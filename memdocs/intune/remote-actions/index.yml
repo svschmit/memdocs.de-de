@@ -1,0 +1,85 @@
+### YamlMime:Landing
+title: Remoteausführung von Geräteaktionen mit Intune
+summary: Intune bietet Administratoren die Möglichkeit, Geräteaktionen remote auszuführen. Durch Verwenden dieser Remoteaktionen im Intune-Portal können Sie Geräte neu starten, Kennwörter zurücksetzen, verloren gegangene oder gestohlene Geräte orten und vieles mehr.
+metadata:
+  title: Remoteausführung von Geräteaktionen mit Intune
+  description: Intune ermöglicht Ihnen, Aktionen remote auszuführen.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: remote-actions
+  ms.topic: landing-page
+  ms.collection: collection
+  author: ErikjeMS
+  ms.author: erikje
+  ms.date: 09/13/2019
+  ms.openlocfilehash: 0c2340fffb2e3680ae4d137f9c0c944a72babf35
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79333633"
+landingContent:
+- title: Remoteausführung von Geräteaktionen
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Übersicht über die Geräteverwaltung
+      url: device-management.md
+  - linkListType: how-to-guide
+    links:
+    - text: Gerät umbenennen
+      url: device-rename.md
+    - text: Siehe Gerätedetails
+      url: device-inventory.md
+    - text: Senden benutzerdefinierter Benachrichtigungen an Geräte
+      url: custom-notifications.md
+    - text: Synchronisieren eines Geräts
+      url: device-sync.md
+    - text: Remoteverwaltung von Geräten mit TeamViewer
+      url: teamviewer-support.md
+    - text: Verwenden von Massengeräteaktionen
+      url: bulk-device-actions.md
+- title: Entfernen und neu starten
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Entfernen, zurücksetzen, ausmustern, Registrierung aufheben
+      url: devices-wipe.md
+    - text: 'Windows: Sauberer Start'
+      url: device-fresh-start.md
+    - text: Neustarten eines Geräts
+      url: device-restart.md
+- title: Benutzeraktionen
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Abmelden des Benutzers
+      url: device-logout-user.md
+    - text: Suchen des primären Benutzers
+      url: find-primary-user.md
+    - text: Benutzer entfernen
+      url: device-remove-user.md
+- title: Sperren und Kennwörter
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sperren eines Geräts
+      url: device-remote-lock.md
+    - text: Zurücksetzen der Gerätekennung
+      url: device-passcode-reset.md
+    - text: Zurücksetzen der PIN unter Windows 10
+      url: device-lost-mode.md
+- title: Apple-Geräteaktionen
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Orten von iOS-/iPadOS-Geräten
+      url: device-locate.md
+    - text: Aktivieren des überwachten iOS-/iPadOS-Modus
+      url: device-supervised-mode.md
+    - text: Aktivieren des iOS-/iPadOS-Modus für verlorene Geräte
+      url: device-lost-mode.md
+    - text: Löschen von Daten von einem macOS-Gerät
+      url: device-erase.md
+    - text: Aktivierungssperre deaktivieren
+      url: device-activation-lock-disable.md
