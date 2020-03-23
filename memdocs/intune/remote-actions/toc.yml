@@ -49,7 +49,9 @@
           href: device-rename.md
         - name: Senden von Benachrichtigungen
           href: custom-notifications.md
-        - name: Remotesteuerung mobiler Geräte
+        - name: Remoteunterstützung für mobile Geräte
+          href: remote-assist-mobile-devices.md
+        - name: Verwenden von TeamViewer für die Remoteverwaltung
           href: teamviewer-support.md
         - name: Synchronisieren eines Geräts
           href: device-sync.md
