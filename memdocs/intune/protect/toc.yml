@@ -265,6 +265,12 @@
               href: security-baseline-settings-defender-atp.md
             - name: Microsoft Edge-Baselineeinstellungen
               href: security-baseline-settings-edge.md
+        - name: Antivirus-Richtlinieneinstellungen
+          items:
+            - name: Defender Antivirus-Einstellungen für macOS
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Einstellungen für Microsoft Defender Antivirus für Windows 10
+              href: antivirus-microsoft-defender-settings-windows.md
         - name: Windows Update-Einstellungen
           href: windows-update-settings.md
         - name: 'Konformitätsrichtlinieneinstellungen: Android'
