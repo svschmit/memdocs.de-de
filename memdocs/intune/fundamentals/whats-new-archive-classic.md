@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc5cd2926f85ebf2f81d681646be7973e6ba444
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e838ab0123058b90f06814d5a1266072bd95385e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354476"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085780"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Neuerungen im klassischen Intune-Portal – vorherige Monate
 
@@ -320,7 +320,7 @@ Intune kennzeichnet alle neuen Geräte als persönlich, es sei denn, der IT-Admi
 ### <a name="notices"></a>Benachrichtigungen
 
 __Die mehrstufige Authentifizierung bei der Registrierung wechselt zum Azure-Portal__ <!--VSO 750545-->
-Bisher mussten sich Administratoren entweder bei der Intune-Konsole oder der Configuration Manager-Konsole (vor der Version von Oktober 2016) anmelden, um MFA für Intune-Registrierungen festzulegen. Mit diesem aktualisierten Feature melden Sie sich jetzt mit Ihren Intune-Anmeldeinformationen beim [Microsoft Azure-Portal](https://manage.windowsazure.com) an und konfigurieren die MFA-Einstellungen über Azure AD. Weitere Informationen dazu finden Sie [hier](https://aka.ms/mfa_ad).
+Bisher mussten sich Administratoren entweder bei der Intune-Konsole oder der Configuration Manager-Konsole (vor der Version von Oktober 2016) anmelden, um MFA für Intune-Registrierungen festzulegen. Mit diesem aktualisierten Feature melden Sie sich jetzt mit Ihren Intune-Anmeldeinformationen beim [Microsoft Azure-Portal](https://manage.windowsazure.com) an und konfigurieren die MFA-Einstellungen über Azure AD. Weitere Informationen dazu finden Sie [hier](/azure/active-directory/authentication/howto-mfa-mfasettings).
 
 __Die Unternehmensportal-App für Android ist jetzt in China verfügbar__ <!--VSO 658093-->
 Die Unternehmensportal-App für Android wird jetzt zum Download in China veröffentlicht. Da der Google Play Store in China nicht zur Verfügung steht, müssen Apps für Android-Geräte von chinesischen App-Marktplätzen abgerufen werden. Die Unternehmensportal-App für Android wird in den folgenden Stores zum Download zur Verfügung stehen:

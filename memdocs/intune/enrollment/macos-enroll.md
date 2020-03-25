@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1066e2d86a2c3be4ad4d55a0fd2bbbac03066cc6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363485"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086089"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Registrieren von macOS-Geräten in Intune
 
@@ -51,7 +51,7 @@ Benutzer können ihre eigenen persönlichen Geräte in der Intune-Verwaltung reg
 - zur [Website des Unternehmensportals](https://portal.manage.microsoft.com) wechseln oder
 - unter [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) die macOS-Unternehmensportal-App herunterladen.
 
-Sie können Ihren Benutzern auch einen Link zu den Schritten für die Onlineregistrierung senden: [Registrieren Ihres macOS-Geräts in Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-macos)
+Sie können Ihren Benutzern auch einen Link zu den Schritten für die Onlineregistrierung senden: [Registrieren Ihres macOS-Geräts in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)
 
 Informationen zu anderen Endbenutzeraufgaben finden Sie in den folgenden Artikeln:
 

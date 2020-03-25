@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7d58d2766444be924bd525b5aff20e17a302d56
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342516"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083670"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>App-Konfigurationsrichtlinien für Microsoft Intune
 
@@ -93,7 +93,7 @@ Sie können die App-Konfigurationsrichtlinie mithilfe der folgenden drei Methode
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>iOS/iPadOS-Konfiguration auf nicht verwalteten Geräten
 
-Auf nicht verwalteten Geräten können Sie mit dem **Intune-Diagnoseprotokoll** die iOS-/iPadOS-Konfiguration in Bezug auf die Konfiguration verwalteter Apps überprüfen. Zusätzlich zu den unten angegebenen Schritten können Sie über Microsoft Edge auf Protokolle für verwaltete Apps zugreifen. Weitere Informationen finden Sie unter [Verwenden von Microsoft Edge unter iOS/iPadOS für den Zugriff auf Protokolle für verwaltete Apps](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Auf nicht verwalteten Geräten können Sie mit dem **Intune-Diagnoseprotokoll** die iOS-/iPadOS-Konfiguration in Bezug auf die Konfiguration verwalteter Apps überprüfen. Zusätzlich zu den unten angegebenen Schritten können Sie über Microsoft Edge auf Protokolle für verwaltete Apps zugreifen. Weitere Informationen finden Sie unter [Verwenden von Microsoft Edge unter iOS/iPadOS für den Zugriff auf Protokolle für verwaltete Apps](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
 
 1. Falls noch nicht auf dem Gerät installiert, laden Sie den **Microsoft Edge**-Browser aus dem App Store herunter und installieren ihn. Weitere Informationen finden Sie unter [Durch Microsoft Intune geschützte Apps](apps-supported-intune-apps.md).
 2. Starten Sie **Microsoft Edge**, und wählen Sie auf der Navigationsleiste **Info** > **Intune-Hilfe** aus.

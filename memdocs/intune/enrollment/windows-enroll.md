@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c2a32561f66f3170b41209cb4d324e368768878
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1f4d51cbd5c8bc6c82822d5e26191c01d2e1bb1d
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344427"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220148"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Registrierung von Windows-Geräten
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Dieser Artikel hilft IT-Administratoren, die Windows-Registrierung für ihre Benutzer zu vereinfachen. Sobald Sie [Intune eingerichtet](../fundamentals/setup-steps.md) haben, können Benutzer Windows-Geräte registrieren, indem sie sich mit ihrem Geschäfts-, Schul- oder Unikonto [anmelden](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows).  
+Dieser Artikel hilft IT-Administratoren, die Windows-Registrierung für ihre Benutzer zu vereinfachen. Sobald Sie [Intune eingerichtet](../fundamentals/setup-steps.md) haben, können Benutzer Windows-Geräte registrieren, indem sie sich mit ihrem Geschäfts-, Schul- oder Unikonto [anmelden](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal).  
 
 Als Intune-Administrator können Sie die Registrierung auf folgende Weise vereinfachen:
 
@@ -111,7 +111,7 @@ Benutzern erklären, wie sie ihre Windows-Geräte registrieren können, und sie 
 > [!NOTE]
 > Endbenutzer müssen über Microsoft Edge auf die Website des Unternehmensportals zugreifen, um Windows-Anwendungen anzuzeigen, die Sie für bestimmte Versionen von Windows zugewiesen haben. Andere Browser wie Google Chrome, Mozilla Firefox und Internet Explorer unterstützen diese Art der Filterung nicht.
 
-Registrierungsanleitungen für Endbenutzer finden Sie unter [Registrieren Ihres Windows-Geräts bei Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows). Sie können Benutzer auch auf [Welche Informationen erhält mein Unternehmen, wenn ich mein Gerät in Intune registriere?](https://docs.microsoft.com/user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows) verweisen.
+Registrierungsanleitungen für Endbenutzer finden Sie unter [Registrieren Ihres Windows-Geräts bei Intune](../user-help/windows-enrollment-company-portal.md). Sie können Benutzer auch auf [Welche Informationen erhält mein Unternehmen, wenn ich mein Gerät in Intune registriere?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) verweisen.
 
 >[!IMPORTANT]
 > Wenn Sie zwar die automatische Registrierung für die Verwaltung mobiler Geräte nicht aktiviert haben, Sie aber über Windows 10-Geräte verfügen, die mit Azure AD verknüpft wurden, werden nach der Registrierung zwei Datensätze in der Intune-Konsole angezeigt. Dies können Sie vermeiden, wenn Sie sicherstellen, dass Benutzer mit Geräten, die mit Azure AD verknüpft sind, zu **Konten** > **Access work or school** (Auf Arbeits- oder Schul- bzw. Unikonto zugreifen) navigieren und unter Verwendung dieses Kontos eine **Verbindung** herstellen. 

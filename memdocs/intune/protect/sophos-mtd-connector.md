@@ -15,15 +15,14 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40d290fbe07ab4d1f0cf66761b0c78867cf5677
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338746"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526443"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Sophos Mobile Threat Defense-Connector mit Intune
-
 Sie können den Zugriff mobiler Geräte auf Unternehmensressourcen mithilfe des bedingten Zugriffs auf Risikobewertungen steuern, die von Sophos Mobile vorgenommen werden, einer Mobile Threat Defense-Lösung (MTD), die in Microsoft Intune integriert werden kann. Das Risiko wird basierend auf Telemetriedaten von Geräten bewertet, auf denen die Sophos Mobile-App ausgeführt wird.
 Sie können Richtlinien für bedingten Zugriff basierend auf der Sophos Mobile-Risikobewertung konfigurieren, die über Intune-Gerätekompatibilitätsrichtlinien aktiviert wird, und so anhand der erkannten Bedrohungen den Zugriff auf Unternehmensressourcen durch nicht konforme Geräte zulassen oder blockieren.
 

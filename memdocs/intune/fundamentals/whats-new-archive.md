@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17fa979f9563eb0735a68d2cc0ed82d800f8816f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354736"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085834"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Neuerungen in Microsoft Intune (vorherige Monate)
 
@@ -294,7 +294,7 @@ Die Microsoft Intune-App für Android wurde mit den folgenden Verbesserungen akt
 - Die Anzeige von benutzerdefinierten Pushbenachrichtigungen wurde hinzugefügt, wodurch die App der Unterstützung angepasst wird, die kürzlich in den Unternehmensportal-Apps für iOS und Android hinzugefügt wurde. Weitere Informationen finden Sie unter [Senden benutzerdefinierter Benachrichtigungen in Intune](../remote-actions/custom-notifications.md).
 ""
 #### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal---4394993---"></a>Für iOS-Geräte: Anpassen des Datenschutzbildschirms für den Registrierungsvorgang im Unternehmensportal<!-- 4394993 -->
-Mithilfe von Markdown können Sie den Datenschutzbildschirm im Unternehmensportal anpassen, der den Endbenutzern während der iOS-Registrierung angezeigt wird. Insbesondere können Sie die Liste der Elemente und Vorgänge anpassen, die Ihre Organisation auf dem Gerät nicht anzeigen bzw. ausführen kann. Weitere Informationen finden Sie unter [Konfigurieren der Microsoft Intune-Unternehmensportal-App](../apps/company-portal-app.md#privacy-statement-customization).
+Mithilfe von Markdown können Sie den Datenschutzbildschirm im Unternehmensportal anpassen, der den Endbenutzern während der iOS-Registrierung angezeigt wird. Insbesondere können Sie die Liste der Elemente und Vorgänge anpassen, die Ihre Organisation auf dem Gerät nicht anzeigen bzw. ausführen kann. Weitere Informationen finden Sie unter [Konfigurieren der Microsoft Intune-Unternehmensportal-App](../apps/company-portal-app.md#configuration).
 
 
 
@@ -316,7 +316,7 @@ Gilt für:
 
 In Intune können Sie Profile für iOS- und macOS-Geräte einrichten (**Gerätekonfiguration** > **Profile** > **Profil erstellen** > Plattform **iOS** oder **macOS** > **Geräteeinschränkungen**, Profiltyp **Geräteeinschränkungen** oder **Erweiterungen**). 
 
-In diesem Update sind die im Intune-Portal verfügbaren Einstellungen nach dem Registrierungstyp kategorisiert, für den sie gelten:
+In diesem Update sind die verfügbaren Einstellungen im Intune-Portal nach dem Registrierungstyp kategorisiert, für den sie gelten:
 
 - iOS
   - Benutzerregistrierung
@@ -1094,7 +1094,7 @@ Die Anzeigen und Schritte bei der Registrierung im Unternehmensportal für iOS w
 * Öffnen der App „Settings“ (Einstellungen), um das Verwaltungsprofil auf dem Gerät zu installieren.
 * Rückkehr zur Unternehmensportal-App, um die Registrierung abzuschließen.  
 
-Die aktualisierten Registrierungsschritte und -anzeigen finden Sie unter [Enroll iOS device in Intune (Registrieren eines iOS-Geräts in Intune)](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).
+Die aktualisierten Registrierungsschritte und -anzeigen finden Sie unter [Enroll iOS device in Intune (Registrieren eines iOS-Geräts in Intune)](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).
 
 #### <a name="openssl-encryption-for-android-app-protection-policies---3747362---"></a>OpenSSL-Verschlüsselung für Android-App-Schutzrichtlinien<!-- 3747362 -->
 Intune-App-Schutzrichtlinien für Android-Geräte nutzen nun eine OpenSSL-Verschlüsselungsbibliothek, die FIPS 140-2-konform ist. Weitere Informationen finden Sie im Abschnitt [Verschlüsselung](../apps/app-protection-policy-settings-android.md#encryption) unter [Einstellungen für App-Schutzrichtlinien in Microsoft Intune](../apps/app-protection-policy-settings-android.md).
@@ -1390,7 +1390,7 @@ Es wurden neue Fehlermeldungen eingeführt, die bei folgenden Problemen bei der 
 Navigieren Sie in Intune zu **Client-Apps** > **Apps** > Name der App > **Geräteinstallationsstatus**. Die neuen Fehlermeldungen werden in der Spalte **Statusdetails** angezeigt.
 
 #### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780----"></a>Neue Anzeige „App-Kategorien“ in der Unternehmensportal-App für Windows 10<!-- 3834780  -->
-Eine neue Anzeige namens **App-Kategorien** wurde hinzugefügt, um das Durchsuchen und Auswählen von Apps im Unternehmensportal für Windows 10 zu verbessern. Für Benutzer werden Apps nun sortiert nach Kategorien wie **Empfohlen**, **Bildung** und **Produktivität** angezeigt. Diese Änderung ist im Unternehmensportal ab Version 10.3.3451.0 vorhanden. Informationen zu dieser neuen Anzeige finden Sie unter [Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune](whats-new-app-ui.md). Weitere Informationen zu den Apps im Unternehmensportal finden Sie unter [Install and share apps on your device (Installieren und Freigeben von Apps auf Ihrem Gerät)](https://docs.microsoft.com/user-help/install-apps-cpapp-windows).  
+Eine neue Anzeige namens **App-Kategorien** wurde hinzugefügt, um das Durchsuchen und Auswählen von Apps im Unternehmensportal für Windows 10 zu verbessern. Für Benutzer werden Apps nun sortiert nach Kategorien wie **Empfohlen**, **Bildung** und **Produktivität** angezeigt. Diese Änderung ist im Unternehmensportal ab Version 10.3.3451.0 vorhanden. Informationen zu dieser neuen Anzeige finden Sie unter [Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune](whats-new-app-ui.md). Weitere Informationen zu den Apps im Unternehmensportal finden Sie unter [Install and share apps on your device (Installieren und Freigeben von Apps auf Ihrem Gerät)](https://docs.microsoft.com/mem/intune/user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app---1455231-doc-work-item---"></a>Power BI-Compliance-App<!-- 1455231 doc-work-item -->
 Sie können über die App [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) in Power BI auf Ihre Intune Data Warehouse-Instanz zugreifen. Mit dieser Power BI-App können Sie nun auf vorab erstellte Berichte zugreifen und diese freigeben, ohne dafür ein Setup durchzuführen und ohne Ihren Webbrowser zu verlassen. Weitere Informationen finden Sie im [Änderungsprotokoll für die Intune Data Warehouse-API](../developer/reports-changelog.md#power-bi-compliance-app).
@@ -2284,7 +2284,7 @@ Die Unternehmensportalwebsite wurde auf der Grundlage von Kundenfeedback um neue
 - Verbesserte Leistung bei großen App-Katalogen
 - Mehr Barrierefreiheit für alle Benutzer  
 
-Die [Dokumentation zur Intune-Unternehmensportalwebsite](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website) wurde entsprechend dieser Änderungen aktualisiert. Ein Beispiel für die App-Verbesserungen finden Sie unter [Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune](whats-new-app-ui.md).  
+Die [Dokumentation zur Intune-Unternehmensportalwebsite](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) wurde entsprechend dieser Änderungen aktualisiert. Ein Beispiel für die App-Verbesserungen finden Sie unter [Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune](whats-new-app-ui.md).  
 
 ### <a name="monitor-and-troubleshoot"></a>Überwachung und Problembehandlung
 

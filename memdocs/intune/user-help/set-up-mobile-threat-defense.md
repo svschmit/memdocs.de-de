@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 889c7ef6d45a51a4aed86bf1a76842feb6f6251a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79336107"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084402"
 ---
 # <a name="install-mobile-threat-defense"></a>Installieren von Mobile Threat Defense   
 
@@ -69,7 +69,7 @@ Weitere Informationen zur Geräteregistrierung finden Sie unter [Registrieren Ih
 3. Die MTD-App bittet Sie um die Berechtigung, auf bestimmte Bereiche Ihres Geräts zuzugreifen, sofern dies erforderlich ist. Damit diese App richtig funktioniert, müssen Sie den Zugriff auf Kontakte **Zulassen**. Die angeforderten Berechtigungen unterscheiden sich bei den verschiedenen MTD-Anbietern.  
 4. Tippen Sie auf Ihr Geschäftskonto, um sich anzumelden.  
 5. Warten Sie, während die MTD-App Ihr Gerät auf Sicherheitsbedrohungen überprüft.  
-6. Kehren Sie zurück zu der Schul-, Uni- oder Geschäfts-App, auf die Sie ursprünglich zugreifen wollten. An diesem Punkt fordert Ihre Organisation Sie möglicherweise dazu auf, andere App-Sicherheitsanforderungen zu konfigurieren, z. B. dazu, eine PIN zu erstellen.  
+6. Kehren Sie zu der Schul-, Uni- oder Geschäfts-App zurück, auf die Sie ursprünglich zugreifen wollten. An diesem Punkt fordert Ihre Organisation Sie möglicherweise dazu auf, andere App-Sicherheitsanforderungen zu konfigurieren, z. B. dazu, eine PIN zu erstellen.  
 7. Sie sollten nun auf die App zugreifen können. Gehen Sie wie folgt vor, wenn Sie noch immer blockiert sind:  
     * Tippen Sie auf der Seite **Zugriff anfordern** auf **Erneut prüfen**.  
     * Wechseln Sie zur MTD-App, und suchen Sie nach vorhandenen Bedrohungen. Führen Sie die empfohlenen Schritte aus, um die Bedrohung zu beheben und den Zugriff wiederherzustellen.  
@@ -79,9 +79,9 @@ Weitere Informationen zur Geräteregistrierung finden Sie unter [Registrieren Ih
 Wenden Sie sich an Ihren IT-Support, wenn bei der Installation ein Fehler auftritt. Besuchen Sie die [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980), um die Kontaktinformationen für Ihre Organisation zu erhalten.  
 
 Sie können auch Ihre App-Protokolle an Ihren IT-Support senden, um mehr Kontextinformationen zur Installation bereitzustellen.  
-* Android-Benutzer: Verwenden Sie das Unternehmensportal, um [Ihre Protokolle hochzuladen und per E-Mail zu versenden](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android).   
+* Android-Benutzer: Verwenden Sie das Unternehmensportal, um [Ihre Protokolle hochzuladen und per E-Mail zu versenden](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).   
 
-* Benutzer von iOS-Geräten: Verwenden Sie Microsoft Edge für iOS, um [Ihre Protokolle abzurufen und zu versenden](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-on-ios-to-access-managed-app-logs).  
+* Benutzer von iOS-Geräten: Verwenden Sie Microsoft Edge für iOS, um [Ihre Protokolle abzurufen und zu versenden](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs).  
 
 ## <a name="resolve-a-threat"></a>Beheben einer Bedrohung  
 Wenn eine Bedrohung die von Ihrer Organisation definierte Bedrohungsstufe übersteigt, ergreift Ihre Organisation eine der folgenden Maßnahmen:  

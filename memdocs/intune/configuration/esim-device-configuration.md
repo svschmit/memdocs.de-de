@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f12282acebaa90d3afe868bb28743444d01001d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343491"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086989"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Öffentliche Vorschau: Konfigurieren von eSIM-Mobilfunkprofilen in Intune
 
 eSIM ist ein eingebetteter SIM-Chip, mit dem Sie auf einem eSIM-fähigen Gerät, wie z.B. dem [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro), über Mobilfunk eine Verbindung mit dem Internet herstellen können. Mit einer eSIM müssen Sie keine SIM-Karte von Ihrem Mobilfunkanbieter erhalten. Wenn Sie viel reisen, können Sie zwischen den Mobilfunkanbietern und Datentarifen wechseln, um stets verbunden zu sein.
 
 Sie haben beispielsweise einen Mobilfunktarif für Ihre Arbeit und einen Datentarif bei einem anderen Mobilfunkanbieter für den persönlichen Gebrauch. Bei Reisen erhalten Sie Zugang zum Internet, indem nach Mobilfunkanbietern mit Datentarifen in diesem Gebiet gesucht wird.
+
+Diese Funktion gilt für:
+
+- Windows 10 und höher
 
 In Intune können Sie einmalige Aktivierungscodes importieren, die von Ihrem Mobilfunkanbieter bereitgestellt werden. Für die Konfiguration von Mobilfunktarifen auf dem eSIM-Modul müssen Sie diese Aktivierungscodes auf Ihren eSIM-fähigen Geräten bereitstellen. Wenn Intune den Aktivierungscode installiert, nimmt das eSIM-Hardwaremodul mithilfe der Daten im Aktivierungscode Kontakt zum Mobilfunkanbieter auf. Nach Abschluss dieses Vorgangs wird das eSIM-Profil auf dem Gerät heruntergeladen und für die Aktivierung der Mobilfunkverbindung konfiguriert.
 

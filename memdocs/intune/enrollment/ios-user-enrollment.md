@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842b262c2ae19a7a026d87600df5ffb0e80cf9b8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359234"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086104"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Einrichten der iOS-/iPadOS- und iPadOS-Benutzerregistrierung (Vorschau)
 
@@ -59,7 +59,7 @@ Ein Registrierungsprofil definiert die Einstellungen, die bei der Registrierung 
 
     - **Geräteregistrierung**: Alle Benutzer in diesem Profil verwenden die Geräteregistrierung.
     - **Benutzerregistrierung**: Alle Benutzer in diesem Profil verwenden die Benutzerregistrierung.
-    - **Basierend auf Benutzerauswahl festlegen**: Alle Benutzer in dieser Gruppe können wählen, welchen Registrierungstyp sie verwenden möchten. Wenn Benutzer ihre Geräte registrieren, haben sie die Möglichkeit, zwischen **Ich besitze dieses Gerät** und **(Unternehmen) besitzt dieses Gerät** zu wählen. Bei Wahl der zweiten Option wird das Gerät über die Geräteregistrierung registriert. Wenn der Benutzer **Ich besitze dieses Gerät** wählt, erhält er eine weitere Option, um das gesamte Gerät oder nur sichere arbeitsbezogene Apps und Daten abzusichern. Die Wahl des Endbenutzers, ob er das Gerät besitzt, bestimmt, welcher Registrierungstyp auf seinem Gerät implementiert wird. Diese Benutzerauswahl wird in Intune auch im Attribut „Gerätebesitz“ berücksichtigt. Weitere Informationen zur Benutzererfahrung finden Sie unter [Einrichten des iOS-/iPadOS-Gerätezugriffs auf Unternehmensressourcen](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).
+    - **Basierend auf Benutzerauswahl festlegen**: Alle Benutzer in dieser Gruppe können wählen, welchen Registrierungstyp sie verwenden möchten. Wenn Benutzer ihre Geräte registrieren, haben sie die Möglichkeit, zwischen **Ich besitze dieses Gerät** und **(Unternehmen) besitzt dieses Gerät** zu wählen. Bei Wahl der zweiten Option wird das Gerät über die Geräteregistrierung registriert. Wenn der Benutzer **Ich besitze dieses Gerät** wählt, erhält er eine weitere Option, um das gesamte Gerät oder nur sichere arbeitsbezogene Apps und Daten abzusichern. Die Wahl des Endbenutzers, ob er das Gerät besitzt, bestimmt, welcher Registrierungstyp auf seinem Gerät implementiert wird. Diese Benutzerauswahl wird in Intune auch im Attribut „Gerätebesitz“ berücksichtigt. Weitere Informationen zur Benutzererfahrung finden Sie unter [Einrichten des iOS-/iPadOS-Gerätezugriffs auf Unternehmensressourcen](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
     
 5. Wählen Sie **Weiter** aus.
 

@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 66dafbeea3d5fa540a4306c811f784a4c6088c2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad586baf79bb818ccdfc012c04a58e55d19d8cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347924"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084482"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Installieren und Anmelden bei der Unternehmensportal-App
 
@@ -38,6 +38,6 @@ Installieren Sie die Unternehmensportal-App auf Ihrem iOS-Gerät, um Zugriff auf
 
 3. Öffnen Sie die Unternehmensportal-App, geben Sie die E-Mail-Adresse und das Kennwort Ihres Geschäfts-, Schul- oder Unikontos ein, und tippen Sie dann auf **Anmelden**.
 
-    Wenn Sie sich zum ersten Mal bei der Unternehmensportal-App anmelden und Ihr Unternehmen oder Ihre Schule/Uni Intune verwendet, werden Sie aufgefordert, Ihr Gerät bei Intune zu registrieren. Führen Sie zum Registrieren die unter [Registrieren Ihres iOS-Geräts bei Intune](enroll-your-device-in-intune-ios.md) aufgeführten Schritte aus. Sie können sich auch [über ein anderes Gerät anmelden](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
+    Wenn Sie sich zum ersten Mal bei der Unternehmensportal-App anmelden und Ihr Unternehmen oder Ihre Schule/Uni Intune verwendet, werden Sie aufgefordert, Ihr Gerät bei Intune zu registrieren. Führen Sie zum Registrieren die unter [Registrieren Ihres iOS-Geräts bei Intune](enroll-your-device-in-intune-ios.md) aufgeführten Schritte aus. Sie können sich auch [über ein anderes Gerät anmelden](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
 
 Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).

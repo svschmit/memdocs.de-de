@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb0012dfc2cedb72c64a54c16b567dffff84c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342295"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083552"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Datenschutzframework mithilfe von App-Schutzrichtlinien 
 
@@ -55,7 +55,7 @@ Wie Sie in der obigen Tabelle sehen, sollten alle Änderungen an den App-Schutzr
 
 Beim Testen der APP-Änderungen sollten Sie die [zeitliche Planung der Implementierung](app-protection-policy-delivery.md) berücksichtigen. Der Status der APP-Implementierung für einen Benutzer kann überwacht werden. Weitere Informationen finden Sie unter [Überwachen von App-Schutzrichtlinien](app-protection-policies-monitor.md).
 
-Mithilfe von Edge und der URL *about:Intunehelp* können Sie einzelne APP-Einstellungen für einzelne Apps auf Geräten überprüfen. Weitere Informationen finden Sie unter [Überprüfen der Protokolle für Client-App-Schutz](app-protection-policy-settings-log.md) und [Einstellungen für das APP-Datenschutzframework](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Mithilfe von Edge und der URL *about:Intunehelp* können Sie einzelne APP-Einstellungen für einzelne Apps auf Geräten überprüfen. Weitere Informationen finden Sie unter [Überprüfen der Protokolle für Client-App-Schutz](app-protection-policy-settings-log.md) und [Einstellungen für das APP-Datenschutzframework](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>Einstellungen für das APP-Datenschutzframework
 

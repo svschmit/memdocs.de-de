@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bcfe4adead40e8a38d7f84af52406af320a394
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338239"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220250"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Senden benutzerdefinierter Benachrichtigungen in Intune
 
@@ -73,7 +73,6 @@ Wenn Sie die Unternehmensportal-App auf einem Android-Gerät geöffnet haben, ä
 - Für das Erstellen von Meldungen muss ein Konto verwendet werden, dem eine Intune-Rolle mit der richtigen Berechtigung zugewiesen ist, wie oben im Abschnitt *Berechtigungen* beschrieben. Informationen zum Zuweisen von Berechtigungen für einen Benutzer finden Sie unter [Rollenzuweisungen](../fundamentals/role-based-access-control.md#role-assignments).
 - Benutzerdefinierte Benachrichtigungen sind auf 50 Zeichen lange Titel und 500 Zeichen lange Nachrichten beschränkt.  
 - Intune speichert den Text bereits gesendeter benutzerdefinierter Benachrichtigungen nicht. Sie müssen eine Nachricht noch mal erstellen, um sie noch mal zu senden.  
-- Sie können maximal 25 Nachrichten pro Stunde an Gruppen senden. Diese Einschränkung gilt für die Mandantenebene. Diese Einschränkung gilt nicht beim Senden von Benachrichtigungen an einzelne Geräte.
 - Sie können maximal 25 Nachrichten pro Stunde an Gruppen senden. Diese Einschränkung gilt für die Mandantenebene. Diese Einschränkung gilt nicht beim Senden von Benachrichtigungen an Einzelpersonen.
 - Wenn Sie Nachrichten an einzelne Geräte senden, können Sie nur bis zu 10 Nachrichten pro Stunde an ein und dasselbe Gerät senden.
 - Sie können Benachrichtigungen an Gruppen von Benutzern senden. Beim Senden von Benachrichtigungen an Gruppen kann jede Benachrichtigung direkt an bis zu 25 Gruppen gerichtet werden. Verschachtelte Gruppen zählen nicht zu dieser Gesamtanzahl. Benachrichtigungen, die an Gruppen gesendet werden, richten sich nur nach den Benutzern in der jeweiligen Gruppe und werden an alle registrierten iOS-/iPadOS- und Android-Geräte dieser Benutzer gesendet. Die Geräte in der Gruppe werden beim Bestimmen der Benachrichtigungsempfänger nicht berücksichtigt.
