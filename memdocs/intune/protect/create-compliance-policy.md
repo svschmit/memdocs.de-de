@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7275963f521955c9e89c4b417c11f752e2f06ce1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f84df30204f866e5498e97b8d64ed3fc6fd4ba28
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352604"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084911"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Erstellen einer Konformitätsrichtlinie in Microsoft Intune
 
@@ -63,80 +63,70 @@ Stellen Sie zum Verwenden von Konformitätsrichtlinien folgendes sicher:
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 
-2. Wählen Sie **Geräte** > **Konformitätsrichtlinien** > **Richtlinie erstellen** aus.
+2. Wählen Sie **Geräte** > **Konformitätsrichtlinien** > **Richtlinien** > **Richtlinie erstellen** aus.
 
-3. Legen Sie die folgenden Eigenschaften fest:
+3. Wählen Sie aus den folgenden Optionen eine **Plattform** für diese Richtlinie aus:
+   - *Android-Geräteadministrator*
+   - *Android Enterprise*
+   - *iOS/iPadOS*
+   - *macOS*
+   - *Windows Phone 8.1*
+   - *Windows 8.1 und höher*
+   - *Windows 10 und höher*
 
-   - **Name:** Geben Sie einen aussagekräftigen Namen für die Richtlinie ein. Benennen Sie Ihre Richtlinien so, dass Sie diese später leicht wiedererkennen. Ein geeigneter Richtlinienname ist z. B. **iOS/iPadOS-Geräte mit Jailbreak als nicht konform markieren**.
+    Für *Android Enterprise* können Sie auch einen **Richtlinientyp** auswählen:
+     - *Konformitätsrichtlinie für Android-Gerätebesitzer*
+     - *Konformitätsrichtlinie für Android-Arbeitsprofil*
 
-   - **Beschreibung:** Geben Sie eine Beschreibung für die Richtlinie ein. Diese Einstellung ist optional, wird jedoch empfohlen.
+    Wählen Sie dann **Erstellen** aus, um das Konfigurationsfenster **Richtlinie erstellen** zu öffnen.
 
-   - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:
-     - **Android-Geräteadministrator**
-     - **Android Enterprise**
-     - **iOS/iPadOS**
-     - **macOS**
-     - **Windows Phone 8.1**
-     - **Windows 8.1 und höher**
-     - **Windows 10 und höher**
+4. Geben Sie auf der Registerkarte **Grundlagen** einen **Namen** an, um die Richtlinie später identifizieren zu können. Ein geeigneter Richtlinienname ist z. B. **iOS/iPadOS-Geräte mit Jailbreak als nicht konform markieren**.
 
-     Für *Android Enterprise* müssen Sie dann einen **Profiltyp** auswählen:
-     - **Gerätebesitzer**
-     - **Arbeitsprofil**
+   Sie können auch eine **Beschreibung** angeben.
+  
+5. Erweitern Sie auf der Registerkarte **Konformitätseinstellungen** die verfügbaren Kategorien, und konfigurieren Sie Einstellungen für Ihre Richtlinie.  In den folgenden Artikeln werden die Einstellungen für die einzelnen Plattformen beschrieben:
+   - [Android-Geräteadministrator](compliance-policy-create-android.md)
+   - [Android Enterprise](compliance-policy-create-android-for-work.md)
+   - [iOS/iPadOS](compliance-policy-create-ios.md)
+   - [macOS](compliance-policy-create-mac-os.md)
+   - [Windows Phone 8.1, Windows 8.1 und höher](compliance-policy-create-windows-8-1.md)
+   - [Windows 10 und höher](compliance-policy-create-windows.md)  
 
-   - **Einstellungen**: In den folgenden Artikel werden die Einstellungen für die einzelnen Plattformen aufgelistet und beschrieben:
-     - [Android-Geräteadministrator](compliance-policy-create-android.md)
-     - [Android Enterprise](compliance-policy-create-android-for-work.md)
-     - [iOS/iPadOS](compliance-policy-create-ios.md)
-     - [macOS](compliance-policy-create-mac-os.md)
-     - [Windows Phone 8.1, Windows 8.1 und höher](compliance-policy-create-windows-8-1.md)
-     - [Windows 10 und höher](compliance-policy-create-windows.md)  
+6. Auf der Registerkarte **Standorte** können Sie die Konformität basierend auf dem Standort des Geräts erzwingen. Sie können vorhandene Standorte auswählen. Wenn noch kein Standort verfügbar ist, finden Sie weitere Informationen unter [Verwenden von Standorten (Netzwerkfence)](use-network-locations.md).
+   > [!TIP]
+   > **Standorte** sind nur für die Plattform *Android-Geräteadministrator* verfügbar.
 
-   - **Standorte** *(Android-Geräteadministrator)* : In Ihrer Richtlinie können Sie Konformität durch den Standort des Geräts erzwingen. Sie können vorhandene Standorte auswählen. Haben Sie noch keine Standorte? Unter [Verwenden von Standorten (Netzwerk-Fencing) in Intune](use-network-locations.md) erhalten Sie weitere Informationen.  
+7. Geben Sie auf der Registerkarte **Aktionen bei Nichtkonformität** eine Reihe von Aktionen an, die automatisch auf Geräte angewendet werden, die diese Konformitätsrichtlinie nicht erfüllen.
 
-   - **Aktionen bei Inkompatibilität**: Für Geräte, die nicht Ihren Konformitätsrichtlinien entsprechen, können Sie Aktionen hinzufügen, die automatisch ausgeführt werden sollen. Sie können den Zeitplan anpassen, anhand dessen das Gerät als nicht konform markiert wird, z.B. nach einem Tag. Sie können auch eine zweite Aktion konfigurieren, durch die E-Mails an Benutzer gesendet werden, wenn das Gerät nicht mehr konform ist.
+   Sie können mehrere Aktionen hinzufügen und Zeitpläne sowie weitere Details für einige Aktionen konfigurieren. Sie können beispielsweise den Zeitplan der Standardaktion *Gerät als nicht konform markieren* so ändern, dass die Aktion nach einem Tag ausgeführt wird. Dann können Sie eine Aktion hinzufügen, mit der eine E-Mail mit einer Warnung an den Benutzer gesendet wird, wenn ein Gerät nicht konform ist. Sie können auch Aktionen hinzufügen, die Geräte sperren oder außer Betrieb nehmen, die weiterhin nicht konform sind.
 
-     Weitere Informationen sowie Informationen zum Erstellen einer E-Mail-Benachrichtigung für Ihre Benutzer finden Sie unter [Hinzufügen von Aktionen für nicht konforme Geräte in Intune](actions-for-noncompliance.md).
+   Informationen zu den Aktionen, die Sie konfigurieren können – z. B. zum Senden von Benachrichtigungs-E-Mails an Ihre Benutzer –, finden Sie unter [Aktionen für nicht konforme Geräte hinzufügen](actions-for-noncompliance.md).
 
-     Sie verwenden beispielsweise das Standortfeature und fügen einen Standort zu einer Konformitätsrichtlinie hinzu. Die Standardaktion für Nichtkonformität gilt, wenn Sie mindestens einen Standort auswählen. Wenn das Gerät nicht mit den ausgewählten Standorten verbunden ist, wird es sofort als nicht konform betrachtet. Sie können Ihren Benutzern eine Toleranzperiode gewähren, z.B. einen Tag.
+   Ein anderes Beispiel ist die Verwendung von Standorten: Sie können einer Konformitätsrichtlinie mindestens einen Standort hinzufügen. In diesem Fall gilt die Standardaktion für Nichtkonformität, wenn Sie mindestens einen Standort auswählen. Wenn ein Gerät nicht mit einem der ausgewählten Standorte verbunden ist, wird es als nicht konform betrachtet. Sie können den Zeitplan so konfigurieren, dass Ihren Benutzern eine Toleranzperiode eingeräumt wird (z.B. ein Tag).
 
-   - **Bereich (Markierungen)** : Bereichsmarkierungen sind eine gute Möglichkeit, Richtlinien für bestimmte Gruppen zu filtern, wie z. B. `US-NC IT Team` oder `JohnGlenn_ITDepartment`. Nachdem Sie die Einstellungen hinzugefügt haben, können Sie Ihrer Konformitätsrichtlinie ebenfalls eine Bereichsmarkierung hinzufügen. Im Artikel zum [Verwenden von Bereichsmarkierungen zum Filtern von Richtlinien](../fundamentals/scope-tags.md) finden Sie weitere Informationen.
+8. Wählen Sie auf der Registerkarte **Bereich** Tags aus, mit denen die Richtlinien für bestimmte Gruppen gefiltert werden können, wie etwa `US-NC IT Team` oder `JohnGlenn_ITDepartment`. Nachdem Sie die Einstellungen hinzugefügt haben, können Sie Ihrer Konformitätsrichtlinie ebenfalls eine Bereichsmarkierung hinzufügen. 
 
-4. Wählen Sie anschließend **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern. Die Richtlinie wird erstellt und in der Liste angezeigt. Weisen Sie die Richtlinie anschließend Ihrer Gruppe zu.
+   Weitere Informationen zur Verwendung von Bereichstags finden Sie unter [Verwenden von Bereichsmarkierungen](../fundamentals/scope-tags.md).
 
-## <a name="assign-the-policy"></a>Zuweisen der Richtlinie
+9. Weisen Sie die Richtlinie auf der Registerkarte **Zuweisungen** Ihren Gruppen zu.  
 
-Wenn eine Richtlinie erstellt wurde, können Sie diese Gruppen zuweisen:
+   Klicken Sie auf **+ Einzuschließende Gruppen auswählen**, und weisen Sie die Richtlinie einer oder mehreren Gruppen zu. Die Richtlinie wird auf diese Gruppen angewendet, wenn Sie die Richtlinie nach dem nächsten Schritt speichern. 
 
-1. Wählen Sie eine Richtlinie aus, die Sie erstellt haben. Vorhandene Richtlinien befinden sich unter **Geräte** > **Konformitätsrichtlinien** > **Richtlinien**.
+10. Überprüfen Sie die Einstellungen auf der Registerkarte **Überprüfen + erstellen**, und klicken Sie auf **Erstellen**, um die Konformitätsrichtlinie zu speichern.  
 
-2. Wählen Sie *Richtlinie* > **Zuweisungen** aus. Sie können Azure Active Directory (AD)-Sicherheitsgruppen ein- oder ausschließen.
+    Die Benutzer oder Geräte, für die Ihre Richtlinie gilt, werden hinsichtlich der Konformität ausgewertet, wenn sie mit Intune eingecheckt werden.
 
-3. Wählen Sie **Ausgewählte Gruppen**, um Ihre Azure AD-Sicherheitsgruppen anzuzeigen. Wählen Sie die Gruppen aus, auf die diese Richtlinie angewendet werden soll, und wählen Sie dann **Speichern** aus, um die Richtlinie bereitzustellen.
+<!-- Evaluate option  - pending details as to its fate with this new Full Screen UI udpate  
 
-Die Benutzer oder Geräte, auf die Ihre Richtlinie abzielt, werden hinsichtlich der Konformität ausgewertet, wenn sie mit Intune eingecheckt werden.
+### Evaluate how many users are targeted
 
-### <a name="evaluate-how-many-users-are-targeted"></a>Auswerten der Anzahl der betroffenen Benutzer
+When you assign the policy, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
 
-Wenn Sie die Richtlinie zuweisen, können Sie auch **auswerten**, wie viele Benutzer betroffen sind. Durch diese Funktion wird eine Benutzeranzahl (jedoch keine Geräteanzahl) berechnet.
+1. In Intune, select **Devices** > **Compliance policies** > **Policies**.
 
-1. Wählen Sie in Intune **Geräte** > **Konformitätsrichtlinien** > **Richtlinien** aus.
+2. Select a *policy* > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this policy.
 
-2. Wählen Sie *Richtlinie* > **Zuweisungen** > **Bewerten** aus. Eine Meldung mit der Anzahl der von dieser Richtlinie betroffenen Benutzer wird angezeigt.
-
-Wenn die Schaltfläche **Evaluate** (Auswerten) ausgegraut ist, stellen Sie sicher, dass die Richtlinie mindestens einer Gruppe zugewiesen wurde.
-
-<!-- ## Actions for noncompliance
-
-For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
-
-[Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
-
-For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
-
-## Scope tags
-
-Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
+If the **Evaluate** button is grayed out, make sure the policy is assigned to one or more groups.
 -->
 
 ## <a name="refresh-cycle-times"></a>Aktualisierungszykluszeit
@@ -147,7 +137,7 @@ Benutzer können jederzeit die Unternehmensportal-App öffnen und das Gerät syn
 
 ### <a name="assign-an-ingraceperiod-status"></a>Zuweisung eines InGracePeriod-Status
 
-Der InGracePeriod-Status für eine Konformitätsrichtlinie ist ein Wert. Der Wert wird durch die Kombination der Toleranzzeit eines Geräts und dem tatsächlichen Status eines Geräts für diese Konformitätsrichtlinie ermittelt.
+Der InGracePeriod-Status für eine Konformitätsrichtlinie ist ein Wert. Der Wert wird durch die Kombination der Toleranzperiode eines Geräts und dem tatsächlichen Status eines Geräts in Bezug auf diese Konformitätsrichtlinie ermittelt.
 
 Im Detail bedeutet das: Wenn ein Gerät den Status „NonCompliant“ für eine zugewiesene Richtlinie aufweist und:
 
@@ -160,8 +150,8 @@ In der folgenden Tabelle werden diese Punkte zusammengefasst:
 |Tatsächlicher Konformitätsstatus|Wert der zugewiesenen Toleranzperiode|Effektiver Konformitätsstatus|
 |---------|---------|---------|
 |NonCompliant |Keine Toleranzperiode zugewiesen |NonCompliant |
-|NonCompliant |Datum vom Vortag|NonCompliant|
-|NonCompliant |Datum des folgenden Tages|InGracePeriod|
+|NonCompliant |Datum des Vortags|NonCompliant|
+|NonCompliant |Datum des folgenden Tags|InGracePeriod|
 
 Weitere Informationen zum Überwachen der Richtlinien zur Gerätekonformität finden Sie unter [Überwachen von Intune-Richtlinien zur Gerätekonformität](compliance-policy-monitor.md).
 

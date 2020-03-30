@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0733ac48aa39f611db43164137d129a3248f13d4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 936dc5d4167252fcb2280ca3c9aa8b450a924a98
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342815"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083633"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Verwalten des Webzugriffs durch einen mittels Microsoft Intune-Richtlinien geschützte Browser
 
@@ -88,6 +88,9 @@ Da Managed Browser oder Microsoft Edge nicht von Intune verwaltet werden, könne
 ## <a name="conditional-access-for-protected-browsers"></a>Bedingter Zugriff für geschützte Browser
 
 Managed Browser wurde jetzt als Client-App für bedingten Zugriff freigegeben. Das bedeutet, dass Sie den Zugriff auf mit Azure AD verbundene Web-Apps über mobile Browser einschränken können, sodass die Benutzer nur noch Managed Browser verwenden können und der Zugriff über sämtliche anderen nicht geschützten Browser wie Safari oder Chrome blockiert wird. Dieser Schutz kann auf Azure-Ressourcen wie Exchange Online, SharePoint Online, das Microsoft 365 Admin Center und sogar auf lokale Websites angewendet werden, die Sie für externe Benutzer über den [Azure AD-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) freigegeben haben. 
+
+> [!NOTE]
+> Neue Webclips (angeheftete Web-Apps) auf iOS-Geräten werden in Microsoft Edge statt in Intune Managed Browser geöffnet, wenn das Öffnen in einem geschützten Browser erforderlich ist. Ältere iOS-Webclips müssen neu zugewiesen werden, um sicherzustellen, dass sie in Microsoft Edge statt in Managed Browser geöffnet werden.
 
 Wenn Sie verhindern wollen, dass mit Azure AD verbundene Web-Apps Intune Managed Browser auf mobilen Plattformen verwenden können, können Sie eine Richtlinie für bedingten Zugriff erstellen, die zugelassene Clientanwendungen erforderlich macht. 
 

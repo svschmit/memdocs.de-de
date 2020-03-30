@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ba140f9d49cbdfbada0cb992b333a690cbb4a85
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350251"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219876"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Verwenden der Updatekanal- und Zielversionseinstellungen für das Aktualisieren von Office 365 mit den administrativen Vorlagen von Microsoft Intune
 
@@ -39,13 +39,15 @@ Gilt für:
 
 Stellen Sie sicher, dass Sie für Ihre Office-Apps [die automatischen Updates für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) aktiviert haben. Hierfür können Sie die Gruppenrichtlinie oder die Office 2016-ADMX-Vorlage für Intune verwenden:
 
-![Festlegen der Einstellung „Automatische Updates aktivieren“ in der administrativen Intune-Vorlage](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
+> [!div class="mx-imgBorder"]
+> ![Festlegen der Einstellung „Automatische Updates aktivieren“ für Office in der administrativen Intune-Vorlage](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
 
 ## <a name="set-the-update-channel-in-the-intune-administrative-template"></a>Festlegen des Updatekanals in der administrativen Intune-Vorlage
 
-1. Navigieren Sie in Ihrer [administrativen Intune-Vorlage](administrative-templates-windows.md#create-a-template) zur Einstellung **Updatekanal**, und geben Sie den gewünschten Kanal ein. Wählen Sie beispielsweise `Semi-Annual Channel` aus:
+1. Navigieren Sie in Ihrer [administrativen Intune-Vorlage](administrative-templates-windows.md#create-the-template) zur Einstellung **Updatekanal**, und geben Sie den gewünschten Kanal ein. Wählen Sie beispielsweise `Semi-Annual Channel` aus:
 
-    ![Festlegen der Einstellung „Updatekanal“ für Office in der administrativen Intune-Vorlage](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
+    > [!div class="mx-imgBorder"]
+    > ![Festlegen der Einstellung „Updatekanal“ für Office in der administrativen Intune-Vorlage](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
 
     > [!NOTE]
     > Es wird empfohlen, häufiger zu aktualisieren. Der Kanalname „halbjährlich“ dient nur als Beispiel.
@@ -53,7 +55,7 @@ Stellen Sie sicher, dass Sie für Ihre Office-Apps [die automatischen Updates f�
 2. Stellen Sie sicher, dass Sie Ihren Windows 10-Geräten [die Richtlinie zuweisen](device-profile-assign.md). Sie können die Richtlinie auch synchronisieren, um Ihre Richtlinie früher überprüfen zu können:
 
     - [Synchronisieren der Richtlinie in Intune](../remote-actions/device-sync.md)
-    - [Manuelles Synchronisieren der Richtlinie auf dem Gerät](https://docs.microsoft.com/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [Manuelles Synchronisieren der Richtlinie auf dem Gerät](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
 
 ## <a name="check-the-intune-registry-keys"></a>Überprüfen der Intune-Registrierungsschlüssel
 
@@ -72,7 +74,8 @@ Nachdem Sie die Richtlinien- und die Gerätesynchronisierungen zugewiesen haben,
 
     Im folgenden Beispiel sehen Sie, dass `L_UpdateBranch` einen ähnlichen Wert wie `<enabled /><data id="L_UpdateBranchID" value="Deferred" />` hat. Dieser Wert bedeutet, dass er auf „halbjährlicher Kanal“ festgelegt ist:
 
-    ![Beispiel der administrativen Vorlage „L_Updatebranch“ für den Registrierungsschlüssel](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![Beispiel des Registrierungsschlüssels der administrativen Vorlage „L_Updatebranch“](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
     > Im Artikel [Verwalten von Office 365 ProPlus mit dem Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) finden Sie die Werte und deren Bedeutung. Die Registrierungswerte basieren auf dem ausgewählten Verteilungskanal:
@@ -99,7 +102,8 @@ An diesem Punkt wird die Intune-Richtlinie erfolgreich auf das Gerät angewendet
 
     Im folgenden Beispiel ist der Wert `UpdateChannel` auf `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60` festgelegt, der **monatlich** ist:
 
-    ![Beispiel der administrativen Office-Vorlage „UpdateChannel“ für den Registrierungsschlüssel](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![Beispiel des Registrierungsschlüssels der administrativen Office-Vorlage „UpdateChannel“](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
 
     Dieses Beispiel bedeutet, dass die Richtlinie noch nicht angewendet wird, da sie immer noch auf **monatlich** anstatt auf **halbjährlich** festgelegt ist.
 
@@ -120,7 +124,8 @@ Sie können die Richtlinieneinstellungen auf dem Gerät erzwingen, um die Richtl
     2. Klappen Sie **Task Scheduler** > **Microsoft** > **Office** (Aufgabenplanungsbibliothek > Microsoft > Office) auf.
     3. Wählen Sie **Office Automatic Updates 2.0** > **Run** (Automatische Office-Updates 2.0 > Ausführen) aus:
 
-        ![Öffnen der „Task Schedule“ (Aufgabenplanung) und Ausführen der automatischen Office-Updates](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
+        > [!div class="mx-imgBorder"]
+        > ![Öffnen der Aufgabenplanung und Ausführen der automatischen Office-Updates](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
 
         Warten Sie, bis die Aufgabe abgeschlossen ist, was einige Minuten in Anspruch nehmen kann.
 
@@ -138,11 +143,12 @@ Wenn Sie weitere Schritte durchführen möchten, können Sie das Update der neue
 
 1. Vergewissern Sie sich, dass die Office-Version den von Ihnen gewählten Updatekanal unterstützt. Im Artikel [Updateverlauf für Office 365 ProPlus (nach Datum)](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) finden Sie die Buildnummern, die die unterschiedlichen Updatekanäle unterstützen.
 
-2. Navigieren Sie in Ihrer [administrativen Intune-Vorlage](administrative-templates-windows.md#create-a-template) zur Einstellung **Zielversion**, und geben Sie die gewünschte Version ein.
+2. Navigieren Sie in Ihrer [administrativen Intune-Vorlage](administrative-templates-windows.md#create-the-template) zur Einstellung **Zielversion**, und geben Sie die gewünschte Version ein.
 
     Ihre Einstellung **Zielversion** ähnelt der folgenden Einstellung:
 
-    ![Festlegen der Einstellung „Zielversion“ in der administrativen Intune-Vorlage für Office](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
+    > [!div class="mx-imgBorder"]
+    > ![Festlegen der Einstellung „Zielversion“ für Office in der administrativen Intune-Vorlage](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
 
 > [!IMPORTANT]
 >
@@ -167,7 +173,8 @@ Befolgen Sie diese Schritte, um die Richtlinie zu überprüfen, bevor Sie die Ri
       1. Navigieren Sie zu `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version` auf dem Gerät.
       2. Öffnen Sie die `VersionDescriptor.xml`-Datei, und navigieren Sie zum Abschnitt `<Version>`. Die verfügbare Version sollte die gleiche wie die in der Intune-Richtlinie eingegebene Version sein, wie z. B.:
 
-          ![Überprüfen des Abschnitts „Version“ des Versionsdeskriptors der Office-XML-Datei](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
+          > [!div class="mx-imgBorder"]
+          > ![Überprüfen des Abschnitts „Version“ in der Office-XML-Datei mit dem Versionsdeskriptor](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
 
 4. Nachdem das Update installiert wurde, sollte die Office-App die neue Version anzeigen (z. B. im Menü **Konto**).
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b706ea076ebcc239904a9ae918389ccafa287ec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339955"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084061"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Erstellen eines Geräteprofils in Microsoft Intune
 
@@ -52,7 +52,7 @@ Inhalt dieses Artikels
    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
    - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:  
 
-       - **Android**
+       - **Android-Geräteadministrator**
        - **Android Enterprise**
        - **iOS/iPadOS**
        - **macOS**
@@ -68,12 +68,14 @@ Inhalt dieses Artikels
        - [Übermittlungsoptimierung](delivery-optimization-windows.md)
        - [Gerätefeatures](device-features-configure.md)
        - [Geräteeinschränkungen](device-restrictions-configure.md)
+       - [Domänenbeitritt](domain-join-configure.md)
        - [Editionsupgrade und Moduswechsel](edition-upgrade-configure-windows-10.md)
        - [Bildungswesen](education-settings-configure.md)
        - [E-Mail](email-settings-configure.md)
        - [Endpoint Protection](../protect/endpoint-protection-configure.md)
        - [Identity Protection](../protect/identity-protection-configure.md)  
        - [Kiosk](kiosk-settings.md)
+       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [PKCS-Zertifikat](../protect/certficates-pfx-configure.md)
        - [Importiertes PKCS-Zertifikat](../protect/certificates-imported-pfx-configure.md)
        - [Einstellungsdatei](preference-file-settings-macos.md)
@@ -82,12 +84,12 @@ Inhalt dieses Artikels
        - [Updaterichtlinien](../protect/software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [WLAN](wi-fi-settings-configure.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [Windows Information Protection](../protect/windows-information-protection-configure.md)
 
      Wenn Sie beispielsweise **iOS/iPadOS** für die Plattform auswählen, werden Ihnen Profiltypoptionen ähnlich den folgenden angezeigt:
 
-     ![Erstellen eines iOS/iPadOS-Profils in Intune](./media/device-profile-create/create-device-profile.png)
+     > [!div class="mx-imgBorder"]
+     > ![Erstellen eines iOS/iPadOS-Profils in Intune](./media/device-profile-create/create-device-profile.png)
 
 4. Wählen Sie anschließend **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern. Das Profil wird erstellt und in der Liste angezeigt.
 
@@ -138,7 +140,8 @@ Beim Zuweisen von Profilen zu Gruppen fungieren die Anwendbarkeitsregeln als Fil
 
 1. Wählen Sie **Anwendbarkeitsregeln** aus. Sie können die **Regel**, die **Eigenschaft** und die **Betriebssystemedition** auswählen:
 
-    ![Hinzufügen einer Anwendbarkeitsregel zu einem Gerätekonfigurationsprofil in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    > [!div class="mx-imgBorder"]
+    > ![Hinzufügen einer Anwendbarkeitsregel zu einem Gerätekonfigurationsprofil in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
 
 2. Wählen Sie unter **Regel** aus, ob Sie Benutzer oder Gruppen einschließen oder ausschließen möchten. Folgende Optionen sind verfügbar:
 
@@ -184,7 +187,8 @@ Erstellen Sie Profile unter Berücksichtigung folgender Empfehlungen:
 
   Die folgende Abbildung zeigt ein Beispiel einer Einstellung, die für Benutzer und/oder Geräte gelten kann:
 
-  ![Intune-Administratorvorlage, die für Benutzer und Geräte gilt](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > [!div class="mx-imgBorder"]
+  > ![Intune-Administratorvorlage, die für Benutzer und Geräte gilt](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - Jedes Mal, wenn Sie eine einschränkende Richtlinie erstellen, sollten Sie diese Änderung Ihren Benutzern mitteilen. Wenn Sie z. B. die Kennungsanforderung von vier auf sechs Zeichen ändern, informieren Sie Ihre Benutzer, bevor Sie die Richtlinie zuweisen.
 

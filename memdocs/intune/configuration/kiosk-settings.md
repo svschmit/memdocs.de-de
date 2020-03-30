@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f8d7a2f8944535cb16f6cd01c117799a3c92904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343387"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086901"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Geräteeinstellungen bei Windows 10 und Windows Holographic for Business zur Ausführung als dedizierter Kiosk mit Intune
 
@@ -54,7 +54,7 @@ In diesem Artikel erfahren Sie, wie Sie ein Gerätekonfigurationsprofil erstelle
     - **Einzelne App, Vollbildkiosk:** Das Gerät wird mit einem einzelnen Benutzerkonto ausgeführt und kann nur auf eine einzige Store-App zugreifen. Wenn sich der Benutzer anmeldet, wird so eine bestimmte App gestartet. Dieser Modus hindert den Benutzer auch daran, neue Apps zu öffnen oder die App zu ändern, die ausgeführt wird.
     - **Kiosk mit mehreren Apps:** Das Gerät führt mehrere Store-Apps, Win32-Apps oder Windows-Posteingangs-Apps unter Verwendung der Anwendungsbenutzermodell-ID (AUMID) aus. Nur die von Ihnen hinzugefügten Apps sind auf dem Gerät verfügbar.
 
-        Der Vorteil eines Kiosks mit mehreren Apps oder eines Geräts mit festem Zweck ist ein leicht verständlicher Prozess für die Benutzer, da diese nur auf die Apps zugreifen, die sie benötigen. Apps, die sie nicht benötigen, werden aus der Ansicht entfernt.
+        Der Vorteil eines Kiosks mit mehreren Apps oder eines Geräts mit festem Zweck ist ein leicht verständlicher Prozess für die Benutzer, da diese nur auf die Apps zugreifen, die sie benötigen. Zudem werden Apps, die Benutzer nicht benötigen, aus der Ansicht entfernt.
 
     Eine Liste aller Einstellungen und ihrer Funktionen finden Sie unter:
       - [Windows 10-Kioskeinstellungen](kiosk-settings-windows.md)
@@ -69,7 +69,7 @@ Das Profil wird erstellt und in der Profilliste angezeigt. [Weisen](device-profi
 [Zuweisen von Profilen](device-profile-assign.md) und [Überwachen von Profilen](device-profile-monitor.md)
 
 Sie können Kioskprofile für Geräte erstellen, die die folgenden Plattformen ausführen:
-- [Android](device-restrictions-android.md#kiosk)
+- [Android-Geräteadministrator](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
 - [Windows 10 und höher](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

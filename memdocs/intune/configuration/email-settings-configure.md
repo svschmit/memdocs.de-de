@@ -1,12 +1,12 @@
 ---
 title: Konfigurieren von E-Mail-Einstellungen in Microsoft Intune – Azure | Microsoft-Dokumentation
 titleSuffix: ''
-description: Erstellen Sie ein E-Mail-Profil in Microsoft Intune, und stellen Sie dieses Profil auf Android Enterprise-, iOS-, iPadOS- und Windows-Geräten bereit. Verwenden Sie ein E-Mail-Profil, um allgemeine E-Mail-Einstellungen zu konfigurieren, einschließlich eines E-Mail-Servers und der Authentifizierungsmethode für die Verbindungsherstellung mit Unternehmens-E-Mails auf von Ihnen verwalteten Geräten.
+description: Erstellen Sie ein E-Mail-Profil in Microsoft Intune, und stellen Sie dieses Profil im Android-Geräteadministrator sowie auf Android Enterprise-, iOS-, iPadOS- und Windows-Geräten bereit. Verwenden Sie E-Mail-Profile, um allgemeine E-Mail-Einstellungen zu konfigurieren, einschließlich E-Mail-Server und Authentifizierungsmethoden für die Verbindungsherstellung mit Unternehmens-E-Mails auf von Ihnen verwalteten Geräten.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3921da0032fdc0b28ff21812b99029d22fbbb27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364239"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086986"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Hinzufügen von E-Mail-Einstellungen für Geräte mit Intune
 
@@ -29,7 +29,7 @@ Microsoft Intune umfasst verschiedene E-Mail-Einstellungen, die Sie für Geräte
 
 Sie können E-Mail-Profile verwenden, um die integrierten E-Mail-Einstellungen auf den folgenden Geräten zu konfigurieren:
 
-- Android Samsung KNOX Standard 4.0 und höher
+- Android-Geräteadministrator auf Geräten mit Samsung Knox Standard 4.0 und höher
 - Android Enterprise
 - iOS 8.0 und höher
 - iOS 13.0 und höher
@@ -38,35 +38,48 @@ Sie können E-Mail-Profile verwenden, um die integrierten E-Mail-Einstellungen a
 
 Dieser Artikel zeigt, wie Sie ein E-Mail-Profil in Microsoft Intune erstellen. Außerdem werden Links zu verschiedenen Plattformen mit Informationen zu spezifischeren Einstellungen bereitgestellt.
 
-## <a name="create-a-device-profile"></a>Erstellen eines Geräteprofils
+## <a name="create-the-profile"></a>Erstellen des Profils
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 3. Geben Sie die folgenden Eigenschaften ein:
 
-    - **Name:** Geben Sie einen aussagekräftigen Namen für die Richtlinie ein. Benennen Sie Ihre Richtlinien so, dass Sie diese später leicht wiedererkennen. Ein sinnvoller Richtlinienname ist beispielsweise **E-Mail-Einstellungen für alle Windows-Geräte**.
-    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
-    - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:
+    - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:  
 
-        - **Android** (nur Samsung Android KNOX Standard)
+        - **Android-Geräteadministrator** (nur Samsung Android Knox Standard)
         - **Android Enterprise**
         - **iOS/iPadOS**
-        - **Windows Phone 8.1**
         - **Windows 10 und höher**
+        - **Windows Phone 8.1**
 
-    - **Profiltyp**: Wählen Sie **E-Mail** aus.
+    - **Profil**: Wählen Sie **E-Mail** aus.
 
-4. Die konfigurierbaren Einstellungen variieren je nach der ausgewählten Plattform. Wählen Sie Ihre Plattform für detaillierte Einstellungen aus:
+4. Wählen Sie **Erstellen** aus.
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
 
-    - [Android Samsung Knox Standard-Einstellungen](email-settings-android.md)
-    - [Android Enterprise-Einstellungen](email-settings-android-enterprise.md)
-    - [iOS/iPadOS-Einstellungen](email-settings-ios.md)
-    - [Einstellungen für Windows Phone 8.1](email-settings-windows-phone-8-1.md)
-    - [Einstellungen für Windows 10](email-settings-windows-10.md)
+    - **Name:** Geben Sie einen aussagekräftigen Namen für die Richtlinie ein. Benennen Sie Ihre Richtlinien so, dass Sie diese später leicht wiedererkennen. Ein guter Richtlinienname ist beispielsweise **Windows 10: E-Mail-Einstellungen für alle Windows 10-Geräte**.
+    - **Beschreibung:** Geben Sie eine Beschreibung für die Richtlinie ein. Diese Einstellung ist optional, wird jedoch empfohlen.
 
-5. Wenn Sie fertig sind, wählen Sie **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern.
+6. Wählen Sie **Weiter** aus.
 
-Nachdem Sie Ihre Einstellungen eingegeben und das Profil erstellt haben, wird das Profil in der Liste angezeigt. Im nächsten Schritt [weisen Sie dieses Profil nun einigen Gruppen zu](device-profile-assign.md).
+7. Die verfügbaren **Konfigurationseinstellungen** variieren je nach ausgewählter Plattform. Wählen Sie Ihre Plattform für detaillierte Einstellungen aus:
+
+    - [Android-Geräteadministrator (Samsung Knox Standard)](email-settings-android.md)
+    - [Android Enterprise](email-settings-android-enterprise.md)
+    - [iOS/iPadOS](email-settings-ios.md)
+    - [Windows 10](email-settings-windows-10.md)
+    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
+
+8. Wählen Sie **Weiter** aus.
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
+
+    Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen Ihr Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+11. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf **Erstellen** klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
 
 ## <a name="remove-an-email-profile"></a>Entfernen eines E-Mail-Profils
 
@@ -104,4 +117,4 @@ Wenn Sie ein zuvor zugewiesenes E-Mail-Profil ändern, werden Endbenutzer mögli
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Das Profil ist nun erstellt, führt aber noch keine Aktionen durch. [Weisen Sie anschließend das Profil zu](device-profile-assign.md).
+Das Profil ist nun erstellt, führt aber noch keine Aktionen durch. Die nächsten Schritte sind das [Zuweisen von Benutzer- und Geräteprofilen in Microsoft Intune](device-profile-assign.md) und das [Überwachen von Geräteprofilen in Microsoft Intune](device-profile-monitor.md).

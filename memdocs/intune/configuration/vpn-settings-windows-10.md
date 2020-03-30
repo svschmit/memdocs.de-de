@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f2998c6b166e1f45c839d7006551867b8deb80
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364083"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086505"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Geräteeinstellungen für Windows 10 und Windows Holographic zum Hinzuzufügen von VPN-Verbindungen mithilfe von Intune
-
-
 
 Sie können VPN-Verbindungen für Geräte mithilfe von Microsoft Intune hinzufügen und konfigurieren. In diesem Artikel werden häufig verwendete Einstellungen und Features für das Erstellen von virtuellen privaten Netzwerken (VPNs) aufgeführt und erläutert. Diese VPN-Einstellungen und Features werden in den Gerätekonfigurationsprofilen in Intune verwendet, die über Push auf Geräte übertragen oder auf Geräten bereitgestellt werden.
 
@@ -68,10 +66,10 @@ Abhängig von den ausgewählten Einstellungen können nicht alle der aufgeführt
   - **PPTP**
 
   Wenn Sie einen VPN-Verbindungstyp auswählen, werden Sie möglicherweise aufgefordert, folgende Einstellungen vorzunehmen:  
-  - **Immer aktiv:** **Aktivieren** Sie diese Option, um die VPN-Verbindung automatisch bei folgenden Ereignissen herzustellen: 
+  - **Immer aktiv:** **Aktivieren** Sie diese Option, um die VPN-Verbindung automatisch bei folgenden Ereignissen herzustellen:
     - Benutzer melden sich an ihren Geräten an.
     - Das Netzwerk auf dem Gerät ändert sich.
-    - Der Bildschirm wird auf dem Gerät wieder eingeschaltet, nachdem er ausgeschaltet war. 
+    - Der Bildschirm wird auf dem Gerät wieder eingeschaltet, nachdem er ausgeschaltet war.
 
   - **Authentifizierungsmethode**: Wählen Sie aus, wie Benutzer sich beim VPN-Server authentifizieren sollen. Die Verwendung von **Zertifikaten** bietet erweiterte Features, z.B. Authentifizierung ohne Benutzereingriff, bedarfsgesteuertes VPN und Pro-App-VPN.
   - **Anmeldeinformationen bei jeder Anmeldung speichern:** Wählen Sie diese Option aus, wenn die Anmeldeinformationen für die Authentifizierung zwischengespeichert werden sollen.

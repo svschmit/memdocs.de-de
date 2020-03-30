@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 63090c61039c5029e6a8b80f53232191e1beb99a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347066"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233416"
 ---
 # <a name="what-is-device-enrollment"></a>Was ist die Geräteregistrierung?
 Wenn Sie von Ihrem Gerät aus auf Geschäfts-, Schul- oder Uniressourcen zugreifen möchten, müssen Sie Ihr Gerät im Intune-Unternehmensportal oder der Microsoft Intune-App registrieren. 
@@ -111,5 +111,3 @@ Wenn Sie auf Ihr Geschäfts-, Schul- oder Unikonto zugreifen möchten, befolgen 
 * [Registrieren eines von Ihrer Organisation bereitgestellten iOS-Geräts](enroll-your-device-dep-ios.md)
 * [Registrieren Ihres macOS-Geräts](enroll-your-device-in-intune-macos-cp.md)
 * [Registrieren eines von Ihrer Organisation bereitgestellten macOS-Geräts](enroll-company-device-macos.md)
-
-

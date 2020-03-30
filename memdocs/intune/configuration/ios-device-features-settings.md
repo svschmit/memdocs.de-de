@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 351c6ade59d98ce620b939c5ff6238e650390a5f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361080"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086960"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- und iPadOS-Geräteeinstellungen zur Verwendung gängiger iOS/iPadOS-Features in Intune
 
-Intune umfasst einige integrierte Einstellungen, damit iOS/iPadOS-Benutzer verschiedene Apple-Features auf ihren Geräten nutzen können. Administratoren können beispielsweise steuern, wie iOS/iPadOS-Benutzer AirPrint-Drucker verwenden, Apps und Ordner zum Dock und zu den Seiten auf dem Startbildschirm hinzufügen, App-Benachrichtigungen anzeigen, Details zu Bestandskennzeichen auf dem Sperrbildschirm anzeigen, Authentifizierung für einmaliges Anmelden verwenden und Benutzer mit Zertifikaten authentifizieren.
+Intune umfasst einige integrierte Einstellungen, damit iOS/iPadOS-Benutzer verschiedene Apple-Features auf ihren Geräten nutzen können. Sie können beispielsweise AirPrint-Drucker steuern, Apps und Ordner dem Dock und den Seiten des Startbildschirms hinzufügen, App-Benachrichtigungen anzeigen, Details zu Bestandskennzeichen auf dem Sperrbildschirm anzeigen, Authentifizierung für einmaliges Anmelden und Zertifikatauthentifizierung verwenden.
 
 Nutzen Sie diese Features, um iOS/iPadOS-Geräte im Rahmen Ihrer MDM-Lösung (Mobile Device Management, Verwaltung mobiler Geräte) zu verwalten.
 
@@ -48,7 +48,7 @@ In diesem Artikel werden diese Einstellungen mit ihren Funktionsbeschreibungen a
 - **IP-Adresse**: Geben Sie die IPv4- oder IPv6-Adresse des Druckers ein. Wenn Sie den Hostnamen verwenden, um Drucker zu identifizieren, erhalten Sie die IP-Adresse, indem Sie den Drucker am Terminal pingen. Der Abschnitt über das Abrufen von IP-Adresse und Pfad (in diesem Artikel) enthält weitere Details.
 - **Pfad:** Der Pfad ist für Drucker in Ihrem Netzwerk in der Regel `ipp/print`. Der Abschnitt über das Abrufen von IP-Adresse und Pfad (in diesem Artikel) enthält weitere Details.
 - **Port:** Geben Sie den Lauschport des AirPrint-Ziels ein. Wenn Sie diese Eigenschaft leer lassen, verwendet AirPrint den Standardport. In iOS 11.0+ und iPadOS 13.0+ verfügbar.
-- **TLS**: Wählen Sie **Aktivieren**, um AirPrint-Verbindungen mit Transport Layer Security (TLS) zu sichern. In iOS 11.0+ und iPadOS 13.0+ verfügbar.
+- **TLS**: **Aktivieren** sichert AirPrint-Verbindungen mit Transport Layer Security (TLS). In iOS 11.0+ und iPadOS 13.0+ verfügbar.
 
 Zum Hinzufügen von AirPrint-Servern können Sie folgende Schritte ausführen:
 
@@ -81,7 +81,7 @@ Diese Funktion gilt für:
 
 ### <a name="dock"></a>Dock
 
-Mit den **Dock**-Einstellungen können Sie dem Dock des iOS/iPadOS-Bildschirms bis zu sechs Elemente oder Ordner hinzufügen. Viele Geräte unterstützen weniger Elemente. Beispielsweise unterstützen iPhone-Geräte bis zu vier Elemente. In diesem Fall werden nur die ersten vier Elemente, die Sie hinzugefügt haben, auf dem Gerät angezeigt.
+Mit der Einstellung **Dock** können Sie dem Dock des Bildschirms bis zu sechs Elemente oder Ordner hinzufügen. Viele Geräte unterstützen weniger Elemente. Beispielsweise unterstützen iPhone-Geräte bis zu vier Elemente. In diesem Fall werden nur die ersten vier Elemente, die Sie hinzugefügt haben, auf dem Gerät angezeigt.
 
 Sie können für den Gerätedock bis zu **sechs** Elemente hinzufügen (Apps und Ordner kombiniert).
 
@@ -283,8 +283,32 @@ Diese Funktion gilt für:
 - **Typ der SSO-App-Erweiterung:** Wählen Sie den Typ der SSO-App-Erweiterung aus. Folgende Optionen sind verfügbar:
 
   - **Nicht konfiguriert:** Es werden keine App-Erweiterungen verwendet. Um eine App-Erweiterung zu deaktivieren, können Sie den Typ der SSO-App-Erweiterung in **Nicht konfiguriert** ändern.
-  - **Umleiten:** Verwenden Sie eine generische, anpassbare App-Erweiterung für die Umleitung, um das einmalige Anmelden (Single Sign-On, SSO) mit modernen Authentifizierungsflows zu unterstützen. Stellen Sie sicher, dass Sie die Erweiterungs-ID für die App-Erweiterung Ihrer Organisation kennen.
-  - **Anmeldeinformationen:** Verwenden Sie eine generische, anpassbare App-Erweiterung für Anmeldeinformationen, um das einmalige Anmelden mit Challenge-Response-Authentifizierungsflows zu unterstützen. Stellen Sie sicher, dass Sie die Erweiterungs-ID für die App-Erweiterung Ihrer Organisation kennen.
+  - **Umleiten:** Verwenden Sie eine generische, anpassbare App-Erweiterung für die Umleitung, um das einmalige Anmelden (Single Sign-On, SSO) mit modernen Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterungs-ID für die App-Erweiterung Ihrer Organisation kennen.
+
+    Auf Geräten mit iOS/iPadOS 13.0+-Geräten können Sie die **Microsoft Azure AD SSO-App-Erweiterung** mit diesem Umleitungs-SSO-App-Erweiterungstyp konfigurieren. Die Microsoft Azure AD-Erweiterung ermöglicht das einmalige Anmelden zwischen Microsoft-Apps und Organisations-Apps, die Azure AD für die Authentifizierung verwenden. Die Azure AD-Erweiterung fungiert als erweiterter Authentifizierungsbroker, der Sicherheits- und Endbenutzerverbesserungen bietet. Alle Apps, die bisher eine brokerbasierte Authentifizierung über die Microsoft Authenticator-App verwendet haben, können das einmalige Anmelden mit der neuen SSO-Erweiterung weiterhin nutzen. Die Azure AD SSO-Erweiterung unterstützt noch kein Browser-SSO. Weitere Informationen zu SSO und dem iOS/iPadOS-Authentifizierungsbroker finden Sie unter [Gewusst wie: Konfigurieren von SSO unter macOS und iOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+
+    **So konfigurieren Sie die iOS Microsoft Azure AD-Erweiterung:**
+
+    1. Legen Sie den **SSO-App-Erweiterungstyp** auf **Umleitung** fest.
+    2. Legen Sie für die **Erweiterungs-ID** `com.microsoft.azureauthenticator.ssoextension` fest.
+    3. Legen Sie **Team-ID** auf `SGGM6D27TK`fest.
+    4. Geben Sie in der Einstellung **URLs** die folgenden URLs ein:
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > Um einmaliges Anmelden mit der iOS/iPadOS-Microsoft Azure AD-Erweiterung zu erreichen, installieren Sie zuerst die iOS/iPadOS-Microsoft Authenticator-App auf dem Gerät. Der Authentifikator übergibt die Azure AD-Erweiterung an das Gerät, und die Einstellungen für die MDM-SSO-App-Erweiterung aktivieren die Azure AD-Erweiterung. Nachdem der Authentifikator und das SSO-App-Erweiterungs Profil auf dem Gerät installiert sind, müssen die Benutzer ihre Anmeldeinformationen eingeben, um sich anzumelden und eine Sitzung einzurichten. Diese Sitzung wird dann für verschiedene Anwendungen verwendet, ohne dass sich die Benutzer erneut authentifizieren müssen.
+
+  - **Anmeldeinformationen:** Verwenden Sie eine generische, anpassbare App-Erweiterung für Anmeldeinformationen, um das einmalige Anmelden mit Challenge-Response-Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterungs-ID für die App-Erweiterung Ihrer Organisation kennen.
   - **Kerberos**: Verwenden Sie die integrierte Kerberos-Erweiterung von Apple, die in iOS 13.0 und höher und iPadOS 13.0 und höher enthalten ist. Bei dieser Option handelt es sich um eine Kerberos-spezifische Version der App-Erweiterung vom Typ **Anmeldeinformationen**.
 
   > [!TIP]
@@ -303,7 +327,7 @@ Diese Funktion gilt für:
   - Alle Domänen in den Intune-Profilen für Ihre SSO-App-Erweiterung müssen eindeutig sein. Sie können eine Domäne nicht mehrfach in einem SSO-App-Erweiterungsprofil verwenden – selbst dann nicht, wenn Sie verschiedene Arten von SSO-App-Erweiterungen verwenden.
   - Für diese Domänen erfolgt keine Beachtung der Groß-/Kleinschreibung.
 
-- **URLs** (nur „Umleiten“): Geben Sie die URL-Präfixe der Identitätsanbieter ein, in deren Auftrag die Umleitungs-App-Erweiterung die SSO-Authentifizierung durchführt. Wenn ein Benutzer an diese URLs umgeleitet wird, greift die SSO-App-Erweiterung und fordert eine SSO-Authentifizierung an.
+- **URLs** (nur „Umleiten“): Geben Sie die URL-Präfixe der Identitätsanbieter ein, in deren Auftrag die Umleitungs-App-Erweiterung die SSO-Authentifizierung nutzt. Wenn Benutzer an diese URLs umgeleitet werden, greift die SSO-App-Erweiterung ein und fordert eine SSO-Authentifizierung an.
 
   - Alle URLs in Ihren Intune-SSO-Erweiterungsprofilen müssen eindeutig sein. Sie können eine Domäne nicht mehrfach in einem SSO-App-Erweiterungsprofil verwenden – selbst dann nicht, wenn Sie verschiedene Arten von SSO-App-Erweiterungen verwenden.
   - Die URLs müssen mit „http://“ oder „https://“ beginnen.

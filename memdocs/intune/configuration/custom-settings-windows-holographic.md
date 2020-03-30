@@ -1,11 +1,11 @@
 ---
-title: Benutzerdefinierte Einstellungen – Windows Holographic for Business-Geräte – Microsoft Intune
+title: Benutzerdefinierte Einstellungen – Windows Holographic for Business-Geräte – Microsoft Intune | Microsoft-Dokumentation
 description: 'Fügen Sie ein benutzerdefiniertes Profil zur Verwendung der OMA-URI-Einstellungen für Windows Holographic for Business-Geräte in Microsoft Intune (einschließlich Microsoft Hololens) hinzu, oder erstellen Sie ein solches Profil. Sie können die folgenden Einstellungen für den Konfigurationsdienstanbieter für Richtlinien verwenden: AllowFastReconnect, AllowVPN, AllowUpdateService, UpdateServiceURL, RequireUpdatesApproval, ApprovedUpdates und ApplicationLaunchRestrictions.'
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/19/2020
 ms.article: article
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e72995942ebbc9fbcd35697bc525c9af75e77d18
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 43199009740f259c6a6484e455b0205da76492ba
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361899"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084048"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Verwenden von benutzerdefinierten Einstellungen für Windows Holographic for Business-Geräte in Intune
 
@@ -93,12 +93,12 @@ Die folgenden Einstellungen sind nützlich für Geräte unter Windows Holographi
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Ganze Zahl<br/>0 – Nicht zulässig<br/>1 – Zulässig (Standard)|
 
-### <a name="requireupdatesapproval"></a>[RequireUpdatesApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
+### <a name="requireupdateapproval"></a>[RequireUpdateApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datentyp|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Ganze Zahl<br/>0 – Nicht konfiguriert Das Gerät installiert alle anwendbaren Updates.<br/>1 – Das Gerät installiert nur Updates, die anwendbar sind und in der Liste der genehmigten Updates stehen. Legen Sie diese Richtlinie auf 1 fest, wenn die IT die Bereitstellung von Updates auf Geräten steuern möchte, etwa wenn vor der Bereitstellung Tests erforderlich sind.|
+> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Diese Einstellung ist in RS5 (Build 17763) und früher verfügbar. Ab 19H1 (Build 18362) verwenden Sie [Windows Update for Business](../protect/windows-update-for-business-configure.md).<br/><br/>Ganze Zahl<br/>0 – Nicht konfiguriert Das Gerät installiert alle anwendbaren Updates.<br/>1 – Das Gerät installiert nur Updates, die anwendbar sind und in der Liste der genehmigten Updates stehen. Legen Sie diese Richtlinie auf 1 fest, wenn die IT die Bereitstellung von Updates auf Geräten steuern möchte, etwa wenn vor der Bereitstellung Tests erforderlich sind.|
 
 ### <a name="scheduledinstalltime"></a>[ScheduledInstallTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
 
@@ -112,7 +112,7 @@ Die folgenden Einstellungen sind nützlich für Geräte unter Windows Holographi
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datentyp|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Zeichenfolge<br/>URL – Das Gerät prüft, ob an der angegebenen URL Updates vom WSUS-Server vorliegen.<br/>Nicht konfiguriert – Das Gerät prüft, ob Updates von Microsoft Update vorliegen.|
+> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Diese Einstellung ist in RS5 (Build 17763) und früher verfügbar. Ab 19H1 (Build 18362) verwenden Sie [Windows Update for Business](../protect/windows-update-for-business-configure.md).<br/><br/>Zeichenfolge<br/>URL – Das Gerät prüft, ob an der angegebenen URL Updates vom WSUS-Server vorliegen.<br/>Nicht konfiguriert – Das Gerät prüft, ob Updates von Microsoft Update vorliegen.|
 
 ### <a name="approvedupdates"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
 

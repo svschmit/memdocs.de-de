@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724e425ab284d63dbe1e64dcd236509744abe10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50d32a76e638d88adc7a72d103c84e73544079cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352344"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084889"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Verwenden abgeleiteter Anmeldeinformationen in Microsoft Intune
 
@@ -106,7 +106,7 @@ Im Folgenden finden Sie wichtige Überlegungen zu jedem unterstützten Partner. 
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-Überprüfen Sie den [Benutzerworkflow für DISA Purebred](https://docs.microsoft.com/user-help/enroll-ios-device-disa-purebred). Zu den wichtigsten Anforderungen für diesen Workflow gehören folgende:
+Überprüfen Sie den [Benutzerworkflow für DISA Purebred](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred). Zu den wichtigsten Anforderungen für diesen Workflow gehören folgende:
 
 - Benutzer benötigen Zugriff auf einen Computer oder KIOSK, auf dem Sie Ihre Smartcard zum Authentifizieren beim Zertifikataussteller verwenden können.
 
@@ -122,7 +122,7 @@ Informationen zum Abrufen und Konfigurieren der DISA Purebred-App finden Sie sp�
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-Überprüfen Sie den [Benutzerworkflow für Entrust Datacard](https://docs.microsoft.com/user-help/enroll-ios-device-entrust-datacard). Zu den wichtigsten Anforderungen für diesen Workflow gehören folgende:
+Überprüfen Sie den [Benutzerworkflow für Entrust Datacard](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard). Zu den wichtigsten Anforderungen für diesen Workflow gehören folgende:
 
 - Benutzer benötigen Zugriff auf einen Computer oder KIOSK, auf dem Sie Ihre Smartcard zum Authentifizieren beim Zertifikataussteller verwenden können.
 
@@ -132,7 +132,7 @@ Informationen zum Abrufen und Konfigurieren der DISA Purebred-App finden Sie sp�
 
 #### <a name="intercede"></a>Intercede
 
-Überprüfen Sie den [Benutzerworkflow für Intercede](https://docs.microsoft.com/user-help/enroll-ios-device-intercede). Zu den wichtigsten Anforderungen für diesen Workflow gehören folgende:
+Überprüfen Sie den [Benutzerworkflow für Intercede](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede). Zu den wichtigsten Anforderungen für diesen Workflow gehören folgende:
 
 - Benutzer benötigen Zugriff auf einen Computer oder KIOSK, auf dem Sie Ihre Smartcard zum Authentifizieren beim Zertifikataussteller verwenden können.
 
@@ -221,17 +221,34 @@ Sie können **Derived credentials** (Abgeleitete Anmeldeinformationen) für die 
 Verwenden Sie abgeleitete Anmeldeinformationen für die zertifikatbasierte Authentifizierung bei Websites und Anwendungen. So verwenden Sie abgeleitete Anmeldeinformationen zur App-Authentifizierung
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
+
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
-3. Legen Sie folgende Einstellungen fest:
 
-    - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein guter Profilname ist beispielsweise **Abgeleitete Anmeldeinformationen für iOS/iPadOS-Geräteprofile**.
-    - **Beschreibung:** Geben Sie eine Beschreibung ein, die einen Überblick über die Einstellung und andere wichtige Details bietet.
-    - **Plattform**: Wählen Sie **iOS/iPadOS** aus.
-    - **Profiltyp**: Wählen Sie **Abgeleitete Anmeldeinformationen** aus.
+3. Geben Sie die folgenden Eigenschaften ein:
+   - **Plattform**: Wählen Sie die Plattform der Geräte aus, denen dieses Profil zugewiesen werden soll.
+   - **Profil**: Wählen Sie **Abgeleitete Anmeldeinformationen** aus.
 
-4. Klicken Sie auf **OK**, um die Änderungen zu speichern.
-5. Klicken Sie anschließend auf **OK** > **Erstellen**, um das Intune-Profil zu erstellen. Das Profil wird erstellt und in der Liste **Gerätekonfiguration > Konfigurationsprofile** angezeigt.
-6. Wählen Sie Ihr neues Profil aus, und klicken Sie auf **Zuweisungen**. Wählen Sie die Gruppen aus, die die Richtlinie erhalten sollen.
+4. Wählen Sie **Erstellen** aus.
+
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
+
+   - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein guter Profilname ist beispielsweise **Abgeleitete Anmeldeinformationen für iOS/iPadOS-Geräteprofile**.
+   - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
+
+6. Wählen Sie **Weiter** aus.
+
+7. Legen Sie in **Konfigurationseinstellungen** die Option **Abgeleitete Anmeldeinformationen zur App-Authentifizierung verwenden** auf **Ja** fest, und wählen Sie dann **Weiter** aus.
+
+8. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
+
+   Wählen Sie **Weiter** aus.
+
+9. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen das Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](../configuration/device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+10. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf „Erstellen“ klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
+
  
 Benutzer erhalten die App- oder E-Mail-Benachrichtigung abhängig von den Einstellungen, die Sie beim Einrichten des Zertifikatausstellers für abgeleitete Anmeldeinformationen angegeben haben. Die Benachrichtigung informiert den Benutzer darüber, dass das Unternehmensportal gestartet werden muss, damit die Richtlinien für abgeleitete Anmeldeinformationen verarbeitet werden können.
 

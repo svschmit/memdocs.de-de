@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f12ea7e320e3334d1925c8ab04905cd84ed56c82
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341658"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083802"
 ---
 # <a name="app-protection-policies-overview"></a>Übersicht über App-Schutzrichtlinien
 
@@ -205,6 +205,9 @@ Ein Beispiel: Wenn ein Benutzer ein neues Dokument in Word startet, wird dies al
 Ein Beispiel für „Unternehmenskontext“: Ein Benutzer startet die OneDrive-App über sein Geschäftskonto. Im geschäftlichen Kontext kann er keine Dateien an einen privaten Speicherort verschieben. Wenn der Benutzer OneDrive später jedoch mit einem persönlichen Konto verwendet, kann er Daten ohne Einschränkung aus dem persönlichen OneDrive kopieren und verschieben.
 
 Outlook bietet eine kombinierte Ansicht für „persönliche“ und „geschäftliche“ E-Mails. In dieser Situation fordert die Outlook-App beim Start zur Eingabe der Intune-PIN auf.
+
+  >[!NOTE]
+  > Obwohl Edge im „Unternehmenskontext“ ausgeführt wird, können Benutzer OneDrive-Dateien aus dem „Unternehmenskontext“ absichtlich in einen unbekannten persönlichen Cloudspeicherort verschieben. Um dies zu verhindern, konfigurieren Sie die Liste der zulässigen bzw. blockierten Websites für Edge. Informationen dazu finden Sie unter [Angeben der Liste zulässiger oder blockierter Websites für Microsoft Edge](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge).
 
 Weitere Informationen zu mehreren Identitäten in Intune finden Sie unter [Durch Microsoft Intune geschützte Apps](apps-supported-intune-apps.md).
 

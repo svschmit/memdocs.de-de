@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c30cc122931588149120efa10710627826c50e2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 06d5e2163303b9766d41bcb0bd7581dc41bf6980
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337966"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219825"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Suchen des primären Benutzers eines Intune-Geräts
 
@@ -43,8 +43,11 @@ Der primäre Benutzer eines Geräts kann für Windows 10-Geräte aktualisiert we
 3. Wählen Sie einen neuen Benutzer aus, und klicken Sie auf **Auswählen**.
 
 Nachdem der primäre Benutzer aktualisiert wurde, wird er auch in Intune und auf Azure AD-Geräteblättern aktualisiert.
-
-Der primäre Benutzer kann auf gemeinsam verwalteten Windows 10-Geräten nicht geändert werden.
+>[!NOTE]
+>1. Aktualisierungen des primären Benutzers über Endpoint Manager und Azure AD können bis zu 10 Minuten in Anspruch nehmen.
+>2. Der primäre Benutzer kann derzeit auf gemeinsam verwalteten Windows 10-Geräten nicht geändert werden. 
+>3. Wenn Sie den primären Benutzer des Geräts ändern, werden keine Änderungen an der lokalen Gruppenmitgliedschaft wie z. B. Hinzufügen oder Entfernen von Benutzern aus der lokalen Gruppe „Administratoren“ vorgenommen.
+>4. Durch das Ändern des primären Benutzers wird der „Registriert durch“-Benutzer nicht geändert. 
 
 
 ## <a name="what-is-the-primary-user"></a>Was ist der primäre Benutzer?

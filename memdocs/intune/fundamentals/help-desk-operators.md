@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ec804aa200e35391c5b283d6e26ba87002e271f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359026"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085811"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Verwenden des Problembehandlungsportals zur Unterstützung von Benutzern Ihres Unternehmens
 
@@ -65,7 +65,7 @@ Sie können den Bereich **Problembehandlung** verwenden, um Benutzerinformatione
 | ---  | ---  | ---         |
 | 1.   | Kontostatus  | Zeigt den Status des aktuellen Intune-Mandanten als **Aktiv** oder **Inaktiv** an.       |
 | 2.   | Benutzerauswahl  | Der Name des aktuell ausgewählten Benutzers. Klicken Sie auf **Benutzer wechseln**, um einen neuen Benutzer auszuwählen.       |
-| 3.   | Benutzerstatus  | Zeigt den Status der Intune-Lizenz des Benutzers, die Anzahl von Geräten, die jeweilige Gerätekompatibilität, die Anzahl von Apps und die App-Kompatibilität an.       |
+| 3.   | Benutzerstatus  | Zeigt den Status der Intune-Lizenz des Benutzers, die Anzahl von Geräten und die jeweilige Gerätekompatibilität an.       |
 | 4.   | Benutzerinformationen  | Verwenden Sie die Liste in diesem Bereich, um die zu überprüfenden Details auszuwählen. <br>Sie können Folgendes auswählen: <ul><li>Client-Apps<li>Kompatibilitätsrichtlinien<li> Konfigurationsrichtlinien<li>App-Schutzrichtlinien <li>Registrierungseinschränkungen</ul>      |
 | 5.   | Gruppenmitgliedschaft  | Zeigt die aktuellen Gruppen, denen der ausgewählte Benutzer als Mitglied angehört.       |
 

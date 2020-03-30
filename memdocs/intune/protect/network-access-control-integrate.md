@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1fe46894a9905cba4267e8ff9baa949dde5709a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5bafd916ef31bea50dabb2de5012d693039ca741
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351486"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084823"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrieren der Netzwerkzugriffssteuerung (NAC) mit Intune
 
@@ -65,36 +65,35 @@ Im Folgenden erhalten Sie einen Überblick darüber, wie die Integration der Net
 8. Wenn das Gerät registriert wurde und kompatibel ist, erhält die Lösung des NAC-Partners von Intune eine Statusmeldung.
 9. Die Verbindung konnte erfolgreich hergestellt werden, und das Gerät erhält Zugriff auf Unternehmensressourcen.
 
-## <a name="use-nac-for-vpn-on-your-iosipados-devices"></a>Verwenden der NAC für ein VPN auf iOS/iPadOS-Geräten  
+## <a name="use-nac-for-vpn-on-your-iosipados-devices"></a>Verwenden der NAC für ein VPN auf iOS/iPadOS-Geräten
 
 NAC steht auf den folgenden VPNs zur Verfügung, ohne dass NAC im VPN-Profil aktiviert werden muss:
 
-  - NAC für Cisco Legacy AnyConnect
-  - F5 Access Legacy
-  - Citrix VPN
+- NAC für Cisco Legacy AnyConnect
+- F5 Access Legacy
+- Citrix VPN
 
-NAC wird auch für Cisco AnyConnect, Citrix SSO und F5 Access unterstützt. 
+NAC wird auch für Cisco AnyConnect, Citrix SSO und F5 Access unterstützt.
 
-### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>So aktivieren Sie NAC für Cisco Any Connect für iOS:
+### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Aktivieren von NAC für Cisco Any Connect für iOS
 
-  - Integrieren Sie ISE in Intune für NAC, wie im folgenden Link beschrieben wird.
-  - Legen Sie die Einstellung **Netzwerkzugriffssteuerung (NAC) aktivieren** im VPN-Profil auf **Ja** fest.
+- Integrieren Sie ISE in Intune für NAC, wie im folgenden Link beschrieben wird.
+- Legen Sie die Einstellung **Netzwerkzugriffssteuerung (NAC) aktivieren** im VPN-Profil auf **Ja** fest.
 
-### <a name="to-enable-nac-for-citrix-sso"></a>So aktivieren Sie NAC für Citrix SSO:
+### <a name="to-enable-nac-for-citrix-sso"></a>Aktivieren von NAC für Citrix SSO
 
-  - Verwenden Sie Citrix Gateway 12.0.59 oder höher.  
-  - Benutzer müssen Citrix SSO 1.1.6 oder höher installiert haben.
-  - [Integrieren Sie NetScaler in Intune für die NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html), wie in der Citrix-Produktdokumentation beschrieben wird.
-  - Wählen Sie im VPN-Profil **Basiseinstellungen** > **Netzwerkzugriffssteuerung (NAC) aktivieren** und **Ich stimme zu** aus.
+- Verwenden Sie Citrix Gateway 12.0.59 oder höher.  
+- Benutzer müssen Citrix SSO 1.1.6 oder höher installiert haben.
+- [Integrieren Sie NetScaler in Intune für die NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html), wie in der Citrix-Produktdokumentation beschrieben wird.
+- Wählen Sie im VPN-Profil **Basiseinstellungen** > **Netzwerkzugriffssteuerung (NAC) aktivieren** und **Ich stimme zu** aus.
 
+### <a name="to-enable-nac-for-f5-access"></a>Aktivieren von NAC für F5 Access
 
-### <a name="to-enable-nac-for-f5-access"></a>So aktivieren Sie NAC für F5 Access:
+- Verwenden Sie F5 BIG-IP 13.1.1.5 oder höher.
+- Integrieren Sie BIG-IP für NAC in Intune. Im F5-Leitfaden [Übersicht: Konfigurieren von APM für Gerätestatusüberprüfungen mit Endpunktverwaltungssystemen](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) sind die dazu erforderlichen Schritte aufgeführt.
+- Wählen Sie im VPN-Profil **Basiseinstellungen** > **Netzwerkzugriffssteuerung (NAC) aktivieren** und **Ich stimme zu** aus.
 
-  - Verwenden Sie F5 BIG-IP 13.1.1.5. BIG-IP 14 wird nicht unterstützt.
-  - Integrieren Sie BIG-IP für NAC in Intune. Im F5-Leitfaden [Übersicht: Konfigurieren von APM für Gerätestatusüberprüfungen mit Endpunktverwaltungssystemen](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) sind die dazu erforderlichen Schritte aufgeführt.
-  - Wählen Sie im VPN-Profil **Basiseinstellungen** > **Netzwerkzugriffssteuerung (NAC) aktivieren** und **Ich stimme zu** aus.
-
-  Die VPN-Verbindung wird alle 24 Stunden aus Sicherheitsgründen getrennt. Die VPN-Verbindung kann sofort wiederhergestellt werden.
+Die VPN-Verbindung wird alle 24 Stunden aus Sicherheitsgründen getrennt. Die VPN-Verbindung kann sofort wiederhergestellt werden.
 
 Microsoft und Partner arbeiten an einer NAC-Lösung für diese neueren Clients. Wenn Lösungen bereit sind, wird dieser Artikel mit zusätzlichen Informationen aktualisiert.
 

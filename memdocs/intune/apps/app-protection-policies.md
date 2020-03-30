@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f475f6f204225e00424e08afb8c69e20e21e815
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b8de67a77b2122c5db4dddbb82a4966c20e1936
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342022"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233512"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Erstellen und Zuweisen von App-Schutzrichtlinien
 
@@ -58,7 +58,7 @@ Befolgen Sie beim Erstellen neuer App-Schutzrichtlinien für iOS-/iPadOS- und An
 
     Der Wert **Plattform** wird basierend auf der oben von Ihnen ausgewählten Option festgelegt.
 
-    ![Screenshot der Seite „Grundeinstellungen“ im Bereich „Richtlinie erstellen“](/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Screenshot der Seite „Grundeinstellungen“ im Bereich „Richtlinie erstellen“](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Klicken Sie auf **Weiter**, um die Seite **Apps** anzuzeigen.<br>
     Auf der Seite **Apps** können Sie auswählen, wie Sie diese Richtlinie auf Apps auf verschiedenen Geräten anwenden möchten. Sie müssen mindestens eine App hinzufügen.<p>
@@ -123,7 +123,7 @@ Für eine sofortige Anzeige der Änderungen muss der Endbenutzer sich von der Ap
     
     | Wert/Option | Beschreibung |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Auf Apps auf allen Gerätetypen anwenden | Verwenden Sie diese Option, um die Richtlinie auf Apps auf Geräten mit beliebigem Verwaltungsstatus anzuwenden. Klicken Sie auf **Nein**, um die Richtlinie auf Apps auf bestimmten Gerätetypen anzuwenden. Weitere Informationen finden Sie unter [Verwendung von App-Schutzrichtlinien als Ziel, basierend auf dem Status der Geräteverwaltung](#target-app-protection-policies-based-on-device-management-state). |
+    | Auf Apps auf allen Gerätetypen anwenden | Verwenden Sie diese Option, um die Richtlinie auf Apps auf Geräten mit beliebigem Verwaltungsstatus anzuwenden. Klicken Sie auf **Nein**, um die Richtlinie auf Apps auf bestimmten Gerätetypen anzuwenden. Für diese Einstellung ist möglicherweise eine weitere App-Konfiguration erforderlich. Weitere Informationen finden Sie unter [Erstellen und Zuweisen von App-Schutzrichtlinien](#target-app-protection-policies-based-on-device-management-state). |
     |     Device types (Gerätetypen) | Verwenden Sie diese Option, um anzugeben, ob diese Richtlinie für mit MDM verwaltete oder nicht verwaltete Geräte gilt. Wählen Sie für iOS-/iPadOS-App-Richtlinien **Unmanaged devices** (Nicht verwaltete Geräte) und **Managed devices** (Verwaltete Geräte) aus. Wählen Sie für Android-App-Richtlinien **Unmanaged Devices** (Nicht verwaltete Geräte), **Android device administrator** (Android-Geräteadministrator) und **Android Enterprise** aus.  |
     | Public apps (Öffentliche Apps) | Klicken Sie auf **Select public apps** (Öffentliche Apps auswählen), um die gewünschten Apps als Ziel auszuwählen. |
     | Custom apps (Benutzerdefinierte Apps) | Klicken Sie auf **Select custom apps** (Benutzerdefinierte Apps auswählen), um basierend auf einer Paket-ID benutzerdefinierte Apps als Ziel auszuwählen. |
@@ -178,10 +178,9 @@ Um diese Richtlinien zu erstellen, navigieren Sie in der Intune-Konsole zu **App
 - **Android-Geräteadministrator**: Von Intune verwaltete Geräte, die die Android-Geräteverwaltungs-API verwenden.
 - **Android Enterprise**: Von Intune verwaltete Geräte, die Android Enterprise-Arbeitsprofile oder Android Enterprise-Full Device Management verwenden.
 
-> [!NOTE]
-> Android-Geräte fordern dazu auf, die Intune-Unternehmensportal-App zu installieren, unabhängig davon, welcher Gerätetyp gewählt wurde. Wenn Sie beispielsweise „Android Enterprise“ auswählen, werden Benutzer mit nicht verwalteten Android-Geräten weiterhin dazu aufgefordert.
+Android-Geräte fordern dazu auf, die Intune-Unternehmensportal-App zu installieren, unabhängig davon, welcher Gerätetyp gewählt wurde. Wenn Sie beispielsweise „Android Enterprise“ auswählen, werden Benutzer mit nicht verwalteten Android-Geräten weiterhin dazu aufgefordert.
 
-Für iOS/iPadOS sind zusätzliche App-Konfigurationseinstellungen erforderlich, um App-Schutzrichtlinieneinstellungen für Apps auf in Intune registrierten Geräten bereitzustellen:
+Damit unter iOS/iPadOS die Auswahl nicht verwalteter Geräte als Typ erzwungen wird, sind zusätzliche App-Konfigurationseinstellungen erforderlich. Diese Konfigurationen teilen dem APP-Dienst (App Protection Policies) mit, dass eine bestimmte App verwaltet wird und die APP-Einstellungen nicht gelten:
 
 - **IntuneMAMUPN** muss für alle mit MDM verwalteten Anwendungen konfiguriert sein. Weitere Informationen finden Sie unter [Verwalten der Datenübertragung zwischen iOS-/iPadOS-Apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** muss für alle mit MDM verwalteten Drittanbieter- und Branchenanwendungen konfiguriert sein. **IntuneMAMDeviceID** sollte auf das Geräte-ID-Token konfiguriert sein. Beispiel: `key=IntuneMAMDeviceID, value={{deviceID}}`. Weitere Informationen finden Sie unter [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete iOS-/iPadOS-Geräte](app-configuration-policies-use-ios.md).

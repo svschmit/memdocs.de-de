@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-ms.reviewer: srik
+ms.reviewer: crisk
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b746317ef15065af246cfd977f6e9d745ef4dea7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362679"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086017"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Anfordern von Support für Microsoft Intune
 
@@ -35,7 +35,6 @@ Als Intune-Administrator können Sie die Option **Hilfe und Support** verwenden,
 > Wenden Sie sich für den technischen Support für Drittanbieterprodukte, die mit Intune eingesetzt werden können (z.B. Saaswedo, Cisco oder Lookout), zuerst an den Lieferanten des Produkts. Bevor Sie beim Intune-Support eine Anforderung stellen, sollten Sie sicherstellen, dass Sie das andere Produkt richtig konfiguriert haben.
 >
 > Weitere Informationen zur Problembehandlung im Zusammenhang mit Microsoft Intune finden Sie im [Abschnitt zur Problembehandlung](help-desk-operators.md) in der Intune-Dokumentation.
-
 
 ## <a name="help-and-support-experience"></a>Benutzeroberfläche für Hilfe und Support
 
@@ -52,10 +51,9 @@ Wenn Sie einen neu erstellten Mandanten für Intune verwenden, kann *Hilfe und S
 
 - *Es ist ein unbekanntes Problem aufgetreten. Aktualisieren Sie die Seite. Wenn das Problem weiterhin besteht, erstellen Sie einen Fall über das [M365 Admin Center](https://admin.microsoft.com), und verweisen Sie auf die angegebene Sitzungs-ID.*
 
-Die Fehlerdetails enthalten eine *Sitzungs-ID*, *Erweiterungsdetails* usw. 
- 
-Dieses Problem tritt auf, wenn Sie Ihr neues Mandantenkonto noch nicht über das **M365 Admin Center** auf https://admin.microsoft.com oder das **Office 365-Portal** unter https://portal.office.com authentifiziert haben. Wählen Sie zur Lösung des Problems den Link für das *M365 Admin Center* in der Meldung aus, oder rufen Sie https://portal.office.com auf, und melden Sie sich an. Nach der Authentifizierung bei einer der beiden Websites ist *Hilfe und Support* für Intune verfügbar.
+Die Fehlerdetails enthalten eine *Sitzungs-ID*, *Erweiterungsdetails* usw.
 
+Dieses Problem tritt auf, wenn Sie Ihr neues Mandantenkonto nicht über das **M365 Admin Center** auf https://admin.microsoft.com oder das **Office 365-Portal** unter https://portal.office.com authentifiziert haben. Wählen Sie zur Lösung des Problems den Link für das *M365 Admin Center* in der Meldung aus, oder rufen Sie https://portal.office.com auf, und melden Sie sich an. Nach der Authentifizierung bei einer der beiden Websites ist *Hilfe und Support* für Intune verfügbar.
 
 **Zugriff auf Hilfe und Support:**
 
@@ -67,18 +65,28 @@ Dieses Problem tritt auf, wenn Sie Ihr neues Mandantenkonto noch nicht über das
   > Wenn Ihre Intune-Instanz in der privaten Cloud für Regierungsbehörden – auch als Sovereign Cloud bezeichnet, Beispiel: Azure Government – gehostet wird, finden Sie weitere Informationen weiter unten in diesem Artikel unter [Intune-Support für die private Cloud für Regierungsbehörden](#intune-support-for-private-cloud-for-government). Die Intune-Benutzeroberfläche *Hilfe und Support* wird für die private Cloud für Regierungsbehörden erst nächstes Jahr verfügbar sein.
 
 - **Aus dem Microsoft Endpoint Manager Admin Center**
-  - Wählen Sie zunächst einen Featurebereich für Intune und dann die Option **Hilfe und Support** aus.
-  - Wählen Sie von einem beliebigen Knoten im Microsoft Endpoint Manager Admin Center das **?** - Symbol in der oberen rechten Ecke des Portals, und verwenden Sie dann die Dropdownliste, um den Dienst auszuwählen, für den Sie Hilfe benötigen. Das **?** - Symbol im Microsoft Endpoint Manager Admin Center unterstützt eine Vielzahl von Diensten, und Sie müssen den bestimmten Dienst auswählen, für den Sie Hilfe benötigen.  
 
-    ![Dienst auswählen](./media/get-support/select-a-service.png)
+  - Wählen Sie von einem beliebigen Knoten im Microsoft Endpoint Manager Admin Center das **?** - Symbol in der oberen rechten Ecke des Portals, und verwenden Sie dann die Dropdownliste, um den Verwaltungstyp auszuwählen, für den Sie Hilfe benötigen. Das Microsoft Endpoint Manager Admin Center unterstützt die folgenden Verwaltungstypen, und Sie müssen denjenigen auswählen, für den Sie Hilfe benötigen, wie etwa Intune:
 
-    Nach der Auswahl eines Diensts wird die *Hilfe und Support*-Seite dafür angezeigt, auf der Sie Details angeben können, um zu einem bestimmten Problem [Lösungen zu finden](#find-solutions).
+    - Configuration Manager (umfasst Desktop Analytics)
+    - Intune
+    - Co-Verwaltung  
 
-    Wenn die Suchergebnisse nicht Ihren Erwartungen für den Dienst entsprechen, überprüfen Sie, ob der richtige Dienst ausgewählt wurde. Der ausgewählte Dienst wird direkt hinter *Hilfe und Support* angezeigt.  Wenn nicht der richtige Dienst ausgewählt wurde, klicken Sie auf *Dienst auswählen*, um zur Dropdownliste für die Dienstauswahl zurückzukehren.
+    > [!div class="mx-imgBorder"]
+    > ![Wählen Sie Ihren Verwaltungstyp aus](./media/get-support/select-management-type.png)
 
-    ![Dienst bestätigen](./media/get-support/confirm-your-service-selection.png)
+    Nach der Auswahl eines Verwaltungstyps wird die *Hilfe und Support*-Seite geöffnet, auf der Sie Details angeben können, um zu einem bestimmten Problem [Lösungen zu finden](#find-solutions). Details werden auf dem Verwaltungstyp Ihrer Wahl basierend gefiltert.
 
-###  <a name="the-support-experience"></a>Die Benutzeroberfläche für Support
+     Wenn der richtige Verwaltungstyp nicht ausgewählt wurde **(1)** , klicken Sie auf *Verwaltungstyp auswählen* **(2)** , um zur Dropdownliste für die Auswahl des Verwaltungstyps zurückzukehren:
+
+    > [!div class="mx-imgBorder"]
+    > ![Bestätigen Sie Ihren Verwaltungstyp](./media/get-support/confirm-management-selection.png)
+
+  - Wenn Sie Hilfe und Support über **Problembehandlung + Support** > **Hilfe und Support** öffnen, wird Ihr ausgewählter Verwaltungstyp nicht unter *Hilfe und Support* aufgelistet.
+
+  - Wenn Sie einen Drilldown in einen anderen Knoten wie *Geräte*, *Apps* oder *Benutzer* durchführen und dann *Hilfe und Support* auswählen, haben Sie keine Möglichkeit, einen Verwaltungstyp auszuwählen, und der Typ wird auch nicht unter *Hilfe- und Support* angezeigt. In diesem Fall wird *Intune* vorausgesetzt. Wenn Sie nicht möchten, dass Intune der Kontext ist, verwenden Sie die **?** - Option, sodass Sie einen anderen Verwaltungstyp auswählen können.
+
+### <a name="the-support-experience"></a>Die Benutzeroberfläche für Support
 
   Wenn Sie Hilfe und Support öffnen, wird im Portal das **Benötigen Sie Hilfe?** -Fenster angezeigt:
 
@@ -144,8 +152,7 @@ Wenn Sie für ein Problem entweder Schweregrad **A** oder **Kritisch** auswähle
 Sie können nicht mehr auf die Azure-Benutzeroberfläche *Hilfe und Support* zugreifen, um Unterstützung für Intune zu erhalten, es sei denn, Ihr Abonnement befindet sich in einer privaten Cloud für Regierungsbehörden.
 Wenn Ihre Intune-Instanz nicht in einer privaten Cloud für Regierungsbehörden ausgeführt wird, werden Sie beim Navigieren zur Azure-Benutzeroberfläche *Hilfe und Support* zur Intune-Benutzeroberfläche *Hilfe und Support* umgeleitet, wo Sie Supportincidents erstellen und verwalten können:
 
-Wenn Sie die Option **Hilfe und Support** im linken Navigationsbereich oder das **?** - Option zum Öffnen des Bereichs *Hilfe* verwenden und dann auf **Hilfe und Support** klicken, öffnen Sie die Azure-Seite *Hilfe und Support*. 
-
+Wenn Sie die Option **Hilfe und Support** im linken Navigationsbereich oder das **?** - Option zum Öffnen des Bereichs *Hilfe* verwenden und dann auf **Hilfe und Support** klicken, öffnen Sie die Azure-Seite *Hilfe und Support*.
 
 Klicken Sie auf dieser Seite auf **+ Neue Supportanfrage**, um die Registerkarte *Grundeinstellungen* der Seite *Hilfe und Support + Neue Supportanfrage* zu öffnen.
 
@@ -160,7 +167,6 @@ Gehen Sie auf dieser Seite wie folgt vor:
   
   ![Neue Supportanfrage](./media/get-support/new-request.png)
 
-
 ## <a name="intune-support-for-private-cloud-for-government"></a>Intune-Support für die private Cloud für Regierungsbehörden
 
 Wenn Ihr Intune-Abonnement in der privaten Cloud für Regierungsbehörden – auch als Sovereign Cloud bezeichnet, Beispiel: Azure Government – gehostet wird, haben Sie noch keinen Zugriff auf die neuere Intune-Benutzeroberfläche für Hilfe und Support.  Verwenden Sie stattdessen die folgenden Informationen, um Support für Intune zu erhalten.
@@ -172,7 +178,7 @@ Wenn Ihr Intune-Abonnement in der privaten Cloud für Regierungsbehörden – au
 >
 > Die Supportmitarbeiter arbeiten und kommunizieren mit der 8-stelligen Supportfallnummer und verwenden nur diese zum Protokollieren der Kommunikation und zum Nachverfolgen des Incidentstatus. Daher erhalten Sie E-Mail-Updates mit dieser 8-stelligen Supportfallnummer, die zum Aufzeichnen der Bearbeitung Ihres Falls dienen. Im Supportincident mit der 15-stelligen Nummer werden keine Details protokolliert. Wenn der Support beendet und der 8-stellige Supportfall abgeschlossen ist, wird dieser Status in dem 15-stelligen Supportfall gespiegelt, den Sie im Azure-Portal anzeigen können.  Für den 15-stelligen Supportfall sind keine weiteren Updates oder Statusänderungen zu erwarten.
 >
-> Wenn der Verlagerung der Supporttools später in diesem Jahr abgeschlossen sein wird, wird die Supportoberfläche, die Intune in der Government Cloud gehostet hat, der standardmäßigen *Hilfe und Support*-Benutzeroberfläche entsprechen, die derzeit für in der öffentlichen Cloud gehostete Intune-Abonnements verfügbar ist.
+> Wenn die Übergänge zwischen den Supporttools später in diesem Jahr abgeschlossen sind, wird die Supportoberfläche, die Intune in der Government Cloud gehostet hat, der standardmäßigen *Hilfe und Support*-Benutzeroberfläche entsprechen, die derzeit für in der öffentlichen Cloud gehostete Intune-Abonnements verfügbar ist.
 
 1. Melden Sie sich im Azure-Portal (<https://portal.azure.us>) mit Ihren Intune-Administratoranmeldeinformationen an, und wählen Sie das Symbol **?** aus. in der oberen rechten Ecke des Portals aus, und wählen Sie dann **Hilfe und Support** aus, um zur Seite [Azure Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) zu gelangen.
 

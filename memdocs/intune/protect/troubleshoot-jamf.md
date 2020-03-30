@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 335841a8642429e36c277673fd8a238d486366c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350615"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084635"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Problembehandlung bei der Integration von Jamf Pro mit Microsoft Intune
 
@@ -89,8 +89,8 @@ Nachdem Sie die Integration von Intune und Jamf Pro konfiguriert und Richtlinien
 Beim Öffnen von Microsoft Teams wird z. B. eine Eingabeaufforderung angezeigt, die dem folgenden Beispiel ähnelt:
 
 ``` 
-  Microsoft Teams wants to sign using key “Microsoft Workplace Join Key” in your keychain.  
-  To allow this, enter the “login” keychain password 
+  Microsoft Teams wants to sign using key "Microsoft Workplace Join Key" in your keychain.  
+  To allow this, enter the "login" keychain password 
 ```
 
 **Ursache:** Diese Eingabeaufforderungen werden von Jamf Pro für jede kompatible App generiert, für die eine Azure AD Registrierung erforderlich ist. 
@@ -118,7 +118,7 @@ Es gibt verschiedene gängige Ursachen, wenn Mac-Geräte nicht registriert werde
 
 #### <a name="cause-2"></a>Ursache 2  
 
-**Der native macOS-Connector von **Jamf** wurde nicht in Ihrem Azure AD Mandanten erstellt, oder die Einwilligung für den Connector wurde von einem Konto signiert, das keine globalen Administratorrechte hat.**  
+**Der **native macOS-Connector von Jamf** wurde nicht in Ihrem Azure AD Mandanten erstellt, oder die Einwilligung für den Connector wurde von einem Konto signiert, das keine globalen Administratorrechte hat.**  
 
   **Lösung**  
   Weitere Informationen finden Sie im Abschnitt *Konfigurieren der Intune-Integration unter macOS* unter [Integration mit Microsoft Intune](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html) auf docs.jamf.com. 
@@ -156,7 +156,7 @@ In der Unternehmensportal-App wird dem Benutzer **`Not registered`** angezeigt, 
 
 **Lösung**  
 So ändern Sie die Registrierungsquelle von Intune in Jamf:
-1. [Aufheben der Registrierung Ihres macOS-Geräts bei Intune](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-macos). Informationen zu weiteren Komplikationen mit Geräten, die nicht vollständig aus Intune entfernt werden, finden Sie unter [*Ursache 6*](#cause-6) in dieser Liste.  
+1. [Aufheben der Registrierung Ihres macOS-Geräts bei Intune](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos). Informationen zu weiteren Komplikationen mit Geräten, die nicht vollständig aus Intune entfernt werden, finden Sie unter [*Ursache 6*](#cause-6) in dieser Liste.  
 
 2. Verwenden Sie auf dem Gerät den Jamf-Self-Service, um die Unternehmensportal-App zu öffnen, und registrieren Sie das Gerät anschließend bei Intune. Hierfür müssen Sie [Jamf verwendet haben, um die Unternehmensportal-App für macOS](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) bereitzustellen, und [eine Richtlinie in Jamf Pro erstellt haben, die das Gerät des Benutzers bei Azure AD](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory) registriert.  
 
@@ -196,7 +196,7 @@ Wenn die Registrierung eines Geräts bei Jamf aufgehoben, aber nicht ordnungsgem
 1. Starten Sie auf dem Mac das **Terminal**.
 2. Führen Sie **sudo JAMF removemdmprofile** aus.
 3. Führen Sie **sudo JAMF removeframework** aus.
-4. Löschen Sie auf dem Jamf Pro-Server den Inventurdatensatz des Computers.
+4. Löschen Sie auf dem JAMF Pro-Server den Inventurdatensatz des Computers.
 5. Löschen Sie das Gerät aus Azure AD.
 6. Löschen Sie die folgenden Dateien vom Gerät, sofern diese vorhanden sind:
    - /Library/Application Support/com.microsoft.CompanyPortal.usercontext.info
@@ -242,9 +242,9 @@ Wenn die Registrierung eines Geräts bei Jamf aufgehoben, aber nicht ordnungsgem
 Während der Registrierung wird dem Benutzer eines macOS-Geräts die folgende Eingabeaufforderung angezeigt, um den JamfAAD-Zugriff auf einen Schlüssel aus dem Schlüsselbund zu gestatten: 
 
 ```
-   JamfAAD wants to access key “Microsoft Workplace Join Key" in your keychain. 
+   JamfAAD wants to access key "Microsoft Workplace Join Key" in your keychain. 
     
-   To allow this, enter the “login” keychain password
+   To allow this, enter the "login" keychain password
 ```
 
 **Lösung**  

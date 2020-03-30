@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ab825416226ef0b395862ae26a934013136ca61b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352266"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084879"
 ---
 # <a name="use-device-encryption-with-intune"></a>Verwenden der Geräteverschlüsselung mit Intune
 
@@ -97,7 +97,7 @@ Nachdem Intune ein macOS-Gerät mit FileVault verschlüsselt hat, können Sie de
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Abrufen eines persönlichen Wiederherstellungsschlüssels von MEM-verschlüsselten macOS-Geräten
 
-Endbenutzer rufen ihren persönlichen Wiederherstellungsschlüssel (FileVault-Schlüssel) mithilfe der Unternehmensportal-App für iOS ab. Das Gerät mit dem persönlichen Wiederherstellungsschlüssel muss bei Intune registriert und über Intune mit FileVault verschlüsselt sein. Mithilfe der iOS-Unternehmensportal-App können die Endbenutzer eine Webseite öffnen, die den persönlichen FileVault-Wiederherstellungsschlüssel umfasst. Sie können den Wiederherstellungsschlüssel auch aus Intune abrufen, indem Sie **Geräte** > *das verschlüsselte und registrierte macOS-Gerät* > **Wiederherstellungsschlüssel abrufen** auswählen. 
+Endbenutzer können ihren persönlichen Wiederherstellungsschlüssel (FileVault-Schlüssel) über die iOS-Unternehmensportal-App, die Android-Unternehmensportal-App oder die Android-Intune-App abrufen. Das Gerät mit dem persönlichen Wiederherstellungsschlüssel muss bei Intune registriert und über Intune mit FileVault verschlüsselt sein. Über die iOS-Unternehmensportal-App, die Android-Unternehmensportal-App, die Android-Intune-App oder die Unternehmensportal-Website können Endbenutzer den **FileVault**-Wiederherstellungsschlüssel anzeigen, den sie für den Zugriff auf ihre Mac-Geräte benötigen. Benutzer können **Geräte** > *verschlüsseltes und registriertes macOS-Gerät* > **Wiederherstellungsschlüssel abrufen** auswählen. Der Browser zeigt das Web-Unternehmensportal und darin den Wiederherstellungsschlüssel an. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>BitLocker-Verschlüsselung für Windows 10
 

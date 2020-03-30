@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a3a3b38b28eda0e4bde9c353482d0234fa3329
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5a98b57fe8cc2d9d2af3c0095297eb676796029f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354320"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085222"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatisieren von E-Mails und Hinzufügen von Aktionen für nicht konforme Geräte in Intune
 
@@ -40,7 +40,16 @@ Es gibt mehrere Arten von Aktionen:
 
 - **Mark device non-compliant** (Markieren des Geräts als nicht konform): Erstellen Sie einen Zeitplan mit der Anzahl von Tagen, nach der ein Gerät als „nicht konform“ markiert wird. Sie können die Aktion so konfigurieren, dass sie sofort oder erst nach einer gewissen Toleranzperiode wirksam wird, um dem Benutzer Gelegenheit zu geben, Ihre Gerätekonformitätsrichtlinien zu erfüllen.
 
-In diesem Artikel erfahren Sie, wie Sie Folgendes durchführen:
+- **Retire the noncompliant device** (Nicht konformes Gerät deaktivieren): Diese Aktion entfernt alle Unternehmensdaten vom Gerät und dann das Gerät aus der Intune-Verwaltung. Damit ein Gerät nicht versehentlich gelöscht wird, unterstützt diese Aktion einen minimalen Zeitplan von 30 Tagen. Folgende Plattformen unterstützen diese Aktion:
+  - Android
+  - iOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 und höher
+
+  Weitere Informationen zum [Außerbetriebnehmen](../remote-actions/devices-wipe.md#retire) von Geräten.
+  
+  In diesem Artikel erfahren Sie, wie Sie Folgendes durchführen:
 
 - Erstellen einer Benachrichtigungsvorlage
 - Erstellen einer Aktion für Nichtkonformität, wie z.B. das Senden einer E-Mail oder das Remotesperren eines Geräts
@@ -76,7 +85,7 @@ Zum Senden einer E-Mail an Ihre Benutzer müssen Sie eine Benachrichtigungsvorla
    - **E-Mail-Fußzeile: Unternehmensnamen einschließen**
    - **E-Mail-Fußzeile: Kontaktinformationen einschließen**
 
-   Das Logo, das Sie für das Branding des Unternehmensportals hochladen, wird für E-Mail-Vorlagen verwendet. Weitere Informationen zum Branding des Unternehmensportals finden Sie unter [Anpassen des Unternehmensbrandings](../apps/company-portal-app.md#company-identity-branding-customization).
+   Das Logo, das Sie für das Branding des Unternehmensportals hochladen, wird für E-Mail-Vorlagen verwendet. Weitere Informationen zum Branding des Unternehmensportals finden Sie unter [Anpassen des Unternehmensbrandings](../apps/company-portal-app.md#customizing-the-user-experience).
 
    ![Beispiel einer Benachrichtigung zur Konformität in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
@@ -112,11 +121,13 @@ Zusätzlich zur Standardaktion zum Kennzeichnen von Geräten als „nicht konfor
 
    - **Nicht konformes Gerät remote sperren:** Sperren Sie das Gerät, wenn es nicht konform ist. Durch diese Aktion wird der Benutzer zur Eingabe einer PIN oder eines Kennworts gezwungen, um das Gerät zu entsperren
 
-5. Konfigurieren Sie einen **Zeitplan**: Geben Sie die Anzahl von Tagen (0 bis 365) nach der Nichtkonformität ein, nach der die Aktion auf Benutzergeräten ausgelöst werden soll. Nach Ablauf dieser Nachfrist können Sie eine Richtlinie für [bedingten Zugriff](conditional-access-intune-common-ways-use.md) erzwingen. Wenn Sie als Anzahl von Tagen **0** (null) eingeben, wird der bedingte Zugriff **sofort** wirksam. Wenn beispielsweise ein Gerät nicht konform ist, können Sie mithilfe des bedingten Zugriffs sofort den Zugriff auf E-Mails, SharePoint und andere Organisationsressourcen blockieren.
+   - **Retire the noncompliant device** (Nicht konformes Gerät deaktivieren): Wenn das Gerät nicht konform ist, entfernen Sie alle Unternehmensdaten vom Gerät, und entfernen Sie das Gerät aus der Intune-Verwaltung. Damit ein Gerät nicht versehentlich gelöscht wird, unterstützt diese Aktion einen minimalen Zeitplan von **30** Tagen.
+
+5. Konfigurieren Sie einen **Zeitplan**: Geben Sie die Anzahl von Tagen (0 bis 365) nach der Nichtkonformität ein, nach der die Aktion auf Benutzergeräten ausgelöst werden soll. (*Nicht konformes Gerät zurückziehen* unterstützt mindestens 30 Tage.) Nach Ablauf dieser Nachfrist können Sie eine Richtlinie für [bedingten Zugriff](conditional-access-intune-common-ways-use.md) erzwingen. Wenn Sie als Anzahl von Tagen **0** (null) eingeben, wird der bedingte Zugriff **sofort** wirksam. Wenn beispielsweise ein Gerät nicht konform ist, können Sie mithilfe des bedingten Zugriffs sofort den Zugriff auf E-Mails, SharePoint und andere Organisationsressourcen blockieren.
 
    Wenn Sie eine Konformitätsrichtlinie erstellen, wird automatisch die Aktion **Gerät als nicht konform markieren** erstellt und auf **0** Tage (sofort) festgelegt. Durch diese Aktion wird das Gerät beim Einchecken sofort als nicht konform ausgewertet. Wenn Sie auch den bedingten Zugriff verwenden, wird dieser umgehend wirksam. Wenn Sie eine Nachfrist zulassen möchten, ändern Sie den **Zeitplan** für die Aktion **Gerät als nicht konform markieren**.
 
-   Sie möchten den Benutzer außerdem in Ihrer Konformitätsrichtlinie benachrichtigen. Fügen Sie die Aktion **E-Mail an Endbenutzer senden** hinzu. Legen Sie für diese Aktion **E-Mail senden**, den **Zeitplan** auf 2 Tage fest. Wird das Gerät oder der Endbenutzer an Tag 2 weiterhin als nicht konform ausgewertet, wird Ihre E-Mail an Tag 2 gesendet. Wenn Sie dem Benutzer an Tag 5 der Nichtkonformität erneut eine E-Mail senden möchten, fügen Sie eine weitere Aktion hinzu, und legen Sie den **Zeitplan** auf 5 Tage fest.
+  Sie möchten den Benutzer außerdem in Ihrer Konformitätsrichtlinie benachrichtigen. Fügen Sie die Aktion **E-Mail an Endbenutzer senden** hinzu. Legen Sie für diese Aktion **E-Mail senden** den **Zeitplan** auf zwei Tage fest. Wird das Gerät oder der Endbenutzer an Tag zwei weiterhin als nicht konform ausgewertet, wird Ihre E-Mail an Tag zwei gesendet. Wenn Sie dem Benutzer an Tag fünf der Nichtkonformität erneut eine E-Mail senden möchten, fügen Sie eine weitere Aktion hinzu, und legen Sie den **Zeitplan** auf fünf Tage fest.
 
    Weitere Informationen zur Konformität und den integrierten Aktionen finden Sie in der [Konformitätsübersicht](device-compliance-get-started.md).
 

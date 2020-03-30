@@ -1,32 +1,31 @@
 ---
 title: Hinzufügen von VPN-Einstellungen für Geräte in Microsoft Intune – Azure | Microsoft-Dokumentation
-description: Verwenden Sie für Android-, Android Enterprise-, iOS-, iPadOS-, macOS- und Windows-Geräte integrierte Einstellungen zum Erstellen von VPN-Verbindungen (virtuelles privates Netzwerk) in Microsoft Intune.
+description: Verwenden Sie für Android-Geräteadministrator-, Android Enterprise-, iOS-, iPadOS-, macOS- und Windows-Geräte integrierte Einstellungen zum Erstellen von VPN-Verbindungen (virtuelles privates Netzwerk) in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 453ce45c40370641f37527501a577876c9867acd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 64356bf9be0c2c439c1f4fc296a9728a7937b001
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364109"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086574"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Erstellen von VPN-Profilen zum Herstellen einer Verbindung mit VPN-Servern in Intune
 
-
-
-Über virtuelle private Netzwerke (VPNs) erhalten Ihre Benutzer sicheren Remotezugriff auf Ihr Organisationsnetzwerk. Mithilfe eines VPN-Verbindungsprofils stellen Geräte eine Verbindung mit dem VPN-Server her. **VPN-Profile** in Microsoft Intune ermöglichen Ihnen die Zuweisung von VPN-Einstellungen für Benutzer und Geräte in Ihrer Organisation, damit diese leicht eine sichere Verbindung zu Ihrem Organisationsnetzwerk herstellen können.
+Über virtuelle private Netzwerke (VPNs) erhalten Benutzer sicheren Remotezugriff auf Ihr Organisationsnetzwerk. Mithilfe eines VPN-Verbindungsprofils stellen Geräte eine Verbindung mit dem VPN-Server her. **VPN-Profile** in Microsoft Intune ermöglichen Ihnen die Zuweisung von VPN-Einstellungen für Benutzer und Geräte in Ihrer Organisation, damit diese leicht eine sichere Verbindung zu Ihrem Organisationsnetzwerk herstellen können.
 
 Angenommen, Sie möchten z. B. alle iOS-/iPadOS-Geräte mit den Einstellungen konfigurieren, die zum Herstellen einer Verbindung mit einer Dateifreigabe im Organisationsnetzwerk erforderlich sind. Erstellen Sie zunächst ein VPN-Profil, das diese Einstellungen enthält. Weisen Sie dieses Profil anschließend allen Benutzern zu, die über iOS-/iPadOS-Geräte verfügen. Die Benutzer sehen die VPN-Verbindung in der Liste der verfügbaren Netzwerke und können mit geringem Aufwand eine Verbindung herstellen.
 
@@ -44,62 +43,136 @@ Angenommen, Sie möchten z. B. alle iOS-/iPadOS-Geräte mit den Einstellungen k
 
 Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
 
-|Verbindungstyp|Plattform|
-|-|-|
-|Automatisch|Windows 10|
-|Check Point Capsule VPN|– Android<br/>– Android Enterprise-Arbeitsprofile<br/>– iOS/iPadOS<br/>– macOS<br/>– Windows 10<br/>– Windows 8.1<br/>– Windows Phone 8.1|
-|Cisco AnyConnect|– Android<br/>– Android Enterprise-Arbeitsprofile<br/>– Android Enterprise-Gerätebesitzer (vollständig verwaltet)<br/>– iOS/iPadOS<br/>– macOS|
-|Cisco (IPSec)|iOS/iPadOS|
-|Citrix SSO|– Android<br/>– Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)<br/>– Android Enterprise-Gerätebesitzer (vollständig verwaltet): Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)<br/>– iOS/iPadOS<br/>– Windows 10|
-|Benutzerdefiniertes VPN|– iOS/iPadOS<br/>– macOS|
-|F5 Access|– Android<br/>– Android Enterprise-Arbeitsprofile<br/>– Android Enterprise-Gerätebesitzer (vollständig verwaltet)<br/>– iOS/iPadOS<br/>– macOS<br/>– Windows 10<br/>– Windows 8.1<br/>– Windows Phone 8.1|
-|IKEv2| – iOS/iPadOS<br/>– Windows 10|
-|L2TP|Windows 10|
-|Palo Alto Networks GlobalProtect|– Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)<br/>– iOS/iPadOS<br/>– Windows 10|
-|PPTP|Windows 10|
-|Pulse Secure|– Android<br/>– Android Enterprise-Arbeitsprofile<br/>– Android Enterprise-Gerätebesitzer (vollständig verwaltet)<br/>– iOS/iPadOS<br/>– macOS<br/>– Windows 10<br/>– Windows 8.1<br/>– Windows Phone 8.1|
-|SonicWall Mobile Connect|– Android<br/>– Android Enterprise-Arbeitsprofile<br/>– iOS/iPadOS<br/>– macOS<br/>– Windows 10<br/>– Windows 8.1<br/>– Windows Phone 8.1|
-|Zscaler|– Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)<br/>– iOS/iPadOS|
+- Automatisch
+  - Windows 10
+
+- Check Point Capsule VPN
+  - Android-Geräteadministrator
+  - Android Enterprise-Arbeitsprofile
+  - iOS/iPadOS
+  - macOS
+  - Windows 10
+  - Windows 8.1
+  - Windows Phone 8.1
+
+- Cisco AnyConnect
+  - Android-Geräteadministrator
+  - Android Enterprise-Arbeitsprofile
+  - Android Enterprise-Gerätebesitzer (vollständig verwaltet)
+  - iOS/iPadOS
+  - macOS
+
+- Cisco (IPSec)
+  - iOS/iPadOS
+
+- Citrix SSO
+  - Android-Geräteadministrator
+  - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise-Gerätebesitzer (vollständig verwaltet): Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)
+  - iOS/iPadOS
+  - Windows 10
+
+- Benutzerdefiniertes VPN
+  - iOS/iPadOS
+  - macOS
+
+  Erstellen benutzerdefinierter VPN-Profile mithilfe von URI-Einstellungen finden Sie unter [Erstellen eines Profils mit benutzerdefinierten Einstellungen in Intune](custom-settings-configure.md).
+
+- F5 Access
+  - Android-Geräteadministrator
+  - Android Enterprise-Arbeitsprofile
+  - Android Enterprise-Gerätebesitzer (vollständig verwaltet)
+  - iOS/iPadOS
+  - macOS
+  - Windows 10
+  - Windows 8.1
+  - Windows Phone 8.1
+
+- IKEv2
+  - iOS/iPadOS
+  - Windows 10
+
+- L2TP
+  - Windows 10
+
+- Palo Alto Networks GlobalProtect
+  - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)
+  - iOS/iPadOS
+  - Windows 10
+
+- PPTP
+  - Windows 10
+
+- Pulse Secure
+  - Android-Geräteadministrator
+  - Android Enterprise-Arbeitsprofile
+  - Android Enterprise-Gerätebesitzer (vollständig verwaltet)
+  - iOS/iPadOS
+  - macOS
+  - Windows 10
+  - Windows 8.1
+  - Windows Phone 8.1
+
+- SonicWall Mobile Connect
+  - Android-Geräteadministrator
+  - Android Enterprise-Arbeitsprofile
+  - iOS/iPadOS
+  - macOS
+  - Windows 10
+  - Windows 8.1
+  - Windows Phone 8.1
+
+- Zscaler
+  - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)
+  - iOS/iPadOS
 
 > [!IMPORTANT]
-> Vor der Verwendung von VPN-Profilen, die auf einem Gerät zugewiesen werden, müssen Sie die entsprechende VPN-App für das Profil installieren. Die Informationen im Artikel [Was ist die App-Verwaltung in Microsoft Intune?](../apps/app-management.md) unterstützen Sie beim Zuweisen der App mit Intune.  
+> Vor der Verwendung von VPN-Profilen, die auf einem Gerät zugewiesen werden, müssen Sie die entsprechende VPN-App für das Profil installieren. Informationen dazu, wie Sie die App mit Intune zuweisen, finden Sie unter [Was ist die Microsoft Intune App-Verwaltung?](../apps/app-management.md).  
 
-Informationen zum Erstellen benutzerdefinierter VPN-Profile mithilfe von URI-Einstellungen finden Sie unter [Erstellen eines Profils mit benutzerdefinierten Einstellungen in Intune](custom-settings-configure.md).
-
-## <a name="create-a-device-profile"></a>Erstellen eines Geräteprofils
+## <a name="create-the-profile"></a>Erstellen des Profils
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 3. Geben Sie die folgenden Eigenschaften ein:
 
-    - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein geeigneter Profilname ist beispielsweise **VPN-Profil für das gesamte Unternehmen**.
-    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
     - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:
-
-      - **Android**
+      - **Android-Geräteadministrator**
       - **Android Enterprise** > **Nur Gerätebesitzer**
       - **Android Enterprise** > **Nur Arbeitsprofil**
       - **iOS/iPadOS**
       - **macOS**
-      - **Windows Phone 8.1**
-      - **Windows 8.1 und höher**
       - **Windows 10 und höher**
+      - **Windows 8.1 und höher**
+      - **Windows Phone 8.1**
+    - **Profil**: Wählen Sie **VPN** aus.
 
-    - **Profiltyp**: Wählen Sie **VPN** aus.
+4. Wählen Sie **Erstellen** aus.
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
 
-4. Die konfigurierbaren Einstellungen variieren je nach der ausgewählten Plattform. In den folgenden Artikeln finden Sie ausführliche Informationen zu den Einstellungen auf den jeweiligen Plattformen:
+    - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein geeigneter Profilname ist beispielsweise **VPN-Profil für das gesamte Unternehmen**.
+    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
 
-    - [Einstellungen für Android](vpn-settings-android.md)
-    - [Android Enterprise-Einstellungen](vpn-settings-android-enterprise.md)
-    - [iOS/iPadOS-Einstellungen](vpn-settings-ios.md)
-    - [Einstellungen für macOS](vpn-settings-macos.md)
-    - [Einstellungen für Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
-    - [Einstellungen für Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Einstellungen für Windows 10](vpn-settings-windows-10.md) (einschließlich Windows Holographic for Business)
+6. Wählen Sie **Weiter** aus.
+7. Die verfügbaren **Konfigurationseinstellungen** variieren je nach ausgewählter Plattform. Wählen Sie Ihre Plattform aus, um auf die einzelnen Einstellungen zuzugreifen:
 
-5. Wenn Sie fertig sind, wählen Sie **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern.
+    - [Android-Geräteadministrator](vpn-settings-android.md)
+    - [Android Enterprise](vpn-settings-android-enterprise.md)
+    - [iOS/iPadOS](vpn-settings-ios.md)
+    - [macOS](vpn-settings-macos.md)
+    - [Windows 10](vpn-settings-windows-10.md) (einschließlich Windows Holographic for Business)
+    - [Windows 8.1](vpn-settings-windows-8-1.md)
+    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
-Das Profil wird erstellt und in der Profilliste angezeigt. Informationen zur Zuweisung dieses Profils zu Gruppen finden Sie unter [Zuweisen von Geräteprofilen](device-profile-assign.md).
+8. Wählen Sie **Weiter** aus.
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
+
+    Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen das Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+11. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf **Erstellen** klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
 
 ## <a name="secure-your-vpn-profiles"></a>Sichern der VPN-Profile
 
@@ -117,6 +190,6 @@ Der Benutzer authentifiziert sich beim VPN-Server durch Angabe seines Benutzerna
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Das Profil ist nun erstellt, führt aber noch keine Aktionen durch. Im nächsten Schritt können Sie [das Profil einigen Geräten zuweisen](device-profile-assign.md).
+Das Profil ist nun erstellt, führt aber noch keine Aktionen durch. Die nächsten Schritte sind das [Zuweisen von Profilen](device-profile-assign.md) zu einigen Geräten und das [Überwachen ihres Status](device-profile-monitor.md).
 
-Sie können auch Pro-App-VPNs für [Android-](android-pulse-secure-per-app-vpn.md) und [iOS-/iPadOS-Geräte](vpn-setting-configure-per-app.md) erstellen und verwenden.
+Sie können auch Pro-App-VPNs für [Android-Geräteadministrator-/Android Enterprise](android-pulse-secure-per-app-vpn.md)- und [iOS-/iPadOS-Geräte](vpn-setting-configure-per-app.md) erstellen und verwenden.

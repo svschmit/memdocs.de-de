@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: cba46d5b4b203cdbb67fb5f6b6b116a21ebacb32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338928"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084761"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Entfernen von SCEP- und PKCS-Zertifikaten in Microsoft Intune
 
@@ -91,7 +91,6 @@ PKCS-Zertifikate *verbleiben* auf dem Gerät (d.h., sie werden weder widerrufen 
 - ein Administrator den Benutzer oder die Gruppe aus Azure AD entfernt.
 - ein Administrator das PKCS-Profil ändert oder aktualisiert
 - ein Zertifikatprofil aus der Gruppenzuweisung entfernt wird.
-
 
 ## <a name="ios-devices"></a>iOS-Geräte
 
@@ -190,8 +189,8 @@ Das Stammzertifikat wird entfernt, wenn:
 - ein Administrator die Aktion [Außer Betrieb nehmen](../remote-actions/devices-wipe.md#retire) ausführt.
 
 PKCS-Zertifikate *verbleiben* auf dem Gerät (d.h., sie werden weder widerrufen noch entfernt), wenn:
-- ein Benutzer seine Intune-Lizenz verliert.
 
+- ein Benutzer seine Intune-Lizenz verliert.
 - ein Administrator die Intune-Lizenz widerruft.
 - ein Administrator den Benutzer oder die Gruppe aus Azure AD entfernt.
 - ein Administrator das PKCS-Profil ändert oder aktualisiert
@@ -228,7 +227,23 @@ SCEP-Zertifikate *verbleiben* auf dem Gerät (d.h., sie werden weder widerrufen 
 
 ### <a name="pkcs-certificates"></a>PKCS-Zertifikate
 
-PKCS-Zertifikate werden unter macOS nicht unterstützt.
+PKCS-Zertifikate werden widerrufen *und* entfernt, wenn:
+
+- die Registrierung eines Benutzers aufgehoben wird.
+- ein Administrator die Aktion [Außer Betrieb nehmen](../remote-actions/devices-wipe.md#retire) ausführt.
+
+Das Stammzertifikat wird entfernt, wenn:
+
+- die Registrierung eines Benutzers aufgehoben wird.
+- ein Administrator die Aktion [Außer Betrieb nehmen](../remote-actions/devices-wipe.md#retire) ausführt.
+
+PKCS-Zertifikate verbleiben auf dem Gerät (d. h., sie werden weder widerrufen noch entfernt), wenn:
+
+- ein Benutzer seine Intune-Lizenz verliert.
+- ein Administrator die Intune-Lizenz widerruft.
+- ein Zertifikatprofil aus der Gruppenzuweisung entfernt wird. (Das Profil wird entfernt.)
+- ein Administrator den Benutzer oder die Gruppe aus Azure AD entfernt.
+- ein Administrator das PKCS-Profil ändert oder aktualisiert
 
 ## <a name="next-steps"></a>Nächste Schritte
 

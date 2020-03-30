@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8189a23c2f07ebce03716ecf111c0130942b8b68
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 709824c91173edd0b322e1477c3204db34db7a9f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343023"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086298"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Erste Schritte mit dem Microsoft Intune App SDK
 
@@ -108,7 +108,7 @@ Microsoft Intune sammelt Daten zu Nutzungsstatistiken für Ihre App.
 
 * **Intune App SDK für Android**: Das Intune App SDK für Android kontrolliert nicht die Datensammlung über Ihre App. Standardmäßig protokolliert die Unternehmensportal-Anwendung Telemetriedaten. Diese Daten werden an Microsoft Intune gesendet. Gemäß der Microsoft-Richtlinie sammeln wir keine personenbezogenen Informationen (PII). 
 
-  * Wenn Benutzer sich dazu entschließen, diese Daten nicht zu senden, müssen sie die Telemetrie unter „Einstellungen“ in der Unternehmensportal-App deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Erfassung von Nutzungsdaten durch Microsoft](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android). 
+  * Wenn Benutzer sich dazu entschließen, diese Daten nicht zu senden, müssen sie die Telemetrie unter „Einstellungen“ in der Unternehmensportal-App deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Erfassung von Nutzungsdaten durch Microsoft](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## <a name="line-of-business-app-version-numbers"></a>Branchenspezifische App-Versionsnummern
 
@@ -179,7 +179,7 @@ Nachdem Sie Ihre App innerhalb eines Azure-Mandanten registriert haben und sie u
 3. Klicken Sie auf **+ Berechtigung hinzufügen**.
 4. Wählen Sie die Registerkarte **Von meiner Organisation verwendete APIs** aus. 
 5. Geben Sie in das Suchfeld **Microsoft Mobile Application Management** (Verwaltung mobiler Microsoft-Anwendungen) ein.
-6. Aktivieren Sie unter **Delegierte Berechtigungen** das Kontrollkästchen **DeviceManagementManagedApps.ReadWrite: Lese- und Schreibberechtigungen für die App-Verwaltungsdaten des Benutzers***.
+6. Aktivieren Sie unter **Delegierte Berechtigungen** das Kontrollkästchen **DeviceManagementManagedApps.ReadWrite: Lese- und Schreibberechtigungen für die App-Verwaltungsdaten des Benutzers**.
 7. Klicken Sie auf **Berechtigungen hinzufügen**.
 
 > [!NOTE]

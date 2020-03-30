@@ -5,28 +5,28 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ade4842564188c457af94a22fe49d3d18d791ebb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361873"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087101"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Anwenden von Einstellungen und Funktionen auf Ihren Geräten mit Geräteprofilen in Microsoft Intune
 
-Microsoft Intune umfasst Einstellungen und Funktionen, die Sie auf unterschiedlichen Geräten in Ihrer Organisation aktivieren oder deaktivieren können. Diese Einstellungen und Funktionen werden zu „Konfigurationsprofilen“ hinzugefügt. Sie können Profile für unterschiedliche Geräte und Plattformen einrichten, z. B. für iOS/iPadOS, Android und Windows. Verwenden Sie Intune, um das Profil Geräten zuzuweisen.
+Microsoft Intune umfasst Einstellungen und Funktionen, die Sie auf unterschiedlichen Geräten in Ihrer Organisation aktivieren oder deaktivieren können. Diese Einstellungen und Funktionen werden zu „Konfigurationsprofilen“ hinzugefügt. Sie können Profile für unterschiedliche Geräte und Plattformen einrichten, z. B. für iOS/iPadOS, Android-Geräteadministrator, Android Enterprise und Windows. Verwenden Sie Intune, um das Profil Geräten zuzuweisen.
 
 Im Rahmen Ihrer MDM-Lösung (Mobile Device Management, Verwaltung mobiler Geräte) können Sie diese Konfigurationsprofile verwenden, um verschiedene Aufgaben zu erledigen. Beispiele für Profile:
 
@@ -55,7 +55,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 Dieses Features unterstützt folgende Betriebssysteme: 
 
-- Android
+- Android-Geräteadministrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -69,7 +69,7 @@ Mithilfe von [benutzerdefinierten Einstellungen](custom-settings-configure.md) k
 
 Dieses Features unterstützt folgende Betriebssysteme:
 
-- Android
+- Android-Geräteadministrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -108,7 +108,7 @@ Mit [Geräteeinschränkungen](device-restrictions-configure.md) werden Einstellu
 
 Dieses Features unterstützt folgende Betriebssysteme:
 
-- Android
+- Android-Geräteadministrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -143,7 +143,7 @@ Mit [E-Mail-Einstellungen](email-settings-configure.md) können Sie Exchange Act
 
 Dieses Features unterstützt folgende Betriebssysteme: 
 
-- Android
+- Android-Geräteadministrator
 - Android Enterprise
 - iOS/iPadOS
 - Windows Phone 8.1
@@ -241,7 +241,7 @@ Virtuelle private Netzwerke (Virtual Private Networks, VPNs) ermöglichen Benutz
 
 Dieses Features unterstützt folgende Betriebssysteme: 
 
-- Android
+- Android-Geräteadministrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -255,7 +255,7 @@ Mit [WLAN-Einstellungen](wi-fi-settings-configure.md) können Sie Benutzern und 
 
 Dieses Features unterstützt folgende Betriebssysteme: 
 
-- Android
+- Android-Geräteadministrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -276,7 +276,7 @@ Mit [Zebra Mobility Extensions (MX)](android-zebra-mx-overview.md) können Admin
 
 Dieses Features unterstützt folgende Betriebssysteme:
 
-- Android (Mobility Extensions)
+- Android-Geräteadministrator (Mobility-Erweiterungen)
 
 ## <a name="manage-and-troubleshoot"></a>Verwaltung und Problembehandlung
 

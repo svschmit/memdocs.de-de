@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caeeb332f4a7c8c124e40537041b8aef8d219240
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.openlocfilehash: 94e170e01a1ede01a94b2ca3f09d8530f97335a3
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79372618"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085004"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden Ihrer PKCS-Zertifikate mit Intune
 
@@ -177,25 +177,40 @@ Jedes Gerät benötigt ein Zertifikat einer Stamm- oder Zwischenzertifizierungss
 
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 
-   ![Navigieren Sie zu Intune, und erstellen Sie ein neues Profil für ein vertrauenswürdiges Zertifikat.](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
-
 3. Geben Sie die folgenden Eigenschaften ein:
+   - **Plattform**: Wählen Sie die Plattform der Geräte aus, denen dieses Profil zugewiesen werden soll.
+   - **Profil**: Wählen Sie **Vertrauenswürdiges Zertifikat** aus.
+  
+4. Wählen Sie **Erstellen** aus.
 
-    - **Name** für das Profil
-    - Optional eine Beschreibung
-    - **Plattform**, auf der das Profil bereitgestellt werden soll
-    - Für **Profiltyp** die Option **Vertrauenswürdiges Zertifikat**
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
+   - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein geeigneter Profilname ist beispielsweise *Profil für vertrauenswürdiges Zertifikat für das gesamte Unternehmen* .
+   - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
 
-4. Wählen Sie **Einstellungen** aus, und geben Sie die zuvor exportierte CER-Datei mit dem Zertifikat der Stammzertifizierungsstelle an.
+6. Wählen Sie **Weiter** aus.
+
+7. Geben Sie in den **Konfigurationseinstellungen** die zuvor exportierte CER-Datei mit dem Zertifikat der Stammzertifizierungsstelle an.
 
    > [!NOTE]
-   > Je nach der in **Schritt 2** ausgewählten Plattform besitzen Sie möglicherweise die Option zum Auswählen des **Zielspeichers** für das Zertifikat.
+   > Abhängig von der in **Schritt 3** ausgewählten Plattform besitzen Sie möglicherweise die Option zum Auswählen des **Zielspeichers** für das Zertifikat.
 
    ![Profil erstellen und ein vertrauenswürdiges Zertifikat hochladen](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-5. Wählen Sie **OK** > **Erstellen** aus, um Ihr Profil zu speichern.
+8. Wählen Sie **Weiter** aus.
 
-6. Informationen zum Zuweisen des neuen Profils zu einem oder mehreren Geräten finden Sie unter [Zuweisen von Microsoft Intune-Geräteprofilen](../configuration/device-profile-assign.md).
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
+
+   Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen das Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](../configuration/device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+11. (*Gilt nur für Windows 10*) Geben Sie unter **Anwendbarkeitsregeln** einige Anwendbarkeitsregeln an, um die Zuweisung dieses Profils genauer zu spezifizieren. Sie können auswählen, dass das Profil basierend auf der Betriebssystemedition oder der Version eines Geräts zugewiesen oder nicht zugewiesen wird.
+
+  Weitere Informationen finden Sie im Artikel *Erstellen eines Geräteprofils in Microsoft Intune* im Abschnitt [Anwendbarkeitsregeln](../configuration/device-profile-create.md#applicability-rules).
+
+12. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf „Erstellen“ klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Erstellen eines PKCS-Zertifikatprofils
 
@@ -204,13 +219,25 @@ Jedes Gerät benötigt ein Zertifikat einer Stamm- oder Zwischenzertifizierungss
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 
 3. Geben Sie die folgenden Eigenschaften ein:
+   - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:
+     - Android-Geräteadministrator
+     - Android Enterprise > Nur Gerätebesitzer
+     - Android Enterprise > Nur Arbeitsprofil
+     - iOS/iPadOS
+     - macOS
+     - Windows 10 und höher
+   - **Profil**: Wählen Sie das **PKCS-Zertifikat** aus.
 
-    - **Name** für das Profil
-    - Optional eine Beschreibung
-    - **Plattform**, auf der das Profil bereitgestellt werden soll
-    - Für **Profiltyp** die Option **PKCS-Zertifikat**
+   > [!NOTE]
+   > Auf Geräten mit einem Android Enterprise-Profil sind Zertifikate, die über ein PKCS-Zertifikatprofil installiert wurden, nicht sichtbar. Um die erfolgreiche Zertifikatbereitstellung zu bestätigen, überprüfen Sie den Status des Profils in der Intune-Konsole.
+4. Wählen Sie **Erstellen** aus.
 
-4. Wählen Sie **Einstellungen** aus, und konfigurieren Sie die Eigenschaften, die auf die Plattform zutreffen, die Sie ausgewählt haben:
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
+   - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein geeigneter Profilname ist beispielsweise *PKCS-Profil für das gesamte Unternehmen*.
+   - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
+
+6. Wählen Sie **Weiter** aus.
+7. Die verfügbaren **Konfigurationseinstellungen** variieren je nach ausgewählter Plattform. Wählen Sie Ihre Plattform aus, um auf die einzelnen Einstellungen zuzugreifen: Android-Geräteadministrator, Android Enterprise, iOS/iPadOS, Windows 10
    
    |Einstellung     | Plattform     | Details   |
    |------------|------------|------------|
@@ -227,12 +254,18 @@ Jedes Gerät benötigt ein Zertifikat einer Stamm- oder Zwischenzertifizierungss
    |**Allen Apps Zugriff auf den privaten Schlüssel gewähren** |<ul><li>macOS  |Stellen Sie **Aktiviert** ein, um Apps, die für das zugeordnete Mac-Gerät konfiguriert sind, Zugriff auf den privaten Schlüssel des PKCS-Zertifikats zu gewähren. <br><br> Weitere Informationen zu dieser Einstellung finden Sie unter *AllowAllAppsAccess* im Abschnitt zur Zertifikatnutzlast der [Referenz zum Konfigurationsprofil](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) in der Apple-Entwicklerdokumentation. |
    |**Stammzertifikat**             |<ul><li>Android-Geräteadministrator </li><li>Android Enterprise (*Gerätebesitzer*, *Arbeitsprofil*) |Wählen Sie ein Stammprofil für das ZS-Zertifikat aus, das zuvor zugewiesen wurde. |
 
-5. Wählen Sie **OK** > **Erstellen** aus, um Ihr Profil zu speichern.
+8. Wählen Sie **Weiter** aus.
 
-6. Informationen zum Zuweisen des neuen Profils zu einem oder mehreren Geräten finden Sie unter [Zuweisen von Microsoft Intune-Geräteprofilen](../configuration/device-profile-assign.md).
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
 
-   > [!NOTE]
-   > Auf Geräten mit einem Android Enterprise-Profil sind Zertifikate, die über ein PKCS-Zertifikatprofil installiert wurden, nicht sichtbar. Um die erfolgreiche Zertifikatbereitstellung zu bestätigen, überprüfen Sie den Status des Profils in der Intune-Konsole.
+   Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen das Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](../configuration/device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+11. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf „Erstellen“ klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
+
 
 ### <a name="subject-name-format"></a>Format des Antragstellernamens
 

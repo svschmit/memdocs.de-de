@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 767d3671d796299d802fe950d443a152d8e2d645
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ba2b8e407b4c81f74df7c86e7101461b30a0d8e0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354567"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087140"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune
 
@@ -32,10 +32,19 @@ Lernen Sie die neuesten Updates für die Microsoft Intune-Apps kennen. Wir verbe
 * Benachrichtigen von Kursteilnehmern und Mitarbeitern über Änderungen bei App und Registrierung.
 * Aktualisieren der Dokumentation oder Helpdesk-Abläufe Ihrer Organisation.  
 
-Wenn Sie ein Mitarbeiter oder Kursteilnehmer sind, sollten Sie sich die Screenshots und Links zur Hilfedokumentation für das Unternehmensportal ansehen. Weitere Informationen zur Benutzung der Unternehmensportal-App finden Sie in der [Benutzerhilfe-Dokumentation für das Unternehmensportal](https://docs.microsoft.com/user-help/).  
+Wenn Sie ein Mitarbeiter oder Kursteilnehmer sind, sollten Sie sich die Screenshots und Links zur Hilfedokumentation für das Unternehmensportal ansehen. Weitere Informationen zur Benutzung der Unternehmensportal-App finden Sie in der [Benutzerhilfe-Dokumentation für das Unternehmensportal](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
-<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## <a name="week-of-march-2-2020"></a>Woche des 2. März 2020   
+### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Verbesserte Anmeldefunktion im Unternehmensportal für Android   
+Wir haben das Layout mehrerer Anmeldebildschirme in der Unternehmensportal-App für Android aktualisiert, um die Benutzeroberfläche moderner, einfacher und übersichtlicher zu gestalten. Alle „Unternehmensportal für Android“-Registrierungsanweisungen finden Sie unter [Registrierung Ihres Android-Geräts](../user-help/enroll-device-android-company-portal.md) oder [Registrieren eines Geräts mit dem Android-Arbeitsprofil](../user-help/enroll-device-android-work-profile.md).   
+
+
+|Aktualisiert|Zurück|   
+|---|---|   
+|![Beispielabbildung des neuen Anmeldebildschirms des Unternehmensportals mit der Anmeldeschaltfläche.](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Beispielabbildung der vorherigen Unternehmensportal-Anmeldeseite mit unruhigerem Design.](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
+|![Beispielabbildung des neuen Anmeldefortschrittsbildschirms mit einer Statusanzeige.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Beispielabbildung des vorherigen Anmeldefortschrittsbildschirms mit unruhigerem Design.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
 ## <a name="week-of-february-3-2020"></a>Woche am 3. Februar 2020
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>Bildschirm aus dem Unternehmensportal bzw. der Android-Arbeitsprofilregistrierung entfernt <!--6103987 -->
@@ -142,7 +151,7 @@ Die Anzeigen und Schritte bei der Registrierung im Unternehmensportal für iOS w
 * Öffnen der App „Settings“ (Einstellungen), um das Verwaltungsprofil auf dem Gerät zu installieren.  
 * Rückkehr zur Unternehmensportal-App, um die Registrierung abzuschließen.  
 
-Die aktualisierten Registrierungsschritte und -anzeigen finden Sie unter [Enroll iOS device in Intune (Registrieren eines iOS-Geräts in Intune)](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).  
+Die aktualisierten Registrierungsschritte und -anzeigen finden Sie unter [Enroll iOS device in Intune (Registrieren eines iOS-Geräts in Intune)](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Update für die Benutzeroberfläche für die Unternehmensportal-App für iOS <!-- 2536024 -->
 Die Startseite der Unternehmensportal-App für iOS-Geräte wurde neu gestaltet. Sie entspricht nun mehr dem Muster der iOS-Benutzeroberfläche, und zudem können Apps und E-Books besser gefunden werden.  
@@ -166,7 +175,7 @@ Als Microsoft Intune-Administrator können Sie ein benutzerdefiniertes Markenbil
 ## <a name="week-of-august-27-2018"></a>Woche vom 27. August 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Neues Update für die Benutzeroberfläche für die Unternehmensportal-Website <!--2000968 -->  
-Die Unternehmensportalwebsite wurde auf der Grundlage von Kundenfeedback um neue Features ergänzt. Sie werden eine erhebliche Verbesserung der vorhandenen Funktionen und Benutzerfreundlichkeit Ihrer Geräte feststellen können. Bestimmte Bereiche der Website wie Gerätedetails, Feedback und Support sowie die Geräteübersicht wurden mit einem neuen, modernen und dynamischen Design ausgestattet. Die [Dokumentation zur Intune-Unternehmensportalwebsite](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website) wurde entsprechend dieser Änderungen aktualisiert.   
+Die Unternehmensportalwebsite wurde auf der Grundlage von Kundenfeedback um neue Features ergänzt. Sie werden eine erhebliche Verbesserung der vorhandenen Funktionen und Benutzerfreundlichkeit Ihrer Geräte feststellen können. Bestimmte Bereiche der Website wie Gerätedetails, Feedback und Support sowie die Geräteübersicht wurden mit einem neuen, modernen und dynamischen Design ausgestattet. Die [Dokumentation zur Intune-Unternehmensportalwebsite](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) wurde entsprechend dieser Änderungen aktualisiert.   
 
 Folgende Updates werden Sie bemerken:  
 

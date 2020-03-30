@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb597aec20e8010d8694475d2af5d8033a809f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352890"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084947"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Welche gängigen Möglichkeiten gibt es für die Verwendung des bedingten Zugriffs in Intune?
 
@@ -83,7 +83,7 @@ Der bedingte Zugriff für PCs bietet eine Funktionalität, die der für mobile G
 
 #### <a name="corporate-owned"></a>Unternehmenseigene Geräte
 
-- **In die lokale AD-Domäne eingebunden**: Diese Option wird häufig von Organisationen genutzt, die bereits mit der Verwaltung ihrer PCs über AD-Gruppenrichtlinien oder Configuration Manager vertraut sind.
+- **Über Azure AD Hybrid eingebunden**: Diese Option wird häufig von Organisationen genutzt, die bereits mit der Verwaltung ihrer PCs über AD-Gruppenrichtlinien oder Configuration Manager vertraut sind.
 
 - **In die Azure AD-Domäne eingebunden und über Intune verwaltet**: Dieses Szenario eignet sich für Organisationen, die einen Cloud-First-Ansatz (primäre Nutzung von Clouddiensten, sodass weniger lokale Infrastruktur erforderlich ist) oder einen Cloud-Only-Ansatz (gar keine lokale Infrastruktur) verfolgen möchten. Die Azure AD-Einbindung lässt sich gut in einer hybriden Umgebung einsetzen und bietet Zugriff auf Apps und Ressourcen sowohl in der Cloud als auch in der lokalen Infrastruktur. Geräte werden in Azure AD eingebunden und in Intune registriert – dies kann beim Zugriff auf Unternehmensressourcen als Kriterium für den bedingten Zugriff verwendet werden.
 

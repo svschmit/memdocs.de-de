@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227d18a73ac33cfc277ec4c91935002e159da553
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2219dae6de9814e7eacebe507095c46c598f932f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348925"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084700"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Entfernen von Geräten durch Zurücksetzen, Abkoppeln oder manuelles Aufheben der Registrierung des Geräts
 
@@ -188,7 +188,7 @@ Wenn Sie ein Apple-DEP-Gerät vollständig aus der Intune-Verwaltung entfernen m
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Klicken Sie auf **Geräte** > **Alle Geräte**, wählen Sie das Gerät aus, und klicken Sie auf **Abkoppeln**.
 ![Screenshot vom Abkoppeln](./media/devices-wipe/retire.png)
-3. Besuchen Sie [deploy.apple.com](http://deploy.apple.com), und suchen Sie über die Seriennummer nach dem Gerät.
+3. Besuchen Sie [business.apple.com](http://business.apple.com), und suchen Sie anhand der Seriennummer nach dem Gerät.
 4. Wählen Sie im Menü **Assigned to** (Zugewiesen an) die Option **Unassigned** (Nicht zugewiesen) aus.
 
 5. Wählen Sie **Reassign** (Neu zuweisen) aus.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40c4f352d3e7b94ef6e6c2f16a28d188c4e9ad1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339383"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220199"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Automatisches Registrieren von iOS-/iPadOS-Geräten mit dem Programm zur Geräteregistrierung von Apple
 
@@ -195,6 +195,9 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 
 11. Wählen Sie aus, ob für Geräte, für die dieses Profil verwendet wird, die Option **Mit Computern synchronisieren** verfügbar sein soll. Wenn Sie **Apple Configurator nach Zertifikat zulassen** auswählen, müssen Sie unter **Apple Configurator-Zertifikate** ein Zertifikat auswählen.
 
+     > [!NOTE]
+     > Wenn **Mit Computern synchronisieren** auf **Alle ablehnen** festgelegt ist, wird der Port auf iOS- und iPadOS-Geräten beschränkt. Der Port kann ausschließlich zum Laden verwendet werden. Die Verwendung von iTunes oder Apple Configurator an diesem Port wird blockiert.
+
 12. Wenn Sie im vorherigen Schritt **Apple Configurator nach Zertifikat zulassen** ausgewählt haben, müssen Sie ein Apple Configurator-Zertifikat zum Importieren auswählen.
 
 13. Sie können ein Benennungsformat für Geräte angeben, das sowohl bei deren Registrierung als auch bei jeder ihrer späteren Anmeldungen automatisch angewendet wird. Um eine Benennungsvorlage zu erstellen, wählen Sie **Ja** unter **Vorlage für Gerätenamen anwenden** aus. Geben Sie dann in das Feld **Vorlage für Gerätenamen** den Namen der Vorlage ein, die für die Geräte verwendet werden soll, für die dieses Profil verwendet wird. Sie können ein Vorlagenformat angeben, das den Gerätetyp und die Seriennummer enthält. 
@@ -278,6 +281,10 @@ Sie haben die Verwaltung und Synchronisierung zwischen Apple und Intune aktivier
 Informationen finden Sie unter [Registrieren Ihres iOS-/iPadOS-Geräts in Intune mit dem Programm zur Geräteregistrierung](../user-help/enroll-your-device-dep-ios.md).
 
 ## <a name="renew-a-dep-token"></a>Erneuern eines DEP-Tokens  
+
+> [!NOTE]
+> Zusätzlich zur jährlichen Verlängerung des DEP-Tokens müssen Sie das Token Ihres Registrierungsprogramms in Intune und Apple Business Manager verlängern, wenn das Kennwort der verwalteten Apple-ID für den Benutzer geändert wird, der das Token im Apple Business Manager eingerichtet hat, oder wenn dieser Benutzer Ihre Apple Business Manager-Organisation verlässt.
+
 1. Wechseln Sie zu deploy.apple.com.  
 2. Wählen Sie unter **Server verwalten** Ihren MDM-Server aus, der der Tokendatei zugeordnet ist, die Sie erneuern möchten.
 3. Klicken Sie auf **Neues Token generieren**.

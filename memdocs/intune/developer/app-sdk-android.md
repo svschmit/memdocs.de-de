@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4354d4b5aeb0957790d469a2a3fd5c6787aa93eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363771"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086333"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Entwicklerhandbuch zum Microsoft Intune App SDK für Android
 
@@ -297,7 +297,7 @@ Zusätzlich zu den Basisklassen verfügen einige Klassen, die Ihre Anwendung ohn
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
@@ -324,7 +324,7 @@ Zusätzlich zu den Basisklassen verfügen einige Klassen, die Ihre Anwendung ohn
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | Android.Support.V7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -1079,7 +1079,7 @@ Die `getComplianceStatus()`-Methode gibt das Ergebnis des Versuchs, die Konformi
 | PENDING (AUSSTEHEND) | Der Versuch, die Konformität wiederherzustellen, ist fehlgeschlagen, da die Statusantwort noch nicht vom Dienst empfangen wurde, als das Zeitlimit ablief. Die App sollte später noch einmal versuchen, das Token abzurufen. |
 | COMPANY_PORTAL_REQUIRED | Das Unternehmensportal muss auf dem Gerät installiert sein, damit die Konformitätswiederherstellung erfolgreich sein kann.  Wenn das Unternehmensportal bereits auf dem Gerät installiert ist, muss die App neu gestartet werden.  In diesem Fall wird ein Dialogfeld angezeigt, das den Benutzer auffordert, die App neu zu starten. |
 
-Wenn der Konformitätsstatus `MAMCAComplianceStatus.COMPLIANT` ist, sollte die App ihren ursprünglichen Tokenabruf neu initiieren (für ihre eigene Ressource). Wenn der Versuch, die Konformität wiederherzustellen, fehlgeschlagen ist, geben die `getComplianceErrorTitle()`- und `getComplianceErrorMessage()`-Methoden lokalisierte Zeichenfolgen zurück, die die App dem Endbenutzer gegebenenfalls anzeigen kann.  In den meisten Fällen können die Fehler von der App nicht behoben werden,. Allgemein ist es also am besten, dass die Kontoerstellung oder Anmeldung fehlschlägt und der Benutzer die Möglichkeit erhält, es später noch mal zu versuchen.  Wenn ein Fehlschlag dauerhaft auftritt, helfen die MAM-Protokolle möglicherweise dabei, die Gründe dafür herauszufinden.  Der Endbenutzer kann die Protokolle senden. Weitere Informationen dazu finden Sie [hier](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android "Senden von Protokollen per E-Mail an den Support Ihres Unternehmens").
+Wenn der Konformitätsstatus `MAMCAComplianceStatus.COMPLIANT` ist, sollte die App ihren ursprünglichen Tokenabruf neu initiieren (für ihre eigene Ressource). Wenn der Versuch, die Konformität wiederherzustellen, fehlgeschlagen ist, geben die `getComplianceErrorTitle()`- und `getComplianceErrorMessage()`-Methoden lokalisierte Zeichenfolgen zurück, die die App dem Endbenutzer gegebenenfalls anzeigen kann.  In den meisten Fällen können die Fehler von der App nicht behoben werden,. Allgemein ist es also am besten, dass die Kontoerstellung oder Anmeldung fehlschlägt und der Benutzer die Möglichkeit erhält, es später noch mal zu versuchen.  Wenn ein Fehlschlag dauerhaft auftritt, helfen die MAM-Protokolle möglicherweise dabei, die Gründe dafür herauszufinden.  Der Endbenutzer kann die Protokolle senden. Weitere Informationen dazu finden Sie [hier](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "Senden von Protokollen per E-Mail an den Support Ihres Unternehmens").
 
 Da `MAMUserNotification` von `MAMComplianceNotification` erweitert wird, ist die Identität des Benutzers ebenfalls verfügbar, für den die Wiederherstellung versucht wurde.
 
@@ -1445,7 +1445,7 @@ Um `MAMAsyncTask` zu verwenden, arbeiten Sie einfach mit einer Vererbung davon a
 ```
 
 ### <a name="file-protection"></a>Dateischutz
-Jeder Datei wird zum Zeitpunkt der Erstellung basierend auf der Thread- und Prozessidentität eine Identität zugewiesen. Diese Identität wird sowohl für die Dateiverschlüsselung als auch die selektive Zurücksetzung verwendet. Nur Dateien, deren Identität verwaltet wird und eine Richtlinie aufweist, die Verschlüsselung erfordert, werden verschlüsselt. Die standardmäßige selektive Funktionszurücksetzung des SDK setzt nur Dateien zurück, denen die verwaltete Identität zugeordnet ist, für die eine Zurücksetzung angefordert wurde. Die App kann die Identität einer Datei mit de `MAMFileProtectionManager`-Klasse abfragen oder ändern.
+Jeder Datei wird zum Zeitpunkt der Erstellung basierend auf der Thread- und Prozessidentität eine Identität zugewiesen. Diese Identität wird sowohl für die Dateiverschlüsselung als auch die selektive Zurücksetzung verwendet. Nur Dateien, deren Identität verwaltet wird und eine Richtlinie aufweist, die Verschlüsselung erfordert, werden verschlüsselt. Die standardmäßige selektive Funktionszurücksetzung des SDK setzt nur Dateien zurück, denen die verwaltete Identität zugeordnet ist, für die eine Zurücksetzung angefordert wurde. Die App kann die Identität einer Datei mit der `MAMFileProtectionManager`-Klasse abfragen oder ändern.
 
 ```java
 public final class MAMFileProtectionManager {
@@ -1457,12 +1457,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *         Identity to set.
     * @param file
-    *       File to protect.
+    *         File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1864,7 +1864,7 @@ Das Intune SDK verwaltet des von der Android-API bereitgestellten Vertrag; jedoc
 Das Intune App SDK für Android kontrolliert nicht die Datensammlung über Ihre App. Standardmäßig protokolliert die Unternehmensportal-Anwendung systemgenerierte Daten. Diese Daten werden an Microsoft Intune gesendet. Gemäß der Microsoft-Richtlinie sammeln wir keine personenbezogenen Daten.
 
 > [!NOTE]
-> Wenn Benutzer sich dazu entschließen, diese Daten nicht zu senden, müssen sie die Telemetrie unter „Einstellungen“ in der Unternehmensportal-App deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Erfassung von Nutzungsdaten durch Microsoft](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android). 
+> Wenn Benutzer sich dazu entschließen, diese Daten nicht zu senden, müssen sie die Telemetrie unter „Einstellungen“ in der Unternehmensportal-App deaktivieren. Weitere Informationen finden Sie unter [Deaktivieren der Erfassung von Nutzungsdaten durch Microsoft](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## <a name="recommended-android-best-practices"></a>Empfohlene und bewährte Methoden für Android
 

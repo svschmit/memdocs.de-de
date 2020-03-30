@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8586e5c25ec3db4a736d84381e691ecebe6fae32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361678"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220097"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Einstellungen für Windows 10-Geräte (und höher) zum Zulassen oder Einschränken von Features mit Intune
 
@@ -315,7 +315,7 @@ Dieses Geräteeinschränkungsprofil steht in direktem Zusammenhang mit dem Kiosk
 - **Start Microsoft Edge with** (Microsoft Edge starten mit): Wählen Sie aus, welche Seiten beim Starten von Microsoft Edge geöffnet werden. Folgende Optionen sind verfügbar:
   - **Benutzerdefinierte Startseiten**: Geben Sie die Startseiten ein, z. B. `http://www.contoso.com`. Microsoft Edge lädt die Startseiten, die Sie eingeben.
   - **Neue Registerkartenseite:** Microsoft Edge lädt, was in der Einstellung **URL für neue Registerkartenseite** eingegeben wird.
-  - **Seite der letzten Sitzung:** Microsoft Edge lädt die Seite der letzten Sitzung.
+  - **Seite der letzten Sitzung**: Microsoft Edge lädt die Seite der letzten Sitzung.
   - **Startseiten in lokalen App-Einstellungen**: Microsoft Edge beginnt mit der vom Betriebssystem definierten Standardstartseite.
 
 - **Benutzern das Ändern von Startseiten gestatten**: Wenn die Option **Ja** (Standard) ausgewählt ist, können Benutzer die Startseiten ändern. Administratoren können mithilfe der `EdgeHomepageUrls` die Startseiten eingeben, die Benutzern standardmäßig beim Öffnen von Microsoft Edge angezeigt werden. **Nein** hindert Benutzer daran, Änderungen an den Startseiten vorzunehmen.
@@ -377,7 +377,7 @@ Dieses Geräteeinschränkungsprofil steht in direktem Zusammenhang mit dem Kiosk
 - **Browserdaten beim Beenden löschen (Nur Desktopgeräte)** : Die Option **Ja** löscht den Verlauf sowie die Browserdaten, wenn der Benutzer Microsoft Edge beendet. **Nein** (Standard) verwendet den Betriebssystemstandard, d.h. die Browserdaten werden möglicherweise zwischengespeichert.
 - **Sync browser settings between user's devices** (Browsereinstellungen zwischen Benutzergeräten synchronisieren): Legen Sie fest, wie die Browsereinstellungen zwischen den Geräten synchronisiert werden sollen. Folgende Optionen sind verfügbar:
   - **Zulassen:** Lässt die Synchronisierung von Microsoft Edge-Browsereinstellungen zwischen Benutzergeräten zu.
-  - **Block and enable user override** (Außerkraftsetzung durch Benutzer blockieren und aktivieren): blockiert die Synchronisierung von Microsoft Edge-Browsereinstellungen zwischen Benutzergeräten. Benutzer können diese Einstellung überschreiben.
+  - **Block and enable user override** (Außerkraftsetzung durch Benutzer blockieren und aktivieren): Blockiert die Synchronisierung von Microsoft Edge-Browsereinstellungen zwischen Benutzergeräten. Benutzer können diese Einstellung überschreiben.
   - **Blockieren:** Blockieren der Synchronisierung von Microsoft Edge-Browsereinstellungen zwischen Geräten von Benutzern. Benutzer können diese Einstellung nicht überschreiben.
 
 Wenn „Außerkraftsetzung durch Benutzer blockieren und aktivieren“ ausgewählt ist, kann der Benutzer die Administratorfestlegung überschreiben.
@@ -898,6 +898,11 @@ Diese Einstellungen verwenden den [Defender-Richtlinien-CSP](https://docs.micros
   [Defender/ThreatSeverityDefaultAction-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Microsoft Defender Antivirus-Ausschlüsse
+
+Sie können bestimmte Dateien aus Microsoft Defender Antivirus-Scans ausschließen, indem Sie Ausschlusslisten bearbeiten. **Im Allgemeinen sollten Sie keine Ausschlüsse anwenden**. Microsoft Defender Antivirus umfasst eine Reihe von automatischen Ausschlüssen, die auf bekannten Betriebssystemverhalten und typischen Verwaltungsdateien basieren, wie z. B. solchen, die in der Unternehmensverwaltung, Datenbankverwaltung und anderen Unternehmensszenarien und -situationen verwendet werden.
+
+> [!WARNING]
+> **Durch das Definieren von Ausschlüsse wird der von Microsoft Defender Antivirus angebotene Schutz gesenkt**. Bewerten Sie immer die Risiken, die mit der Implementierung von Ausschlüssen einhergehen. Schließen Sie nur Dateien aus, von denen Sie wissen, dass sie nicht schädlich sind.
 
 - **Files and folders to exclude from scans and real-time protection** (Dateien und Ordner, die bei Überprüfungen und Echtzeitschutz ausgeschlossen werden sollen): Fügt Dateien und Ordner wie **C:\Pfad** oder **%ProgramFiles%\Pfad\Dateiname.exe** der Ausschlussliste hinzu. Diese Dateien und Ordner werden in Echtzeitüberprüfungen oder geplanten Überprüfungen nicht berücksichtigt.
 - **File extensions to exclude from scans and real-time protection** (Dateierweiterungen, die bei Überprüfungen und Echtzeitschutz ausgeschlossen werden sollen): Fügen Sie Dateierweiterungen wie **JPG** oder **TXT** der Ausschlussliste hinzu. Dateien mit diesen Erweiterungen werden nicht in Echtzeitüberprüfungen oder geplante Überprüfungen einbezogen.

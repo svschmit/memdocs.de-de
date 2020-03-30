@@ -1,11 +1,11 @@
 ---
 title: Einschränkung der Gerätefeatures durch Richtlinien in Microsoft Intune – Azure | Microsoft-Dokumentation
-description: Hinzufügen eines Geräteprofils zum Einschränken von Funktionen auf Android-, macOS-, iOS-, iPadOS-, Windows Phone- und Windows 10-Geräten in Microsoft Intune
+description: Hinzufügen eines Geräteprofils zum Einschränken von Funktionen auf Android-Geräteadministrator-, Android Enterprise-, macOS-, iOS-, iPadOS-, Windows Phone- und Windows 10-Geräten in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28cf0b8bffc06a0b5a56165c1e9eeab780c453c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361821"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087085"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurieren von Einstellungen für Geräteeinschränkungen in Microsoft Intune
-
-
 
 Intune enthält Richtlinien zur Geräteeinschränkung, die Administratoren bei der Steuerung von Android-, iOS-/iPadOS-, macOS- und Windows-Geräten unterstützen. Mit diesen Einschränkungen können Sie eine Vielzahl von Einstellungen und Features steuern, um die Ressourcen Ihres Unternehmens zu schützen. Administratoren können z.B.:
 
@@ -48,7 +46,7 @@ In diesem Artikel erfahren Sie, wie Sie ein Geräteeinschränkungsprofil erstell
     - **Beschreibung:** Geben Sie eine Beschreibung für die Richtlinie ein. Diese Einstellung ist optional, wird jedoch empfohlen.
     - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:  
 
-        - **Android**
+        - **Android-Geräteadministrator**
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
@@ -62,7 +60,7 @@ In diesem Artikel erfahren Sie, wie Sie ein Geräteeinschränkungsprofil erstell
 
 4. Die konfigurierbaren Einstellungen variieren je nach der ausgewählten Plattform. Wählen Sie Ihre Plattform für detaillierte Einstellungen aus:
 
-    - [Einstellungen für Android](device-restrictions-android.md)
+    - [Android-Geräteadministratoreinstellungen](device-restrictions-android.md)
     - [Android-Einstellungen für Unternehmen](device-restrictions-android-for-work.md)
     - [iOS/iPadOS-Einstellungen](device-restrictions-ios.md)
     - [Einstellungen für macOS](device-restrictions-macos.md)

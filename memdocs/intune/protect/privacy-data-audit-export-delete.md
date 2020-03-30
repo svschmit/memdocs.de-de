@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db3146bbaae3362e97c8c076823b58dbcd57c4af
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339071"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084814"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Überwachen, Exportieren und Löschen von personenbezogenen Daten in Intune
 
@@ -39,13 +39,13 @@ Aus Sicherheitsgründen kann Intune Überwachungsprotokolle für Benutzer- und G
 
 Wenn Sie die Überwachungsprotokolle überprüfen möchten, finden Sie weitere Informationen unter [Überwachungsprotokolle für Intune-Aktivitäten](../fundamentals/monitor-audit-logs.md). 
 
-Überwachungsprotokolle können von Administratoren nicht gelöscht werden.
+Administratoren können Überwachungsprotokolle nicht löschen.
 
 Diese Überwachungsereignisse werden für ein Jahr aufbewahrt. Mandantenadministratoren können Überwachungsprotokoll mithilfe [dieses Formulars für Supportanfragen](https://privacy.microsoft.com/en-US/privacy-questions?) anfordern.
 
 ## <a name="export-personal-data"></a>Exportieren von personenbezogenen Daten
 
-Administratoren können die personenbezogenen Daten von Endbenutzern exportieren, einschließlich Konten, Dienstdaten und zugeordneten Protokollen, um DSR-Anforderungen (Data Subject Rights) zu erfüllen. Es liegt an Ihnen und Ihrer Organisation, zu entscheiden, ob Sie dem Datensubjekt eine Kopie der personenbezogenen Daten bereitstellen oder ob eine legitime geschäftliche Veranlassung vorliegt, die Daten einzubehalten. Wenn Sie die Daten bereitstellen, können Sie dies durch eine Kopie des echten Dokuments, eine entsprechend bearbeitete Version oder einen Screenshot der Teile, die freigegeben werden können, tun.
+Administratoren können die personenbezogenen Daten von Endbenutzern exportieren, einschließlich Konten, Dienstdaten und zugeordneten Protokollen, um DSR-Anforderungen (Data Subject Rights) zu erfüllen. Es obliegt Ihnen und Ihrer Organisation, zu entscheiden, ob Sie dem Datensubjekt eine Kopie der personenbezogenen Daten bereitstellen oder ob ein legitimer geschäftlicher Grund besteht, die Daten einzubehalten. Wenn Sie die Daten bereitstellen, können Sie dies durch eine Kopie des echten Dokuments, eine entsprechend bearbeitete Version oder einen Screenshot der Teile, die freigegeben werden können, tun.
 
 Sie können Folgendes verwenden, um die personenbezogenen Daten eines Benutzers zu exportieren: 
 - Das Intune-Blatt „MDM-Gerät“, um eine Liste der Geräte zu exportieren. Sie können die Gerätedaten auch direkt kopieren.
@@ -60,13 +60,13 @@ Es gibt drei Möglichkeiten, um personenbezogene Daten aus der Intune-Verwaltung
 
 ### <a name="delete-a-user-from-intune"></a>Löschen eines Benutzers aus Intune
 
-Ein Administrator muss [den Benutzer aus Azure Active Directory (AAD) löschen](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), um die personenbezogenen Daten eines Endbenutzers aus Intune zu löschen. Wenn der Benutzer aus AAD gelöscht wird (dauerhaft), empfängt Intune den Löschbefehl von AAD und beginnt automatisch damit, alle personenbezogenen Daten des Benutzers aus dem Intune-Dienst zu löschen. Die Benutzerinformationen werden aus dem Intune-Dienst innerhalb von 30 Tagen nach dem Löschvorgang gelöscht.
+Um die personenbezogenen Daten eines Endbenutzers aus Intune zu löschen, muss ein Administrator [den Benutzer aus Azure Active Directory (AAD) löschen](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Wenn der Benutzer dauerhaft aus AAD gelöscht wird, empfängt Intune den Löschbefehl von AAD und beginnt automatisch damit, alle personenbezogenen Daten des Benutzers aus dem Intune-Dienst zu entfernen. Die Benutzerinformationen werden innerhalb von 30 Tagen nach dem Löschvorgang aus dem Intune-Dienst gelöscht.
 
 ### <a name="reset-device-to-factory-settings"></a>Zurücksetzen des Geräts auf die Werkseinstellung
 Beim Zurücksetzen auf Werkseinstellungen werden alle geschäftlichen und personenbezogenen Daten und Einstellungen auf die Werkseinstellungen zurückgesetzt. Dies ist nützlich, um ein Gerät für den nächsten Mitarbeiter bereitzustellen. Benutzerdateien, von Benutzern installierte Anwendungen und vom Standard abweichende Einstellungen werden entfernt, und diese Daten werden innerhalb von 30 Tagen nach dem Löschvorgang aus dem Intune-Dienst gelöscht.
 
 ### <a name="user-self-removal-from-intune-management"></a>Selbstständige Entfernung des Benutzers aus der Intune-Verwaltung
-Benutzer können ihre persönlichen [Android-, Apple- oder Windows-Geräte](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-android) aus der Intune-Verwaltung ohne Unterstützung durch den Administrator entfernen.   
+Benutzer können ihre persönlichen [Android-, Apple- oder Windows-Geräte](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) aus der Intune-Verwaltung ohne Unterstützung durch den Administrator entfernen.   
 
 ### <a name="retire"></a>Außerkraftsetzen
 Mit der Aktion **Abkoppeln** werden in Intune bereitgestellte Daten wie Unternehmensanwendungen, Daten zu von Intune verwalteten Apps, Richtlinieneinstellungen und E-Mail-Profile entfernt. Dabei bleiben die personenbezogenen Daten des Benutzers auf dem Gerät erhalten.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 398737a89c302031cfbed87709d031077f90fb6a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354268"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085197"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Erzwingen der Konformität für Microsoft Defender ATP mit bedingtem Zugriff in Intune
 
@@ -136,14 +136,17 @@ Wenn Sie die Verbindung mit Microsoft Defender ATP hergestellt haben, empfängt 
 
 Die Konformitätsrichtlinie bestimmt die Risikostufe, die Sie für ein Gerät als akzeptabel einstufen.
 
-### <a name="create-the-compliance-policy"></a>Erstellen der Konformitätsrichtlinie
+Wenn Sie mit dem Erstellen von Kompatibilitätsrichtlinien nicht vertraut sind, lesen Sie den Abschnitt [Erstellen der Richtlinie](../protect/create-compliance-policy.md#create-the-policy) im Artikel *Erstellen einer Konformitätsrichtlinie in Microsoft Intune*. Die folgenden Informationen beziehen sich speziell auf die Konfiguration von Defender ATP im Rahmen einer Konformitätsrichtlinie.
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
-2. Wählen Sie **Geräte** > **Konformitätsrichtlinien** > **Richtlinie erstellen** aus.
-3. Geben Sie einen **Namen** und eine **Beschreibung** ein.
-4. Wählen Sie unter **Plattform** die Option **Windows 10 und höher** aus.
-5. Wählen Sie unter **Einstellungen** die Option **Microsoft Defender ATP** aus.
-6. Legen Sie **Anfordern, dass das Gerät höchstens das angegebene Computerrisiko aufweist** als bevorzugte Stufe fest.
+
+2. Wählen Sie **Geräte** > **Konformitätsrichtlinien** > **Richtlinien** > **Richtlinie erstellen** aus.
+
+3. Wählen Sie für **Plattform** *Windows 10 und höher* aus, und wählen Sie dann **Erstellen** aus, um das Konfigurationsfenster **Richtlinie erstellen** zu öffnen.
+
+4. Geben Sie auf der Registerkarte **Grundlagen** einen **Namen** an, um die Richtlinie später identifizieren zu können. Sie können auch eine **Beschreibung** angeben.
+  
+5. Erweitern Sie auf der Registerkarte **Konformitätseinstellungen** die Gruppe **Microsoft Defender ATP**, und legen Sie für **Anfordern, dass das Gerät höchstens das angegebene Computerrisiko aufweist** die bevorzugte Stufe fest.
 
    Bedrohungsstufenklassifizierungen werden [von Microsoft Defender ATP bestimmt](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
@@ -152,8 +155,7 @@ Die Konformitätsrichtlinie bestimmt die Risikostufe, die Sie für ein Gerät al
    - **Mittel**: Das Gerät ist konform, wenn auf dem Gerät Bedrohungen niedriger oder mittlerer Stufe gefunden werden. Wenn auf dem Gerät Bedrohungen hoher Stufen erkannt werden, wird es als nicht kompatibel bewertet.
    - **Hoch**: Dies ist die unsicherste Stufe, die alle Bedrohungsstufen zulässt. Also werden Geräte mit hohen, mittleren oder niedrigen Bedrohungsstufen als konform angesehen.
 
-7. Wählen Sie **OK** und **Erstellen** aus, um Ihre Änderungen zu speichern (und die Richtlinie zu erstellen).
-8. [Weisen Sie die Gerätekonformitätsrichtlinie](create-compliance-policy.md#assign-the-policy) entsprechenden Gruppen zu.
+6. Vervollständigen Sie die Konfiguration der Richtlinie einschließlich der Zuweisung der Richtlinie zu den entsprechenden Gruppen.
 
 ## <a name="create-a-conditional-access-policy"></a>Erstellen einer Richtlinie für bedingten Zugriff
 

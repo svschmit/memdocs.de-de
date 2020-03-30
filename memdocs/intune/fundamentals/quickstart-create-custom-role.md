@@ -42,7 +42,7 @@ Wenn Sie eine benutzerdefinierte Rolle erstellen, können Sie Berechtigungen fü
 
 1. Wählen Sie in Intune die Option **Rollen** > **Alle Rollen** > **Hinzufügen** aus.
 ![Browser](./media/quickstart-create-custom-role/add-custom-role.png)
-2. Geben Sie im Feld **Name** unter **Benutzerdefinierte Rolle hinzufügen***Sicherheitsvorgänge* ein.
+2. Geben Sie im Feld **Name** unter **Benutzerdefinierte Rolle hinzufügen** *Sicherheitsvorgänge* ein.
 3. Geben Sie *This role lets a security operator monitor device configuration and compliance information.* (Mit dieser Rolle kann ein Sicherheitsmitarbeiter die Gerätekonfiguration und Kompatibilitätsinformationen überwachen.) im Feld **Beschreibung** ein.
 4. Klicken Sie neben **Lesen** > **OK** auf **Konfigurieren** > **Bezeichner von Unternehmensgeräten** > **Ja**.
 ![Browser](./media/quickstart-create-custom-role/corp-device-id-read.png)
@@ -57,7 +57,7 @@ Bevor Ihr Sicherheitsoperator die neuen Berechtigungen verwenden kann, müssen S
 
 1. Wählen Sie in Intune die Optionen **Rollen** > **Alle Rollen** > **Sicherheitsvorgänge** aus.
 2. Klicken Sie unter **Intune-Rollen** auf **Zuweisungen** > **Zuweisen**.
-3. Geben Sie im Feld **Zuweisungsname***Sec ops* ein.
+3. Geben Sie im Feld **Zuweisungsname** *Sec ops* ein.
 4. Klicken Sie auf **Mitglied (Gruppen)**  > **Hinzufügen**.
 5. Wählen Sie die Gruppe **Contoso Tester** aus.
 6. Klicken Sie auf **Auswählen** > **OK**.

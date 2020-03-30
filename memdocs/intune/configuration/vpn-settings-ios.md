@@ -1,11 +1,11 @@
 ---
 title: Konfigurieren von VPN-Einstellungen für iOS/iPadOS-Geräte in Microsoft Intune – Azure | Microsoft-Dokumentation
-description: Fügen Sie ein VPN-Konfigurationsprofil hinzu bzw. erstellen Sie dieses, indem Sie Konfigurationseinstellungen für virtuelle private Netzwerke (VPNs) verwenden, einschließlich der Verbindungsdetails, Authentifizierungsmethoden und dem getrennten Tunneln in den Grundeinstellungen; der benutzerdefinierten VPN-Einstellungen mit dem Bezeichner und den Schlüssel-Wert-Paaren; der App-bezogenen VPN-Einstellungen, die Safari-URLs und bedarfsgesteuerten VPNs mit SSIDs oder DNS-Suchdomänen enthalten; und der Proxyeinstellungen zum Einschließen von einem Konfigurationsskript, einer IP-Adresse oder FQDN-Adresse und einem TCP-Port in Microsoft Intune auf Geräten mit iOS/iPadOS.
+description: Fügen Sie ein VPN-Konfigurationsprofil auf iOS/iPadOS-Geräten mithilfe von VPN-Konfigurationseinstellungen (virtuelles privates Netzwerk) hinzu, oder erstellen Sie es. Konfigurieren Sie Verbindungsdetails, Authentifizierungsmethoden, getrenntes Tunneln, benutzerdefinierte VPN-Einstellungen mit dem Bezeichner, den Schlüssel-Wert-Paaren, App-bezogenen VPN-Einstellungen, die Safari-URLs enthalten, und bedarfsgesteuerte VPNs mit SSIDs oder DNS-Suchdomänen, Proxyeinstellungen zum Einschließen eines Konfigurationsskripts, einer IP- oder FQDN-Adresse und eines TCP-Ports in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ff24193c607003889c2246bb9199db795f1623
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360456"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086533"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Hinzufügen von VPN-Einstellungen auf iOS- und iPadOS-Geräten in Microsoft Intune
 
@@ -82,10 +82,10 @@ Die in der folgenden Liste gezeigten Einstellungen hängen vom ausgewählten VPN
 
 - **Netzwerkzugriffssteuerung (NAC) aktivieren** (Cisco AnyConnect, Citrix SSO, F5 Access): Wenn Sie **Ich stimme zu** auswählen, wird die Geräte-ID in das VPN-Profil aufgenommen. Diese ID kann für die Authentifizierung beim VPN verwendet werden, um Zugriff auf das Netzwerk zu ermöglichen oder zu verhindern.
 
-    **Beim Verwenden von Cisco AnyConnect mit ISE** achten Sie auf Folgendes:
+  **Beim Verwenden von Cisco AnyConnect mit ISE** achten Sie auf Folgendes:
 
-    - Wenn Sie dies noch nicht getan haben, integrieren Sie ISE für die Netzwerkzugriffssteuerung mit Intune, so wie es im Abschnitt **Konfigurieren von Microsoft Intune als MDM-Server** im [Administratorleitfaden zu Cisco Identity Services Engine](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html) beschrieben ist.
-    - Aktivieren Sie die NAC im VPN-Profil.
+  - Wenn Sie dies noch nicht getan haben, integrieren Sie ISE für die Netzwerkzugriffssteuerung mit Intune, so wie es im Abschnitt **Konfigurieren von Microsoft Intune als MDM-Server** im [Administratorleitfaden zu Cisco Identity Services Engine](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html) beschrieben ist.
+  - Aktivieren Sie die NAC im VPN-Profil.
 
   **Wenn Sie Citrix SSO mit Gateway verwenden**, führen Sie Folgendes durch:
 
@@ -107,6 +107,34 @@ Die in der folgenden Liste gezeigten Einstellungen hängen vom ausgewählten VPN
 ## <a name="ikev2-settings"></a>IKEv2-Einstellungen
 
 Diese Einstellungen gelten, wenn Sie **Verbindungstyp** > **IKEv2** auswählen.
+
+- **Always On-VPN:** **Aktivieren** legt einen VPN-Client so fest, dass er automatisch eine Verbindung mit dem VPN herstellt und erneut herstellt. Always On-VPN-Verbindungen bleiben erhalten oder werden sofort hergestellt, wenn der Benutzer sein Gerät sperrt, das Gerät neu gestartet wird oder das drahtlose Netzwerk sich ändert. Wenn diese Option auf **Deaktivieren** (Standard) festgelegt ist, ist das Always On-VPN für alle VPN-Clients deaktiviert. Wenn diese Einstellung aktiviert ist, konfigurieren Sie auch die folgende Einstellung:
+
+  - **Netzwerkschnittstelle**: Alle IKEv2-Einstellungen gelten nur für die von Ihnen gewählte Netzwerkschnittstelle. Folgende Optionen sind verfügbar:
+    - **WLAN und Mobilfunknetz** (Standard): Die IKEv2-Einstellungen gelten für die WLAN- und Mobilfunkschnittstelle auf dem Gerät.
+    - **Mobilfunk**: Die IKEv2-Einstellungen gelten nur für die Mobilfunkschnittstelle auf dem Gerät. Wählen Sie diese Option aus, wenn Sie auf Geräten mit deaktivierter oder entfernter WLAN-Schnittstelle bereitstellen.
+    - **WLAN:** Die IKEv2-Einstellungen gelten nur für die WLAN-Schnittstelle auf dem Gerät.
+  - **Benutzern das Deaktivieren der VPN-Konfiguration erlauben**: **Aktivieren** ermöglicht Benutzern das Deaktivieren des Always On-VPN. **Deaktivieren** (Standardeinstellung) hindert Benutzer daran, es zu deaktivieren. Der Standardwert für diese Einstellung ist die sicherste Option.
+  - **Voicemail**: Wählen Sie aus, was mit Voicemaildatenverkehr passiert, wenn Always On-VPN aktiviert ist. Folgende Optionen sind verfügbar:
+    - **Netzwerkdatenverkehr über VPN erzwingen** (Standard): Diese Einstellung ist die sicherste Option.
+    - **Netzwerkdatenverkehr außerhalb des VPN zulassen**
+    - **Netzwerkdatenverkehr trennen**
+  - **AirPrint**: Wählen Sie aus, was mit AirPrint-Datenverkehr passiert, wenn Always On-VPN aktiviert ist. Folgende Optionen sind verfügbar:
+    - **Netzwerkdatenverkehr über VPN erzwingen** (Standard): Diese Einstellung ist die sicherste Option.
+    - **Netzwerkdatenverkehr außerhalb des VPN zulassen**
+    - **Netzwerkdatenverkehr trennen**
+  - **Mobilfunkdienste**: Wählen Sie unter iOS 13.0+ aus, was mit Mobilfunkdatenverkehr passiert, wenn Always On-VPN aktiviert ist. Folgende Optionen sind verfügbar:
+    - **Netzwerkdatenverkehr über VPN erzwingen** (Standard): Diese Einstellung ist die sicherste Option.
+    - **Netzwerkdatenverkehr außerhalb des VPN zulassen**
+    - **Netzwerkdatenverkehr trennen**
+  - **Datenverkehr von nicht nativen Captive-Netzwerk-Apps außerhalb des VPN zulassen**: Ein Captive-Netzwerk bezieht sich auf WLAN-Hotspots, die in der Regel in Restaurants und Hotels eingesetzt werden. Folgende Optionen sind verfügbar:
+    - **Nein**: Erzwingt die Abwicklung des gesamten CN-App-Datenverkehrs (Captive Networking) über den VPN-Tunnel.
+    - **Ja, alle Apps**: Ermöglicht dem gesamten CN-App-Datenverkehr das Umgehen des VPN.
+    - **Ja, bestimmte Apps**: **Fügen Sie** eine Liste von CN-Apps hinzu, deren Datenverkehr das VPN umgehen kann. Geben Sie die Bündel-IDs der CN-App ein. Geben Sie beispielsweise `com.contoso.app.id.package` ein.
+
+  - **Datenverkehr aus der Captive-WebSheet-App außerhalb des VPN**: Captive WebSheet ist ein integrierter Webbrowser, der die Captive-Anmeldung behandelt. **Aktivieren** ermöglicht dem Browser-App-Datenverkehr, das VPN zu umgehen. **Deaktivieren** (Standard) zwingt den WebSheet-Datenverkehr, das Always On-VPN zu verwenden. Der Standardwert ist die sicherste Option.
+  - **Keep-Alive-Intervall für die Netzwerkadressübersetzung (NAT) in Sekunden**: Um mit dem VPN verbunden zu bleiben, sendet das Gerät Netzwerkpakete, um aktiv zu bleiben. Geben Sie von 20-1.440 in Sekunden an, wie oft diese Pakete gesendet werden. Geben Sie z. B. den Wert `60` ein, um die Netzwerkpakete alle 60 Sekunden an das VPN zu senden. Dieser Wert ist standardmäßig auf `110` Sekunden eingestellt.
+  - **NAT-Keep-Alive auf Hardware auslagern, wenn sich das Gerät im Standbymodus befindet**: Wenn ein Gerät inaktiv und **Aktivieren** (Standard) festgelegt ist, sendet NAT kontinuierlich Keep-Alive-Pakete, damit das Gerät mit dem VPN verbunden bleibt. **Deaktivieren** deaktiviert dieses Feature.
 
 - **Remote-ID:** Geben Sie die Netzwerk-IP-Adresse, den vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN), den Benutzer-FQDN (UserFQDN) oder den ASN1DN des IKEv2-Servers ein. Geben Sie beispielsweise `10.0.0.3` oder `vpn.contoso.com` ein. In der Regel geben Sie den gleichen Wert wie für den [**Verbindungsnamen**](#base-vpn-settings) ein (in diesem Artikel). Dies hängt jedoch von Ihren IKEv2-Servereinstellungen ab.
 
@@ -194,7 +222,7 @@ Diese Einstellungen gelten, wenn Sie **Verbindungstyp** > **IKEv2** auswählen.
   - **URL-Zeichenfolgentest**: (Optional) Geben Sie eine URL ein, die die Regel als Test verwenden soll. Wenn das Gerät auf diese URL ohne Umleitung zugreift, wird die VPN-Verbindung gestartet. Und das Gerät wird mit der Ziel-URL verbunden. Der Standort des URL-Zeichenfolgentests wird dem Benutzer nicht angezeigt.
 
     Bei einem URL-Zeichenfolgentest handelt es sich beispielsweise um eine URL eines Überwachungswebservers, der die Gerätekonformität prüft, bevor die VPN-Verbindung hergestellt wird. Alternativ testet die URL die Fähigkeit des VPN, eine Verbindung mit einem Standort herzustellen, bevor das Gerät über das VPN mit der Ziel-URL verbunden wird.
-.
+
   - **Domänenaktion**: Wählen Sie eine der folgenden Optionen aus:
     - Bei Bedarf verbinden
     - Nie verbinden

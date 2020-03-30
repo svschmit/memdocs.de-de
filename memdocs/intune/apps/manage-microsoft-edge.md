@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/02/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cf77349508144498b847236598abda6bced52b0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c04423f79855f4c28121dad11fa21ccb05216de
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361223"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084168"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Verwalten des Webzugriffs mithilfe von Microsoft Edge mit Microsoft Intune
 
@@ -53,9 +53,15 @@ Sie können diese Einstellungen auf Folgendes anwenden:
 
 Wenn Microsoft Edge keine Intune-Richtlinie zugeordnet wird, können Benutzer diesen Browser nicht verwenden, um auf Daten aus anderen von Intune verwalteten Anwendungen wie Office-Apps zuzugreifen. 
 
+   >[!NOTE]
+   > Langes Drücken ist für Microsoft Edge deaktiviert, wenn die „Speichern unter“-Richtlinie angewendet wird, die das Herunterladen von Bildern verhindert.
+
 ## <a name="conditional-access-for-microsoft-edge"></a>Bedingter Zugriff für Microsoft Edge
 
 Sie können den bedingten Azure AD-Zugriff nutzen, um Ihre Benutzer weiterzuleiten, damit diese nur über Microsoft Edge auf Unternehmensdaten zugreifen können. Das schränkt den mobilen Browserzugriff bei mit Azure AD verbundenen Web-Apps auf den richtliniengeschützten Microsoft Edge-Browser ein. Der Zugriff über andere, nicht geschützte Browser wie z.B. Safari oder Chrome ist gesperrt. Sie können den bedingten Zugriff auf Azure-Ressourcen wie Exchange Online, SharePoint Online, das Microsoft 365 Admin Center und sogar auf lokale Websites anwenden, die Sie über den [Azure AD-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) für externe Benutzer verfügbar gemacht haben.
+
+> [!NOTE]
+> Neue Webclips (angeheftete Web-Apps) auf iOS-Geräten werden in Microsoft Edge statt in Intune Managed Browser geöffnet, wenn das Öffnen in einem geschützten Browser erforderlich ist. Ältere iOS-Webclips müssen neu zugewiesen werden, um sicherzustellen, dass sie in Microsoft Edge statt in Managed Browser geöffnet werden.
 
 So schränken Sie bei mit Azure AD verbundenen Web-Apps die Verwendung von Microsoft Edge unter iOS und Android ein:
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
@@ -195,7 +201,7 @@ Verwenden Sie das folgende Schlüssel-Wert-Paar zum Konfigurieren einer Verknüp
 Mit diesen Einstellungen können Sie die „Neuer Tab“-Seite für Microsoft Edge so anpassen, dass das Logo und die Markenfarbe Ihrer Organisation als Seitenhintergrund angezeigt werden.
 
 Um das Logo und die Farbe Ihrer Organisation hochzuladen, führen Sie zuerst die folgenden Schritte aus:
-- Navigieren Sie im Azure-Portal zu [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)  ->  **Tenant Administration**  ->  **Branding and customization**  ->  **Company Identity Branding** (Microsoft Endpoint Manager Admin Center > Mandantenverwaltung > Branding und Anpassung > Firmenidentitätsbranding).
+- Navigieren Sie im Azure-Portal zu [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Mandantenverwaltung** -> **Anpassung** -> **Unternehmensbranding**.
 - Um das Logo Ihrer Marke festzulegen, wählen Sie unter „Anzeigen“ die Option „Nur Firmenlogo“ aus. Es empfiehlt sich, transparente Hintergrundlogos zu verwenden. 
 - Um die Hintergrundfarbe Ihrer Marke festzulegen, wählen Sie unter „Anzeigen“ die Option „Designfarbe“ aus. Microsoft Edge wendet einen helleren Farbton der Farbe auf die Seite „Neuer Tab“ an. Dadurch ist sichergestellt, dass die Seite gut lesbar ist. 
 
@@ -212,7 +218,7 @@ Sie können das Element „Neue Registerkartenseite“ in Microsoft Edge für Mo
 
 |    Key    |    Wert    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    Bei Festlegung auf **True** werden Branchennachrichten in Microsoft Edge für Mobilgeräte im Element „Neue Registerkartenseite“ angezeigt.<p>Bei Festlegung auf **False** werden Branchennachrichten im Element „Neue Registerkartenseite“ ausgeblendet.    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    Bei Festlegung auf **TRUE** werden Branchennachrichten in Microsoft Edge für Mobilgeräte im Element „Neue Registerkartenseite“ angezeigt.<p>Bei Festlegung auf **False** werden Branchennachrichten im Element „Neue Registerkartenseite“ ausgeblendet.    |
 
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Konfigurieren von verwalteten Lesezeichen für Microsoft Edge
 
@@ -238,7 +244,7 @@ Ihren Benutzern werden standardmäßig die MyApps-Websites angezeigt, die für s
 
 |    Key    |    Wert    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **True** zeigt „MyApps“ in den Microsoft Edge-Lesezeichen.<p>**False** blendet „MyApps“ in den Microsoft Edge-Lesezeichen aus.    |
+|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **TRUE** zeigt „MyApps“ in den Microsoft Edge-Lesezeichen an.<p>**False** blendet „MyApps“ in den Microsoft Edge-Lesezeichen aus.    |
     
 ## <a name="use-https-protocol-as-default"></a>Verwendung des HTTPS-Protokolls als Standard
 
@@ -246,7 +252,7 @@ Sie können Microsoft Edge für mobile Geräte so konfigurieren, dass standardm�
 
 |    Key    |    Wert    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.defaultHTTPS`     |     **True** legt das Standardprotokoll so fest, dass HTTPS verwendet wird.     |
+|    `com.microsoft.intune.mam.managedbrowser.defaultHTTPS`     |     **TRUE** legt das Standardprotokoll so fest, dass HTTPS verwendet wird.     |
 
 
 ## <a name="specify-allowed-or-blocked-sites-list-for-microsoft-edge"></a>Angeben der Liste zulässiger oder blockierter Websites für Microsoft Edge
@@ -257,6 +263,15 @@ Verwenden Sie die folgenden Schlüssel-Wert-Paare, um entweder eine Zulassungsli
 |    Key    |    Wert    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Es stehen die folgenden Optionen zur Auswahl:<p>1. Geben Sie zulässige URLs an (nur diese URLs sind zulässig. Es kann nicht auf andere Websites zugegriffen werden):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Angeben von blockierten URLs (auf alle anderen Websites kann zugegriffen werden):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Der entsprechende Wert für den Schlüssel ist eine Liste mit URLs. Sie geben alle URLs, die Sie zulassen oder blockieren möchten, als einen einzelnen Wert ein, der durch einen senkrechten Strich (`|`) getrennt ist.<br>**Beispiele:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+
+Die folgenden Websites sind unabhängig von den definierten Zulassungs- oder Sperrlisteneinstellungen immer zulässig:
+- `https://*.microsoft.com/*`
+- `http://*.microsoft.com/*`
+- `https://microsoft.com/*`
+- `http://microsoft.com/*`
+- `https://*.windowsazure.com/*`
+- `https://*.microsoftonline.com/*`
+- `https://*.microsoftonline-p.com/*`
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>URL-Formate für die Liste zulässiger und blockierter Websites 
 Sie können verschiedene URL-Formate verwenden, um Ihre Listen für zulässige/blockierte Websites zu erstellen. Diese zulässigen Muster werden in der folgenden Tabelle beschrieben. Einige Hinweise, bevor Sie beginnen: 
@@ -301,19 +316,7 @@ Verwenden Sie das folgende Schlüssel-Wert-Paar, um zu konfigurieren, ob diese w
 
 |    Key    |    Wert    |
 |-------------------------------------------------------------------|-------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **TRUE** (Standardwert) erlaubt es Microsoft Edge, Benutzer an ihren persönlichen Kontext weiterzuleiten, um blockierte Websites zu öffnen.<p>**False** verhindert, dass Microsoft Edge Benutzer weiterleitet. Benutzern wird einfach eine Meldung angezeigt, die besagt, dass die Website, auf die sie versuchen zuzugreifen, gesperrt ist.    |
-
-## <a name="disable-inprivate-and-microsoft-accounts-msa-to-restrict-personal-browsing"></a>Deaktivieren von InPrivate- und Microsoft-Konten (MSA) zum Einschränken des privaten Browsens
-Einige Kunden in streng regulierten Branchen, die Microsoft Edge verwenden, möchten das Browsen ihrer Benutzer auf ihren AAD-Kontext einschränken. Mithilfe der folgenden App-Konfigurationseinstellungen können Sie Microsoft-Konten oder das InPrivate-Browsen deaktivieren.
-
-|    Key    |    Wert    |
-|-------------------------------------------------------------------|-------------------------------------------------------|
-|     `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    Mit dem Wert **inprivate** wird der InPrivate-Browser deaktiviert. <br> Mit dem Wert **msa** wird die Fähigkeit der Benutzer deaktiviert, private MSA-Konten zu Microsoft Edge hinzuzufügen.<br> Verwenden Sie `inprivate| msa`, um sowohl InPrivate- als auch MSA-Konten zu deaktivieren.    |  
-
-
-Wenn Sie keine App-Schutzrichtlinien bereitstellen, können Sie Benutzern auch die Verwendung von Microsoft-Konten einschränken und nur das Browsen über ein Geschäfts-, Schul-oder Unikonto auf registrierten Geräten zulassen. Weitere Informationen über Schlüssel zum Konfigurieren des Modus „org-account-only“ für Microsoft Edge finden Sie unter:
-- [org-account-only für Android](https://docs.microsoft.com/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [org-account-only für iOS](https://docs.microsoft.com/intune/apps/app-configuration-policies-use-ios#allow-only-configured-organization-accounts-in-multi-identity-apps)
+|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **TRUE** (Standardwert) erlaubt Microsoft Edge, Benutzer an ihren persönlichen Kontext weiterzuleiten, um blockierte Websites zu öffnen.<p>**False** verhindert, dass Microsoft Edge Benutzer weiterleitet. Benutzern wird einfach eine Meldung angezeigt, die besagt, dass die Website, auf die sie versuchen zuzugreifen, gesperrt ist.    |
 
 ## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Direktes Öffnen eingeschränkter Links in den InPrivate-Registerkartenseiten
 
@@ -350,32 +353,63 @@ Standardmäßig bietet Microsoft Edge auf iOS an, die Kennwörter Ihrer Benutzer
 |-----------------------|-----------------------|
 |    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    Der Wert **password** verhindert, dass Aufforderungen angezeigt werden, Kennwörter für den Endbenutzer zu speichern.    |
 
-### <a name="disable-inprivate-browsing-and-microsoft-accounts-to-restrict-browsing-to-work-only-contexts"></a>Deaktivieren von InPrivate-Browsen und Verhindern, dass das Browsen mit Microsoft-Konten nur für arbeitsrelevante Kontexte möglich ist
+### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>Verhindern, dass Benutzer Microsoft Edge Erweiterungen hinzufügen 
 
-Wenn Ihre Organisation in einer stark reglementierten Branche tätig ist oder ein VPN pro App verwendet, um Benutzern den Zugriff auf Arbeitsressourcen mithilfe von Microsoft Edge zu ermöglichen, können Sie die Verwendung von Microsoft Edge auf durch die mobile Anwendungsverwaltung geschützte Kontexte reduzieren. Diese Funktion steht nur für Geräte zur Verfügung, die für die mobile Geräteverwaltung registriert sind.
+Sie können das Erweiterungsframework in Microsoft Edge deaktivieren, um zu verhindern, dass Benutzer Erweiterungs-Apps installieren. Konfigurieren Sie hierzu die folgende Einstellung:
 
 |    Key    |    Wert    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    Der Wert **inprivate** deaktiviert das InPrivate-Browsen, <br> der Wert **msa** verhindert, dass Benutzer Microsoft Edge-Apps ihre privaten Microsoft-Konten (MSA) hinzufügen. <br> Wenn Sie mehrere Features deaktivieren möchten, trennen Sie die Werte mit `|`. `inprivate|msa` verhindert beispielsweise sowohl das InPrivate-Browsen als auch die Verwendung privater Konten.   |
+|    `com.microsoft.intune.mam.managedbrowser.disableExtensionFramework`    |    **TRUE** deaktiviert das Erweiterungsframework.    |
+
+### <a name="disable-inprivate-browsing-and-microsoft-accounts-to-restrict-browsing-to-work-only-contexts"></a>Deaktivieren von InPrivate-Browsen und Verhindern, dass das Browsen mit Microsoft-Konten nur für arbeitsrelevante Kontexte möglich ist
+
+Wenn Ihre Organisation in einer stark reglementierten Branche tätig ist oder ein VPN pro App verwendet, um Benutzern den Zugriff auf Arbeitsressourcen mithilfe von Microsoft Edge zu ermöglichen, können Sie „InPrivate-Browsen“ in Microsoft Edge deaktivieren, was als Nichtarbeitskontext gilt. 
+
+|    Key    |    Wert    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    Der Wert **inprivate** deaktiviert das InPrivate-Browsen.   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Beschränken der Verwendung von Microsoft Edge auf zugelassene Konten
 
 Zusätzlich zur Einschränkung des InPrivate- und MSA-Browsens können Sie auch festlegen, dass Microsoft Edge nur verwendet werden kann, wenn Benutzer mit ihrem AAD-Konto angemeldet sind. Diese Funktion steht nur für Benutzer zur Verfügung, die für die mobile Geräteverwaltung registriert sind. Hinter folgenden Links finden Sie weitere Informationen zur Konfiguration dieser Einstellung:
 
-- [Einstellungen für Android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [Einstellungen für iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+>[!NOTE]
+> `com.microsoft.intune.mam.managedbrowser.disableFeatures` kann verwendet werden, um mehrere Funktionen gleichzeitig zu deaktivieren. Um z. B. sowohl InPrivate als auch Kennwort zu deaktivieren, verwenden Sie `inprivate| password`.
 
-## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>Verwenden von Microsoft Edge unter iOS für den Zugriff auf Protokolle für verwaltete Apps
+## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Konfigurieren von Microsoft Edge als Kiosk-App auf Android-Geräten
 
-Benutzer, auf deren iOS-Gerät Microsoft Edge installiert ist, können den Verwaltungsstatus aller von Microsoft veröffentlichten Apps anzeigen. Sie können Protokolle für die Problembehandlung ihrer verwalteten iOS-Apps senden. Gehen Sie wie folgt vor:
+### <a name="enable-microsoft-edge-as-a-kiosk-app"></a>Aktivieren von Microsoft Edge als Kiosk-App
+Um Microsoft Edge als Kiosk-APP zu aktivieren, konfigurieren Sie zuerst diese übergeordnete Einstellung:
 
-1. Öffnen Sie Microsoft Edge auf Ihrem iOS-Gerät.
+|    Key    |    Wert    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.enableKioskMode`    |    **TRUE** aktiviert die Kioskkonfiguration für Microsoft Edge    |
+
+### <a name="show-address-bar-in-kiosk-mode"></a>Anzeigen der Adressleiste im Kioskmodus
+Wenn Sie die Adressleiste in Microsoft Edge im Kioskmodus anzeigen möchten, konfigurieren Sie die folgende Einstellung:
+
+|    Key    |    Wert    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode`    |    **TRUE** zeigt die Adressleiste an. <br> **FALSE** (Standard) blendet die Adressleiste aus.    |
+
+### <a name="show-bottom-action-bar-in-kiosk-mode"></a>Untere Aktionsleiste im Kioskmodus anzeigen
+|    Key    |    Wert    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode`    |    **TRUE** zeigt die untere Aktionsleiste in Microsoft Edge an. <br> **FALSE** (Standard) blendet die untere Leiste aus.    |
+
+
+## <a name="use-microsoft-edge-to-access-managed-app-logs"></a>Verwenden von Microsoft Edge für den Zugriff auf Protokolle für verwaltete Apps
+
+
+Benutzer, auf deren iOS- oder Android-Gerät Microsoft Edge installiert ist, können den Verwaltungsstatus aller von Microsoft veröffentlichten Apps anzeigen. Mithilfe der folgenden Schritte können sie Protokolle zur Behandlung von Problemen mit ihren verwalteten iOS- oder Android-Apps senden:
+
+1. Öffnen Sie Microsoft Edge auf Ihrem Gerät.
 2. Geben Sie im Adressfeld `about:intunehelp` ein.
 3. Microsoft Edge wird im Problembehandlungsmodus gestartet.
 
 Eine Liste der in den App-Protokollen gespeicherten Einstellungen finden Sie unter [Prüfung der App-Schutzprotokolle in Managed Browser](app-protection-policy-settings-log.md).
 
-Informationen zum Anzeigen von Protokollen auf Android-Geräten finden Sie unter [Senden von Protokollen an Ihren IT-Administrator per E-Mail](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android).
+Informationen zum Anzeigen von Protokollen auf Android-Geräten finden Sie unter [Senden von Protokollen an Ihren IT-Administrator per E-Mail](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
 
 ## <a name="security-and-privacy-for-microsoft-edge"></a>Sicherheit und Datenschutz für Microsoft Edge
 
@@ -386,6 +420,15 @@ Im Folgenden finden Sie einige weitere Überlegungen zu Sicherheit und Datenschu
 - Microsoft Edge kann den Zugriff auf Websites nur blockieren, wenn darauf direkt zugegriffen wird. Der Zugriff auf die Website wird nicht blockiert, wenn Benutzer dafür Zwischendienste (z.B. einen Übersetzungsdienst) verwenden.
 - Um die Authentifizierung und den Zugriff auf die Intune-Dokumentation zuzulassen, ist * **.microsoft.com** von den Einstellungen für Zulassungs- oder Blockierungsliste ausgenommen. Dies ist immer zulässig.
 - Benutzer können die Datensammlung deaktivieren. Microsoft sammelt automatisch anonyme Daten über die Leistung und die Verwendung von Managed Browser, um Microsoft-Produkte und -Dienste zu verbessern. Benutzer können die Erfassung von Daten mithilfe der Einstellung für **Nutzungsdaten** auf ihren Geräten deaktivieren. Sie haben keine Kontrolle über die Erfassung dieser Daten. Auf iOS-Geräten können von Benutzern besuchte Websites, deren Zertifikat abgelaufen oder nicht vertrauenswürdig ist, nicht geöffnet werden.
+
+## <a name="restrict-microsoft-edge-use-to-a-work-or-school-account"></a>Beschränken der Verwendung von Microsoft Edge auf Geschäfts-, Schul- oder Unikonten
+
+Die Einhaltung der Datensicherheits- und Compliancerichtlinien unserer größten und hoch regulierten Kunden ist eine tragende Säule des Werts von Microsoft 365. In einigen Unternehmen müssen alle Kommunikationsinformationen in der Unternehmensumgebung aufgezeichnet werden, und ebenso muss sichergestellt werden, dass die Geräte nur für die Unternehmenskommunikation verwendet werden. Zur Unterstützung dieser Anforderungen können Edge für iOS und Android auf registrierten Geräten so konfiguriert werden, dass nur ein einzelnes Unternehmenskonto innerhalb von Edge für iOS und Android bereitgestellt werden kann.
+
+Hier finden Sie weitere Informationen zum ausschließlichen Konfigurieren in der Organisation zugelassener Konten:
+
+- [Einstellungen für Android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [Einstellungen für iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

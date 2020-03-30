@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fc6b9fc427ab6e0dc0488061378e78060527676
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b30d2a3ef7c85557222aa39740417a1a6fd463f1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361977"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084131"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Hinzufügen von Web-Apps zu Microsoft Intune
 
@@ -37,9 +37,10 @@ Intune erstellt auf dem Gerät des Benutzers eine Verknüpfung zu der Web-App. F
 
 > [!Note]
 > Zum Starten von Web-Apps muss ein Browser auf dem Gerät des Benutzers installiert sein. 
-
-> [!Note]
-> Für Android Enterprise-Geräte: [Weblinks „Verwaltetes Google Play“](apps-add-android-for-work.md#managed-google-play-web-links)
+> 
+> Für Android Enterprise-Geräte: [Weblinks „Verwaltetes Google Play“](apps-add-android-for-work.md#managed-google-play-web-links).
+> 
+> Für iOS-Geräte: Neue Webclips (angeheftete Web-Apps) werden in Microsoft Edge statt in Intune Managed Browser geöffnet, wenn das Öffnen in einem geschützten Browser erforderlich ist. Ältere iOS-Webclips müssen neu zugewiesen werden, um sicherzustellen, dass sie in Microsoft Edge statt in Managed Browser geöffnet werden.
 
 ## <a name="add-a-web-app-to-intune"></a>Hinzufügen einer Web-App zu Intune
 Führen Sie die folgenden Schritte aus, um eine App als Verknüpfung zu einer App im Internet zu Intune hinzuzufügen:

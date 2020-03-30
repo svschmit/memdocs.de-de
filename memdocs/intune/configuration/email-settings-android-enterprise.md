@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: befd2ba9894d8b5d4f7fac32a96d4ed4cae6337a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364252"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087032"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Android Enterprise-Geräteeinstellungen zum Konfigurieren von E-Mail, Authentifizierung und Synchronisierung in Intune
-
-
 
 In diesem Artikel werden die verschiedenen E-Mail-Einstellungen aufgeführt und beschrieben, die Sie auf Android Enterprise-Geräten steuern können. Als Bestandteil Ihrer Lösung für die mobile Geräteverwaltung (Mobile Device Management, MDM) verwenden Sie diese Einstellungen, um einen E-Mail-Server zu konfigurieren, SSL zur Verschlüsselung von E-Mails zu nutzen und vieles mehr.
 
@@ -35,16 +33,16 @@ Weitere Informationen zu E-Mail-Profilen in Intune finden Sie unter [Hinzufügen
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-Erstellen Sie ein [Gerätekonfigurationsprofil](email-settings-configure.md#create-a-device-profile) (wählen Sie das Arbeitsprofil aus), oder erstellen Sie eine [App-Konfigurationsrichtlinie](../apps/app-configuration-policies-use-android.md).
+Erstellen Sie ein [Gerätekonfigurationsprofil](email-settings-configure.md) (wählen Sie das Arbeitsprofil aus), oder erstellen Sie eine [App-Konfigurationsrichtlinie](../apps/app-configuration-policies-use-android.md).
 
 ## <a name="android-enterprise"></a>Android Enterprise
 
-- **E-Mail-App**: Wählen Sie entweder **Gmail** oder **Nine Work** aus.
-- **E-Mail-Server**: Der Hostname Ihres Exchange-Servers. Geben Sie beispielsweise `outlook.office365.com` ein.
+- **E-Mail-App**: Wählen Sie **Gmail** oder **Nine Work** aus.
+- **E-Mail-Server**: Geben Sie den Hostnamen Ihres Exchange-Servers ein. Geben Sie beispielsweise `outlook.office365.com` ein.
 - **Benutzernamensattribut aus AAD**: Dieser Name ist das Attribut, das Intune aus Azure Active Directory (Azure AD) abruft. Intune generiert dynamisch den Benutzernamen, der von diesem Profil verwendet wird. Folgende Optionen sind verfügbar:
 
-  - **Benutzerprinzipalname**: Hiermit wird der Name abgerufen, z.B. `user1` oder `user1@contoso.com`.
-  - **Benutzername**: Hiermit wird nur der Name abgerufen, z.B. `user1`.
+  - **Benutzerprinzipalname**: Hiermit wird der Name abgerufen, z. B. `user1` oder `user1@contoso.com`.
+  - **Benutzername:** Hiermit wird nur der Name abgerufen, z. B. `user1`.
 
 - **Attribut für E-Mail-Adresse aus AAD**: Dieser Name ist das E-Mail-Attribut, dass Intune aus Azure AD abruft. Intune generiert dynamisch die E-Mail-Adresse, die von diesem Profil verwendet wird. Folgende Optionen sind verfügbar:
   - **Benutzerprinzipalname**:  Der vollständige Prinzipalname, z.B. `user1@contoso.com` oder `user1`, wird als E-Mail-Adresse verwendet.

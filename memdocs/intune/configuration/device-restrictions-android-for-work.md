@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0546b280f6a04b6bc396b39a9a04031ee9800172
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a3e6679e27e7d373243874ea40c2d028ff25d3e9
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220114"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -316,7 +316,7 @@ Diese Einstellung gelten für Android Enterprise-Registrierungstypen, bei denen 
 - **Minimale Kennwortlänge:** Geben Sie eine Mindestanzahl von **4**-**16** Zeichen ein, die das Benutzerkennwort enthalten muss.
 - **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Sperrung des Arbeitsprofils:** Wählen Sie den Zeitraum aus, nach dem das Arbeitsprofil gesperrt wird. Der Benutzer muss dann seine Anmeldeinformationen eingeben, um wieder Zugriff zu erhalten.
 - **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie ein, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Arbeitsprofil vom Gerät gelöscht wird.
-- **Kennwortablauf (Tage):** Geben Sie eine Anzahl von Tagen von **1**-**255** ein, nach deren Verstreichen das Kennwort eines Endbenutzers geändert werden muss.
+- **Kennwortablauf (Tage):** Geben Sie eine Anzahl von Tagen von **1**-**365** ein, nach deren Verstreichen das Kennwort eines Endbenutzers geändert werden muss.
 - **Erforderlicher Kennworttyp:** Wählen Sie den Typ des Kennworts aus, das auf dem Gerät festgelegt werden muss. Es stehen die folgenden Optionen zur Auswahl:
   - **Gerätestandard**
   - **Biometrie auf niedriger Sicherheitsstufe**
@@ -337,7 +337,7 @@ Diese Kennworteinstellungen gelten für persönliche Profile auf Geräten, die e
 - **Minimale Kennwortlänge:** Geben Sie eine Mindestanzahl von **4**-**14** Zeichen ein, die das Benutzerkennwort enthalten muss.
 - **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Bildschirmsperrung:** Wählen Sie den Zeitraum aus, nach dem ein inaktives Gerät automatisch gesperrt wird.
 - **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie ein, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Arbeitsprofil vom Gerät gelöscht wird.
-- **Kennwortablauf (Tage):** Geben Sie eine Anzahl von Tagen von **1**-**255** ein, nach deren Verstreichen das Kennwort eines Endbenutzers geändert werden muss.
+- **Kennwortablauf (Tage):** Geben Sie eine Anzahl von Tagen von **1**-**365** ein, nach deren Verstreichen das Kennwort eines Endbenutzers geändert werden muss.
 - **Erforderlicher Kennworttyp:** Wählen Sie den Typ des Kennworts aus, das auf dem Gerät festgelegt werden muss. Es stehen die folgenden Optionen zur Auswahl:
   - **Gerätestandard**
   - **Biometrie auf niedriger Sicherheitsstufe**

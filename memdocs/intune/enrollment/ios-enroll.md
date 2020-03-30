@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d5fe8ed78aa5537552ecf3db12eabd2bb6fbde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359286"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086113"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrieren von iOS-/iPadOS-Geräten in Intune
 
@@ -46,7 +46,7 @@ Benutzer können ihre persönlichen Geräte für die Intune-Verwaltung registrie
 - Die Geräteregistrierung ist das, was Sie sich als typische BYOD-Registrierung vorstellen. Sie bietet Administratoren eine Vielzahl von Verwaltungsoptionen.
 - Die Benutzerregistrierung ist ein optimierter Registrierungsprozess, der Administratoren eine Teilmenge von Geräteverwaltungsoptionen zur Verfügung stellt. Dieses Feature befindet sich derzeit in der Vorschauphase. 
 
-Sobald Sie die Voraussetzungen erfüllen und Benutzerlizenzen zugewiesen haben, können Benutzer die Unternehmensportal-App für Intune aus dem App Store herunterladen und den Registrierungsanweisungen in der App folgen. Sie können die Datenschutzerklärung des Unternehmensportals auf iOS-/iPadOS-Geräten anpassen, wie unter [Unternehmensinformationen und Datenschutzerklärung](../apps/company-portal-app.md#privacy-statement-customization) erläutert.
+Sobald Sie die Voraussetzungen erfüllen und Benutzerlizenzen zugewiesen haben, können Benutzer die Unternehmensportal-App für Intune aus dem App Store herunterladen und den Registrierungsanweisungen in der App folgen. Sie können die Unternehmensportal-Datenschutzbestimmungen auf iOS/iPadOS-Geräten anpassen, wie in [Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App](../apps/company-portal-app.md#configuration) erläutert.
 
 ## <a name="company-owned-iosipados-devices"></a>Unternehmenseigene iOS-/iPadOS-Geräte
 

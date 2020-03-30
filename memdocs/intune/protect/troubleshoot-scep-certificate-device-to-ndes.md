@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e8f8a19ef27eee039090f146c46488ed1e1205
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350576"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526460"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Problembehandlung für die Kommunikation zwischen Gerät und NDES-Server für SCEP-Zertifikatprofile in Microsoft Intune
 
@@ -243,6 +243,19 @@ Wenn der SCEP-Anwendungspool nicht gestartet wurde, überprüfen Sie das Anwendu
 
   ![IIS-Berechtigungen](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
 
+- **Ursache 4**: Das NDESPolicy-Modulzertifikat ist abgelaufen.
+
+  Das Protokoll CAPI2 (siehe die Auflösung von Ursache 2) zeigt Fehler im Zusammenhang mit dem Zertifikat an, auf das von „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint“ außerhalb der Gültigkeitsdauer des Zertifikats verwiesen wird.
+
+  **Lösung**: Aktualisieren Sie den Verweis mit dem Fingerabdruck eines gültigen Zertifikats.
+  1. Identifizieren Sie ein Ersatzzertifikat:
+     - Erneuern Sie das vorhandene Zertifikat
+     - Wählen Sie ein anderes Zertifikat mit ähnlichen Eigenschaften (Betreff, EKU, Schlüsseltyp und -länge usw.) aus
+     - Registrieren Sie ein neues Zertifikat
+  2. Exportieren Sie den `NDESPolicy`-Registrierungsschlüssel, um die aktuellen Werte zu sichern.
+  3. Ersetzen Sie die Daten des `NDESCertThumbprint`-Registrierungswerts durch den Fingerabdruck des neuen Zertifikats, entfernen Sie alle Leerzeichen, und wandeln Sie den Text in Kleinbuchstaben um.
+  4. Starten Sie die NDES-IIS-App-Pools neu, oder führen Sie `iisreset` über eine Eingabeaufforderung mit erhöhten Rechten aus.
+
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 
 Wenn Sie die SCEP-Server-URL aufrufen, erhalten Sie die folgende Fehlermeldung:
@@ -289,7 +302,7 @@ Sie haben den Azure AD-Anwendungsproxy konfiguriert. Wenn Sie die SCEP-Server-UR
 
   **Lösung**: Verwenden Sie die Standarddomäne *yourtenant.msappproxy.net* in der Anwendungsproxykonfiguration für die externe SCEP-URL.
 
-#### <a name="internal-server-error"></a>500 – Interner Serverfehler
+#### <a name="500---internal-server-error"></a><a name="internal-server-error"></a>500 – Interner Serverfehler
 
 Wenn Sie die SCEP-Server-URL aufrufen, erhalten Sie die folgende Fehlermeldung:
 

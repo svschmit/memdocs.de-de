@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bdb45edb1bcd518b4e55da40f179fb87cefb07c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a49c71705755f82dcf33c63971ed6f11ffc849f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353670"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084987"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden importierter PKCS-Zertifikate mit Intune
 
@@ -45,8 +45,8 @@ Intune unterstützt den Import von PFX-Zertifikaten für die folgenden Plattform
 - Android: Geräteadministrator
 - Android Enterprise: vollständig verwaltet
 - Android Enterprise: Arbeitsprofil
-- iOS
-- Mac
+- iOS/iPadOS
+- macOS
 - Windows 10
 
 ## <a name="requirements"></a>Anforderungen
@@ -216,26 +216,51 @@ Nach dem Importieren der Zertifikate in Intune erstellen Sie ein Profil für ein
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 
 3. Geben Sie die folgenden Eigenschaften ein:
+   - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus.
+   - **Profil**: Wählen Sie das **importierte PKCS-Zertifikat** aus.
 
-   - **Name** für das Profil
-   - Optional eine Beschreibung
-   - **Plattform**, auf der das Profil bereitgestellt werden soll
-   - Für **Profiltyp** die Option **Importiertes PKCS-Zertifikat**
+4. Wählen Sie **Erstellen** aus.
 
-4. Wählen Sie **Einstellungen** aus, und geben Sie die folgenden Eigenschaften ein:
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
+   - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein geeigneter Profilname ist beispielsweise *Profil für importiertes PKCS-Zertifikat für das gesamte Unternehmen*.
+   - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
+
+6. Wählen Sie **Weiter** aus.
+
+7. Geben Sie in den **Konfigurationseinstellungen** die folgenden Eigenschaften ein:
 
    - **Beabsichtigter Zweck**: Geben Sie den Zweck der Zertifikate an, die für dieses Profil importiert werden. Administratoren können Zertifikate zu unterschiedlichen Zwecken importieren, z. B. zum Signieren oder Verschlüsseln mit S/MIME. Der Zweck, der im Zertifikatprofil ausgewählt wird, entspricht demjenigen des Zertifikatprofils mit den korrekten importierten Zertifikaten. Der beabsichtigte Zweck ist ein Tag zum Gruppieren importierter Zertifikate. Diese Angabe garantiert nicht, dass die mit diesem Tag importierten Zertifikate den beabsichtigten Zweck erfüllen.  
-   - **Gültigkeitsdauer des Zertifikats**: Wenn die Gültigkeitsdauer in der Zertifikatvorlage nicht geändert wurde, ist diese Option standardmäßig auf ein Jahr festgelegt.
+
+   <!-- Not in new UI:
+   - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
+   -->
    - **Schlüsselspeicheranbieter (KSP)** : Wählen Sie für Windows den Schlüsselspeicherort auf dem Gerät aus.
 
-5. Wählen Sie **OK** > **Erstellen** aus, um Ihr Profil zu speichern.
+8. Wählen Sie **Weiter** aus.
+
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
+
+   Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen das Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](../configuration/device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+11. (*Gilt nur für Windows 10*) Geben Sie unter **Anwendbarkeitsregeln** einige Anwendbarkeitsregeln an, um die Zuweisung dieses Profils genauer zu spezifizieren. Sie können auswählen, dass das Profil basierend auf der Betriebssystemedition oder der Version eines Geräts zugewiesen oder nicht zugewiesen wird.
+
+    Weitere Informationen finden Sie im Artikel *Erstellen eines Geräteprofils in Microsoft Intune* im Abschnitt [Anwendbarkeitsregeln](../configuration/device-profile-create.md#applicability-rules).
+
+    Wählen Sie **Weiter** aus.
+
+12. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf „Erstellen“ klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
 
 ## <a name="support-for-third-party-partners"></a>Unterstützung für Drittanbieterpartner
 
 Die folgenden Partner stellen unterstützte Methoden oder Tools bereit, die Sie verwenden können, um PFX-Zertifikate in Intune zu importieren.
 
 ### <a name="digicert"></a>DigiCert
-Wenn Sie PKI Platform von DigiCert nutzen, können Sie das **DigiCert-Importtool für Intune-S/MIME-Zertifikate** verwenden, um PFX-Zertifikate in Intune zu importieren. Wenn Sie dieses Tool verwenden, müssen Sie allerdings dennoch die Anweisungen im Abschnitt [Importieren von PFX-Zertifikaten in Intune](#import-pfx-certificates-to-intune) befolgen, die weiter oben in diesem Artikel erläutert werden.
+
+Wenn Sie PKI Platform von DigiCert nutzen, können Sie das **DigiCert-Importtool für Intune-S/MIME-Zertifikate** verwenden, um PFX-Zertifikate in Intune zu importieren. Wenn Sie dieses Tool verwenden, müssen Sie die Anweisungen im Abschnitt [Importieren von PFX-Zertifikaten in Intune](#import-pfx-certificates-to-intune) nicht mehr befolgen, die weiter oben in diesem Artikel erläutert werden.
 
 Weitere Informationen zum DigiCert-Importtool, einschließlich zur Beschaffung des Tools, finden Sie unter https://knowledge.digicert.com/tutorials/microsoft-intune.html in der DigiCert-Wissensdatenbank.
 

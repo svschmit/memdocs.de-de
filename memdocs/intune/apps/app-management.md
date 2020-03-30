@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98eba2cd2905a70157cfb50299bb9b11a6319fcc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342334"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083743"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Was ist die Microsoft Intune App-Verwaltung?
 
@@ -118,7 +118,7 @@ Die folgenden Konsolenelemente stellen App-bezogene Funktionen bereit:
 - **Windows-Schlüssel zum Querladen**: Fügen Sie einen Windows-Schlüssel zum Querladen hinzu, mit dem Sie eine App direkt auf Geräten installieren können, anstatt die App im Microsoft Store zu veröffentlichen und aus diesem herunterzuladen. Weitere Informationen finden Sie unter [Querladen einer Windows-App](app-sideload-windows.md).
 - **Apple-VPP-Tokens**: Hiermit können Sie Ihre iOS-/iPadOS-VPP-Lizenzen (Volume Purchase Program) anzeigen und anwenden. Weitere Informationen finden Sie unter [How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune (Verwalten von iOS- und macOS-Apps, die über das Apple Volume Purchase Program mit Microsoft Intune erworben wurden)](vpp-apps-ios.md).
 - **Verwaltetes Google Play**: Verwaltetes Google Play ist der Enterprise App Store von Google und die einzige Quelle von Anwendungen für Android Enterprise. Weitere Informationen finden Sie unter [Hinzufügen von verwalteten Google Play-Apps für Android Enterprise-Geräte mit Intune](apps-add-android-for-work.md).
-- **Branding und Anpassung**: Passen Sie das Unternehmensportal mit Ihrem Unternehmensbranding an. Weitere Informationen finden Sie unter [How to configure the Microsoft Intune Company Portal app (Konfigurieren der Microsoft Intune-Unternehmensportal-App)](company-portal-app.md).
+- **Anpassung**: Passen Sie das Unternehmensportal mit Ihrem Unternehmensbranding an. Weitere Informationen finden Sie unter [How to configure the Microsoft Intune Company Portal app (Konfigurieren der Microsoft Intune-Unternehmensportal-App)](company-portal-app.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

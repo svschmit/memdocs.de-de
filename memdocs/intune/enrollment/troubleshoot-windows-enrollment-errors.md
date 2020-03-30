@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cdd92948aed51eb37b4774d2521a1d28cd8245f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344609"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526273"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Behandeln von Problemen bei der Windows-Geräteregistrierung in Microsoft Intune
 
@@ -321,6 +321,8 @@ Fehler 0x80070774: Es ist ein Problem aufgetreten. Vergewissern Sie sich, dass S
 Dieses Problem tritt üblicherweise vor dem Neustart des Geräts in einem Azure AD Hybrid-Autopilot-Szenario auf, wenn für das Gerät während des ersten Anmeldebildschirms ein Timeout auftritt. Das bedeutet, dass der Domänencontroller aufgrund von Konnektivitätsproblemen nicht gefunden wurde oder nicht erreichbar war. Alternativ befindet sich das Gerät in einem Zustand, der einen Beitritt zur Domäne nicht zulässt.
 
 **Ursache**: Die häufigste Ursache ist die Verwendung von Azure AD Hybrid Join mit konfigurierter Benutzerzuweisung im Autopilot-Profil. Durch die Verwendung des Features „Benutzer zuweisen“ wird während des ersten Anmeldebildschirms ein Azure AD-Beitritt für das Gerät durchgeführt. Hierdurch wird das Gerät in einen Zustand versetzt, der den Beitritt zu Ihrer lokalen Domäne verhindert. Aus diesem Grund sollte das Feature „Benutzer zuweisen“ nur in Autopilot-Standardszenarien für den Azure AD-Beitritt verwendet werden.  Verwenden Sie das Feature nicht in Azure AD Hybrid Join-Szenarien.
+
+Dieser Fehler kann auch dadurch verursacht werden, dass das Azure AD-Gerät, das dem Autopilot-Objekt zugeordnet ist, gelöscht wurde. Um dieses Problem zu beheben, löschen Sie das Autopilot-Projekt und importieren den Hash erneut, um ein neues Objekt zu generieren.
 
 #### <a name="resolution"></a>Lösung
 

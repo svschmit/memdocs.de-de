@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f49d1e419eb7199d2a7cf20f03959689a5f5fa44
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342490"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233471"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Android Enterprise-Geräte
 
@@ -103,15 +103,18 @@ Wenn Sie eine Variable als Werttypen auswählen möchten, haben Sie folgende Opt
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Nur Zulassen von konfigurierten Organisationskonten in Apps mit mehreren Identitäten 
 
-Verwenden Sie für Android-Geräte die folgenden Schlüssel/Wert-Paare:
+Als Microsoft Intune-Administrator können Sie steuern, welche Benutzerkonten zu Microsoft-Apps auf verwalteten Geräten hinzugefügt werden. Sie können den Zugriff auf zulässige Organisationsbenutzerkonten beschränken und persönliche Konten auf registrierten Geräten blockieren. Verwenden Sie für Android-Geräte die folgenden Schlüssel/Wert-Paare:
 
 | **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **Werte** | <ul><li>Ein oder mehrere durch <code>;</code> getrennte UPNs.</li><li>Die einzigen zulässigen Konten sind die von diesem Schlüssel definierten, verwalteten Benutzerkonten.</li><li> Für bei Intune registrierte Geräte kann das Token <code>{{userprincipalname}}</code> verwendet werden, um das angemeldete Benutzerkonto darzustellen.</li></ul> |
 
    > [!NOTE]
-   > Sie müssen Outlook für Android 2.2.222 und höher, Word, Excel, PowerPoint für Android 16.0.9327.1000 und höher oder OneDrive für Android 5.28 und höher verwenden, wenn nur konfigurierte Organisationskonten mit mehreren Identitäten zugelassen werden.<p></p>
-   > Als Microsoft Intune-Administrator können Sie steuern, welche Benutzerkonten Microsoft Office-Anwendungen auf verwalteten Geräten hinzugefügt werden. Sie können den Zugriff auf zulässige Organisationsbenutzerkonten beschränken und persönliche Konten auf registrierten Geräten blockieren. Die unterstützenden Anwendungen verarbeiten die App-Konfiguration und entfernen und blockieren nicht genehmigte Konten.<p></p>
+   > Die folgenden Apps verarbeiten die oben genannte App-Konfiguration und lassen nur Organisationskonten zu:
+   > - Edge für Android (42.0.4.4048 und höher)
+   > - Office, Word, Excel, PowerPoint für Android (16.0.9327.1000 und höher)
+   > - OneDrive für Android (5.28 und höher)
+   > - Outlook für Android (2.2.222 und höher)
 
 ## <a name="enter-json-data"></a>Eingeben von JSON-Daten
 

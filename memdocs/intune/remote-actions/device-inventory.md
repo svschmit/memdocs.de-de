@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df00db079a7e6b73ba24dc612b5cb6b2250c3898
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50c56cff5f6b58894ff1abb24dad397d7e6c2c1e
+ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338187"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79508473"
 ---
 # <a name="see-device-details-in-intune"></a>Anzeigen von Gerätedetails in Intune
 
@@ -36,7 +36,7 @@ Dieser Artikel erläutert, wie Sie all Ihre Geräte und deren Eigenschaften im A
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 3. Klicken Sie auf **Geräte** > **Alle Geräte**, und wählen Sie anschließend eins der aufgeführten Geräte aus, damit dessen Gerätedetails geöffnet werden:
 
-   - In der **Übersicht** werden der Gerätename und einige wichtige Eigenschaften des Geräts aufgeführt, z. B. ob es sich um ein BYOD-Gerät (Bring-Your-Own-Device), die Einckeckzeit und mehr. Auf diesem Gerät können Sie die folgenden Aktionen ausführen:
+   - In der **Übersicht** werden der Gerätename und einige wichtige Eigenschaften des Geräts aufgeführt, z. B. ob es sich um ein privates oder Unternehmensgerät handelt, Seriennummer, primärer Benutzer und mehr. Auf diesem Gerät können Sie die folgenden Aktionen ausführen:
       - [Außerkraftsetzen](devices-wipe.md#retire)
       - [Zurücksetzen](devices-wipe.md#wipe)
       - [Löschen](devices-wipe.md#delete-devices-from-the-intune-portal)

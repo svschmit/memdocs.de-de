@@ -84,7 +84,7 @@ Nachdem Sie Ihr Token installiert haben, können Sie nun ein Registrierungsprofi
 
 2. Wählen Sie das soeben installierte Token aus, und klicken Sie auf **Profile** > **Profil erstellen**.
 
-3. Geben Sie unter **Profil erstellen** den **Namen***TestDEPProfile* und die **Beschreibung***Test von DEP für iOS-/iPadOS-Geräte* ein. Benutzer können diese Informationen nicht sehen.
+3. Geben Sie unter **Profil erstellen** den **Namen** *TestDEPProfile* und die **Beschreibung** *Test von DEP für iOS-/iPadOS-Geräte* ein. Benutzer können diese Informationen nicht sehen.
 
 4. Wählen Sie unter **Plattform** die Option **iOS** aus.
 

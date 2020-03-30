@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c2bacea3e1e87e6bd1a14c14b22bd6f4c2870fd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d6cddd94400874c508a31b11b22fa4417798e2da
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339032"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084775"
 ---
 # <a name="view-and-correct-personal-data"></a>Anzeigen und Korrigieren personenbezogener Daten
 
@@ -35,9 +35,9 @@ Intune-Administratoren können einige personenbezogene Daten basierend auf ihren
 ## <a name="view-personal-data"></a>Anzeigen von personenbezogenen Daten
 
 Administratoren können die personenbezogenen Daten von Benutzern in verschiedenen Blättern der Intune-Benutzeroberfläche anzeigen. In den folgenden Artikeln wird erläutert, auf welche Informationen Administratoren zugreifen können:
-- [Anzeigen von Gerätedetails in Intune:](../remote-actions/device-inventory.md) erläutert, wie Sie die Informationen von Endbenutzergeräten überprüfen können.
-- [Überwachen von App-Informationen und -Zuweisungen:](../apps/apps-monitor.md) erläutert, wie Sie Informationen über die Apps abrufen können, die auf einem Endbenutzergerät installiert sind.
-- Im Artikel [Welche Informationen erhält mein Unternehmen, wenn ich mein Gerät registriere](https://docs.microsoft.com/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) erhalten Endbenutzer eine Liste der Daten, die ihr Unternehmen sehen bzw. nicht sehen kann. Es wird empfohlen, Benutzer darüber in Kenntnis zu setzen, welche Daten Sie weshalb erfassen. Dieser Artikel kann den ersten Schritt für diese Transparenz darstellen.
+- [Anzeigen von Gerätedetails in Intune](../remote-actions/device-inventory.md) – hier erfahren Sie, wie Sie Informationen zu Endbenutzergeräten überprüfen können.
+- [Überwachen von App-Informationen und -Zuweisungen](../apps/apps-monitor.md) – dieser Artikel erläutert, wie Sie Informationen zu den Apps abrufen können, die auf einem Endbenutzergerät installiert sind.
+- Im Artikel [Welche Informationen erhält meine Organisation, wenn ich mein Gerät registriere?](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) erhalten Endbenutzer eine Liste der Daten, die ihr Unternehmen sehen bzw. nicht sehen kann. Setzen Sie Ihre Benutzer darüber in Kenntnis, welche Daten Sie erfassen und warum Sie diese erfassen. Dieser Artikel kann den ersten Schritt für diese Transparenz darstellen.
 
 ### <a name="who-can-view-the-data"></a>Wer kann die Daten anzeigen?
 

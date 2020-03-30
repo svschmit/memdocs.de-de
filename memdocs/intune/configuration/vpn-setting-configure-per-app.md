@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a967ff72c7751ebf1cfb74489fbe7bf73563077
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e088af5687b5708754869614a431e80f9497b3c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360521"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086824"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Einrichten eines Pro-App-VPN für iOS-Geräte in Intune
 
@@ -51,7 +51,7 @@ Zscaler Private Access (ZPA) kann für die Authentifizierung mit Azure Active Di
 > [!IMPORTANT]
 > Ihr VPN-Anbieter hat möglicherweise andere Anforderungen wie spezielle Hardware oder bestimmte Lizenzen für die Nutzung des Pro-App-VPN. Vor der Einrichtung des Pro-App-VPN ist es daher erforderlich, dass Sie sich mit der Anbieterdokumentation vertraut machen und die beschriebenen Anforderungen erfüllen.
 
-Um ihre Identität nachzuweisen, zeigt der VPN-Server das Zertifikat an, das vom Gerät ohne Aufforderung akzeptiert werden muss. Erstellen Sie ein Profil mit einem vertrauenswürdigen Zertifikat, das das durch die Zertifizierungsstelle (CA) ausgegebene Stammzertifikat des VPN-Servers enthält, um die automatische Genehmigung des Zertifikats sicherzustellen. 
+Um ihre Identität nachzuweisen, zeigt der VPN-Server das Zertifikat an, das vom Gerät ohne Aufforderung akzeptiert werden muss. Erstellen Sie ein Profil mit einem vertrauenswürdigen Zertifikat, das das durch die Zertifizierungsstelle (CA) ausgegebene Stammzertifikat des VPN-Servers enthält, um die automatische Genehmigung des Zertifikats sicherzustellen.
 
 ### <a name="export-the-certificate-and-add-the-ca"></a>Exportieren Sie das Zertifikat, und fügen Sie die CA hinzu.
 
@@ -73,14 +73,22 @@ Importieren Sie das Stammzertifikat des VPN-Servers, das von der Zertifizierungs
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 3. Geben Sie die folgenden Eigenschaften ein:
-    - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein geeigneter Profilname ist beispielsweise **VPN-Profil für vertrauenswürdiges iOS/iPadOS-Zertifikat für das gesamte Unternehmen** .
-    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
+
     - **Plattform**: Wählen Sie **iOS/iPadOS** aus.
     - **Profiltyp**: Wählen Sie **Vertrauenswürdiges Zertifikat**.
-4. Klicken Sie auf das Ordnersymbol, und navigieren Sie zu Ihrem VPN-Zertifikat (CER-Datei), das Sie über Ihre VPN-Verwaltungskonsole exportiert haben. 
-5. Klicken Sie auf **OK** > **Erstellen**.
 
-    ![Erstellen eines Profils mit einem vertrauenswürdigen Zertifikat für iOS/iPadOS-Geräte in Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
+4. Wählen Sie **Erstellen** aus.
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
+
+    - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein geeigneter Profilname ist beispielsweise **VPN-Profil für vertrauenswürdiges iOS/iPadOS-Zertifikat für das gesamte Unternehmen** .
+    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
+
+6. Wählen Sie **Weiter** aus.
+7. Wählen Sie in **Konfigurationseinstellungen** das Ordnersymbol aus, und navigieren Sie zu Ihrem VPN-Zertifikat (CER-Datei), das Sie über Ihre VPN-Verwaltungskonsole exportiert haben.
+8. Wählen Sie **Weiter** aus, und setzen Sie die Erstellung des Profils fort. Weitere Informationen finden Sie unter [Erstellen von VPN-Profilen](vpn-settings-configure.md#create-the-profile).
+
+    > [!div class="mx-imgBorder"]
+    > ![Erstellen eines Profils mit einem vertrauenswürdigen Zertifikat für iOS/iPadOS-Geräte in Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
 
 ## <a name="create-a-scep-or-pkcs-certificate-profile"></a>Erstellen eines SCEP- oder PKCS-Zertifikatprofils
 
@@ -91,48 +99,61 @@ In den folgenden Artikeln erfahren Sie mehr zum Konfigurieren und Zuweisen eines
 - [Konfigurieren der Infrastruktur für die Unterstützung von SCEP mit Intune](../protect/certificates-scep-configure.md)
 - [Konfigurieren Ihrer Microsoft Intune-Zertifikatsinfrastruktur für PKCS](../protect/certficates-pfx-configure.md)
 
-Achten Sie darauf, dass die Clientauthentifizierung für das Zertifikat konfiguriert wurde. Dies können Sie direkt in den SCEP-Zertifikatprofilen festlegen (**Erweiterte Schlüsselverwendung** > **Clientauthentifizierung**). Legen Sie für PKCS die Clientauthentifizierung in der Zertifikatvorlage in der Zertifizierungsstelle fest.
+Achten Sie darauf, dass die Clientauthentifizierung für das Zertifikat konfiguriert wurde. Sie können die Clientauthentifizierung direkt in den SCEP-Zertifikatprofilen festlegen (**Erweiterte Schlüsselverwendung** > **Clientauthentifizierung**). Legen Sie für PKCS die Clientauthentifizierung in der Zertifikatvorlage in der Zertifizierungsstelle fest.
 
-![Erstellen Sie ein SCEP-Zertifikatprofil in Microsoft Intune, das u.a. das Format des Antragstellernamens, die Schlüsselverwendung und die erweiterte Schlüsselverwendung enthält.](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
+> [!div class="mx-imgBorder"]
+> ![Erstellen Sie ein SCEP-Zertifikatprofil in Microsoft Intune, das u. a. das Format des Antragstellernamens, die Schlüsselverwendung und die erweiterte Schlüsselverwendung enthält.](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
 
 ## <a name="create-a-per-app-vpn-profile"></a>Erstellen eines Pro-App-VPN-Profils
 
-Das VPN-Profil enthält das SCEP- oder PKCS-Zertifikat, das die Anmeldeinformationen des Clients, die Verbindungsinformationen für das VPN und das Pro-App-VPN-Flag enthält. So können Sie die Pro-App-VPN-Funktion für den Gebrauch durch die iOS/iPadOS-Anwendung aktivieren.
+Das VPN-Profil enthält das SCEP- oder PKCS-Zertifikat, das die Anmeldeinformationen des Clients, die Verbindungsinformationen für das VPN und das Pro-App-VPN-Flag enthält, das das von der iOS/iPadOS-Anwendung verwendete Pro-App-VPN aktiviert.
 
 1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
-2. Geben Sie die folgenden Eigenschaften ein:
-    - **Name:** Geben Sie einen aussagekräftigen Namen für das benutzerdefinierte Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein geeigneter Profilname ist beispielsweise **Pro-App-VPN-Profil für iOS/iPadOS für das gesamte Unternehmen**.
-    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
+2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
+3. Geben Sie die folgenden Eigenschaften ein:
+
     - **Plattform**: Wählen Sie **iOS/iPadOS** aus.
     - **Profiltyp**: Wählen Sie **VPN** aus.
-3. Wählen Sie unter **Verbindungstyp** Ihre VPN-Client-App aus.
-4. Wählen Sie **Basis-VPN** aus. Im Artikel [Hinzufügen von VPN-Einstellungen auf iOS- und iPadOS-Geräten in Microsoft Intune](vpn-settings-ios.md) werden alle Einstellungen aufgelistet und beschrieben. Achten Sie darauf, dass Sie die folgenden Einstellungen wie unten angegeben vornehmen, wenn Sie ein Pro-App-VPN verwenden:
 
-    - **Authentifizierungsmethode**: Wählen Sie **Zertifikate**. 
-    - **Authentifizierungszertifikat**: Wählen Sie ein vorhandenes SCEP- oder PKCS-Zertifikat, und klicken Sie anschließend auf **OK**.
-    - **Getrenntes Tunneln:** Klicken Sie auf **Disable** (Deaktivieren), um zu erzwingen, dass der gesamte Datenverkehr den VPN-Tunnel durchläuft, wenn die VPN-Verbindung aktiv ist. 
+4. Wählen Sie **Erstellen** aus.
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
 
-      ![Festlegen eines Verbindungstyps, einer IP-Adresse oder eines FQDN, einer Authentifizierungsmethode und Aktivieren/Deaktivieren des getrennten Tunnelns im Pro-App-VPN-Profil in Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
+    - **Name:** Geben Sie einen aussagekräftigen Namen für das benutzerdefinierte Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein geeigneter Profilname ist beispielsweise **Pro-App-VPN-Profil für iOS/iPadOS für das gesamte Unternehmen**.
+    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
+
+6. Konfigurieren Sie in den **Konfigurationseinstellungen** die folgenden Einstellungen:
+
+    - **Verbindungstyp:** Wählen Sie Ihre VPN-Client-App aus.
+    - **Basis-VPN**: Konfigurieren Sie Ihre Einstellungen. Im Artikel [Hinzufügen von VPN-Einstellungen auf iOS- und iPadOS-Geräten in Microsoft Intune](vpn-settings-ios.md) werden alle Einstellungen aufgelistet und beschrieben. Achten Sie darauf, dass Sie die folgenden Einstellungen wie unten angegeben vornehmen, wenn Sie ein Pro-App-VPN verwenden:
+
+      - **Authentifizierungsmethode**: Wählen Sie **Zertifikate**. 
+      - **Authentifizierungszertifikat**: Wählen Sie ein vorhandenes SCEP- oder PKCS-Zertifikat, und klicken Sie anschließend auf **OK**.
+      - **Getrenntes Tunneln:** Klicken Sie auf **Disable** (Deaktivieren), um zu erzwingen, dass der gesamte Datenverkehr den VPN-Tunnel durchläuft, wenn die VPN-Verbindung aktiv ist. 
+
+      > [!div class="mx-imgBorder"]
+      > ![Festlegen eines Verbindungstyps, einer IP-Adresse oder eines FQDN, einer Authentifizierungsmethode und Aktivieren/Deaktivieren des getrennten Tunnelns im Pro-App-VPN-Profil in Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
 
     Informationen zu den anderen Einstellungen finden Sie unter [Hinzufügen von VPN-Einstellungen auf iOS- und iPadOS-Geräten in Microsoft Intune](vpn-settings-ios.md).
 
-5. Wählen Sie **Automatisches VPN** > **Typ des automatischen VPN** > **Pro-App-VPN** aus.
+    - **Automatisches VPN** > **Typ des automatischen VPN** > **Pro-App-VPN**
 
-    ![Festlegen des Typs des automatischen VPN auf Pro-App-VPN für iOS/iPadOS-Geräte in Intune](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
+      > [!div class="mx-imgBorder"]
+      > ![Festlegen des Typs des automatischen VPN auf Pro-App-VPN für iOS/iPadOS-Geräte in Intune](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
 
-6. Klicken Sie auf **OK** > **OK** > **Erstellen**.
+7. Wählen Sie **Weiter** aus, und setzen Sie die Erstellung des Profils fort. Weitere Informationen finden Sie unter [Erstellen von VPN-Profilen](vpn-settings-configure.md#create-the-profile).
 
 ## <a name="associate-an-app-with-the-vpn-profile"></a>Ordnen Sie dem VPN-Profil eine App zu.
 
 Nachdem Sie Ihr VPN-Profil hinzugefügt haben, ordnen Sie die App und Azure AD-Gruppe dem Profil zu.
 
 1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Apps** > **Alle Apps** aus.
-2. Wählen Sie eine App aus der Liste, und klicken Sie auf **Zuweisungen** > **Gruppe hinzufügen**.
+2. Wählen Sie eine App aus der Liste und dann **Eigenschaften** > **Zuweisungen** > **Gruppe hinzufügen** aus.
 3. Wählen Sie unter **Zuweisungstyp** **Erforderlich** oder **Für registrierte Geräte verfügbar** aus.
 4. Wählen Sie **Eingeschlossene Gruppe** > **Wählen Sie die Gruppen aus, die eingeschlossen werden sollen**. Wählen Sie dann die [von Ihnen im Rahmen dieses Artikels erstellte Gruppe aus](#create-a-group-for-your-vpn-users), und klicken Sie auf **Auswählen**.
 5. Wählen Sie unter **VPNs** das Pro-App-VPN-Profil aus, [das Sie im Rahmen dieses Artikels erstellt haben](#create-a-per-app-vpn-profile).
 
-    ![Zuweisen einer App zu einem Pro-App-VPN-Profil in Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png)
+    > [!div class="mx-imgBorder"]
+    > ![Zuweisen einer App zu einem Pro-App-VPN-Profil in Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png)
 
 6. Klicken Sie auf **OK** > **Speichern**.
 

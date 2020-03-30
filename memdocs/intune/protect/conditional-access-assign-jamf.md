@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 3/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9760029effc873b510bf37b779c054c9a0574a20
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353150"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219842"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Erzwingen von Konformität auf mit Jamf Pro verwalteten Macs
 
@@ -41,7 +41,10 @@ Die Verfahren in diesem Artikel erfordern Zugriff auf die Intune- und Jamf Pro-K
 
 2. Wählen Sie **Geräte** > **Konformitätsrichtlinien** aus. Wenn Sie eine zuvor erstellte Richtlinie verwenden, wählen Sie diese Richtlinie in der Konsole aus, und fahren Sie dann mit dem nächsten Schritt dieses Verfahrens fort. Wählen Sie **Richtlinie erstellen** aus, um eine neue Richtlinie zu erstellen, und geben Sie dann Details für eine Richtlinie mit **macOS** als *Plattform* an. Konfigurieren Sie *Einstellungen* und *Aktionen bei Inkompatibilität*, um Ihre unternehmensinternen Anforderungen zu erfüllen, und klicken Sie dann zum Speichern der Richtlinie auf **Erstellen**.
 
-3. Wählen Sie im Richtlinienbereich *Übersicht* die Option **Zuweisungen** aus. Verwenden Sie die verfügbaren Optionen, um zu konfigurieren, für welche Azure Active Directory-Benutzer und -Sicherheitsgruppen diese Richtlinie gelten soll. Die Jamf-Integration mit Intune unterstützt keine Konformitätsrichtlinien für Gerätegruppen.
+3. Wählen Sie im Richtlinienbereich *Übersicht* die Option **Zuweisungen** aus. Verwenden Sie die verfügbaren Optionen, um zu konfigurieren, für welche Azure Active Directory-Benutzer und -Sicherheitsgruppen diese Richtlinie gelten soll. **Die Jamf-Integration in Intune unterstützt keine Konformitätsrichtlinien für Gerätegruppen.**
+
+> [!NOTE]
+> Die Jamf-Integration in Intune unterstützt nur AAD-Benutzergruppen. Gerätekonformitätsrichtlinien für Gerätegruppen werden nicht angewendet.
 
 4. Wenn Sie auf **Speichern** klicken, wird die Richtlinie für die Benutzer bereitgestellt.  
 

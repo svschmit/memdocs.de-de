@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31310accbaded1e048cb3c5b574557ffcef0335c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364226"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087011"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Android-Geräteeinstellungen zum Konfigurieren von E-Mail, Authentifizierung und Synchronisierung in Intune
 
@@ -32,28 +32,26 @@ Weitere Informationen zu E-Mail-Profilen in Intune finden Sie unter [Hinzufügen
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie eine Gerätekonfigurationsprofil.](email-settings-configure.md#create-a-device-profile)
+[Erstellen Sie eine Gerätekonfigurationsprofil.](email-settings-configure.md)
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
 - **E-Mail-Server**: Geben Sie den Hostnamen Ihres Exchange-Servers ein. Geben Sie beispielsweise `outlook.office365.com` ein.
 - **Kontoname**: Geben Sie den Anzeigenamen des E-Mail-Kontos ein. Dieser Name wird Benutzern auf ihren Geräten angezeigt.
 - **Benutzernamensattribut aus AAD**: Dieser Name ist das Attribut, das Intune aus Azure Active Directory (Azure AD) abruft. Intune generiert dynamisch den Benutzernamen, der von diesem Profil verwendet wird. Folgende Optionen sind verfügbar:
-  - **Benutzerprinzipalname**: Hiermit wird der Name abgerufen, z.B. `user1` oder `user1@contoso.com`.
-  - **Benutzername**: Hiermit wird nur der Name abgerufen, z.B. `user1`.
-  - **SAM-Kontoname**: Erfordert die Domäne, z.B. `domain\user1`. Der SAM-Kontoname wird nur mit Android-Geräten verwendet.
-
-    Geben Sie außerdem Folgendes ein:  
+  - **Benutzerprinzipalname**: Hiermit wird der Name abgerufen, z. B. `user1` oder `user1@contoso.com`.
+  - **Benutzername:** Hiermit wird nur der Name abgerufen, z. B. `user1`.
+  - **SAM-Kontoname**: Erfordert die Domäne, z.B. `domain\user1`. Der SAM-Kontoname wird nur mit Android-Geräten verwendet. Geben Sie außerdem Folgendes ein:  
     - **Quelle für Benutzerdomänenname**: Wählen Sie zwischen **AAD** (Azure Active Directory) oder **Benutzerdefiniert**.
 
       Wenn Sie die Attribute von **AAD** abrufen möchten, geben Sie Folgendes ein:
       - **Attribut für Benutzerdomänenname aus AAD**: Rufen Sie entweder das Attribut **Vollständiger Domänenname** oder das Attribut **NetBIOS-Name** des Benutzers ab.
 
       Wenn Sie sich dazu entscheiden, die Attribute **Benutzerdefiniert** zu verwenden, geben Sie Folgendes ein:
-      - **Zu verwendender benutzerdefinierter Domänenname**: Geben Sie einen Wert ein, den Intune als Domänennamen verwenden kann, z.B. `contoso.com` oder `contoso`.
+      - **Zu verwendender benutzerdefinierter Domänenname**: Geben Sie einen Wert ein, den Intune als Domänennamen verwenden kann, z. B. `contoso.com` oder `contoso`.
 
 - **Attribut für E-Mail-Adresse aus AAD**: Dieser Name ist das E-Mail-Attribut, dass Intune aus Azure AD abruft. Intune generiert dynamisch die E-Mail-Adresse, die von diesem Profil verwendet wird. Folgende Optionen sind verfügbar:
-  - **Benutzerprinzipalname**:  Der vollständige Prinzipalname, z.B. `user1@contoso.com` oder `user1`, wird als E-Mail-Adresse verwendet.
+  - **Benutzerprinzipalname**: Der vollständige Prinzipalname, z.B. `user1@contoso.com` oder `user1`, wird als E-Mail-Adresse verwendet.
   - **Primäre SMTP-Adresse**: Verwenden Sie die primäre SMTP-Adresse, z.B. `user1@contoso.com`, zum Anmelden bei Exchange.
 
 - **Authentifizierungsmethode**: Wählen Sie entweder **Benutzername und Kennwort** oder **Zertifikat** als Authentifizierungsmethode aus, die vom E-Mail-Profil verwendet werden soll.

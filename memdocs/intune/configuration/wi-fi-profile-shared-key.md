@@ -12,17 +12,17 @@ ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
-ms.reviewer: karanda
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 105a25e33e0f8f0a76934199d24060328d50c05f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360365"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086453"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Verwenden eines benutzerdefinierten Geräteprofils zum Erstellen eines WLAN-Profils mit einem vorinstallierten Schlüssel in Intune
 
@@ -52,7 +52,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 3. Geben Sie die folgenden Eigenschaften ein:
 
-    - **Name:** Geben Sie einen aussagekräftigen Namen für die Richtlinie ein. Benennen Sie Ihre Richtlinien so, dass Sie diese später leicht wiedererkennen. Ein geeigneter Richtlinienname ist beispielsweise **Benutzerdefinierte Profileinstellungen für OMA-URI-WLAN für Android-Geräte**.
+    - **Name:** Geben Sie einen aussagekräftigen Namen für die Richtlinie ein. Benennen Sie Ihre Richtlinien so, dass Sie diese später leicht wiedererkennen. Ein geeigneter Richtlinienname ist beispielsweise **Benutzerdefinierte Profileinstellungen für OMA-URI-WLAN für Android-Geräteadministratorgeräte**.
     - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
     - **Plattform**: Wählen Sie Ihre Plattform aus.
     - **Profiltyp**: Klicken Sie auf **Benutzerdefiniert**.
@@ -139,6 +139,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 ```
 
 ### <a name="eap-based-wi-fi-profile-example"></a>EAP-basiertes WLAN-Profil – Beispiel
+
 Das folgende Beispiel enthält den XML-Code für ein EAP-basiertes WLAN-Profil: Das Beispiel wird bereitgestellt, um das richtige Format sowie weitere Details zu zeigen. Es ist nur ein Beispiel, und dient nicht als empfohlene Konfiguration für Ihre Umgebung.
 
 

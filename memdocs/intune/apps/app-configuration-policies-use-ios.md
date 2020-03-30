@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a110b268c31f4e1ee5dada6554215b648449f01
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342425"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233447"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Hinzufügen von App-Konfigurationsrichtlinien für verwaltete iOS-/iPadOS-Geräte
 
@@ -106,7 +106,7 @@ Die Zeichen \{\{ und \}\} werden nur von Tokentypen verwendet und dürfen nicht 
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Nur Zulassen von konfigurierten Organisationskonten in Apps mit mehreren Identitäten 
 
-Verwenden Sie für iOS-/iPadOS-Geräte die folgenden Schlüssel-Wert-Paare:
+Als Microsoft Intune-Administrator können Sie steuern, welche Benutzerkonten zu Microsoft-Apps auf verwalteten Geräten hinzugefügt werden. Sie können den Zugriff auf zulässige Organisationsbenutzerkonten beschränken und persönliche Konten auf registrierten Geräten blockieren. Verwenden Sie für iOS-/iPadOS-Geräte die folgenden Schlüssel-Wert-Paare:
 
 | **Key** | **Werte** |
 |----|----|
@@ -114,7 +114,10 @@ Verwenden Sie für iOS-/iPadOS-Geräte die folgenden Schlüssel-Wert-Paare:
 | IntuneMAMUPN | <ul><li>UPN des Kontos, das zur Anmeldung bei der App berechtigt ist</li><li> Für bei Intune registrierte Geräte kann das Token <code>{{userprincipalname}}</code> verwendet werden, um das angemeldete Benutzerkonto darzustellen.</li></ul>  |
 
    > [!NOTE]
-   > Sie müssen OneDrive für iOS 10.34 oder höher, Outlook für iOS 2.99.0 oder höher oder Microsoft Edge für iOS 44.8.7 oder höher verwenden, und für die App müssen [Intune-App-Schutzrichtlinien](app-protection-policy.md) eingerichtet sein, wenn Sie nur konfigurierte Organisationskonten mit mehreren Identitäten zulassen.
+   > Die folgenden Apps verarbeiten die oben genannte App-Konfiguration und lassen nur Organisationskonten zu:
+   > - Edge für iOS (44.8.7 und höher)
+   > - OneDrive für iOS (10.34 und höher)
+   > - Outlook für iOS (2.99.0 und höher)
 
 ## <a name="enter-xml-data"></a>Eingeben von XML-Daten
 
