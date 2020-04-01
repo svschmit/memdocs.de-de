@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083743"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80358720"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Was ist die Microsoft Intune App-Verwaltung?
 
@@ -71,7 +71,7 @@ Intune bietet eine Reihe von Funktionen, die die Installation der erforderlichen
 <sup>1</sup> Erwägen Sie die Verwendung [Windows Information Protection](../protect/windows-information-protection-configure.md) für den Schutz von Apps auf Geräten mit Windows 10.<br>
 <sup>2</sup> Gilt nur für Geräte, die von Intune verwaltet werden.<br>
 <sup>3</sup> Intune unterstützt verfügbare Apps aus dem verwalteten Google Play Store auf Android Enterprise-Geräten.<br>
-<sup>4</sup> Intune bietet keine Möglichkeit, eine Verknüpfung zu einer App als Weblink auf Standard Android Enterprise-Geräten zu installieren. Jedoch wird die Unterstützung von Weblinks für [dedizierte Android Enterprise-Geräte mit mehreren Apps](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings) bereitgestellt. 
+<sup>4</sup> Intune bietet keine Möglichkeit, eine Verknüpfung zu einer App als Weblink auf Standard Android Enterprise-Geräten zu installieren. Jedoch wird die Unterstützung von Weblinks für [dedizierte Android Enterprise-Geräte mit mehreren Apps](../configuration/device-restrictions-android-for-work.md#dedicated-devices) bereitgestellt. 
 
 
 ## <a name="get-started"></a>Erste Schritte

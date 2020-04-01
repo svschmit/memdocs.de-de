@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1750ff93f0896e620af243d96914caa428e37a4a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 69432082c199152b18b2afa95fd8351917d9bba9
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360807"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359231"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Geräteeinstellungen bei Windows 10 (und höher) zur Ausführung als Kiosk in Intune
 
@@ -196,6 +196,6 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
 
 [Zuweisen von Profilen](device-profile-assign.md) und [Überwachen von Profilen](device-profile-monitor.md)
 
-Außerdem können Sie Kioskprofile für Geräte mit [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings), and [Windows Holographic for Business](kiosk-settings-holographic.md) erstellen.
+Außerdem können Sie Kioskprofile für Geräte mit [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices), and [Windows Holographic for Business](kiosk-settings-holographic.md) erstellen.
 
 Weitere Informationen finden Sie unter [Einrichten eines Kiosks mit einer einzelnen App](https://docs.microsoft.com/windows/configuration/kiosk-single-app) oder [Einrichten eines Kiosks mit mehreren Apps](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) im Windows-Leitfaden.

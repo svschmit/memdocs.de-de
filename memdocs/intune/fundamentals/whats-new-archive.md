@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085834"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401472"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Neuerungen in Microsoft Intune (vorherige Monate)
 
@@ -229,7 +229,7 @@ Wenn Sie die [Intune-Graph-API](https://docs.microsoft.com/graph/api/resources/i
 ### <a name="microsoft-365-device-management"></a>Microsoft 365-Geräteverwaltung
 
 #### <a name="improved-administration-experience-in-microsoft-365-device-management---5551239---"></a>Verbesserte Verwaltungsbenutzeroberfläche bei der Microsoft 365-Geräteverwaltung<!-- 5551239 -->
-Eine aktualisierte und optimierte Verwaltungsbenutzeroberfläche ist nun im Arbeitsbereich für die Microsoft 365-Geräteverwaltung auf [https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com) allgemein verfügbar, einschließlich:
+Eine aktualisierte und optimierte Verwaltungsbenutzeroberfläche ist nun im Arbeitsbereich für die Microsoft 365-Geräteverwaltung auf [https://endpoint.microsoft.com](https://endpoint.microsoft.com) allgemein verfügbar, einschließlich:
 
 - **Aktualisierte Navigation**: Sie finden eine vereinfachte Navigation auf der ersten Ebene, in der Features logisch gruppiert sind.
 - **Neue Plattformfilter**: Auf den Seiten „Geräte“ und „Apps“ können Sie eine einzelne Plattform auswählen, auf der nur die Richtlinien und Apps für die ausgewählte Plattform angezeigt werden.
@@ -238,7 +238,7 @@ Weitere Informationen zu diesen Verbesserungen finden Sie im [Blogbeitrag „Ent
 
 #### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management---5630102---"></a>Einführung zum Endpunkt-Sicherheitsknoten in der Microsoft 365-Geräteverwaltung<!-- 5630102 -->
 
-Der **Endpunkt-Sicherheitsknoten** ist jetzt allgemein im speziellen Arbeitsbereich der Microsoft 365-Geräteverwaltung unter https://devicemanagement.microsoft.com verfügbar, wo die Funktionen zum Schützen von Endpunkten gruppiert sind wie etwa:
+Der **Endpunkt-Sicherheitsknoten** ist jetzt allgemein im speziellen Arbeitsbereich der Microsoft 365-Geräteverwaltung unter https://endpoint.microsoft.com verfügbar, wo die Funktionen zum Schützen von Endpunkten gruppiert sind wie etwa:
 
 - Sicherheitsbaselines:  Vorkonfigurierte Einstellungen, mit denen Sie eine bekannte Gruppe von Einstellungen und Standardwerten anwenden können, die von Microsoft empfohlen werden.
 - Sicherheitsaufgaben: Nutzen Sie die Microsoft Defender ATPs-Verwaltung für Bedrohungs-und Sicherheitsrisiken (Threat and Vulnerability Management, TVM), und verwenden Sie Intune, um Endpunktschwächen zu beheben.
@@ -527,7 +527,7 @@ In diesem Update werden die folgenden Features hinzugefügt:
 - **Dedizierte Geräte** > **Multi-App**: **Medienlautstärkeregler** ermöglicht es Benutzern, über einen Schieberegler die Medienlautstärke des Geräts zu steuern. 
 - **Dedizierte Geräte** > **Multi-App**:  **Einen Bildschirmschoner aktivieren**, ein benutzerdefiniertes Bild hochladen und steuern, wann der Bildschirmschoner angezeigt wird.
 
-Die aktuellen Einstellungen finden Sie unter [Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
+Die aktuellen Einstellungen finden Sie unter [Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Gilt für:
 
@@ -1461,7 +1461,7 @@ Gilt für:
 #### <a name="kiosk-devices-are-now-called-dedicated-devices-on-android-enterprise-devices---3598402-----"></a>„Kioskgeräte“ heißen bei Android Enterprise-Geräten jetzt „Dedizierte Geräte“<!-- 3598402   -->
 Zur Anpassung an die Android-Terminologie wurde **Kiosk** für Android Enterprise-Geräte in **dedizierte Geräte** umbenannt (**Gerätekonfiguration** > **Profile** > **Profil erstellen** > **Android Enterprise** (Plattform) > **Nur Gerätebesitzer** > **Geräteeinschränkungen** > **Dedizierte Geräte**).
 
-Eine Liste der verfügbaren Einstellungen finden Sie unter [Device settings to allow or restrict features (Geräteeinstellungen zum Zulassen oder Einschränken von Features)](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
+Eine Liste der verfügbaren Einstellungen finden Sie unter [Device settings to allow or restrict features (Geräteeinstellungen zum Zulassen oder Einschränken von Features)](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Gilt für:  
 Android Enterprise
@@ -2106,7 +2106,7 @@ Wenn Intune Office auf den Computern Ihrer Endbenutzer installiert, erhalten sie
 ### <a name="monitor-and-troubleshoot"></a>Überwachung und Problembehandlung
 
 #### <a name="new-intune-support-experience-in-the-microsoft-365-device-management-portal---3076965---"></a>Neue Benutzeroberfläche für Intune-Support im Portal für die Microsoft 365-Geräteverwaltung<!-- 3076965 -->
-Im [Portal für die Microsoft 365-Geräteverwaltung]( https://devicemanagement.microsoft.com) wird eine neue Benutzeroberfläche für „Hilfe und Support“ in Intune eingeführt. Über die neue Benutzeroberfläche können Sie Ihr Problem in eigenen Worten beschreiben und erhalten Einblicke in die Problembehandlung sowie webbasierte Anleitungen zur Selbsthilfe. Diese Lösungen werden über einen regelbasierten Algorithmus für maschinelles Lernen angeboten, der auf Benutzeranfragen basiert.  
+Im [Portal für die Microsoft 365-Geräteverwaltung]( https://endpoint.microsoft.com) wird eine neue Benutzeroberfläche für „Hilfe und Support“ in Intune eingeführt. Über die neue Benutzeroberfläche können Sie Ihr Problem in eigenen Worten beschreiben und erhalten Einblicke in die Problembehandlung sowie webbasierte Anleitungen zur Selbsthilfe. Diese Lösungen werden über einen regelbasierten Algorithmus für maschinelles Lernen angeboten, der auf Benutzeranfragen basiert.  
 
 Zusätzlich zur themenspezifischen Anleitung können Sie auch den neuen Workflow zur Fallerstellung nutzen, um einen Supportfall per E-Mail oder Telefon zu öffnen.  
 
@@ -2148,7 +2148,7 @@ Wenn Sie über eines der unten aufgelisteten Geräte verfügen oder eines der un
 ### <a name="device-management"></a>Geräteverwaltung
 
 #### <a name="microsoft-365-device-management-administration-center---3078424---"></a>Admin Center für die Microsoft 365-Geräteverwaltung<!-- 3078424 -->
-Microsoft 365 verspricht unkomplizierte Verwaltung. Im Laufe der Zeit wurden die Microsoft 365-Back-End-Dienste integriert, um End-to-End-Szenarios wie den bedingten Zugriff für Intune und Azure AD zu ermöglichen. Im neuen [Microsoft 365-Admin Center](https://devicemanagement.microsoft.com) können Sie Verwaltungsvorgänge vereinen, vereinfachen und integrieren. Über diesen Arbeitsbereich für die Geräteverwaltung können Sie schnell auf alle Informationen und Aufgaben zur Geräte- und App-Verwaltung zugreifen, die für Ihre Organisation relevant sind. Dieser Bereich soll der primäre Arbeitsbereich für Computingteams von geschäftliche Endbenutzer werden.
+Microsoft 365 verspricht unkomplizierte Verwaltung. Im Laufe der Zeit wurden die Microsoft 365-Back-End-Dienste integriert, um End-to-End-Szenarios wie den bedingten Zugriff für Intune und Azure AD zu ermöglichen. Im neuen [Microsoft 365-Admin Center](https://endpoint.microsoft.com) können Sie Verwaltungsvorgänge vereinen, vereinfachen und integrieren. Über diesen Arbeitsbereich für die Geräteverwaltung können Sie schnell auf alle Informationen und Aufgaben zur Geräte- und App-Verwaltung zugreifen, die für Ihre Organisation relevant sind. Dieser Bereich soll der primäre Arbeitsbereich für Computingteams von geschäftliche Endbenutzer werden.
 
 
 <!-- ########################## -->

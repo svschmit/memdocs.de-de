@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c04423f79855f4c28121dad11fa21ccb05216de
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084168"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407724"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Verwalten des Webzugriffs mithilfe von Microsoft Edge mit Microsoft Intune
 
@@ -343,7 +343,7 @@ Laut Standardeinstellung werden Benutzer in Microsoft Edge zum Speichern Ihres B
 
 |    Key    |    Wert    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     `com.microsoft.intune.man.managedbrowser.disableShareBrowsingHistory`    |     Der Wert **TRUE** verhindert, dass diese Aufforderung Endbenutzern angezeigt wird.     |
+|     `com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory`    |     Der Wert **TRUE** verhindert, dass diese Aufforderung Endbenutzern angezeigt wird.     |
 
 ### <a name="disable-prompts-that-offer-to-save-passwords"></a>Deaktivieren von Aufforderungen, Kennwörter zu speichern
 

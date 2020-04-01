@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 67ea2757e066b70154baea9f87a95a12dd2fe632
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 631f62d6dfa677bbfc805488ec2d66c7dc2e8afe
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347196"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274947"
 ---
 # <a name="sync-your-ios-device-manually"></a>Manuelles Synchronisieren des iOS-Geräts
 
@@ -34,13 +34,13 @@ Manchmal kann es zu lange dauern, bis Ihre App aus dem Unternehmensportal herunt
 
 2. Tippen Sie auf **Geräte**. Wenn Sie mehrere Geräte besitzen, wird Ihnen eine Liste der Geräte angezeigt. Wählen Sie das Gerät aus, das Sie derzeit verwenden. Wenn Sie nur ein Gerät besitzen, wird Ihnen direkt der Bildschirm „Gerätedetails“ angezeigt.
 
-    ![Screenshot des Bildschirms „Geräte“, der zwei Geräte anzeigt Unter dem oberen Gerät steht „This is the iPhone 6 Plus that you're currently using.“ (Dies ist das iPhone 6 Plus, das Sie derzeit verwenden.).](/user-help/media/ios_sync_1_CP_after_1804.png)
+    ![Screenshot des Bildschirms „Geräte“, der zwei Geräte anzeigt Unter dem oberen Gerät steht „This is the iPhone 6 Plus that you're currently using.“ (Dies ist das iPhone 6 Plus, das Sie derzeit verwenden.).](./media/ios_sync_1_CP_after_1804.png)
 
 3. Tippen Sie auf **Einstellungen überprüfen**, um Ihr Gerät zu synchronisieren. Es wird ein Ladebalken auf dem Bildschirm angezeigt, bis die Synchronisierung abgeschlossen ist.
 
-    ![Screenshot der Gerätedetails, die die Zeit der letzten Anmeldung des Geräts und den Link „Einstellungen überprüfen“ anzeigen](/user-help/media/ios_sync_2_CP_after_1804.png)  
+    ![Screenshot der Gerätedetails, die die Zeit der letzten Anmeldung des Geräts und den Link „Einstellungen überprüfen“ anzeigen](./media/ios_sync_2_CP_after_1804.png)  
 
-   ![Screenshot der Gerätedetails, die den Ladebalken anzeigen, nachdem der Benutzer auf „Einstellungen überprüfen“ geklickt hat](/user-help/media/ios_sync_3_CP-after_1804.png)
+   ![Screenshot der Gerätedetails, die den Ladebalken anzeigen, nachdem der Benutzer auf „Einstellungen überprüfen“ geklickt hat](./media/ios_sync_3_CP-after_1804.png)
 
 Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).
 

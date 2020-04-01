@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed8acbcbe550ffd0a3a3f94e07d5752489ae8be6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340930"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324822"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurieren von Google Chrome für Android-Geräte mit Intune 
 
@@ -40,7 +40,7 @@ Sie können Intune-App-Konfigurationsrichtlinien zum Konfigurieren von Google Ch
 2. Wählen Sie **Apps** > **Alle Apps** > **Hinzufügen** aus, und fügen Sie dann die App **Verwaltetes Google Play** hinzu.
 3. Wechseln Sie zu verwaltetem Google Play, suchen Sie **Google Chrome**, und erteilen Sie die Genehmigung.
 
-    ![Suchen und Genehmigen von Google Chrome](/media/apps-configure-chrome-android/search.png)
+    ![Suchen und Genehmigen von Google Chrome](./media/apps-configure-chrome-android/search.png)
 
 4. Weisen Sie Google Chrome einer Benutzergruppe als erforderlicher App-Typ zu. Google Chrome wird automatisch bereitgestellt, wenn das Gerät bei Intune registriert wird.
 
@@ -55,15 +55,15 @@ Weitere Informationen zum Hinzufügen einer verwalteten Google Play-App zu Intun
     - **Geräteregistrierungstyp:** Diese Einstellung ist auf **Verwaltete Geräte** festgelegt.
     - **Plattform:** Wählen Sie **Android** aus.
 
-    ![Hinzufügen einer Google Chrome-Konfigurationsrichtlinie](/media/apps-configure-chrome-android/add-policy.png)
+    ![Hinzufügen einer Google Chrome-Konfigurationsrichtlinie](./media/apps-configure-chrome-android/add-policy.png)
 
 3. Klicken Sie auf **Zugeordnete App**, um den Bereich **Zugeordnete App** anzuzeigen. Suchen Sie nach **Google Chrome**. Diese Liste enthält [verwaltete Google Play-Apps aus, die Sie genehmigt und mit Intune synchronisiert haben](apps-add-android-for-work.md).
 
-    ![Auswählen von Google Chrome unter „Zugeordnete App“](/media/apps-configure-chrome-android/associated-app.png)
+    ![Auswählen von Google Chrome unter „Zugeordnete App“](./media/apps-configure-chrome-android/associated-app.png)
 
 4. Klicken Sie auf **Konfigurationseinstellungen**, wählen Sie **Konfigurations-Designer verwenden** aus, und klicken Sie dann auf **Hinzufügen**, um die Konfigurationsschlüssel auszuwählen.
 
-    ![Hinzufügen von „Konfigurations-Designer verwenden“](/media/apps-configure-chrome-android/configuration.png)
+    ![Hinzufügen von „Konfigurations-Designer verwenden“](./media/apps-configure-chrome-android/configuration.png)
 
     Im Folgenden finden Sie ein Beispiel für die allgemeinen Einstellungen:
     - **Zugriff auf eine Liste von URLs blockieren**: `["*"]`
@@ -73,7 +73,7 @@ Weitere Informationen zum Hinzufügen einer verwalteten Google Play-App zu Intun
 
     Nachdem die Konfigurationseinstellungen mit dem Konfigurations-Designer hinzugefügt wurden, werden sie in einer Tabelle aufgelistet. 
 
-    ![Allgemeine Einstellungen](/media/apps-configure-chrome-android/common-settings.png)
+    ![Allgemeine Einstellungen](./media/apps-configure-chrome-android/common-settings.png)
 
     Mit den obigen Einstellungen werden Lesezeichen erstellt und der Zugriff auf alle URLs mit Ausnahme von `baidu.com`, `yahoo.com`, `chromium.org` und `chrome://` blockiert.
 
@@ -84,31 +84,31 @@ Weitere Informationen zum Hinzufügen einer verwalteten Google Play-App zu Intun
 
 Sobald das Android-Gerät bei Android Enterprise registriert ist, wird die verwaltete Google Chrome-App mit dem Portfoliosymbol automatisch bereitgestellt.
 
-   <img alt="Managed Google Chrome with the portfolio icon" src="/media/apps-configure-chrome-android/chrome-icon.png" width="350">
+   <img alt="Managed Google Chrome with the portfolio icon" src="./media/apps-configure-chrome-android/chrome-icon.png" width="350">
 
 Sobald Sie Google Chrome starten, werden die Einstellungen angewendet.
 
    Lesezeichen:<br>
-   <img alt="Bookmarks" src="/media/apps-configure-chrome-android/bookmarks.png" width="350">
+   <img alt="Bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
 
    Blockierte URL:<br>
-   <img alt="Blocked URL" src="/media/apps-configure-chrome-android/blocked-url.png" width="350">
+   <img alt="Blocked URL" src="./media/apps-configure-chrome-android/blocked-url.png" width="350">
 
    Zugelassene URL:<br>
-   <img alt="Allow URL" src="/media/apps-configure-chrome-android/allowed-url.png" width="350">
+   <img alt="Allow URL" src="./media/apps-configure-chrome-android/allowed-url.png" width="350">
 
    Registerkarte „Inkognito“:<br>
-   <img alt="Incognito tab" src="/media/apps-configure-chrome-android/incognito-tab.png" width="350">
+   <img alt="Incognito tab" src="./media/apps-configure-chrome-android/incognito-tab.png" width="350">
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
 1. Überwachen Sie im Intune-Portal den Bereitstellungsstatus der Richtlinie.
 
-    ![Überwachen des Bereitstellungsstatus der Richtlinie](/media/apps-configure-chrome-android/monitor-status.png)
+    ![Überwachen des Bereitstellungsstatus der Richtlinie](./media/apps-configure-chrome-android/monitor-status.png)
 
 2. Starten Sie Google Chrome, und besuchen Sie **chrome://policy**. Wir können überprüfen, ob die Einstellungen erfolgreich angewendet werden.
 
-    ![Überprüfen der erfolgreichen Anwendung der Einstellungen](/media/apps-configure-chrome-android/confirm.png)
+    ![Überprüfen der erfolgreichen Anwendung der Einstellungen](./media/apps-configure-chrome-android/confirm.png)
 
 ## <a name="additional-information"></a>Zusätzliche Informationen
 

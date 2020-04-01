@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c52261051000e7af1580f8213e5d348857a128c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 796e95b09193228fdc4612a370658e532fbbd2c6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340228"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324374"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Aktivieren von Win32-Apps auf Geräten im S Modus
 
-[Windows 10 im S Modus](https://docs.microsoft.com/windows/deployment/s-mode) ist ein gesperrtes Betriebssystem, das nur Store-Apps ausführt. Standardmäßig lassen Windows-Geräte im S Modus die Installation und Ausführung von Win32-Apps nicht zu. Diese Geräte enthalten eine einzelne *Windows 10 S-Basisrichtlinie*, die verhindert, dass das Gerät im S Modus Win32-Apps ausführen kann. Durch die Erstellung und Verwendung einer **zusätzlichen S Modus-Richtlinie** in Intune können Sie jedoch Win32-Apps auf verwalteten Windows 10-Geräten im S Mode installieren und ausführen. Mithilfe der [Microsoft Defender-Anwendungssteuerung](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)-PowerShell-Tools können Sie eine oder mehrere zusätzliche Richtlinien für Windows im S Modus erstellen. Sie müssen die zusätzlichen Richtlinien mit dem [Device Guard-Signaturdienst](https://go.microsoft.com/fwlink/?linkid=2095629) oder mit [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/signing-policies-with-signtool) signieren und dann die Richtlinien über Intune hochladen und verteilen. Alternativ können Sie die zusätzlichen Richtlinien mit einem Codesignaturzertifikat Ihrer Organisation signieren. Die bevorzugte Methode ist jedoch die Verwendung eines Device Guard-Signaturdiensts. In der Instanz, in der Sie das Codesignaturzertifikat Ihrer Organisation verwenden, muss das Stammzertifikat, mit dem das Codesignaturzertifikat verkettet ist, auf dem Gerät vorhanden sein.
+[Windows 10 im S Modus](https://docs.microsoft.com/windows/deployment/s-mode) ist ein gesperrtes Betriebssystem, das nur Store-Apps ausführt. Standardmäßig lassen Windows-Geräte im S Modus die Installation und Ausführung von Win32-Apps nicht zu. Diese Geräte enthalten eine einzelne *Windows 10 S-Basisrichtlinie*, die verhindert, dass das Gerät im S Modus Win32-Apps ausführen kann. Durch die Erstellung und Verwendung einer **zusätzlichen S Modus-Richtlinie** in Intune können Sie jedoch Win32-Apps auf verwalteten Windows 10-Geräten im S Mode installieren und ausführen. Mithilfe der [Microsoft Defender-Anwendungssteuerung](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)-PowerShell-Tools können Sie eine oder mehrere zusätzliche Richtlinien für Windows im S Modus erstellen. Sie müssen die zusätzlichen Richtlinien mit dem [Device Guard-Signaturdienst](https://go.microsoft.com/fwlink/?linkid=2095629) oder mit [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) signieren und dann die Richtlinien über Intune hochladen und verteilen. Alternativ können Sie die zusätzlichen Richtlinien mit einem Codesignaturzertifikat Ihrer Organisation signieren. Die bevorzugte Methode ist jedoch die Verwendung eines Device Guard-Signaturdiensts. In der Instanz, in der Sie das Codesignaturzertifikat Ihrer Organisation verwenden, muss das Stammzertifikat, mit dem das Codesignaturzertifikat verkettet ist, auf dem Gerät vorhanden sein.
 
 Durch die Zuweisung der zusätzlichen S Modus-Richtlinie in Intune ermöglichen Sie es dem Gerät, eine Ausnahme in der vorhandenen Geräterichtlinie im S Modus festzulegen. Dies lässt den hochgeladenen zugehörigen signierten App-Katalog zu. Die Richtlinie legt eine Zulassungsliste von Apps (der App-Katalog) fest, die auf dem Gerät im S Modus verwendet werden können.
 

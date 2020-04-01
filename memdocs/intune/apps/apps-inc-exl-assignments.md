@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5011e24064c4c546107f950925d12489ed9113c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6095c079c6b5cb6f132d9963e3e7413e97180d70
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340605"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324583"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Einschließen und Ausschließen von App-Zuweisungen in Microsoft Intune
 
@@ -90,7 +90,7 @@ Wenn Sie Gruppenzuweisungen vornehmen, können Gruppen, die bereits zugewiesen w
 
 Um Zuweisungen zu bearbeiten, wählen Sie in der App-**Zuweisungen**-Liste die Zeile mit der jeweiligen Zuweisung aus, die Sie ändern möchten. Sie können eine Zuweisung auch entfernen, indem Sie die Auslassungspunkte ( **...** ) am Ende einer Zeile und dann **Entfernen** auswählen. Um die Ansicht der Liste **Zuweisungen** zu ändern, gruppieren Sie nach **Zuweisungstyp** oder **Eingeschlossen/Ausgeschlossen**.
 
-![Intune-App-Zuweisungen – Abschluss](/media/apps-inc-exl-assignments/apps-inc-exl-05.png)
+![Intune-App-Zuweisungen – Abschluss](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

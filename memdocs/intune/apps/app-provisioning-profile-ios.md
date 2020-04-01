@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3cf008c708ce42611a842ff7f8720d48d57ac91
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a1ce95391e8dbfa9fd8f5a8e2347f9c4249ee79f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341619"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323436"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Verwenden von Bereitstellungsprofilen für iOS-Apps, um zu verhindern, dass Apps ablaufen
 
@@ -53,7 +53,7 @@ Wenn Sie über Administratorberechtigungen verfügen, können Sie Sicherheitsgru
 
    Das **Ablaufdatum** wird mit einem Wert aus der Datei mit einem Konfigurationsprofil für Apple-Mobilgeräte aufgefüllt, die Sie oben hinzugefügt haben.<br>
 
-   <img alt="Create profile - Basics" src="/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+   <img alt="Create profile - Basics" src="./media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. Klicken Sie auf **Next: Bereichstags**.<br>
    Auf der Seite **Bereichstags** können Sie optional Bereichstags konfigurieren, um zu bestimmen, wer das iOS/iPadOS-App-Bereitstellungsprofil in Intune sehen kann. Weitere Informationen zu Bereichsmarkierungen finden Sie unter [Use role-based access control and scope tags for distributed IT (Verwenden der rollenbasierten Zugriffssteuerung und von Bereichsmarkierungen für verteilte IT)](../fundamentals/scope-tags.md).

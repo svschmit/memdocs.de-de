@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1598be8f5f54f1f509194aed0232730bd821624b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8583c625277735d653143f5cf87c56c350bdc1ff
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79357115"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326722"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Verwenden von Richtliniensätzen zur Gruppierung von Verwaltungsobjektsammlungen in Microsoft Intune
 
@@ -63,7 +63,7 @@ Wenn Sie einen Richtliniensatz erstellen, erstellen Sie eine einzelne Zuweisungs
     - **Name des Richtliniensatzes**: Geben Sie einen Namen für diesen Richtliniensatz an.
     - **Beschreibung**: Geben Sie optional eine Beschreibung des Richtliniensatzes an.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. Klicken Sie auf **Next: App-Verwaltung**.<br>
    Auf der Seite **Anwendungsverwaltung** können Sie optional [Apps](../apps/apps-add.md), [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-overview.md) und [App-Schutzrichtlinien](../apps/app-protection-policy.md) zu Ihrem Richtliniensatz hinzufügen. Weitere Informationen zur App-Verwaltung finden Sie unter [Was ist die Microsoft Intune App-Verwaltung?](../apps/app-management.md).
