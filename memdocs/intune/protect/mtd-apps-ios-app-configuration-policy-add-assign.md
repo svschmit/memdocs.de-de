@@ -168,7 +168,7 @@ Verwenden Sie dasselbe Azure AD-Konto, das zuvor in der [Symantec Endpoint Prote
 
   - In den Anweisungen für [die Verwendung der iOS-App-Konfigurationsrichtlinien von Microsoft Intune](../apps/app-configuration-policies-use-ios.md) erfahren Sie, wie Sie die iOS-App-Konfigurationsrichtlinie für SEP Mobile hinzufügen.
 
-    - Wählen Sie für **Format der Konfigurationseinstellungen** **XML-Daten eingeben** aus, kopieren Sie den Inhalt aus der **.plist**-Datei, und fügen Sie diesen Inhalt in den Text der Konfigurationsrichtlinie ein.
+    - Wählen Sie für **Format der Konfigurationseinstellungen** **XML-Daten eingeben** aus, kopieren Sie den Inhalt aus der * **.plist**-Datei, und fügen Sie diesen Inhalt in den Text der Konfigurationsrichtlinie ein.
 
 > [!NOTE]
 > Wenn Sie die Dateien nicht abrufen können, wenden Sie sich an den [Symantec Endpoint Protection Mobile Enterprise Support](https://support.symantec.com/en_US/contact-support.html).
