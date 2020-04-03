@@ -12,6 +12,7 @@
 
 ## Verwendung Ihres Android-Geräts
 ### [Warum sollten Sie Ihr Android-Gerät registrieren?](why-enroll-android-device.md)
+### [Installieren der Unternehmensportal-App in China](install-company-portal-android-china.md)
 ### Registrieren Sie Ihr Gerät
 #### [Registrierung Ihres Android-Geräts](enroll-device-android-company-portal.md)  
 #### [Registrieren mit dem Android-Arbeitsprofil](enroll-device-android-work-profile.md)
