@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff94f0b628fb20c063ef77ccb061f33eb0199195
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363680"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327101"
 ---
 # <a name="categorize-devices-into-groups"></a>Kategorisieren von Geräten in Gruppen
 
@@ -71,7 +71,7 @@ Wenn die Spalte **Gerätekategorie** nicht angezeigt wird, klicken Sie auf **Spa
 
 ### <a name="change-the-category-of-a-device"></a>Ändern der Gerätekategorie
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Alle Geräte** > das hinzuzufügende Gerät auswählen > **Eigenschaften**.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Alle Geräte**, wählen Sie das gewünschte Gerät aus, und klicken Sie dann auf **Eigenschaften**.
 2. Auf dem nächsten Blatt können Sie die **Gerätekategorie** des ausgewählten Geräts in einen beliebigen Kategorienamen ändern, den Sie zuvor konfiguriert haben.
 
 ## <a name="after-you-configure-device-groups"></a>Nach dem Konfigurieren von Gerätegruppen

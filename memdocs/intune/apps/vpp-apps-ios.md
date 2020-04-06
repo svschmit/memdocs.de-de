@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d391bf08d963e26dd91607d7dad0347e77d130ed
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 52d69b851b67d0a230e71d8aaa6b60b5cb7b2b8d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361938"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325690"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Verwalten von iOS- und macOS-Apps, die über das Apple Volume Purchase Program mit Microsoft Intune erworben wurden
 
@@ -88,7 +88,7 @@ Migrieren Sie in Apple Business Manager oder Apple School Manager vorhandene erw
 2. Stellen Sie sicher, dass alle VPP-Einkäufer in Ihrer Organisation Schritt 1 abgeschlossen haben, bevor Sie fortfahren.
 3. Überprüfen Sie, ob alle erworbenen Apps und Lizenzen in Apple Business Manager oder Apple School Manager zu „Apps und Bücher“ migriert wurden.
 4. Laden Sie das neue Standorttoken herunter, indem Sie zu **Apple Business (oder School) Manager** > **Einstellungen** > **Apps und Bücher** > **Meine Servertoken** wechseln.
-5. Aktualisieren Sie das Standorttoken im Admin Center von Microsoft Endpoint Manager, indem Sie zu **Mandantenverwaltung** > **Connectors und Token** > **Apple VPP-Token** navigieren und das Token synchronisieren.
+5. Aktualisieren Sie das Standorttoken im Microsoft Endpoint Manager Admin Center, indem Sie zu **Mandantenverwaltung** > **Connectors und Token** > **Apple-VPP-Token** navigieren und das Token synchronisieren.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Hochladen eines Apple VPP- oder Standorttokens
 

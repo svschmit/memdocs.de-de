@@ -5,27 +5,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: ''
+ms.reviewer: kakyker; annovich
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e143530c5e9965a3717c632c1af7fcbc28a664f
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: a4ed859078f7cc6be5a91b303de45f7247248203
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526290"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359183"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>macOS-Gerätefunktionseinstellungen in Intune
 
-Intune bietet einige integrierte Einstellungen zum Anpassen von Features auf Ihren macOS-Geräten. Administratoren können beispielsweise AirPrint-Drucker hinzufügen, die Art der Benutzeranmeldung auswählen, die Energiesteuerung konfigurieren, die SSO-Authentifizierung verwenden und mehr.
+Intune bietet integrierte Einstellungen zum Anpassen von Features auf Ihren macOS-Geräten. Administratoren können beispielsweise AirPrint-Drucker hinzufügen, die Art der Benutzeranmeldung auswählen, die Energiesteuerung konfigurieren, die SSO-Authentifizierung verwenden und mehr.
 
 Nutzen Sie diese Features, um macOS-Geräte im Rahmen Ihrer MDM-Lösung (Mobile Device Management, Verwaltung mobiler Geräte) zu verwalten.
 
@@ -40,7 +40,7 @@ In diesem Artikel werden diese Einstellungen mit ihren Funktionsbeschreibungen a
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Die Einstellungen gelten für: Geräteregistrierung und automatische Geräteregistrierung 
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Die Einstellungen gelten für: Geräteregistrierung und automatische Geräteregistrierung
 
 - **IP-Adresse**: Geben Sie die IPv4- oder IPv6-Adresse des Druckers ein. Wenn Sie den Hostnamen verwenden, um Drucker zu identifizieren, erhalten Sie die IP-Adresse, indem Sie den Drucker in der Terminal-App pingen. Der Abschnitt [Abrufen von IP-Adresse und Pfad](#get-the-ip-address-and-path) (in diesem Artikel) enthält weitere Details.
 - **Pfad:** Geben Sie den Pfad des Druckers ein. Der Pfad ist für Drucker in Ihrem Netzwerk in der Regel `ipp/print`. Der Abschnitt [Abrufen von IP-Adresse und Pfad](#get-the-ip-address-and-path) (in diesem Artikel) enthält weitere Details.
@@ -81,43 +81,45 @@ Um AirPrinter-Server hinzuzufügen, benötigen Sie die IP-Adresse des Druckers, 
   
   Wenn Sie eine App, einen Ordner oder eine Datei hinzufügen, stellen Sie sicher, dass Sie den richtigen Pfad eingeben. Nicht alle Elemente befinden sich im Ordner `Applications`. Wenn ein Benutzer ein Element von einem Speicherort an einen anderen verschiebt, ändert sich der Pfad. Dieses verschobene Element wird nicht geöffnet, wenn sich der Benutzer anmeldet.
 
+- **Aus Benutzerkonfiguration ausblenden:** Mit der Einstellung **Ausblenden** wird die App nicht in der Liste der Anmeldeelemente für Benutzer und Gruppen angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem Elemente, für die Sie einstellen, dass diese beim Anmelden gestartet werden sollen, in der Liste der Anmeldeelemente für Benutzer und Gruppen an, wenn bei der Option „Ausblenden“ kein Häkchen gesetzt wird.
+
 ## <a name="login-window"></a>Fenster „Anmeldung“
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Die Einstellungen gelten für: Geräteregistrierung und automatische Geräteregistrierung
 
 #### <a name="window-layout"></a>Fensterlayout
 
-- **Zusätzliche Informationen in der Menüleiste anzeigen**: Wenn der Zeitbereich auf der Menüleiste ausgewählt ist, zeigt **Zulassen** den Hostnamen und die macOS-Version an. Bei Wahl der Standardeinstellung **Nicht konfiguriert** werden diese Informationen nicht auf der Menüleiste angezeigt.
+- **Zusätzliche Informationen in der Menüleiste anzeigen**: Wenn der Zeitbereich auf der Menüleiste ausgewählt ist, zeigt **Zulassen** den Hostnamen und die macOS-Version an. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem diese Informationen möglicherweise nicht in der Menüleiste an.
 - **Banner**: Geben Sie eine Meldung ein, die auf dem Anmeldebildschirm des Geräts angezeigt wird. Geben Sie beispielsweise Ihre Unternehmensinformationen, eine Begrüßungsmeldung, Informationen bei Verlust eines Geräts usw. ein.
 - **Anmeldeformat auswählen**: Wählen Sie aus, wie Benutzer sich beim Gerät anmelden können. Folgende Optionen sind verfügbar:
   - **Nach Benutzernamen und Kennwort fragen** (Standard): Erfordert, dass Benutzer einen Benutzernamen und ein Kennwort eingeben.
   - **Alle Benutzer auflisten und Kennwort anfordern**: Erfordert, dass Benutzer ihren Benutzernamen in einer Benutzerliste auswählen und dann ihr Kennwort eingeben. Konfigurieren Sie auch Folgendes:
 
-    - **Lokale Benutzer**: Bei Wahl von **Ausblenden** werden die lokalen Benutzerkonten nicht in der Benutzerliste angezeigt, wozu auch die Standard- und die Administratorkonten gehören können. Nur die Netzwerk- und Systembenutzerkonten werden gezeigt. **Nicht konfiguriert** (Standard): Zeigt die lokalen Benutzerkonten in der Benutzerliste.
-    - **Mobile Konten**: Bei Wahl von **Ausblenden** werden mobile Konten nicht in der Benutzerliste angezeigt. **Nicht konfiguriert** (Standard): Zeigt die mobilen Konten in der Benutzerliste. Einige mobile Konten werden möglicherweise als Netzwerkbenutzer angezeigt.
-    - **Netzwerkbenutzer**: Klicken Sie auf **Anzeigen**, um die Netzwerkbenutzer in der Benutzerliste aufzulisten. **Nicht konfiguriert** (Standard): Zeigt die Konten von Netzwerkbenutzern nicht in der Benutzerliste an.
-    - **Administratorbenutzer**: Bei Wahl von **Ausblenden** werden Administratorbenutzerkonten nicht in der Benutzerliste angezeigt. **Nicht konfiguriert** (Standard): Zeigt die Administratorbenutzerkonten in der Benutzerliste an.
-    - **Andere Benutzer**: Wählen Sie **Anzeigen** aus, um **Weitere...** Benutzer in der Benutzerliste aufzulisten. **Nicht konfiguriert** (Standard): Zeigt andere Benutzerkonten nicht in der Benutzerliste an.
+    - **Lokale Benutzer**: Bei Wahl von **Ausblenden** werden die lokalen Benutzerkonten nicht in der Benutzerliste angezeigt, wozu auch die Standard- und die Administratorkonten gehören können. Nur die Netzwerk- und Systembenutzerkonten werden gezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die lokalen Benutzerkonten in der Benutzerliste an.
+    - **Mobile Konten**: Bei Wahl von **Ausblenden** werden mobile Konten nicht in der Benutzerliste angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die mobilen Konten in der Benutzerliste an. Einige mobile Konten werden möglicherweise als Netzwerkbenutzer angezeigt.
+    - **Netzwerkbenutzer**: Klicken Sie auf **Anzeigen**, um die Netzwerkbenutzer in der Benutzerliste aufzulisten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Netzwerkbenutzerkonten nicht in der Benutzerliste an.
+    - **Administratorbenutzer**: Bei Wahl von **Ausblenden** werden Administratorbenutzerkonten nicht in der Benutzerliste angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Administratorbenutzerkonten in der Benutzerliste an.
+    - **Andere Benutzer**: Wählen Sie **Anzeigen** aus, um **Weitere...** Benutzer in der Benutzerliste aufzulisten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die anderen Benutzerkonten nicht in der Benutzerliste an.
 
 #### <a name="login-screen-power-settings"></a>Energieeinstellungen auf dem Anmeldebildschirm
 
-- **Schaltfläche „Herunterfahren“** : Bei Wahl von **Ausblenden** wird die Schaltfläche „Herunterfahren“ nicht auf dem Anmeldebildschirm angezeigt. Bei Wahl der Standardeinstellung **Nicht konfiguriert** wird die Schaltfläche „Herunterfahren“ gezeigt.
-- **Schaltfläche „Neu starten“** : Bei Wahl von **Ausblenden** wird die Schaltfläche „Neu starten“ nicht auf dem Anmeldebildschirm angezeigt. Bei Wahl der Standardeinstellung **Nicht konfiguriert** wird die Schaltfläche „Neu starten“ gezeigt.
-- **Standbytaste**: Bei Wahl von **Ausblenden** wird die Schaltfläche „Standby“ nicht auf dem Anmeldebildschirm angezeigt. Bei Wahl der Standardeinstellung **Nicht konfiguriert** wird die Schaltfläche „Standby“ gezeigt.
+- **Schaltfläche „Herunterfahren“** : Bei Wahl von **Ausblenden** wird die Schaltfläche „Herunterfahren“ nicht auf dem Anmeldebildschirm angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Schaltfläche „Ausschalten“ an.
+- **Schaltfläche „Neu starten“** : Bei Wahl von **Ausblenden** wird die Schaltfläche „Neu starten“ nicht auf dem Anmeldebildschirm angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Schaltfläche „Neustart“ an.
+- **Standbytaste**: Bei Wahl von **Ausblenden** wird die Schaltfläche „Standby“ nicht auf dem Anmeldebildschirm angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Schaltfläche „Ruhezustand“ an.
 
 #### <a name="other"></a>Andere
 
-- **Benutzeranmeldung über Konsole deaktivieren**: Bei Wahl von **Deaktivieren** wird die macOS-Befehlszeile zum Anmelden ausgeblendet. **Deaktivieren** Sie diese Einstellung für typische Benutzer. Die Standardeinstellung **Nicht konfiguriert** ermöglicht fortgeschrittenen Benutzern die Anmeldung über die macOS-Befehlszeile. Um in den Konsolenmodus zu wechseln, müssen Benutzer `>console` in das Feld „Benutzername“ eingeben und sich im Konsolenfenster authentifizieren.
+- **Benutzeranmeldung über Konsole deaktivieren**: Bei Wahl von **Deaktivieren** wird die macOS-Befehlszeile zum Anmelden ausgeblendet. **Deaktivieren** Sie diese Einstellung für typische Benutzer. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass fortgeschrittene Benutzer sich über die macOS-Befehlszeile anmelden. Um in den Konsolenmodus zu wechseln, müssen Benutzer `>console` in das Feld „Benutzername“ eingeben und sich im Konsolenfenster authentifizieren.
 
 #### <a name="apple-menu"></a>Apple-Menü
 
 Nachdem sich Benutzer bei den Geräten angemeldet haben, beeinflussen die folgenden Einstellungen ihre Möglichkeiten.
 
-- **Herunterfahren deaktivieren**: Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Herunterfahren** gehindert, nachdem sich der Benutzer angemeldet hat. Die Standardeinstellung **Nicht konfiguriert** ermöglicht Benutzern das Auswählen des Menüelements **Herunterfahren** auf dem Gerät.
-- **Neustart deaktivieren**: Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Neu starten** gehindert, nachdem sich der Benutzer angemeldet hat. Die Standardeinstellung **Nicht konfiguriert** ermöglicht Benutzern das Auswählen des Menüelements **Neu starten** auf dem Gerät.
-- **Ausschalten deaktivieren**: Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Ausschalten** gehindert, nachdem sich der Benutzer angemeldet hat. Die Standardeinstellung **Nicht konfiguriert** ermöglicht Benutzern das Auswählen des Menüelements **Ausschalten** auf dem Gerät.
-- **Abmelden deaktivieren** (macOS 10.13 und höher): Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Abmelden** gehindert, nachdem sich der Benutzer angemeldet hat. Die Standardeinstellung **Nicht konfiguriert** ermöglicht Benutzern das Auswählen des Menüelements **Abmelden** auf dem Gerät.
-- **Sperrbildschirm deaktivieren** (macOS 10.13 und höher): Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Bildschirm sperren** gehindert, nachdem sich der Benutzer angemeldet hat. Die Standardeinstellung **Nicht konfiguriert** ermöglicht Benutzern das Auswählen des Menüelements **Sperrbildschirm** auf dem Gerät.
+- **Herunterfahren deaktivieren**: Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Herunterfahren** gehindert, nachdem sich der Benutzer angemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Ausschalten** klicken.
+- **Neustart deaktivieren**: Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Neu starten** gehindert, nachdem sich der Benutzer angemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Neustart** klicken.
+- **Ausschalten deaktivieren**: Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Ausschalten** gehindert, nachdem sich der Benutzer angemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Power off** (Abschalten) klicken.
+- **Abmelden deaktivieren** (macOS 10.13 und höher): Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Abmelden** gehindert, nachdem sich der Benutzer angemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Abmelden** klicken.
+- **Sperrbildschirm deaktivieren** (macOS 10.13 und höher): Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Bildschirm sperren** gehindert, nachdem sich der Benutzer angemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Lock screen** (Bildschirm sperren) klicken.
 
 ## <a name="single-sign-on-app-extension"></a>App-Erweiterung für einmaliges Anmelden
 
@@ -130,8 +132,8 @@ Diese Funktion gilt für:
 - **Typ der SSO-App-Erweiterung:** Wählen Sie den Typ der SSO-App-Erweiterung für Anmeldeinformationen aus. Folgende Optionen sind verfügbar:
 
   - **Nicht konfiguriert:** Es werden keine App-Erweiterungen verwendet. Um eine App-Erweiterung zu deaktivieren, ändern Sie den Typ der SSO-App-Erweiterung in **Nicht konfiguriert**.
-  - **Umleiten:** Verwenden Sie eine generische, anpassbare App-Erweiterung für die Umleitung, um das einmalige Anmelden (Single Sign-On, SSO) mit modernen Authentifizierungsflows zu unterstützen. Stellen Sie sicher, dass Sie die Erweiterung und die Team-ID für die App-Erweiterung Ihrer Organisation kennen.
-  - **Anmeldeinformationen:** Verwenden Sie eine generische, anpassbare App-Erweiterung für Anmeldeinformationen, um das einmalige Anmelden mit Challenge-Response-Authentifizierungsflows zu unterstützen. Stellen Sie sicher, dass Sie die Erweiterungs-ID und die Team-ID für die SSO-App-Erweiterung Ihrer Organisation kennen.  
+  - **Umleiten:** Verwenden Sie eine generische, anpassbare App-Erweiterung für die Umleitung, um das einmalige Anmelden (Single Sign-On, SSO) mit modernen Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterung und die Team-ID für die App-Erweiterung Ihrer Organisation kennen.
+  - **Anmeldeinformationen:** Verwenden Sie eine generische, anpassbare App-Erweiterung für Anmeldeinformationen, um das einmalige Anmelden mit Challenge-Response-Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterungs-ID und die Team-ID für die SSO-App-Erweiterung Ihrer Organisation kennen.  
   - **Kerberos**: Verwenden Sie die integrierte Kerberos-Erweiterung von Apple, die in macOS Catalina 10.15 und höher enthalten ist. Bei dieser Option handelt es sich um eine Kerberos-spezifische Version der App-Erweiterung vom Typ **Anmeldeinformationen**.
 
   > [!TIP]
@@ -149,7 +151,7 @@ Diese Funktion gilt für:
   - Alle Domänen in den Intune-Profilen für Ihre SSO-App-Erweiterung müssen eindeutig sein. Sie können eine Domäne nicht mehrfach in einem SSO-App-Erweiterungsprofil verwenden – selbst dann nicht, wenn Sie verschiedene Arten von SSO-App-Erweiterungen verwenden.
   - Für diese Domänen erfolgt keine Beachtung der Groß-/Kleinschreibung.
 
-- **URLs** (nur „Umleiten“): Geben Sie die URL-Präfixe der Identitätsanbieter ein, in deren Auftrag die Umleitungs-App-Erweiterung die SSO-Authentifizierung durchführt. Wenn ein Benutzer an diese URLs umgeleitet wird, greift die SSO-App-Erweiterung und fordert eine SSO-Authentifizierung an.
+- **URLs** (nur „Umleiten“): Geben Sie die URL-Präfixe der Identitätsanbieter ein, in deren Auftrag die Umleitungs-App-Erweiterung die SSO-Authentifizierung nutzt. Wenn Benutzer auf diese URLs umgeleitet werden, greift die SSO-App-Erweiterung ein und fordert eine SSO-Authentifizierung an.
 
   - Alle URLs in Ihren Intune-SSO-Erweiterungsprofilen müssen eindeutig sein. Sie können eine Domäne nicht mehrfach in einem SSO-App-Erweiterungsprofil verwenden – selbst dann nicht, wenn Sie verschiedene Arten von SSO-App-Erweiterungen verwenden.
   - Die URLs müssen mit „http://“ oder „https://“ beginnen.
@@ -166,25 +168,25 @@ Diese Funktion gilt für:
   
   - **Hinzufügen**: Tippen Sie auf diese Option, um Ihre Konfigurationsschlüssel hinzuzufügen.
 
-- **Verwendung des Schlüsselbunds** (nur „Kerberos“): Wählen Sie **Blockieren** aus, um zu verhindern, dass Kennwörter im Schlüsselbund gespeichert und aufbewahrt werden. Wenn diese Option blockiert ist, werden Benutzer nicht aufgefordert, Ihr Kennwort zu speichern, sondern müssen es noch einmal eingeben, wenn das Kerberos-Ticket abläuft. **Nicht konfiguriert** (Standardeinstellung): Ermöglicht das Speichern von Kennwörtern im Schlüsselbund. Benutzer werden nicht aufgefordert, Ihr Kennwort noch einmal einzugeben, wenn das Ticket abgelaufen ist.
-- **Face ID, Touch ID, or passcode** (Face ID, Touch ID oder Passcode) (nur „Kerberos“): Bei der Option **Anfordern** werden Benutzer dazu gezwungen, ihre Face-ID, ihre Touch-ID oder ihren Gerätepasscode einzugeben, wenn die Anmeldeinformationen zum Aktualisieren des Kerberos-Tickets benötigt werden. Bei der Einstellung **Nicht konfiguriert** (Standardeinstellung) müssen sich Benutzer nicht mit biometrischen Daten oder einem Gerätepasscode authentifizieren, um das Kerberos-Ticket zu aktualisieren. Wenn die Einstellung **Verwendung des Schlüsselbunds** blockiert ist, wird diese Einstellung nicht angewendet.
-- **Default realm** (Standardbereich) (nur „Kerberos“): Klicken Sie auf **Aktivieren**, um den von Ihnen unter **Bereich** eingegebenen Wert als Standardbereich festzulegen. **Nicht konfiguriert** (Standardeinstellung): Es ist kein Standardbereich festgelegt.
+- **Verwendung des Schlüsselbunds** (nur „Kerberos“): Wählen Sie **Blockieren** aus, um zu verhindern, dass Kennwörter im Schlüsselbund gespeichert und aufbewahrt werden. Wenn diese Option blockiert ist, werden Benutzer nicht aufgefordert, Ihr Kennwort zu speichern, sondern müssen es noch einmal eingeben, wenn das Kerberos-Ticket abläuft. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise das Speichern von Kennwörtern im Schlüsselbund zu. Benutzer werden nicht aufgefordert, Ihr Kennwort noch einmal einzugeben, wenn das Ticket abgelaufen ist.
+- **Face ID, Touch ID, or passcode** (Face ID, Touch ID oder Passcode) (nur „Kerberos“): Bei der Option **Anfordern** werden Benutzer dazu gezwungen, ihre Face-ID, ihre Touch-ID oder ihren Gerätepasscode einzugeben, wenn die Anmeldeinformationen zum Aktualisieren des Kerberos-Tickets benötigt werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig fordert das Betriebssystem möglicherweise nicht, dass Benutzer sich mit biometrischen Daten oder einem Gerätepasscode authentifizieren, um das Kerberos-Ticket zu aktualisieren. Wenn die Einstellung **Verwendung des Schlüsselbunds** blockiert ist, wird diese Einstellung nicht angewendet.
+- **Default realm** (Standardbereich) (nur „Kerberos“): Klicken Sie auf **Aktivieren**, um den von Ihnen unter **Bereich** eingegebenen Wert als Standardbereich festzulegen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig legt das Betriebssystem möglicherweise keinen Standardbereich fest.
 
   > [!TIP]
   > - **Aktivieren** Sie diese Einstellung, wenn Sie mehrere Kerberos-SSO-App-Erweiterungen in Ihrer Organisation konfigurieren.
   > - **Aktivieren** Sie diese Einstellung, wenn Sie mehrere Bereiche verwenden. Der von Ihnen eingegebene **Bereich** wird als Standardbereich festgelegt.
   > - Wenn Sie nur über einen Bereich verfügen, behalten Sie die Einstellung **Nicht konfiguriert** (Standardeinstellung) bei.
 
-- **AutoErmittlung** (nur „Kerberos“): Wenn diese Option auf **Blockieren** festgelegt ist, verwendet die Kerberos-Erweiterung nicht automatisch LDAP und DNS, um ihren Active Directory-Standortnamen zu ermitteln. **Nicht konfiguriert** (Standardeinstellung): Bei dieser Einstellung kann die Erweiterung den Namen des Active Directory-Standorts automatisch ermitteln.
-- **Password changes** (Kennwortänderungen) (nur „Kerberos“): Die Option **Blockieren** hindert Benutzer daran, die Kennwörter zu ändern, mit denen sie sich bei den von Ihnen eingegebenen Domänen anmelden. **Nicht konfiguriert** (Standardeinstellung): Das Ändern von Kennwörtern ist gestattet.  
-- **Password sync** (Kennwortsynchronisierung) (nur „Kerberos“): Klicken Sie auf **Aktivieren**, um die lokalen Kennwörter Ihrer Benutzer mit Azure AD zu synchronisieren. **Nicht konfiguriert** (Standardeinstellung): Deaktiviert die Kennwortsynchronisierung mit Azure AD. Verwenden Sie diese Einstellung als Alternative oder Backuplösung für das einmalige Anmelden (SSO). Diese Einstellung funktioniert nicht, wenn Benutzer mit einem mobilen Apple-Konto angemeldet sind.
-- **Windows Server Active Directory password complexity** (Windows Server Active Directory-Kennwortkomplexität) (nur „Kerberos“): Klicken Sie auf **Anfordern**, um durchzusetzen, dass Benutzer die Anforderungen an die Kennwortkomplexität erfüllen müssen, die Active Directory stellt. Weitere Informationen finden Sie unter [Kennwort muss Komplexitätsvoraussetzungen entsprechen](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). **Nicht konfiguriert** (Standardeinstellung): Die Benutzer müssen nicht die Active Directory-Kennwortanforderungen erfüllen.
-- **Mindestkennwortlänge** (nur „Kerberos“): Geben Sie die Mindestanzahl von Zeichen ein, aus denen das Kennwort eines Benutzers bestehen muss. **Nicht konfiguriert** (Standardeinstellung): Es wird keine Mindestlänge für Benutzerkennwörter erzwungen.
-- **Limit für die Wiederverwendung von Kennwörtern** (nur „Kerberos“): Geben Sie die Anzahl neuer Kennwörter ein (1–24), die verwendet werden müssen, bis ein vorheriges Kennwort für die Domäne wiederverwendet werden kann. **Nicht konfiguriert** (Standardeinstellung): Es wird kein Limit für die Wiederverwendung von Kennwörtern erzwungen.
-- **Minimum password age** (Mindestkennwortalter) (nur „Kerberos“): Geben Sie die Anzahl von Tagen ein, die ein Kennwort für die Domäne verwendet werden muss, bevor ein Benutzer es ändern kann. **Nicht konfiguriert** (Standardeinstellung): Es wird kein Mindestkennwortalter erzwungen, bevor ein Kennwort geändert werden kann.
-- **Password expiration notification** (Benachrichtigung über Kennwortablauf) (nur „Kerberos“): Geben Sie an, wie viele Tage vor Ablauf eines Kennworts Benutzer über den bevorstehenden Ablauf ihres Kennworts benachrichtigt werden. **Nicht konfiguriert** (Standardeinstellung): `15` Tage.
-- **Kennwortablauf** (nur Kerberos): Geben Sie die Anzahl der Tage an, bis das Gerätekennwort geändert werden muss. **Nicht konfiguriert** (Standardeinstellung): Benutzerkennwörter laufen nie ab.
-- **URL für Kennwortänderung** (nur „Kerberos“): Geben Sie die URL ein, die gestartet wird, wenn der Benutzer eine Kerberos-Kennwortänderung einleitet.
+- **AutoErmittlung** (nur „Kerberos“): Wenn diese Option auf **Blockieren** festgelegt ist, verwendet die Kerberos-Erweiterung nicht automatisch LDAP und DNS, um ihren Active Directory-Standortnamen zu ermitteln. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass die Erweiterung den Namen des Active Directory-Standorts automatisch ermittelt.
+- **Password changes** (Kennwortänderungen) (nur „Kerberos“): Die Option **Blockieren** hindert Benutzer daran, die Kennwörter zu ändern, mit denen sie sich bei den von Ihnen eingegebenen Domänen anmelden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise das Ändern von Kennwörtern zu.  
+- **Password sync** (Kennwortsynchronisierung) (nur „Kerberos“): Klicken Sie auf **Aktivieren**, um die lokalen Kennwörter Ihrer Benutzer mit Azure AD zu synchronisieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig deaktiviert das Betriebssystem möglicherweise die Kennwortsynchronisierung mit Azure AD. Verwenden Sie diese Einstellung als Alternative oder Backuplösung für das einmalige Anmelden (SSO). Diese Einstellung funktioniert nicht, wenn Benutzer mit einem mobilen Apple-Konto angemeldet sind.
+- **Windows Server Active Directory password complexity** (Windows Server Active Directory-Kennwortkomplexität) (nur „Kerberos“): Klicken Sie auf **Anfordern**, um durchzusetzen, dass Benutzer die Anforderungen an die Kennwortkomplexität erfüllen müssen, die Active Directory stellt. Weitere Informationen finden Sie unter [Kennwort muss Komplexitätsvoraussetzungen entsprechen](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig fordert das Betriebssystem möglicherweise nicht, dass Benutzer die Active Directory-Kennwortanforderungen erfüllen.
+- **Mindestkennwortlänge** (nur „Kerberos“): Geben Sie die Mindestanzahl von Zeichen ein, aus denen das Kennwort eines Benutzers bestehen muss. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise keine Mindestlänge für Benutzerkennwörter.
+- **Limit für die Wiederverwendung von Kennwörtern** (nur „Kerberos“): Geben Sie die Anzahl neuer Kennwörter ein (1–24), die verwendet werden müssen, bis ein vorheriges Kennwort für die Domäne wiederverwendet werden kann. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise kein Limit für die Wiederverwendung von Kennwörtern.
+- **Minimum password age** (Mindestkennwortalter) (nur „Kerberos“): Geben Sie die Anzahl von Tagen ein, die ein Kennwort für die Domäne verwendet werden muss, bevor ein Benutzer es ändern kann. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise kein Mindestkennwortalter, bevor ein Kennwort geändert werden kann.
+- **Password expiration notification** (Benachrichtigung über Kennwortablauf) (nur „Kerberos“): Geben Sie an, wie viele Tage vor Ablauf eines Kennworts Benutzer über den bevorstehenden Ablauf ihres Kennworts benachrichtigt werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig verwendet das Betriebssystem möglicherweise `15` Tage.
+- **Kennwortablauf** (nur Kerberos): Geben Sie die Anzahl der Tage an, bis das Gerätekennwort geändert werden muss. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig ist im Betriebssystem möglicherweise eingestellt, dass Kennwörter nie ablaufen.
+- **URL für Kennwortänderung** (nur „Kerberos“): Geben Sie die URL ein, die aufgerufen wird, wenn der Benutzer eine Kerberos-Kennwortänderung einleitet.
 - **Prinzipalname** (nur „Kerberos“): Geben Sie den Benutzernamen des Kerberos-Prinzipals ein. Sie müssen den Bereichsnamen nicht einschließen. In `user@contoso.com` lautet der Prinzipalname beispielsweise `user`, und `contoso.com` ist der Bereichsname.
 
   > [!TIP]
@@ -194,7 +196,7 @@ Diese Funktion gilt für:
 - **Active Directory site code** (Active Directory-Standortcode) (nur „Kerberos“): Geben Sie den Namen des Active Directory-Standorts ein, der von der Kerberos-Erweiterung verwendet werden soll. Möglicherweise müssen Sie diesen Wert nicht ändern, weil die Kerberos-Erweiterung den Active Directory-Standortcode ggf. automatisch ermittelt.
 - **Cachename** (nur „Kerberos“): Geben Sie den Generic Security Services-Namen (GSS) für den Kerberos-Cache ein. Dieser Wert muss höchstwahrscheinlich nicht festgelegt werden.  
 - **Password requirements message** (Meldung zu Kennwortanforderungen) (nur „Kerberos“): Geben Sie eine Textversion der Kennwortanforderungen Ihrer Organisation ein, die den Benutzern angezeigt wird. Die Meldung wird angezeigt, wenn Sie keine Active Directory-Kennwortkomplexitätsanforderungen erzwingen oder keine Mindestkennwortlänge eingeben.  
-- **App-Bundle-IDs** (nur „Kerberos“): Mit **Hinzufügen** werden die App-Bundle-IDs hinzugefügt, für die auf Ihren Geräten SSO verwendet werden soll. Diese Apps erhalten Zugriff auf das Kerberos-TGT (Ticket Granting Ticket) sowie das Authentifizierungsticket und authentifizieren Benutzer für Dienste, für die sie über Zugriffsberechtigungen verfügen.
+- **App-Bundle-IDs** (nur „Kerberos“): Mit **Hinzufügen** werden die App-Bundle-IDs hinzugefügt, für die auf Ihren Geräten SSO verwendet werden soll. Diese Apps erhalten Zugriff auf das Kerberos-TGT (Ticket Granting Ticket) sowie das Authentifizierungsticket. Außerdem authentifizieren diese Apps Benutzer für Dienste, für die sie über Zugriffsberechtigungen verfügen.
 - **Domänenbereichszuordnung** (nur „Kerberos“): Mit **Hinzufügen** werden die Domänen-DNS-Suffixe hinzugefügt, die Ihrem Bereich zugeordnet werden sollen. Verwenden Sie diese Einstellung, wenn die DNS-Namen der Hosts nicht mit dem Bereichsnamen identisch sind. Wahrscheinlich ist es nicht erforderlich, diese Zuordnung zwischen benutzerdefinierter Domäne und Bereich zu erstellen.
 - **PKINIT-Zertifikat** (nur „Kerberos“): Mit **Auswählen** legen Sie das PKINIT-Zertifikat (Public Key Cryptography for Initial Authentication) fest, das für die Kerberos-Authentifizierung verwendet werden kann. Sie können aus [PKCS](../protect/certficates-pfx-configure.md)- oder [SCEP](../protect/certificates-scep-configure.md)-Zertifikaten auswählen, die Sie in Intune hinzugefügt haben. Weitere Informationen zu Zertifikaten finden Sie unter [Verwenden von Zertifikaten zur Authentifizierung in Microsoft Intune](../protect/certificates-configure.md).
 
@@ -219,7 +221,7 @@ Diese Funktion gilt für:
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Domäne:** Geben Sie die Websitedomäne ein, die einer App zugeordnet werden soll. Die Domäne enthält einen Diensttyp und einen vollqualifizierten Hostnamen, beispielsweise `webcredentials: www.contoso.com`.
+- **Domäne:** Geben Sie die Websitedomäne ein, die einer App zugeordnet werden soll. Die Domäne enthält einen Diensttyp und einen vollqualifizierten Hostnamen, beispielsweise `webcredentials:www.contoso.com`.
 
   Sie können alle Unterdomänen einer zugeordneten Domäne einschließen, indem Sie vor dem Domänennamen `*.` (Sternchen-Platzhalter und Punkt) eingeben. Der Punkt ist erforderlich. Exakte Domänen haben eine höhere Priorität als Platzhalterdomänen. Daher werden Muster aus übergeordneten Domänen abgeglichen, *wenn* in der vollqualifizierten Unterdomäne keine Übereinstimmung gefunden wird.
 

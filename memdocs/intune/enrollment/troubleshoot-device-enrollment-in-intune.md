@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085861"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327011"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Behandlung von Problemen bei der Geräteregistrierung in Microsoft Intune
 
@@ -63,9 +63,9 @@ Diese Probleme können auf allen Geräteplattformen auftreten.
 
 Überprüfen Sie, dass dem Benutzer nicht mehr als die zulässige Zahl an Geräten zugewiesen wurde. Gehen Sie dafür wie folgt vor:
 
-1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **Registrierungseinschränkungen** > **Einschränkungen zum Gerätelimit**. Achten Sie auf den Wert in der Spalte **Gerätelimit**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Registrierungsbeschränkungen** > **Einschränkungen zum Gerätelimit**. Achten Sie auf den Wert in der Spalte **Gerätelimit**.
 
-2. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Benutzer** > **Alle Benutzer**, anschließend den gewünschten Benutzer und dann **Geräte** aus. Überprüfen Sie die Anzahl der Geräte.
+2. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Benutzer** > **Alle Benutzer**, wählen Sie den Benutzer aus, und klicken Sie dann auf **Geräte**. Überprüfen Sie die Anzahl der Geräte.
 
 3. Wenn die Anzahl der registrierten Geräte des Benutzers bereits das Gerätelimit erreicht hat, kann er keine weiteren Geräte registrieren, bis eine der folgenden Aktionen durchgeführt wird:
     - [Vorhandene Geräte werden entfernt](../remote-actions/devices-wipe.md) oder
@@ -286,9 +286,9 @@ Um das Problem zu beheben, müssen Benutzer die Schaltfläche **Set up** (Einric
 Sobald die Geräte registriert sind, ist ihr Integritätsstatus gut, und sie erhalten erneut Zugriff auf Unternehmensressourcen.
 
 ### <a name="verify-ws-trust-13-is-enabled"></a>Sicherstellen, dass WS-Trust 1.3 aktiviert ist
-**Problem:** Geräte des Programms zur Geräteregistrierung (Device Enrollment Program, DEP) für iOS/iPadOS können nicht registriert werden
+**Problem:** ADE-Geräte (Automated Device Enrollment) mit iOS/iPadOS können nicht registriert werden.
 
-Für die Registrierung von Geräten des Programms zur Geräteregistrierung mit Benutzeraffinität muss der Endpunkt „WS-Trust 1.3 Username/Mixed“ aktiviert sein, um Benutzertoken anzufordern. Dieser Endpunkt wird von Active Directory standardmäßig aktiviert. Eine Liste der aktivierten Endpunkte erhalten Sie mithilfe des PowerShell-Cmdlets „Get-AdfsEndpoint“ und der Suche nach dem Endpunkt Trust/13/UsernameMixed. Beispiel:
+Für die Registrierung von ADE-Geräten mit Benutzeraffinität muss das Anfordern von Benutzertoken für den Endpunkt „WS-Trust 1.3 Username/Mixed“ aktiviert sein. Dieser Endpunkt wird von Active Directory standardmäßig aktiviert. Eine Liste der aktivierten Endpunkte erhalten Sie mithilfe des PowerShell-Cmdlets „Get-AdfsEndpoint“ und der Suche nach dem Endpunkt Trust/13/UsernameMixed. Beispiel:
 
       Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 
@@ -339,7 +339,7 @@ Das Problem kann in den folgenden Fällen auftreten:
 4. Weisen Sie den Benutzer an, den Registrierungsvorgang neu zu starten.
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Ermitteln Sie, ob ein Problem mit dem VPP-Token vorliegt.
-1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** > Tokenname > **Profile** > Profilname > **Verwalten** > **Eigenschaften**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Enrollment program tokens** (Registrierungsprogrammtoken) > Tokenname > **Profile** > Profilname > **Verwalten** > **Eigenschaften**.
 2. Überprüfen Sie die Eigenschaften, um festzustellen, ob ähnliche Fehler wie die folgenden auftreten:
     - Dieses Token ist abgelaufen.
     - Dieses Token enthält keine Lizenzen für das Unternehmensportal.
@@ -349,13 +349,13 @@ Das Problem kann in den folgenden Fällen auftreten:
 3. Beheben Sie die Probleme mit dem Token.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Ermitteln der vom VPP-Token blockierten Geräte
-1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** > Tokenname > **Geräte**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Enrollment program tokens** (Registrierungsprogrammtoken), klicken Sie anschließend auf den Tokennamen und dann auf **Geräte**.
 2. Filtern Sie die Spalte **Profilstatus** nach **Blockiert**.
 3. Notieren Sie sich die Seriennummern aller Geräte, für die **Blockiert** angegeben ist.
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>Remote-Zurücksetzung der blockierten Geräte
 Nachdem Sie die Probleme mit dem VPP-Token behoben haben, müssen Sie die blockierten Geräte zurücksetzen.
-1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **Alle Geräte** > **spalten** > **Seriennummer** > **Übernehmen**. 
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Alle Geräte** > **Spalten** > **Seriennummer** > **Übernehmen**. 
 2. Wählen Sie jedes blockierte Gerät in der Liste **Alle Geräte** aus und wählen Sie dann **Zurücksetzen** > **Ja** aus.
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Anweisen des Benutzers, den Registrierungsvorgang neu zu starten

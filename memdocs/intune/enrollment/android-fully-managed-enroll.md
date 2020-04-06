@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4fb6adadb4e0dbf593bbbe3d9ee51ed5783e152
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 89d299edfb9542591eaabcf42d0b2069bbde4331
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339591"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327308"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Einrichten der Intune-Registrierung von vollständig verwalteten Android Enterprise-Geräten 
 
@@ -56,7 +56,7 @@ Führen Sie die folgenden Schritte aus, um die Verwaltung für vollständig verw
 
 ### <a name="enable-corporate-owned-user-devices"></a>Zulassen unternehmenseigener Benutzergeräte
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und wählen Sie **Geräte** > **Android** > **Android-Registrierung**  > **Unternehmenseigene, vollständig verwaltete Benutzergeräte** aus.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Android** > **Android-Registrierung**  > **Unternehmenseigene, vollständig verwaltete Geräte**.
 2. Wählen Sie **Ja** unter **Benutzern die Registrierung unternehmenseigener Benutzergeräte ermöglichen** aus.
 
 > [!NOTE]

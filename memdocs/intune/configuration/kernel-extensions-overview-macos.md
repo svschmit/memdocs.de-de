@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 191b2cdfa8fd99078bccee8edf99eb9b0cb275ee
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360963"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359383"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Hinzufügen von macOS-Kernelerweiterungen in Intune
 
@@ -74,17 +75,31 @@ In diesem Artikel erfahren Sie, wie Sie ein Gerätekonfigurationsprofil mithilfe
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 3. Geben Sie die folgenden Eigenschaften ein:
 
-    - **Name:** Geben Sie einen aussagekräftigen Namen für das neue Profil ein.
-    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
     - **Plattform**: Wählen Sie **macOS** aus.
-    - **Profiltyp**: Wählen Sie **Erweiterungen** aus.
-    - **Einstellungen**: Geben Sie die Einstellungen ein, die Sie konfigurieren möchten. Eine Liste aller Einstellungen und ihrer Funktionen finden Sie unter:
+    - **Profil**: Wählen Sie **Erweiterungen** aus.
 
-        - [macOS](kernel-extensions-settings-macos.md)
+4. Wählen Sie **Erstellen** aus.
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
 
-4. Wenn Sie fertig sind, wählen Sie **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern.
+    - **Name:** Geben Sie einen aussagekräftigen Namen für die Richtlinie ein. Benennen Sie Ihre Richtlinien so, dass Sie diese später leicht wiedererkennen. Ein guter Richtlinienname ist beispielsweise **macOS: Hinzufügen von Kernelerweiterungen zu Geräten**.
+    - **Beschreibung:** Geben Sie eine Beschreibung für die Richtlinie ein. Diese Einstellung ist optional, wird jedoch empfohlen.
 
-Das Profil wird erstellt und in der Liste angezeigt. Denken Sie daran, das [Profil zuzuweisen](device-profile-assign.md) und [seinen Status zu überwachen](device-profile-monitor.md).
+6. Wählen Sie **Weiter** aus.
+
+7. Konfigurieren Sie Ihre Einstellungen in den **Konfigurationseinstellungen**:
+
+    - [macOS](kernel-extensions-settings-macos.md)
+
+8. Wählen Sie **Weiter** aus.
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
+
+    Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen Ihr Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+11. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf **Erstellen** klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

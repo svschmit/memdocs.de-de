@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6daf1b37517f33f004742d9550f04f79aa207b63
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0711b407b185b3a9621ff80a371bd3aaa5032ead
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334131"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407734"
 ---
 # <a name="configure-microsoft-launcher"></a>Konfigurieren von Microsoft Launcher
 
@@ -33,7 +33,7 @@ Auf vollständig verwalteten Android Enterprise-Geräten ermöglicht Launcher es
 
 ## <a name="how-to-configure-the-microsoft-launcher-app"></a>Konfigurieren der Microsoft Launcher-App 
 
-Navigieren Sie zum [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), und wählen Sie **Apps** > **App-Konfigurationsrichtlinien** aus. Fügen Sie eine Konfigurationsrichtlinie für **Verwaltete Geräte** unter **Android** hinzu, und wählen Sie **Microsoft Launcher** als zugeordnete App aus. Klicken Sie auf **Konfigurationseinstellungen**, um die verschiedenen verfügbaren Einstellungen für Microsoft Launcher zu konfigurieren. 
+Sobald die Microsoft Launcher-Anwendung [zu Intune hinzugefügt](../apps/apps-add.md) wurde, navigieren Sie zum [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), und klicken Sie auf **Apps** > **App-Konfigurationsrichtlinien**. Fügen Sie eine Konfigurationsrichtlinie für **Verwaltete Geräte** unter **Android** hinzu, und wählen Sie **Microsoft Launcher** als zugeordnete App aus. Klicken Sie auf **Konfigurationseinstellungen**, um die verschiedenen verfügbaren Einstellungen für Microsoft Launcher zu konfigurieren. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Auswählen eines Formats für die Konfigurationseinstellungen 
 
@@ -46,6 +46,9 @@ Es gibt zwei Methoden, mit denen Sie Konfigurationseinstellungen für Microsoft 
 Wenn Sie Eigenschaften mit dem **Konfigurations-Designer** hinzufügen, können Sie diese Eigenschaften automatisch in JSON konvertieren, indem Sie in der Dropdownliste **Format der Konfigurationseinstellungen** den Eintrag **JSON-Daten eingeben** auswählen, wie unten gezeigt.
 
    ![Format der Konfigurationseinstellungen – Konfigurations-Designer verwenden](./media/configure-microsoft-launcher/configure-microsoft-launcher-01.png)
+
+   > [!NOTE]
+   > Sobald Eigenschaften über den Konfigurations-Designer konfiguriert wurden, werden auch die JSON-Daten aktualisiert, sodass nur diese Eigenschaften widergespiegelt werden. Wenn Sie den JSON-Daten zusätzliche Konfigurationsschlüssel hinzufügen möchten, verwenden Sie das [JSON-Skriptbeispiel](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example), um die erforderlichen Zeilen für jeden Konfigurationsschlüssel zu kopieren. 
 
 ## <a name="using-configuration-designer"></a>Verwenden von Konfigurations-Designer
 
@@ -64,6 +67,10 @@ In der folgenden Tabelle sind die für Microsoft Launcher verfügbaren Konfigura
 |    Ändern des Hintergrundbilds für das Gerät durch Benutzer zulässig    |    Bool    |    True    |    Hiermit können Sie festlegen, ob die Einstellung für das Hintergrundbild durch Endbenutzer geändert werden darf.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird das Hintergrundbild in der Richtlinie nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird das Hintergrundbild bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    Feed aktivieren    |    Boolesch    |    True    |    Ermöglicht es Ihnen, den Launcher-Feed auf dem Gerät zu aktivieren, wenn der Benutzer auf dem Startbildschirm nach rechts wischt.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird der Feed aktiviert.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird der Feed deaktiviert.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Ändern der Feedaktivierung durch Benutzer zulässig    |    Boolesch    |    True    |     Hiermit können Sie festlegen, ob die Einstellung **Feed aktivieren** durch Endbenutzer geändert werden darf.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird der Feed nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird der Feed bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
+|    Platzierung der Suchleiste   |    Zeichenfolge    |    Unten    |  Hiermit können Sie die **Platzierung der Suchleiste** auf dem Startbildschirm angeben. <ul><li>Wenn **Unten** festgelegt ist, befindet sich die Suchleiste am unteren Rand des Startbildschirms.</li><li>Wenn **Oben** festgelegt ist, befindet sich die Suchleiste am oberen Rand des Startbildschirms.</li><li>Wenn **Ausblenden** festgelegt ist, wird die Suchleiste vom Startbildschirm entfernt.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
+|    Ändern der Platzierung der Suchleiste durch Benutzer zulässig   |    Bool    |    True    |  Hiermit können Sie festlegen, ob die Einstellung zur **Platzierung der Suchleiste** durch Endbenutzer geändert werden darf. <ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird die Platzierung der Suchleiste nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird die Platzierung der Suchleiste bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Dockmodus  |    Zeichenfolge    |    Anzeigen    | Hiermit können Sie das Dock auf dem Gerät aktivieren, wenn der Benutzer auf dem Startbildschirm nach rechts wischt.<ul><li>Wenn **Anzeigen** festgelegt ist, wird das Dock aktiviert.</li><li>Wenn **Ausblenden** festgelegt ist, wird das Dock auf dem Startbildschirm ausgeblendet, der Benutzer kann es jedoch bei Bedarf anzeigen lassen.</li><li>Wenn **Deaktiviert** festgelegt ist, wird das Dock deaktiviert.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Dock.Mode`    |
+|   Ändern des Dockmodus durch Benutzer zulässig   |    Zeichenfolge    |    True    |  Hiermit können Sie festlegen, ob die Einstellung zum Dockmodus durch Endbenutzer geändert werden darf.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird die Einstellung zum Dockmodus nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird die Einstellung zum Dockmodus bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
 ## <a name="enter-json-data"></a>Eingeben von JSON-Daten
 
@@ -76,7 +83,9 @@ Zusätzlich zu den konfigurierbaren Einstellungen, die in der Tabelle „Konfigu
 |    Konfigurationsschlüssel    |    Werttyp    |    Standardwert    |    Beschreibung     |
 |----------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Anwendungen für die Zulassungsliste festlegen<br>JSON-Schlüssel:`com.microsoft.launcher.HomeScreen.Applications`    |    BundleArray    | Siehe: [Anwendungen für die Zulassungsliste festlegen](configure-microsoft-launcher.md#set-allow-listed-applications)</sup>    |    Hiermit können Sie aus den Apps, die auf dem Gerät installiert sind, diejenige Gruppe von Apps definieren, die auf dem Startbildschirm sichtbar sein soll. Sie können die Apps definieren, indem Sie die Paketnamen der Apps eingeben, die Sie sichtbar machen möchten. Mit `com.android.settings` beispielsweise kann über den Startbildschirm auf Einstellungen zugegriffen werden. Die Apps, die Sie der Zulassungsliste in diesem Abschnitt hinzufügen, müssen bereits auf dem Gerät installiert sein, um auf dem Startbildschirm angezeigt zu werden.<p>Eigenschaften:<ul><li>**Paket**: Der Name des Anwendungspakets</li><li>**Klasse:** Die Anwendungsaktivität, die für eine bestimmte App-Seite gilt. Wenn dieser Wert leer ist, wird die Standard-App-Seite verwendet.</li></ul>      |
-|    App-Reihenfolge auf dem Startbildschirm<br>JSON-Schlüssel: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    Siehe: [App-Reihenfolge auf dem Startbildschirm](configure-microsoft-launcher.md#home-screen-app-order)      |    Ermöglicht es Ihnen, die App-Reihenfolge auf dem Startbildschirm anzugeben.<p>Eigenschaften:<br><ul><li>**Typ:** Der einzige unterstützte Typ ist `application`.</li><li>**Position**: Die Position des Anwendungssymbols auf dem Startbildschirm. Die Zählung beginnt bei Position 1 oben links und wird von links nach rechts und von oben nach unten fortgeführt.</li><li>**Paket**: Der Name des Anwendungspakets.</li><li>**Klasse:** Die Anwendungsaktivität, die für eine bestimmte App-Seite gilt. Wenn dieser Wert leer ist, wird die Standard-App-Seite verwendet.</li></ul>    |
+|    App-Reihenfolge auf dem Startbildschirm<br>JSON-Schlüssel: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    Siehe: [App-Reihenfolge auf dem Startbildschirm](configure-microsoft-launcher.md#home-screen-app-order)      |    Ermöglicht es Ihnen, die App-Reihenfolge auf dem Startbildschirm anzugeben.<p>Eigenschaften:<br><ul><li>**Typ:** Wenn Sie Positionen von Apps angeben möchten, ist der einzig unterstützte Typ `application`. Wenn Sie Positionen von Weblinks angeben möchten, ist der Typ `weblink`.</li><li>**Position**: Hierdurch wird die Position des Anwendungssymbols auf dem Startbildschirm angegeben. Die Zählung beginnt bei Position 1 oben links und wird von links nach rechts und von oben nach unten fortgeführt.</li><li>**Paket**: Hierbei handelt es sich um den Namen des Anwendungspakets, der zum Angeben der App-Reihenfolge verwendet wird.</li><li>**Klasse:** Hierbei handelt es sich um eine Anwendungsaktivität, die für eine bestimmte App-Seite gilt. Wenn dieser Wert leer ist, wird die Standard-App-Seite verwendet. Diese Eigenschaft wird für eine App verwendet.</li><li>**Bezeichnung:** Hierbei handelt es sich um eine Anwendungsaktivität, die für eine bestimmte App-Seite gilt. Wenn dieser Wert leer ist, wird die Standard-App-Seite verwendet. Diese Eigenschaft wird für eine App verwendet.</li><li>**Link:** Hierbei handelt es sich um die URL, die geöffnet werden soll, wenn ein Endbenutzer auf das Weblinksymbol klickt. Diese Eigenschaft wird für einen Weblink verwendet.</li></ul>    |
+|    Angeheftete Weblinks festlegen<br>JSON-Schlüssel: `com.microsoft.launcher.HomeScreen.WebLinks`    |    BundleArray    |    Siehe: [Angeheftete Weblinks festlegen](configure-microsoft-launcher.md#set-pinned-web-link)      |    Mit diesem Schlüssel können Sie eine Website als Schnellstartsymbol an den Startbildschirm anheften. Auf diese Weise können Sie sicherstellen, dass Endbenutzer schnellen und einfachen Zugriff auf wichtige Websites erhalten. Sie können den Speicherort der einzelnen Weblinksymbole über die Konfiguration der App-Reihenfolge auf dem Startbildschirm ändern.<p>Eigenschaften:<br><ul><li>**• Bezeichnung:** Hierbei handelt es sich um den Weblinktitel, der auf dem Startbildschirm von MS Launcher angezeigt wird.</li><li>**Link:** Hierbei handelt es sich um die URL, die geöffnet werden soll, wenn ein Endbenutzer auf das Weblinksymbol klickt.</li></ul>    |
+
 
 ### <a name="set-allow-listed-applications"></a>Festlegen von Anwendungen für die Zulassungsliste
 
@@ -131,6 +140,57 @@ Zusätzlich zu den konfigurierbaren Einstellungen, die in der Tabelle „Konfigu
     ]
 }
 ```
+
+### <a name="set-pinned-web-link"></a>Angeheftete Weblinks festlegen
+
+```JSON
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "label",
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link", 
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+},
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.AppOrder",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "type",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "position",  
+                    "valueInteger": 
+                },  
+                { 
+                    "key": "label",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link",  
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+}
+```
+
+
+
+### <a name="microsoft-launcher-configuration-example"></a>Beispiel für die Microsoft Launcher-Konfiguration
 
 Dies ist ein Beispiel für ein JSON-Skript, in dem alle verfügbaren Konfigurationsschlüssel enthalten sind:
 
@@ -204,6 +264,23 @@ Dies ist ein Beispiel für ein JSON-Skript, in dem alle verfügbaren Konfigurati
                 }
             ]
         }, 
+        { 
+            "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+            "valueBundleArray": [ 
+                { 
+                    "managedProperty": [ 
+                        { 
+                            "key": "label",
+                            "valueString": "News" 
+                        },  
+                        { 
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com" 
+                        } 
+                    ] 
+                }
+            ] 
+        },
         {
             "key": "com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed", 
             "valueBool": false
@@ -270,11 +347,32 @@ Dies ist ein Beispiel für ein JSON-Skript, in dem alle verfügbaren Konfigurati
                             "valueString": ""
                         }
                     ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "type", 
+                            "valueString": "weblink"
+                        }, 
+                        {
+                            "key": "position", 
+                            "valueInteger": 20
+                        }, 
+                        {
+                            "key": "label", 
+                            "valueString": "News"
+                        }, 
+                        {
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com"
+                        }
+                    ]
                 }
             ]
         }
     ]
 }
+
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte

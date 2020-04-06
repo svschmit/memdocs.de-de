@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80219842"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323089"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Erzwingen von Konformität auf mit Jamf Pro verwalteten Macs
 
@@ -114,7 +114,7 @@ Sollte der Verbindungstest in der Jamf Pro-Konsole fehlschlagen, überprüfen Si
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Entfernen eines mit Jamf verwalteten Gerätes aus Intune
 
-Öffnen Sie das Microsoft Endpoint Manager Admin Center, um ein mit Jamf verwaltetes Gerät zu entfernen, und wählen Sie **Geräte** > **Alle Geräte** aus. Wählen Sie dann **Löschen** aus.  Die Massenlöschung von Geräten kann aktiviert werden, indem Sie mehrere Geräte auswählen und auf **Löschen** klicken.
+Öffnen Sie das Microsoft Endpoint Manager Admin Center, klicken Sie auf **Geräte** > **Alle Geräte**, wählen Sie das entsprechende Gerät aus, und dann klicken Sie dann auf **Löschen**, um ein mit Jamf verwaltetes Gerät zu entfernen.  Die Massenlöschung von Geräten kann aktiviert werden, indem Sie mehrere Geräte auswählen und auf **Löschen** klicken.
 
 Erfahren Sie, wie Sie [ein mit Jamf verwaltetes Gerät in den Jamf Pro-Dokumenten entfernen](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Sie können auch ein Supportticket beim [Jamf-Support](https://www.jamf.com/support/) einreichen, wenn Sie zusätzliche Hilfe benötigen. 
 

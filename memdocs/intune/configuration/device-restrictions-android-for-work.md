@@ -5,22 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: chmaguir, chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3e6679e27e7d373243874ea40c2d028ff25d3e9
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220114"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407885"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -34,58 +35,65 @@ In diesem Artikel werden die verschiedenen Einstellungen aufgeführt und beschri
 
 Diese Einstellungen gelten für Android Enterprise-Registrierungstypen, bei denen das gesamte Gerät von Intune verwaltet wird, z. B. vollständig verwaltete Android Enterprise-Geräte oder dedizierte Android Enterprise-Geräte.
 
-### <a name="general-settings"></a>Allgemeine Einstellungen
+### <a name="general"></a>Allgemein
 
-- **Bildschirmaufnahme:** Wählen Sie **Blockieren** aus, um zu verhindern, dass Screenshots oder Bildschirmaufnahmen auf dem Gerät vorgenommen werden. Zudem wird verhindert, dass der Inhalt auf Anzeigegeräten angezeigt wird, die über keine sichere Videoausgabe verfügen. **Nicht konfiguriert** erlaubt dem Benutzer, den Bildschirminhalt als Bild zu erfassen.
-- **Kamera:** Wählen Sie **Blockieren** aus, um den Zugriff auf die Kamera des Geräts zu verhindern. **Nicht erforderlich** ermöglicht den Zugriff auf die Kamera des Geräts.
-- **Standardberechtigungsrichtlinie:** Diese Einstellung definiert die Standardberechtigungsrichtlinie für Anforderungen für Laufzeitberechtigungen. Folgende Werte sind zulässig:
+- **Bildschirmaufnahme:** **Blockieren** verhindert, dass Screenshots oder Bildschirmaufnahmen auf dem Gerät vorgenommen werden. Zudem wird verhindert, dass der Inhalt auf Anzeigegeräten angezeigt wird, die über keine sichere Videoausgabe verfügen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem lässt möglicherweise standardmäßig zu, dass Benutzer den Bildschirminhalt als Bild erfassen.
+- **Kamera:** **Blockieren** verhindert den Zugriff auf die Kamera des Geräts. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise den Zugriff auf die Kamera zu.
+
+  Intune verwaltet nur den Zugriff auf die Kamera des Geräts. Das Programm kann nicht auf Bilder oder Videos zugreifen.
+
+- **Standardberechtigungsrichtlinie:** Diese Einstellung definiert die Standardberechtigungsrichtlinie für Anforderungen für Laufzeitberechtigungen. Folgende Optionen sind verfügbar:
   - **Gerätestandard:** Die Standardeinstellung des Geräts wird verwendet.
-  - **Eingabeaufforderung:** Der Benutzer wird dazu aufgefordert, die Berechtigung zu genehmigen.
+  - **Eingabeaufforderung:** Benutzer werden dazu aufgefordert, die Berechtigung zu genehmigen.
   - **Automatisch zulassen:** Berechtigungen werden automatisch gewährt.
   - **Automatisch ablehnen:** Berechtigungen werden automatisch verweigert.
-- **Datums- und Uhrzeitänderungen:** Wählen Sie **Blockieren** aus, um zu verhindern, dass Benutzer manuell Datum und Uhrzeit einstellen. **Nicht konfiguriert** ermöglicht Benutzern, Datum und Uhrzeit auf dem Gerät einzustellen.
-- **Änderung der Lautstärke:** **Blockieren** verhindert, dass Benutzer die Lautstärke des Geräts ändern können. Außerdem wird die Hauptlautstärke des Geräts stummgeschaltet. **Nicht konfiguriert** ermöglicht die Verwendung der Lautstärkeeinstellungen am Gerät.
-- **Auf Werkseinstellungen zurücksetzen:** Wählen Sie **Blockieren** aus, um zu verhindern, dass Benutzer die Option zum Zurücksetzen auf Werkseinstellungen in den Einstellungen des Geräts verwenden. **Nicht konfiguriert** ermöglicht Benutzern, diese Einstellung auf dem Gerät zu verwenden.
-- **Abgesicherter Start:** Wenn Sie **Blockieren** auswählen, können Benutzer das Gerät nicht im abgesicherten Modus neu starten. **Nicht konfiguriert** ermöglicht Benutzern, das Gerät im abgesicherten Modus neu zu starten.
-- **Statusleiste:** Wählen Sie **Blockieren** aus, um den Zugriff auf die Statusleiste einschließlich Benachrichtigungen und Schnelleinstellungen zu verhindern. **Nicht konfiguriert** ermöglicht Benutzern den Zugriff auf die Statusleiste.
-- **Roamingdatendienste:** Wählen Sie **Blockieren** aus, um Datenroaming über das Mobilfunknetz zu verhindern. **Nicht konfiguriert** erlaubt das Datenroaming, wenn das Gerät in einem Mobilfunknetz verwendet wird.
-- **Änderung der WLAN-Einstellungen:** Wählen Sie **Blockieren** aus, um zu verhindern, dass Benutzer vom Gerätebesitzer erstellte WLAN-Einstellungen ändern. Benutzer können eigene WLAN-Konfigurationen erstellen. **Nicht konfiguriert** ermöglicht Benutzern, die WLAN-Einstellungen auf dem Gerät ändern.
-- **Konfiguration des WLAN-Zugriffspunkts:** Wählen Sie **Blockieren** aus, um zu verhindern, dass Benutzer WLAN-Konfigurationen erstellen oder ändern. **Nicht konfiguriert** ermöglicht Benutzern, die WLAN-Einstellungen auf dem Gerät ändern.
-- **Bluetooth-Konfiguration:** Wählen Sie **Blockieren** aus, um Benutzer daran zu hindern, Bluetooth auf dem Gerät zu konfigurieren. **Nicht konfiguriert** ermöglicht die Verwendung von Bluetooth auf dem Gerät.
-- **Tethering und Zugriff auf Hotspots:** Wählen Sie **Blockieren** aus, um Tethering und Zugriff auf portable Hotspots zu verhindern. **Nicht konfiguriert** ermöglicht Tethering und Zugriff auf portable Hotspots.
-- **USB-Speicher:** Wählen Sie **Zulassen** aus, um auf USB-Speicher auf dem Gerät zuzugreifen. **Nicht konfiguriert** verhindert den Zugriff auf USB-Speicher.
-- **USB-Dateiübertragung:** Wählen Sie **Blockieren** aus, um das Übertragen von Dateien per USB zu verhindern. **Nicht konfiguriert** ermöglicht das Übertragen von Dateien.
-- **Externe Medien:** Wählen Sie **Blockieren** aus, um die Verwendung externer Medien oder das Herstellen einer Verbindung mit solchen auf dem Gerät zu verhindern. **Nicht konfiguriert** lässt externe Medien auf dem Gerät zu.
-- **Daten mithilfe von NFC übertragen:** Wählen Sie **Blockieren** aus, um die Verwendung der Nahfeldkommunikation (Near Field Communication, NFC) zum Übertragen von Dateien aus Apps zu verhindern. **Nicht konfiguriert** ermöglicht die Verwendung von NFC zum Freigeben von Daten zwischen Geräten.
-- **Debugfunktionen:** Wenn Sie **Zulassen** auswählen, können Benutzer Features zum Debuggen auf dem Gerät verwenden. **Nicht konfiguriert** verhindert, dass Benutzer Features zum Debuggen auf dem Gerät verwenden.
-- **Mikrofonanpassung:** Wenn Sie **Blockieren** auswählen, können Benutzer weder die Stummschaltung des Mikrofons aufheben noch die Lautstärke am Mikrofon anpassen. **Nicht konfiguriert** ermöglicht dem Benutzer, die Lautstärke am Mikrofon des Geräts anzupassen.
-- **E-Mail-Adressen für Schutz vor Zurücksetzung auf Werkseinstellungen:** Wählen Sie **E-Mail-Adressen für Google-Konto** aus. Geben Sie die E-Mail-Adressen der Geräteadministratoren ein, die das Gerät entsperren können, nachdem es zurückgesetzt wurde. Achten Sie darauf, dass Sie die E-Mail-Adressen durch ein Semikolon trennen, z. B. `admin1@gmail.com;admin2@gmail.com`. Wenn keine E-Mail-Adresse eingegeben wird, kann jeder das Gerät entsperren, sobald die Werkseinstellungen wiederhergestellt sind. Diese E-Mail-Adressen sind nur gültig, wenn eine nicht von einem Benutzer initiierte Zurücksetzung auf Werkseinstellungen ausgeführt wird, z. B. die Ausführung einer Zurücksetzung auf Werkseinstellungen über das Wiederherstellungsmenü.
-- **Notausstieg für Netzwerk:** Das **Aktivieren** dieser Option erlaubt Benutzern, das Feature „Notausstieg für Netzwerk“ zu aktivieren. Wenn beim Starten des Geräts keine Netzwerkverbindung hergestellt wird, fordert die Notausstiegsfunktion zum Herstellen einer vorübergehenden Verbindung mit einem Netzwerk und Aktualisieren der Geräterichtlinie auf. Nach dem Anwenden der Richtlinie wird das temporäre Netzwerk ignoriert, und das Gerät setzt den Start fort. Dieses Feature verbindet Geräte mit einem Netzwerk, wenn:
+- **Datums- und Uhrzeitänderungen:** Wenn **Blockieren** festgelegt wird, können Benutzer das Datum und die Uhrzeit nicht manuell festlegen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, das Datum und die Uhrzeit auf dem Gerät festzulegen.
+- **Änderung der Lautstärke:** **Blockieren** verhindert, dass Benutzer die Lautstärke des Geräts ändern können. Außerdem wird die Hauptlautstärke des Geräts stummgeschaltet. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, die Lautstärkeeinstellungen auf dem Gerät festzulegen.
+- **Auf Werkseinstellungen zurücksetzen:** Wenn **Blockieren** festgelegt wird, können Benutzer die Option zum Zurücksetzen auf Werkseinstellungen in den Einstellungen des Geräts nicht verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, diese Einstellung auf dem Gerät zu verwenden.
+- **Abgesicherter Start:** Wenn **Blockieren** festgelegt wird, können Benutzer das Gerät nicht im abgesicherten Modus neustarten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, das Gerät im abgesicherten Modus neu zu starten.
+- **Statusleiste:** Wenn **Blockieren** festgelegt wird, wird der Zugriff auf die Statusleiste, einschließlich der Benachrichtigungen und Schnelleinstellungen verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig den Zugriff auf die Statusleiste.
+- **Roamingdatendienste:** **Blockieren** verhindert das Datenroaming über das Mobilfunknetzwerk. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem Datenroaming zulassen, wenn das Gerät in einem Mobilfunknetz verwendet wird.
+- **Änderung der WLAN-Einstellungen:** Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, die vom Gerätebesitzer festgelegten WLAN-Einstellungen zu ändern. Benutzer können eigene WLAN-Konfigurationen erstellen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, die WLAN-Einstellungen auf dem Gerät zu ändern.
+- **Konfiguration des WLAN-Zugriffspunkts:** Wenn **Blockieren** festgelegt wird, können Benutzer WLAN-Konfigurationen weder erstellen noch ändern. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, die WLAN-Einstellungen auf dem Gerät zu ändern.
+- **Bluetooth-Konfiguration:** Wenn **Blockieren** festgelegt wird, können Benutzer das Bluetooth auf dem Gerät nicht konfigurieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt die Verwendung von Bluetooth auf dem Gerät möglicherweise standardmäßig.
+- **Tethering und Zugriff auf Hotspots:** Wenn **Blockieren** festgelegt wird, werden Zugriff und Tethering auf portable Hotspots verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Tethering und Zugriff auf portable Hotspots möglicherweise standardmäßig.
+- **USB-Speicher:** Wählen Sie **Zulassen** aus, um auf USB-Speicher auf dem Gerät zuzugreifen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem verhindert den Zugriff auf USB-Speicher möglicherweise standardmäßig.
+- **USB-Dateiübertragung:** Wenn **Blockieren** festgelegt wird, wird die Übertragung von Dateien über USB verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt das Übertragen von Dateien möglicherweise standardmäßig.
+- **Externe Medien:** Wenn **Blockieren** festgelegt wird, werden die Verwendung und das Herstellen einer Verbindung mit externen Medien auf dem Gerät verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt externe Medien auf dem Gerät möglicherweise standardmäßig.
+- **Daten mithilfe von NFC übertragen:** Wenn **Blockieren** festgelegt wird, wird die Verwendung der NFC-Technologie zum Übertragen von Daten aus Apps verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt die Verwendung von NFC zum Freigeben von Daten zwischen Geräten möglicherweise standardmäßig.
+- **Debugfunktionen:** Wenn Sie **Zulassen** auswählen, können Benutzer Features zum Debuggen auf dem Gerät verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem hindert Benutzer möglicherweise standardmäßig daran, Debuggingfeatures auf dem Gerät zu verwenden.
+- **Mikrofonanpassung:** Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, die Stummschaltung der Mikrofons aufzuheben und die Mikrofonlautstärke anzupassen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt das Verwenden und Anpassen der Lautstärke des Mikrofons möglicherweise standardmäßig.
+- **E-Mail-Adressen für Schutz vor Zurücksetzung auf Werkseinstellungen:** Wählen Sie **E-Mail-Adressen für Google-Konto** aus. Geben Sie die E-Mail-Adressen der Geräteadministratoren ein, die das Gerät entsperren können, nachdem es zurückgesetzt wurde. Achten Sie darauf, dass Sie die E-Mail-Adressen durch ein Semikolon trennen, z. B. `admin1@gmail.com;admin2@gmail.com`. Wenn keine E-Mail-Adresse eingegeben wird, kann jeder das Gerät entsperren, sobald die Werkseinstellungen wiederhergestellt sind. Diese E-Mail-Adressen sind nur gültig, wenn eine nicht vom Benutzer gestartete Zurücksetzung auf die Werkseinstellungen durchgeführt wird, z. B. über das Wiederherstellungsmenü.
+
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+
+- **Notausstieg für Netzwerk:** Wenn **Aktivieren** festgelegt wird, können Benutzer das Feature „Notausstieg für Netzwerk“ aktivieren. Wenn beim Starten des Geräts keine Netzwerkverbindung hergestellt wird, fordert die Notausstiegsfunktion zum Herstellen einer vorübergehenden Verbindung mit einem Netzwerk und Aktualisieren der Geräterichtlinie auf. Nach dem Anwenden der Richtlinie wird das temporäre Netzwerk ignoriert, und das Gerät setzt den Start fort. Dieses Feature verbindet Geräte mit einem Netzwerk, wenn:
   - Kein geeignetes Netzwerk in der letzten Richtlinie enthalten ist.
   - Das Gerät im Aufgabensperrmodus in eine App startet.
-  - Der Benutzer die Einstellungen für das Gerät nicht erreichen kann.
+  - Benutzer können die Geräteeinstellungen nicht aufrufen.
 
-  **Nicht konfiguriert** verhindert, dass Benutzer die Netzwerk-Notausstiegsfunktion auf dem Gerät aktivieren.
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem hindert Benutzer möglicherweise standardmäßig daran, das Feature „Notausstieg für Netzwerk“ auf dem Gerät zu aktivieren.
 
-- **Systemupdate:** Hier können Sie eine Option auswählen, um zu definieren, wie das Gerät Over-the-Air-Updates verarbeitet:
+- **Systemupdate:** Hier können Sie eine Option auswählen, um zu definieren, wie das Gerät Over-the-Air-Updates verarbeitet. Folgende Optionen sind verfügbar:
   - **Gerätestandard:** Die Standardeinstellung des Geräts wird verwendet.
   - **Automatisch:** Updates werden ohne Interaktion mit dem Benutzer automatisch installiert. Durch das Festlegen dieser Richtlinie werden sofort alle ausstehenden Updates installiert.
-  - **Zurückgestellt:** Updates werden für 30 Tage zurückgestellt. Nach Ablauf der 30 Tage fordert Android den Benutzer zur Installation des Updates auf. Gerätehersteller oder Mobilfunkanbieter können verhindern (ausschließen), dass wichtige Sicherheitsupdates zurückgestellt werden. Bei einem ausgeschlossenen Update wird dem Benutzer eine Systembenachrichtigung auf dem Gerät angezeigt.
-  - **Wartungsfenster:** Updates werden automatisch in einem täglichen Wartungsfenster installiert, das Sie in Intune festlegen. Die Installation wird 30 Tage lang täglich versucht, und es kann aufgrund von zu geringem Speicherplatz oder Akkustand ein Fehler auftreten. Nach 30 Tagen wird der Benutzer von Android zum Installieren aufgefordert. Dieses Fenster wird auch verwendet, um Updates für Google Play-Apps zu installieren. Verwenden Sie diese Option für dedizierte Geräte wie etwa Kioskgeräte, da Apps, die im Vordergrund auf einem dedizierten Gerät im Einzelanwendungsmodus ausgeführt werden, aktualisiert werden können.
+  - **Zurückgestellt:** Updates werden für 30 Tage zurückgestellt. Nach Ablauf der 30 Tage fordert Android die Benutzer zur Installation des Updates auf. Gerätehersteller oder Mobilfunkanbieter können verhindern (ausschließen), dass wichtige Sicherheitsupdates zurückgestellt werden. Bei einem ausgeschlossenen Update wird den Benutzern eine Systembenachrichtigung auf dem Gerät angezeigt.
+  - **Wartungsfenster:** Updates werden automatisch in einem täglichen Wartungsfenster installiert, das Sie in Intune festlegen. Die Installation wird 30 Tage lang täglich versucht, und es kann aufgrund von zu geringem Speicherplatz oder Akkustand ein Fehler auftreten. Nach 30 Tagen fordert Android die Benutzer zur Installation auf. Dieses Fenster wird auch verwendet, um Updates für Google Play-Apps zu installieren. Verwenden Sie diese Option für dedizierte Geräte wie etwa Kioskgeräte, da Apps, die im Vordergrund auf einem dedizierten Gerät im Einzelanwendungsmodus ausgeführt werden, aktualisiert werden können.
 
-- **Benachrichtigungsfenster:** Wenn **Deaktivieren** ausgewählt ist, werden Fensterbenachrichtigungen, wie Popups, eingehende Anrufe, ausgehende Anrufe, Systemwarnungen und Systemfehler, nicht auf dem Gerät angezeigt. Bei **Nicht konfiguriert** wird die Standardeinstellung des Betriebssystems verwendet, wodurch Benachrichtigungen möglicherweise angezeigt werden.
-- **Hinweise zur ersten Verwendung überspringen:** **Aktivieren** führt dazu, dass Vorschläge von Apps beim Durchführen von Tutorials oder Hinweise beim Start einer App ausgeblendet oder übersprungen werden. Bei Festlegung auf **Nicht konfiguriert** wird die Standardeinstellung des Betriebssystems verwendet, wodurch diese Vorschläge beim Starten der App möglicherweise angezeigt werden.
+- **Benachrichtigungsfenster:** Wenn **Deaktivieren** ausgewählt ist, werden Fensterbenachrichtigungen, wie Popups, eingehende Anrufe, ausgehende Anrufe, Systemwarnungen und Systemfehler, nicht auf dem Gerät angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem zeigt Benachrichtigungen möglicherweise standardmäßig an.
+- **Hinweise zur ersten Verwendung überspringen:** **Aktivieren** führt dazu, dass Vorschläge von Apps beim Durchführen von Tutorials oder Hinweise beim Start einer App ausgeblendet oder übersprungen werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem zeigt diese Vorschläge möglicherweise standardmäßig beim Starten der App an.
 
-### <a name="system-security-settings"></a>Einstellungen für die Systemsicherheit
+### <a name="system-security"></a>Systemsicherheit
 
-- **Bedrohungsüberprüfung für Apps:** Die Standardeinstellung **Anfordern** aktiviert Google Play Protect so, dass Apps vor und nach der Installation überprüft werden. Wenn das Tool eine Bedrohung erkennt, kann es den Benutzer warnen, damit er die App vom Gerät entfernt. Bei Wahl von **Nicht konfiguriert** wird Google Play Protect nicht zum Überprüfen von Apps aktiviert oder ausgeführt.
+- **Bedrohungsüberprüfung für Apps:** Die Standardeinstellung **Anfordern** aktiviert Google Play Protect so, dass Apps vor und nach der Installation überprüft werden. Wenn eine Bedrohung erkannt wird, wird der Benutzer gewarnt, damit er die App vom Gerät entfernt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Google Play Protect wird möglicherweise nicht vom Betriebssystem zum Scannen von Apps aktiviert oder ausgeführt.
 
-### <a name="dedicated-device-settings"></a>Einstellungen dedizierter Geräte
+### <a name="dedicated-devices"></a>Dedizierte Geräte
 
-Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dedizierten Geräten zu konfigurieren. Sie können ein Gerät so konfigurieren, dass eine App oder mehrerer Apps ausgeführt werden. Im Kioskmodus eines Geräts stehen nur die Apps zur Verfügung, die Sie hinzufügen. Diese Einstellungen gelten für dedizierte Android Enterprise-Geräte. Sie gelten nicht für vollständig verwaltete Android Enterprise-Geräte.
+Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dedizierten Geräten zu konfigurieren. Sie können Geräte zum Ausführen einer oder mehrerer Apps konfigurieren. Im Kioskmodus eines Geräts stehen nur die Apps zur Verfügung, die Sie hinzufügen. Diese Einstellungen gelten für dedizierte Android Enterprise-Geräte. Sie gelten nicht für vollständig verwaltete Android Enterprise-Geräte.
 
 **Kioskmodus:** Wählen Sie aus, ob auf dem Gerät eine App oder mehrere Apps ausgeführt werden.
 
+- **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
 - **Einzelne App**: Benutzer können auf dem Gerät nur auf eine einzelne App zugreifen. Wenn das Gerät gestartet wird, wird nur die jeweilige App gestartet. Benutzer können keine neuen Apps öffnen oder die ausgeführte App ändern.
 
   - **Verwaltete App auswählen**: Wählen Sie die verwaltete Google Play-App aus der Liste aus.
@@ -93,7 +101,7 @@ Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dediz
     Wenn keine Apps aufgelistet werden, können Sie dem Gerät [einige Android-Apps hinzufügen](../apps/apps-add-android-for-work.md). Achten Sie darauf, [die App der Gerätegruppe zuzuweisen, die für Ihre dedizierten Geräte erstellt wurde](../apps/apps-deploy.md).
 
   > [!IMPORTANT]
-  > Wenn Sie den Kioskmodus für einzelne Apps verwenden, funktionieren Apps mit Wähltasten/Telefon-Apps möglicherweise nicht ordnungsgemäß. 
+  > Wenn Sie den Kioskmodus für einzelne Apps verwenden, funktionieren Apps mit Wähltasten/Telefon-Apps möglicherweise nicht ordnungsgemäß.
   
 - **Multi-App**: Benutzer können auf dem Gerät nur auf eine begrenzte Anzahl von Apps zugreifen. Wenn das Gerät gestartet wird, werden nur die von Ihnen hinzugefügten Apps gestartet. Sie können auch einige Weblinks hinzufügen, die Benutzer öffnen können. Wenn die Richtlinie angewendet wird, können Benutzer die Symbole für die zulässigen Apps auf dem Startbildschirm sehen.
 
@@ -118,17 +126,17 @@ Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dediz
     - **Nach oben wischen:** Eine Startschaltfläche wird angezeigt, wenn ein Benutzer auf dem Gerät nach oben wischt.
     - **Unverankert:** Auf dem Gerät wird dauerhaft eine unverankerte Startschaltfläche angezeigt.
 
-  - **Kioskmodus verlassen:** Wählen Sie **Aktivieren** aus, um Administratoren zu ermöglichen, den Kioskmodus vorübergehend zu beenden, um das Gerät zu aktualisieren. Um dieses Feature verwenden zu können, führt der Administrator Folgendes aus:
+  - **Kioskmodus verlassen:** Wenn **Aktivieren** festgelegt wird, können Administratoren der Kioskmodus vorübergehend pausieren, um ein Update für das Gerät durchzuführen. Um dieses Feature verwenden zu können, führt der Administrator Folgendes aus:
   
     1. Weiteres Betätigen der Schaltfläche „Zurück“, bis die Schaltfläche **Kiosk beenden** angezeigt wird. 
     2. Auswählen der Schaltfläche **Kiosk beenden** und Eingabe der PIN für den **Code zum Verlassen des Kioskmodus**.
     3. Wenn Sie fertig sind, wählen Sie die App **Verwalteter Startbildschirm** aus. Mit diesem Schritt wird das Gerät erneut im Multi-App-Kioskmodus gesperrt.
 
-      Wenn **Nicht konfiguriert** festgelegt ist, können Administratoren den Kioskmodus nicht pausieren. Wenn der Administrator weiterhin die Schaltfläche „Zurück“ betätigt und die Schaltfläche **Kiosk beenden** auswählt, wird eine Meldung angezeigt, dass eine Kennung erforderlich ist.
+      Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise hindert das Betriebssystem Administratoren standardmäßig am Pausieren des Kioskmodus. Wenn der Administrator weiterhin die Schaltfläche „Zurück“ betätigt und die Schaltfläche **Kiosk beenden** auswählt, wird eine Meldung angezeigt, dass eine Kennung erforderlich ist.
 
     - **Code zum Verlassen des Kioskmodus:** Geben Sie eine 4-6-stellige numerische PIN ein. Der Administrator verwendet diese PIN zum vorübergehenden Anhalten des Kioskmodus.
 
-  - **Benutzerdefinierten URL-Hintergrund festlegen:** Geben Sie eine URL zum Anpassen des Hintergrundbildschirms auf dem dedizierten Gerät ein.
+  - **Benutzerdefinierten URL-Hintergrund festlegen:** Geben Sie eine URL zum Anpassen des Hintergrundbildschirms auf dem dedizierten Gerät ein. Geben Sie beispielsweise `http://contoso.com/backgroundimage.jpg` ein.
 
     > [!NOTE]
     > In den meisten Fällen empfehlen wir, mit Bildern mit mindestens den folgenden Größen zu beginnen:
@@ -140,15 +148,15 @@ Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dediz
     >
     > Moderne Displays haben höhere Pixeldichten und können entsprechende Bilder mit 2K-/4K-Auflösung anzeigen.
 
-  - **WLAN-Konfiguration:** **Aktivieren** zeigt die WLAN-Steuerelement auf dem verwalteten Startbildschirm an und ermöglicht es Endbenutzern, das Gerät mit anderen WLAN-Netzwerken zu verbinden. Durch Aktivieren dieses Features wird auch der Gerätestandort aktiviert. **Nicht konfiguriert** (Standardwert) zeigt das WLAN-Steuerelement nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer Verbindungen mit WLAN-Netzwerken herstellen, während Sie den verwalteten Startbildschirm verwenden.
+  - **WLAN-Konfiguration:** Wenn **Aktivieren** festgelegt wird, wird das WLAN-Steuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können das Gerät mit verschiedenen WLAN-Netzwerken verbinden. Durch Aktivieren dieses Features wird auch der Gerätestandort aktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das WLAN-Steuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer Verbindungen mit WLAN-Netzwerken herstellen, während Sie den verwalteten Startbildschirm verwenden.
 
-  - **Bluetooth-Konfiguration:** **Aktivieren** zeigt das Bluetooth-Steuerelement auf dem verwalteten Startbildschirm an und ermöglicht es Endbenutzern, Geräte über Bluetooth miteinander zu koppeln. Durch Aktivieren dieses Features wird auch der Gerätestandort aktiviert. **Nicht konfiguriert** (Standardwert) zeigt das Bluetooth-Steuerelement nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer Bluetooth konfigurieren und Geräte koppeln, während sie den verwalteten Startbildschirm verwenden.
+  - **Bluetooth-Konfiguration:** Wenn **Aktivieren** festgelegt wird, wird das Bluetooth-Steuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können Geräte über Bluetooth koppeln. Durch Aktivieren dieses Features wird auch der Gerätestandort aktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Bluetooth-Steuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer Bluetooth konfigurieren und Geräte koppeln, während sie den verwalteten Startbildschirm verwenden.
 
-  - **Zugriff auf Taschenlampe:** **Aktivieren** zeigt das Taschenlampensteuerfeld auf dem verwalteten Startbildschirm an und ermöglicht es Endbenutzern, die Taschenlampe ein- oder auszuschalten. **Nicht konfiguriert** (Standardwert) zeigt das Taschenlampensteuerelement nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer die Taschenlampe verwenden, während sie den verwalteten Startbildschirm verwenden.
+  - **Zugriff auf Taschenlampe:** Wenn **Aktivieren** festgelegt wird, wird das Taschenlampensteuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können die Taschenlampenfunktion ein- und ausschalten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Taschenlampensteuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer die Taschenlampe verwenden, während sie den verwalteten Startbildschirm verwenden.
 
-  - **Medienlautstärkeregler:** **Aktivieren** zeigt den Medienlautstärkeregler auf dem verwalteten Startbildschirm an und ermöglicht es Endbenutzern, die Medienlautstärke auf dem Gerät mithilfe eines Reglers anzupassen. **Nicht konfiguriert** (Standardwert) zeigt den Medienlautstärkeregler nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer die Medienlautstärke auf dem Gerät anpassen können, während sie den verwalteten Startbildschirm verwenden, außer die Tasten ihrer Hardware unterstützen dies. 
+  - **Medienlautstärkeregler:** Wenn **Aktivieren** festgelegt wird, wird der Medienlautstärkeregler auf dem verwalteten Startbildschirm angezeigt und Benutzer können die Medienlautstärke des Geräts mithilfe eines Reglers anpassen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Medienlautstärkesteuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer die Medienlautstärke auf dem Gerät anpassen können, während sie den verwalteten Startbildschirm verwenden, außer die Tasten ihrer Hardware unterstützen dies.
 
-  - **Bildschirmschonermodus:** **Aktivieren** zeigt einen Bildschirmschoner auf dem verwalteten Startbildschirm, wenn das Gerät gesperrt ist oder im Fall eines Timeouts. **Nicht konfiguriert** (Standardwert) zeigt keinen Bildschirmschoner auf dem verwalteten Startbildschirm.
+  - **Bildschirmschonermodus:** **Aktivieren** zeigt einen Bildschirmschoner auf dem verwalteten Startbildschirm, wenn das Gerät gesperrt ist oder im Fall eines Timeouts. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem keinen Bildschirmschoner auf dem verwalteten Startbildschirm an.
 
     Wenn diese Einstellung aktiviert ist, konfigurieren Sie auch die folgende Einstellung:
 
@@ -159,29 +167,33 @@ Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dediz
       - `https://www.contoso.com/image.webp`
 
       Wenn Sie keine URL eingeben, wird das Standardbild des Geräts verwendet, wenn es ein Standardbild gibt.
-      
+
       > [!TIP]
       > Alle URLs zu Dateiressourcen, die in das Bitmap-Format umgewandelt werden können, werden unterstützt.
 
     - **Die Anzahl von Sekunden, die das Gerät den Bildschirmschoner anzeigt, bevor der Bildschirm deaktiviert wird:** Wählen Sie aus, wie lange der Bildschirmschoner auf dem Gerät angezeigt werden soll. Geben Sie einen Wert zwischen 0 und 9999999 Sekunden ein. Der Standardwert beträgt `0` Sekunden. Wenn das Feld leer gelassen wird oder auf `0` (null) festgelegt ist, ist der Bildschirmschoner solange aktiv, bis ein Benutzer mit dem Gerät interagiert.
     - **Anzahl von Sekunden, in denen das Gerät inaktiv ist, bevor der Bildschirmschoner angezeigt wird:** Wählen Sie aus, wie lange ein Gerät inaktiv sein kann, bevor der Bildschirmschoner angezeigt wird. Geben Sie einen Wert zwischen 1 und 9999999 Sekunden ein. Der Standardwert beträgt `30` Sekunden. Geben Sie eine Zahl ein, die größer als null (`0`) ist.
-    - **Vor dem Start des Bildschirmschoners Medien ermitteln:** **Aktivieren** (Standardwert) zeigt den Bildschirmschoner nicht an, wenn auf dem Gerät Audio- oder Videodateien wiedergeben werden. **Nicht konfiguriert** zeigt den Bildschirmschoner an, auch wenn Audiodaten oder Videos abgespielt werden.
+    - **Vor dem Start des Bildschirmschoners Medien ermitteln:** **Aktivieren** (Standardwert) zeigt den Bildschirmschoner nicht an, wenn auf dem Gerät Audio- oder Videodateien wiedergeben werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem den Bildschirmschoner standardmäßig an, auch wenn Audiodateien oder Videos abgespielt werden.
 
-### <a name="device-password-settings"></a>Gerätekennworteinstellungen
+### <a name="password"></a>Kennwort
 
-- **Sperrbildschirm deaktivieren**: Wenn Sie **Deaktivieren** auswählen, können Benutzer das Bildschirmsperrfeature Keyguard nicht auf dem Gerät verwenden. **Nicht konfiguriert** ermöglicht dem Benutzer, die Keyguard-Features zu verwenden.
+- **Sperrbildschirm deaktivieren**: Wenn Sie **Deaktivieren** auswählen, können Benutzer das Bildschirmsperrfeature Keyguard nicht auf dem Gerät verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem Benutzern standardmäßig die Verwendung der Keyguard-Features.
 - **Deaktivierte Sperrbildschirmfeatures**: Wenn Keyguard auf dem Gerät aktiviert ist, wählen Sie die Features aus, die Sie deaktivieren möchten. Ist beispielsweise **Kamera absichern** ausgewählt, ist die Kamerafunktion auf dem Gerät deaktiviert. Alle nicht ausgewählten Features sind auf dem Gerät aktiviert.
 
   Diese Features sind für Benutzer verfügbar, wenn das Gerät gesperrt ist. Benutzer können mit einem Häkchen versehene Features weder anzeigen noch darauf zugreifen.
 
-- **Erforderlicher Kennworttyp:** Hiermit wird der Typ des erforderlichen Kennworts für das Gerät definiert. Folgende Optionen sind verfügbar:
+- **Erforderlicher Kennworttyp:** Geben Sie den erforderlichen Grad der Kennwortkomplexität ein, und bestimmen Sie, ob biometrische Geräte zulässig sind. Folgende Optionen sind verfügbar:
   - **Gerätestandard**
   - **Kennwort erforderlich, keine Einschränkungen**
   - **Schwach biometrisch**: [Vergleich von stark und schwach biometrisch](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (öffnet Android-Website)
-  - **Numerisch**: Kennwort darf nur aus Zahlen bestehen. Beispiel: `123456789`. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
-  - **Numerisch, komplex:** Sich wiederholende oder fortlaufende Ziffern wie „1111“ oder „1234“ sind nicht zulässig. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
-  - **Alphabetisch**: Buchstaben des Alphabets sind erforderlich. Zahlen und Symbole sind nicht erforderlich. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
-  - **Alphanumerisch**: Schließt Großbuchstaben, Kleinbuchstaben und Ziffern ein. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
+  - **Numerisch**: Kennwort darf nur aus Zahlen bestehen. Beispiel: `123456789`. Geben Sie außerdem Folgendes ein:
+    - **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).
+  - **Numerisch, komplex:** Sich wiederholende oder fortlaufende Ziffern wie „1111“ oder „1234“ sind nicht zulässig. Geben Sie außerdem Folgendes ein:
+    - **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).
+  - **Alphabetisch**: Buchstaben des Alphabets sind erforderlich. Zahlen und Symbole sind nicht erforderlich. Geben Sie außerdem Folgendes ein:
+    - **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).
+  - **Alphanumerisch**: Schließt Großbuchstaben, Kleinbuchstaben und Ziffern ein. Geben Sie außerdem Folgendes ein:
+    - **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).
   - **Alphanumerisch mit Symbolen**: Schließt Großbuchstaben, Kleinbuchstaben, Ziffern, Interpunktionszeichen und Symbole ein. Geben Sie außerdem Folgendes ein:
 
     - **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).
@@ -192,42 +204,42 @@ Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dediz
     - **Erforderliche Anzahl numerischer Zeichen**: Geben Sie die erforderliche Anzahl numerischer Zeichen (`1`, `2`, `3` usw.) für das Kennwort ein, von 0 bis 16 Zeichen.
     - **Erforderliche Anzahl Symbole**: Geben Sie die erforderliche Anzahl der Symbole (`&`, `#`, `%` usw.) für das Kennwort ein, von 0 bis 16 Zeichen.
 
-- **Anzahl Tage bis zum Kennwortablauf**: Geben Sie die Anzahl der Tage von 1–365 an, bis das Gerätekennwort geändert werden muss. Geben Sie beispielsweise zum Ändern des Kennworts nach 60 Tagen `60` ein. Wenn das Kennwort abläuft, werden Benutzer aufgefordert, ein neues Kennwort zu erstellen.
-- **Anzahl erforderlicher Kennwörter, bevor ein Benutzer ein Kennwort wiederverwenden kann**: Geben Sie die Anzahl von vorherigen Kennwörtern ein, die nicht wiederverwendet werden dürfen, von 1 bis 24. Verwenden Sie diese Einstellung, um zu verhindern, dass der Benutzer zuvor verwendete Kennwörter erstellt.
-- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie die Anzahl der Anmeldungen von 4 bis 11 ein, die fehlschlagen können, bevor das Gerät zurückgesetzt wird.
+- **Anzahl Tage bis zum Kennwortablauf**: Geben Sie die Anzahl der Tage ein, bis das Gerätekennwort geändert werden muss (von 1 bis 365). Geben Sie beispielsweise `90` an, damit das Kennwort nach 90 Tagen abläuft. Wenn das Kennwort abläuft, werden Benutzer aufgefordert, ein neues Kennwort zu erstellen. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+- **Anzahl erforderlicher Kennwörter, bevor ein Benutzer ein Kennwort wiederverwenden kann**: Verwenden Sie diese Einstellung, um zu verhindern, dass Benutzer zuvor verwendete Kennwörter erstellen. Geben Sie die Anzahl der zuvor verwendeten Kennwörter ein, die nicht erneut verwendet werden können, von 1–24. Geben Sie z.B. `5` an, damit ein Benutzer sein neues Kennwort nicht auf sein aktuelles Kennwort oder eines seiner vorherigen vier Kennwörter festlegen kann. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Gerät zurückgesetzt wird (zwischen 4 und 11). Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 
 ### <a name="power-settings"></a>Energieeinstellungen
 
-- **Zeit bis Bildschirmsperre:** Geben Sie die maximale Zeit an, die ein Benutzer als Zeit bis zur Bildschirmsperre festlegen kann. Wenn Sie als Wert beispielsweise **10 Minuten** festlegen, können Benutzer eine beliebige Zeit zwischen 15 Sekunden und zehn Minuten wählen. Wenn **Nicht konfiguriert** (Standardwert) festgelegt ist, wird diese Einstellung von Intune nicht geändert oder verwaltet.
+- **Zeit bis Bildschirmsperre:** Geben Sie die maximale Zeit an, die ein Benutzer als Zeit bis zur Bildschirmsperre festlegen kann. Wenn Sie beispielsweise `10 minutes` für diese Einstellung festlegen, können Benutzer eine beliebige Zeit zwischen 15 Sekunden und 10 Minuten angeben. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
 - **Bildschirm aktiviert, wenn Gerät angeschlossen ist:** Hiermit kann ausgewählt werden, bei welchen Stromquellen der Bildschirm des Geräts aktiviert bleibt, wenn es angeschlossen ist.
 
-### <a name="users-and-accounts-settings"></a>Einstellungen für Benutzer und Konten
+### <a name="users-and-accounts"></a>Benutzer und Konten
 
-- **Neue Benutzer hinzufügen:** Wenn Sie **Blockieren** auswählen, können Benutzer keine neuen Benutzer hinzufügen. Jeder Benutzer hat einen persönlichen Bereich auf dem Gerät für benutzerdefinierte Startseiten, Konten, Apps und Einstellungen. Eine Festlegung auf **Nicht konfiguriert** (Standardeinstellung) ermöglicht es Benutzern, dem Gerät andere Benutzer hinzufügen.
-- **Entfernen von Benutzern:** Wenn Sie **Blockieren** auswählen, können Benutzer keine Benutzer entfernen. Eine Festlegung auf **Nicht konfiguriert** (Standardeinstellung) ermöglicht es Benutzern, andere Benutzer vom Gerät zu entfernen.
-- **Kontoänderungen** (nur dedizierte Geräte) Wenn Sie **Blockieren** auswählen, können Benutzer Konten nicht bearbeiten. Eine Festlegung auf **Nicht konfiguriert** (Standardeinstellung) ermöglicht es Benutzern, Benutzerkonten auf dem Gerät zu aktualisieren.
+- **Neue Benutzer hinzufügen:** Wenn **Blockieren** festgelegt wird, können Benutzer keine neuen Benutzer hinzufügen. Jeder Benutzer hat einen persönlichen Bereich auf dem Gerät für benutzerdefinierte Startseiten, Konten, Apps und Einstellungen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem Benutzern das Hinzufügen anderer Benutzer zum Gerät standardmäßig.
+- **Entfernen von Benutzern:** Wenn **Blockieren** festgelegt wird, können Benutzer keine Benutzer entfernen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem Benutzern das Entfernen anderer Benutzer vom Gerät standardmäßig.
+- **Kontoänderungen** (nur dedizierte Geräte) Wenn **Blockieren** festgelegt wird, können Benutzer Konten nicht bearbeiten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem Benutzern standardmäßig das Anpassen von Benutzerkonten auf dem Gerät.
 
   > [!NOTE]
   > Diese Einstellung gilt nicht für vollständig verwaltete Geräte von Gerätebesitzern. Wenn Sie diese Einstellung konfigurieren, wird die Einstellung ignoriert und hat keine Auswirkungen.
 
-- **Benutzer kann Anmeldeinformationen konfigurieren:** **Blockieren** verhindert, dass Benutzer Zertifikate konfigurieren, die Geräten zugewiesen sind, auch wenn es sich um Geräte handelt, die keinem Benutzerkonto zugewiesen sind. **Nicht konfiguriert** kann es Benutzern ermöglichen, ihre Anmeldeinformationen zu konfigurieren oder zu ändern, wenn sie im Keystore darauf zugreifen. 
-- **Persönliche Google-Konten:** **Blockieren** verhindert, dass Benutzer ihre privaten Google-Konten auf dem Gerät hinzufügen. **Nicht konfiguriert** (Standardwert) ermöglicht Benutzern das Hinzufügen ihres persönlichen Google-Kontos.
+- **Benutzer kann Anmeldeinformationen konfigurieren:** **Blockieren** verhindert, dass Benutzer Zertifikate konfigurieren, die Geräten zugewiesen sind, auch wenn es sich um Geräte handelt, die keinem Benutzerkonto zugewiesen sind. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise ermöglicht das Betriebssystem Benutzern standardmäßig das Konfigurieren oder Ändern ihrer Anmeldeinformationen, wenn sie im Schlüsselspeicher auf diese zugreifen.
+- **Persönliche Google-Konten:** **Blockieren** verhindert, dass Benutzer ihre privaten Google-Konten auf dem Gerät hinzufügen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem Benutzern standardmäßig das Hinzufügen ihrer persönlichen Google-Konten.
 
 ### <a name="applications"></a>Applications
 
-- **Installation aus unbekannten Quellen zulassen:** Wählen Sie **Zulassen** aus, damit die Benutzer **Unbekannte Quellen** aktivieren können. Diese Einstellung ermöglicht die Installation von Apps aus unbekannten Quellen, einschließlich anderer Quellen als Google Play Store. **Nicht konfiguriert** verhindert, dass Benutzer **Unbekannte Quellen** nutzen.
-- **Zugriff auf alle Apps im Google Play Store zulassen**: Wenn diese Option auf **Zulassen** festgelegt ist, erhalten Benutzer Zugriff auf alle Apps im Google Play Store. Sie erhalten keinen Zugriff auf die Apps, die der Administrator in [Client-Apps](../apps/apps-add-android-for-work.md) sperrt. **Nicht konfiguriert** zwingt Benutzer, nur auf die Apps zuzugreifen, die der Administrator im Google Play Store zur Verfügung stellt, oder auf die Apps, die in [Client-Apps](../apps/apps-add-android-for-work.md) erforderlich sind.
-- **Automatische App-Updates:** Wählen Sie diese Option aus, wenn automatische Updates installiert werden. Folgende Optionen sind verfügbar:
-  - **Nicht konfiguriert**
-  - **Benutzerauswahl**
-  - **Nie**
-  - **Nur WLAN**
-  - **Immer**
+- **Installation aus unbekannten Quellen zulassen:** Wenn **Zulassen** festgelegt wird, können Benutzer **unbekannte Quellen** aktivieren. Diese Einstellung ermöglicht die Installation von Apps aus unbekannten Quellen, einschließlich anderer Quellen als Google Play Store. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise hindert das Betriebssystem Benutzer standardmäßig am Aktivieren von **unbekannten Quellen**.
+- **Zugriff auf alle Apps im Google Play Store zulassen**: Wenn diese Option auf **Zulassen** festgelegt ist, erhalten Benutzer Zugriff auf alle Apps im Google Play Store. Sie erhalten keinen Zugriff auf die Apps, die der Administrator in [Client-Apps](../apps/apps-add-android-for-work.md) sperrt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erzwingt das Betriebssystem standardmäßig, dass Benutzer nur auf die vom Administrator zur Verfügung gestellten Apps im Google Play Store oder in [Client-Apps](../apps/apps-add-android-for-work.md) als erforderlich gekennzeichneten Apps zugreifen können.
+- **Automatische App-Updates:** Geräte suchen täglich nach App-Updates. Wählen Sie diese Option aus, wenn automatische Updates installiert werden. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Benutzerauswahl:** Dies ist möglicherweise die Standardoption des Betriebssystems. Benutzer können ihre Einstellungen in der App für verwaltetes Google Play festlegen.
+  - **Nie:** Bei dieser Einstellung werden keine Updates installiert. Von der Verwendung dieser Option wird abgeraten.
+  - **Nur WLAN:** Bei dieser Einstellung werden Updates nur installiert, wenn das Gerät mit einem WLAN-Netzwerk verbunden ist.
+  - **Immer:** Bei dieser Einstellung werden Updates installiert, sobald sie verfügbar sind.
 
 ### <a name="connectivity"></a>Verbindung
 
-- **Always On-VPN:** Wählen Sie **Aktivieren** aus, um einen VPN-Client so festzulegen, dass er automatisch eine Verbindung mit dem VPN herstellt und erneut herstellt. Always On-VPN-Verbindungen bleiben erhalten oder werden sofort hergestellt, wenn der Benutzer sein Gerät sperrt, das Gerät neu gestartet wird oder das drahtlose Netzwerk sich ändert. 
+- **Always On-VPN:** Wenn **Aktivieren** festgelegt wird, wird der VPN-Client so festgelegt, dass er automatisch eine Verbindung mit dem VPN herstellt bzw. wiederherstellt. Always On-VPN-Verbindungen bleiben aktiv. Alternativ wird die Verbindung sofort wiederhergestellt, wenn der Benutzer sein Gerät sperrt, das Gerät neu gestartet wird oder das Drahtlosnetzwerk geändert wird.
 
   Wählen Sie **Nicht konfiguriert** aus, um das Always On-VPN für alle VPN-Clients zu deaktivieren.
 
@@ -246,19 +258,17 @@ Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dediz
   > - Der von Ihnen ausgewählte VPN-Client muss auf dem Gerät installiert sein und VPN pro Anwendung in Arbeitsprofilen unterstützen. Andernfalls tritt ein Fehler auf. 
   > - Sie müssen die VPN-Client-App im **verwalteten Google Play Store** genehmigen, die App mit Intune synchronisieren und die App auf dem Gerät bereitstellen. Danach wird die App im Arbeitsprofil des Benutzers installiert.
   > - Sie müssen den VPN-Client dann trotzdem noch mit einem [VPN-Profil](vpn-settings-android-enterprise.md) oder über ein [App-Konfigurationsprofil](../apps/app-configuration-policies-use-android.md) konfigurieren.
-  > - Es gibt eventuell bekannte Probleme bei der Verwendung von VPN pro App mit F5 Access for Android 3.0.4. Weitere Informationen finden Sie unter [F5's release notes for F5 Access for Android 3.0.4 (Versionshinweise zu F5 Access for Android 3.0.4)](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
+  > - Es gibt eventuell bekannte Probleme bei der Verwendung von VPN pro App mit F5 Access for Android 3.0.4. Weitere Informationen finden Sie unter [Versionshinweise zu F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
-- **Sperrmodus:** Wählen Sie **Aktivieren** aus, um den gesamten Netzwerkdatenverkehr zu zwingen, den VPN-Tunnel zu verwenden. Wenn keine Verbindung zum VPN hergestellt wird, hat das Gerät keinen Netzwerkzugriff.
+- **Sperrmodus:** Wenn **Aktivieren** festgelegt wird, wird jeglicher Netzwerkdatenverkehr durch den VPN-Tunnel erzwungen. Wenn keine Verbindung zum VPN hergestellt wird, hat das Gerät keinen Netzwerkzugriff. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem den Datenverkehr durch den VPN-Tunnel oder über das Mobilfunknetz standardmäßig zu.
 
-  Wählen Sie **Nicht konfiguriert** aus, damit der Datenverkehr durch den VPN-Tunnel oder durch das Mobilfunknetz fließen kann.
-
-- **Empfohlener globaler Proxy:** Wählen Sie **Aktivieren** aus, um den Geräten einen globalen Proxy hinzuzufügen. Wenn diese Einstellung aktiviert ist, wird für HTTP- und HTTPS-Datenverkehr einschließlich einiger Apps auf dem Gerät den von Ihnen eingegebenen Proxy. Dieser Proxy ist nur eine Empfehlung. Es ist möglich, dass einige Apps den Proxy nicht verwenden. **Nicht konfiguriert** (Standardwert) fügt keinen empfohlenen globalen Proxy hinzu.
+- **Empfohlener globaler Proxy:** Wenn **Aktivieren** festgelegt wird, wird ein globaler Proxy zu den Geräten hinzugefügt. Wenn diese Einstellung aktiviert ist, wird für HTTP- und HTTPS-Datenverkehr einschließlich einiger Apps auf dem Gerät den von Ihnen eingegebenen Proxy. Dieser Proxy ist nur eine Empfehlung. Es ist möglich, dass einige Apps den Proxy nicht verwenden. **Nicht konfiguriert** (Standardwert) fügt keinen empfohlenen globalen Proxy hinzu.
 
   Weitere Informationen zu diesem Feature finden Sie auf der Android-Website zu [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)).
 
   Wenn diese Einstellung aktiviert ist, geben Sie auch den **Proxytyp** ein. Folgende Optionen sind verfügbar:
 
-  - **Direkt:** Wählen Sie diese Option aus, um die Proxyserverdetails einschließlich folgender Informationen manuell einzugeben:
+  - **Direkt:** Geben Sie die Proxyserverdetails manuell ein, einschließlich der folgenden:
     - **Host:** Geben Sie den Hostnamen oder die IP-Adresse Ihres Proxy Servers ein. Geben Sie beispielsweise `proxy.contoso.com` oder `127.0.0.1` ein.
     - **Portnummer:** Geben Sie die vom Proxyserver verwendete TCP-Portnummer ein. Geben Sie beispielsweise `8080` ein.
     - **Ausgeschlossene Hosts:** Geben Sie eine Liste von Hostnamen oder IP-Adressen ein, die den Proxy nicht verwenden. Diese Liste kann ein Asterisk-Platzhalterzeichen (`*`) und mehrere durch Semikolons (`;`) getrennte Hosts ohne Leerzeichen. Geben Sie beispielsweise `127.0.0.1;web.contoso.com;*.microsoft.com` ein.
@@ -267,109 +277,134 @@ Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dediz
 
     Weitere Informationen zu PAC-Dateien finden Sie unter [Proxy Auto-Configuration (PAC) file (Datei für die automatische Proxykonfiguration)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (öffnet eine Drittanbieterwebsite).
 
+  Weitere Informationen zu diesem Feature finden Sie auf der Android-Website zu [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)).
+
 ## <a name="work-profile-only"></a>Nur Arbeitsprofil
 
 Diese Einstellung gelten für Android Enterprise-Registrierungstypen, bei denen nur das Arbeitsprofil von Intune verwaltet wird, z. B. die Registrierung für ein Android Enterprise-Arbeitsprofil auf einem privaten oder BYOD-Gerät.
 
 ### <a name="work-profile-settings"></a>Arbeitsprofileinstellungen
 
-#### <a name="general"></a>Allgemein
-
-- **Kopieren und Einfügen zwischen Arbeitsprofilen und persönlichen Profilen:** Wenn Sie **Blockieren** auswählen, wird das Kopieren und Einfügen zwischen Arbeits-Apps und persönlichen Apps verhindert. **Nicht konfiguriert** ermöglicht Benutzern, Daten mithilfe von Kopieren und Einfügen mit Apps im persönlichen Profil freizugeben. 
-- **Datenaustausch zwischen Arbeitsprofilen und persönlichen Profilen:** Wählen Sie diese Option aus, damit Apps im Arbeitsprofil Daten mit Apps im persönlichen Profil austauschen können. Sie können z.B. Freigabeaktionen in Anwendungen steuern, wie etwa die Option **Freigeben**. in der Chrome-Browser-App. Diese Einstellung gilt nicht für das Verhalten beim Kopieren/Einfügen der Zwischenablage. Ihre Freigabeoptionen:
+- **Kopieren und Einfügen zwischen Arbeitsprofilen und persönlichen Profilen:** Wenn **Blockieren** festgelegt wird, werden Kopier- und Einfügevorgänge zwischen Arbeits-Apps und persönlichen Apps verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem Benutzern standardmäßig das Freigeben von Daten mithilfe von Kopier- und Einfügevorgängen bei Apps im persönlichen Profil.
+- **Datenaustausch zwischen Arbeitsprofilen und persönlichen Profilen:** Wählen Sie diese Option aus, damit Apps im Arbeitsprofil Daten mit Apps im persönlichen Profil austauschen können. Sie können z.B. Freigabeaktionen in Anwendungen steuern, wie etwa die Option **Freigeben**. in der Chrome-Browser-App. Diese Einstellung gilt nicht für das Verhalten beim Kopieren/Einfügen der Zwischenablage. Folgende Optionen sind verfügbar:
   - **Gerätestandard:** Dies ist das standardmäßige Freigabeverhalten des Geräts, das abhängig von der Android-Version variiert. Standardmäßig ist die Freigabe von Daten des persönlichen Profils für das Arbeitsprofil zulässig. Die Freigabe von Daten des Arbeitsprofils für das persönliche Profil ist dagegen standardmäßig blockiert. Durch diese Einstellung wird die Freigabe von Daten des Arbeitsprofils für das persönliche Profil verhindert. Auf Geräten mit den Versionen 6.0 und höher blockiert Google die Freigabe vom persönlichen Profil zum Arbeitsprofil nicht.
-  - **Apps im Arbeitsprofil können Freigabeanforderungen vom persönlichen Profil verarbeiten:** Dadurch wird das integrierte Android-Feature aktiviert, das die Freigabe vom persönlichen Profil zum Arbeitsprofil erlaubt. Wenn diese Option aktiviert ist, können Daten durch eine Freigabeanfrage einer App im persönlichen Profil für Apps im Arbeitsprofil freigegeben werden. Diese Einstellung ist das Standardverhalten für Android-Geräte, die frühere Versionen als 6.0 ausführen.
   - **Grenzübergreifende Freigaben verhindern:** Verhindert die Datenfreigabe zwischen Arbeits- und persönlichen Profilen
+  - **Apps im Arbeitsprofil können Freigabeanforderungen vom persönlichen Profil verarbeiten:** Dadurch wird das integrierte Android-Feature aktiviert, das die Freigabe vom persönlichen Profil zum Arbeitsprofil erlaubt. Wenn diese Option aktiviert ist, können Daten durch eine Freigabeanfrage einer App im persönlichen Profil für Apps im Arbeitsprofil freigegeben werden. Diese Einstellung ist das Standardverhalten für Android-Geräte, die frühere Versionen als 6.0 ausführen.
   - **Keine Einschränkungen bei Freigabe:** Ermöglicht die Freigabe von Daten in beide Richtungen über die Begrenzung des Arbeitsprofils hinaus. Wenn Sie diese Einstellung auswählen, können Apps im Arbeitsprofil Daten für Apps ohne Badgeverwendung im persönlichen Profil freigeben. Diese Einstellung gestattet es verwalteten Apps im Arbeitsprofil, die Daten für Apps auf der nicht verwalteten Seite des Geräts freizugeben. Verwenden Sie diese Einstellung also mit Bedacht.
 
-- **Arbeitsprofilbenachrichtigungen bei Gerätesperre:** Steuert, ob Apps im Arbeitsprofil Daten in Benachrichtigungen anzeigen können, wenn das Gerät gesperrt ist. **Blockieren** verhindert die Datenanzeige. **Nicht konfiguriert** zeigt die Daten an.
-- **Standardmäßige App-Berechtigungen:** Legt die Standardberechtigungsrichtlinie für alle Apps im Arbeitsprofil fest. Ab Android 6 wird der Benutzer aufgefordert, bestimmte von den Apps benötigte Berechtigungen zu erteilen, wenn die App gestartet wird. Bei dieser Richtlinieneinstellung können Sie festlegen, ob Benutzer aufgefordert werden sollen, Berechtigungen für alle Apps im Arbeitsprofil zu gewähren. Beispielsweise können Sie dem Arbeitsprofil eine App zuweisen, die Standortzugriff benötigt. In der Regel fordert diese App den Benutzer dazu auf, den Standortzugriff durch die App zu genehmigen oder abzulehnen. Verwenden Sie diese Richtlinie, um Berechtigungen automatisch ohne Aufforderung zu erteilen, Berechtigungen ohne Aufforderung automatisch zu verweigern oder den Endbenutzer entscheiden zu lassen. Es stehen die folgenden Optionen zur Auswahl:
+- **Arbeitsprofilbenachrichtigungen bei Gerätesperre:** Wenn **Blockieren** festgelegt wird, werden Fensterbenachrichtigungen verhindert, sodass Popups, eingehende Anrufe, ausgehende Anrufe, Systemwarnungen und Systemfehler auf gesperrten Geräten nicht angezeigt werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem zeigt Benachrichtigungen möglicherweise standardmäßig an.
+- **Standardmäßige App-Berechtigungen:** Legt die Standardberechtigungsrichtlinie für alle Apps im Arbeitsprofil fest. Ab Android 6 werden Benutzer aufgefordert, bestimmte von den Apps benötigte Berechtigungen zu erteilen, wenn die App gestartet wird. Bei dieser Richtlinieneinstellung können Sie festlegen, ob Benutzer aufgefordert werden sollen, Berechtigungen für alle Apps im Arbeitsprofil zu gewähren. Beispielsweise können Sie dem Arbeitsprofil eine App zuweisen, die Standortzugriff benötigt. In der Regel fordert diese App Benutzer dazu auf, den Standortzugriff durch die App zu genehmigen oder abzulehnen. Verwenden Sie diese Richtlinie, um Berechtigungen automatisch ohne Aufforderung zu erteilen, Berechtigungen ohne Aufforderung automatisch zu verweigern oder die Benutzer entscheiden zu lassen. Folgende Optionen sind verfügbar:
   - **Gerätestandard**
   - **Eingabeaufforderung**
   - **Automatisch gewähren**
   - **Automatisch verweigern**
 
-  Sie können auch eine App-Konfigurationsrichtlinie verwenden, um Berechtigungen für einzelne Anwendungen zu erteilen (**Clientanwendungen** > **App-Konfigurationsrichtlinien**).
+  Sie können auch eine App-Konfigurationsrichtlinie verwenden, um Berechtigungen für einzelne Anwendungen zu erteilen (**Client-Apps** > **App-Konfigurationsrichtlinien**).
 
-- **Konten hinzufügen und entfernen:** Wählen Sie **Blockieren** aus, um zu verhindern, dass Endbenutzer Konten im Arbeitsprofil manuell hinzufügen oder daraus entfernen. Wenn Sie beispielsweise die Gmail-App in einem Android-Arbeitsprofil bereitstellen, können Sie verhindern, dass Benutzer Konten in diesem Arbeitsprofil hinzufügen oder entfernen. **Nicht konfiguriert** ermöglicht das Hinzufügen von Konten im Arbeitsprofil.  
+- **Konten hinzufügen und entfernen:** Wenn **Blockieren** festgelegt wird, können Benutzer Konten nicht manuell im Arbeitsprofil hinzufügen oder entfernen. Wenn Sie beispielsweise die Gmail-App in einem Android-Arbeitsprofil bereitstellen, können Sie verhindern, dass Benutzer Konten in diesem Arbeitsprofil hinzufügen oder entfernen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem das Hinzufügen von Konten im Arbeitsprofil standardmäßig.  
 
   > [!NOTE]
   > Google-Konten können keinem Arbeitsprofil hinzugefügt werden.
 
-- **Kontaktfreigabe über Bluetooth:** Ermöglicht den Zugriff auf Geschäftskontakte von einem anderen Gerät aus, z.B. aus dem Auto, wenn es mit Bluetooth gekoppelt ist. Diese Einstellung ist standardmäßig nicht konfiguriert, und Kontakte aus dem Arbeitsprofil werden nicht angezeigt. Klicken Sie auf **Aktivieren**, um diese Freigabe zuzulassen und um Kontakte aus dem Arbeitsprofil anzuzeigen. Diese Einstellung ist auf Geräten unter Android OS 6.0 und höher verfügbar, auf denen Arbeitsprofile eingerichtet wurden. Wenn Sie diese Einstellung aktivieren, können bestimmte Bluetooth-Geräte bei der ersten Verbindung Arbeitskontakte zwischenspeichern. Durch das Deaktivieren dieser Richtlinie nach einer ersten Kopplung bzw. Synchronisierung werden die Arbeitskontakte von einem Bluetooth-Gerät möglicherweise nicht entfernt.
+- **Kontaktfreigabe über Bluetooth:** Wenn **Aktivieren** festgelegt wird, wird das Freigeben und Zugreifen auf Arbeitsprofilkontakte über ein anderes Gerät erlaubt, einschließlich Autos, die per Bluetooth gekoppelt werden. Wenn Sie diese Einstellung aktivieren, können bestimmte Bluetooth-Geräte bei der ersten Verbindung Arbeitskontakte zwischenspeichern. Durch das Deaktivieren dieser Richtlinie nach einer ersten Kopplung bzw. Synchronisierung werden die Arbeitskontakte von einem Bluetooth-Gerät möglicherweise nicht entfernt.
 
-- **Bildschirmaufnahme:** Wählen Sie **Blockieren** aus, um zu verhindern, dass Screenshots oder Bildschirmaufnahmen auf dem Gerät im Arbeitsprofil vorgenommen werden. Zudem wird verhindert, dass der Inhalt auf Anzeigegeräten angezeigt wird, die über keine sichere Videoausgabe verfügen. **Nicht konfiguriert** ermöglicht das Erstellen von Screenshots.
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise gibt das Betriebssystem Arbeitskontakte standardmäßig nicht frei.
 
-- **Anrufer-ID des Geschäftskontakts im persönlichen Profil anzeigen:** Wenn diese Option aktiviert ist (**Nicht konfiguriert**), werden die Anruferdetails des Geschäftskontakts im persönlichen Profil angezeigt. Mit **Blockieren** wird die Anrufernummer des Arbeitskontakts im persönlichen Profil nicht angezeigt. Gilt für Android OS v6.0 und neuere Versionen.
+  Diese Einstellung gilt für:
 
-- **Geschäftskontakte vom persönlichen Profil aus suchen:** Wählen Sie **Blockieren** aus, um zu verhindern, dass Benutzer in Apps im persönlichen Profil nach Geschäftskontakten suchen. **Nicht erforderlich** ermöglicht das Suchen nach Arbeitskontakten im persönlichen Profil.
+  - Android-Arbeitsprofilgeräte mit Android 6.0 und höher
 
-- **Kamera:** Wählen Sie **Blockieren** aus, um den Zugriff auf die Kamera des Geräts im Arbeitsprofil zu verhindern. Die Kamera im persönlichen Profil ist von dieser Einstellung nicht betroffen. **Nicht erforderlich** ermöglicht den Zugriff auf die Kamera im Arbeitsprofil.
+- **Bildschirmaufnahme:** Wenn **Blockieren** festgelegt wird, werden Screenshots oder Bildschirmaufnahmen auf dem Gerät im Arbeitsprofil verhindert. Zudem wird verhindert, dass der Inhalt auf Anzeigegeräten angezeigt wird, die über keine sichere Videoausgabe verfügen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem das Aufnehmen von Screenshots standardmäßig.
 
-- **Widgets aus Arbeitsprofil-Apps zulassen:** **Aktivieren** ermöglicht, dass Endbenutzer von Apps verfügbar gemachte Widgets auf dem Startbildschirm platzieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird dieses Feature deaktiviert.
+- **Anrufer-ID des Geschäftskontakts im persönlichen Profil anzeigen:** Wenn **Blockieren** festgelegt wird, wird die Anrufnummer von Arbeitskontakten im persönlichen Profil nicht angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem die Anruferkontaktinformationen standardmäßig an.
+
+  Diese Einstellung gilt für:
+
+  - Android 6.0 und höher
+
+- **Geschäftskontakte vom persönlichen Profil aus suchen:** Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, im persönlichen Profil in Apps nach Arbeitskontakten zu suchen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem die Suche nach Arbeitskontakten im persönlichen Profil standardmäßig.
+
+- **Kamera:** Wenn **Blockieren** festgelegt wird, wird der Zugriff auf die Kamera des Geräts im Arbeitsprofil verhindert. Die Kamera im persönlichen Profil ist von dieser Einstellung nicht betroffen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise den Zugriff auf die Kamera zu.
+
+- **Widgets aus Arbeitsprofil-Apps zulassen:** Wenn **Aktivieren** festgelegt wird, können Benutzer von Apps zur Verfügung gestellte Widgets auf dem Startbildschirm platzieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem diese Funktion deaktivieren.
 
   Angenommen, Outlook ist für das Arbeitsprofil Ihrer Benutzer installiert. Wenn diese Einstellung auf **Aktivieren** festgelegt ist, können Benutzer das Agenda-Widget auf dem Startbildschirm des Geräts platzieren.
 
-#### <a name="work-profile-password"></a>Arbeitsprofilkennwort
+- **Arbeitsprofilkennwort erforderlich:** Wenn **Erforderlich** festgelegt wird, wird eine Passcode-Richtlinie erzwungen, die nur für Apps im Arbeitsprofil gilt. Benutzer können die zwei separat definierten PINs standardmäßig verwenden. Alternativ können Benutzer die PINs in die sicherere PIN kombinieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem Benutzern standardmäßig die Verwendung von Arbeits-Apps, ohne die Eingabe eines Passcodes zu erfordern.
 
-- **Arbeitsprofilkennwort erforderlich:** Gilt für Android 7.0 und höher mit aktiviertem Arbeitsprofil. Wählen Sie **Anfordern** aus, um eine Kennungsrichtlinie einzugeben, die nur für Apps im Arbeitsprofil gilt. Standardmäßig kann der Endbenutzer die beiden separat definierten PINs verwenden oder diese zu einer PIN kombinieren, die die Stärke der jeweils stärkeren PIN übernimmt. **Nicht konfiguriert** ermöglicht dem Benutzer, Arbeits-Apps ohne Kennworteingabe zu verwenden.
-- **Minimale Kennwortlänge:** Geben Sie eine Mindestanzahl von **4**-**16** Zeichen ein, die das Benutzerkennwort enthalten muss.
-- **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Sperrung des Arbeitsprofils:** Wählen Sie den Zeitraum aus, nach dem das Arbeitsprofil gesperrt wird. Der Benutzer muss dann seine Anmeldeinformationen eingeben, um wieder Zugriff zu erhalten.
-- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie ein, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Arbeitsprofil vom Gerät gelöscht wird.
-- **Kennwortablauf (Tage):** Geben Sie eine Anzahl von Tagen von **1**-**365** ein, nach deren Verstreichen das Kennwort eines Endbenutzers geändert werden muss.
-- **Erforderlicher Kennworttyp:** Wählen Sie den Typ des Kennworts aus, das auf dem Gerät festgelegt werden muss. Es stehen die folgenden Optionen zur Auswahl:
+  Diese Einstellung gilt für:
+
+  - Android 7.0 und höher mit aktiviertem Arbeitsprofil
+
+- **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).
+- **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Sperrung des Arbeitsprofils:** Geben Sie den Zeitraum an, für den sich ein Gerät im Leerlauf befinden muss, bevor der Bildschirm automatisch gesperrt wird. Benutzer müssen ihre Anmeldeinformationen eingeben, um wieder Zugriff zu erhalten. Geben Sie zum Beispiel `5` ein, um Geräte nach 5 Minuten im Leerlauf zu sperren. Wenn kein Wert angegeben oder **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+
+  Benutzer können keinen Zeitwert auf Geräten festlegen, der über dem im Profil konfigurierten Zeitwert liegt. Benutzer können einen niedrigeren Zeitwert festlegen. Wenn das Profil beispielsweise auf `15` Minuten festgelegt wird, können Benutzer einen Wert von 5 Minuten festlegen. Benutzer können den Wert jedoch nicht auf 30 Minuten festlegen.
+
+- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Gerät zurückgesetzt wird (zwischen 4 und 11). Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+
+- **Kennwortablauf (Tage):** Geben Sie die Anzahl der Tage (von **1**-**365**) ein, nach der Benutzerkennwörter geändert werden müssen.
+- **Erforderlicher Kennworttyp:** Geben Sie den erforderlichen Grad der Kennwortkomplexität ein, und bestimmen Sie, ob biometrische Geräte zulässig sind. Folgende Optionen sind verfügbar:
   - **Gerätestandard**
-  - **Biometrie auf niedriger Sicherheitsstufe**
+  - **Biometrie auf niedriger Sicherheitsstufe:** [Vergleich von stark und schwach biometrisch](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (öffnet Android-Website)
   - **Erforderlich**
-  - **Mindestens numerisch**
-  - **Numerisch, komplex:** Sich wiederholende oder fortlaufende Ziffern wie „1111“ oder „1234“ sind nicht zulässig.
-  - **Mindestens alphabetisch**
-  - **Mindestens alphanumerisch**
-  - **Mindestens alphanumerisch mit Symbolen**
-- **Wiederverwendung vorheriger Kennwörter verhindern:** Geben Sie eine Anzahl neuer Kennwörter von **1**-**24** ein, die verwendet werden müssen, bevor ein altes Kennwort wiederverwendet werden kann.
-- **Entsperrung durch Fingerabdruck:** Wählen Sie **Blockieren** aus, um zu verhindern, dass ein Endbenutzer das Gerät mithilfe des Fingerabdruckscanners entsperren kann. **Nicht konfiguriert** ermöglicht Benutzern das Entsperren von Geräten mit einem Fingerabdruck im Arbeitsprofil.
-- **Smart Lock und andere Vertrauens-Agents:** Wählen Sie **Blockieren** aus, um zu verhindern, dass Smart Lock oder andere Vertrauens-Agents Sperrbildschirmeinstellungen auf kompatiblen Geräten anpassen können. Dieses Feature wird auch als Vertrauens-Agent bezeichnet und ermöglicht es Ihnen, das Kennwort für den Gerätesperrbildschirm zu deaktivieren oder zu umgehen, wenn sich das Gerät an einem vertrauenswürdigen Standort befindet. Umgehen Sie z. B. das Kennwort für das Arbeitsprofil, wenn das Gerät mit einem bestimmten Bluetooth-Gerät verbunden ist oder sich in der Nähe eines NFC-Tags befindet. Mit dieser Einstellung können Sie verhindern, dass Benutzer Smart Lock konfigurieren.
+  - **Mindestens numerisch:** Bei dieser Einstellung sind numerische Zeichen wie `123456789` enthalten.
+  - **Numerisch, komplex:** Bei dieser Einstellung sind wiederholte oder fortlaufende Zahlen wie `1111` oder `1234` nicht zulässig.
+  - **Mindestens alphabetisch**: Bei dieser Einstellung sind Buchstaben des Alphabets enthalten. Zahlen und Symbole sind nicht erforderlich.
+  - **Mindestens alphanumerisch**: Schließt Großbuchstaben, Kleinbuchstaben und Ziffern ein.
+  - **Mindestens alphanumerisch mit Symbolen**: Schließt Großbuchstaben, Kleinbuchstaben, Ziffern, Interpunktionszeichen und Symbole ein.
 
-### <a name="device-password"></a>Gerätekennwort
+- **Wiederverwendung vorheriger Kennwörter verhindern:** Verwenden Sie diese Einstellung, um zu verhindern, dass Benutzer zuvor verwendete Kennwörter erstellen. Geben Sie die Anzahl der zuvor verwendeten Kennwörter ein, die nicht erneut verwendet werden können, von 1–24. Geben Sie z.B. `5` an, damit ein Benutzer sein neues Kennwort nicht auf sein aktuelles Kennwort oder eines seiner vorherigen vier Kennwörter festlegen kann. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+- **Entsperrung durch Fingerabdruck:** Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, den Fingerabdruckscanner des Geräts zum Entsperren zu verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer das Gerät per Fingerabdruck entsperren.
+- **Smart Lock und andere Vertrauens-Agents:** Wenn **Blockieren** festgelegt wird, werden Smart Lock und andere Vertrauens-Agents daran gehindert, die Sperrbildschirmeinstellungen auf kompatiblen Geräten anzupassen. Dieses Feature wird auch als Vertrauens-Agent bezeichnet und ermöglicht es Ihnen, das Kennwort für den Gerätesperrbildschirm zu deaktivieren oder zu umgehen, wenn sich das Gerät an einem vertrauenswürdigen Standort befindet. Beispielsweise können Sie das Arbeitsprofilkennwort umgehen, wenn Geräte mit einem bestimmten Bluetooth-Gerät verbunden sind oder sich in der Nähe eines NFC-Tags befinden. Mit dieser Einstellung können Sie verhindern, dass Benutzer Smart Lock konfigurieren.
+
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+
+### <a name="password"></a>Kennwort
 
 Diese Kennworteinstellungen gelten für persönliche Profile auf Geräten, die ein Arbeitsprofil verwenden.
 
-- **Minimale Kennwortlänge:** Geben Sie eine Mindestanzahl von **4**-**14** Zeichen ein, die das Benutzerkennwort enthalten muss.
-- **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Bildschirmsperrung:** Wählen Sie den Zeitraum aus, nach dem ein inaktives Gerät automatisch gesperrt wird.
-- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie ein, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Arbeitsprofil vom Gerät gelöscht wird.
-- **Kennwortablauf (Tage):** Geben Sie eine Anzahl von Tagen von **1**-**365** ein, nach deren Verstreichen das Kennwort eines Endbenutzers geändert werden muss.
-- **Erforderlicher Kennworttyp:** Wählen Sie den Typ des Kennworts aus, das auf dem Gerät festgelegt werden muss. Es stehen die folgenden Optionen zur Auswahl:
+- **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).
+- **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Bildschirmsperrung:** Geben Sie den Zeitraum an, für den sich ein Gerät im Leerlauf befinden muss, bevor der Bildschirm automatisch gesperrt wird. Benutzer müssen ihre Anmeldeinformationen eingeben, um wieder Zugriff zu erhalten. Geben Sie zum Beispiel `5` ein, um Geräte nach 5 Minuten im Leerlauf zu sperren. Wenn kein Wert angegeben oder **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+
+  Benutzer können keinen Zeitwert auf Geräten festlegen, der über dem im Profil konfigurierten Zeitwert liegt. Benutzer können einen niedrigeren Zeitwert festlegen. Wenn das Profil beispielsweise auf `15` Minuten festgelegt wird, können Benutzer einen Wert von 5 Minuten festlegen. Benutzer können den Wert jedoch nicht auf 30 Minuten festlegen.
+
+- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Gerät zurückgesetzt wird (zwischen 4 und 11). Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+- **Kennwortablauf (Tage):** Geben Sie die Anzahl der Tage ein, bis das Gerätekennwort geändert werden muss (von 1 bis 365). Geben Sie beispielsweise `90` an, damit das Kennwort nach 90 Tagen abläuft. Wenn das Kennwort abläuft, werden Benutzer aufgefordert, ein neues Kennwort zu erstellen. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+- **Erforderlicher Kennworttyp:** Geben Sie den erforderlichen Grad der Kennwortkomplexität ein, und bestimmen Sie, ob biometrische Geräte zulässig sind. Folgende Optionen sind verfügbar:
   - **Gerätestandard**
-  - **Biometrie auf niedriger Sicherheitsstufe**
+  - **Biometrie auf niedriger Sicherheitsstufe:** [Vergleich von stark und schwach biometrisch](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (öffnet Android-Website)
   - **Erforderlich**
-  - **Mindestens numerisch**
-  - **Numerisch, komplex:** Sich wiederholende oder fortlaufende Ziffern wie „1111“ oder „1234“ sind nicht zulässig.
-  - **Mindestens alphabetisch**
-  - **Mindestens alphanumerisch**
-  - **Mindestens alphanumerisch mit Symbolen**
-- **Wiederverwendung vorheriger Kennwörter verhindern:** Geben Sie eine Anzahl neuer Kennwörter von **1**-**24** ein, die verwendet werden müssen, bevor ein altes Kennwort wiederverwendet werden kann.
-- **Entsperrung durch Fingerabdruck:** Wählen Sie **Blockieren** aus, um zu verhindern, dass ein Endbenutzer das Gerät mithilfe des Fingerabdruckscanners entsperren kann. **Nicht konfiguriert** ermöglicht dem Benutzer das Entsperren des Geräts mittels Fingerabdruck.
-- **Smart Lock und andere Vertrauens-Agents:** Wählen Sie **Blockieren** aus, um zu verhindern, dass Smart Lock oder andere Vertrauens-Agents Sperrbildschirmeinstellungen auf kompatiblen Geräten anpassen können. Dieses Feature wird auch als Vertrauens-Agent bezeichnet und ermöglicht es Ihnen, das Kennwort für den Gerätesperrbildschirm zu deaktivieren oder zu umgehen, wenn sich das Gerät an einem vertrauenswürdigen Standort befindet. Umgehen Sie z. B. das Kennwort für das Arbeitsprofil, wenn das Gerät mit einem bestimmten Bluetooth-Gerät verbunden ist oder sich in der Nähe eines NFC-Tags befindet. Mit dieser Einstellung können Sie verhindern, dass Benutzer Smart Lock konfigurieren.
+  - **Mindestens numerisch:** Bei dieser Einstellung sind numerische Zeichen wie `123456789` enthalten.
+  - **Numerisch, komplex:** Bei dieser Einstellung sind wiederholte oder fortlaufende Zahlen wie `1111` oder `1234` nicht zulässig.
+  - **Mindestens alphabetisch**: Bei dieser Einstellung sind Buchstaben des Alphabets enthalten. Zahlen und Symbole sind nicht erforderlich.
+  - **Mindestens alphanumerisch**: Schließt Großbuchstaben, Kleinbuchstaben und Ziffern ein.
+  - **Mindestens alphanumerisch mit Symbolen**: Schließt Großbuchstaben, Kleinbuchstaben, Ziffern, Interpunktionszeichen und Symbole ein.
+
+- **Wiederverwendung vorheriger Kennwörter verhindern:** Verwenden Sie diese Einstellung, um zu verhindern, dass Benutzer zuvor verwendete Kennwörter erstellen. Geben Sie die Anzahl der zuvor verwendeten Kennwörter ein, die nicht erneut verwendet werden können, von 1–24. Geben Sie z.B. `5` an, damit ein Benutzer sein neues Kennwort nicht auf sein aktuelles Kennwort oder eines seiner vorherigen vier Kennwörter festlegen kann. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+- **Entsperrung durch Fingerabdruck:** Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, den Fingerabdruckscanner des Geräts zum Entsperren zu verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer das Gerät per Fingerabdruck entsperren.
+- **Smart Lock und andere Vertrauens-Agents:** Wenn **Blockieren** festgelegt wird, werden Smart Lock und andere Vertrauens-Agents daran gehindert, die Sperrbildschirmeinstellungen auf kompatiblen Geräten anzupassen. Dieses Feature wird auch als Vertrauens-Agent bezeichnet und ermöglicht es Ihnen, das Kennwort für den Gerätesperrbildschirm zu deaktivieren oder zu umgehen, wenn sich das Gerät an einem vertrauenswürdigen Standort befindet. Beispielsweise können Sie das Arbeitsprofilkennwort umgehen, wenn Geräte mit einem bestimmten Bluetooth-Gerät verbunden sind oder sich in der Nähe eines NFC-Tags befinden. Mit dieser Einstellung können Sie verhindern, dass Benutzer Smart Lock konfigurieren.
+
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
 ### <a name="system-security"></a>Systemsicherheit
 
-- **Bedrohungsüberprüfung für Apps:** Die Option **Anfordern** erzwingt, dass die Einstellung **Apps überprüfen** für Arbeitsprofile und persönliche Profile aktiviert ist.
+- **Bedrohungsüberprüfung für Apps:** Die Option **Anfordern** erzwingt, dass die Einstellung **Apps überprüfen** für Arbeitsprofile und persönliche Profile aktiviert ist. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
-   > [!Note]
-   > Diese Einstellung funktioniert nur auf Geräten mit Android 8 (Oreo) und höher.
+  Diese Einstellung gilt für:
 
-- **App-Installationen aus unbekannten Quellen im persönlichen Profil verhindern:** Entwurfsbedingt können auf Android Enterprise-Geräten mit Arbeitsprofil keine Apps aus Quellen außerhalb des Play Store installiert werden. Geräte mit Arbeitsprofil sind auf zwei Profile ausgelegt:
+  - Android 8 (Oreo) und höher
+
+- **App-Installationen aus unbekannten Quellen im persönlichen Profil verhindern:** Entwurfsbedingt können auf Android Enterprise-Geräten mit Arbeitsprofil keine Apps aus Quellen außerhalb des Play Store installiert werden. Diese Einstellung ermöglicht Administratoren eine bessere Kontrolle über App-Installationen aus unbekannten Quellen. Wenn **Blockieren** festgelegt wird, werden App-Installationen im persönlichen Profil aus anderen Quellen als dem Google Play Store verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem App-Installationen im persönlichen Profil möglicherweise nicht aus unbekannten Quellen zu. Geräte mit Arbeitsprofil sind auf zwei Profile ausgelegt:
 
   - Ein MDM-verwaltetes Arbeitsprofil
   - Ein privates, von der MDM-Verwaltung unabhängiges Profil
 
-  Diese Einstellung ermöglicht Administratoren eine bessere Kontrolle über App-Installationen aus unbekannten Quellen. **Nicht konfiguriert** (Standardwert) ermöglicht im persönlichen Profil App-Installationen aus unbekannten Quellen. **Blockieren** verhindert App-Installationen im privaten Profil aus anderen Quellen als dem Play Store.
-
 ### <a name="connectivity"></a>Verbindung
 
-- **Always On-VPN:** Wählen Sie **Aktivieren** aus, um einen VPN-Client so festzulegen, dass er automatisch eine Verbindung mit dem VPN herstellt und erneut herstellt. Always On-VPN-Verbindungen bleiben erhalten oder werden sofort hergestellt, wenn der Benutzer sein Gerät sperrt, das Gerät neu gestartet wird oder das drahtlose Netzwerk sich ändert. 
+- **Always On-VPN:** **Aktivieren** legt einen VPN-Client so fest, dass er automatisch eine Verbindung mit dem VPN herstellt und erneut herstellt. Always On-VPN-Verbindungen bleiben aktiv. Alternativ wird die Verbindung sofort wiederhergestellt, wenn der Benutzer sein Gerät sperrt, das Gerät neu gestartet wird oder das Drahtlosnetzwerk geändert wird.
 
-  Wählen Sie **Nicht konfiguriert** aus, um das Always On-VPN für alle VPN-Clients zu deaktivieren.
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig deaktiviert das Betriebssystem Always On-VPN möglicherweise für alle VPN-Clients.
 
   > [!IMPORTANT]
   > Stellen Sie sicher, dass Sie nur eine Always On-VPN-Richtlinie auf einem einzelnen Gerät bereitstellen. Die Bereitstellung mehrerer Always VPN-Richtlinien auf einem einzelnen Gerät wird nicht unterstützt.
@@ -383,13 +418,13 @@ Diese Kennworteinstellungen gelten für persönliche Profile auf Geräten, die e
     - **Paket-ID:** Geben Sie die Paket-ID der App im Google Play Store ein. Wenn z. B. die URL für die App im Play Store `https://play.google.com/store/details?id=com.contosovpn.android.prod` lautet, dann ist die Paket-ID `com.contosovpn.android.prod`.
 
   > [!IMPORTANT]
-  > - Der von Ihnen ausgewählte VPN-Client muss auf dem Gerät installiert sein und VPN pro Anwendung in Arbeitsprofilen unterstützen. Andernfalls tritt ein Fehler auf. 
+  > - Der von Ihnen ausgewählte VPN-Client muss auf dem Gerät installiert sein und VPN pro Anwendung in Arbeitsprofilen unterstützen. Andernfalls tritt ein Fehler auf.
   > - Sie müssen die VPN-Client-App im **verwalteten Google Play Store** genehmigen, die App mit Intune synchronisieren und die App auf dem Gerät bereitstellen. Danach wird die App im Arbeitsprofil des Benutzers installiert.
   > - Es gibt eventuell bekannte Probleme bei der Verwendung von VPN pro App mit F5 Access for Android 3.0.4. Weitere Informationen finden Sie unter [F5's release notes for F5 Access for Android 3.0.4 (Versionshinweise zu F5 Access for Android 3.0.4)](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
-- **Sperrmodus:** Wählen Sie **Aktivieren** aus, um den gesamten Netzwerkdatenverkehr zu zwingen, den VPN-Tunnel zu verwenden. Wenn keine Verbindung zum VPN hergestellt wird, hat das Gerät keinen Netzwerkzugriff.
+- **Sperrmodus:** Wenn **Aktivieren** festgelegt wird, wird jeglicher Netzwerkdatenverkehr durch den VPN-Tunnel erzwungen. Wenn keine Verbindung zum VPN hergestellt wird, hat das Gerät keinen Netzwerkzugriff.
 
-  Wählen Sie **Nicht konfiguriert** aus, damit der Datenverkehr durch den VPN-Tunnel oder durch das Mobilfunknetz fließen kann.
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem den Datenverkehr durch den VPN-Tunnel oder über das Mobilfunknetz standardmäßig zu.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -397,6 +432,4 @@ Diese Kennworteinstellungen gelten für persönliche Profile auf Geräten, die e
 
 Außerdem können Sie Kioskprofile auf dedizierten Geräten für [Android](device-restrictions-android.md#kiosk)- und [Windows 10](kiosk-settings.md)-Geräte erstellen.
 
-## <a name="see-also"></a>Weitere Informationen:
-
-[Konfigurieren und Problembehandlung von Android Enterprise-Geräten in Microsoft Intune](https://support.microsoft.com/help/4476974)
+[Konfigurieren und Behandeln von Problemen bei Android Enterprise-Geräten in Microsoft Intune](https://support.microsoft.com/help/4476974)

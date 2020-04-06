@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81246598fce3c03c95d9fd052e058749932bff4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342776"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80358700"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurieren der Managed Home Screen-App von Microsoft für Android Enterprise
 
@@ -34,9 +34,9 @@ Managed Home Screen ist die App, die für unternehmenseigene dedizierte Android 
 Wenn Ihnen Einstellungen über „Gerätekonfiguration“ zur Verfügung stehen, konfigurieren Sie die Einstellungen normalerweise dort. Auf diese Weise können Sie Zeit sparen, Fehler minimieren und erhalten eine bessere Benutzeroberfläche für Intune-Support. Allerdings stehen einige der Einstellungen für Managed Home Screen derzeit nur im Bereich **App-Konfigurationsrichtlinien** in der Intune-Konsole zur Verfügung. Anhand dieses Dokuments lernen Sie, wie Sie die verschiedenen Einstellungen entweder mithilfe des Konfigurations-Designers oder eines JSON-Skripts konfigurieren. 
 
 > [!NOTE]
-> Es ist derzeit möglich und ratsam, Anwendungen für die Zulassungsliste und angeheftete Weblinks über **Apps** und **Gerätekonfiguration** festzulegen. Die vollständige Liste von Einstellungen, die in **Gerätekonfiguration** zur Verfügung stehen und sich auf Managed Home Screen auswirken, finden Sie unter [Einstellungen dedizierter Geräte](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
+> Es ist derzeit möglich und ratsam, Anwendungen für die Zulassungsliste und angeheftete Weblinks über **Apps** und **Gerätekonfiguration** festzulegen. Die vollständige Liste von Einstellungen, die in **Gerätekonfiguration** zur Verfügung stehen und sich auf Managed Home Screen auswirken, finden Sie unter [Einstellungen dedizierter Geräte](../configuration/device-restrictions-android-for-work.md#dedicated-devices).  
 
-Navigieren Sie zuerst zum [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), und wählen Sie **Apps** > **App-Konfigurationsrichtlinien** aus. Fügen Sie eine Konfigurationsrichtlinie für **Verwaltete Geräte** unter **Android** hinzu, und wählen Sie **Managed Home Screen** als zugeordnete App aus. Klicken Sie auf **Konfigurationseinstellungen**, um die verschiedenen verfügbaren Einstellungen für Managed Home Screen zu konfigurieren. 
+Navigieren Sie zuerst zum [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), und klicken Sie auf **Apps** > **App-Konfigurationsrichtlinien**. Fügen Sie eine Konfigurationsrichtlinie für **Verwaltete Geräte** unter **Android** hinzu, und wählen Sie **Managed Home Screen** als zugeordnete App aus. Klicken Sie auf **Konfigurationseinstellungen**, um die verschiedenen verfügbaren Einstellungen für Managed Home Screen zu konfigurieren. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Auswählen eines Formats für die Konfigurationseinstellungen
 
@@ -136,7 +136,7 @@ Dies ist ein Beispiel für ein JSON-Skript, in dem alle verfügbaren Konfigurati
                     "managedProperty": [
                         {
                             "key": "package",
-                            "valueString": “app package name here”
+                            "valueString": "app package name here"
                         }
                     ]
                 }
@@ -149,11 +149,11 @@ Dies ist ein Beispiel für ein JSON-Skript, in dem alle verfügbaren Konfigurati
                     "managedProperty": [
                         {
                             "key": "link",
-                            "valueString": “link here”
+                            "valueString": "link here"
                         },
                         {
                             "key": "label",
-                            "valueString": “weblink label here”
+                            "valueString": "weblink label here"
                         }
                     ]
                 }
@@ -335,7 +335,7 @@ Dies ist ein Beispiel für ein JSON-Skript, in dem alle verfügbaren Konfigurati
 Mit der App „Managed Home Screen“ ist nun der Zugriff auf die Android Device Policy-App von Google möglich. Die App „Managed Home Screen“ ist ein benutzerdefiniertes Startprogramm, das für Geräte verwendet wird, die bei Intune als dedizierte Android Enterprise-Geräte (AE) registriert sind und den Kioskmodus mit mehreren Apps verwenden. Zu Unterstützungs- und Debugzwecken können Sie auf die Android Device Policy-App zugreifen oder Benutzer auf diese weiterleiten. Diese Startfunktion ist verfügbar, sobald das Gerät registriert wird und sich bei der App „Managed Home Screen“ einloggt. Für diese Funktion sind keine weiteren Installationen nötig.
 
 ## <a name="managed-home-screen-debug-screen"></a>Managed Home Screen-Debugbildschirm
-Sie können auf den Managed Home Screen-Debugbildschirm zugreifen, indem Sie auf die Schaltfläche **Zurück** klicken, bis der Debugbildschirm angezeigt wird (klicken Sie mindestens 15 mal auf die Schaltfläche **Zurück**). Von diesem Debugbildschirm aus können Sie die Android Device Policy-Anwendung starten, Protokolle anzeigen und hochladen oder den Kioskmodus vorübergehend anhalten, um das Gerät zu aktualisieren. Weitere Informationen zum Anhalten des Kioskmodus finden Sie unter **Kioskmodus verlassen** in den [Einstellungen dedizierter Geräte](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings) in Android Enterprise.
+Sie können auf den Managed Home Screen-Debugbildschirm zugreifen, indem Sie auf die Schaltfläche **Zurück** klicken, bis der Debugbildschirm angezeigt wird (klicken Sie mindestens 15 mal auf die Schaltfläche **Zurück**). Von diesem Debugbildschirm aus können Sie die Android Device Policy-Anwendung starten, Protokolle anzeigen und hochladen oder den Kioskmodus vorübergehend anhalten, um das Gerät zu aktualisieren. Weitere Informationen zum Anhalten des Kioskmodus finden Sie unter **Kioskmodus verlassen** in den [Einstellungen dedizierter Geräte](../configuration/device-restrictions-android-for-work.md#dedicated-devices) in Android Enterprise.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

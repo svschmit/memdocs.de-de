@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad456ef7cc88ccb24079010479bd8f27292eb73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363264"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326935"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Behandeln von Problemen bei der iOS/iPadOS-Geräteregistrierung in Microsoft Intune
 
@@ -41,7 +41,7 @@ Sammeln Sie die folgenden Informationen zum Problem:
 - Wie viele Benutzer sind betroffen? Sind alle oder nur einige Benutzer betroffen?
 - Wie viele Geräte sind betroffen? Sind alle oder nur einige Geräte betroffen?
 - Welche MDM-Autorität wird verwendet?
-- Wie wird die Registrierung durchgeführt? Wird BYOD (Bring Your Own Device) oder das Apple-Programm zur Geräteregistrierung (DEP) mit Registrierungsprofilen verwendet?
+- Wie wird die Registrierung durchgeführt? Wird BYOD (Bring Your Own Device) oder die automatische Geräteregistrierung von Apple (ADE) mit Registrierungsprofilen verwendet?
 
 ## <a name="error-messages"></a>Fehlermeldungen
 
@@ -106,7 +106,7 @@ Wenn Ihr Unternehmen mehrere Domänen für die Anmeldeinformationen der Benutzer
 **Ursache**: Der Benutzer, der das Gerät registrieren möchte, besitzt keine Microsoft Intune-Lizenz.
 
 #### <a name="resolution"></a>Lösung
-1. Wechseln Sie zum [Office 365 Admin Center](https://portal.office.com/adminportal/home#/homepage), und wählen Sie dann **Benutzer > Aktive Benutzer** aus.
+1. Wechseln Sie zum [Office 365 Admin Center](https://admin.microsoft.com), und wählen Sie dann **Benutzer > Aktive Benutzer** aus.
 2. Wählen Sie das Benutzerkonto aus, dem Sie eine Intune-Benutzerlizenz zuweisen möchten, und klicken Sie dann auf **Produktlizenzen > Bearbeiten**.
 3. Legen Sie den Umschalter für die dem Benutzer zuzuweisende Lizenz auf **Ein** fest, und klicken Sie dann auf **Speichern**.
 4. Registrieren Sie das Gerät erneut.
@@ -157,7 +157,7 @@ Wenn Ihr Unternehmen mehrere Domänen für die Anmeldeinformationen der Benutzer
 **Ursache**: Der Benutzer, der das Gerät registrieren möchte, besitzt keine gültige Intune-Lizenz.
 
 #### <a name="resolution"></a>Lösung
-1. Wechseln Sie zum [Microsoft 365 Admin Center](https://portal.office.com/adminportal/home#/homepage), und klicken Sie auf **Benutzer** > **Aktive Benutzer**.
+1. Wechseln Sie zum [Microsoft 365 Admin Center](https://admin.microsoft.com), und klicken Sie auf **Benutzer** > **Aktive Benutzer**.
 2. Wählen Sie das betroffene Benutzerkonto aus, und klicken Sie auf **Produktlizenzen** > **Bearbeiten**.
 3. Überprüfen Sie, ob diesem Benutzer eine gültige Intune-Lizenz zugewiesen ist.
 4. Registrieren Sie das Gerät erneut.
@@ -166,7 +166,7 @@ Wenn Ihr Unternehmen mehrere Domänen für die Anmeldeinformationen der Benutzer
 
 **Ursache**: Der Benutzer, der das Gerät registrieren möchte, besitzt keine gültige Intune-Lizenz.
 
-1. Wechseln Sie zum [Microsoft 365 Admin Center](https://portal.office.com/adminportal/home#/homepage), und klicken Sie auf **Benutzer** > **Aktive Benutzer**.
+1. Wechseln Sie zum [Microsoft 365 Admin Center](https://admin.microsoft.com), und klicken Sie auf **Benutzer** > **Aktive Benutzer**.
 2. Wählen Sie das betroffene Benutzerkonto aus, und klicken Sie dann auf **Produktlizenzen** > **Bearbeiten**.
 3. Überprüfen Sie, ob diesem Benutzer eine gültige Intune-Lizenz zugewiesen ist.
 4. Registrieren Sie das Gerät erneut.
@@ -203,7 +203,7 @@ Erneuern Sie das APNs-Zertifikat, und registrieren Sie das Gerät erneut.
 
 ### <a name="xpc_type_error-connection-invalid"></a>Ungültige XPC_TYPE_ERROR-Verbindung
 
-Wenn Sie ein DEP-verwaltetes Gerät einschalten, dem ein Registrierungsprofil zugewiesen ist, tritt bei der Registrierung ein Fehler auf, und Sie erhalten die folgende Fehlermeldung:
+Wenn Sie ein ADE-verwaltetes Gerät einschalten, dem ein Registrierungsprofil zugewiesen ist, tritt bei der Registrierung ein Fehler auf, und Sie erhalten die folgende Fehlermeldung:
 
 ```
 asciidoc
@@ -213,7 +213,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**Ursache**: Zwischen dem Gerät und dem Apple-DEP-Dienst besteht ein Verbindungsproblem.
+**Ursache**: Zwischen dem Gerät und dem Apple-ADE-Dienst besteht ein Verbindungsproblem.
 
 #### <a name="resolution"></a>Lösung
 Beheben Sie das Verbindungsproblem, oder verwenden Sie eine andere Netzwerkverbindung, um das Gerät zu registrieren. Falls das Problem weiterhin besteht, müssen Sie sich möglicherweise auch an Apple wenden.
@@ -221,20 +221,20 @@ Beheben Sie das Verbindungsproblem, oder verwenden Sie eine andere Netzwerkverbi
 
 ## <a name="other-issues"></a>Andere Probleme
 
-### <a name="dep-enrollment-doesnt-start"></a>DEP-Registrierung wird nicht gestartet
-Wenn Sie ein DEP-verwaltetes Gerät einschalten, dem ein Registrierungsprofil zugewiesen ist, wird der Vorgang zur Intune-Registrierung nicht eingeleitet.
+### <a name="ade-enrollment-doesnt-start"></a>ADE-Registrierung wird nicht gestartet
+Wenn Sie ein ADE-verwaltetes Gerät einschalten, dem ein Registrierungsprofil zugewiesen ist, wird der Vorgang zur Intune-Registrierung nicht eingeleitet.
 
-**Ursache**: Das Registrierungsprofil wird erstellt, bevor das DEP-Token in Intune hochgeladen wird.
+**Ursache**: Das Registrierungsprofil wird erstellt, bevor das ADE-Token in Intune hochgeladen wird.
 
 #### <a name="resolution"></a>Lösung
 
 1. Bearbeiten Sie das Registrierungsprofil. Sie können Änderungen am Profil vornehmen. Der Zweck besteht darin, die Änderungszeit des Profils zu aktualisieren.
-2. Synchronisieren von DEP-verwalteten Geräten: Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** > wählen Sie ein Token aus > **Jetzt synchronisieren**. Eine Synchronisierungsanforderung wird an Apple gesendet.
+2. Synchronisieren von ADE-verwalteten Geräten: Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Enrollment program tokens** (Registrierungsprogrammtoken), wählen Sie ein Token aus, und klicken Sie auf **Jetzt synchronisieren**. Eine Synchronisierungsanforderung wird an Apple gesendet.
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>DEP-Registrierung bleibt bei Benutzeranmeldung stehen
-Wenn Sie ein DEP-verwaltetes Gerät einschalten, dem ein Registrierungsprofil zugewiesen ist, wird die erste Einrichtung nach Eingabe der Anmeldeinformationen nicht fortgesetzt.
+### <a name="ade-enrollment-stuck-at-user-login"></a>ADE-Registrierung bleibt bei Benutzeranmeldung stehen
+Wenn Sie ein ADE-verwaltetes Gerät einschalten, dem ein Registrierungsprofil zugewiesen ist, wird die erste Einrichtung nach Eingabe der Anmeldeinformationen nicht fortgesetzt.
 
-**Ursache**: Die mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) ist aktiviert. Die mehrstufige Authentifizierung wird während der Registrierung auf DEP-Geräten aktuell nicht unterstützt.
+**Ursache**: Die mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) ist aktiviert. Die mehrstufige Authentifizierung wird während der Registrierung auf ADE-Geräten aktuell nicht unterstützt.
 
 #### <a name="resolution"></a>Lösung
 Deaktivieren Sie die mehrstufige Authentifizierung, und registrieren Sie das Gerät erneut.

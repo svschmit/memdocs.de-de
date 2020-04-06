@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087101"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359303"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Anwenden von Einstellungen und Funktionen auf Ihren Geräten mit Geräteprofilen in Microsoft Intune
 
@@ -53,7 +53,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 [Zertifikate](../protect/certificates-configure.md) konfigurieren vertrauenswürdige SCEP- und PKCS-Zertifikate, die Geräten zugewiesen werden. Diese Zertifikate authentifizieren WLAN-, VPN- und E-Mail-Profile.
 
-Dieses Features unterstützt folgende Betriebssysteme: 
+Dieses Features unterstützt folgende Betriebssysteme:
 
 - Android-Geräteadministrator
 - Android Enterprise
@@ -84,6 +84,15 @@ Verwenden Sie diese Einstellungen, um zu steuern, wie Softwareupdates auf Gerät
 Dieses Features unterstützt folgende Betriebssysteme:
 
 - Windows 10 und höher
+
+## <a name="derived-credential"></a>Abgeleitete Anmeldeinformation
+
+[Abgeleitete Anmeldeinformationen](../protect/derived-credentials.md) sind Zertifikate auf Smartcards, die zur Authentifizierung, Signierung und Verschlüsselung dienen. In Intune können Sie Profile mit diesen Anmeldeinformationen für Apps, E-Mail-Profile, Verbindungen mit VPNs, S/MIME und WLAN verwenden.
+
+Dieses Features unterstützt folgende Betriebssysteme:
+
+- Android Enterprise
+- iOS/iPadOS
 
 ## <a name="device-features"></a>Gerätefunktionen
 
@@ -133,7 +142,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 ## <a name="education"></a>Education
 
-Mit den [Education settings - Windows 10](education-settings-configure.md) (Education-Einstellungen: Windows 10) können Sie Optionen für die [Take a Test-Windows-App](https://education.microsoft.com/gettrained/win10takeatest) konfigurieren. Wenn Sie diese Optionen konfigurieren, können keine anderen Apps auf dem Gerät ausgeführt werden, bis der Test abgeschlossen ist.
+Mit den [Education settings - Windows 10](education-settings-configure.md) (Education-Einstellungen: Windows 10) können Sie Optionen für die [Take a Test-Windows-App](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) konfigurieren. Wenn Sie diese Optionen konfigurieren, können keine anderen Apps auf dem Gerät ausgeführt werden, bis der Test abgeschlossen ist.
 
 In den [Einstellungen für Bildungseinrichtungen (iOS/iPadOS)](../fundamentals/education-settings-configure-ios-shared.md) wird die iOS/iPadOS-Classroom-App so konfiguriert, dass der Unterricht strukturiert und Geräte von Schülern/Kursteilnehmern im Kursraum gesteuert werden können. Sie können iPad-Geräte so konfigurieren, dass mehrere Schüler/Kursteilnehmer gemeinsam ein Gerät verwenden können.
 
@@ -141,7 +150,7 @@ In den [Einstellungen für Bildungseinrichtungen (iOS/iPadOS)](../fundamentals/e
 
 Mit [E-Mail-Einstellungen](email-settings-configure.md) können Sie Exchange ActiveSync-E-Mail-Einstellungen auf den Geräten erstellen, zuweisen und überwachen. E-Mail-Profile helfen bei der Einheitlichkeit, beim Reduzieren der Anzahl von Supportanfragen und ermöglichen Endbenutzern den Zugriff auf Unternehmens-E-Mails auf ihren persönlichen Geräten, ohne dass ihrerseits eine Konfiguration erforderlich wäre. 
 
-Dieses Features unterstützt folgende Betriebssysteme: 
+Dieses Features unterstützt folgende Betriebssysteme:
 
 - Android-Geräteadministrator
 - Android Enterprise
@@ -151,12 +160,13 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
 
-Mit [Endpoint Protection-Einstellungen für Windows 10](../protect/endpoint-protection-windows-10.md) können Sie BitLocker- und Microsoft Defender-Einstellungen für Windows 10-Geräte konfigurieren.
+[Endpoint Protection](../protect/endpoint-protection-configure.md) konfiguriert BitLocker- und Microsoft Defender-Einstellungen für Windows 10-Geräte. Außerdem werden auf macOS-Geräten die Firewall, das Gateway und andere Ressourcen konfiguriert.
 
 Informationen zur Integration von Microsoft Defender Advanced Threat Protection in Microsoft Intune finden Sie unter [Konfigurieren von Endpunkten mithilfe von Tools für die mobile Geräteverwaltung (MDM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 Dieses Features unterstützt folgende Betriebssysteme:
 
+- macOS
 - Windows 10 und höher
 
 ## <a name="esim-cellular---public-preview"></a>eSIM-Mobiltelefone: Public Preview
@@ -192,7 +202,15 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 - Windows 10 und höher
 
-Kioskeinstellungen sind auch als Geräteeinschränkungen für [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) und [iOS/iPadOS](device-restrictions-ios.md#kiosk) verfügbar.
+Kioskeinstellungen sind auch als Geräteeinschränkungen für [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) und [iOS/iPadOS](device-restrictions-ios.md#kiosk) verfügbar.
+
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+[Microsoft Defender ATP (Advanced Threat Protection)](../protect/advanced-threat-protection.md) integriert mit Intune, um Geräte zu überwachen und zu schützen. Sie können Risikostufen festlegen und festlegen, was geschieht, wenn Geräte die Risikostufe überschreiten. In Kombination mit bedingtem Zugriff können Sie somit bösartigen Aktivitäten in Ihrer Organisation vorbeugen.
+
+Dieses Features unterstützt folgende Betriebssysteme:
+
+- Windows 10 und höher
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -206,11 +224,18 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 [PowerShell-Skripts auf Windows 10-Geräten](../apps/intune-management-extension.md) verwenden die Intune-Verwaltungserweiterung, um Ihre PowerShell-Skripts in Intune hochzuladen und diese Skripte dann auf Ihren Geräten auszuführen. Beachten Sie auch, was für die Verwendung der Erweiterung erforderlich ist, wie sie in Intune hinzufügt wird und weitere wichtige Informationen.
 
-
 Dieses Features unterstützt folgende Betriebssysteme:
 
 - Windows 10 und höher
 - Windows Holographic for Business
+
+## <a name="preference-file"></a>Einstellungsdatei
+
+[Einstellungsdateien](preference-file-settings-macos.md) auf macOS-Geräten enthalten Informationen über Apps. Sie können Einstellungsdateien beispielsweise verwenden, um Webbrowsereinstellungen zu steuern oder Apps anzupassen.
+
+Dieses Features unterstützt folgende Betriebssysteme:
+
+- macOS
 
 ## <a name="shared-multi-user-device"></a>Von mehreren Benutzern gemeinsam verwendetes Gerät
 
@@ -260,14 +285,6 @@ Dieses Features unterstützt folgende Betriebssysteme:
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (nur Import)
-- Windows 10 und höher
-
-## <a name="windows-information-protection-profile"></a>WIP-Profil (Windows Information Protection)
-
-[Windows Information Protection](../protect/windows-information-protection-configure.md) unterstützt Sie dabei, das Unternehmen vor Datenlecks zu schützen, ohne gleichzeitig die Benutzerfreundlichkeit für die Mitarbeiter einzuschränken. Die Lösung schützt auch Unternehmens-Apps und -daten vor versehentlichen Datenlecks auf unternehmenseigenen sowie auf persönlichen Geräten, die die Mitarbeiter bei der Arbeit verwenden. Die Verwendung von Windows Information Protection setzt keine Änderungen Ihrer Umgebung oder andere Apps voraus.
-
-Dieses Features unterstützt folgende Betriebssysteme:
-
 - Windows 10 und höher
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Extensions (MX)

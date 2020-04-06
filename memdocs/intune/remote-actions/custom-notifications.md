@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 0ef8989c9f4de0211a7636c747ff9a01111842f6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220250"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325317"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Senden benutzerdefinierter Benachrichtigungen in Intune
 
@@ -89,7 +89,7 @@ Wenn Sie die Unternehmensportal-App auf einem Android-Gerät geöffnet haben, ä
 
 ## <a name="send-a-custom-notification-to-groups"></a>Senden einer benutzerdefinierten Benachrichtigung an Gruppen
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) mit einem Konto mit Zugriffsberechtigungen zum Erstellen und Senden von Benachrichtigungen an, und navigieren Sie zu **Mandatenverwaltung** > **Benutzerdefinierte Benachrichtigungen**.  
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) mit einem Konto mit Berechtigung zum Erstellen und Senden von Benachrichtigungen an, und navigieren Sie zu **Mandantenverwaltung** > **Benutzerdefinierte Benachrichtigungen**.  
 
 2. Geben Sie auf der Registerkarte „Basics“ (Grundlagen) das Folgende an, und klicken Sie dann auf **Weiter**, um fortzufahren.  
    - **Titel:** Geben Sie einen Titel für diese Benachrichtigung an. Titel sind auf 50 Zeichen beschränkt.  
@@ -109,7 +109,7 @@ Intune verfolgt die von Ihnen gesendeten benutzerdefinierten Benachrichtigungen 
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Senden einer benutzerdefinierten Benachrichtigung an ein einzelnes Gerät
 
-1. Melden Sie sich mit einem Konto mit Zugriffsberechtigungen zum Erstellen und Senden von Benachrichtigungen beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Alle Geräte**.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) mit einem Konto mit Berechtigung zum Erstellen und Senden von Benachrichtigungen an, und navigieren Sie zu **Geräte** > **Alle Geräte**.
 
 2. Doppelklicken Sie auf den Namen des verwalteten Geräts, an das Sie eine Benachrichtigung senden möchten, um die Seite *Übersicht* für dieses Gerät zu öffnen.
 

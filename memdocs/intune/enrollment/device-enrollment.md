@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086167"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256639"
 ---
 # <a name="what-is-device-enrollment"></a>Was ist die Geräteregistrierung?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -40,7 +40,7 @@ Standardmäßig dürfen Geräte für alle Plattformen in Intune registriert werd
 | | Geräte werden während der Registrierung auf die Werkseinstellungen zurückgesetzt. | Diese Methode ordnet jedes Gerät einem Benutzer zu.| Falls dies der Fall ist, können Benutzer die Registrierung von Geräten nicht aufheben. | |
 |**[BYOD](#bring-your-own-device)** | Nein| Ja | Nein | [Weitere Informationen](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| Nein |Nein |Nein | [Weitere Informationen](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| Ja | Optional | Optional|[Weitere Informationen](device-enrollment-program-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Ja | Optional | Optional|[Weitere Informationen](device-enrollment-program-enroll-ios.md)|
 |**[USB (Setup-Assistent)](#usb-sa)**| Ja | Optional | Nein| [Weitere Informationen](apple-configurator-enroll-ios.md)|
 |**[USB (direkt)](#usb-direct)**| Nein | Nein | Nein|[Weitere Informationen](apple-configurator-enroll-ios.md)|
 
@@ -49,7 +49,7 @@ Standardmäßig dürfen Geräte für alle Plattformen in Intune registriert werd
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Nein| Ja | Nein | [Weitere Informationen](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Nein |Nein |Nein  | [Weitere Informationen](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| Ja | Optional | Optional|[Weitere Informationen](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Ja | Optional | Optional|[Weitere Informationen](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Windows-Registrierungsmethoden
 
@@ -84,15 +84,15 @@ Standardmäßig dürfen Geräte für alle Plattformen in Intune registriert werd
 Zu BYOD-Geräten (Bring Your Own Device) gehören Mobiltelefone, Tablets und PCs, die persönliches Eigentum der Benutzer sind. Benutzer installieren die Unternehmensportal-App und führen diese zur Registrierung ihrer Geräte aus. Dieses Programm ermöglicht Benutzern den Zugriff auf Unternehmensressourcen wie E-Mails.
 
 ## <a name="corporate-owned-device"></a>Unternehmenseigene Geräte
-[Unternehmenseigene Geräte (Corporate-Owned Devices, COD)](corporate-identifiers-add.md) umfassen Mobiltelefone, Tablets und PCs, die das Eigentum der Organisation sind und an die Mitarbeiter ausgegeben werden. Die Registrierung von COD-Geräten unterstützt Szenarios wie die automatische Registrierung, freigegebene Geräte oder Anforderungen für eine vorab autorisierte Registrierung. Eine Methode zum Registrieren von COD-Geräten besteht darin, dass ein Administrator oder Vorgesetzter den Geräteregistrierungs-Manager verwendet. iOS-/iPadOS-Geräte können direkt über die von Apple bereitgestellten Programme zur Geräteregistrierung (Device Enrollment Program, DEP) registriert werden. Geräte mit einer IMEI-Nummer können auch als unternehmenseigene Geräte identifiziert und gekennzeichnet werden.
+[Unternehmenseigene Geräte (Corporate-Owned Devices, COD)](corporate-identifiers-add.md) umfassen Mobiltelefone, Tablets und PCs, die das Eigentum der Organisation sind und an die Mitarbeiter ausgegeben werden. Die Registrierung von COD-Geräten unterstützt Szenarios wie die automatische Registrierung, freigegebene Geräte oder Anforderungen für eine vorab autorisierte Registrierung. Eine Methode zum Registrieren von COD-Geräten besteht darin, dass ein Administrator oder Vorgesetzter den Geräteregistrierungs-Manager verwendet. iOS-/iPadOS-Geräte können direkt über die von Apple bereitgestellten ADE-Tools registriert werden. Geräte mit einer IMEI-Nummer können auch als unternehmenseigene Geräte identifiziert und gekennzeichnet werden.
 
 ### <a name="device-enrollment-manager"></a>Geräteregistrierungs-Manager
 Der Geräteregistrierungs-Manager (DEM) ist ein besonderes Benutzerkonto, das zum Registrieren und Verwalten mehrerer firmeneigener Geräte verwendet wird. Manager können das Unternehmensportal installieren und viele benutzerlose Geräte registrieren. Diese Gerätetypen eignen sich z.B. für POS- oder Hilfsprogramm-Apps, nicht aber für Benutzer, die Zugriff auf E-Mails oder Unternehmensressourcen benötigen. Erfahren Sie mehr über [DEM](device-enrollment-manager-enroll.md).
 
-### <a name="apple-device-enrollment-program"></a>Apple-Programm zur Geräteregistrierung
-Mit dem Programm zur Geräteregistrierung von Apple (Device Enrollment Program, DEP) können Sie Richtlinien erstellen und „drahtlos“ auf iOS-/iPadOS- und macOS-Geräten bereitstellen, die über das DEP erworben wurden und verwaltet werden. Das Gerät wird registriert, wenn ein Benutzer es zum ersten Mal einschaltet und den Setup-Assistenten ausführt. Diese Methode unterstützt den überwachten Modus von iOS/iPadOS, der zulässt, dass ein Gerät mit bestimmten Funktionen konfiguriert wird.
+### <a name="apple-automated-device-enrollment"></a>Automatische Geräteregistrierung von Apple
+Mit der automatischen Geräteregistrierung von Apple (ADE, Automated Device Enrollment) können Sie Richtlinien erstellen und „drahtlos“ auf iOS-/iPadOS- und macOS-Geräten bereitstellen, die über die automatische Geräteregistrierung erworben wurden und verwaltet werden. Das Gerät wird registriert, wenn ein Benutzer es zum ersten Mal einschaltet und den Setup-Assistenten ausführt. Diese Methode unterstützt den überwachten Modus von iOS/iPadOS, der zulässt, dass ein Gerät mit bestimmten Funktionen konfiguriert wird.
 
-Weitere Informationen zur iOS-/iPadOS-DEP-Registrierung finden Sie unter:
+Weitere Informationen zur automatischen Registrierung unter iOS/iPadOS finden Sie unter:
 
 - [Auswählen der Registrierungsmethode für iOS-/iPadOS-Geräte](ios-enroll.md)
 - [Registrieren von iOS-/iPadOS-Geräten mithilfe des Programms zur Geräteregistrierung](device-enrollment-program-enroll-ios.md)

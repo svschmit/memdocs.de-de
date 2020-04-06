@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d201bb3b15c0debb724f974d519a77994aae8e7f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359546"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327239"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Einrichten der iOS-/iPadOS-Geräteregistrierung mit Apple School Manager
 
@@ -31,7 +31,7 @@ ms.locfileid: "79359546"
 
 Sie können Intune für die Registrierung von iOS-/iPadOS-Geräten einrichten, die über das [Apple School Manager](https://school.apple.com/)-Programm erworben wurden. Wenn Sie Intune mit Apple School Manager verwenden, können Sie eine große Zahl von iOS-/iPadOS-Geräten registrieren, ohne sie in die Hand nehmen zu müssen. Wenn ein Schüler oder ein Lehrer das Gerät anschaltet, wird der Setup-Assistent mit vordefinierten Einstellungen ausgeführt, und das Gerät wird für die Verwaltung registriert.
 
-Um die Registrierung mit Apple School Manager möglich zu machen, müssen Sie die Portale von Intune und Apple School Manager verwenden. Sie benötigen auch eine Liste von Seriennummern oder eine Bestellnummer, um Geräte in Intune zur Verwaltung zuweisen zu können. Sie erstellen DEP-Registrierungsprofile, die Einstellungen enthalten, die für Geräte während der Registrierung gelten.
+Um die Registrierung mit Apple School Manager möglich zu machen, müssen Sie die Portale von Intune und Apple School Manager verwenden. Sie benötigen auch eine Liste von Seriennummern oder eine Bestellnummer, um Geräte in Intune zur Verwaltung zuweisen zu können. Sie erstellen ADE-Registrierungsprofile (automatische Geräteregistrierung), die Einstellungen enthalten, die für Geräte während der Registrierung gelten.
 
 Die Registrierung von Apple School Manager kann nicht mit dem [Programm zur Geräteregistrierung von Apple](device-enrollment-program-enroll-ios.md) oder dem [Geräteregistrierungs-Manager](device-enrollment-manager-enroll.md) verwendet werden.
 
@@ -48,7 +48,7 @@ Damit Sie unternehmenseigene iOS-/iPadOS-Geräte mit dem Apple School Manager re
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>Schritt 1: Herunterladen des Intune-Zertifikats mit öffentlichem Schlüssel, das zum Erstellen eines Apple-Tokens erforderlich ist
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** > **Hinzufügen** aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** > **Hinzufügen**.
 
    ![Rufen Sie ein Registrierungsprogrammtoken ab.](./media/device-enrollment-program-enroll-ios/image01.png)
 
@@ -71,7 +71,7 @@ Damit Sie unternehmenseigene iOS-/iPadOS-Geräte mit dem Apple School Manager re
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Schritt 3: Speichern der zum Erstellen dieses Tokens verwendeten Apple-ID
 
-Geben Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Apple-ID zur späteren Referenz an.
+Geben Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Apple-ID zur späteren Verwendung an.
 
 ![Screenshot der Angabe der Apple-ID zur Erstellung des Registrierungsprogrammtokens und Navigieren zu diesem Token](./media/apple-school-manager-set-up-ios/image03.png)
 
@@ -81,7 +81,7 @@ Navigieren Sie im Feld **Apple-Token** zur Zertifikatsdatei (PEM), und wählen S
 ## <a name="create-an-apple-enrollment-profile"></a>Erstellen eines Apple-Registrierungsprofils
 Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil für Apple School-Geräte erstellen. Ein Geräteregistrierungsprofil definiert die Einstellungen, die während der Registrierung auf eine Gruppe von Geräten angewendet werden.
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** aus.
+1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken**.
 2. Wählen Sie ein Token aus, und wählen Sie dann **Profile** und **Profil erstellen** aus.
 
 3. Geben Sie zu administrativen Zwecken unter **Profil erstellen** einen **Namen** und eine **Beschreibung** für das Profil ein. Benutzer können diese Informationen nicht sehen. Sie können das Feld **Name** zum Erstellen einer dynamischen Gruppe in Azure Active Directory verwenden. Verwenden Sie den Profilnamen, um den Parameter „enrollmentProfileName“ zu definieren, um Geräte mit diesem Registrierungsprofil zuzuweisen. Erfahren Sie mehr über [dynamische Gruppen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
@@ -106,7 +106,7 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
     > Diese Optionen werden nicht unterstützt, wenn die Authentifizierung über den Setup-Assistenten von Apple erfolgt.
 
 6. Klicken Sie auf **Geräteverwaltungseinstellungen**, und geben Sie an, ob Geräte mit diesem Profil überwacht werden sollen.
-    Bei **überwachten** Geräten stehen mehr Verwaltungsfunktionen zur Verfügung, und die Aktivierungssperre ist standardmäßig deaktiviert. Microsoft empfiehlt, DEP als Mechanismus zur Aktivierung des überwachten Modus zu verwenden. Dies gilt insbesondere für Organisationen, die eine große Anzahl von iOS-/iPadOS-Geräten bereitstellen.
+    Bei **überwachten** Geräten stehen mehr Verwaltungsfunktionen zur Verfügung, und die Aktivierungssperre ist standardmäßig deaktiviert. Microsoft empfiehlt, ADE als Mechanismus zur Aktivierung des überwachten Modus zu verwenden. Dies gilt insbesondere für Organisationen, die eine große Anzahl von iOS-/iPadOS-Geräten bereitstellen.
 
     Die Benutzer werden auf zweierlei Weise benachrichtigt, dass ihre Geräte überwacht werden:
 
@@ -155,7 +155,7 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 ## <a name="connect-school-data-sync"></a>Verbinden mit School Data Sync
 (Optional) Apple School Manager unterstützt die Synchronisierung von Kursplandaten mit Azure Active Directory (AD) über Microsoft School Data Sync (SDS). Sie können nur ein Token mit SDS synchronisieren. Wenn Sie ein anderes Token mit School Data Sync einrichten, wird SDS aus dem bisherigen Token entfernt. Das aktuelle Token wird durch eine neue Verbindung ersetzt. Führen Sie die folgenden Schritte aus, um SDS zum Synchronisieren von Schul- bzw. Unidaten zu verwenden.
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** aus.
+1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken**.
 2. Wählen Sie ein Apple School Manager-Token und dann **School Data Sync** aus.
 3. Wählen Sie unter **School Data Sync** die Option **Zulassen** aus. Mit dieser Einstellung kann Intune in Office 365 eine Verbindung mit SDS herstellen.
 4. Um eine Verbindung zwischen Apple School Manager und Azure AD zu ermöglichen, klicken Sie auf **Microsoft-Synchronisierung von Schul-/Unidaten einrichten**. Erfahren Sie mehr über [das Einrichten von School Data Sync](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1).
@@ -165,7 +165,7 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 
 Nachdem Intune die Berechtigung zum Verwalten Ihrer Apple School Manager-Geräte zugewiesen wurde, synchronisieren Sie Intune mit dem Apple-Dienst, um Ihre verwalteten Geräte in Intune anzuzeigen.
 
-Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken**, wählen Sie ein Token aus der Liste und anschließend **Geräte** > **Synchronisierung** aus. ![Screenshot des Knotens „Geräte des Registrierungprogramms“ und des Links „Synchronisierung“](./media/apple-school-manager-set-up-ios/image06.png)
+Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken**, wählen Sie ein Token aus der Liste aus, und klicken Sie auf **Geräte** > **Synchronisieren**. ![Screenshot des Knotens „Geräte des Registrierungprogramms“ und des Links „Synchronisierung“](./media/apple-school-manager-set-up-ios/image06.png)
 
 Zur Befolgung der Apple-Bedingungen für zulässigen Datenverkehr des Registrierungsprogramms erzwingt Intune die folgenden Einschränkungen:
 - Eine vollständige Synchronisation kann nicht öfter als einmal alle sieben Tage erfolgen. Während einer vollständigen Synchronisierung aktualisiert Intune jede Seriennummer von Apple, die Intune zugewiesen ist. Wenn eine vollständige Synchronisierung innerhalb von sieben Tagen nach der vorherigen vollständigen Synchronisierung versucht wird, aktualisiert Intune nur Seriennummern, die nicht bereits in Intune aufgeführt werden.
@@ -178,7 +178,7 @@ Zur Befolgung der Apple-Bedingungen für zulässigen Datenverkehr des Registrier
 ## <a name="assign-a-profile-to-devices"></a>Zuweisen eines Profils zu Geräten
 Apple School Manager-Geräten, die von Intune verwaltet werden, muss vor der Registrierung ein Registrierungsprofil zugewiesen werden.
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** und dann ein Token aus der Liste aus.
+1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken**, und wählen Sie ein Token aus der Liste aus.
 2. Wählen Sie **Geräte** aus, wählen Sie in der Liste die Geräte aus, und wählen Sie dann **Profil zuweisen** aus.
 3. Wählen Sie unter **Profil zuweisen** ein Profil für die Geräte aus, und wählen Sie dann **Zuweisen** aus.
 

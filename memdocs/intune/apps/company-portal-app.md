@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084205"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407749"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App
 
@@ -45,7 +45,7 @@ In der folgenden Tabelle finden Sie Details zur Anpassung des Brandings für die
 | **In Kopfzeile anzeigen** | Wählen Sie aus, ob in Kopfzeilen der Benutzeroberfläche **Unternehmenslogo und -name**, **nur das Unternehmenslogo** oder **nur der Unternehmensname** angezeigt werden soll. Die Vorschaufelder unten zeigen nur die Logos, nicht den Namen.  |
 | **Logo für Hintergrund in Designfarbe hochladen** | Laden Sie das Logo hoch, das Sie auf der ausgewählten Designfarbe anzeigen möchten. Um eine optimale Darstellung zu erzielen, laden Sie ein Logo mit transparentem Hintergrund hoch. Im Vorschaufeld unterhalb der Einstellung können Sie die Darstellung sehen.<p>Maximale Bildgröße: 400 × 400 px<br>Maximale Dateigröße:   750 KB<br>Dateityp: PNG, JPG oder JPEG |
 | **Logo für weißen oder hellen Hintergrund hochladen** | Laden Sie das Logo hoch, das Sie vor weißen oder hellen Hintergründen anzeigen möchten. Um eine optimale Darstellung zu erzielen, laden Sie ein Logo mit transparentem Hintergrund hoch. Im Vorschaufeld unterhalb der Einstellung können Sie die Darstellung vor einem weißen Hintergrund sehen.<p>Maximale Bildgröße: 400 × 400 px<br>Maximale Dateigröße: 750 KB<br>Dateityp: PNG, JPG oder JPEG |
-| **Markenimage hochladen** | Laden Sie ein Bild hoch, das für die Marke Ihrer Organisation steht.<p><ul><li>Empfohlene Bildbreite: Größer als 1125 px (mindestens 650 px)</li><li>Maximale Bildgröße: 1,3 MB</li><li>Dateityp: PNG, JPG oder JPEG</li><li>Das Logo wird an folgenden Stellen angezeigt:</li><ul><li>iOS/iPadOS-Unternehmensportal: Hintergrundbild auf der Profilseite des Benutzers.</li><li>Unternehmensportal-Website:   Hintergrundbild auf der Profilseite des Benutzers.</li><li>Android-Intune-App: Im Drawer und als Hintergrundbild auf der Profilseite des Benutzers.</li></ul></ul> |
+| **Markenimage hochladen** | Laden Sie ein Bild hoch, das für die Marke Ihrer Organisation steht.<p><ul><li>Empfohlene Bildbreite: Größer als 1125 px (mindestens 650 px)</li><li>Maximale Bildgröße: 1,3 MB</li><li>Dateityp: PNG, JPG oder JPEG</li><li>Das Logo wird an folgenden Stellen angezeigt:</li><ul><li>iOS/iPadOS-Unternehmensportal: Hintergrundbild auf der Profilseite des Benutzers.</li><li>Unternehmensportal-Website:   Hintergrundbild auf der Profilseite des Benutzers</li><li>Android-Intune-App: Im Drawer und als Hintergrundbild auf der Profilseite des Benutzers</li></ul></ul> |
 
 > [!NOTE]
 > Wenn ein Benutzer eine iOS/iPadOS-Anwendung über das Unternehmensportal installiert, wird eine Eingabeaufforderung angezeigt. Dies passiert, wenn die iOS/iPadOS-App mit dem App-Store, einem Volumenlizenzprogramm (Volume-Purchase Program, VPP) oder einer branchenspezifischen App (Line-Of-Business, LOB) verknüpft ist. In der Eingabeaufforderung kann der Benutzer die Aktion akzeptieren oder die Verwaltung der App erlauben. Die Eingabeaufforderung zeigt den Namen Ihres Unternehmens oder – wenn dieser nicht verfügbar ist – den Text **Unternehmensportal** an.
@@ -193,4 +193,4 @@ Einige Plattformen und Konfigurationen lassen keine Self-Service-Geräteaktionen
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Manuelles Hinzufügen der Windows 10-Unternehmensportal-App mithilfe von Microsoft Intune](company-portal-app.md)
+- [Hinzufügen von Apps](apps-add.md)

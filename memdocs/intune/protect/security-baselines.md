@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a62b87861bbe2f1d9e498756aedb0acd28bbff5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349991"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488061"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurieren von Windows 10-Geräten in Intune mithilfe von Sicherheitsbaselines
 
@@ -31,7 +31,7 @@ Diese Funktion gilt für:
 
 - Windows 10, Version 1809 und höher
 
-Sie stellen Sicherheitsbaselines für Gruppen von Benutzern oder Geräten in Intune bereit. Die Einstellungen gelten für Geräte, auf denen Windows 10 oder höher ausgeführt wird. Die *MDM-Sicherheitsbaselinie* aktiviert beispielsweise für Wechseldatenträger u.a. automatisch BitLocker, fordert automatisch ein Kennwort zum Entsperren eines Geräts an und deaktiviert automatisch die Standardauthentifizierung. Wenn eine Standardeinstellung für Ihre Umgebung nicht funktioniert, passen Sie die so Baseline an, dass die benötigten Einstellungen übernommen werden.
+Sie stellen Sicherheitsbaselines für Gruppen von Benutzern oder Geräten in Intune bereit. Die Einstellungen gelten für Geräte, auf denen Windows 10 oder höher ausgeführt wird. Die *MDM-Sicherheitsbaselinie* aktiviert beispielsweise für Wechseldatenträger u.a. automatisch BitLocker, fordert automatisch ein Kennwort zum Entsperren eines Geräts an und deaktiviert automatisch die Standardauthentifizierung. Wenn eine Standardeinstellung für Ihre Umgebung nicht funktioniert, passen Sie die Baseline so an, dass die benötigten Einstellungen angewendet werden.
 
 Separate Baselinetypen können zwar die gleichen Einstellungen enthalten, aber unterschiedliche Standardwerte für diese Einstellungen verwenden. Es ist wichtig, die Standardwerte in den von Ihnen gewählten Baselines zu verstehen und anschließend jede Baseline an Ihre Unternehmensanforderungen anzupassen.
 
@@ -60,7 +60,7 @@ Um weitere Informationen zu den von Ihnen verwendeten Baselineversionen anzuzeig
 
 Wenn Sie ein Sicherheitsbaseline-*Profil* erstellen, verwendet das Profil automatisch die zuletzt veröffentlichte Instanz der Sicherheitsbaseline.  Sie können zuvor erstellte Profile, die eine frühere Instanz der Baselineversion verwenden, weiterhin einsetzen und bearbeiten, einschließlich der mit einer Vorschauversion erstellten Baselines.
 
-Sie haben die Möglichkeit des [Änderns der Version](#change-the-baseline-version-for-a-profile) einer Baseline, die mit einem bestimmten Profil verwendet wird. Das bedeutet, dass Sie bei Veröffentlichung einer neuen Version kein neues Baselineprofil erstellen müssen, um in den Genuss der Vorteile zu kommen. Stattdessen können Sie, wenn Sie soweit sind, ein Baselineprofil auswählen und dann die integrierte Option verwenden, um die Instanzversion für dieses Profil in eine andere zu ändern.
+Sie können die [Version einer Baseline ändern](#change-the-baseline-version-for-a-profile), die mit einem bestimmten Profil verwendet wird. Das bedeutet, dass Sie bei Veröffentlichung einer neuen Version kein neues Baselineprofil erstellen müssen, um in den Genuss der Vorteile zu kommen. Stattdessen können Sie, wenn Sie soweit sind, ein Baselineprofil auswählen und dann die integrierte Option verwenden, um die Instanzversion für dieses Profil in eine neue zu ändern.
 
 ## <a name="available-security-baselines"></a>Verfügbare Sicherheitsbaselines
 
@@ -76,7 +76,7 @@ Die folgenden Sicherheitsbaseline-Instanzen können für Intune verwendet werden
 
 - **Microsoft Defender ATP-Baseline**
    *(Um diese Baseline verwenden zu können, muss Ihre Umgebung die Voraussetzungen für die Verwendung von [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) erfüllen)* .
-  - [Microsoft Defender ATP-Baseline](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP-Baselineversion 3](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > Die Microsoft Defender ATP-Sicherheitsbaseline wurde für physische Geräte optimiert und ist zurzeit nicht für die Verwendung auf virtuellen Computern (VMs) oder VDI-Endpunkten empfehlenswert. Bestimmte Baselineeinstellungen können sich auf interaktive Remotesitzungen in virtualisierten Umgebungen auswirken.  Weitere Informationen finden Sie unter [Increase compliance to the Microsoft Defender ATP security baseline (Erhöhung der Compliance für die Microsoft Defender ATP-Sicherheitsbaseline)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline).
@@ -186,7 +186,7 @@ Nach dem Speichern im Anschluss an die Konvertierung wird die Baseline für zuge
 
 ### <a name="remove-a-security-baseline-assignment"></a>Aufheben der Zuweisung einer Sicherheitsbaseline
 
-Wenn eine Sicherheitsbaseline-Einstellung nicht mehr für ein Gerät gilt oder die Einstellungen in einer Baseline auf *Nicht konfiguriert* festgelegt sind, werden diese Einstellungen auf einem Gerät nicht auf eine zuvor verwaltete Konfiguration zurückgesetzt. Stattdessen behalten die zuvor verwalteten Einstellungen auf dem Gerät ihre letzten Konfigurationen, wie sie von der Baseline empfangen wurden, bis ein anderer Prozess diese Einstellungen auf dem Gerät aktualisiert.
+Wenn eine Einstellung der Sicherheitsbaseline nicht mehr für ein Gerät gilt oder die Einstellungen in einer Baseline auf *Nicht konfiguriert* festgelegt sind, werden diese Einstellungen auf einem Gerät nicht auf eine zuvor verwaltete Konfiguration zurückgesetzt. Stattdessen behalten die zuvor verwalteten Einstellungen auf dem Gerät ihre letzten Konfigurationen, wie sie von der Baseline empfangen wurden, bis ein anderer Prozess diese Einstellungen auf dem Gerät aktualisiert.
 
 Andere Prozesse, die später die Einstellungen auf dem Gerät ggf. ändern, sind eine andere oder neue Sicherheitsbaseline, ein Gerätekonfigurationsprofil, Gruppenrichtlinienkonfigurationen oder die manuelle Bearbeitung der Einstellungen auf dem Gerät.
 
@@ -208,13 +208,13 @@ Das gleiche Microsoft-Sicherheitsteam hat die Einstellungen für jede Baseline a
 
 ### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Sind die Intune-Sicherheitsbaselines CIS- oder NSIT-kompatibel?
 
-Streng genommen, nicht. Das Microsoft-Sicherheitsteam berät Unternehmen wie CIS, um Empfehlungen zusammenzutragen. Allerdings gibt es keine 1:1-Zuordnung von „CIS-kompatiblen“ und Microsoft-Baselines.
+Streng genommen, nicht. Das Microsoft-Sicherheitsteam berät Unternehmen wie CIS, um Empfehlungen zusammenzutragen. Allerdings gibt es keine 1:1-Zuordnung von „CIS-konformen“ und Microsoft-Baselines.
 
-### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Welche Zertifizierungen haben die Sicherheitsbaselines von Microsoft? 
+### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Welche Zertifizierungen weisen die Sicherheitsbaselines von Microsoft auf? 
 
 - Microsoft veröffentlicht weiterhin Sicherheitsbaselines für Gruppenrichtlinien (GPOs) und das [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), wie seit vielen Jahren. Diese Baselines werden von vielen Organisationen verwendet. Die Empfehlungen in diesen Baselines entstammen der Zusammenarbeit des Microsoft-Sicherheitsteams mit Unternehmenskunden und externen Einrichtungen, einschließlich des Department of Defense (DoD, Verteidigungsministerium der USA), National Institute of Standards and Technology (NIST, Nationales Institut für Standards und Technologie) und anderer. Wir teilen unsere Empfehlungen und Baselines mit diesen Organisationen. Diese Organisationen haben auch ihre eigenen Empfehlungen, die die Empfehlungen von Microsoft sehr genau widerspiegeln. Da die mobile Geräteverwaltung (MDM) in der Cloud zunimmt, hat Microsoft entsprechende MDM-Empfehlungen zu diesen Gruppenrichtlinien-Baselines erstellt. Diese zusätzlichen Baselines sind in Microsoft Intune integriert und enthalten Konformitätsberichte zu Benutzern, Gruppen und Geräten, die die Baseline befolgen (oder nicht).
 
-- Viele Kunden nutzen die Intune-Baselineempfehlungen als Ausgangspunkt und passen sie ihren IT- und Sicherheitsanforderungen an. Die **MDM-Sicherheitsbaseline** für Windows 10 RS5 von Microsoft ist die erste Baseline, die freigegeben wird. Diese Baseline wird als allgemeine Infrastruktur erstellt, die Kunden ermöglicht, schließlich andere, auf CIS, NIST und anderen Standards basierende Sicherheitsbaselines zu importieren. Derzeit ist sie für Windows verfügbar und wird schließlich iOS/iPadOS und Android einschließen.
+- Viele Kunden nutzen die Intune-Baselineempfehlungen als Ausgangspunkt und passen sie ihren IT- und Sicherheitsanforderungen an. Die **MDM-Sicherheitsbaseline** für Windows 10 RS5 von Microsoft ist die erste Baseline, die freigegeben wird. Diese Baseline wird als allgemeine Infrastruktur erstellt, die Kunden ermöglicht, schließlich andere, auf CIS, NIST und anderen Standards basierende Sicherheitsbaselines zu importieren. Derzeit ist sie für Windows verfügbar und wird schließlich iOS/iPadOS und Android einschließen.
 
 - Das Migrieren von lokalen Active Directory-Gruppenrichtlinien zu einer reinen Cloudlösung mithilfe von Azure Active Directory (AD) mit Microsoft Intune ist eine Reise. Zur Unterstützung sind im [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) Gruppenrichtlinienvorlagen enthalten, die bei der Verwaltung von in hybrides Active Directory und Azure Active Directory eingebundenen Geräten helfen können. Diese Geräte können MDM-Einstellungen aus der Cloud (Intune) und Gruppenrichtlinieneinstellungen vom lokalen Domänencontroller nach Bedarf abrufen.
 

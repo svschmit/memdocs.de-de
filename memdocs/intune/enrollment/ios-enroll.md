@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086113"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256452"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrieren von iOS-/iPadOS-Geräten in Intune
 
@@ -52,23 +52,23 @@ Sobald Sie die Voraussetzungen erfüllen und Benutzerlizenzen zugewiesen haben, 
 
 Für Organisationen, die Geräte für Ihre Benutzer kaufen, unterstützt Intune die folgenden Methoden für die Registrierung von firmeneigenen iOS-/iPadOS-Geräten:
 
-- Apple-Programm zur Geräteregistrierung (DEP)
+- Automatische Geräteregistrierung von Apple (Automated Device Enrollment, ADE)
 - Apple School Manager
 - Registrierung über den Setup-Assistenten für Apple Configurator
 - Apple Configurator – Direkte Registrierung
 
 Sie können firmeneigene iOS-/iPadOS-Geräte auch mit einem Konto für den [Geräteregistrierungs-Manager](device-enrollment-manager-enroll.md) registrieren.
 
-## <a name="device-enrollment-program"></a>Geräteregistrierungsprogramm
+## <a name="automated-device-enrollment"></a>Automatische Geräteregistrierung
 
-Organisationen können iOS-/iPadOS-Geräte über das Apple Device Enrollment Program (DEP) erwerben. Mit DEP können Sie drahtlos (Over The Air) ein Registrierungsprofil bereitstellen, das Geräte für die Verwaltung registriert. Weitere Informationen finden Sie unter [Programm zur Geräteregistrierung](device-enrollment-program-enroll-ios.md).
+Organisationen können iOS-/iPadOS-Geräte über die automatische Geräteregistrierung von Apple (Automated Device Enrollment, ADE) erwerben. Mit ADE können Sie drahtlos (Over The Air) ein Registrierungsprofil bereitstellen, das Geräte für die Verwaltung registriert. Weitere Informationen finden Sie unter [Programm zur Geräteregistrierung](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Benutzerregistrierung
 Die Benutzerregistrierung bietet Administratoren im Vergleich zu anderen Registrierungsmethoden eine Teilmenge von Verwaltungsoptionen. Weitere Informationen finden Sie unter [Von der Benutzerregistrierung unterstützte Aktionen, Kennwörter und andere Optionen](ios-user-enrollment-supported-actions.md) und [Einrichten der iOS-/iPadOS- und iPadOS-Benutzerregistrierung](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 
-Apple School Manager ist Programm zum Kauf von Geräten und deren Registrierung für Schulen. Wie bei DEP können Sie ein Profil zum Registrieren von Geräten in der Verwaltung bereitstellen. Erfahren Sie mehr über [Apple School Manager](apple-school-manager-set-up-ios.md).
+Apple School Manager ist Programm zum Kauf von Geräten und deren Registrierung für Schulen. Wie bei ADE, können Sie ein Profil zum Registrieren von Geräten für die Verwaltung bereitstellen. Erfahren Sie mehr über [Apple School Manager](apple-school-manager-set-up-ios.md).
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -79,7 +79,7 @@ Sie können iOS-/iPadOS-Geräte mit Apple Configurator auf einem Mac-Computer re
 
 Erfahren Sie mehr über die [Apple Configurator-Registrierung](apple-configurator-enroll-ios.md).
 
-## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Verwenden des Unternehmensportals auf Geräten, die über DEP oder Apple Configurator registriert wurden
+## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>Verwenden des Unternehmensportals auf Geräten, die über ADE oder Apple Configurator registriert wurden
 
 Auf mit Benutzeraffinität konfigurierten Geräte kann die Unternehmensportal-App installiert und ausgeführt werden, um Apps herunterzuladen und Geräte zu verwalten. Nachdem Benutzer ihre Geräte erhalten haben, müssen sie verschiedene zusätzliche Schritte ausführen, um den Setup-Assistenten abzuschließen und die Unternehmensportal-App zu installieren.
 

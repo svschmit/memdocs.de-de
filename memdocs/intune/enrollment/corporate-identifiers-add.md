@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f3ec6871784a019ffcf117d17b863b05354848
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 483f82e67c3f5d8ad3b4e55fba73e21eba85d49d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526307"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327164"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifizieren von Geräten als unternehmenseigen
 
@@ -54,7 +54,7 @@ Dieses Feature wird für folgende Plattformen unterstützt:
 | Vom Geräteadministrator verwaltetes Android-Betriebssystem, Version 10 | Nicht unterstützt | Nicht unterstützt |
 | Andere Android-Version | Nicht unterstützt | Unterstützt |
 
-<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
+<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
 [Erfahren Sie, wie Sie die Seriennummer eines Apple-Geräts finden](https://support.apple.com/HT204308).<br>
 [Erfahren Sie, wie Sie die Seriennummer Ihres Android-Geräts finden](https://support.google.com/store/answer/3333000).
@@ -85,7 +85,7 @@ Diese CSV-Datei wird bei der Anzeige in einem Text-Editor folgendermaßen angeze
 
 ### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Hochladen einer CSV-Liste von Unternehmensbezeichnern
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Geräte registrieren** > **Bezeichner von Unternehmensgeräten** > **Hinzufügen** > **CSV-Datei hochladen**.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Geräte registrieren** > **Bezeichner von Unternehmensgeräten** > **Hinzufügen** > **Upload CSV file** (CSV-Datei hochladen).
 
 2. Geben Sie auf dem Blatt **Bezeichner hinzufügen** den Bezeichnertyp ein: **IMEI** oder **Seriennummer**.
 
@@ -95,7 +95,7 @@ Diese CSV-Datei wird bei der Anzeige in einem Text-Editor folgendermaßen angeze
 
 ## <a name="manually-enter-corporate-identifiers"></a>Manuelles Eingeben von Unternehmensbezeichnern
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Geräte registrieren** > **Bezeichner von Unternehmensgeräten** > **Hinzufügen** > **Manuell eingeben**.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Geräte registrieren** > **Bezeichner von Unternehmensgeräten** > **Hinzufügen** > **Enter manually** (Manuell eingeben).
 
 2. Geben Sie auf dem Blatt **Bezeichner hinzufügen** den Bezeichnertyp ein: **IMEI** oder **Seriennummer**.
 

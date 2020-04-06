@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3ceb5c08e443bad42a0983b2b8257b997ca537c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ae24c8cad5ccee06444ffec6a4cd8b39b3371b49
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359702"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327286"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Einrichten der Intune-Registrierung für dedizierte Android Enterprise-Geräte
 
@@ -59,7 +59,7 @@ Führen Sie die folgenden Schritte aus, um die Verwaltung für dedizierte Androi
 
 Sie müssen ein Registrierungsprofil erstellen, damit Sie Ihre dedizierten Geräte registrieren können. Wenn das Profil erstellt wird, wird ein Registrierungstoken (zufällige Zeichenfolge) und ein QR-Code bereitgestellt. Je nach Android-Betriebssystem und Version des Geräts können Sie entweder das Token oder den QR-Code zum [Registrieren des dedizierten Geräts](#enroll-the-dedicated-devices) verwenden.
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und wählen Sie **Geräte** > **Android** > **Android-Registrierung** > **Unternehmenseigene dedizierte Geräte** aus.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Android** > **Android-Registrierung** > **Unternehmenseigene dedizierte Geräte**.
 2. Klicken Sie auf **Erstellen**, und füllen Sie die erforderlichen Felder aus.
     - **Name:** Geben Sie einen Namen ein, den Sie zum Zuweisen des Profils zu einer dynamischen Gerätegruppe verwenden.
     - **Datum für Tokenablauf**: Der Ablaufzeitpunkt des Tokens. Google erzwingt maximal 90 Tage.
@@ -69,7 +69,7 @@ Sie müssen ein Registrierungsprofil erstellen, damit Sie Ihre dedizierten Gerä
 
 Sie können Apps und Richtlinien auf zugewiesene oder dynamische Gerätegruppen ausrichten. Sie können dynamische AAD-Gerätegruppen konfigurieren, um Geräte dynamisch aufzufüllen, die mit einem bestimmten Registrierungsprofil registriert werden, indem Sie die folgenden Schritte ausführen:
 
-1. Melden Sie sich im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und wählen Sie die Option **Gruppen** > **Alle Gruppen** > **Neue Gruppe** aus.
+1. Melden Sie sich im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Gruppen** > **Alle Gruppen** > **Neue Gruppe**.
 2. Füllen Sie auf dem Blatt **Gruppe** die erforderlichen Felder wie folgt aus:
     - **Gruppentyp**: Sicherheit
     - **Gruppenname**: Geben Sie einen aussagekräftigen Namen ein (z.B. Factory 1-Geräte)
@@ -92,7 +92,7 @@ Sie können Apps und Richtlinien auf zugewiesene oder dynamische Gerätegruppen 
 
 Das Ersetzen oder Widerrufen eines Tokens bzw. QR-Codes hat keine Auswirkungen auf Geräte, die bereits registriert sind.
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und wählen Sie **Geräte** > **Android** > **Android-Registrierung** > **Unternehmenseigene dedizierte Geräte** aus.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Android** > **Android-Registrierung** > **Unternehmenseigene dedizierte Geräte**.
 2. Wählen Sie das Profil aus, mit dem Sie arbeiten möchten.
 3. Klicken Sie auf **Token**.
 4. Klicken Sie auf **Token ersetzen**, um das Token zu ersetzen.

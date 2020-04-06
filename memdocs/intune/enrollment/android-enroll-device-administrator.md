@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c22da8e3c4fdbcf40c3292476e734dd50f9543a
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8e44fa26c84537fdcf801192ce8cc22790f320b9
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086218"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438788"
 ---
 # <a name="android-device-administrator-enrollment"></a>Android-Geräteadministratorregistrierung
 
@@ -32,8 +32,6 @@ Der Android-Geräteadministrator (mit Android 2.2 veröffentlicht und manchmal 
 Um eine solche Einschränkung der Funktionalität zu vermeiden, empfehlen wir daher, neue Geräte nicht mit dem im Folgenden beschriebenen Geräteadministratorprozess zu registrieren.
 
 Aus den gleichen Gründen empfehlen wir auch, dass Sie Geräte aus der Geräteadministratorverwaltung migrieren, wenn die Geräte auf Android 10 aktualisiert werden sollen. 
-
-Weitere Informationen zur Intune-Unterstützung für den Android-Geräteadministrator finden Sie im Abschnitt [Hinweise](../fundamentals/whats-new.md#decreasing-support-for-android-device-administrator).
 
 Wenn Sie sich dennoch dafür entscheiden, dass Benutzer ihre Android-Geräte mit der Geräteadministratorverwaltung registrieren lassen, fahren Sie mit dem nächsten Abschnitt fort.  
 
@@ -44,7 +42,7 @@ Weitere Informationen zu den Android Enterprise-Features von Google finden Sie i
 ## <a name="set-up-device-administrator-enrollment"></a>Einrichten der Geräteadministratorregistrierung
 
 1. Um auf die Verwaltung von mobilen Geräten vorzubereiten, müssen Sie die MDM-Autorität (Mobile Device Management, Verwaltung mobiler Geräte) auf **Microsoft Intune** festlegen. Anweisungen finden Sie unter [Festlegen der MDM-Autorität](../fundamentals/mdm-authority-set.md). Sie legen dieses Element nur einmal fest, wenn Sie die Ersteinrichtung von Intune für die Verwaltung mobiler Geräte durchführen.
-2. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und wählen Sie **Geräte** > **Android** > **Android-Registrierung** > **Persönliche und unternehmenseigene Geräte mit Geräteverwaltungsrechten** > **Geräteadministrator zum Verwalten von Geräten verwenden**.
+2. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Android** > **Android-Registrierung** > **Personal and corporate-owned devices with device administration privileges** (Private und unternehmenseigene Geräte mit Geräteadministratorberechtigungen) > **Geräte über Geräteadministrator verwalten**.
 3. [Informieren Sie Ihre Benutzer darüber, wie sie ihre Geräte registrieren sollen.](../user-help/enroll-device-android-company-portal.md)  
 
 Nachdem ein Benutzer sich registriert hat, können Sie damit anfangen, die Geräte in Intune zu verwalten, dies umfasst das [Zuweisen von Gerätekonformitätsrichtlinien](../protect/compliance-policy-create-android.md), das [Verwalten von Apps](../apps/app-management.md) und mehr.

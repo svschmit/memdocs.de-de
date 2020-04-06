@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c6f57bd12713135244b2096f9eda4d8a802f32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361132"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359357"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Verwenden benutzerdefinierter Einstellungen für macOS-Geräte in Microsoft Intune
 
@@ -38,7 +39,7 @@ Dieser Artikel enthält eine Anleitung zur Verwendung von Apple Configurator und
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie das Profil.](device-profile-create.md)
+[Erstellen Sie das Profil.](custom-settings-configure.md)
 
 ## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
 
@@ -64,10 +65,8 @@ Dieser Artikel enthält eine Anleitung zur Verwendung von Apple Configurator und
   > [!NOTE]
   > Variablen werden in der Benutzeroberfläche nicht überprüft, und die Groß-/Kleinschreibung muss beachtet werden. Daher gibt es möglicherweise Profile, die mit fehlerhaften Eingaben gespeichert wurden. Wenn Sie beispielsweise `{{DeviceID}}` anstelle von `{{deviceid}}` eingeben, wird die Zeichenfolge anstelle der eindeutigen Geräte-ID angezeigt. Stellen Sie sicher, dass die eingegebenen Informationen korrekt sind.
 
-Wählen Sie **OK** > **Erstellen** aus, um die Änderungen zu speichern. Das Profil wird erstellt und in der Profilliste angezeigt.
-
 ## <a name="next-steps"></a>Nächste Schritte
 
-Das Profil ist nun erstellt, führt aber noch keine Aktionen durch. [Weisen Sie anschließend das Profil zu](device-profile-assign.md).
+Das Profil ist nun erstellt, führt aber vielleicht noch keine Aktionen durch. Die nächsten Schritte sind das [Zuweisen von Benutzer- und Geräteprofilen in Microsoft Intune](device-profile-assign.md) und das [Überwachen von Geräteprofilen in Microsoft Intune](device-profile-monitor.md).
 
-Weitere Informationen finden Sie unter [Erstellen eines Profils auf einem iOS-/iPadOS-Gerät](custom-settings-ios.md).
+Erstellen Sie ein [benutzerdefiniertes Profil auf iOS/iPadOS-Geräten](custom-settings-ios.md).

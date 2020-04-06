@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/31/2020
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e7ed0aa1d45c66c5688cde07b385cf95081a3c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d41dec48ff1f357733882ebe99bcad670e676675
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342048"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488014"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Überprüfen der Einrichtung von App-Schutzrichtlinien in Microsoft Intune
 
@@ -44,7 +44,7 @@ Wenn der Test zeigt, dass das Verhalten Ihrer App-Schutzrichtlinie nicht wie erw
 
 ### <a name="user-app-protection-status"></a>Schutzstatus der Benutzer-App
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
-3. Wählen Sie **Apps** >  **App-Schutzstatus** und dann die Kachel **Zugewiesene Benutzer** aus. 
+3. Klicken Sie auf **Apps** > **Überwachen** >  **Status des App-Schutzes** und dann auf die Kachel **Zugewiesene Benutzer**. 
 4. Klicken Sie auf der Seite **App-Berichterstellung** auf **Benutzer auswählen**, um eine Liste von Benutzern und Gruppen anzuzeigen. 
 5. Suchen Sie einen Benutzer, und wählen Sie ihn aus. Klicken Sie anschließend auf **Benutzer auswählen**. Im oberen Bereich von **App-Berichterstellung** können Sie sehen, ob der Benutzer für den App-Schutz lizenziert ist. Zudem können Sie sehen, ob der Benutzer eine Lizenz für Office 365 und den App-Status aller Geräte des Benutzers besitzt.
 

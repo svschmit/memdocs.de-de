@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26c30c947c6db1d44d8438aa63972fd5a3f663cd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 37eff19d940ef02cec0d2d0204644c46ef0742a2
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363433"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326992"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Geschäftsbedingungen für den Benutzerzugriff
 
@@ -93,7 +93,7 @@ Sie können Ihre Geschäftsbedingungen bearbeiten und ihre Versionen verwalten. 
 
 Behalten Sie die aktuelle Versionsnummer bei, wenn Sie z. B. Tippfehler korrigieren oder die Formatierung ändern.
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Mandantenverwaltung** > **Nutzungsbedingungen** > die zu ändernden Nutzungsbedingungen auswählen > **Eigenschaften**.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Mandantenverwaltung** > **Nutzungsbedingungen**, wählen Sie die zu ändernden Nutzungsbedingungen aus, und klicken Sie dann auf **Eigenschaften**.
 
 2. Klicken Sie im Bereich **Eigenschaften** auf **Nutzungsbedingungen**, und ändern Sie bei Bedarf **Titel**, **Summary of Terms** (Zusammenfassung der Nutzungsbedingungen) und die **Nutzungsbedingungen**. Wenn Ihre Änderungen eine erneute Akzeptierung Ihrer Benutzer voraussetzen, klicken Sie auf **Fordert eine erneute Annahme durch die Benutzer an und erhöht die Versionsnummer auf...** .
 

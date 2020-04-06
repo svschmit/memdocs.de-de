@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086960"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359397"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- und iPadOS-Geräteeinstellungen zur Verwendung gängiger iOS/iPadOS-Features in Intune
 
@@ -33,7 +33,7 @@ In diesem Artikel werden diese Einstellungen mit ihren Funktionsbeschreibungen a
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie ein iOS/iPadOS-Gerätekonfigurationsprofil.](device-features-configure.md)
+[Erstellen Sie ein iOS-/iPadOS-Gerätefeatureprofil.](device-features-configure.md)
 
 > [!NOTE]
 > Diese Einstellungen gelten für verschiedene Registrierungstypen, wobei einige Einstellungen für alle Registrierungsoptionen gelten. Weitere Informationen zu den verschiedenen Registrierungstypen finden Sie unter [iOS/iPadOS-Registrierung](../enrollment/ios-enroll.md).
@@ -113,11 +113,13 @@ Sie können für den Gerätedock bis zu **sechs** Elemente hinzufügen (Apps und
 
 Im folgenden Beispiel zeigt der Dockbildschirm nur die Anwendungen Safari, Mail und Stocks an. Die Mail-App wird ausgewählt, um deren Eigenschaften anzuzeigen:
 
-![Beispieleinstellungen für das iOS/iPadOS-Dock](./media/ios-device-features-settings/FfFiUcP.png)
+> [!div class="mx-imgBorder"]
+> ![Beispieleinstellungen für das iOS-/iPadOS-Dock](./media/ios-device-features-settings/FfFiUcP.png)
 
 Wenn Sie einem iPhone die Richtlinie zuweisen, sieht der Dock etwa so aus:
 
-![Beispiellayout für das iOS/iPadOS-Dock auf dem iPhone](./media/ios-device-features-settings/bAgCe8F.png)
+> [!div class="mx-imgBorder"]
+> ![Beispiellayout für das iOS-/iPadOS-Dock auf dem iPhone](./media/ios-device-features-settings/bAgCe8F.png)
 
 ### <a name="pages"></a>Seiten
 
@@ -134,7 +136,7 @@ Sie können bis zu **40** Seiten zu einem Gerät hinzufügen.
 
   Sie können auf einem Gerät bis zu **60** Elemente hinzufügen (Apps und Ordner kombiniert).
 
-  - **Hinzufügen**: Fügt einer Seite auf dem Gerät Apps oder Ordner hinzu.
+  - **Hinzufügen**: Fügt einer Seite auf dem Gerät Apps oder Ordner hinzu
 
     - **Typ:** Fügen Sie eine **App** oder einen **Ordner** hinzu:
 
@@ -147,7 +149,7 @@ Sie können bis zu **40** Seiten zu einem Gerät hinzufügen.
 
         Apps, die Sie zu einer Seite in einem Ordner hinzufügen, werden von links nach rechts und in der gleichen Reihenfolge wie die Liste angeordnet. Wenn Sie mehr Apps hinzufügen, als auf eine Seite passen, werden die Apps auf eine andere Seite verschoben.
 
-        - **Ordnername:** Geben Sie einen Namen für den Ordner ein. Dieser Name wird Benutzern auf dem Gerät angezeigt.
+        - **Ordnername:** Geben Sie einen Namen für den Ordner ein. Dieser Name wird Benutzern auf ihren Geräten angezeigt.
         - **Hinzufügen**: Fügt dem Ordner Seiten hinzu. Geben Sie auch die folgenden Eigenschaften ein:
 
           - **Name der Seite**: Geben Sie einen Namen für die Seite ein. Dieser Name wird zu Ihrer Referenz im Microsoft Endpoint Manager Admin Center verwendet. Er wird *nicht* auf dem iOS/iPadOS-Gerät angezeigt.
@@ -158,11 +160,13 @@ Sie können bis zu **40** Seiten zu einem Gerät hinzufügen.
 
 Im folgenden Beispiel wird eine neue Seite mit dem Namen **Contoso** hinzugefügt. Diese Seite zeigt die Apps „Find Friends“ und „Settings“ an. Die Settings-App wird ausgewählt, um deren Eigenschaften anzuzeigen:
 
-![Beispieleinstellungen für den iOS/iPadOS-Startbildschirm in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
+> [!div class="mx-imgBorder"]
+> ![Beispieleinstellungen für den iOS-/iPadOS-Startbildschirm in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
 
 Wenn Sie einem iPhone die Richtlinie zuweisen, sieht die Seite etwa so aus:
 
-![iOS/iPadOS-Gerät mit geändertem Startbildschirm in Intune](./media/ios-device-features-settings/Bd37PHa.png)
+> [!div class="mx-imgBorder"]
+> ![iOS-/iPadOS-Gerät mit geändertem Startbildschirm in Intune](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## <a name="app-notifications"></a>App-Benachrichtigungen
 
@@ -170,15 +174,16 @@ Wenn Sie einem iPhone die Richtlinie zuweisen, sieht die Seite etwa so aus:
 
 - **Hinzufügen**: Hinzufügen von Benachrichtigungen für Apps:
 
-    ![Hinzufügen von App-Benachrichtigungen in einem iOS/iPadOS-Profil in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > [!div class="mx-imgBorder"]
+  > ![Hinzufügen von App-Benachrichtigungen in einem iOS-/iPadOS-Profil in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **App-Bündel-ID**: Geben Sie die **App-Bündel-ID** der App ein, die Sie hinzufügen möchten. Einige Beispiele finden Sie unter [Bundle-IDs für integrierte iOS/iPadOS-Apps](bundle-ids-built-in-ios-apps.md).
   - **App-Name:** Geben Sie die den Namen der App ein, die Sie hinzufügen möchten. Dieser Name wird zu Ihrer Referenz im Microsoft Endpoint Manager Admin Center verwendet. Er wird *nicht* auf dem Gerät angezeigt.
   - **Herausgeber**: Geben Sie den Namen des Herausgebers der App ein, die Sie hinzufügen. Dieser Name wird zu Ihrer Referenz im Microsoft Endpoint Manager Admin Center verwendet. Er wird *nicht* auf dem Gerät angezeigt.
-  - **Benachrichtigungen:** **Aktivieren** oder **deaktivieren** Sie das Senden von Benachrichtigungen von der App an das Gerät.
+  - **Benachrichtigungen:** **Aktivieren** oder **deaktivieren** Sie das Senden von Benachrichtigungen von der App an Geräte.
     - **In Mitteilungszentrale anzeigen**: **Aktivieren** Sie diese Option, um zuzulassen, dass Benachrichtigungen der App in der Mitteilungszentrale angezeigt werden. **Deaktivieren** Sie diese Option, um zu verhindern, dass Benachrichtigungen in der Mitteilungszentrale angezeigt werden.
-    - **In Sperrbildschirm anzeigen**: **Aktivieren** Sie diese Option, damit Benachrichtigungen der App auf dem Sperrbildschirm des Geräts angezeigt werden. **Deaktivieren** Sie diese Option, um zu verhindern, dass Benachrichtigungen im Sperrbildschirm angezeigt werden.
-    - **Warnungstyp**: Wählen Sie, wie die Benachrichtigung angezeigt wird, wenn das Gerät entsperrt wird. Folgende Optionen sind verfügbar:
+    - **In Sperrbildschirm anzeigen**: Mit der Einstellung **Aktivieren** werden App-Benachrichtigungen auf dem Sperrbildschirm des Geräts angezeigt. **Deaktivieren** Sie diese Option, um zu verhindern, dass Benachrichtigungen im Sperrbildschirm angezeigt werden.
+    - **Warnungstyp**: Wählen Sie aus, wie die Benachrichtigung angezeigt wird, wenn das Gerät entsperrt wird. Folgende Optionen sind verfügbar:
       - **Keine**: Es werden keine Benachrichtigungen angezeigt.
       - **Banner**: Es wird kurz ein Banner mit der Benachrichtigung angezeigt.
       - **Modal**: Die Benachrichtigung wird angezeigt, und der Benutzer muss sie manuell schließen, um das Gerät weiter verwenden zu können.
@@ -196,7 +201,7 @@ Diese Funktion gilt für:
 
 - **Bestandskennzeicheninformationen:** Geben Sie Informationen zum Bestandskennzeichen des Geräts ein. Geben Sie beispielsweise `Owned by Contoso Corp` oder `Serial Number: {{serialnumber}}` ein.
 
-  Der von Ihnen eingegebene Text wird im Anmeldefenster und Sperrbildschirm auf dem Gerät angezeigt.
+  Der von Ihnen eingegebene Text wird auf dem Gerät im Anmeldefenster und auf dem Sperrbildschirm angezeigt.
 
 - **Fußnote im Sperrbildschirm:** Geben Sie einen Hinweis ein, der Ihnen helfen könnte, das Gerät zurückzubekommen, wenn es verloren geht oder gestohlen wird. Sie können einen beliebigen Text eingeben. Geben Sie zum Beispiel `If found, call Contoso at ...` ein.
 
@@ -209,15 +214,16 @@ Diese Funktion gilt für:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Die Einstellungen gelten für: Geräteregistrierung, automatisierte Geräteregistrierung (überwacht)
 
-- **Benutzernamensattribut aus AAD**: Intune sucht für jeden Azure AD-Benutzer nach diesem Attribut. Intune füllt anschließend das entsprechende Feld (z.B. „UPN“) auf, bevor die auf dem Gerät zu installierende XML-Nutzlast generiert wird. Folgende Optionen sind verfügbar:
+- **Benutzernamensattribut aus AAD**: Intune sucht für jeden Azure AD-Benutzer nach diesem Attribut. Intune füllt anschließend das entsprechende Feld (z. B. „UPN“) aus, bevor der auf dem Gerät zu installierende XML-Code generiert wird. Folgende Optionen sind verfügbar:
 
   - **Benutzerprinzipalname**: Der Benutzerprinzipalname (UPN) wird wie folgt analysiert:
 
-    ![SSO-Attribut für den iOS/iPadOS-Benutzernamen in Intune](./media/ios-device-features-settings/User-name-attribute.png)
+    > [!div class="mx-imgBorder"]
+    > ![SSO-Attribut für den iOS-/iPadOS-Benutzernamen in Intune](./media/ios-device-features-settings/User-name-attribute.png)
 
     Sie können den Bereich auch mit dem Text überschreiben, den Sie in das Textfeld **Bereich** eingeben.
 
-    Beispielsweise verfügt Contoso über mehrere Regionen, wie z.B. Europa, Asien und Nordamerika. Contoso möchte, dass seine Benutzer in Asien das einmalige Anmelden verwenden und der UPN muss laut App im Format `username@asia.contoso.com` vorliegen. Wenn Sie den **Benutzerprinzipalname** auswählen, wird der Bereich für die einzelnen Benutzer aus Azure AD übernommen, z.B. `contoso.com`. Wählen Sie für Benutzer in Asien, also **Benutzerprinzipalname**, und geben Sie `asia.contoso.com` ein. Daraufhin wird für den UPN des Endbenutzers `username@asia.contoso.com` anstelle von `username@contoso.com` verwendet.
+    Beispielsweise verfügt Contoso über mehrere Regionen, wie z.B. Europa, Asien und Nordamerika. Contoso möchte, dass seine Benutzer in Asien das einmalige Anmelden verwenden und der UPN muss laut App im Format `username@asia.contoso.com` vorliegen. Wenn Sie den **Benutzerprinzipalname** auswählen, wird der Bereich für die einzelnen Benutzer aus Azure AD übernommen, z.B. `contoso.com`. Wählen Sie für Benutzer in Asien, also **Benutzerprinzipalname**, und geben Sie `asia.contoso.com` ein. Daraufhin wird für den UPN des Benutzers `username@asia.contoso.com` anstelle von `username@contoso.com` verwendet.
 
   - **Intune-Geräte-ID**: Intune wählt die Intune-Geräte-ID automatisch aus.
 
@@ -240,13 +246,13 @@ Diese Funktion gilt für:
 
   Die Muster `http://.com` und `https://.com` stimmen mit allen HTTP- bzw. HTTPS-URLs überein.
 
-- **Apps, die einmaliges Anmelden verwenden**: **Fügen** Sie Apps auf Endbenutzergeräten hinzu, die das einmalige Anmelden verwenden können.
+- **Apps, die einmaliges Anmelden verwenden**: **Fügen** Sie Apps auf Benutzergeräten hinzu, die das einmalige Anmelden verwenden können.
 
   Das `AppIdentifierMatches`-Array muss Zeichenfolgen enthalten, die mit App-Bündel-IDs übereinstimmen. Bei diesen Zeichenfolgen kann es sich um exakte Übereinstimmungen (z.B. `com.contoso.myapp`) handeln. Sie können aber auch Präfixübereinstimmungen der Bündel-ID unter Verwendung des Platzhalterzeichens \* angeben. Das Platzhalterzeichen muss nach einem Punkt (.) folgen und kann nur einmal am Ende der Zeichenfolge verwendet werden (z.B. `com.contoso.*`). Wenn ein Platzhalter enthalten ist, erhält jede App, deren Bündel-ID mit dem Präfix beginnt, Zugriff auf das Konto.
 
   Verwenden Sie den **App-Namen** als benutzerfreundlichen Namen, um die Bündel-ID einfacher identifizieren zu können.
 
-- **Zertifikat zum Erneuern der Anmeldeinformationen**: Erfolgt die Authentifizierung anhand von Zertifikaten (nicht Kennwörtern), wählen Sie als Authentifizierungszertifikat das vorhandene SCEP- oder PFX-Zertifikat aus. In der Regel handelt es sich dabei um dasselbe Zertifikat, das dem Benutzer für andere Profile wie VPN, WLAN oder E-Mail bereitgestellt wird.
+- **Zertifikat zum Erneuern der Anmeldeinformationen**: Erfolgt die Authentifizierung anhand von Zertifikaten (nicht Kennwörtern), wählen Sie als Authentifizierungszertifikat das vorhandene SCEP- oder PFX-Zertifikat aus. In der Regel handelt es sich dabei um das Zertifikat, das dem Benutzer für andere Profile wie VPN, WLAN oder E-Mail bereitgestellt wird.
 
 ## <a name="web-content-filter"></a>Webinhaltsfilter
 
@@ -263,13 +269,13 @@ Diese Funktion gilt für:
 
     - **Blockierte URLs**: **Fügen** Sie die URLs hinzu, die Sie nicht öffnen möchten, unabhängig von der den Einstellung für den Apple-Webfilter.
 
-  - **Nur bestimmte Websites** (nur für Safari-Webbrowser): Diese URLs werden den Lesezeichen im Safari-Browser hinzugefügt. Benutzer dürfen **nur** diese Websites besuchen, der Zugriff auf andere Websites ist nicht möglich. Verwenden Sie diese Option nur, wenn Sie genau wissen, auf welche URLs Benutzer zugreifen können.
+  - **Nur bestimmte Websites** (nur für Safari-Webbrowser): Diese URLs werden den Lesezeichen im Safari-Browser hinzugefügt. Benutzer dürfen **nur** diese Websites besuchen. Ein Zugriff auf andere Websites ist nicht möglich. Verwenden Sie diese Option nur, wenn Sie genau wissen, auf welche URLs Benutzer zugreifen können.
 
     - **URL**: Geben Sie die URL der Website ein, die Sie zulassen möchten. Geben Sie beispielsweise `https://www.contoso.com` ein.
     - **Lesezeichenpfad**: Apple hat diese Einstellung geändert. Alle Lesezeichen werden dem Ordner **Genehmigte Websites** hinzugefügt. Lesezeichen werden nicht in dem von Ihnen eingegebenen Lesezeichenpfad gespeichert.
     - **Titel**: Geben Sie einen beschreibenden Titel für das Lesezeichen ein.
 
-    Wenn Sie keine URLs eingeben, können Endbenutzer nur auf `microsoft.com`, `microsoft.net` und `apple.com` zugreifen. Diese URLs werden von Intune automatisch zugelassen.
+    Wenn Sie keine URLs eingeben, können Benutzer nur auf die Websites `microsoft.com`, `microsoft.net` und `apple.com` zugreifen. Diese URLs werden von Intune automatisch zugelassen.
 
 ## <a name="single-sign-on-app-extension"></a>App-Erweiterung für einmaliges Anmelden
 
@@ -282,10 +288,10 @@ Diese Funktion gilt für:
 
 - **Typ der SSO-App-Erweiterung:** Wählen Sie den Typ der SSO-App-Erweiterung aus. Folgende Optionen sind verfügbar:
 
-  - **Nicht konfiguriert:** Es werden keine App-Erweiterungen verwendet. Um eine App-Erweiterung zu deaktivieren, können Sie den Typ der SSO-App-Erweiterung in **Nicht konfiguriert** ändern.
+  - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Standardmäßig verwendet das Betriebssystem möglicherweise keine App-Erweiterungen. Um eine App-Erweiterung zu deaktivieren, können Sie den Typ der SSO-App-Erweiterung in **Nicht konfiguriert** ändern.
   - **Umleiten:** Verwenden Sie eine generische, anpassbare App-Erweiterung für die Umleitung, um das einmalige Anmelden (Single Sign-On, SSO) mit modernen Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterungs-ID für die App-Erweiterung Ihrer Organisation kennen.
 
-    Auf Geräten mit iOS/iPadOS 13.0+-Geräten können Sie die **Microsoft Azure AD SSO-App-Erweiterung** mit diesem Umleitungs-SSO-App-Erweiterungstyp konfigurieren. Die Microsoft Azure AD-Erweiterung ermöglicht das einmalige Anmelden zwischen Microsoft-Apps und Organisations-Apps, die Azure AD für die Authentifizierung verwenden. Die Azure AD-Erweiterung fungiert als erweiterter Authentifizierungsbroker, der Sicherheits- und Endbenutzerverbesserungen bietet. Alle Apps, die bisher eine brokerbasierte Authentifizierung über die Microsoft Authenticator-App verwendet haben, können das einmalige Anmelden mit der neuen SSO-Erweiterung weiterhin nutzen. Die Azure AD SSO-Erweiterung unterstützt noch kein Browser-SSO. Weitere Informationen zu SSO und dem iOS/iPadOS-Authentifizierungsbroker finden Sie unter [Gewusst wie: Konfigurieren von SSO unter macOS und iOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+    Auf Geräten mit iOS/iPadOS 13.0+-Geräten können Sie die **Microsoft Azure AD SSO-App-Erweiterung** mit diesem Umleitungs-SSO-App-Erweiterungstyp konfigurieren. Die Microsoft Azure AD-Erweiterung ermöglicht das einmalige Anmelden zwischen Microsoft-Apps und Organisations-Apps, die Azure AD für die Authentifizierung verwenden. Die Azure AD-Erweiterung fungiert als erweiterter Authentifizierungsbroker, der eine Verbesserung der Sicherheit und der Benutzerfreundlichkeit bietet. Alle Apps, die bisher eine brokerbasierte Authentifizierung über die Microsoft Authenticator-App verwendet haben, können das einmalige Anmelden mit der neuen SSO-Erweiterung weiterhin nutzen. Die Azure AD SSO-Erweiterung unterstützt noch kein Browser-SSO. Weitere Informationen zu SSO und dem iOS/iPadOS-Authentifizierungsbroker finden Sie unter [Gewusst wie: Konfigurieren von SSO unter macOS und iOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
 
     **So konfigurieren Sie die iOS Microsoft Azure AD-Erweiterung:**
 
@@ -306,7 +312,7 @@ Diese Funktion gilt für:
         - `https://login-us.microsoftonline.com`
 
     > [!IMPORTANT]
-    > Um einmaliges Anmelden mit der iOS/iPadOS-Microsoft Azure AD-Erweiterung zu erreichen, installieren Sie zuerst die iOS/iPadOS-Microsoft Authenticator-App auf dem Gerät. Der Authentifikator übergibt die Azure AD-Erweiterung an das Gerät, und die Einstellungen für die MDM-SSO-App-Erweiterung aktivieren die Azure AD-Erweiterung. Nachdem der Authentifikator und das SSO-App-Erweiterungs Profil auf dem Gerät installiert sind, müssen die Benutzer ihre Anmeldeinformationen eingeben, um sich anzumelden und eine Sitzung einzurichten. Diese Sitzung wird dann für verschiedene Anwendungen verwendet, ohne dass sich die Benutzer erneut authentifizieren müssen.
+    > Um einmaliges Anmelden mit der iOS-/iPadOS-Microsoft Azure AD-Erweiterung zu erreichen, installieren Sie zuerst die iOS-/iPadOS-Microsoft Authenticator-App auf dem Gerät. Authenticator stellt die Azure AD-Erweiterung auf dem Gerät bereit, und die MDM-SSO-App-Erweiterungseinstellungen aktivieren die Azure AD-Erweiterung. Wenn Authenticator und das SSO-App-Erweiterungsprofil auf dem Gerät installiert sind, müssen die Benutzer ihre Anmeldeinformationen eingeben, um sich anzumelden und eine Sitzung einzurichten. Diese Sitzung wird dann für verschiedene Anwendungen verwendet, ohne dass sich die Benutzer erneut authentifizieren müssen.
 
   - **Anmeldeinformationen:** Verwenden Sie eine generische, anpassbare App-Erweiterung für Anmeldeinformationen, um das einmalige Anmelden mit Challenge-Response-Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterungs-ID für die App-Erweiterung Ihrer Organisation kennen.
   - **Kerberos**: Verwenden Sie die integrierte Kerberos-Erweiterung von Apple, die in iOS 13.0 und höher und iPadOS 13.0 und höher enthalten ist. Bei dieser Option handelt es sich um eine Kerberos-spezifische Version der App-Erweiterung vom Typ **Anmeldeinformationen**.
@@ -344,9 +350,9 @@ Diese Funktion gilt für:
 
   - **Hinzufügen**: Tippen Sie auf diese Option, um Ihre Konfigurationsschlüssel hinzuzufügen.
 
-- **Verwendung des Schlüsselbunds** (nur „Kerberos“): Wählen Sie **Blockieren** aus, um zu verhindern, dass Kennwörter im Schlüsselbund gespeichert und aufbewahrt werden. Wenn diese Option blockiert ist, werden Benutzer nicht aufgefordert, Ihr Kennwort zu speichern, sondern müssen es noch einmal eingeben, wenn das Kerberos-Ticket abläuft. **Nicht konfiguriert** (Standardeinstellung): Ermöglicht das Speichern von Kennwörtern im Schlüsselbund. Benutzer werden nicht aufgefordert, Ihr Kennwort noch einmal einzugeben, wenn das Ticket abgelaufen ist.
-- **Face ID, Touch ID, or passcode** (Face ID, Touch ID oder Passcode) (nur „Kerberos“): Bei der Option **Anfordern** werden Benutzer dazu gezwungen, ihre Face-ID, ihre Touch-ID oder ihren Gerätepasscode einzugeben, wenn die Anmeldeinformationen zum Aktualisieren des Kerberos-Tickets benötigt werden. Bei der Einstellung **Nicht konfiguriert** (Standardeinstellung) müssen sich Benutzer nicht mit biometrischen Daten oder einem Gerätepasscode authentifizieren, um das Kerberos-Ticket zu aktualisieren. Wenn die Einstellung **Verwendung des Schlüsselbunds** blockiert ist, wird diese Einstellung nicht angewendet.
-- **Default realm** (Standardbereich) (nur „Kerberos“): Klicken Sie auf **Aktivieren**, um den von Ihnen unter **Bereich** eingegebenen Wert als Standardbereich festzulegen. **Nicht konfiguriert** (Standardeinstellung): Es ist kein Standardbereich festgelegt.
+- **Verwendung des Schlüsselbunds** (nur „Kerberos“): Die Einstellung **Blockieren** verhindert, dass Kennwörter im Schlüsselbund gespeichert werden. Wenn diese Option blockiert ist, werden Benutzer nicht aufgefordert, Ihr Kennwort zu speichern, sondern müssen es noch einmal eingeben, wenn das Kerberos-Ticket abläuft. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise das Speichern von Kennwörtern im Schlüsselbund zu. Benutzer werden nicht aufgefordert, Ihr Kennwort noch einmal einzugeben, wenn das Ticket abgelaufen ist.
+- **Face ID, Touch ID, or passcode** (Face ID, Touch ID oder Passcode) (nur „Kerberos“): Bei der Option **Anfordern** werden Benutzer dazu gezwungen, ihre Face-ID, ihre Touch-ID oder ihren Gerätepasscode einzugeben, wenn die Anmeldeinformationen zum Aktualisieren des Kerberos-Tickets benötigt werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig fordert das Betriebssystem möglicherweise nicht, dass Benutzer sich mit biometrischen Daten oder einem Gerätepasscode authentifizieren, um das Kerberos-Ticket zu aktualisieren. Wenn die Einstellung **Verwendung des Schlüsselbunds** blockiert ist, wird diese Einstellung nicht angewendet.
+- **Default realm** (Standardbereich) (nur „Kerberos“): Mit **Aktivieren** wird der von Ihnen eingegebene **Bereich** als Standardbereich festgelegt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig legt das Betriebssystem möglicherweise keinen Standardbereich fest.
 
   > [!TIP]
   > - **Aktivieren** Sie diese Einstellung, wenn Sie mehrere Kerberos-SSO-App-Erweiterungen in Ihrer Organisation konfigurieren.
@@ -371,8 +377,8 @@ Möglicherweise kommt es zu unerwartetem Verhalten, wenn ein Profil ohne Bild ei
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Die Einstellungen gelten für: Automatisierte Geräteregistrierung (überwacht)
 
-- **Position für die Anzeige des Hintergrundbilds**: Wählen Sie die Position auf dem Gerät, an dem das Bild angezeigt werden soll. Folgende Optionen sind verfügbar:
-  - **Nicht konfiguriert:** Es ist kein benutzerdefiniertes Bild auf dem Gerät hinzugefügt. Das Gerät nutzt den Standard des Betriebssystems.
+- **Position für die Anzeige des Hintergrundbilds**: Geben Sie einen Ort auf dem Gerät an, an dem das Bild angezeigt werden soll. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Es wird kein benutzerdefiniertes Bild auf dem Gerät hinzugefügt. Standardmäßig legt das Betriebssystem möglicherweise selbst ein Bild fest.
   - **Sperrbildschirm**: Fügt das Bild zum Sperrbildschirm hinzu.
   - **Startbildschirm**: Fügt das Bild zum Startbildschirm hinzu.
   - **Sperrbildschirm und Startbildschirm**: Verwendet das gleiche Bild auf dem Sperr- und dem Startbildschirm.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b66777e9c108ab4a6b84e4d4fa0942532685912f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086727"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327272"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Verschieben von Android-Geräten aus dem Geräteadministrator in die Arbeitsprofilverwaltung
 
@@ -40,12 +40,12 @@ Wenn Benutzer bemerken, dass ihr Gerät aus diesem Grund nicht mehr konform ist,
 - Richten Sie die Android-Arbeitsprofilverwaltung ein, indem Sie [eine Verbindung von Ihrem Intune-Mandantenkonto mit Ihrem Android Enterprise-Konto herstellen](connect-intune-android-enterprise.md).
 - Legen Sie die [Android Enterprise-Arbeitsprofilregistrierung](android-work-profile-enroll.md) für die Gruppe von Benutzern fest, die zum Android-Arbeitsprofil wechseln.
 - Erhöhen Sie ggf. die Limits für Benutzergeräte. Wenn Sie die Registrierung von Geräten bei der Geräteadministratorverwaltung aufheben, werden Datensätze für Geräte u. U. nicht sofort entfernt. Um für diesen Zeitraum über genügend Puffer zu verfügen, müssen Sie möglicherweise das Gerätelimit erhöhen, sodass die Benutzer sich bei der Arbeitsprofilverwaltung registrieren können.
-  - [Konfigurieren Sie die Azure Active Directory-Geräteeinstellungen](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) für die maximale Anzahl von Geräten pro Benutzer.
+  - [Konfigurieren Sie die Azure Active Directory-Geräteeinstellungen](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) für die maximale Anzahl von Geräten pro Benutzer.
   - Passen Sie die [Intune-Gerätelimiteinschränkungen](enrollment-restrictions-set.md#create-a-device-limit-restriction) an, indem Sie das Gerätelimit festlegen. 
 
 ## <a name="create-device-compliance-policy"></a>Erstellen einer Gerätekonformitätsrichtlinie
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **Konformitätsrichtlinien** > **Richtlinien** > **Richtlinie erstellen** aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **Konformitätsrichtlinien** > **Richtlinien** > **Richtlinie erstellen**.
 
     ![Erstellen von Richtlinien](./media/android-move-device-admin-work-profile/create-policy.png)
 
@@ -71,6 +71,7 @@ Wenn Benutzer bemerken, dass ihr Gerät aus diesem Grund nicht mehr konform ist,
     > [!NOTE]
     > - Natürlich können Sie in Ihren Mitteilungen an Benutzer auch benutzerfreundlichen Hypertext für die Links verwenden. Verkürzen Sie URLs jedoch nicht, da die Links in diesem Fall möglicherweise nicht funktionieren.
     > - Wenn das Android-Unternehmensportal im Hintergrund offen ist und der Benutzer auf den Link tippt, wird er möglicherweise auf die zuletzt im Portal geöffnete Seite weitergeleitet.
+    > - Benutzer müssen auf einem Android-Gerät auf den Link tippen. Wenn sie ihn stattdessen in einen Browser kopieren, wird dadurch nicht das Android-Unternehmensportal gestartet. 
 
     Wählen Sie **Weiter** aus.
 
@@ -80,12 +81,12 @@ Wenn Benutzer bemerken, dass ihr Gerät aus diesem Grund nicht mehr konform ist,
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Der [Endbenutzerflow zum Wechsel in die neue Geräteverwaltung](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md) leitet Benutzer durch den Prozess zum Aufheben der Registrierung bei der Geräteadministratorverwaltung und zum Einrichten der Arbeitsprofilverwaltung. Benutzer müssen über [beim Android-Geräteadministrator registrierte Geräte](android-enroll-device-administrator.md) mit dem Android-Unternehmensportal der Version 5.0.4720.0 oder höher verfügen.
+Der [Endbenutzerflow zum Wechsel in die neue Geräteverwaltung](../user-help/move-to-new-device-management-setup.md) leitet Benutzer durch den Prozess zum Aufheben der Registrierung bei der Geräteadministratorverwaltung und zum Einrichten der Arbeitsprofilverwaltung. Benutzer müssen über [beim Android-Geräteadministrator registrierte Geräte](android-enroll-device-administrator.md) mit dem Android-Unternehmensportal der Version 5.0.4720.0 oder höher verfügen.
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>Benutzern wird nach dem Tippen auf „Auflösen“ ein Fehler angezeigt
 Wenn Benutzern nach dem Tippen auf die Schaltfläche **Auflösen**n ein Fehler angezeigt wird, liegt wahrscheinlich einer der folgenden Gründe vor:
 - Die Registrierung des Arbeitsprofils ist nicht ordnungsgemäß eingerichtet (ein Android Enterprise-Konto ist nicht verbunden, oder die Registrierungseinschränkungen sind so festgelegt, dass die Arbeitsprofilregistrierung blockiert wird).
-- Auf dem Gerät wird Android 4.4 oder früher ausgeführt – diese Version unterstützt die Registrierung von Arbeitsprofilen nicht. 
+- Auf dem Gerät wird Android 4.4 oder früher ausgeführt – diese Versionen unterstützen die Registrierung von Arbeitsprofilen nicht. 
 - Der Gerätehersteller unterstützt die Registrierung von Arbeitsprofilen auf dem Gerätemodell nicht.
 
 ### <a name="resolve-button-doesnt-appear-on-the-users-device"></a>Die Schaltfläche zum Auflösen wird auf dem Benutzergerät nicht angezeigt
@@ -103,8 +104,5 @@ Wenn Benutzer auf die URL tippen, die sie zur Seite **Geräteeinstellungen aktua
 - Das Gerät verwendet Android 6 oder früher. 
 
 ## <a name="next-steps"></a>Nächste Schritte
-[Endbenutzerflow](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
-
+[Sehen Sie sich den Prozess für Endbenutzer an](../user-help/move-to-new-device-management-setup.md)
 [Verwalten von Android-Arbeitsprofilgeräten mit Intune](android-enterprise-overview.md)
-
-

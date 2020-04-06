@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 410911a44ca84230c30ccbea394c24b539b77c4f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086089"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327039"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Registrieren von macOS-Geräten in Intune
 
@@ -60,7 +60,7 @@ Informationen zu anderen Endbenutzeraufgaben finden Sie in den folgenden Artikel
 
 ## <a name="company-owned-macos-devices"></a>Unternehmenseigene macOS-Geräte
 Für Organisationen, die Geräte für Ihre Benutzer erwerben, unterstützt Intune die folgenden Methoden für die Registrierung von unternehmenseigenen macOS-Geräten:
-- [Apple-Programm zur Geräteregistrierung (DEP)](device-enrollment-program-enroll-macos.md): Organisationen können macOS-Geräte über das Apple-Programm zur Geräteregistrierung (Device Enrollment Program, DEP) erwerben. Mit DEP können Sie drahtlos (Over The Air) ein Registrierungsprofil bereitstellen, das Geräte für die Verwaltung registriert.
+- [Automatische Geräteregistrierung von Apple (Automated Device Enrollment, ADE):](device-enrollment-program-enroll-macos.md) Organisationen können macOS-Geräte über die ADE kaufen. Mit ADE können Sie drahtlos (Over The Air) ein Registrierungsprofil bereitstellen, das Geräte für die Verwaltung registriert.
 - [Geräteregistrierungs-Manager (Device Enrollment Manager, DEM)](device-enrollment-manager-enroll.md): Über ein DEM-Konto können Sie bis zu 1.000 Geräte registrieren.
 
 ## <a name="block-macos-enrollment"></a>Blockieren der macOS-Registrierung

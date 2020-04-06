@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 427907b3b24556be15958707bf55f4dc9b190d94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1070c7b396ac3c19c340a69b6e2eb8db9d6707b6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363823"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327196"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Automatisches Registrieren von macOS-Geräten mit Apple Business Manager oder Apple School Manager
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+> [!IMPORTANT]
+> Apple hat vor Kurzem vom Programm zur Geräteregistrierung (DEP, Device Enrollment Program) auf die automatische Geräteregistrierung (ADE, Automated Device Enrollment) umgestellt. Die Benutzeroberfläche von Intune wird derzeit entsprechend aktualisiert. Bis diese Änderungen abgeschlossen sind, wird im Intune-Portal weiterhin der Begriff *Programm zur Geräteregistrierung* verwendet. Überall, wo dieser steht, wird nun die automatische Geräteregistrierung verwendet.
 
 Sie können die Intune-Registrierung für macOS-Geräte einrichten, die über [Apple Business Manager](https://business.apple.com/) oder [Apple School Manager](https://school.apple.com/) von Apple erworben wurden. Sie können jedes dieser Programme zur Geräteregistrierung für eine große Anzahl von Geräten verwenden, ohne diese physisch berühren zu müssen. Sie können macOS-Geräte direkt an Benutzer senden. Wenn ein Benutzer das Gerät einschaltet, wird der Setup-Assistent mit vordefinierten Einstellungen ausgeführt, und das Gerät wird bei der Intune-Verwaltung registriert.
 
@@ -50,9 +51,9 @@ Weder die Registrierung mit Apple Business Manager noch mit Apple School Manager
 - [MDM-Autorität](../fundamentals/mdm-authority-set.md)
 - [Apple-MDM-Push-Zertifikat](../enrollment/apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-dep-token"></a>Abrufen eines Apple-DEP-Tokens
+## <a name="get-an-apple-ade-token"></a>Abrufen eines Apple-ADE-Tokens
 
-Bevor Sie macOS-Geräte mit DEP oder Apple School Manager registrieren können, benötigen Sie ein DEP-Token (P7M-Datei) von Apple. Mit diesem Token kann Intune Informationen zu den Geräten synchronisieren, die Ihrem Unternehmen gehören. Zudem ermöglicht es Intune das Hochladen von Registrierungsprofilen bei Apple und das Zuweisen dieser Profile zu Geräten.
+Bevor Sie macOS-Geräte mit ADE oder Apple School Manager registrieren können, benötigen Sie eine Tokendatei (P7M-Datei) von Apple. Mit diesem Token kann Intune Informationen zu den Geräten synchronisieren, die Ihrem Unternehmen gehören. Zudem ermöglicht es Intune das Hochladen von Registrierungsprofilen bei Apple und das Zuweisen dieser Profile zu Geräten.
 
 Verwenden Sie das Apple-Portal, um ein Token zu erstellen. Sie verwenden das Apple-Portal auch, um in Intune Geräte für die Verwaltung zuzuweisen.
 
@@ -92,7 +93,7 @@ Verwenden Sie das Apple-Portal, um ein Token zu erstellen. Sie verwenden das App
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Schritt 3: Speichern der zum Erstellen dieses Tokens verwendeten Apple-ID
 
-Geben Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Apple-ID zur späteren Referenz an.
+Geben Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Apple-ID zur späteren Verwendung an.
 
 ![Screenshot der Angabe der Apple-ID zur Erstellung des Registrierungsprogrammtokens und Navigieren zu diesem Token](./media/device-enrollment-program-enroll-macos/image03.png)
 
@@ -115,7 +116,7 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 4. Wählen Sie als **Plattform** die Option **macOS** aus.
 
 5. Wählen Sie unter **Benutzeraffinität** aus, ob sich Geräte mit diesem Profil mit oder ohne einen zugewiesenen Benutzer registrieren müssen.
-    - **Mit Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die Benutzern gehören und das Unternehmensportal verwenden sollen, um Dienste wie z.B. die Installation von Apps nutzen zu können. Bei ADFS ist für Benutzeraffinität [Endpunkt WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints) erforderlich. [Weitere Informationen](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint): Auf macOS-Geräten mit Benutzeraffinität, die über DEP registriert wurden, wird die mehrstufige Authentifizierung nicht unterstützt.
+    - **Mit Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die Benutzern gehören und das Unternehmensportal verwenden sollen, um Dienste wie z.B. die Installation von Apps nutzen zu können. Bei ADFS ist für Benutzeraffinität [Endpunkt WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints) erforderlich. [Hier erhalten Sie weitere Informationen](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). Auf macOS-Geräten mit Benutzeraffinität, die über ADE registriert wurden, wird die mehrstufige Authentifizierung nicht unterstützt.
 
     - **Ohne Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die keinem einzelnen Benutzer zugeordnet sind. Verwenden Sie diese Option für Geräte, die Aufgaben ohne den Zugriff auf lokale Benutzerdaten ausführen. Apps wie die Unternehmensportal-App funktionieren nicht.
 
@@ -165,10 +166,10 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 
 Nachdem Intune nun die Berechtigung zum Verwalten Ihrer Geräte besitzt, können Sie Intune mit Apple synchronisieren, um Ihre verwalteten Geräte in Intune im Azure-Portal anzuzeigen.
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **macOS** > **macOS-Registrierung** > **Registrierungsprogrammtoken** aus, und wählen Sie in der Liste **Geräte** > **Synchronisieren** ein Token aus. ![Screenshot des ausgewählten Knotens „Geräte des Registrierungprogramms“ und des ausgewählten Links „Synchronisierung“](./media/device-enrollment-program-enroll-macos/image06.png)
+1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **macOS** > **macOS-Registrierung** > **Registrierungsprogrammtoken**, wählen Sie ein Token aus der Liste aus, und klicken Sie auf **Geräte** > **Synchronisieren**. ![Screenshot des ausgewählten Knotens „Geräte des Registrierungprogramms“ und des ausgewählten Links „Synchronisierung“](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Zur Einhaltung der Apple-Bedingungen für zulässigen Datenverkehr des Registrierungsprogramms erzwingt Intune die folgenden Einschränkungen:
-   - Eine vollständige Synchronisation kann nicht öfter als einmal alle sieben Tage erfolgen. Während einer vollständigen Synchronisierung ruft Intune die vollständig aktualisierte Liste der Seriennummern auf, die dem mit Intune verbundenen Apple MDM-Server zugewiesen sind. Nachdem ein Registrierungsprogrammgerät aus dem Intune-Portal gelöscht wurde, ohne dass es vom Apple MDM-Server im DEP-Portal entfernt wurde, wird es erst wieder in Intune importiert, wenn die vollständige Synchronisierung ausgeführt wurde.   
+   - Eine vollständige Synchronisation kann nicht öfter als einmal alle sieben Tage erfolgen. Während einer vollständigen Synchronisierung ruft Intune die vollständig aktualisierte Liste der Seriennummern auf, die dem mit Intune verbundenen Apple MDM-Server zugewiesen sind. Nachdem ein Registrierungsprogrammgerät aus dem Intune-Portal gelöscht wurde, ohne dass es vom Apple MDM-Server im Apple-Portal entfernt wurde, wird es erst wieder in Intune importiert, wenn die vollständige Synchronisierung ausgeführt wurde.   
    - Die Synchronisierung wird automatisch alle 24 Stunden ausgeführt. Sie können eine Synchronisierung ebenfalls durchführen, indem Sie auf die Schaltfläche **Synchronisierung** klicken (nicht öfter als einmal alle 15 Minuten). Alle Synchronisierungsanforderungen müssen innerhalb von 15 Minuten abgeschlossen werden. Die Schaltfläche **Synchronisierung** bleibt bis zum Abschluss der Synchronisierung deaktiviert. Durch diese Synchronisierung werden vorhandene Gerätestatus aktualisiert und neue Geräte importiert, die dem Apple MDM-Server zugewiesen sind.
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Zuweisen eines Registrierungsprofils an Geräte
@@ -190,7 +191,7 @@ Sie können ein macOS- und iOS-/iPadOS-Standardprofil auswählen, das auf alle G
 
 Sie haben die Verwaltung und Synchronisierung zwischen Apple und Intune aktiviert und haben ein Profil zugewiesen, damit Ihre Geräte registriert werden können. Sie können jetzt Geräte an Benutzer verteilen. Für Geräte mit Benutzeraffinität muss jedem Benutzer eine Intune-Lizenz zugewiesen werden. Geräte ohne Benutzeraffinität benötigen eine Gerätelizenz. Ein aktiviertes Gerät kann kein Registrierungsprofil anwenden, bis das Gerät zurückgesetzt wurde.
 
-## <a name="renew-a-dep-token"></a>Erneuern eines DEP-Tokens
+## <a name="renew-an-ade-token"></a>Erneuern eines ADE-Tokens
 
 1. Wechseln Sie zu deploy.apple.com.  
 2. Wählen Sie unter **Server verwalten** Ihren MDM-Server aus, der der Tokendatei zugeordnet ist, die Sie erneuern möchten.
@@ -199,7 +200,7 @@ Sie haben die Verwaltung und Synchronisierung zwischen Apple und Intune aktivier
     ![Screenshot von „Neues Token generieren“](./media/device-enrollment-program-enroll-macos/generatenewtoken.png)
 
 4. Klicken Sie auf **Ihr Servertoken**.  
-5. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräteregistrierung** > **Apple-Registrierung** > **Registrierungsprogrammtoken**, und wählen Sie das Token aus.
+5. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräteregistrierung** > **Apple-Registrierung** > **Registrierungsprogrammtoken**, und wählen Sie das Token aus.
     ![Screenshot der Registrierungsprogrammtoken.](./media/device-enrollment-program-enroll-macos/enrollmentprogramtokens.png)
 
 6. Wählen Sie **Token erneuern** aus, und geben Sie die Apple-ID ein, die zum Erstellen des ursprünglichen Tokens verwendet wurde.  

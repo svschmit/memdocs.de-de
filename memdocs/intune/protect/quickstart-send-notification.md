@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e41ed4d5de66e1ca9573145f865cbfce45f5245
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 48ec5bf332d951fc19cb4d6ef1dee242b87d02ee
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084796"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325476"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Schnellstart: Senden von Benachrichtigungen an nicht konforme Geräte
 
@@ -41,7 +41,7 @@ Wenn Sie Gerätekonformitätsrichtlinien verwenden, um den Zugriff auf Unternehm
 
 ## <a name="sign-in-to-intune"></a>Anmelden bei Intune
 
-Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) als [globaler Administrator](../fundamentals/users-add.md#types-of-administrators) oder [Intune-Dienstadministrator](../fundamentals/users-add.md#types-of-administrators) an. Wenn Sie ein Testabonnement für Intune erstellt haben, besitzt das Konto, mit dem Sie das Abonnement erstellt haben, die Rolle des Unternehmensadministrators.
+Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) als [globaler Administrator](../fundamentals/users-add.md#types-of-administrators) oder Intune-[Dienstadministrator](../fundamentals/users-add.md#types-of-administrators) an. Wenn Sie ein Testabonnement für Intune erstellt haben, besitzt das Konto, mit dem Sie das Abonnement erstellt haben, die Rolle des Unternehmensadministrators.
 
 ## <a name="create-a-notification-message-template"></a>Erstellen einer Benachrichtigungsvorlage
 

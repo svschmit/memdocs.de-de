@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec131df32e06c1c43b8904dde732b4e6a17a91aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3daf758ed93fb03ac63b062f604a457d033637dc
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334196"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438763"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>Hinzufügen und Zuweisen der Unternehmensportal-App für Windows 10 auf vom Autopilot bereitgestellten Geräten
 
@@ -52,9 +52,9 @@ Die Unternehmensportal-App (Offline) kann über die folgenden Schritte installie
 ## <a name="assign-the-company-portal-app"></a>Verknüpfen der Unternehmensportal-App
 
 1. Melden Sie sich im  [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) ( ) mit Ihrem Administratorkonto an. 
-2. Klicken Sie rechts auf die Registerkarte  **Apps** .
-3. Wählen Sie unter  **Nach Plattform** die Option **Windows** aus.
-4. Klicken Sie auf  **Unternehmensportal (Offline)** .
+2. Klicken Sie auf die Registerkarte **Apps** im rechten Bereich.
+3. Wählen Sie unter **Nach Plattform** die Option **Windows** aus.
+4. Klicken Sie auf **Unternehmensportal (Offline)** .
 5. Sie müssen entweder warten, bis der Synchronisierungszeitplan abgeschlossen ist, oder eine manuelle Synchronisierung im Microsoft Endpoint Manager Admin Center durchführen.
 6. Weisen Sie den Autopilot-Gerätegruppen die Unternehmensportal-App als erforderliche App zu.
 

@@ -6,26 +6,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa471beb5929a6c5b39267871518f560fe6978f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343426"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359287"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>macOS-Geräteeinstellungen zum Konfigurieren und Verwenden von Kernelerweiterungen in Intune
-
-
 
 In diesem Artikel werden die verschiedenen Einstellungen für Kernelerweiterungen aufgeführt und beschrieben, die Sie auf macOS-Geräten steuern können. Mit diesen Einstellungen Ihrer Lösung für die mobile Geräteverwaltung (Mobile Device Management, MDM) können Sie Kernelerweiterungen auf Ihren Geräten hinzufügen und verwalten.
 
@@ -44,7 +43,7 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 
 ### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>Die Einstellungen gelten für: Vom Benutzer genehmigte und automatische Geräteregistrierung
 
-- **Außerkraftsetzungen durch Benutzer zulassen:** Die Einstellung **Zulassen** ermöglicht es Benutzern, Kernelerweiterungen zu genehmigen, die nicht im Konfigurationsprofil enthalten sind. Die Einstellung **Nicht konfiguriert** (Standardeinstellung) verhindert, dass Benutzer Erweiterungen zulassen, die nicht im Konfigurationsprofil enthalten sind. Dies bedeutet, dass nur im Profil enthaltene Erweiterungen genehmigt sind.
+- **Außerkraftsetzungen durch Benutzer zulassen:** Die Einstellung **Zulassen** ermöglicht es Benutzern, Kernelerweiterungen zu genehmigen, die nicht im Konfigurationsprofil enthalten sind. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig verhindert das Betriebssystem, dass Benutzer Erweiterungen zulassen, die nicht im Konfigurationsprofil enthalten sind. Dies bedeutet, dass nur im Profil enthaltene Erweiterungen genehmigt sind.
 
   Weitere Informationen zu diesem Feature finden Sie unter [Vom Benutzer genehmigtes Laden von Kernelerweiterungen](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (Apple-Website).
 

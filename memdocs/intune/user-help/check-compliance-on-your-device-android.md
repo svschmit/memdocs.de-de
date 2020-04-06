@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 03/25/2020
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,19 +18,29 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2806ca94b474ddea35d286fa9ee9a2ca626100a8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5078f41e08f78063fac3e355301d285d1bdf6ff2
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337849"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274964"
 ---
-# <a name="check-compliance-on-your-android-device"></a>Überprüfen der Kompatibilität auf Ihrem Android-Gerät
+# <a name="check-compliance-on-your-android-device"></a>Überprüfen der Kompatibilität auf Ihrem Android-Gerät  
+Sie können einen Geräte-Check-In manuell über das Unternehmensportal starten, um:
 
-Wenn Ihr Gerät sich eine Zeit lang nicht bei Intune angemeldet hat, können Sie möglicherweise nicht auf Ihre Firmen- oder Schulressourcen zugreifen. Versuchen Sie, den Zugriff mit den folgenden Schritten wiederzuerlangen.  
+* den Gerätestatus zu aktualisieren. 
+* wieder Zugriff auf Ihre Arbeits-, Schul- oder Uniressourcen zu erhalten. 
+
+Während eines Check-Ins bestätigt das Unternehmensportal, dass die Einstellungen auf Ihrem Gerät den Richtlinienanforderungen Ihrer Organisation entsprechen.  Ihre Organisation kann den Zugriff auf Arbeits-, Schul- oder Uniressourcen einschränken, bis Sie einchecken.  
+
+Wenn Sie vor kurzem Änderungen an den Geräteeinstellungen vorgenommen haben, müssen Sie möglicherweise manuell einchecken, um die Änderungen beim Unternehmensportal zu registrieren. 
 
 1. Öffnen Sie die Unternehmensportal-App für Android auf Ihrem Gerät.  
 
-2. Tippen Sie auf **Geräteeinstellungen überprüfen**.   
+2. Tippen Sie auf **Geräte**, und wählen Sie dann Ihr Gerät aus.  
 
-Wenn Sie Ihr verlorenes oder gestohlenes Gerät nicht zurücksetzen können, bitten Sie den Support Ihres Unternehmens, es zurückzusetzen. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+3. Tippen Sie unter **Status der Geräteeinstellungen** auf **Geräteeinstellungen überprüfen**. Das Unternehmensportal überprüft Ihr Gerät, um zu bestätigen, dass es den Richtlinienanforderungen Ihrer Organisation entspricht. 
+
+4. Nach der Überprüfung lautet der Status des Geräteeinstellungen **Richtlinienkonform** oder **Nicht richtlinienkonform**. Wenn Sie Änderungen vornehmen müssen, wird oben auf dem Bildschirm eine Meldung angezeigt. Tippen Sie auf diese, um weitere Details anzuzeigen. 
+
+Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  

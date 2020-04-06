@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,22 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 470ca47aa92b30acacc8a251c6d7d1741513bdf1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087085"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359213"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurieren von Einstellungen für Geräteeinschränkungen in Microsoft Intune
 
 Intune enthält Richtlinien zur Geräteeinschränkung, die Administratoren bei der Steuerung von Android-, iOS-/iPadOS-, macOS- und Windows-Geräten unterstützen. Mit diesen Einschränkungen können Sie eine Vielzahl von Einstellungen und Features steuern, um die Ressourcen Ihres Unternehmens zu schützen. Administratoren können z.B.:
 
-- Die Kamera des Geräts zulassen, oder sie blockieren
-- Den Zugriff auf Google Play, App-Stores, das Anzeigen von Dokumenten und Spiele steuern.
+- Lassen Sie die Kamera des Geräts zu, oder blockieren Sie sie.
+- den Zugriff auf Google Play, App-Stores, Dokumente und Gaming steuern.
 - integrierte Apps blockieren oder eine Liste von Apps erstellen, die zugelassen oder nicht zugelassen werden.
-- das Speichern von Dateien in Cloud- oder Speicherkonten erlauben oder verhindern.
-- Eine minimale Kennwortlänge einstellen und einfache Kennwörter blockieren
+- das Speichern von Dateien in Cloud- und Speicherkonten erlauben oder verhindern.
+- eine Mindestlänge für Kennwörter festlegen und einfache Kennwörter blockieren.
 
 Diese Features sind in Intune verfügbar und werden vom Administrator konfiguriert. Intune verwendet „Konfigurationsprofile“ zum Erstellen und Anpassen dieser Einstellungen für die Anforderungen Ihrer Organisation. Nachdem Sie diese Features in einem Profil hinzugefügt haben, können Sie das Profil anschließend auf Geräte in Ihrer Organisation pushen oder bereitstellen.
 
@@ -42,37 +42,50 @@ In diesem Artikel erfahren Sie, wie Sie ein Geräteeinschränkungsprofil erstell
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 3. Geben Sie die folgenden Eigenschaften ein:
 
-    - **Name:** Geben Sie einen aussagekräftigen Namen für die Richtlinie ein. Benennen Sie Ihre Richtlinien so, dass Sie diese später leicht wiedererkennen. Ein guter Richtlinienname ist beispielsweise **iOS/iPadOS: Kamera auf Geräten blockieren**.
-    - **Beschreibung:** Geben Sie eine Beschreibung für die Richtlinie ein. Diese Einstellung ist optional, wird jedoch empfohlen.
     - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:  
 
         - **Android-Geräteadministrator**
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
-        - **Windows Phone 8.1**
-        - **Windows 8.1 und höher**
         - **Windows 10 und höher**
+        - **Windows 8.1 und höher**
+        - **Windows Phone 8.1**
 
-    - **Profiltyp**: Wählen Sie **Geräteeinschränkungen** aus.
+    - **Profil**: Wählen Sie **Geräteeinschränkungen** aus.
 
         Um ein Geräteeinschränkungsprofil für Windows 10 Team-Geräte wie etwa ein Surface Hub zu erstellen, wählen Sie **Geräteeinschränkungen (Windows 10 Team)** aus.
 
-4. Die konfigurierbaren Einstellungen variieren je nach der ausgewählten Plattform. Wählen Sie Ihre Plattform für detaillierte Einstellungen aus:
+4. Wählen Sie **Erstellen** aus.
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
 
-    - [Android-Geräteadministratoreinstellungen](device-restrictions-android.md)
-    - [Android-Einstellungen für Unternehmen](device-restrictions-android-for-work.md)
-    - [iOS/iPadOS-Einstellungen](device-restrictions-ios.md)
-    - [Einstellungen für macOS](device-restrictions-macos.md)
-    - [Einstellungen für Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
+    - **Name:** Geben Sie einen aussagekräftigen Namen für die Richtlinie ein. Benennen Sie Ihre Richtlinien so, dass Sie diese später leicht wiedererkennen. Ein guter Richtlinienname ist beispielsweise **iOS/iPadOS: Kamera auf Geräten blockieren**.
+    - **Beschreibung:** Geben Sie eine Beschreibung für die Richtlinie ein. Diese Einstellung ist optional, wird jedoch empfohlen.
+
+6. Wählen Sie **Weiter** aus.
+
+7. Die verfügbaren **Konfigurationseinstellungen** variieren je nach ausgewählter Plattform. Wählen Sie Ihre Plattform für detaillierte Einstellungen aus:
+
+    - [Android-Geräteadministrator](device-restrictions-android.md)
+    - [Android Enterprise](device-restrictions-android-for-work.md)
+    - [iOS/iPadOS](device-restrictions-ios.md)
+    - [macOS](device-restrictions-macos.md)
+    - [Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
-    - [Einstellungen für Windows 10](device-restrictions-windows-10.md)
-    - [Einstellungen für Windows 10 Team](device-restrictions-windows-10-teams.md)
-    - [Einstellungen für Windows Holographic for Business](device-restrictions-windows-holographic.md)
+    - [Windows 10 und höher](device-restrictions-windows-10.md)
+    - [Windows 10 Team](device-restrictions-windows-10-teams.md)
+    - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
-5. Wenn Sie fertig sind, wählen Sie **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern.
+8. Wählen Sie **Weiter** aus.
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
 
-Das Profil wird erstellt und in der Profilliste angezeigt.
+    Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen Ihr Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+11. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf **Erstellen** klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14bc0be97a2e74c4666603feb2a4832c6a1e2011
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339461"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327138"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrieren von Geräten in Intune mithilfe eines Geräteregistrierungs-Manager-Kontos
 
@@ -37,7 +37,7 @@ DEM-Benutzerkonten und Geräte, die mit einem DEM-Benutzerkonto registriert werd
 - Die Zurücksetzung kann nicht über das Unternehmensportal erfolgen. Die Zurücksetzung eines Geräts, das über ein DEM-Benutzerkonto registriert wurde, kann über Intune im Azure-Portal erfolgen.
 - Nur das lokale Gerät erscheint in der Unternehmensportal-App oder -Website.
 - DEM-Benutzerkonten können Apps aus dem Apple Volume Purchase Program (VPP) nicht mit Apple VPP-Benutzerlizenzen verwenden, weil benutzerspezifische Apple-IDs für die Verwaltung dieser Apps erforderlich sind.
-- DEM-Konten können nicht verwendet werden, wenn Geräte über das Programm zur Geräteregistrierung (DEP) von Apple registriert wurden.
+- DEM-Konten können nicht verwendet werden, wenn Geräte über die automatische Geräteregistrierung (Automated Device Enrollment, ADE) von Apple registriert werden.
 - Geräte können VPP-Apps installieren, wenn sie über Apple VPP-Gerätelizenzen verfügen.
 - Geräte werden für den bedingten Zugriff mit Ausnahme von Windows 10-Version 1803 und höher blockiert.
 - Jedes Gerät, das bei DEM-Konten registriert ist, muss für die Verwaltung durch Intune korrekt lizenziert sein. Bei der Lizenz kann es sich um eine Intune-Benutzerlizenz oder um eine Intune-Gerätelizenz handeln.

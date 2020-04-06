@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ef60333b53e03b3a6a8d736817ef27df9a182f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352071"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359466"
 ---
-# <a name="macos-endpoint-protection-settings-in-intune"></a>Endpoint Protection-Einstellungen in Intune unter MacOS  
+# <a name="macos-endpoint-protection-settings-in-intune"></a>Endpoint Protection-Einstellungen in Intune unter macOS  
 
 In diesem Artikel werden die Endpoint Protection-Einstellungen beschrieben, die Sie für Ihre macOS-Geräte konfigurieren können. Sie konfigurieren diese Einstellungen mithilfe eines macOS-Gerätekonfigurationsprofils für [Endpoint Protection](endpoint-protection-configure.md) in Intune.  
+
+## <a name="before-you-begin"></a>Vorbereitung
+
+[Erstellen eines Endpoint Protection-Profils für macOS](endpoint-protection-configure.md)
 
 ## <a name="gatekeeper"></a>Gatekeeper  
 
@@ -97,7 +101,7 @@ Weitere Informationen zu den Einstellungen von Apple FileVault finden Sie unter 
     *Persönliche Schlüssel*: Wiederherstellungsschlüssel werden für Geräte erstellt. Konfigurieren Sie die folgenden Einstellungen für den persönlichen Schlüssel.  
 
     - **Speicherort des persönlichen Wiederherstellungsschlüssels**: Legen Sie eine kurze Nachricht an den Benutzer fest, die erklärt, wie und wo dieser den persönlichen Wiederherstellungsschlüssel abrufen kann. Dieser Text wird in die Meldung eingefügt, die dem Benutzer auf dem Anmeldebildschirm angezeigt wird, wenn dieser sein Kennwort vergessen hat und zur Eingabe des persönlichen Wiederherstellungsschlüssels aufgefordert wird.  
-      
+
     - **Rotation für persönlichen Wiederherstellungsschlüssel**: Geben Sie an, wie häufig der persönliche Wiederherstellungsschlüssel für ein Gerät rotiert werden soll. Sie können die Standardeinstellung **Nicht konfiguriert** oder einen Wert von **1** bis **12** Monaten festlegen.  
 
   - **Aufforderung bei Abmeldung deaktivieren**  
@@ -118,3 +122,8 @@ Weitere Informationen zu den Einstellungen von Apple FileVault finden Sie unter 
 
 Weitere Informationen zu FileVault mit Intune finden Sie unter [FileVault-Wiederherstellungsschlüssel](encryption-monitor.md#filevault-recovery-keys).
 
+## <a name="next-steps"></a>Nächste Schritte
+
+[Zuweisen von Profilen](../configuration/device-profile-assign.md) und [Überwachen von Profilen](../configuration/device-profile-monitor.md)
+
+Sie können Endpoint Protection auch auf [Geräten mit Windows 10 und höher](endpoint-protection-windows-10.md) konfigurieren.

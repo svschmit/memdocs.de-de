@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cec45dae7e0596428b2d7ab5c925889c183d465
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8ac931bf20140865e1185c4f401de0141273cdb3
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364590"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359403"
 ---
 # <a name="use-custom-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Verwenden benutzerdefinierter Einstellungen für iOS- und iPadOS-Geräte in Microsoft Intune
 
@@ -38,7 +38,7 @@ Dieser Artikel enthält eine Anleitung zur Verwendung von Apple Configurator und
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie das Profil.](device-profile-create.md)
+[Erstellen Sie das Profil.](custom-settings-configure.md)
 
 ## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
 
@@ -57,14 +57,12 @@ Dieser Artikel enthält eine Anleitung zur Verwendung von Apple Configurator und
 ## <a name="custom-configuration-profile-settings"></a>Einstellungen für das benutzerdefinierte Konfigurationsprofil
 
 - **Name des benutzerdefinierten Konfigurationsprofils**: Geben Sie einen Namen für die Richtlinie ein. Dieser Name wird auf dem Gerät und im Intune-Status angezeigt.
-- **Konfigurationsprofildatei**: Navigieren Sie zum Konfigurationsprofil, das Sie mit Apple Configurator oder dem Apple-Profil-Manager erstellt haben. Die maximale Dateigröße beträgt 1 Million Bytes (annähernd 1 MB). Die importierte Datei wird im Bereich **Dateiinhalt** angezeigt.
+- **Konfigurationsprofildatei**: Navigieren Sie zum Konfigurationsprofil, das Sie mit Apple Configurator oder dem Apple-Profil-Manager erstellt haben. Die maximale Dateigröße beträgt `1000000` Bytes (annähernd 1 MB). Die importierte Datei wird im Bereich **Dateiinhalt** angezeigt.
 
   Sie können Ihren benutzerdefinierten Konfigurationsdateien auch Gerätetoken hinzufügen. Gerätetoken werden verwendet, um gerätespezifische Informationen hinzuzufügen. Geben Sie zum Beispiel zur Anzeige der Seriennummer `{{serialnumber}}` ein. Auf dem Gerät wird ein Text angezeigt, der für jedes Gerät eindeutig ist und der etwa folgendermaßen aussieht: `123456789ABC`. Achten Sie darauf, bei der Eingabe von Variablen geschweifte Klammern `{{ }}` zu verwenden. [App-Konfigurationstoken](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) umfassen eine Reihe von Variablen, die Sie nutzen können. Zudem können Sie `deviceid` oder einen anderen gerätespezifischen Wert verwenden.
 
   > [!NOTE]
-  > Variablen werden in der Benutzeroberfläche nicht überprüft, und die Groß-/Kleinschreibung muss beachtet werden. Daher gibt es möglicherweise Profile, die mit fehlerhaften Eingaben gespeichert wurden. Wenn Sie beispielsweise `{{DeviceID}}` anstelle von `{{deviceid}}` eingeben, wird die Zeichenfolge anstelle der eindeutigen Geräte-ID angezeigt. Vergewissern Sie sich, dass die eingegebenen Informationen korrekt sind.
-
-Wählen Sie **OK** > **Erstellen** aus, um die Änderungen zu speichern. Das Profil wird erstellt und in der Profilliste angezeigt.
+  > Variablen werden in der Benutzeroberfläche nicht überprüft, und die Groß-/Kleinschreibung muss beachtet werden. Daher gibt es möglicherweise Profile, die mit fehlerhaften Eingaben gespeichert wurden. Wenn Sie beispielsweise `{{DeviceID}}` anstelle von `{{deviceid}}` eingeben, wird die Zeichenfolge anstelle der eindeutigen Geräte-ID angezeigt. Stellen Sie sicher, dass die eingegebenen Informationen korrekt sind.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

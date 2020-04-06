@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,21 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086901"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359152"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Geräteeinstellungen bei Windows 10 und Windows Holographic for Business zur Ausführung als dedizierter Kiosk mit Intune
 
 Verwenden Sie Intune, um Geräte mit Windows 10 als Kiosk auszuführen. Diese werden manchmal auch als dedizierte Geräte bezeichnet. Auf einem Gerät im Kioskmodus können eine oder mehrere Apps ausgeführt werden. Sie können ein Startmenü anzeigen und anpassen, verschiedene Apps hinzufügen, einschließlich Win32-Anwendungen, einem Webbrowser eine bestimmte Startseite hinzufügen und vieles mehr. 
 
-Dieses Feature gilt für Geräte, die ausgeführt werden unter:
+Diese Funktion gilt für:
 
 - Windows 10 und höher
 - Windows Holographic for Business
+
+Informationen zum Erstellen von Kioskprofilen für andere Plattformen finden Sie in den Abschnitten [Android-Geräteadministrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) und [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 Intune unterstützt ein Kioskprofil pro Gerät. Wenn Sie mehrere Kioskprofile auf einem einzelnen Gerät benötigen, können Sie einen [benutzerdefinierten OMA-URI](custom-settings-windows-10.md) verwenden.
 
@@ -69,7 +71,8 @@ Das Profil wird erstellt und in der Profilliste angezeigt. [Weisen](device-profi
 [Zuweisen von Profilen](device-profile-assign.md) und [Überwachen von Profilen](device-profile-monitor.md)
 
 Sie können Kioskprofile für Geräte erstellen, die die folgenden Plattformen ausführen:
+
 - [Android-Geräteadministrator](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
+- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 und höher](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

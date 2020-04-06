@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084061"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327451"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Erstellen eines Geräteprofils in Microsoft Intune
 
@@ -37,73 +37,64 @@ Inhalt dieses Artikels
 
 ## <a name="create-the-profile"></a>Erstellen des Profils
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
+Profile werden im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) erstellt. Klicken Sie in diesem Admin Center auf **Geräte**. Hierzu stehen Ihnen folgende Optionen zur Verfügung:
 
-2. Wählen Sie **Geräte** > **Konfigurationsprofile** aus. Hierzu stehen Ihnen folgende Optionen zur Verfügung:
+- **Übersicht:** Hier werden die Status Ihrer Profile sowie weitere Details zu den Profilen angezeigt, die Sie Benutzern und Geräten zugewiesen haben.
+- **Überwachen:** Überprüfen Sie den Status Ihrer Profile auf Erfolg oder Fehler, und zeigen Sie Protokolle zu Ihren Profilen an.
+- **Nach Plattform:** Erstellen Sie Richtlinien und Profile und zeigen Sie diese für Ihre Plattform an. In dieser Ansicht werden möglicherweise auch plattformspezifische Features angezeigt. Klicken Sie zum Beispiel auf **Windows**. Ihnen werden spezifische Features für Windows angezeigt, z. B. **Windows 10-Updateringe** und **PowerShell-Skripts**.
+- **Richtlinie:** Erstellen Sie Geräteprofile, und laden Sie benutzerdefinierte [PowerShell-Skripts](../apps/intune-management-extension.md) zur Ausführung auf Geräten hoch. Fügen Sie mit [eSIM](esim-device-configuration.md) Datenpläne zu Geräten hinzu.
 
-    - **Übersicht:** Hier werden die Status Ihrer Profile sowie weitere Details zu den Profilen angezeigt, die Sie Benutzern und Geräten zugewiesen haben.
-    - **Verwalten:** Erstellen Sie Geräteprofile, und laden Sie benutzerdefinierte [PowerShell-Skripts](../apps/intune-management-extension.md) zur Ausführung im Profil hoch. Fügen Sie mit [eSIM](esim-device-configuration.md) Datenpläne zu Geräten hinzu.
-    - **Überwachen:** Prüfen Sie den Status eines Profils, und zeigen Sie Protokolle zu Ihren Profilen an.
-    - **Setup:** Fügen Sie eine Zertifizierungsstelle (SCEP oder PFX) hinzu, oder aktivieren Sie [Telecom Expense Management](telecom-expenses-monitor.md) für das Profil.
+Wählen Sie Ihre Plattform aus, wenn Sie ein Profil erstellen (**Konfigurationsprofile** > **Profil erstellen**):
 
-3. Wählen Sie **Profil erstellen** aus. Geben Sie die folgenden Eigenschaften ein:
+- **Android-Geräteadministrator**
+- **Android Enterprise**
+- **iOS/iPadOS**
+- **macOS**
+- **Windows 10 und höher**
+- **Windows 8.1 und höher**
+- **Windows Phone 8.1**
 
-   - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein angemessener Profilname ist beispielsweise **WP email profile for entire company** (WP-E-Mail-Profil für das gesamte Unternehmen).
-   - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
-   - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:  
+Wählen Sie dann den Profiltyp aus. Die konfigurierbaren Einstellungen variieren je nach ausgewählter Plattform. In den folgenden Artikeln werden die Einstellungen für die verschiedenen Profiltypen beschrieben:
 
-       - **Android-Geräteadministrator**
-       - **Android Enterprise**
-       - **iOS/iPadOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 und höher**
-       - **Windows 10 und höher**
+- [Administrative Vorlagen (Windows)](administrative-templates-windows.md)
+- [Benutzerdefiniert](custom-settings-configure.md)
+- [Übermittlungsoptimierung (Windows)](delivery-optimization-windows.md)
+- [Abgeleitete Anmeldeinformation (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
+- [Gerätefeatures (macOS, iOS, iPadOS)](device-features-configure.md)
+- [Gerätefirmware (Windows)](device-firmware-configuration-interface-windows.md)
+- [Geräteeinschränkungen](device-restrictions-configure.md)
+- [Domänenbeitritt (Windows)](domain-join-configure.md)
+- [Editionsupgrade und Moduswechsel (Windows)](edition-upgrade-configure-windows-10.md)
+- [Bildung (iOS, iPadOS)](../fundamentals/education-settings-configure-ios.md)
+- [E-Mail](email-settings-configure.md)
+- [Endpoint Protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
+- [Erweiterungen (macOS)](kernel-extensions-overview-macos.md)
+- [Identity Protection (Windows)](../protect/identity-protection-configure.md)
+- [Kiosk](kiosk-settings.md)
+- [Microsoft Defender ATP (Windows)](../protect/advanced-threat-protection.md)
+- [Mobility Extensions-Profil (MX) (Android-Geräteadministrator)](android-zebra-mx-overview.md)
+- [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
+- [PKCS-Zertifikat](../protect/certficates-pfx-configure.md)
+- [Importiertes PKCS-Zertifikat](../protect/certificates-imported-pfx-configure.md)
+- [Einstellungsdatei (macOS)](preference-file-settings-macos.md)
+- [SCEP-Zertifikat](../protect/certificates-scep-configure.md)
+- [Sicheres Assessment (Education) (Windows)](education-settings-configure.md)
+- [Freigegebenes, von mehreren Benutzern verwendetes Gerät (Windows)](shared-user-device-settings.md)
+- [Telekommunikationsausgaben (Android-Geräteadministrator, iOS, iPadOS)](telecom-expenses-monitor.md)
+- [ Vertrauenswürdiges Zertifikat](../protect/certificates-configure.md)
+- [VPN](vpn-settings-configure.md)
+- [WLAN](wi-fi-settings-configure.md)
 
-   - **Profiltyp**: Wählen Sie den Typ der Einstellungen aus, den Sie erstellen möchten. Die angezeigte Liste variiert je nach ausgewählter **Plattform**.
-   - **Einstellungen**: Die folgenden Artikel beschreiben die Einstellungen für die einzelnen Profiltypen:
+Wenn Sie beispielsweise **iOS/iPadOS** für die Plattform auswählen, werden Ihnen Profiltypoptionen ähnlich den folgenden angezeigt:
 
-       - [Administrative Vorlagen](administrative-templates-windows.md)
-       - [Benutzerdefiniert](custom-settings-configure.md)
-       - [Übermittlungsoptimierung](delivery-optimization-windows.md)
-       - [Gerätefeatures](device-features-configure.md)
-       - [Geräteeinschränkungen](device-restrictions-configure.md)
-       - [Domänenbeitritt](domain-join-configure.md)
-       - [Editionsupgrade und Moduswechsel](edition-upgrade-configure-windows-10.md)
-       - [Bildungswesen](education-settings-configure.md)
-       - [E-Mail](email-settings-configure.md)
-       - [Endpoint Protection](../protect/endpoint-protection-configure.md)
-       - [Identity Protection](../protect/identity-protection-configure.md)  
-       - [Kiosk](kiosk-settings.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
-       - [PKCS-Zertifikat](../protect/certficates-pfx-configure.md)
-       - [Importiertes PKCS-Zertifikat](../protect/certificates-imported-pfx-configure.md)
-       - [Einstellungsdatei](preference-file-settings-macos.md)
-       - [SCEP-Zertifikat](../protect/certificates-scep-configure.md)
-       - [ Vertrauenswürdiges Zertifikat](../protect/certificates-configure.md)
-       - [Updaterichtlinien](../protect/software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [WLAN](wi-fi-settings-configure.md)
-       - [Windows Information Protection](../protect/windows-information-protection-configure.md)
-
-     Wenn Sie beispielsweise **iOS/iPadOS** für die Plattform auswählen, werden Ihnen Profiltypoptionen ähnlich den folgenden angezeigt:
-
-     > [!div class="mx-imgBorder"]
-     > ![Erstellen eines iOS/iPadOS-Profils in Intune](./media/device-profile-create/create-device-profile.png)
-
-4. Wählen Sie anschließend **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern. Das Profil wird erstellt und in der Liste angezeigt.
+> [!div class="mx-imgBorder"]
+> ![Erstellen eines iOS/iPadOS-Profils in Intune](./media/device-profile-create/create-device-profile.png)
 
 ## <a name="scope-tags"></a>Festlegen von Tags
 
-Nachdem Sie die Einstellungen hinzugefügt haben, können Sie dem Profil ebenfalls eine Bereichsmarkierung hinzufügen. Bereichsmarkierungen filtern Profile für bestimmte IT-Gruppen, z. B. `US-NC IT Team` oder `JohnGlenn_ITDepartment`.
+Nachdem Sie die Einstellungen hinzugefügt haben, können Sie dem Profil ebenfalls eine Bereichsmarkierung hinzufügen. Bereichsmarkierungen filtern Profile für bestimmte IT-Gruppen, z. B. `US-NC IT Team` oder `JohnGlenn_ITDepartment`. Außerdem werden sie bei verteilter IT verwendet.
 
 Weitere Informationen zu Bereichsmarkierungen und Ihren Möglichkeiten finden Sie unter [Use role-based access control (RBAC) and scope tags for distributed IT (Verwenden der rollenbasierten Zugriffssteuerung sowie Bereichsmarkierungen für verteilte IT)](../fundamentals/scope-tags.md).
-
-### <a name="add-a-scope-tag"></a>Hinzufügen einer Bereichsmarkierung
-
-1. Wählen Sie **Scope (Tags)** (Bereich (Markierungen)) aus.
-2. Klicken Sie auf **Hinzufügen**, um eine neue Bereichsmarkierung zu erstellen. Wählen Sie alternativ eine Bereichsmarkierung aus der Liste aus.
-3. Klicken Sie auf **OK**, um die Änderungen zu speichern.
 
 ## <a name="applicability-rules"></a>Anwendbarkeitsregeln
 

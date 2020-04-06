@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81bfa4d593f723aae46c2af63d550662e35b4017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349211"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488044"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Verwalten von Windows 10-Softwareupdates in Intune
 
@@ -209,7 +209,7 @@ Wenn ein Gerät eine Richtlinie für Windows 10-Featureupdates erhält, geschieh
 
 Die folgenden Voraussetzungen müssen erfüllt sein, um Windows 10-Featureupdates in Intune zu verwenden.
 
-- Geräte müssen bei Intune MDM registriert und mit Azure AD verknüpft oder bei Azure AD registriert sein.
+- Geräte müssen bei Intune MDM registriert, in Azure AD Hybrid oder Azure AD eingebunden oder bei Azure AD registriert sein.
 - Um die Richtlinie „Featureupdates“ mit Intune verwenden zu können, muss auf Geräten Telemetrie aktiviert sein, wobei die Mindesteinstellung [*Standard*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) ist. Telemetrie wird unter *Berichterstellung und Telemetrie* als Teil einer Richtlinie des Typs [Geräteeinschränkung](../configuration/device-restrictions-configure.md) konfiguriert.
   
   Geräte, die die Richtlinie „Featureupdates“ empfangen und bei denen Telemetrie auf *Nicht konfiguriert* festgelegt ist, also deaktiviert ist, installieren möglicherweise eine spätere Version von Windows als in der Richtlinie „Featureupdates“ definiert. Die Voraussetzung, Telemetrie anzufordern, wird derzeit geprüft, während sich dieses Feature in Richtung allgemeine Verfügbarkeit weiterentwickelt.

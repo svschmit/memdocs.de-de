@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d8ff51b8b20c5f6505cb341f666ce043b086b3b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220182"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438802"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Neuerungen in Microsoft Intune
 
-Hier erfahren Sie jede Woche, welche Neuerungen Microsoft Intune zu bieten hat. Hier finden Sie auch [wichtige Hinweise](#notices), [frühere Releases](whats-new-archive.md) und Informationen zur [Veröffentlichung von Intune-Dienstupdates](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
+In diesem Artikel werden die Neuheiten im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) von Microsoft Intune behandelt. Hier finden Sie auch [wichtige Hinweise](#notices), [frühere Releases](whats-new-archive.md) und Informationen zur [Veröffentlichung von Intune-Dienstupdates](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
 
 > [!Note]
 > Bei jedem [monatlichen Update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) kann das Rollout bis zu drei Tage dauern und erfolgt in dieser Reihenfolge:
@@ -55,6 +55,59 @@ Hier erfahren Sie jede Woche, welche Neuerungen Microsoft Intune zu bieten hat. 
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-march-30-2020"></a>Woche ab 30. März 2020
+
+### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Neue URL des Microsoft Endpoint Manager Admin Centers<!-- 3704810 -->
+Die URL für das Microsoft Endpoint Manager Admin Center (zuvor Microsoft 365-Geräteverwaltung) wurde gemäß der Ankündigung zu Microsoft Endpoint Manager bei der Ignite im letzten Jahr in [https://endpoint.microsoft.com](https://endpoint.microsoft.com) geändert. Die alte Admin Center-URL ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) wird weiterhin funktionieren, es wird jedoch empfohlen, dass Sie über die neue URL auf das Microsoft Endpoint Manager Admin Center zugreifen.
+
+Weitere Informationen finden Sie unter [Vereinfachen von IT-Aufgaben mit dem Microsoft Endpoint Manager Admin Center](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
+
+### <a name="app-management"></a>App-Verwaltung
+
+#### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Skriptunterstützung für macOS-Geräte (Public Preview)<!-- 4280361 wnready -->
+Sie können Skripts für macOS-Geräte hinzufügen und bereitstellen. Diese Unterstützung erweitert die Funktion zum Konfigurieren von macOS-Geräten um ein Vielfaches, was mit nativen MDM-Funktionen auf macOS-Geräten möglich ist. Weitere Informationen finden Sie unter [Verwenden von Shellskripts auf macOS-Geräten in Intune](../apps/macos-shell-scripts.md).
+
+<!-- ########################## -->
+## <a name="week-of-march-24-2020"></a>Woche ab 24. März 2020
+
+### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Verbesserte Benutzeroberfläche für das Erstellen von Gerätekonfigurationsprofilen auf Android- und Android Enterprise-Geräten<!-- 5841361 -->
+
+Wenn Sie ein Profil für Android- oder Android Enterprise-Geräte erstellen, wird das Microsoft Endpoint Manager Admin Center entsprechend aktualisiert. Diese Änderung wirkt sich auf die folgenden Gerätekonfigurationsprofile aus (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **Android-Geräteadministrator** oder **Android Enterprise** für die Plattform):
+
+- Geräteeinschränkungen: Android-Geräteadministrator
+- Geräteeinschränkungen: Android Enterprise-Gerätebesitzer
+- Geräteeinschränkungen: Android Enterprise-Arbeitsprofil
+
+Weitere Informationen zu den Geräteeinschränkungen, die Sie konfigurieren können, finden Sie unter [Android-Geräte Administrator](../configuration/device-restrictions-android.md) und [Android Enterprise](../configuration/device-restrictions-android-for-work.md).
+
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Verbesserte Benutzeroberfläche für das Erstellen von Konfigurationsprofilen auf iOS-/iPadOS- und macOS-Geräten<!-- 5569002 5568997 -->
+
+Wenn Sie ein Profil für iOS- oder macOS-Geräte erstellen, wird das Microsoft Endpoint Manager Admin Center entsprechend aktualisiert. Diese Änderung wirkt sich auf die folgenden Gerätekonfigurationsprofile aus. (Navigieren Sie zu **Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **iOS/iPadOS** oder **macOS**, um die Plattform auszuwählen):
+
+- Benutzerdefiniert: iOS/iPadOS, macOS
+- Gerätefunktionen: iOS/iPadOS, macOS
+- Geräteeinschränkungen: iOS/iPadOS, macOS
+- Endpoint Protection: macOS
+- Erweiterungen: macOS
+- Einstellungsdatei: macOS
+
+### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Ausblenden der Benutzerkonfigurationseinstellung in Gerätefeatures auf macOS-Geräten<!-- 6524869 -->
+
+Beim Erstellen eines Konfigurationsprofils für Gerätefeatures auf macOS-Geräten gibt es die neue Einstellung **Aus Benutzerkonfiguration ausblenden** (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **macOS** (Plattform) > **Gerätefeatures** (Profil) > **Anmeldeelemente**).
+
+Dieses Feature aktiviert das Kontrollkästchen zum Ausblenden einer App in den **Benutzer und Gruppen**-Anmeldeelementen der App-Liste auf macOS-Geräten. Vorhandene Profile zeigen diese Einstellung innerhalb der Liste als nicht konfiguriert an. Administratoren können vorhandene Profile aktualisieren, um diese Einstellung zu konfigurieren.
+
+Wenn **Ausblenden** festgelegt wird, wird das Kontrollkästchen zum Ausblenden für die App aktiviert, und Benutzer können die Einstellung nicht ändern. Außerdem wird die App für Benutzer ausgeblendet, wenn sie sich bei ihren Geräten anmelden.
+
+> [!div class="mx-imgBorder"]
+> ![Ausblenden von Apps auf macOS-Geräten, nachdem Benutzer sich am Gerät in Microsoft Intune und Endpoint Manager anmelden](./media/whats-new/macos-hide-checkmark-users-groups-login-items-apps-list.png)
+
+Weitere Informationen zu diesen Einstellungen finden Sie unter [macOS-Gerätefeatureeinstellungen](../configuration/macos-device-features-settings.md).
+
+Diese Funktion gilt für:
+
+- macOS
+
 ## <a name="week-of-march-16-2020-2003-service-release"></a>Woche ab 16. März 2020 (Dienstrelease 2003)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -183,7 +236,7 @@ Auf diesen nicht konformen Geräten wird Benutzern auf der Seite **Geräteeinste
 2. Registrieren bei der Arbeitsprofilverwaltung
 3. Lösen von Konformitätsproblemen 
  
-In dem Bestreben, auf eine moderne, umfassendere und sicherere Geräteverwaltung mit Android Enterprise umzusteigen, reduziert Google die Geräteadministratorunterstützung in neuen Android-Releases.  Intune kann nur vollständige Unterstützung für die vom Geräteadministrator verwalteten Android-Geräte bieten, auf denen bis zum zweiten Quartal 2020 Android 10 und höher ausgeführt wird. Geräte, die vom Geräteadministrator verwaltet werden (mit Ausnahme von Samsung) und nach Ablauf dieser Zeit Android 10 oder höher ausführen, können nicht vollständig verwaltet werden. Dies bedeutet, dass betroffene Geräte keine neuen Kennwortanforderungen erhalten. Weitere Informationen finden Sie in diesem [Hinweis](#decreasing-support-for-android-device-administrator).
+In dem Bestreben, auf eine moderne, umfassendere und sicherere Geräteverwaltung mit Android Enterprise umzusteigen, reduziert Google die Geräteadministratorunterstützung in neuen Android-Releases.  Intune kann nur vollständige Unterstützung für die vom Geräteadministrator verwalteten Android-Geräte bieten, auf denen bis zum zweiten Quartal 2020 Android 10 und höher ausgeführt wird. Geräte, die vom Geräteadministrator verwaltet werden (mit Ausnahme von Samsung) und nach Ablauf dieser Zeit Android 10 oder höher ausführen, können nicht vollständig verwaltet werden. Dies bedeutet, dass betroffene Geräte keine neuen Kennwortanforderungen erhalten.
 
 Weitere Informationen zu dieser Einstellung finden Sie unter [Verschieben von Android-Geräten aus dem Geräteadministrator in die Arbeitsprofilverwaltung](../enrollment/android-move-device-admin-work-profile.md). 
 
@@ -295,7 +348,11 @@ Lesen Sie den [Technical Preview](https://docs.microsoft.com/configmgr/core/get-
 Sie können jetzt Massenbefehle für die folgenden Remoteaktionen ausgeben: Neu starten, Autopilot-Zurücksetzung, Zurücksetzen und Delete (Löschen). Navigieren Sie zu [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Geräte** > **Alle Geräte** > **Bulk actions** (Massenvorgänge), um die neuen Massenvorgänge anzuzeigen.
 
 #### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>Liste „Alle Geräte“ für Suchen, Sortieren und Filtern optimiert<!--6179023-->
-Die Liste „Alle Geräte“ wurde hinsichtlich Leistung, Suche, Sortieren und Filtern verbessert. Weitere Informationen finden Sie in diesem [Supportartikel](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).
+Die Liste „Alle Geräte“ wurde hinsichtlich Leistung, Suche, Sortieren und Filtern verbessert. Weitere Informationen finden Sie in diesem [Supportartikel](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).  
+
+### <a name="app-management"></a>App-Verwaltung  
+####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Verbesserte Anmeldefunktion im Unternehmensportal für Android    
+Wir haben das Layout mehrerer Anmeldebildschirme in der Unternehmensportal-App für Android aktualisiert, um die Benutzeroberfläche moderner, einfacher und übersichtlicher zu gestalten. Weitere Informationen zu den Verbesserungen finden Sie in den [Neuerungen für die App-Benutzeroberfläche](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui).
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>Woche des 24. Februar 2020
@@ -405,7 +462,7 @@ Wir haben im Microsoft Endpoint Manager Admin Center den Namen der Option für d
 ### <a name="role-based-access-control"></a>Rollenbasierte Zugriffssteuerung
 
 #### <a name="intune-roles-user-interface-changes-coming--5801612-----"></a>Benutzeroberfläche für Intune-Rollen wird bald geändert<!--5801612   -->
-Die Benutzeroberfläche für [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Mandantenverwaltung** > **Rollen** wurde optimiert und ist jetzt benutzerfreundlicher und intuitiver. Nach der Aktualisierung haben Sie Zugriff auf dieselben Einstellungen und Details wie bisher. Der neue Prozess ähnelt dann aber eher einem Assistenten.
+Die Benutzeroberfläche für [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Mandantenverwaltung** > **Rollen** wurde verbessert und ist jetzt benutzerfreundlicher und intuitiver. Nach der Aktualisierung haben Sie Zugriff auf dieselben Einstellungen und Details wie bisher. Der neue Prozess ähnelt dann aber eher einem Assistenten.
 
 <!-- ########################## -->
 ## <a name="week-of-february-17-2020"></a>Woche des 17. Februar 2020

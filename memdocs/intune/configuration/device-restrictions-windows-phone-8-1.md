@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,53 +16,59 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3696ebf52ee093befc3b6eadc6d1a5041d5929e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 285144e42f2a029bf2d24b96493c54922727d6dc
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364447"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407647"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Einstellungen für Geräteeinschränkungen für Windows Phone 8.1 in Microsoft Intune
 
-
-
 In diesem Artikel erhalten Sie Informationen zu den Einstellungen für Microsoft Intune-Geräteeinschränkungen, die Sie für Windows Phone 8.1-Geräte konfigurieren können.
-
 
 ## <a name="general"></a>Allgemein
 
-- **Kamera:** Erlaubt oder sperrt die Verwendung der Kamera des Geräts.
-- **Kopieren und einfügen:** Lässt Kopier- und Einfügefunktionen auf Geräten zu oder sperrt diese Funktionen.
-- **Wechselmedien:** Erlaubt dem Gerät, Wechselmedien wie SD-Karten zu verwenden.
-- **Geolocation:** Erlaubt dem Gerät die Nutzung von Standortinformationen.
-- **Microsoft-Konto:** Erlaubt oder sperrt das Verknüpfen des Geräts mit einem Microsoft-Konto durch den Benutzer.
-- **Bildschirmaufnahme:** Erlaubt dem Benutzer, den Bildschirminhalt als Bilddatei zu erfassen.
-- **Übermittlung von Diagnosedaten:** Ermöglicht dem Gerät die Übermittlung von Diagnoseinformationen an Microsoft.
-- **Synchronisierung benutzerdefinierter E-Mail-Konten:** Ermöglicht dem Gerät das Herstellen einer Verbindung mit nicht von Microsoft stammenden E-Mail-Konten.
+- **Kamera:** Wenn **Blockieren** festgelegt wird, wird der Zugriff auf die Kamera des Geräts verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+
+  Intune verwaltet nur den Zugriff auf die Kamera des Geräts. Das Programm kann nicht auf Bilder oder Videos zugreifen.
+
+- **Kopieren und Einfügen:** Wenn **Blockieren** festgelegt wird, werden Kopier- und Einfügevorgänge zwischen Apps auf dem Gerät verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Wechselmedien:** Wenn **Blockieren** festgelegt wird, wird die Verwendung von externen Speichergeräten wie SD-Karten verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Geolocation**: Wenn **Blockieren** festgelegt wird, wird das Aktivieren der Standortdienste auf Geräten verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Microsoft-Konto**: Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, dem Gerät ein Microsoft-Konto zuzuordnen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Bildschirmaufnahme:** Wenn **Blockieren** festgelegt wird, wird das Erfassen von Screenshots verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Übermittlung von Diagnosedaten:** Wenn **Blockieren** festgelegt wird, werden Geräte daran gehindert, Diagnose- und Nutzungstelemetriedaten an Microsoft zu senden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Synchronisierung benutzerdefinierter E-Mail-Konten:** Wenn **Blockieren** festgelegt wird, können Geräte keine Verbindungen mit E-Mail-Konten herstellen, die nicht von Microsoft stammen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
 ## <a name="password"></a>Kennwort
 
-- **Kennwort:** Der Endbenutzer muss ein Kennwort eingeben, um auf das Gerät zugreifen zu können.
-  - **Erforderlicher Kennworttyp:** Gibt den erforderlichen Typ des Kennworts an, z.B. alphanumerisch oder nur numerisch.
-  - **Minimale Kennwortlänge:** Gibt die Mindestanzahl von Zeichen an, die das Kennwort enthalten muss.
-  - **Einfache Kennwörter:** Gibt an, dass einfache Kennwörter, wie z.B: „0000“ und „1234“ verwendet werden können.
-  - **Anzahl von Anmeldefehlern, bevor das Gerät zurückgesetzt wird:** Gibt an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Gerät zurückgesetzt wird.
-  - **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Bildschirmsperrung:** Gibt die Zeitdauer der Inaktivität für ein Gerät an, bevor der Bildschirm automatisch gesperrt wird.
-  - **Kennwortablauf (Tage):** Gibt die Anzahl der Tage an, bevor das Gerätekennwort geändert werden muss.
-  - **Wiederverwendung vorheriger Kennwörter verhindern:** Gibt an, wie viele zuvor verwendete Kennwörter gespeichert werden.
-- **Verschlüsselung:** Schreibt vor, dass die Daten auf unterstützten mobilen Geräten verschlüsselt werden müssen.
+- **Kennwort:** Wenn **Erforderlich** festgelegt wird, müssen Benutzer ein Kennwort eingeben, um auf Geräte zuzugreifen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Diese Einstellung gilt nur für lokale Konten. Kennwörter für Domänenkonten werden weiterhin von Active Directory (AD) und Azure AD konfiguriert.
+  - **Erforderlicher Kennworttyp:** Wählen Sie den Kennworttyp aus. Folgende Optionen sind verfügbar:
+    - **Gerätestandard:** Das Kennwort kann Zahlen und Buchstaben enthalten.
+    - **Alphanumerisch**: Das Kennwort muss aus einer Kombination aus Ziffern und Buchstaben bestehen.
+    - **Numerisch**: Das Kennwort darf nur aus Zahlen bestehen.
+  - **Minimale Kennwortlänge:** Geben Sie die erforderliche Mindestanzahl von Zeichen ein (zwischen 4 und 16). Geben Sie z.B. `6` ein, um ein mindestens sechs Zeichen langes Kennwort zu verlangen.
+  - **Einfache Kennwörter:** Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, einfache Kennwörter wie `1234` oder `1111` zu erstellen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+  - **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor Geräte zurückgesetzt werden.
+  - **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Bildschirmsperrung:** Geben Sie den Zeitraum an, für den sich Geräte im Leerlauf befinden müssen, bevor der Bildschirm automatisch gesperrt wird. Geben Sie zum Beispiel `5` ein, um Geräte nach 5 Minuten im Leerlauf zu sperren. Wenn die Einstellung **Nicht konfiguriert** oder nichts festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+  - **Kennwortablauf (Tage):** Geben Sie den Zeitraum in Tagen an, nach dem das Kennwort für das Gerät geändert werden muss (zwischen 1 und 255). Geben Sie beispielsweise `90` an, damit das Kennwort nach 90 Tagen abläuft. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+  - **Wiederverwendung vorheriger Kennwörter verhindern:** Geben Sie die Anzahl der zuvor verwendeten Kennwörter ein, die nicht erneut verwendet werden können, von 1–24. Geben Sie z.B. `5` an, damit ein Benutzer sein neues Kennwort nicht auf sein aktuelles Kennwort oder eines seiner vorherigen vier Kennwörter festlegen kann. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+- **Verschlüsselung:** Wenn **Erforderlich** festgelegt wird, wird die Verschlüsselung auf Geräten, einschließlich Dateien, vorgeschrieben. Nicht alle Geräte unterstützen die Verschlüsselung. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Konfigurieren Sie außerdem Folgendes, um diese Einstellung zu konfigurieren und sie ordnungsgemäß als konform zu melden:
+  - **Kennwort anfordern**: Legen sie **Erfordern** fest.
+  - **Erforderlicher Kennworttyp:** Legen Sie mindestens **Numerisch** fest.
+  - **Minimale Kennwortlänge:** Legen Sie mindestens `4` fest.
 
 ## <a name="app-store"></a>App Store
 
-- **App-Store:** Erlaubt Benutzern, über das Gerät eine Verbindung mit dem App Store herzustellen.
+- **App Store:** Wenn **Blockieren** festgelegt wird, können Benutzer nicht auf den App Store zugreifen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
 ## <a name="restricted-apps"></a>Eingeschränkte Apps
 
 In der Liste der eingeschränkten Apps können Sie eine der folgenden Listen konfigurieren:
 
-**Blockierte Apps:** Listet die (nicht von Intune verwalteten) Apps auf, die Benutzer nicht installieren und ausführen dürfen.
-**Zulässige Apps:** Listet die Apps auf, die Benutzer installieren dürfen. Apps, die von Intune verwaltet werden, sind automatisch zugelassen.
+- **Blockierte Apps:** Listet die (nicht von Intune verwalteten) Apps auf, die Benutzer nicht installieren und ausführen dürfen.
+- **Zulässige Apps:** Listet die Apps auf, die Benutzer installieren dürfen. Apps, die von Intune verwaltet werden, sind automatisch zugelassen.
 
 Klicken Sie zum Konfigurieren einer Liste auf **Hinzufügen**. Geben Sie einen Namen Ihrer Wahl sowie die URL zur App im App-Store und optional den Herausgeber der App an.
 
@@ -76,22 +82,23 @@ Suchen Sie im [Windows Phone Store](https://www.microsoft.com/store/apps/windows
 
 Beispiel: Durchsuchen Sie den Store nach der Skype-App. Verwenden Sie dazu die URL `http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51`.
 
-
-
 ### <a name="additional-options"></a>Zusätzliche Optionen
 
 Sie können auch auf **Importieren** klicken, um die Liste mithilfe einer CSV-Datei im Format <*App-URL*>, <*App-Name*>, <*App-Herausgeber*> aufzufüllen. Stattdessen können Sie aber auch auf **Exportieren** klicken, um eine CSV-Datei mit dem Inhalt der Liste der eingeschränkten Apps im gleichen Format zu erstellen.
 
-
 ## <a name="browser"></a>Browser
 
-- **Webbrowser:** Erlaubt oder sperrt die Verwendung des integrierten Webbrowsers auf Geräten.
+- **Webbrowser:** Wenn **Blockieren** festgelegt wird, wird der integrierte Webbrowser auf Geräten deaktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
 ## <a name="cellular-and-connectivity"></a>Mobilfunk und Konnektivität
 
-- **WLAN:** Aktiviert oder deaktiviert die WLAN-Funktionalität des Geräts.
-- **WLAN-Tethering:** Erlaubt die Verwendung des WLAN-Tetherings auf dem Gerät.
-- **Automatische Verbindung mit WLAN-Hotspots herstellen:** Erlaubt, dass das Gerät automatisch eine Verbindung mit unverschlüsselten WLAN-Hotspots herstellen und die Geschäftsbedingungen für die Verbindung automatisch akzeptieren kann.
-- **WLAN-Hotspotmeldung:** Sendet Informationen über WLAN-Verbindungen, um nahegelegene Verbindungen zu ermitteln.
-- **NFC:** Aktiviert oder deaktiviert Vorgänge, die NFC (Near Field Communication, Nahfeldkommunikation) verwenden, sofern dies vom Gerät unterstützt wird.
-- **Bluetooth:** Aktiviert oder deaktiviert die Bluetooth-Funktionalität des Geräts.
+- **WLAN:** Wenn **Blockieren** festgelegt wird, wird die WLAN-Funktionalität der Geräte deaktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **WLAN-Tethering:** Wenn **Blockieren** festgelegt wird, wird das WLAN-Tethering auf Geräten verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Automatically connect to Wi-Fi hotspots** (Automatische Verbindung mit WLAN-Hotspots): Mit dieser Einstellung können Geräte automatisch Verbindungen mit kostenlosen WLAN-Hotspots herstellen und Nutzungsbedingungen akzeptieren.
+- **Berichterstellung für WLAN-Hotspots:** Wenn **Blockieren** festgelegt wird, können Geräte keine Verbindungsinformationen zu WLAN-Hotspots senden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **NFC:** Wenn **Blockieren** festgelegt wird, werden Vorgänge deaktiviert, die NFC (Near Field Communication, Nahfeldkommunikation) auf Geräten verwenden, die dieses Feature unterstützen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Bluetooth**: **Blockieren** verhindert, dass Benutzer Bluetooth aktivieren können. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Eine allgemeine Übersicht über das Geräteeinschränkungsprofil finden Sie unter [Konfigurieren der Geräteeinschränkungseinstellungen in Microsoft Intune](device-restrictions-configure.md).

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f8a15199f599cf0fd4f90ea965bcc3e668f3b27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354411"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326626"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Verwalten und Verwenden verschiedener Geräteverwaltungsfeatures für Windows Holographic- und HoloLens-Geräten mit Intune
 
@@ -58,7 +58,7 @@ Azure Active Directory (AD) kann Ihnen bei der Verwaltung und Steuerung Ihrer Ge
 
 **[Erstellen einer Konformitätsrichtlinie für Geräte](../protect/compliance-policy-create-windows.md)**
 
-Bei Konformitätsrichtlinien handelt es sich um Regeln und Einstellungen, die Geräte erfüllen müssen, um als „konform“ zu gelten. Verwenden Sie diese Richtlinien mit bedingtem Zugriff, um den Zugriff auf Unternehmensressourcen für Geräte zu blockieren, die nicht konform sind. In Intune erstellen Sie Konformitätsrichtlinien, um den Zugriff für Geräte, auf denen Windows Holographic for Business ausgeführt wird, zuzulassen oder zu blockieren. Sie können beispielsweise eine Richtlinie erstellen, die erfordert, dass „BitLocker“ aktiviert ist.
+Bei Konformitätsrichtlinien handelt es sich um Regeln und Einstellungen, die Geräte erfüllen müssen, um als „konform“ zu gelten. Verwenden Sie diese Richtlinien mit bedingtem Zugriff, um den Zugriff auf Unternehmensressourcen für Geräte zu blockieren, die nicht konform sind. In Intune erstellen Sie Konformitätsrichtlinien, um den Zugriff für Geräte, auf denen Windows Holographic for Business ausgeführt wird, zuzulassen oder zu blockieren. Sie können beispielsweise eine Richtlinie erstellen, die erfordert, dass BitLocker aktiviert ist.
 
 Weitere Informationen erhalten Sie unter **[Erste Schritte mit Konformitätsrichtlinien](../protect/device-compliance-get-started.md)** .
 
@@ -107,7 +107,7 @@ Mithilfe von Intune können Sie Gerätekategorien erstellen, um Geräte basieren
 
 ## <a name="device-configuration-profiles"></a>Gerätekonfigurierungsprofile
 
-**[Erste Schritte mit Konfigurationsprofilen](../configuration/device-profiles.md) und [Erstellen Ihres eigenen Profils](../configuration/device-profile-create.md)**
+**[Erste Schritte mit Konfigurationsprofilen](../configuration/device-profiles.md) und [Profilübersicht](../configuration/device-profile-create.md)**
 
 Intune umfasst Einstellungen und Features, die Sie auf unterschiedlichen Geräten in Ihrer Organisation aktivieren oder deaktivieren können. Diese Einstellungen und Features werden mithilfe von Profilen verwaltet. Sie können beispielsweise ein Profil erstellen, das Cortana aktiviert, oder Microsoft Defender SmartScreen auf Ihren Geräten mit Windows Holographic for Business verwenden.
 

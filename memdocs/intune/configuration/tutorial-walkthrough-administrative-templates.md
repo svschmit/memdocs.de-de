@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/31/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220223"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488175"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Verwenden der Cloud zum Konfigurieren einer Gruppenrichtlinie für Windows 10-Geräte mit ADMX-Vorlagen und Microsoft Intune
 
@@ -39,7 +39,7 @@ ADMX-Vorlagen sind für die folgenden Dienste verfügbar:
 
 Weitere Informationen zu ADMX-Richtlinien finden Sie unter [Grundlegendes zu durch ADMX unterstützten Richtlinien](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
 
-In Microsoft Intune sind diese Vorlagen in den Intune-Dienst integriert und als Profile unter **Administrative Vorlagen** verfügbar. In diesem Profil konfigurieren Sie die Einstellungen, die dieses Profil umfassen soll, und weisen es dann Ihren Geräten zu.
+Diese Vorlagen sind in Microsoft Intune integriert und als Profile unter **Administrative Vorlagen** verfügbar. In diesem Profil konfigurieren Sie die Einstellungen, die dieses Profil umfassen soll, und weisen es dann Ihren Geräten zu.
 
 Inhalt des Tutorials:
 
@@ -68,7 +68,7 @@ Diese Funktion gilt für:
 
 - Bei einem lokalen Active Directory-Domänencontroller (DC):
 
-  1. Kopieren Sie die folgenden Office- und Microsoft Edge-Vorlagen in den [zentralen Speicher (Ordner SYSVOL)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
+  1. Kopieren Sie die folgenden Office- und Microsoft Edge-Vorlagen in den [zentralen Speicher (Ordner „sysvol“)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
 
       - [Administrative Vorlagen für Office](https://www.microsoft.com/download/details.aspx?id=49030)
       - [Administrative Vorlagen für Microsoft Edge > Richtliniendatei](https://www.microsoftedgeinsider.com/en-us/enterprise)
@@ -78,7 +78,9 @@ Diese Funktion gilt für:
       - heißt die mit diesen Vorlagen erstellte Gruppenrichtlinie **OfficeandEdge**. Diesen Namen werden Sie auf den Bildern sehen.
       - wird der verwendete Windows 10 Enterprise-Administratorcomputer als **Administratorcomputer** bezeichnet.
 
-      In manchen Organisationen haben Domänenadministratoren zwei Konten: ein normales Domänengeschäftskonto und ein separates Domänenadministratorkonto, das nur für Domänenadministratoraufgaben wie Gruppenrichtlinien verwendet wird.
+      In einigen Organisationen verfügt ein Domänenadministrator über zwei Konten:  
+        - ein typisches Domänengeschäftskonto
+        - ein anderes Domänengeschäftskonto, das nur für Aufgaben des Domänenadministrators verwendet wird, zum Beispiel die Gruppenrichtlinie
 
       Auf diesem **Administratorcomputer** können sich Administratoren mit ihrem Domänenadministratorkonto anmelden und auf Tools zum Verwalten von Gruppenrichtlinien zugreifen.
 
@@ -235,10 +237,20 @@ In diesem Abschnitt erstellen Sie eine administrative Vorlage in Intune und sehe
     - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
 
 5. Wählen Sie **Weiter** aus.
-6. Wählen Sie unter **Konfigurationseinstellungen** in der Dropdownliste die Option **Alle Produkte** aus. Es werden alle Einstellungen angezeigt. Sehen Sie sich in diesen Einstellungen die folgenden Eigenschaften an:
+6. Unter **Konfigurationseinstellungen** gelten Einstellungen für das Gerät (**Computerkonfiguration**) und für Benutzer **(Benutzerkonfiguration**):
 
-    - Der **Pfad** zur Richtlinie ist derselbe wie bei der Gruppenrichtlinienverwaltung oder GPEdit.
-    - Die Einstellung gilt für Benutzer und Geräte.
+    > [!div class="mx-imgBorder"]
+    > ![Anwenden von ADMX-Vorlageneinstellungen auf Benutzer und Geräte in Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
+
+7. Erweitern Sie **Computerkonfiguration** > **Microsoft Edge**, und klicken Sie auf **SmartScreen-Einstellungen**. Beachten Sie den Pfad zur Richtlinie sowie alle verfügbaren Einstellungen:
+
+    > [!div class="mx-imgBorder"]
+    > ![SmartScreen-Richtlinieneinstellungen unter Microsoft Edge in den ADMX-Vorlagen in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+
+8. Geben Sie im Suchfeld **Download** ein. Beachten Sie die Richtlinieneinstellungen, die gefiltert werden:
+
+    > [!div class="mx-imgBorder"]
+    > ![Filterung der SmartScreen-Richtlinieneinstellungen unter Microsoft Edge in den ADMX-Vorlagen in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
 
 ### <a name="open-group-policy-management"></a>Öffnen der Gruppenrichtlinienverwaltung
 
@@ -254,7 +266,7 @@ In diesem Abschnitt sehen Sie sich eine Richtlinie in Intune und die entsprechen
 3. Klicken Sie mit der rechten Maustaste auf die Richtlinie **OfficeandEdge**, und klicken Sie dann auf **Bearbeiten**. Dadurch wird die App „Gruppenrichtlinienverwaltungs-Editor“ geöffnet.
 
     > [!div class="mx-imgBorder"]
-    > ![Rechtsklick auf die ADMX-Gruppenrichtlinie für Office und Edge und dann auf „Bearbeiten“](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
+    > ![Rechtsklick auf die ADMX-Gruppenrichtlinie für Office und Microsoft Edge und dann auf „Bearbeiten“](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
 
     **OfficeandEdge** ist eine Gruppenrichtlinie, die die ADMX-Vorlagen für Office und Microsoft Edge umfasst. Diese Richtlinie wird im Abschnitt [Voraussetzungen](#prerequisites) (in diesem Artikel) beschrieben.
 
@@ -269,18 +281,18 @@ In diesem Abschnitt sehen Sie sich eine Richtlinie in Intune und die entsprechen
     > ![Verfügbare Einstellungen unter „Computerkonfiguration“ im Tool „Gruppenrichtlinie“ ansehen](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. Navigieren Sie im Endpoint Manager Admin Center zu Ihrer Vorlage **Administratorvorlage – Geräte von Studenten mit Windows 10**.
-6. Klicken Sie in der Dropdownliste auf **Alle Produkte**, und suchen Sie nach **Darstellung und Anpassung**:
+6. Wählen Sie **Computerkonfiguration** > **Systemsteuerung** > **Personalisierung** aus. Sehen Sie sich die verfügbaren Einstellungen an:
 
     > [!div class="mx-imgBorder"]
-    > ![Suche nach „Darstellung und Anpassung“ in der administrativen Vorlage in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/search-personalization-administrative-template.png)
+    > ![Pfad zur Richtlinieneinstellung für die Personalisierung in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
-    Sehen Sie sich die verfügbaren Einstellungen an.
-
-    Der Einstellungstyp ist **Gerät** und der Pfad ist **\Systemsteuerung\Darstellung und Anpassung**. Dieser Pfad ähnelt dem, was Sie soeben im Gruppenrichtlinienverwaltungs-Editor gesehen haben. Wenn Sie die Einstellung öffnen, sehen Sie die gleichen Optionen wie im Gruppenrichtlinienverwaltungs-Editor: **Nicht konfiguriert**, **Aktiviert** und **Deaktiviert**.
+    Der Einstellungstyp lautet **Gerät**, und der Pfad ist **/Systemsteuerung/Personalisierung**. Dieser Pfad ähnelt dem, was Sie soeben im Gruppenrichtlinienverwaltungs-Editor gesehen haben. Wenn Sie die Einstellung **Aktivieren der Kamera auf dem Sperrbildschirm verhindern** öffnen, sehen Sie die gleichen Optionen wie im Gruppenrichtlinienverwaltungs-Editor: **Nicht konfiguriert**, **Aktiviert** und **Deaktiviert**.
 
 #### <a name="compare-a-user-policy"></a>Vergleichen einer Benutzerrichtlinie
 
-1. Suchen Sie in Ihrer Administratorvorlage nach **InPrivate-Browsen**. Beachten Sie den Pfad und dass diese Einstellung für Benutzer und Geräte gilt.
+1. Wählen Sie in Ihrer Administratorvorlage die Optionen **Computerkonfiguration** > **Alle Einstellungen** aus, und suchen Sie nach **InPrivate-Browsen**. Beachten Sie den Pfad.
+
+    Führen Sie die gleichen Schritte für die **Benutzerkonfiguration** aus. Wählen Sie **Alle Einstellungen** aus, und suchen Sie nach **InPrivate-Browsen**.
 
 2. Finden Sie die entsprechenden Einstellungen für Benutzer und Geräte im **Gruppenrichtlinienverwaltungs-Editor**:
 
@@ -296,9 +308,11 @@ In diesem Abschnitt sehen Sie sich eine Richtlinie in Intune und die entsprechen
 #### <a name="compare-an-edge-policy"></a>Vergleichen einer Edge-Richtlinie
 
 1. Navigieren Sie im Endpoint Manager Admin Center zu Ihrer Vorlage **Administratorvorlage – Geräte von Studenten mit Windows 10**.
-2. Klicken Sie in der Dropdownliste auf **Microsoft Edge, Version 77 und höher**.
-3. Suchen Sie nach **Start**. Sehen Sie sich die verfügbaren Einstellungen an.
-4. Suchen Sie im Gruppenrichtlinienverwaltungs-Editor nach den folgenden Einstellungen:
+2. Klappen Sie **Computerkonfiguration** > **Microsoft Edge** > **Startup, homepage and new tab page** (Start, Startseite und neue Registerkartenseite) auf. Sehen Sie sich die verfügbaren Einstellungen an.
+
+    Führen Sie die gleichen Schritte für die **Benutzerkonfiguration** aus.
+
+3. Suchen Sie im Gruppenrichtlinienverwaltungs-Editor nach den folgenden Einstellungen:
 
     - Gerät: Klappen Sie **Computerkonfiguration** > **Richtlinien** > **Administrative Vorlagen** > **Microsoft Edge** > **Startup, homepage and new tab page** (Start, Startseite und neue Registerkartenseite) auf.
     - Benutzer: Klappen Sie **Benutzerkonfiguration** > **Richtlinien** > **Administrative Vorlagen** > **Microsoft Edge** > **Startup, homepage and new tab page** (Start, Startseite und neue Registerkartenseite) auf.
@@ -311,12 +325,12 @@ Sie haben eine administrative Vorlage in Intune erstellt. In dieser Vorlage habe
 
 In dieser Vorlage konfigurieren Sie bestimmte Internet Explorer-Einstellungen, um Geräte, die von mehreren Studenten genutzt werden, zu sperren.
 
-1. Suchen Sie in Ihrer Vorlage **Administratorvorlage – Geräte von Studenten mit Windows 10** nach **InPrivate-Browsen deaktivieren**, und klicken Sie auf die Geräterichtlinie:
+1. Suchen Sie in Ihrer Vorlage **Administratorvorlage – Geräte von Studenten mit Windows 10**, erweitern Sie **Computerkonfiguration**, und wählen Sie für **InPrivate-Browsen deaktiviere**n die Option **Alle Einstellungen** aus.
 
     > [!div class="mx-imgBorder"]
     > ![Geräterichtlinie „InPrivate-Browsen deaktivieren“ in einer administrativen Vorlage in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
-2. Sehen Sie sich in diesem Fenster die Beschreibung und die Werte an, die Sie festlegen können. Diese Optionen ähneln dem, was Sie im Tool „Gruppenrichtlinie“ sehen.
+2. Wählen Sie die Einstellung **InPrivate-Browsen deaktivieren** aus. Sehen Sie sich in diesem Fenster die Beschreibung und die Werte an, die Sie festlegen können. Diese Optionen ähneln dem, was Sie im Tool „Gruppenrichtlinie“ sehen.
 3. Klicken Sie auf **Aktiviert** > **OK**, um die Änderungen zu speichern.
 4. Konfigurieren Sie außerdem die folgenden Internet Explorer-Einstellungen. Stellen Sie sicher, dass Sie auf **OK** klicken, um die Änderungen zu speichern.
 
@@ -343,7 +357,7 @@ In dieser Vorlage konfigurieren Sie bestimmte Internet Explorer-Einstellungen, u
 
 ### <a name="assign-your-template"></a>Vorlage zuweisen
 
-1. Klicken Sie in Ihrer Vorlage auf **Zuweisungen** > **Einzuschließende Gruppen auswählen**:
+1. Klicken Sie in Ihrer Vorlage auf **Weiter**, bis Sie zu **Zuweisungen** gelangen. Klicken Sie auf **Wählen Sie die Gruppen aus, die eingeschlossen werden sollen**:
 
     > [!div class="mx-imgBorder"]
     > ![Profil Ihrer administrativen Vorlage in der Liste von Konfigurationsprofilen für Geräte in Microsoft Intune auswählen](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
@@ -352,7 +366,7 @@ In dieser Vorlage konfigurieren Sie bestimmte Internet Explorer-Einstellungen, u
 
     Wenn Sie dieses Tutorial in einer Produktionsumgebung verwenden, wird empfohlen, leere Gruppen hinzuzufügen. Ziel ist es, das Zuweisen Ihrer Vorlage zu üben.
 
-3. Klicken Sie auf **Weiter**, um zur Registerkarte **Überprüfen + erstellen** zu gelangen. Klicken Sie auf **Erstellen**, um Ihre Änderungen zu speichern.
+3. Wählen Sie **Weiter** aus. Klicken Sie unter **Überprüfen + erstellen** auf **Erstellen**, um die Änderungen zu speichern.
 
 Sobald das Profil gespeichert wurde, gilt es für die Geräte, sobald diese sich bei Intune einchecken. Wenn die Geräte mit dem Internet verbunden sind, kann dies sofort geschehen. Weitere Informationen zu den Aktualisierungszeiten von Richtlinien finden Sie unter [Wie lange dauert es, bis Geräte Richtlinien, Profile oder Apps nach ihrer Zuweisung abrufen?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
@@ -380,11 +394,20 @@ In diesem Abschnitt werden Sie in Intune eine Administratorvorlage für OneDrive
     - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
 
 5. Wählen Sie **Weiter** aus.
-6. Wählen Sie unter **Konfigurationseinstellungen** in der Dropdownliste die Option **Office** aus. **Aktivieren** Sie die folgenden Einstellungen. Stellen Sie sicher, dass Sie auf **OK** klicken, um die Änderungen zu speichern.
+6. Konfigurieren Sie in den **Konfigurationseinstellungen** die folgenden Einstellungen. Stellen Sie sicher, dass Sie auf **OK** klicken, um die Änderungen zu speichern:
 
-    - **Benutzer automatisch mit ihren Windows-Anmeldeinformationen beim OneDrive-Synchronisierungsclient anmelden**
-    - **OneDrive-Dateien bei Bedarf verwenden**
-    - **Benutzer an der Synchronisierung persönlicher OneDrive-Konten hindern**
+    - **Computerkonfiguration** > **Alle Einstellungen**:
+      - **Benutzer automatisch mit ihren Windows-Anmeldeinformationen beim OneDrive-Synchronisierungsclient anmelden**
+        - **Typ:** Gerät
+        - **Wert:** Aktiviert
+      - **OneDrive-Dateien bei Bedarf verwenden**
+        - **Typ:** Gerät
+        - **Wert:** Aktiviert
+
+    - **Benutzerkonfiguration** > **Alle Einstellungen**:
+      - **Benutzer an der Synchronisierung persönlicher OneDrive-Konten hindern**
+        - **Typ:** Benutzer
+        - **Wert:** Aktiviert
 
 Ihre Einstellungen sehen ähnlich aus wie die folgenden:
 
@@ -395,12 +418,12 @@ Weitere Informationen zu Einstellungen für den OneDrive-Client finden Sie unter
 
 ### <a name="assign-your-template"></a>Vorlage zuweisen
 
-1. Klicken Sie in Ihrer Vorlage auf **Zuweisungen** > **Einzuschließende Gruppen auswählen**.
+1. Klicken Sie in Ihrer Vorlage auf **Weiter**, bis Sie zu **Zuweisungen** gelangen. Klicken Sie auf **Wählen Sie die Gruppen aus, die eingeschlossen werden sollen**:
 2. Eine Liste der vorhandenen Benutzer und Gruppen wird angezeigt. Klicken Sie auf die Gruppe **Alle Windows-Geräte**, die Sie vorhin erstellt haben, und dann auf **Auswählen**.
 
     Wenn Sie dieses Tutorial in einer Produktionsumgebung verwenden, wird empfohlen, leere Gruppen hinzuzufügen. Ziel ist es, das Zuweisen Ihrer Vorlage zu üben.
 
-3. Klicken Sie auf **Weiter**, um zur Registerkarte **Überprüfen + erstellen** zu gelangen. Klicken Sie auf **Erstellen**, um Ihre Änderungen zu speichern.
+3. Wählen Sie **Weiter** aus. Klicken Sie unter **Überprüfen + erstellen** auf **Erstellen**, um die Änderungen zu speichern.
 
 Mittlerweile haben Sie einige administrative Vorlagen erstellt und von Ihnen erstellten Gruppen zugewiesen. Im nächsten Schritt erstellen Sie eine administrative Vorlage mit Windows PowerShell und der Microsoft Graph-API für Intune.
 

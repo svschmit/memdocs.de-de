@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f4d51cbd5c8bc6c82822d5e26191c01d2e1bb1d
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220148"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326923"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Registrierung von Windows-Geräten
 
@@ -102,7 +102,7 @@ Die Weitergabe von Änderungen an DNS-Einträgen kann bis zu 72 Stunden dauern. 
 Das Verwenden einer anderen Methode als die CNAME-Konfiguration wird nicht unterstützt. Beispielsweise wird die Verwendung eines Proxyservers zum Umleiten von „enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc“ auf „enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc“ oder „manage.microsoft.com/EnrollmentServer/Discovery.svc“ nicht unterstützt.
 
 **Schritt 2: Verifizieren des CNAME-Eintrags** (optional)<br>
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **Windows** > **Windows-Registrierung** > **CNAME-Validierung** aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Windows** > **Windows-Registrierung** > **CNAME Validation** (CNAME-Validierung).
 2. Geben Sie in das Feld **Domäne** die Unternehmenswebsite ein, und wählen Sie dann **Testen** aus.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Benutzern mitteilen, wie Windows-Geräte registriert werden

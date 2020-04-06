@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b30d2a3ef7c85557222aa39740417a1a6fd463f1
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6d4fd6022e7d772c70a2147e0e25bd7dad0775c
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084131"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407704"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Hinzufügen von Web-Apps zu Microsoft Intune
 
@@ -41,6 +41,8 @@ Intune erstellt auf dem Gerät des Benutzers eine Verknüpfung zu der Web-App. F
 > Für Android Enterprise-Geräte: [Weblinks „Verwaltetes Google Play“](apps-add-android-for-work.md#managed-google-play-web-links).
 > 
 > Für iOS-Geräte: Neue Webclips (angeheftete Web-Apps) werden in Microsoft Edge statt in Intune Managed Browser geöffnet, wenn das Öffnen in einem geschützten Browser erforderlich ist. Ältere iOS-Webclips müssen neu zugewiesen werden, um sicherzustellen, dass sie in Microsoft Edge statt in Managed Browser geöffnet werden.
+>
+> Bei Legacy-Android-Geräten von Geräteadministratoren können über das Unternehmensportal-Widget angeheftete Weblinks nur über Intune Managed Browser geöffnet werden, wenn die vom Benutzer verwendete Version des Unternehmensportals älter als 5.0.4737.0 ist. 
 
 ## <a name="add-a-web-app-to-intune"></a>Hinzufügen einer Web-App zu Intune
 Führen Sie die folgenden Schritte aus, um eine App als Verknüpfung zu einer App im Internet zu Intune hinzuzufügen:

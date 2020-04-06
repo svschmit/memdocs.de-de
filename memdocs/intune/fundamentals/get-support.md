@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086017"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326954"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Anfordern von Support für Microsoft Intune
 
@@ -66,7 +66,7 @@ Dieses Problem tritt auf, wenn Sie Ihr neues Mandantenkonto nicht über das **M3
 
 - **Aus dem Microsoft Endpoint Manager Admin Center**
 
-  - Wählen Sie von einem beliebigen Knoten im Microsoft Endpoint Manager Admin Center das **?** - Symbol in der oberen rechten Ecke des Portals, und verwenden Sie dann die Dropdownliste, um den Verwaltungstyp auszuwählen, für den Sie Hilfe benötigen. Das Microsoft Endpoint Manager Admin Center unterstützt die folgenden Verwaltungstypen, und Sie müssen denjenigen auswählen, für den Sie Hilfe benötigen, wie etwa Intune:
+  - Klicken Sie in einem beliebigen Knoten im Microsoft Endpoint Manager Admin Center auf das **?** . Symbol in der oberen rechten Ecke des Portals, und verwenden Sie dann die Dropdownliste, um den Verwaltungstyp auszuwählen, für den Sie Hilfe benötigen. Das Microsoft Endpoint Manager Admin Center unterstützt die folgenden Verwaltungstypen, und Sie müssen denjenigen auswählen, für den Sie Hilfe benötigen, wie etwa Intune:
 
     - Configuration Manager (umfasst Desktop Analytics)
     - Intune

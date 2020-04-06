@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9aab0233c05416fc50413a7889435cb221179730
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dd99c334866714095a4d87e1e028731ce3ee7c7c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344635"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326883"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Tutorial: Verwenden der Apple-Features für Unternehmensgeräteregistrierung in Apple Business Manager (ABM) zum Registrieren von iOS-/iPadOS-Geräten in Intune
 Die Geräteregistrierungsfeatures in Apple Business Manager vereinfachen das Registrieren von Geräten. Intune unterstützt auch das ältere Portal für das Programm zur Geräteregistrierung (Device Enrollment Program, DEP), doch wir empfehlen Ihnen einen Neustart mit Apple Business Manager. Mit Microsoft Intune und der Apple-Unternehmensgeräteregistrierung werden Geräte automatisch sicher registriert, wenn der Benutzer das Gerät zum ersten Mal einschaltet. Sie können Geräte daher für mehrere Benutzer bereitstellen, ohne jedes Gerät einzeln einrichten zu müssen. 
@@ -42,17 +42,17 @@ Wenn Sie über kein Intune-Abonnement verfügen, [registrieren Sie sich für ein
 ## <a name="get-an-apple-device-enrollment-token"></a>Abrufen eines Tokens für Apple-Geräteregistrierung
 Vor der Registrierung von iOS-/iPadOS-Geräten mit den Apple-Features für Unternehmensregistrierung benötigen Sie ein Token für die Apple-Geräteregistrierung, d.h. eine PEM-Datei. Mit diesem Token kann Intune Informationen zu Apple-Geräten synchronisieren, die Ihrem Unternehmen gehören. Damit kann Intune außerdem Registrierungsprofile zu Apple hochladen und diesen Profilen Geräte zuweisen.
 
-Sie verwenden das ABM- oder DEP-Portal zum Erstellen eines Tokens für Geräteregistrierung. Sie verwenden die Portale auch, um Intune Geräte zur Verwaltung zuzuweisen.
+Sie verwenden das Apple-Portal zum Erstellen eines Tokens für die Geräteregistrierung. Sie verwenden die Portale auch, um Intune Geräte zur Verwaltung zuzuweisen.
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** > **Hinzufügen** aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Enrollment Program Tokens** (Registrierungsprogrammtoken) > **Hinzufügen**.
 
 2. Erteilen Sie Microsoft die Berechtigung, Benutzer- und Geräteinformationen an Apple zu senden, indem Sie auf **Ich stimme zu** klicken.
 
    ![Screenshot des Bereichs „Registrierungsprogrammtoken“ im Arbeitsbereich „Apple-Zertifikate“ zum Herunterladen des öffentlichen Schlüssels](./media/tutorial-use-device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. Wählen Sie **Laden Sie Ihr Zertifikat mit öffentlichem Schlüssel herunter** aus, um die Verschlüsselungsschlüsseldatei (PEM) herunterzuladen und lokal zu speichern. Die PEM-Datei wird verwendet, um ein Vertrauensstellungszertifikat vom ABM- oder DEP-Portal anzufordern.
+3. Wählen Sie **Laden Sie Ihr Zertifikat mit öffentlichem Schlüssel herunter** aus, um die Verschlüsselungsschlüsseldatei (PEM) herunterzuladen und lokal zu speichern. Die PEM-Datei wird verwendet, um ein Vertrauensstellungszertifikat vom Apple-Portal anzufordern.
 
-4. Wählen Sie **Create a token for Apple's Device Enrollment Program** (Token für das Programm zur Geräteregistrierung von Apple erstellen) aus, um das Portal des Bereitstellungsprogramms von Apple zu öffnen. Melden Sie sich mit der Apple-ID Ihres Unternehmens an. Diese Apple-ID kann später zum Erneuern Ihres DEP-Token verwendet werden.
+4. Wählen Sie **Create a token for Apple's Device Enrollment Program** (Token für das Programm zur Geräteregistrierung von Apple erstellen) aus, um das Portal des Bereitstellungsprogramms von Apple zu öffnen. Melden Sie sich mit der Apple-ID Ihres Unternehmens an. Diese Apple-ID kann später zum Erneuern Ihres Tokens verwendet werden.
 
 5. Wählen Sie im [Portal des Bereitstellungsprogramms](https://deploy.apple.com) von Apple die Option **Erste Schritte** für das **Programm zur Geräteregistrierung** aus. Möglicherweise ist Ihr Prozess etwas anders als die folgenden Schritte in [Apple Business Manager](https://business.apple.com).
 
@@ -80,11 +80,11 @@ Sie verwenden das ABM- oder DEP-Portal zum Erstellen eines Tokens für Gerätere
 ## <a name="create-an-apple-enrollment-profile"></a>Erstellen eines Apple-Registrierungsprofils
 Nachdem Sie Ihr Token installiert haben, können Sie nun ein Registrierungsprofil für unternehmenseigene iOS-/iPadOS-Geräte erstellen. Ein Geräteregistrierungsprofil definiert die Einstellungen, die während der Registrierung auf eine Gruppe von Geräten angewendet werden.
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Enrollment Program Tokens** (Registrierungsprogrammtoken).
 
 2. Wählen Sie das soeben installierte Token aus, und klicken Sie auf **Profile** > **Profil erstellen**.
 
-3. Geben Sie unter **Profil erstellen** den **Namen** *TestDEPProfile* und die **Beschreibung** *Test von DEP für iOS-/iPadOS-Geräte* ein. Benutzer können diese Informationen nicht sehen.
+3. Geben Sie unter **Profil erstellen** den **Namen** *TestProfile* und die **Beschreibung** *Test von ADE für iOS-/iPadOS-Geräte* ein. Benutzer können diese Informationen nicht sehen.
 
 4. Wählen Sie unter **Plattform** die Option **iOS** aus.
 
@@ -116,28 +116,28 @@ Nachdem Sie Ihr Token installiert haben, können Sie nun ein Registrierungsprofi
 
 ## <a name="sync-managed-devices-to-intune"></a>Synchronisieren verwalteter Geräte mit Intune
 
-Nachdem Sie ein Registrierungsprogrammtoken beim ABM-, ASM- oder DEP-Portal eingerichtet und dort dem MDM-Server Geräte zugewiesen haben, können Sie warten, bis diese Geräte mit dem Intune-Dienst synchronisiert werden oder eine Synchronisierung manuell per Push starten. Ohne eine manuelle Synchronisierung kann es bis zu 24 Stunden dauern, bis Geräte im Azure-Portal angezeigt werden.
+Nachdem Sie im ABM-, ASM- oder ADE-Portal ein Registrierungsprogrammtoken erstellt und dort dem MDM-Server Geräte zugewiesen haben, können Sie warten, bis diese Geräte mit dem Intune-Dienst synchronisiert werden oder eine Synchronisierung manuell per Push starten. Ohne eine manuelle Synchronisierung kann es bis zu 24 Stunden dauern, bis Geräte im Azure-Portal angezeigt werden.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken**, und wählen Sie in der Liste **Geräte** > **Synchronisieren** ein Token aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte**  >  **iOS**  >  **iOS enrollment** (iOS-Registrierung)  >  **Enrollment Program Tokens** (Registrierungsprogrammtoken), wählen Sie in der Liste ein Token aus, und klicken Sie auf **Geräte** > **Synchronisieren**.
 
 ## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>Zuweisen eines Registrierungsprofils an iOS-/iPadOS-Geräte
 
-Sie müssen Geräten ein Profil des Registrierungsprogramms zuweisen, bevor Sie mit der Registrierung beginnen können. Diese Geräte werden mit Intune aus Apple synchronisiert und müssen im ABM-, ASM- oder DEP-Portal dem richtigen MDM-Servertoken zugewiesen werden.
+Sie müssen Geräten ein Profil des Registrierungsprogramms zuweisen, bevor Sie mit der Registrierung beginnen können. Diese Geräte werden mit Intune aus Apple synchronisiert und müssen im ABM-, ASM- oder ADE-Portal dem richtigen MDM-Servertoken zugewiesen werden.
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Geräte** > **iOS** > **iOS-Registrierung** > **Registrierungsprogrammtoken** und dann Ihr Token aus der Liste aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte**  >  **iOS**  >  **iOS enrollment** (iOS-Registrierung)  >  **Enrollment Program Tokens** (Registrierungsprogrammtoken), und wählen Sie in der Liste Ihr Token aus.
 2. Wählen Sie **Geräte** aus, wählen Sie in der Liste die Geräte aus, und wählen Sie dann **Profil zuweisen** aus.
 3. Wählen Sie unter **Profil zuweisen** ein Profil für die Geräte aus, und klicken Sie dann auf **Zuweisen**.
 
 ## <a name="distribute-devices-to-users"></a>Verteilen von Geräten an Benutzer
 
-Sie haben die Verwaltung und Synchronisierung zwischen Apple und Intune eingerichtet und haben ein Profil zugewiesen, damit Ihre DEP-Geräte registriert werden können. Sie können jetzt Geräte an Benutzer verteilen. Für Geräte mit Benutzeraffinität muss jedem Benutzer eine Intune-Lizenz zugewiesen werden.
+Sie haben die Verwaltung und Synchronisierung zwischen Apple und Intune eingerichtet und haben ein Profil zugewiesen, damit Ihre ADE-Geräte registriert werden können. Sie können jetzt Geräte an Benutzer verteilen. Für Geräte mit Benutzeraffinität muss jedem Benutzer eine Intune-Lizenz zugewiesen werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Informieren Sie sich auch über die anderen Optionen, die für das Registrieren von iOS-/iPadOS-Geräten verfügbar sind.
 
 > [!div class="nextstepaction"]
-> [Ausführlicher Artikel zur iOS-/iPadOS-DEP-Registrierung](device-enrollment-program-enroll-ios.md)
+> [Ausführlicher Artikel zur automatischen Registrierung unter iOS/iPadOS](device-enrollment-program-enroll-ios.md)
 
 <!--commenting out because inaccurate>
 ## Clean up resources

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c4c6660138df0c05975b1fc6b093c41600c0547
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e031acf6964c2e43bb355db85dd5e365db1a08ad
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344622"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326900"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutorial: Registrieren von Windows-Geräten in Intune mithilfe von Autopilot
 
@@ -60,7 +60,7 @@ Der erste Schritt beim Einrichten von Windows Autopilot besteht darin, die Windo
 
 2. Speichern Sie die CSV-Datei.
 
-3. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) unter **Windows Autopilot Deployment-Programm** > **Importieren** auf **Geräte** > **Windows** > **Geräte**.
+3. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Windows** > **Geräte** (unter **Windows AutoPilot Deployment-Programm** > **Importieren**).
 
     ![Screenshot von Windows Autopilot-Geräten](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -78,7 +78,7 @@ Der erste Schritt beim Einrichten von Windows Autopilot besteht darin, die Windo
 
 Als Nächstes erstellen Sie eine Gerätegruppe und platzieren darin die Autopilot-Geräte, die Sie gerade geladen haben.
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Gruppen** > **Neue Gruppe** aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Gruppen** > **Neue Gruppe**.
 2. Auf dem Blatt **Gruppe**:
     1. Wählen Sie für **Gruppentyp** die Option **Sicherheit**.
     2. Geben Sie für **Gruppenname** *Autopilot-Gruppe* ein. Geben Sie für **Gruppenbeschreibung** *Testgruppe für Autopilot-Geräte* ein.
@@ -90,7 +90,7 @@ Als Nächstes erstellen Sie eine Gerätegruppe und platzieren darin die Autopilo
 
 Nach dem Erstellen einer Gerätegruppe müssen Sie ein Bereitstellungsprofil erstellen, um die Autopilot-Geräte konfigurieren zu können.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Windows** > **Windows-Registrierung** > **Bereitstellungsprofile** > **Profil erstellen**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Windows** > **Windows-Registrierung** > **Deployment Profiles** (Bereitstellungsprofile) > **Profil erstellen**.
 2. Geben Sie auf der Seite **Grundlagen** als **Name** *Autopilot-Profil* ein. Geben Sie für **Beschreibung** *Testprofil für Autopilot-Geräte* ein.
 3. Legen Sie **Alle als Ziel angegebenen Geräte in Autopilot konvertieren** auf **Ja** fest. Durch diese Einstellung wird sichergestellt, dass alle Geräte in der Liste beim Autopilot-Bereitstellungsdienst registriert werden. Die Verarbeitung der Registrierung kann 48 Stunden dauern.
 4. Wählen Sie **Weiter** aus.
@@ -116,7 +116,7 @@ Wenn Sie die Autopilot-Geräte nicht mehr verwenden möchten, können Sie sie l�
 
 1. Wenn Geräte bei Intune registriert sind, müssen Sie sie zunächst [aus Azure Active Directory-Portal löschen](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) unter **Windows Autopilot Deployment-Programm** auf **Geräte** > **Windows** > **Windows-Registrierung** > **Geräte**.
+2. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Windows** > **Windows-Registrierung** > **Geräte** (unter **Windows AutoPilot Deployment-Programm**).
 
 3. Wählen Sie die Geräte aus, die Sie löschen möchten, und klicken Sie dann auf **Löschen**.
 

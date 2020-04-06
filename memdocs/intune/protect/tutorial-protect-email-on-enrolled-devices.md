@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9921fb9e22b17a47c588dfcbfbf502e00ef2aadd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 200bde56a4a1e77ce78678eddd35537c04dfa514
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349874"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325489"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutorial: Schützen des Exchange Online-E-Mail-Diensts auf verwalteten Geräten
 
@@ -49,7 +49,7 @@ Bevor Sie beginnen, erstellen Sie ein Testgeräteprofil für iOS-Geräte, indem 
 
 ## <a name="sign-in-to-intune"></a>Anmelden bei Intune
 
-Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) als [globaler Administrator](../fundamentals/users-add.md#types-of-administrators) oder Intune-[Dienstadministrator](../fundamentals/users-add.md#types-of-administrators) an. Wenn Sie ein Testabonnement für Intune erstellt haben, besitzt das Konto, mit dem Sie das Abonnement erstellt haben, die Rolle des globalen Administrators.
+Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) als [globaler Administrator](../fundamentals/users-add.md#types-of-administrators) oder [Intune-Dienstadministrator](../fundamentals/users-add.md#types-of-administrators) an. Wenn Sie ein Testabonnement für Intune erstellt haben, besitzt das Konto, mit dem Sie das Abonnement erstellt haben, die Rolle des globalen Administrators.
 
 ## <a name="create-the-ios-device-compliance-policy"></a>Erstellen der iOS-Gerätekonformitätsrichtlinie
 

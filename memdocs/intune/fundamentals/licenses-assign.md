@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03f3e89b8fe1872b323459e3c0da34f3029a7e9c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358792"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326775"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Zuweisen von Lizenzen zu Benutzern, damit sie ihre Geräte bei Intune registrieren können
 
@@ -32,9 +32,9 @@ Egal, ob Sie manuell Benutzer hinzufügen oder aus Ihrem lokalen Active Director
 
 ## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Zuweisen einer Intune-Lizenz im Microsoft Endpoint Manager Admin Center
 
-Sie können das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) verwenden, um cloudbasierte Benutzer manuell hinzuzufügen. Außerdem können Sie über das Admin Center sowohl cloudbasierten Benutzerkonten als auch Konten, die aus Ihrer lokalen Active Directory-Bereitstellung mit Azure AD synchronisiert wurden, Lizenzen zuzuweisen.
+Sie können das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) verwenden, um cloudbasierte Benutzer manuell hinzuzufügen. Außerdem können Sie über das Admin Center sowohl cloudbasierten Benutzerkonten als auch Konten, die aus Ihrer lokalen Active Directory-Bereitstellung mit Azure AD synchronisiert wurden, Lizenzen zuweisen.
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Benutzer** > **Alle Benutzer**, anschließend einen Benutzer und dann **Lizenzen** > **Zuweisungen** aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Benutzer** > **Alle Benutzer**,wählen Sie anschließend einen Benutzer aus, und klicken Sie dann auf **Lizenzen** > **Zuweisungen**.
 
 2. Wählen Sie **Intune** > **Speichern** aus.
 

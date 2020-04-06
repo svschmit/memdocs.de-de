@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7686be29b819d29aa39ed12d558780dde9bf4159
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083576"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401368"
 ---
 # <a name="review-client-app-protection-logs"></a>Überprüfen der Schutzprotokolle für Client-Apps
 
@@ -33,6 +33,9 @@ Der Prozess zum Aktivieren und Sammeln von Protokollen unterscheidet sich je nac
 - **iOS-/iPadOS-Geräte**: Verwenden Sie Microsoft Edge für iOS/iPadOS, um Protokolle zu sammeln. Details hierzu finden Sie unter [Verwalten des Webzugriffs mithilfe von Microsoft Edge mit Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 - **Windows 10-Geräte:** Verwenden Sie *MDMDiag* und Ereignisprotokolle. Weitere Informationen finden Sie unter [Diagnostizieren von MDM-Fehlern unter Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) in der Referenz zur Windows-Clientverwaltung und im Blogbeitrag [Troubleshooting Windows 10 Intune Policy Failures (Behandeln von Problemen mit Intune-Richtlinien unter Windows 10)](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
 - **Android-Geräte**: Verwenden Sie Microsoft Edge für Android, um Protokolle zu sammeln. Details hierzu finden Sie unter [Verwalten des Webzugriffs mithilfe von Microsoft Edge mit Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+
+  > [!Note]
+  > Auf vollständig verwalteten Android-Geräten wird in manchen Fällen möglicherweise die Intune-Unternehmensportal-App unter „Alle Apps“ angezeigt. Dies kann passieren, wenn eine mit einer App-Schutzrichtlinie verknüpfte App nicht installiert ist oder nicht gestartet wird. 
 
 In der folgenden Tabelle werden der Name der App-Schutzrichtlinie und die unterstützten Werte aufgelistet, die im Protokoll erfasst werden. Zusätzlich identifiziert jede Einstellung die im Portal Microsoft Endpoint Manager gefundene Richtlinieneinstellung. Ausführliche Informationen zu den einzelnen Einstellungen finden Sie unter [Einstellungen für App-Schutzrichtlinien für iOS/iPadOS](app-protection-policy-settings-ios.md).
 

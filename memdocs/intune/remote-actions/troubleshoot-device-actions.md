@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6eefc9f07a6c0cf442468b14d6d74567b8c15861
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348821"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322326"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Troubleshooting für Geräteaktionen in Intune
 
@@ -54,7 +54,7 @@ Nein. Außerdem müssen die Bindestriche nicht eingeben werden.
 ## <a name="remove-devices-action"></a>Aktion „Geräte entfernen“
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Wie finde ich heraus, wer eine Abkoppeln/Zurücksetzen-Aktion gestartet hat?
-Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Mandantenverwaltung** > **Überwachungsprotokolle** und sehen Sie sich die Spalte **Initiiert von** an.
+Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Mandantenverwaltung** > **Überwachungsprotokolle**, und überprüfen Sie dann die Spalte **Initiiert von**.
 Wenn kein Eintrag angezeigt wird, wurde die Aktion höchstwahrscheinlich vom Gerätebenutzer selbst initiiert. Dazu wurde vermutlich die Unternehmensportal-App oder portal.manage.microsoft.com verwendet.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Warum wurde meine Anwendung nach Verwenden der Aktion „Abkoppeln“ nicht deinstalliert?

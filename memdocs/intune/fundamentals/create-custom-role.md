@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54cb4028001f2e6b64cba639cb27c58b31db172f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344154"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326794"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Erstellen einer benutzerdefinierten Rolle in Intune
 
@@ -34,7 +34,7 @@ Für das Erstellen, Bearbeiten oder Zuweisen von Rollen muss das Konto in Azure 
 
 ## <a name="to-create-a-custom-role"></a>So erstellen Sie eine benutzerdefinierte Rolle
 
-1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Mandantenverwaltung**  >  **Rollen**  >  **Alle Rollen**  >  **Erstellen**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Mandantenverwaltung** > **Rollen** > **Alle Rollen** > **Erstellen**.
 
 2. Geben Sie auf der Seite **Grundeinstellungen** einen Namen und eine Beschreibung für die neue Rolle ein, und klicken Sie dann auf **Weiter**.
 
@@ -48,7 +48,7 @@ Für das Erstellen, Bearbeiten oder Zuweisen von Rollen muss das Konto in Azure 
 
 Sie können auch eine vorhandene Rolle kopieren.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Mandantenverwaltung**  >  **Rollen**  >  **Alle Rollen** > klicken Sie auf das Kästchen neben einer Rolle in der Liste > **Duplizieren**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Mandantenverwaltung** > **Rollen** > **Alle Rollen**, klicken Sie auf das Kästchen neben einer Rolle in der Liste und dann auf **Duplizieren**.
 
 2. Geben Sie auf der Seite **Grundeinstellungen** einen Namen ein. Stellen Sie sicher, dass Sie einen eindeutigen Namen verwenden.
 

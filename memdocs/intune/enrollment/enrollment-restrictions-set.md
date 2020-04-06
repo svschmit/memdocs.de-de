@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f68278e936a85ab21407e55c8d5c18529457938a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b05d89c40f274a7cacc29634fcf60433019c7e1f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359299"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327085"
 ---
 # <a name="set-enrollment-restrictions"></a>Festlegen von Registrierungseinschränkungen
 
@@ -126,7 +126,7 @@ Während der BYOD-Registrierung erhalten Benutzer eine Benachrichtigung darüber
 
 Sie können die Einstellungen für eine Registrierungseinschränkung ändern, indem Sie die folgenden Schritte ausführen. Diese Einschränkungen haben keine Auswirkungen auf Geräte, die bereits registriert wurden. Geräte, die mit dem [Intune-PC-Agent](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) registriert sind, können nicht über dieses Feature blockiert werden.
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu  > **Geräte** > **Registrierungsbeschränkungen** > die zu ändernde Einschränkung auswählen > **Eigenschaften**.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Registrierungsbeschränkungen**, wählen Sie die zu ändernde Einschränkung aus, und klicken Sie dann auf **Eigenschaften**.
 2. Klicken Sie neben den Einstellungen, die Sie ändern möchten, auf **Bearbeiten**.
 3. Nehmen Sie auf der Seite **Bearbeiten** die gewünschten Änderungen vor, und fahren Sie auf der Seite **Überprüfen und speichern** fort. Klicken Sie abschließend auf **Speichern**.
 

@@ -1,12 +1,12 @@
 ---
 title: Windows Information Protection-App-Schutzrichtlinien (WIP)
 titleSuffix: Microsoft Intune
-description: Erstellen und Bereitstellen von WIP-App-Schutzrichtlinien (Windows Information Protection) in Microsoft Intune
+description: Erstellen und Bereitstellen von WIP-Richtlinien (Windows Information Protection) in Microsoft Intune
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ea664594744facd36f3f92900a1e80c48053904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6e7305d33b1c40c2624c5c860f59922a5817c818
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345688"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326103"
 ---
-# <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Erstellen und Bereitstellen von WIP-App-Schutzrichtlinien (Windows Information Protection) in Intune
+# <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Erstellen und Bereitstellen von WIP-Richtlinien (Windows Information Protection) in Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Sie können App-Schutzrichtlinien bei Windows 10-Apps verwenden, um Apps ohne Geräteregistrierung zu schützen.
+Sie können WIP-Richtlinien (Windows Information Protection) bei Windows 10-Apps verwenden, um Apps ohne Geräteregistrierung zu schützen.
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
@@ -49,10 +49,10 @@ Sie müssen mit einigen Konzepten vertraut sein, wenn Sie eine WIP-Richtlinie hi
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Sie müssen den MAM-Anbieter konfigurieren, bevor Sie eine WIP-App-Schutzrichtlinie erstellen können. Weitere Informationen finden Sie unter [Konfigurieren Ihres MAM-Anbieters in Intune](app-protection-policies-configure-windows-10.md).  
+Sie müssen den MAM-Anbieter konfigurieren, bevor Sie eine WIP-Richtlinie erstellen können. Weitere Informationen finden Sie unter [Konfigurieren Ihres MAM-Anbieters in Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP unterstützt nicht mehrere Identitäten; nur jeweils eine verwaltete Identität darf vorhanden sein.
+> WIP unterstützt nicht mehrere Identitäten; nur jeweils eine verwaltete Identität darf vorhanden sein. Weitere Informationen zu den Möglichkeiten und Grenzen von WIP finden Sie unter [Schützen Ihrer Unternehmensdaten mit Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Darüber hinaus benötigen Sie folgende Lizenz und folgendes Update:
 
@@ -63,7 +63,7 @@ Darüber hinaus benötigen Sie folgende Lizenz und folgendes Update:
 
 
 
-## <a name="to-add-a-wip-app-protection-policy"></a>So erstellen Sie eine WIP-App-Schutzrichtlinie
+## <a name="to-add-a-wip-policy"></a>Hinzufügen einer WIP-Richtlinie
 
 Nachdem Sie Intune in Ihrer Organisation eingerichtet haben, können Sie eine WIP-spezifische Richtlinie erstellen.
 
@@ -76,7 +76,7 @@ Nachdem Sie Intune in Ihrer Organisation eingerichtet haben, können Sie eine WI
 3. Fügen Sie die folgenden Werte hinzu:
     - **Name:** Geben Sie einen Namen für Ihre neue Richtlinie ein (erforderlich).
     - **Beschreibung:** Geben Sie eine Beschreibung ein (optional).
-    - **Plattform:** Wählen Sie **Windows 10** als unterstützte Plattform für Ihre App-Schutzrichtlinie aus.
+    - **Plattform:** Wählen Sie **Windows 10** als unterstützte Plattform für Ihre WIP-Richtlinie aus.
     - **Registrierungsstatus:** Wählen Sie **Ohne Registrierung** als Registrierungsstatus für Ihre Richtlinie aus.
 4. Wählen Sie **Erstellen** aus. Die Richtlinie wird erstellt und in der Tabelle im Bereich **App-Schutzrichtlinien** angezeigt.
 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526273"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326864"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Behandeln von Problemen bei der Windows-Geräteregistrierung in Microsoft Intune
 
@@ -41,7 +41,7 @@ Sammeln Sie die folgenden Informationen zum Problem:
 - Wie viele Benutzer sind betroffen? Sind alle oder nur einige Benutzer betroffen?
 - Wie viele Geräte sind betroffen? Sind alle oder nur einige Geräte betroffen?
 - Welche MDM-Autorität wird verwendet?
-- Wie wird die Registrierung durchgeführt? Wird BYOD (Bring Your Own Device) oder das Apple-Programm zur Geräteregistrierung (DEP) mit Registrierungsprofilen verwendet?
+- Wie wird die Registrierung durchgeführt? Wird BYOD (Bring Your Own Device) oder die automatische Geräteregistrierung von Apple (ADE) mit Registrierungsprofilen verwendet?
 
 ## <a name="error-messages"></a>Fehlermeldungen
 
@@ -141,7 +141,7 @@ Weisen Sie dem Benutzer eine gültige Intune-Lizenz zu, und registrieren Sie dan
 Verwenden Sie eine der folgenden Methoden, um dieses Problem zu beheben: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Zuweisen einer gültigen Lizenz für den Benutzer
-Wechseln Sie zum [Microsoft 365 Admin Center](https://portal.office.com/adminportal/home), und weisen Sie dem Benutzer entweder eine Intune- oder eine Office 365-Lizenz zu.
+Wechseln Sie zum [Microsoft 365 Admin Center](https://admin.microsoft.com), und weisen Sie dem Benutzer entweder eine Intune- oder eine Office 365-Lizenz zu.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>Korrigieren Sie die URL für die MDM-Nutzungsbedingungen.
   1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/) an, und klicken Sie dann auf **Azure Active Directory**.    
@@ -201,7 +201,7 @@ Fehler: „Es wurde ein Problem festgestellt. Diese Windows-Version wird von Ihr
 #### <a name="resolution"></a>Lösung
 Um dieses Problem in einer eigenständigen Intune-Umgebung zu beheben, führen Sie die folgenden Schritte aus: 
  
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Registrierungseinschränkungen**, und wählen Sie eine Einschränkung zum Gerätetyp aus.    
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Registrierungsbeschränkungen**, und wählen Sie eine Gerätetypeinschränkung aus.    
 2. Wählen Sie **Eigenschaften** > **Bearbeiten** (neben **Plattformeinstellungen**) > **Zulassen** für **Windows (MDM)** aus.    
 3. Klicken Sie auf **Überprüfen und speichern**.    
 

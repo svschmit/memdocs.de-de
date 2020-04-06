@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f102daeab975bbbf0a618d1a5d642c84f52edba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344492"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488074"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massenregistrierung für Windows-Geräte
 
@@ -61,11 +61,13 @@ Azure AD-Benutzer sind auf diesen Geräten Standardbenutzer und erhalten zugewie
 7. Geben Sie Ihre Azure AD-Anmeldeinformationen an, um ein Massentoken abzurufen.
    ![Abbildung vom Anmelden in der Windows Configuration Designer-App im Store](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. Klicken Sie auf **Weiter**, wenn das **Massentoken** erfolgreich abgerufen wurde.
+8. Wählen Sie auf der Seite **Use this account everywhere on this device** (Dieses Konto überall auf dem Gerät verwenden) die Option **This app only** (Nur diese App) aus.
 
-9. Optional können Sie **Anwendungen hinzufügen** und **Zertifikate hinzufügen**. Diese Anwendungen und Zertifikate werden auf dem Gerät bereitgestellt.
+9. Klicken Sie auf **Weiter**, wenn das **Massentoken** erfolgreich abgerufen wurde.
 
-10. Optional können Sie Ihr Bereitstellungspaket mit einem Kennwort schützen.  Klicken Sie auf **Erstellen**.
+10. Optional können Sie **Anwendungen hinzufügen** und **Zertifikate hinzufügen**. Diese Anwendungen und Zertifikate werden auf dem Gerät bereitgestellt.
+
+11. Optional können Sie Ihr Bereitstellungspaket mit einem Kennwort schützen.  Klicken Sie auf **Erstellen**.
     ![Abbildung vom Paketschutz in der Windows Configuration Designer-App im Store](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Bereitstellen von Geräten
