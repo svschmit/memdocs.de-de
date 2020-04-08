@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407724"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696540"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Verwalten des Webzugriffs mithilfe von Microsoft Edge mit Microsoft Intune
 
@@ -367,14 +367,14 @@ Wenn Ihre Organisation in einer stark reglementierten Branche tätig ist oder ei
 
 |    Key    |    Wert    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    Der Wert **inprivate** deaktiviert das InPrivate-Browsen.   |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    Der Wert **inprivate** deaktiviert das InPrivate-Browsen.   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Beschränken der Verwendung von Microsoft Edge auf zugelassene Konten
 
 Zusätzlich zur Einschränkung des InPrivate- und MSA-Browsens können Sie auch festlegen, dass Microsoft Edge nur verwendet werden kann, wenn Benutzer mit ihrem AAD-Konto angemeldet sind. Diese Funktion steht nur für Benutzer zur Verfügung, die für die mobile Geräteverwaltung registriert sind. Hinter folgenden Links finden Sie weitere Informationen zur Konfiguration dieser Einstellung:
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disableFeatures` kann verwendet werden, um mehrere Funktionen gleichzeitig zu deaktivieren. Um z. B. sowohl InPrivate als auch Kennwort zu deaktivieren, verwenden Sie `inprivate| password`.
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` kann verwendet werden, um mehrere Funktionen gleichzeitig zu deaktivieren. Um z. B. sowohl InPrivate als auch Kennwort zu deaktivieren, verwenden Sie `inprivate|password`.
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Konfigurieren von Microsoft Edge als Kiosk-App auf Android-Geräten
 
