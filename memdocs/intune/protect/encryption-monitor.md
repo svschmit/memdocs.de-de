@@ -28,7 +28,7 @@ ms.locfileid: "80322455"
 
 Der Microsoft Intune-Verschlüsselungsbericht enthält Details zum Verschlüsselungsstatus Ihrer verwalteten Geräte sowie Optionen zum Verwalten von Wiederherstellungsschlüsseln für Geräte. Welche Wiederherstellungsschlüsseloptionen verfügbar sind, hängt vom Typ des Geräts ab, das aufgerufen wird.
 
-Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, um den Bericht zu finden. Wählen Sie **Geräte** > **Überwachen** aus. Wählen Sie dann unter *Konfiguration***Verschlüsselungsbericht** aus.
+Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, um den Bericht zu finden. Wählen Sie **Geräte** > **Überwachen** aus. Wählen Sie dann unter *Konfiguration* **Verschlüsselungsbericht** aus.
 
 ## <a name="view-encryption-details"></a>Abrufen von Verschlüsselungsdetails
 

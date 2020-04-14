@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d424163df07dbe6add74bbdab9ec36a7b220b655
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324225"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808107"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Verwenden von PowerShell-Skripts auf Windows 10-Geräten in Intune
 
@@ -31,6 +31,9 @@ Verwenden Sie die Verwaltungserweiterung von Microsoft Intune, um PowerShell-Skr
 Diese Funktion gilt für:
 
 - Windows 10 und höher
+
+> [!NOTE]
+> Wenn die Voraussetzungen der Intune-Verwaltungserweiterung erfüllt sind, wird die Intune-Verwaltungserweiterung automatisch installiert, sobald dem Benutzer oder Gerät ein PowerShell-Skript oder eine Win32-App zugewiesen ist. Weitere Informationen finden Sie in den [Voraussetzungen](../apps/intune-management-extension.md#prerequisites) der Intune-Verwaltungserweiterung.
 
 ## <a name="move-to-modern-management"></a>Wechseln zur modernen Verwaltung
 
@@ -121,7 +124,34 @@ Für die Intune-Verwaltungserweiterung sind folgende Voraussetzungen erforderlic
 
 - Endbenutzer müssen sich nicht beim Gerät anmelden, um PowerShell-Skripts auszuführen.
 
-- Der Intune-Client für die Verwaltungserweiterung überprüft Intune einmal pro Stunde und nach jedem Neustart auf neue Skripts oder Änderungen. Nachdem Sie die Richtlinie den Azure AD-Gruppen zugewiesen haben, wird das PowerShell-Skript ausgeführt, und die Ausführungsergebnisse werden berichtet. Das Skript wird nur einmal ausgeführt. Eine erneute Ausführung erfolgt nur, wenn eine Änderung am Skript oder der Richtlinie vorgenommen wird.
+- Der Agent für die Intune-Verwaltungserweiterung überprüft Intune einmal pro Stunde und nach jedem Neustart auf neue Skripts oder Änderungen. Nachdem Sie die Richtlinie den Azure AD-Gruppen zugewiesen haben, wird das PowerShell-Skript ausgeführt, und die Ausführungsergebnisse werden berichtet. Das Skript wird nur einmal ausgeführt. Eine erneute Ausführung erfolgt nur, wenn eine Änderung am Skript oder der Richtlinie vorgenommen wird. Wenn das Skript nicht ausgeführt werden kann, versucht der Agent für die Intune-Verwaltungserweiterung dreimal, das Skript für die nächsten drei aufeinander folgenden Eincheckvorgänge der Intune-Verwaltungserweiterung erneut auszuführen.
+
+### <a name="failure-to-run-script-example"></a>Fehler beim Ausführen des Skriptbeispiels
+8:00 Uhr
+  -  Einchecken
+  -  Skript **ConfigScript01** ausführen
+  -  Fehler beim Ausführen des Skripts
+
+9:00 Uhr
+  -  Einchecken
+  -  Skript **ConfigScript01 ausführen**
+  -  Fehler beim Ausführen des Skripts (Wiederholungsanzahl = 1)
+
+10:00 Uhr
+  -  Einchecken
+  -  Skript **ConfigScript01** ausführen
+  -  Fehler beim Ausführen des Skripts (Wiederholungsanzahl = 2)
+  
+11:00 Uhr
+  -  Einchecken
+  -  Skript **ConfigScript01 ausführen**
+  -  Fehler beim Ausführen des Skripts (Wiederholungsanzahl = 3)
+
+12:00 Uhr
+  -  Einchecken
+  - Es werden keine weiteren Versuche unternommen, Skript **ConfigScript01** auszuführen.
+  - Wenn keine weiteren Änderungen am Skript vorgenommen werden, werden keine weiteren Versuche unternommen, das Skript auszuführen.
+
 
 ## <a name="monitor-run-status"></a>Überwachen des Ausführungsstatus
 

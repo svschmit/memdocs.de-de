@@ -6,26 +6,27 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
+ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99a34167f8616c6bbf2e441628de0d73aba080c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355893"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696451"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Verwenden der Seite des Intune-Mandantenstatus
 Bei der Mandantenstatusseite von Microsoft Intune handelt es sich um einen zentralen Hub, auf dem Sie aktuelle und wichtige Details zu Ihrem Mandanten abrufen können. Diese Details umfassen u. a. die Lizenzverfügbarkeit und -verwendung, den Connectorstatus und wichtige Mitteilungen zum Intune-Dienst.  
 
-Melden Sie sich zum Anzeigen des Dashboards bei [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) an, und wählen Sie dann **Mandantenstatus** aus.  Der *Mandantenstatus* wird unter **Hilfe und Support** angezeigt.  
+Melden Sie sich zum Anzeigen des Dashboards beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, wechseln Sie zu **Mandantenverwaltung**, und wählen Sie dann **Mandantenstatus** aus.
 
 Diese Seite ist in drei Bereiche unterteilt:
 

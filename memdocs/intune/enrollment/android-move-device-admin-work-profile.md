@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327272"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624914"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Verschieben von Android-Geräten aus dem Geräteadministrator in die Arbeitsprofilverwaltung
 
@@ -65,8 +65,8 @@ Wenn Benutzer bemerken, dass ihr Gerät aus diesem Grund nicht mehr konform ist,
 
 
     In der E-Mail-Nachricht an Benutzer können Sie die folgende URL angeben. Mit dieser URL wird das Android-Unternehmensportal auf der Seite **Geräteeinstellungen aktualisieren** geöffnet. Auf dieser Seite startet der Flow für den Wechsel zur Arbeitsprofilverwaltung.
-    - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx).
-    - Für US-Regierungsorganisationen können Sie stattdessen diesen Link verwenden: [https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx).
+    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+    - Für US-Regierungsorganisationen können Sie stattdessen diesen Link verwenden: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
     > [!NOTE]
     > - Natürlich können Sie in Ihren Mitteilungen an Benutzer auch benutzerfreundlichen Hypertext für die Links verwenden. Verkürzen Sie URLs jedoch nicht, da die Links in diesem Fall möglicherweise nicht funktionieren.
