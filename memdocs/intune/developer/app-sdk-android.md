@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/19/2020
+ms.date: 04/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,17 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 71d5efbf8b61c08e9a2edbc5312c61279571339e
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086333"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620559"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Entwicklerhandbuch zum Microsoft Intune App SDK für Android
 
 > [!NOTE]
 > Lesen Sie am besten zuerst die [Übersicht über das Intune App SDK](app-sdk.md). Dort finden Sie Informationen zu den aktuellen Features des SDK sowie zu den Vorbereitungen, die Sie auf den verschiedenen unterstützten Plattformen für die Integration treffen müssen.
+>
+> Informationen zum Herunterladen des SDK finden Sie unter [Herunterladen der SDK-Dateien](../developer/app-sdk-get-started.md#download-the-sdk-files).
 
 Mit dem Microsoft Intune App SDK für Android können Sie die Intune-App-Schutzrichtlinien (auch als **APP**- oder MAM-Richtlinien bezeichnet) in Ihre native Android-App integrieren. Mit Intune verwaltete Anwendungen sind in das Intune App SDK integrierte Anwendungen. Intune-Administratoren können ganz einfach App-Schutzrichtlinien für Ihre mit Intune verwaltete App bereitstellen, wenn diese aktiv von Intune verwaltet wird.
 

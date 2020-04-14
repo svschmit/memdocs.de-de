@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083552"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696512"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Datenschutzframework mithilfe von App-Schutzrichtlinien 
 
@@ -62,6 +62,9 @@ Mithilfe von Edge und der URL *about:Intunehelp* können Sie einzelne APP-Einste
 Die folgenden App-Schutzrichtlinieneinstellungen sollten für geeignete Apps aktiviert und allen Benutzer von mobilen Geräten zugewiesen werden. Weitere Informationen finden Sie unter [Einstellungen für App-Schutzrichtlinien für iOS](app-protection-policy-settings-ios.md) und [Einstellungen für App-Schutzrichtlinien für Android in Microsoft Intune](app-protection-policy-settings-android.md).
 
 Microsoft empfiehlt, Nutzungsszenarios zu überprüfen und zu kategorisieren, und dann mithilfe von Anleitungen Benutzer für eine entsprechende Stufe zu konfigurieren. Wie bei jedem Framework müssen die Einstellungen in einer entsprechenden Stufe möglicherweise je nach Anforderungen eines Unternehmens angepasst werden, da für den Datenschutz die Bedrohungsumgebung, Risikobereitschaft und der Einfluss auf die Verwendbarkeit ausgewertet werden müssen.  
+
+### <a name="conditional-access-policies"></a>Richtlinien für bedingten Zugriff
+Um sicherzustellen, dass nur Apps, die App-Schutzrichtlinien unterstützen, auf Geschäfts-, Schul- oder Unikontodaten zugreifen, sind Azure Active Directory-Bedingungsrichtlinien erforderlich. Weitere Informationen zu Schritten zum Implementieren spezifischer Richtlinien finden Sie unter **Szenario 1: Office 365-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien** in [Gewusst wie: Erzwingen einer App-Schutzrichtlinie und einer genehmigten Client-App für den Zugriff auf Cloud-Apps mithilfe des bedingten Zugriffs](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>Für die App-Schutzrichtlinien empfohlene Apps  
 

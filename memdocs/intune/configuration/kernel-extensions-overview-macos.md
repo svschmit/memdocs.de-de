@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359383"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551420"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Hinzufügen von macOS-Kernelerweiterungen in Intune
 
@@ -68,6 +68,9 @@ In diesem Artikel erfahren Sie, wie Sie ein Gerätekonfigurationsprofil mithilfe
 >
 > - [Notarizing your app before distribution (Notarisierung Ihrer App vor der Verteilung)](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) 
 > - [Auf Änderungen an Kernel-Erweiterungen in macOS High Sierra vorbereiten](https://support.apple.com/en-us/HT208019)
+
+> [!NOTE]
+> Die Intune-Benutzeroberfläche (User Interface, UI) wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie die in diesem Artikel beschriebenen Einstellungen erstellen oder bearbeiten.
 
 ## <a name="create-the-profile"></a>Erstellen des Profils
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438802"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808213"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Neuerungen in Microsoft Intune
 
@@ -55,14 +55,29 @@ In diesem Artikel werden die Neuheiten im [Microsoft Endpoint Manager Admin Cent
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-april-6-2020"></a>Woche vom 6. April 2020
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>Neue Shellskripteinstellungen für macOS-Geräte<!-- 6884363 -->
+Wenn Sie Shellskripts für macOS-Geräte konfigurieren, können Sie nun die folgenden neuen Einstellungen konfigurieren: 
+- Skriptbenachrichtigungen auf Geräten ausblenden
+- Häufigkeit der Skriptausführung
+- Maximale Anzahl von Wiederholungsversuchen bei Skriptfehlern
+
+Weitere Informationen finden Sie unter [Verwenden von Shellskripts auf macOS-Geräten in Intune](../apps/macos-shell-scripts.md).
+
+<!-- ########################## -->
 ## <a name="week-of-march-30-2020"></a>Woche ab 30. März 2020
 
 ### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Neue URL des Microsoft Endpoint Manager Admin Centers<!-- 3704810 -->
 Die URL für das Microsoft Endpoint Manager Admin Center (zuvor Microsoft 365-Geräteverwaltung) wurde gemäß der Ankündigung zu Microsoft Endpoint Manager bei der Ignite im letzten Jahr in [https://endpoint.microsoft.com](https://endpoint.microsoft.com) geändert. Die alte Admin Center-URL ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) wird weiterhin funktionieren, es wird jedoch empfohlen, dass Sie über die neue URL auf das Microsoft Endpoint Manager Admin Center zugreifen.
 
-Weitere Informationen finden Sie unter [Vereinfachen von IT-Aufgaben mit dem Microsoft Endpoint Manager Admin Center](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
+Weitere Informationen finden Sie unter [Vereinfachen von IT-Aufgaben mit dem Microsoft Endpoint Manager Admin Center](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).  
 
-### <a name="app-management"></a>App-Verwaltung
+
+### <a name="app-management"></a>App-Verwaltung  
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>Unternehmensportal für iOS zur Unterstützung des Querformats<!--6048329 wnready -->   
+Benutzer können jetzt über die Bildschirmausrichtung ihrer Wahl ihre Geräte registrieren, Apps suchen und IT-Support erhalten. Die App erkennt automatisch Bildschirme und passt diese an das Hoch- oder Querformat an, es sei denn, Benutzer sperren den Bildschirm im Hochformat.  
 
 #### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Skriptunterstützung für macOS-Geräte (Public Preview)<!-- 4280361 wnready -->
 Sie können Skripts für macOS-Geräte hinzufügen und bereitstellen. Diese Unterstützung erweitert die Funktion zum Konfigurieren von macOS-Geräten um ein Vielfaches, was mit nativen MDM-Funktionen auf macOS-Geräten möglich ist. Weitere Informationen finden Sie unter [Verwenden von Shellskripts auf macOS-Geräten in Intune](../apps/macos-shell-scripts.md).
@@ -71,6 +86,9 @@ Sie können Skripts für macOS-Geräte hinzufügen und bereitstellen. Diese Unte
 ## <a name="week-of-march-24-2020"></a>Woche ab 24. März 2020
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Verbesserte Benutzeroberfläche für das Erstellen von Gerätekonfigurationsprofilen auf Android- und Android Enterprise-Geräten<!-- 5841361 -->
+
+> [!NOTE] 
+> Die Intune-Benutzeroberfläche wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie Einstellungen erstellen oder bearbeiten.
 
 Wenn Sie ein Profil für Android- oder Android Enterprise-Geräte erstellen, wird das Microsoft Endpoint Manager Admin Center entsprechend aktualisiert. Diese Änderung wirkt sich auf die folgenden Gerätekonfigurationsprofile aus (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **Android-Geräteadministrator** oder **Android Enterprise** für die Plattform):
 
@@ -82,6 +100,9 @@ Weitere Informationen zu den Geräteeinschränkungen, die Sie konfigurieren kön
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Verbesserte Benutzeroberfläche für das Erstellen von Konfigurationsprofilen auf iOS-/iPadOS- und macOS-Geräten<!-- 5569002 5568997 -->
 
+> [!NOTE]
+> Die Intune-Benutzeroberfläche wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie Einstellungen erstellen oder bearbeiten.
+
 Wenn Sie ein Profil für iOS- oder macOS-Geräte erstellen, wird das Microsoft Endpoint Manager Admin Center entsprechend aktualisiert. Diese Änderung wirkt sich auf die folgenden Gerätekonfigurationsprofile aus. (Navigieren Sie zu **Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **iOS/iPadOS** oder **macOS**, um die Plattform auszuwählen):
 
 - Benutzerdefiniert: iOS/iPadOS, macOS
@@ -92,6 +113,9 @@ Wenn Sie ein Profil für iOS- oder macOS-Geräte erstellen, wird das Microsoft E
 - Einstellungsdatei: macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Ausblenden der Benutzerkonfigurationseinstellung in Gerätefeatures auf macOS-Geräten<!-- 6524869 -->
+
+> [!NOTE]
+> Diese Änderung wird in den nächsten Wochen für alle Kunden durchgeführt.
 
 Beim Erstellen eines Konfigurationsprofils für Gerätefeatures auf macOS-Geräten gibt es die neue Einstellung **Aus Benutzerkonfiguration ausblenden** (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **macOS** (Plattform) > **Gerätefeatures** (Profil) > **Anmeldeelemente**).
 
@@ -187,6 +211,10 @@ Navigieren Sie zu [iOS- und iPadOS-Geräteeinstellungen zum Zulassen oder Einsch
 Das Benachrichtigungssymbol für eine ausstehende MAM-Richtlinie auf der Blatt „Problembehandlung“ wurde in ein Informationssymbol geändert.
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>Aktualisierung der Benutzeroberfläche beim Konfigurieren der Konformitätsrichtlinie<!-- 3961639    -->
+
+> [!NOTE]
+> Die Intune-Benutzeroberfläche wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie Einstellungen erstellen oder bearbeiten.
+
 Wir haben die Benutzeroberfläche für die [Erstellung von Konformitätsrichtlinien](../protect/create-compliance-policy.md#create-the-policy) in Microsoft Endpoint Manager aktualisiert (**Geräte** > **Konformitätsrichtlinien** > **Richtlinien** > **Richtlinie erstellen**). Wir verwenden eine neue Benutzeroberfläche, die dieselben Einstellungen und Details enthält, die Sie zuvor verwendet haben. Die neue Benutzeroberfläche ähnelt den Vorgängen eines Assistenten zum Erstellen von Konformitätsrichtlinien und enthält eine Seite, auf der Sie *Zuweisungen* für die Richtlinie hinzufügen können sowie eine Seite *Überprüfen + erstellen*, auf der Sie Ihre Konfiguration überprüfen können, bevor Sie die Richtlinie erstellen.
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>Ausmustern nicht konformer Geräte<!-- 1827291       -->

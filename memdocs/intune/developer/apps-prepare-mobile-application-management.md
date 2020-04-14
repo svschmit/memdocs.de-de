@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af0d79f42f1c8861fe60cb2f4f9b618cb54009d1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6a26e32d0a719df7c3982591042991ae760d9281
+ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360300"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611701"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Vorbereiten von branchenspezifischen Apps für App-Schutzrichtlinien
 
@@ -76,7 +76,7 @@ Weitere Informationen zum SDK finden Sie unter [Übersicht](app-sdk.md). Ein Ein
 
 ## <a name="not-using-an-app-development-platform-listed-above"></a>Sie verwenden keine der oben aufgeführten Plattformen für die App-Entwicklung?
 
-Das Intune SDK-Entwicklungsteam testet und unterstützt aktiv Apps, die mit dem nativen Android-, iOS- (Obj-C, Swift), Xamarin-, Xamarin.Forms- und Cordova-Plattformen erstellt wurden. Während einige Kunden das Intune SDK erfolgreich in andere Plattformen wie React Native und NativeScript integrieren konnten, bieten wir keine expliziten Anleitungen oder Plug-Ins für App-Entwickler, die andere als unsere unterstützten Plattformen verwenden. 
+Das Intune SDK-Entwicklungsteam testet und unterstützt aktiv Apps, die mit den nativen Android-, iOS-Plattformen (Obj-C, Swift), Xamarin- und Xamarin.Forms-Plattformen erstellt wurden. Während einige Kunden das Intune SDK erfolgreich in andere Plattformen wie React Native und NativeScript integrieren konnten, bieten wir keine expliziten Anleitungen oder Plug-Ins für App-Entwickler, die andere als unsere unterstützten Plattformen verwenden. 
 
 ## <a name="feature-comparison"></a>Funktionsvergleich
 

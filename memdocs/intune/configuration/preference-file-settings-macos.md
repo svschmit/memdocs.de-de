@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359324"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551492"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Hinzufügen einer Eigenschaftenlistendatei zu macOS-Geräten mit Microsoft Intune
 
@@ -43,6 +43,9 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 - Wenn Sie nicht sicher sind, wie Sie einen App-Schlüssel eingeben, ändern Sie die Einstellungen in der App. Überprüfen Sie anschließend die Einstellungsdatei der App mit [Xcode](https://developer.apple.com/xcode/), um zu sehen, wie die Einstellung konfiguriert ist. Apple empfiehlt, nicht verwaltbare Einstellungen mit Xcode vor dem Importieren der Datei zu entfernen.
 - Nur manche Apps arbeiten mit verwalteten Einstellungen, und selbst bei diesen Apps können Sie möglicherweise nicht alle Einstellungen verwalten.
 - Stellen Sie sicher, dass Sie Eigenschaftenlistendateien hochladen, die die Gerätekanaleinstellungen und nicht die Benutzerkanaleinstellungen konfigurieren. Eigenschaftenlistendateien beziehen sich auf das gesamte Gerät.
+
+> [!NOTE]
+> Die Intune-Benutzeroberfläche (User Interface, UI) wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie die in diesem Artikel beschriebenen Einstellungen erstellen oder bearbeiten.
 
 ## <a name="create-the-profile"></a>Erstellen des Profils
 

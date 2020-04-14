@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 04/02/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: bdf779e35125d8da7093e67702e064cff362d6ed
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407897"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620538"
 ---
 # <a name="intune-app-installation-error-reference"></a>Referenz zu Fehlercodes bei der Installation der Intune-App
 
@@ -59,6 +59,7 @@ In den folgenden Fehlermeldungen und -beschreibungen finden Sie weitere Informat
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Fehler beim Apple MDM-Agent: Fehler beim App-Installationsbefehl ohne Angabe der Fehlerursache. Versuchen Sie nochmals, die App zu installieren. | Ein Fehler beim Ausführen des Installationsbefehls wurde vom Apple-MDM-Agent zurückgegeben. |
 | 0x87D1313C | -2016333508 | Die Netzwerkverbindung auf dem Client wurde getrennt oder unterbrochen. Weitere Versuche in einer besseren Netzwerkumgebung sollten erfolgreich sein. | Die Netzwerkverbindung wurde unterbrochen, während die aktualisierte URL des Downloaddiensts an das Gerät gesendet wurde. Insbesondere konnte ein Server mit dem angegebenen Hostnamen nicht gefunden werden. |
+| 0x87D1313D | -2016333507 | Die Lizenz für die App konnte nicht mit der iTunes Store-ID abgerufen werden. | Synchronisieren Sie das zugeordnete VPP-Token, und synchronisieren Sie dann das Gerät mit Intune. Wenn das Problem weiterhin besteht, entfernen Sie die Gruppenzuweisung, und weisen Sie die VPP-App als gerätelizenziert neu zu. Wenn das Problem weiterhin besteht, widerrufen Sie folgendermaßen die App-Lizenz vom Gerät aus: Wechsel zu **Apps** > **iOS** > *VPP-App auswählen* > **App-Lizenzen** > *Gerät auswählen*. Widerrufen Sie dann die Lizenz, und weisen Sie die App der Benutzer- oder Gerätegruppe erneut zu. Wenn das Problem weiterhin besteht, widerrufen Sie alle VPP-Lizenzen für das Gerät, und gehen Sie wie folgt vor: Wechsel zu **Geräte** > **iOS** > *Gerät auswählen* > **Übersicht** > **Lizenzen widerrufen**. Nehmen Sie dann das Gerät außer Betrieb, und registrieren Sie sich erneut bei Intune.
 | 0x87D11388 | -2016341112 | Das iOS-/iPadOS-Gerät ist derzeit ausgelastet.  | Das iOS-/iPadOS-Gerät war ausgelastet, was zu einem Fehler führte. Das Gerät wurde gesperrt. Der Benutzer muss das Gerät entsperren, damit die App installiert werden kann. |
 | 0x87D13B64 | -2016330908 | Fehler bei der App-Installation.  | Ein Fehler bei der App-Installation ist aufgetreten. Zur Behebung dieses Fehlers werden Protokolle der iOS-/iPadOS-Konsole benötigt. |
 | 0x87D13B66 | -2016330906 | Die App wird verwaltet, ist jedoch abgelaufen oder wurde vom Benutzer entfernt.  | Entweder hat der Benutzer die App explizit deinstalliert, die App ist abgelaufen und es war kein Download möglich, oder die App-Erkennung führt zu keiner Übereinstimmung mit der Antwort des Geräts.   Darüber hinaus kann dieser Fehler aufgrund eines Plattformfehlers von iOS/iPadOS 9.2.2 auftreten. |

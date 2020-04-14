@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233471"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808090"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Android Enterprise-Geräte
 
@@ -47,7 +47,7 @@ Die App-Konfigurationsrichtlinien in Microsoft Intune bieten Einstellungen für 
 8. Klicken Sie auf **Hinzufügen**, um den Bereich **Berechtigungen hinzufügen** anzuzeigen.
 9. Klicken Sie auf die Berechtigungen, die Sie außer Kraft setzen möchten. Die erteilten Berechtigungen setzen die Richtlinie „Standardmäßige App-Berechtigungen“ für die ausgewählten Apps außer Kraft.
 10. Legen Sie den **Berechtigungszustand** für jede Berechtigung fest. Sie können zwischen **Eingabeaufforderung**, **Automatisch zulassen** und **Automatisch ablehnen** wählen. Weitere Informationen zu Berechtigungen finden Sie unter [Android Enterprise-Einstellungen, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen](../protect/compliance-policy-create-android-for-work.md).
-11. Wählen Sie im Dropdownfeld das **Format der Konfigurationseinstellungen** aus. Wählen Sie zum Hinzufügen von Konfigurationsinformationen eine der folgenden Methoden aus:
+11. Wenn die verwaltete App Konfigurationseinstellungen unterstützt, wählen Sie im Dropdownfeld **Format der Konfigurationseinstellungen** aus. Wählen Sie zum Hinzufügen von Konfigurationsinformationen eine der folgenden Methoden aus:
     - **Verwenden des Konfigurations-Designers**
     - **Eingeben von JSON-Daten**<br><br>
     Ausführliche Informationen zur Verwendung des Konfigurations-Designers finden Sie unter [Verwenden des Konfigurations-Designers](#use-the-configuration-designer). Ausführliche Informationen zum Eingeben von JSON-Daten finden Sie unter [Eingeben von JSON-Daten](#enter-json-data).

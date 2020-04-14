@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359470"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551400"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Hinzufügen von Einstellungen für iOS-, iPadOS- oder macOS-Gerätefeatures in Intune
 
@@ -37,6 +37,9 @@ Intune umfasst zahlreiche Features und Einstellungen, mit denen Administratoren 
 Intune verwendet „Konfigurationsprofile“ zum Erstellen und Anpassen dieser Einstellungen für die Anforderungen Ihrer Organisation. Nachdem Sie diese Features in einem Profil hinzugefügt haben, übertragen Sie das Profil per Push auf iOS/iPadOS- und macOS-Geräte in Ihrer Organisation oder stellen es für diese Geräte bereit.
 
 In diesem Artikel werden die verschiedenen Features beschrieben, die Sie konfigurieren können, und es wird erläutert, wie Sie ein Gerätekonfigurationsprofil erstellen. Sie können auch alle verfügbaren Einstellungen für [iOS/iPadOS](ios-device-features-settings.md)- und [macOS](macos-device-features-settings.md)-Geräte anzeigen.
+
+> [!NOTE]
+> Die Intune-Benutzeroberfläche (User Interface, UI) wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie die in diesem Artikel beschriebenen Einstellungen erstellen oder bearbeiten.
 
 ## <a name="airprint"></a>AirPrint
 

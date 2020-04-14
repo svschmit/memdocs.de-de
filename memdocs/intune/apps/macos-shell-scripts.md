@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36936976528b5ea9c3fff1f77ec11223a4e4e63d
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: ba099e3614c11e10ce4cd9ae94668a1648bfc150
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401783"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808053"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Verwenden von Shellskripts auf macOS-Geräten in Intune (Public Preview)
 
@@ -55,6 +55,9 @@ Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, wenn Sie S
 4. Geben Sie unter **Skripteinstellungen** die folgenden Eigenschaften ein, und klicken Sie auf **Weiter**:
    - **Skript hochladen:** Navigieren Sie zum Shellskript. Die Skriptdatei muss kleiner als 200 KB sein.
    - **Skript als angemeldeter Benutzer ausführen:** Klicken Sie auf **Ja**, um das Skript mit den Anmeldeinformationen des Benutzers auf dem Gerät auszuführen. Klicken Sie auf **Nein** (Standardeinstellung), um das Skript als Root-Benutzer auszuführen. 
+   - **Skriptbenachrichtigungen auf Geräten ausblenden**: Standardmäßig werden für jedes Skript, das ausgeführt wird, Skriptbenachrichtigungen angezeigt. Endbenutzern wird eine Benachrichtigung *IT konfiguriert Ihren Computer* von Intune auf macOS-Geräten angezeigt.
+   - **Häufigkeit der Skriptausführung**: Wählen Sie aus, wie oft das Skript ausgeführt werden soll. Wählen Sie **Nicht konfiguriert** (Standard) aus, um ein Skript nur einmal auszuführen.
+   - **Maximale Anzahl von Wiederholungsversuchen bei Skriptfehlern**: Wählen Sie aus, wie oft das Skript ausgeführt werden soll, wenn es einen Exitcode ungleich 0 (null) zurückgibt (null steht für Erfolg). Wählen Sie **Nicht konfiguriert** (Standard) aus, um ein Skript nicht erneut auszuführen, wenn bei der Ausführung ein Fehler auftritt.
 5. Fügen Sie unter **Bereichsmarkierungen** optional Bereichsmarkierungen für das Skript hinzu, und klicken Sie auf **Weiter**. Sie können Bereichsmarkierungen verwenden, um zu bestimmen, wer Skripts in Intune anzeigen kann. Ausführliche Informationen zu Bereichsmarkierungen finden Sie unter [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Verwenden der rollenbasierten Zugriffssteuerung und von Bereichsmarkierungen für verteilte IT).
 6. Klicken Sie auf **Zuweisungen** > **Select groups to include** (Gruppen auswählen, die hinzugefügt werden sollen). Dann wird eine vorhandene Liste mit Azure AD Gruppen angezeigt. Wählen Sie mindestens eine Gerätegruppe aus, die die Benutzer enthält, deren macOS-Geräte das Skript erhalten sollen. Klicken Sie auf **Auswählen**. Die Gruppen, die Sie ausgewählt haben, werden in der Liste angezeigt und Ihrer Skriptrichtlinie zugeordnet.
    > [!NOTE]
@@ -103,9 +106,17 @@ Die zugewiesene Intune-Rolle erfordert Berechtigungen zur **Gerätekonfiguration
  - Der Agent wird im Hintergrund bei Intune-Diensten authentifiziert, bevor er eincheckt, um zugewiesene Shellskripts für das macOS-Gerät zu empfangen.
  - Der Agent empfängt zugewiesene Shellskripts und führt die Skripts basierend auf dem konfigurierten Zeitplan, den Wiederholungsversuchen, den Benachrichtigungseinstellungen und anderen Einstellungen aus, die vom Administrator festgelegt werden.
  - Der Agent überprüft die Intune-Dienste in der Regel alle 8 Stunden auf neue oder aktualisierte Skripts. Dieser Check-In-Vorgang ist unabhängig vom MDM-Check-In. 
+ 
+ ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>Wie kann ich ein Agent-Einchecken manuell von einem Mac aus initiieren?
+Öffnen Sie auf einem verwalteten Mac, auf dem der Agent installiert ist, **Terminal**, und führen Sie den `sudo killall IntuneMdmAgent`-Befehl aus, um den `IntuneMdmAgent`-Prozess zu beenden. Der `IntuneMdmAgent`-Prozess wird sofort neu gestartet, wodurch ein Einchecken mit Intune initiiert wird.
 
- >[!NOTE]
- > Die Aktion **Einstellungen überprüfen** im Unternehmensportal erzwingt nur einen MDM-Check-In. Es gibt keine manuelle Aktion für den Agent-Check-In.
+Alternativ können Sie Folgendes tun:
+1. **Aktivitätsmonitor** > **Ansicht** öffnen >  ***Alle Prozesse** auswählen.* 
+2. Suchen Sie nach Prozessen mit dem Namen `IntuneMdmAgent`. 
+3. Beenden Sie den Prozess, der für **Root-Benutzer** ausgeführt wird. 
+
+> [!NOTE]
+> Mit der Aktion **Einstellungen überprüfen** im Unternehmensportal und der Aktion **Synchronisierung** für Geräte in der Microsoft Endpoint Manager-Verwaltungskonsole wird ein MDM-Einchecken initiiert, und ein Agent-Einchecken wird nicht erzwungen.
 
  ### <a name="when-is-the-agent-removed"></a>Wann wird der Agent entfernt?
  Es gibt mehrere Bedingungen, die dazu führen können, dass der Agent vom Gerät entfernt wird, z. B.:

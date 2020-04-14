@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359449"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551363"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Erstellen eines Profils mit benutzerdefinierten Einstellungen in Intune
 
@@ -31,6 +31,9 @@ Benutzerdefinierte Einstellungen werden für jede Plattform anders konfiguriert.
 Weitere Informationen zu Konfigurationsprofilen finden Sie unter [Was sind Microsoft Intune-Geräteprofile?](device-profiles.md).
 
 Dieser Artikel veranschaulicht, wie Sie ein benutzerdefiniertes Profil für den Android-Geräteadministrator sowie für Android Enterprise, iOS/iPadOS, macOS und Windows erstellen. Sie können auch alle verfügbaren Einstellungen für die verschiedenen Plattformen anzeigen.
+
+> [!NOTE]
+> Die Intune-Benutzeroberfläche (User Interface, UI) wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie die in diesem Artikel beschriebenen Einstellungen erstellen oder bearbeiten.
 
 ## <a name="create-the-profile"></a>Erstellen des Profils
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327138"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808140"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrieren von Geräten in Intune mithilfe eines Geräteregistrierungs-Manager-Kontos
 
@@ -42,7 +42,7 @@ DEM-Benutzerkonten und Geräte, die mit einem DEM-Benutzerkonto registriert werd
 - Geräte werden für den bedingten Zugriff mit Ausnahme von Windows 10-Version 1803 und höher blockiert.
 - Jedes Gerät, das bei DEM-Konten registriert ist, muss für die Verwaltung durch Intune korrekt lizenziert sein. Bei der Lizenz kann es sich um eine Intune-Benutzerlizenz oder um eine Intune-Gerätelizenz handeln.
 - Wenn Sie [Android Enterprise-Arbeitsprofilgeräte über ein DEM-Konto registrieren](android-work-profile-enroll.md), besteht pro Konto ein Grenzwert von 10 registrierbaren Geräten.
-
+- Das [Registrieren von vollständig verwalteten Android Enterprise-Geräten](android-fully-managed-enroll.md) mit DEM-Konten wird nicht unterstützt.
 
 ## <a name="add-a-device-enrollment-manager"></a>Hinzufügen eines Geräteregistrierungs-Managers
 

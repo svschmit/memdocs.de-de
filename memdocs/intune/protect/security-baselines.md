@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488061"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551694"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurieren von Windows 10-Geräten in Intune mithilfe von Sicherheitsbaselines
 
@@ -62,11 +62,20 @@ Wenn Sie ein Sicherheitsbaseline-*Profil* erstellen, verwendet das Profil automa
 
 Sie können die [Version einer Baseline ändern](#change-the-baseline-version-for-a-profile), die mit einem bestimmten Profil verwendet wird. Das bedeutet, dass Sie bei Veröffentlichung einer neuen Version kein neues Baselineprofil erstellen müssen, um in den Genuss der Vorteile zu kommen. Stattdessen können Sie, wenn Sie soweit sind, ein Baselineprofil auswählen und dann die integrierte Option verwenden, um die Instanzversion für dieses Profil in eine neue zu ändern.
 
+## <a name="avoid-conflicts"></a>Vermeiden von Konflikten
+
+Sie können eine oder mehrere der verfügbaren Baselines in Ihrer Intune-Umgebung gleichzeitig verwenden. Sie können auch mehrere Instanzen derselben Sicherheitsbaselines verwenden, die unterschiedliche Anpassungen aufweisen.
+
+Wenn Sie mehrere Sicherheitsbaselines verwenden, überprüfen Sie die Einstellungen in jeder einzelnen Baseline, um festzustellen, ob die verschiedenen Baselinekonfigurationen zu widersprüchlichen Werten für dieselbe Einstellung führen. Da Sie Sicherheitsbaselines bereitstellen können, die für verschiedene Zwecke konzipiert sind, und mehrere Instanzen derselben Baseline bereitgestellt werden können, die benutzerdefinierte Einstellungen umfassen, kann es zu Konfigurationskonflikten für Geräte kommen, die untersucht und gelöst werden müssen.
+
+Außerdem verwalten Sicherheitsbaselines häufig dieselben Einstellungen, die Sie möglicherweise mit [Gerätekonfigurationsprofilen](../configuration/device-profiles.md) oder anderen Arten von Richtlinien festlegen. Beachten Sie daher die zusätzlichen Richtlinien und Profile für Einstellungen, wenn Sie versuchen, Konflikte zu vermeiden oder zu lösen.
+
+Verwenden Sie die Informationen unter den folgenden Links, um Konflikte zu identifizieren und zu beheben:
+
+- [Richtlinien und Profile zur Problembehandlung in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Überwachen Ihrer Sicherheitsbaselines](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
+
 ## <a name="available-security-baselines"></a>Verfügbare Sicherheitsbaselines
-
- Sie können eine oder mehrere der verfügbaren Baselines in Ihrer Intune-Umgebung gleichzeitig verwenden. Sie können auch mehrere Instanzen derselben Sicherheitsbaselines verwenden, die unterschiedliche Anpassungen aufweisen.
-
-Wenn Sie mehrere Sicherheitsbaselines verwenden, überprüfen Sie die Einstellungen in jeder einzelnen Baseline, um festzustellen, ob die verschiedenen Baselines zu widersprüchlichen Werten für dieselbe Einstellung führen. Da Sie Sicherheitsbaselines bereitstellen können, die für verschiedene Zwecke konzipiert sind, und mehrere Instanzen derselben Baseline bereitgestellt werden können, die benutzerdefinierte Einstellungen umfassen, kann es zu [Konfigurationskonflikten für Geräte kommen, die untersucht und gelöst werden müssen](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Berücksichtigen Sie auch Ihre [Gerätekonfigurationsprofile](../configuration/device-profiles.md), in denen viele der Einstellungen konfiguriert werden können, die auch durch Sicherheitsbaselines eingerichtet werden.
 
 Die folgenden Sicherheitsbaseline-Instanzen können für Intune verwendet werden. Klicken Sie auf die Links, um die Einstellungen für die neueste Instanz jeder Baseline anzuzeigen.
 

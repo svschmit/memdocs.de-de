@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322519"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696290"
 ---
 # <a name="see-device-details-in-intune"></a>Anzeigen von Gerätedetails in Intune
 
@@ -41,20 +41,26 @@ Dieser Artikel erläutert, wie Sie all Ihre Geräte und deren Eigenschaften im A
       - [Zurücksetzen](devices-wipe.md#wipe)
       - [Löschen](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Remotesperre](device-remote-lock.md)
-      - [Synch](device-sync.md)
+      - [Synchronisieren](device-sync.md)
       - [Kennung zurücksetzen](device-passcode-reset.md)
       - [Neu starten](device-restart.md) (nur Windows)
       - [Sauberer Start](device-fresh-start.md) (nur Windows)
       - [Autopilot-Zurücksetzung](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (nur Windows)
       - [Schnellüberprüfung](../configuration/device-restrictions-windows-10.md) (nur Windows 10)
       - [Vollständige Überprüfung](../configuration/device-restrictions-windows-10.md) (nur Windows 10)
-       - [Gerät umbenennen](device-rename.md)
-      - Starten einer Remoteunterstützungssitzung
+      - Windows Defender-Sicherheitsinformationen aktualisieren
+      - [BitLocker-Schlüsselrotation](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Gerät umbenennen](device-rename.md)
+      - [Neue Remoteunterstützungssitzung](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - Verwenden Sie die **Eigenschaften**, um eine [von Ihnen erstellte Gerätekategorie](../enrollment/device-group-mapping.md) zuzuweisen, und ändern Sie den Besitz des Geräts in ein privates oder ein unternehmenseigenes Gerät.
    - Unter **Hardware** werden viele Details über das Gerät aufgeführt, z. B. die Geräte-ID, das Betriebssystem und die Version, der Speicherplatz und weitere Details.
    - Unter **Ermittelte Apps** werden alle auf dem Gerät installierten Apps aufgeführt, die von Intune gefunden wurden. Weitere Informationen finden Sie unter [Von Intune ermittelte Apps](../apps/app-discovered-apps.md).
    - Unter **Gerätekonformität** werden alle zugewiesenen Konformitätsrichtlinien aufgeführt, und es wird angezeigt, ob das Gerät mit diesen Richtlinien konform ist.
    - Unter **Gerätekonfiguration** werden alle Gerätekonfigurationsrichtlinien angezeigt, die dem Gerät zugewiesen sind, und Sie können erkennen, ob die Richtlinie erfolgreich war oder fehlgeschlagen ist.
+   - **App-Konfiguration** 
+   - **Konfiguration der Endpunktsicherheit**
+   - **Wiederherstellungsschlüssel** zeigt die verfügbaren BitLocker-Schlüssel für das Gerät an.
+   - **Verwaltete Apps** listet alle verwalteten Apps auf, die von Intune konfiguriert und auf dem Gerät bereitgestellt wurden. 
 
 ## <a name="hardware-device-details"></a>Details zum Hardwaregerätestatus
 Je nach Netzbetreiber der Geräte werden möglicherweise nicht alle Details erfasst.

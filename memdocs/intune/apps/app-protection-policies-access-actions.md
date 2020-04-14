@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b877587e8eb50019086e2296d7cc5b7e900da62a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323785"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551348"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektives Löschen von Daten in Intune über durch App-Schutzrichtlinien festgelegte bedingte Startaktionen
 
@@ -59,7 +59,7 @@ Für iOS/iPadOS können Sie mithilfe der Dropdownliste **Einstellung** Aktionen 
 - Gerätemodelle
 - Maximal zulässige Gerätebedrohungsstufe
 
-Geben Sie eine durch Semikolons getrennte Liste der iOS/iPadOS-Modellbezeichner ein, um die **Gerätemodelle**-Einstellung zu verwenden. Bei den Werten wird nicht zwischen Groß- und Kleinschreibung unterschieden. Einen iOS/iPadOS-Modellbezeichner in der Spalte „Gerätetyp“ finden Sie in der Intune-Berichterstellung für die Eingabe der Gerätemodelle und in der [HockeyApp-Dokumentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) oder in diesem [GitHub-Repository von Drittanbietern](https://gist.github.com/adamawolf/3048717).<br>
+Geben Sie eine durch Semikolons getrennte Liste der iOS/iPadOS-Modellbezeichner ein, um die **Gerätemodelle**-Einstellung zu verwenden. Bei den Werten wird nicht zwischen Groß- und Kleinschreibung unterschieden. Einen iOS/iPadOS-Modellbezeichner finden Sie in der Intune-Berichterstellung für die Eingabe „Gerätemodelle“ oder in diesem [Drittanbieter-GitHub-Repository](https://gist.github.com/adamawolf/3048717).<br>
 Beispieleingabe: *iPhone5,2;iPhone5,3*
 
 Auf Endbenutzergeräten führt der Intune-Client Aktionen auf Grundlage eines einfachen Abgleichs der Zeichenfolgen der Gerätemodelle aus, die in Intune für Anwendungsschutzrichtlinien angegeben sind. Die Übereinstimmung hängt ausschließlich davon ab, was das Gerät meldet. Sie (der IT-Administrator) können sicherstellen, dass das gewünschte Verhalten eintritt, indem Sie diese Einstellung basierend auf mehrerer Geräteherstellern und -modellen und für eine kleine Benutzergruppe testen. Der Standardwert lautet **Nicht konfiguriert**.<br>

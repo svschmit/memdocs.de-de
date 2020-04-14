@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327239"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696550"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Einrichten der iOS-/iPadOS-Geräteregistrierung mit Apple School Manager
 
@@ -38,7 +38,6 @@ Die Registrierung von Apple School Manager kann nicht mit dem [Programm zur Ger�
 **Voraussetzungen**
 - [Pushzertifikat für Apple-MDM (Mobile Device Management, Verwaltung mobiler Geräte)](apple-mdm-push-certificate-get.md)
 - [MDM-Autorität](../fundamentals/mdm-authority-set.md)
-- [Apple-MDM-Push-Zertifikat](apple-mdm-push-certificate-get.md)
 - Bei ADFS ist für Benutzeraffinität [Endpunkt WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints) erforderlich. [Weitere Informationen](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)
 - Geräte, die über das Programm [Apple School Management](http://school.apple.com) erworben wurden
 
@@ -120,7 +119,7 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 
 8. Mithilfe einer verwalteten Apple-ID können Sie mehreren Benutzern ermöglichen, sich bei registrierten iPads anzumelden. Wählen Sie dazu **Ja** unter **Gemeinsam genutztes iPad**. (Diese Option erfordert den Modus **Ohne Benutzeraffinität registrieren** und **Überwacht**, der auf **Ja** eingestellt ist.) Verwaltete Apple-IDs werden im Apple School Manager-Portal erstellt. Weitere Informationen zu [gemeinsam genutzten iPads](../fundamentals/education-settings-configure-ios-shared.md) finden Sie in den [entsprechenden Apple-Anforderungen](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
-9. Wählen Sie aus, ob für Geräte, für die dieses Profil verwendet wird, die Option **Mit Computern synchronisieren** verfügbar sein soll. Wenn Sie **Apple Configurator nach Zertifikat zulassen** auswählen, müssen Sie unter **Apple Configurator-Zertifikate** ein Zertifikat auswählen.
+9. Wählen Sie aus, ob für Geräte, für die dieses Profil verwendet wird, die Option **Mit Computern synchronisieren** verfügbar sein soll. **Alle verweigern** bedeutet, dass alle Geräte, die dieses Profil verwenden, keine Daten mit Daten auf einem beliebigen Computer synchronisieren können. Wenn Sie **Apple Configurator nach Zertifikat zulassen** auswählen, müssen Sie unter **Apple Configurator-Zertifikate** ein Zertifikat auswählen.
 
 10. Wenn Sie im vorherigen Schritt **Apple Configurator nach Zertifikat zulassen** ausgewählt haben, müssen Sie ein Apple Configurator-Zertifikat zum Importieren auswählen.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59ec9f899991e63b9a652e55e3253a07dee0cc15
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
+ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361210"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611721"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Häufig gestellte Fragen zu MAM und App-Schutz
 
@@ -75,7 +75,7 @@ Jede App, die in das [Intune App SDK](../developer/app-sdk.md) integriert oder v
 
 **Was geschieht, wenn ich eine App mit Intune-App-Schutz aktivieren möchte, diese aber keine unterstützte App-Entwicklungsplattform verwendet?**
 
-Das Intune SDK-Entwicklungsteam testet und unterstützt aktiv Apps, die mit den nativen Android-, iOS/iPadOS- (Obj-C, Swift), Xamarin-, Xamarin.Forms- und Cordova-Plattformen erstellt wurden. Während einige Kunden das Intune SDK erfolgreich in andere Plattformen wie React Native und NativeScript integrieren konnten, bieten wir keine expliziten Anleitungen oder Plug-Ins für App-Entwickler, die andere als unsere unterstützten Plattformen verwenden.
+Das Intune SDK-Entwicklungsteam testet und unterstützt aktiv Apps, die mit den nativen Android-, iOS/iPadOS-Plattformen (Obj-C, Swift), Xamarin- und Xamarin.Forms-Plattformen erstellt wurden. Während einige Kunden das Intune SDK erfolgreich in andere Plattformen wie React Native und NativeScript integrieren konnten, bieten wir keine expliziten Anleitungen oder Plug-Ins für App-Entwickler, die andere als unsere unterstützten Plattformen verwenden.
 
 **Unterstützt das Intune App SDK die Microsoft Authentication Library (MSAL) oder soziale Konten?**<br></br>
 Das Intune App SDK verwendet erweiterte ADAL-Funktionen für die Erstanbieter- und Drittanbieterversionen des SDK. Deshalb ist die MSAL für viele Hauptszenarios wie die Authentifizierung beim Intune-App-Schutz-Dienst und der bedingte Start nicht gut geeignet. Da der allgemeine Leitfaden des Identity-Teams von Microsoft darin besteht, für alle Microsoft Office-Apps auf MSAL umzusteigen, wird das Intune SDK es letztlich unterstützen müssen, aber derzeit ist keine Unterstützung geplant.

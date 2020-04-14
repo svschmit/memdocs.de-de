@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326646"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696457"
 ---
 # <a name="device-management-overview"></a>Übersicht über die Geräteverwaltung
 
@@ -76,7 +76,7 @@ Eine Hauptaufgabe einer jeden Lösung für die Geräteverwaltung ist es, Sicherh
 
 Es gibt mehrere Möglichkeiten, die Geräteverwaltung anzugehen. Zunächst können Sie verschiedene Aspekte von Geräten verwalten, indem Sie alle in Intune integrierten Features nutzen. Dieser Ansatz wird als **Verwaltung mobiler Geräte (Mobile Device Management, MDM)** bezeichnet. Benutzer „registrieren“ ihre Geräte und verwenden Zertifikate, um mit Intune zu kommunizieren. Als IT-Administrator können Sie Anwendungen per Push auf Geräte verteilen, Geräte auf ein bestimmtes Betriebssystem beschränken, private Geräte blockieren und vieles mehr. Wenn ein Gerät einmal verloren geht oder gestohlen wird, können Sie auch alle Daten von dem Gerät entfernen.
 
-Im zweiten Ansatz verwalten Sie Apps auf Geräten. Dieser Ansatz wird als **Verwaltung mobiler Anwendungen (Mobile Device Management, MAM)** bezeichnet. Benutzer können mit ihren privaten Geräten auf Organisationsressourcen zugreifen. Beim Öffnen einer App, wie E-Mail oder SharePoint, werden die Benutzer zur zusätzlichen Authentifizierung aufgefordert. Wenn ein Gerät einmal verloren geht oder gestohlen wird, können Sie alle Unternehmensdaten von dem Gerät entfernen.
+Im zweiten Ansatz verwalten Sie Apps auf Geräten. Dieser Ansatz wird als **Verwaltung mobiler Anwendungen (Mobile Device Management, MAM)** bezeichnet. Benutzer können mit ihren privaten Geräten auf Organisationsressourcen zugreifen. Beim Öffnen einer App, wie E-Mail oder SharePoint, werden die Benutzer zur zusätzlichen Authentifizierung aufgefordert. Wenn ein Gerät einmal verloren geht oder gestohlen wird, können Sie alle Unternehmensdaten aus den von Intune verwalteten Anwendungen entfernen.
 
 Sie können auch eine Kombination aus [MDM und MAM](byod-technology-decisions.md) verwenden.
 

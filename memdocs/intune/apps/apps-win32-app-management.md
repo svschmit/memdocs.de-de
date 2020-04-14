@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c08e0a967d18aaa7defb8e7b180a60f68c1b92c
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407796"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620612"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Eigenständiges Intune – Win32-App-Verwaltung
 
@@ -33,7 +33,7 @@ Die [eigenständige Intune-Version](../fundamentals/mdm-authority-set.md) ermög
 > Für Windows-Anwendungen unterstützt dieses App-Verwaltungsfeature sowohl eine 32-Bit- als auch 64-Bit-Betriebssystemarchitektur.
 
 > [!IMPORTANT]
-> Bei der Bereitstellung von Win32-Anwendungen sollten Sie ausschließlich die [Intune-Verwaltungserweiterung](../apps/intune-management-extension.md) verwenden, insbesondere wenn Sie ein Win32-App-Installationsprogramm mit mehreren Dateien haben. Wenn Sie die Installation von Win32- und branchenspezifischen Apps während der Autopilot-Registrierung kombinieren, kann die App-Installation fehlschlagen.  
+> Bei der Bereitstellung von Win32-Anwendungen sollten Sie ausschließlich den Ansatz der [Intune-Verwaltungserweiterung](../apps/intune-management-extension.md) verwenden, insbesondere wenn Sie ein Win32-App-Installationsprogramm mit mehreren Dateien haben. Wenn Sie die Installation von Win32- und branchenspezifischen Apps während der Autopilot-Registrierung kombinieren, kann die App-Installation fehlschlagen. Die Intune-Verwaltungserweiterung wird automatisch installiert, wenn ein PowerShell-Skript oder eine Win32-App dem Benutzer oder Gerät zugewiesen ist.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

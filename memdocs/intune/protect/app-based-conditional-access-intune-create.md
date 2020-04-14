@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: fadd5817ccd4e591fe92c11cb30041296ac85d61
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323194"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696448"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Einrichten App-basierter Richtlinien für bedingten Zugriff mit Intune
 
@@ -32,7 +32,7 @@ Richten Sie die App-basierten Richtlinien für bedingten Zugriff für Apps ein, 
 Bevor Sie App-basierte Richtlinien für den bedingten Zugriff verwenden, müssen Sie Ihren Apps [Intune-App-Schutzrichtlinien](../apps/app-protection-policies.md) zugewiesen haben.
 
 > [!IMPORTANT]
-> In diesem Artikel werden die einzelnen Schritte erläutert, die notwendig sind, um eine App-basierte Richtlinie für bedingten Zugriff hinzuzufügen. Sie können die gleichen Schritte auch beim Hinzufügen von Apps wie SharePoint Online, Microsoft Teams und Microsoft Exchange Online aus der Liste der genehmigten Apps verwenden.
+> In diesem Artikel werden die einzelnen Schritte erläutert, die notwendig sind, um eine einfache app-basierte Richtlinie für bedingten Zugriff hinzuzufügen. Sie können dieselben Schritte auch für andere Cloud-Apps verwenden. Weitere Informationen finden Sie unter [Anleitung: Planen Ihrer Bereitstellung für bedingten Zugriff in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access).
 
 ## <a name="create-app-based-conditional-access-policies"></a>Erstellen App-basierter Richtlinien für bedingten Zugriff
 
@@ -48,7 +48,7 @@ Bevor Sie Richtlinien für den bedingten Zugriff über das Microsoft Endpoint Ma
 
 3. Geben Sie einen **Namen** für die Richtlinie ein, und wählen Sie dann unter *Zuweisungen* die Option **Benutzer und Gruppen** aus. Fügen Sie mit den Optionen „Einschließen“ oder „Ausschließen“ Ihre Gruppen für die Richtlinie hinzu, und wählen Sie **Fertig** aus.
 
-4. Wählen Sie **Cloud-Apps oder Aktionen** und die zu schützenden Apps aus. Wählen Sie z.B. **Apps auswählen** und **Office 365 SharePoint Online** sowie **Office 365 Exchange Online** aus.
+4. Wählen Sie **Cloud-Apps oder Aktionen** und die zu schützenden Apps aus. Wählen Sie z. B. **Apps auswählen** und dann **Office 365 (Vorschau)** aus.
 
    Wählen Sie **Fertig** aus, um die Änderungen zu speichern.
 
@@ -56,7 +56,7 @@ Bevor Sie Richtlinien für den bedingten Zugriff über das Microsoft Endpoint Ma
 
    Wählen Sie **Fertig** aus, um die Änderungen zu speichern.
 
-6. Wählen Sie unter *Zugriffssteuerung* die Option **Gewähren** aus, um den bedingten Zugriff basierend auf der Gerätekonformität anzuwenden. Wählen Sie z.B. **Zugriff gewähren** > **Markieren des Geräts als kompatibel erforderlich** aus.
+6. Wählen Sie unter *Zugriffssteuerung* die Option **Gewähren** aus, um den bedingten Zugriff basierend auf der Gerätekonformität anzuwenden. Wählen Sie z. B. **Zugriff gewähren** > **Genehmigte Client-App erforderlich** sowie **App-Schutzrichtlinie erforderlich (Vorschau)** und dann **Eine der ausgewählten Kontrollen anfordern (Vorschau)** aus.
 
    Wählen Sie **OK** aus, um die Änderungen zu speichern.
 

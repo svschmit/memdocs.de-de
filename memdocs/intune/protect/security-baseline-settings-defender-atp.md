@@ -5,7 +5,7 @@ description: Von Intune unterstützte Einstellungen für Sicherheitsbaselines zu
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897b232e841c59fd85d132d1fa9b720c24ac1c9a
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488026"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551752"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Microsoft Defender Advanced Threat Protection-Baselineeinstellungen für Intune
 
@@ -863,3 +863,9 @@ Weitere Informationen finden Sie in der Windows-Dokumentation unter [PassportFor
     - **Nicht zulässig**
     - **Erforderlich**
     - **Zulässig** (*Standardeinstellung*)
+
+## <a name="next-steps"></a>Nächste Schritte
+
+- [Informationen zu Sicherheitsbaselines](security-baselines.md)
+- [Vermeiden von Konflikten](security-baselines.md#avoid-conflicts)
+- [Richtlinien und Profile zur Problembehandlung in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)

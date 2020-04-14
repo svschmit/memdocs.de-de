@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 04/01/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0f6efa6d026879a3231c21662e799bf8ba7ada09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337745"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551651"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Registrieren Ihres Geräts im Unternehmensportal  
 Registrieren Sie Ihr privates oder unternehmenseigenes Android-Gerät, um sicheren Zugriff auf Unternehmens-E-Mails, -Apps und -Daten zu erhalten. Das Unternehmensportal unterstützt Android-Geräte, einschließlich Samsung Knox, mit Android 4.4 und höher.  
@@ -35,7 +35,7 @@ Registrieren Sie Ihr privates oder unternehmenseigenes Android-Gerät, um sicher
 > Samsung Knox ist ein Sicherheitssystem, mit dem bestimmte Geräte von Samsung neben den nativen Android-Sicherheitsfeatures zusätzlichen Schutz bieten. Navigieren Sie zu **Einstellungen** > **System > Über das Telefon**, um zu überprüfen, ob es sich bei Ihrem Gerät um ein Samsung Knox-Gerät handelt. Wird dort keine **Knox-Version** angezeigt, verfügen Sie über ein natives Android-Gerät.
 
 ## <a name="enroll-device"></a>Registrieren eines Geräts  
-[Installieren Sie die kostenlose Intune-Unternehmensportal-App über Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). 
+Installieren Sie die Intune-Unternehmensportal-App [über Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Eine Liste der Geschäfte, die die App auf dem chinesischen Festland anbieten, finden Sie unter [Installieren der Unternehmensportal-App auf dem chinesischen Festland](install-company-portal-android-china.md).    
 
 Während der Registrierung werden Sie möglicherweise aufgefordert, eine Kategorie auszuwählen, die am besten beschreibt, wie Sie Ihr Gerät nutzen. Der Support Ihres Unternehmens verwendet Ihre Antwort, um die Apps zu überprüfen, auf die Sie Zugriff haben.  
 

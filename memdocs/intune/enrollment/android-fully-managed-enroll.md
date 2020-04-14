@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89d299edfb9542591eaabcf42d0b2069bbde4331
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: d768859d65fff18d6ce94a26b48bb28f57417af6
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327308"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808069"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Einrichten der Intune-Registrierung von vollständig verwalteten Android Enterprise-Geräten 
 
@@ -65,7 +65,7 @@ Führen Sie die folgenden Schritte aus, um die Verwaltung für vollständig verw
 Wenn für diese Einstellung **Ja** ausgewählt ist, erhalten Sie ein Registrierungstoken (eine zufällige Zeichenfolge) und einen QR-Code für Ihren Intune-Mandanten. Dieses einzelne Registrierungstoken ist für all Ihre Benutzer gültig und läuft nicht ab. Abhängig vom Android-Betriebssystem und der Version des Geräts können Sie entweder das Token oder den QR-Code verwenden, um das Gerät zu registrieren.
 
 ## <a name="enroll-the-fully-managed-devices"></a>Registrieren vollständig verwalteter Android-Geräte
-Sie können jetzt [Ihre vollständig verwalteten Geräte registrieren](android-dedicated-devices-fully-managed-enroll.md).
+Sie können jetzt [Ihre vollständig verwalteten Geräte registrieren](android-dedicated-devices-fully-managed-enroll.md) (aber nicht bei Verwendung von DEM-Konten).
 
 ## <a name="next-steps"></a>Nächste Schritte
 - [Add Android Enterprise fully managed device configuration policies (Hinzufügen von Konfigurationsrichtlinien für vollständig verwaltete Android Enterprise-Geräte)](../configuration/device-restrictions-android-for-work.md#device-owner-only)

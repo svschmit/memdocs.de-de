@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4ed859078f7cc6be5a91b303de45f7247248203
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 7c6c8b9d964355b1c08756fc2026a87e30bc7297
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359183"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551514"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>macOS-Gerätefunktionseinstellungen in Intune
 
@@ -82,6 +82,9 @@ Um AirPrinter-Server hinzuzufügen, benötigen Sie die IP-Adresse des Druckers, 
   Wenn Sie eine App, einen Ordner oder eine Datei hinzufügen, stellen Sie sicher, dass Sie den richtigen Pfad eingeben. Nicht alle Elemente befinden sich im Ordner `Applications`. Wenn ein Benutzer ein Element von einem Speicherort an einen anderen verschiebt, ändert sich der Pfad. Dieses verschobene Element wird nicht geöffnet, wenn sich der Benutzer anmeldet.
 
 - **Aus Benutzerkonfiguration ausblenden:** Mit der Einstellung **Ausblenden** wird die App nicht in der Liste der Anmeldeelemente für Benutzer und Gruppen angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem Elemente, für die Sie einstellen, dass diese beim Anmelden gestartet werden sollen, in der Liste der Anmeldeelemente für Benutzer und Gruppen an, wenn bei der Option „Ausblenden“ kein Häkchen gesetzt wird.
+
+  > [!NOTE]
+  > Diese Einstellung wird in den nächsten Wochen für alle Kunden eingeführt.
 
 ## <a name="login-window"></a>Fenster „Anmeldung“
 

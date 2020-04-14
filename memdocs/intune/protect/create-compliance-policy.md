@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a26a42efb56c75d9538d9e7fcd2d726327d26d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322990"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551384"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Erstellen einer Konformitätsrichtlinie in Microsoft Intune
 
@@ -58,6 +58,9 @@ Stellen Sie zum Verwenden von Konformitätsrichtlinien folgendes sicher:
 - Registrieren Sie Geräte in Intune (nur dann können Sie den Konformitätsstatus ermitteln).
 
 - Registrieren Sie Geräte für einen Benutzer oder registrieren Sie ohne einen Hauptbenutzer. Für mehrere Benutzer registrierte Geräte werden nicht unterstützt.
+
+> [!NOTE]
+> Die Intune-Benutzeroberfläche (User Interface, UI) wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie die in diesem Artikel beschriebenen Einstellungen erstellen oder bearbeiten.
 
 ## <a name="create-the-policy"></a>Erstellen der Richtlinie
 

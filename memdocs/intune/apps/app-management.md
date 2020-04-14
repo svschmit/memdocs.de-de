@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358720"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536846"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Was ist die Microsoft Intune App-Verwaltung?
 
@@ -119,6 +119,8 @@ Die folgenden Konsolenelemente stellen App-bezogene Funktionen bereit:
 - **Apple-VPP-Tokens**: Hiermit können Sie Ihre iOS-/iPadOS-VPP-Lizenzen (Volume Purchase Program) anzeigen und anwenden. Weitere Informationen finden Sie unter [How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune (Verwalten von iOS- und macOS-Apps, die über das Apple Volume Purchase Program mit Microsoft Intune erworben wurden)](vpp-apps-ios.md).
 - **Verwaltetes Google Play**: Verwaltetes Google Play ist der Enterprise App Store von Google und die einzige Quelle von Anwendungen für Android Enterprise. Weitere Informationen finden Sie unter [Hinzufügen von verwalteten Google Play-Apps für Android Enterprise-Geräte mit Intune](apps-add-android-for-work.md).
 - **Anpassung**: Passen Sie das Unternehmensportal mit Ihrem Unternehmensbranding an. Weitere Informationen finden Sie unter [How to configure the Microsoft Intune Company Portal app (Konfigurieren der Microsoft Intune-Unternehmensportal-App)](company-portal-app.md).
+
+Weitere Informationen zu Apps finden Sie unter [Hinzufügen von Apps zu Microsoft Intune](../apps/apps-add.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
