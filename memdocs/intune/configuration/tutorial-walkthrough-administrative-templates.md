@@ -305,7 +305,7 @@ In diesem Abschnitt sehen Sie sich eine Richtlinie in Intune und die entsprechen
 > [!TIP]
 > Sie können auch GPEdit (die App **Gruppenrichtlinie bearbeiten**) verwenden, um sich die integrierten Windows-Richtlinien anzusehen.
 
-#### <a name="compare-an-edge-policy"></a>Vergleichen einer Edge-Richtlinie
+#### <a name="compare-an-edge-policy"></a>Vergleichen einer Microsoft Edge-Richtlinie
 
 1. Navigieren Sie im Endpoint Manager Admin Center zu Ihrer Vorlage **Administratorvorlage – Geräte von Studenten mit Windows 10**.
 2. Klappen Sie **Computerkonfiguration** > **Microsoft Edge** > **Startup, homepage and new tab page** (Start, Startseite und neue Registerkartenseite) auf. Sehen Sie sich die verfügbaren Einstellungen an.

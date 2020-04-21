@@ -423,7 +423,7 @@ Im Folgenden finden Sie einige weitere Überlegungen zu Sicherheit und Datenschu
 
 ## <a name="restrict-microsoft-edge-use-to-a-work-or-school-account"></a>Beschränken der Verwendung von Microsoft Edge auf Geschäfts-, Schul- oder Unikonten
 
-Die Einhaltung der Datensicherheits- und Compliancerichtlinien unserer größten und hoch regulierten Kunden ist eine tragende Säule des Werts von Microsoft 365. In einigen Unternehmen müssen alle Kommunikationsinformationen in der Unternehmensumgebung aufgezeichnet werden, und ebenso muss sichergestellt werden, dass die Geräte nur für die Unternehmenskommunikation verwendet werden. Zur Unterstützung dieser Anforderungen können Edge für iOS und Android auf registrierten Geräten so konfiguriert werden, dass nur ein einzelnes Unternehmenskonto innerhalb von Edge für iOS und Android bereitgestellt werden kann.
+Die Einhaltung der Datensicherheits- und Compliancerichtlinien unserer größten und hoch regulierten Kunden ist eine tragende Säule des Werts von Microsoft 365. In einigen Unternehmen müssen alle Kommunikationsinformationen in der Unternehmensumgebung aufgezeichnet werden, und ebenso muss sichergestellt werden, dass die Geräte nur für die Unternehmenskommunikation verwendet werden. Zur Unterstützung dieser Anforderungen können Microsoft Edge für iOS und Android auf registrierten Geräten so konfiguriert werden, dass nur ein einzelnes Unternehmenskonto innerhalb von Microsoft Edge für iOS und Android bereitgestellt werden kann.
 
 Hier finden Sie weitere Informationen zum ausschließlichen Konfigurieren in der Organisation zugelassener Konten:
 

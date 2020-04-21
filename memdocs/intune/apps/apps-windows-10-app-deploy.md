@@ -58,7 +58,7 @@ Bestimmte App-Typen werden basierend auf der Version von Windows 10 unterstütz
 
 <sup>1</sup> Wenn Sie die App-Verwaltung verwenden möchten, führen Sie ein Upgrade auf Ihr HoloLens-Gerät zu [Holographic for Business](../fundamentals/windows-holographic-for-business.md) aus.<br />
 <sup>2</sup> Starten nur über das Unternehmensportal möglich.<br />
-<sup>3</sup> Damit die Edge-App erfolgreich installiert werden kann, muss allen Geräten eine S Modus-Richtlinie zugewiesen werden.
+<sup>3</sup> Damit die Microsoft Edge-App erfolgreich installiert werden kann, muss allen Geräten eine S Modus-Richtlinie zugewiesen werden.
 
 > [!NOTE]
 > Alle Windows-App-Typen erfordern eine Registrierung.

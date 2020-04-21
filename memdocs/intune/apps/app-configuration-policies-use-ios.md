@@ -115,7 +115,7 @@ Als Microsoft Intune-Administrator können Sie steuern, welche Benutzerkonten zu
 
    > [!NOTE]
    > Die folgenden Apps verarbeiten die oben genannte App-Konfiguration und lassen nur Organisationskonten zu:
-   > - Edge für iOS (44.8.7 und höher)
+   > - Microsoft Edge für iOS (44.8.7 und höher)
    > - OneDrive für iOS (10.34 und höher)
    > - Outlook für iOS (2.99.0 und höher)
 
