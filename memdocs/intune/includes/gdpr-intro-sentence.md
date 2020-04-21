@@ -1,6 +1,6 @@
 ---
-title: Datei einfügen
-description: Datei einfügen
+title: include file
+description: include file
 services: azure-policy
 author: eross-msft
 ms.service: azure-policy
@@ -10,11 +10,11 @@ ms.author: lizross
 ms.custom: include file
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b5e550f18908ae34c7df7e8ba9f03ce6a1b7d0a5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339110"
 ---
 >[!Note] 
-> Dieser Artikel enthält Schrittanleitungen zum Löschen von personenbezogenen Daten aus einem Gerät oder Dienst und kann Sie dabei unterstützen, Ihren Pflichten gemäß DSGVO nachzukommen. Allgemeine Informationen zur DSGVO finden Sie im [Abschnitt „DSGVO“ im Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Dieser Artikel enthält Schritte zum Löschen von persönlichen Daten vom Gerät oder aus dem Dienst und kann zur Unterstützung Ihrer Verpflichtungen im Rahmen der Datenschutz-Grundverordnung (DSGVO) verwendet werden. Allgemeine Informationen zur DSGVO finden Sie unter [GDPR section of the Service Trust portal (DSGVO-Bereich des Service Trust Portals)](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
