@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a1641efe6899c46a797a8ccf7979b533cb620d19
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358961"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installieren des Intune-Softwareclients auf Windows-PCs
@@ -126,7 +126,7 @@ Wenn Benutzern eine Lizenz für Intune zugewiesen wurde und die MDM-Autorität d
 
 - Windows 10- oder Windows 8.1-PC-Benutzern werden zwei Registrierungsoptionen angezeigt:
 
-  - **Registrieren des PCs als mobiles Gerät**: Benutzer klicken auf die Schaltfläche **Anleitung zum Registrieren** und werden zu Anweisungen weitergeleitet, wie sie ihren PC als mobiles Gerät registrieren. Diese Schaltfläche wird hervorgehoben angezeigt, da die MDM-Registrierung die Standardeinstellung und die bevorzugte Registrierungsoption ist. Die MDM-Option ist jedoch nicht auf dieses Thema anwendbar, das nur die Installation der Clientsoftware behandelt.
+  - **PC als mobiles Gerät registrieren**: Benutzer wählen die Schaltfläche **ANLEITUNG ZUM REGISTRIEREN** und werden zu Anweisungen weitergeleitet, wie sie ihren PC als mobiles Gerät registrieren. Diese Schaltfläche wird hervorgehoben angezeigt, da die MDM-Registrierung die Standardeinstellung und die bevorzugte Registrierungsoption ist. Die MDM-Option ist jedoch nicht auf dieses Thema anwendbar, das nur die Installation der Clientsoftware behandelt.
   - **Registrieren des PCs mit Intune-Clientsoftware**: Ihre Benutzer müssen den Link **Zum Herunterladen hier klicken** auswählen, der sie durch die Installation der Clientsoftware führt.
 
 In der folgende Tabelle werden die Optionen zusammengefasst.

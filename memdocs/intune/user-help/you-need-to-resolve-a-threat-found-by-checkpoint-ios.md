@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 3966560e48d0a409b592e33b22cf5e79b223e30a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346390"
 ---
 # <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Beheben einer von SandBlast Mobile Protect erkannten Bedrohung
@@ -50,6 +50,6 @@ Da die App in den MDM-Anbieter Ihres Unternehmens integriert ist, wird auch eine
 
 Wenn Sie eine App installieren, die als Bedrohung für Ihr Gerät angesehen wird, erhalten Sie eine Benachrichtigung in SandBlast Mobile Protect. Solange die betroffene App auf Ihrem Gerät verbleibt, können Sie nicht auf Unternehmensressourcen zugreifen.  
 
-Zum Auflösen der Warnung wählen Sie die App in der Liste der Bedrohungen in SandBlast Mobile Protect aus. Führen Sie dann die Anweisungen aus, um die App zu entfernen und zu deinstallieren.  
+Zum Auflösen der Warnung wählen Sie die App in der Liste der Bedrohungen in SandBlast Mobile Protect aus. Folgen Sie dann den Anweisungen, um die App zu entfernen und zu deinstallieren.  
 
-Benötigen Sie weitere Unterstützung? Kontaktieren Sie die Supportabteilung Ihres Unternehmens. Sie finden entsprechende Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Sie finden entsprechende Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  

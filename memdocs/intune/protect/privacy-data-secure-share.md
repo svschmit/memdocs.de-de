@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: aebb9163d236e5da48b92cfbbfc12e76db69b55c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339058"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Datensicherheit und -freigabe in Intune
@@ -30,7 +30,7 @@ ms.locfileid: "79339058"
 
 ## <a name="data-security"></a>Datensicherheit
 
-Microsoft Intune ist eine wichtige Komponente des Clouddienstangebots Microsoft Enterprise Mobility and Security Suite. Alle Microsoft Cloud Services werden mit den Methoden [Microsoft Privacy](https://www.microsoft.com/en-us/trustcenter/privacy) und [Microsoft Security](https://www.microsoft.com/en-us/trustcenter/security/) entwickelt, um die [Strategie zur Datenkontrolle](https://www.microsoft.com/en-us/TrustCenter/Security/default.aspx) zu unterstützen.  
+Microsoft Intune ist eine wichtige Komponente des Clouddienstangebots Microsoft Enterprise Mobility and Security Suite. Alle Microsoft Cloud Services werden mit den Methoden [Microsoft Privacy](https://www.microsoft.com/en-us/TrustCenter/Security/default.aspx) und [Microsoft Security](https://www.microsoft.com/en-us/trustcenter/privacy) entwickelt, um die [Strategie zur Datenkontrolle](https://www.microsoft.com/en-us/trustcenter/security/) zu unterstützen.  
 
 Für Microsoft Intune werden die gleichen technischen und organisatorischen Maßnahmen wie bei Microsoft Azure ergriffen, um den Dienst gegen Datenschutzverletzungen zu sichern.
 

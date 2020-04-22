@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04521681ee6e262f4634cfc96560a5922ce1b8c0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360235"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Endpunkt der Intune Data Warehouse-API
@@ -49,7 +49,7 @@ Die URL für Intune verwendet das folgende Format:
 
 Die URL enthält die folgenden Elemente:
 
-| Element | Beispiel | Beschreibung |
+| Element | Beispiel | Description |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | location | msua06 | Die Basis-URL kann im Blatt „Data Warehouse API“ im Azure Portal gefunden werden. |
 | Entitätssammlung | devicePropertyHistories | Der Name der OData-Entitätssammlung. Weitere Informationen zu Sammlungen und Entitäten im Datenmodell finden Sie unter [Data Model (Datenmodell)](reports-ref-data-model.md). |
@@ -78,7 +78,7 @@ Die aktuelle Version unterstützt die OData-Abfrageparameter `$filter`, `$select
 > [!NOTE]
 > In den Filterbeispielen wird davon ausgegangen, dass heute der 21.02.2019 ist.
 
-|                             Filter                             |           Leistungsoptimierung           |                                          Beschreibung                                          |
+|                             Filter                             |           Leistungsoptimierung           |                                          Description                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
 |    `maxhistorydays=7`                                            |    Vollständig                                      |    Gibt Daten mit `DateKey` zwischen 20180214 und 20180221 zurück.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Vollständig                                      |    Gibt Daten mit `DateKey` gleich 20180214 zurück.                                                    |

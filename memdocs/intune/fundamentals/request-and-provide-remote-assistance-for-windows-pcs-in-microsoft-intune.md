@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 901064b4902ad9a0de490596d10f99a7507fa5e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79356556"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Anfordern und Bereitstellen von Remoteunterstützung für Windows-PCs
@@ -63,7 +63,7 @@ Bevor Sie entsprechende Einrichtungsschritte ausführen und auf Anforderungen f�
 
 ## <a name="respond-to-a-remote-assistance-request"></a>Reagieren auf eine Remoteunterstützungsanforderung
 
-1. Wenn ein Benutzer eine Remoteunterstützungsanforderung übermittelt, können Sie sie im Arbeitsbereich **Warnungen** unter **Überwachung** > **Remoteunterstützung** anzeigen. Beispiel:
+1. Wenn ein Benutzer eine Remoteunterstützungsanforderung übermittelt, können Sie sie im Arbeitsbereich **Warnungen** unter **Überwachung** > **Remoteunterstützung** anzeigen. Beispiele:
    > ![Screenshot einer Remoteunterstützungsanforderung](./media/request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune/team-viewer.png)
 
 <br>Wenn die Anforderung länger als 4 Stunden unbeantwortet bleibt, wird sie entfernt.

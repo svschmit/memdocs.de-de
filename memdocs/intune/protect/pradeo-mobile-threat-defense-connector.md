@@ -16,10 +16,10 @@ ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a23155c31586992c82781998bb664bf2ce6a0889
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339175"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Mobile Threat Defense-Connector Pradeo in Intune
@@ -71,7 +71,7 @@ Wenn Apps, die Schadsoftware enthalten, auf Geräten erkannt werden, können Sie
 
 ![Darstellung des Szenarios, wenn Apps mit Schadsoftware erkannt werden](./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-blocked.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 ![Apps mit Schadsoftware entdeckt, Zugriff gewährt](./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-unblocked.png)
 
@@ -83,11 +83,11 @@ Erkennen von Bedrohungen wie **Man-in-the-Middle-Angriffe** für Ihr Netzwerk un
 
 ![Blockieren des Netzwerkzugriffs über WLAN](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-blocked.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 ![Darstellung des Szenarios, wenn der Zugriff nach der Behebung wieder erteilt wird](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-unblocked.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf Netzwerkbedrohungen
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf der Bedrohung für das Netzwerk
 
 Erkennen von Bedrohungen wie **Man-in-the-Middle-Angriffe** für Ihr Netzwerk und Verhindern der Synchronisierung von Unternehmensdateien basierend auf dem Geräterisiko.
 
@@ -95,7 +95,7 @@ Erkennen von Bedrohungen wie **Man-in-the-Middle-Angriffe** für Ihr Netzwerk un
 
 ![Blockieren von SharePoint Online bei Erkennung von Bedrohungen für das Netzwerk](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-blocked.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 ![Darstellung des Szenarios für das Sharepoint-Beispiel, wenn der Zugriff nach der Behebung wieder erteilt wird](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-unblocked.png)
 

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 2d5438a83132323f67f9fd9655a8a1bff52439a9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79348444"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrieren von Windows 10-Geräten mit dem Intune-Unternehmensportal
@@ -95,7 +95,7 @@ Können Sie immer noch nicht auf Ihre Geschäfts-, Schul- oder Uni-E-Mails, -Dat
 
 ## <a name="it-administrator-support"></a>Unterstützung für IT-Administratoren   
 
-Wenn Sie IT-Administrator sind und Probleme bei der Registrierung von Geräten haben, lesen Sie [Troubleshooting Windows device enrollment problems in Microsoft Intune (Behandeln von Problemen bei der Registrierung von Windows-Geräten in Microsoft Intune)](https://support.microsoft.com/help/4469913). In diesem Artikel werden häufige Fehler, ihre Ursachen und Schritte zur Behebung aufgelistet. 
+Wenn Sie IT-Administrator sind und Probleme bei der Registrierung von Geräten haben, lesen Sie [Troubleshooting Windows device enrollment problems in Microsoft Intune (Behandeln von Problemen bei der Registrierung von Windows-Geräten in Microsoft Intune)](https://support.microsoft.com/help/4469913). Dieser Artikel listet häufige Fehler, ihre Ursachen und Schritte zur Behebung auf. 
 
 ## <a name="next-steps"></a>Nächste Schritte  
 Wenden Sie sich an das IT-Supportteam Ihrer Organisation, wenn Sie Hilfe bei der Verwendung des Unternehmensportals oder der Registrierung benötigen. Die erforderlichen Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980). Melden Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto bei der Website an.  

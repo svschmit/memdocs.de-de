@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f7490c2fffbb6e3a18da4763575b3c71867ced59
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359780"
 ---
 # <a name="reference-for-dates-entity"></a>Verweis für die Datumsentität
@@ -34,7 +34,7 @@ Die Kategorie **dates** enthält die Entität **date**, die zum Definieren von D
 Die **date**-Entität stellt Datumsangaben dar, die auf mehrere Data Warehouse-Entitäten verweisen.
 
 
-|    Eigenschaft     |                      Beschreibung                       |       Beispiel        |
+|    Eigenschaft     |                      Description                       |       Beispiel        |
 |-----------------|--------------------------------------------------------|----------------------|
 |     dateKey     | Eindeutiger Bezeichner für dieses Datum im Data Warehouse |       20160703       |
 |    FullDate     |    Dieses Datum wird im vollständigen Datums- und Uhrzeitformat dargestellt     | 03.07.2016 12:00:00 Uhr |

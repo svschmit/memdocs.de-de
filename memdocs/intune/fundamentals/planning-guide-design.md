@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357726"
 ---
 # <a name="create-a-design"></a>Erstellen eines Entwurfs
@@ -194,7 +194,7 @@ Sie müssen beim Erstellen des Entwurfs wissen, welche Geräte sich in der Umgeb
 
 ### <a name="devices"></a>Geräte
 
-Intune verwaltet mobile Geräte, um Unternehmensdaten zu schützen und Endbenutzern die Arbeit an mehreren Standorten zu ermöglichen. Intune unterstützt alle Geräteplattformen. Deshalb wird empfohlen, die Geräte und die Betriebssystemplattformen und -versionen zu dokumentieren, die im Entwurf Ihrer Organisation unterstützt werden. Beispiel:
+Intune verwaltet mobile Geräte, um Unternehmensdaten zu schützen und Endbenutzern die Arbeit an mehreren Standorten zu ermöglichen. Intune unterstützt alle Geräteplattformen. Deshalb wird empfohlen, die Geräte und die Betriebssystemplattformen und -versionen zu dokumentieren, die im Entwurf Ihrer Organisation unterstützt werden. Beispiele:
 
 | **Geräteplattform** | **Betriebssystemversionen** |
 |:---:|:---:|
@@ -209,7 +209,7 @@ Sie können eine [Vorlage der oben stehenden Tabelle herunterladen](https://gall
 
 Intune unterstützt sowohl unternehmenseigene als auch persönliche Geräte. Ein Gerät wird als unternehmenseigen betrachtet, wenn Sie es über einen Geräteregistrierungs-Manager oder ein Programm zur Geräteregistrierung registrieren. Beispielsweise kann ein Gerät über das Programm zur Geräteregistrierung von Apple (Device Enrollment Program, DEP) registriert, als unternehmenseigen markiert und in eine Gerätegruppe aufgenommen werden, die gezielte Unternehmensrichtlinien und Apps empfängt.
 
-Siehe [Abschnitt 3: Bestimmen von Anwendungsfallanforderungen](planning-guide-requirements.md). Hier finden Sie weitere Informationen zu Unternehmens- und BYOD-Anwendungsfällen.
+Weitere Informationen zu Unternehmens- und BYOD-Anwendungsfällen finden Sie unter [Abschnitt 3: Bestimmen von Anwendungsfallanforderungen](planning-guide-requirements.md).
 
 ### <a name="bulk-enrollment"></a>Massenregistrierung
 
@@ -263,13 +263,13 @@ Erstellen Sie mindestens eine Konfigurationsrichtlinie pro Plattform. Sie könne
 
 Sie können eine [Vorlage der oben stehenden Tabelle herunterladen](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0), um die Anforderungen an Ihre Konfigurationsrichtlinien zu ermitteln.
 
-### <a name="profiles"></a>Profile
+### <a name="profiles"></a>Profiles
 
 Anhand von Profilen kann der Benutzer eine Verbindung mit Unternehmensdaten herstellen. Intune unterstützt zahlreiche Typen von Profilen. Anhand der Anwendungsfälle und Anforderungen können Sie bestimmen, wann die Profile konfiguriert werden. Alle Geräteprofile werden nach Plattformtyp kategorisiert und sollten in der Entwurfsdokumentation berücksichtigt werden.
 
 - Zertifikatprofile
 
-- Wi-Fi-Profil
+- WLAN-Profil
 
 - VPN-Profil
 
@@ -378,7 +378,7 @@ Durch App-Schutzrichtlinien werden Datenverluste auf ein Minimum reduziert, inde
 
 
 Sie können eine [Vorlage der oben stehenden Tabelle herunterladen](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0), um die Anforderungen an Ihre App-Schutzrichtlinien zu ermitteln.
-#### <a name="compliance-policies"></a>Kompatibilitätsrichtlinien
+#### <a name="compliance-policies"></a>Compliance Richtlinien
 
 Konformitätsrichtlinien bestimmen, ob ein Gerät bestimmten Anforderungen entspricht. Intune ermittelt anhand von Konformitätsrichtlinien, ob ein Gerät als konform oder als nicht konform betrachtet wird. Der Konformitätsstatus kann dann dazu verwendet werden, den Zugriff auf Unternehmensressourcen einzuschränken oder zuzulassen. Wenn bedingter Zugriff erforderlich ist, wird empfohlen, eine [Gerätekonformitätsrichtlinie](../protect/device-compliance-get-started.md) zu entwerfen.
 

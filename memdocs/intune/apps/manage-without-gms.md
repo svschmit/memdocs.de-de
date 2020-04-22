@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b9f5a560b0f44b8ff256034b51cb9057faf0ec2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: ce61f7af7c11fb579e34890700231ca2e59fb5cd
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80576853"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81267682"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Verwenden von Intune in Umgebungen ohne Google Mobile Services
 
@@ -33,7 +33,7 @@ Microsoft Intune verwendet Google Mobile Services (GMS) für die Kommunikation m
 
 ### <a name="for-users-outside-of-mainland-china"></a>Für Benutzer außerhalb des chinesischen Festlands 
 
-Wenn Google Play nicht verfügbar ist, können Android-Geräte das  [Microsoft Intune-Unternehmensportal für Android](../user-help/install-the-company-portal-app-android.md) herunterladen und die App querladen. Bei dieser Installation erhält die App nicht Updates oder Korrekturen automatisch. Sie müssen die App regelmäßig manuell aktualisieren und patchen. 
+Wenn Google Play nicht verfügbar ist, können Android-Geräte das  [Microsoft Intune-Unternehmensportal für Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140) herunterladen und die App querladen. Bei dieser Installation erhält die App nicht Updates oder Korrekturen automatisch. Sie müssen die App regelmäßig manuell aktualisieren und patchen. 
 
 ### <a name="for-users-in-mainland-china"></a>Für Benutzer auf dem chinesischen Festland 
 
@@ -47,7 +47,7 @@ Einige Intune-Features sind von GMS-Komponenten wie dem Google Play Store oder G
 
 | Szenario  | Features  |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Konformitätsrichtlinien für Geräte  | Beim Erstellen oder Bearbeiten von Kompatibilitätsrichtlinien für Android-Geräteadministratoren sind alle unter **Google Play Protect** aufgeführten Optionen nicht verfügbar.  |
+| Gerätekompatibilitätsrichtlinien  | Beim Erstellen oder Bearbeiten von Kompatibilitätsrichtlinien für Android-Geräteadministratoren sind alle unter **Google Play Protect** aufgeführten Optionen nicht verfügbar.  |
 | App-Schutzrichtlinien (bedingter Start)  | **SafetyNet-Gerätenachweis** und **Bedrohungsüberprüfung für Apps erzwingen**-Gerätebedingungen können nicht für den bedingten Start verwendet werden.  |
 | Client-Apps  | Apps vom Typ **Android** sind nicht verfügbar. Verwenden Sie stattdessen zum Bereitstellen und Verwalten von Apps **branchenspezifische App-** .  |
 | Mobile Threat Defense  | Arbeiten Sie mit dem MTD-Anbieter zusammen, um zu verstehen, ob seine Lösung in Intune integriert ist, ob sie in der betreffenden Region verfügbar ist und ob sie auf GMS basiert.  |

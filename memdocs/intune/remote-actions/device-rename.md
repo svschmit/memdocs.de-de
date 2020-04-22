@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4ff0e650a3eccf057158d3faf28875e42ed90a4d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325028"
 ---
 # <a name="rename-a-device-in-intune"></a>Umbenennen eines Geräts in Intune
@@ -44,9 +44,9 @@ Dieses Feature unterstützt derzeit nicht das Umbenennen von Windows-Geräten mi
 
 ## <a name="windows-device-rename-rules"></a>Umbenennungsregeln für Windows-Geräte
 Wird ein Windows-Gerät umbenannt, müssen beim neuen Namen folgende Regeln eingehalten werden:
-- Der Name sollte aus 15 oder weniger Zeichen (d. h. weniger als oder gleich 63 Byte ohne nachstehender NULL) bestehen.
+- Der Name sollte aus 15 Zeichen oder weniger (d. h. weniger als oder gleich 63 Byte ohne nachstehender NULL) bestehen.
 - Der Name sollte nicht NULL sein oder aus einer leeren Zeichenfolge bestehen.
-- Zulässiger ASCII-Code: Buchstaben (a-z, A-Z), Zahlen (0-9) und Bindestriche
+- Zulässige ASCII-Zeichen: Buchstaben (a–z, A–Z), Zahlen (0–9) und Bindestriche
 - Zulässige Unicode-Zeichen: Zeichen >= 0x80, muss eine gültige UTF-8-Codierung und die IDN-Zuordnung (RtlIdnToNameprepUnicode erfolgreich, weitere Informationen finden Sie im RFC 3492) aufweisen
 - Namen dürfen nicht nur aus Zahlen bestehen.
 - Es dürfen keine Leerzeichen im Namen enthalten sein.

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086427"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Hinzufügen von WLAN-Einstellungen für dedizierte und vollständig verwaltete Android Enterprise-Geräte in Microsoft Intune
@@ -39,36 +39,36 @@ Diese Option eignet sich für das Bereitstellen auf einem dedizierten oder volls
 
 ### <a name="basic"></a>Einfach
 
-- **WLAN-Typ**: Wählen Sie **Standard**.
+- **WLAN-Typ**: Wählen Sie **Grundlegend** aus.
 - **Netzwerkname**: Geben Sie einen Namen für diese WLAN-Verbindung ein. Benutzern wird dieser Name angezeigt, wenn sie auf ihrem Gerät die verfügbaren WLAN-Verbindungen durchsuchen. Geben Sie z.B. **Contoso WiFi** ein.
-- **SSID**: Geben Sie den **Service Set Identifier** ein. Dabei handelt es sich um den tatsächlichen Namen des Drahtlosnetzwerks, mit dem Geräte eine Verbindung herstellen. Den Benutzern wird beim Auswählen der Verbindung jedoch nur der **Netzwerkname** angezeigt, den Sie konfiguriert haben.
+- **SSID**: Geben Sie den **Service Set Identifier** ein. Dabei handelt es sich um den Namen des Drahtlosnetzwerks, mit dem Geräte eine Verbindung herstellen. Den Benutzern wird beim Auswählen der Verbindung jedoch nur der **Netzwerkname** angezeigt, den Sie konfiguriert haben.
 - **Ausgeblendetes Netzwerk**: Wählen Sie **Aktivieren** aus, um dieses Netzwerk in der Liste der verfügbaren Netzwerke auf dem Gerät auszublenden. Die SSID wird nicht übertragen. Wählen Sie **Deaktivieren** aus, um dieses Netzwerk in der Liste der verfügbaren Netzwerke auf dem Gerät anzuzeigen.
 - **WLAN-Typ**: Wählen Sie das Sicherheitsprotokoll zur Authentifizierung beim WLAN-Netzwerk aus. Folgende Optionen sind verfügbar:
 
-  - **Offen (keine Authentifizierung)** : Verwenden Sie diese Option nur, wenn das Netzwerk nicht gesichert ist.
+  - **Offen (keine Authentifizierung):** Verwenden Sie diese Option nur, wenn das Netzwerk nicht gesichert ist.
   - **Vorinstallierter WEP-Schlüssel**: Geben Sie das Kennwort unter **Vorinstallierter Schlüssel** ein. Wenn das Netzwerk Ihrer Organisation eingerichtet oder konfiguriert wird, wird auch ein Kennwort oder ein Netzwerkschlüssel konfiguriert. Geben Sie dieses Kennwort oder den Netzwerkschlüssel für den Wert des vorinstallierten Schlüssels ein.
   - **Vorinstallierter WPA-Schlüssel**: Geben Sie das Kennwort unter **Vorinstallierter Schlüssel** ein. Wenn das Netzwerk Ihrer Organisation eingerichtet oder konfiguriert wird, wird auch ein Kennwort oder ein Netzwerkschlüssel konfiguriert. Geben Sie dieses Kennwort oder den Netzwerkschlüssel für den Wert des vorinstallierten Schlüssels ein.
 
 ### <a name="enterprise"></a>Enterprise
 
 - **WLAN-Typ**: Wählen Sie **Unternehmen** aus.
-- **SSID**: Geben Sie den **Service Set Identifier** ein. Dabei handelt es sich um den tatsächlichen Namen des Drahtlosnetzwerks, mit dem Geräte eine Verbindung herstellen. Den Benutzern wird beim Auswählen der Verbindung jedoch nur der **Netzwerkname** angezeigt, den Sie konfiguriert haben.
+- **SSID**: Geben Sie den **Service Set Identifier** ein. Dabei handelt es sich um den Namen des Drahtlosnetzwerks, mit dem Geräte eine Verbindung herstellen. Den Benutzern wird beim Auswählen der Verbindung jedoch nur der **Netzwerkname** angezeigt, den Sie konfiguriert haben.
 - **Ausgeblendetes Netzwerk**: Wählen Sie **Aktivieren** aus, um dieses Netzwerk in der Liste der verfügbaren Netzwerke auf dem Gerät auszublenden. Die SSID wird nicht übertragen. Wählen Sie **Deaktivieren** aus, um dieses Netzwerk in der Liste der verfügbaren Netzwerke auf dem Gerät anzuzeigen.
-- **EAP-Typ**: Wählen Sie die den EAP-Typ (Extensible Authentication-Protokoll) zur Authentifizierung von gesicherten Drahtlosverbindungen aus. Folgende Optionen sind verfügbar:
+- **EAP-Typ**: Wählen Sie den EAP-Typ (Extensible Authentication Protocol) zum Authentifizieren von geschützten Drahtlosverbindungen aus. Folgende Optionen sind verfügbar:
 
-  - **EAP-TLS**: Geben Sie außerdem Folgendes ein:
+  - **EAP-TLS**: Machen Sie außerdem die folgenden Angaben:
 
-    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes, vertrauenswürdiges Stammzertifikatprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
+    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes vertrauenswürdiges Stammzertifikatsprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
 
     - **Clientauthentifizierung** - **Clientzertifikat zur Clientauthentifizierung (Identitätszertifikat)** : Wählen Sie das SCEP-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
 
-    - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
+    - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet wird. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
 
-  - **EAP-TTLS**: Geben Sie außerdem Folgendes ein:
+  - **EAP-TTLS**: Machen Sie außerdem die folgenden Angaben:
 
-    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes, vertrauenswürdiges Stammzertifikatprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
+    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes vertrauenswürdiges Stammzertifikatsprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
 
-    - **Clientauthentifizierung:** Wählen Sie eine **Authentifizierungsmethode** aus. Folgende Optionen sind verfügbar:
+    - **Clientauthentifizierung**: Wählen Sie eine **Authentifizierungsmethode** aus. Folgende Optionen sind verfügbar:
 
       - **Benutzername und Kennwort**: Fordern Sie den Benutzer zur Eingabe des Benutzernamens und Kennworts für die Authentifizierung der Verbindung auf. Geben Sie außerdem Folgendes ein:
         - **Nicht-EAP-Methode (innere Identität)** : Wählen Sie aus, wie Sie die Verbindung authentifizieren möchten. Achten Sie darauf, dass Sie das gleiche Protokoll auswählen, das auch in Ihrem WLAN konfiguriert ist. Folgende Optionen sind verfügbar:
@@ -77,54 +77,54 @@ Diese Option eignet sich für das Bereitstellen auf einem dedizierten oder volls
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP, Version 2 (MS-CHAP v2)**
 
-      - **Zertifikate:** Wählen Sie das SCEP-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
+      - **Zertifikate**: Wählen Sie das SCEP-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
 
-      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
+      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet wird. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
 
   - **PEAP**: Geben Sie außerdem Folgendes ein:
 
-    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes, vertrauenswürdiges Stammzertifikatprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
+    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes vertrauenswürdiges Stammzertifikatsprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
 
-    - **Clientauthentifizierung:** Wählen Sie eine **Authentifizierungsmethode** aus. Folgende Optionen sind verfügbar:
+    - **Clientauthentifizierung**: Wählen Sie eine **Authentifizierungsmethode** aus. Folgende Optionen sind verfügbar:
 
       - **Benutzername und Kennwort**: Fordern Sie den Benutzer zur Eingabe des Benutzernamens und Kennworts für die Authentifizierung der Verbindung auf. Geben Sie außerdem Folgendes ein:
-        - **Nicht-EAP-Authentifizierungsmethode (innere Identität)** : Wählen Sie aus, wie Sie die Verbindung authentifizieren möchten. Achten Sie darauf, dass Sie das gleiche Protokoll auswählen, das auch in Ihrem WLAN konfiguriert ist. Folgende Optionen sind verfügbar:
+        - **Nicht-EAP-Methode zur Authentifizierung (innere Identität)** : Wählen Sie aus, wie Sie die Verbindung authentifizieren möchten. Achten Sie darauf, dass Sie das gleiche Protokoll auswählen, das auch in Ihrem WLAN konfiguriert ist. Folgende Optionen sind verfügbar:
 
           - **Keine**
           - **Microsoft CHAP, Version 2 (MS-CHAP v2)**
 
-      - **Zertifikate:** Wählen Sie das SCEP-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
+      - **Zertifikate**: Wählen Sie das SCEP-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
 
-      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
+      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet wird. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
 
 ## <a name="work-profile-only"></a>Nur Arbeitsprofil
 
 ### <a name="basic"></a>Einfach
 
-- **WLAN-Typ**: Wählen Sie **Standard**.
-- **SSID**: Geben Sie den **Service Set Identifier** ein. Dabei handelt es sich um den tatsächlichen Namen des Drahtlosnetzwerks, mit dem Geräte eine Verbindung herstellen. Den Benutzern wird beim Auswählen der Verbindung jedoch nur der **Netzwerkname** angezeigt, den Sie konfiguriert haben.
+- **WLAN-Typ**: Wählen Sie **Grundlegend** aus.
+- **SSID**: Geben Sie den **Service Set Identifier** ein. Dabei handelt es sich um den Namen des Drahtlosnetzwerks, mit dem Geräte eine Verbindung herstellen. Den Benutzern wird beim Auswählen der Verbindung jedoch nur der **Netzwerkname** angezeigt, den Sie konfiguriert haben.
 - **Ausgeblendetes Netzwerk**: Wählen Sie **Aktivieren** aus, um dieses Netzwerk in der Liste der verfügbaren Netzwerke auf dem Gerät auszublenden. Die SSID wird nicht übertragen. Wählen Sie **Deaktivieren** aus, um dieses Netzwerk in der Liste der verfügbaren Netzwerke auf dem Gerät anzuzeigen.
 
 ### <a name="enterprise"></a>Enterprise
 
 - **WLAN-Typ**: Wählen Sie **Unternehmen** aus.
-- **SSID**: Geben Sie den **Service Set Identifier** ein. Dabei handelt es sich um den tatsächlichen Namen des Drahtlosnetzwerks, mit dem Geräte eine Verbindung herstellen. Den Benutzern wird beim Auswählen der Verbindung jedoch nur der **Netzwerkname** angezeigt, den Sie konfiguriert haben.
+- **SSID**: Geben Sie den **Service Set Identifier** ein. Dabei handelt es sich um den Namen des Drahtlosnetzwerks, mit dem Geräte eine Verbindung herstellen. Den Benutzern wird beim Auswählen der Verbindung jedoch nur der **Netzwerkname** angezeigt, den Sie konfiguriert haben.
 - **Ausgeblendetes Netzwerk**: Wählen Sie **Aktivieren** aus, um dieses Netzwerk in der Liste der verfügbaren Netzwerke auf dem Gerät auszublenden. Die SSID wird nicht übertragen. Wählen Sie **Deaktivieren** aus, um dieses Netzwerk in der Liste der verfügbaren Netzwerke auf dem Gerät anzuzeigen.
-- **EAP-Typ**: Wählen Sie die den EAP-Typ (Extensible Authentication-Protokoll) zur Authentifizierung von gesicherten Drahtlosverbindungen aus. Folgende Optionen sind verfügbar:
+- **EAP-Typ**: Wählen Sie den EAP-Typ (Extensible Authentication Protocol) zum Authentifizieren von geschützten Drahtlosverbindungen aus. Folgende Optionen sind verfügbar:
 
-  - **EAP-TLS**: Geben Sie außerdem Folgendes ein:
+  - **EAP-TLS**: Machen Sie außerdem die folgenden Angaben:
 
-    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes, vertrauenswürdiges Stammzertifikatprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
+    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes vertrauenswürdiges Stammzertifikatsprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
 
-    - **Clientauthentifizierung** - **Clientzertifikat zur Clientauthentifizierung (Identitätszertifikat)** : Wählen Sie das SCEP- oder PKCS-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
+    - **Clientauthentifizierung** - **Clientzertifikat zur Clientauthentifizierung (Identitätszertifikat)** : Wählen Sie das SCEP- oder PKCS-Clientzertifikatsprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
 
-    - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
+    - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet wird. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
 
-  - **EAP-TTLS**: Geben Sie außerdem Folgendes ein:
+  - **EAP-TTLS**: Machen Sie außerdem die folgenden Angaben:
 
-    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes, vertrauenswürdiges Stammzertifikatprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
+    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes vertrauenswürdiges Stammzertifikatsprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
 
-    - **Clientauthentifizierung:** Wählen Sie eine **Authentifizierungsmethode** aus. Folgende Optionen sind verfügbar:
+    - **Clientauthentifizierung**: Wählen Sie eine **Authentifizierungsmethode** aus. Folgende Optionen sind verfügbar:
 
       - **Benutzername und Kennwort**: Fordern Sie den Benutzer zur Eingabe des Benutzernamens und Kennworts für die Authentifizierung der Verbindung auf. Geben Sie außerdem Folgendes ein:
         - **Nicht-EAP-Methode (innere Identität)** : Wählen Sie aus, wie Sie die Verbindung authentifizieren möchten. Achten Sie darauf, dass Sie das gleiche Protokoll auswählen, das auch in Ihrem WLAN konfiguriert ist. Folgende Optionen sind verfügbar:
@@ -133,32 +133,32 @@ Diese Option eignet sich für das Bereitstellen auf einem dedizierten oder volls
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP, Version 2 (MS-CHAP v2)**
 
-      - **Zertifikate:** Wählen Sie das SCEP- oder PKCS-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
+      - **Zertifikate**: Wählen Sie das SCEP- oder PKCS-Clientzertifikatsprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
 
-      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
+      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet wird. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
 
   - **PEAP**: Geben Sie außerdem Folgendes ein:
 
-    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes, vertrauenswürdiges Stammzertifikatprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
+    - **Serververtrauensstellung** - **Stammzertifikat zur Servervalidierung**: Wählen Sie ein vorhandenes vertrauenswürdiges Stammzertifikatsprofil aus. Wenn sich der Client mit dem Netzwerk verbindet, wird dieses Zertifikat dem Server bereitgestellt und zur Authentifizierung der Verbindung verwendet.
 
-    - **Clientauthentifizierung:** Wählen Sie eine **Authentifizierungsmethode** aus. Folgende Optionen sind verfügbar:
+    - **Clientauthentifizierung**: Wählen Sie eine **Authentifizierungsmethode** aus. Folgende Optionen sind verfügbar:
 
       - **Benutzername und Kennwort**: Fordern Sie den Benutzer zur Eingabe des Benutzernamens und Kennworts für die Authentifizierung der Verbindung auf. Geben Sie außerdem Folgendes ein:
-        - **Nicht-EAP-Authentifizierungsmethode (innere Identität)** : Wählen Sie aus, wie Sie die Verbindung authentifizieren möchten. Achten Sie darauf, dass Sie das gleiche Protokoll auswählen, das auch in Ihrem WLAN konfiguriert ist. Folgende Optionen sind verfügbar:
+        - **Nicht-EAP-Methode zur Authentifizierung (innere Identität)** : Wählen Sie aus, wie Sie die Verbindung authentifizieren möchten. Achten Sie darauf, dass Sie das gleiche Protokoll auswählen, das auch in Ihrem WLAN konfiguriert ist. Folgende Optionen sind verfügbar:
 
           - **Keine**
           - **Microsoft CHAP, Version 2 (MS-CHAP v2)**
 
-      - **Zertifikate:** Wählen Sie das SCEP- oder PKCS-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
+      - **Zertifikate**: Wählen Sie das SCEP- oder PKCS-Clientzertifikatsprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
 
-      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
+      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet wird. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
 
-- **Proxyeinstellungen:** Legen Sie die Proxykonfiguration fest, die von Ihrer Organisation verwendet wird. Folgende Optionen sind verfügbar:
+- **Proxyeinstellungen:** Geben Sie die von Ihrer Organisation verwendete Proxykonfiguration an. Folgende Optionen sind verfügbar:
 
   - **Keine:** Sie verwenden keinen Proxyserver.
   - **Automatisch:** Wählen Sie diese Option aus, um die Einstellung für die *Proxyserver-URL* zur Verfügung zu stellen, mit der Sie den Proxyserver oder eine Datei für die automatische Proxykonfiguration (Proxy Auto-Configuration, PAC) angeben, die eine Liste Ihrer Proxyserver enthält.
 
-- **Proxyserver-URL:** Diese Einstellung ist verfügbar, wenn Sie die *Proxyeinstellungen* auf *Automatisch* festlegen. Geben Sie eine der folgenden Optionen an, um Geräte an Ihren Proxyserver weiterzuleiten:
+- **Proxyserver-URL**: Diese Einstellung ist verfügbar, wenn Sie die *Proxyeinstellungen* auf *Automatisch* festlegen. Geben Sie eine der folgenden Optionen an, um Geräte an Ihren Proxyserver weiterzuleiten:
 
   - IP-Adresse. Beispiel: `10.0.0.11`
   - Eine URL. Beispiel: `http://proxyserver.contoso.com`.

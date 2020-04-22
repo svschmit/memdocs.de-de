@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fa9b8bc49e9c5aaf6337988fd980115beea1200b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79352474"
 ---
 # <a name="data-intune-sends-to-google"></a>Von Intune an Google gesendete Daten
@@ -42,7 +42,7 @@ In der folgenden Tabelle sind die Daten aufgeführt, die Microsoft Intune an Goo
 | newPassword | Wird in Intune erzeugt. | Zurücksetzen der Gerätekennung. | Zeichenfolge, die ein neues Kennwort darstellt. |
 | Google-Benutzer | Google | Verwalten des Arbeitsprofils für Arbeitsprofilszenarios (BYOD). | Eindeutiger Bezeichner zur Darstellung des verknüpften Gmail-Kontos. Beispiel: 114223373813435875042 |
 | Anwendungsdaten | Wird beim Speichern einer Anwendungsrichtlinie in Intune erzeugt. |  | Zeichenfolge eines Anwendungsnamens. Beispiel: app:com.microsoft.windowsintune.companyportal |
-| Unternehmensdienstkonto | Wird auf Anforderung von Intune in Google erzeugt. | Wird zur Authentifizierung zwischen Intune und Google bei Transaktionen im Zusammenhang mit diesem Kunden verwendet. | Setzt sich aus verschiedenen Teilen zusammen:<br> **Unternehmens-ID**: bereits dokumentiert.<br>**UPN**: Generierter UPN, wird bei der Authentifizierung im Namen des Kunden verwendet.<br>Beispiel: w49d77900526190e26708c31c9e8a0@pfwp-commicrosoftonedfmdm2.google.com.iam.gserviceaccount.com<br>**Schlüssel:** Base64-codierter Blob verwendet in Authentifizierungsanforderungen, verschlüsselt gespeichert im Dienst; der Blob sieht jedoch folgendermaßen aus:<br> Eindeutiger Bezeichner zur Darstellung des Schlüssels des Kunden<br>Beispiel: a70d4d53eefbd781ce7ad6a6495c65eb15e74f1f |
+| Unternehmensdienstkonto | Wird auf Anforderung von Intune in Google erzeugt. | Wird zur Authentifizierung zwischen Intune und Google bei Transaktionen im Zusammenhang mit diesem Kunden verwendet. | Setzt sich aus verschiedenen Teilen zusammen:<br> **Unternehmens-ID**: bereits dokumentiert.<br>**UPN**: Generierter UPN, wird bei der Authentifizierung im Namen des Kunden verwendet.<br>Beispiel: w49d77900526190e26708c31c9e8a0@pfwp-commicrosoftonedfmdm2.google.com.iam.gserviceaccount.com<br>**Schlüssel**: Base64-codierter Blob verwendet in Authentifizierungsanforderungen, verschlüsselt gespeichert im Dienst; der Blob sieht jedoch folgendermaßen aus:<br> Eindeutiger Bezeichner zur Darstellung des Schlüssels des Kunden<br>Beispiel: a70d4d53eefbd781ce7ad6a6495c65eb15e74f1f |
 
 
 Wenn Sie die Android-Geräteverwaltung für Unternehmen mit Microsoft Intune nicht mehr verwenden und die Daten löschen möchten, müssen Sie die Microsoft Intune Android-Geräteverwaltung für Unternehmen und das Google-Konto löschen. Informationen zur Kontenverwaltung in der Dokumentation zum Google-Konto.

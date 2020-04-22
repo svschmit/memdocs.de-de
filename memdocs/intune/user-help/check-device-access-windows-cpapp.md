@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: f99a159a776e95c2f7ff8045a802b0c686672c9a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79348730"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>Überprüfen des Zugriffs über die Unternehmensportal-App für Windows
@@ -70,7 +70,7 @@ Führen Sie die Schritte in diesem Artikel aus, um den Zugriff von der Unternehm
 
 2. Klicken Sie mit der rechten Maustaste, oder tippen Sie auf ein Gerät, und halten Sie es gedrückt, um das [Kontextmenü](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) zu öffnen.  
 
-    ![Beispielscreenshot der Unternehmensportal-App für Windows, Startseite Das Kontextmenü für das Gerät wird im Abschnitt **Meine Geräte** auf der Seite angezeigt und enthält die Aktionen „Umbenennen“, „Entfernen“ und „Zugriff prüfen“.](./media/1809_DeviceContextMenu_Windows_CP.png)  
+    ![Ein Beispielscreenshot der Unternehmensportal-App für Windows, Startseite Das Kontextmenü für das Gerät wird im Abschnitt **Meine Geräte** auf der Seite angezeigt und enthält die Aktionen „Umbenennen“, „Entfernen“ und „Zugriff prüfen“.](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. Wählen Sie **Zugriff prüfen** aus. Die App synchronisiert Ihr Gerät mit den aktuellen Anforderungen Ihres Unternehmens und überprüft, ob Ihr Gerät mit diesen übereinstimmt. Diese Überprüfung kann einige Minuten dauern.  
  
 4. Unter dem Gerät wird eine Meldung angezeigt, die Sie darüber informiert, ob das Gerät **auf Unternehmensressourcen zugreifen kann** oder **nicht auf Unternehmensressourcen zugreifen kann**. 

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc4580c1debec3f8583a68305438443a211f9243
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326192"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Suchen des primären Benutzers eines Intune-Geräts
@@ -79,13 +79,13 @@ Intune fügt den primären Benutzer während oder kurz nach der Registrierung au
 | Windows | Registrierung nur in MDM | Registrierender Benutzer | Während der Registrierung | 
 | Windows | Hybrid AADJ und GPO für automatische Registrierung | Erster Benutzer, der sich bei Windows anmeldet | Wenn der erste Benutzer sich bei Windows anmeldet| 
 | Windows | Co-Verwaltung | Erster Benutzer, der sich bei Windows anmeldet | Wenn der erste Benutzer sich bei Windows anmeldet | 
-| Windows | Beitritt zu Azure AD (Token für Massenregistrierung) | Keine | Nicht zutreffend | 
-| Windows | Beitritt zu Azure AD (Selbstbereitstellungsmodus mit Autopilot) | Keine | Nicht zutreffend | 
+| Windows | Beitritt zu Azure AD (Token für Massenregistrierung) | Keine | Nicht verfügbar | 
+| Windows | Beitritt zu Azure AD (Selbstbereitstellungsmodus mit Autopilot) | Keine | Nicht verfügbar | 
 | Plattformübergreifend | Benutzergesteuerte Registrierung mit Unternehmensportal-App | Registrierender Benutzer | Während der Registrierung |
 | Plattformübergreifend | Geräteregistrierungs-Manager (Device Enrollment Manager, DEM) | Registrierender DEM-Benutzer | Während der Registrierung |
 | iOS/iPadOS, macOS | Automatisierte Apple-Geräteregistrierung (DEP mit Benutzeraffinität) | Registrierender Benutzer | Während der Registrierung |
-| iOS/iPadOS, macOS | Automatisierte Apple-Geräteregistrierung (DEP ohne Benutzeraffinität) | Keine | Nicht zutreffend |
-| Android | Unternehmenseigene, dedizierte Android-Geräte | Keine | Nicht zutreffend |
+| iOS/iPadOS, macOS | Automatisierte Apple-Geräteregistrierung (DEP ohne Benutzeraffinität) | Keine | Nicht verfügbar |
+| Android | Unternehmenseigene, dedizierte Android-Geräte | Keine | Nicht verfügbar |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Primärer Benutzer und Azure AD-Gerätebesitzer
 In einigen Fällen kann sich der primäre Benutzer in Intune von der Eigenschaft **Besitzer** des Azure AD-Geräts unterscheiden (kann unter **Geräte** > **Azure AD-Geräte** angezeigt werden). Der Azure AD-Gerätebesitzer wird während der Registrierung eines Geräts bei Azure Active Directory hinzugefügt.

@@ -17,10 +17,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3b7784d4ad86e3418259f85ca1c4577d2289dc86
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358155"
 ---
 # <a name="basic-setup"></a>Grundlegende Einrichtung
@@ -59,13 +59,13 @@ Wenn Sie die zertifikatbasierte Authentifizierung für VPN-, WLAN- oder E-Mail-P
 
 Bevor Sie zu Intune migrieren können, brauchen Sie ein [Intune-Abonnement](account-sign-up.md).
 
-### <a name="task-2-assign-intune-user-licenses"></a>Aufgabe 2: Zuweisen von Intune-Benutzerlizenzen
+### <a name="task-2-assign-intune-user-licenses"></a>Aufgabe 2: Zuweisen von Intune-Benutzerlizenzen
 
 - Erfahren Sie, wie Sie [Intune-Benutzerlizenzen zuweisen](licenses-assign.md) können.
 
 - Wenn Sie bereits einen neuen AAD-Mandanten erstellt haben, erfahren Sie, wie Sie [neue Benutzer erstellen oder Benutzer aus Ihrem lokalen Active Directory (AD) synchronisieren](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) können.
 
-### <a name="task-3-set-your-mdm-authority-to-intune"></a>Aufgabe 3: Umstellen Ihrer MDM-Autorität auf Intune
+### <a name="task-3-set-your-mdm-authority-to-intune"></a>Aufgabe 3: Stellen Sie die MDM-Autorität auf Intune um
 
 Es wird empfohlen, Intune über das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu verwalten.
 
@@ -76,6 +76,6 @@ Legen Sie Ihre MDM-Autorität auf **Intune** fest. Wenn Sie eine andere MDM-Auto
 
 Erfahren Sie, wie Sie die [Autorität für die Verwaltung mobiler Geräte einrichten](mdm-authority-set.md) können.
 
-## <a name="next-step"></a>Nächster Schritt
+## <a name="next-step"></a>Nächste Schritte
 
 Konfigurieren Sie [Richtlinien für die Verwaltung von Apps und Geräten](migration-guide-configure-policies.md).

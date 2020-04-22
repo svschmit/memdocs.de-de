@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358636"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune-Dienstbeschreibung
@@ -56,7 +56,7 @@ Da sich das Ökosystem für die mobile Geräteverwaltung durch Updates von Betri
 
 - [Neuerungen in Microsoft Intune](whats-new.md). Dieses Thema wird mit dem monatlichen Dienstupdate und zudem wöchentlich aktualisiert, wenn z.B. Apps wie die Unternehmensportal-App veröffentlicht werden.
 
-- Wichtige Dienstupdates werden auch im [Microsoft 365 Admin Center](https://admin.microsoft.com/) im Nachrichtencenter angekündigt. Wenn Sie die begleitende [mobilen Office 365-Admin-App](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) installieren, können Sie Benachrichtigungen auf Ihrem mobilen Gerät erhalten. Erfahren Sie mehr über das [Office 365-Nachrichtencenter](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Wichtige Dienstupdates werden auch im [Microsoft 365 Admin Center](https://admin.microsoft.com/) im Nachrichtencenter angekündigt. Bei Installation der begleitenden [mobilen App für die Office 365-Verwaltung](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) können Sie Benachrichtigungen auf Ihrem mobilen Gerät erhalten. Erfahren Sie mehr über das [Office 365-Nachrichtencenter](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
   Einige hilfreiche Tipps:
 
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>Sprachunterstützung
-Intune wird im Azure-Portal ausgeführt, das folgende Sprachen unterstützt: Chinesisch (Vereinfacht), Chinesisch (Traditionell), Tschechisch, Niederländisch, Englisch, Deutsch, Ungarisch, Italienisch, Japanisch, Portugiesisch (Brasilien), Portugiesisch (Portugal), Russisch, Spanisch, Französisch, Koreanisch, Polnisch, Schwedisch und Türkisch.
+Intune wird im Azure-Portal ausgeführt, das die folgenden Sprachen unterstützt: Chinesisch (Vereinfacht), Chinesisch (Traditionell), Tschechisch, Niederländisch, Englisch, Deutsch, Ungarisch, Italienisch, Japanisch, Portugiesisch (Brasilien), Portugiesisch (Portugal), Russisch, Spanisch, Französisch, Koreanisch, Polnisch, Schwedisch und Türkisch.
 
 Die Intune-Verwaltungskonsole und die mobilen Oberflächen für Benutzer unterstützen zusätzlich zu allen vom Azure-Portal unterstützten Sprachen außerdem Dänisch, Griechisch, Finnisch, Norwegisch und Rumänisch.
 

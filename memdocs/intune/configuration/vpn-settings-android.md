@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8b43b9671767a2d67bb98db6150799d266fe9fa6
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086557"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>Android-Geräteeinstellungen zur VPN-Konfiguration in Intune
@@ -36,13 +36,13 @@ Weitere Informationen zu VPN-Profilen in Intune finden Sie unter [VPN-Profile](v
 
 ## <a name="base-vpn"></a>Basis-VPN
 
-- **Verbindungsname:** Geben Sie einen Namen für diese Verbindung ein. Benutzern wird dieser Name angezeigt, wenn sie auf ihrem Gerät die verfügbaren VPN-Verbindungen durchsuchen. Geben Sie beispielsweise `Contoso VPN` ein.
+- **Verbindungsname**: Geben Sie einen Namen für diese Verbindung ein. Benutzern wird dieser Name angezeigt, wenn sie auf ihrem Gerät die verfügbaren VPN-Verbindungen durchsuchen. Geben Sie beispielsweise `Contoso VPN` ein.
 - **IP-Adresse oder FQDN:** Geben Sie die IP-Adresse oder den vollqualifizierten Domänennamen (FQDN) des VPN-Servers ein, mit dem Geräte eine Verbindung herstellen. Geben Sie beispielsweise **192.168.1.1** oder **vpn.contoso.com** ein.
 
-  - **Authentifizierungsmethode**: Wählen Sie aus, wie sich Geräte beim VPN-Server authentifizieren. Folgende Optionen sind verfügbar:
+  - **Authentifizierungsmethode:** Wählen Sie aus, wie sich Geräte beim VPN-Server authentifizieren. Folgende Optionen sind verfügbar:
 
-    - **Zertifikate:** Wählen Sie ein vorhandenes SCEP- oder PKCS-Zertifikatprofil zum Authentifizieren der Verbindung aus. Unter [Konfigurieren eines Zertifikatprofils](../protect/certificates-configure.md) werden die Schritte aufgeführt, die zum Erstellen eines Zertifikatprofils erforderlich sind.
-    - **Benutzername und Kennwort**: Endbenutzer werden bei der Anmeldung beim VPN-Server dazu aufgefordert, ihren Benutzernamen und ihr Kennwort einzugeben.
+    - **Zertifikate:** Wählen ein vorhandenes SCEP- oder PKCS-Zertifikatprofil zum Authentifizieren der Verbindung aus. Unter [Konfigurieren eines Zertifikatprofils](../protect/certificates-configure.md) werden die Schritte aufgeführt, die zum Erstellen eines Zertifikatprofils erforderlich sind.
+    - **Benutzername und Kennwort:** Endbenutzer werden bei der Anmeldung beim VPN-Server dazu aufgefordert, ihren Benutzernamen und ein Kennwort einzugeben.
 
 - **Verbindungstyp:** Wählen Sie den VPN-Verbindungstyp aus. Folgende Optionen sind verfügbar:
 
@@ -53,7 +53,7 @@ Weitere Informationen zu VPN-Profilen in Intune finden Sie unter [VPN-Profile](v
   - **Pulse Secure**
   - **Citrix SSO**
 
-- **Fingerabdruck** (Nur Check Point Capsule VPN): Geben Sie eine Zeichenfolge (z.B. **Contoso-Fingerabdruckcode**) ein, um zu überprüfen, ob der VPN-Server vertrauenswürdig ist. Ein Fingerabdruck wird an den Client gesendet, damit dieser weiß, dass alle Server vertrauenswürdig sind, die den gleichen Fingerabdruck vorweisen. Wenn das Gerät nicht über den Fingerabdruck verfügt, wird der Benutzer dazu aufgefordert, dem VPN-Server zu vertrauen, während der Fingerabdruck angezeigt wird. Der Benutzer überprüft den Fingerabdruck manuell und wählt „Vertrauen“ aus, um die Verbindung herzustellen.
+- **Fingerabdruck** (nur Check Point Capsule-VPN): Geben Sie eine Zeichenfolge (z.B. **Contoso-Fingerabdruckcode**) ein, um zu überprüfen, ob der VPN-Server vertrauenswürdig ist. Ein Fingerabdruck wird an den Client gesendet, damit dieser weiß, dass alle Server vertrauenswürdig sind, die den gleichen Fingerabdruck vorweisen. Wenn das Gerät nicht über den Fingerabdruck verfügt, wird der Benutzer dazu aufgefordert, dem VPN-Server zu vertrauen, während der Fingerabdruck angezeigt wird. Der Benutzer überprüft den Fingerabdruck manuell und wählt „Vertrauen“ aus, um die Verbindung herzustellen.
 - **Geben Sie Schlüssel-Wert-Paare für die Citrix-VPN-Attribute ein** (nur Citrix): Geben Sie von Citrix bereitgestellte Schlüssel-Wert-Paare ein. Durch diese Werte werden die Eigenschaften der VPN-Verbindung konfiguriert. 
 
   Sie können auch eine durch Trennzeichen getrennte Datei (.csv) mit Schlüssel-Wert-Paaren **importieren**. Überprüfen Sie die Eigenschaften **Meine Daten haben Überschriften** und **Schlüssel**.

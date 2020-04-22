@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7107669b3a87f0ca7488f2fdd5203c6052beffad
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326271"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Zurücksetzen der Kennung auf Windows-Geräten mit Intune
@@ -42,9 +42,9 @@ Die folgenden Plattformen werden **nicht** unterstützt:
 Integrieren Sie den PIN-Zurücksetzungsdienst in Ihren Intune-Mandanten, um die Kennung auf Windows-Geräten zurückzusetzen.
 
 1. Navigieren Sie zum [Microsoft PIN Reset Service production](https://login.windows.net/common/oauth2/authorize?response_type=code&client_id=b8456c59-1230-44c7-a4a2-99b085333e84&resource=https%3A%2F%2Fgraph.windows.net&redirect_uri=https%3A%2F%2Fcred.microsoft.com&state=e9191523-6c2f-4f1d-a4f9-c36f26f89df0&prompt=admin_consent) (Microsoft-PIN-Zurücksetzungsdienst für die Produktion), und melden sich mit dem Mandantenadministratorkonto an.
-2. Klicken Sie auf **Akzeptieren**, um dem PIN-Zurücksetzungsdienst zu erlauben, auf Ihr Konto zuzugreifen: ![Berechtigungsanforderung zum Zurücksetzen der PIN für den Server akzeptieren](./media/device-windows-pin-reset/pin-reset-service-home-screen.png)
+2. Klicken Sie auf **Akzeptieren**, um dem PIN-Zurücksetzungsdienst zu erlauben, auf Ihr Konto zuzugreifen: ![Akzeptieren Sie die Berechtigungsanforderung des PIN-Zurücksetzungsdiensts](./media/device-windows-pin-reset/pin-reset-service-home-screen.png).
 3. Navigieren Sie zum [Client des PIN-Zurücksetzungsdiensts von Microsoft](https://login.windows.net/common/oauth2/authorize?response_type=code&client_id=9115dd05-fad5-4f9c-acc7-305d08b1b04e&resource=https%3A%2F%2Fcred.microsoft.com%2F&redirect_uri=ms-appx-web%3A%2F%2FMicrosoft.AAD.BrokerPlugin%2F9115dd05-fad5-4f9c-acc7-305d08b1b04e&state=6765f8c5-f4a7-4029-b667-46a6776ad611&prompt=admin_consent), und melden sich mit dem Mandantenadministratorkonto an. Klicken Sie auf **Akzeptieren**, um dem PIN-Zurücksetzungsclient zu erlauben, auf Ihr Konto zuzugreifen.
-4. Überprüfen Sie im [Azure-Portal](https://portal.azure.com), ob die PIN-Zurücksetzungsdienste unter „Enterprise applications (All applications)“ (Unternehmensanwendungen (Alle Anwendungen)) aufgelistet sind: ![Berechtigungsseite für den PIN-Zurücksetzungsdienst](./media/device-windows-pin-reset/pin-reset-service-application.png)
+4. Bestätigen Sie im [Azure-Portal](https://portal.azure.com), dass die PIN-Zurücksetzungsdienste unter „Enterprise applications (All applications)“ (Unternehmensanwendungen (Alle Anwendungen)) aufgelistet sind: ![Berechtigungsseite für den PIN-Zurücksetzungsdienst](./media/device-windows-pin-reset/pin-reset-service-application.png).
 
 > [!NOTE]
 > Nachdem Sie die Anforderung der PIN-Zurücksetzung akzeptiert haben, wird Ihnen möglicherweise die Meldung `Page not found` angezeigt, oder es scheint, als würde nichts passieren. Dieses Verhalten ist normal. Achten Sie darauf, dass die beiden Anwendungen für Ihren Mandanten aufgelistet sind.
@@ -65,10 +65,10 @@ Legen Sie den Wert diesen CSP auf **TRUE** fest.
 ## <a name="reset-the-passcode"></a>Zurücksetzen der Kennung
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an. 
-2. Klicken Sie auf **Geräte** und dann auf **Alle Geräte**.
+2. Klicken Sie auf **Geräte** > **Alle Geräte**.
 3. Wählen Sie das Gerät aus, dessen Kennung Sie zurücksetzen möchten. Klicken Sie in den Geräteeigenschaften auf **Kennung zurücksetzen**.
 4. Klicken Sie zum Bestätigen auf **Ja**. Die Kennung wird generiert und für die folgenden sieben Tage im Portal angezeigt.
 
-## <a name="next-step"></a>Nächster Schritt
+## <a name="next-step"></a>Nächste Schritte
 
 Sollte bei der Zurücksetzung der Kennung ein Fehler auftreten, wird im Portal ein Link mit weiteren Informationen angezeigt.

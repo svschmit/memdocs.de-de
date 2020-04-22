@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327101"
 ---
 # <a name="categorize-devices-into-groups"></a>Kategorisieren von Geräten in Gruppen
@@ -35,7 +35,7 @@ Gerätekategorien verwenden den folgenden Workflow:
 2. Wenn Benutzer von iOS-/iPadOS- und Android-Geräten ihre Geräte registrieren, müssen sie aus der Liste der von Ihnen konfigurierten Kategorien eine Kategorie auswählen. Benutzer müssen die Unternehmensportalwebsite verwenden, um einem Windows-Gerät eine Kategorie zuzuweisen.
 3. Dann können Sie Richtlinien und Apps für diese Gruppen bereitstellen.
 
-Sie können beliebige Gerätekategorien erstellen. Beispiel:
+Sie können beliebige Gerätekategorien erstellen. Beispiele:
 - Point-of-Sale-Gerät
 - Demogerät
 - Sales
@@ -69,7 +69,7 @@ Wenn nach dem Konfigurieren von Gerätegruppen Benutzer ihre Geräte registriere
 
 Wenn die Spalte **Gerätekategorie** nicht angezeigt wird, klicken Sie auf **Spalten** > **Kategorie** > **Anwenden**.
 
-### <a name="change-the-category-of-a-device"></a>Ändern der Gerätekategorie
+### <a name="change-the-category-of-a-device"></a>Ändern der Kategorie eines Geräts
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Alle Geräte**, wählen Sie das gewünschte Gerät aus, und klicken Sie dann auf **Eigenschaften**.
 2. Auf dem nächsten Blatt können Sie die **Gerätekategorie** des ausgewählten Geräts in einen beliebigen Kategorienamen ändern, den Sie zuvor konfiguriert haben.

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 33f59cc2ecd2662e2d5d09fb06a9f1c7a33f0fca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79342360"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Übersicht über den App-Lebenszyklus in Microsoft Intune
@@ -49,7 +49,7 @@ Im Rahmen des App-Lebenszyklus werden regelmäßig neue Versionen von Apps verö
 
 Intune bietet Ihnen viele Möglichkeiten zum Schutz der Daten in Ihren Apps. Die wichtigsten Methoden sind:
 
-- Der [bedingte Zugriff](../protect/conditional-access.md) steuert den Zugriff auf E-Mails und andere Dienste basierend auf Bedingungen, die Sie festlegen. Bedingungen sind z. B. Gerätetypen oder die Einhaltung einer von Ihnen bereitgestellten [Gerätekompatibilitätsrichtlinie](../protect/device-compliance-get-started.md).
+- Der [bedingte Zugriff](../protect/conditional-access.md) steuert den Zugriff auf E-Mails und andere Dienste basierend auf Bedingungen, die Sie festlegen. Bedingungen sind z. B. Gerätetypen oder die Einhaltung einer von Ihnen bereitgestellten [Gerätekonformitätsrichtlinie](../protect/device-compliance-get-started.md).
 - [App-Schutzrichtlinien](app-protection-policy.md) arbeiten mit einzelnen Apps, mit denen Sie die von diesen Apps verwendeten Unternehmensdaten schützen können. Beispielsweise können Sie das Kopieren von Daten zwischen nicht verwalteten Apps und von Ihnen verwalteten Apps einschränken, oder Sie können die Ausführung von Apps auf Geräten verhindern, die per Jailbreak oder Rooting manipuliert wurden.
 
 ## <a name="retire"></a>Außerkraftsetzen

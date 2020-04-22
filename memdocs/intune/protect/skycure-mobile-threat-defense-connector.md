@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6f8f3cf9ced5b613323093ed2baafcf65667997
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80275083"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile-Connector
@@ -90,7 +90,7 @@ Wenn Apps, die Schadsoftware enthalten, auf Geräten erkannt werden, können Sie
 
 ![Darstellung des Szenarios, wenn Apps mit Schadsoftware erkannt werden](./media/skycure-mobile-threat-defense-connector/symantec-arch-1.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 ![Darstellung des gewährten Zugriffs nach Beseitigung von erkannten Apps mit Schadsoftware](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
@@ -102,11 +102,11 @@ Erkennen Sie Bedrohungen wie **Man-in-the-Middle** im Netzwerk, und schützen Si
 
 ![Blockieren des Netzwerkzugriffs über WLAN](./media/skycure-mobile-threat-defense-connector/symantec-arch-3.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 ![Zugriff erteilt nach der Behebung](./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf Netzwerkbedrohungen
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf der Bedrohung für das Netzwerk
 
 Erkennen von Bedrohungen wie **Man-in-the-Middle** im Netzwerk und Verhindern der Synchronisierung von Unternehmensdateien auf der Grundlage des Geräterisikos.
 
@@ -114,7 +114,7 @@ Erkennen von Bedrohungen wie **Man-in-the-Middle** im Netzwerk und Verhindern de
 
 ![Blockieren von SharePoint Online bei Erkennung von Bedrohungen für das Netzwerk](./media/skycure-mobile-threat-defense-connector/symantec-arch-5.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 ![Zugriff erteilt nach der Behebung für Sharepoint-Beispiel](./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png)
 

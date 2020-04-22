@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b6306f89f1e8ed2aefadd2691df4b3b21e2edafe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345155"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Verwenden von Azure AD für den Zugriff auf die Intune-APIs in Microsoft Graph
@@ -160,7 +160,7 @@ Die Tabelle enthält die Einstellungen in der Reihenfolge, in der sie im Azure-P
 
 Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies bedeutet, dass Sie zum Ausführen von Apps oder Skripts, die auf die Ressourcen der Intune-API zugreifen, entsprechende Anmeldeinformationen benötigen.
 
-### <a name="app-ro"></a>DeviceManagementApps.Read.All
+### <a name="devicemanagementappsreadall"></a><a name="app-ro"></a>DeviceManagementApps.Read.All
 
 - Einstellung **Zugriff aktivieren**: __Microsoft Intune-Apps lesen__
 
@@ -170,7 +170,7 @@ Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies 
   - App-Schutzrichtlinien
   - App-Konfigurationen
 
-### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
+### <a name="devicemanagementappsreadwriteall"></a><a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
 - Einstellung **Zugriff aktivieren**: __Microsoft Intune-Apps lesen und schreiben__
 
@@ -183,7 +183,7 @@ Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies 
   - App-Schutzrichtlinien
   - App-Konfigurationen
 
-### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
+### <a name="devicemanagementconfigurationreadall"></a><a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
 - Einstellung **Zugriff aktivieren**: __Microsoft Intune-Gerätekonfiguration und -Richtlinien lesen__
 
@@ -192,7 +192,7 @@ Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies 
   - Gerätekonformitätsrichtlinie
   - Benachrichtigungen
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+### <a name="devicemanagementconfigurationreadwriteall"></a><a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
 - Einstellung **Zugriff aktivieren**: __Microsoft Intune-Gerätekonfiguration und -Richtlinien lesen und schreiben__
 
@@ -203,7 +203,7 @@ Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies 
   - Gerätekonformitätsrichtlinie
   - Benachrichtigungen
 
-### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
+### <a name="devicemanagementmanageddevicesprivilegedoperationsall"></a><a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
 - Einstellung **Zugriff aktivieren**: __Remoteaktionen mit Auswirkungen auf Benutzer auf Microsoft Intune-Geräten ausführen__
 
@@ -217,7 +217,7 @@ Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies 
   - Neustart
   - Benutzer von gemeinsam genutzten Gerät löschen
 
-### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
+### <a name="devicemanagementmanageddevicesreadall"></a><a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
 - Einstellung **Zugriff aktivieren**: __Microsoft Intune-Geräte lesen__
 
@@ -228,7 +228,7 @@ Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies 
   - Remoteaktionen
   - Informationen zu Schadsoftware
 
-### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
+### <a name="devicemanagementmanageddevicesreadwriteall"></a><a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
 - Einstellung **Zugriff aktivieren**: __Microsoft Intune-Geräte lesen und schreiben__
 
@@ -243,7 +243,7 @@ Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies 
   - Aktivierungssperre deaktivieren
   - Remoteunterstützung anfordern
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="devicemanagementrbacreadall"></a><a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
 - Einstellung **Zugriff aktivieren**: __Einstellungen für die rollenbasierte Zugriffssteuerung von Microsoft Intune-Geräten lesen__
 
@@ -252,7 +252,7 @@ Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies 
   - Rollendefinitionen
   - Ressourcenvorgänge
 
-### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
+### <a name="devicemanagementrbacreadwriteall"></a><a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
 - Einstellung **Zugriff aktivieren**: __Einstellungen für die rollenbasierte Zugriffssteuerung von Microsoft Intune-Geräten lesen und schreiben__
 
@@ -262,7 +262,7 @@ Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies 
   - Rollenzuweisungen
   - Rollendefinitionen
 
-### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
+### <a name="devicemanagementserviceconfigreadall"></a><a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
 - Einstellung **Zugriff aktivieren**: __Microsoft Intune-Konfiguration lesen__
 
@@ -278,7 +278,7 @@ Derzeit erfordern alle Intune-Berechtigungsbereiche Administratorzugriff.  Dies 
   - Branding
   - Mobile Threat Defense
 
-### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
+### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
 - Einstellung **Zugriff aktivieren**: __Microsoft Intune-Konfiguration lesen und schreiben__
 
@@ -602,7 +602,7 @@ Ferner gilt Folgendes:
     string authority = "https://login.microsoftonline.com/common/";
     ```
 
-    in
+    auf
 
     ``` csharp
     string authority = "https://login.microsoftonline.com/northwind.onmicrosoft.com/";

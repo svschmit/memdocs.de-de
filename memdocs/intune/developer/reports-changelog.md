@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 632f3bf16fd062acf05c7bd4e269069468df42a3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360209"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Änderungsprotokoll für die Intune Data Warehouse-API
@@ -43,7 +43,7 @@ Die folgende Tabelle enthält die in jüngster Zeit entfernten Sammlungen und de
 |    mobileAppDeviceUserInstallStatus    |    Entfernt    |    Verwenden Sie stattdessen [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts).                                                                                                                                                                                                                                                                     |
 |    enrollmentTypes                     |    Entfernt    |    Verwenden Sie stattdessen [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes).                                                                                                                                                                                                                                                                                      |
 |    mdmStatuses                         |    Entfernt    |    Verwenden Sie stattdessen [ComplianceStates](intune-data-warehouse-collections.md#compliancestates).                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    Entfernt    |    Verwenden Sie stattdessen in den Sammlungen [devices](intune-data-warehouse-collections.md#devices) und [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) die `azureAdRegistered`-Eigenschaft.                                                                                                                                                                                                             |
+|    workPlaceJoinStateTypes             |    Entfernt    |    Verwenden Sie stattdessen in den Sammlungen `azureAdRegistered`devices[ und ](intune-data-warehouse-collections.md#devices)devicePropertyHistories[ die ](intune-data-warehouse-collections.md#devicepropertyhistories)-Eigenschaft.                                                                                                                                                                                                             |
 |    clientRegistrationStateTypes        |    Entfernt    |    Verwenden Sie stattdessen [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates).                                                                                                                                                                                                                                                                             |
 |    currentUser                         |    Entfernt    |    Verwenden Sie stattdessen die Sammlung [users](intune-data-warehouse-collections.md#users).                                                                                                                                                                                                                                                                                                      |
 |    mdmDeviceInventoryHistories         |    Entfernt    |    Viele der Eigenschaften waren unnötig oder befinden sich nun in den Sammlungen [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) oder [devices](intune-data-warehouse-collections.md#devices). **mdmDeviceInventoryHistories**-Eigenschaften, die nicht bereits in diesen beiden Sammlungen aufgeführt sind, stehen nicht mehr zur Verfügung. Siehe die folgenden Details.    |

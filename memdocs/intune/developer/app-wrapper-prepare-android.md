@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7fd1a1567096f804b56c5f141fccfc825f4a02e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360313"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Vorbereiten von Android-Apps für App-Schutzrichtlinien mit dem Intune App Wrapping Tool
@@ -54,7 +54,7 @@ Lesen Sie vor dem Ausführen des Tools die [Sicherheitsüberlegungen für das Au
     > [!NOTE]
     > Das Intune App Wrapping Tool unterstützt nicht die v2- und anstehenden v3-Signaturschemen von Google für App-Signierung. Nachdem Sie die APK-Datei mit dem Intune App Wrapping Tool umschlossen haben, wird empfohlen, das [von Google bereitgestellte Apksigner Tool]( https://developer.android.com/studio/command-line/apksigner) zu verwenden. Dadurch wird Folgendes sichergestellt: Sobald Ihre App auf Endbenutzergeräte abgerufen wurde, kann sie durch Android-Standards ordnungsgemäß gestartet werden. 
 
-- (Optional) In einigen Fällen erreicht eine App das Größenlimit der ausführbaren Dalvik-Datei (DEX) aufgrund der Intune MAM SDK-Klassen, die während der Umschließung hinzugefügt werden. DEX-Dateien sind Teil der Kompilierung einer Android-App. Das App Wrapping Tool von Intune verarbeitet den DEX-Dateiüberlauf beim Umschließen von Apps mindestens mit API-Ebene 21 (Stand: [Version 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). Bei Apps mit API-Mindestebene 21 besteht die empfohlene Vorgehensweise darin, die API-Mindestebene mithilfe des `-UseMinAPILevelForNativeMultiDex`-Flags des Wrappers zu erhöhen. Damit Kunden die API-Mindestebene der App nicht erhöhen können, sind die folgenden DEX-Überlaufumgehungen verfügbar. In bestimmten Organisationen erfordert dies möglicherweise eine Zusammenarbeit mit demjenigen, der die App kompiliert (z.B. dem App-Entwicklungsteam):
+- (Optional) In einigen Fällen erreicht eine App das Größenlimit der ausführbaren Dalvik-Datei (DEX) aufgrund der Intune MAM SDK-Klassen, die während der Umschließung hinzugefügt werden. DEX-Dateien sind Teil der Kompilierung einer Android-App. Das InTune App Wrapping-Tool verarbeitet den DEX-Datei Überlauf beim umschließen von apps mit einer minimalen API-Ebene von 21 oder höher (ab [v) automatisch. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases) Bei Apps mit API-Mindestebene 21 besteht die empfohlene Vorgehensweise darin, die API-Mindestebene mithilfe des `-UseMinAPILevelForNativeMultiDex`-Flags des Wrappers zu erhöhen. Damit Kunden die API-Mindestebene der App nicht erhöhen können, sind die folgenden DEX-Überlaufumgehungen verfügbar. In bestimmten Organisationen erfordert dies möglicherweise eine Zusammenarbeit mit demjenigen, der die App kompiliert (z.B. dem App-Entwicklungsteam):
 
   - Verwenden Sie ProGuard, um nicht verwendete Klassenverweise aus der primären DEX-Datei der App auszuschließen.
   - Deaktivieren Sie den [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html) für Kunden, die Version 3.1.0 oder höher des Android Gradle-Plug-Ins verwenden.  
@@ -65,7 +65,7 @@ Lesen Sie vor dem Ausführen des Tools die [Sicherheitsüberlegungen für das Au
 
 2. Akzeptieren Sie den Lizenzvertrag, und schließen Sie die Installation ab.
 
-Merken Sie sich den Ordner, in dem Sie das Tool installieren. Der Standardspeicherort ist: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
+Merken Sie sich den Ordner, in dem Sie das Tool installieren. Der Standardspeicherort lautet: C:\Programme (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
 ## <a name="run-the-app-wrapping-tool"></a>Ausführen des App Wrapping Tools
 
@@ -86,7 +86,7 @@ Merken Sie sich den Ordner, in dem Sie das Tool installieren. Der Standardspeich
 
    Die folgende Tabelle führt die Eigenschaften des Befehls **invoke-AppWrappingTool** auf:
 
-|Eigenschaft|Informationen|Beispiel|
+|Eigenschaft|Informationen zu|Beispiel|
 |-------------|--------------------|---------|
 |**-InputPath**&lt;String&gt;|Pfad der Android-Quelle-App (.apk).| |
  |**-OutputPath**&lt;String&gt;|Pfad zur Android-Ausgabe-App. Ist dies der gleiche Verzeichnispfad wie InputPath, schlägt das Verpacken fehl.| |

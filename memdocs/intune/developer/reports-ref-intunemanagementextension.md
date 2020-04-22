@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f8152eb12779376e1885d0a2b2898cd602aa825d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359767"
 ---
 # <a name="reference-for-intune-management-extensions"></a>Verweis für die Intune-Verwaltungserweiterungen
@@ -36,7 +36,7 @@ Die Kategorie **intuneManagementExtensions** enthält Entitäten für mobile Ger
 
 Die Entität **intuneManagementExtensionVersion** listet alle von intuneManagementExtensions verwendeten Versionen auf.
 
-| Eigenschaft  | Beschreibung | Beispiel |
+| Eigenschaft  | Description | Beispiel |
 |---------|------------|--------|
 | extensionVersionKey |Eindeutiger Bezeichner für die intuneManagementExtensions-Version. | 1 |
 | extensionVersion |Die vierstellige Versionsnummer |1.0.2.0 |
@@ -45,7 +45,7 @@ Die Entität **intuneManagementExtensionVersion** listet alle von intuneManageme
 
 **intuneManagementExtensionHealthState** listet alle möglichen Status der intuneManagementExtensions auf.
 
-| Eigenschaft  | Beschreibung | Beispiel |
+| Eigenschaft  | Description | Beispiel |
 |---------|------------|--------|
 | extensionStateKey |Eindeutiger Bezeichner des Integritätszustands | 2 |
 | extensionState |Der Integritätsstatus einer IntuneManagementExtension | Healthy |
@@ -56,7 +56,7 @@ Die **intuneManagementExtensions** listet täglich den Integritätsstatus von in
 Die Daten der letzten 60 Tage werden aufbewahrt. 
 
 
-|      Eigenschaft       |                         Beschreibung                         | Beispiel |
+|      Eigenschaft       |                         Description                         | Beispiel |
 |---------------------|-------------------------------------------------------------|---------|
 |       dateKey       |               Eindeutiger Datumsbezeichner                |   123   |
 |      tenantKey      |              Eindeutiger Mandantenbezeichner               |   456   |

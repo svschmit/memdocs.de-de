@@ -1,5 +1,5 @@
 ---
-title: Bestimmen von Szenarien für Anwendungsfälle
+title: Bestimmen von Anwendungsfallszenarien
 titleSuffix: Microsoft Intune
 description: Dieser Artikel hilft Ihnen, Szenarien für Intune-Anwendungsfälle und untergeordnete Anwendungsfälle für eine reine Cloudimplementierung von Microsoft Intune zu bestimmen.
 keywords: ''
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d277b47b2d753b5068e871fe33ce0cab48cfb1e4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357362"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Bestimmen von Szenarien für Anwendungsfälle für die Verwaltung von Mobilgeräten
@@ -64,7 +64,7 @@ Sie können [eine Vorlage der obigen Tabelle herunterladen](https://gallery.tech
 
 ## <a name="organizational-groups-for-your-scenarios"></a>Organisationsgruppen für Ihre Szenarien
 
-Jetzt müssen Sie die Organisationsgruppen festlegen, die den einzelnen Szenarien für Anwendungsfälle und untergeordnete Anwendungsfälle zugeordnet werden. Beispiel:
+Jetzt müssen Sie die Organisationsgruppen festlegen, die den einzelnen Szenarien für Anwendungsfälle und untergeordnete Anwendungsfälle zugeordnet werden. Beispiele:
 
 | **Anwendungsfälle** | **Untergeordnete Anwendungsfälle** | **Organisationsgruppen** |
 |:---:|:---:|:---:|

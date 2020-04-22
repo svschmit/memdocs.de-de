@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79372550"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Wie Ihre Android-Benutzer Apps erhalten  
@@ -37,8 +37,8 @@ Dieser Artikel bietet grundlegende Informationen dazu, wie und wo Android-Gerät
 
 Ihre Benutzer müssen die Installation aus unbekannten Quellen zulassen, damit [branchenspezifische Apps](../apps/lob-apps-android.md) installiert werden können. Diese Einstellung befindet sich normalerweise an zwei verschiedenen Stellen:
 
-* **Android 7.1.2 und höher:** **Einstellungen** > **Sicherheit** > **Unknown sources** (Unbekannte Quellen)
-* **Android 8.0 und höher:** **Einstellungen** > **Apps & Benachrichtigungen** > **Special app access** > **Install unknown apps** > **Unternehmensportal** > **Allow from this source** (Spezieller App-Zugriff > Unbekannte App installieren > Unternehmensportal > Aus dieser Quelle zulassen)
+* **Android 7.1.2 und früher**: **Einstellungen** > **Sicherheit** > **Unknown sources** (Unbekannte Quellen)
+* **Android 8.0 und höher**: **Einstellungen** > **Apps & Benachrichtigungen** > **Special app access** > **Install unknown apps** > **Unternehmensportal** > **Allow from this source** (Spezieller App-Zugriff > Unbekannte App installieren > Unternehmensportal > Aus dieser Quelle zulassen)
 
 In diesem Fall informiert die Unternehmensportal-App den Benutzer und führt ihn zur entsprechenden Einstellung. 
 

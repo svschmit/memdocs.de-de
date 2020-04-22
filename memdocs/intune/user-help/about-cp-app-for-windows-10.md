@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 8fffba81b1da6b335346edd0c04bd0c9ea2e6c56
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79348808"
 ---
 # <a name="installing-the-company-portal-app-for-windows-10"></a>Installieren der Unternehmensportal-App für Windows 10  
@@ -41,7 +41,7 @@ Wenn Sie bereit sind, das Unternehmensportal zu installieren und Ihr Gerät zu r
 
 Wenn Sie einen Computer hinzufügen:
 
-- Auf Ihrem Computer wird Software installiert, mit deren Hilfe die Supportabteilung Ihres Unternehmens den Computer verwalten kann und mit der Sie Unternehmensressourcen wie Apps und Supportinformationen abrufen können. Die Supportabteilung Ihres Unternehmens kann diese Software möglicherweise automatisch aktualisieren.
+- Auf Ihrem Computer wird Software installiert, mit deren Hilfe der Support Ihres Unternehmens den Computer verwalten kann und mit der Sie Unternehmensressourcen wie Apps und Supportinformationen abrufen können. Der Support Ihres Unternehmens aktualisiert diese Software möglicherweise automatisch.
 
 - Intune Endpoint Protection wird möglicherweise auf Ihrem Computer installiert. Diese Software überprüft den Computer auf Viren und Malware.
 

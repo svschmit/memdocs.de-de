@@ -1,11 +1,11 @@
 - name: Remoteaktionen
   href: index.yml
-- name: Übersicht
+- name: Overview
   expanded: true
   items:
     - name: Übersicht über die Geräteverwaltung
       href: device-management.md
-- name: Anleitungen
+- name: Schrittanleitungen
   items:
     - name: Sperren und Kennwörter
       items:

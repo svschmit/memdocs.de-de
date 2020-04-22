@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084077"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>Bündel-IDs für integrierte iOS- und iPadOS-Apps, die Sie in Intune verwenden können
@@ -29,7 +29,7 @@ Beim Konfigurieren von Funktionen auf iOS-/iPadOS-Geräte können Sie auch die i
 
 ## <a name="bundle-ids"></a>Bündel-IDs
 
-| Paket-ID                   | App-Name     | Herausgeber |
+| Paket-ID                   | App-Name     | Verleger |
 |-----------------------------|--------------|-----------|
 | com.apple.AppStore          | App Store    | Apple     |
 | com.apple.store.Jolly       | Apple Store  | Apple     |
@@ -47,7 +47,7 @@ Beim Konfigurieren von Funktionen auf iOS-/iPadOS-Geräte können Sie auch die i
 | com.apple.gamecenter        | Gamecenter  | Apple     |
 | com.apple.mobilegarageband  | GarageBand   | Apple     |
 | com.apple.Health            | Integrität       | Apple     |
-| com.apple.Home              | -Startseite         | Apple     |
+| com.apple.Home              | Startseite         | Apple     |
 | com.apple.iBooks            | iBooks       | Apple     |
 | com.apple.iMovie            | iMovie       | Apple     |
 | com.apple.itunesconnect.mobile | iTunes Connect | Apple |
@@ -56,7 +56,7 @@ Beim Konfigurieren von Funktionen auf iOS-/iPadOS-Geräte können Sie auch die i
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Mail         | Apple     |
 | com.apple.Maps              | Zuordnungen         | Apple     |
-| com.apple.measure           | Maßeinheit      | Apple     |
+| com.apple.measure           | "Measure"      | Apple     |
 | com.apple.MobileSMS         | Nachrichten     | Apple     |
 | com.apple.Music             | Musik        | Apple     |
 | com.apple.news              | News         | Apple     |
@@ -69,7 +69,7 @@ Beim Konfigurieren von Funktionen auf iOS-/iPadOS-Geräte können Sie auch die i
 | com.apple.podcasts          | Podcasts     | Apple     |
 | com.apple.reminders         | Reminders    | Apple     |
 | com.apple.mobilesafari      | Safari       | Apple     |
-| com.apple.Preferences       | Einstellung     | Apple     |
+| com.apple.Preferences       | Einstellungen     | Apple     |
 | com.apple.shortcuts         | Verknüpfungen    | Apple     |
 | com.apple.SiriViewService   | Siri         | Apple     |
 | com.apple.stocks            | Stocks       | Apple     |

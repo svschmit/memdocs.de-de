@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1bd216049c5dbda7c044949f9fa39c3b7bd56f9d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8caf05a2869088fd4f8206d1306d82c696f527a2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337238"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81638204"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Einrichten eines iOS- oder iPadOS-Geräts im Unternehmensportal und bei Intercede
 
@@ -38,12 +39,12 @@ Sie müssen wahrscheinlich abgeleitete Anmeldeinformationen einrichten, wenn Sie
 
 Folgendes wird in diesem Artikel beschrieben:  
 
-* Registrieren eines mobilen iOS- oder iPadOS-Geräts im Intune-Unternehmensportal  
+* Registrieren eines mobilen iOS- oder iPadOS-Geräts beim Intune-Unternehmensportal  
 * Abrufen von abgeleiteten Anmeldeinformationen vom Anbieter Ihrer Organisation, [Intercede](https://www.intercede.com/)   
 
 
 ## <a name="what-are-derived-credentials"></a>Was sind abgeleitete Anmeldeinformationen?  
-Eine abgeleitete Anmeldeinformation ist ein Zertifikat, das von Ihren Smartcard-Anmeldeinformationen abgeleitet und auf Ihrem Gerät installiert wird. Es gewährt Ihnen Remotezugriff auf Arbeitsressourcen und verhindert gleichzeitig, dass nicht autorisierte Benutzer auf sensible Informationen zugreifen.  
+Eine abgeleitete Anmeldeinformation ist ein Zertifikat, das von Ihren Smartcard-Anmeldeinformationen abgeleitet und auf Ihrem Gerät installiert wird. Es gewährt Ihnen Remotezugriff auf Arbeitsressourcen und verhindert gleichzeitig, dass nicht autorisierte Benutzer auf vertrauliche Informationen zugreifen.  
 
 Abgeleitete Anmeldeinformationen werden für Folgendes verwendet: 
 * Authentifizieren von Kursteilnehmern und Mitarbeitern, die sich bei Geschäfts-, Schul- oder Uni-Apps, im WLAN oder im VPN anmelden

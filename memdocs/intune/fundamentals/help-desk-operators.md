@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085811"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Verwenden des Problembehandlungsportals zur Unterstützung von Benutzern Ihres Unternehmens
@@ -61,12 +61,12 @@ Sie können den Bereich **Problembehandlung** verwenden, um Benutzerinformatione
 
 ![Dashboard „Problembehandlung“ mit nummerierten, in der folgenden Tabelle beschriebenen Bereichen](./media/help-desk-operators/troubleshooting-dash.png)
 
-| Bereich | Name | Beschreibung |
+| Bereich | Name | Description |
 | ---  | ---  | ---         |
 | 1.   | Kontostatus  | Zeigt den Status des aktuellen Intune-Mandanten als **Aktiv** oder **Inaktiv** an.       |
 | 2.   | Benutzerauswahl  | Der Name des aktuell ausgewählten Benutzers. Klicken Sie auf **Benutzer wechseln**, um einen neuen Benutzer auszuwählen.       |
 | 3.   | Benutzerstatus  | Zeigt den Status der Intune-Lizenz des Benutzers, die Anzahl von Geräten und die jeweilige Gerätekompatibilität an.       |
-| 4.   | Benutzerinformationen  | Verwenden Sie die Liste in diesem Bereich, um die zu überprüfenden Details auszuwählen. <br>Sie können Folgendes auswählen: <ul><li>Client-Apps<li>Kompatibilitätsrichtlinien<li> Konfigurationsrichtlinien<li>App-Schutzrichtlinien <li>Registrierungseinschränkungen</ul>      |
+| 4.   | Benutzerinformationen  | Verwenden Sie die Liste in diesem Bereich, um die zu überprüfenden Details auszuwählen. <br>Sie können Folgendes auswählen: <ul><li>Client-Apps<li>Compliance Richtlinien<li> Konfigurationsrichtlinien<li>App-Schutzrichtlinien <li>Registrierungseinschränkungen</ul>      |
 | 5.   | Gruppenmitgliedschaft  | Zeigt die aktuellen Gruppen, denen der ausgewählte Benutzer als Mitglied angehört.       |
 
 <!-- this section needs to be updated
@@ -248,7 +248,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 In der Tabelle mit Registrierungsfehlern werden Registrierungsversuche aufgelistet, bei denen ein Fehler aufgetreten ist. Es kann sein, dass ein Gerät aus der unten stehenden Tabelle bei einem späteren Registrierungsversuch erfolgreich registriert werden kann. Zudem kann es sein, dass einige fehlgeschlagene Registrierungen nicht aufgelistet sind. Nicht für alle fehlgeschlagenen Registrierungen stehen Informationen zur Fehlerbehebung zur Verfügung.
 
-| Tabellenspalte | Beschreibung |
+| Tabellenspalte | Description |
 |-------------|----------|
 | Enrollment start (Start der Registrierung) | Der Zeitpunkt, zu dem der Benutzer mit der Registrierung begonnen hat |
 | Betriebssystem | Das Betriebssystem des Geräts. |
@@ -259,7 +259,7 @@ In der Tabelle mit Registrierungsfehlern werden Registrierungsversuche aufgelist
 
 Wenn Sie eine Zeile mit einem Fehler auswählen, werden mehr Details angezeigt.
 
-| Abschnitt | Beschreibung |
+| Abschnitt | Description |
 |-------------|----------|
 | Failure details (Fehlerdetails) | Eine ausführlichere Beschreibung des Fehlers |
 | Potential remediations (Mögliche Fehlerbehebungen) | Empfohlene Schritte zum Beheben des Fehlers. Für einige Fehler gibt es keine empfohlenen Fehlerbehebungen. |

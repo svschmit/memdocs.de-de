@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233416"
 ---
 # <a name="what-is-device-enrollment"></a>Was ist die Geräteregistrierung?
@@ -61,10 +61,10 @@ Die Microsoft Intune-App ist für unternehmenseigene Android-Geräte und verfüg
 Sie können die folgenden Geräte im Unternehmensportal registrieren:  
 
 - Windows-Geräte
-  - Windows 10 Mobile
-  - Windows 10 Desktop
+  - Windows 10 Mobile
+  - Windows 10 Desktop
   - Windows Phone 8.1
-  - Windows 8.1
+  - Windows 8,1
 - Apple-Geräte
     - iOS
     - macOS

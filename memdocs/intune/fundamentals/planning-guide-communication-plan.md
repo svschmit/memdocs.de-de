@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d82121fbd3d02c5eef9f45a4e67a897277da9334
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357765"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Entwickeln eines Kommunikationsplans für den Rollout
@@ -73,7 +73,7 @@ Die erste Kommunikation zum Intune-Projektstart kann sich z.B. an die gesamte Or
 
   | **Kommunikationsplan** | **Juli** | **August** | **September** | **Oktober** |
 |:---:|:---:|:---:|:---:|:---:|
-| Phase 1  | Alle |  |  |  |
+| Phase 1  | All |  |  |  |
 | Besprechung zu Projektbeginn | Erste Woche |  |  |  |
 | Phase 2 | IT | Vertrieb und Marketing | Einzelhandel | Personalabteilung, Finanzabteilung und Führungskräfte |
 | E-Mail 1 vor dem Rollout | Erste Woche | Erste Woche | Erste Woche | Erste Woche |
@@ -86,6 +86,6 @@ Die erste Kommunikation zum Intune-Projektstart kann sich z.B. an die gesamte Or
 
 Sie können eine [Vorlage der oben stehenden Tabelle herunterladen](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0), um Ihren Kommunikationsplan zu entwickeln.
 
-## <a name="next-step"></a>Nächster Schritt
+## <a name="next-step"></a>Nächste Schritte
 
 Der nächste Abschnitt enthält Hinweise zum [Entwerfen eines Supportplans](planning-guide-support-plan.md).

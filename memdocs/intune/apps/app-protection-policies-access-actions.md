@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551348"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektives Löschen von Daten in Intune über durch App-Schutzrichtlinien festgelegte bedingte Startaktionen
@@ -91,7 +91,7 @@ Geben Sie eine durch Semikolons getrennte Liste der Android-Hersteller ein, um d
 Beispieleingabe: *Hersteller A;Hersteller B* 
 
 >[!NOTE]
-> Dies sind einige gängige Hersteller, die von Geräten mit Intune-Verwendung gemeldet werden, sie können als Eingabe verwendet werden: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
+> Die folgenden Hersteller gelten für Geräte, auf denen Intune verwendet wird, als häufig verwendet und können eingegeben werden: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk.
 
 Auf Endbenutzergeräten führt der Intune-Client Aktionen auf Grundlage eines einfachen Abgleichs der Zeichenfolgen der Gerätemodelle aus, die in Intune für Anwendungsschutzrichtlinien angegeben sind. Die Übereinstimmung hängt ausschließlich davon ab, was das Gerät meldet. Sie (der IT-Administrator) können sicherstellen, dass das gewünschte Verhalten eintritt, indem Sie diese Einstellung basierend auf mehrerer Geräteherstellern und -modellen und für eine kleine Benutzergruppe testen. Der Standardwert lautet **Nicht konfiguriert**.<br>
 Legen Sie eine der folgenden Aktionen fest: 

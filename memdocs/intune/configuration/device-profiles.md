@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359303"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Anwenden von Einstellungen und Funktionen auf Ihren Geräten mit Geräteprofilen in Microsoft Intune
@@ -60,7 +60,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 - iOS/iPadOS
 - macOS
 - Windows Phone 8.1
-- Windows 8.1
+- Windows 8,1
 - Windows 10 und höher
 
 ## <a name="custom-profile"></a>Benutzerdefiniertes Profil
@@ -271,7 +271,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 - iOS/iPadOS
 - macOS
 - Windows Phone 8.1
-- Windows 8.1
+- Windows 8,1
 - Windows 10 und höher
 
 ## <a name="wi-fi"></a>WLAN

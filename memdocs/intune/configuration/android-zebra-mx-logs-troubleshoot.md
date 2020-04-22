@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80083844"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Problembehandlung und Ermitteln potenzieller Fehler auf Android Zebra-Geräten in Microsoft Intune
@@ -61,7 +61,7 @@ Endbenutzer können Ihnen die Protokolle mithilfe einer E-Mail-App auf dem Gerä
 
 ## <a name="read-the-logs"></a>Lesen der Protokolle
 
-Wenn Sie sich die Protokolle ansehen, finden Sie überall dort, wo Sie das `<characteristic-error>`-Tag finden, einen Fehler. Fehlerdetails werden in die `desc`-Eigenschaft des `<parm-error>`-Tags geschrieben.
+Wenn Sie sich die Protokolle ansehen, finden Sie überall dort, wo Sie das `<characteristic-error>`-Tag finden, einen Fehler. Fehlerdetails werden in die `<parm-error>`-Eigenschaft des `desc`-Tags geschrieben.
 
 ## <a name="error-types"></a>Fehlertypen
 

@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 88f30f10af5969d202dd8eb252cc82d03d3d921e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358064"
 ---
 # <a name="intune-migration-guide"></a>Intune-Migrationshandbuch
@@ -36,7 +36,7 @@ Hier finden Sie detaillierte Informationen zu den verschiedenen Aspekten bei der
 
 Dieses Handbuch teilt die Migration in zwei Phasen auf, die beide Aufgaben, Strategien und Unterstützung bei der Vorgehensweise beinhalten, die Sie während der Migration zu Intune MDM Schritt für Schritt begleiten.
 
-- [Phase 1: Vorbereitung von Microsoft Intune für die Verwaltung mobiler Geräte (MDM)](migration-guide-prepare.md)
+- [Phase 1: Vorbereitung von Intune für die Verwaltung mobiler Geräte](migration-guide-prepare.md)
 
   - [Anforderungen Ihrer MDM-Migration analysieren](migration-guide-prepare.md#assess-mdm-requirements)
 
@@ -48,7 +48,7 @@ Dieses Handbuch teilt die Migration in zwei Phasen auf, die beide Aufgaben, Stra
 
   - [Besondere Überlegungen bei der Migration](migration-guide-considerations.md)
 
-- [Phase 2: Migrationskampagne](migration-guide-campaign.md)
+- [Phase 2: Die Migration](migration-guide-campaign.md)
 
   - [Kommunikationsplan](migration-guide-communication-plan.md)
 
@@ -72,4 +72,4 @@ Es ist wichtig, dass Sie wissen, dass Ihre Bereitstellung mit Intune möglicherw
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Phase 1: Vorbereitung von Microsoft Intune für die Verwaltung mobiler Geräte (MDM)](migration-guide-prepare.md)
+[Phase 1: Vorbereitung von Intune für die Verwaltung mobiler Geräte](migration-guide-prepare.md)

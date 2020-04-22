@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7b339941da247cf6bc5efd9f3fa9c598415ed0e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339903"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Darstellung der Benutzerlebensdauer im Microsoft Intune-Data Warehouse
@@ -37,13 +37,13 @@ Dieses Szenario wird klarer, wenn Sie die Lebensdauer einer Entität durchlaufen
 
 Angenommen, einem Benutzer **John Smith** wird am 01.06.2017 eine Lizenz zugewiesen. Die Tabelle **Benutzer** weist in diesem Fall den folgenden Eintrag auf: 
  
-| DisplayName | isDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | John Smith | FALSE | 06/01/2017 | 12/31/9999 | TRUE
  
 John Smith gibt seine Lizenz am 25.07.2017 auf. Die Tabelle **Benutzer** weist die folgenden Einträge auf. Änderungen in vorhandenen Datensätzen werden gekennzeichnet: `marked`. 
 
-| DisplayName | isDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | John Smith | FALSE | 06/01/2017 | `07/26/2017` | `FALSE` 
 | John Smith | TRUE | 07/26/2017 | 12/31/9999 | TRUE 
@@ -52,7 +52,7 @@ Die erste Zeile gibt an, dass John Smith vom 01.06.2017 bis zum 25.07.2017 in In
 
 Nehmen wir jetzt an, dass dem Benutzer John Smith am 31.08.2017 eine neue Lizenz zugewiesen wird. Die Tabelle „Benutzer“ weist in diesem Fall die folgenden Einträge auf:
  
-| DisplayName | isDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | John Smith | FALSE | 06/01/2017 | 07/26/2017 | FALSE 
 | John Smith | TRUE | 07/26/2017 | `08/31/2017` | `FALSE` 
@@ -70,7 +70,7 @@ Am häufigsten werden folgende Metadatenspalten verwendet:
 
 | Name der Metadateneigenschaft  | Interpretation von Werten |
 |--|--|
-| isDeleted | Gibt an, ob die Entität in Intune gelöscht wurde. |
+| IsDeleted | Gibt an, ob die Entität in Intune gelöscht wurde. |
 | StartDateInclusiveUTC  | Das UTC-Datum, an dem die Entität in das Intune Data Warehouse geladen wurde. Möglicherweise wurde die Entität erstellt, bevor sie in das Intune Data Warehouse importiert wurde. |
 | DeletedDateUTC  | Das UTC-Datum, an dem die Entität in Intune gelöscht wurde. |  
 

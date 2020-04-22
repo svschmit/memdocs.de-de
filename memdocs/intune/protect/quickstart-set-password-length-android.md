@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b2e2d5fb2f698d7e0b544dbdbd4ab05f2b94b7ea
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325455"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Schnellstart: Erstellen einer Konformitätsrichtlinie für Kennwörter für Android-Geräte
@@ -40,7 +40,7 @@ Wenn Sie über kein Intune-Abonnement verfügen, [registrieren Sie sich für ein
 
 Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) als [globaler Administrator](../fundamentals/users-add.md#types-of-administrators) oder Intune-[Dienstadministrator](../fundamentals/users-add.md#types-of-administrators) an.
 
-## <a name="create-a-device-compliance-policy"></a>Erstellen einer Gerätekonformitätsrichtlinie
+## <a name="create-a-device-compliance-policy"></a>Erstellen einer Kompatibilitätsrichtlinie
 
 Erstellen Sie eine Gerätekonformitätsrichtlinie, um festzulegen, dass alle Mitarbeiter mit Android-Geräten ein Kennwort mit einer bestimmten Länge eingeben müssen, bevor sie auf Informationen auf dem Gerät zugreifen können.
 
@@ -77,4 +77,4 @@ In diesem Schnellstart haben Sie mit Intune eine Kompatibilitätsrichtlinie für
 Weitere Informationen zu Intune erhalten Sie im nächsten Schnellstart.
 
 > [!div class="nextstepaction"]
-> [Schnellstart: Senden von Benachrichtigungen an nicht konforme Geräte](quickstart-send-notification.md)
+> [Quickstart: Send notifications to noncompliant devices (Schnellstart: Senden von Benachrichtigungen an nicht konforme Geräte)](quickstart-send-notification.md)

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aabc09e276c723e9aeaed4ec8eb3dd4c0332b4e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362510"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Geführtes Szenario: Sichere mobile Microsoft Office-Apps
@@ -75,7 +75,7 @@ Zugewiesene iOS/iPadOS- und Android-Benutzer müssen bei jedem Öffnen einer Off
 
 ### <a name="what-you-will-need-to-continue"></a>Voraussetzungen zum Fortfahren
 
-Sie werden nach den Apps gefragt, die Ihre Benutzer benötigen, und was Sie für den Zugriff darauf benötigen. Stellen Sie sicher, dass Sie die folgenden Informationen zur Hand haben:
+Sie werden gefragt, welche Apps Ihre Benutzer brauchen und was sie für den Zugriff darauf benötigen. Stellen Sie sicher, dass Sie die folgenden Informationen zur Hand haben:
 
 - Liste der Office-Apps, die für die Verwendung in Unternehmen zugelassen sind.
 - Alle PIN-Anforderungen für den Start von genehmigten Apps auf nicht verwalteten Geräten.
@@ -109,7 +109,7 @@ Wenn Sie die Apps ausgewählt haben, klicken Sie auf **Weiter**.
 
 In diesem Schritt müssen Sie die Anforderungen für den Zugriff und die gemeinsame Nutzung der Unternehmensdateien und E-Mails in diesen Apps konfigurieren. Standardmäßig können Benutzer Daten in den OneDrive- und SharePoint-Konten Ihrer Organisation speichern.
 
-| Einstellung | Beschreibung | Standardwert |
+| Einstellung | Description | Standardwert |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | PIN-Typ | Numerische PINs bestehen nur aus Ziffern. Passcodes bestehen aus alphanumerischen Zeichen und Sonderzeichen.  Auf iOS/iPadOS benötigt die App zur Konfiguration des Typs "Kennung" die Intune SDK Version 7.1.12 oder höher. Für einen numerischen Typ besteht keine Einschränkung hinsichtlich der Intune SDK-Version. | Numerisch |
 | Auswählen der PIN-Mindestlänge | Geben Sie die Mindestanzahl von Ziffern in einer PIN-Sequenz an. | 6 |

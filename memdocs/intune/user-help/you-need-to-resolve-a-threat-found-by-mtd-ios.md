@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 905378b764fe3e8beee7eb90570cb9f871d9fa47
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346208"
 ---
 # <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Beseitigen einer Bedrohung, die von einer Mobile Threat Defense-App erkannt wurde
@@ -44,5 +44,5 @@ Im Folgenden finden Sie die iOS-spezifischen Mobile Threat Defense-Dienste, die 
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
-Benötigen Sie weitere Unterstützung? Kontaktieren Sie die Supportabteilung Ihres Unternehmens. Sie finden entsprechende Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Sie finden entsprechende Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

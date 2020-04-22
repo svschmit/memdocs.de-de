@@ -1,5 +1,5 @@
 ---
-title: Was geschieht, wenn Sie die Registrierung für Ihr Android-Gerät aufheben? | Microsoft-Dokumentation
+title: Was geschieht, wenn Sie die Registrierung für Ihr Android-Gerät aufheben? | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 368972acc1b3380b1adf9b21939adbca0dc1434c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346858"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Was geschieht, wenn Sie die Registrierung Ihres Android-Geräts bei Intune aufheben?
@@ -44,4 +44,4 @@ Wenn Ihr Gerät nur für den Empfang von Unternehmens-E-Mail eingerichtet ist un
 
 Anweisungen zum Aufheben der Registrierung finden Sie unter [Aufheben der Registrierung Ihres Geräts bei Intune über die Unternehmensportal-App](unenroll-your-device-from-intune-android.md).
 
-Benötigen Sie Unterstützung? Wenden Sie sich an den Support Ihres Unternehmens (suchen Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980) nach Kontaktinformationen) oder an das <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-Team</a>.
+Benötigen Sie Unterstützung? Wenden Sie sich an die Supportabteilung Ihres Unternehmens (suchen Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980) nach Kontaktinformationen) oder an das <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">Android-Team von Microsoft</a>.

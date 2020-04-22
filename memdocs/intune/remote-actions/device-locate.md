@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 433bea6442ef52cd970513213d1623faf8aae2ca
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327479"
 ---
 # <a name="locate-lost-or-stolen-iosipados-devices-with-intune"></a>Suchen nach verlorenen oder gestohlenen iOS-/iPadOS-Geräten mit Intune
@@ -42,7 +42,7 @@ Dieses Feature wird für die folgenden Betriebssysteme nicht unterstützt:
 ## <a name="locate-a-lost-or-stolen-device"></a>Suchen eines verloren gegangenen oder gestohlenen Geräts
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
-3. Klicken Sie auf **Geräte** und dann auf **Alle Geräte**.
+3. Klicken Sie auf **Geräte** > **Alle Geräte**.
 4. Wählen Sie aus der Liste der von Ihnen verwalteten Geräten ein iOS-/iPadOS-Gerät aus, und klicken Sie auf **...Weitere**. Wählen Sie dann die Remotegeräteaktion **Gerät suchen** aus.
 5. Wenn das Gerät gefunden wurde, wird der Standort unter **Gerät suchen** angezeigt.
     ![Screenshot von „Gerät suchen“ mithilfe von Intune in Azure](./media/device-locate/locate-device.png)

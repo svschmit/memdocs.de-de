@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357895"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Anforderungen und Bandbreite an die Intune-Netzwerkkonfiguration
@@ -36,7 +36,7 @@ Die Tabelle führt den ungefähren Umfang und die Häufigkeit gemeinsamer Inhalt
 > [!NOTE]
 > Um sicherzustellen, dass Geräte Updates und Inhalt von Intune empfangen, müssen Sie zeitweise mit dem Internet verbunden sein. Die Zeit, die für das Empfangen von Updates oder Inhalten benötigt wird, kann variieren, sie sollten jedoch für mindestens eine Stunde pro Tag kontinuierlich mit dem Internet verbunden sein.
 
-|Art des Inhalts|Ungefähre Größe|Häufigkeit und Details|
+|Inhaltstyp|Ungefähre Größe|Häufigkeit und Details|
 |----------------|--------------------|-------------------------|
 |Intune-Clientinstallation<br /><br />**Die folgenden Anforderungen gelten zusätzlich zur Intune-Clientinstallation**|125 MB|**Einmalig**<br /><br />Der Umfang des Clientdownloads schwankt je nach Betriebssystem des Clientcomputers.|
 |Clientregistrierungspaket|15 MB|**Einmalig**<br /><br />Weitere Downloads sind möglich, wenn Updates für diesen Inhaltstyp vorliegen.|
@@ -48,7 +48,7 @@ Die Tabelle führt den ungefähren Umfang und die Häufigkeit gemeinsamer Inhalt
 |Malwaredefinitionsupdates für Endpoint Protection|Variiert<br /><br />Normalerweise zwischen 40 KB und 2 MB|**Täglich**<br /><br />Bis zu drei Mal täglich.|
 |Endpoint Protection-Engine-Update|5 MB|**Monatlich**|
 |Softwareupdates|Variiert<br /><br />Die Größe hängt von den von Ihnen bereitgestellten Updates ab.|**Monatlich**<br /><br />Normalerweise werden Softwareupdates am zweiten Dienstag eines jeden Monats bereitgestellt.<br /><br />Durch einen neu registrierten oder bereitgestellten Computer kann mehr Netzwerkbandbreite verwendet werden, solange alle zuvor veröffentlichten Updates heruntergeladen werden.|
-|Service Packs|Variiert<br /><br />Die Größe variiert für jedes von Ihnen bereitgestellte Service Pack.|**Variiert**<br /><br />Hängt vom Zeitpunkt der Service Pack-Bereitstellung ab.|
+|Service Packs|Variiert<br /><br />Die Größe variiert für jedes von Ihnen bereitgestellte Service Pack.|**Unterschiedlich**<br /><br />Hängt vom Zeitpunkt der Service Pack-Bereitstellung ab.|
 |Softwareverteilung|Variiert<br /><br />Die Größe hängt von der von Ihnen bereitgestellten Software ab.|**Unterschiedlich**<br /><br />Hängt vom Zeitpunkt der Softwarebereitstellung ab.|
 
 ## <a name="ways-to-reduce-network-bandwidth-use"></a>Möglichkeiten zum Verringern der Bandbreitennutzung
@@ -95,10 +95,10 @@ Sie können die [Übermittlungsoptimierung](../configuration/delivery-optimizati
 
 Intune-Clients können BranchCache verwenden, um den WAN-Datenverkehr zu verringern. Die folgenden Betriebssysteme unterstützen BranchCache:
 
-- Windows 7
+- Windows 7
 - Windows 8.0
-- Windows 8.1
-- Windows 10
+- Windows 8,1
+- Windows-10
 
 Zum Verwenden von BranchCache muss BranchCache auf dem Clientcomputer aktiviert und für den Modus **Verteilter Cache** konfiguriert sein.
 

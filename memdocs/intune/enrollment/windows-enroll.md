@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326923"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Registrierung von Windows-Geräten
@@ -68,9 +68,9 @@ Wenn sich Standardbenutzer mit ihren Azure AD-Anmeldeinformationen anmelden, erh
 Um die Registrierung zu vereinfachen, erstellen Sie einen Domänennamenserver-Alias (DNS; Eintragstyp CNAME), der Registrierungsanforderungen an Intune-Server umleitet. Andernfalls müssen Benutzer, die eine Verbindung mit Intune herstellen möchten, während der Registrierung den Intune-Servernamen eingeben.
 
 **Schritt 1: Erstellen von CNAME-Einträgen** (optional)<br>
-Erstellen Sie CNAME-DNS-Ressourceneinträge für die Domäne des Unternehmens. Wenn die Website Ihres Unternehmens beispielsweise „contoso.com“ heißt, würden Sie einen CNAME im DNS erstellen, der „EnterpriseEnrollment.contoso.com“ an „enterpriseenrollment-s.manage.microsoft.com“ umleitet.
+Erstellen Sie CNAME DNS-Ressourceneinträge für die Domäne des Unternehmens. Wenn die Website Ihres Unternehmens beispielsweise „contoso.com“ heißt, würden Sie einen CNAME im DNS erstellen, der „EnterpriseEnrollment.contoso.com“ an „enterpriseenrollment-s.manage.microsoft.com“ umleitet.
 
-Obwohl das Erstellen eines CNAME-DNS-Eintrags optional ist, ist die Registrierung mit einem CNAME-Eintrag für den Benutzer leichter. Wenn kein CNAME-Eintrag für die Registrierung gefunden wurde, werden Benutzer aufgefordert, manuell den MDM-Servernamen „enrollment.manage.microsoft.com“ einzugeben.
+Obwohl das Erstellen eines CNAME-DNS-Eintrags optional ist, ist die Registrierung mit einem CNAME-Eintrag für den Benutzer leichter. Wenn kein CNAME-Eintrag für die Registrierung gefunden wurde, werden Benutzer dazu aufgefordert, manuell den MDM-Servernamen „enrollment.manage.microsoft.com“ einzugeben.
 
 |Typ|Hostname|Verweist auf|TTL|
 |----------|---------------|---------------|---|

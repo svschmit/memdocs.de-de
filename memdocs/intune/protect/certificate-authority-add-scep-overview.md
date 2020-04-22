@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1dfac34615c208328cab06a3fd047d3a9b99c794
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353891"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Hinzufügen einer Partnerzertifizierungsstelle in Intune mithilfe von SCEP
@@ -41,7 +41,7 @@ Mit einer Azure AD-Anwendung können Sie Rechte an Intune delegieren, wodurch si
 
 Dieser Artikel stellt eine Übersicht über dieses Feature aus der Perspektive von Administratoren bereit und geht auch auf die Erstellung einer Azure AD-Anwendung ein.
 
-## <a name="overview"></a>Übersicht
+## <a name="overview"></a>Overview
 
 Die folgenden Schritte bieten einen Überblick über die Verwendung von SCEP für Zertifikate in Intune:
 

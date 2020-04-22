@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360014"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Erstellen eines Intune-Berichts aus dem OData-Feed mit Power BI
@@ -47,7 +47,7 @@ Die Verwendung der Begriffe *Entität* und *Tabelle* erscheint Ihnen möglicherw
 
 ## <a name="install-power-bi-desktop"></a>Installieren von Power BI Desktop
 
-Installieren Sie die neueste Version von Power BI Desktop. Sie können Power BI Desktop hier herunterladen: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Installieren Sie die neueste Version von Power BI Desktop. Sie können Power BI Desktop aus [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop) herunterladen.
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>Stellen Sie eine Verbindung zum OData-Feed für das Intune Data Warehouse für Ihren Mandanten her.
 
@@ -106,7 +106,7 @@ Jetzt verfügen Sie über eine Visualisierung der Verteilung von Herstellern und
 
 Sie können Ihrer Treemap einen Filter hinzufügen, damit Sie mithilfe Ihrer App zusätzliche Fragen beantworten können.
 
-1. Um einen Filter hinzuzufügen, wählen Sie zunächst die Berichtscanvas aus, und klicken Sie anschließend unter **Visualisierungen** auf das **Slicer-Symbol** (![Treemap mit Datenmodell und unterstützten Beziehungen](./media/reports-proc-create-with-odata/reports-create-slicer.png)). Die leere **Slicervisualisierung** wird in der Canvas angezeigt.
+1. Um einen Filter hinzuzufügen, wählen Sie zunächst die Berichtscanvas aus, und klicken Sie anschließend unter **Visualisierungen** auf das ![Slicer-Symbol](./media/reports-proc-create-with-odata/reports-create-slicer.png) (**Treemap mit Datenmodell und unterstützten Beziehungen**). Die leere **Slicervisualisierung** wird in der Canvas angezeigt.
 2. Suchen Sie im Bereich **Felder** nach der `ownerTypes`-Tabelle.
 3. Erweitern Sie die `ownerTypes`-Tabelle, und klicken Sie auf das Datenfeld `ownerTypeName`.
 4. Ziehen Sie das Datenfeld `onwerTypeName` aus der `ownerTypes`-Tabelle in den Bereich **Filter**, und legen Sie es im Abschnitt **Filter für diese Seite** auf dem Feld mit der Bezeichnung **Hier Datenfelder hinzufügen** ab.  

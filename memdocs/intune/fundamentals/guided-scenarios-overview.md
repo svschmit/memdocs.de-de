@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401441"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Übersicht über geführte Szenarios zu Intune 
@@ -64,7 +64,7 @@ Wenn bei der Bereitstellung des Szenarios ein Fehler auftritt, werden alle Ände
 
 Geführte Szenarios können nicht zum Bearbeiten vorhandener Ressourcen verwendet werden. Sobald sie erstellt wurden, müssen alle Ressourcen, Gruppen und Zuweisungen mithilfe der vorhandenen Workloads bearbeitet werden.
 
-### <a name="monitoring"></a>Überwachung 
+### <a name="monitoring"></a>monitoring 
 
 Geführte Szenarios können abgesehen von Erstellungsvorgang nicht zum Überwachen vorhandener Ressourcen verwendet werden. Sobald sie erstellt wurden, müssen alle Ressourcen, Gruppen und Zuweisungen mithilfe der vorhandenen Workloads überwacht werden. 
 

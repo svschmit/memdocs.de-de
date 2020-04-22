@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2dea6d5af4356526c2df1b23d47fb468c6213e0c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359455"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Verwaltungsfunktionen für registrierte Geräte in Microsoft Intune
@@ -50,8 +50,8 @@ Benutzer erhalten Zugriff auf das Unternehmensportal, das es ihnen ermöglicht, 
 
 |Funktion|Details|Weitere Informationen|
 |--------------|-----------|--------------------|
-|App-Bereitstellung und -Verwaltung|Bietet eine Reihe von Tools zum Verwalten von mobilen Apps während deren Lebenszyklus, einschließlich der App-Bereitstellung von Installationsdateien und App Stores sowie eine detaillierte Überwachung des Status der App und App-Entfernung.|[Bereitstellen von Apps in Microsoft Intune](../apps/apps-deploy.md)|
-|Konforme und nicht konforme Apps|Ermöglicht das Angeben von Listen der konformen Apps (die Benutzer installieren dürfen) und nicht konformen Apps (die Benutzer nicht installieren dürfen).|[iOS-Richtlinieneinstellungen in Microsoft Intune](../configuration/device-restrictions-ios.md)|
+|App-Bereitstellung und -Verwaltung|Bietet eine Reihe von Tools zum Verwalten von mobilen Apps während deren Lebenszyklus, einschließlich der App-Bereitstellung von Installationsdateien und App Stores sowie eine detaillierte Überwachung des Status der App und App-Entfernung.|[Bereitstellen von Apps in Microsoft Intune](../apps/apps-deploy.md)|
+|Kompatible und nicht kompatible Anwendungen|Ermöglicht das Angeben von Listen der konformen Apps (die Benutzer installieren dürfen) und nicht konformen Apps (die Benutzer nicht installieren dürfen).|[iOS-Richtlinieneinstellungen in Microsoft Intune](../configuration/device-restrictions-ios.md)|
 |Mobile Anwendungsverwaltung|Konfiguriert die Einschränkungen für Apps, indem die mobile Anwendungsverwaltung für alle Geräte verwendet wird, die über Intune verwaltet oder nicht über Intune verwaltet werden. Sie können die Sicherheit Ihrer Unternehmensdaten erhöhen, indem Sie Vorgänge wie das Kopieren und Einfügen, die externe Sicherung von Daten und die Übertragung von Daten zwischen Apps einschränken.|[Konfigurieren und Bereitstellen von Verwaltungsrichtlinien für mobile Anwendungen in der Microsoft Intune-Konsole](../developer/app-wrapper-prepare-android.md)|
 |Konfiguration mobiler iOS-Apps|Verwendet Konfigurationsrichtlinien für mobile Apps, um Einstellungen für iOS-/iPadOS-Apps anzugeben, die beim Ausführen der App durch den Benutzer erforderlich sein können. Beispielsweise kann eine App erfordern, dass der Benutzer eine Portnummer oder Anmeldeinformationen angibt. Sie können die Konfiguration der App optimieren und die Anzahl von Anrufen beim Support verringern.|Lesen Sie [Konfigurieren von iOS-/iPadOS-Apps mit Konfigurationsrichtlinien für mobile Apps in Microsoft Intune](../apps/app-configuration-policies-use-ios.md).|
 |Bereitstellungsprofile für mobile iOS-/iPadOS-Apps|Hilft Ihnen, Bereitstellungsprofile für iOS-/iPadOS-Apps bereitzustellen, die demnächst ablaufen. |[Verwenden von Richtlinien für mobile iOS-/iPadOS-Bereitstellungsprofile, um zu verhindern, dass Apps ablaufen](../apps/app-provisioning-profile-ios.md)|

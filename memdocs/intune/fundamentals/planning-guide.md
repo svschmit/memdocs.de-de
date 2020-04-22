@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6327de8fd4543f60d66eedc3ac6b86b8275f2ca2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357219"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Bereitstellungsplanungs-, Entwurfs- und Implementierungshandbuch für Intune
@@ -33,15 +33,15 @@ Eine erfolgreiche Bereitstellung von Microsoft Intune beginnt mit einer guten Pl
 
 Dieses Handbuch enthält Abschnitte, in denen Sie lückenlos durch die Bereitstellung von Intune geführt werden. Beginnen Sie mit Abschnitt 1, um Ihre lang- und kurzfristigen Ziele und Herausforderungen zu klären. Fahren Sie dann mit den Abschnitten 2-7 in der Reihenfolge fort, die Ihren Anforderungen am ehesten entspricht. Sie müssen diese Abschnitte nicht nacheinander, sondern können Sie auch parallel durcharbeiten.
 
-- [Abschnitt 1: Bestimmen der Bereitstellungsziele, sonstigen Ziele und Herausforderungen](planning-guide-deployment-goals.md)
+- [Abschnitt 1: Bestimmen der Bereitstellungsziele, sonstigen Ziele und Herausforderungen](planning-guide-deployment-goals.md)
 
-- [Abschnitt 2: Bestimmen von Szenarios für Anwendungsfälle](planning-guide-scenarios.md)
+- [Abschnitt 2: Bestimmen von Anwendungsszenarien](planning-guide-scenarios.md)
 
 - [Abschnitt 3: Bestimmen von Anwendungsfallanforderungen](planning-guide-requirements.md)
 
-- [Abschnitt 4: Entwickeln eines Rolloutplans](planning-guide-rollout-plan.md)
+- [Abschnitt 4: Entwickeln eines Einführungsplans](planning-guide-rollout-plan.md)
 
-- [Abschnitt 5: Entwickeln eines Kommunikationsplans für den Rollout](planning-guide-communication-plan.md)
+- [Abschnitt 5: Entwickeln eines Kommunikationsplans für die Einführung](planning-guide-communication-plan.md)
 
 - [Abschnitt 6: Entwickeln eines Unterstützungsplans](planning-guide-support-plan.md)
 
@@ -49,11 +49,11 @@ Dieses Handbuch enthält Abschnitte, in denen Sie lückenlos durch die Bereitste
 
 - [Abschnitt 8: Implementierung von Intune](planning-guide-onboarding.md)
 
-- [Abschnitt 9: Tests und Überprüfung](planning-guide-test-validation.md)
+- [Abschnitt 9: Testen und Überprüfen](planning-guide-test-validation.md)
 
 Dieses Handbuch enthält außerdem zusätzliche technische Informationen und Tabellenvorlagen zum Unterstützen des Planungs-, Entwurfs- und Implementierungsprozesses zur Bereitstellung von Intune.
 
-- [Weitere Ressourcen: Links und Tabellenvorlagen](planning-guide-resources.md)
+- [Zusätzliche Ressourcen: Links und Tabellenvorlagen](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>Annahmen
 
@@ -63,4 +63,4 @@ Dieses Handbuch enthält außerdem zusätzliche technische Informationen und Tab
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Beginnen wir mit dem ersten Abschnitt: [Bestimmen der Bereitstellungsziele, sonstigen Ziele und Herausforderungen](planning-guide-deployment-goals.md)
+Beginnen wir mit dem ersten Abschnitt [Bestimmen der Bereitstellungsziele, sonstigen Ziele und Herausforderungen](planning-guide-deployment-goals.md).

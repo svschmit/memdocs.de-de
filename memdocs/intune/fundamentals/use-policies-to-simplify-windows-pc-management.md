@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 275939c4c97b25f7e9b2ab179a7491d47801e48e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355061"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Verwenden von Richtlinien zum Vereinfachen der Verwaltung von Windows-PCs
@@ -38,7 +38,7 @@ Benutzern wird der Intune-Softwareclient als das **Microsoft Intune Center** ang
 
 - Abrufen von Anwendungen aus dem Unternehmensportal
 
-- Suchen Sie nach Updates.
+- Suchen nach Updates
 
 - Verwalten von Microsoft Intune Endpoint Protection
 
@@ -48,10 +48,10 @@ Das Microsoft Intune Center ist auf allen verwalteten Computern installiert. Sie
 
 |Richtlinieneinstellung|Details|
 |------------------|--------------------|
-|**Name**|Name des Administrators, der den Computer verwaltet<br />Maximale Länge: 40 Zeichen|
-|**Telefonnummer**|Telefonnummer des Administrators, der den Computer verwaltet<br />Maximale Länge: 20 Zeichen|
-|**E-Mail-Adresse**|E-Mail-Adresse des Administrators, der den Computer verwaltet<br />Maximale Länge: 40 Zeichen|
-|**Name der Website**|Name der Supportwebsite für Benutzer<br />>Mindestlänge: 40 Zeichen|
+|**Name**|Name des Administrators, der den Computer verwaltet<br />Maximale Länge: 40 Zeichen|
+|**Telefonnummer**|Telefonnummer des Administrators, der den Computer verwaltet<br />Maximale Länge: 20 Zeichen|
+|**E-Mail-Adresse**|E-Mail-Adresse des Administrators, der den Computer verwaltet<br />Maximale Länge: 40 Zeichen|
+|**Name der Website**|Name der Supportwebsite für Benutzer<br />>Maximale Länge: 40 Zeichen|
 |**URL der Website**|URL der Supportwebsite<br />Maximale Länge: 150 Zeichen|
 |**Hinweise**|Hinweis, der Benutzern angezeigt wird<br />Maximale Länge: 120 Zeichen|
 

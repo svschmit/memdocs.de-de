@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b23fbed8f12c4df90ff2136434e21f3eba369c9e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322564"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Deaktivieren der Aktivierungssperre auf überwachten iOS-/iPadOS-Geräten mit Intune
@@ -38,7 +38,7 @@ Microsoft Intune kann Sie beim Verwalten der iOS-/iPadOS-Aktivierungssperre unte
 
 ## <a name="how-activation-lock-affects-you"></a>Auswirkungen der Aktivierungssperre
 
-Obwohl die Aktivierungssperre zum Schutz von iOS-/iPadOS-Geräten beiträgt und die Chancen einer Wiederherstellung bei Verlust oder Diebstahl des Geräts erhöht, kann diese Funktion Sie als IT-Administrator vor eine Reihe von Herausforderungen stellen. Beispiel:
+Obwohl die Aktivierungssperre zum Schutz von iOS-/iPadOS-Geräten beiträgt und die Chancen einer Wiederherstellung bei Verlust oder Diebstahl des Geräts erhöht, kann diese Funktion Sie als IT-Administrator vor eine Reihe von Herausforderungen stellen. Beispiele:
 
 - Ein Benutzer richtet die Aktivierungssperre auf einem Gerät ein. Anschließend verlässt der Benutzer das Unternehmen und gibt das Gerät zurück. Ohne die Apple-ID und das Kennwort des Benutzers gibt es keine Möglichkeit, das Gerät zu reaktivieren.
 - Sie benötigen einen Bericht über alle Geräte, bei denen die Aktivierungssperre aktiviert ist.

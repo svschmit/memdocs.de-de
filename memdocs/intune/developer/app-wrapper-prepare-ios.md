@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 26204a36000b8c49b65effbfdb5f629fc092df64
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345545"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Vorbereiten von iOS-Apps für App-Schutzrichtlinien mit dem Intune App Wrapping Tool
@@ -101,7 +101,7 @@ Sie benötigen Folgendes zum Verteilen von Apps, die von Intune mit einem Wrappe
 
    ![Apple Developer-Portal: Zertifikate, IDs und Profile](./media/app-wrapper-prepare-ios/iOS-signing-cert-1.png)
 
-5. Klicken Sie auf ![das Pluszeichen im Apple Developer-Portal](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) (rechts oben), um ein iOS-Zertifikat hinzuzufügen.
+5. Klicken Sie auf die Registerkarte ![das Pluszeichen im Apple Developer-Portal](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) (rechts oben), um ein iOS-Zertifikat hinzuzufügen.
 
 6. Wählen Sie unter **Production** das Erstellen eines Zertifikats des Typs **In-House and Ad Hoc** aus.
 
@@ -148,7 +148,7 @@ Sie benötigen Folgendes zum Verteilen von Apps, die von Intune mit einem Wrappe
 
 2. Klicken Sie auf **Certificates, IDs & Profiles**.
 
-3. Klicken Sie auf ![das Pluszeichen im Apple Developer-Portal](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) (rechts oben), um ein iOS-Bereitstellungsprofil hinzuzufügen.
+3. Klicken Sie auf die Registerkarte ![das Pluszeichen im Apple Developer-Portal](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) (rechts oben), um ein iOS-Bereitstellungsprofil hinzuzufügen.
 
 4. Wählen Sie unter **Distribution** das Erstellen eines Bereitstellungsprofils des Typs **In House** aus.
 
@@ -181,7 +181,7 @@ Sie benötigen Folgendes zum Verteilen von Apps, die von Intune mit einem Wrappe
 > [!NOTE]
 > Einige Parameter sind optional, wie in der folgenden Tabelle dargestellt.
 
-**Beispiel:** Der Befehl im folgenden Beispiel führt das App Wrapping Tool für eine App mit dem Namen „MyApp.ipa“ aus. Es werden ein Bereitstellungsprofil und ein SHA-1-Hash des Signaturzertifikats angegeben und zum Signieren der umschlossenen App verwendet. Die Ausgabe-App („MyApp_Wrapped.ipa“) wird erstellt und in Ihrem Desktopordner gespeichert.
+**Beispiel**: Der Befehl im folgenden Beispiel führt das App Wrapping Tool für eine App mit dem Namen „MyApp.ipa“ aus. Es werden ein Bereitstellungsprofil und ein SHA-1-Hash des Signaturzertifikats angegeben und zum Signieren der umschlossenen App verwendet. Die Ausgabe-App („MyApp_Wrapped.ipa“) wird erstellt und in Ihrem Desktopordner gespeichert.
 
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB"  -v true
@@ -315,7 +315,7 @@ Umschlossene Apps geben auch Benutzern die Möglichkeit, die Protokolle direkt v
 
 Damit eine vollständige Funktionalität gewährleistet werden kann, müssen die Voraussetzungen für das App Wrapping Tool für iOS erfüllt sein.
 
-|Anforderungen|Details|
+|Anforderung|Details|
 |---------------|-----------|
 |iOS-Bereitstellungsprofil|Stellen Sie sicher, dass das Bereitstellungsprofil gültig ist, bevor Sie es einfügen. Das App Wrapping Tool überprüft bei der Verarbeitung einer iOS-App nicht, ob das Bereitstellungsprofil abgelaufen ist. Wenn ein abgelaufenes Bereitstellungsprofil angegeben wird, umfasst das App Wrapping Tool das abgelaufene Bereitstellungsprofil; Sie wissen erst dann, dass ein Problem vorliegt, wenn die Anwendung nicht mehr auf einem iOS-Gerät installiert werden kann.|
 |iOS-Signaturzertifikat|Stellen Sie sicher, dass das Signaturzertifikat gültig ist, bevor Sie es angeben. Das App Wrapping Tool überprüft bei der Verarbeitung einer iOS-App nicht, ob das Zertifikat abgelaufen ist. Wenn ein Hash für ein abgelaufenes Zertifikat bereitgestellt wird, kann das Tool die App verarbeiten und signieren, jedoch die Installation auf Geräten schlägt fehl.<br /><br />Stellen Sie sicher, dass das für die Signierung der umschlossenen App bereitgestellte Zertifikat im Bereitstellungsprofil enthalten ist. Das Tool überprüft nicht, ob das Bereitstellungsprofil über eine Übereinstimmung für das Zertifikat zum Signieren der umschlossenen Anwendung verfügt.|
@@ -327,7 +327,7 @@ Vor dem Umschließen Ihrer App können Sie *Berechtigungen* erteilen, um der App
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Unterstützte Funktionen für das App Wrapping Tool für iOS
 
-|Funktion|Beschreibung|Empfohlene Vorgehensweise|
+|Funktion|Description|Empfohlene Vorgehensweise|
 |--------------|---------------|------------------------|
 |App-Gruppen|Verwenden Sie App-Gruppen, um mehreren Apps den Zugriff auf freigegebene Container zu gestatten und um die zusätzliche, prozessübergreifende Kommunikation zwischen Apps zu ermöglichen.<br /><br />Um App-Gruppen zu aktivieren, öffnen Sie den Bereich **Funktionen**, und klicken Sie unter **App-Gruppen** auf **EIN**. Sie können App-Gruppen hinzufügen oder vorhandene auswählen.|Bei Verwendung von App-Gruppen verwenden Sie Reverse-DNS-Notation:<br /><br />*group.com.companyName.AppGroup*|
 |Hintergrundmodi|Durch das Aktivieren von Hintergrundmodi kann Ihre iOS-App weiter im Hintergrund ausgeführt werden.||

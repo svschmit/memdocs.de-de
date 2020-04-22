@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79342906"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Verwalten von Windows-PCs als Computer mit dem Intune-Softwareclient
@@ -46,10 +46,10 @@ Intune unterstützt die Verwaltung von Windows-PCs als Computer mit dem Software
 
 ## <a name="requirements-for-intune-pc-client-management"></a>Anforderungen für die Intune-PC-Clientverwaltung
 
-**Hardware:**  
+**Hardware**:  
 Im Folgenden sind die Hardwaremindestanforderungen zum Installieren der Intune-Clientsoftware aufgeführt:
 
-|Anforderungen|Weitere Informationen|
+|Anforderung|Weitere Informationen|
 |---------------|--------------------|
 |Netzwerk|Für den Client ist ein PC mit Internetzugriff erforderlich.|
 |Prozessor und Arbeitsspeicher|Weitere Informationen entnehmen Sie den Prozessor- und Arbeitsspeicheranforderungen des PC-Betriebssystems.|
@@ -58,11 +58,11 @@ Im Folgenden sind die Hardwaremindestanforderungen zum Installieren der Intune-C
 **Software**:  
 Im Folgenden sind die Softwareanforderungen zum Installieren der Clientsoftware aufgeführt:
 
-|Anforderungen|Weitere Informationen|
+|Anforderung|Weitere Informationen|
 |---------------|--------------------|
 |Betriebssystem | Auf dem Windows-Gerät muss Windows 7 SP1 und Windows 8.1 oder höher ausgeführt werden. </br></br>**Versionen der Home Edition werden nicht unterstützt.**|
 |Administratorrechte|Das Konto, mit dem die Clientsoftware installiert wird, muss über lokale Administratorrechte auf diesem Gerät verfügen.|
-|Windows Installer 3.1|Auf dem PC wird Windows Installer 3.1 oder höher benötigt.<br /><br />So zeigen Sie die Windows Installer-Version auf einem PC an:<br /><br />  Klicken Sie auf dem PC mit der rechten Maustaste auf **%windir%\System32\msiexec.exe**, und klicken Sie dann auf **Eigenschaften**.<br /><br />Sie können die neueste Version von Windows Installer von der Microsoft Developer Network-Website unter [Windows Installer Redistributables (Weitervertreibbare Komponenten für Windows Installer)](https://go.microsoft.com/fwlink/?LinkID=234258) herunterladen.|
+|Windows Installer 3.1|Auf dem PC wird Windows Installer 3.1 oder höher benötigt.<br /><br />So zeigen Sie die Windows Installer-Version auf einem PC an:<br /><br />  Klicken Sie auf dem PC mit der rechten Maustaste auf **%windir%\System32\msiexec.exe**, und klicken Sie dann auf **Eigenschaften**.<br /><br />Sie können die neueste Version von Windows Installer von der Microsoft Developer Network-Website unter [Windows Installer Redistributables (Weitervertreibbare Komponenten für Windows Installer)](https://go.microsoft.com/fwlink/?LinkID=234258) herunterladen.|
 |Entfernen nicht kompatibler Clientsoftware|Bevor Sie die Intune-Clientsoftware installieren, deinstallieren Sie sämtliche Clientsoftware für Configuration Manager, Operations Manager und Service Manager auf diesem PC.|
 
 ## <a name="deploying-the-intune-software-client"></a>Bereitstellen des Intune-Softwareclients

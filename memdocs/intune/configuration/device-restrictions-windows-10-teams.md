@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 31457667612617bb573ddfb145ed26f70de33159
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79361652"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Einstellungen für Geräteeinschränkungen für Windows 10 Team in Microsoft Intune
@@ -33,12 +33,12 @@ In diesem Artikel erhalten Sie Informationen zu den Einstellungen für Microsoft
 - **Anzeige von Besprechungsinformationen auf dem Willkommensbildschirm:** Aktivieren Sie diese Option, um die Informationen auszuwählen, die auf der Kachel „Besprechungen“ auf dem Willkommensbildschirm angezeigt werden. Sie können:
   - **Nur Organisator und Zeit anzeigen**
   - **Organisator, Zeit und Thema anzeigen (Thema bei privaten Besprechungen ausblenden)**
-- **URL für Hintergrundbild des Willkommensbildschirms:** Aktivieren Sie diese Einstellung, um auf dem **Willkommensbildschirm** von Windows 10 Team-Geräten einen benutzerdefinierten Hintergrund aus der angegebenen URL anzuzeigen.<br>Das Bild muss im PNG-Format vorliegen und die URL muss mit **https://** beginnen.
+- **URL für Hintergrundbild des Willkommensbildschirms:** Aktivieren Sie diese Einstellung, um auf dem **Willkommensbildschirm** von Windows 10 Team-Geräten einen benutzerdefinierten Hintergrund aus der angegebenen URL anzuzeigen.<br>Das Bild muss im PNG-Format vorliegen, und die URL muss mit **https://** beginnen.
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 
 - **Azure Operational Insights:** Azure Operational Insights ist Teil der Microsoft Operations Manager-Suite und sammelt, speichert und analysiert Protokolldateidaten von Windows 10-Team-Geräten.
-Sie müssen eine **Arbeitsbereichs-ID** und einen **Arbeitsbereichsschlüssel** angeben, um die Verbindung mit Azure Operational Insights herstellen zu können.
+Zum Herstellen einer Verbindung mit Azure Operational Insights geben Sie eine **Arbeitsbereichs-ID** und einen **Arbeitsbereichsschlüssel**  ein.
 
 ## <a name="maintenance"></a>Wartung
 

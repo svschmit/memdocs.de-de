@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a3d0335274604519da82146cab8837459e190801
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322841"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Verwenden von Intune zum Korrigieren von mit Microsoft Defender ATP identifizierten Sicherheitsrisiken
@@ -67,7 +67,7 @@ Ein Beispielworkflow:
 
 **Abonnements**:
 
-- Microsoft Intune  
+- Microsoft Intune  
 - Microsoft Defender Advanced Threat Protection ([Für eine kostenlose Testversion registrieren](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)
 
 **Intune-Konfigurationen für ATP**:

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696457"
 ---
 # <a name="device-management-overview"></a>Übersicht über die Geräteverwaltung
@@ -41,7 +41,7 @@ Die Antwort ist [Microsoft Intune](what-is-intune.md). Intune bietet die Verwalt
 
 Intune ist in Microsoft Azure und Microsoft 365 enthalten und lässt sich in Azure Active Directory (Azure AD) integrieren. Azure AD hilft bei der Kontrolle, welche Personen auf welche Daten Zugriff haben.
 
-## <a name="microsoft-intune"></a>Microsoft Intune
+## <a name="microsoft-intune"></a>Microsoft Intune
 
 Viele Unternehmen wie Microsoft verwenden Intune, um proprietäre Daten zu schützen, auf die Benutzer von ihren unternehmenseigenen und privaten mobilen Geräten aus zugreifen können. Intune enthält Konfigurationsrichtlinien für Geräte und Apps, Richtlinien für Softwareupdates und Installationsstatus (Diagramme, Tabellen und Berichte), die Ihnen helfen, den Datenzugriff zu schützen und zu überwachen.
 
@@ -59,7 +59,7 @@ Weitere Informationen zu Intune finden Sie unter [Was ist Microsoft Intune?](wha
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integration mit Diensten für Sicherheit und Schutz
 
-Eine Hauptaufgabe einer jeden Lösung für die Geräteverwaltung ist es, Sicherheit und Schutz zu bieten. Intune leistet bei der Integration mit anderen Diensten hervorragende Arbeit, um diese Aufgabe zu erfüllen. Beispiel:
+Eine Hauptaufgabe einer jeden Lösung für die Geräteverwaltung ist es, Sicherheit und Schutz zu bieten. Intune leistet bei der Integration mit anderen Diensten hervorragende Arbeit, um diese Aufgabe zu erfüllen. Beispiele:
 
 - **Microsoft 365** ist eine Schlüsselkomponente zur Vereinfachung gängiger IT-Aufgaben. Im Microsoft 365 Admin Center können Sie Benutzer erstellen und Gruppen verwalten. Außerdem erhalten Sie Zugriff auf andere Dienste wie z.B. Intune und Azure AD.
 
@@ -88,7 +88,7 @@ Das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?l
 
 Im Admin Center für die Geräteverwaltung haben Sie folgende Optionen:
 
-- [Registrieren von Geräten](../enrollment/device-enrollment.md)
+- [Geräte registrieren](../enrollment/device-enrollment.md)
 - [Festlegen der Gerätekonformität](../protect/device-compliance-get-started.md)
 - [Verwalten von Geräten](../remote-actions/device-management.md)
 - [Verwalten von Apps](../apps/app-management.md)  

@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fb8b5eae3c88664caff76da597fc3ab9111f989c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79343855"
 ---
-# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Schnellstart: Erstellen und Zuweisen einer App-Schutzrichtlinie
+# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Schnellstart: Erstellen und Zuweisen von App-Schutzrichtlinien
 
 In diesem Schnellstart erfahren Sie, wie Sie mithilfe von Intune eine App-Schutzrichtlinie erstellen und einer Client-App auf dem Gerät eines Endbenutzers zuweisen. Intune verwendet App-Schutzrichtlinien, um zu überprüfen, ob Ihre Apps die Datenschutzanforderungen Ihrer Organisation erfüllen.
 
@@ -49,7 +49,7 @@ Führen Sie die folgenden Schritte aus, um eine App-Schutzrichtlinie zu erstelle
     - **Name:** *Inhaltsschutz für Windows 10*
     - **Beschreibung:** *Benutzer, denen die Richtlinie zugewiesen ist, können in zugewiesenen Apps und anderen nicht verwalteten Apps auf dem Gerät keine Inhalte ausschneiden, kopieren oder einfügen.*
     - **Plattform**: *Windows 10*
-    - **Registrierungsstatus**: *Mit Registrierung*
+    - **Registrierungsstatus:** *Mit Registrierung*
 
 3. Klicken Sie auf **Protected apps** (Geschützte Apps), um die Apps auszuwählen, für die diese Richtlinie gelten soll.
 4. Klicken Sie auf **Apps hinzufügen**.

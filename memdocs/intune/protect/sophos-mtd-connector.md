@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526443"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Sophos Mobile Threat Defense-Connector mit Intune
@@ -77,7 +77,7 @@ Erkennen von Bedrohungen wie Man-in-the-Middle-Angriffe für Ihr Netzwerk und Sc
 *Zugriff erteilt nach der Behebung*:   
 ![Zugriff erteilt nach der Behebung](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png)  
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf Netzwerkbedrohungen
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf der Bedrohung für das Netzwerk
 
 Erkennen von Bedrohungen wie Man-in-the-Middle-Angriffe für Ihr Netzwerk und Verhindern der Synchronisierung von Unternehmensdateien basierend auf dem Geräterisiko.  
 

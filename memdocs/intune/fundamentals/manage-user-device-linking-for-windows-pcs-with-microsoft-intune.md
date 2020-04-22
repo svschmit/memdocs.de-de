@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 72b816938e803b28a06d3975f062f105d4c6a1cc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358740"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Verwalten von Verknüpfungen zwischen Benutzern und Geräten für Windows-PCs
@@ -42,7 +42,7 @@ So verknüpfen Sie einen Benutzer mit einem PC
 
    Im Dialogfeld **Benutzer verknüpfen** wird eine Liste verfügbarer Benutzer mit ihren Anzeigenamen, Benutzer-IDs und der Anzahl von PCs angezeigt, mit denen die Benutzer jeweils aktuell verknüpft sind. Wenn ein Benutzer bereits mit dem ausgewählten PC verknüpft ist, werden Name und Benutzer-ID des Benutzers unter **Aktueller Benutzer**angezeigt. Wenn der PC mit keinem Benutzer verknüpft ist, wird unter **Aktueller Benutzer** der Wert **Kein Benutzer**angezeigt.
 
-3. Führen Sie einen der folgenden Schritte aus:
+3. Führen Sie eines der folgenden Verfahren aus:
 
    - Wählen Sie **Abbrechen** aus, um die Verknüpfung des PC mit einem ggf. vorhandenen aktuellen Benutzer beizubehalten.
 

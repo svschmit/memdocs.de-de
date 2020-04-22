@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 71563a44e991e7324b9ce258d66d288d4b5a6cdb
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327263"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Einrichten der iOS-/iPadOS-Geräteregistrierung mit Apple Configurator
@@ -58,7 +58,7 @@ Ein Registrierungsprofil für Geräte definiert die Einstellungen, die während 
 
 3. Wählen Sie unter **Benutzeraffinität** aus, ob sich Geräte mit diesem Profil mit oder ohne einen zugewiesenen Benutzer registrieren müssen.
 
-    - **Mit Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die Benutzern gehören und das Unternehmensportal verwenden sollen, um Dienste wie z. B. die Installation von Apps nutzen zu können. Das Gerät muss mit dem Setup-Assistenten einem Benutzer zugewiesen werden und kann dann auf Unternehmensdaten und E-Mails zugreifen. Wird nur für die Registrierung des Setup-Assistenten unterstützt. Benutzeraffinität erfordert [den Endpunkt WS-Trust 13 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Weitere Informationen](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)
+    - **Mit Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die Benutzern gehören und das Unternehmensportal verwenden sollen, um Dienste wie z. B. die Installation von Apps nutzen zu können. Das Gerät muss mit dem Setup-Assistenten einem Benutzer zugewiesen werden und kann dann auf Unternehmensdaten und E-Mails zugreifen. Wird nur für die Registrierung des Setup-Assistenten unterstützt. Benutzeraffinität erfordert [den Endpunkt WS-Trust 13 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Erfahren Sie mehr](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
     - **Ohne Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die keinem einzelnen Benutzer zugeordnet sind. Verwenden Sie diese Option für Geräte, die Aufgaben ohne den Zugriff auf lokale Benutzerdaten ausführen. Apps, die eine Benutzerzugehörigkeit erfordern (einschließlich der Unternehmensportal-App, die für die Installation branchenspezifischer Apps verwendet wird), funktionieren nicht. Dies ist für die direkte Anmeldung erforderlich.
 
@@ -136,7 +136,7 @@ Nachdem Sie das Profil erstellt und die Seriennummern zugewiesen haben, müssen 
 10. Trennen Sie das USB-Kabel, wenn die Vorbereitung des iOS-/iPadOS-Geräts abgeschlossen ist.  
 
 ### <a name="distribute-devices"></a>Verteilen von Geräten
-Die Geräte sind nun bereit zur Unternehmensregistrierung. Schalten Sie die Geräte aus, und verteilen Sie sie an Benutzer. Wenn die Benutzer die Geräte einschalten, wird der Setup-Assistent gestartet.
+Die Geräte sind nun für die Unternehmensregistrierung bereit. Schalten Sie die Geräte aus, und verteilen Sie sie an Benutzer. Wenn die Benutzer die Geräte einschalten, wird der Setup-Assistent gestartet.
 
 Nachdem Benutzer ihre Geräte erhalten haben, müssen sie den Setup-Assistenten ausführen. Auf mit Benutzeraffinität konfigurierten Geräte kann die Unternehmensportal-App installiert und ausgeführt werden, um Apps herunterzuladen und Geräte zu verwalten.
 

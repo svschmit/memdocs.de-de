@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2e036e139e97ce033b3269ba0b8d5cf202fad773
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360027"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Abrufen von Daten aus der Intune-Data Warehouse-API mit einem REST-Client
@@ -81,7 +81,7 @@ Sie können mit der Intune-Data Warehouse-API und einem generischen REST-Client 
 
 Sie benötigen die folgenden Informationen für einen REST-Aufruf mit Postman:
 
-| Attribut        | Beschreibung                                                                                                                                                                          | Beispiel                                                                                       |
+| Attribut        | Description                                                                                                                                                                          | Beispiel                                                                                       |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Rückruf-URL     | Legen Sie dies auf der Seite „Einstellungen“ Ihrer App als die Rückruf-URL fest.                                                                                                                              | https://www.getpostman.com/oauth2/callback                                                    |
 | Tokenname       | Eine Zeichenfolge, mit der die Anmeldeinformationen der Azure-App übergeben werden. Der Prozess generiert Ihr Token, sodass Sie die Data Warehouse-API aufrufen können.                          | Bearer                                                                                        |

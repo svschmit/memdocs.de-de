@@ -17,17 +17,17 @@ search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3a769b1f1a0f11a4dd98c2f38e313012a7e2590b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79363576"
 ---
 # <a name="enrollment-options-for-devices-managed-by-intune"></a>Registrierungsoptionen für von Intune verwaltete Geräte
 
 Als Intune-Administrator können Sie die Geräteregistrierung konfigurieren, um Benutzer zu unterstützen und Intune-Funktionen zu aktivieren.  Intune umfasst folgende Registrierungsoptionen:
 
-## <a name="terms-and-conditions"></a>Nutzungsbedingungen
+## <a name="terms-and-conditions"></a>Geschäftsbedingungen
 
 Sie können festlegen, dass für Benutzer die Annahme der Geschäftsbedingungen Ihres Unternehmens erforderlich ist, bevor diese das Unternehmensportal verwenden können, um ihre Geräte zu registrieren und auf Ressourcen wie Unternehmens-Apps und -E-Mails zuzugreifen. Die Konfiguration der Geschäftsbedingungen ist optional. Weitere Informationen zu den [Nutzungsbedingungen](terms-and-conditions-create.md).
 
@@ -51,7 +51,7 @@ Sie können IMEI-Nummern (IMEI = International Mobile Equipment Identifier) und 
 
 Sie können Benutzer dazu auffordern, eine zusätzliche Überprüfungsmethode wie eine Telefonnummer, eine PIN oder biometrische Daten zu verwenden, wenn sie ein Gerät registrieren. Erfahren Sie mehr über die [mehrstufige Authentifizierung](multi-factor-authentication.md).
 
-## <a name="device-enrollment-manager"></a>Geräteregistrierungs-Manager
+## <a name="device-enrollment-manager"></a>Geräteregistrierungsmanager
 Sie können Benutzer zu Geräteregistrierungs-Managern machen.  DEM-Benutzer (DEM = Device Enrollment Manager, Geräteregistrierungs-Manager) können eine große Anzahl mobiler Geräte mit einem einzelnen Benutzerkonto registrieren. Das DEM-Konto kann bis zu 1.000 Geräte registrieren. Weitere Informationen zu [Geräteregistrierungs-Managern](device-enrollment-manager-enroll.md).
 
 ## <a name="device-categories"></a>Gerätekategorien

@@ -18,13 +18,13 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 91c79ae7ca7fc70c361fba0a7ad6becf8d035b5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362770"
 ---
-# <a name="help-end-users-understand-company-portal-app-messages"></a>Grundlegendes zum Verständnis von Meldungen in der Unternehmensportal-App
+# <a name="help-end-users-understand-company-portal-app-messages"></a>Unterstützen der Endbenutzer beim Verstehen von Meldungen in der Unternehmensportal-App
 
 > [!NOTE]
 > Die folgenden Informationen gelten nur für Geräte mit Android 6.0 und höher und iOS 10 und höher.
@@ -117,7 +117,7 @@ Verweisen Sie Ihre Benutzer an [Senden von Protokollen an Ihren IT-Administrator
 
 ### <a name="where-it-appears"></a>Position in der Oberfläche
 
-Wenn Sie die Unternehmensportal-App nicht zur Liste **Zulässige Apps** oder **Ausgenommene Apps** hinzugefügt haben, und ein Benutzer versucht, sich anzumelden, schlägt die Anmeldung fehl. Es wird die folgende Meldung angezeigt:
+Wenn Sie die Unternehmensportal-App nicht zur Liste **Zulässige Apps** oder **Ausgenommene Apps** hinzugefügt haben, und ein Benutzer versucht, sich anzumelden, schlägt die Anmeldung fehl. Die folgende Meldung wird angezeigt:
 
 > **Der Support Ihres Unternehmens muss Ihnen Zugriff auf Unternehmensressourcen gewähren**  
 > Ihr Unternehmen verwendet Windows Information Protection-Richtlinien, um Ihr Gerät zu schützen. Der Support Ihres Unternehmens muss sicherstellen, dass die Unternehmensportal-App auf diese Ressourcen zugreifen kann.

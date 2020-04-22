@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8ac931bf20140865e1185c4f401de0141273cdb3
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359403"
 ---
 # <a name="use-custom-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Verwenden benutzerdefinierter Einstellungen für iOS- und iPadOS-Geräte in Microsoft Intune
@@ -56,13 +56,13 @@ Dieser Artikel enthält eine Anleitung zur Verwendung von Apple Configurator und
 
 ## <a name="custom-configuration-profile-settings"></a>Einstellungen für das benutzerdefinierte Konfigurationsprofil
 
-- **Name des benutzerdefinierten Konfigurationsprofils**: Geben Sie einen Namen für die Richtlinie ein. Dieser Name wird auf dem Gerät und im Intune-Status angezeigt.
-- **Konfigurationsprofildatei**: Navigieren Sie zum Konfigurationsprofil, das Sie mit Apple Configurator oder dem Apple-Profil-Manager erstellt haben. Die maximale Dateigröße beträgt `1000000` Bytes (annähernd 1 MB). Die importierte Datei wird im Bereich **Dateiinhalt** angezeigt.
+- **Name des benutzerdefinierten Konfigurationsprofils:** Geben Sie einen Namen für die Richtlinie ein. Dieser Name wird auf dem Gerät und im Intune-Status angezeigt.
+- **Konfigurationsprofildatei:** Navigieren Sie zum mit Apple Configurator oder dem Apple-Profil-Manager erstellten Konfigurationsprofil. Die maximale Dateigröße beträgt `1000000` Bytes (annähernd 1 MB). Die importierte Datei wird im Bereich **Dateiinhalt** angezeigt.
 
   Sie können Ihren benutzerdefinierten Konfigurationsdateien auch Gerätetoken hinzufügen. Gerätetoken werden verwendet, um gerätespezifische Informationen hinzuzufügen. Geben Sie zum Beispiel zur Anzeige der Seriennummer `{{serialnumber}}` ein. Auf dem Gerät wird ein Text angezeigt, der für jedes Gerät eindeutig ist und der etwa folgendermaßen aussieht: `123456789ABC`. Achten Sie darauf, bei der Eingabe von Variablen geschweifte Klammern `{{ }}` zu verwenden. [App-Konfigurationstoken](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) umfassen eine Reihe von Variablen, die Sie nutzen können. Zudem können Sie `deviceid` oder einen anderen gerätespezifischen Wert verwenden.
 
   > [!NOTE]
-  > Variablen werden in der Benutzeroberfläche nicht überprüft, und die Groß-/Kleinschreibung muss beachtet werden. Daher gibt es möglicherweise Profile, die mit fehlerhaften Eingaben gespeichert wurden. Wenn Sie beispielsweise `{{DeviceID}}` anstelle von `{{deviceid}}` eingeben, wird die Zeichenfolge anstelle der eindeutigen Geräte-ID angezeigt. Stellen Sie sicher, dass die eingegebenen Informationen korrekt sind.
+  > Variablen werden in der Benutzeroberfläche nicht überprüft, und die Groß-/Kleinschreibung muss beachtet werden. Daher gibt es möglicherweise Profile, die mit fehlerhaften Eingaben gespeichert wurden. Wenn Sie beispielsweise `{{DeviceID}}` anstelle von `{{deviceid}}` eingeben, wird die Zeichenfolge anstelle der eindeutigen Geräte-ID angezeigt. Vergewissern Sie sich, dass die eingegebenen Informationen korrekt sind.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

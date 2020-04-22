@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 851fea24f101d313dba3426e5d65c60c5f31fdb5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355581"
 ---
 # <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Behandlung von Problemen bei Softwareupdates in Microsoft Intune
@@ -48,7 +48,7 @@ Dieses Problem kann auftreten, wenn ersetzte Updates (Updates, die durch ein and
 3. Lehnen Sie alle ersetzten Updates ab, die für Windows 7 oder für Anwendungen (z.B. Microsoft Office) gelten, die auf den betroffenen Clients installiert wurden.
 4. Starten Sie die betroffenen Clients neu.
 
-Wenn Sie Windows 7 ausführen, stellen Sie sicher, dass Sie das folgende Update installiert haben:[3050265 Windows-Update-Client für Windows 7: Juni 2015](https://support.microsoft.com/kb/3050265).
+Wenn Sie Windows 7 ausführen, stellen Sie sicher, dass Sie das folgende Update installiert haben:[3050265 Windows Update-Client für Windows 7: Juni 2015](https://support.microsoft.com/kb/3050265).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

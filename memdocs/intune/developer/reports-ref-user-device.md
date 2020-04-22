@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6127b365a04ad48a9cbaa98bdef821c4d1334181
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339890"
 ---
 # <a name="reference-for-user-device-association-entity"></a>Verweis für die Entität „Benutzergerätezuordnung“
@@ -32,11 +32,11 @@ Die Entität **userDeviceAssociation** enthält Zuordnungen von Benutzergeräten
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 
 
-|        Name        |                                           Beschreibung                                            |        Beispiel         |
+|        Name        |                                           Description                                            |        Beispiel         |
 |--------------------|--------------------------------------------------------------------------------------------------|------------------------|
 |      userKey       |              Eindeutiger Bezeichner für den Benutzer im Data Warehouse (Ersatzschlüssel)               |          123           |
 |     deviceKey      |                      Eindeutiger Bezeichner für das Gerät im Data Warehouse                      |          123           |
-| CreatedDateTimeUTC |           Datum und Uhrzeit, als die Benutzergerätezuordnung erstellt wurde Verwendet UTC-Format           | 23.11.2016 12:00:00 Uhr |
+| CreatedDateTimeUTC |           Datum und Uhrzeit, als die Benutzergerätezuordnung erstellt wurde Verwendet UTC-Format           | 23.11.2016 12:00:00 |
 |     isDeleted      | Gibt an, dass der Benutzer dieses Geräts die Registrierung aufgehoben hat und die Zuordnung nicht mehr aktuell ist |       Wahr/falsch       |
 |  EndedDateTimeUTC  |              Datum und Uhrzeit in UTC, als IsDeleted in <strong>TRUE</strong> geändert wurde               | 23.06.2017, 12:00:00 Uhr |
 

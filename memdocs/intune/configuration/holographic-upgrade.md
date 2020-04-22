@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f4e809a888fc2696e54540ee6baa2271d7340579
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79361054"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Aktualisieren von Geräten, die Windows Holographic ausführen, auf Windows Holographic for Business
@@ -33,11 +33,11 @@ Weitere Informationen zu diesem Feature finden Sie unter [Verwenden eines Konfig
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie eine Gerätekonfigurationsprofil.](edition-upgrade-configure-windows-10.md#create-the-profile)
+[Erstellen Sie ein Profil für die Gerätekonfiguration.](edition-upgrade-configure-windows-10.md#create-the-profile)
 
 ## <a name="edition-upgrade"></a>Upgrade der Edition
 
-- **Edition, auf die das Upgrade erfolgen soll**: Wählen Sie **Windows 10 Holographic for Business** aus.
+- **Edition, auf die ein Upgrade durchgeführt wird:** Wählen Sie **Windows 10 Holographic for Business** aus.
 - **Lizenzdatei**: Navigieren Sie zu der XML-Lizenzdatei, die für Sie bereitgestellt wurde, und wählen Sie sie aus.
 
   ![Geben Sie den Namen der XML-Datei ein, die die Holographic for Business-Lizenzinformationen enthält.](./media/holographic-upgrade/Holographic-edition-upgrade.png)

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 16b7cc65ae043fb48b7f500bfcd65195c7ff7561
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355698"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Endpoint Protection-Probleme und mögliche Lösungen in Microsoft Intune
@@ -37,7 +37,7 @@ Dieser Artikel beschreibt mögliche Ursachen und Lösungen für die einige Fehle
 
 ### <a name="endpoint-protection-engine-unavailable"></a>Die Endpoint Protection-Engine ist nicht verfügbar
 
-**Mögliche Ursache:** Die Endpoint Protection-Engine von Intune wurde beschädigt oder gelöscht.
+**Mögliche Ursache**: Die Endpoint Protection-Engine von Intune wurde beschädigt oder gelöscht.
 
 **Mögliche Lösungen**:
 
@@ -80,7 +80,7 @@ Es wurde seit 14 Tagen keine vollständige Überprüfung oder Schnellüberprüfu
 
 Eine andere Endpoint Protection-Anwendung wird ausgeführt, und das Gerät befindet sich in einem fehlerfreien Zustand.
 
-**Mögliche Lösungen**: Wenn bereits eine andere Endpunktschutzanwendung installiert ist und Intune diese Anwendung erkennt, wird das Geräte möglicherweise instabil.
+**Mögliche Lösungen**: Wenn bereits eine andere Endpoint Protection-Anwendung installiert ist und Intune diese Anwendung erkennt, wird das Geräte möglicherweise instabil.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -16,10 +16,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326744"
 ---
 # <a name="intune-reports"></a>Intune-Berichte
@@ -103,7 +103,7 @@ Führen Sie die folgenden Schritte aus, um den Bericht zu den **Trends** abzuruf
     ![Intune-Trendbericht](./media/intune-reports/intune-reports-03.png)
 
 ## <a name="azure-monitor-integration-reports-specialist"></a>Integrationsberichte für Azure Monitor (spezialisiert)
-Sie können Ihre eigenen Berichte im Hinblick auf die Daten anpassen, die Sie benötigen. Alternativ können Sie auch die Daten in Ihren Berichten mithilfe von [Log Analytics](reports.md#log-analytics) und [Azure Monitor-Arbeitsmappen](reports.md#workbooks) über [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) abrufen. Mit diesen Lösungen können Sie Warnungen konfigurieren sowie benutzerdefinierte Abfragen und Dashboards erstellen, auf denen die Daten zur Gerätekonformität Ihren Anforderungen entsprechend angezeigt werden. Zudem können Sie Aktivitätsprotokolle in Ihrem Azure Storage-Konto speichern, über [SIEM-Tools (Security Information & Event Management)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration) in die Berichte integrieren und eine Korrelation zwischen den Berichten und Azure Active Directory-Aktivitätsprotokollen herstellen. Azure Monitor-Arbeitsmappen können zusätzlich zu importierten Dashboards zur benutzerdefinierten Berichterstellung verwendet werden.
+Sie können Ihre eigenen Berichte im Hinblick auf die Daten anpassen, die Sie benötigen. Alternativ können Sie auch die Daten in Ihren Berichten mithilfe von [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/overview) und [Azure Monitor-Arbeitsmappen](reports.md#log-analytics) über [Azure Monitor](reports.md#workbooks) abrufen. Mit diesen Lösungen können Sie Warnungen konfigurieren sowie benutzerdefinierte Abfragen und Dashboards erstellen, auf denen die Daten zur Gerätekonformität Ihren Anforderungen entsprechend angezeigt werden. Zudem können Sie Aktivitätsprotokolle in Ihrem Azure Storage-Konto speichern, über [SIEM-Tools (Security Information & Event Management)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration) in die Berichte integrieren und eine Korrelation zwischen den Berichten und Azure Active Directory-Aktivitätsprotokollen herstellen. Azure Monitor-Arbeitsmappen können zusätzlich zu importierten Dashboards zur benutzerdefinierten Berichterstellung verwendet werden.
 
 > [!NOTE]
 > Für komplexe Berichterstellungsfunktionen ist ein Azure-Abonnement erforderlich.

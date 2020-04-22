@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: b6ef9fbb3db775dd6e0a29ac33e82dce4efd5dce
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346169"
 ---
 # <a name="resolve-a-threat-found-by-zimperium-zips"></a>Auflösen einer von Zimperium zIPS erkannten Bedrohung
@@ -51,4 +51,4 @@ Wenn Sie eine App installieren, die als Bedrohung für Ihr Gerät angesehen wird
 
 Zum Auflösen der Warnung wählen Sie die App in der Liste der Bedrohungen in Zimperium zIPS aus. Führen Sie dann die angezeigten Anweisungen aus, um die App zu entfernen und zu deinstallieren.  
 
-Benötigen Sie weitere Unterstützung? Kontaktieren Sie die Supportabteilung Ihres Unternehmens. Sie finden entsprechende Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).   
+Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Sie finden entsprechende Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).   

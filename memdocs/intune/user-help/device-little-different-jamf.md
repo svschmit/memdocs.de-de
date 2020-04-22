@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 84fe8a6d5a21b643fcf8bd51161f7b03211ad6ac
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79348600"
 ---
 # <a name="performing-actions-on-a-macos-device-managed-by-jamf"></a>Ausführen von Aktionen auf einem macOS-Gerät, das von Jamf verwaltet wird
@@ -35,4 +35,4 @@ __Maßnahmen bei Anzeige der Meldungen „AccountNotOnboarded“ oder „Das Ger
 
 Wenn Sie die Unternehmensportal-App geöffnet haben und die Meldung „AccountNotOnboarded“ angezeigt wird, müssen Sie die Unternehmensportal-App beenden und zu **Anwendungen** > **Self-Service** navigieren. Ihr Unternehmen verfügt über eine Geräteregistrierungsrichtlinie, die Sie installieren müssen. Klicken Sie zum Installieren auf die Richtlinie, und öffnen Sie das Unternehmensportal dann erneut.
 
-Benötigen Sie weitere Unterstützung? Kontaktieren Sie die Supportabteilung Ihres Unternehmens. Sie finden entsprechende Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Sie finden entsprechende Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).

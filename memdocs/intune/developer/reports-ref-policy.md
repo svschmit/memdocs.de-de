@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5a2f13bddb852b46459c9c79df39dda49ef9549d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339916"
 ---
 # <a name="reference-for-policy-entities"></a>Referenz für Richtlinienentitäten
@@ -37,22 +37,22 @@ Die Kategorie **policies** enthält Entitäten für mobile Geräte, die folgende
 
 Die Entität **policy** listet Gerätekonfigurationsprofile, Appkonfigurationsprofile und Kompatibilitätsrichtlinien auf. Sie können die Richtlinien mit der mobilen Geräteverwaltung (MDM) zu einer Gruppe in Ihrem Unternehmen zuweisen.
 
-| Eigenschaft  | Beschreibung | Beispiel |
+| Eigenschaft  | Description | Beispiel |
 |---------|------------|--------|
 | policyKey |Eindeutiger Schlüssel, der die Richtlinie im Data Warehouse darstellen soll |123 |
 | policyId |Eindeutiger Bezeichner der Richtlinie im Data Warehouse |b66bc706-ffff-7437-0340-032819502773 |
 | policyName |Name der Richtlinie |"Windows 10-Baseline" |
 | policyVersion |Version der Richtlinie Wenn die Richtlinie bearbeitet oder geändert wird, wird eine neuere Version erstellt. |1, 2, 3 |
 | isDeleted |Gibt an, ob der Richtliniendatensatz aktualisiert wurde.  <br>Wahr: Richtlinie verfügt über einen neuen Datensatz mit aktualisierten Feldern. <br>Falsch: der neueste Datensatz für diese Richtlinie. |Wahr/falsch |
-| startDateInclusiveUTC |Datum und Uhrzeit in UTC, als diese Richtlinie im Data Warehouse erstellt wurde |23.11.2016 12:00:00 Uhr |
-| deletedDateUTC |Datum und Uhrzeit in UTC, als IsDeleted in TRUE geändert wurde |23.11.2016 12:00:00 Uhr |
-| rowLastModifiedDateTimeUTC |Datum und Uhrzeit in UTC, als diese Richtlinie zuletzt im Data Warehouse geändert wurde |23.11.2016 12:00:00 Uhr |
+| startDateInclusiveUTC |Datum und Uhrzeit in UTC, als diese Richtlinie im Data Warehouse erstellt wurde |23.11.2016 12:00:00 |
+| deletedDateUTC |Datum und Uhrzeit in UTC, als IsDeleted in TRUE geändert wurde |23.11.2016 12:00:00 |
+| rowLastModifiedDateTimeUTC |Datum und Uhrzeit in UTC, als diese Richtlinie zuletzt im Data Warehouse geändert wurde |23.11.2016 12:00:00 |
 
 ## <a name="policytypes"></a>policyTypes
 
 Die Entität **policyType** listet Gerätekonfigurationsprofile, Appkonfigurationsprofile und Kompatibilitätsrichtlinien auf. Sie können die Richtlinien mit der mobilen Geräteverwaltung (MDM) zu einer Gruppe in Ihrem Unternehmen zuweisen.
 
-| Eigenschaft  | Beschreibung | Beispiel |
+| Eigenschaft  | Description | Beispiel |
 |---------|------------|--------|
 | policyTypeId |Eindeutiger Bezeichner der Richtlinie im Quellsystem |123 |
 | policyTypeKey |Eindeutiger Bezeichner der Richtlinie im Data Warehouse |1 |
@@ -62,20 +62,20 @@ Die Entität **policyType** listet Gerätekonfigurationsprofile, Appkonfiguratio
 
 Die Entität **deviceConfigurationProfileDeviceActivity** listet die Anzahl der **Geräte** mit dem Zustand „erfolgreich“, „ausstehend“, „fehlerhaft“ oder „Fehler“ pro Tag auf. Die Anzahl gibt die Gerätekonfigurationsprofile an, die der Entität zugewiesen sind. Wenn ein **Gerät** beispielsweise den Zustand „erfolgreich“ für alle zugewiesenen Richtlinien aufweist, wird der Zähler für „erfolgreich“ für diesen Tag um eins erhöht. Wenn einem Gerät zwei Profile zugewiesen sind, von denen eines den Zustand „erfolgreich“ und eines den Zustand „Fehler“ aufweist, erhöht die Entität den Zähler für „erfolgreich“ und versetzt das Gerät in den Zustand „Fehler“. Die Entität listet für die letzten 30 Tage auf, wie viele Geräte an einem bestimmten Tag in welchem Zustand waren.
 
-| Eigenschaft  | Beschreibung | Beispiel |
+| Eigenschaft  | Description | Beispiel |
 |---------|------------|--------|
 | dateKey |Date Key für den Zeitpunkt als das Einchecken der Gerätekonfigurationsprofile im Data Warehouse aufgezeichnet wurde |20160703 |
-| pending |Anzahl eindeutiger Geräte im Zustand „ausstehend“ |123 |
+| Ausstehend |Anzahl eindeutiger Geräte im Zustand „ausstehend“ |123 |
 | Erfolgreich |Anzahl eindeutiger Geräte im Zustand „erfolgreich“ |12 |
 | Fehler |Anzahl eindeutiger Geräte im Zustand „Fehler“ |10 |
 | Gescheitert |Anzahl eindeutiger Geräte im Zustand „fehlerhaft“ |2 |
 
 Die Entität **deviceConfigurationProfileUserActivity** listet die Anzahl der **Benutzer** mit dem Zustand „erfolgreich“, „ausstehend“, „fehlerhaft“ oder „Fehler“ pro Tag auf. Die Anzahl gibt die Gerätekonfigurationsprofile an, die der Entität zugewiesen sind. Wenn ein **Benutzer** beispielsweise den Zustand „erfolgreich“ für alle zugewiesenen Richtlinien aufweist, wird der Zähler für „erfolgreich“ für diesen Tag um eins erhöht. Wenn einem Benutzer zwei Profile zugewiesen sind, von denen eines den Zustand „erfolgreich“ und eines den Zustand „Fehler“ aufweist, wird der Benutzer für den Zustand „Fehler“ gezählt.  Die Entität **deviceConfigurationProfileUserActivity** listet für die letzten 30 Tage auf, wie viele Benutzer an einem bestimmten Tag in welchem Zustand waren.
 
-| Eigenschaft  | Beschreibung | Beispiel |
+| Eigenschaft  | Description | Beispiel |
 |---------|------------|--------|
 | dateKey |Date Key für den Zeitpunkt als das Einchecken der Gerätekonfigurationsprofile im Data Warehouse aufgezeichnet wurde |20160703 |
-| pending |Anzahl eindeutiger Benutzer im Zustand „ausstehend“ |123 |
+| Ausstehend |Anzahl eindeutiger Benutzer im Zustand „ausstehend“ |123 |
 | Erfolgreich |Anzahl eindeutiger Benutzer im Zustand „erfolgreich“ |12 |
 | Fehler |Anzahl eindeutiger Benutzer im Zustand „Fehler“ |10 |
 | Gescheitert |Anzahl eindeutiger Benutzer im Zustand „fehlerhaft“ |2 |
@@ -84,12 +84,12 @@ Die Entität **deviceConfigurationProfileUserActivity** listet die Anzahl der **
 
 Die Entität **policyTypeActivity** listet die Gesamtzahl der Geräte im Zustand „erfolgreich“, „ausstehend“, „fehlerhaft“ oder „Fehler“ auf. Diese Zustände werden im Bezug auf ein Gerätekonfigurationsprofil, ein Appkonfigurationsprofil oder eine Kompatibiliätsrichtlinie pro Tag aufgelistet.
 
-| Eigenschaft  | Beschreibung | Beispiel |
+| Eigenschaft  | Description | Beispiel |
 |---------|------------|--------|
 | dateKey |„dateKey“ für den Zeitpunkt, zu dem das Einchecken des Gerätekonfigurationsprofils im Data Warehouse aufgezeichnet wurde. |20160703 |
 | policyKey |„policyKey“ kann mit „policy“ verknüpft werden, um den „policyName“ zu erhalten. |Windows 10-Baseline |
 | policyTypeKey |Der Typ des Richtlinienschlüssels kann mit dem Richtlinientyp verknüpft werden, um den Namen des Richtlinientyps zu erhalten. |Windows 10-Kompatibilitätsrichtlinien |
-| pending |Anzahl eindeutiger Geräte im Zustand „ausstehend“ |123 |
+| Ausstehend |Anzahl eindeutiger Geräte im Zustand „ausstehend“ |123 |
 | Erfolgreich |Anzahl eindeutiger Geräte im Zustand „erfolgreich“ |12 |
 | Fehler |Anzahl eindeutiger Geräte im Zustand „Fehler“ |10 |
 | Gescheitert |Anzahl eindeutiger Geräte im Zustand „fehlerhaft“ |2 |
@@ -103,7 +103,7 @@ Die API-Referenz der Konformitätsrichtlinie enthält Entitäten, die Statusinfo
 In der folgenden Tabelle sind die Zuweisungsstatus der Konformitätsrichtlinien von Geräten zusammengefasst. Es ist die Anzahl der Geräte aufgeführt, die in jedem Konformitätszustand zu finden sind.
 
 
-|Eigenschaft     |Beschreibung  |Beispiel  |
+|Eigenschaft     |Description  |Beispiel  |
 |---------|---------|---------|
 |dateKey  |Datumsschlüssel, der angibt, wann die Zusammenfassung für die Konformitätsrichtlinie erstellt wurde|20161204 |
 |unknown  |Anzahl der Geräte, die offline sind oder aus einem anderen Grund nicht mit Intune oder Azure AD kommunizieren können |5|
@@ -119,7 +119,7 @@ In der folgenden Tabelle sind die Zuweisungsstatus der Konformitätsrichtlinien 
 
 
 
-|Eigenschaft  |Beschreibung  |Beispiel  |
+|Eigenschaft  |Description  |Beispiel  |
 |---------|---------|---------|
 |dateKey  |Datumsschlüssel, der angibt, wann die Zusammenfassung für die Konformitätsrichtlinie erstellt wurde|20161219|
 |policyKey     |Schlüssel für die Konformitätsrichtlinie, für die die Zusammenfassung erstellt wurde |10178 |
@@ -136,7 +136,7 @@ In der folgenden Tabelle sind die Zuweisungsstatus der Konformitätsrichtlinien 
 Die folgende Tabelle enthält die Plattformtypen aller zugewiesenen Richtlinien. Plattformtypen von Richtlinien, die noch nie Geräten zugewiesen waren, sind in dieser Tabelle nicht aufgeführt.
 
 
-|Eigenschaft  |Beschreibung  |Beispiel  |
+|Eigenschaft  |Description  |Beispiel  |
 |---------|---------|---------|
 |policyPlatformTypeKey      |Der eindeutige Schlüssel für den Plattformtyp der Richtlinie |20170519 |
 |policyPlatformTypeId      |Der eindeutige Bezeichner für den Plattformtyp der Richtlinie|1|
@@ -146,11 +146,11 @@ Die folgende Tabelle enthält die Plattformtypen aller zugewiesenen Richtlinien.
 
 In der folgenden Tabelle ist die Anzahl der Geräte mit dem Zustand „erfolgreich“, „ausstehend“, „fehlerhaft“ oder „Fehler“ pro Tag aufgeführt. Die Anzahl spiegelt die Daten pro Richtlinientypprofil wider. Wenn ein Gerät beispielsweise den Zustand „erfolgreich“ für alle zugewiesenen Richtlinien aufweist, wird der Zähler für „erfolgreich“ für diesen Tag um eins erhöht. Wenn einem Gerät zwei Profile zugewiesen sind, von denen eines den Zustand „erfolgreich“ und eines den Zustand „Fehler“ aufweist, erhöht die Entität den Zähler für „erfolgreich“ und versetzt das Gerät in den Zustand „Fehler“. Die Entität „policyDeviceActivity“ listet für die letzten 30 Tage auf, wie viele Geräte an einem bestimmten Tag in welchem Zustand waren.
 
-|Eigenschaft  |Beschreibung  |Beispiel  |
+|Eigenschaft  |Description  |Beispiel  |
 |---------|---------|---------|
 |dateKey|Date Key für den Zeitpunkt als das Einchecken der Gerätekonfigurationsprofile im Data Warehouse aufgezeichnet wurde|20160703|
-|pending|Anzahl eindeutiger Geräte im Zustand „ausstehend“|123|
-|Erfolgreich|Anzahl eindeutiger Geräte im Zustand „erfolgreich“|12|
+|Ausstehend|Anzahl eindeutiger Geräte im Zustand „ausstehend“|123|
+|Succeeded|Anzahl eindeutiger Geräte im Zustand „erfolgreich“|12|
 |policyKey|„policyKey“ kann mit „policy“ verknüpft werden, um den „policyName“ zu erhalten.|Windows 10-Baseline|
 |Fehler|Anzahl eindeutiger Geräte im Zustand „Fehler“|10|
 |Gescheitert|Anzahl eindeutiger Geräte im Zustand „fehlerhaft“|2|
@@ -160,10 +160,10 @@ In der folgenden Tabelle ist die Anzahl der Geräte mit dem Zustand „erfolgrei
 In der folgenden Tabelle ist die Anzahl der Benutzer mit dem Zustand „erfolgreich“, „ausstehend“, „fehlerhaft“ oder „Fehler“ pro Tag aufgeführt. Die Anzahl spiegelt die Daten pro Richtlinientypprofil wider. Wenn ein Benutzer beispielsweise den Zustand „erfolgreich“ für alle zugewiesenen Richtlinien aufweist, wird der Zähler für „erfolgreich“ für diesen Tag um eins erhöht. Wenn einem Benutzer zwei Profile zugewiesen sind, von denen eines den Zustand „erfolgreich“ und eines den Zustand „Fehler“ aufweist, wird der Benutzer für den Zustand „Fehler“ gezählt. Die Entität PolicyUserActivity listet für die letzten 30 Tage auf, wie viele Benutzer an einem bestimmten Tag in welchem Zustand waren.
 
 
-| Eigenschaft  |                                         Beschreibung                                         |       Beispiel       |
+| Eigenschaft  |                                         Description                                         |       Beispiel       |
 |-----------|---------------------------------------------------------------------------------------------|---------------------|
 |  dateKey  | Date Key für den Zeitpunkt als das Einchecken der Gerätekonfigurationsprofile im Data Warehouse aufgezeichnet wurde |      20160703       |
-|  pending  |                         Anzahl eindeutiger Geräte im Zustand „ausstehend“                          |         123         |
+|  Ausstehend  |                         Anzahl eindeutiger Geräte im Zustand „ausstehend“                          |         123         |
 | Erfolgreich |                         Anzahl eindeutiger Geräte im Zustand „erfolgreich“                          |         12          |
 | policyKey |                 „policyKey“ kann mit „policy“ verknüpft werden, um den „policyName“ zu erhalten.                 | Windows 10-Baseline |
 |   Fehler   |                          Anzahl eindeutiger Geräte im Zustand „Fehler“                           |         10          |

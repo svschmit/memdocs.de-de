@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f9bf88dd3a30caeb57b10e0c88c6954d1479d4f2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349406"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Wandera Mobile Threat Defense-Connector mit Intune  
@@ -90,11 +90,11 @@ Erkennen Sie Bedrohungen Ihres Netzwerks, wie etwa Man-in-the-Middle-Angriffe, u
 
 *Zugriff erteilt nach der Behebung*:  
 
-![Zugriff nach Beseitigung gewährt](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
+![Zugriff erteilt nach der Behebung](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
 
-## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf Netzwerkbedrohungen
+## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf der Bedrohung für das Netzwerk
 
-Erkennen Sie Bedrohungen für Ihr Netzwerk wie Man-in-the-Middle-Angriffe, und verhindern Sie die Synchronisierung von Unternehmensdateien basierend auf den Risiken für Geräte.
+Erkennen von Bedrohungen Ihres Netzwerks, wie etwa Man-in-the-Middle-Angriffen, und Verhindern der Synchronisierung von Unternehmensdateien auf der Grundlage des Geräterisikos.
 
 *Blockieren von SharePoint Online bei Erkennung von Bedrohungen für das Netzwerk*:  
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696290"
 ---
 # <a name="see-device-details-in-intune"></a>Anzeigen von Gerätedetails in Intune
@@ -68,7 +68,7 @@ Je nach Netzbetreiber der Geräte werden möglicherweise nicht alle Details erfa
 > [!Note]  
 > Der Hardware- und Softwarebestand wird im Intune-Dienst alle 7 Tage aktualisiert.
 
-|Detail|Beschreibung|Plattform| 
+|Detail|Description|Plattform| 
 |--------------|----------------------|----|  
 |Name|Der Name des Geräts.|Windows, iOS|
 |Verwaltungsname|Der Gerätename, der nur in der Konsole verwendet wird. Durch das Ändern dieses Namens wird nicht gleichzeitig der Name des Geräts geändert.|Windows, iOS|

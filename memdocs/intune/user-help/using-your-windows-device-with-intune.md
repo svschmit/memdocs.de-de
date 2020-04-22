@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 3b3420dce8ea9d21b955e36506229817420cdbf0
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084173"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Verwenden Ihres Windows-Geräts mit dem Intune-Unternehmensportal
@@ -42,7 +42,7 @@ Das Unternehmensportal unterstützt derzeit Geräte, die unter folgenden Windows
 * Windows 10 (Home, Pro, Education, S Modus und Enterprise-Versionen)
 * Windows Phone 8.1 und höher
 * Windows 8.1 RT
-* Windows 8.1
+* Windows 8,1
 
 Auch einige andere Versionen von Windows, z.B. [Windows 10 Holographic](https://www.microsoft.com/hololens), werden vom Unternehmensportal unterstützt. Diese Versionen werden jedoch in diesem Artikel nicht behandelt, weil sie nur für sehr spezifische Zwecke konzipiert sind.
 
@@ -65,7 +65,7 @@ Auch einige andere Versionen von Windows, z.B. [Windows 10 Holographic](https://
 * [Auflösen von Einschränkungen eines Zugriffspunkts](resolve-access-point-restrictions.md)
 * [Die Registrierung meines Windows 10-Geräts funktioniert nicht](troubleshoot-your-windows-10-device-windows.md)
 * [Meine Windows-Version wird nicht unterstützt](your-windows-version-isnt-yet-supported.md)
-* [Aktualisieren Ihres Windows-Geräts](you-need-to-update-your-windows-device.md)
+* [Aktualisieren meines Windows-Geräts](you-need-to-update-your-windows-device.md)
 * [Senden von Protokollen an die bzw. von der Unternehmensportal-App](send-logs-to-your-it-admin-cp-windows.md)
 * [Senden von Protokollen von der Einstellungs-App](send-logs-to-your-it-admin-settings-windows.md)
 * [Installieren von Office 365 auf meinem Windows 10-Gerät](install-office-windows.md)
@@ -73,7 +73,7 @@ Auch einige andere Versionen von Windows, z.B. [Windows 10 Holographic](https://
 * [Mein Gerät benötigt Antischadsoftware](your-device-needs-antimalware-software.md)
 * [Aktivieren des sicheren Starts](you-need-to-enable-secure-boot-windows.md)
 * [Aktivieren der Codeintegrität](you-need-to-enable-code-integrity.md)
-* [Aktivieren der Windows Defender Firewall](you-need-to-enable-defender-firewall-windows.md)
+* [Windows Firewall aktivieren](you-need-to-enable-defender-firewall-windows.md)
 * [Aktivieren der Benutzerzugriffssteuerung](you-need-to-enable-uac-windows.md)
 * [Aktualisieren von Betriebssystem-Buildversionen](you-need-to-update-os-build-version-windows.md)
 * [Aktivieren von Windows Defender](turn-on-defender-windows.md)

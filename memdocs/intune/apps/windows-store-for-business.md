@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 02f90fc0cd249062f878b5a18481f6a6a73228af
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323379"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Verwalten von VPP-Apps (Apple Volume Purchase Program) aus Microsoft Store für Unternehmen mit Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Im [Microsoft Store für Unternehmen](https://www.microsoft.com/business-store) können Sie Apps für Ihre Organisation suchen und einzeln oder im Rahmen eines Volumenprogramms erwerben. Indem Sie den Store mit Microsoft Intune verbinden, können Sie im Rahmen von per Volumenlizenz erworbenen Apps über das Azure-Portal verwalten. Beispiel:
+Im [Microsoft Store für Unternehmen](https://www.microsoft.com/business-store) können Sie Apps für Ihre Organisation suchen und einzeln oder im Rahmen eines Volumenprogramms erwerben. Indem Sie den Store mit Microsoft Intune verbinden, können Sie im Rahmen von per Volumenlizenz erworbenen Apps über das Azure-Portal verwalten. Beispiele:
 
 * Sie können die Liste der Apps, die Sie im Speicher erworben haben (oder die kostenlos sind), mit Intune synchronisieren.
 * Synchronisierte Apps werden in der Intune-Verwaltungskonsole angezeigt und können wie alle anderen Apps zugewiesen werden.
@@ -64,7 +64,7 @@ Bevor Sie die Synchronisierung in der Intune-Konsole aktivieren, müssen Sie Ihr
 3. Wenn Sie nicht ausdrücklich **Microsoft Intune** als Verwaltungstool für mobile Geräte angegeben haben, wählen Sie **Verwaltungstool hinzufügen** aus, um **Microsoft Intune** hinzuzufügen. Wenn Sie nicht **Microsoft Intune** als Ihr Verwaltungstool für mobile Geräte aktiviert haben, klicken Sie neben **Microsoft Intune** auf **Aktivieren**. Beachten Sie, dass Sie **Microsoft Intune** statt **Microsoft Intune-Registrierung** aktivieren sollten.
 
 > [!NOTE]
-> Zuvor konnten Sie nur ein Verwaltungstool zum Zuweisen von Apps mit Microsoft Store für Unternehmen zuweisen. Nun können Sie mehrere Verwaltungstools dem Store zuordnen, z.B. Intune und Configuration Manager.
+> Zuvor konnten Sie nur ein Verwaltungstool zum Zuweisen von Apps mit Microsoft Store für Unternehmen zuweisen. Sie können dem Store jetzt mehrere Verwaltungstools zuordnen, z. B. Intune und Configuration Manager.
 
 Sie können nun fortfahren und die Synchronisierung in der Intune-Konsole einrichten.
 

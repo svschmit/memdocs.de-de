@@ -18,10 +18,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
 ms.openlocfilehash: cb88ddf489fbcf588d3abbaffae545dc46d91b7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326578"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrieren von Windows Hello for Business in Microsoft Intune  
@@ -82,7 +82,7 @@ Nutzen Sie die Informationen in diesem Artikel, um eine Windows Hello for Busine
 
      - **Zulässig**. Benutzer können den Zeichentyp in ihrer PIN verwenden, aber es ist nicht zwingend erforderlich.
 
-     - **Erforderlich**. Benutzer müssen mindestens einen der Zeichentypen in ihrer PIN verwenden. Beispielsweise ist es üblich, die Verwendung mindestens eines Großbuchstabens und eines Sonderzeichens vorzuschreiben.
+     - **Erforderlich** Benutzer müssen mindestens einen der Zeichentypen in ihrer PIN verwenden. Beispielsweise ist es üblich, die Verwendung mindestens eines Großbuchstabens und eines Sonderzeichens vorzuschreiben.
 
      - **Nicht zulässig** (Standard). Benutzer dürfen diese Zeichentypen in ihrer PIN nicht verwenden. (Dies trifft auch zu, wenn die Einstellung nicht konfiguriert ist.)
 
@@ -111,7 +111,7 @@ Nutzen Sie die Informationen in diesem Artikel, um eine Windows Hello for Busine
 
    - **Anmeldung per Telefon zulassen:**
 
-     Wenn diese Option auf **Ja** festgelegt ist, können die Benutzer einen Remote-Passport als tragbares Begleitgerät für die Authentifizierung von Desktopcomputern verwenden. Der Desktopcomputer muss mit Azure Active Directory verknüpft sein, und das Begleitgerät muss mit einer Windows Hello for Business-PIN konfiguriert werden.
+     Wenn diese Option auf **Ja** festgelegt ist, können die Benutzer einen Remote-Passport als tragbares Begleitgerät für die Authentifizierung von Desktopcomputern verwenden. Der Desktopcomputer muss Azure Active Directory angehören, und das Begleitgerät muss mit einer Windows Hello for Business-PIN konfiguriert werden.
 
 ## <a name="windows-holographic-for-business-support"></a>Unterstützung durch Windows Holographic for Business
 

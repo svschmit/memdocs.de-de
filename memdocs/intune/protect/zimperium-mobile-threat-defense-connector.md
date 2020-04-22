@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed623abeb602e599866af7b7249756edd87d5a29
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349198"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Zimperium Mobile Threat Defense-Connector in Intune
@@ -80,7 +80,7 @@ Wenn Apps, die Schadsoftware enthalten, auf Geräten erkannt werden, können Sie
 > [!div class="mx-imgBorder"]
 > ![Darstellung des Szenarios, wenn Apps mit Schadsoftware erkannt werden](./media/zimperium-mobile-threat-defense-connector/Maliciousapps-blocked-zimperium.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 > [!div class="mx-imgBorder"]
 > ![Darstellung des Szenarios, wenn der Zugriff nach der Behebung wieder erteilt wird](./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png)
@@ -94,12 +94,12 @@ Erkennen Sie Bedrohungen wie **Man-in-the-Middle** im Netzwerk, und schützen Si
 > [!div class="mx-imgBorder"]
 > ![Blockieren des Netzwerkzugriffs über WLAN](./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 > [!div class="mx-imgBorder"]
 > ![Zugriff erteilt nach der Behebung](./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf Netzwerkbedrohungen
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf der Bedrohung für das Netzwerk
 
 Erkennen von Bedrohungen wie **Man-in-the-Middle** im Netzwerk und Verhindern der Synchronisierung von Unternehmensdateien auf der Grundlage des Geräterisikos.
 
@@ -108,7 +108,7 @@ Erkennen von Bedrohungen wie **Man-in-the-Middle** im Netzwerk und Verhindern de
 > [!div class="mx-imgBorder"]
 > ![Blockieren von SharePoint Online bei Erkennung von Bedrohungen für das Netzwerk](./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 > [!div class="mx-imgBorder"]
 > ![Zugriff erteilt nach der Behebung für SharePoint – Beispiel](./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png)
@@ -135,4 +135,4 @@ Nach der Behebung wird der Zugriff wieder erteilt:
 
 - [Aktivieren des Zimperium MTD-Connectors](mtd-connector-enable.md)
 
-- [Erstellen einer Mobile Threat Defense-App-Schutzrichtlinie (MTD) mit Intune](../protect/mtd-app-protection-policy.md)
+- [Erstellen einer MTD-App-Schutzrichtlinie](../protect/mtd-app-protection-policy.md)

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7de306a7d4f632b3eedf321323e12c7ad95b713
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79341957"
 ---
 # <a name="protecting-application-extensions"></a>Schützen von Anwendungserweiterungen
@@ -64,7 +64,7 @@ Wenn die LinkedIn-Integration für Ihren Mandanten aktiviert ist und Benutzer Ih
 Wenn ein Benutzer seine Zustimmung gibt, seine Daten zwischen den Konten zu teilen, werden vorhandene Microsoft Graph-APIs wie bei Office-Add-Ins für die LinkedIn-Integration verwendet. Bei der LinkedIn-Integration wird nur ein Teil der APIs verwendet, die für Office-Add-Ins verfügbar sind, und verschiedene Ausnahmen werden unterstützt.
 
 
-|Microsoft Graph-Berechtigungen  |Beschreibung  |
+|Microsoft Graph-Berechtigungen  |Description  |
 |---------|---------|
 |Liest Berechtigungen für [Personen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#people-permissions)     |Ermöglicht der App, eine bewertete Liste von Personen zu lesen, die für den angemeldeten Benutzer relevant sind. Diese Liste kann lokale Kontakte, Kontakte aus sozialen Netzwerken oder dem Verzeichnis Ihrer Organisation und Personen aus aktuellen Kommunikationen (z.B. E-Mail und Skype) enthalten.         |
 |Liest Berechtigungen für [Kalender](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Ermöglicht der App, Ereignisse in Benutzerkalendern zu lesen. Enthält die Besprechungen in angemeldeten Benutzerkalendern, ihre Uhrzeiten, Orte und Teilnehmer.         |
@@ -72,7 +72,7 @@ Wenn ein Benutzer seine Zustimmung gibt, seine Daten zwischen den Konten zu teil
 |Subscriptions     |Dieser Bereich ist nicht verfügbar und wird noch nicht verwendet. Darin sind Abonnements enthalten, die von der Organisation des Benutzers für Microsoft-Apps und -Dienste bereitgestellt werden, z.B. Office 365.         |
 |Einblicke     |Dieser Bereich ist nicht verfügbar und wird noch nicht verwendet. Darin sind Interessen enthalten, die dem angemeldeten Benutzerkonto basierend auf der Verwendung von Microsoft-Diensten zugeordnet werden können.         |
 
-### <a name="learn-more"></a>Erfahren Sie mehr
+### <a name="learn-more"></a>Weitere Informationen
 
 - Erfahren Sie mehr über [LinkedIn-Informationen und -Features in Ihren Microsoft-Apps](https://go.microsoft.com/fwlink/?linkid=850740).
 - Erfahren Sie mehr über die Veröffentlichung von LinkedIn-Kontoverbindungen über die [Office 365-Roadmap](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 

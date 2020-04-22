@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae24c8cad5ccee06444ffec6a4cd8b39b3371b49
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b8872efe661f01d2cc286282c38953739711982b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327286"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397695"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Einrichten der Intune-Registrierung für dedizierte Android Enterprise-Geräte
 
@@ -39,7 +39,7 @@ Geräte, die Sie auf diese Weise verwalten, werden ohne Benutzerkonto in Intune 
 
 Geräte müssen diese Anforderungen erfüllen, um als dediziertes Android Enterprise-Gerät verwaltet zu werden:
 
-- Android-Betriebssystemversion 5.1 und höher.
+- Mindestens Android-Betriebssystemversion 6.0.
 - Geräte müssen eine Android-Verteilung ausführen, die über GMS-Konnektivität (Google Mobile Services) verfügt. Geräte müssen über GMS verfügen und dazu in der Lage sein, eine Verbindung mit GMS herzustellen.
 
 ## <a name="set-up-android-enterprise-dedicated-device-management"></a>Einrichten der Verwaltung von dedizierten Android Enterprise-Geräten
@@ -62,7 +62,7 @@ Sie müssen ein Registrierungsprofil erstellen, damit Sie Ihre dedizierten Gerä
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Android** > **Android-Registrierung** > **Unternehmenseigene dedizierte Geräte**.
 2. Klicken Sie auf **Erstellen**, und füllen Sie die erforderlichen Felder aus.
     - **Name:** Geben Sie einen Namen ein, den Sie zum Zuweisen des Profils zu einer dynamischen Gerätegruppe verwenden.
-    - **Datum für Tokenablauf**: Der Ablaufzeitpunkt des Tokens. Google erzwingt maximal 90 Tage.
+    - **Datum für Tokenablauf:** Das Datum, an dem das Token abläuft. Google erzwingt maximal 90 Tage.
 3. Wählen Sie **Erstellen** aus, um das Profil zu speichern.
 
 ### <a name="create-a-device-group"></a>Erstellen einer Gerätegruppe
@@ -71,12 +71,12 @@ Sie können Apps und Richtlinien auf zugewiesene oder dynamische Gerätegruppen 
 
 1. Melden Sie sich im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Gruppen** > **Alle Gruppen** > **Neue Gruppe**.
 2. Füllen Sie auf dem Blatt **Gruppe** die erforderlichen Felder wie folgt aus:
-    - **Gruppentyp**: Sicherheit
-    - **Gruppenname**: Geben Sie einen aussagekräftigen Namen ein (z.B. Factory 1-Geräte)
-    - **Mitgliedschaftstyp**: Dynamisches Gerät
+    - **Gruppentyp:** Sicherheit
+    - **Gruppenname:** Geben Sie einen aussagekräftigen Namen ein (z.B. Factory 1-Geräte)
+    - **Mitgliedschaftstyp:** Dynamisches Gerät
 3. Klicken Sie auf **Dynamische Abfrage hinzufügen**.
 4. Füllen Sie die Felder auf dem Blatt **Dynamische Mitgliedschaftsregeln** wie folgt aus:
-    - **Regel für dynamische Mitgliedschaft hinzufügen**: Einfache Regel
+    - **Regel für dynamische Mitgliedschaft hinzufügen:** Einfache Regel
     - **Geräte hinzufügen, wobei:** enrollmentProfileName
     - Klicken Sie im mittleren Feld auf **Ist gleich**.
     - Geben Sie im letzten Feld den Namen des Registrierungsprofils ein, das Sie zuvor erstellt haben.
@@ -85,8 +85,8 @@ Sie können Apps und Richtlinien auf zugewiesene oder dynamische Gerätegruppen 
 
 ### <a name="replace-or-remove-tokens"></a>Ersetzen oder Entfernen von Token
 
-- **Token ersetzen**: Sie können ein neues Token bzw. einen neuen QR-Code generieren, wenn das Ablaufdatum sich nähert, indem Sie „Token ersetzen“ verwenden.
-- **Token widerrufen**: Sie können das Token bzw. den QR-Code sofort für ungültig erklären. Von diesem Zeitpunkt an kann das Token bzw. der QR-Code nicht mehr verwendet werden. Sie können diese Option verwenden, wenn Sie:
+- **Token ersetzen:** Sie können ein neues Token bzw. einen neuen QR-Code generieren, wenn das Ablaufdatum sich nähert, indem Sie „Token ersetzen“ verwenden.
+- **Token widerrufen:** Sie können das Token bzw. den QR-Code sofort ablaufen lassen. Von diesem Zeitpunkt an kann das Token bzw. der QR-Code nicht mehr verwendet werden. Sie können diese Option verwenden, wenn Sie:
   - das Token bzw. den QR-Code versehentlich mit nicht autorisierten Personen geteilt haben
   - alle Registrierungen abgeschlossen haben und das Token bzw. den QR-Code nicht mehr benötigen
 

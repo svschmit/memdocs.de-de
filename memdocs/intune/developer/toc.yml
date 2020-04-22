@@ -1,6 +1,6 @@
 - name: Anleitung für Entwickler
   href: index.yml
-- name: Anleitungen
+- name: Schrittanleitungen
   expanded: true
   items:
     - name: Schützen von Apps mit dem Intune App SDK

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084842"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Hinzufügen und Zuweisen von Mobile Threat Defense-Apps (MTD) mit Intune
@@ -96,7 +96,7 @@ Wählen Sie den Abschnitt aus, der Ihrem MTD-Anbieter entspricht:
 ### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>Konfigurieren von Symantec Endpoint Protection Mobile-Apps
 
 - **Android**
-  - Sehen Sie sich die Anleitungen für [das Hinzufügen von Android Store-Apps zu Microsoft Intune](../apps/store-apps-android.md) an. Verwenden Sie diese [App-Store-URL zu SEP Mobile](https://play.google.com/store/apps/details?id=com.skycure.skycure) für die **App-Store-URL**.  Wählen Sie für **Mindestens erforderliches Betriebssystem** die Option **Android 4.0 (Ice Cream Sandwich)** aus.
+  - Sehen Sie sich die Anleitungen für [das Hinzufügen von Android Store-Apps zu Microsoft Intune](../apps/store-apps-android.md) an. Verwenden Sie diese [App Store-URL zu SEP Mobile](https://play.google.com/store/apps/details?id=com.skycure.skycure) für die **App Store-URL**.  Wählen Sie für **Mindestens erforderliches Betriebssystem** die Option **Android 4.0 (Ice Cream Sandwich)** aus.
 
 - **iOS**
   - Sehen Sie sich die Anleitungen für [das Hinzufügen von iOS Store-Apps zu Microsoft Intune](../apps/store-apps-ios.md) an. Verwenden Sie diese [App Store-URL zu SEP Mobile](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) für die **App Store-URL**.
@@ -107,12 +107,12 @@ Wählen Sie den Abschnitt aus, der Ihrem MTD-Anbieter entspricht:
   - Sehen Sie sich die Anleitungen für [das Hinzufügen von Android Store-Apps zu Microsoft Intune](../apps/store-apps-android.md) an. Verwenden Sie diese [App-Store-URL zu Check Point SandBlast Mobile](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) als **App-Store-URL**.
 
 - **iOS**
-  - Sehen Sie sich die Anleitungen für [das Hinzufügen von iOS Store-Apps zu Microsoft Intune](../apps/store-apps-ios.md) an. Verwenden Sie diese [App Store-URL zu Check Point SandBlast Mobile](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) als **App-Store-URL**.  
+  - Sehen Sie sich die Anleitungen für [das Hinzufügen von iOS Store-Apps zu Microsoft Intune](../apps/store-apps-ios.md) an. Verwenden Sie diese [App-Store-URL zu Check Point SandBlast Mobile](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) als **App-Store-URL**.  
 
 ### <a name="configure-zimperium-apps"></a>Konfigurieren von Zimperium-Apps
 
 - **Android**
-  - Sehen Sie sich die Anleitungen für [das Hinzufügen von Android Store-Apps zu Microsoft Intune](../apps/store-apps-android.md) an. Verwenden Sie diese [App-Store-URL zu Zimperium](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) für die **App-Store-URL**.
+  - Sehen Sie sich die Anleitungen für [das Hinzufügen von Android Store-Apps zu Microsoft Intune](../apps/store-apps-android.md) an. Verwenden Sie diese [App Store-URL zu Zimperium](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) für die **App Store-URL**.
 
 - **iOS**
   - Sehen Sie sich die Anleitungen für [das Hinzufügen von iOS Store-Apps zu Microsoft Intune](../apps/store-apps-ios.md) an. Verwenden Sie diese [App Store-URL zu Zimperium](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) für die **App Store-URL**.  
@@ -120,7 +120,7 @@ Wählen Sie den Abschnitt aus, der Ihrem MTD-Anbieter entspricht:
 ### <a name="configure-pradeo-apps"></a>Konfigurieren von Pradeo-Apps
 
 - **Android**
-  - Sehen Sie sich die Anleitungen für [das Hinzufügen von Android Store-Apps zu Microsoft Intune](../apps/store-apps-android.md) an. Verwenden Sie diese [App-Store-URL zu Pradeo](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) für die **App-Store-URL**.
+  - Sehen Sie sich die Anleitungen für [das Hinzufügen von Android Store-Apps zu Microsoft Intune](../apps/store-apps-android.md) an. Verwenden Sie diese [App Store-URL zu Pradeo](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) für die **App Store-URL**.
 
 - **iOS**
   - Sehen Sie sich die Anleitungen für [das Hinzufügen von iOS Store-Apps zu Microsoft Intune](../apps/store-apps-ios.md) an. Verwenden Sie diese [App Store-URL zu Pradeo](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) für die **App Store-URL**.
@@ -144,7 +144,7 @@ Wählen Sie den Abschnitt aus, der Ihrem MTD-Anbieter entspricht:
 ### <a name="configure-wandera-apps"></a>Konfigurieren von Wandera-Apps
 
 - **Android**
-  - Sehen Sie sich die Anleitungen für [das Hinzufügen von Android Store-Apps zu Microsoft Intune](../apps/store-apps-android.md) an. Verwenden Sie diese [App-Store-URL zu Wandera Mobile](https://play.google.com/store/apps/details?id=com.wandera.android) für die **App-Store-URL**. Wählen Sie für **Mindestens erforderliches Betriebssystem** die Option **Android 5.0** aus.
+  - Sehen Sie sich die Anleitungen für [das Hinzufügen von Android Store-Apps zu Microsoft Intune](../apps/store-apps-android.md) an. Verwenden Sie diese [App Store-URL zu Wandera Mobile](https://play.google.com/store/apps/details?id=com.wandera.android) für die **App Store-URL**. Wählen Sie für **Mindestens erforderliches Betriebssystem** die Option **Android 5.0** aus.
 
 - **iOS**
   - Sehen Sie sich die Anleitungen für [das Hinzufügen von iOS Store-Apps zu Microsoft Intune](../apps/store-apps-ios.md) an. Verwenden Sie diese [App Store-URL zu Wandera Mobile](https://itunes.apple.com/app/wandera/id605469330) für die **App Store-URL**.

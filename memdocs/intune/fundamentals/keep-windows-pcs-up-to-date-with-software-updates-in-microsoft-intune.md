@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a1a5b291135f5c6d42a47377d14d6d3d4f13411
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362328"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Aktualisieren Ihrer Windows-PCs mit Softwareupdates in Microsoft Intune
@@ -57,15 +57,15 @@ In den folgenden Tabellen sind die Werte, die Sie in der Richtlinie konfiguriere
 
   |Richtlinieneinstellung|Details|
     |------------------|--------------------|
-    |**Häufigkeit der Suche nach Updates und Anwendungen (Stunden)** |Gibt an, wie häufig (8 bis 22 Stunden) Intune Überprüfungen auf neue Updates und Anwendungen ausführt.<br /><br />Empfohlener Wert: **8** Stunden|
-    |**Automatische Installation von Updates und Anwendungen oder Installation auf Aufforderung** |Hiermit wird festgelegt, ob Updates automatisch installiert werden, oder ob vor der Installation eine Benutzeraufforderung angezeigt wird. Darüber hinaus können Sie mit dieser Einstellung die Installation von Updates und Anwendungen planen.<br /><br />**Mit der automatischen Installation von Updates und Anwendungen nach Plan** werden Updates und Anwendungen unter Berücksichtigung des angegebenen Zeitplans installiert.<br /><br />**Automatische Wartung für Windows-Computer verwenden** ist eine abhängige Richtlinieneinstellung und gibt an, dass Updates und Anwendungen während des automatischen Wartungsfensters von Windows installiert werden.<br /><br />Mit **Benutzer zur Installation auffordern** wird der Benutzer zur Installation aufgefordert, wenn Updates bereitstehen.<br /><br />Empfohlene Werte:<br /><br />**Updates und Anwendungen automatisch wie geplant installieren** aktiviert<br /><br />**Geplanter Tag: Täglich**<br /><br />**Geplante Uhrzeit: 3:00 Uhr**<br /><br />**Automatische Wartung für Windows-Computer verwenden** aktiviert|
-    |**Sofortige Installation von Updates zulassen, die Windows nicht unterbrechen** |**Zulassen** installiert Updates sofort nach dem Herunterladen, außer Updates, die Windows unterbrechen oder neu starten würden. Diese Updates werden entsprechend der Konfiguration der Einstellung **Automatische Installation oder Updateinstallation nach Aufforderung** installiert.<br /><br />Durch **Nicht zulassen** werden Updates entsprechend der Konfiguration der Einstellung **Automatische Installation von Updates oder Installation auf Aufforderung** installiert.<br /><br />Empfohlener Wert: **Zulassen** |
-    |**Verzögerung des Windows-Neustarts nach der Installation geplanter Updates und Anwendungen (in Minuten)** |Hiermit wird angegeben, wie lange nach der Installation geplanter Updates und Anwendungen gewartet werden soll, bevor Windows neu gestartet wird. Der Wertebereich liegt zwischen 1 und 30 Minuten.<br /><br />Empfohlener Wert: **15 Minuten** |
-    |**Verzögerung nach einem Windows-Neustart bis zum Beginn der Installation verpasster geplanter Updates und Anwendungen (Minuten)** |Hiermit wird festgelegt, wie viel Zeit nach einem Windows-Neustart verstreichen darf, bis mit der Installation von Updates und Anwendungen begonnen wird, wenn ein geplantes Update verpasst wurde. Der Wertebereich liegt zwischen 1 und 60 Minuten.<br /><br />Empfohlener Wert: **5 Minuten**|
+    |**Häufigkeit der Suche nach Updates und Anwendungen (Stunden)** |Gibt an, wie häufig (8 bis 22 Stunden) Intune Überprüfungen auf neue Updates und Anwendungen ausführt.<br /><br />Empfohlener Wert: **8** Stunden.|
+    |**Automatische Installation von Updates und Anwendungen oder Installation auf Aufforderung** |Hiermit wird festgelegt, ob Updates automatisch installiert werden, oder ob vor der Installation eine Benutzeraufforderung angezeigt wird. Darüber hinaus können Sie mit dieser Einstellung die Installation von Updates und Anwendungen planen.<br /><br />**Mit der automatischen Installation von Updates und Anwendungen nach Plan** werden Updates und Anwendungen unter Berücksichtigung des angegebenen Zeitplans installiert.<br /><br />**Automatische Wartung für Windows-Computer verwenden**  ist eine abhängige Richtlinieneinstellung und gibt an, dass Updates und Anwendungen während des automatischen Wartungsfensters von Windows installiert werden.<br /><br />Mit **Benutzer zur Installation auffordern** wird der Benutzer zur Installation aufgefordert, wenn Updates bereitstehen.<br /><br />Empfohlene Werte:<br /><br />**Updates und Anwendungen automatisch wie geplant installieren** aktiviert<br /><br />**Geplant am: Täglich**<br /><br />**Geplante Zeit: 03:00 Uhr**<br /><br />**Automatische Wartung für Windows-Computer verwenden** aktiviert|
+    |**Sofortige Installation von Updates zulassen, die Windows nicht unterbrechen** |**Zulassen** installiert Updates sofort nach dem Herunterladen, außer Updates, die Windows unterbrechen oder neu starten würden. Diese Updates werden entsprechend der Konfiguration der Einstellung **Automatische Installation oder Updateinstallation nach Aufforderung** installiert.<br /><br />Durch **Nicht zulassen** werden Updates entsprechend der Konfiguration der Einstellung **Automatische Installation von Updates oder Installation auf Aufforderung** installiert.<br /><br />Empfohlener Wert: **Allow** |
+    |**Verzögerung des Windows-Neustarts nach der Installation geplanter Updates und Anwendungen (in Minuten)** |Hiermit wird angegeben, wie lange nach der Installation geplanter Updates und Anwendungen gewartet werden soll, bevor Windows neu gestartet wird. Der Wertebereich liegt zwischen 1 und 30 Minuten.<br /><br />Empfohlener Wert: **15 Minuten** |
+    |**Verzögerung nach einem Windows-Neustart bis zum Beginn der Installation verpasster geplanter Updates und Anwendungen (Minuten)** |Hiermit wird festgelegt, wie viel Zeit nach einem Windows-Neustart verstreichen darf, bis mit der Installation von Updates und Anwendungen begonnen wird, wenn ein geplantes Update verpasst wurde. Der Wertebereich liegt zwischen 1 und 60 Minuten.<br /><br />Empfohlener Wert: **5 Minuten**|
     |**Angemeldetem Benutzer die Steuerung des Windows-Neustarts nach der Installation geplanter Updates und Anwendungen gestatten** |Hiermit wird angegeben, ob der angemeldete Benutzer den Neustart von Windows verzögern kann (Einstellung **Ja**) oder über den automatischen Neustart von Windows benachrichtigt wird (Einstellung **Nein**). Wenn zum Zeitpunkt der Installation geplanter Updates und Anwendungen kein Benutzer angemeldet ist, wird Windows bei Bedarf automatisch neu gestartet. Bei der Einstellung **Nein**ist die Zeit bis zum Windows-Neustart standardmäßig auf 5 Minuten festgelegt.<br /><br />Empfohlener Wert: **Ja**|
     |**Benutzer zum Neustarten von Windows während obligatorischer Updates des Client-Agents von Microsoft Intune auffordern** |Hiermit wird festgelegt, ob angemeldete Benutzer zum Neustart von Windows aufgefordert werden, wenn ein obligatorisches Update des Intune-Clients einen Windows-Neustart erfordert.<br /><br />Empfohlener Wert: **Ja**|
     |**Zeitplan für die Installation von obligatorischen Updates des Client-Agents von Microsoft Intune** |Hiermit wird geplant, wann die Installation von Clientupdates stattfindet.<br /><br />Empfohlener Wert: "nicht konfiguriert"|
-    |**Verzögerung zwischen Aufforderungen zum Neustart von Windows nach Installation geplanter Updates und Anwendungen (in Minuten)** |Hiermit wird angegeben, wie häufig der Benutzer aufgefordert wird, Windows neu zu starten, wenn nach der Installation eines Updates oder eine Anwendung ein Windows-Neustart erforderlich ist und der Benutzer diesen Neustart verzögert. Der Wertebereich liegt zwischen 1 und 1440 Minuten.<br /><br />Empfohlener Wert: **30 Minuten** |
+    |**Verzögerung zwischen Aufforderungen zum Neustart von Windows nach Installation geplanter Updates und Anwendungen (in Minuten)** |Hiermit wird angegeben, wie häufig der Benutzer aufgefordert wird, Windows neu zu starten, wenn nach der Installation eines Updates oder eine Anwendung ein Windows-Neustart erforderlich ist und der Benutzer diesen Neustart verzögert. Der Wertebereich liegt zwischen 1 und 1440 Minuten.<br /><br />Empfohlener Wert: **30 Minuten** |
 
 ## <a name="update-software-made-by-microsoft"></a>Aktualisieren von Microsoft-Software
 Das Aktualisieren von Microsoft-Software ist sehr unkompliziert. Bevor Sie jedoch beginnen, müssen Sie zweierlei konfigurieren:
@@ -80,7 +80,7 @@ Bereiten Sie die Verwendung von Softwareupdates mithilfe der folgenden beiden Ve
 
 1. Klicken Sie in der [Microsoft Intune-Verwaltungskonsole](https://manage.microsoft.com/) auf **Admin** &gt; **Updates**.
 
-2. Wählen Sie auf der Seite **Diensteinstellungen: Updates** in der Liste **Produktkategorie** die Updatekategorien aus, die Sie auf den Computern verfügbar machen möchten. Beachten Sie, dass die am häufigsten verwendeten Updates standardmäßig aktiviert sind.
+2. Wählen Sie auf der Seite **Diensteinstellungen: Updates** in der Liste **Produktkategorie** die Updatekategorien aus, die Sie auf Computern verfügbar machen möchten. Beachten Sie, dass die am häufigsten verwendeten Updates standardmäßig aktiviert sind.
 
     > [!IMPORTANT]
     > Damit sichergestellt ist, dass Computer die vom Administrator genehmigten Updates erhalten, darf die Windows Server Update Services-Gruppenrichtlinieneinstellung **Internen Pfad für den Microsoft Updatedienst angeben** auf die bei Intune registrierten Computer nicht angewendet werden.
@@ -93,7 +93,7 @@ Bereiten Sie die Verwendung von Softwareupdates mithilfe der folgenden beiden Ve
 
 1. Klicken Sie in der [Microsoft Intune-Verwaltungskonsole](https://manage.microsoft.com/) auf **Admin** &gt; **Updates**.
 
-2. Klicken Sie im Bereich **Regel zur automatischen Genehmigung** auf der Seite **Servereinstellungen: Updates** auf **Neu**.
+2. Wählen Sie im Abschnitt **Automatische Genehmigungsregeln** der Seite **Servereinstellungen: Updates** **Neu** aus.
 
 3. Geben Sie auf der Seite **Allgemein** des Assistenten zum Erstellen von automatischen Genehmigungsregeln einen Namen und optional eine Beschreibung für die Regeln an.
 
@@ -114,7 +114,7 @@ Bereiten Sie die Verwendung von Softwareupdates mithilfe der folgenden beiden Ve
 
 7. Überprüfen Sie auf der Seite **Zusammenfassung** die Einstellungen für die neue Regel, und wählen Sie anschließend **Fertig stellen** aus.
 
-Die neue Regel wird im Bereich **Regel zur automatischen Genehmigung** auf der Seite **Diensteinstellungen: Updates** angezeigt.
+Die neue Regel wird im Bereich **Automatische Genehmigungsregeln** auf der Seite **Diensteinstellungen: Updates** angezeigt.
 
 > [!NOTE]
 > Wenn Sie eine automatische Genehmigungsregel erstellen, gilt diese nur für künftige Updates. In Intune bereits vorhandene Updates werden nicht automatisch genehmigt. Zum Genehmigen dieser Updates müssen Sie die automatische Genehmigungsregel ausführen.

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 17b120faa0021a1fc044d7831b4b81ea88f404a7
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526579"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Lookout Mobile Endpoint Security-Connector mit Intune
@@ -83,7 +83,7 @@ Wenn Apps, die Schadsoftware enthalten, auf Geräten erkannt werden, können Sie
 > [!div class="mx-imgBorder"]
 > ![Darstellung der Richtlinie, die den Zugriff aufgrund von Apps mit Schadsoftware blockiert](./media/lookout-mobile-threat-defense-connector/malicious-apps-blocked.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 > [!div class="mx-imgBorder"]
 > ![Darstellung des gewährten Zugriffs auf Geräte nach der Beseitigung](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
@@ -97,26 +97,26 @@ Erkennen Sie Bedrohungen Ihres Netzwerks, wie etwa Man-in-the-Middle-Angriffe, u
 > [!div class="mx-imgBorder"]
 > ![Darstellung des blockierten WLAN-Zugriffs basierend auf Netzwerkbedrohungen](./media/lookout-mobile-threat-defense-connector/network-wifi-blocked.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 > [!div class="mx-imgBorder"]
 > ![Darstellung des bedingten Zugriffs, der nach Beseitigung der Bedrohung den Zugriff gewährt](./media/lookout-mobile-threat-defense-connector/network-wifi-unblocked.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf Netzwerkbedrohungen
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf der Bedrohung für das Netzwerk
 
-Erkennen Sie Bedrohungen für Ihr Netzwerk wie Man-in-the-Middle-Angriffe, und verhindern Sie die Synchronisierung von Unternehmensdateien basierend auf den Risiken für Geräte.
+Erkennen von Bedrohungen Ihres Netzwerks, wie etwa Man-in-the-Middle-Angriffen, und Verhindern der Synchronisierung von Unternehmensdateien auf der Grundlage des Geräterisikos.
 
 *Blockieren des Zugriffs auf SharePoint Online bei Erkennen von Bedrohungen für das Netzwerk*
 
 > [!div class="mx-imgBorder"]
 > ![Darstellung des blockierten Zugriffs auf SharePoint Online](./media/lookout-mobile-threat-defense-connector/network-spo-blocked.png)
 
-*Zugriff nach Beseitigung gewährt:*
+*Nach Korrektur erteilter Zugriff:*
 
 > [!div class="mx-imgBorder"]
 > ![Darstellung des gewährten Zugriffs, nachdem die Netzwerkbedrohung beseitigt wurde](./media/lookout-mobile-threat-defense-connector/network-spo-unblocked.png)
 
-### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Steuern des Zugriffs auf nicht registrierte Geräte bei Bedrohungen durch Apps mit Schadsoftware
+### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Steuern des Zugriffs auf nicht registrierte Geräte bei Bedrohungen durch böswillige Apps
 
 Wenn die MTD-Lösung von Lookout for Work ein Gerät für infiziert hält:
 > [!div class="mx-imgBorder"]

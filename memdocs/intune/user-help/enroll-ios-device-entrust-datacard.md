@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 763d67c393eede1920f356e54d6ab422bc75a480
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e1f1c04bed91de3ac193ea3b6a07bde4e8658ba
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348496"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81638251"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>Einrichten eines iOS- oder iPadOS-Geräts beim Unternehmensportal und bei Entrust Datacard
 
@@ -33,7 +34,7 @@ Während der Registrierung installieren Sie auch abgeleitete Anmeldeinformatione
 
 Sie müssen wahrscheinlich abgeleitete Anmeldeinformationen einrichten, wenn Sie eine Smartcard für Folgendes verwenden:  
 
-* Anmelden bei Geschäfts-, Schul- oder Uni-Apps, im WLAN und in virtuellen privaten Netzwerken (VPN)
+* Anmelden bei Geschäfts-, Schul- oder Uni-Apps, im WLAN und in virtuellen privaten Netzwerken (VPNs)
 * Signieren und Verschlüsseln von Geschäfts-, Schul- oder Uni-E-Mails mithilfe von S/MIME-Zertifikaten  
 
 Folgendes wird in diesem Artikel beschrieben:  
@@ -52,12 +53,12 @@ Abgeleitete Anmeldeinformationen sind eine Implementierung der NIST-Richtlinien 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
- Sie benötigen zum Abschließen der Registrierung Folgendes:
+ Sie benötigen Folgendes, um die Registrierung abzuschließen:
 
 * Ihre Smartcard von der Schule, der Uni oder der Arbeit
 * Zugriff auf einen Computer oder ein Kiosk, an dem Sie sich mit Ihrer Smartcard anmelden können
 * Ihr mobiles Gerät
-* die auf Ihrem iOS- oder iPadOS-Gerät installierte Intune-Unternehmensportal-App  
+* Die auf Ihrem iOS- oder iPadOS-Gerät installierte Intune-Unternehmensportal-App  
 
 
 ## <a name="enroll-device"></a>Registrieren eines Geräts  
@@ -65,7 +66,7 @@ Abgeleitete Anmeldeinformationen sind eine Implementierung der NIST-Richtlinien 
 
 2. Notieren Sie sich den Code auf dem Bildschirm.  
 
-    ![Beispielbild der Unternehmensportal-App mit Meldung und Code auf dem Bildschirm](./media/copy-code-intercede.png)   
+    ![Beispielbild der Unternehmensportal-App mit Nachricht und Code auf dem Bildschirm](./media/copy-code-intercede.png)   
 
 3. Wechseln Sie zu dem Gerät, für das Sie Ihre Smartcard aktiviert haben, und navigieren Sie zu https://microsoft.com/devicelogin. 
 4. Geben Sie den Code ein, den Sie zuvor notiert haben.  
@@ -80,7 +81,7 @@ Abgeleitete Anmeldeinformationen sind eine Implementierung der NIST-Richtlinien 
 
 8. Gehen Sie in der Anzeige **Zugriff auf mobile Smartcard einrichten** wie folgt vor:   
     a. Tippen Sie auf den Link zu den Setupanweisungen Ihrer Organisation. Wenn Ihre Organisation keine weiteren Anweisungen bereitstellt, werden Sie zu diesem Artikel weitergeleitet.  
-    b. Tippen Sie auf **Anfang**.  
+    b. Tippen Sie auf **Beginn**.  
 
     ![Beispielscreenshot des Bildschirms „Zugriff auf mobile Smartcard einrichten“ im Unternehmensportal](./media/smart-card-info-intercede.png)
 

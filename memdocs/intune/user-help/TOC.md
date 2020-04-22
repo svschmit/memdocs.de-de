@@ -17,6 +17,9 @@
 #### [Registrierung Ihres Android-Geräts](enroll-device-android-company-portal.md)  
 #### [Registrieren mit dem Android-Arbeitsprofil](enroll-device-android-work-profile.md)
 #### [Registrieren mit der Microsoft Intune-App](enroll-device-android-microsoft-intune-app.md)
+#### Registrieren mit abgeleiteten Anmeldeinformationen
+##### [Registrieren mit Entrust Datacard](enroll-android-device-entrust-datacard.md)
+##### [Registrieren mit Intercede](enroll-android-device-intercede.md)
 ### [Zum Setup der neuen Geräteverwaltung wechseln](move-to-new-device-management-setup.md)
 ### [Verwenden verwalteter Apps auf Ihrem Gerät](use-managed-apps-on-your-device-android.md)
 ### [Verschlüsseln Ihres Geräts](encrypt-your-device-android.md)
@@ -145,9 +148,9 @@
 ### [Behandeln häufig auftretender Probleme für Windows](troubleshoot-your-device-windows.md)
 #### [Auflösen von Einschränkungen eines Zugriffspunkts](resolve-access-point-restrictions.md)
 #### [Die Registrierung meines Windows 10-Geräts funktioniert nicht](troubleshoot-your-windows-10-device-windows.md)
-#### [Aktualisieren Ihres Windows-Geräts](you-need-to-update-your-windows-device.md)
+#### [Aktualisieren meines Windows-Geräts](you-need-to-update-your-windows-device.md)
 #### [Senden von Protokollen an die bzw. von der Unternehmensportal-App](send-logs-to-your-it-admin-cp-windows.md)
-#### [Senden von Protokollen über die Geräteeinstellungen-App](send-logs-to-your-it-admin-settings-windows.md)
+#### [Senden von Protokollen von der Einstellungs-App](send-logs-to-your-it-admin-settings-windows.md)
 #### [Meine Windows-Version wird nicht unterstützt](your-windows-version-isnt-yet-supported.md)
 #### [Installieren von Office 365 auf meinem Windows 10-Gerät](install-office-windows.md)
 #### [Mein Gerät muss verschlüsselt werden](you-need-to-enable-windows-encryption.md)
@@ -162,7 +165,7 @@
 ## Verwenden der Intune-Unternehmensportal-App für Windows 
 ### [Überprüfen des Gerätezugriffs](check-device-access-windows-cpapp.md)
 ### [Installieren von Apps](install-apps-cpapp-windows.md) 
-### [Remotesperre für ein Gerät aktivieren](remote-lock-your-device-cp-app.md)   
+### [Remotesperre für Gerät aktivieren](remote-lock-your-device-cp-app.md)   
 ### [Gerät umbenennen](rename-your-device-cpapp.md) 
 ### [Gerät zurücksetzen](reset-device-cp-app.md)
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3cf638ba82d1b6e91e3c4c24d5cfd3433df3b010
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326531"
 ---
 # <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Aktivieren des Modus für verlorene Geräte auf iOS-/iPadOS-Geräten mit Intune
@@ -43,7 +43,7 @@ Dieses Feature wird für die folgenden Betriebssysteme nicht unterstützt:
 ## <a name="enable-lost-mode"></a>Aktivieren des Modus für verlorene Geräte
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
-3. Klicken Sie auf **Geräte** und dann auf **Alle Geräte**.
+3. Klicken Sie auf **Geräte** > **Alle Geräte**.
 4. Wählen Sie aus der Liste der von Ihnen verwalteten Geräte ein iOS-/iPadOS-Gerät aus, und wählen Sie dann **Modus für verlorene Geräte (nur überwacht)** aus.
 5. Wählen Sie unter **Modus für verlorene Geräte** die Option **Aktivieren** aus.
 6. Geben Sie unter **Auf dem Sperrbildschirm anzuzeigende Meldung** eine Meldung ein, die auf dem Sperrbildschirm des Geräts angezeigt werden soll.
