@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: Dokumentation zur Betriebssystembereitstellung
+summary: Verwenden Sie Configuration Manager zum Bereitstellen von Windows über unterschiedliche Methoden und zum Automatisieren von Aufgaben.
+metadata:
+  title: Dokumentation zur Betriebssystembereitstellung
+  titleSuffix: Configuration Manager
+  description: Verwenden Sie Configuration Manager zum Bereitstellen von Windows über unterschiedliche Methoden und zum Automatisieren von Aufgaben.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 5c56cef287ee16a8899c16af72d4734c9d1f4bad
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741951"
+landingContent:
+- title: Informationen zur Betriebssystembereitstellung
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Einführung in die Betriebssystembereitstellung
+      url: understand/introduction-to-operating-system-deployment.md
+    - text: Anforderungen an die Infrastruktur
+      url: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - linkListType: concept
+    links:
+    - text: Vorbereiten der Betriebssystembereitstellung
+      url: get-started/prepare-for-operating-system-deployment.md
+    - text: Szenarios für die Betriebssystembereitstellung
+      url: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    - text: Methoden für die Bereitstellung von Betriebssystemen
+      url: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+- title: Erste Schritte
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Verwalten von Tasksequenzen
+      url: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - text: Erstellen einer Upgradetasksequenz für ein Betriebssystem
+      url: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - text: Erstellen einer stufenweisen Bereitstellung
+      url: deploy-use/create-phased-deployment-for-task-sequence.md
+    - text: Bereitstellen einer Tasksequenz
+      url: deploy-use/deploy-a-task-sequence.md
+    - text: Debuggen einer Tasksequenz
+      url: deploy-use/debug-task-sequence.md
+- title: Technische Referenz
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Verwenden des Tasksequenz-Editors
+      url: understand/task-sequence-editor.md
+    - text: Informationen zu Tasksequenzschritten
+      url: understand/task-sequence-steps.md
+    - text: Verwenden von Tasksequenzvariablen
+      url: understand/using-task-sequence-variables.md
+    - text: 'Tasksequenzvariablen: Referenz'
+      url: understand/task-sequence-variables.md

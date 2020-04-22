@@ -1,0 +1,148 @@
+- name: Dokumentation zur Betriebssystembereitstellung
+  href: index.yml
+- name: Verstehen
+  items:
+    - name: Einführung in die Betriebssystembereitstellung
+      href: understand/introduction-to-operating-system-deployment.md
+- name: Planung und Entwurf
+  items:
+    - name: Anforderungen an die Infrastruktur für die Betriebssystembereitstellung
+      href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+    - name: Planungsüberlegungen für das Automatisieren von Tasks
+      href: plan-design/planning-considerations-for-automating-tasks.md
+    - name: Szenarien für die Bereitstellung von Unternehmensbetriebssystemen
+      items:
+        - name: Szenarien für die Bereitstellung von Betriebssystemen – Übersicht
+          href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+        - name: Upgrade von Windows auf die neueste Version
+          href: deploy-use/upgrade-windows-to-the-latest-version.md
+        - name: Windows Autopilot für vorhandene Geräte
+          href: deploy-use/windows-autopilot-for-existing-devices.md
+        - name: Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows
+          href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+        - name: Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal)
+          href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+        - name: Ersetzen eines vorhandenen Computers und Übertragen von Einstellungen
+          href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+    - name: Methoden zum Bereitstellen von Unternehmensbetriebssystemen
+      items:
+        - name: Methoden für die Bereitstellung von Betriebssystemen
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: Verwenden von PXE zum Bereitstellen von Windows über das Netzwerk
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: Verwenden des Softwarecenters zum Bereitstellen von Windows über das Netzwerk
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: Verwenden startbarer Medien zum Bereitstellen von Windows über das Netzwerk
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: Verwenden eigenständiger Medien zum Bereitstellen von Windows ohne Verwendung des Netzwerks
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: Verwenden von Multicast zum Bereitstellen von Windows über das Netzwerk
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: Erstellen eines Images für ein OEM-Vorinstallations- oder lokales Depot
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: Sicherheit und Datenschutz für die Betriebssystembereitstellung
+      href: plan-design/security-and-privacy-for-operating-system-deployment.md
+    - name: Planen der Interoperabilität der Betriebssystembereitstellung
+      href: plan-design/planning-for-operating-system-deployment-interoperability.md
+- name: Erste Schritte
+  items:
+    - name: Vorbereiten von Standortsystemrollen für Betriebssystembereitstellungen
+      href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
+    - name: Vorbereiten auf die Betriebssystembereitstellung
+      items:
+        - name: Vorbereiten der Betriebssystembereitstellung
+          href: get-started/prepare-for-operating-system-deployment.md
+        - name: Startabbilder
+          items:
+            - name: Verwalten von Startabbildern (Startimages)
+              href: get-started/manage-boot-images.md
+            - name: Anpassen von Startabbildern (Startimages)
+              href: get-started/customize-boot-images.md
+        - name: Betriebssystemimages
+          items:
+            - name: Verwalten von Betriebssystemimages
+              href: get-started/manage-operating-system-images.md
+            - name: Anpassen von Betriebssystemimages
+              href: get-started/customize-operating-system-images.md
+        - name: Verwalten von Betriebssystemupgradepaketen
+          href: get-started/manage-operating-system-upgrade-packages.md
+        - name: Verwalten von Treibern
+          href: get-started/manage-drivers.md
+        - name: Verwalten des Benutzerzustands
+          href: get-started/manage-user-state.md
+        - name: Vorbereiten auf Bereitstellungen für unbekannte Computer
+          href: get-started/prepare-for-unknown-computer-deployments.md
+        - name: Zuordnen von Benutzern zu einem Zielcomputer
+          href: get-started/associate-users-with-a-destination-computer.md
+    - name: Vorbereiten des Windows PE-Peercache zum Reduzieren des WAN-Datenverkehrs
+      href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
+- name: Bereitstellen und Verwenden
+  items:
+    - name: Verwalten und Erstellen von Tasksequenzen
+      href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - name: Erstellen von Tasksequenzen zum Automatisieren von Tasks
+      items:
+        - name: Erstellen einer Tasksequenz zum Installieren eines Betriebssystems
+          href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
+        - name: Erstellen einer Tasksequenz zum Durchführen eines Betriebssystemupgrades
+          href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+        - name: Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI
+          href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
+        - name: Erstellen einer Tasksequenz zum Erfassen eines Betriebssystems
+          href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
+        - name: Erstellen einer Tasksequenz zum Erfassen und Wiederherstellen des Benutzerzustands
+          href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+        - name: Erstellen einer benutzerdefinierten Tasksequenz
+          href: deploy-use/create-a-custom-task-sequence.md
+        - name: Erstellen einer Tasksequenz für Nicht-Betriebssystembereitstellungen
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: Bereitstellen einer Tasksequenz
+      href: deploy-use/deploy-a-task-sequence.md
+    - name: Erstellen einer stufenweisen Bereitstellung
+      href: deploy-use/create-phased-deployment-for-task-sequence.md
+    - name: Verwalten und Überwachen von stufenweisen Bereitstellungen
+      href: deploy-use/manage-monitor-phased-deployments.md
+    - name: Verwalten von Windows als Dienst
+      href: deploy-use/manage-windows-as-a-service.md
+    - name: Bereitstellen von Windows To Go
+      href: deploy-use/deploy-windows-to-go.md
+    - name: Überwachen von Betriebssystembereitstellungen
+      href: deploy-use/monitor-operating-system-deployments.md
+    - name: Debuggen einer Tasksequenz
+      href: deploy-use/debug-task-sequence.md
+    - name: Konfigurieren des zwischengespeicherten Inhalts
+      href: deploy-use/configure-precache-content.md
+    - name: Tasksequenzmedien erstellen
+      items:
+        - name: Tasksequenzmedien – Übersicht
+          href: deploy-use/create-task-sequence-media.md
+        - name: Erstellen eigenständiger Medien
+          href: deploy-use/create-stand-alone-media.md
+        - name: Erstellen von vorab bereitgestellten Medien
+          href: deploy-use/create-prestaged-media.md
+        - name: Erstellen startbarer Medien
+          href: deploy-use/create-bootable-media.md
+        - name: Erstellen von Erfassungsmedien
+          href: deploy-use/create-capture-media.md
+- name: Technische Referenzen
+  items:
+    - name: Verwenden des Tasksequenz-Editors
+      href: understand/task-sequence-editor.md
+    - name: Benutzererfahrungen bei der Betriebssystembereitstellung
+      href: understand/user-experience.md
+    - name: Tasksequenzschritte
+      items:
+        - name: Informationen zu Tasksequenzschritten
+          href: understand/task-sequence-steps.md
+        - name: Softwareupdates installieren
+          href: understand/install-software-updates.md
+        - name: Vorabbereitstellung von BitLocker in Windows PE
+          href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+    - name: Verwenden von Tasksequenzvariablen
+      href: understand/using-task-sequence-variables.md
+    - name: Tasksequenzvariablen
+      href: understand/task-sequence-variables.md
+    - name: Prestart-Befehle für Tasksequenzmedien
+      href: understand/prestart-commands-for-task-sequence-media.md
+    - name: Bereitstellungsmodus
+      href: understand/provisioning-mode.md

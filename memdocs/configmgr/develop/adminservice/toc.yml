@@ -1,0 +1,16 @@
+- name: Dokumentation für Verwaltungsdienst
+  href: index.yml
+- name: Was ist der Verwaltungsdienst?
+  href: overview.md
+- name: Anleitungen
+  items:
+    - name: Ablauf der Einrichtung
+      href: set-up.md
+    - name: Verwendung
+      href: usage.md
+- name: Reference
+  items:
+    - name: Häufig gestellte Fragen
+      href: faq.md
+    - name: Anmerkungen zu dieser Version
+      href: release-notes.md

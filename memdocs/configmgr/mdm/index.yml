@@ -1,0 +1,58 @@
+### YamlMime:Landing
+title: Dokumentation der Mobilgerätverwaltung (Mobile Device Management, MDM)
+summary: Verwenden von Microsoft Endpoint Manager zum Verwalten mobiler Geräte in Ihrer Organisation, lokal oder cloudbasiert
+metadata:
+  title: Verwaltung mobiler Geräte
+  titleSuffix: Configuration Manager
+  description: Verwenden von Microsoft Endpoint Manager zum Verwalten mobiler Geräte in Ihrer Organisation, lokal oder cloudbasiert
+  ms.prod: configuration-manager
+  ms.technology: configmgr-mdm
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 12/31/2019
+  ms.openlocfilehash: d9e3c95272c9e0d6596d214f73ea53f572b54c6b
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741798"
+landingContent:
+- title: Informationen zu lokaler Verwaltung mobiler Geräte
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Was ist die lokale Verwaltung mobiler Geräte (MDM)?
+      url: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - text: Planen für die lokale Verwaltung mobiler Geräte (MDM)
+      url: plan-design/plan-on-premises-mdm.md
+  - linkListType: how-to-guide
+    links:
+    - text: Installieren von Rollen
+      url: get-started/install-site-system-roles-for-on-premises-mdm.md
+    - text: Registrieren von Geräten
+      url: deploy-use/enroll-devices-on-premises-mdm.md
+    - text: Verwalten von Geräten
+      url: deploy-use/wipe-lock-reset-devices.md
+- title: Verbinden von ConfigMgr und Exchange
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Geräteverwaltung mit Exchange
+      url: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+  - linkListType: how-to-guide
+    links:
+    - text: Installieren des Exchange Connectors
+      url: deploy-use/install-configure-exchange-connector.md
+- title: Verwenden der cloudbasierten Intune-Instanz
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Was ist Intune?
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-intune
+    - text: Übersicht über die Geräteverwaltung
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-device-management
+  - linkListType: tutorial
+    links:
+    - text: Exemplarische Vorgehensweise für Intune in Microsoft Endpoint Manager
+      url: https://docs.microsoft.com/intune/fundamentals/tutorial-walkthrough-endpoint-manager
