@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1956db4b044faffdd5e010ed66de2dfbc6738419
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335106"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Registrieren von Windows-Geräten im Intune-Unternehmensportal  
@@ -62,8 +62,8 @@ Die Schritte zur Registrierung unterscheiden sich je nach Version der Windows 1
 
 4. Bei Version  
 
-    * __1607 oder höher__: Registrieren Sie Ihr Gerät über die Route [**Einstellungen** > **Konto** > **Access work or school** (Zugriff auf Geschäft, Schule oder Uni)](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 oder früher__: Registrieren Sie Ihr Gerät über die Route [**Einstellungen** > **Konto** > **Your Accounts** (Ihre Konten)](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 oder höher:__ Registrieren Sie Ihr Gerät über die Route [**Einstellungen** > **Konto** > **Access work or school** (Zugriff auf Geschäft, Schule oder Uni)](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 oder früher:__ Registrieren Sie Ihr Gerät über die Route [**Einstellungen** > **Konto** > **Your Accounts** (Ihre Konten)](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ### <a name="windows-10-mobile-devices"></a>Windows 10 Mobile-Geräte
 
@@ -72,8 +72,8 @@ Die Schritte zur Registrierung unterscheiden sich je nach Version der Windows 1
 3. Unter __Device information__ (Geräteinformationen) wird die __Version__ angezeigt.  
 4. Bei Version  
 
-    * __1607 oder höher__: Registrieren Sie Ihr Gerät über die Navigation [**Einstellungen** > **Access work or school** (Zugriff auf Geschäft, Schule oder Uni)](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 oder früher__: Registrieren Sie Ihr Gerät mithilfe der [Route **Einstellungen** > **Konten**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 oder höher:__ Registrieren Sie Ihr Gerät über die Navigation [**Einstellungen** > **Access work or school** (Zugriff auf Geschäft, Schule oder Uni)](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 oder früher:__ Registrieren Sie Ihr Gerät mithilfe der [Route **Einstellungen** > **Konten**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ## <a name="enroll-non-windows-10-devices"></a>Registrieren von nicht-Windows 10-basierten Geräten  
 In den folgenden Artikeln erfahren Sie, wie Sie über die Website des Unternehmensportals andere von Windows unterstützte Geräte registrieren:   
@@ -81,7 +81,7 @@ In den folgenden Artikeln erfahren Sie, wie Sie über die Website des Unternehme
 * [Windows Phone 8.1-Gerät](enroll-your-wp81-windows.md)    
 
 ## <a name="it-administrator-support"></a>Unterstützung für IT-Administratoren  
-Wenn Sie IT-Administrator sind und Probleme bei der Registrierung von Geräten haben, lesen Sie [Troubleshooting Windows device enrollment problems in Microsoft Intune (Behandeln von Problemen bei der Registrierung von Windows-Geräten in Microsoft Intune)](https://support.microsoft.com/help/4469913). In diesem Artikel werden häufige Fehler, ihre Ursachen und Schritte zur Behebung aufgelistet.  
+Wenn Sie IT-Administrator sind und Probleme bei der Registrierung von Geräten haben, lesen Sie [Troubleshooting Windows device enrollment problems in Microsoft Intune (Behandeln von Problemen bei der Registrierung von Windows-Geräten in Microsoft Intune)](https://support.microsoft.com/help/4469913). Dieser Artikel listet häufige Fehler, ihre Ursachen und Schritte zur Behebung auf.  
 
 ## <a name="next-steps"></a>Nächste Schritte  
 Da Sie nun wissen, welche Geräte unterstützt werden und die Versionsnummer von Windows 10 kennen, können Sie mit den empfohlenen Artikeln zur Registrierung fortfahren.  

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 5b22902d4cc0aa28903cf5a159355c92befb8e6b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335418"
 ---
 # <a name="unenroll-your-macos-device-from-company-portal"></a>Aufheben der Registrierung Ihres macOS-Geräts über das Unternehmensportal
@@ -46,7 +46,7 @@ Wenn Sie die Registrierung Ihres Geräts bei Intune aufheben passiert Folgendes:
 
 - Alle Einstellungen, die beim Hinzufügen des Geräts auf diesem geändert wurden (z.B. die Kennwortlänge), werden unwirksam.
 
-- Unter Umständen haben Sie auf dem Gerät keinen Zugriff mehr auf einige Unternehmensressourcen, z. B. Dateifreigaben oder interne Websites.
+- Unter Umständen haben Sie auf dem Gerät keinen Zugriff mehr auf einige Unternehmensressourcen, z. B. Dateifreigaben oder interne Websites.
 
 - Sie können keine Unternehmens-Apps und Unternehmensdaten mehr auf dem Gerät verwenden.
 

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 6a8c7212de97fbcb741d03cbcec57bafc4692484
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335236"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Was geschieht, wenn Sie die Unternehmensportal-App installieren und Ihr Windows-Gerät bei Intune registrieren?
@@ -59,13 +59,13 @@ Wenn Sie Ihr Gerät registrieren, erteilen Sie der Supportabteilung Ihres Untern
 
 ## <a name="what-happens-to-all-windows-pcs-after-enrollment"></a>Was mit allen Windows-PCs nach der Registrierung geschieht
 
-- Auf Ihrem Computer wird Software installiert, mit deren Hilfe die Supportabteilung Ihres Unternehmens den Computer verwalten kann und mit der Sie Unternehmensressourcen wie Apps und Supportinformationen abrufen können. Die Supportabteilung Ihres Unternehmens kann diese Software möglicherweise automatisch aktualisieren.
+- Auf Ihrem Computer wird Software installiert, mit deren Hilfe der Support Ihres Unternehmens den Computer verwalten kann und mit der Sie Unternehmensressourcen wie Apps und Supportinformationen abrufen können. Der Support Ihres Unternehmens aktualisiert diese Software möglicherweise automatisch.
 
 - Intune Endpoint Protection wird möglicherweise auf Ihrem Computer installiert. Diese Software überprüft den Computer auf Viren und Malware.
 
-- Die Supportabteilung Ihres Unternehmens kann Daten von der Festplatte Ihres Computers sammeln oder löschen.
+- Der Support Ihres Unternehmens kann Daten von der Festplatte Ihres Computers sammeln oder löschen.
 
-- Sie kann außerdem Apps und Updates auf Ihrem Computer installieren.
+- Er kann Apps und Updates auf Ihrem Computer installieren.
 
 ## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Was nach der Registrierung des Geräts alle acht Stunden geschieht
 

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 6b5fe7c97b42c4863fbad8e7341b64fa847b8563
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335405"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Entfernen Ihres iOS-Geräts aus Intune
@@ -53,7 +53,7 @@ Befolgen Sie zum Entfernen Ihres Geräts aus Intune die hier oder in diesem Vide
 
     - Alle Einstellungen, die beim Hinzufügen des Geräts auf diesem geändert wurden, z. B. das Deaktivieren der Kamera oder die Anforderung einer bestimmten Kennwortlänge, werden unwirksam.
 
-    - Unter Umständen haben Sie auf dem Gerät keinen Zugriff mehr auf einige Unternehmensressourcen, z. B. Dateifreigaben oder interne Websites.
+    - Unter Umständen haben Sie auf dem Gerät keinen Zugriff mehr auf einige Unternehmensressourcen, z. B. Dateifreigaben oder interne Websites.
 
     - Sie können auf Ihrem Gerät keine Unternehmens-Apps und Unternehmensdaten mehr verwenden.
 
