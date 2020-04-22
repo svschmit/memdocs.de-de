@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: e0802e068b98e3f71393ca9b8124558243bf4847
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347898"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installieren und freigeben von Apps auf Ihrem Gerät
@@ -89,7 +89,7 @@ Zeigen Sie eine Liste aller auf Ihrem Gerät installierten Apps an. Auf der Seit
 * Name: Der Name der App. Optionale Apps enthalten einen Link zu der Seite **App-Details**.
 * Zuweisungstyp: Gibt an, wie die App Ihnen zugewiesen und zur Verfügung gestellt wird. 
 * Herausgeber: Der Name des Entwicklers oder des Unternehmens, der bzw. das die App verbreitet hat. Ein Herausgeber ist typischerweise ein Softwarehersteller oder Ihre Organisation.  
-* Veröffentlichungsdatum: Das Datum, seitdem die App heruntergeladen werden kann. Das Veröffentlichungsdatum kann die erste Veröffentlichung einer App oder das letzte Update einer App sein.
+* Veröffentlichungsdatum: Das Datum, seit dem die App zum Herunterladen zur Verfügung steht. Das Veröffentlichungsdatum kann die erste Veröffentlichung einer App oder das letzte Update einer App sein.
 * Status: Der aktuelle Installationszustand der App auf Ihrem Gerät. Apps können als „wird installiert“, „installiert“ und „Installation fehlgeschlagen“ angezeigt werden. Es kann bis zu 10 Minuten dauern, bis die erforderlichen Apps im aktuellen Status angezeigt werden. Wichtige Details zur Installation einer erforderlichen App finden Sie im Hinweis unter [Apps installieren](#install-apps). 
 
 Um zu dieser Seite zu gelangen, wechseln Sie zum Navigationsmenü und wählen dort die Option **Installierte Apps** aus.  

@@ -89,7 +89,7 @@
     - name: Einrichten der iOS/iPadOS-Registrierung
       href: ios-enroll.md
       items:
-        - name: Geräteregistrierungsprogramm
+        - name: Automatische Geräteregistrierung
           href: device-enrollment-program-enroll-ios.md
         - name: Einrichten der iOS/iPadOS- und iPadOS-Benutzerregistrierung
           href: ios-user-enrollment.md

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551752"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397508"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Microsoft Defender Advanced Threat Protection-Baselineeinstellungen für Intune
 
@@ -133,7 +133,7 @@ Weitere Informationen finden Sie in der Windows-Dokumentation unter [Einstellung
     - **Ja**: Windows lässt nicht zu, dass Daten auf Festplattenlaufwerke geschrieben werden, die nicht durch BitLocker geschützt sind. Wenn ein Festplattenlaufwerk nicht verschlüsselt ist, muss der Benutzer den BitLocker-Setup-Assistenten für das Laufwerk ausführen, bevor er Schreibzugriff erhält.
 
   - **Verschlüsselungsmethode für Festplattenlaufwerke konfigurieren**  
-    CSP: [EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
     Diese Einstellung ist verfügbar, wenn *BitLocker: Richtlinie für Festplattenlaufwerk* auf *Konfigurieren* festgelegt ist.
 
     Konfigurieren Sie die Verschlüsselungsmethode und Verschlüsselungsstärke für Festplattenlaufwerke. *XTS-AES, 128 Bit* ist die Standardverschlüsselungsmethode von Windows und der empfohlene Wert.
@@ -215,7 +215,7 @@ Weitere Informationen finden Sie in der Windows-Dokumentation unter [Einstellung
 ## <a name="device-installation"></a>Geräteinstallation
 
 - **Hardware device installation by device identifiers** (Installation von Hardwaregeräten anhand der Geräte-ID)  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
   Mit dieser Richtlinieneinstellung können Sie eine Liste von Plug & Play-Hardware-IDs und kompatiblen IDs für Geräte angeben, deren Installation unter Windows verhindert wird. Diese Richtlinieneinstellung hat Vorrang gegenüber jeder anderen Richtlinieneinstellung, die die Installation eines Geräts ermöglicht.  Wenn Sie diese Richtlinieneinstellung auf einem Remotedesktopserver aktivieren, wirkt sich dies auf die Umleitung der angegebenen Geräte von einem Remotedesktopclient an den Remotedesktopserver aus.
 

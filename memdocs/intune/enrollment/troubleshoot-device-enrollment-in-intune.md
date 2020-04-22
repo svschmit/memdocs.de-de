@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327011"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397763"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Behandlung von Problemen bei der Geräteregistrierung in Microsoft Intune
 
@@ -237,7 +237,7 @@ Um eine ordnungsgemäße Installation des Zertifikats zu gewährleisten, können
 
 Die folgenden Schritte beschreiben nur eine von vielen Methoden und Tools, die Sie verwenden können, um zu überprüfen, ob das Zertifikat richtig installiert wurde.
 
-1. Wechseln Sie zum [kostenlosen Digicert-Tool](ttps://www.digicert.com/help/).
+1. Wechseln Sie zum [kostenlosen Digicert-Tool](https://www.digicert.com/help/).
 2. Geben Sie den vollqualifizierten Domänennamen Ihres AD FS-Servers ein (z. B. sts.contoso.com), und klicken Sie auf **Server überprüfen**.
 
 Wenn das Serverzertifikat ordnungsgemäß installiert wurde, werden in den Ergebnissen alle Häkchen angezeigt. Wenn das oben beschriebene Problem vorhanden ist, wird in den Abschnitten „Certificate Name Matches“ und „SSL Certificate is correctly Installed“ des Berichts ein rotes X angezeigt.

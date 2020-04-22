@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2bf2ceae88ed775ff53324f007567a4677832805
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 39331a7ab4a512e449770179af4b04f4c52bec73
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80658124"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81668225"
 ---
 <!-- 
 - Feature 1357546
@@ -113,4 +113,4 @@ Supportartikel, die neu sind oder zwischen dem 21. Februar und 19. März 2020 
 - [KB 4552181: Inhaltsverteilung in Configuration Manager kommt zum Stillstand (Current Branch-Version 1910)](https://support.microsoft.com/help/4552181)
 - [KB 4550023: Eine in-Place-Upgrade-Tasksequenz von Configuration Manager wird nach einem Windows 10-Upgrade-Rollback angehalten](https://support.microsoft.com/help/4550023)
 
-Informationen zum Abonnieren von Atom- oder RSS-Benachrichtigungen für neue Configuration Manager-Supportartikel finden Sie unter [Updates für Supportinhalte](https://support.microsoft.com/help/4089498/). Wählen Sie **Microsoft Endpoint Configuration Manager** aus.
+Informationen zum Abonnieren von Atom- oder RSS-Benachrichtigungen für neue Configuration Manager-Supportartikel finden Sie unter [Updates für Supportinhalte](https://support.microsoft.com/help/4089498/). Wählen Sie **Microsoft Endpoint Configuration Manager** aus.  

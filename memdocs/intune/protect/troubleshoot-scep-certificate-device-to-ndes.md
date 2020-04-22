@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 934e2283fec0cd68ea5b72f092fb6dcac6f3fe4c
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526460"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81379634"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Problembehandlung für die Kommunikation zwischen Gerät und NDES-Server für SCEP-Zertifikatprofile in Microsoft Intune
 
@@ -298,7 +298,7 @@ Sie haben den Azure AD-Anwendungsproxy konfiguriert. Wenn Sie die SCEP-Server-UR
 
 `This page can't be displayed`
 
-- **Ursache:** Dieses Problem tritt auf, wenn die externe SCEP-URL in der Anwendungsproxykonfiguration falsch ist. Ein Beispiel für diese URl ist https://contoso.com/certsrv/mscep/mscep.dll.
+- **Ursache:** Dieses Problem tritt auf, wenn die externe SCEP-URL in der Anwendungsproxykonfiguration falsch ist. Ein Beispiel für diese URl ist `https://contoso.com/certsrv/mscep/mscep.dll`.
 
   **Lösung**: Verwenden Sie die Standarddomäne *yourtenant.msappproxy.net* in der Anwendungsproxykonfiguration für die externe SCEP-URL.
 

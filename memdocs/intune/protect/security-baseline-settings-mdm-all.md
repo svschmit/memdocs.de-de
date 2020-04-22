@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696494"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Einstellungen für Windows MDM-Sicherheitsbaselines in Intune
@@ -2168,6 +2168,6 @@ Die folgenden Einstellungen sind entweder:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Informationen zu Sicherheitsbaselines.](security-baselines.md)
+- [Informationen zu Sicherheitsbaselines](security-baselines.md)
 - [Vermeiden von Konflikten](security-baselines.md#avoid-conflicts)
 - [Richtlinien und Profile zur Problembehandlung in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
