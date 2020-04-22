@@ -1,0 +1,55 @@
+---
+title: Technical Preview 1908
+titleSuffix: Configuration Manager
+description: Informationen zu neuen Features im Configuration Manager Technical Preview-Branch, Version 1908.
+ms.date: 08/06/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-core
+ms.topic: conceptual
+ms.assetid: d9c6163f-b365-4417-86b2-cd63c0602ec8
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ROBOTS: NOINDEX
+ms.openlocfilehash: 021185dc33fbfd7ea37b6871e8fc84508b66d915
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81697788"
+---
+# <a name="features-in-configuration-manager-technical-preview-version-1908"></a>Features in Technical Preview-Version 1908 für Configuration Manager
+
+*Gilt für: Configuration Manager (Technical Preview-Branch)*
+
+In diesem Artikel werden die Features vorgestellt, die in der Technical Preview-Version 1908 für Configuration Manager verfügbar sind. Installieren Sie diese Version, um Features für Ihren Technical Preview-Standort zu aktualisieren oder neue Features hinzuzufügen.
+
+Lesen Sie den [Technical Preview](../technical-preview.md)-Artikel vor der Installation dieses Updates. In diesem Artikel erhalten Sie Informationen zu den allgemeinen Anforderungen und Einschränkungen, die für die Verwendung der Technical Preview gelten. Außerdem erfahren Sie, wie Sie Updates zwischen den Versionen ausführen und Feedback übermitteln.
+
+In den folgenden Abschnitten werden die neuen Features beschrieben, die in dieser Version getestet werden können:
+
+<!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
+
+[!INCLUDE [Task sequence performance improvements for power plans](includes/1908/3555926.md)]
+
+[!INCLUDE [Local device query evaluation using CMPivot standalone](includes/1908/3197353.md)]
+[!INCLUDE [Additional software update filter for ADRs](includes/1908/4852033.md)]
+[!INCLUDE [Use Delivery Optimization for all Windows updates](includes/1908/4685210.md)]
+[!INCLUDE [Phased deployment templates](includes/1908/4961086.md)]
+[!INCLUDE [Improvements to console connections node](includes/1908/4951240.md)]
+[!INCLUDE [Copy and paste task sequence conditions](includes/1908/4621098.md)]
+[!INCLUDE [Improvements to task sequence search](includes/1908/4621085.md)]
+
+[!INCLUDE [Improvements to OS deployment](includes/1908/4910348.md)]
+<!-- 4910348, 4931110, 4977616 -->
+
+
+<!-- ## Known issues -->
+
+<!-- [!INCLUDE [Client health dashboard](includes/1903/known-issue-health.md)] -->
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Informationen zur Installation des Technical Preview-Branch oder dessen Aktualisierung finden Sie unter [Technical Preview für Configuration Manager](../technical-preview.md).
+
+Weitere Informationen zu den Unterschieden zwischen den verschiedenen Configuration Manager-Branches finden Sie unter [Welcher Branch von Configuration Manager soll verwendet werden?](../../understand/which-branch-should-i-use.md).

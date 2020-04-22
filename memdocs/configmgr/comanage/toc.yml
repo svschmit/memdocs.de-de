@@ -1,0 +1,54 @@
+- name: Dokumentation zur Co-Verwaltung
+  href: index.yml
+- name: Übersicht
+  items:
+    - name: Was ist Co-Verwaltung?
+      href: overview.md
+- name: Schnellstarts
+  items:
+    - name: Schnellstart – Übersicht
+      href: quickstarts.md
+    - name: Unmittelbarer Wert
+      items:
+        - name: Bedingter Zugriff
+          href: quickstart-conditional-access.md
+        - name: Remoteaktionen aus Intune
+          href: quickstart-remote-actions.md
+        - name: Clientintegrität
+          href: quickstart-client-health.md
+        - name: Hybrid-Azure AD
+          href: quickstart-hybrid-aad.md
+        - name: Windows Autopilot
+          href: quickstart-autopilot.md
+    - name: Erste Schritte
+      items:
+        - name: Pfade zur Co-Verwaltung
+          href: quickstart-paths.md
+        - name: Einrichten von Hybrid-Azure AD
+          href: quickstart-setup-hybrid-aad.md
+        - name: Upgrade auf Windows 10
+          href: quickstart-upgrade-win10.md
+        - name: Hilfe von FastTrack erhalten
+          href: quickstart-fasttrack.md
+- name: Tutorials
+  items:
+    - name: Aktivieren der Co-Verwaltung für Konfigurations-Manager-Clients
+      href: tutorial-co-manage-clients.md
+    - name: Aktivieren der Co-Verwaltung für internetbasierte Geräte
+      href: tutorial-co-manage-new-devices.md
+- name: Konzepte
+  items:
+    - name: Workloads
+      href: workloads.md
+    - name: Koexistenz von Drittanbieter-MDM-Instanzen
+      href: coexistence.md
+- name: Anleitungen
+  items:
+    - name: Aktivieren der Co-Verwaltung
+      href: how-to-enable.md
+    - name: Vorbereiten von internetbasierten Geräten
+      href: how-to-prepare-Win10.md
+    - name: Verschieben von Workloads zu Intune
+      href: how-to-switch-workloads.md
+    - name: Überwachen der Co-Verwaltung
+      href: how-to-monitor.md

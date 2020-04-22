@@ -1,0 +1,235 @@
+### YamlMime:Hub
+title: Dokumentation zu Microsoft Endpoint Configuration Manager
+summary: 'Offizielle Produktdokumentation für die folgenden Komponenten von Microsoft Endpoint Configuration Manager: Configuration Manager, Co-Verwaltung und Desktop Analytics'
+metadata:
+  ms.topic: hub-page
+  ms.openlocfilehash: b890572e652528e1446f1dd2e194d933c27938dd
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741475"
+highlightedContent:
+  items:
+  - title: Neuerungen
+    itemType: learn
+    url: ./core/plan-design/changes/whats-new-incremental-versions.md
+  - title: Unterstützte Konfigurationen
+    itemType: architecture
+    url: ./core/plan-design/configs/supported-configurations.md
+  - title: Updates und Wartung
+    itemType: deploy
+    url: ./core/servers/manage/updates.md
+  - title: Protokolldateien
+    itemType: learn
+    url: ./core/plan-design/hierarchy/log-files.md
+  - title: Ports
+    itemType: learn
+    url: ./core/plan-design/hierarchy/ports.md
+  - title: Technical Preview
+    itemType: get-started
+    url: ./core/get-started/technical-preview.md
+conceptualContent:
+  items:
+  - title: Cloudgestützte Verwaltung
+    links:
+    - text: Verwalten von Clients im Internet
+      url: ./core/clients/manage/manage-clients-internet.md
+      itemType: overview
+    - text: Vorbereitung auf Azure AD
+      url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
+      itemType: architecture
+    - text: Azure-Dienste
+      url: ./core/servers/deploy/configure/azure-services-wizard.md
+      itemType: how-to-guide
+  - title: Co-Verwaltung
+    links:
+    - text: Schnellstarts
+      url: ./comanage/quickstarts.md
+      itemType: quickstart
+    - text: Tutorial
+      url: ./comanage/tutorial-co-manage-clients.md
+      itemType: tutorial
+    - text: Workloads
+      url: ./comanage/workloads.md
+      itemType: overview
+    footerLink:
+      text: Mehr anzeigen
+      url: ./comanage/index.yml
+  - title: Verwaltung in Echtzeit
+    links:
+    - text: CMPivot
+      url: ./core/servers/manage/cmpivot.md
+      itemType: get-started
+    - text: Ausführen von PowerShell-Skripts
+      url: ./apps/deploy-use/create-deploy-scripts.md
+      itemType: how-to-guide
+  - title: Desktop Analytics
+    links:
+    - text: Übersicht
+      url: ./desktop-analytics/overview.md
+      itemType: overview
+    - text: Bereitstellen von Windows 10 für den Pilotversuch
+      url: ./desktop-analytics/tutorial-windows10.md
+      itemType: tutorial
+    - text: Einrichten von Desktop Analytics
+      url: ./desktop-analytics/set-up.md
+      itemType: how-to-guide
+    - text: Office 365-Dashboard
+      url: ./sum/deploy-use/office-365-dashboard.md
+      itemType: learn
+    footerLink:
+      text: Mehr anzeigen
+      url: ./desktop-analytics/index.yml
+  - title: Vereinfachung der Infrastruktur
+    links:
+    - text: Hochverfügbarkeit der Standortserver
+      url: ./core/servers/deploy/configure/site-server-high-availability.md
+      itemType: deploy
+    - text: Neuzuweisen eines Verteilungspunkts
+      url: ./core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_reassign
+      itemType: how-to-guide
+    - text: Configuration Manager in Azure
+      url: ./core/understand/configuration-manager-on-azure.md
+      itemType: learn
+  - title: Kerninfrastruktur
+    links:
+    - text: Verwenden der Konsole
+      url: ./core/servers/manage/admin-console.md
+      itemType: how-to-guide
+    - text: Bereitstellen von Clients
+      url: ./core/clients/deploy/deploy-clients-to-windows-computers.md
+      itemType: deploy
+    - text: Aktuelle Informationen zu Configuration Manager und Windows 10
+      url: ./core/understand/configuration-manager-and-windows-as-service.md
+      itemType: learn
+    footerLink:
+      text: Mehr anzeigen
+      url: ./core/index.yml
+  - title: App-Verwaltung
+    links:
+    - text: Erstellen von Apps
+      url: ./apps/get-started/create-and-deploy-an-application.md
+      itemType: how-to-guide
+    - text: Bereitstellen von Apps
+      url: ./apps/deploy-use/deploy-applications.md
+      itemType: deploy
+    - text: Planen für Software Center
+      url: ./apps/plan-design/plan-for-software-center.md
+      itemType: architecture
+    - text: Microsoft Edge-Verwaltung
+      url: ./apps/deploy-use/deploy-edge.md
+      itemType: how-to-guide
+    footerLink:
+      text: Mehr anzeigen
+      url: ./apps/index.yml
+  - title: Bereitstellung des Betriebssystems
+    links:
+    - text: Upgrade auf Windows 10
+      url: ./osd/deploy-use/upgrade-windows-to-the-latest-version.md
+      itemType: overview
+    - text: Bereitstellung in Phasen
+      url: ./osd/deploy-use/create-phased-deployment-for-task-sequence.md
+      itemType: how-to-guide
+    - text: Tasksequenzschritte
+      url: ./osd/understand/task-sequence-steps.md
+      itemType: learn
+    footerLink:
+      text: Mehr anzeigen
+      url: ./osd/index.yml
+  - title: Softwareupdates
+    links:
+    - text: Planen von Softwareupdates
+      url: ./sum/plan-design/plan-for-software-updates.md
+      itemType: architecture
+    - text: Bereitstellen von Softwareupdates
+      url: ./sum/deploy-use/deploy-software-updates.md
+      itemType: deploy
+    - text: Optimieren von Windows 10-Updates
+      url: ./sum/deploy-use/optimize-windows-10-update-delivery.md
+      itemType: learn
+    - text: Aktualisieren von Office 365
+      url: ./sum/deploy-use/manage-office-365-proplus-updates.md
+      itemType: how-to-guide
+    footerLink:
+      text: Mehr anzeigen
+      url: ./sum/index.yml
+  - title: Gerätekonformität
+    links:
+    - text: Erstellen von Konfigurationselementen
+      url: ./compliance/deploy-use/create-configuration-items.md
+      itemType: how-to-guide
+    - text: Microsoft Edge-Einstellungen
+      url: ./compliance/deploy-use/browser-profiles.md
+      itemType: how-to-guide
+    - text: Upgrade von Windows-Edition
+      url: ./compliance/deploy-use/upgrade-windows-version.md
+      itemType: how-to-guide
+    footerLink:
+      text: Mehr anzeigen
+      url: ./compliance/index.yml
+  - title: Schützen
+    links:
+    - text: Windows Defender
+      url: ./protect/deploy-use/endpoint-protection.md
+      itemType: overview
+    - text: Windows Defender Advanced Threat Protection
+      url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
+      itemType: how-to-guide
+    - text: BitLocker-Verwaltung
+      url: ./protect/plan-design/bitlocker-management.md
+      itemType: overview
+    footerLink:
+      text: Mehr anzeigen
+      url: ./protect/index.yml
+additionalContent:
+  sections:
+  - title: Configuration Manager-Community und -Support
+    items:
+    - title: Configuration Manager-Blog
+      summary: Neuigkeiten und Ankündigungen
+      url: https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog
+    - title: 'Twitter: #ConfigMgr'
+      summary: Auf dem neuesten Stand mit der aktiven Community auf Twitter bleiben
+      url: https://twitter.com/hashtag/configmgr
+    - title: Configuration Manager-Foren
+      summary: In den Produktforen können Sie technische Fragen stellen
+      url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
+    - title: UserVoice-Produktfeedback
+      summary: Teilen Sie dem Engineeringteam Vorschläge zu Produkten mit
+      url: https://configurationmanager.uservoice.com/forums/300492-ideas
+    - title: Produktsupport
+      summary: Professionelle Hilfe vom Microsoft-Support
+      url: https://aka.ms/cmcbsupport
+    - title: System Center 2012 R2 Configuration Manager
+      summary: Dokumentation für die früheren Version von Configuration Manager
+      url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
+  - title: Andere Inhalte
+    items:
+    - title: Entwickeln
+      links:
+      - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+        text: PowerShell
+      - url: ./develop/index.yml
+        text: Software Development Kit (SDK)
+      - url: ./develop/adminservice/index.yml
+        text: REST-API für Verwaltungsdienst
+      - url: ./develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+        text: SQL-Ansichten
+    - title: Tools
+      links:
+      - url: ./core/support/support-center.md
+        text: Supportcenter
+      - url: ./mdt/index.yml
+        text: MDT
+      - url: ./apps/pcm/package-conversion-manager.md
+        text: Package Conversion Manager
+      - url: ./core/support/tools.md
+        text: Mehr anzeigen >
+    - title: Andere Communitywebsites
+      links:
+      - url: https://www.reddit.com/r/sccm
+        text: Configuration Manager auf Reddit
+      - url: https://www.facebook.com/groups/ConfigMgr2012
+        text: ConfigMgr Professionals Group auf Facebook
+  footer: Ist Ihnen auf unserer Website ein Problem aufgefallen? [Sagen Sie uns Bescheid!](./core/understand/use-docs.md#bkmk_docfeedback)

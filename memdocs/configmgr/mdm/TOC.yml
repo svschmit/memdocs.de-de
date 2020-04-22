@@ -1,0 +1,48 @@
+- name: MDM-Dokumentation
+  href: index.yml
+- name: Lokale Verwaltung mobiler Geräte
+  items:
+    - name: Was ist die lokale Verwaltung mobiler Geräte?
+      href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - name: Planen für die lokale Verwaltung mobiler Geräte (MDM)
+      href: plan-design/plan-on-premises-mdm.md
+    - name: Setup
+      items:
+        - name: Installieren lokaler Rollen
+          href: get-started/install-site-system-roles-for-on-premises-mdm.md
+        - name: Einrichten von Zertifikaten
+          href: get-started/set-up-certificates-on-premises-mdm.md
+        - name: Vorbereiten für die Registrierung
+          href: get-started/set-up-device-enrollment-on-premises-mdm.md
+    - name: Registrieren von Geräten
+      items:
+        - name: Registrierung – Übersicht
+          href: deploy-use/enroll-devices-on-premises-mdm.md
+        - name: Benutzerregistrierung
+          href: deploy-use/user-enroll-devices-on-premises-mdm.md
+        - name: Massenregistrierung
+          href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+    - name: Verwalten von Geräten und Schützen von Daten
+      href: deploy-use/wipe-lock-reset-devices.md
+    - name: Verwalten von Anwendungen
+      href: deploy-use/management-tasks-applications.md
+    - name: Verwalten von Konfigurationseinstellungen
+      href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+    - name: Verwalten des Zugriffs auf Ressourcen
+      items:
+        - name: Erstellen von PFX-Zertifikatprofilen
+          href: deploy-use/create-pfx-certificate-profiles.md
+        - name: Importieren von PFX-Zertifikatprofilen
+          href: deploy-use/import-pfx-certificate-profiles.md
+        - name: WLAN-Profile
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+        - name: VPN-Profile
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+- name: Exchange Server-Connector
+  items:
+    - name: Geräteverwaltung mit Exchange
+      href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+    - name: Installieren des Exchange Connectors
+      href: deploy-use/install-configure-exchange-connector.md
+- name: Was ist mit der hybriden Verwaltung mobiler Geräte passiert?
+  href: understand/what-happened-to-hybrid.md

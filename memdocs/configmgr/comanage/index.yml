@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: Dokumentation zur Co-Verwaltung
+summary: Co-Verwaltung ermöglicht Ihnen die gleichzeitige Verwaltung von Windows 10-Geräten mithilfe von Configuration Manager und Microsoft Intune.
+metadata:
+  title: Dokumentation zur Co-Verwaltung
+  titleSuffix: Configuration Manager
+  description: Co-Verwaltung ermöglicht Ihnen die gleichzeitige Verwaltung von Windows 10-Geräten mithilfe von Configuration Manager und Microsoft Intune.
+  ms.product: configuration-manager
+  ms.technology: configmgr-comanage
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: bc1bf65ecaf77ded325fcdae19a0d318052b1cc9
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740999"
+landingContent:
+- title: Informationen zur Co-Verwaltung
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Was ist Co-Verwaltung?
+      url: overview.md
+    - text: Pfade zur Co-Verwaltung
+      url: quickstart-paths.md
+  - linkListType: video
+    links:
+    - text: Bedingter Zugriff mit Co-Verwaltung
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player
+- title: Erste Schritte
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Aktivieren der Co-Verwaltung für vorhandene Konfigurations-Manager-Clients
+      url: tutorial-co-manage-clients.md
+    - text: Aktivieren der Co-Verwaltung für neue internetbasierte Geräte
+      url: tutorial-co-manage-new-devices.md
+  - linkListType: video
+    links:
+    - text: Upgrade auf Windows 10 für Co-Verwaltung
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
+- title: Hauptaufgaben
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Verschieben von Configuration Manager-Workloads zu Intune
+      url: how-to-switch-workloads.md
+    - text: Überwachen der Co-Verwaltung in Configuration Manager
+      url: how-to-monitor.md
+  - linkListType: video
+    links:
+    - text: Windows Autopilot mit Co-Verwaltung
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player

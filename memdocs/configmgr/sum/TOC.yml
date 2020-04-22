@@ -1,0 +1,95 @@
+- name: Dokumentation zur Softwareupdateverwaltung
+  href: index.yml
+- name: Verstehen und Kennenlernen
+  items:
+    - name: Einführung zu Softwareupdates
+      href: understand/software-updates-introduction.md
+    - name: Für Softwareupdates verwendete Symbole
+      href: understand/software-updates-icons.md
+- name: Planung und Entwurf
+  items:
+    - name: Planen von Softwareupdates
+      href: plan-design/plan-for-software-updates.md
+    - name: Voraussetzungen für Softwareupdates
+      href: plan-design/prerequisites-for-software-updates.md
+    - name: Bewährte Methoden für Softwareupdates
+      href: plan-design/software-updates-best-practices.md
+    - name: Sicherheit und Datenschutz für die Softwareupdates
+      href: plan-design/security-and-privacy-for-software-updates.md
+- name: Erste Schritte
+  items:
+    - name: Vorbereiten der Softwareupdateverwaltung
+      href: get-started/prepare-for-software-updates-management.md
+    - name: Installieren eines Softwareupdatepunkts
+      href: get-started/install-a-software-update-point.md
+    - name: Synchronisieren von Softwareupdates
+      href: get-started/synchronize-software-updates.md
+    - name: Konfigurieren von Klassifizierungen und Produkten
+      href: get-started/configure-classifications-and-products.md
+    - name: Verwalten von Einstellungen für Softwareupdates
+      href: get-started/manage-settings-for-software-updates.md
+    - name: Synchronisieren von Softwareupdates in getrennten Umgebungen
+      items:
+        - name: Synchronisieren von Softwareupdates bei einem getrennten Softwareupdatepunkt
+          href: get-started/synchronize-software-updates-disconnected.md
+        - name: "Synchronisieren von Office\_365-Updates bei einem getrennten Softwareupdatepunkt"
+          href: get-started/synchronize-office-updates-disconnected.md
+- name: Bereitstellen und Verwenden
+  items:
+    - name: Herunterladen von Softwareupdates
+      href: deploy-use/download-software-updates.md
+    - name: Hinzufügen von Softwareupdates zu einer Updategruppe
+      href: deploy-use/add-software-updates-to-an-update-group.md
+    - name: Bereitstellen von Softwareupdates
+      href: deploy-use/deploy-software-updates.md
+      items:
+        - name: Manuelles Bereitstellen von Softwareupdates
+          href: deploy-use/manually-deploy-software-updates.md
+        - name: Automatisches Bereitstellen von Softwareupdates
+          href: deploy-use/automatically-deploy-software-updates.md
+        - name: Erstellen einer stufenweisen Bereitstellung
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: Überwachen von Softwareupdates
+      href: deploy-use/monitor-software-updates.md
+      items:
+        - name: Verwalten und Überwachen von stufenweisen Bereitstellungen
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: Wartung für Softwareupdates
+      href: deploy-use/software-updates-maintenance.md
+    - name: Orchestrierungsgruppen
+      href: deploy-use/orchestration-groups.md
+    - name: Bereitstellung einer Servergruppe
+      href: deploy-use/service-a-server-group.md
+    - name: Office 365-Clientverwaltungsdashboard
+      href: deploy-use/office-365-dashboard.md
+    - name: Verwalten von Office 365 ProPlus-Updates
+      href: deploy-use/manage-office-365-proplus-updates.md
+    - name: Optimieren der Bereitstellung von Updates für Windows 10
+      href: deploy-use/optimize-windows-10-update-delivery.md
+    - name: Verwalten von Express-Installationsdateien für Windows 10-Updates
+      href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: Integration mit Windows Update für Unternehmen in Windows 10
+      href: deploy-use/integrate-windows-update-for-business-windows-10.md
+    - name: Updates für Drittanbietersoftware
+      href: deploy-use/third-party-software-updates.md
+    - name: Beispielszenario für die Bereitstellung von Sicherheitsupdates
+      href: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+- name: System Center Updates Publisher
+  href: tools/updates-publisher.md
+  items:
+    - name: Installation
+      href: tools/install-updates-publisher.md
+    - name: Konfigurieren von Optionen
+      href: tools/updates-publisher-options.md
+    - name: Verwalten von Katalogen
+      href: tools/updates-publisher-catalogs.md
+    - name: Verwalten von Updates
+      href: tools/manage-updates-with-updates-publisher.md
+    - name: Verwalten von Veröffentlichungen
+      href: tools/updates-publisher-publications.md
+    - name: Erstellen neuer Updates
+      href: tools/create-updates-with-updates-publisher.md
+    - name: Anwendbarkeitsregeln
+      href: tools/updates-publisher-applicability-rules.md
+    - name: Zertifikate und Sicherheit
+      href: tools/updates-publisher-security.md
