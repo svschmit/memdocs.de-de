@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2538a8c9755efe9ecec80358b7d90f10d5f2c33a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323828"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078395"
 ---
 # <a name="intune-discovered-apps"></a>Von Intune ermittelte Apps
 
@@ -54,7 +54,7 @@ In der folgenden Liste erhalten Sie Informationen zum Plattformtyp der App, zu d
 
 | Plattform | Benutzereigene Geräte | Unternehmenseigene Geräte | Aktualisierungszyklus |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Win32-Apps) HINWEIS: [Erfordert die Intune-Verwaltungserweiterung](intune-management-extension.md) auf dem Gerät | Nicht zutreffend | Nur verwaltete Apps | Alle 24 Stunden ab der Geräteregistrierung |
+| Windows 10 (Win32-Apps) HINWEIS: [Erfordert die Intune-Verwaltungserweiterung](intune-management-extension.md) auf dem Gerät | Nicht zutreffend | Alle auf dem Gerät installierten Apps | Alle 24 Stunden ab der Geräteregistrierung |
 | Windows 10 (Moderne Apps) | Nur verwaltete moderne Apps | Alle auf dem Gerät installierten modernen Apps | Alle 7 Tage ab der Geräteregistrierung |
 | Windows 8.1 | Nur verwaltete Apps | Nur verwaltete Apps | Alle 7 Tage ab der Geräteregistrierung |
 | Windows Phone 8 | Nur verwaltete Apps | Nur verwaltete Apps | Alle 7 Tage ab der Geräteregistrierung |

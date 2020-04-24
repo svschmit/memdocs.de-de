@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae1f0117f6dbf186b3a4bdddb393d053c33c914a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359793"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078055"
 ---
 # <a name="reference-for-devices-entities"></a>Referenz für Geräteentitäten
 
@@ -42,7 +42,7 @@ Die Kategorie **devices** enthält Entitäten für mobile Geräte, die folgende 
 
 Die Entität **deviceTypes** stellt den Gerätetyp dar, auf den von anderen Data Warehouse-Entitäten verwiesen wird. Der Gerätetyp beschreibt in der Regel entweder das Gerätemodell, den Hersteller oder eine Kombination aus beidem.
 
-| Eigenschaft  | Description |
+| Eigenschaft  | Beschreibung |
 |---------|------------|
 | deviceTypeID |Der eindeutige Bezeichner des Gerätetyps |
 | deviceTypeKey |Der eindeutige Bezeichner des Gerätetyps im Data Warehouse – Ersatzschlüssel |
@@ -50,9 +50,9 @@ Die Entität **deviceTypes** stellt den Gerätetyp dar, auf den von anderen Data
 
 ### <a name="example"></a>Beispiel
 
-| deviceTypeID  | Name | Description |
+| deviceTypeID  | Name | Beschreibung |
 |---------|------------|--------|
-| 0 |Desktop |Windows Desktop-Gerät |
+| 0 |desktop- |Windows Desktop-Gerät |
 | 1 |WindowsRT |WindowsRT-Gerät |
 | 2 |WinMO6 |Windows Mobile 6.0-Gerät |
 | 3 |Nokia |Nokia-Gerät |
@@ -76,7 +76,7 @@ Die Entität **deviceTypes** stellt den Gerätetyp dar, auf den von anderen Data
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
 Die Entität **enrollmentActivity** gibt die Aktivität einer Geräteregistrierung an.
 
-| Eigenschaft                      | Description                                                               |
+| Eigenschaft                      | Beschreibung                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
 | dateKey                       | Der Schlüssel des Datums, an dem diese Registrierungsaktivität aufgezeichnet wurde.               |
 | deviceEnrollmentTypeKey       | Der Schlüssel des Typs der Registrierung.                                        |
@@ -90,32 +90,32 @@ Die Entität **enrollmentActivity** gibt die Aktivität einer Geräteregistrieru
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
 Die Entität **enrollmentEventStatus** gibt das Ergebnis einer Geräteregistrierung an.
 
-| Eigenschaft                   | Description                                                                       |
+| Eigenschaft                   | Beschreibung                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
 | enrollmentEventStatusKey   | Eindeutiger Bezeichner des Registrierungsstatus im Data Warehouse (Ersatzschlüssel).  |
 | enrollmentEventStatusName  | Die Bezeichnung des Registrierungsstatus. Siehe folgende Beispiele.                            |
 
 ### <a name="example"></a>Beispiel
 
-| enrollmentEventStatusName  | Description                            |
+| enrollmentEventStatusName  | Beschreibung                            |
 |----------------------------|----------------------------------------|
 | Erfolgreich                    | Eine erfolgreiche Geräteregistrierung.         |
-| Fehlgeschlagen                     | Eine fehlerhafte Geräteregistrierung.             |
+| Failed                     | Eine fehlerhafte Geräteregistrierung.             |
 | Nicht verfügbar              | Der Registrierungsstatus ist nicht verfügbar.  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
 Die Entität **enrollmentFailureCategory** gibt an, warum eine Geräteregistrierung fehlgeschlagen ist. 
 
-| Eigenschaft                       | Description                                                                                 |
+| Eigenschaft                       | Beschreibung                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
 | enrollmentFailureCategoryKey   | Eindeutiger Bezeichner der Fehlerkategorie für die Registrierung im Data Warehouse (Ersatzschlüssel).  |
 | enrollmentFailureCategoryName  | Der Name der Fehlerkategorie für die Registrierung. Siehe folgende Beispiele.                            |
 
 ### <a name="example"></a>Beispiel
 
-| enrollmentFailureCategoryName   | Description                                                                                                   |
+| enrollmentFailureCategoryName   | Beschreibung                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Nicht anwendbar                  | Die Fehlerkategorie für die Registrierung ist nicht anwendbar.                                                            |
+| Nicht zutreffend                  | Die Fehlerkategorie für die Registrierung ist nicht anwendbar.                                                            |
 | Nicht verfügbar                   | Die Fehlerkategorie für die Registrierung ist nicht verfügbar.                                                             |
 | Unbekannt                         | Unbekannter Fehler.                                                                                                |
 | Authentifizierung                  | Fehler bei der Authentifizierung.                                                                                        |
@@ -133,16 +133,16 @@ Die Entität **enrollmentFailureCategory** gibt an, warum eine Geräteregistrier
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
 Die Entität **enrollmentFailureReason** gibt eine ausführlichere Ursache für einen Fehler bei der Geräteregistrierung innerhalb einer Fehlerkategorie an.  
 
-| Eigenschaft                     | Description                                                                               |
+| Eigenschaft                     | Beschreibung                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
 | enrollmentFailureReasonKey   | Eindeutiger Bezeichner für die Fehlerursache bei der Registrierung im Data Warehouse (Ersatzschlüssel).  |
 | enrollmentFailureReasonName  | Die Bezeichnung der Fehlerursache bei der Registrierung. Siehe folgende Beispiele.                            |
 
 ### <a name="example"></a>Beispiel
 
-| enrollmentFailureReasonName      | Description                                                                                                                                                                                            |
+| enrollmentFailureReasonName      | Beschreibung                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nicht anwendbar                   | Die Fehlerursache für die Registrierung ist nicht anwendbar.                                                                                                                                                       |
+| Nicht zutreffend                   | Die Fehlerursache für die Registrierung ist nicht anwendbar.                                                                                                                                                       |
 | Nicht verfügbar                    | Die Fehlerursache für die Registrierung ist nicht verfügbar.                                                                                                                                                        |
 | Unbekannt                          | Unbekannter Fehler.                                                                                                                                                                                         |
 | UserNotLicensed                  | Der Benutzer wurde nicht in Intune gefunden oder verfügt über keine gültige Lizenz.                                                                                                                                     |
@@ -155,7 +155,7 @@ Die Entität **enrollmentFailureReason** gibt eine ausführlichere Ursache für 
 | AuthenticationRequirementNotMet  | Der Intune-Registrierungsdienst konnte diese Anforderung nicht autorisieren.                                                                                                                                            |
 | UnsupportedDeviceType            | Das Gerät erfüllt nicht die Mindestanforderungen für die Intune-Registrierung.                                                                                                                                  |
 | EnrollmentCriteriaNotMet         | Dieses Gerät konnte aufgrund einer konfigurierten Regel zur Einschränkung von Registrierungen nicht registriert werden.                                                                                                                          |
-| BulkDeviceNotPreregistered       | Die IMEI (International Mobile Equipment Identity) bzw. die Seriennummer dieses Geräts wurde nicht gefunden.  Ohne diesen Bezeichner werden Geräte als persönliche Geräte erkannt, die zurzeit gesperrt sind.  |
+| BulkDeviceNotPreregistered       | IMEI (International Mobile Equipment Identifier) oder Seriennummer des Geräts wurde nicht gefunden.  Ohne diesen Bezeichner werden Geräte als persönliche Geräte erkannt, die zurzeit gesperrt sind.  |
 | FeatureNotSupported              | Der Benutzer hat versucht, auf eine Funktion zuzugreifen, die noch nicht für alle Kunden freigegeben oder nicht mit Ihrer Intune-Konfiguration kompatibel ist.                                                            |
 | UserAbandonment                  | Die Registrierung wurde vom Endbenutzer vorzeitig beendet. (Der Endbenutzer hat mit dem Onboarding begonnen, aber dieses nicht rechtzeitig abgeschlossen.)                                                                                           |
 | APNSCertificateExpired           | Apple-Geräte können nicht mit einem abgelaufenen Apple-MDM-Pushzertifikat verwaltet werden.                                                                                                                            |
@@ -163,7 +163,7 @@ Die Entität **enrollmentFailureReason** gibt eine ausführlichere Ursache für 
 
 Die Entität **enrollmentType** gibt an, ob ein Gerät einem Unternehmen oder einer Privatperson gehört oder ob der Besitzer unbekannt ist.
 
-| Eigenschaft  | Description | Beispiel |
+| Eigenschaft  | Beschreibung | Beispiel |
 |---------|------------|--------|
 | ownerTypeID |Eindeutiger Bezeichner des Besitzertyps | |
 | ownerTypeKey |Eindeutige Bezeichner des Besitzertyps im Data Warehouse – Ersatzschlüssel | |
@@ -176,7 +176,7 @@ Die Entität **enrollmentType** gibt an, ob ein Gerät einem Unternehmen oder ei
 
 Die Entität **managementStates** stellt Details zum Status des Geräts bereit. Details können nützlich sein, wenn Remoteaktionen angewendet werden, das Gerät per Jailbreak oder Rootzugriff manipuliert wurde.
 
-| Eigenschaft  | Description |
+| Eigenschaft  | Beschreibung |
 |---------|------------|
 | managementStateID | Der eindeutige Bezeichner des Verwaltungsstatus |
 | managementStateKey | Der eindeutige Bezeichner des Verwaltungsstatus im Data Warehouse – Ersatzschlüssel |
@@ -184,7 +184,7 @@ Die Entität **managementStates** stellt Details zum Status des Geräts bereit. 
 
 ### <a name="example"></a>Beispiel
 
-| managementStateID  | Name | Description |
+| managementStateID  | Name | Beschreibung |
 |---------|------------|--------|
 | 0 |Verwaltet | Verwaltet, ohne ausstehende Remoteaktionen |
 | 1 |RetirePending | Für das Gerät steht ein Befehl zum Außerkraftsetzen aus. |
@@ -203,7 +203,7 @@ Die Entität **managementStates** stellt Details zum Status des Geräts bereit. 
 
 Die Entität **ManagementAgentType** stellt die Agents dar, die zum Verwalten von Geräten verwendet werden.
 
-| Eigenschaft  | Description |
+| Eigenschaft  | Beschreibung |
 |---------|------------|
 | managementAgentTypeID | Eindeutige Bezeichner des Verwaltungs-Agent-Typen |
 | managementAgentTypeKey | Eindeutiger Bezeichner des Verwaltungs-Agent-Typen im Data Warehouse – Ersatzschlüssel |
@@ -211,7 +211,7 @@ Die Entität **ManagementAgentType** stellt die Agents dar, die zum Verwalten vo
 
 ### <a name="example"></a>Beispiel
 
-| ManagementAgentTypeID  | Name | Description |
+| ManagementAgentTypeID  | Name | Beschreibung |
 |---------|------------|--------|
 | 1 |EAS | Das Gerät wird mithilfe von Exchange Active Sync verwaltet. |
 | 2 |MDM | Das Gerät wird mit einem MDM-Agent verwaltet. |
@@ -225,7 +225,7 @@ Die Entität **ManagementAgentType** stellt die Agents dar, die zum Verwalten vo
 
 In der Entität **devices** werden alle für die Verwaltung registrierten Geräte und ihre entsprechenden Eigenschaften aufgelistet.
 
-|          Eigenschaft          |                                                                                       Description                                                                                      |
+|          Eigenschaft          |                                                                                       Beschreibung                                                                                      |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | deviceKey                  | Der eindeutige Bezeichner des Geräts im Data Warehouse – Ersatzschlüssel.                                                                                                               |
 | deviceId                   | Eindeutiger Bezeichner des Geräts.                                                                                                                                                     |
@@ -268,7 +268,7 @@ In der Entität **devices** werden alle für die Verwaltung registrierten Gerät
 
 Die Entität **devicePropertyHistory** hat die gleichen Eigenschaften wie die Gerätetabellen und die täglichen Momentaufnahmen der einzelnen Gerätedatensätze pro Tag für die letzten 90 Tage. Die DateKey-Spalte gibt den Tag für jede Zeile an.
 
-|          Eigenschaft          |                                                                                      Description                                                                                     |
+|          Eigenschaft          |                                                                                      Beschreibung                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | dateKey                    | Verweis auf die Datumstabelle, die den Tag angibt                                                                                                                                          |
 | deviceKey                  | Der eindeutige Bezeichner des Geräts in Data Warehouse – Ersatzschlüssel. Dies ist ein Verweis auf die Gerätetabelle, die die Intune-Geräte-ID enthält.                               |

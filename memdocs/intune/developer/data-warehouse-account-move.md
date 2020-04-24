@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7bf08775a6cccac3dd96268765d6e1a2e453c51
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 95c7104f949216a6a9f7704ac9bec6a7c2dfa7aa
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345363"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078089"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Verschieben Ihrer Intune Data Warehouse-Kontodaten 
 
@@ -82,5 +82,5 @@ Kunde X fordert eine Kontoverschiebung beginnend am 06.01.2018 an. Als Antwort a
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Erfahren Sie [jede Woche die Neuerungen in Intune](../fundamentals/whats-new.md). Sie erhalten auch Informationen zu bevorstehenden Änderungen, wichtige Hinweise zum Dienst und Informationen zu vorherigen Releases.
+- Erfahren Sie [jede Woche von Neuerungen in Intune](../fundamentals/whats-new.md). Sie erhalten auch Informationen zu bevorstehenden Änderungen, wichtige Hinweise zum Dienst und Informationen zu vorherigen Releases.
 - Lesen Sie den [Microsoft Intune-Blog](https://go.microsoft.com/fwlink/?LinkID=273882).

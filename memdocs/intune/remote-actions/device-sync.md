@@ -16,17 +16,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54271edb7f9c4de240992ca2ca620866c9ca469c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2e1f4512441212d308e97122fe71369eaadd1226
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326241"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077817"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronisieren von Geräten mit Intune, um die neuesten Richtlinien und Aktionen zu erhalten
 
 
-Die Geräteaktion **Synchronisieren** zwingt das ausgewählte Gerät, sich sofort bei Intune anzumelden. Checkt ein Gerät ein, empfängt es sofort alle ihm zugewiesenen ausstehenden Aktionen oder Richtlinien. Mit diesem Feature können Sie zugewiesene Richtlinien sofort überprüfen und Probleme beheben, ohne den nächsten geplanten Check-In abwarten zu müssen.
+Die Geräteaktion **Synchronisieren** zwingt das ausgewählte Gerät, sich sofort bei Intune anzumelden. Checkt ein Gerät ein, empfängt es sofort alle ihm zugewiesenen ausstehenden Aktionen oder Richtlinien. Diese Funktion kann Ihnen dabei helfen, die von Ihnen zugewiesenen Richtlinien sofort zu überprüfen und Probleme zu behandeln, ohne auf die nächste geplante Anmeldung zu warten.
 
 ## <a name="supported-platforms"></a>Unterstützte Plattformen
 

@@ -19,18 +19,18 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 26fbc0fbc8c498df67d254895e71ef9a9ae6970f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b368fa0835e8779db5214d5372d97b72f76d906e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347144"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077545"
 ---
 # <a name="unable-to-get-macos-device-managed"></a>Verwalten von macOS-Geräten nicht möglich
 
 Wenn Sie eine der folgenden Meldungen erhalten, während Sie die Verwaltung eines macOS-Geräts einrichten möchten, kontaktieren Sie den Support Ihres Unternehmens.
 
-**Nachricht 1**: *We’re having trouble getting your device managed. This problem could be caused if you're using a virtual machine, have a restricted serial number, or if this device is already assigned to someone else. Learn how to resolve these problems or contact your company support. (Die Verwaltung Ihres Geräts bereitet Probleme, die dadurch entstanden sein könnten, dass Sie einen virtuellen Computer verwenden, die Seriennummer eingeschränkt ist oder das Gerät bereits einer anderen Person zugewiesen ist. Informieren Sie sich, wie Sie diese Probleme lösen können, oder kontaktieren Sie den Support Ihres Unternehmens.)*
+**Nachricht 1**: *We‘re having trouble getting your device managed. This problem could be caused if you're using a virtual machine, have a restricted serial number, or if this device is already assigned to someone else. Learn how to resolve these problems or contact your company support. (Die Verwaltung Ihres Geräts bereitet Probleme, die dadurch entstanden sein könnten, dass Sie einen virtuellen Computer verwenden, die Seriennummer eingeschränkt ist oder das Gerät bereits einer anderen Person zugewiesen ist. Informieren Sie sich, wie Sie diese Probleme lösen können, oder kontaktieren Sie den Support Ihres Unternehmens.)*
 
 **Nachricht 2**: *It looks like you're using a virtual machine. Make sure you've fully configured your virtual machine, including serial number and hardware model. If this isn't a virtual machine, please contact support. (Sie verwenden scheinbar einen virtuellen Computer. Vergewissern Sie sich, dass Sie diesen vollständig konfiguriert haben und sowohl eine Seriennummer als auch ein Hardwaremodell vorhanden ist. Wenn es sich nicht um einen virtuellen Computer handelt, kontaktieren Sie den Support.)*  
 
