@@ -179,7 +179,7 @@ Nachdem Sie Ihre App innerhalb eines Azure-Mandanten registriert haben und sie u
 3. Klicken Sie auf **+ Berechtigung hinzufügen**.
 4. Wählen Sie die Registerkarte **Von meiner Organisation verwendete APIs** aus. 
 5. Geben Sie in das Suchfeld **Microsoft Mobile Application Management** (Verwaltung mobiler Microsoft-Anwendungen) ein.
-6. Aktivieren Sie unter **Delegierte Berechtigungen** das Kontrollkästchen **DeviceManagementManagedApps.ReadWrite: Lese- und Schreibberechtigungen für die App-Verwaltungsdaten des Benutzers**.
+6. Aktivieren Sie unter **Delegierte Berechtigungen** das Kontrollkästchen **DeviceManagementManagedApps.ReadWrite: Lese- und Schreibberechtigungen für die App-Verwaltungsdaten des Benutzers** *.
 7. Klicken Sie auf **Berechtigungen hinzufügen**.
 
 > [!NOTE]
