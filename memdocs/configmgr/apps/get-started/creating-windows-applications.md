@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6b7ce4fd1ab09607f167696df35f3b5f19469b0d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688988"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075726"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Erstellen von Windows-Anwendungen in Configuration Manager
 
@@ -124,7 +124,7 @@ Ab Version 2002 können Sie komplexe Anwendungen mithilfe von Tasksequenzen üb
 
 - Definieren zusätzlicher Metadaten für die App-Tasksequenz, einschließlich lokalisierter Informationen.
 
-Als Bereitstellungstyp für eine App können Sie nur eine Tasksequenz hinzufügen, die nicht der Bereitstellung des Betriebssystems dient. Tasksequenzen mit hoher Auswirkung, Betriebssystembereitstellung oder -upgrade werden nicht unterstützt. Eine benutzerorientierte Bereitstellung wird weiterhin im Benutzerkontext des lokalen Kontos „System“ ausgeführt.
+Als Bereitstellungstyp für eine App können Sie nur eine Tasksequenz hinzufügen, die nicht der Bereitstellung des Betriebssystems dient. Tasksequenzen mit hoher Auswirkung, Betriebssystembereitstellung oder -upgrade werden nicht unterstützt. <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 Wenn Sie diesen Bereitstellungstyp zu einer App hinzufügen, konfigurieren Sie die zugehörigen Eigenschaften auf der Seite **Tasksequenz**. Weitere Informationen finden Sie unter [Optionen der **Bereitstellungstyp-** Tasksequenz](../deploy-use/create-applications.md#bkmk_dt-ts).
 

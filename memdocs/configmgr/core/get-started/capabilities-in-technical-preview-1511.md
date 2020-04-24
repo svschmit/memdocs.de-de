@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 475cb4e9a4c6c3b90582210b0ebf4a7f69e9f643
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694288"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076338"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funktionen in der Technical Preview 1511 für Configuration Manager
 
@@ -48,7 +48,7 @@ Für Computer, die über WUfB verbunden sind, kann Configuration Manager keine M
 
 4.  Erstellen Sie eine Client-Agent-Einstellung, um den Softwareupdate-Workflow zu deaktivieren, und stellen Sie die Einstellung in der Sammlung von Computern bereit, die direkt mit WUfB verbunden sind.  
 
-5.  Die Computer, die über WUfB verwaltet werden, zeigen als Konformitätsstatus **Unbekannt** an und werden im Gesamtprozentsatz der Konformität nicht berücksichtigt.  
+5.  Die Computer, die über WUfB verwaltet werden, zeigen als Kompatibilitätsstatus **Unbekannt** an und werden im Gesamtprozentsatz der Kompatibilität nicht berücksichtigt.  
 
 ##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Verwalten von Office 365 ProPlus-Clientupdates über Configuration Manager  
  Configuration Manager verfügt jetzt über die Möglichkeit zum Verwalten von Office 365-Desktopclientupdates mithilfe des Softwareupdateverwaltungs-Workflows von Configuration Manager.    

@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: be5cae95460064287fa347d1ca42626ab75a2809
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
+  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333939"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82077953"
 landingContent:
 - title: Informationen zur Registrierung
   linkLists:
@@ -87,7 +87,7 @@ landingContent:
     links:
     - text: Einrichten der iOS/iPadOS-Registrierung
       url: ios-enroll.md
-    - text: Automatisches Registrieren von iOS/iPadOS-Geräten mit dem Programm zur Geräteregistrierung von Apple
+    - text: Automatisches Registrieren von iOS-/iPadOS-Geräten mit der automatischen Geräteregistrierung von Apple
       url: device-enrollment-program-enroll-ios.md
     - text: Einrichten der iOS/iPadOS- und iPadOS-Benutzerregistrierung
       url: ios-user-enrollment.md
@@ -111,7 +111,7 @@ landingContent:
     links:
     - text: Einrichten der macOS-Registrierung
       url: macos-enroll.md
-    - text: Automatisches Registrieren von macOS-Geräten mit dem Programm zur Geräteregistrierung oder Apple School Manager
+    - text: Automatisches Registrieren von macOS-Geräten mit der automatischen Geräteregistrierung oder Apple School Manager
       url: device-enrollment-program-enroll-macos.md
-    - text: Einrichten der iOS/iPadOS-Geräteregistrierung mit Apple Configurator
+    - text: Einrichten der iOS-/iPadOS-Geräteregistrierung mit Apple Configurator
       url: apple-configurator-enroll-ios.md

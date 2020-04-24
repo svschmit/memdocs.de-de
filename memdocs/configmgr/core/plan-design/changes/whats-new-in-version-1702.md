@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a82ff8135fac84c866c819bb78d080111bd1bffa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702598"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073941"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Neuerungen in Version 1702 von Configuration Manager
 
@@ -92,7 +92,7 @@ Im Folgenden sind Änderungen an Updates und Wartung aufgeführt:
   Sie haben die Option, auch die anderen verfügbaren Updates herunterzuladen und zu installieren, auch wenn diese nicht die aktuellsten Versionen sind. Wenn Sie ein älteres Update herunterladen, erhalten Sie eine Warnmeldung, dass das Update von einem aktuelleren ersetzt wurde. Um ein *verfügbares* Update herunterzuladen, wählen Sie das Update in der Konsole aus, und klicken Sie anschließend auf **Herunterladen**.
 
 - **Verbesserte Bereinigung älterer Updates**   
-  Es wurde eine automatische Bereinigungsfunktion hinzugefügt, die nicht mehr benötigte Downloads aus dem Ordner „EasySetupPayload“auf Ihrem Standortserver löscht. Da dies in Version 1702 eingeführt wurde, beginnt der die Bereinigung nach der Installation eines nachfolgenden Updates, z.B. einem Updaterollup oder einer zukünftigen Updateversion.  
+  Wir haben eine automatische Bereinigungsfunktion hinzugefügt, die nicht mehr benötigte Downloads aus dem Ordner „EasySetupPayload“ auf Ihrem Standortserver löscht. Da dies in Version 1702 eingeführt wurde, beginnt der die Bereinigung nach der Installation eines nachfolgenden Updates, z.B. einem Updaterollup oder einer zukünftigen Updateversion.  
 
 
 ### <a name="data-warehouse-service-point"></a>Data Warehouse-Dienstpunkt
@@ -185,7 +185,7 @@ Weitere Informationen finden Sie unter [Konfigurieren von Einstellungen für ein
 Sie können jetzt zu einer vorherigen Seite zurückkehren, wenn Sie eine Tasksequenz ausführen und ein Fehler auftritt. Bevor es diese Version gab, mussten Sie die Tasksequenz neu starten, wenn ein Fehler aufgetreten ist. In den folgenden Szenarios können Sie zum Beispiel die Schaltfläche **Zurück** verwenden:
 
 - Beim Starten eines Computers in Windows PE wird möglicherweise der Bootstrap-Dialog der Tasksequenz angezeigt, bevor die Tasksequenz verfügbar ist. Wenn Sie in diesem Szenario auf „Weiter“ klicken, wird auf der letzten Seite der Tasksequenz eine Nachricht angezeigt, die darüber informiert, dass es keine verfügbaren Tasksequenzen gibt. Klicken Sie jetzt auf **Zurück**, um erneut nach verfügbaren Tasksequenzen zu suchen. Sie können diesen Vorgang wiederholen, bis die Tasksequenz verfügbar ist.
-- Wenn die abhängigen Paketinhalte beim Ausführen einer Tasksequenz an den Verteilungspunkten noch nicht verfügbar sind, kann die Tasksequenz nicht ausgeführt werden. Sie können jetzt fehlenden Inhalt (wenn dieser noch nicht verteilt wurde) verteilen oder warten, bis der Inhalt an den Verteilungspunkten verfügbar ist. Klicken Sie dann auf **Zurück**, damit die Tasksequenz wieder nach dem Inhalt sucht.
+- Wenn die abhängigen Paketinhalte beim Ausführen einer Tasksequenz an den Verteilungspunkten noch nicht verfügbar sind, kann die Tasksequenz nicht ausgeführt werden. Sie können jetzt die fehlende Inhalte verteilen (wenn diese noch nicht verteilt wurden). Sie können auch warten, bis die Inhalte auf den Verteilungspunkten verfügbar sind, und dann auf **Zurück** klicken, damit die Tasksequenz wieder nach den Inhalten sucht.
 
 ### <a name="pre-cache-content-for-available-deployments-and-task-sequences"></a>Zwischenspeichern von Inhalt für verfügbare Bereitstellungen und Tasksequenzen
 Ab Version 1702 (für verfügbare Bereitstellungen und Tasksequenzen) können Sie zwischengespeicherten Inhalt verwenden. Mit dem Zwischenspeichern von Inhalten können Sie den Client dahingehend einschränken, dass er nur zutreffenden Inhalt herunterladen darf, wenn er die Bereitstellung empfängt. Wenn der Benutzer dann im Softwarecenter auf **Installieren** klickt, steht der Inhalt bereit, und die Installation startet sofort, da der Inhalt bereits auf der lokalen Festplatte gespeichert ist. Informationen finden Sie unter [Konfigurieren des zwischengespeicherten Inhalts](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content).

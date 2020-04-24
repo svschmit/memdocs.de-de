@@ -10,12 +10,12 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 55877923ae2e9a7aa47b3ebe774f7dc0e4ea21a4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5b44147006a9ae4d38d2275a4515d71d61eec55c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697338"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074859"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Konfigurieren von Warnungen für Endpoint Protection in Configuration Manager
 
@@ -87,7 +87,7 @@ ms.locfileid: "81697338"
 
 ## <a name="alert-for-outdated-malware-client"></a>Warnung für veralteten Malwareclient
 
-Ab der Configuration Manager-Version 1702 können Sie eine Warnung konfigurieren, um sicherzustellen, dass Endpoint Protection-Clients nicht veraltet sind. Aus jeder Gerätesammlung können Sie nun Spalten zur Liste für die folgenden Attribute **Antischadsoftware-Clientversion** und **Endpoint Protection-Bereitstellungsstatus** hinzufügen. Navigieren Sie zum Beispiel in der Konsole zu **Bestand und Kompatibilität** > **Übersicht** > **Gerätesammlungen** > **Alle Desktops und Serverclients**. Klicken Sie mit der rechten Maustaste auf die Spaltenüberschrift, und wählen Sie die hinzuzufügenden Spalten aus. Sie können die Warnungen im Arbeitsbereich **Überwachung** über den Knoten **Warnungen** überprüfen. Wenn mehr als 20 % der verwalteten Clients mit abgelaufenen Versionen der Antischadsoftware ausgeführt werden wird die Warnmeldung „Die Antischadsoftware-Clientversion ist veraltet“ angezeigt. Diese Warnmeldung wird nicht in der Registerkarte **Überwachung** > **Übersicht** angezeigt. Aktivieren Sie Softwareupdates für Antischadsoftwareclients, um die abgelaufenen Antischadsoftwareclients zu aktualisieren.
+Ab der Configuration Manager-Version 1702 können Sie eine Warnung konfigurieren, um sicherzustellen, dass Endpoint Protection-Clients nicht veraltet sind. Aus jeder Gerätesammlung können Sie nun Spalten zur Liste für die folgenden Attribute **Antischadsoftware-Clientversion** und **Endpoint Protection-Bereitstellungsstatus** hinzufügen. Navigieren Sie zum Beispiel in der Konsole zu **Bestand und Kompatibilität** > **Übersicht** > **Gerätesammlungen** > **Alle Desktops und Serverclients**. Klicken Sie mit der rechten Maustaste auf die Spaltenüberschrift, und wählen Sie die hinzuzufügenden Spalten aus. Sie können die Warnungen im Arbeitsbereich **Überwachung** über den Knoten **Warnungen** überprüfen. Wenn mehr als 20 % der verwalteten Clients mit abgelaufenen Versionen der Antischadsoftware ausgeführt werden wird die Warnmeldung „Die Antischadsoftware-Clientversion ist veraltet“ angezeigt. Diese Warnmeldung wird auf der Registerkarte **Überwachung** > **Übersicht** nicht angezeigt. Aktivieren Sie Softwareupdates für Antischadsoftwareclients, um die abgelaufenen Antischadsoftwareclients zu aktualisieren.
 
 Um die Prozentzahl, aber der die Warnung generiert wird, zu konfigurieren, erweitern Sie **Überwachung** > **Warnungen** > **Alle Warnungen**, doppelklicken Sie auf **Antischadsoftwareclients veraltet**, und passen Sie die Option **Warnung ausgeben, wenn der Prozentsatz verwalteter Clients mit veralteter Version des Antischadsoftwareclients höher ist als** entsprechend an.
 
