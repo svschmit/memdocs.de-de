@@ -10,12 +10,12 @@ ms.assetid: 4a877bed-f6c4-4048-9421-507dc848af5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7dc4753a94dccf8a6a15751a436cecf8374e399
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0ca37a4e15f5da63ed743b541eeabc43708b0be1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691228"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075318"
 ---
 # <a name="remote-actions-with-co-management"></a>Remoteaktionen mit Co-Verwaltung
 
@@ -51,7 +51,7 @@ Das weltweit tätige Beratungsunternehmen Avanade setzt regelmäßig Remoteaktio
 > *Unser unmittelbarer Gewinn aus der Intune-Funktionalität war die Möglichkeit, Windows auf einem Computer remote zurückzusetzen. Dies ist wichtig für uns bei verlorenen oder gestohlenen Computern, was bei unseren hochmobilen Mitarbeitern häufiger der Fall ist.* 
 > *Dies ist Funktionalität, die wir sonst in einem benutzerdefinierten ConfigMgr-Paket hätten erstellen und verwalten müssen.*
 
-Weitere Informationen dazu, wie diese Remoteaktionen verwendet werden, finden Sie unter [Verfügbare Geräteaktionen](https://docs.microsoft.com/intune/device-management#available-device-actions).
+Weitere Informationen dazu, wie diese Remoteaktionen verwendet werden, finden Sie unter [Verfügbare Geräteaktionen](../../intune/remote-actions/device-management.md#available-device-actions).
 
 
 ## <a name="value-proposition"></a>Leistungsversprechen
@@ -74,25 +74,25 @@ Verwenden Sie die folgenden Remoteaktionen aus Intune, sobald Sie in Configurati
 
 - **Löschen** Wenn Sie Geräte aus Intune im Azure-Portal entfernen möchten, löschen Sie sie aus dem jeweiligen Gerätebereich. Das nächste Mal, wenn sich das Gerät anmeldet, werden alle darauf gespeicherten Unternehmensdaten entfernt.  
 
-Weitere Informationen finden Sie unter [Entfernen von Geräten durch Zurücksetzen, Außerbetriebnahme oder manuelles Aufheben der Registrierung des Geräts](https://docs.microsoft.com/intune/devices-wipe).
+Weitere Informationen finden Sie unter [Entfernen von Geräten durch Zurücksetzen, Außerbetriebnahme oder manuelles Aufheben der Registrierung des Geräts](../../intune/remote-actions/devices-wipe.md).
 
 #### <a name="selective-wipe"></a>Selektives Zurücksetzen
 <!--SCCMDocs issue 973-->
 Wenn Sie eine **Selektive App-Zurücksetzung** auswählen, werden App-Unternehmensdaten entfernt, persönliche Daten hingegen nicht. Verwenden Sie diese Aktion, wenn ein Gerät als verloren oder gestohlen gemeldet wird. 
 
-Weitere Informationen finden Sie unter [Zurücksetzen nur von Unternehmensdaten aus mit Intune verwalteten Apps](https://docs.microsoft.com/intune/apps-selective-wipe).
+Weitere Informationen finden Sie unter [How to wipe only corporate data from Intune-managed apps](../../intune/apps/apps-selective-wipe.md) (Zurücksetzen nur von Unternehmensdaten aus mit Intune verwalteten Apps).
 
 #### <a name="sync"></a>Sync
 Die Geräteaktion **Synchronisieren** zwingt das ausgewählte Gerät, sich sofort bei Intune anzumelden. Wenn sich ein Gerät anmeldet, empfängt es sofort alle ausstehenden Aktionen oder Richtlinien, die Sie ihm zugewiesen haben.
 
 Diese Funktion kann Ihnen dabei helfen, die von Ihnen zugewiesenen Richtlinien sofort zu überprüfen und Probleme zu behandeln, ohne auf die nächste geplante Anmeldung zu warten.
 
-Weitere Informationen finden Sie unter [Synchronisieren von Geräten, um die neuesten Richtlinien und Aktionen mit Intune abzurufen](https://docs.microsoft.com/intune/device-sync).
+Weitere Informationen finden Sie unter [Synchronisieren von Geräten, um die neuesten Richtlinien und Aktionen mit Intune abzurufen](../../intune/remote-actions/device-sync.md).
 
 #### <a name="restart"></a>Neu starten
 Die Geräteaktion **Neu starten** bewirkt, dass das ausgewählte Gerät neu gestartet wird. Diese Aktion ist sinnvoll, wenn ein Neustart aussteht, der Benutzer aber nicht verfügbar ist, um ihn durchzuführen.
 
-Weitere Informationen finden Sie unter [Remoteneustart von Geräten mit Intune](https://docs.microsoft.com/intune/device-restart).
+Weitere Informationen finden Sie unter [Remoteneustart von Geräten mit Intune](../../intune/remote-actions/device-restart.md).
 
 #### <a name="fresh-start"></a>Sauber starten
 Die Geräteaktion **Sauber starten** entfernt alle Apps, die auf einem Gerät mit Windows 10, Version 1703 oder höher, installiert sind. Mit „Sauber starten“ können vorinstallierte Apps (OEM-Apps) entfernt werden, die typischerweise auf einem neuen Gerät installiert werden.
@@ -101,12 +101,12 @@ Wenn Sie sich dafür entscheiden, die Benutzerdaten nicht beizubehalten, stellt 
 
 Wenn Sie vorgegebene Standards dafür haben, welche Apps auf dem Gerät installiert werden sollten, dann beseitigt diese Aktion diejenigen Apps, die nicht Ihren Kriterien entsprechen.
 
-Weitere Informationen finden Sie unter [Verwenden von „Sauber starten“ zum Zurücksetzen von Windows 10-Geräten mit Intune](https://docs.microsoft.com/intune/device-fresh-start). 
+Weitere Informationen finden Sie unter [Verwenden von „Sauber starten“ zum Zurücksetzen von Windows 10-Geräten mit Intune](../../intune/remote-actions/device-fresh-start.md). 
 
 #### <a name="remote-control"></a>Remotesteuerung
 Von Intune verwaltete Geräte können mit [TeamViewer](https://www.teamviewer.com/) remote verwaltet werden. TeamViewer ist ein Drittanbieterprogramm, das Sie separat erwerben.
 
-Weitere Informationen finden Sie unter [Verwenden von TeamViewer für die Remoteverwaltung von Intune-Geräten](https://docs.microsoft.com/intune/device-profile-android-teamviewer). 
+Weitere Informationen finden Sie unter [Verwenden von TeamViewer für die Remoteverwaltung von Intune-Geräten](../../intune/remote-actions/teamviewer-support.md).
 
 
 
@@ -114,5 +114,4 @@ Weitere Informationen finden Sie unter [Verwenden von TeamViewer für die Remote
 
 Abgesehen von der Remotesteuerung über TeamViewer ist für die Verwendung dieser Remotegeräteaktionen in Intune keine zusätzliche Einrichtung erforderlich, nachdem Sie [Co-Verwaltung](how-to-enable.md) aktiviert haben.
 
-Weitere Informationen zur Verwendung von TeamViewer für die Remotesteuerung finden Sie unter [Verwenden von TeamViewer für die Remoteverwaltung von Intune-Geräten](https://docs.microsoft.com/intune/device-profile-android-teamviewer). 
-
+Weitere Informationen zur Verwendung von TeamViewer für die Remotesteuerung finden Sie unter [Verwenden von TeamViewer für die Remoteverwaltung von Intune-Geräten](../../intune/remote-actions/teamviewer-support.md).

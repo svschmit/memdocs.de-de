@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: c1bb178c03682b9dd04902fecd50e5f2c9f01d0b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488175"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022856"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Verwenden der Cloud zum Konfigurieren einer Gruppenrichtlinie für Windows 10-Geräte mit ADMX-Vorlagen und Microsoft Intune
 
@@ -34,7 +34,7 @@ Administrative Vorlagen für Gruppenrichtlinien (auch als ADMX-Vorlagen bezeichn
 ADMX-Vorlagen sind für die folgenden Dienste verfügbar:
 
 - **Microsoft Edge**: Download unter [Microsoft Edge-Richtliniendatei](https://www.microsoftedgeinsider.com/en-us/enterprise)
-- **Office:** Download unter [Office 365 ProPlus, Office 2019 und Office 2016](https://www.microsoft.com/download/details.aspx?id=49030)
+- **Office:** Herunterladen unter [Microsoft 365-Apps, Office 2019 und Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: In das Betriebssystem Windows 10 integriert
 
 Weitere Informationen zu ADMX-Richtlinien finden Sie unter [Grundlegendes zu durch ADMX unterstützten Richtlinien](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
