@@ -1,0 +1,96 @@
+### YamlMime:Hub
+title: Microsoft Endpoint Manager – Dokumentation
+summary: Offizielle Produktdokumentation zu Microsoft Endpoint Manager
+metadata:
+  services: service
+  ms.service: microsoft-intune
+  ms.topic: hub-page
+  author: dougeby
+  ms.author: dougeby
+  manager: mtillman
+  ms.date: 04/20/2020
+  ms.openlocfilehash: b72bb3a86129b67622f1f22b4e78814d3dfee574
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741305"
+highlightedContent:
+  items:
+  - title: Übersicht über Microsoft Endpoint Manager
+    itemType: overview
+    url: endpoint-manager-overview.md
+  - title: Microsoft Endpoint Manager (Produktseite)
+    itemType: get-started
+    url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
+  - title: 'Tutorial: Exemplarische Vorgehensweise für Intune in Microsoft Endpoint Manager'
+    itemType: tutorial
+    url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
+  - title: Sichern Ihrer Remotemitarbeiter
+    itemType: get-started
+    url: https://docs.microsoft.com/enterprise-mobility-security/remote-work/
+conceptualContent:
+  items:
+  - title: Microsoft Intune
+    links:
+    - url: ./intune/index.yml
+      itemType: overview
+      text: Microsoft Intune-Dokumentation
+    - url: ./intune/fundamentals/index.yml
+      itemType: overview
+      text: Planen und Einrichten von Intune
+    - url: ./intune/enrollment/index.yml
+      itemType: overview
+      text: Registrieren von Geräten
+    - url: ./intune/remote-actions/index.yml
+      itemType: overview
+      text: Remoteverwaltung von Geräten
+    - url: ./intune/protect/index.yml
+      itemType: overview
+      text: Erstellen von Konformitätsregeln für Benutzer und Geräte
+    - url: ./intune/configuration/index.yml
+      itemType: overview
+      text: Steuern von Gerätefeatures und -einstellungen
+    - url: ./intune/apps/index.yml
+      itemType: concept
+      text: Verwalten und Schützen von Apps
+  - title: Microsoft Endpoint Configuration Manager
+    links:
+    - url: ./configmgr/index.yml
+      itemType: get-started
+      text: Dokumentation zu Microsoft Endpoint Configuration Manager
+    - url: ./configmgr/comanage/index.yml
+      itemType: concept
+      text: Verwalten von Geräteworkloads in Configuration Manager und Intune
+    - url: ./configmgr/desktop-analytics/index.yml
+      itemType: overview
+      text: Verwenden von Desktop Analytics für die Updatebereitschaft
+    - url: ./configmgr/core/index.yml
+      itemType: overview
+      text: Verwalten der Infrastruktur
+    - url: ./configmgr/apps/index.yml
+      itemType: concept
+      text: Verwalten von Apps
+    - url: ./configmgr/osd/index.yml
+      itemType: concept
+      text: Betriebssystembereitstellung
+    - url: ./configmgr/sum/index.yml
+      itemType: concept
+      text: Softwareupdates
+    - url: ./configmgr/compliance/index.yml
+      itemType: concept
+      text: Verwalten der Konfiguration und Compliance von Geräten
+    - url: ./configmgr/protect/index.yml
+      itemType: concept
+      text: Schützen Ihrer Infrastruktur und Daten
+  - title: Windows Autopilot
+    links:
+    - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
+      itemType: concept
+      text: Windows Autopilot – Dokumentation
+    - url: /mem/intune/enrollment/enrollment-autopilot
+      itemType: how-to-guide
+      text: 'Intune: Registrieren von Windows-Geräten mithilfe von Autopilot'
+    - url: ./configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md
+      itemType: how-to-guide
+      text: 'Configuration Manager: Verwenden von Windows Autopilot für vorhandene Geräte'

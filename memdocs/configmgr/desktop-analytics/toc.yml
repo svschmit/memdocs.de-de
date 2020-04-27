@@ -1,0 +1,60 @@
+- name: Dokumentation für Desktop Analytics
+  href: index.yml
+- name: Übersicht
+  items:
+    - name: Was ist Desktop Analytics?
+      href: overview.md
+    - name: Neuerungen
+      href: whats-new.md
+- name: Tutorials
+  items:
+    - name: Pilot Windows 10
+      href: tutorial-windows10.md
+- name: Konzepte
+  items:
+    - name: Bereitstellungspläne
+      href: about-deployment-plans.md
+    - name: Assets
+      href: about-assets.md
+    - name: Qualitäts- und Featureupdates
+      href: about-updates.md
+    - name: Bewertung der Kompatibilität
+      href: compat-assessment.md
+    - name: Überwachen des Integritätsstatus
+      href: health-status-monitoring.md
+- name: Anleitungen
+  items:
+    - name: Einrichten von Desktop Analytics
+      href: set-up.md
+    - name: Herstellen einer Verbindung mit Configuration Manager
+      href: connect-configmgr.md
+    - name: Registrieren von Geräten
+      href: enroll-devices.md
+    - name: Erstellen von Bereitstellungsplänen
+      href: create-deployment-plans.md
+    - name: Bereitstellen für die Pilotphase
+      href: deploy-pilot.md
+    - name: Bereitstellen für die Produktion
+      href: deploy-prod.md
+    - name: Zurücksetzen Ihres Kontos
+      href: account-reset.md
+    - name: Schließen Ihres Kontos
+      href: account-close.md
+- name: Reference
+  items:
+    - name: Aktivieren der Datenfreigabe
+      href: enable-data-sharing.md
+    - name: Datenschutz
+      href: privacy.md
+    - name: Problembehandlung
+      href: troubleshooting.md
+    - name: Protokollsammler
+      href: log-collector.md
+    - name: Überwachen der Verbindungsintegrität
+      href: monitor-connection-health.md
+    - name: Gruppenrichtlinieneinstellungen
+      href: group-policy-settings.md
+    - name: Häufig gestellte Fragen
+      href: faq.md
+    - name: Anfordern von Support
+      href: get-support.md
