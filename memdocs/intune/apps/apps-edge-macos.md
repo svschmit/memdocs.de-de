@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 002d8e8826fbc1420bf9deca6fb88a3468e8a2ad
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c0d9267f989988ae33d56696d424de56a649bca2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324525"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80900472"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Hinzufügen von Microsoft Edge zu macOS-Geräten mit Microsoft Intune
 
 Bevor Sie Apps bereitstellen, konfigurieren, überwachen oder schützen können, müssen Sie sie zu Intune hinzufügen. Einer der verfügbaren [App-Typen](apps-add.md#app-types-in-microsoft-intune) ist Microsoft Edge *Version 77 und höher*. Wenn Sie den App-Typ in Intune auswählen, können Sie Microsoft Edge *Version 77 und höher* zuweisen und auf Geräten mit macOS installieren. Dieser App-Typ erleichtert Ihnen das Zuweisen von Microsoft Edge zu macOS-Geräten, ohne dass Sie das macOS App Wrapping Tool verwenden müssen. Diese Apps sind auch im Lieferumfang von Microsoft AutoUpdate (MAU) enthalten, um die App sicherer und auf dem neuesten Stand zu halten.
 
 > [!IMPORTANT]
-> Dieser App-Typ befindet sich in der **öffentlichen Vorschau** und bietet Entwickler- und Beta-Channels für macOS an. Die Bereitstellung ist nur in englischer Sprache verfügbar, Endbenutzer können die Anzeigesprache im Browser jedoch unter **Einstellungen** > **Sprachen** ändern. 
+> Dieser App-Typ bietet Entwickler- und Beta-Channels für macOS an. Die Bereitstellung ist nur in englischer Sprache verfügbar, Endbenutzer können die Anzeigesprache im Browser jedoch unter **Einstellungen** > **Sprachen** ändern. 
 
 > [!NOTE]
 > Microsoft Edge *Version 77 und höher* ist auch für Windows 10 verfügbar.

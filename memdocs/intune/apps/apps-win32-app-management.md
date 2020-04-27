@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.openlocfilehash: 0af3574d5ca05a076cb62f899a0ce93aaf02ef09
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80620612"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80863178"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Eigenständiges Intune – Win32-App-Verwaltung
 
@@ -405,6 +405,8 @@ Agentprotokolle auf dem Clientcomputer befinden sich häufig unter `C:\ProgramDa
 > **Auf X86-Clientcomputern:**<br>
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
+>
+> Weitere Informationen finden Sie unter [Empfehlungen zum Virenscan auf Unternehmenscomputern, auf denen unterstützte Windows-Versionen ausgeführt werden](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
 
 ### <a name="detecting-the-win32-app-file-version-using-powershell"></a>Ermitteln der Dateiversion einer Win32-App mithilfe von PowerShell
 

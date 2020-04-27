@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 38d1b40ecdeee5bfd872297a5fd4f0229cb48dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337589"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077800"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>Einrichten eines iOS- oder iPadOS-Geräts beim Unternehmensportal und bei DISA Purebred  
 
@@ -33,13 +34,13 @@ Während der Registrierung installieren Sie auch abgeleitete Anmeldeinformatione
 
 Sie müssen wahrscheinlich abgeleitete Anmeldeinformationen einrichten, wenn Sie eine Smartcard für Folgendes verwenden:
 
-* Anmelden bei Geschäfts-, Schul- oder Uni-Apps, im WLAN und in virtuellen privaten Netzwerken (VPN)
+* Anmelden bei Geschäfts-, Schul- oder Uni-Apps, im WLAN und in virtuellen privaten Netzwerken (VPNs)
 * Signieren und Verschlüsseln von Geschäfts-, Schul- oder Uni-E-Mails mithilfe von S/MIME-Zertifikaten  
 
 Folgendes wird in diesem Artikel beschrieben:  
 
-   * Registrieren eines mobilen iOS- oder iPadOS-Geräts beim Intune-Unternehmensportal  
-   * Abrufen von abgeleiteten Anmeldeinformationen vom Anbieter Ihrer Organisation, [DISA Purebred](https://cyber.mil/pki-pke/purebred/)  
+   * Registrieren eines mobilen iOS- oder iPadOS-Geräts im Intune-Unternehmensportal  
+   * Abrufen von abgeleiteten Anmeldeinformationen vom Anbieter Ihrer Organisation, DISA Purebred: https:\//cyber.mil/pki-pke/purebred/.  
 
 ## <a name="what-are-derived-credentials"></a>Was sind abgeleitete Anmeldeinformationen?  
 Eine abgeleitete Anmeldeinformation ist ein Zertifikat, das von Ihren Smartcard-Anmeldeinformationen abgeleitet und auf Ihrem Gerät installiert wird. Es gewährt Ihnen Remotezugriff auf Arbeitsressourcen und verhindert gleichzeitig, dass nicht autorisierte Benutzer auf vertrauliche Informationen zugreifen.  
@@ -52,7 +53,7 @@ Abgeleitete Anmeldeinformationen sind eine Implementierung der NIST-Richtlinien 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
- Um die Registrierung abzuschließen, benötigen Sie Folgendes:
+ Sie benötigen Folgendes, um die Registrierung abzuschließen:
 
 * Ihre Smartcard von der Schule, der Uni oder der Arbeit
 * Zugriff auf einen Computer oder ein Kiosk, an dem Sie sich mit Ihrer Smartcard anmelden können

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6633682a9572ba36f41f42e77c5aa64403e0e209
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326794"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81440576"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Erstellen einer benutzerdefinierten Rolle in Intune
 
@@ -40,7 +40,7 @@ Für das Erstellen, Bearbeiten oder Zuweisen von Rollen muss das Konto in Azure 
 
 3. Klicken Sie auf der Seite **Berechtigungen** auf die Berechtigungen, die Sie mit dieser Rolle verwenden möchten.
 
-4. Wählen Sie auf der Seite **Bereich (Markierungen)** die Tags für diese Rolle aus. Diese Rolle kann auf Ressourcen zugreifen, die ebenfalls diese Markierungen aufweisen. Wählen Sie **Weiter** aus.
+4. Wählen Sie auf der Seite **Bereich (Markierungen)** die Tags für diese Rolle aus. Wenn diese Rolle einem Benutzer zugewiesen wird, kann dieser Benutzer auf Ressourcen zugreifen, die ebenfalls über diese Tags verfügen. Wählen Sie **Weiter** aus.
 
 5. Klicken Sie, wenn Sie fertig sind, auf der Seite **Bewerten + erstellen** auf **Erstellen**. Die neue Rolle wird in der Liste auf dem Blatt **Intune-Rollen – Alle Rollen** angezeigt.
 

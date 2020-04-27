@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 096a12ae811b717fec7840ab4fd4d4b41f2c8f17
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086986"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615733"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Hinzufügen von E-Mail-Einstellungen für Geräte mit Intune
 
@@ -109,7 +109,7 @@ Wenn der Benutzer bereits ein E-Mail-Konto konfiguriert hat, wird das E-Mail-Pro
 
 - **Android Samsung Knox Standard**: Basierend auf der E-Mail-Adresse wird ein vorhandenes doppeltes E-Mail-Profil erkannt und durch das Intune-Profil überschrieben. Android identifiziert das Profil nicht anhand des Hostnamens. Erstellen Sie nicht mehrere E-Mail-Profile mit derselben E-Mail-Adresse auf verschiedenen Hosts. Die Profile überschreiben sich gegenseitig.
 
-- **Android-Arbeitsprofile**: Intune stellt zwei Android-E-Mail-Arbeitsprofile bereit: eines für die E-Mail-App Gmail und eines für die E-Mail-App Nine Work. Diese Apps sind im Google Play Store erhältlich und können im Arbeitsprofil des Geräts installiert werden. Diese Apps erstellen keine doppelten Profile. Beide Apps unterstützen Verbindungen mit Exchange. Zur Verwendung der E-Mail-Konnektivität stellen Sie eine dieser E-Mail-Apps für die Benutzergeräte bereit. Erstellen Sie anschließend das geeignete E-Mail-Profil, und stellen Sie es bereit. E-Mail-Apps wie z.B. Nine Work sind möglicherweise nicht kostenlos. Lesen Sie die Lizenzierungsdetails der App, oder kontaktieren Sie bei Fragen das Unternehmen, das die App bereitstellt.
+- **Android-Arbeitsprofile**: Intune stellt zwei Android-E-Mail-Arbeitsprofile bereit: eines für die E-Mail-App Gmail und eines für die E-Mail-App Nine Work. Diese Apps sind im Google Play Store erhältlich und können im Arbeitsprofil des Geräts installiert werden. Diese Apps erstellen keine doppelten Profile. Beide Apps unterstützen Verbindungen mit Exchange. Zur Verwendung der E-Mail-Konnektivität stellen Sie eine dieser E-Mail-Apps für die Benutzergeräte bereit. Erstellen Sie anschließend das geeignete E-Mail-Profil, und stellen Sie es bereit. Sie können E-Mail-Konfigurationsprofile für Gmail und Nine verwenden, die für die Registrierungstypen „Arbeitsprofil“ und „Gerätebesitzer“ verwendet werden können. Außerdem können Zertifikatprofile für beide E-Mail-Konfigurationstypen verwendet werden. Alle Gmail- oder Nine-Richtlinien, die Sie in der Gerätekonfiguration für Arbeitsprofile erstellt haben, gelten weiterhin für das Gerät und müssen nicht in App-Konfigurationsrichtlinien verlagert werden. E-Mail-Apps wie z.B. Nine Work sind möglicherweise nicht kostenlos. Lesen Sie die Lizenzierungsdetails der App, oder kontaktieren Sie bei Fragen das Unternehmen, das die App bereitstellt. 
 
 ## <a name="changes-to-assigned-email-profiles"></a>Änderungen an zugewiesenen E-Mail-Profilen
 

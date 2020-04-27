@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 44cbde7eb7de9c50db488dabcb3bf5841b7248f7
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696540"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80979238"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Verwalten des Webzugriffs mithilfe von Microsoft Edge mit Microsoft Intune
 
@@ -39,8 +39,8 @@ Microsoft Intune-Schutzrichtlinien für Microsoft Edge tragen dazu bei, die Date
 ## <a name="getting-started"></a>Erste Schritte
 
 Sie und Ihre Endbenutzer können Microsoft Edge aus öffentlichen App-Stores für die Verwendung in Ihrer Organisation herunterladen. Für Browserrichtlinien ist eins der folgenden Betriebssysteme erforderlich:
-- Android 4 und höher
-- iOS 8.0 und höher
+- Android 5 und höher
+- iOS 12.0 und höher
 
 ## <a name="application-protection-policies-for-microsoft-edge"></a>Anwendungsschutzrichtlinien für Microsoft Edge
 
@@ -129,7 +129,7 @@ Sie weisen die Einstellungen Gruppen von Benutzern in Azure AD zu. Haben diese B
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Weiterleiten von Benutzern an Microsoft Edge statt an den Intune Managed Browser 
 
-Sowohl der Intune Managed Browser als auch Microsoft Edge können als richtliniengeschützte Browser verwendet werden. Wenn Sie sicherstellen möchten, dass Ihre Benutzer an die richtige Browser-App weitergeleitet werden, legen Sie für all Ihre von Intune verwalteten Apps (z.B. Outlook, OneDrive und SharePoint) die folgende Konfigurationseinstellung fest:
+Microsoft Edge kann als ein durch eine Richtlinie geschützter Browser verwendet werden. Wenn Sie sicherstellen möchten, dass Ihre Benutzer an die richtige Browser-App weitergeleitet werden, legen Sie für all Ihre von Intune verwalteten Apps (z.B. Outlook, OneDrive und SharePoint) die folgende Konfigurationseinstellung fest:
 
 |    Key    |    Wert    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -415,7 +415,7 @@ Informationen zum Anzeigen von Protokollen auf Android-Geräten finden Sie unter
 
 Im Folgenden finden Sie einige weitere Überlegungen zu Sicherheit und Datenschutz für Microsoft Edge:
 
-- Microsoft Edge nutzt keine Einstellungen, die Benutzer für den nativen Browser (https://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps ) auf ihren Geräten festlegen, weil Microsoft Edge auf diese Einstellungen nicht zugreifen kann.
+- Microsoft Edge nutzt keine Einstellungen, die Benutzer für den nativen Browser auf ihren Geräten festlegen, weil Microsoft Edge auf diese Einstellungen nicht zugreifen kann.
 - Sie können die Option **Einfache PIN für den Zugriff erforderlich** oder **Unternehmensanmeldeinformationen für den Zugriff erforderlich** in einer App-Schutzrichtlinie konfigurieren, die Microsoft Edge zugeordnet ist. Wenn ein Benutzer auf der Authentifizierungsseite den Link „Hilfe“ auswählt, kann er beliebige Websites aufrufen, unabhängig davon, ob diese in der Richtlinie einer Sperrliste hinzugefügt wurden.
 - Microsoft Edge kann den Zugriff auf Websites nur blockieren, wenn darauf direkt zugegriffen wird. Der Zugriff auf die Website wird nicht blockiert, wenn Benutzer dafür Zwischendienste (z.B. einen Übersetzungsdienst) verwenden.
 - Um die Authentifizierung und den Zugriff auf die Intune-Dokumentation zuzulassen, ist * **.microsoft.com** von den Einstellungen für Zulassungs- oder Blockierungsliste ausgenommen. Dies ist immer zulässig.

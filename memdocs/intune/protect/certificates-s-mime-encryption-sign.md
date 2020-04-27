@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/10/2018
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4965f29144131895660796bc3282ba46d6b8101
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b93e850e7a38feb7dd5347670279f6d85b92455b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353605"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725662"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>S/MIME-Übersicht zum Signieren und Verschlüsseln von E-Mails in Intune
 
@@ -46,7 +46,7 @@ Für die Verwendung von Signaturzertifikaten müssen Sie eine Vorlage in Ihrer Z
 
 Signaturzertifikate in Intune verwenden PKCS-Zertifikate. Unter [Konfigurieren und Verwenden von PKCS-Zertifikate](certficates-pfx-configure.md) wird beschrieben, wie PKCS-Zertifikate in Ihrer Intune-Umgebung bereitgestellt und verwendet werden. Hierzu gehören folgende Schritte:
 
-- Das Herunterladen und Installieren von Microsoft Intune Certificate Connector zur Unterstützung von PKCS-Zertifikatanforderungen.
+- Das Herunterladen und Installieren von Microsoft Intune Certificate Connector zur Unterstützung von PKCS-Zertifikatanforderungen. Der Connector hat die gleichen Netzwerkanforderungen wie [verwaltete Geräte](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 - Das Erstellen eines vertrauenswürdigen Stammzertifikatprofil für Ihre Geräte. Dieser Schritt beinhaltet die Verwendung von vertrauenswürdigen Stamm- und Zwischenzertifikaten für Ihre Zertifizierungsstelle und die Bereitstellung des Profils für Geräte.
 - Erstellen Sie mit der von Ihnen erstellten Zertifikatvorlage ein PKCS-Zertifikatprofil. Dieses Profil stellt Signaturzertifikate für Geräte aus und stellt das PKCS-Zertifikatprofil für Geräte bereit.
 

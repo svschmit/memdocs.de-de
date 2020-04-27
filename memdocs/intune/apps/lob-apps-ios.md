@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5caa8b23950e3ce87f66d6804961a9a2a3e21c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 90f943c7eca95a5311023b03e769e4e18ada9249
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324075"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80863093"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Hinzufügen von branchenspezifischen iOS-Apps zu Microsoft Intune
 
@@ -34,7 +34,7 @@ Fügen Sie mithilfe der Informationen in diesem Artikel branchenspezifische (LOB
 > [!NOTE]
 > Benutzer von iOS-Geräten können einige der integrierten iOS-Apps wie Stocks und Maps entfernen. Über Intune können diese Apps jedoch nicht erneut bereitgestellt werden. Wenn Benutzer diese Apps löschen, müssen sie zum App Store navigieren und die Apps manuell erneut installieren.
 >
-> Für branchenspezifische iOS-Apps gilt das Größenlimit von maximal 4 GB pro App.
+> Für branchenspezifische iOS-Apps gilt das Größenlimit von maximal 2 GB pro App.
 
 > [!NOTE]
 > Bundle-IDs (z. B. *com.contoso.app*) sollen eindeutige Bezeichner einer App sein. Wenn Sie beispielsweise eine Betaversion einer branchenspezifischen App parallel zu einer Produktionsversion für Testzwecke installieren möchten, muss die Betaversion einen anderen eindeutigen Bezeichner haben, z. B. *com.contoso.app-beta*. Andernfalls kommt es zu einer Überlappung der Betaversion mit der Produktion, und sie wird wie ein Upgrade behandelt. Ein Umbenennen der IPA-Datei wirkt sich auf dieses Verhalten nicht aus.
@@ -80,7 +80,7 @@ Sie können Bereichsmarkierungen verwenden, um zu bestimmen, wer Client-App-Info
 
 ## <a name="step-3---assignments"></a>Schritt 3: Zuweisungen
 
-1. Wählen Sie die Gruppenzuweisungen **Erforderlich**, **Für registrierte Geräte verfügbar** oder **Deinstallieren** für die App aus. Weitere Informationen finden Sie unter [Hinzufügen von Gruppen zum Organisieren von Benutzern und Geräten](../fundamentals/groups-add.md) und [Zuweisen von Apps zu Gruppen mit Microsoft Intune](apps-deploy.md).
+1. Wählen Sie die Gruppenzuweisungen **Erforderlich**, **Für registrierte Geräte verfügbar**, **Verfügbar mit oder ohne Registrierung** oder **Deinstallieren** für die App aus. Weitere Informationen finden Sie unter [Hinzufügen von Gruppen zum Organisieren von Benutzern und Geräten](../fundamentals/groups-add.md) und [Zuweisen von Apps zu Gruppen mit Microsoft Intune](apps-deploy.md).
 2. Klicken Sie auf **Weiter**, um die Seite **Überprüfen + erstellen** anzuzeigen.
 
 ## <a name="step-4---review--create"></a>Schritt 4: Überprüfen und Erstellen

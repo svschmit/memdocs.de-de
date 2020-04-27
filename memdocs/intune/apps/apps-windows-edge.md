@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/03/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 31d1ace74cc274c10fbe237f4611835aff93d47b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401336"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80900455"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Hinzufügen von Microsoft Edge für Windows 10 zu Microsoft Intune
 
 Bevor Sie Apps bereitstellen, konfigurieren, überwachen oder schützen können, müssen Sie sie zu Intune hinzufügen. Einer der verfügbaren [App-Typen](apps-add.md#app-types-in-microsoft-intune) ist Microsoft Edge *Version 77 und höher*. Wenn Sie den App-Typ in Intune auswählen, können Sie Microsoft Edge *Version 77 und höher* zuweisen und auf Geräten mit Windows 10 installieren.
 
 > [!IMPORTANT]
-> Dieser App-Typ befindet sich in der **öffentlichen Vorschau** und bietet stabile Kanäle sowie Beta- und Entwicklerkanäle für Windows 10 an. Die Bereitstellung ist nur in englischer Sprache verfügbar, Endbenutzer können die Anzeigesprache im Browser jedoch unter **Einstellungen** > **Sprachen** ändern. Microsoft Edge ist eine Win32-App, die im Systemkontext und auf entsprechenden Architekturen (x86-App auf x86-Betriebssystemen und x64-App auf x64-Betriebssystemen) installiert ist. Intune erkennt jegliche vorhandene Microsoft Edge-Installationen. Wenn Microsoft Edge im Benutzerkontext installiert ist, wird es durch eine Systeminstallation überschrieben. Wenn das Programm im Systemkontext installiert ist, wird der Erfolg der Installation gemeldet. Außerdem sind automatische Updates von Microsoft Edge standardmäßig **Aktiviert**.
+> Dieser App-Typ bietet stabile Kanäle sowie Beta- und Entwicklerkanäle für Windows 10 an. Die Bereitstellung ist nur in englischer Sprache verfügbar, Endbenutzer können die Anzeigesprache im Browser jedoch unter **Einstellungen** > **Sprachen** ändern. Microsoft Edge ist eine Win32-App, die im Systemkontext und auf entsprechenden Architekturen (x86-App auf x86-Betriebssystemen und x64-App auf x64-Betriebssystemen) installiert ist. Intune erkennt jegliche vorhandene Microsoft Edge-Installationen. Wenn Microsoft Edge im Benutzerkontext installiert ist, wird es durch eine Systeminstallation überschrieben. Wenn das Programm im Systemkontext installiert ist, wird der Erfolg der Installation gemeldet. Außerdem sind automatische Updates von Microsoft Edge standardmäßig **Aktiviert**.
 
 > [!NOTE]
 > Microsoft Edge *Version 77 und höher* ist auch für macOS verfügbar.
