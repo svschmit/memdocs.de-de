@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d862f29866ecaaa758983f847d0a1a598e2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ee0cd575da83231723ea869d472da1be599ce477
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346468"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079619"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Installieren von Zimperium zIPS auf Ihrem Android-Gerät
 
@@ -52,7 +52,7 @@ Wenn Sie Probleme mit der Installation haben, versuchen Sie es mit den Schritten
 
    * Wenn keine Bedrohungen gefunden wurden, werden alle drei Bedrohungstypen grün angezeigt.
 
-11. Der Bildschirm **Gerätedetails** im Unternehmensportal zeigt, dass Sie nun mit den Sicherheitsanforderungen Ihres Unternehmens kompatibel sind.
+11. Der Bildschirm **Gerätedetails** im Unternehmensportal zeigt jetzt, dass Sie mit den Sicherheitsanforderungen Ihres Unternehmens kompatibel sind.
 
     ![Ihr Gerät ist jetzt mit den Richtlinien kompatibel](./media/mtd-device-now-compliant-android.png)
 

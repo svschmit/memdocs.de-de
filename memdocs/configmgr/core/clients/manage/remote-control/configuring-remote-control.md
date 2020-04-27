@@ -10,12 +10,12 @@ ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1362f44c510fd34aebc6af77efc63e881c27688c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78f74a9659a011defd50e6ab0e9e1cfe85eec16b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696468"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076729"
 ---
 # <a name="configuring-remote-control-in-configuration-manager"></a>Konfigurieren der Remotesteuerung in Configuration Manager
 
@@ -41,7 +41,7 @@ Für die Verwendung der Remoteunterstützung oder des Remotedesktops müssen sie
 
 #### <a name="enable-keyboard-translation"></a>Aktivieren der Tastaturübersetzung
 
-Standardmäßig überträgt Configuration Manager die Schlüsselposition vom Standort des anzeigenden Benutzers an den Standort des freigebenden Benutzers. Dies kann zu Problemen führen, wenn die Tastaturkonfiguration des anzeigenden Benutzers von der des freigebenden Benutzers abweicht. Beispielsweise würde ein anzeigender Benutzer mit einer englischen Tastatur ein „A“ eingeben, die französische Tastatur des freigebenden Benutzers würde jedoch ein „Q“ bereitstellen. Sie haben jetzt die Möglichkeit, die Remotesteuerung so zu konfigurieren, dass das Zeichen selbst von der Tastatur des anzeigenden Benutzers an den freigebenden Benutzer übertragen wird. Beim freigebenden Benutzer kommt das an, was der anzeigende Benutzer beabsichtigt einzugeben.
+Standardmäßig überträgt Configuration Manager die Schlüsselposition vom Standort des anzeigenden Benutzers an den Standort des freigebenden Benutzers. Dies kann zu Problemen führen, wenn die Tastaturkonfiguration des anzeigenden Benutzers von der des freigebenden Benutzers abweicht. Beispielsweise würde ein anzeigender Benutzer mit einer englischen Tastatur ein „A“ eingeben, die französische Tastatur des freigebenden Benutzers würde jedoch ein „Q“ bereitstellen. Sie haben jetzt die Möglichkeit, die Remotesteuerung so zu konfigurieren, dass das Zeichen selbst von der Tastatur des anzeigenden Benutzers an den freigebenden Benutzer übertragen wird. Beim freigebenden Benutzer kommt das an, was der anzeigende Benutzer einzugeben beabsichtigt.
 
 Wählen Sie zum Aktivieren der Tastaturübersetzung in **Configuration Manager-Remotesteuerung** **Aktion** und **Enable keyboard translation** (Tastaturübersetzung aktivieren) aus, um die Schlüsselposition zu übertragen.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64d1bce08186c47e63a83b3148b59a2593a761f5
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7f1bd1b5da0a45ce4291eba765742405e1e4ba43
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362263"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077887"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Verwalten von Lizenzverträgen für Windows-PC-Software in Microsoft Intune
 
@@ -148,7 +148,7 @@ Außerdem können Sie zusätzlich zu Microsoft-Volumenlizenzverträgen weitere T
 
     - **Agreement name** (erforderlich). Der Vertragsname darf höchstens 256 Zeichen umfassen. Folgende Zeichen sind nicht zulässig: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Leerzeichen sind im Namen zulässig.
 
-    - **Herausgeber** (erforderlich). Wenn Sie mit der Eingabe eines Herausgebers beginnen, werden die Namen aller Herausgeber abgerufen, die die eingegebenen Buchstaben enthalten. Wenn Sie beispielsweise "soft" eingeben, werden alle Herausgebernamen abgerufen, die die Zeichenfolge "soft" im Namen enthalten, z. B. "Microsoft" und "Microsoft Research". Die Herausgebernamen werden vom Software Asset-Katalog bezogen. Bevor Sie den Produkttitel eingeben, müssen Sie den Herausgeber auswählen.
+    - **Herausgeber** (erforderlich). Wenn Sie mit der Eingabe eines Herausgebers beginnen, werden die Namen aller Herausgeber abgerufen, die die eingegebenen Buchstaben enthalten. Wenn Sie beispielsweise „soft“ eingeben, werden alle Herausgebernamen abgerufen, die die Zeichenfolge „soft“ im Namen enthalten, z. B. „Microsoft“ und „Microsoft Research“. Die Herausgebernamen werden vom Software Asset-Katalog bezogen. Bevor Sie den Produkttitel eingeben, müssen Sie den Herausgeber auswählen.
 
         > [!IMPORTANT]
         > Das Unternehmen, das Sie hinzufügen möchten, wird möglicherweise nicht in dieser Liste angezeigt. Sie können nur Softwareverträge für Unternehmen hinzufügen, die bereits im Software Asset-Katalog vorhanden sind. Microsoft arbeitet jedoch kontinuierlich daran, die beliebtesten Softwaretitel hinzuzufügen. Wenn Sie eine Anforderung zum Hinzufügen eines Unternehmens zu dieser Liste absenden möchten, können Sie dies auf der [Intune Uservoice-Website](https://microsoftintune.uservoice.com/) durchführen.

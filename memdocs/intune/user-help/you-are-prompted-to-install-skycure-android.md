@@ -17,16 +17,16 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2bd295b0dca016971c34997873994a4fe1bc2c0d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5c521740eb714ac6e80499dfb99d1e9de2df376e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334937"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079636"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-android-device"></a>Installieren von Symantec Endpoint Protection Mobile auf Ihrem Android-Gerät
 
-Damit Sie auf Ihre Arbeit zugreifen können, verlangt Ihr Unternehmen, dass Sie die Symantec Endpoint Protection Mobile-App (SEP Mobile) installieren, die Ihr Gerät schützen soll, indem sie mögliche Sicherheitsbedrohungen erkennt.
+Damit Sie auf Ihre Arbeit zugreifen können, verlangt Ihr Unternehmen, dass Sie die Mobile Symantec Endpoint Protection-App installieren, die Ihr Gerät schützen soll, indem sie mögliche Sicherheitsbedrohungen erkennt.
 
 Wenn Sie Probleme mit der Installation haben, versuchen Sie es mit den Schritten zur Problembehandlung am Ende dieses Themas.
 
@@ -52,7 +52,7 @@ Wenn Sie Probleme mit der Installation haben, versuchen Sie es mit den Schritten
 
    * Wenn keine Bedrohungen gefunden wurden, werden alle drei Bedrohungstypen grün angezeigt.
 
-     * Der Bildschirm **Gerätedetails** im Unternehmensportal zeigt, dass Sie nun mit den Sicherheitsanforderungen Ihres Unternehmens kompatibel sind.
+     * Der Bildschirm **Gerätedetails** im Unternehmensportal zeigt jetzt, dass Sie mit den Sicherheitsanforderungen Ihres Unternehmens kompatibel sind.
 
      ![Ihr Gerät ist jetzt mit den Richtlinien kompatibel](./media/mtd-device-now-compliant-android.png)
 

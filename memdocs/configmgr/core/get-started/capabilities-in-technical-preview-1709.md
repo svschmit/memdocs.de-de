@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3cefbbb9824266fd5fa057a7625332e85ec0ab32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bedb515c8446e13189fb84644bc0ce7563cc1574
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705118"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078769"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-configuration-manager"></a>Funktionen in der Technical Preview 1709 für Configuration Manager
 
@@ -44,7 +44,7 @@ In diesem Artikel werden die Features vorgestellt, die in der Technical Preview-
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Verbesserte Benutzeroberfläche für VPN-Profile in der Configuration Manager-Konsole
 <!-- 1313282 -->
-Mit diesem Release haben wir den Assistenten zum Erstellen von VPN-Profilen und die VPN-Eigenschaftenseiten aktualisiert, sodass die Einstellungen der ausgewählten Plattform entsprechend angezeigt werden. Genauer gesagt:
+In dieser Version haben wir den Assistenten zum Erstellen von VPN-Profilen und die VPN-Eigenschaftenseiten aktualisiert, sodass die Einstellungen der ausgewählten Plattform entsprechend angezeigt werden. Genauer gesagt:
 
 - Jede Plattform hat einen eigenen Workflow. Das bedeutet, dass neue VPN-Profile nur die von der jeweiligen Plattform unterstützte Einstellung enthalten.
 - Nach der Seite **Allgemein** wird nun die Seite **Unterstützte Plattformen** angezeigt.  Ab sofort wählen Sie die Plattform aus, bevor Sie Eigenschaftswerte festlegen.

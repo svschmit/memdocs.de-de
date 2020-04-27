@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb2e22348e7197f0abb62ee540c37079f8645f4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49e598f370669ed55688af6e6a570a932b5bf9d3
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084698"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137965"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Einrichten des iOS-Gerätezugriffs auf Unternehmensressourcen  
 
@@ -170,13 +170,13 @@ Eine Unterbrechung von mehr als einigen Minuten während der Registrierung kann 
 
 8. Geben Sie in der Anzeige **Anmelden** das Kennwort für Ihre verwaltete Apple-ID ein. In den meisten Fällen sind diese Anmeldeinformationen identisch mit denen, die Sie für die Anmeldung bei Ihrem Geschäfts-, Schul- oder Unikonto verwenden, es sei denn, Ihre Organisation hat Ihnen andere Anmeldeinformationen zugeteilt. 
 9. Tippen Sie auf **Anmelden**.  
-10. Kurz nach der Installation des Profils wird eine Erfolgsmeldung angezeigt. Öffnen Sie die Einstellungen für  **Profile und Geräteverwaltung**, um zu überprüfen, ob das Profil installiert wurde. Daraufhin sollte das Profil unter  **Verwaltung mobiler Geräte** aufgeführt sein.  
+10. Kurz nach der Installation des Profils wird eine Erfolgsmeldung angezeigt. Um zu bestätigen, dass das Profil installiert wurde, wechseln Sie zu den Einstellungen unter **Profile und Geräteverwaltung**. Daraufhin sollte das Profile unter **Verwaltung mobiler Geräte** aufgeführt sein.  
 
     ![Beispielscreenshot der App „Einstellungen“ mit den Einstellungen unter „Profile und Geräteverwaltung“ mit gezeigtem Verwaltungsprofil.](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. Kehren Sie zur Unternehmensportal-App zurück. Das Unternehmensportal beginnt mit der Synchronisierung und Einrichtung Ihres Geräts. Das Unternehmensportal fordert Sie möglicherweise auf, zusätzliche Geräteeinstellungen zu aktualisieren. Wenn das der Fall ist, tippen Sie auf **Weiter**.    
 
-12. Sie erkennen, dass das Setup abgeschlossen ist, wenn alle Elemente in der Liste ein grünes Häkchen aufweisen. Tippen Sie auf  **Fertig**.  
+12. Sie erkennen, dass das Setup abgeschlossen ist, wenn alle Elemente in der Liste ein grünes Häkchen aufweisen. Tippen Sie auf **Fertig**.  
 
 ## <a name="it-administrator-support"></a>Unterstützung für IT-Administratoren  
 Wenn Sie IT-Administrator sind und Probleme bei der Registrierung von Geräten haben, lesen Sie [Behandeln von Problemen bei der Registrierung von iOS-Geräten in Microsoft Intune](https://support.microsoft.com/en-us/help/4039809). Dieser Artikel listet häufige Fehler, ihre Ursachen und Schritte zur Behebung auf.  

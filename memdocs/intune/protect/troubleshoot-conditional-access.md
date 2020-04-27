@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350667"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079143"
 ---
 # <a name="troubleshoot-conditional-access"></a>Problembehandlung beim bedingten Zugriff
 In diesem Artikel wird beschrieben, wie Sie vorgehen müssen, wenn Ihre Benutzer keinen Zugriff auf Ressourcen erhalten, die mit bedingtem Zugriff geschützt sind, oder wenn Benutzer auf geschützte Ressourcen zugreifen können, aber blockiert werden sollten.
@@ -80,7 +80,7 @@ Sie können diese Bedingungen für alle Geräte im Azure-Portal und im Gerätein
   1. Öffnen Sie die Unternehmensportal-App.
   2. Wechseln Sie über die Schaltfläche mit den drei Punkten (...) oder die Hardwaremenü-Schaltfläche zur Seite „Einstellungen“.
   3. Wählen Sie die Schaltfläche *Browserzugriff aktivieren* aus.
-  4. Melden Sie sich im Chrome-Browser aus Office 365 ab, und starten Sie Chrome neu.  
+  4. Melden Sie sich im Chrome-Browser von Office 365 ab, und starten Sie Chrome erneut.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Geräte werden blockiert und es wird keine Quarantäne-E-Mail empfangen
@@ -105,12 +105,12 @@ Sie können diese Bedingungen für alle Geräte im Azure-Portal und im Gerätein
 
 Ist ein Gerät nicht kompatibel, besitzt aber weiterhin Zugriff, gehen Sie folgendermaßen vor:
 
-- Überprüfen Sie die Ziel- und Ausschlussgruppen. Wenn sich ein Benutzer nicht in der richtigen Zielgruppe oder in der Ausschlussgruppe befindet, wird er nicht blockiert. Nur die Geräte der Benutzer in einer Zielgruppe werden hinsichtlich der Konformität überprüft.
+- Überprüfen Sie die Ziel- und Ausschlussgruppen. Wenn sich ein Benutzer nicht in der richtigen Zielgruppe oder in der Ausschlussgruppe befindet, wird er nicht blockiert. Nur die Geräte der Benutzer in einer Zielgruppe werden hinsichtlich der Kompatibilität überprüft.
 
 - Stellen Sie sicher, dass das Gerät ermittelt wird. Verweist der Exchange Connector auf einen Exchange 2010-Clientzugriffsserver, obwohl sich der Benutzer auf einem Exchange 2013-Server befindet? In diesem Fall kann Intune die Verbindung des Geräts mit Exchange nicht erkennen, wenn die Exchange-Standardregel „Zulassen“ lautet, auch wenn sich der Benutzer in der Zielgruppe befindet.
 
 - Überprüfen Sie die Existenz und den Zugriffsstatus des Geräts in Exchange:
-  - Verwenden Sie dieses PowerShell-Cmdlet, um eine Liste aller mobilen Geräte für ein Postfach abzurufen: „Get-ActiveSyncDeviceStatistics -mailbox mbx“. Wenn das Gerät nicht aufgeführt ist, greift es nicht auf Exchange zu.
+  - Verwenden Sie das folgende PowerShell-Cmdlet, um eine Liste aller mobilen Geräte für ein Postfach abzurufen: „Get-ActiveSyncDeviceStatistics -mailbox mbx“. Wenn das Gerät nicht aufgeführt ist, greift es nicht auf Exchange zu.
   
   - Wenn das Gerät aufgeführt ist, verwenden Sie das Cmdlet „Get-CASmailbox -identity:’upn’ | fl“, um ausführliche Informationen zum Zugriffsstatus zu erhalten und diese Informationen dem Microsoft-Support bereitzustellen.
 

@@ -9,12 +9,12 @@ ms.date: 04/24/2018
 ms.author: lizross
 ms.custom: include file
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a40f614dccf3a61c8323acab763ce284a775324
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b8fcab22462027cc50b5794319b71cb467c8bc2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79339019"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079506"
 ---
 >[!Note] 
->Wenn Sie mehr über das Anzeigen oder Löschen von personenbezogenen Daten erfahren möchten, finden Sie weitere Informationen im Artikel [Azure Data Subject Requests for the GDPR (Anfragen von Azure-Datensubjekten im Bezug auf die DSGVO)](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure). Allgemeine Informationen zur DSGVO finden Sie im [Abschnitt „DSGVO“ im Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+>Wenn Sie mehr über das Anzeigen oder Löschen von personenbezogenen Daten erfahren möchten, finden Sie weitere Informationen im Artikel [Anträge betroffener Personen für Azure im Rahmen der DSGVO](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure). Allgemeine Informationen zur DSGVO finden Sie im [Abschnitt „DSGVO“ im Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

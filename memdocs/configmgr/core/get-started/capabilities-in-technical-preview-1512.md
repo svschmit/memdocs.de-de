@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 03a6e7cd49bbb5a65a4364be398961c048d2a1b9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705678"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074502"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Funktionen in der Technical Preview 1512 für Configuration Manager
 
@@ -75,7 +75,7 @@ In der Technical Preview 1512 haben wir die folgenden neuen Einstellungen zur En
 
      Die Engine für Antischadsoftware kann das Senden von Dateibeispielen an Microsoft anfordern, damit diese eingehender analysiert werden. Standardmäßig erfolgt immer eine Aufforderung, bevor diese Beispiele gesendet werden. Administratoren können jetzt die folgenden Einstellungen verwalten, um dieses Verhalten zu konfigurieren:  
 
-    -   Erweitert: **Automatische Beispieldateiübermittlung aktivieren, um Microsoft bei der Erkennung von schädlichen Elementen zu unterstützen:**  Legen Sie diese Einstellung auf „Ja“ fest, um die automatische Beispieldateiübermittlung zu aktivieren. Standardmäßig ist diese Einstellung auf „Nein“ festgelegt. Somit ist die automatische Beispieldateiübermittlung deaktiviert und Benutzer werden vor dem Senden von Beispielen entsprechend aufgefordert.   (Diese Einstellung wurde erstmals in System Center 2012 R2 Configuration Manager SP1 eingeführt.)  
+    -   Erweitert: **Automatische Beispieldateiübermittlung aktivieren, um Microsoft bei der Erkennung von schädlichen Elementen zu unterstützen:**  Legen Sie diese Einstellung auf „Ja“ fest, um die automatische Beispieldateiübermittlung zu aktivieren. Standardmäßig ist diese Einstellung auf „Nein“ festgelegt. Somit ist die automatische Beispieldateiübermittlung deaktiviert, und Benutzer werden vor dem Senden von Beispielen entsprechend aufgefordert.   (Diese Einstellung wurde erstmals in System Center 2012 R2 Configuration Manager SP1 eingeführt.)  
 
     -   Erweitert: **Benutzern das Ändern der Einstellungen für die automatische Beispieldateiübermittlung erlauben:** Diese Einstellung bestimmt, ob ein Benutzer mit lokalen Administratorrechten auf einem Gerät die Einstellung für die automatische Übermittlung der Beispieldatei über die Clientbenutzeroberfläche ändern kann. Diese Einstellung ist standardmäßig auf „Nein“ festgelegt, d.h. die Einstellungen können nur in der Configuration Manager-Konsole geändert werden, und lokale Administratoren auf einem Gerät können diese Konfiguration nicht ändern.  
 

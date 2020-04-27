@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da9ab5fe5a8716e3af0ae02122f51d06e6e55e6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 424b835669986d1ede6e2300e9dfaba619034c30
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352500"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079738"
 ---
 # <a name="data-intune-sends-to-apple"></a>Von Intune an Apple gesendete Daten
 
@@ -40,7 +40,7 @@ Damit Microsoft Intune eine Verbindung einrichten kann, müssen Sie zunächst f�
 
 In der folgenden Tabelle sind die Daten aufgeführt, die Microsoft Intune von einem Gerät an den aktivierten Apple-Dienst sendet. 
 
-| Service | An Apple versendete Daten | Verwendet für |
+| Dienst | An Apple versendete Daten | Verwendet für |
 |---|---| ---|
 | [APNS](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token, PushMagic | Wenn der Server das Gerät akzeptiert, stellt das Gerät sein Gerätetoken für Pushbenachrichtigungen für den Server bereit. Der Server verwendet dieses Token zum Versenden von Pushbenachrichtigungen an das Gerät. Diese Meldung zum Eincheckvorgang enthält auch eine also PushMagic-Zeichenfolge. Der Server speichert diese Zeichenfolge und fügt sie in alle Pushbenachrichtigungen ein, die er an das Gerät sendet. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Servertoken | Gerätetoken für Pushbenachrichtigungen zur Authentifizierung beim Apple-Dienst. |

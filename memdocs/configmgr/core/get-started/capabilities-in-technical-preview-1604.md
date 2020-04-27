@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ef37b5f99cda8022166972cdc015a3c60d0458a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1785880af8c7d0d106abfe3eea8ecd390f6ce6b1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705628"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074451"
 ---
 # <a name="capabilities-in-technical-preview-1604-for-configuration-manager"></a>Funktionen in der Technical Preview 1604 für Configuration Manager
 
@@ -39,7 +39,7 @@ In diesem Artikel werden die Features vorgestellt, die in der Technical Preview-
 
 ##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>Szenario 1: Einrichten der Synchronisierung mit Windows Store für Unternehmen  
 
-1.  Registrieren Sie Configuration Manager als „Web-Anwendung und/oder Web-API“-Verwaltungstool in Azure Active Directory. Sie erhalten eine Client-ID, die Sie später benötigen.  
+1.  Registrieren Sie Configuration Manager als „Webanwendung und/oder Web-API“-Verwaltungstool in Azure Active Directory. Sie erhalten eine Client-ID, die Sie später benötigen.  
 
     1.  Wählen Sie im Knoten **Active Directory** von [https://manage.windowsazure.com](https://manage.windowsazure.com) Ihr Azure Active Directory aus, und klicken Sie dann auf **Anwendungen** > **Hinzufügen**.  
 

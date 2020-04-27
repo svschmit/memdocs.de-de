@@ -2,7 +2,7 @@
 title: Ready for Windows
 titleSuffix: Configuration Manager
 description: Informationen zur Einstellung der Ready for Windows-Website
-ms.date: 10/30/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: da56dbe1a363606e50569db8be10d65d10d1b422
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3f378ce519085eb1d2714a901e20b29b62b0cd4
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695568"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82109980"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Häufig gestellte Fragen zur Einstellung von „Ready for Modern Desktop“
 
@@ -31,6 +31,9 @@ Für viele Kunden ist es eine Herausforderung, zu Windows 10 und Office 365 Pro
 Im Verzeichnis *Ready for modern desktop* werden Softwarelösungen aufgeführt, die auf kommerziellen Geräten mit Windows 10 und Office 365 ProPlus unterstützt und in der Praxis verwendet werden. Das Verzeichnis unterstützt IT-Manager, die die neuesten Versionen von Windows 10 und Office 365 für Ihre Bereitstellungen in Erwägung ziehen.
 
 IT-Managern haben den Wunsch geäußert, dass diese Informationen in die von ihnen bereits verwendeten Tools zur Planung der Bereitstellungspläne integriert werden. Mit [Desktop Analytics](https://aka.ms/dadocs) und [Office 365 ProPlus Readiness-Funktionen](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager können Sie Ihre Upgradeprojekte für Windows 10 und Office 365 ProPlus planen. 
+
+> [!Note]
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
 
 ### <a name="what-is-desktop-analytics"></a>Was ist Desktop Analytics?
 

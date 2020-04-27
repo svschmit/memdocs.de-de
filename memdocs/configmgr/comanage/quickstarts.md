@@ -10,12 +10,12 @@ ms.assetid: 8d878443-90e7-46e4-9cd3-99e2a19b2ad0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebadb47ca67f331ac88f8947b396438893e12386
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5ca960ddd6a4057da10341063f0b14a7f1d104d1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690868"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075811"
 ---
 # <a name="cloud-connecting-with-co-management"></a>Verbinden mit der Cloud mithilfe von Co-Verwaltung
 
@@ -39,7 +39,7 @@ Im folgenden Video stellt Microsoft Corporate Vice President Brad Anderson diese
 |-|-|-|
 | <a name="bkmk_ca"></a>**Bedingter Zugriff mit Gerätekonformität** | Steuern des Benutzerzugriffs auf Unternehmensressourcen auf Grundlage von Intune-Complianceregeln | [![Miniaturansicht des Videos zum bedingten Zugriff](media/thumbnail-conditional-access.png)](quickstart-conditional-access.md) |
 | <a name="bkmk_remote"></a>**Remoteaktionen aus Intune** | Führen Sie Remoteaktionen aus Intune für gemeinsam verwaltete Geräte aus. Beispielsweise das Löschen und Zurücksetzen eines Geräts und das Verwalten der Registrierung und des Kontos. | [![Miniaturansicht des Videos zu den Remoteaktionen](media/thumbnail-remote-action.png)](quickstart-remote-actions.md) |
-| <a name="bkmk_client-health"></a>**Configuration Manager-Clientintegrität** | Verwalten der Sichtbarkeit von Configuration Manager-Clientintegrität über Intune im Azure-Portal | [![Miniaturansicht des Videos zur Clientintegrität](media/thumbnail-client-health.png)](quickstart-client-health.md) |
+| <a name="bkmk_client-health"></a>**Configuration Manager-Clientintegrität** | Verwalten Sie die Sichtbarkeit der Configuration Manager-Clientintegrität über Intune im Azure-Portal. | [![Miniaturansicht des Videos zur Clientintegrität](media/thumbnail-client-health.png)](quickstart-client-health.md) |
 | <a name="bkmk_hybrid-aad"></a>**Azure Active Directory (Azure AD)** | Mit Azure AD können Sie die Vorteile von verbesserter Produktivität für Ihre Benutzer und von Sicherheit für Ihre Ressourcen nutzen, und zwar sowohl in Cloud- als auch in lokalen Umgebungen. | [![Miniaturansicht des Videos zu Hybrid-Azure AD](media/thumbnail-azure-ad.png)](quickstart-hybrid-aad.md) |
 | <a name="bkmk_autopilot"></a>**Windows Autopilot** | Verringern Sie Zeit, Ressourcen und Komplexität, die mit der Bereitstellung, Verwaltung, Außerbetriebnahme und Wiederverwendung von Geräten verbunden sind. Autopilot bietet außerdem eine bessere Erfahrung für Endbenutzer. | [![Miniaturansicht des Videos zu Windows Autopilot](media/thumbnail-autopilot.png)](quickstart-autopilot.md) |
 

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7b2afaf1090b1e7c9c53d403f70c17d3e171cdbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705338"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076202"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Funktionen in der Technical Preview 1701 für Configuration Manager
 
@@ -109,7 +109,7 @@ Hierzu bearbeiten Sie eine Konfigurationsdatei, damit sie auf die Government-Clo
 
    **Bearbeitungen:**
 
-   Ändern Sie den Wert für die Einstellung *FairFaxArmResourceID* in „<https://management.usgovcloudapi.net/”>“.
+   Ändern Sie den Wert für die Einstellung *FairFaxArmResourceID* in „<https://management.usgovcloudapi.net/">“.
 
    - **Original:** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
      &lt;value>&lt;/value>   

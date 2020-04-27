@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: ab5ad2af9b1cad051346eca28c186e7223e8253a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fd668760a6b5d1a16cfbb8549063da4f7e8a8b7d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705498"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074179"
 ---
 # <a name="capabilities-in-technical-preview-1608-for-configuration-manager"></a>Funktionen in der Technical Preview 1608 für Configuration Manager
 
@@ -53,7 +53,7 @@ Nachdem Sie eine Über-/Untergeordnet-Beziehung definiert haben, können Sie Ihr
 Die Anzeige zeigt jetzt nur die übergeordneten Softwareelemente oder Software an, für die keine Beziehung definiert wurde. Software, die nur einem anderen Titel untergeordnet ist, wird nicht angezeigt.
 
 ## <a name="remote-control-keyboard-translation"></a>Tastaturübersetzung bei Remotesteuerung
-In der Vergangenheit übertrug Configuration Manager die Schlüsselposition vom Standort des anzeigenden Benutzers an den Standort des freigebenden Benutzers. Dies war problematisch, wenn die Tastaturkonfiguration des anzeigenden Benutzers von der des freigebenden Benutzers abwich. Beispielsweise würde ein anzeigender Benutzer mit einer englischen Tastatur ein „A“ eingeben, die französische Tastatur des freigebenden Benutzers würde jedoch ein „Q“ bereitstellen. Wir ändern das Standardverhalten dahingehend, dass das Zeichen selbst von der Tastatur des anzeigenden Benutzers an den freigebenden Benutzer übertragen wird, und beim freigebenden Benutzer kommt das an, was der anzeigende Benutzer beabsichtigt einzugeben.
+In der Vergangenheit übertrug Configuration Manager die Schlüsselposition vom Standort des anzeigenden Benutzers an den Standort des freigebenden Benutzers. Dies war problematisch, wenn die Tastaturkonfiguration des anzeigenden Benutzers von der des freigebenden Benutzers abwich. Beispielsweise würde ein anzeigender Benutzer mit einer englischen Tastatur ein „A“ eingeben, die französische Tastatur des freigebenden Benutzers würde jedoch ein „Q“ bereitstellen. Wir ändern das Standardverhalten dahingehend, dass das Zeichen selbst von der Tastatur des anzeigenden Benutzers an den freigebenden Benutzer übertragen wird, und beim freigebenden Benutzer kommt das an, was der anzeigende Benutzer einzugeben beabsichtigt.
 
 Dieses Verhalten kann durch den anzeigenden Benutzer deaktiviert werden, wenn dieser bevorzugt, seine Eingabe entsprechend der Tastaturanordnung des freigebenden Benutzers vorzunehmen. Wählen Sie zum Ändern des Verhaltens in der **Configuration Manager-Remotesteuerung** **Aktion** und **Tastaturübersetzung aktivieren** aus, um die Schlüsselposition zu übertragen.
 

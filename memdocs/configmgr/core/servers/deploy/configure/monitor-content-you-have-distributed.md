@@ -10,12 +10,12 @@ ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31edf096c57b726c3723d261db7a3103fcc311f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fafcbffe3231af78ae3a079061accc9f112a181c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701128"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110014"
 ---
 # <a name="monitor-content-you-distribute-with-configuration-manager"></a>Überwachen von Inhalten, die Sie mit Configuration Manager verteilen
 
@@ -157,7 +157,7 @@ Hier werden die Quellen angezeigt, von denen Clients Inhalte beziehen:
 - [BranchCache](../../../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache)
 - [Peercache](../../../plan-design/hierarchy/client-peer-cache.md)
 - [Übermittlungsoptimierung](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization) (ab Version 1906)<sup>[Hinweis 1](#bkmk_note1)</sup>
-- Microsoft Update: Geräte melden diese Quelle, wenn der Configuration Manager-Client Softwareupdates von Microsoft-Clouddiensten herunterlädt. Zu diesen Diensten gehören Microsoft Update und Office 365.
+- Microsoft Update: Geräte melden diese Quelle, wenn der Configuration Manager-Client Softwareupdates von Microsoft-Clouddiensten herunterlädt. Zu diesen Diensten gehören Microsoft Update und Microsoft 365 Apps for Enterprise.
 
 ![Kachel „Quellen für Clientinhalte“ auf dem Dashboard](media/3555759-do-source.png)
 

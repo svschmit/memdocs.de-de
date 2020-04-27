@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cb8107efa5961c74277afa84da861305d8b9484
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2368e27cbd5f98683a0b00e6b23c070236c84491
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357284"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080112"
 ---
 # <a name="develop-a-support-plan"></a>Entwickeln eines Supportplans
 
@@ -91,6 +91,6 @@ Die [Intune-Dokumentation](../index.yml) bietet eine Übersicht über Intune, au
 
 Das Einbeziehen Ihres IT-Support-/Helpdeskpersonals in frühe Phasen der Planung der Intune-Bereitstellung und in Pilotprojekte kann die Intune-Bereitstellung und die Akzeptanz durch Endbenutzer verbessern. Frühes Einbeziehen ermöglicht Ihren Supportmitarbeitern von Anfang an wertvolle Erfahrungen mit Intune. So kann sich Ihr IT-Support-/Helpdeskpersonal auf den Support beim vollständigen Produktionsrollout der Organisation vorbereiten.
 
-## <a name="next-step"></a>Nächste Schritte
+## <a name="next-step"></a>Nächster Schritt
 
 Der nächste Abschnitt enthält Hinweise zum [Entwerfen von Intune](planning-guide-design.md).

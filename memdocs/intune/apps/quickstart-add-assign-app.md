@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 32405d7cc00d7ddbf528eb9ce736cf0faf702b42
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334274"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023026"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Schnellstart: Hinzufügen und Zuweisen einer Client-App
 
@@ -46,7 +46,7 @@ Eine App kann eingefügt werden, damit Intune Aspekte der App verwalten kann.
 Führen Sie die folgenden Schritte aus, um eine App zu Intune hinzuzufügen:
 
 1. Wählen Sie in [Intune](https://aka.ms/intuneportal) die Option **Apps** > **Alle Apps** > **Hinzufügen** aus. 
-2. Wählen Sie **Windows 10** im Abschnitt **Office 365 Suite** des Bereichs **App-Typ auswählen** aus.
+2. Wählen Sie **Windows 10** im Abschnitt **Microsoft 365-Apps** des Bereichs **App-Typ auswählen** aus.
 3. Klicken Sie auf **Auswählen**. Die **App hinzufügen**-Schritte werden angezeigt.
 4. Bestätigen Sie die Standarddetails auf der Seite **Informationen zur App-Suite**.
 5. Klicken Sie auf **Weiter**, um die Seite **App-Suite konfigurieren** anzuzeigen.
@@ -88,7 +88,7 @@ Sie müssen die Unternehmensportal-App installieren, um die von Intune zur Verf�
 
 2. Öffnen Sie den **Microsoft Store** über das **Startmenü**. Suchen Sie anschließend nach der **Unternehmensportal-App**, und installieren Sie sie.
 3. Starten Sie die **Unternehmensportal-App**.
-4. Klicken Sie auf die App, die Sie mit Intune hinzugefügt haben. In diesem Schnellstart haben Sie die **Microsoft Office 365-App-Suite**-App hinzugefügt.
+4. Klicken Sie auf die App, die Sie mit Intune hinzugefügt haben. In diesem Schnellstart haben Sie die Suite **Microsoft Office 365-Apps** hinzugefügt.
 
     > [!NOTE]
     > Wenn Sie dem Intune-Benutzer keine Apps erfolgreich zugewiesen haben, wird die folgende Meldung angezeigt: *Ihr IT-Administrator hat keine Apps für Sie bereitgestellt.*
@@ -104,4 +104,4 @@ In diesem Schnellstart haben Sie Apps zu Intune hinzugefügt, die Apps zu einer 
 Weitere Informationen zu Intune erhalten Sie im nächsten Schnellstart.
 
 > [!div class="nextstepaction"]
-> [Schnellstart: Erstellen und Zuweisen von App-Schutzrichtlinien](quickstart-create-assign-app-policy.md)
+> [Schnellstart: Erstellen und Zuweisen einer App-Schutzrichtlinie](quickstart-create-assign-app-policy.md)

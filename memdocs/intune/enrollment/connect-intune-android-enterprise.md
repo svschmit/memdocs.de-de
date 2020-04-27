@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97024c641be4c61561e762751cfabfab2732e4c1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6027a8f193bc470c4c7ab7724f3b9736c2487980
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327167"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078021"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Herstellen einer Verbindung zwischen Ihrem Intune-Konto und Ihrem verwalteten Google Play-Konto
 
@@ -41,21 +41,21 @@ Intune fügt bei der Verbindung mit Google Play automatisch vier gängige Androi
 > [!NOTE]
 > Aufgrund der Interaktion zwischen Google- und Microsoft-Domänen müssen Sie möglicherweise Ihre Browsereinstellungen anpassen, um diesen Schritt durchzuführen.  Stellen Sie sicher, dass „portal.azure.com“ und „play.google.com“ sich in der gleichen Sicherheitszone Ihres Browsers befinden.
 
-1. Wenn nicht bereits geschehen, bereiten Sie die Verwaltung mobiler Geräte durch  [Festlegen der Autorität für die Verwaltung mobiler Geräte](../fundamentals/mdm-authority-set.md) auf **Microsoft Intune**.
+1. Wenn nicht bereits geschehen, bereiten Sie die Verwaltung mobiler Geräte durch [Festlegen der Autorität für die Verwaltung mobiler Geräte](../fundamentals/mdm-authority-set.md) auf **Microsoft Intune** vor.
 2. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und wählen Sie **Geräte** > **Android** > **Android-Registrierung** > **Verwaltetes Google Play** aus.  Wenn Sie eine benutzerdefinierte Administratorrolle für Intune verwenden, benötigen Sie für den Zugriff die Berechtigungen „Organisation“ und „Update“.
    
    ![Registrierungsseite von Android Enterprise](./media/connect-intune-android-enterprise/android-work-bind.png)
 
 3. Wählen Sie **Ich stimme zu** aus, um Microsoft die Berechtigung zu erteilen, [Benutzer- und Geräteinformationen an Google zu senden](../protect/data-intune-sends-to-google.md). 
    
-4. Wählen Sie **Launch Google to connect now** (Jetzt Google für die Verknüpfung starten), um die Google Play-Website zu öffnen. Die Website wird auf einer neuen Registerkarte im Browser geöffnet.
+4. Wählen Sie **Launch Google to connect now** (Jetzt Google für die Verknüpfung starten), um die Google Play-Website zu öffnen. Die Website wird auf einer neuen Registerkarte Ihres Browsers geöffnet.
   
 5. Geben Sie auf der Anmeldeseite von Google das Google-Konto an, das allen Android Enterprise-Verwaltungsaufgaben für diesen Mandanten zugeordnet sein wird. Dies ist das Google-Konto, das von den IT-Administratoren Ihres Unternehmens gemeinsam zum Verwalten und Veröffentlichen von Apps in der Google Play-Konsole verwendet wird. Sie können ein vorhandenes Google-Konto verwenden oder ein neues Konto erstellen. Das von Ihnen ausgewählte Konto sollte einer G-Suite-Domäne zugeordnet sein.
     
     > [!Note]
     > Wenn Sie Microsoft Edge als Browser verwenden, klicken Sie in der oberen rechten Ecke auf **Anmelden**, um sich bei Ihrem Google-Konto anzumelden.
 
-6. Geben Sie den Namen Ihres Unternehmens als **Organisationsnamen** ein. Für den **Enterprise Mobility Verwaltungsanbieter (EMM)** sollte **Microsoft Intune** angezeigt werden.
+6. Geben Sie für **Organisationsname** den Namen Ihres Unternehmens an. Für den **Enterprise Mobility Verwaltungsanbieter (EMM)** sollte **Microsoft Intune** angezeigt werden.
 
 7. Stimmen Sie der Android-Vereinbarung zu, und klicken Sie dann auf **Bestätigen**. Ihre Anforderung wird verarbeitet.
 

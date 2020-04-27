@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355113"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077919"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Wo ist meine Intune-Funktion in Azure jetzt?
 Wir hatten die Chance, einige Aufgaben logischer zu organisieren, als wir Intune in das Azure-Portal umgezogen haben. Jedoch kommt jede Verbesserung mit der neuen Aufgabe, die neue Organisation kennenzulernen. Dieses Referenzhandbuch wurde für diejenigen von Ihnen erstellt, die mit Intune im klassischen Portal bestens vertraut sind und sich nun fragen, wie Aufgaben in Intune im Azure-Portal erledigt werden. Wenn dieser Artikel eine Funktion, die Sie suchen, nicht behandelt, hinterlassen Sie einen Kommentar am Ende des Artikels, damit wir ihn aktualisieren können.
@@ -52,7 +52,7 @@ Im klassischen Portal konnten Sie Regeln festlegen, die die MDM-Registrierung mo
 
 ![Abbildung der klassischen Registrierungsregeln für mobile Geräte](./media/ui-changes/01-classic-rules.png)
 
-Diese Regeln galten ausnahmslos für alle Benutzer in Ihrem Intune-Konto. Im Azure-Portal werden diese Regeln nun in zwei unterschiedlichen Typen von Richtlinien dargestellt: Gerätetypbeschränkungen und Einschränkungen zum Gerätelimit.
+Diese Regeln galten ausnahmslos für alle Benutzer in Ihrem Intune-Konto. Diese Regeln werden im Azure-Portal nun in zwei verschiedenen Richtlinientypen unterteilt angezeigt: Gerätetypbeschränkungen und Gerätelimitbeschränkungen.
 
 ![Abbildung der Registrierungseinschränkungen für mobile Azure-Geräte](./media/ui-changes/02-azure-enroll-restrictions.png)
 

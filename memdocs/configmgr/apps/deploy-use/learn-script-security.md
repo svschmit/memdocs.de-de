@@ -10,12 +10,12 @@ ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a0edf83c736c2737f4af2f040159a71bb0348aee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6b519d60be094bb7c39f738d04322009b36a409f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689308"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075862"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>Informationen zur PowerShell-Skriptsicherheit
 
@@ -29,7 +29,7 @@ In „Run Scripts“ (Skripts ausführen) ist ein Feature integriert, mit dem Sk
 ## <a name="recommendations"></a>Empfehlungen
 - Öffnen Sie die nachfolgenden Links, und machen Sie sich mit den bewährten PowerShell-Methoden zum Thema Sicherheit vertraut.
 - **Signieren Sie Ihre Skripte:** Eine weitere Möglichkeit, die Sicherheit von Skripts zu erhöhen, ist sie überprüfen und dann signieren zu lassen, bevor sie für die Verwendung importiert werden.
-- Speichern Sie keine Geheimnisse (z.B. Kennwörter) in PowerShell-Skripts, und informieren Sie sich über den besten Umgang damit.
+- Speichern Sie keine Geheimnisse (z. B. Kennwörter) in PowerShell-Skripts, und informieren Sie sich über den besten Umgang damit.
 
 
 ## <a name="general-information-about-powershell-security-best-practices"></a>Allgemeine Informationen zu bewährten PowerShell-Methoden zum Thema Sicherheit

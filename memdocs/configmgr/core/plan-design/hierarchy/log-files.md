@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f203861e2f82aa7eb0942a22a7b16cf5dd49616c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6cd64d49abf7392c949a76ef198dabfc543dce7c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706528"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110167"
 ---
 # <a name="log-file-reference"></a>Protokolldateireferenz
 
@@ -828,7 +828,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
-|AlternateHandler.log|Zeichnet Details auf, wenn der Client die Klick-und-Los-COM-Schnittstelle von Office aufruft, um Office 365-Clientupdates herunterzuladen und zu installieren. Ähnelt der Verwendung von WuaHandler, wenn die Windows Update Agent-API aufgerufen wird, um Windows-Updates herunterzuladen und zu installieren.<!-- SCCMDocs#888 -->|Client|
+|AlternateHandler.log|Zeichnet Details auf, wenn der Client die Klick-und-Los-COM-Schnittstelle von Office aufruft, um Clientupdates für Microsoft 365 Apps für Unternehmen herunterzuladen und zu installieren. Ähnelt der Verwendung von WuaHandler, wenn die Windows Update Agent-API aufgerufen wird, um Windows-Updates herunterzuladen und zu installieren.<!-- SCCMDocs#888 -->|Client|
 |Ccmperf.log|Zeichnet Aktivitäten im Zusammenhang mit Wartung und Erfassung von Daten zu Clientleistungsindikatoren auf.|Client|
 |DeltaDownload.log|Zeichnet Informationen zum Download von Express-Updates und von Updates auf, die mithilfe der Übermittlungsoptimierung heruntergeladen wurden.|Client|  
 |PatchDownloader.log|Zeichnet Details zum Download von Softwareupdates von der Updatequelle in das Downloadziel auf dem Standortserver.|Wenn Sie Updates manuell herunterladen, befindet sich diese Protokolldatei im Verzeichnis %temp% des Benutzers, der die Konsole auf dem Computer ausführt, auf dem Sie die Konsole ausführen. Bei automatischen Bereitstellungsregeln befindet sich diese Protokolldatei auf dem Standortserver in %windir%\CCM\Logs, wenn der ConfigMgr-Client auf dem Standortserver installiert ist.|  

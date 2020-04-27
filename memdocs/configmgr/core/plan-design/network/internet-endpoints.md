@@ -2,7 +2,7 @@
 title: Erforderliche Berechtigungen für den Internetzugriff
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie, welche Internetendpunkten zugelassen werden müssen, um die vollständige Funktionalität der Configuration Manager-Features zu gewährleisten.
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2edcff868a684d5e108626b7372241dd1ec47d1c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701528"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110133"
 ---
 # <a name="internet-access-requirements"></a>Erforderliche Berechtigungen für den Internetzugriff
 
@@ -171,13 +171,16 @@ In den folgenden Fällen müssen Sie möglicherweise Endpunkte zu einer Firewall
 
 ## <a name="manage-office-365"></a>Verwalten von Office 365
 
-Wenn Sie Configuration Manager zum Bereitstellen und Aktualisieren von Office 365 verwenden, lassen Sie die folgenden Endpunkte zu:
+> [!NOTE]
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
+
+Wenn Sie Configuration Manager zum Bereitstellen und Aktualisieren von Microsoft 365 Apps for Enterprise verwenden, lassen Sie die folgenden Endpunkte zu:
 
 <!-- SCCMDocs#929 -->
 
-- `officecdn.microsoft.com` zum Synchronisieren des Softwareupdatepunkts für Office 365-Clientupdates
+- `officecdn.microsoft.com` zum Synchronisieren des Softwareupdatepunkts für Clientupdates von Microsoft 365 Apps for Enterprise
 
-- `config.office.com` zum Erstellen benutzerdefinierter Konfigurationen für Office 365-Bereitstellungen
+- `config.office.com` zum Erstellen benutzerdefinierter Konfigurationen für Bereitstellungen von Microsoft 365 Apps for Enterprise
 
 ## <a name="configuration-manager-console"></a>Configuration Manager-Konsole
 

@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2d5438a83132323f67f9fd9655a8a1bff52439a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8f3150a887cfbff73976bb697e0b13ea129f003f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348444"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080078"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrieren von Windows 10-Geräten mit dem Intune-Unternehmensportal
 
@@ -60,7 +60,7 @@ In diesen Schritten wird beschrieben, wie Sie ein Windows 10-Gerät (Version 160
 
 6. Wenn Ihre Organisation vorgibt, dass Sie eine PIN für Windows Hello einrichten müssen, werden Sie aufgefordert, einen Prüfcode einzugeben. Geben Sie den Code ein, und führen Sie die auf dem Bildschirm angezeigten Schritte aus, um eine PIN zu erstellen.  
 
-7. Auf dem Bildschirm **Alles erledigt!** sehen, klicken Sie auf **Fertig**. Ihr Gerät ist jetzt bei registriert.  
+7. Auf dem Bildschirm **Alles erledigt!** wählen Sie **Fertig** aus. Ihr Gerät ist jetzt bei registriert.  
 
 8. Wechseln Sie zu **Einstellungen** > **Konten** > **Access work or school** (Zugriff auf Geschäft, Schule oder Uni), um Ihre Verbindung zu überprüfen.  Ihr Konto sollte jetzt in der Liste aufgeführt werden.  
 
@@ -95,7 +95,7 @@ Können Sie immer noch nicht auf Ihre Geschäfts-, Schul- oder Uni-E-Mails, -Dat
 
 ## <a name="it-administrator-support"></a>Unterstützung für IT-Administratoren   
 
-Wenn Sie IT-Administrator sind und Probleme bei der Registrierung von Geräten haben, lesen Sie [Troubleshooting Windows device enrollment problems in Microsoft Intune (Behandeln von Problemen bei der Registrierung von Windows-Geräten in Microsoft Intune)](https://support.microsoft.com/help/4469913). Dieser Artikel listet häufige Fehler, ihre Ursachen und Schritte zur Behebung auf. 
+Wenn Sie IT-Administrator sind und Probleme bei der Registrierung von Geräten haben, lesen Sie [Troubleshooting Windows device enrollment problems in Microsoft Intune (Behandeln von Problemen bei der Registrierung von Windows-Geräten in Microsoft Intune)](https://support.microsoft.com/help/4469913). In diesem Artikel werden häufige Fehler, ihre Ursachen und Schritte zur Behebung aufgelistet. 
 
 ## <a name="next-steps"></a>Nächste Schritte  
 Wenden Sie sich an das IT-Supportteam Ihrer Organisation, wenn Sie Hilfe bei der Verwendung des Unternehmensportals oder der Registrierung benötigen. Die erforderlichen Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980). Melden Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto bei der Website an.  

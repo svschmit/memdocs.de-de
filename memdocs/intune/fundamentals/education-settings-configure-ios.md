@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 104996e87c830701b1725129727c76d8c7a09ee3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cf4fc3017ccf3efcf93986544c8a60b60acbf3c8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344128"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076117"
 ---
 # <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>Vorgehensweise: Konfigurieren von Intune-Einstellungen für die Classroom-App auf iOS-/iPadOS-Geräten
 
@@ -77,8 +77,8 @@ Sie können Informationen mithilfe einer der folgenden Methoden in SDS importier
 ### <a name="configure-general-settings"></a>Konfigurieren allgemeiner Einstellungen
 
 1. Melden Sie sich bei [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) an.
-3. Klicken Sie im Bereich **Intune** auf die Option **Gerätekonfiguration**.
-2. Klicken Sie im Bereich **Gerätekonfiguration** im Abschnitt **Verwalten** auf die Option **Profile**.
+3. Wählen Sie im Bereich **Intune** die Option **Gerätekonfiguration** aus.
+2. Klicken Sie im Bereich **Gerätekonfiguration** im Abschnitt **Verwalten** auf **Profile**.
 5. Klicken Sie im Bereich „Profile“ auf **Profil erstellen**.
 6. Geben Sie im Bereich **Profil erstellen** einen **Namen** und eine **Beschreibung** für das iOS-/iPadOS-Education-Profil ein.
 7. Wählen Sie in der Dropdownliste **Plattform** die Option **iOS** aus.
@@ -149,7 +149,7 @@ Wenn Sie das Konfigurieren von Zertifikaten abgeschlossen haben, wählen Sie **O
 1. Klicken Sie im Bereich **Bildung** auf OK.
 2. Klicken Sie im Bereich **Profil erstellen** auf die Option **Erstellen**.
 
-Das Profil wird erstellt und in der Profilliste angezeigt.
+Das Profil wird erstellt und im Bereich „Profilliste“ angezeigt.
 
 Weisen Sie das Profil den Geräten der Schüler und Studenten in den Kursraumgruppen zu, die erstellt wurden, als Sie Ihre Schul-/Unidaten mit Azure AD synchronisiert haben (siehe [Zuweisen von Geräteprofilen](../configuration/device-profile-assign.md)).
 

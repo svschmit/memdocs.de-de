@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2dbd43ff5a8048286693dbfb417d6bb720a877
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 54e18ae8da6d534e26e37da8fba898e60f5a2986
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353033"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079840"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Überwachen von Intune-Richtlinien zur Gerätekompatibilität
 
@@ -101,7 +101,7 @@ Wählen Sie einen Zustand im Diagramm **Gerätekonformitätszustand** aus. Wähl
 Durch diese Aktion wird das Fenster **Gerätekonformität** geöffnet, in dem Geräte in einem Diagramm zum **Gerätezustand** angezeigt werden. Dieses Diagramm zeigt weitere Details zu den Geräten mit diesem Zustand an, einschließlich Betriebssystemplattform, letztes Check-In-Datum und mehr.
 ![Bild vom Dashboard mit weiteren Details zum Gerät mit diesem spezifischen Zustand](./media/compliance-policy-monitor/drill-down-details.png)
 
-Wenn Sie alle Geräte im Besitz eines spezifischen Benutzers anzeigen möchten, können Sie außerdem das Berichtsdiagramm filtern, indem Sie die E-Mail-Adresse des Benutzers eingeben:
+Wenn Sie alle Geräte im Besitz eines spezifischen Benutzers anzeigen möchten, können Sie außerdem das Berichtsdiagramm filtern, indem Sie die E-Mail-Adresse des Benutzers eingeben.
 
 #### <a name="filter-and-columns"></a>Filter und Spalten
 

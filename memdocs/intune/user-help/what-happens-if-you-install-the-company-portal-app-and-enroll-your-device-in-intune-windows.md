@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6a8c7212de97fbcb741d03cbcec57bafc4692484
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65533f3d93d226b91493c98fd029c6257e7e6409
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335236"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077256"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Was geschieht, wenn Sie die Unternehmensportal-App installieren und Ihr Windows-Gerät bei Intune registrieren?
 
@@ -33,7 +33,7 @@ Wenn Sie die Unternehmensportal-App installieren und darüber anschließend ein 
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>Was mit allen Windows-Geräten nach der Registrierung geschieht
 Wenn Sie Ihr Windows- oder Windows Phone-Gerät bei Intune registrieren, haben Sie folgende Möglichkeiten:
 
-- Zugreifen auf das Netzwerk des Unternehmens und auf E-Mails sowie andere arbeitsbezogene Dateien
+- Zugreifen auf das Netzwerk des Unternehmens sowie auf E-Mails und arbeitsbezogene Dateien
 
 - Abrufen von Unternehmens-Apps aus dem Unternehmensportal (__Hinweis__: Bei Windows 7 und Windows Vista können Sie Unternehmens-Apps nur von der Unternehmensportal-Website abrufen)
 
@@ -59,13 +59,13 @@ Wenn Sie Ihr Gerät registrieren, erteilen Sie der Supportabteilung Ihres Untern
 
 ## <a name="what-happens-to-all-windows-pcs-after-enrollment"></a>Was mit allen Windows-PCs nach der Registrierung geschieht
 
-- Auf Ihrem Computer wird Software installiert, mit deren Hilfe der Support Ihres Unternehmens den Computer verwalten kann und mit der Sie Unternehmensressourcen wie Apps und Supportinformationen abrufen können. Der Support Ihres Unternehmens aktualisiert diese Software möglicherweise automatisch.
+- Auf Ihrem Computer wird Software installiert, mit deren Hilfe die Supportabteilung Ihres Unternehmens den Computer verwalten kann und mit der Sie Unternehmensressourcen wie Apps und Supportinformationen abrufen können. Die Supportabteilung Ihres Unternehmens kann diese Software möglicherweise automatisch aktualisieren.
 
 - Intune Endpoint Protection wird möglicherweise auf Ihrem Computer installiert. Diese Software überprüft den Computer auf Viren und Malware.
 
-- Der Support Ihres Unternehmens kann Daten von der Festplatte Ihres Computers sammeln oder löschen.
+- Die Supportabteilung Ihres Unternehmens kann Daten von der Festplatte Ihres Computers sammeln oder löschen.
 
-- Er kann Apps und Updates auf Ihrem Computer installieren.
+- Sie kann außerdem Apps und Updates auf Ihrem Computer installieren.
 
 ## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Was nach der Registrierung des Geräts alle acht Stunden geschieht
 

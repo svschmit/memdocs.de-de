@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1ac77e4c539c8d5614001f9a326b32536ee07629
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 79bcfc1fabab3b14a9a2560b692c5f2ca459aee4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79336484"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079415"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Sperren Ihres Geräts remote über die Unternehmensportalwebsite
 
@@ -35,7 +35,7 @@ Die Einstellung für die Remotesperre funktioniert für:
 * Android
 * iOS
 * macOS
-* Windows-10
+* Windows 10
 * Windows 10 Mobile (wenn für das Gerät bereits eine Kennung festgelegt wurde)
 * Windows Phone 8.1 (wenn für das Gerät bereits eine Kennung festgelegt wurde)  
 
@@ -53,7 +53,7 @@ Die Einstellung für die Remotesperre funktioniert für:
 
 4. Eine Meldung wird angezeigt, die darauf hinweist, dass Sie Ihr Gerät sperren. Tippen Sie auf **Remotesperre**, um den Vorgang zu bestätigen.
 
-Nach der Bestätigung versucht die Unternehmensportal-App, Ihr Gerät zu sperren. Während dieser Zeit wird eine Meldung angezeigt, dass die Remotesperre noch aussteht. Wenn Ihr Gerät gesperrt ist, wird der Status auf „Remotesperre war erfolgreich“ gesetzt.  
+Nach der Bestätigung versucht die Unternehmensportal-App, Ihr Gerät zu sperren. Während dieser Zeit wird eine Meldung angezeigt, dass die Remotesperre noch aussteht. Wenn Ihr Gerät gesperrt ist, wird der Status auf „Remotesperre war erfolgreich“ festgelegt.  
 
 Der Status „Remotesperre“ wird an drei Stellen angezeigt:
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 643c5713bdedce84def842ae06c00fb0e8c6d069
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 106c08b6e988c104858a06ef9843ebcb2e3ae93a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352552"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079772"
 ---
 # <a name="data-apple-sends-to-intune"></a>Von Apple an Intune gesendete Daten
 
@@ -43,7 +43,7 @@ Damit Microsoft Intune eine Verbindung einrichten kann, müssen Sie zunächst f�
 
 Die folgende Tabelle enthält die Daten, die ein Apple-Gerät an Intune sendet. [Von Intune an Apple gesendete Daten](data-intune-sends-to-apple.md). 
 
-| Service | Nachricht | An Intune versendete Daten | Verwendet für |
+| Dienst | Nachricht | An Intune versendete Daten | Verwendet für |
 |:---:|:---:|:---:| ---|
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Authentifizieren | MessageType | Der Nachrichtentyp: Authentifizieren. |
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Authentifizieren | Thema | Das Thema, worauf das Gerät lauscht. |
@@ -69,7 +69,7 @@ Die folgende Tabelle enthält die Daten, die ein Apple-Gerät an Intune sendet. 
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | MDM-Protokoll | ErrorChain | Ein Array von Wörterbüchern, das die Kette der aufgetretenen Fehler darstellt.  |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Registrierungsprogrammtoken | Seriennummer | Die Seriennummer des Geräts. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Registrierungsprogrammtoken | model | Der Modellname des Geräts. |
-| [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Registrierungsprogrammtoken | Description | Eine Beschreibung des Geräts. |
+| [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Registrierungsprogrammtoken | Beschreibung | Eine Beschreibung des Geräts. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Registrierungsprogrammtoken | Farbe | Die Farbe des Geräts. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Registrierungsprogrammtoken | Bestandskennzeichen | Das Bestandskennzeichen des Geräts. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Registrierungsprogrammtoken | Profilstatus | Der Status der Profilinstallation. |
@@ -96,7 +96,7 @@ Die folgende Tabelle enthält die Daten, die ein Apple-Gerät an Intune sendet. 
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple VPP-Token | Intune UserId guid | Die von Intune generierte GUID. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple VPP-Token | isIrrevocable | Apple gibt „true“ zurück, wenn die Lizenz nicht widerrufen werden kann. Wenn sie widerrufen werden kann, wird „false“ zurückgegeben. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple VPP-Token | Lizenz-ID | Die von Apple zum Identifizieren einer bestimmten Lizenz generierte ID. |
-| [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple VPP-Token | Speicherort | Speicherort, der in Apple VPP-Konfigurationsdaten gespeichert wird. |
+| [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple VPP-Token | Standort | Speicherort, der in Apple VPP-Konfigurationsdaten gespeichert wird. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple VPP-Token | Managed AppleId UPN | Die AppleID-E-Mail für Benutzer, Administrator und Vermittlermitglied. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple VPP-Token | OrganizationId | Die von Apple zugewiesene Organisations-ID. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple VPP-Token | pricingParam | Der Apple-Preistyp für eine App. |

@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f7dc2fcf505890af1e24f8176bef653a6d5f1022
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0aff833df367cced712219fff0be85653ef79e89
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334976"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079653"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>Installieren von SandBlast Mobile Protect auf Ihrem Android-Gerät
 
@@ -52,7 +52,7 @@ Wenn Sie Probleme mit der Installation haben, versuchen Sie es mit den Schritten
 
 10. Wenn keine Bedrohungen gefunden wurden, werden alle drei Bedrohungstypen grün angezeigt.
 
-11. Der Bildschirm **Gerätedetails** im Unternehmensportal zeigt, dass Sie nun mit den Sicherheitsanforderungen Ihres Unternehmens kompatibel sind.
+11. Der Bildschirm **Gerätedetails** im Unternehmensportal zeigt jetzt, dass Sie mit den Sicherheitsanforderungen Ihres Unternehmens kompatibel sind.
 
     ![Ihr Gerät ist jetzt mit den Richtlinien kompatibel](./media/mtd-device-now-compliant-android.png)
 

@@ -10,12 +10,12 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cff249bf5289ebcf354851258b5c9d598314ce3b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 11045ff31dc3832ac97d62f491561b3cf989813c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709058"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079347"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Verwenden von PXE zum Bereitstellen von Windows über das Netzwerk mit Configuration Manager
 
@@ -105,6 +105,9 @@ Um eine PXE-initiierte Betriebssystembereitstellung zu verwenden, müssen Sie di
 - Nur Medien und PXE
 
 - Nur Medien und PXE (ausgeblendet)
+
+## <a name="option-82-during-pxe-dhcp-handshake"></a>Option 82 während des PXE DHCP-Handshakes
+Ab Version 1906 wird während des PXE DHCP-Handshakes die Option 82 für den PXE-Antwortdienst ohne WDS unterstützt. Wenn Option 82 benötigt wird, achten Sie darauf, den PXE-Antwortdienst ohne WDS zu verwenden. Die Option 82 wird mit WDS nicht unterstützt.
 
 ## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> Bereitstellen der Tasksequenz
 

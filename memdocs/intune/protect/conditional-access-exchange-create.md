@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 671f80efb54f51cac410b37de6227e456d9316d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323132"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739905"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurieren des lokalen Exchange-Zugriffs für Intune
 
@@ -35,7 +35,7 @@ Wenn Sie über eine Exchange Online Dedicated-Umgebung verfügen und herausfinde
 
 Bevor Sie den bedingten Zugriff konfigurieren, überprüfen Sie, ob folgende Konfigurationen vorhanden sind:
 
-- Bei Ihrer Exchange-Version handelt es sich um **Exchange 2010 SP1 oder höher**. Exchange Server-Clientzugriffsserver-Arrays werden unterstützt.
+- Bei Ihrer Exchange-Version handelt es sich um **Exchange 2010 SP3 oder höher**. Exchange Server-Clientzugriffsserver-Arrays werden unterstützt.
 
 - Der [Exchange Active Sync-Connector für Exchange lokal](exchange-connector-install.md), der Intune mit Exchange lokal verbindet, ist installiert und wird verwendet.
 

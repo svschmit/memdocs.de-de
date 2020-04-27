@@ -2,7 +2,7 @@
 title: Synchronisieren von Office 365-Updates ohne Internetverbindung
 titleSuffix: Configuration Manager
 description: Synchronisieren Sie Office 365-Updates auf dem obersten Softwareupdatepunkt, der nicht mit dem Internet verbunden ist.
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,18 +10,21 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 78b97be755659fa06466dd1bb1f6920e2a7be330
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3627d2f7772b7b9e133d742b0ee4f94dba6e457a
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699468"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110354"
 ---
 # <a name="synchronize-office-365-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> Synchronisieren von Office 365-Updates bei einem getrennten Softwareupdatepunkt
 
 *Gilt für: Configuration Manager (Current Branch)*
 <!--4065163-->
 Ab Version 2002 von Configuration Manager können Sie ein neues Tool verwenden, um Office 365-Updates von einem mit dem Internet verbundenen WSUS-Server in eine nicht verbundene Configuration Manager-Umgebung zu importieren. Bisher konnten Sie beim Exportieren und Importieren von Metadaten für Softwareupdates in nicht verbundenen Umgebungen keine Office 365-Updates bereitstellen. Für Office 365-Updates sind zusätzliche Metadaten erforderlich, die über eine Office-API vom Office-CDN heruntergeladen werden, was in nicht verbundenen Umgebungen nicht möglich ist.
+
+> [!Note]
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

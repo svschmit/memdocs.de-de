@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b2f3952d0805237acf0fe71c4f0f1617618723
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7f88c352206d087ca6e79f25ec078fabc000de66
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351148"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079177"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>MDM-Einstellungen für Sicherheitsbaselines in Intune  
 
@@ -542,7 +542,7 @@ Weitere Informationen finden Sie unter [Policy CSP - Internet Explorer (Richtlin
   **Standardeinstellung:** Keine Websites  
 
 - **Internet Explorer: Verschlüsselungsunterstützung**  
-  Mit dieser Richtlinieneinstellung können Sie die Unterstützung der Versionen 1.0, 1.1 und 1.2 von Transport Layer Security (TLS) und der Versionen 2.0 und 3.0 von Secure Sockets Layer (SSL) im Browser deaktivieren. TLS und SSL sind Protokolle, die die Kommunikation zwischen Browser und Zielserver schützen. Wenn der Browser versucht, die geschützte Kommunikation mit dem Zielserver einzurichten, vereinbaren der Browser und der Server, welches Protokoll und welche Version verwendet werden sollen. Der Browser und der Server versuchen, ihre Listen mit unterstützten Protokollen und Versionen abzugleichen und wählen die bevorzugte Übereinstimmung aus. Wenn Sie diese Richtlinieneinstellung aktivieren, handelt der Browser ggf. über die von Ihnen in der Dropdownliste ausgewählten Verschlüsselungsmethoden einen Verschlüsselungstunnel aus. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann der Benutzer auswählen, welche Verschlüsselungsmethode der Browser unterstützen soll.  
+  Mit dieser Richtlinieneinstellung können Sie die Unterstützung der Versionen 1.0, 1.1 und 1.2 von Transport Layer Security (TLS) und der Versionen 2.0 und 3.0 von Secure Sockets Layer (SSL) im Browser deaktivieren. TLS und SSL sind Protokolle, die die Kommunikation zwischen Browser und Zielserver schützen. Wenn der Browser versucht, die geschützte Kommunikation mit dem Zielserver einzurichten, vereinbaren der Browser und der Server, welches Protokoll und welche Version verwendet werden sollen. Der Browser und der Server versuchen, ihre jeweiligen Listen mit unterstützten Protokollen und Versionen abzugleichen und wählen die bevorzugte Übereinstimmung aus. Wenn Sie diese Richtlinieneinstellung aktivieren, handelt der Browser ggf. über die von Ihnen in der Dropdownliste ausgewählten Verschlüsselungsmethoden einen Verschlüsselungstunnel aus. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann der Benutzer auswählen, welche Verschlüsselungsmethode der Browser unterstützen soll.  
   [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067057)
 
   **Standardeinstellung:** 2 Elemente:  TLS v1.1 und TLS v1.2  

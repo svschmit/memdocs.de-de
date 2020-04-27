@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ea003aef949f5624591d87dd6105d3a1cff3b691
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705728"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076304"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funktionen in der Technical Preview 1601 für Configuration Manager
 
@@ -126,7 +126,7 @@ In der Technical Preview-Version 1601 haben wir Unterstützung für die folgende
 ##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a> Onlinestatus von Clients  
 Ab Technical Preview Release 1601 können Sie in der Configuration Manager-Konsole auf einen Blick erkennen, ob ein Client online oder offline ist. Über aktualisierte Symbole und Spalten in den Geräteauflistungen in der Konsole können Sie den Status von Clients in Ihrer Umgebung beurteilen, um Problembereiche und andere Aspekte auszumachen, die ggf. Ihre Aufmerksamkeit erfordern.  
 
-Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs „Configuration Manager-Verwaltungspunkt“ verbunden ist. Solange der Verwaltungspunkt Ping-ähnliche Nachrichten vom Client empfängt, ist dessen Status online. Wenn der Verwaltungspunkt ca. 5 Minuten keine Nachricht erhält, ist der Status des Clients offline.  
+Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs „Configuration Manager-Verwaltungspunkt“ verbunden ist. Solange der Verwaltungspunkt Ping-ähnliche Nachrichten vom Client empfängt, ist dessen Status online. Wenn der Verwaltungspunkt ca. 5 Minuten lang keine Nachricht erhält, wird der Status des Clients zu „offline“ geändert.  
 
 ### <a name="icons-for-client-status"></a>Symbole für den Clientstatus  
 

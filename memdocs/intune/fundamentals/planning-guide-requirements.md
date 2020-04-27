@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e002b62fb00c4e2e8523848c4c64ad7a54ce024
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357648"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080129"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Bestimmen von Anforderungen von Anwendungsfallszenarien
 
@@ -35,7 +35,7 @@ Möglicherweise gibt es auch Organisationsgruppen für das unternehmensweite Anw
 
 Hier sehen Sie einige Beispiele für die Anwendungsfallanforderungen einer Organisation mit verschiedenen Anforderungskonstellationen für jedes Szenario aus Anwendungsfällen und untergeordneten Anwendungsfällen sowie für jede Organisationsgruppe und mobile Geräteplattform. In der folgenden Tabelle können Sie außerdem die Anwendungsfallanforderungen Ihrer Organisation eintragen:
 
-| **Anwendungsfälle** | **Untergeordnete Anwendungsfälle** | **Gruppen** | **Geräteplattformen** | **Anforderungen** |
+| **Anwendungsfälle** | **Untergeordnete Anwendungsfälle** | **Gruppen** | **Geräteplattformen** | **Requirements** |
 |:---:|:---:|:---:|:---:|:---:|
 | Unternehmen | Information-Worker | Personalabteilung, Finanzabteilung | iOS/iPadOS | Sichere E-Mail, Geräteeinstellungen, Profile, Apps |                                                          
 | Unternehmen | Führungskräfte | Personalabteilung, Finanzabteilung | iOS/iPadOS | Sichere E-Mail, Geräteeinstellungen, Profile, Apps |                                                         

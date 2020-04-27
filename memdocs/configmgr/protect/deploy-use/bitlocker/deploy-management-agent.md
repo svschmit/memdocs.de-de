@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be5ecd02817d315da4a3bea1f21285eb5a77d77e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709358"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075012"
 ---
 # <a name="deploy-bitlocker-management"></a>Bereitstellen der BitLocker-Verwaltung
 
@@ -194,6 +194,19 @@ Wenn Laufwerke bereits mit der BitLocker-Laufwerkverschlüsselung geschützt sin
 Angenommen, Sie haben ein Gerät mit MBAM ohne PIN-Schutz verschlüsselt, obwohl die Configuration Manager-Richtlinie eine PIN erfordert. Das Laufwerk ist nicht mit der Richtlinie konform, obwohl das Laufwerk verschlüsselt ist.
 
 Als Problemumgehung müssen Sie zuerst BitLocker auf dem Gerät deaktivieren. Anschließend stellen Sie eine neue Richtlinie mit den neuen Einstellungen bereit.
+
+## <a name="co-management-and-intune"></a>Co-Verwaltung und Intune
+
+<!-- SCCMDocs#2321 -->
+
+Der Configuration Manager-Clienthandler für BitLocker erkennt Co-Verwaltung. Wenn das Gerät der Co-Verwaltung unterliegt und Sie die [Endpoint Protection-Workload](../../../comanage/workloads.md#endpoint-protection) auf Intune umstellen, ignoriert der Configuration Manager-Client die BitLocker-Richtlinie des Geräts. Das Gerät bezieht seine Windows-Verschlüsselungsrichtlinie von Intune.
+
+Bei einem Wechsel der Quelle für die Verschlüsselungsverwaltung sollten Sie [erneute Verschlüsselung](#re-encryption) einplanen.
+
+Weitere Informationen zur Verwaltung von BitLocker mit Intune finden Sie in den folgenden Artikeln:
+
+- [Verwenden der Geräteverschlüsselung mit Intune](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Troubleshooting für BitLocker-Richtlinien in Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

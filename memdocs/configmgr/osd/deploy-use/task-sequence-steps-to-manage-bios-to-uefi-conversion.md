@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 09f844fc99d1cd5ea3c612f4747ce6a216f235ca
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9183efd622cb425027500d3fe51ed7b86d3a94e4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703388"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079364"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI
 Windows 10 bietet viele neue Sicherheitsfunktionen, die UEFI-fähige Geräte erfordern. Möglicherweise verfügen Sie über moderne Windows-PCs, die UEFI unterstützen, aber das Legacy-BIOS verwenden. Wenn Sie ein Geräte zu UEFI konvertieren wollten, mussten Sie auf jedem PC die Festplatte neu formatieren und die Firmware neu konfigurieren. Mithilfe von Tasksequenzen in Configuration Manager können Sie eine Festplatte für die BIOS UEFI-Konvertierung vorbereiten, von BIOS in UEFI als Teil des direkten Upgrades konvertieren und UEFI-Informationen als Teil der Hardwareinventur sammeln.
@@ -46,7 +46,7 @@ Fügen Sie in einer vorhandenen Tasksequenz zum Installieren eines Betriebssyste
    3. Erstellen Sie eine NTFS-Partition, die von der Tasksequenz-Engine verwendet wird, um dessen Zustand sowie Protokolldateien zu speichern.
 7. Fügen Sie den Tasksequenzschritt **Computer neu starten** hinzu. Wählen Sie unter **Geben Sie an, was nach dem Neustart ausgeführt werden soll** **The boot image assigned to this task sequence is selected** (Das dieser Tasksequenz zugewiesene Startimage wird ausgewählt) aus, um den Computer in Windows PE zu starten.  
 
-## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Konvertieren von BIOS in UEFI während eines direkten Upgrades
+## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Konvertieren von BIOS zu UEFI während eines direkten Upgrades
 Windows 10 Creators Update führt ein einfaches Konvertierungstool ein, womit der Prozess der Neupartitionierung der Festplatte für UEFI-aktivierte Hardware automatisiert werden kann und das Konvertierungstool in den direkten Upgradeprozess von Windows 7 zu Windows 10 integriert werden kann. Wenn Sie dieses Tool mit Ihrer Tasksequenz des Betriebssystemupgrades und dem OEM-Tool kombinieren, der die Firmware von BIOS zu UEFI konvertiert, können Sie Ihre Computer von BIOS zu UEFI während eines direkten Upgrades zu Windows 10 Creators Update konvertieren.
 
 **Anforderungen**:
@@ -57,7 +57,7 @@ Windows 10 Creators Update führt ein einfaches Konvertierungstool ein, womit de
 ### <a name="to-convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Konvertieren von BIOS zu UEFI während eines direkten Upgrades
 1. Erstellen Sie eine Tasksequenz für ein Betriebssystemupgrade, die ein direktes Upgrade auf Windows 10 Creators Update durchführt.
 2. Bearbeiten Sie die Tasksequenz. Fügen Sie diese zusätzlichen Tasksequenzschritte in der **Nachbearbeitungsgruppe** hinzu.
-   1. Fügen Sie den Schritt **Befehlszeile ausführen** unter „Allgemein“ hinzu. Sie werden die Befehlszeile für das MBR2GPT-Tool hinzufügen, das einen Datenträger von MBR zu GPT konvertiert, ohne Daten zu ändern oder vom Datenträger zu löschen. Geben Sie in der Befehlszeile Folgendes ein: **MBR2GPT /convert /disk:0 /AllowFullOS**. Sie können auch das MBR2GPT.EXE-Tool ausführen, wenn Sie sich unter Windows PE statt in der Vollversion des Betriebssystems befinden. Sie können dazu einen Schritt vor dem Schritt zum Ausführen des MBR2GPT.EXE-Tools zum Neustart des Computers zu WinPE hinzufügen und die /AllowFullOS-Option aus der Befehlszeile entfernen. Weitere Informationen über das Tool und die verfügbaren Optionen finden Sie unter [MBR2GPT.EXE](https://technet.microsoft.com/itpro/windows/deploy/mbr-to-gpt).
+   1. Fügen Sie den Schritt **Befehlszeile ausführen** unter „Allgemein“ hinzu. Sie werden die Befehlszeile für das MBR2GPT-Tool hinzufügen, das einen Datenträger von MBR zu GPT konvertiert, ohne Daten zu ändern oder vom Datenträger zu löschen. Geben Sie Folgendes in die Befehlszeile ein:  **MBR2GPT /convert /disk:0 /AllowFullOS**. Sie können auch das MBR2GPT.EXE-Tool ausführen, wenn Sie sich unter Windows PE statt in der Vollversion des Betriebssystems befinden. Sie können dazu einen Schritt vor dem Schritt zum Ausführen des MBR2GPT.EXE-Tools zum Neustart des Computers zu WinPE hinzufügen und die /AllowFullOS-Option aus der Befehlszeile entfernen. Weitere Informationen über das Tool und die verfügbaren Optionen finden Sie unter [MBR2GPT.EXE](https://technet.microsoft.com/itpro/windows/deploy/mbr-to-gpt).
    2. Fügen Sie einen Schritt zum Starten des OEM-Tools hinzu, das die Firmware von BIOS in UEFI konvertiert. Dabei handelt es sich normalerweise um einen Tasksequenzschritt „Befehlszeile ausführen“ mit einer Befehlszeile zum Starten des OEM-Tools.
    3. Fügen Sie den Schritt **Computer neu starten** unter „Allgemein“ hinzu. Für „Geben Sie an, was nach dem Neustart ausgeführt werden soll“, wählen Sie **Aktuell installiertes Standardbetriebssystem** aus.
 3. Bereitstellen der Tasksequenz

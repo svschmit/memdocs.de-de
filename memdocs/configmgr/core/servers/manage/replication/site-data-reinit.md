@@ -10,12 +10,12 @@ ms.assetid: 19741d45-2d42-438e-a9f3-15bb365d63ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e844bae40664d47a642d019b878f453ef573f7a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6a336bdf323fbb81a16082e9c308577763a7c104
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706478"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078588"
 ---
 # <a name="troubleshoot-site-data-reinit"></a>Problembehandlung bei der Wiederherstellung von Standortdaten
 
@@ -58,7 +58,7 @@ FROM RCM_DrsInitializationTracking dt
 WHERE RequestTrackingGUID=@trackingGuid
 ```
 
-### <a name="check-primary-site-isnt-in-maintenance-mode"></a>Überprüfen, dass sich der primäre Standort nicht im Wartungsmodus befindet
+### <a name="check-primary-site-isnt-in-maintenance-mode"></a>Vergewissern, dass sich der primäre Standort nicht im Wartungsmodus befindet
 
 ```sql
 SELECT * FROM ServerData

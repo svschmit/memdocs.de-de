@@ -1,5 +1,5 @@
 ---
-title: Was geschieht, wenn Sie die Registrierung für Ihr Android-Gerät aufheben? | Microsoft Docs
+title: Was geschieht, wenn Sie die Registrierung für Ihr Android-Gerät aufheben? | Microsoft-Dokumentation
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 368972acc1b3380b1adf9b21939adbca0dc1434c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a8bbabee06e2aa94b6dc7c4d273c76f513005ddf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346858"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077018"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Was geschieht, wenn Sie die Registrierung Ihres Android-Geräts bei Intune aufheben?
 
@@ -44,4 +44,4 @@ Wenn Ihr Gerät nur für den Empfang von Unternehmens-E-Mail eingerichtet ist un
 
 Anweisungen zum Aufheben der Registrierung finden Sie unter [Aufheben der Registrierung Ihres Geräts bei Intune über die Unternehmensportal-App](unenroll-your-device-from-intune-android.md).
 
-Benötigen Sie Unterstützung? Wenden Sie sich an die Supportabteilung Ihres Unternehmens (suchen Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980) nach Kontaktinformationen) oder an das <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">Android-Team von Microsoft</a>.
+Benötigen Sie Unterstützung? Wenden Sie sich an den Support Ihres Unternehmens (suchen Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980) nach Kontaktinformationen) oder an das <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-Team</a>.

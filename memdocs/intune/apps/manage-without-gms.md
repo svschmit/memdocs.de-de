@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce61f7af7c11fb579e34890700231ca2e59fb5cd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5aa91a84b2fe5d8870afc93022ab5a468b30e0db
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81267682"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074791"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Verwenden von Intune in Umgebungen ohne Google Mobile Services
 
@@ -47,7 +47,7 @@ Einige Intune-Features sind von GMS-Komponenten wie dem Google Play Store oder G
 
 | Szenario  | Features  |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Gerätekompatibilitätsrichtlinien  | Beim Erstellen oder Bearbeiten von Kompatibilitätsrichtlinien für Android-Geräteadministratoren sind alle unter **Google Play Protect** aufgeführten Optionen nicht verfügbar.  |
+| Konformitätsrichtlinien für Geräte  | Beim Erstellen oder Bearbeiten von Kompatibilitätsrichtlinien für Android-Geräteadministratoren sind alle unter **Google Play Protect** aufgeführten Optionen nicht verfügbar.  |
 | App-Schutzrichtlinien (bedingter Start)  | **SafetyNet-Gerätenachweis** und **Bedrohungsüberprüfung für Apps erzwingen**-Gerätebedingungen können nicht für den bedingten Start verwendet werden.  |
 | Client-Apps  | Apps vom Typ **Android** sind nicht verfügbar. Verwenden Sie stattdessen zum Bereitstellen und Verwalten von Apps **branchenspezifische App-** .  |
 | Mobile Threat Defense  | Arbeiten Sie mit dem MTD-Anbieter zusammen, um zu verstehen, ob seine Lösung in Intune integriert ist, ob sie in der betreffenden Region verfügbar ist und ob sie auf GMS basiert.  |

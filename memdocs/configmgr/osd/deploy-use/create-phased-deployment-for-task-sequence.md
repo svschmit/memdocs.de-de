@@ -2,7 +2,7 @@
 title: Bereitstellung in Phasen
 titleSuffix: Configuration Manager
 description: Verwenden Sie die stufenweise Bereitstellung, um das Rollout von Software für mehrere Sammlungen zu automatisieren.
-ms.date: 04/16/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 75868250b1f35654e01065e7ff610beb293de727
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5af0b7c90225a1f42d55767a0296d7e2263f956f
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690728"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110456"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Erstellen von stufenweisen Bereitstellungen mit Configuration Manager
 
@@ -117,14 +117,12 @@ Include a timeline diagram
 
 4. Wählen Sie auf der Seite **Einstellungen** für jede Einstellung des Zeitplans eine Option aus. Weitere Informationen finden Sie unter [Einstellungen für Phasen](#bkmk_settings). Wenn Sie fertig sind, klicken Sie auf **Weiter**.  
 
-5. Die zwei Phasen, die der Assistent für die angegebenen Sammlungen erstellt, finden Sie auf der Seite **Phasen**. Wählen Sie **Weiter** aus.   
-
-    > [!Note]  
-    > In diesem Abschnitt wird der Vorgang zum automatischen Erstellen einer Standardbereitstellung in zwei Phasen besprochen. Mit dem Assistent können Sie Phasen für eine stufenweise Bereitstellung hinzufügen, entfernen, neu anordnen, bearbeiten oder anzeigen. Weitere Informationen zu diesen zusätzlichen Aktionen finden Sie unter [Erstellen einer stufenweisen Bereitstellung mit manuell konfigurierten Phasen](#bkmk_manual).  
+5. Die zwei Phasen, die der Assistent für die angegebenen Sammlungen erstellt, finden Sie auf der Seite **Phasen**. Wählen Sie **Weiter** aus. In diesen Anweisungen wird der Vorgang zum automatischen Erstellen einer Standardbereitstellung in zwei Phasen behandelt. Mit dem Assistent können Sie Phasen für eine stufenweise Bereitstellung hinzufügen, entfernen, neu anordnen, bearbeiten oder anzeigen. Weitere Informationen zu diesen zusätzlichen Aktionen finden Sie unter [Erstellen einer stufenweisen Bereitstellung mit manuell konfigurierten Phasen](#bkmk_manual).  
 
 6. Bestätigen Sie Ihre Auswahl auf der Registerkarte **Zusammenfassung**, und klicken Sie auf **Weiter**, um den Assistenten abzuschließen.  
 
-
+> [!NOTE]
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole den alten Namen noch im Produkt Configuration Manager und der unterstützenden Dokumentation.  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Erstellen einer stufenweisen Bereitstellung mit manuell konfigurierten Phasen
 <!--1358148--> 

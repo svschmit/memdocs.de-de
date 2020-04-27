@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6d588955a625c6cf1e7771560f298bd612b10aff
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6eaf0013531018e77a65386ca32dece0bee4ea08
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346663"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079687"
 ---
 # <a name="install-lookout-for-work"></a>Installieren von Lookout for Work
 
@@ -68,7 +68,7 @@ Wenn Sie Probleme mit der Installation haben, versuchen Sie es mit den Schritten
 
    ![Lookout for Work hat keine Sicherheitsbedrohungen gefunden](./media/lookout-scan-no-threats-found-android.png)
 
-   Der Bildschirm „Gerätedetails“ im Unternehmensportal zeigt jetzt, dass Sie mit den Sicherheitsanforderungen Ihres Unternehmens konform sind.
+   Der Bildschirm „Gerätedetails“ im Unternehmensportal zeigt jetzt, dass Sie mit den Sicherheitsanforderungen Ihres Unternehmens kompatibel sind.
 
     ![Ihr Gerät ist jetzt mit den Richtlinien konform](./media/mtd-device-now-compliant-android.png)
 

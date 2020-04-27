@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11959de1d03c7aa9cd29de2b4069c6d7bc133f79
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9a15bc7c1fd74aa3741a9bd699778795cbf3faab
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358441"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080027"
 ---
-# <a name="phase-2-migration-campaign"></a>Phase 2: Migrationskampagne
+# <a name="phase-2-migration-campaign"></a>Phase 2: Migration
 
-Wählen Sie einen Migrationsansatz aus, der am besten für die Anforderungen Ihres Unternehmens geeignet ist, und passen Sie Implementierungstaktiken basierend auf Ihren speziellen Anforderungen entsprechend an. Diese Anleitung hilft Ihnen bei der Registrierung Ihrer Geräte in Intune.
+Wählen Sie einen Migrationsansatz aus, der am besten für die Anforderungen Ihres Unternehmens geeignet ist, und passen Sie Implementierungstaktiken basierend auf Ihren speziellen Anforderungen entsprechend an. Im weiteren Verlauf dieser Anleitung erhalten Sie die Tools, die Sie benötigen, um die Geräte Ihrer Benutzer bei Intune zu registrieren.
 
 ## <a name="keys-to-a-successful-migration"></a>Wichtige Faktoren für eine erfolgreiche Migration
 

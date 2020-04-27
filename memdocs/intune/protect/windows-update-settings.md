@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e568a7700a6849993d24be4dd042195a95ab000
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8bb76dbb14fe2deb95c02a18ccc048fc6a4b2538
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79338421"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078956"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows-Updateeinstellungen für Intune  
 
@@ -33,7 +33,7 @@ Wenn Sie Einstellungen für Windows 10-Updateringe in Intune konfigurieren, konf
 Updateeinstellungen steuern, welche Bits ein Gerät herunterlädt und wann dies geschieht. Weitere Informationen zum Verhalten der einzelnen Einstellungen finden Sie in der Windows-Referenzdokumentation.  
 
 - **Wartungskanal**  
-  **Standardeinstellung**: Halbjährlicher Kanal  
+  **Standardeinstellung:** Halbjährlicher Kanal  
   Windows Update-CSP: [Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 
   Legen Sie den Kanal (Branch) fest, von dem das Gerät Windows-Updates erhält. Verschiedene Kanäle können verschiedene Verzögerungszeiträume aufweisen, bevor Updates bereitgestellt werden.  
@@ -69,7 +69,7 @@ Updateeinstellungen steuern, welche Bits ein Gerät herunterlädt und wann dies 
   - **Blockieren**: Wählen Sie „Blockieren“ aus, um die Suche nach Treibern zu verhindern.  
 
 - **Zeitraum für die Zurückstellung von Qualitätsupdates in Tagen**  
-  **Standardeinstellung**: 0  
+  **Standardeinstellung:** 0  
   Windows Update-CSP: [Update/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
   Geben Sie die Anzahl von Tagen (0 bis 30) an, für die Qualitätsupdates zurückgestellt werden. Dieser Zeitraum wird zusätzlich zu jedem Verzögerungszeitraum gewährt, der Teil des von Ihnen gewählten Dienstkanals ist. Der Verzögerungszeitraum beginnt mit dem Empfang der Richtlinie durch das Gerät.  
@@ -77,7 +77,7 @@ Updateeinstellungen steuern, welche Bits ein Gerät herunterlädt und wann dies 
   Bei Qualitätsupdates handelt es sich in der Regel um Korrekturen und Verbesserungen für bereits vorhandene Windows-Funktionen.  
 
 - **Zeitraum für die Zurückstellung von Featureupdates in Tagen**  
-  **Standardeinstellung**: 0  
+  **Standardeinstellung:** 0  
   Windows Update-CSP: [Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
 
   Geben Sie die Anzahl von Tagen an, für die Featureupdates zurückgestellt werden. Dieser Zeitraum wird zusätzlich zu jedem Verzögerungszeitraum gewährt, der Teil des von Ihnen gewählten Dienstkanals ist. Der Verzögerungszeitraum beginnt mit dem Empfang der Richtlinie durch das Gerät.  
@@ -90,7 +90,7 @@ Updateeinstellungen steuern, welche Bits ein Gerät herunterlädt und wann dies 
   Bei Featureupdates handelt es sich in der Regel um neue Features für Windows.  
 
 - **Zeitraum für das Deinstallieren von Featureupdates (2 bis 60 Tage)**  
-  **Standard**: 10  
+  **Standardeinstellung:** 10  
   Windows Update-CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
 
   Konfigurieren Sie einen Zeitpunkt, nach dem Featureupdates nicht mehr deinstalliert werden können.  
@@ -104,7 +104,7 @@ Updateeinstellungen steuern, welche Bits ein Gerät herunterlädt und wann dies 
 Einstellungen für die Benutzererfahrung steuern die Endbenutzererfahrung für den Geräteneustart und Erinnerungen. Weitere Informationen zum Verhalten der einzelnen Einstellungen finden Sie in der Windows Update CSP-Dokumentation.  
 
 - **Automatisches Updateverhalten**  
-  **Standard**: Automatische Installation während der Wartung  
+  **Standardeinstellung:** Automatische Installation während der Wartung  
   Windows Update-CSP: [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
   Wählen Sie aus, wie automatische Updates installiert und wann Neustarts des Geräts (wenn erforderlich) ausgeführt werden.  
@@ -118,7 +118,7 @@ Einstellungen für die Benutzererfahrung steuern die Endbenutzererfahrung für d
     Diese Option kann ein Gerät automatisch neu starten, nachdem das Update installiert wurde. Verwenden Sie die Einstellungen **Nutzungszeit**, um einen Zeitraum zu definieren, in dem automatische Neustarts blockiert werden:  
 
     - **Beginn der Nutzungszeit**: Geben Sie eine Startzeit für die Unterdrückung von Neustarts aufgrund von Updateinstallationen an.  
-      **Standardeinstellung:** 08:00 Uhr  
+      **Standardeinstellung:** 8:00 Uhr  
       Windows Update-CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Ende der Nutzungszeit**: Geben Sie eine Endzeit für die Unterdrückung von Neustarts aufgrund von Updateinstallationen an.  
@@ -130,7 +130,7 @@ Einstellungen für die Benutzererfahrung steuern die Endbenutzererfahrung für d
     Diese Option kann ein Gerät automatisch neu starten, nachdem das Update installiert wurde. Die Verwendung der Einstellungen **Nutzungszeit** wird in den Windows Update-Einstellungen nicht beschrieben. Sie werden aber von Intune verwendet, um einen Zeitraum zu definieren, in dem automatische Neustarts blockiert werden:  
 
     - **Beginn der Nutzungszeit**: Geben Sie eine Startzeit für die Unterdrückung von Neustarts aufgrund von Updateinstallationen an.  
-      **Standardeinstellung:** 08:00 Uhr  
+      **Standardeinstellung:** 8:00 Uhr  
       Windows Update-CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Ende der Nutzungszeit**: Geben Sie eine Endzeit für die Unterdrückung von Neustarts aufgrund von Updateinstallationen an.  
@@ -143,13 +143,13 @@ Einstellungen für die Benutzererfahrung steuern die Endbenutzererfahrung für d
     Diese Option unterstützt zusätzliche Einstellungen.  
 
     - **Häufigkeit für automatisches Verhalten**: Verwenden Sie diese Einstellung zum Planen, wann Updates installiert werden, einschließlich der Woche, des Tags und der Uhrzeit.  
-      **Standardeinstellung:** Wöchentlich
+      **Standardeinstellung:** Jede Woche
 
     - **Tag für geplante Installation:** : Geben Sie an, an welchem Wochentag Updates installiert werden sollen.  
-      **Standardeinstellung:** Täglich  
+      **Standardeinstellung:** Beliebiger Tag  
 
     - **Zeitpunkt für geplante Installation**: Geben Sie die Tageszeit an, zu der Updates installiert werden sollen.  
-      **Standardeinstellung**: 03:00 Uhr  
+      **Standardeinstellung:** 3:00 Uhr  
 
   - **Automatische Installation und Neustart ohne Endbenutzersteuerung**: Updates werden automatisch heruntergeladen und dann während der automatischen Wartung installiert, wenn das Gerät nicht verwendet und auch nicht im Akkubetrieb ausgeführt wird. Wenn ein Neustart erforderlich ist, wird das Gerät neu gestartet, wenn es nicht verwendet wird. Durch diese Option wird für den Steuerungsbereich des Endbenutzers der schreibgeschützte Modus festgelegt.  
 
@@ -190,7 +190,7 @@ Einstellungen für die Benutzererfahrung steuern die Endbenutzererfahrung für d
   - **Erforderlich**: Der Benutzer muss einen Geräteneustart außerhalb der Nutzungszeiten genehmigen.  
    
 - **Benutzer vor erforderlichem automatischen Neustart mit ablehnbarer Erinnerung erinnern (Stunden)**  
-  **Standard**: 4  
+  **Standardeinstellung:** 4  
   Windows Update-CSP: [Update/ScheduleRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
 
   Geben Sie an, wie lange vor einem automatischen Neustart einem Gerätebenutzer eine ablehnbare Benachrichtigung zu diesem Neustart angezeigt werden soll. Werte von **2**, **4**, **8**, **12** und **24** Stunden werden unterstützt.  
@@ -198,7 +198,7 @@ Einstellungen für die Benutzererfahrung steuern die Endbenutzererfahrung für d
   Wenn Sie den Standardwert löschen, wird diese Einstellung *nicht konfiguriert*.  
 
 - **Benutzer vor erforderlichem automatischen Neustart mit permanenter Erinnerung erinnern (Minuten)**  
-  **Standard**: 15  
+  **Standardeinstellung:** 15  
   Windows Update-CSP: [Update/ScheduleImminentRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
 
   Geben Sie an, wie lange vor einem automatischen Neustart eine nicht ablehnbare Warnung zu diesem Neustart für einen Gerätebenutzer angezeigt werden soll. Werte von **15**, **30** und **60** Minuten werden unterstützt.  
@@ -228,24 +228,24 @@ Einstellungen für die Benutzererfahrung steuern die Endbenutzererfahrung für d
   Wenn diese Option auf *Zulassen*festgelegt ist, können Sie die folgenden Einstellungen für Stichtage konfigurieren:
 
   - **Stichtag für Featureupdates**  
-    **Standard**: *Nicht konfiguriert*  
+    **Standardeinstellung:** *Nicht konfiguriert*  
     Windows Update-CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     Gibt an, nach wie viel Tagen Featureupdates automatisch auf den Benutzergeräten installiert werden (2–30)
 
   - **Stichtag für Qualitätsupdates**  
-    **Standard**: *Nicht konfiguriert*  
+    **Standardeinstellung:** *Nicht konfiguriert*  
     Windows Update-CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     Gibt an, nach wie viel Tagen Qualitätsupdates automatisch auf den Benutzergeräten installiert werden (2–30)
 
   - **Karenzzeit**  
-    **Standard**: *Nicht konfiguriert* Windows Update: CSP – [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **Standardeinstellung:** *Not configured* Windows Update-CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
     Gibt eine Mindestanzahl von Tagen nach dem Stichtag an, bis der Neustart automatisch erfolgt (2–7)
 
   - **Automatischer Neustart vor Stichtag**  
-    **Standard**: Ja, Windows Update-CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+    **Standardeinstellung:**  Ja, Windows Update-CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
 
     Gibt an, ob das Gerät vor Stichtag automatisch neu gestartet werden soll
     - **Ja**

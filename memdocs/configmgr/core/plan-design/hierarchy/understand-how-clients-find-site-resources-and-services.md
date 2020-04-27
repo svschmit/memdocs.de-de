@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8af805b7183445cadbaeafa4ab21b40382f81dbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699908"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075658"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Informationen dazu, wie Clients Standortressourcen und -dienste für Configuration Manager suchen
 
@@ -172,7 +172,7 @@ Die Veröffentlichung von Verwaltungspunkten in DNS ist nur möglich, wenn die b
 
 **Falls von den DNS-Servern automatische Updates unterstützt werden**, können Sie festlegen, dass Verwaltungspunkte von Configuration Manager im Intranet automatisch in DNS veröffentlicht werden. Alternativ können Sie diese Datensätze manuell in DNS veröffentlichen. Bei der Veröffentlichung von Verwaltungspunkten in DNS werden der zugehörige Intranet-FQDN und die Portnummer im SRV-Eintrag veröffentlicht. Sie konfigurieren die DNS-Veröffentlichung an einem Standort über die Eigenschaften für Verwaltungspunktkomponenten am Standort. Weitere Informationen finden Sie unter [Standortkomponenten für Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
 
-**Wenn Ihre DNS-Zone für dynamische Updates auf „Secure only“ (Nur sichern) festgelegt ist**, kann nur der erste Verwaltungpunkt, der unter DNS veröffentlicht werden soll, dies ohne Standardberechtigungten ausführen.
+**Wenn Ihre DNS-Zone für dynamische Updates auf „Secure only“ (Nur sichern) festgelegt ist**, kann nur der erste Verwaltungspunkt, der unter DNS veröffentlicht werden soll, dies mit Standardberechtigungen ausführen.
 
 Wenn nur ein Verwaltungspunkt erfolgreich seinen DNS-Eintrag veröffentlichen und ändern kann und der Verwaltungspunktserver fehlerfrei arbeitet, können Clients die vollständige MP-Liste von diesem Verwaltungspunkt erhalten und anschließend ihren bevorzugten Verwaltungspunkt finden.
 

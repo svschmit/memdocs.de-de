@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8612640ec71075194af680535a988f2228bb66fd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 21b1fb333ce77fdf358e268eb22db17708bbfe11
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362887"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076134"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurieren von Intune-Einstellungen für Bildungseinrichtungen für freigegebene iPad-Geräte
 
@@ -69,8 +69,8 @@ Sie können Informationen mithilfe einer der folgenden Methoden in SDS importier
 ### <a name="configure-general-settings"></a>Konfigurieren allgemeiner Einstellungen
 
 1. Melden Sie sich bei [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) an.
-3. Klicken Sie im Bereich **Intune** auf die Option **Gerätekonfiguration**.
-2. Klicken Sie im Bereich **Gerätekonfiguration** im Abschnitt **Verwalten** auf die Option **Profile**.
+3. Wählen Sie im Bereich **Intune** die Option **Gerätekonfiguration** aus.
+2. Klicken Sie im Bereich **Gerätekonfiguration** im Abschnitt **Verwalten** auf **Profile**.
 5. Klicken Sie im Bereich „Profile“ auf **Profil erstellen**.
 6. Geben Sie im Bereich **Profil erstellen** einen **Namen** und eine **Beschreibung** für das iOS-/iPadOS-Education-Profil ein.
 7. Wählen Sie in der Dropdownliste **Plattform** die Option **iOS** aus.
@@ -134,7 +134,7 @@ Wenn Sie das Konfigurieren von Zertifikaten abgeschlossen haben, klicken Sie auf
 1. Klicken Sie im Bereich **Bildung** auf **OK**.
 2. Klicken Sie im Bereich **Profil erstellen** auf die Option **Erstellen**.
 
-Das Profil wird erstellt und in der Profilliste angezeigt.
+Das Profil wird erstellt und im Bereich „Profilliste“ angezeigt.
 
 ## <a name="step-3---create-a-device-category"></a>Schritt 3: Erstellen einer Gerätekategorie
 
@@ -168,7 +168,7 @@ Die dynamische Gruppe wird im Bereich **Users and Groups – All Groups** (Benut
 
 1. Melden Sie sich bei [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) an.
 3. Klicken Sie im Bereich **Intune** auf **Geräte**.
-4. Wählen Sie im Bereich **Geräte** die Option **Alle Geräte** aus.
+4. Klicken Sie im Bereich **Geräte** auf die Option **Alle Geräte**.
 5. Wählen Sie im Bereich **Devices – All devices** (Geräte – Alle Geräte) ein Gerät aus.
 6. Klicken Sie im Bereich des Geräts auf **Eigenschaften**.
 7. Geben Sie im Eigenschaftenbereich des Geräts in das Textfeld **Gerätekategorie** die Gerätekategorie ein.
@@ -179,7 +179,7 @@ Das Gerät wurde der Gerätekategorie zugeordnet. Wiederholen Sie diesen Vorgang
 ## <a name="step-6--create-classroom-profiles"></a>Schritt 6: Erstellen von Classroom-Profilen
 
 1. Melden Sie sich bei [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) an.
-3. Klicken Sie im Bereich **Intune** auf die Option **Gerätekonfiguration**.
+3. Wählen Sie im Bereich **Intune** die Option **Gerätekonfiguration** aus.
 4. Klicken Sie im Bereich **Gerätekonfiguration** auf **Verwalten** > **Cart-Profile**.
 5. Klicken Sie im Bereich des Profils auf **Profil erstellen**.
 6. Geben Sie im Bereich **Zuordnung erstellen** einen **Namen** und eine **Beschreibung** ein.
@@ -189,12 +189,12 @@ Das Gerät wurde der Gerätekategorie zugeordnet. Wiederholen Sie diesen Vorgang
 10. Wählen Sie die Gruppen aus, die im Cart-Profil enthalten sein sollen, und klicken Sie dann auf **Auswählen**.
 11. Klicken Sie im Bereich **Zuordnung erstellen** auf **Speichern**, um das Cart-Profil zu speichern.
 
-Das Profil wird erstellt und in der Profilliste angezeigt.
+Das Profil wird erstellt und im Bereich „Profilliste“ angezeigt.
 
 ## <a name="step-7---assign-the-cart-profile-to-classes"></a>Schritt 7: Zuweisen des Cart-Profils zu Klassen
 
 1. Melden Sie sich bei [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) an.
-3. Klicken Sie im Bereich **Intune** auf die Option **Gerätekonfiguration**.
+3. Wählen Sie im Bereich **Intune** die Option **Gerätekonfiguration** aus.
 4. Klicken Sie im Bereich **Gerätekonfiguration** auf **Überwachen** > **Zuweisungsstatus**.
 5. Klicken Sie im Bereich **Zuweisungsstatus** auf das erstellte **Cart-Profil**.
 6. Klicken Sie im Bereich **Cart-Profil** auf die Option **Zuweisungen** und unter **Einschließen** auf **Select groups to include** (Gruppen auswählen, die eingeschlossen werden sollen).

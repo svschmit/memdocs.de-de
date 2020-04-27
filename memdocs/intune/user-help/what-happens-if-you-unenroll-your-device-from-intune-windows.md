@@ -1,5 +1,5 @@
 ---
-title: Was geschieht, wenn Sie die Registrierung für Ihr Windows-Gerät aufheben? | Microsoft Docs
+title: Was geschieht, wenn Sie die Registrierung für Ihr Windows-Gerät aufheben? | Microsoft-Dokumentation
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 56a7b87f61c522eb7796d201be4b3100d57f8ca1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bea6ab16baa923d4cc38dee421342636de9e1942
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346871"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076797"
 ---
 # <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>Was geschieht, wenn Sie die Registrierung Ihres Windows-Geräts bei Intune aufheben?
 
@@ -48,7 +48,7 @@ Informationen zum verwendeten Gerätetyp finden Sie über die Links rechts auf d
 
 Zusätzlich für Windows 8.1:
 
-- Sie können keine Unternehmens-Apps und Unternehmensdaten mehr auf dem Gerät verwenden.
+- Sie können auf Ihrem Gerät keine Unternehmens-Apps und Unternehmensdaten mehr verwenden.
 
 - In einigen E-Mail-Apps wie Windows Mail kann nicht mehr auf Unternehmens-E-Mails zugegriffen werden, die auf dem Gerät gespeichert sind.
 
@@ -60,7 +60,7 @@ Zusätzlich für Windows 8.1:
 
 - Die Unternehmensportal-App wird auf Ihrem Gerät deinstalliert. Ihr Gerät wird nicht mehr im Unternehmensportal angezeigt, und Sie können über die Unternehmensportal-App bzw. die Unternehmensportal-Website keine Apps installieren.
 
-- Sie können keine Unternehmens-Apps und Unternehmensdaten mehr auf dem Gerät verwenden.
+- Sie können auf Ihrem Gerät keine Unternehmens-Apps und Unternehmensdaten mehr verwenden.
 
 - Alle Einstellungen, die beim Hinzufügen des Geräts auf diesem geändert wurden, z.B. das Deaktivieren der Kamera oder die Anforderung einer bestimmten Kennwortlänge, werden unwirksam.
 
@@ -71,7 +71,7 @@ Zusätzlich für Windows 8.1:
 
 - Die Unternehmensportal-App wird auf Ihrem Gerät deinstalliert. Das bedeutet, dass Ihr Gerät nicht mehr im Unternehmensportal angezeigt wird, und Sie über das Unternehmensportal keine Apps installieren können.
 
-- Sie können keine Unternehmens-Apps und Unternehmensdaten mehr auf dem Gerät verwenden.
+- Sie können auf Ihrem Gerät keine Unternehmens-Apps und Unternehmensdaten mehr verwenden.
 
 - Alle Einstellungen, die beim Hinzufügen des Geräts auf diesem geändert wurden, z.B. das Deaktivieren der Kamera oder die Anforderung einer bestimmten Kennwortlänge, werden unwirksam.
 
@@ -85,7 +85,7 @@ Wenn Sie Ihr Windows RT-Gerät entfernen, geschieht Folgendes:
 
 - Die Unternehmensportal-App wird auf Ihrem Gerät deinstalliert. Das bedeutet, dass Ihr Gerät nicht mehr im Unternehmensportal angezeigt wird, und Sie über das Unternehmensportal keine Apps installieren können.
 
-- Sie können keine Unternehmens-Apps und Unternehmensdaten mehr auf dem Gerät verwenden.
+- Sie können auf Ihrem Gerät keine Unternehmens-Apps und Unternehmensdaten mehr verwenden.
 
 - Alle Einstellungen, die beim Hinzufügen des Geräts auf diesem geändert wurden, z.B. das Deaktivieren der Kamera oder die Anforderung einer bestimmten Kennwortlänge, werden unwirksam.
 

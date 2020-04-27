@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1e1f1c04bed91de3ac193ea3b6a07bde4e8658ba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d0e933d3ab40b6c07615f701c9d181d41e4fded5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81638251"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077783"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>Einrichten eines iOS- oder iPadOS-Geräts beim Unternehmensportal und bei Entrust Datacard
 
@@ -66,7 +66,7 @@ Abgeleitete Anmeldeinformationen sind eine Implementierung der NIST-Richtlinien 
 
 2. Notieren Sie sich den Code auf dem Bildschirm.  
 
-    ![Beispielbild der Unternehmensportal-App mit Nachricht und Code auf dem Bildschirm](./media/copy-code-intercede.png)   
+    ![Beispielbild der Unternehmensportal-App mit Meldung und Code auf dem Bildschirm](./media/copy-code-intercede.png)   
 
 3. Wechseln Sie zu dem Gerät, für das Sie Ihre Smartcard aktiviert haben, und navigieren Sie zu https://microsoft.com/devicelogin. 
 4. Geben Sie den Code ein, den Sie zuvor notiert haben.  

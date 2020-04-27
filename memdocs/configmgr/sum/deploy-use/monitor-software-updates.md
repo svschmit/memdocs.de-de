@@ -5,17 +5,17 @@ description: Die Configuration Manager-Konsole stellt Warnungen und Status zum �
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/08/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: 278f859d58c4feda6fa13522b476ec2beb60f514
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aa17e58f2687a48895502d1062a22d0c8630aea3
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709488"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110371"
 ---
 # <a name="monitor-software-updates-in-configuration-manager"></a>Überwachen von Softwareupdates in Configuration Manager
 
@@ -33,7 +33,7 @@ Ab Version 1610 von Configuration Manager können Sie jetzt das Dashboard „Sof
 <!--4224414-->
 *(Eingeführt in Version 1906)*
 
-Sie können einen Drillthrough durch die Konformitätsstatistiken durchführen, um herauszufinden, auf welchen Geräten ein bestimmtes Softwareupdate für Office 365 erforderlich ist. Sie benötigen zum Abrufen der Geräteliste die Berechtigung, Updates und die jeweiligen Sammlungen abzurufen, zu denen die Geräte gehören. Gehen Sie wie folgt vor, um einen Drilldown in der Geräteliste auszuführen:
+Sie können einen Drillthrough durch die Konformitätsstatistiken durchführen, um herauszufinden, auf welchen Geräten ein bestimmtes Softwareupdate für Microsoft 365-Apps erforderlich ist. Sie benötigen zum Abrufen der Geräteliste die Berechtigung, Updates und die jeweiligen Sammlungen abzurufen, zu denen die Geräte gehören. Gehen Sie wie folgt vor, um einen Drilldown in der Geräteliste auszuführen:
 
 1. Wechseln Sie zu **Softwarebibliothek** > **Softwareupdates** > **Alle Softwareupdates**.
 1. Wählen Sie ein beliebiges Update aus, das für mindestens ein Gerät erforderlich ist.

@@ -10,12 +10,12 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fa36d3782f75605221c03b7c0791e9b75b68f6e5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 419b91365d80062baabc289d0dbcf064c89b71a0
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690558"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110473"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Verwalten und Überwachen von stufenweisen Bereitstellungen
 
@@ -76,7 +76,10 @@ Sie können eine stufenweise Bereitstellung manuell anhalten oder fortsetzen. Be
 
 3. Wechseln Sie im Detailbereich zur Registerkarte **Stufenweise Bereitstellungen**.  
 
-4. Wählen Sie die stufenweise Bereitstellung aus, und klicken Sie im Menüband auf **Anhalten** oder **Fortsetzen**.  
+4. Wählen Sie die stufenweise Bereitstellung aus, und klicken Sie im Menüband auf **Anhalten** oder **Fortsetzen**. 
+
+> [!NOTE]
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole den alten Namen noch im Produkt Configuration Manager und der unterstützenden Dokumentation. 
 
 <!-- Removed for 1806, need to clarify behavior with engineering
 When you suspend a phased deployment, it sets the available and deadline times on the active deployments to a future time. When you resume, it generates a new schedule based on when you resume the phased deployment. The new schedule helps to avoid problems if you resume after the original deadline. For example, the initial schedule has the required deadline seven days after the deployment is available. You suspend it on the second day. If you aren't ready to resume it until day eight, you don't want the deployment to be immediately past the deadline. So it generates a new deadline starting from when you resume the phased deployment on day eight. 

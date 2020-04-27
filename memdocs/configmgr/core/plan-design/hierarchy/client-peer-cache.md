@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1b9afc8c9cde94488908e4cd9737a58547326f9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703668"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110184"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peercache für Konfigurations-Manager-Clients
 
@@ -41,7 +41,7 @@ Wenn Sie Clients als Peercachequellen verwenden möchten, müssen Sie die Client
 
 Eine Peercachequelle muss ein Mitglied der aktuellen Begrenzungsgruppe des Peercacheclients sein. Der Verwaltungspunkt trägt keine Peercachequellen aus einer benachbarten Begrenzungsgruppe in die Liste der Inhaltsquellen ein, die dem Client bereitgestellt wird. Stattdessen werden nur die Verteilungspunkte einer benachbarten Begrenzungsgruppe eingeschlossen. Weitere Informationen zu aktuellen und benachbarten Begrenzungsgruppen finden Sie unter [Begrenzungsgruppen](../../servers/deploy/configure/boundary-groups.md).<!--SCCMDocs issue 685-->  
 
-Der Konfigurations-Manager-Client verwendet den Peercache, um anderen Clients unterschiedliche Inhalte aus dem Cache zur Verfügung zu stellen. Zu diesen Inhalten zählen Office 365-Dateien und Expressinstallationsdateien.<!--SMS.500850-->  
+Der Konfigurations-Manager-Client verwendet den Peercache, um anderen Clients unterschiedliche Inhalte aus dem Cache zur Verfügung zu stellen. Zu diesen Inhalten gehören Dateien von Microsoft 365 Apps für Unternehmen und Expressinstallationsdateien.<!--SMS.500850-->  
 
 Der Peercache ersetzt nicht andere Lösungen wie Windows BranchCache oder die Übermittlungsoptimierung, sondern kann zusammen mit diesen verwendet werden. Diese Technologien bieten Ihnen mehr Optionen für das Erweitern herkömmlicher Inhaltsbereitstellungslösungen wie z.B. Verteilungspunkte. Der Peercache ist eine individuelle Lösung, die nicht von BranchCache abhängig ist. Sie können den Peercache kann auch dann verwenden, wenn Sie BranchCache nicht aktivieren oder nutzen.  
 

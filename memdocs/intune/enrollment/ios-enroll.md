@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2c05a5518ff180bcfd3f00f6f59097815e9eed9d
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696527"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126184"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrieren von iOS-/iPadOS-Geräten in Intune
 
@@ -35,7 +35,7 @@ Als Intune-Administrator können Sie die Registrierung für iOS-/iPadOS- und iPa
 
 Bevor Sie iOS-/iPadOS -Geräte aktivieren können, schließen Sie die folgenden Schritte ab:
 
-- [Stellen Sie sicher, dass Ihr Gerät für die Apple-Geräteregistrierung berechtigt ist](https://support.apple.com/en-us/HT204142#eligibility).
+- [Stellen Sie sicher, dass Ihre Geräte unterstützt werden](../fundamentals/supported-devices-browsers.md).
 - [Einrichten von Intune:](../fundamentals/setup-steps.md) Mit diesen Schritten wird Ihre Intune-Infrastruktur eingerichtet. Besonders für die Geräteregistrierung ist es erforderlich, dass Sie [die MDM-Autorität festlegen](../fundamentals/mdm-authority-set.md).
 - [Abrufen eines Apple-MDM-Pushzertifikats:](apple-mdm-push-certificate-get.md) Apple benötigt ein Zertifikat, um die Verwaltung von iOS-/iPadOS- und macOS-Geräten zu aktivieren.
 

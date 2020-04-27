@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8caf05a2869088fd4f8206d1306d82c696f527a2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81638204"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077766"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Einrichten eines iOS- oder iPadOS-Geräts im Unternehmensportal und bei Intercede
 
@@ -39,7 +39,7 @@ Sie müssen wahrscheinlich abgeleitete Anmeldeinformationen einrichten, wenn Sie
 
 Folgendes wird in diesem Artikel beschrieben:  
 
-* Registrieren eines mobilen iOS- oder iPadOS-Geräts beim Intune-Unternehmensportal  
+* Registrieren eines mobilen iOS- oder iPadOS-Geräts im Intune-Unternehmensportal  
 * Abrufen von abgeleiteten Anmeldeinformationen vom Anbieter Ihrer Organisation, [Intercede](https://www.intercede.com/)   
 
 

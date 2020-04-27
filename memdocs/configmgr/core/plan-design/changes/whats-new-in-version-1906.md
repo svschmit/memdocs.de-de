@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 94ad19c2b405af75c7432bb4601098f980c1e821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702328"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078701"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Neuerungen in Version 1906 von Configuration Manager (Current Branch)
 
@@ -371,6 +371,10 @@ Dieses Release umfasst die folgenden Verbesserungen für die Betriebssystemberei
 - Die Tasksequenz legt die neue schreibgeschützte Variable **_SMSTSLastContentDownloadLocation** fest. Diese Variable enthält den letzten Speicherort, von dem die Tasksequenz Inhalte heruntergeladen bzw. versucht hat, Inhalte herunterzuladen. Überprüfen Sie diese Variable, statt die Clientprotokolle zu analysieren.<!-- 2840337 -->
 
 - Beim Erstellen von Tasksequenzmedien fügt Configuration Manager keine autorun.inf-Datei hinzu. Diese Datei wird in der Regel von Antischadsoftwareprodukten blockiert. Wenn Sie die Datei für Ihr Szenario benötigen, können Sie sie aber weiterhin hinzufügen.<!-- 4090666 -->
+
+### <a name="improvements-to-pxe"></a>Verbesserungen bei PXE
+
+Während des PXE DHCP-Handshakes wird jetzt die Option 82 für den PXE-Antwortdienst ohne WDS unterstützt. Die Option 82 wird mit WDS nicht unterstützt.
 
 
 ## <a name="software-center"></a><a name="bkmk_userxp"></a> Softwarecenter

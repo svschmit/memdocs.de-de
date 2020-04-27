@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e986827cee4911ac2204a8e2f50923dcdd71fed0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705148"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078786"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Funktionen in der Technical Preview 1706 für Configuration Manager
 
@@ -186,7 +186,7 @@ Versuchen Sie, die folgenden Aufgaben auszuführen, und senden Sie uns dann **Fe
 
 ## <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Einbeziehen einer Vertrauensstellung für bestimmte Dateien und Ordner in eine Device Guard-Richtlinie
 <!-- 1324676 -->
-In dieser Version haben wir der Gruppenrichtlinienverwaltung mit [Device Guard](../../protect/deploy-use/use-device-guard-with-configuration-manager.md) weitere Funktionen hinzugefügt.
+In diesem Release haben wir der [Device Guard](../../protect/deploy-use/use-device-guard-with-configuration-manager.md)-Richtlinienverwaltung weitere Funktionen hinzugefügt.
 
 Sie können jetzt einer Device Guard-Richtlinie optional eine Vertrauensstellung für bestimmte Dateien oder Ordner hinzufügen. Dies ermöglicht Ihnen Folgendes:
 
