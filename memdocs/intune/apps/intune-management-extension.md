@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: a773c449b0b6d60b9cf7bf6a280cc371d9c4cf03
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808107"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80979221"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Verwenden von PowerShell-Skripts auf Windows 10-Geräten in Intune
 
@@ -52,6 +52,9 @@ Für die Intune-Verwaltungserweiterung sind folgende Voraussetzungen erforderlic
 - Mit Azure Active Directory (Azure AD) verknüpfte Geräte, einschließlich:  
   
   - Mit Azure AD Hybrid verknüpfte Geräte: Geräte, die mit Azure Active Directory und einer lokalen Azure Active Directory-Instanz verknüpft sind. Weitere Informationen finden Sie unter [Anleitung: Planen der Implementierung einer Azure Active Directory-Hybrideinbindung](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
+  
+  > [!TIP]
+  > Stellen Sie sicher, dass die Geräte in Azure AD [eingebunden](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) sind. Geräte, die bei Azure AD nur [registriert](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) sind, erhalten Ihre Skripts nicht.  
 
 - Bei Intune registrierte Geräte, einschließlich:
 
@@ -71,8 +74,8 @@ Für die Intune-Verwaltungserweiterung sind folgende Voraussetzungen erforderlic
     - [Client-Apps-Workload](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [Umstellen von Configuration Manager-Workloads auf Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> Stellen Sie sicher, dass die Geräte in Azure AD [eingebunden](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) sind. Geräte, die bei Azure AD nur [registriert](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) sind, erhalten Ihre Skripts nicht.
+> [!NOTE]
+> Informationen zur Verwendung von virtuellen Window 10-Computern finden Sie unter [Verwenden von virtuellen Windows 10-Computern mit Intune](../fundamentals/windows-10-virtual-machines.md).
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Erstellen und Zuweisen einer Skriptrichtlinie
 
@@ -125,6 +128,8 @@ Für die Intune-Verwaltungserweiterung sind folgende Voraussetzungen erforderlic
 - Endbenutzer müssen sich nicht beim Gerät anmelden, um PowerShell-Skripts auszuführen.
 
 - Der Agent für die Intune-Verwaltungserweiterung überprüft Intune einmal pro Stunde und nach jedem Neustart auf neue Skripts oder Änderungen. Nachdem Sie die Richtlinie den Azure AD-Gruppen zugewiesen haben, wird das PowerShell-Skript ausgeführt, und die Ausführungsergebnisse werden berichtet. Das Skript wird nur einmal ausgeführt. Eine erneute Ausführung erfolgt nur, wenn eine Änderung am Skript oder der Richtlinie vorgenommen wird. Wenn das Skript nicht ausgeführt werden kann, versucht der Agent für die Intune-Verwaltungserweiterung dreimal, das Skript für die nächsten drei aufeinander folgenden Eincheckvorgänge der Intune-Verwaltungserweiterung erneut auszuführen.
+
+- Bei freigegebenen Geräten wird das PowerShell-Skript für jeden neuen Benutzer ausgeführt, der sich anmeldet.
 
 ### <a name="failure-to-run-script-example"></a>Fehler beim Ausführen des Skriptbeispiels
 8:00 Uhr

@@ -6,28 +6,32 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
-ms.reviewer: jinyoon
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0a9f4d9195c68664f42570746ade6d924c8da62
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e5b568a90d4077c32a88044beea746907613eb0e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323005"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525732"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrieren von Jamf Pro in Intune zu Konformitätszwecken
 
-Wenn Ihre Organisation [Jamf Pro](https://www.jamf.com) zur Verwaltung von macOS-Geräten verwendet, können Sie Microsoft Intune-Konformitätsrichtlinien zusammen mit dem bedingten Zugriff von Azure Active Directory (Azure AD) verwenden, um sicherzustellen, dass Geräte in Ihrer Organisation konform sind, ehe sie auf Unternehmensressourcen zugreifen dürfen. In diesem Artikel erfahren Sie, wie Sie die Jamf-Integration in Intune konfigurieren.
+Wenn Ihre Organisation [Jamf Pro](https://www.jamf.com) zur Verwaltung von macOS-Geräten verwendet, können Sie Microsoft Intune-Konformitätsrichtlinien zusammen mit dem bedingten Zugriff von Azure Active Directory (Azure AD) verwenden, um sicherzustellen, dass Geräte in Ihrer Organisation konform sind, ehe sie auf Unternehmensressourcen zugreifen dürfen. Sie haben zwei Möglichkeiten, um Jamf Pro in Intune zu integrieren:
+
+- **Integration manuell konfigurieren**: Verwenden Sie die Informationen in diesem Artikel, um die Jamf-Integration mit Intune manuell zu konfigurieren.
+- **Jamf-Cloudconnector verwenden** (*empfohlen*): Verwenden Sie die Informationen in [Verwenden des Jamf-Cloudconnectors mit Microsoft Intune](../protect/conditional-access-jamf-cloud-connector.md), um den Jamf-Cloudconnector zur Integration von Jamf Pro in Microsoft Intune zu installieren. Der Cloudconnector automatisiert viele der Schritte, die erforderlich sind, wenn Sie die Integration manuell konfigurieren.
+
 
 Wenn Jamf Pro in Intune integriert ist, können Sie die Bestandsdaten von macOS-Geräten über Azure AD mit Intune synchronisieren. Das Konformitätsmodul von Intune analysiert anschließend die Bestandsdaten, um einen Bericht zu erstellen. Die Analyse von Intune wird mit Informationen zur Azure AD-Identität des Gerätebenutzers kombiniert, um die Erzwingung über bedingten Zugriff zu steuern. Geräte, die mit den Richtlinien für bedingten Zugriff kompatibel sind, können Zugriff auf geschützte Unternehmensressourcen erhalten.
 
@@ -135,7 +139,7 @@ So stellen Sie eine Verbindung zwischen Intune und Jamf Pro her:
 2. Navigieren Sie in Intune zur Seite **Partnergeräteverwaltung**. Konfigurieren Sie unter den **Connectoreinstellungen** Gruppen für eine Zuweisung:
 
    - Wählen Sie **Einschließen** aus, und geben Sie an, welche Benutzergruppen Sie für die macOS-Registrierung mit Jamf auswählen möchten.
-   - Verwenden Sie **Ausschließen**, um Benutzergruppen auszuwählen, die nicht mit Jamf registriert werden, und stattdessen Ihre Macs direkt bei Intune registrieren.
+   - Verwenden Sie **Ausschließen**, um Benutzergruppen auszuwählen, die nicht mit Jamf registriert werden, und stattdessen Ihre Macintosh-Computer direkt bei Intune registrieren.
 
    *Ausschließen* setzt *Einschließen* außer Kraft, was bedeutet, dass jedes Gerät, das in beiden Gruppen ist, von Jamf ausgeschlossen und zur Registrierung bei Intune weitergeleitet wird.
 
@@ -154,7 +158,7 @@ Nach dem Konfigurieren der Integration zwischen Intune und Jamf verwenden Sie di
 
 ## <a name="disconnect-jamf-pro-and-intune"></a>Trennen von Jamf Pro und Intune
 
-Wenn Sie Jamf Pro nicht mehr zum Verwalten von Macs in Ihrer Organisation verwenden und Benutzer in Intune verwaltet werden sollen, müssen Sie die Verbindung zwischen Jamf Pro und Intune entfernen. Entfernen Sie die Verbindung über die Jamf Pro-Konsole.
+Wenn Sie die Integration von Jamf Pro in Intune entfernen müssen, führen Sie die folgenden Schritte aus, um die Verbindung innerhalb der Jamf Pro-Konsole zu entfernen. Diese Informationen gelten sowohl für die manuell konfigurierte Integration als auch für die Integration über den Cloudconnector.
 
 1. Navigieren Sie in Jamf Pro zu **Global Management** > **Conditional Access** (Globale Verwaltung > Bedingter Zugriff). Klicken Sie auf der Registerkarte **macOS Intune Integration** (Intune-Integration in macOS) auf **Edit** (Bearbeiten).
 

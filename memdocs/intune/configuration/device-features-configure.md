@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551400"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149190"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Hinzufügen von Einstellungen für iOS-, iPadOS- oder macOS-Gerätefeatures in Intune
 
@@ -37,9 +37,6 @@ Intune umfasst zahlreiche Features und Einstellungen, mit denen Administratoren 
 Intune verwendet „Konfigurationsprofile“ zum Erstellen und Anpassen dieser Einstellungen für die Anforderungen Ihrer Organisation. Nachdem Sie diese Features in einem Profil hinzugefügt haben, übertragen Sie das Profil per Push auf iOS/iPadOS- und macOS-Geräte in Ihrer Organisation oder stellen es für diese Geräte bereit.
 
 In diesem Artikel werden die verschiedenen Features beschrieben, die Sie konfigurieren können, und es wird erläutert, wie Sie ein Gerätekonfigurationsprofil erstellen. Sie können auch alle verfügbaren Einstellungen für [iOS/iPadOS](ios-device-features-settings.md)- und [macOS](macos-device-features-settings.md)-Geräte anzeigen.
-
-> [!NOTE]
-> Die Intune-Benutzeroberfläche (User Interface, UI) wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie die in diesem Artikel beschriebenen Einstellungen erstellen oder bearbeiten.
 
 ## <a name="airprint"></a>AirPrint
 
@@ -136,12 +133,12 @@ Gilt für:
 
 Die meisten branchenspezifischen Apps erfordern eine bestimmte Form von Benutzerauthentifizierung, um Sicherheitsfeatures unterstützen zu können. Häufig müssen Benutzer bei dieser Art von Authentifizierung die gleichen Anmeldeinformationen mehrfach eingeben. Um die Benutzerfreundlichkeit zu verbessern, können Entwickler Apps erstellen, die einmaliges Anmelden (SSO) verwenden. Dadurch wird die Anzahl der Male reduziert, die ein Benutzer Anmeldeinformationen eingeben muss.
 
+Das Profil für einmaliges Anmelden basiert auf Kerberos. Kerberos ist ein Netzwerkauthentifizierungsprotokoll, das die Verschlüsselung mit geheimem Schlüssel verwendet, um Client-Server-Anwendungen zu authentifizieren. Die Intune-Einstellungen definieren Kerberos-Kontoinformationen beim Zugriff auf Server oder bestimmte Apps und behandeln Kerberos-Herausforderungen für Webseiten und native Apps. Apple empfiehlt die Verwendung der Einstellungen für die [Kerberos-Anwendungserweiterung für einmaliges Anmelden](#single-sign-on-app-extension) (in diesem Artikel) anstelle der Einstellungen für einmaliges Anmelden.  
+
 Um einmaliges Anmelden zu verwenden, achten Sie darauf, dass Sie folgende Anforderungen erfüllen:
 
 - Es muss eine App vorhanden sein, die dafür codiert ist, den Anmeldeinformationsspeicher des Benutzers zum einmaligen Anmelden auf dem Gerät zu durchsuchen.
 - Intune muss für einmaliges Anmelden von iOS/iPadOS-Geräten konfiguriert sein.
-
-![Bereich „Einmaliges Anmelden“](./media/device-features-configure/sso-blade.png)
 
 Eine Liste der Einstellungen, die Sie in Intune konfigurieren können, finden Sie unter [Einmaliges Anmelden](ios-device-features-settings.md#single-sign-on).
 
@@ -156,7 +153,7 @@ Diese Einstellungen konfigurieren eine App-Erweiterung, die das einmalige Anmeld
 
 In Intune verwenden Sie diese Einstellungen, um eine von Microsoft, Apple, Ihrer Organisation oder Ihrem Identitätsanbieter erstellte App-Erweiterung für das einmalige Anmelden zu konfigurieren. Die App-Erweiterung für einmaliges Anmelden verarbeitet die Authentifizierung für Ihre Benutzer. Diese Einstellungen konfigurieren SSO-App-Erweiterungen für Umleitungen und Anmeldeinformationen.
 
-- Die Erweiterung für Umleitungen ist für moderne Authentifizierungsprotokolle wie OAuth und SAML2 konzipiert. Microsoft stellt eine Azure AD-SSO-App-Erweiterung zur Weiterleitung für iOS/iPadOS bereit, die mit den Einstellungen für SSO-App-Erweiterungen aktiviert werden kann.
+- Die Erweiterung für Umleitungen ist für moderne Authentifizierungsprotokolle wie OAuth und SAML2 konzipiert. Sie können eine allgemeine Erweiterung für Umleitungen auf macOS-Geräten verwenden. Für iOS/iPadOS-Geräte können Sie zwischen der Azure AD SSO-Erweiterung von Microsoft ([Microsoft Enterprise SSO-Plug-In](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) und einer allgemeinen Erweiterung für Umleitungen auswählen.
 - Die Erweiterung für Anmeldeinformationen ist für Abfrage- und Antwort-Authentifizierungsabläufe konzipiert. Sie können zwischen einer von Apple bereitgestellten Kerberos-spezifischen und einer generischen Erweiterung für Anmeldeinformationen auswählen.
 
 Eine Liste der Einstellungen, die Sie in Intune konfigurieren können, finden Sie unter [App-Erweiterung für einmaliges Anmelden](ios-device-features-settings.md#single-sign-on-app-extension) (iOS/iPadOS) und [App-Erweiterung für einmaliges Anmelden](macos-device-features-settings.md#single-sign-on-app-extension) (macOS).
