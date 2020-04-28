@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75ef2a03c9f42f0bda78af009f0fb563fbcedb75
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 15d999cee3acb72204d0cd196d396ed8a35af736
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220020"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81440593"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Verwenden von Windows 10-Vorlagen zum Konfigurieren von Gruppenrichtlinieneinstellungen in Microsoft Intune
 
@@ -102,6 +102,10 @@ In diesem Artikel sind die Schritte zum Erstellen einer Vorlage für Windows 10-
     Wählen Sie **Weiter** aus.
 
 14. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen das Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+
+    Wenn das Profil Benutzergruppen zugeordnet ist, gelten die konfigurierten ADMX-Einstellungen für jedes Gerät, das der Benutzer registriert und bei dem er sich anmeldet. Wenn das Profil Gerätegruppen zugeordnet ist, gelten die konfigurierten ADMX-Einstellungen für jeden Benutzer, der sich bei diesem Gerät anmeldet. Diese Zuweisung erfolgt, wenn die ADMX-Einstellung eine Computerkonfiguration (`HKEY_LOCAL_MACHINE`) oder eine Benutzerkonfiguration (`HKEY_CURRENT_USER`) ist. Bei einigen Einstellungen kann sich eine einem Benutzer zugewiesene Computereinstellung auch auf die Erfahrung anderer Benutzer mit diesem Gerät auswirken.
+    
+    Weitere Informationen finden Sie unter [Benutzer- und Gerätegruppen im Vergleich](device-profile-assign.md#user-groups-vs-device-groups).
 
     Wählen Sie **Weiter** aus.
 

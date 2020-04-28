@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e05577967d874ea8e3cd5e4bdd5e20e204158921
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325437"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615683"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Erstellen einer Mobile Threat Defense-Gerätekompatibilitätsrichtlinie (MTD) mit Intune
 
@@ -59,6 +59,11 @@ Voraussetzungen für die Gerätekompatibilitätsrichtlinie mit MTD:
    - **Mittel**: Das Gerät ist konform, wenn auf dem Gerät Bedrohungen niedriger oder mittlerer Stufe gefunden werden. Wenn auf dem Gerät Bedrohungen hoher Stufen erkannt werden, wird es als nicht kompatibel bewertet.
 
    - **Hoch**: Diese Stufe gewährleistet das geringste Maß an Sicherheit. Sie lässt alle Bedrohungsstufen zu und verwendet Mobile Threat Defense nur zu Berichtszwecken. Auf Geräten muss mit dieser Einstellung die MTD-App aktiviert sein.
+
+   > [!IMPORTANT]
+   > Für Besitzer von Android Enterprise-Geräten können Sie, nachdem Sie eine Richtlinie erstellt und gespeichert haben, die Richtlinie später nicht mehr bearbeiten, um die Bedrohungsstufe zu ändern. Änderungen der Gerätebedrohungsstufe für die Einstellung zur Geräteintegrität von **Anfordern, dass das Gerät höchstens der angegebenen Gerätebedrohungsstufe entspricht** werden nicht wirksam. Um den Wert für die Bedrohungsstufe zu ändern, müssen Sie die aktuelle Richtlinie löschen und eine neue Richtlinie erstellen, die die gewünschte Bedrohungsstufe festlegt.
+   >
+   > Dies ist ein bekanntes Problem, das in einem zukünftigen Update von Intune behoben wird.
 
 6. Klicken Sie zweimal auf **OK**, und wählen Sie zum Erstellen der Richtlinie **Erstellen** aus.
 

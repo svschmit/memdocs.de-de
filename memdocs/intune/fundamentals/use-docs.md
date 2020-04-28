@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b91f6b11df1b65176711df0ecd907a1764c2e692
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355087"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726038"
 ---
 # <a name="using-the-intune-docs"></a>Verwenden der Intune-Dokumentation
 
@@ -117,11 +117,11 @@ Befolgen Sie diese allgemeinen Richtlinien, wenn Sie zur Intune-Dokumentation be
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Konsolidierung der Dokumentation für Microsoft Endpoint Manager
 
-Diese Dokumentationsbibliothek wurde zur besseren Unterstützung kombinierter Szenarios für Intune und Configuration Manager in [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) verschoben. Die Configuration Manager-Dokumentationsbibliothek wird später in `docs.microsoft.com/mem/configmgr` verschoben. Alle Links werden automatisch umgeleitet, sodass Sie keine Änderungen zum Lesen dieses Inhalts vornehmen müssen.
+Um kombinierte Szenarien für Intune und Configuration Manager besser zu unterstützen, wurde die Dokumentation zu Intune und Configuration Manager auf der Microsoft Endpoint Manager-Website konsolidiert. Die Intune-Dokumentation ist jetzt unter [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) und die Configuration Manager-Dokumentationsbibliothek ist unter [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr) verfügbar. Alle Links werden automatisch umgeleitet, wenn Sie eine alte URL verwenden, sodass Sie keine Änderungen zum Lesen dieses Inhalts vornehmen müssen.
 
 Wenn Sie Feedback geben oder an Artikeln mitwirken, sind einige Änderungen erforderlich:
 
-- Vorhandene GitHub-Issues verbleiben im ursprünglichen Repository ([https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues)).
+- Vorhandene GitHub-Issues sind im ursprünglichen Repository ([https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) oder [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/)) verblieben.
 
   - Diese Issues werden nicht als offene oder geschlossene Issues im Abschnitt „Feedback“ des verknüpften Artikels angezeigt.
 

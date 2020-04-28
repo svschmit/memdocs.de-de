@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 3/13/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,22 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8b7ef62056fc85f7584d0d7fed3eab646d199476
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323089"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525671"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Erzwingen von Konformität auf mit Jamf Pro verwalteten Macs
 
-Wenn Sie [Jamf Pro mit Intune integrieren](conditional-access-integrate-jamf.md), können Sie Richtlinien für bedingten Zugriff verwenden, um auf Ihren Mac-Geräten Konformität mit Ihren organisationsinternen Anforderungen zu erzwingen.  Dieser Artikel unterstützt Sie bei den folgenden Aufgaben:  
+Wenn Sie Jamf Pro mit Intune integrieren, können Sie Richtlinien für bedingten Zugriff verwenden, um auf Ihren Mac-Geräten Konformität mit Ihren organisationsinternen Anforderungen zu erzwingen. Dieser Artikel unterstützt Sie bei den folgenden Aufgaben:  
 
 - Erstellen von Richtlinien für bedingten Zugriff.
 - Konfigurieren von Jamf Pro zur Bereitstellung der App „Intune-Unternehmensportal“ auf Geräten, die Sie mit Jamf verwalten.
 - Konfigurieren von Geräten zur Registrierung bei Azure AD, wenn sich der Gerätebenutzer bei der Unternehmensportal-App anmeldet, die er in der App „Jamf Self Service“ startet. Die Geräteregistrierung richtet eine Identität in Azure AD ein, die es dem Gerät ermöglicht, für den Zugriff auf Unternehmensressourcen von Richtlinien für bedingten Zugriff bewertet zu werden.  
  
 Die Verfahren in diesem Artikel erfordern Zugriff auf die Intune- und Jamf Pro-Konsole.
+Intune unterstützt zwei Methoden zur Integration von Jamf Pro, die Sie getrennt von den Verfahren in diesem Artikel konfigurieren:
+
+- Empfohlen: [Integrieren von Jamf Pro in Intune mit dem Jamf-Cloudconnector](conditional-access-jamf-cloud-connector.md)
+- [Manuelles Konfigurieren der Integration von Jamf Pro mit Intune](conditional-access-integrate-jamf.md)
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Einrichten von Gerätekonformitätsrichtlinien in Intune
 
@@ -41,7 +45,7 @@ Die Verfahren in diesem Artikel erfordern Zugriff auf die Intune- und Jamf Pro-K
 
 2. Wählen Sie **Geräte** > **Konformitätsrichtlinien** aus. Wenn Sie eine zuvor erstellte Richtlinie verwenden, wählen Sie diese Richtlinie in der Konsole aus, und fahren Sie dann mit dem nächsten Schritt dieses Verfahrens fort. Wählen Sie **Richtlinie erstellen** aus, um eine neue Richtlinie zu erstellen, und geben Sie dann Details für eine Richtlinie mit **macOS** als *Plattform* an. Konfigurieren Sie *Einstellungen* und *Aktionen bei Inkompatibilität*, um Ihre unternehmensinternen Anforderungen zu erfüllen, und klicken Sie dann zum Speichern der Richtlinie auf **Erstellen**.
 
-3. Wählen Sie im Richtlinienbereich *Übersicht* die Option **Zuweisungen** aus. Verwenden Sie die verfügbaren Optionen, um zu konfigurieren, für welche Azure Active Directory-Benutzer und -Sicherheitsgruppen diese Richtlinie gelten soll. **Die Jamf-Integration in Intune unterstützt keine Konformitätsrichtlinien für Gerätegruppen.**
+3. Wählen Sie im Richtlinienbereich *Übersicht* die Option **Zuweisungen** aus. Verwenden Sie die verfügbaren Optionen, um zu konfigurieren, für welche Azure Active Directory-Benutzer und -Sicherheitsgruppen diese Richtlinie gelten soll. **Die Jamf-Integration mit Intune unterstützt keine Konformitätsrichtlinien für Gerätegruppen.**
 
 > [!NOTE]
 > Die Jamf-Integration in Intune unterstützt nur AAD-Benutzergruppen. Gerätekonformitätsrichtlinien für Gerätegruppen werden nicht angewendet.

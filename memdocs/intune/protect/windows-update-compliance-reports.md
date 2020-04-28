@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ad666f21b2ff271b99675486835357dfd071773
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 157c61e9f145295f5ef728d12385fa44697a88e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326515"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725637"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Berichte zur Updatekonformität für Intune
 
-Wenn Sie Intune verwenden, um Windows-Updates auf Windows 10-Geräten bereitzustellen, können Sie mithilfe von Intune oder der kostenlosen Lösung *Updatekonformität* (Teil der Microsoft Operations Management Suite, OMS) Details zur Updatekonformität abrufen.
+Wenn Sie Intune verwenden, um Windows-Updates auf Windows 10-Geräten bereitzustellen, können Sie mithilfe von Intune oder der kostenlosen Lösung *Updatekonformität* Details zur Updatekonformität abrufen. Updatekonformität ist Teil der Microsoft Operations Management Suite (OMS).
 
 ## <a name="use-intune"></a>Verwenden von Intune
 
@@ -47,13 +47,13 @@ Gehen Sie wie folgt vor, um Richtlinienberichte zum Bereitstellungsstatus für d
 
 ## <a name="use-update-compliance"></a>Verwenden der Updatekonformität
 
-Sie können Windows 10-Updaterollouts mithilfe der Windows Analytics-Lösung [Updatekonformität](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) überwachen. Die Updatekonformität wird im Azure-Portal angeboten und ist für Geräte kostenlos, die die entsprechenden [Voraussetzungen](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites) erfüllen.  
+Sie können Windows 10-Updaterollouts mithilfe der [Updatekonformität](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) überwachen. Die Updatekonformität wird im Azure-Portal angeboten und ist für Geräte kostenlos, die die entsprechenden [Voraussetzungen](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites) erfüllen.  
 
 Bei Verwendung dieser Lösung können Sie eine Organisations-ID für jedes Ihrer mit Intune verwalteten Windows 10-Geräte bereitstellen, für das Sie Updateüberwachungsberichte verwenden möchten.  
 
 Die Organisations-ID können Sie in Intune mithilfe der OMA-URI-Einstellungen einer benutzerdefinierten Richtlinie konfigurieren. Siehe [Verwenden von benutzerdefinierten Einstellungen für Windows 10-Geräte in Intune](../configuration/custom-settings-windows-10.md).
 
-Der OMA-URI-Pfad (Groß-/Kleinschreibung beachten) zum Konfigurieren der Organisations-ID lautet *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*.  
+Der OMA-URI-Pfad (Groß-/Kleinschreibung beachten) zum Konfigurieren der Organisations-ID lautet *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*.
 
 Unter **OMA-URI-Einstellung hinzufügen oder bearbeiten** können Sie beispielsweise folgende Werte verwenden:
 

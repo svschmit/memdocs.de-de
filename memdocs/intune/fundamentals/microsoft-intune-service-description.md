@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ca133b1995769f1c4cdfdcaf6b3a8256d7e6d5c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358636"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078843"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune-Dienstbeschreibung
 
@@ -56,11 +56,11 @@ Da sich das Ökosystem für die mobile Geräteverwaltung durch Updates von Betri
 
 - [Neuerungen in Microsoft Intune](whats-new.md). Dieses Thema wird mit dem monatlichen Dienstupdate und zudem wöchentlich aktualisiert, wenn z.B. Apps wie die Unternehmensportal-App veröffentlicht werden.
 
-- Wichtige Dienstupdates werden auch im [Microsoft 365 Admin Center](https://admin.microsoft.com/) im Nachrichtencenter angekündigt. Bei Installation der begleitenden [mobilen App für die Office 365-Verwaltung](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) können Sie Benachrichtigungen auf Ihrem mobilen Gerät erhalten. Erfahren Sie mehr über das [Office 365-Nachrichtencenter](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Wichtige Dienstupdates werden auch im [Microsoft 365 Admin Center](https://admin.microsoft.com/) im Nachrichtencenter angekündigt. Wenn Sie die begleitende [mobilen Office 365-Admin-App](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) installieren, können Sie Benachrichtigungen auf Ihrem mobilen Gerät erhalten. Erfahren Sie mehr über das [Office 365-Nachrichtencenter](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
   Einige hilfreiche Tipps:
 
-  - Die Nachrichten im Office 365-Nachrichtencenter sind zielgerichtet. Wenn Ihr Unternehmen z. B. nicht mit Intune for Education arbeitet, werden Sie zu Intune for Education nicht benachrichtigt.
+  - Die Nachrichten im Office 365-Nachrichtencenter sind zielgerichtet. Wenn Ihr Unternehmen z. B. nicht mit Intune for Education arbeitet, werden Sie zu Intune for Education nicht benachrichtigt.
 
   - Nachrichten laufen ab. Beispielsweise läuft die Benachrichtigung mit einem Link zur Seite „Neuerungen“, dass Ihr Dienst aktualisiert wurde, beispielsweise wahrscheinlich vor der Benachrichtigung zum nächsten Dienstupdate ab. Andernfalls hätten Sie einen großen Rückstand von Beiträgen, die möglicherweise nicht mehr relevant sind.
 
@@ -92,7 +92,7 @@ Abhängig von den Auswirkungen der Änderung werden Sie mindestens 7 bis 90 Tage
 Wenn schließlich im seltenen Fall, dass im Anschluss an einen Vorfall Maßnahmen zum Wiederherstellen Ihres Diensts oder eine umfassende Änderung mit nach Rückmeldungen von Kunden potenziellem Störpotenzial erforderlich sein sollten, werden basierend auf Ihren [Kommunikationseinstellungen für Office 365](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) E-Mails an die Dienstadministratoren gesendet. Voraussetzung ist eine gültige (vorzugsweise geschäftliche) E-Mail-Adresse.  
 
 
-<!--- ## Choose the management solution that’s right for you
+<!--- ## Choose the management solution that's right for you
 You can set up Intune in several ways to manage and help protect your company's mobile devices and computers (referred to as **devices** in this article).
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>Sprachunterstützung
-Intune wird im Azure-Portal ausgeführt, das die folgenden Sprachen unterstützt: Chinesisch (Vereinfacht), Chinesisch (Traditionell), Tschechisch, Niederländisch, Englisch, Deutsch, Ungarisch, Italienisch, Japanisch, Portugiesisch (Brasilien), Portugiesisch (Portugal), Russisch, Spanisch, Französisch, Koreanisch, Polnisch, Schwedisch und Türkisch.
+Intune wird im Azure-Portal ausgeführt, das folgende Sprachen unterstützt: Chinesisch (Vereinfacht), Chinesisch (Traditionell), Tschechisch, Niederländisch, Englisch, Deutsch, Ungarisch, Italienisch, Japanisch, Portugiesisch (Brasilien), Portugiesisch (Portugal), Russisch, Spanisch, Französisch, Koreanisch, Polnisch, Schwedisch und Türkisch.
 
 Die Intune-Verwaltungskonsole und die mobilen Oberflächen für Benutzer unterstützen zusätzlich zu allen vom Azure-Portal unterstützten Sprachen außerdem Dänisch, Griechisch, Finnisch, Norwegisch und Rumänisch.
 

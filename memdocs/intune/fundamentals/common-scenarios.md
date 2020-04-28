@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9975ffb8ce56659016680304c936fc8bb7d0774
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f2244f484b44673454b1bbb6ba6286c253021517
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344193"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079262"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Häufige Verwendungsarten von Microsoft Intune
 
@@ -62,7 +62,7 @@ Eine häufige Office 365-Bereitstellungsmethode besteht darin, dass sich Geräte
 Wenn Ihr Benutzer jedoch einfach Zugriff auf die E-Mails und Dokumente des Unternehmens benötigt, was häufig bei Geräten der Fall ist, die sich im privaten Besitz befinden, können Sie festlegen, dass der Benutzer die mobilen Office-Apps nutzen (auf die Sie [App-Schutzrichtlinien](../apps/app-protection-policies.md) 
 angewendet haben) und die Registrierung des Geräts überspringen muss.  
 
-In beiden Fällen werden die Office 365-Daten durch Richtlinien geschützt, die von Ihnen definiert wurden.
+In beiden Fällen werden die Office 365-Daten durch von Ihnen definierte Richtlinien geschützt.
 
 <!-- Learn more about how to plan and deploy Intune to help secure Office 365 email and data. -->
 
@@ -98,6 +98,6 @@ In diesem Fall ist die Einfachheit der Benutzererfahrung entscheidend. Daher wer
 
 ## <a name="enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk"></a>Ermöglichen des sicheren Zugriffs für Mitarbeiter auf Office 365 von einem nicht verwalteten, öffentlichen Kiosk aus
 
-Manchmal müssen Ihre Mitarbeiter Geräte, Apps oder Browser verwenden, die von Ihnen nicht verwaltet werden können, z.B. öffentliche Computer auf Messen und in Hotellobbys.
+Mitunter müssen Ihre Mitarbeiter Geräte, Apps oder Browser verwenden, die von Ihnen nicht verwaltet werden können, z. B. öffentliche Computer auf Messen und in Hotellobbys.
 
 Sollten Sie es den Mitarbeitern gestatten, dass sie über diese öffentlichen Computer auf E-Mails im Unternehmen zugreifen? Mit Intune und Microsoft Enterprise Mobility + Security können Sie diese Frage einfach mit „Nein“ beantworten, indem Sie den [E-Mail-Zugriff auf Geräte beschränken, die von Ihrer Organisation verwaltet werden](../protect/conditional-access.md). Dadurch wird sichergestellt, dass streng authentifizierte Mitarbeiter nicht versehentlich Unternehmensdaten auf nicht vertrauenswürdigen Computern hinterlassen.

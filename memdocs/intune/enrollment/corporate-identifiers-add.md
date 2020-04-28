@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 483f82e67c3f5d8ad3b4e55fba73e21eba85d49d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 03df52662aaced80280192b9096c6d169020b55d
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327164"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615452"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifizieren von Geräten als unternehmenseigen
 
@@ -128,3 +128,9 @@ Die Geräteeigenschaften zeigen den **Besitz** für jeden Gerätedatensatz in In
 3. Geben Sie den **Gerätebesitz** als **Persönlich** oder **Unternehmen** an.
 
    ![Geräteeigenschaften, die die Optionen der Gerätekategorie und des Gerätebesitzes anzeigen.](./media/corporate-identifiers-add/device-properties.png)
+
+Sie können eine Pushbenachrichtigung konfigurieren, die an Android- und iOS-Unternehmensportalbenutzer gesendet wird, wenn ihr Gerätebesitzertyp von **Persönlich** in **Unternehmen** geändert wird. 
+
+Wenn der Besitztyp eines Geräts von „Unternehmen“ zu „Persönlich“ geändert wird, löscht Intune alle zuvor von diesem Gerät erfassten App-Informationen innerhalb von 7 Tagen. Gegebenenfalls löscht Intune auch die Telefonnummer im Datensatz. Intune sammelt nach wie vor ein Inventar der vom IT-Administrator auf dem Gerät installierten Apps und sammelt weiterhin eine Teilrufummer für das Gerät, nachdem es als „Persönlich“ gekennzeichnet wurde.
+
+Diese Einstellung finden Sie im Microsoft Endpoint Manager, indem Sie auf **Mandantenverwaltung** > **Anpassen** klicken. Weitere Informationen finden Sie unter [Konfigurieren der Microsoft Intune-Unternehmensportal-App](../apps/company-portal-app.md#configuration).

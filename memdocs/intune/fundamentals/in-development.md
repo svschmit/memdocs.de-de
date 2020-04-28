@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f53096f25b4bb05b80d11246ac2fa01486f6e42
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 3bec2ab1f368b7264348b9b4b51143dbe924dc2f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808163"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81638158"
 ---
 # <a name="in-development-for-microsoft-intune---april-2020"></a>In der Entwicklung befindliche Microsoft Intune-Features: April 2020
 
@@ -56,28 +56,9 @@ Um Ihnen bei Ihrer Vorbereitung und Planung zu helfen, sind auf dieser Seite Upd
 -->
  
 <!-- ***********************************************-->
-## <a name="app-management"></a>App-Verwaltung
-
-### <a name="update-to-android-app-configuration-policies---6113334----"></a>Update der Richtlinien zur Konfiguration von Android-Apps<!-- 6113334  -->
-Die Konfigurationsrichtlinien für Android-Apps werden aktualisiert, damit Administrator den Gerätebereitstellungstyp auswählen können, bevor sie ein App-Konfigurationsprofil erstellen. Die Funktionalität wird für Zertifikatprofile hinzugefügt, die auf dem Registrierungstyp basieren (Arbeitsprofil oder Gerätebesitzer).  Folgendes geschieht beim Release:
-
-- Vorhandene Richtlinien, die vor dem Release dieses Features erstellt wurden und denen keine Zertifikatprofile zugeordnet ist, verwenden standardmäßig den Geräteregistrierungstyp „Arbeitsprofil und Gerätebesitzerprofil“.
-- Vorhandene Richtlinien, die vor dem Release dieses Features erstellt wurden und denen Zertifikatprofile zugeordnet sind, verwenden standardmäßig den Geräteregistrierungstyp „Nur Arbeitsprofil“.
-- Wenn ein neues Profil erstellt und der Typ „Arbeitsprofil und Gerätebesitzerprofil“ ausgewählt wird, können Sie kein Zertifikatprofil mit der App-Konfigurationsrichtlinie zuordnen.
-- Wenn ein neues Profil erstellt und der Typ „Arbeitsprofil und Gerätebesitzerprofil“ ausgewählt wird, können Arbeitsprofil-Zertifikatrichtlinien verwendet werden, die in der Gerätekonfiguration erstellt wurden.
-- Wenn ein neues Profil erstellt und der Typ „Nur Gerätebesitzer“ ausgewählt wird, können Gerätebesitzer-Zertifikatrichtlinien verwendet werden, die in der Gerätekonfiguration erstellt wurden.
-
-Vorhandene Richtlinien werden nicht wiederhergestellt, und es werden keine neuen Zertifikate ausgestellt.
-
-Außerdem werden E-Mail-Konfigurationsprofile für Gmail und Nine hinzugefügt, die für die Registrierungstypen „Arbeitsprofil“ und „Gerätebesitzer“ verwendet werden können. Außerdem können Zertifikatprofile für beide E-Mail-Konfigurationstypen verwendet werden.  Alle Gmail- oder Nine-Richtlinien, die Sie in der Gerätekonfiguration für Arbeitsprofile erstellt haben, gelten weiterhin für das Gerät und müssen nicht in App-Konfigurationsrichtlinien verlagert werden.
-
-Im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) finden Sie App-Konfigurationsrichtlinien unter **Apps** > **App-Konfigurationsrichtlinien**. Weitere Informationen über App-Konfigurationsrichtlinien finden Sie unter [App-Konfigurationsrichtlinien für Microsoft Intune](../apps/app-configuration-policies-overview.md).
-
-### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams ist nun in der Office 365 Suite für macOS enthalten<!-- 5903936  -->
-Benutzer, denen Microsoft Office für macOS in Microsoft Endpoint Manager zugewiesen ist, erhalten nun Microsoft Teams zusätzlich zu den vorhandenen Microsoft Office-Apps (Word, Excel, PowerPoint, Outlook und OneNote). Intune erkennt die vorhandenen Mac-Geräte, auf denen die anderen Office für macOS-Apps installiert sind, und versucht, Microsoft Teams beim nächsten Check-In des Geräts bei Intune zu installieren. Im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) finden Sie die **Office 365 Suite** für macOS, indem Sie auf **Apps** > **macOS** > **Hinzufügen** klicken. Weitere Informationen finden Sie unter [Zuweisen von Office 365 zu macOS-Geräten mit Microsoft Intune](../apps/apps-add-office365-macos.md).
-
-### <a name="group-targeting-support-for-customization-pane----4722837----"></a>Unterstützung von Gruppenzielen im Anpassungsbereich <!-- 4722837  -->
-Sie können die Einstellungen im Anpassungsbereich auf Benutzergruppen ausrichten. Klicken Sie im Intune-Portal auf **Client-Apps** > **Anpassung**. Weitere Informationen finden Sie unter [Anpassen der Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App](company-portal-app.md].
+<!--
+## App management
+-->
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Gerätekonfiguration
@@ -108,15 +89,6 @@ Wir fügen der FileVault-Kategorie innerhalb der [macOS-Endpoint Protection](../
 
 Diese Einstellung ist in der zuvor erstellten Richtlinie nicht verfügbar. Sie müssen die FileVault-Richtlinien neu erstellen, um diese Einstellung für die Verwendung zu konfigurieren. 
 
-### <a name="send-push-notifications-as-an-action-for-non-compliance----1733150-----"></a>Senden von Pushbenachrichtigungen als Aktion bei Nichtkonformität <!-- 1733150   -->
-Auf iOS- und Android-Plattformen wird eine neue Aktion für Nichtkonformität hinzugefügt, mit der eine App-Pushbenachrichtigung über die Unternehmensportal-App gesendet wird. Benutzer können auf die Benachrichtigung klicken, wodurch die Unternehmensportal-App gestartet wird, die dann den Grund für die Nichtkonformität anzeigt. Administratoren können diese neue Aktion für Nichtkonformität dann im Microsoft Endpoint Manager Admin Center konfigurieren, indem sie zu **Geräte** > **Konformitätsrichtlinien** > **Richtlinie erstellen** navigieren und die *Aktion* zum Senden einer App-Pushbenachrichtigung auswählen.
-
-### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Pre-Release-Tests für verwaltete Google Play-Apps<!-- 2681933  -->
-Organisationen, die [Tracks für geschlossene Tests von Google Play für Pre-Release-Tests von Apps](https://support.google.com/googleplay/android-developer/answer/3131213) verwenden, können diese Tracks mit Intune verwalten. Sie können Branchen-Apps selektiv zuweisen, die in den Präproduktionstracks für Pilotgruppen von Google Play veröffentlicht werden, um Tests durchzuführen. In Intune wird außerdem angezeigt, ob eine App über einen veröffentlichten Präproduktionsbuild in einem Testtrack verfügt. Sie können diesen Track auch einem AAD-Benutzer oder Gerätegruppen zuweisen. Dieses Feature ist für alle unserer derzeit unterstützten Android Enterprise-Szenarios verfügbar (Arbeitsprofil, vollständig verwaltet und dediziert). Sie können eine verwaltete Google Play-App im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) hinzufügen, indem Sie auf **Apps** > **Android** > **Hinzufügen** klicken. Weitere Informationen finden Sie unter [Hinzufügen von verwalteten Google Play-Apps für Android Enterprise-Geräte mit Intune](../apps/apps-add-android-for-work.md).
-
-### <a name="manage-smime-settings-for-outlook-on-android---6517085-----"></a>Verwalten von S/MIME-Einstellungen für Outlook unter Android<!-- 6517085   -->
-Sie können App-Konfigurationsrichtlinien zum Verwalten der S/MIME-Einstellung für Outlook auf Geräten mit Android Enterprise verwenden. Außerdem können Sie festlegen, ob Gerätebenutzer S/MIME in den Outlook-Einstellungen aktivieren oder deaktivieren dürfen. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Apps** > **App-Konfigurationsrichtlinien** > **Hinzufügen** > **Verwaltete Geräte**, um App-Konfigurationsrichtlinien für Android zu verwenden.
-
 ### <a name="additional-options-in-sso-and-sso-app-extension-profiles-on-iosipados-devices---6504155----"></a>Zusätzliche Optionen in SSO und SSO-App-Erweiterungsprofile auf iOS/iPadOS-Geräten<!-- 6504155  -->
 Auf iOS/iPadOS-Geräten können Sie:
 
@@ -146,8 +118,6 @@ Sie können Skripts für macOS-Geräte hinzufügen und bereitstellen. Diese Unte
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics enthält das Gerätedetailprotokoll<!--6014987  -->
 Intune-Gerätedetailprotokolle werden unter **Berichte** > **Log Analytics** bereitgestellt. Sie können Gerätedetails korrelieren, um benutzerdefinierte Abfragen und Azure-Workbooks zu erstellen.
 
-### <a name="push-notification-when-device-ownership-type-is-changed---5575875----"></a>Pushbenachrichtigung bei Änderungen am Gerätebesitzertyp<!-- 5575875  -->
-Sie können eine Pushbenachrichtigung konfigurieren, die an Android- und iOS-Unternehmensportalbenutzer gesendet wird, wenn ihr Gerätebesitzertyp von „Persönlich“ in „Unternehmen“ geändert wird. Diese Einstellung finden Sie im Microsoft Endpoint Manager, indem Sie auf **Mandantenverwaltung** > **Anpassen** klicken. Weitere Informationen dazu, wie sich der Gerätebesitz auf Ihre Endbenutzer auswirkt, finden Sie unter [Ändern des Gerätebesitzes](../enrollment/corporate-identifiers-add.md#change-device-ownership).
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
@@ -166,8 +136,10 @@ Sie können eine Pushbenachrichtigung konfigurieren, die an Android- und iOS-Unt
 <!-- ***********************************************-->
 ## <a name="security"></a>Sicherheit
 
-### <a name="derived-credentials-support-on-android-fully-managed-devices--4839592--"></a>Unterstützung für abgeleitete Anmeldeinformationen auf vollständig verwalteten Android-Geräten<!--4839592-->
-Sie können abgeleitete Anmeldeinformationen auf vollständig verwalteten Android Enterprise-Geräten verwenden. Das Abrufen von abgeleiteten Anmeldeinformationen für Entrust Datacard, Intercede und DISA Purebred wird unterstützt. Sie können abgeleitete Anmeldeinformationen für die App-Authentifizierung, für WLAN, VPNs oder S/MIME-Signaturen und/oder -Verschlüsselung für Apps verwenden, die dies unterstützen.
+### <a name="derived-credentials-support-for-disa-purebred-on-android-devices--4839592---"></a>Unterstützung abgeleiteter Anmeldeinformationen für DISA Purebred auf Android-Geräten<!--4839592 -->
+Sie können *DISA Purebred* als Anbieter für [abgeleitete Anmeldeinformationen](../protect/derived-credentials.md) auf vollständig verwalteten Android Enterprise-Geräten (**Mandantenverwaltung** > **Connectors und Token** > **Abgeleitete Anmeldeinformationen**) verwenden. Unterstützung wird beim Abrufen abgeleiteter Anmeldeinformationen für DISA Purebred einbezogen. Sie können abgeleitete Anmeldeinformationen für die App-Authentifizierung, für WLAN, VPNs oder S/MIME-Signaturen und/oder -Verschlüsselung für Apps verwenden, die dies unterstützen. 
+
+Im April hat Intune die Unterstützung für *Entrust Datacard* und *Intercede* als Anbieter für abgeleitete Anmeldeinformationen hinzugefügt. 
 
 ### <a name="privacy-preferences-settings-for-macos-devices---2934232---"></a>Privatsphäreneinstellungen für macOS-Geräte<!-- 2934232 --> 
 Apple hat im Rahmen der Veröffentlichung von macOS Catalina 10.15 die Sicherheits- und Privatsphäreneinstellungen erweitert. Standardmäßig können Anwendungen und Prozesse ohne Zustimmung des Benutzers nicht auf bestimmte Daten zugreifen. Wenn Benutzer keine Zustimmung geben, funktionieren die Anwendungen und Prozesse möglicherweise nicht mehr. Intune fügt Unterstützung für Einstellungen hinzu, mit denen IT-Administratoren den Zugriff auf Daten im Namen von Endbenutzern auf Geräten, auf denen macOS 10.14 oder höher ausgeführt wird, zulassen oder nicht zulassen können. Mit diesen Einstellungen wird sichergestellt, dass Anwendungen und Prozesse weiterhin ordnungsgemäß funktionieren und die Anzahl der Eingabeaufforderungen verringert, die Endbenutzern zur Verfügung stehen.

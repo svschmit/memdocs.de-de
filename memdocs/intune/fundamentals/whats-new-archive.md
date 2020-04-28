@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: dca71984b6779b2b8922a525b079b220f737a128
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401472"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81638347"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Neuerungen in Microsoft Intune (vorherige Monate)
 
@@ -222,7 +222,7 @@ Sie verwenden abgeleitete Anmeldeinformationen als Authentifizierungsmethode fü
 
 Weitere Informationen zum Standard finden Sie unter [Derived PIV Credentials](https://www.nccoe.nist.gov/projects/building-blocks/piv-credentials) (Abgeleitete PIV-Anmeldeinformationen) unter www.nccoe.nist.gov.
 
-#### <a name="use-graph-api-to-specify-a-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Verwendung der Graph-API zum Festlegen eines lokalen Benutzerprinzipalnamen als Variable für SCEP-Zertifikate<!--  5437939        -->  
+#### <a name="use-graph-api-to-specify-an-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Verwendung der Graph-API zum Festlegen eines lokalen Benutzerprinzipalnamen als Variable für SCEP-Zertifikate<!--  5437939        -->  
 Wenn Sie die [Intune-Graph-API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0) verwenden, können Sie „onPremisesUserPrincipalName“ als Variable für den alternativen Antragstellernamen (SAN) für SCEP-Zertifikate angeben.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->'
@@ -2011,7 +2011,7 @@ Benutzer werden jetzt zur Eingabe einer PIN aufgefordert, nachdem sie Änderunge
 Dieses Feature ist nur für iOS verfügbar und erfordert, dass das Intune App SDK für iOS, Version 9.0.1 oder höher in betreffende Anwendungen integriert wird. Die Integration des SDK ist erforderlich, damit das Verhalten für die Zielanwendungen erzwungen werden kann. Diese Integration erfolgt kontinuierlich und ist abhängig von den jeweiligen Anwendungsteams. Zu den betreffenden Apps zählen z. B. WXP, Outlook, Managed Browser und Yammer.
 
 #### <a name="network-access-control-support-on-ios-vpn-clients---1333693---"></a>Unterstützung der Netzwerkzugriffssteuerung auf iOS-VPN-Clients<!-- 1333693 -->
-Mit diesem Update gibt es eine neue Einstellung zum Aktivieren der Netzwerkzugriffssteuerung (Network Access Control, NAC), wenn Sie ein VPN-Konfigurationsprofil für Cisco AnyConnect, F5 Access und Citrix SSO für iOS erstellen. Über diese Einstellung kann die NAC-ID des Geräts in das VPN-Profil aufgenommen werden. Derzeit gibt es keine VPN-Clients oder NAC-Partnerlösungen, die diese neue NAC-ID unterstützen, aber wir werden Sie über unseren [Supportblogbeitrag](ttps://aka.ms/iOS12_and_vpn) auf dem Laufenden halten.
+Mit diesem Update gibt es eine neue Einstellung zum Aktivieren der Netzwerkzugriffssteuerung (Network Access Control, NAC), wenn Sie ein VPN-Konfigurationsprofil für Cisco AnyConnect, F5 Access und Citrix SSO für iOS erstellen. Über diese Einstellung kann die NAC-ID des Geräts in das VPN-Profil aufgenommen werden. Derzeit gibt es keine VPN-Clients oder NAC-Partnerlösungen, die diese neue NAC-ID unterstützen, aber wir werden Sie über unseren [Supportblogbeitrag](https://aka.ms/iOS12_and_vpn) auf dem Laufenden halten.
 
 Zur Nutzung der Netzwerkzugriffssteuerung ist Folgendes erforderlich:
 1. Aktivieren Sie diese Option, damit Intune Geräte-IDs in VPN-Profile aufnehmen kann.
@@ -2200,7 +2200,7 @@ Auf der Seite [Willkommen bei Windows 10 im S Modus](https://www.microsoft.com/w
 Gilt für: den aktuellen [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/)-Build (während der Vorschauversion).
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Windows Defender ATP-Konfigurationspaket wird automatisch dem Konfigurationsprofil zugewiesen<!-- 2144658 -->
-Wenn Sie [Advanced Threat Protection verwenden und Geräte in Intune onboarden](../protect/advanced-threat-protection.md#onboard-devices-by-using-a-configuration-profile), mussten Sie zuvor ein Konfigurationspaket herunterladen und es Ihrem Konfigurationsprofil hinzufügen. Mit diesem Update ruft Intune das Paket automatisch aus dem Windows Defender Security Center ab und fügt es Ihrem Profil hinzu.
+Wenn Sie [Advanced Threat Protection verwenden und Geräte in Intune onboarden](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile), mussten Sie zuvor ein Konfigurationspaket herunterladen und es Ihrem Konfigurationsprofil hinzufügen. Mit diesem Update ruft Intune das Paket automatisch aus dem Windows Defender Security Center ab und fügt es Ihrem Profil hinzu.
 Gilt für Windows 10 und höher.
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>Benutzer müssen während der Geräteeinrichtung eine Verbindung herstellen<!--2311457-->
@@ -3574,7 +3574,7 @@ Wenn das Profil an das Gerät übertragen wurde, hängt der nächste Schritt von
 ### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>Zugriff auf Protokolle von verwalteten Apps für iOS<!-- 1469920 -->
 Endbenutzer, auf deren Geräten der Managed Browser installiert ist, können jetzt auf den Verwaltungsstatus aller von Microsoft veröffentlichten Apps zugreifen und Protokolle für die Problembehandlung ihrer verwalteten iOS-Apps senden.
 
-Informationen zum Aktivieren des Problembehandlungsmodus im Managed Browser auf einem iOS-Gerät finden Sie unter [Zugreifen auf Protokolle von verwalteten Apps mithilfe des Managed Browsers unter iOS](../apps/app-configuration-managed-browser.md#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios).
+Informationen zum Aktivieren des Problembehandlungsmodus im Managed Browser auf einem iOS-Gerät finden Sie unter [Zugreifen auf Protokolle von verwalteten Apps mithilfe des Managed Browsers unter iOS](../apps/app-configuration-managed-browser.md).
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>Verbesserungen des Workflows für das Gerätesetup im Unternehmensportal für iOS in Version 2.9.0<!-- 1417174 -->
 

@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8720eec22c8e7fd8a9c8c2303b50e71db0e834ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362588"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023196"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Geführtes Szenario: Über die Cloud verwalteter moderner Desktop
 
-Der moderne Desktop ist die hochmoderne Produktivitätsplattform für den Information-Worker. Office 365 ProPlus und Windows 10 sind zusammen mit den neuesten Sicherheitsbaselines für Windows 10 und Microsoft Defender Advanced Threat Protection die Kernkomponenten des modernen Desktops.
+Der moderne Desktop ist die hochmoderne Produktivitätsplattform für den Information-Worker. Microsoft 365-Apps und Windows 10 sind zusammen mit den neuesten Sicherheitsbaselines für Windows 10 und Microsoft Defender Advanced Threat Protection die Kernkomponenten des modernen Desktops.
 
 Die Verwaltung des modernen Desktops aus der Cloud bringt zusätzlichen Nutzen internetweiter Remoteaktionen. Die Cloudverwaltung nutzt die integrierten Richtlinien der Verwaltung mobiler Geräte für Windows und entfernt Abhängigkeiten von lokalen Active Directory-Gruppenrichtlinien.
 
@@ -46,7 +46,7 @@ Wenn Sie einen über die Cloud verwalteten modernen Desktop in Ihrem eigenen Unt
 
 ## <a name="step-1---introduction"></a>Schritt 1: Einführung
 
-In diesem Szenario richten Sie einen Testbenutzer ein, registrieren ein Gerät in Intune und stellen das Gerät mit den von Intune empfohlenen Einstellungen sowie Windows 10 und Office ProPlus bereit. Ihr Gerät wird auch für Microsoft Defender Advanced Threat Protection konfiguriert, wenn Sie [diesen Schutz in Intune aktivieren](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). Der von Ihnen eingerichtete Benutzer und das Gerät, das Sie registrieren, werden zu einer neuen Sicherheitsgruppe hinzugefügt und mit den empfohlenen Einstellungen für Sicherheit und Produktivität konfiguriert.
+In diesem Szenario richten Sie einen Testbenutzer ein, registrieren ein Gerät in Intune und stellen das Gerät mit den von Intune empfohlenen Einstellungen sowie Windows 10 und Microsoft 365-Apps bereit. Ihr Gerät wird auch für Microsoft Defender Advanced Threat Protection konfiguriert, wenn Sie [diesen Schutz in Intune aktivieren](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). Der von Ihnen eingerichtete Benutzer und das Gerät, das Sie registrieren, werden zu einer neuen Sicherheitsgruppe hinzugefügt und mit den empfohlenen Einstellungen für Sicherheit und Produktivität konfiguriert.
 
 ### <a name="what-you-will-need-to-continue"></a>Voraussetzungen zum Fortfahren
 
@@ -121,7 +121,7 @@ Das geführte Szenario weist den Benutzer auch dem ausgewählten Gerät mit Auto
 
 Sobald der Benutzer das Gerät mit Azure Active Directory verknüpft, werden die folgenden Konfigurationen auf das Gerät angewendet:
 
-1. Office 365 ProPlus wird automatisch auf dem über eine Cloud verwalteten PC installiert. Es enthält die Anwendungen, mit denen Sie vertraut sind, einschließlich Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business und Word. Mit diesen Anwendungen können Sie sich mit Office 365-Diensten wie SharePoint Online, Exchange Online und Skype for Business Online verbinden. Office 365 ProPlus wird im Gegensatz zu Versionen von Office, die kein Abonnement erfordern, regelmäßig mit neuen Features aktualisiert. Eine Liste mit neuen Features finden Sie unter „Neuerungen in Office 365“.
+1. Microsoft 365-Apps werden automatisch auf dem in der Cloud verwalteten PC installiert. Es enthält die Anwendungen, mit denen Sie vertraut sind, einschließlich Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business und Word. Mit diesen Anwendungen können Sie sich mit Office 365-Diensten wie SharePoint Online, Exchange Online und Skype for Business Online verbinden. Microsoft 365-Apps werden im Gegensatz zu Versionen von Office, die kein Abonnement erfordern, regelmäßig mit neuen Features aktualisiert. Eine Liste mit neuen Features finden Sie unter „Neuerungen in Office 365“.
 2. Die Windows-Sicherheitsbaselines werden auf dem über eine Cloud verwalteten PC installiert. Wenn Sie Microsoft Defender Advanced Threat Protection eingerichtet haben, konfiguriert das geführte Szenario auch die Baselineeinstellungen für Defender. Defender Advanced Threat Protection bietet eine neue Schutzebene für Windows 10-Sicherheitsfeatures. Mit einer Kombination aus Clienttechnologie, die in Windows 10 integriert ist, und einem robusten Clouddienst werden Bedrohungen besser erkannt, die es über andere Abwehrsysteme hinaus geschafft haben. 
 
 ## <a name="next-steps"></a>Nächste Schritte
