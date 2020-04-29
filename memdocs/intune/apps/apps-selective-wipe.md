@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324501"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078327"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Zurücksetzen nur von Unternehmensdaten in einer in Intune verwalteten App
 
@@ -40,9 +40,9 @@ Um Unternehmensdaten aus Apps selektiv zu entfernen, erstellen Sie mithilfe der 
 > Direkt aus der App mit dem nativen Adressbuch synchronisierte Kontakte werden entfernt. Kontakte, die aus dem nativen Adressbuch mit einer anderen externen Quelle synchronisiert werden, können nicht zurückgesetzt werden. Dies betrifft derzeit nur die Microsoft Outlook-App.
 
 ## <a name="deployed-wip-policies-without-user-enrollment"></a>Bereitgestellte WIP-Richtlinien ohne Benutzerregistrierung
-WIP-Richtlinien (Windows Information Protection) können bereitgestellt werden, ohne dass MDM-Benutzer ihr Windows 10-Gerät registrieren müssen. Diese Konfiguration ermöglicht es Unternehmen, ihre Unternehmensdokumente auf der Grundlage der WIP-Konfiguration zu schützen, während der Benutzer die Verwaltung seiner eigenen Windows-Geräte beibehalten kann. Sobald Dokumente durch eine WIP-Richtlinie geschützt sind, können die geschützten Daten von einem Intune-Administrator selektiv zurückgesetzt werden. Durch die Auswahl von Benutzer und Gerät und das Senden einer Anforderung zum Zurücksetzen werden alle Daten, die durch die WIP-Richtlinie geschützt waren, unbrauchbar. Wählen Sie über Intune im Azure-Portal die Option **Client-App** > **Selektive App-Zurücksetzung** aus. Weitere Informationen finden Sie unter [Erstellen und Bereitstellen von WIP-App-Schutzrichtlinien (Windows Information Protection) in Intune](windows-information-protection-policy-create.md).
+WIP-Richtlinien (Windows Information Protection) können bereitgestellt werden, ohne dass MDM-Benutzer ihr Windows 10-Gerät registrieren müssen. Diese Konfiguration ermöglicht es Unternehmen, ihre Unternehmensdokumente auf der Grundlage der WIP-Konfiguration zu schützen, während der Benutzer die Verwaltung seiner eigenen Windows-Geräte beibehalten kann. Sobald Dokumente durch eine WIP-Richtlinie geschützt sind, können die geschützten Daten von einem Intune-Administrator selektiv zurückgesetzt werden ([Globaler Administrator oder Intune-Dienstadministrator](../fundamentals/users-add.md#types-of-administrators)). Durch die Auswahl von Benutzer und Gerät und das Senden einer Anforderung zum Zurücksetzen werden alle Daten, die durch die WIP-Richtlinie geschützt waren, unbrauchbar. Wählen Sie über Intune im Azure-Portal die Option **Client-App** > **Selektive App-Zurücksetzung** aus. Weitere Informationen finden Sie unter [Erstellen und Bereitstellen von WIP-App-Schutzrichtlinien (Windows Information Protection) in Intune](windows-information-protection-policy-create.md).
 
-## <a name="create-a-wipe-request"></a>Erstellen einer Zurücksetzungsanforderung
+## <a name="create-a-device-based-wipe-request"></a>Erstellen einer gerätebasierten Zurücksetzungsanforderung
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Wählen Sie **Apps** > **Selektive App-Zurücksetzung** > **Zurücksetzungsanforderung erstellen** aus.<br>
@@ -61,6 +61,16 @@ Der Dienst erstellt für jede geschützte App auf dem Gerät und den zugeordnete
 
    ![Screenshot des Bereichs „Client-Apps – selektive App-Zurücksetzung“](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
+## <a name="create-a-user-based-wipe-request"></a>Erstellen einer benutzerbasierten Zurücksetzungsanforderung
+
+Durch das Hinzufügen eines Benutzers zur Zurücksetzung auf Benutzerebene werden wir automatisch Zurücksetzungsbefehle an alle Apps auf allen Geräten des Benutzers ausgeben.  Der Benutzer erhält weiterhin bei jedem Check-In von allen Geräten Zurücksetzungsbefehle.  Um einen Benutzer erneut zu aktivieren, müssen Sie ihn aus der Liste entfernen.  
+
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
+2. Wählen Sie **Apps** > **Selektive App-Zurücksetzung** > **Zurücksetzungsanforderung erstellen** aus.<br>
+   Wählen Sie **Zurücksetzung auf Benutzerebene** aus.
+3. Klicken Sie auf **Hinzufügen** und der Bereich **Benutzer auswählen** wird angezeigt.
+4. Wählen Sie den Benutzer aus, dessen App-Daten Sie löschen möchten, und klicken Sie auf **Auswählen**.
+
 ## <a name="monitor-your-wipe-requests"></a>Überwachen der Löschanforderungen
 
 Sie erhalten einen zusammengefassten Bericht, der den Gesamtstatus der Zurücksetzungsanforderung zeigt und die Anzahl der ausstehenden Anforderungen und Fehler enthält. Um weitere Informationen zu erhalten, gehen Sie folgendermaßen vor:
@@ -74,7 +84,7 @@ Darüber hinaus können Sie den Gerätenamen und den Gerätetyp anzeigen. Diese 
 >[!IMPORTANT]
 > Der Benutzer muss die App für das Zurücksetzen öffnen, und das Zurücksetzen dauert bis zu 30 Minuten, nachdem die Anforderung gestellt wurde.
 
-## <a name="delete-a-wipe-request"></a>Löschen einer Zurücksetzungsanforderung
+## <a name="delete-a-device-wipe-request"></a>Löschen einer Zurücksetzungsanforderung für ein Gerät
 
 Zurücksetzungen mit Status „Ausstehend“ werden angezeigt, bis Sie sie manuell löschen. So löschen Sie manuell eine Zurücksetzungsanforderung
 
@@ -85,6 +95,14 @@ Zurücksetzungen mit Status „Ausstehend“ werden angezeigt, bis Sie sie manue
     ![Screenshot der Zurücksetzungsanforderungsliste im Bereich „Selektive App-Zurücksetzung“](./media/apps-selective-wipe/delete-wipe-request.png)
 
 3. Sie werden aufgefordert, den Löschvorgang zu bestätigen. Wählen Sie **Ja** oder **Nein** aus, und klicken Sie dann auf **OK**.
+
+## <a name="delete-a-user-wipe-request"></a>Löschen einer Zurücksetzungsanforderung für einen Benutzer
+
+Benutzerzurücksetzungen verbleiben in der Liste, bis sie von einem Administrator entfernt werden. So entfernen Sie einen Benutzer aus der Liste
+
+1. Wählen Sie im Bereich **Client-Apps – selektive App-Zurücksetzung** die Option **Zurücksetzung auf Benutzerebene** aus.
+2. Klicken Sie in der Liste mit der rechten Maustaste auf den zu löschenden Benutzer, und wählen Sie dann **Löschen** aus. 
+
 
 ## <a name="see-also"></a>Weitere Informationen:
 [Was sind App-Schutzrichtlinien?](app-protection-policy.md)

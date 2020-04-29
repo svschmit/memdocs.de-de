@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 04/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 9f9b2247c73866d3faaa48fa00d509df1695cb6a
+ms.sourcegitcommit: a383820fe31aab17618926550118be0800cc8ed6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275066"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104329"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Einstellungen für Windows 10 (und höher), um Geräte zu schützen, die Intune verwenden.
 
@@ -942,6 +942,9 @@ Blockieren Sie diese Optionen, um Bedrohungen durch E-Mails zu verhindern:
 > **Auf X86-Clientcomputern:**  
 > *C:\Program Files\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> Weitere Informationen finden Sie unter [Empfehlungen zum Virenscan auf Unternehmenscomputern, auf denen unterstützte Windows-Versionen ausgeführt werden](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
+
 
 ### <a name="controlled-folder-access"></a>Überwachter Ordnerzugriff  
 
@@ -1264,9 +1267,8 @@ Konfigurieren Sie mit diesen Optionen die lokalen Sicherheitseinstellungen auf W
   **Standardeinstellung:** Nicht konfiguriert  
   LocalPoliciesSecurityOptions-CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
-  
-  - **Blockieren**: Benutzer können auf die physische Schaltfläche zum Auswerfen eines angedockten portablen Geräts drücken, um dieses sicher abzudocken.  
-  - **Nicht konfiguriert:** Bei dieser Einstellung muss sich der Benutzer beim Gerät anmelden und die Berechtigung dafür erhalten, das Gerät abzudocken.  
+  - **Blockieren:** Bei dieser Einstellung muss sich der Benutzer beim Gerät anmelden und die Berechtigung dafür erhalten, das Gerät abzudocken.
+  - **Nicht konfiguriert:** Benutzer können auf die physische Schaltfläche zum Auswerfen eines angedockten portablen Geräts drücken, um dieses sicher abzudocken.
 
 - **Druckertreiber für freigegebene Drucker installieren**  
   **Standardeinstellung:**  Nicht konfiguriert  
@@ -1309,8 +1311,8 @@ Konfigurieren Sie mit diesen Optionen die lokalen Sicherheitseinstellungen auf W
   LocalPoliciesSecurityOptions-CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
 
 
-  - **Aktivieren**: Benutzer müssen STRG+ALT+ENTF drücken, um sich anzumelden.  
-  - **Nicht konfiguriert**: Benutzer müssen STRG+ALT+ENTF drücken, bevor sie sich bei Windows anmelden.  
+  - **Aktivieren:** Benutzer müssen STRG+ALT+ENTF drücken, bevor sie sich bei Windows anmelden.
+  - **Nicht konfiguriert:** Benutzer müssen STRG+ALT+ENTF drücken, um sich anzumelden.
 
 - **Smart card removal behavior** (Verhalten beim Entfernen von Smartcards)  
   **Standardeinstellung:** Arbeitsstation sperren   

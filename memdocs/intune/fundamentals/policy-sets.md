@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551614"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023162"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Verwenden von Richtliniensätzen zur Gruppierung von Verwaltungsobjektsammlungen in Microsoft Intune
 
@@ -89,7 +89,7 @@ Für Richtliniensätze, die neu in 1910 sind, liegen folgende bekannte Probleme 
   - Android Store-App
   - Branchenspezifische Android-App
   - Verwaltete branchenspezifische Android-App
-  - Office 365 ProPlus-Suite (Windows 10)
+  - Microsoft 365-Apps (Windows 10)
   - Weblink
   - Integrierte iOS-/iPadOS-App
   - Integrierte Android-App
@@ -121,6 +121,7 @@ Für Richtliniensätze, die neu in 1910 sind, liegen folgende bekannte Probleme 
     Wenn einem Richtliniensatz, der für eine Gruppe bereitgestellt wird, eine Richtlinie hinzugefügt wird, wird die Gruppe in der Arbeitsauslastung als direkt zugewiesen angezeigt und nicht als „über den Richtliniensatz zugewiesen“. Folglich verarbeitet MAM keine Löschungen von Gruppenzuweisungen aus Richtliniensätzen.
 
 - MAM unterstützt keine Bereitstellung in den virtuellen Gruppen **Alle Benutzer** und **Alle Geräte** für beliebige Richtlinientypen.
+- Das Gerätekonfigurationsprofil vom Typ „Administrative Vorlagen“ kann nicht als Teil eines Richtliniensatzes ausgewählt werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

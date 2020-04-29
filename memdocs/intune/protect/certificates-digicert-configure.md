@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716a69690c46e301354012272fc7d1f8be564df9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: de7b96b5ad54a207b92221f7685f6c7f50942c46
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322665"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079874"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Einrichten des Intune Certificate Connectors für die DigiCert-PKI-Plattform
 
@@ -45,6 +45,7 @@ Wenn Sie den Connector nur mit der DigiCert-Zertifizierungsstelle einsetzen möc
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - **Ein aktives Abonnement bei der DigiCert-Zertifizierungsstelle**: Das Abonnement ist erforderlich, um von der DigiCert-Zertifizierungsstelle eine Registrierungsstelle abzurufen.
+- Der Microsoft Intune Certificate Connector hat die gleichen Netzwerkanforderungen wie [verwaltete Geräte](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
 ## <a name="install-the-digicert-ra-certificate"></a>Installieren des DigiCert-Registrierungsstellenzertifikats
 
@@ -135,7 +136,7 @@ Wenn Sie den Connector nur mit der DigiCert-Zertifizierungsstelle einsetzen möc
 
    g. Kopieren Sie den Zertifikatfingerabdruck der Registrierungsstelle ohne Leerzeichen. Es folgt ein Beispiel des Fingerabdrucks:
 
-        RA Cert Thumbprint: “EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5”
+        RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"
 
     > [!NOTE]
     > Wenn Sie Hilfe beim Abrufen des Registrierungsstellenzertifikats von der DigiCert-Zertifizierungsstelle benötigen, wenden Sie sich an den [Kundensupport von DigiCert](mailto:enterprise-pkisupport@digicert.com).
@@ -225,7 +226,7 @@ Standardmäßig wird der Intune Certificate Connector in **%ProgramFiles%\Micros
 
 ## <a name="create-a-trusted-certificate-profile"></a>Erstellen eines vertrauenswürdigen Zertifikatprofils
 
-Die von Ihnen für mit Intune verwaltete Geräte bereitgestellten PKCS-Zertifikate müssen mit einem vertrauenswürdigen Stammzertifikat verkettet werden. Dazu müssen Sie mit dem Stammzertifikat der DigiCert-Zertifizierungsstelle ein vertrauenswürdiges Intune-Zertifikatprofil erstellen.
+Die von Ihnen für mit Intune verwaltete Geräte bereitgestellten PKCS-Zertifikate müssen mit einem vertrauenswürdigen Stammzertifikat verkettet werden. Erstellen Sie zum Einrichten dieser Kette ein vertrauenswürdiges Intune-Zertifikatprofil mit dem Stammzertifikat aus der DigiCert-Zertifizierungsstelle, und stellen Sie das vertrauenswürdige Zertifikatprofil und das PKCS-Zertifikatprofil für die gleichen Gruppen bereit.
 
 1. Rufen Sie aus der DigiCert-Zertifizierungsstelle ein vertrauenswürdiges Stammzertifikat ab:
 
@@ -326,7 +327,7 @@ Die Dienstprotokolle von Intune Certificate Connector sind in **%ProgramFiles%\M
 | NDES-Connector – IssuePfx – Generische Ausnahme: <br> System.NullReferenceException: Objektverweis nicht auf eine Instanz eines Objekts festgelegt. | Dieser Fehler ist vorübergehend. Starten Sie den Intune-Connectordienst neu. <br><br> 1. Öffnen Sie **services.msc**. <br> 2. Wählen Sie **Intune-Connectordienst**. <br> 3. Klicken Sie mit der rechten Maustaste, und wählen Sie **Neu starten** aus. |
 | DigiCert-Anbieter: DigiCert-Richtlinie konnte nicht abgerufen werden. <br><br>„Das Zeitlimit für diesen Vorgang wurde überschritten.“ | Beim Intune Certificate Connector ist bei der Kommunikation mit der DigiCert-Zertifizierungsstelle ein Timeoutfehler aufgetreten. Wenn dieser Fehler weiterhin auftritt, erhöhen Sie den Timeoutwert der Verbindung, und versuchen Sie es noch mal. <br><br> So erhöhen Sie das Verbindungstimeout <br> 1. Wechseln Sie zum Computer mit dem NDES-Connector. <br>2. Öffnen Sie in Editor die Datei **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config**. <br> 3. Erhöhen Sie den Timeoutwert des folgenden Parameters: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Starten Sie den Intune Certificate Connector-Dienst neu. <br><br> Wenn das Problem weiterhin besteht, wenden Sie sich an den Kundensupport von DigiCert. |
 | DigiCert-Anbieter: Fehler beim Abrufen des Clientzertifikats | Der Intune Certificate Connector konnte das Zertifikat zur Ressourcenautorisierung nicht aus dem Zertifikatspeicher „Lokaler Computer -> Persönlich“ abrufen. Um dieses Problem zu beheben, installieren Sie das Ressourcenautorisierungszertifikat im Zertifikatspeicher „Lokaler Computer -> Persönlich“ zusammen mit dem zugehörigen privaten Schlüssel. <br><br> Das Ressourcenautorisierungszertifikat muss von der DigiCert-Zertifizierungsstelle abgerufen werden. Weitere Details hierzu erhalten Sie vom Kundensupport von DigiCert. | 
-| DigiCert-Anbieter: DigiCert-Richtlinie konnte nicht abgerufen werden. <br><br>„Die Anforderung wurde abgebrochen: Es konnte kein geschützter SSL/TLS-Kanal erstellt werden. | Dieser Fehler tritt unter folgenden Bedingungen auf: <br><br> 1. Der Intune Certificate Connector-Dienst verfügt nicht über die Berechtigungen, im Zertifikatspeicher „Lokaler Computer -> Persönlich“ das Ressourcenautorisierungszertifikat zusammen mit dem zugehörigen privaten Schlüssel zu lesen. Um dieses Problem zu beheben, überprüfen Sie in „services.msc“ das Konto des Ausführungskontexts des Connectordiensts. Der Connectordienst muss im Kontext NT AUTHORITY\SYSTEM ausgeführt werden. <br><br> 2. Das PKCS-Zertifikatprofil im Intune-Verwaltungsportal wurde möglicherweise mit einem ungültigen Basisdienst-FQDN für die DigiCert-Zertifizierungsstelle konfiguriert. Der FQDN ähnelt **pki-ws.symauth.com**. Um dieses Problem zu beheben, fragen Sie beim Kundensupport von DigiCert nach, ob die URL für Ihr Abonnement richtig ist. <br><br> 3. Der Intune Certificate Connector kann sich über das Ressourcenautorisierungszertifikat nicht bei der DigiCert-Zertifizierungsstelle authentifizieren, weil der private Schlüssel nicht abgerufen werden kann. Um dieses Problem zu beheben, installieren Sie das Ressourcenautorisierungszertifikat zusammen mit dem zugehörigen privaten Schlüssel im Zertifikatspeicher „Lokaler Computer -> Persönlich“. <br><br> Wenn das Problem weiterhin besteht, wenden Sie sich an den Kundensupport von DigiCert. |
+| DigiCert-Anbieter: DigiCert-Richtlinie konnte nicht abgerufen werden. <br><br>„Die Anforderung wurde abgebrochen: Es konnte kein geschützter SSL/TLS-Kanal erstellt werden.“ | Dieser Fehler tritt unter folgenden Bedingungen auf: <br><br> 1. Der Intune Certificate Connector-Dienst verfügt nicht über die Berechtigungen, im Zertifikatspeicher „Lokaler Computer -> Persönlich“ das Ressourcenautorisierungszertifikat zusammen mit dem zugehörigen privaten Schlüssel zu lesen. Um dieses Problem zu beheben, überprüfen Sie in „services.msc“ das Konto des Ausführungskontexts des Connectordiensts. Der Connectordienst muss im Kontext NT AUTHORITY\SYSTEM ausgeführt werden. <br><br> 2. Das PKCS-Zertifikatprofil im Intune-Verwaltungsportal wurde möglicherweise mit einem ungültigen Basisdienst-FQDN für die DigiCert-Zertifizierungsstelle konfiguriert. Der FQDN ähnelt **pki-ws.symauth.com**. Um dieses Problem zu beheben, fragen Sie beim Kundensupport von DigiCert nach, ob die URL für Ihr Abonnement richtig ist. <br><br> 3. Der Intune Certificate Connector kann sich über das Ressourcenautorisierungszertifikat nicht bei der DigiCert-Zertifizierungsstelle authentifizieren, weil der private Schlüssel nicht abgerufen werden kann. Um dieses Problem zu beheben, installieren Sie das Ressourcenautorisierungszertifikat zusammen mit dem zugehörigen privaten Schlüssel im Zertifikatspeicher „Lokaler Computer -> Persönlich“. <br><br> Wenn das Problem weiterhin besteht, wenden Sie sich an den Kundensupport von DigiCert. |
 | DigiCert-Anbieter: DigiCert-Richtlinie konnte nicht abgerufen werden. <br><br>„Ein Anforderungselement wird nicht erkannt.“ | Der Intune Certificate Connector konnte die DigiCert-Zertifikatprofilvorlage nicht abrufen, weil die Clientprofil-OID nicht dem Intune-Zertifikatprofil entspricht. In einem anderen Fall kann der Intune Certificate Connector die Zertifikatprofilvorlage nicht finden, die der Clientprofil-OID in der DigiCert-Zertifizierungsstelle zugeordnet ist. <br><br> Um dieses Problem zu beheben, rufen Sie in der DigiCert-Zertifizierungsstelle die richtige Clientprofil-OID aus der DigiCert-Zertifikatvorlage ab. Aktualisieren Sie anschließend das PKCS-Zertifikatprofil im Intune-Verwaltungsportal. <br><br> Abrufen der Zertifikatprofil-OID der DigiCert-Zertifizierungsstelle: <br> 1. Melden Sie sich beim Verwaltungsportal der DigiCert-Zertifizierungsstelle an. <br> 2. Klicken Sie auf **Manage Certificate Profiles** (Zertifikatprofile verwalten). <br> 3. Wählen Sie das zu verwendende Zertifikatprofil aus. <br> 4. Rufen Sie die Zertifikatprofil-OID ab. Sie sieht etwa folgendermaßen aus: <br> `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109` <br><br> Aktualisieren Sie das PKCS-Zertifikatprofil mit der richtigen Zertifikatprofil-OID: <br>1. Melden Sie sich beim Intune-Verwaltungsportal an. <br> 2. Wechseln Sie zum PKCS-Zertifikatprofil, und klicken Sie auf **Bearbeiten**. <br> 3. Aktualisieren Sie die Zertifikatprofil-OID im Feld mit dem Namen der Zertifikatvorlage. <br> 4. Speichern Sie das PKCS-Zertifikatprofil. |
 | DigiCert-Anbieter: Fehler bei der Richtlinienüberprüfung. <br><br> Das Attribut ist nicht in der Liste mit von DigiCert unterstützten Zertifikatvorlagenattributen enthalten. | Die DigiCert-Zertifizierungsstelle zeigt diese Meldung an, wenn die DigiCert-Zertifikatprofilvorlage vom Intune-Zertifikatprofil abweicht. Dieses Problem ist wahrscheinlich aufgrund eines Attributkonflikts in **SubjectName** oder **SubjectAltName** aufgetreten. <br><br> Um dieses Problem zu beheben, wählen Sie für **SubjectName** und **SubjectAltName** von Intune unterstützte Attribute in der DigiCert-Zertifikatprofilvorlage aus. Weitere Informationen finden Sie im Abschnitt **Zertifikatparameter** unter „Von Intune unterstützte Attribute“. |
 | Einige Benutzergeräte erhalten keine PKCS-Zertifikate der DigiCert-Zertifizierungsstelle. | Dieses Problem tritt auf, wenn der Benutzer-UPN Sonderzeichen wie z. B. einen Unterstrich enthält (Beispiel: `global_admin@intune.onmicrosoft.com`). <br><br> Die DigiCert-Zertifizierungsstelle unterstützt in **mail_firstname** und **mail_lastname** keine Sonderzeichen. <br><br> Führen Sie die folgenden Schritte aus, um das Problem zu lösen: <br><br> 1. Melden Sie sich beim Verwaltungsportal der DigiCert-Zertifizierungsstelle an. <br> 2. Klicken Sie auf **Manage Certificate Profiles** (Zertifikatprofile verwalten). <br> 3. Wählen Sie das für Intune verwendete Zertifikatprofil aus. <br> 4. Klicken Sie auf den Link **Customize options** (Optionen anpassen). <br> 5. Klicken Sie auf die Schaltfläche **Advanced options** (Erweiterte Optionen). <br> 6. Fügen Sie unter **Certificate fields – Subject DN** (Zertifikatfelder – Antragsteller-DN) das Feld **Common Name (CN)** (Allgemeiner Name) hinzu, und löschen Sie das vorhandene Feld **Common Name (CN)** . Das Hinzufügen und Löschen muss in einem Vorgang erfolgen. <br> 7. Wählen Sie **Speichern** aus. <br><br> Mit der vorherigen Änderung fordert das DigiCert-Zertifikatprofil **„CN =<upn>“** anstelle von **mail_firstname** und **mail_lastname** an. |

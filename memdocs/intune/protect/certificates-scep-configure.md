@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4698c0bf286fab855b0067899c5347b643ee6ce9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2163f420089dcd8936d6dc64b8ce02c5ff268b53
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325737"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079891"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurieren der Infrastruktur für die Unterstützung von SCEP mit Intune
 
@@ -53,6 +53,7 @@ Die folgende lokale Infrastruktur muss auf Servern ausgeführt werden, die in Ih
 - **Microsoft Intune Certificate Connector:** Der Microsoft Intune Certificate Connector ist für die Verwendung von SCEP-Zertifikatprofilen in Intune erforderlich. Dieser Artikel enthält Anweisungen zur [Installation des Connectors](#install-the-intune-certificate-connector).
 
   Der Connector unterstützt den FIPS-Modus (Federal Information Processing Standard). FIPS ist zwar nicht erforderlich, wenn er jedoch aktiviert ist, können Sie Zertifikate ausstellen und widerrufen.
+  - Der Connector hat die gleichen Netzwerkanforderungen wie [verwaltete Geräte](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - Der Connector muss auf dem gleichen Server wie die NDES-Serverrolle ausgeführt werden, ein Server, auf dem Windows Server 2012 R2 oder höher ausgeführt wird.
   - .NET Framework 4.5 ist für den Connector erforderlich und standardmäßig in Windows Server 2012 R2 enthalten.
   - Die verstärkte Sicherheitskonfiguration für Internet Explorer [muss auf dem NDES hostenden Server und dem Microsoft Intune Certificate Connector deaktiviert sein](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx).

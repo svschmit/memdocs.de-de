@@ -1,12 +1,12 @@
 ---
-title: Installieren von Office 365 für macOS-Geräte mit Microsoft Intune
+title: Installieren von Office 365-Apps auf macOS-Geräten mit Microsoft Intune
 titleSuffix: ''
 description: Erfahren Sie, wie Sie Microsoft Intune verwenden können, um Office 365-Apps auf macOS-Geräten installieren zu können.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,32 +18,34 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 007d5929c6d1b0dd953d4910b31c872582e817cc
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 39837fc3d97389d830fb1befe7e55c276022d351
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324864"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023230"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Zuweisen von Office 365 zu macOS-Geräten mit Microsoft Intune
 
-Dieser App-Typ macht es Ihnen einfach, Office 365 2016-Apps macOS-Geräten zuzuweisen. Dieser App-Typ ermöglicht Ihnen die Installation von Word, Excel, PowerPoint, Outlook und OneNote. Diese Apps sind auch im Lieferumfang von Microsoft AutoUpdate (MAU) enthalten, um die Apps sicherer und auf dem neuesten Stand zu halten. Die gewünschten Apps werden in der Intune-Konsole als einzelne App in der App-Liste angezeigt.
+Dieser App-Typ macht es Ihnen einfach, Office 365 2016-Apps macOS-Geräten zuzuweisen. Dieser App-Typ ermöglicht Ihnen die Installation von Word, Excel, PowerPoint, Outlook, OneNote und Teams. Diese Apps sind auch im Lieferumfang von Microsoft AutoUpdate (MAU) enthalten, um die Apps sicherer und auf dem neuesten Stand zu halten. Die gewünschten Apps werden in der Intune-Konsole als einzelne App in der App-Liste angezeigt.
 
+> [!NOTE]
+> Microsoft Office 365 ProPlus wurde in **Microsoft 365 Apps for Enterprise** umbenannt. In unserer Dokumentation wird üblicherweise **Microsoft 365-Apps** verwendet.
 
 ## <a name="before-you-start"></a>Vorbereitung
 
-Bevor Sie damit beginnen, macOS-Geräten Office 365 hinzuzufügen, sollten Sie sich Folgendes bewusst machen:
+Bevor Sie damit beginnen, macOS-Geräten Office 365-Apps hinzuzufügen, sollten Sie sich Folgendes bewusst machen:
 
 - Auf Geräten, für die Sie diese Apps bereitstellen, muss macOS 10.10 oder höher ausgeführt werden.
 - Intune unterstützt nur das Hinzufügen von Office-Apps, die in der Office 2016 für Mac-Suite enthalten sind.
 - Wenn Office-Apps geöffnet sind, wenn Intune die App-Suite installiert, verlieren Benutzer möglicherweise Daten aus nicht gespeicherten Dateien.
 
-## <a name="select-the-office-365-suite-app-type"></a>Auswählen des App-Typs „Office 365 Suite“
+## <a name="select-microsoft-365-apps"></a>Auswählen von Microsoft 365-Apps
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Wählen Sie **Apps** > **Alle Apps** > **Hinzufügen** aus.
-3. Wählen Sie **macOS** im Abschnitt **Office 365 Suite** des Bereichs **App-Typ auswählen** aus.
-4. Klicken Sie auf **Auswählen**. Die **Office 365 Suite hinzufügen**-Schritte werden angezeigt.
+3. Wählen Sie **macOS** im Abschnitt **Microsoft 365-Apps** des Bereichs **App-Typ auswählen** aus.
+4. 4. Klicken Sie auf **Auswählen**. Die Schritte für **Microsoft 365-Apps hinzufügen** werden angezeigt.
 
 ## <a name="step-1---app-suite-information"></a>Schritt 1: Informationen zur App-Suite
 
@@ -60,7 +62,7 @@ In diesem Schritt stellen Sie Informationen über die App-Suite bereit. Diese In
     - **Entwickler**: Als Entwickler wird Microsoft angezeigt.
     - **Besitzer**: Als Besitzer wird Microsoft angezeigt.
     - **Anmerkungen**: Geben Sie Hinweise zu dieser App ein.
-    - **Logo**: Das Office 365-Logo wird gemeinsam mit der App angezeigt, wenn Benutzer das Unternehmensportal durchsuchen.
+    - **Logo**: Das Logo von Microsoft 365-Apps wird gemeinsam mit der App angezeigt, wenn der Benutzer das Unternehmensportal durchsucht.
 2. Klicken Sie auf **Weiter**, um die Seite **Bereichsmarkierungen** anzuzeigen.
 
 ## <a name="step-2---select-scope-tags-optional"></a>Schritt 2: Auswählen von Bereichsmarkierungen (optional)
@@ -74,7 +76,7 @@ Sie können Bereichsmarkierungen verwenden, um zu bestimmen, wer Client-App-Info
 1. Wählen Sie die Gruppenzuweisungen **Erforderlich** oder **Für registrierte Geräte verfügbar** für die App-Suite aus. Weitere Informationen finden Sie unter [Hinzufügen von Gruppen zum Organisieren von Benutzern und Geräten](../fundamentals/groups-add.md) und [Zuweisen von Apps zu Gruppen mit Microsoft Intune](apps-deploy.md).
 
     >[!Note]
-    > Sie können die Office 365 für macOS-App-Suite nicht über Intune deinstallieren.
+    > Sie können die „Microsoft 365-Apps für macOS“-App-Suite nicht über Intune deinstallieren.
 
 2. Klicken Sie auf **Weiter**, um die Seite **Überprüfen + erstellen** anzuzeigen. 
 
@@ -83,9 +85,9 @@ Sie können Bereichsmarkierungen verwenden, um zu bestimmen, wer Client-App-Info
 1. Überprüfen Sie die Werte und Einstellungen, die Sie für die App-Suite eingegeben haben.
 2. Klicken Sie abschließend auf **Erstellen**, um Intune die App hinzuzufügen.
 
-    Das **Übersicht**-Blatt der Office 365 Windows 10-App-Suite, die Sie erstellt haben, wird angezeigt. Die Suite wird in der Liste der Apps als einzelnen Eintrag angezeigt.
+    Das Blatt **Übersicht** wird angezeigt. Die Suite wird in der Liste der Apps als einzelnen Eintrag angezeigt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Weitere Informationen zum Hinzufügen von Office 365-Apps zu Windows 10-Geräten finden Sie unter [Zuweisen von Office 365-Apps zu Windows 10-Geräten mit Microsoft Intune](apps-add-office365.md).
+- Weitere Informationen zum Hinzufügen von Office 365-Apps zu Windows 10-Geräten finden Sie unter [Hinzufügen von Microsoft 365-Apps zu Windows 10-Geräten mit Microsoft Intune](apps-add-office365.md).
 - Informationen zum Ein- und Ausschließen von App-Zuweisungen für Gruppen finden Sie unter [Einschließen und Ausschließen von App-Zuweisungen in Microsoft Intune](apps-inc-exl-assignments.md).
