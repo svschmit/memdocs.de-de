@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407885"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166569"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -85,7 +85,7 @@ Diese Einstellungen gelten für Android Enterprise-Registrierungstypen, bei dene
 
 ### <a name="system-security"></a>Systemsicherheit
 
-- **Bedrohungsüberprüfung für Apps:** Die Standardeinstellung **Anfordern** aktiviert Google Play Protect so, dass Apps vor und nach der Installation überprüft werden. Wenn eine Bedrohung erkannt wird, wird der Benutzer gewarnt, damit er die App vom Gerät entfernt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Google Play Protect wird möglicherweise nicht vom Betriebssystem zum Scannen von Apps aktiviert oder ausgeführt.
+- **Bedrohungsüberprüfung für Apps:** Die Standardeinstellung **Anfordern** aktiviert Google Play Protect so, dass Apps vor und nach der Installation überprüft werden. Wenn eine Bedrohung erkannt wird, wird der Benutzer gewarnt, damit er die App vom Gerät entfernt. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert. Google Play Protect wird möglicherweise nicht vom Betriebssystem zum Scannen von Apps aktiviert oder ausgeführt.
 
 ### <a name="dedicated-devices"></a>Dedizierte Geräte
 
@@ -207,6 +207,9 @@ Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dediz
 - **Anzahl Tage bis zum Kennwortablauf**: Geben Sie die Anzahl der Tage ein, bis das Gerätekennwort geändert werden muss (von 1 bis 365). Geben Sie beispielsweise `90` an, damit das Kennwort nach 90 Tagen abläuft. Wenn das Kennwort abläuft, werden Benutzer aufgefordert, ein neues Kennwort zu erstellen. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 - **Anzahl erforderlicher Kennwörter, bevor ein Benutzer ein Kennwort wiederverwenden kann**: Verwenden Sie diese Einstellung, um zu verhindern, dass Benutzer zuvor verwendete Kennwörter erstellen. Geben Sie die Anzahl der zuvor verwendeten Kennwörter ein, die nicht erneut verwendet werden können, von 1–24. Geben Sie z.B. `5` an, damit ein Benutzer sein neues Kennwort nicht auf sein aktuelles Kennwort oder eines seiner vorherigen vier Kennwörter festlegen kann. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 - **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Gerät zurückgesetzt wird (zwischen 4 und 11). Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+
+  > [!NOTE]
+  > Geräte von Gerätebesitzern werden nicht aufgefordert, ein Kennwort festzulegen. Die Einstellungen werden erzwungen und das Kennwort muss manuell festgelegt werden. Durch die Durchsetzung dieser Richtlinie wird ein Fehler gemeldet, bis Sie das Kennwort festlegen, das Ihren Anforderungen entspricht.
 
 ### <a name="power-settings"></a>Energieeinstellungen
 

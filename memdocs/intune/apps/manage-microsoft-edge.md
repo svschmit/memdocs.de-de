@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44cbde7eb7de9c50db488dabcb3bf5841b7248f7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80979238"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183074"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Verwalten des Webzugriffs mithilfe von Microsoft Edge mit Microsoft Intune
 
@@ -194,7 +194,7 @@ Verwenden Sie das folgende Schlüssel-Wert-Paar zum Konfigurieren einer Verknüp
 
 |    Key    |    Wert    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Legen Sie mehrere URL-Werte fest. Jede allgemeine Website-Verknüpfung besteht aus einem Titel und einer URL. Trennen Sie Titel und URL durch das `|`-Zeichen. Beispiel: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Legen Sie mehrere URL-Werte fest. Jede allgemeine Website-Verknüpfung besteht aus einem Titel und einer URL. Trennen Sie Titel und URL durch das `|`-Zeichen. Beispiel: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Konfigurieren des Logos und der Markenfarbe Ihrer Organisation für neue Registerkartenseiten in Microsoft Edge
 

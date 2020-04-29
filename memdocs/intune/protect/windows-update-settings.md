@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bb76dbb14fe2deb95c02a18ccc048fc6a4b2538
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078956"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254706"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows-Updateeinstellungen für Intune  
 
@@ -85,8 +85,7 @@ Updateeinstellungen steuern, welche Bits ein Gerät herunterlädt und wann dies 
   Unterstützter Zurückstellungszeitraum:  
 
   - *Windows-Version 1709 und höher*: 0 bis 365 Tage  
-  - *Windows, Version 1703*: 0 bis 180 Tage  
-
+  
   Bei Featureupdates handelt es sich in der Regel um neue Features für Windows.  
 
 - **Zeitraum für das Deinstallieren von Featureupdates (2 bis 60 Tage)**  
@@ -164,8 +163,6 @@ Einstellungen für die Benutzererfahrung steuern die Endbenutzererfahrung für d
   
   Diese Einstellung hat unterschiedliche Auswirkungen abhängig von der Geräteversion von Windows:  
  
-  - *Windows-Version 1703 und früher*: Wenn Sie ein Gerät neu starten, werden einige Überprüfungen ausgeführt, einschließlich der Überprüfung der aktiven Benutzer, des Akkustands, der ausgeführten Spiele und weitere.  
-  
   - *Ab Windows-Version 1709*: Während der Nutzungszeit werden die folgenden Prozesse nicht für Updates ausgeführt: Überprüfen, Herunterladen, Installieren und Neustart. Nach der Nutzungszeit werden die Updateprozesse ausgeführt und können das Gerät aus dem Ruhezustand aktivieren, nach Updates suchen, diese herunterladen und installieren und das Gerät neu starten, solange die Akku- und Stromversorgungsüberprüfungen bestanden wurden. 
 
 - **Anhalten von Windows-Updates durch Benutzer blockieren**  
