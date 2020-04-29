@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd99c334866714095a4d87e1e028731ce3ee7c7c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326883"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078905"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Tutorial: Verwenden der Apple-Features für Unternehmensgeräteregistrierung in Apple Business Manager (ABM) zum Registrieren von iOS-/iPadOS-Geräten in Intune
 Die Geräteregistrierungsfeatures in Apple Business Manager vereinfachen das Registrieren von Geräten. Intune unterstützt auch das ältere Portal für das Programm zur Geräteregistrierung (Device Enrollment Program, DEP), doch wir empfehlen Ihnen einen Neustart mit Apple Business Manager. Mit Microsoft Intune und der Apple-Unternehmensgeräteregistrierung werden Geräte automatisch sicher registriert, wenn der Benutzer das Gerät zum ersten Mal einschaltet. Sie können Geräte daher für mehrere Benutzer bereitstellen, ohne jedes Gerät einzeln einrichten zu müssen. 
@@ -82,21 +82,23 @@ Nachdem Sie Ihr Token installiert haben, können Sie nun ein Registrierungsprofi
 
 1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Enrollment Program Tokens** (Registrierungsprogrammtoken).
 
-2. Wählen Sie das soeben installierte Token aus, und klicken Sie auf **Profile** > **Profil erstellen**.
+2. Wählen Sie das soeben installierte Token aus, und klicken Sie auf **Profile** > **Profil erstellen** > **iOS**.
 
-3. Geben Sie unter **Profil erstellen** den **Namen** *TestProfile* und die **Beschreibung** *Test von ADE für iOS-/iPadOS-Geräte* ein. Benutzer können diese Informationen nicht sehen.
+3. Geben Sie auf der Seite **Grundlagen** den **Namen** *TestProfile* und die **Beschreibung** *Test von ADE für iOS-/iPadOS-Geräte* ein. Benutzer können diese Informationen nicht sehen.
 
-4. Wählen Sie unter **Plattform** die Option **iOS** aus.
+4. Wählen Sie **Weiter** aus.
 
-5. Bestimmen Sie, ob Sie Ihre Geräte mit oder ohne **Benutzeraffinität** registrieren möchten. „Benutzeraffinität“ ist für Geräte vorgesehen, die von bestimmten Benutzern verwendet werden. Wenn Ihre Benutzer das Unternehmensportal für Dienste wie das Installieren von Apps verwenden möchten, wählen Sie **Mit Benutzeraffinität registrieren** aus. Wenn Ihre Benutzer das Unternehmensportal nicht benötigen oder wenn Sie das Gerät für viele Benutzer bereitstellen möchten, wählen Sie **Ohne Benutzeraffinität registrieren** aus.
+5. Entscheiden Sie auf der Seite **Verwaltungseinstellungen**, ob Ihre Geräte mit oder ohne **Benutzeraffinität** registriert werden sollen. „Benutzeraffinität“ ist für Geräte vorgesehen, die von bestimmten Benutzern verwendet werden. Wenn Ihre Benutzer das Unternehmensportal für Dienste wie das Installieren von Apps verwenden möchten, wählen Sie **Mit Benutzeraffinität registrieren** aus. Wenn Ihre Benutzer das Unternehmensportal nicht benötigen oder wenn Sie das Gerät für viele Benutzer bereitstellen möchten, wählen Sie **Ohne Benutzeraffinität registrieren** aus.
 
-6. Wenn Sie eine Registrierung mit Benutzeraffinität auswählen, bestimmen Sie, ob Sie „Über das Unternehmensportal authentifizieren“ oder dafür den Setup-Assistenten von Apple verwenden möchten. Wenn Sie die mehrstufige Authentifizierung verwenden möchten, ermöglichen Sie es Benutzern, bei der ersten Anmeldung ihr Kennwort zu ändern, oder fordern Sie die Benutzer auf, ihre abgelaufenen Kennwörter während der Registrierung zurückzusetzen, und wählen Sie unter **Über das Unternehmensportal statt über den Setup-Assistenten von Apple authentifizieren** die Option **Ja** aus. Wenn Sie mit der Verwendung der von Apple bereitgestellten HTTP-Standardauthentifizierung über den Setup-Assistenten vertraut sind, wählen Sie **Nein** aus. Wenn Sie **Ja** auswählen und möchten, dass die Unternehmensportal-App automatisch auf den Geräten der Endbenutzer aktualisiert wird, stellen Sie das Unternehmensportal über das Apple Volume Purchase Program (VPP) separat als erforderliche App für diese Benutzer bereit.
-
-7. Wenn Sie ausgewählt haben, dass Sie mit „Benutzeraffinität“ und „Über das Unternehmensportal authentifizieren“ registrieren möchten, bestimmen Sie, ob Sie „Unternehmensportal mit Apple Volume Purchase Program (VPP)“ installieren möchten. Wenn Sie das Unternehmensportal mit einem VPP-Token installieren, muss Ihr Benutzer keine Apple-ID und kein Kennwort eingeben, um das Unternehmensportal während der Registrierung aus dem App Store herunterzuladen. Wählen Sie unter **Unternehmensportal mit VPP installieren** die Option **Token verwenden:** , um ein VPP-Token auszuwählen, dem kostenlose Lizenzen des Unternehmensportals zur Verfügung stehen. Wenn Sie VPP zum Bereitstellen des Unternehmensportals nicht verwenden möchten, wählen Sie unter **Unternehmensportal mit VPP installieren** die Option **VPP nicht verwenden** aus. 
+6. Wenn Sie sich für die Registrierung mit Benutzeraffinität entschieden haben, wird die Option **Wählen Sie aus, wo Benutzer sich authentifizieren müssen** angezeigt. Entscheiden Sie, ob Sie sich über das Unternehmensportal oder den Apple Setup-Assistenten authentifizieren möchten.
+   - **Unternehmensportal**: Wählen Sie diese Option aus, um die Multi-Factor Authentication zu verwenden, Benutzern die Möglichkeit zu geben, Kennwörter bei der ersten Anmeldung zu ändern, oder Benutzer aufzufordern, ihre abgelaufenen Kennwörter während der Registrierung zurückzusetzen. Wenn Sie die Unternehmensportal-App automatisch auf den Geräten der Endbenutzer aktualisieren möchten, stellen Sie das Unternehmensportal über das Apple Volume Purchase Program (VPP) separat als erforderliche App für diese Benutzer bereit.
+   - **Setup-Assistent**: Wählen Sie diese Option aus, um die von Apple bereitgestellte einfache HTTP-Authentifizierung über den Apple Setup-Assistenten zu verwenden.
+  
+7. Wenn Sie sich mit Benutzeraffinität anmelden und sich beim Unternehmensportal authentifizieren möchten, wird die Option **Unternehmensportal mit VPP installieren** angezeigt. Wenn Sie das Unternehmensportal mit einem VPP-Token installieren, muss Ihr Benutzer keine Apple-ID und kein Kennwort eingeben, um das Unternehmensportal während der Registrierung aus dem App Store herunterzuladen. Wählen Sie unter **Unternehmensportal mit VPP installieren** die Option **Token verwenden:** , um ein VPP-Token auszuwählen, dem kostenlose Lizenzen des Unternehmensportals zur Verfügung stehen. Wenn Sie VPP zum Bereitstellen des Unternehmensportals nicht verwenden möchten, wählen Sie die Option **VPP nicht verwenden** aus. 
 
 8. Wenn Sie ausgewählt haben, dass Sie mit „Benutzeraffinität“, „Über das Unternehmensportal authentifizieren“ und „Unternehmensportal mit VPP installieren“ registrieren möchten, entscheiden Sie, ob Sie das Unternehmensportal bis zur Authentifizierung im Einzelanwendungsmodus ausführen möchten. Mithilfe dieser Einstellung können Sie sicherstellen, dass der Benutzer so lange auf keine anderen Apps zugreifen kann, bis er die Unternehmensregistrierung abgeschlossen hat. Wenn Sie den Benutzer bis zum Abschluss der Registrierung auf diesen Ablauf einschränken möchten, wählen Sie unter **Unternehmensportal bis zur Authentifizierung im Einzelanwendungsmodus ausführen** die Option **Ja** aus. 
 
-9. Wählen Sie **Geräteverwaltungseinstellungen**, und dann unter **Überwacht** die Option **Ja** aus. Überwachte Geräte bieten Ihnen die meisten Verwaltungsoptionen für Ihre unternehmenseigenen iOS-/iPadOS-Geräte.
+9. Wählen Sie unter **Geräteverwaltungseinstellungen** die Option **Ja** unter **Überwacht** aus (wenn Sie **Mit Benutzeraffinität registrieren** ausgewählt haben, wird diese automatisch auf **Ja** festgelegt). Überwachte Geräte bieten Ihnen die meisten Verwaltungsoptionen für Ihre unternehmenseigenen iOS-/iPadOS-Geräte.
 
 10. Wählen Sie unter **Gesperrte Registrierung** die Option **Ja** aus, um sicherzustellen, dass Ihre Benutzer die Verwaltung des unternehmenseigenen Geräts nicht entfernen können. 
 
@@ -104,15 +106,15 @@ Nachdem Sie Ihr Token installiert haben, können Sie nun ein Registrierungsprofi
 
 12. Apple benennt das Gerät standardmäßig mit dem Gerätetyp (z.B. „iPad“). Wenn Sie eine andere Namensvorlage bereitstellen möchten, wählen Sie unter **Vorlage für Gerätenamen anwenden** die Option **Ja** aus. Geben Sie den Namen ein, den Sie auf die Geräte anwenden möchten. Dabei stehen die Zeichenfolgen *{{SERIAL}}* und *{{DEVICETYPE}}* für die Seriennummer und den Gerätetyp jedes Geräts. Wählen Sie andernfalls unter **Vorlage für Gerätenamen anwenden** die Option **Nein** aus.
 
-13. Wählen Sie **OK** aus.
+13. Wählen Sie **Weiter** aus.
 
-14. Klicken Sie auf **Anpassung den Setup-Assistenten**, und geben Sie *Tutorial department* (Tutorialabteilung) unter **Abteilungsname** ein. Diese Zeichenfolge wird Benutzern angezeigt, wenn sie während der Geräteaktivierung auf **About configuration** (Informationen zur Konfiguration) tippen.
+14. Auf der Seite **Setup-Assistent**, wählen Sie *Tutorial department* (Tutorialabteilung) für **Abteilungsname** aus. Diese Zeichenfolge wird Benutzern angezeigt, wenn sie während der Geräteaktivierung auf **About configuration** (Informationen zur Konfiguration) tippen.
 
 15. Geben Sie unter **Abteilungstelefonnummer** eine Telefonnummer ein. Diese Nummer wird angezeigt, wenn Benutzer während der Aktivierung auf **Need help** (Hilfe) tippen.
 
 16. Während der Geräteaktivierung können Sie eine Vielzahl von Anzeigen **anzeigen** oder **ausblenden**. Um die nahtloseste Registrierung zu ermöglichen, legen Sie für alle Bildschirme **Ausblenden** fest.
 
-17. Klicken Sie auf **OK** > **Erstellen**.
+17. Wählen Sie **Weiter** aus, um zur Seite **Überprüfen + erstellen** zu wechseln. Wählen Sie **Erstellen** aus.
 
 ## <a name="sync-managed-devices-to-intune"></a>Synchronisieren verwalteter Geräte mit Intune
 
