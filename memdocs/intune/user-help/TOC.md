@@ -54,12 +54,11 @@
 #### [Nicht unterstützter Sicherheitspatch](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [Geräte mit Verschlüsselungsfehlern](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### Mobile Threat Defense
-#### [Installieren einer Mobile Threat Defense-App](you-are-prompted-to-install-mtd-android.md)
-##### [Installieren von Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
-##### [Installieren von Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
-##### [Installieren von SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
-##### [Installieren von Zimperium zIPS](you-are-prompted-to-install-zips-android.md)
+### Mobile Threat Defense-Apps 
+#### [Installieren von Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
+#### [Installieren von Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
+#### [Installieren von SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
+#### [Installieren von Zimperium zIPS](you-are-prompted-to-install-zips-android.md)
 #### [Beheben einer Bedrohung](you-need-to-resolve-a-threat-found-by-mtd-android.md)
 ##### [Verwenden von Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 ##### [Verwenden von Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
@@ -99,12 +98,11 @@
 #### [Aktualisieren Ihres Geräts für die Installation von Outlook](update-device-outlook-ios.md)
 #### [Meine iOS-Version wird noch nicht unterstützt](your-ios-version-isnt-yet-supported.md)
 
-### Mobile Threat Defense
-#### [Installieren einer Mobile Threat Defense-App](you-are-prompted-to-install-mtd-ios.md)
-##### [Installieren von Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
-##### [Installieren von Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
-##### [Installieren von SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
-##### [Installieren von Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
+### Mobile Threat Defense-Apps
+#### [Installieren von Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
+#### [Installieren von Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
+#### [Installieren von SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
+#### [Installieren von Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
 #### [Beheben einer Bedrohung](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
 ##### [Verwenden von Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
 ##### [Verwenden von Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)
@@ -148,9 +146,9 @@
 ### [Behandeln häufig auftretender Probleme für Windows](troubleshoot-your-device-windows.md)
 #### [Auflösen von Einschränkungen eines Zugriffspunkts](resolve-access-point-restrictions.md)
 #### [Die Registrierung meines Windows 10-Geräts funktioniert nicht](troubleshoot-your-windows-10-device-windows.md)
-#### [Aktualisieren meines Windows-Geräts](you-need-to-update-your-windows-device.md)
+#### [Aktualisieren Ihres Windows-Geräts](you-need-to-update-your-windows-device.md)
 #### [Senden von Protokollen an die bzw. von der Unternehmensportal-App](send-logs-to-your-it-admin-cp-windows.md)
-#### [Senden von Protokollen von der Einstellungs-App](send-logs-to-your-it-admin-settings-windows.md)
+#### [Senden von Protokollen über die Geräteeinstellungen-App](send-logs-to-your-it-admin-settings-windows.md)
 #### [Meine Windows-Version wird nicht unterstützt](your-windows-version-isnt-yet-supported.md)
 #### [Installieren von Office 365 auf meinem Windows 10-Gerät](install-office-windows.md)
 #### [Mein Gerät muss verschlüsselt werden](you-need-to-enable-windows-encryption.md)
@@ -165,7 +163,7 @@
 ## Verwenden der Intune-Unternehmensportal-App für Windows 
 ### [Überprüfen des Gerätezugriffs](check-device-access-windows-cpapp.md)
 ### [Installieren von Apps](install-apps-cpapp-windows.md) 
-### [Remotesperre für Gerät aktivieren](remote-lock-your-device-cp-app.md)   
+### [Remotesperre für ein Gerät aktivieren](remote-lock-your-device-cp-app.md)   
 ### [Gerät umbenennen](rename-your-device-cpapp.md) 
 ### [Gerät zurücksetzen](reset-device-cp-app.md)
 
