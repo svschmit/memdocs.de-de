@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cfb3edf860cfc9de9c479a13dd1ea3fa54e599
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ef7a076c0a41e84e0028da6655569401f334772c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326453"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078973"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Zurücksetzen oder Entfernen einer Gerätekennung in Intune
 
@@ -59,13 +59,15 @@ Verwenden Sie die Aktion „Kennung zurücksetzen“, um eine neue Kennung für 
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) mit einer der folgenden Rollen an: Azure Active Directory Global Admin, Azure Active Directory Intune Service Admin, Helpdesk Operator oder Role Administrator (Globaler Administrator in Azure Active Directory, Intune-Dienstadministrator in Azure Active Directory, Support oder Administrator für Rollen).
 2. Klicken Sie auf **Geräte** und dann auf **Alle Geräte**.
-3. Wählen Sie ein Gerät aus der Liste der von Ihnen verwalteten Geräte aus, und wählen Sie dann **Passcode entfernen** aus.
+3. Wählen Sie ein Gerät aus der Liste der von Ihnen verwalteten Geräte aus, und wählen Sie dann **Passcode zurücksetzen** aus.
 
-## <a name="reset-android-work-profile-passcodes"></a>Zurücksetzen von Kennungen für Android-Arbeitsprofile
+## <a name="reset-android-work-profile-and-device-owner-passcodes"></a>Zurücksetzen des Android-Arbeitsprofils und der Passcodes von Gerätebesitzern
 
 Unterstützte Android Enterprise-Geräte, die mit einem Arbeitsprofil registriert sind, erhalten ein neues Kennwort zum Entsperren des verwalteten Profils oder eine Abfrage eines verwalteten Profils für den Endbenutzer.
 
-Für Android Enterprise-Geräte mit Version 8.x oder höher, die mit einem Arbeitsprofil registriert sind, werden Benutzer benachrichtigt, dass sie Ihre zurückgesetzte Kennung sofort nach dem Abschluss der Registrierung aktivieren müssen. Die Benachrichtigung wird angezeigt, wenn das Kennwort für ein Arbeitsprofil erforderlich ist und festgelegt wurde. Sobald die Kennung eingegeben wurde, wird die Benachrichtigung verworfen.
+Für Android Enterprise-Arbeitsprofilgeräte mit Version 8.x oder höher, werden Benutzer benachrichtigt, dass sie Ihren zurückgesetzten Passcode sofort nach dem Abschluss der Registrierung aktivieren müssen. Die Benachrichtigung wird angezeigt, wenn das Kennwort für ein Arbeitsprofil erforderlich ist und festgelegt wurde. Nachdem ihr Passcode eingegeben wurde, wird die Benachrichtigung verworfen.
+
+Bei Android Enterprise-Gerätebesitzer- oder Arbeitsprofilgeräten, die Version 8.x oder höher ausführen, wird dem MEM Intune-Administrator nach Auswahl von „Passcode zurücksetzen“ in der Konsole ein temporärer Passcode angezeigt. Der temporäre Passcode muss auf dem Gerät eingegeben werden. Der temporäre Passcode für das Gerät wird sieben Tage lang in der Konsole angezeigt.
 
 
 ## <a name="remove-iosipados-passcodes"></a>Entfernen von iOS-/iPadOS-Kennungen

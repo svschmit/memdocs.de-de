@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8ba3563a243b13b874608ad7a3ec918130e5bb80
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326849"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022703"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Einrichten einer Seite zum Registrierungsstatus
  
@@ -41,7 +41,7 @@ Mithilfe der Seite zum Registrierungsstatus können Benutzer den Status Ihres Ge
 Außerdem können Sie die Reihenfolge anhand der Priorität der Profile festlegen, um in Konflikt stehende Profilzuweisungen zum gleichen Benutzer zu vermeiden.
 
 > [!NOTE]
-> Die Seite zum Registrierungsstatus kann nur auf einen Benutzer abgestimmt werden, der zu einer zugewiesenen Gruppe gehört. Die Richtlinie wird zum Zeitpunkt der Registrierung auf dem Gerät für alle seine Benutzer festgelegt.  
+> Die Seite zum Registrierungsstatus kann nur auf einen Benutzer abgestimmt werden, der zu einer zugewiesenen Gruppe gehört. Die Richtlinie wird zum Zeitpunkt der Registrierung auf dem Gerät für alle seine Benutzer festgelegt.  Die Geräteausrichtung für Profile vom Typ „Seite zum Registrierungsstatus“ wird derzeit nicht unterstützt.
 
 ## <a name="available-settings"></a>Verfügbare Einstellungen
 
@@ -97,6 +97,10 @@ Sie können angeben, welche Apps installiert sein müssen, bevor der Benutzer au
 5. Wählen Sie **Ausgewählt** für **Geräteverwendung blockieren, bis diese erforderlichen Apps installiert sind, wenn sie dem Benutzer/Gerät zugewiesen sind** aus.
 6. Wählen Sie **Apps auswählen**, wählen Sie die Apps und dann **Auswählen** > **Speichern** aus.
 
+Die in dieser Liste enthaltenen Apps werden von Intune verwendet, um die Liste zu filtern, die als blockierend betrachtet werden soll.  Es wird nicht angegeben, welche Apps installiert werden sollen.  Wenn Sie diese Liste z. B. so konfigurieren, dass sie „App 1“, „App 2“ und „App 3“ enthält und „App 3“ und „App 4“ auf das Gerät oder den Benutzer ausgerichtet sind, verfolgt die Seite zum Registrierungsstatus nur „App 3“.  „App 4“ wird weiterhin installiert, aber die Seite zum Registrierungsstatus wartet nicht auf ihren Abschluss.
+
+Es können maximal 25 Apps angegeben werden.
+
 ## <a name="enrollment-status-page-tracking-information"></a>Auf der Seite zum Registrierungsstatus nachverfolgte Informationen
 
 Auf der Seite zum Registrierungsstatus werden Informationen in drei Phasen nachverfolgt: Gerätevorbereitung, Geräteeinrichtung und Kontoeinrichtung.
@@ -145,10 +149,11 @@ Für die Kontoeinrichtung werden die folgenden Elemente auf der Seite zum Regist
 ### <a name="troubleshooting"></a>Problembehandlung
 Die wichtigsten Fragen zur Problembehandlung
 
-- Warum wurden meine Anwendungen während der Autopilot-Bereitstellungsphase „Geräteeinrichtung“ auf der Seite zum Registrierungsstatus nicht installiert?
-  - Um dafür zu sorgen, dass Anwendungen während der Autopilot-Phase „Geräteeinrichtung“ installiert werden, stellen Sie Folgendes sicher: 
-        1. Die Anwendung ist so eingerichtet, dass der Zugriff auf die Liste „Ausgewählte Apps“ blockiert ist.
-        2. Sie weisen die Anwendungen derselben Azure AD-Gerätegruppe zu, der auch Ihr Autopilot-Profil zugewiesen ist. 
+- Warum wurden meine Anwendungen nicht über die Seite „Registrierungsstatus“ installiert und nachverfolgt?
+  - Stellen Sie Folgendes sicher, um zu gewährleisten, dass Anwendungen über die Seite „Registrierungsstatus“ installiert und nachverfolgt werden:
+      - Die Apps werden über eine „erforderliche“ Zuweisung einer Azure AD-Gruppe zugewiesen, die das Gerät (für geräteorientierte Apps) oder den Benutzer (für benutzerorientierte Apps) enthält.  (Geräteorientierte Apps werden Während der Gerätephase von ESP nachverfolgt, während benutzerorientierte Apps während der Benutzerphase von ESP nachverfolgt werden.)
+      - Entweder Sie geben **Geräteverwendung blockieren, bis alle Apps und Profile installiert sind** an oder schließen die App in die Liste **Block device use until these required apps are installed** (Geräteverwendung blockieren, bis diese erforderlichen Apps installiert wurden) ein.
+      - Diese Apps werden im Gerätekontext installiert und verfügen nicht über Anwendbarkeitsregeln im Benutzerkontext.
 
 - Warum wird die Seite zum Registrierungsstatus für Bereitstellungen ohne Autopilot angezeigt, z. B. wenn sich ein Benutzer zum ersten Mal auf einem registrierten Gerät anmeldet, das gemeinsam mit Configuration Manager verwaltet wird?  
   - Auf der Seite zum Registrierungsstatus wird der Installationsstatus für alle Registrierungsmethoden angezeigt, einschließlich
@@ -190,7 +195,6 @@ Die wichtigsten Fragen zur Problembehandlung
 ### <a name="known-issues"></a>Bekannte Probleme
 Nachstehend sind bekannte Probleme aufgeführt. 
 - Durch das Deaktivieren des ESP-Profils wird die zugehörige Richtlinie nicht von den Geräten entfernt, und den Benutzern wird weiterhin die Seite zum Registrierungsstatus angezeigt, wenn sie sich zum ersten Mal am Gerät anmelden. Die Richtlinie wird nicht entfernt, wenn das ESP-Profil deaktiviert wird. Sie müssen den OMA-URI bereitstellen, um die Seite zum Registrierungsstatus zu deaktivieren. Weitere Informationen zum Deaktivieren der Seite zum Registrierungsstatus mithilfe des OMA-URI finden Sie weiter oben. 
-- Ein ausstehender Neustart führt immer zu einem Timeout. Das Timeout tritt auf, weil das Gerät neu gestartet werden muss. Der Neustart ist erforderlich, um dem Element, das auf der Seite zum Registrierungsstatus nachverfolgt wird, Zeit bis zum Vorgangsabschluss einzuräumen. Ein Neustart führt dazu, dass die Seite zum Registrierungsstatus beendet wird. Nach einem Neustart wird die Seite während der Kontoeinrichtung nach dem Neustart nicht mehr aufgerufen.  Erwägen Sie, bei der Anwendungsinstallation keinen Neustart anzufordern. 
 - Ein Neustart während der Geräteeinrichtung zwingt den Benutzer vor dem Übergang zur Phase „Kontoeinrichtung“ zur Eingabe seiner Anmeldeinformationen. Benutzeranmeldeinformationen werden während des Neustarts nicht beibehalten. Lassen Sie den Benutzer seine Anmeldeinformationen eingeben, damit die Seite zum Registrierungsstatus fortgesetzt werden kann. 
 - Für die Seite zum Registrierungsstatus unter Windows 10-Versionen vor 1903 erfolgt während einer Registrierung des Typs „Geschäfts-, Schul- oder Unikonto hinzufügen“ immer ein Timeout. Die Seite zum Registrierungsstatus wartet auf den Abschluss der Azure AD Registrierung. Das Problem wurde für Windows 10 ab Version 1903 behoben.  
 - Azure AD Hybrid-Autopilot-Bereitstellung mit Seite zum Registrierungsstatus dauert länger als die Timeoutdauer, die im ESP-Profil angegeben ist. Bei Azure AD Hybrid-Autopilot-Bereitstellungen benötigt die Seite zum Registrierungsstatus 40 Minuten länger als der im ESP-Profil festgelegte Wert. Diese Verzögerung gibt dem lokalen AD-Connector Zeit zum Erstellen des neuen Gerätedatensatzes für Azure AD. 

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407814"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166550"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>iOS- und iPadOS-Geräteeinstellungen zum Zulassen oder Einschränken von Funktionen mit Intune
 
@@ -324,7 +324,10 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Die Einstellungen gelten für: Geräteregistrierung, automatisierte Geräteregistrierung (überwacht)
 
+
 - **Spotlight-Suche gibt Ergebnisse aus dem Internet zurück**: **Blockieren** verhindert, dass Spotlight Ergebnisse einer Internetsuche zurückgibt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem der Spotlight-Suchfunktion das Herstellen einer Verbindung mit dem Internet zur Bereitstellung von Suchergebnissen gestatten.
+
+  Diese Einstellung wird auf der Benutzeroberfläche dupliziert und in einer zukünftigen Version korrigiert. Diese Einstellung gilt zurzeit für überwachte Geräte. In einer zukünftigen Version gilt diese Einstellung für geräteregistrierte und automatisierte geräteregistrierte Geräte und erfordert keine Überwachung.
 
 - **Safari-Cookies**: Wählen Sie aus, wie Cookies auf Geräten behandelt werden. Folgende Optionen sind verfügbar:
   - Zulassen
@@ -334,7 +337,7 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 
 - **Safari-JavaScript**: **Blockieren** verhindert, dass auf Geräten Java-Skripts im Browser ausgeführt werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem Java-Skripts zulassen.
 
-- **Safari-Popups**: **Blockieren** deaktiviert den Popupblocker im Webbrowser. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem den Popupblocker zulassen.
+- **Safari-Popups**: **Blockieren** blockiert alle Popups im Safari-Webbrowser. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem den Popupblocker zulassen.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Die Einstellungen gelten für: Automatisierte Geräteregistrierung (überwacht)
 
@@ -386,6 +389,8 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 - **Änderungen an den Einstellungen der App "Meine Freunde suchen"** : **Blockieren** verhindert, dass Änderungen an den Einstellungen der App „Meine Freunde suchen“ durchgeführt werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem Benutzern das Ändern von Einstellungen für die App „Meine Freunde suchen“ erlauben.
 
 - **Spotlight-Suche gibt Ergebnisse aus dem Internet zurück**: **Blockieren** verhindert, dass Spotlight Ergebnisse einer Internetsuche zurückgibt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem der Spotlight-Suchfunktion das Herstellen einer Verbindung mit dem Internet zur Bereitstellung von Suchergebnissen gestatten.
+
+  Diese Einstellung wird auf der Benutzeroberfläche dupliziert und in einer zukünftigen Version korrigiert. Diese Einstellung gilt zurzeit für überwachte Geräte. In einer zukünftigen Version gilt diese Einstellung für geräteregistrierte und automatisierte geräteregistrierte Geräte und erfordert keine Überwachung.
 
 - **Entfernen von System-Apps vom Gerät blockieren**: **Blockieren** deaktiviert die Möglichkeit, System-Apps von Geräten zu entfernen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem Benutzern erlauben, System-Apps vom Gerät zu entfernen.
 
@@ -667,7 +672,6 @@ Sie können beispielsweise für eine Schul- oder Universitätsumgebung eine App 
 Der überwachte Modus von iOS/iPadOS kann nur während der ersten Einrichtung des Geräts über das Apple-Programm zur Geräteregistrierung oder mithilfe von Apple Configurator aktiviert werden. Sobald der überwachte Modus aktiviert ist, kann Intune ein Gerät mit folgenden Funktionen konfigurieren:
 
 - App-Sperre (Einzelanwendungsmodus) 
-- Globaler HTTP-Proxy 
 - Aktivierungssperre deaktivieren 
 - Modus der autonomen einzelnen App 
 - Webinhaltsfilter 

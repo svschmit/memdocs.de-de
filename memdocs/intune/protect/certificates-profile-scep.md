@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,20 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323150"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126061"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Erstellen und Zuweisen eines SCEP-Zertifikatprofils in Intune
 
 Nachdem Sie [Ihre Infrastruktur für die Unterstützung von SCEP-Zertifikaten (Simple Certificate Enrollment Protocol) konfiguriert haben](certificates-scep-configure.md), können Sie SCEP-Zertifikatprofile erstellen und Benutzern und Geräten in Intune zuweisen.
 
-> [!IMPORTANT]  
-> Bevor Sie SCEP-Zertifikatprofile erstellen, müssen Geräte, die ein SCEP-Zertifikatprofil verwenden werden, Ihrer vertrauenswürdigen Stammzertifizierungsstelle (CA) vertrauen. Verwenden Sie in Intune ein *vertrauenswürdiges Zertifikatprofil* zum Bereitstellen des Zertifikats der vertrauenswürdigen Stammzertifizierungsstelle für Benutzer und Geräte. Informationen zum vertrauenswürdigen Zertifikatprofil finden Sie unter [Exportieren des Zertifikats der vertrauenswürdigen Stammzertifizierungsstelle](certificates-configure.md#export-the-trusted-root-ca-certificate) und [Erstellen vertrauenswürdiger Zertifikatprofile](certificates-configure.md#create-trusted-certificate-profiles) in *Verwenden von Zertifikaten für die Authentifizierung in Intune*.
-
+> [!IMPORTANT]
+> Damit Geräte ein SCEP-Zertifikatprofil verwenden können, müssen sie Ihrer vertrauenswürdigen Stammzertifizierungsstelle vertrauen. Die Vertrauensstellung der Stammzertifizierungsstelle wird am besten durch Bereitstellen eines [vertrauenswürdigen Zertifikatprofils](../protect/certificates-configure.md#create-trusted-certificate-profiles) erreicht, und zwar in derselben Gruppe, die das SCEP-Zertifikatprofil empfängt. Vertrauenswürdige Zertifikatprofile stellen das Zertifikat der vertrauenswürdigen Stammzertifizierungsstelle bereit.
 
 ## <a name="create-a-scep-certificate-profile"></a>Erstellen eines SCEP-Zertifikatprofils
 
@@ -95,7 +94,8 @@ Nachdem Sie [Ihre Infrastruktur für die Unterstützung von SCEP-Zertifikaten (S
        - **Seriennummer**
        - **Benutzerdefiniert**: Bei Auswahl dieser Option wird auch ein **benutzerdefiniertes** Textfeld angezeigt. In dieses Feld können Sie ein benutzerdefiniertes Format für den Antragstellernamen, einschließlich Variablen, eingeben. Das benutzerdefinierte Format unterstützt zwei Variablen: **Common Name (CN)** (Allgemeiner Name) und **Email (E)** (E-Mail-Adresse). **Allgemeiner Name (CN)** kann auf eine der folgenden Variablen festgelegt werden:
 
-         - **CN={{UserName}}** : Der Benutzerprinzipalname des Benutzers (z. B. janedoe@contoso.com)
+         - **CN={{UserName}}** : Der Benutzername des Benutzers (z. B. janedoe).
+         - **CN={{UserPrincipalName}}** : Der Benutzerprinzipalname des Benutzers (z. B. janedoe@contoso.com).\*
          - **CN={{AAD_Device_ID}}** : Eine ID, die zugewiesen wird, wenn Sie ein Gerät in Azure Active Directory (AD) registrieren. Diese ID wird in der Regel für die Authentifizierung bei Azure Active Directory verwendet.
          - **CN={{SERIALNUMBER}}** : Die eindeutige Seriennummer (SN), die in der Regel vom Hersteller zum Identifizieren eines Geräts verwendet wird.
          - **CN={{IMEINumber}}** : Die eindeutige IMEI-Nummer (International Mobile Equipment Identity), die verwendet wird, um ein Mobiltelefon zu identifizieren.
@@ -111,6 +111,8 @@ Nachdem Sie [Ihre Infrastruktur für die Unterstützung von SCEP-Zertifikaten (S
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          Dieses Beispiel enthält das Format des Antragstellernamens, das die Variablen „CN“ und „E“ und Zeichenfolgen für die Werte „Organisationseinheit“, „Organisation“, „Standort“, „Bundesland/Kanton“ und „Land/Region“ verwendet. Die Funktion [CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beschreibt diese Funktion und die unterstützten Zeichenfolgen.
+         
+         \* Für Profile vom Typ „Nur Android-Gerätebesitzer“ funktioniert die Einstellung **CN={{UserPrincipalName}}** nicht. Profile vom Typ „Nur Android-Gerätebesitzer“ können für Geräte ohne Benutzer verwendet werden, sodass dieses Profil nicht in der Lage ist, den Prinzipalnamen des Benutzers zu ermitteln. Wenn Sie diese Option für Geräte mit Benutzern wirklich benötigen, können Sie eine Problemumgehung wie die folgende verwenden: **CN={{UserName}}\@contoso.com** Es werden der Benutzername und die Domäne angegeben, die Sie manuell hinzugefügt haben, z. B. janedoe@contoso.com
 
       - **Gerätzertifikattyp**
 
@@ -224,7 +226,7 @@ Nachdem Sie [Ihre Infrastruktur für die Unterstützung von SCEP-Zertifikaten (S
 
    - **SCEP-Server-URLs**:
 
-     Geben Sie mindestens eine URL für die NDES-Server ein, die Zertifikate über SCEP ausstellen. Geben Sie zum Beispiel *https://ndes.contoso.com/certsrv/mscep/mscep.dll* ein. Sie können ggf. zusätzliche SCEP-URLs für den Lastenausgleich hinzufügen, wenn URLs mit dem Profil nach dem Zufallsprinzip auf das Gerät übertragen werden. Wenn ein SCEP-Server nicht verfügbar ist, tritt bei der SCEP-Anforderung ein Fehler auf. Außerdem ist es möglich, dass die Cert-Anforderung bei nachfolgenden Eincheckvorgängen von Geräten für denselben nicht verfügbaren Server durchgeführt wird.
+     Geben Sie mindestens eine URL für die NDES-Server ein, die Zertifikate über SCEP ausstellen. Geben Sie zum Beispiel `https://ndes.contoso.com/certsrv/mscep/mscep.dll` ein. Sie können ggf. zusätzliche SCEP-URLs für den Lastenausgleich hinzufügen, wenn URLs mit dem Profil nach dem Zufallsprinzip auf das Gerät übertragen werden. Wenn ein SCEP-Server nicht verfügbar ist, tritt bei der SCEP-Anforderung ein Fehler auf. Außerdem ist es möglich, dass die Cert-Anforderung bei nachfolgenden Eincheckvorgängen von Geräten für denselben nicht verfügbaren Server durchgeführt wird.
 
 8. Wählen Sie **Weiter** aus.
 
@@ -259,7 +261,7 @@ Wenn Ihr Antragstellername eines der Sonderzeichen enthält, verwenden Sie eine 
 
 **Beispielsweise** haben Sie einen Antragstellernamen, der als *Test user (TestCompany, LLC)* angezeigt wird.  Eine CSR, die einen CN mit dem Komma zwischen *TestCompany* und *LLC* umfasst, stellt ein Problem dar.  Das Problem kann vermieden werden, indem Sie den gesamten CN in Anführungszeichen setzen oder das Komma zwischen *TestCompany* und *LLC* entfernen:
 
-- **Fügen Sie Anführungszeichen hinzu**: *CN=* "Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Fügen Sie Anführungszeichen hinzu**: *CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **Entfernen Sie das Komma**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  Allerdings tritt bei Versuchen, das Komma mithilfe eines umgekehrten Schrägstrichs mit einem Escapezeichen zu versehen, ein Fehler in den CRP-Protokollen auf:
@@ -282,7 +284,11 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## <a name="assign-the-certificate-profile"></a>Zuweisen des Zertifikatprofils
 
-Weisen Sie SCEP-Zertifikatprofile auf die gleiche Weise zu, wie Sie [Geräteprofile für andere Zwecke bereitstellen](../configuration/device-profile-assign.md). Beachten Sie jedoch Folgendes, bevor Sie fortfahren:
+Weisen Sie SCEP-Zertifikatprofile auf die gleiche Weise zu, wie Sie [Geräteprofile für andere Zwecke bereitstellen](../configuration/device-profile-assign.md).
+
+Um ein SCEP-Zertifikatprofil zu verwalten, muss ein Gerät auch das vertrauenswürdige Zertifikatprofil erhalten haben, das es mit Ihrem vertrauenswürdigen Zertifikat der Stammzertifizierungsstelle bereitstellt. Es wird empfohlen, jeweils das Profil des vertrauenswürdigen Stammzertifikats sowie das Profil des SCEP-Zertifikats in den gleichen Gruppen bereitzustellen.
+
+Beachten Sie jedoch Folgendes, bevor Sie fortfahren:
 
 - Wenn Sie Gruppen SCEP-Zertifikatprofile zuweisen, wird die vertrauenswürdige Zertifikatsdatei der Stammzertifizierungsstelle (wie im *vertrauenswürdigen Zertifikatprofil* angegeben) auf dem Gerät installiert. Das Gerät verwendet das SCEP-Zertifikatprofil, um eine Zertifikatanforderung für das vertrauenswürdige Zertifikat der Stammzertifizierungsstelle zu erstellen.
 
@@ -293,8 +299,6 @@ Weisen Sie SCEP-Zertifikatprofile auf die gleiche Weise zu, wie Sie [Geräteprof
 - Damit Zertifikate möglichst schnell nach der Geräteregistrierung auf Geräten veröffentlicht werden können, weisen Sie das Zertifikatprofil besser einer Benutzergruppe zu (nicht einer Gerätegruppe). Wenn Sie es einer Gerätegruppe zuweisen, muss eine vollständige Geräteregistrierung stattfinden, bevor das Gerät Richtlinien empfängt.
 
 - Wenn Sie die Co-Verwaltung für Intune und Configuration Manager verwenden, bewegen Sie in Configuration Manager den [Schieberegler für Workloads](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) für die Ressourcenzugriffsrichtlinie auf **Intune** oder **Intune-Pilot**. Diese Einstellung ermöglicht es Windows 10-Clients, den Prozess zur Anforderung des Zertifikats zu starten.
-
-- Obwohl Sie das vertrauenswürdige Zertifikatprofil und das SCEP-Zertifikatprofil separat erstellen und zuweisen, müssen beide zugewiesen werden. Wenn nicht beide auf einem Gerät installiert sind, schlägt die SCEP-Zertifikatrichtlinie fehl. Stellen Sie sicher, dass alle vertrauenswürdigen Stammzertifikatprofile auch für dieselben Gruppen wie das SCEP-Profil bereitgestellt werden. Wenn Sie beispielsweise ein Zertifikatsprofil des Simple Certificate Enrollment-Protokolls (SCEP) für eine Benutzergruppe bereitstellen, muss das vertrauenswürdige Stammzertifikatsprofil (und Zwischenzertifikatsprofil) ebenfalls für dieselbe Benutzergruppe bereitgestellt werden.
 
 > [!NOTE]
 > Wenn auf iOS/iPadOS-Geräten ein SCEP-Zertifikatprofil oder ein PKCS-Zertifikatsprofil einem zusätzlichen Profil (z.B. einem WLAN- oder VPN-Profil) zugeordnet ist, erhält das Gerät ein Zertifikat für jedes der zusätzlichen Profile. Dadurch werden für das iOS/iPadOS-Gerät mehrere Zertifikate über die SCEP- oder PKCS-Zertifikatanforderung bereitgestellt. 

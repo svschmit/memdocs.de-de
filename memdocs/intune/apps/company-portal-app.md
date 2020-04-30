@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407749"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771428"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App
 
@@ -31,7 +31,7 @@ In den Unternehmensportal-Apps, auf der Unternehmensportal-Website und in der In
 
 ## <a name="customizing-the-user-experience"></a>Anpassen der Benutzeroberfläche
 
-Durch Anpassen der Oberflächenoptionen können Sie Ihren Endbenutzern eine vertraute und hilfreiche Benutzeroberfläche bereitstellen. Navigieren Sie dazu zum [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), klicken Sie auf **Mandantenverwaltung** > **Anpassung**, und konfigurieren Sie dann die erforderlichen Einstellungen. Diese Einstellungen gelten für die Unternehmensportal-Apps, die Unternehmensportal-Website und die Intune-App unter Android.
+Durch Anpassen der Oberflächenoptionen können Sie Ihren Endbenutzern eine vertraute und hilfreiche Benutzeroberfläche bereitstellen. Navigieren Sie dazu zum [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), und wählen Sie **Mandantenverwaltung** > **Anpassung** aus, wo Sie entweder die Standardrichtlinie bearbeiten oder bis zu zehn gruppenorientierte Richtlinien erstellen können. Diese Einstellungen gelten für die Unternehmensportal-Apps, die Unternehmensportal-Website und die Intune-App unter Android.
 
 ## <a name="branding"></a>Branding
 
@@ -93,6 +93,7 @@ Die folgende Tabelle enthält zusätzliche Konfigurationsinformationen:
 | URL zur Datenschutzerklärung | 79 | Legen Sie fest, dass die Datenschutzerklärung Ihrer Organisation angezeigt wird, wenn Benutzer auf entsprechende Links klicken. Sie müssen eine gültige URL im Format `https://www.contoso.com` eingeben. |
 | Datenschutzmeldung im Unternehmensportal für iOS/iPadOS | 520 | Behalten Sie die Standardeinstellung bei, oder legen Sie eine benutzerdefinierte Nachricht fest, um die Elemente aufzulisten, die Ihre Organisation auf verwalteten iOS/iPadOS-Geräten anzeigen darf. Mithilfe von Markdown können Sie Aufzählungspunkte, Fett- und Kursivformatierung sowie Links hinzufügen. |
 | Geräteregistrierung | N/V | Geben Sie an, ob und wie Benutzer aufgefordert werden sollen, sich bei der mobilen Geräteverwaltung anzumelden. Details finden Sie im Folgenden. |
+| Benachrichtigung über Gerätebesitz | N/V | Senden Sie eine Pushbenachrichtigung an Ihre Android- und iOS-Unternehmensportalbenutzer, wenn ihr Gerätebesitzertyp von „Persönlich“ in „Unternehmen“ geändert wird. Diese Pushbenachrichtigung ist standardmäßig deaktiviert. Wenn der Gerätebesitz auf „Unternehmen“ festgelegt wird, hat Intune einen umfassenderen Zugriff auf das Gerät, einschließlich des vollständigen App-Inventars, der FileVault-Schlüsselrotation, des Abrufs von Rufnummern und einiger ausgewählter Remoteaktionen. Weitere Informationen finden Sie unter [Ändern des Gerätebesitzes](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="device-enrollment-setting-options"></a>Optionen für die Einstellung „Geräteregistrierung“
 
@@ -188,7 +189,7 @@ Einige Plattformen und Konfigurationen lassen keine Self-Service-Geräteaktionen
 <sup>(4)</sup> Durch **Umbenennen** wird nur der Gerätename in der Unternehmensportal-App oder im Webportal geändert, nicht auf dem Gerät selbst.<br>
 <sup>(5)</sup>**Löschen** ist auf iOS/iPadOS-Geräten, die vom Benutzer registriert werden, nicht verfügbar.<br>
 <sup>(6)</sup> Das **Zurücksetzen von Passcodes** wird in einigen Android- und Android Enterprise-Konfigurationen nicht unterstützt. Weitere Informationen finden Sie unter [Zurücksetzen oder Entfernen eines Gerätepasscodes in Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> Aktionen für **Außerbetriebnahme** und **Zurücksetzen** sind in Szenarios mit Android Enterprise-Gerätebesitzern (COPE, COBO, COSU) nicht verfügbar.<br> 
+<sup>(7)</sup> Aktionen für **Außerbetriebnahme** und **Zurücksetzen** sind in Szenarios mit Android Enterprise-Gerätebesitzern (COPE, COBO, COSU) nicht verfügbar.<br>
 <sup>(8)</sup> **Passcode zurücksetzen** wird auf von Benutzern registrierten iOS/iPadOS-Geräten nicht unterstützt.
 
 ## <a name="next-steps"></a>Nächste Schritte

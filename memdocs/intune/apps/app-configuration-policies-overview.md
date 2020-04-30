@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083670"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023009"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>App-Konfigurationsrichtlinien für Microsoft Intune
 
@@ -72,6 +72,20 @@ Die Auswahl von **Verwaltete Apps** als **Geräteregistrierungstyp** bezieht sic
 
 > [!NOTE]
 > Für Apps mit mehreren Identitäten, z. B. Microsoft Outlook, können Benutzereinstellungen berücksichtigt werden. Bei einem Posteingang mit Relevanz wird die Benutzereinstellung beispielsweise berücksichtigt und die Konfiguration nicht geändert. Mit anderen Parametern können Sie steuern, ob ein Benutzer die Einstellung ändern kann oder nicht. Weitere Informationen finden Sie unter [Bereitstellen von Outlook für iOS-/iPadOS- und Android-App-Konfigurationseinstellungen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+
+## <a name="android-app-configuration-policies"></a>Richtlinien zur Konfiguration von Android-Apps
+
+Für Konfigurationsrichtlinien von Android-Apps können Sie den Geräteregistrierungstyp auswählen, bevor Sie das Konfigurationsprofil für eine App erstellen. Sie können Zertifikatprofile berücksichtigen, die auf dem Registrierungstyp basieren (Arbeitsprofil oder Gerätebesitzer). Dieses Update bietet Folgendes:
+
+1. Wenn ein neues Profil erstellt und der Typ „Arbeitsprofil und Gerätebesitzerprofil“ ausgewählt wird, können Sie kein Zertifikatprofil mit der App-Konfigurationsrichtlinie zuordnen.
+2. Wenn ein neues Profil erstellt und der Typ „Arbeitsprofil und Gerätebesitzerprofil“ ausgewählt wird, können Arbeitsprofil-Zertifikatrichtlinien verwendet werden, die in der Gerätekonfiguration erstellt wurden.
+3. Wenn ein neues Profil erstellt und der Typ „Nur Gerätebesitzer“ ausgewählt wird, können Gerätebesitzer-Zertifikatrichtlinien verwendet werden, die in der Gerätekonfiguration erstellt wurden. 
+4. Wenn Sie ein Gmail- oder Nine-Konfigurationsprofil auf einem dedizierten Android Enterprise-Gerät bereitstellen, das keinen Benutzer einschließt, tritt ein Fehler auf, da Intune den Benutzer nicht auflösen kann.
+
+> [!IMPORTANT]
+> Vorhandene Richtlinien, die vor dem Release dieses Features (April 2020 Release – 2004) erstellt wurden und denen keine Zertifikatprofile zugeordnet ist, verwenden standardmäßig den Geräteregistrierungstyp „Arbeitsprofil und Gerätebesitzerprofil“. Vorhandene Richtlinien, die vor dem Release dieses Features erstellt wurden und denen Zertifikatprofile zugeordnet sind, verwenden zudem standardmäßig den Geräteregistrierungstyp „Nur Arbeitsprofil“.
+> 
+> Vorhandene Richtlinien werden nicht wiederhergestellt, und es werden keine neuen Zertifikate ausgestellt.
 
 ## <a name="validate-the-applied-app-configuration-policy"></a>Überprüfen der angewendeten App-Konfigurationsrichtlinie
 
@@ -149,7 +163,7 @@ Auf verwalteten Geräten können Sie mit dem **Intune-Diagnoseprotokoll** die iO
 
 ### <a name="android-configuration-on-managed-devices"></a>Android-Konfiguration auf verwalteten Geräten
 
-Auf verwalteten Geräten können Sie mit dem **Intune-Diagnoseprotokoll** die iOS-/iPadOS-Konfiguration in Bezug auf die Konfiguration verwalteter Apps überprüfen.
+Auf verwalteten Geräten können Sie mit dem **Intune-Diagnoseprotokoll** die Android-Konfiguration in Bezug auf die Konfiguration verwalteter Apps überprüfen.
 
 Um auf einem Android-Gerät Protokolle zu erfassen, müssen Sie oder der Endbenutzer die Protokolle über eine USB-Verbindung (oder die Entsprechung von **Datei-Explorer** auf dem Gerät) vom Gerät herunterladen. Gehen Sie dazu so vor:
 

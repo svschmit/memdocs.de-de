@@ -7,58 +7,24 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7fe4f5241fe0cea70bd77fcdd559cfca909598a8
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: fbf352c3bccfb17efc35e34a2a822b6bbbcc215d
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808156"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183046"
 ---
 Diese Hinweise enthalten wichtige Informationen, die Ihnen bei der Vorbereitung auf künftige Änderungen und Features im Zusammenhang mit Intune helfen können.
 
 ### <a name="microsoft-intune-support-for-windows-10-mobile-ending--3544938--"></a>Ende des Microsoft Intune-Supports für Windows 10 Mobile<!--3544938-->
-Der grundlegende Microsoft-Support für Windows 10 Mobile endet im Dezember 2019. Wie in diesem Supporthinweis erwähnt, erlischt für Benutzer von Windows 10 Mobile der Anspruch auf neue Sicherheitsupdates, nicht sicherheitsrelevante Hotfixes, kostenlose Supportoptionen oder Onlineupdates für technische Inhalte von Microsoft. Auf Grundlage der umfassenden Mobile-Betriebssystemunterstützung stellt Microsoft Intune die Unterstützung sowohl für das Unternehmensportal für die Windows 10 Mobile-App als auch für das Windows 10 Mobile-Betriebssystem am 11. Mai 2020 ein.
+Der grundlegende Microsoft-Support für Windows 10 Mobile endet im Dezember 2019. Wie in diesem Supporthinweis erwähnt, erlischt für Benutzer von Windows 10 Mobile der Anspruch auf neue Sicherheitsupdates, nicht sicherheitsrelevante Hotfixes, kostenlose Supportoptionen oder Onlineupdates für technische Inhalte von Microsoft. Auf Grundlage der umfassenden Mobile-Betriebssystemunterstützung stellt Microsoft Intune die Unterstützung sowohl für das Unternehmensportal für die Windows 10 Mobile-App als auch für das Windows 10 Mobile-Betriebssystem am 10. August 2020 ein.
 
 #### <a name="how-does-this-affect-me"></a>Wie wirkt sich das auf mich aus?
-Wenn Sie in Ihrer Organisation Windows 10 Mobile-Geräte im Einsatz haben, können Sie bis zum 11. Mai 2020 neue Geräte registrieren, Richtlinien und Apps hinzufügen oder entfernen oder beliebige Verwaltungseinstellungen aktualisieren. Nach dem 11. Mai sind keine neue Registrierungen mehr möglich, und die Windows 10 Mobile-Verwaltung wird schließlich aus der Intune-Benutzeroberfläche entfernt. Geräte werden nicht mehr in den Intune-Dienst eingecheckt, und Geräte- und Richtliniendaten werden gelöscht.  
+Wenn Sie in Ihrer Organisation Windows 10 Mobile-Geräte im Einsatz haben, können Sie bis zum 10. August 2020 neue Geräte registrieren, Richtlinien und Apps hinzufügen oder entfernen oder beliebige Verwaltungseinstellungen aktualisieren. Nach dem 10. August sind keine neue Registrierungen mehr möglich, und die Windows 10 Mobile-Verwaltung wird schließlich aus der Intune-Benutzeroberfläche entfernt. Geräte werden nicht mehr in den Intune-Dienst eingecheckt, und Geräte- und Richtliniendaten werden gelöscht.  
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Was muss ich als Vorbereitung auf diese Veränderung tun?
 Sie können Ihre Intune-Berichterstellung überprüfen, um zu sehen, welche Geräte oder Benutzer möglicherweise betroffen sind. Wechseln Sie zu **Geräte** > **Alle Geräte**, und filtern Sie nach „Betriebssystem“. Sie können weitere Spalten hinzufügen, um besser bestimmen zu können, welche Benutzer in Ihrer Organisation Geräte mit Windows 10 Mobile verwenden. Fordern Sie Ihre Endbenutzer auf, ihre Geräte zu aktualisieren oder die Geräte nicht mehr für den Unternehmenszugang zu verwenden.
 
-
-### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Aktualisierte Unterstützungsanweisung für die mobile Adobe Acrobat Reader Intune-App<!--5746776-->
-Ende August haben wir in MC188653 mitgeteilt, dass die mobile Adobe Acrobat Reader Intune-App am 1. Dezember 2019 eingestellt wird, und dass Adobe plant, die App-Schutzrichtlinien von Intune innerhalb ihrer Acrobat Reader-Haupt-App zu unterstützen. Seitdem haben wir Feedback der Kunden erhalten, dass die IT-Administratoren mehr Zeit benötigen, sich auf die Änderungen einzustellen, und dass die Endbenutzer mehr Zeit benötigen, Adobe Acrobat Reader für Intune zu verwenden. Angesichts der hohen Nutzung der Adobe Acrobat Reader Intune-App auf Endbenutzergeräten und deren Bedeutung für Unternehmensszenarios möchten wir sicherstellen, dass jede Funktion den Anforderungen Ihrer Organisation an den App-Schutz entspricht. 
-
-Während wir weiterhin empfehlen, die allgemeine mobile Acrobat Reader-App in Ihren Richtlinien zu verwenden, da diese App-Schutzrichtlinien unterstützt und das SDK für Intune integriert hat, wird die Adobe Acrobat Reader Intune-App bis zum 31. März 2020 weiterhin unterstützt. 
-
-#### <a name="how-does-this-affect-me"></a>Wie wirkt sich das auf mich aus?
-Sie erhalten diese Nachricht, weil unsere Berichterstellung anzeigt, dass eine oder mehrere Richtlinien in Ihrer Organisation auf die Adobe Acrobat Reader Intune-App ausgerichtet sind und/oder Sie möglicherweise unsere vorherige EOL-Kommunikation erhalten haben. 
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Was muss ich als Vorbereitung auf diese Veränderung tun?
-Informieren Sie Ihre Endbenutzer und Ihren Helpdesk über diese Änderung. Sie können die [Funktion der Unterstützungsfunktionalität des Unternehmensportals](../apps/company-portal-app.md#support-information) nutzen, um einen Kanal für Intune-bezogene Fragen einzurichten.
-
-#### <a name="additional-information"></a>Weitere Informationen
-https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
-
-### <a name="take-action-use-microsoft-edge-for-your-protected-intune-browser-experience--5728447--"></a>Maßnahme erforderlich: Verwenden von Microsoft Edge für Ihre geschützte Intune-Browserumgebung<!--5728447-->
-Wie wir schon im letzten Jahr bekanntgemacht haben, unterstützt Microsoft Edge für mobile Geräte die gleichen Verwaltungsfeatures wie Managed Browser. Die Benutzerfreundlichkeit wurde allerdings erheblich verbessert. Um Platz für die robusten Microsoft Edge-Funktonen zu schaffen, stellen wir Intune Managed Browser ein. Ab dem 27. Januar 2020 wird Intune Managed Browser nicht länger von Intune unterstützt.  
-
-#### <a name="how-does-this-affect-me"></a>Wie wirkt sich das auf mich aus? 
-Ab dem 1. Februar 2020 wird Intune Managed Browser nicht länger im Google Play Store oder im iOS App Store verfügbar sein. Zu diesem Zeitpunkt haben Sie noch immer die Möglichkeit, neue App-Schutzrichtlinien für Intune Managed Browser zu verwenden, obwohl neue Benutzer die Intune Managed Browser-App nicht mehr herunterladen können. Zusätzliche werden unter iOS neue Webclips, die per Push auf mit MDM registrierte Geräte übertragen werden, in Microsoft Edge und nicht in Intune Managed Browser geöffnet.  
-
-Am 31. März 2020 wird Intune Managed Browser aus der Azure-Konsole entfernt. Das heißt, dass Sie keine neuen Richtlinien für Intune Managed Browser mehr erstellen können. Wenn Sie noch vorhandene Intune Managed Browser-Richtlinien besitzen, sind diese nicht davon betroffen. Intune Managed Browser wird in der Konsole als Branchenanwendung ohne Symbol angezeigt, und vorhandene Richtlinien werden weiterhin auf die App bezogen angezeigt. An diesem Punkt wird auch die Option zum Umleiten von Webinhalt an Intune Managed Browser innerhalb des Abschnitts „Datenschutz“ der App-Schutzrichtlinien entfernt.  
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Was muss ich als Vorbereitung auf diese Veränderung tun? 
-Um einen reibungslosen Übergang vom Intune Managed Browser zu Microsoft Edge sicherzustellen, empfiehlt es sich, die folgenden Schritte proaktiv auszuführen: 
-
-1. Legen Sie für Microsoft Edge für iOS und Android App-Schutzrichtlinien (auch als MAM bezeichnet) sowie Konfigurationseinstellungen für Apps fest. Sie können Intune Managed Browser-Richtlinien für Microsoft Edge nochmals verwenden, indem Sie die vorhandenen Richtlinien auch auf Microsoft Edge ausrichten.  
-2. Stellen Sie sicher, dass alle mit MAM geschützten Apps in Ihrer Umgebung über die gleiche App-Schutzrichtlinieneinstellung verfügen „Übertragung von Webinhalten mit anderen Apps einschränken:“ muss auf „Mit Richtlinien verwaltete Browser“ festgelegt sein. 
-3. Legen Sie für alle mit MAM geschützten Apps die Konfigurationseinstellung „com.microsoft.intune.useEdge“ für verwaltete Apps auf „true“ (wahr) fest. Mit dem Release von Version 1911 nächsten Monat können Sie die Schritte 2 und 3 leicht durchführen, indem Sie für die Einstellung „Übertragung von Webinhalten mit anderen Apps einschränken“ die Option „Microsoft Edge“ über den Bereich „Datenschutz“ in Ihren App-Schutzrichtlinien festlegen. 
-
-Die Unterstützung für Webclips unter iOS und Android ist bald verfügbar. Wenn diese Unterstützung veröffentlich müssen Sie bereits vorhandene Webclips neu zuweisen, um sicherzustellen, dass sie in Microsoft Edge und nicht mehr in Managed Browser geöffnet werden. 
-
-#### <a name="additional-information"></a>Zusätzliche Informationen
-Weitere Informationen finden Sie in unserer Dokumentation zur [Verwendung von Microsoft Edge mit App-Schutzrichtlinien](../apps/manage-microsoft-edge.md) oder in unserem [Blogbeitrag zur Unterstützung](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Ende der Unterstützung für die Legacy-PC-Verwaltung
 
@@ -72,7 +38,7 @@ Der Android-Geräteadministrator (mit Android 2.2 veröffentlicht und manchmal 
 
 #### <a name="how-does-this-affect-me"></a>Wie wirkt sich das auf mich aus?
 Die Änderungen von Google haben für Intune-Benutzer diese Folgen:  
-- Intune bietet vollständige Unterstützung für Geräte, die vom Administrator verwaltet werden und auf denen Android 10 und höher bis zum zweiten Quartal CY2020 ausgeführt wird. Geräte, die vom Geräteadministrator verwaltet werden und nach Ablauf dieser Zeit Android 10 oder höher ausführen, können nicht vollständig verwaltet werden. Insbesondere werden betroffene Geräte keine neuen Kennwortanforderungen erhalten.
+- Intune bietet vollständige Unterstützung für Geräte, die vom Administrator verwaltet werden und auf denen Android 10 und höher bis zum zweiten Quartal CY2020 ausgeführt wird. Geräte, die vom Geräteadministrator verwaltet werden und nach Ablauf dieser Zeit Android 10 oder höher ausführen, können nicht vollständig verwaltet werden. Dies bedeutet, dass betroffene Geräte keine neuen Kennwortanforderungen erhalten.
     - Samsung Knox-Geräte werden in diesem Zeitraum nicht betroffen sein, da Intune durch die Integration mit der Knox-Plattform erweiterte Unterstützung bietet. Dies gibt Ihnen mehr Zeit für die Planung des Übergangs von der Geräteadministratorverwaltung.    
 - Vom Geräteadministrator verwaltete Android-Geräte, auf denen Android-Versionen unter 10 ausgeführt werden, sind nicht betroffen und können weiterhin vollständig mit dem Geräteadministrator verwaltet werden.    
 - Für alle Geräte unter Android 10 und höher hat Google für Geräteadministratorverwaltung-Agents – wie z. B. das Unternehmensportal – die Möglichkeit beschränkt, auf Gerätebezeichnerinformationen zuzugreifen. Diese Einschränkung wirkt sich nach Geräteupdates auf Android 10 oder höher auf die folgenden Intune-Features wie folgt aus:  
