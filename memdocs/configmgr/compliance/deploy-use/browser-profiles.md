@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 6b8a0bdffdacaf70d27e7806aee7680e6765eb55
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 91c11e133c74cd3b55db09e8bf80fd6c4df7774d
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693068"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210093"
 ---
 # <a name="configure-microsoft-edge-settings-in-configuration-manager"></a>Konfigurieren von Microsoft Edge-Einstellungen in Configuration Manager
 
@@ -46,11 +46,11 @@ Diese Richtlinie umfasst derzeit die folgenden Einstellungen:
 
 ### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>Konfigurieren von Windows Defender SmartScreen-Einstellungen für Microsoft Edge
 <!--1353701-->
-Ab Version 1806 fügt diese Richtlinie drei Einstellungen für [Windows Defender-SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) hinzu. Die Richtlinie enthält nun die folgenden zusätzlichen Einstellungen auf der Seite **SmartScreen-Einstellungen**:
+Ab Version 1806 fügt diese Richtlinie drei Einstellungen für [Windows Defender-SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) hinzu. Die Richtlinie enthält nun die folgenden zusätzlichen Einstellungen auf der Seite **SmartScreen-Einstellungen**:
 
-- **SmartScreen zulassen:** Gibt an, ob Windows Defender SmartScreen zugelassen wird. Weitere Informationen finden Sie unter [AllowSmartScreen browser policy (Browserrichtlinie „AllowSmartScreen“)](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
-- **Benutzer können SmartScreen-Aufforderung für Websites außer Kraft setzen:** Gibt an, ob Benutzer die Windows Defender SmartScreen-Filterwarnungen zu potenziell schädlichen Websites außer Kraft setzen können. Weitere Informationen finden Sie unter [PreventSmartScreenPromptOverride browser policy (Browserrichtlinie „PreventSmartScreenPromptOverride“)](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
-- **Benutzer können SmartScreen-Aufforderung für Dateien außer Kraft setzen:** Gibt an, ob Benutzer die Windows Defender SmartScreen-Filterwarnungen zum Herunterladen nicht überprüfter Dateien außer Kraft setzen können. Weitere Informationen finden Sie unter [PreventSmartScreenPromptOverride browser policy (Browserrichtlinie „PreventSmartScreenPromptOverrideForFiles“)](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
+- **SmartScreen zulassen:** Gibt an, ob Windows Defender SmartScreen zugelassen wird. Weitere Informationen finden Sie unter [AllowSmartScreen browser policy (Browserrichtlinie „AllowSmartScreen“)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+- **Benutzer können SmartScreen-Aufforderung für Websites außer Kraft setzen:** Gibt an, ob Benutzer die Windows Defender SmartScreen-Filterwarnungen zu potenziell schädlichen Websites außer Kraft setzen können. Weitere Informationen finden Sie unter [PreventSmartScreenPromptOverride browser policy (Browserrichtlinie „PreventSmartScreenPromptOverride“)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+- **Benutzer können SmartScreen-Aufforderung für Dateien außer Kraft setzen:** Gibt an, ob Benutzer die Windows Defender SmartScreen-Filterwarnungen zum Herunterladen nicht überprüfter Dateien außer Kraft setzen können. Weitere Informationen finden Sie unter [PreventSmartScreenPromptOverride browser policy (Browserrichtlinie „PreventSmartScreenPromptOverrideForFiles“)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
 
 
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 647eba601cbfa5304bf02f8bcf059fe6e851cbf0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074060"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210076"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funktionen in der Technical Preview 1806 für Configuration Manager
 
@@ -163,10 +163,10 @@ Weitere Informationen über dieses Konto finden Sie unter [Verbindungskonto des 
 
 ## <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>Konfigurieren von Windows Defender SmartScreen-Einstellungen für Microsoft Edge
 <!--1353701-->
-In diesem Release werden der [Konformitätsrichtlinie für Microsoft Edge-Browsereinstellungen](../../compliance/deploy-use/browser-profiles.md) drei Einstellungen für [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) hinzugefügt. Die Richtlinie enthält nun die folgenden zusätzlichen Einstellungen auf der Seite **SmartScreen-Einstellungen**:
-- **SmartScreen zulassen:** Gibt an, ob Windows Defender SmartScreen zugelassen wird. Weitere Informationen finden Sie unter [AllowSmartScreen browser policy (Browserrichtlinie „AllowSmartScreen“)](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
-- **Benutzer können SmartScreen-Aufforderung für Websites außer Kraft setzen:** Gibt an, ob Benutzer die Windows Defender SmartScreen-Filterwarnungen zu potenziell schädlichen Websites außer Kraft setzen können. Weitere Informationen finden Sie unter [PreventSmartScreenPromptOverride browser policy (Browserrichtlinie „PreventSmartScreenPromptOverride“)](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
-- **Benutzer können SmartScreen-Aufforderung für Dateien außer Kraft setzen:** Gibt an, ob Benutzer die Windows Defender SmartScreen-Filterwarnungen zum Herunterladen nicht überprüfter Dateien außer Kraft setzen können. Weitere Informationen finden Sie unter [PreventSmartScreenPromptOverride browser policy (Browserrichtlinie „PreventSmartScreenPromptOverrideForFiles“)](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
+In diesem Release werden der [Konformitätsrichtlinie für Microsoft Edge-Browsereinstellungen](../../compliance/deploy-use/browser-profiles.md) drei Einstellungen für [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) hinzugefügt. Die Richtlinie enthält nun die folgenden zusätzlichen Einstellungen auf der Seite **SmartScreen-Einstellungen**:
+- **SmartScreen zulassen:** Gibt an, ob Windows Defender SmartScreen zugelassen wird. Weitere Informationen finden Sie unter [AllowSmartScreen browser policy (Browserrichtlinie „AllowSmartScreen“)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+- **Benutzer können SmartScreen-Aufforderung für Websites außer Kraft setzen:** Gibt an, ob Benutzer die Windows Defender SmartScreen-Filterwarnungen zu potenziell schädlichen Websites außer Kraft setzen können. Weitere Informationen finden Sie unter [PreventSmartScreenPromptOverride browser policy (Browserrichtlinie „PreventSmartScreenPromptOverride“)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+- **Benutzer können SmartScreen-Aufforderung für Dateien außer Kraft setzen:** Gibt an, ob Benutzer die Windows Defender SmartScreen-Filterwarnungen zum Herunterladen nicht überprüfter Dateien außer Kraft setzen können. Weitere Informationen finden Sie unter [PreventSmartScreenPromptOverride browser policy (Browserrichtlinie „PreventSmartScreenPromptOverrideForFiles“)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
 
 
 
