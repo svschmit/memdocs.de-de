@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611721"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183008"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Häufig gestellte Fragen zu MAM und App-Schutz
 
@@ -38,9 +38,9 @@ MAM schützt die Daten einer Organisation innerhalb einer Anwendung. Mit MAM ohn
 
 **Welche Gerätekonfigurationen unterstützt MAM?**<br></br>
 Intune MAM unterstützt zwei Konfigurationen:
-- **Intune MDM und MAM**: IT-Administratoren können Apps mithilfe von MAM und App-Schutzrichtlinien nur auf Geräten verwalten, die bei der Intune-Verwaltung mobiler Geräte (Mobile Device Management, MDM) registriert sind. Um Apps mithilfe von MDM und MAM zu verwalten, sollten Kunden die Intune-Konsole im Azure-Portal unter https://portal.azure.com verwenden.
+- **Intune MDM und MAM**: IT-Administratoren können Apps mithilfe von MAM und App-Schutzrichtlinien nur auf Geräten verwalten, die bei der Intune-Verwaltung mobiler Geräte (Mobile Device Management, MDM) registriert sind. Um Apps mit MDM und MAM zu verwalten, sollten Kunden das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) verwenden.
 
-- **MAM ohne Geräteregistrierung**: Mit MAM ohne Geräteregistrierung (MAM without enrollment, MAM-WE) können IT-Administratoren Apps mithilfe von MAM und App-Schutzrichtlinien auf Geräten verwalten, die nicht bei Intune MDM registriert sind. Dies bedeutet, dass Apps über Intune auf Geräten verwaltet werden können, die bei EMM-Drittanbietern registriert sind. Um Apps mithilfe von MAM-WE zu verwalten, sollten Kunden unter [https://portal.azure.com](https://portal.azure.com) die Intune-Konsole im Azure-Portal verwenden. Darüber hinaus können Apps auf Geräten, die entweder bei EMM-Drittanbietern (Enterprise Mobility Management, EMM) oder überhaupt nicht bei einer MDM registriert sind, von Intune verwaltet werden.
+- **MAM ohne Geräteregistrierung**: Mit MAM ohne Geräteregistrierung (MAM without enrollment, MAM-WE) können IT-Administratoren Apps mithilfe von MAM und App-Schutzrichtlinien auf Geräten verwalten, die nicht bei Intune MDM registriert sind. Dies bedeutet, dass Apps über Intune auf Geräten verwaltet werden können, die bei EMM-Drittanbietern registriert sind. Um Apps mit MAM-WE zu verwalten, sollten Kunden das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) verwenden. Darüber hinaus können Apps auf Geräten, die entweder bei EMM-Drittanbietern (Enterprise Mobility Management, EMM) oder überhaupt nicht bei einer MDM registriert sind, von Intune verwaltet werden.
 
 
 ## <a name="app-protection-policies"></a>App-Schutzrichtlinien
@@ -54,6 +54,7 @@ Ausführliche Informationen zu den einzelnen Einstellungen für App-Schutzrichtl
 **Ist es möglich, sowohl MDM- als auch MAM-Richtlinien gleichzeitig auf denselben Benutzer, aber für verschiedene Geräte angewendet zu haben? Wenn ein Benutzer beispielsweise von seinem eigenen MAM-fähigen Computer aus auf seine Arbeitsressourcen zugreifen könnte, aber auch zur Arbeit kommen und dort ein mit Intune MDM verwaltetes Gerät verwenden könnte. Gibt es Vorbehalte gegenüber dieser Idee?**<br></br>
 Wenn Sie eine MAM-Richtlinie auf den Benutzer anwenden, ohne den Gerätezustand festzulegen, erhält der Benutzer die MAM-Richtlinie sowohl auf dem BYOD-Gerät als auch auf dem mit Intune verwalteten Gerät. Sie können eine MAM-Richtlinie auch basierend auf dem verwalteten Zustand anwenden. Wenn Sie also eine App-Schutzrichtlinie erstellen, würden Sie neben „Ziel“ für alle App-Typen „Nein“ auswählen. Gehen Sie dann auf eine der folgenden Arten vor:
 - Wenden Sie eine weniger strenge MAM-Richtlinie auf mit Intune verwaltete Geräte an, und wenden Sie eine restriktivere MAM-Richtlinie auf nicht bei MDM registrierte Geräte an.
+-   Wenden Sie auf mit Intune verwaltete Geräte eine ebenso strenge MAM-Richtlinie an wie auf verwaltete Geräte von Drittanbietern.
 - Wenden Sie eine MAM-Richtlinie nur auf nicht registrierte Geräte an.
 
 Weitere Informationen finden Sie unter [Überwachen von App-Schutzrichtlinien](app-protection-policies-monitor.md).
@@ -69,7 +70,7 @@ Jede App, die in das [Intune App SDK](../developer/app-sdk.md) integriert oder v
 
 - Dem AAD-Konto des Endbenutzers muss eine Lizenz für Microsoft Intune zugewiesen sein. Informationen zum Zuweisen von Intune-Lizenzen zu Endbenutzern finden Sie unter [Verwalten von Intune-Lizenzen](../fundamentals/licenses-assign.md).
 
-- Der Endbenutzer muss zu einer Sicherheitsgruppe gehören, für die eine App-Schutzrichtlinie gilt. Die gleiche App-Schutzrichtlinie muss für die verwendete App gelten. App-Schutzrichtlinien können in der Intune-Konsole im [Azure-Portal](https://portal.azure.com) erstellt und bereitgestellt werden. Sicherheitsgruppen können zurzeit im [Microsoft 365 Admin Center](https://admin.microsoft.com) erstellt werden.
+- Der Endbenutzer muss zu einer Sicherheitsgruppe gehören, für die eine App-Schutzrichtlinie gilt. Die gleiche App-Schutzrichtlinie muss für die verwendete App gelten. App-Schutzrichtlinien können im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) erstellt und bereitgestellt werden. Sicherheitsgruppen können zurzeit im [Microsoft 365 Admin Center](https://admin.microsoft.com) erstellt werden.
 
 - Der Endbenutzer muss sich mit seinem AAD-Konto bei der App anmelden.
 
@@ -78,7 +79,7 @@ Jede App, die in das [Intune App SDK](../developer/app-sdk.md) integriert oder v
 Das Intune SDK-Entwicklungsteam testet und unterstützt aktiv Apps, die mit den nativen Android-, iOS/iPadOS-Plattformen (Obj-C, Swift), Xamarin- und Xamarin.Forms-Plattformen erstellt wurden. Während einige Kunden das Intune SDK erfolgreich in andere Plattformen wie React Native und NativeScript integrieren konnten, bieten wir keine expliziten Anleitungen oder Plug-Ins für App-Entwickler, die andere als unsere unterstützten Plattformen verwenden.
 
 **Unterstützt das Intune App SDK die Microsoft Authentication Library (MSAL) oder soziale Konten?**<br></br>
-Das Intune App SDK verwendet erweiterte ADAL-Funktionen für die Erstanbieter- und Drittanbieterversionen des SDK. Deshalb ist die MSAL für viele Hauptszenarios wie die Authentifizierung beim Intune-App-Schutz-Dienst und der bedingte Start nicht gut geeignet. Da der allgemeine Leitfaden des Identity-Teams von Microsoft darin besteht, für alle Microsoft Office-Apps auf MSAL umzusteigen, wird das Intune SDK es letztlich unterstützen müssen, aber derzeit ist keine Unterstützung geplant.
+Intune App SDK kann für die Authentifizierung und bedingte Startszenarios entweder die Azure Active Directory-Authentifizierungsbibliothek oder die Microsoft-Authentifizierungsbibliothek verwenden. Es verwendet außerdem ADAL/MSAL zum Registrieren der Benutzeridentität beim MAM-Dienst für Verwaltungsszenarien ohne Geräteregistrierung.
 
 **Welche zusätzlichen Anforderungen gelten für die Verwendung der [mobilen Outlook-App](https://products.office.com/outlook)?**
 
@@ -91,7 +92,7 @@ Das Intune App SDK verwendet erweiterte ADAL-Funktionen für die Erstanbieter- u
 
 **Welche zusätzlichen Anforderungen gelten für die Verwendung der [Word-, Excel- und PowerPoint](https://products.office.com/business/office)-Apps?**
 
-- Mit dem AAD-Konto des Endbenutzers muss eine Lizenz für [Office 365 Business oder Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) verknüpft sein. Das Abonnement muss die Office-Apps auf mobilen Geräten enthalten und kann ein Cloudspeicherkonto mit [OneDrive for Business](https://onedrive.live.com/about/business/) umfassen. Office 365-Lizenzen können im [Microsoft 365 Admin Center](https://admin.microsoft.com) zugewiesen werden. Befolgen Sie dazu diese [Anweisungen](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Mit dem AAD-Konto des Endbenutzers muss eine Lizenz für [Microsoft 365-Apps für Business oder Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) verknüpft sein. Das Abonnement muss die Office-Apps auf mobilen Geräten enthalten und kann ein Cloudspeicherkonto mit [OneDrive for Business](https://onedrive.live.com/about/business/) umfassen. Office 365-Lizenzen können im [Microsoft 365 Admin Center](https://admin.microsoft.com) zugewiesen werden. Befolgen Sie dazu diese [Anweisungen](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - Der Benutzer muss über einen verwalteten Speicherort verfügen, der mithilfe der Funktion „Speichern unter“ im Rahmen der Einstellung für die Anwendungsschutzrichtlinie „Kopien von Organisationsdaten speichern“ konfiguriert wird. Wenn beispielsweise der verwaltete Speicherort OneDrive ist, muss die [OneDrive](https://onedrive.live.com/about/)-App in der Word-, Excel- oder PowerPoint-App des Endbenutzer konfiguriert werden.
 
@@ -140,7 +141,7 @@ Die Intune-PIN funktioniert mit einem auf Inaktivität basierten Timer, also dem
 
 - **Wie schützt Intune die PIN vor Brute-Force-Angriffen?**<br></br> Im Rahmen der App-PIN-Richtlinie kann der IT-Administrator festlegen, wie oft ein Benutzer versuchen kann, die PIN zu authentifizieren, bevor die App gesperrt wird. Nachdem die maximale Anzahl von Versuchen erreicht wurde, kann das Intune App SDK die „unternehmenseigenen“ Daten aus der App zurücksetzen.
   
-- **Warum muss ich bei Apps desselben Herausgebers zweimal eine PIN festlegen?**<br></br> MAM (für iOS/iPadOS) erlaubt derzeit eine PIN auf Anwendungsebene mit alphanumerischen Zeichen und Sonderzeichen (als „Passcode“ bezeichnet), was die Beteiligung von Anwendungen (z. B. WXP, Outlook, Managed Browser, Yammer) erfordert, damit das Intune App SDK für iOS/iPadOS integriert werden kann. Ohne das SDK werden die Kennungseinstellungen nicht ordnungsgemäß für die Zielanwendungen erzwungen. Hierbei handelte es sich um ein Feature, das im Intune SDK für iOS/iPadOS Version 7.1.12 veröffentlicht wurde. <br><br> Alle numerischen PINs oder Kennungen in Version 7.1.12 oder höher werden getrennt von der numerischen PIN in früheren Versionen des SDK verarbeitet, um dieses Feature zu unterstützen und die Abwärtskompatibilität mit früheren Versionen des Intune SDK für iOS/iPadOS zu gewährleisten. Wenn also ein Gerät Anwendungen mit Intune SDK für iOS/iPadOS-Versionen zwischen 7.1.12 UND 7.1.12 vom selben Hersteller aufweist, müssen sie zwei PINs einrichten. <br><br> Allerdings sind die beiden PINs (für jede App) in keiner Weise miteinander verknüpft, d. h., sie muss die jeweilige für die App geltende App-Schutzrichtlinie einhalten. Daher kann der Benutzer eine PIN *nur* dann zweimal einrichten, wenn für App A und B die gleichen Richtlinien (in Bezug auf die PIN) gelten. <br><br> Dieses Verhalten gilt speziell für die PIN für iOS/iPadOS-Anwendungen, die mit der Intune-Verwaltung mobiler Apps aktiviert sind. Wenn Anwendungen im Laufe der Zeit höhere Intune SDK-Versionen für iOS/iPadOS annehmen, ist das zweimalige Festlegen einer PIN für Apps desselben Herausgebers weniger entscheidend. Beachten Sie den Hinweis unterhalb eines Beispiels.
+- **Warum muss ich bei Apps desselben Herausgebers zweimal eine PIN festlegen?**<br></br> MAM (für iOS/iPadOS) erlaubt derzeit eine PIN auf Anwendungsebene mit alphanumerischen Zeichen und Sonderzeichen (als „Passcode“ bezeichnet), was die Beteiligung von Anwendungen (z. B. WXP, Outlook, Managed Browser, Yammer) erfordert, damit das Intune App SDK für iOS/iPadOS integriert werden kann. Ohne das SDK werden die Kennungseinstellungen nicht ordnungsgemäß für die Zielanwendungen erzwungen. Hierbei handelte es sich um ein Feature, das im Intune SDK für iOS/iPadOS Version 7.1.12 veröffentlicht wurde. <br><br> Alle numerischen PINs oder Kennungen in Version 7.1.12 oder höher werden getrennt von der numerischen PIN in früheren Versionen des SDK verarbeitet, um dieses Feature zu unterstützen und die Abwärtskompatibilität mit früheren Versionen des Intune SDK für iOS/iPadOS zu gewährleisten. Wenn also ein Gerät Anwendungen mit Intune SDK für iOS/iPadOS-Versionen zwischen 7.1.12 UND 7.1.12 vom selben Hersteller aufweist, müssen sie zwei PINs einrichten. <br><br> Allerdings sind die beiden PINs (für jede App) in keiner Weise miteinander verknüpft, d. h., sie müssen die jeweilige für die App geltende App-Schutzrichtlinie einhalten. Daher kann der Benutzer eine PIN *nur* dann zweimal einrichten, wenn für App A und B die gleichen Richtlinien (in Bezug auf die PIN) gelten. <br><br> Dieses Verhalten gilt speziell für die PIN für iOS/iPadOS-Anwendungen, die mit der Intune-Verwaltung mobiler Apps aktiviert sind. Wenn Anwendungen im Laufe der Zeit höhere Intune SDK-Versionen für iOS/iPadOS annehmen, ist das zweimalige Festlegen einer PIN für Apps desselben Herausgebers weniger entscheidend. Beachten Sie den Hinweis unterhalb eines Beispiels.
 
   >[!NOTE]
   > Beispiel: Wenn App A mit einer niedrigeren Version als 7.1.12 und App B mit einer höheren oder gleichen Version wie 7.1.12 vom selben Herausgeber erstellt wurde, muss der Endbenutzer die PINs für A und B separat einrichten, sofern beide auf einem iOS/iPadOS-Gerät installiert sind. <br><br> Wenn App C mit SDK Version 7.1.9 auf dem Gerät installiert ist, verwendet diese dieselbe PIN wie bei App A. <br><br> App D, die mit 7.1.14 erstellt wurde, verwendet dieselbe PIN wie App B. <br><br> Wenn auf einem Gerät nur App A und C installiert sind, muss eine PIN festgelegt werden. Dasselbe gilt, wenn auf einem Gerät nur App B und D installiert sind.
@@ -161,7 +162,7 @@ Intune kann App-Daten auf drei Arten zurücksetzen: vollständiges Zurücksetzen
 
 - **Was ist selektives Zurücksetzen für MDM?**<br></br> Informationen zum Entfernen von Unternehmensdaten finden Sie unter [Remove devices - retire (Entfernen von Geräten: Abkoppeln)](../remote-actions/devices-wipe.md#retire).
 
-- **Was ist selektives Zurücksetzen für MAM?**<br></br> Durch selektives Zurücksetzen für MAM können Unternehmensanwendungsdaten von einer App entfernt werden. Die Anforderung wird mithilfe des Azure-Portals für Intune initiiert. Informationen zum Initiieren einer Zurücksetzungsanforderung finden Sie unter [So setzen Sie nur die Unternehmensdaten in einer App zurück](apps-selective-wipe.md).
+- **Was ist selektives Zurücksetzen für MAM?**<br></br> Durch selektives Zurücksetzen für MAM können Unternehmensanwendungsdaten von einer App entfernt werden. Die Anforderung wird über das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) initiiert. Informationen zum Initiieren einer Zurücksetzungsanforderung finden Sie unter [So setzen Sie nur die Unternehmensdaten in einer App zurück](apps-selective-wipe.md).
 
 - **Wie schnell wird das selektive Zurücksetzen für MAM ausgeführt?**<br></br> Wenn das selektive Zurücksetzen initiiert wird, während ein Benutzer die App verwendet, überprüft das Intune App SDK alle 30 Minuten, ob eine Anforderung zum selektiven Zurücksetzen vom Intune MAM-Dienst vorhanden ist. Das SDK überprüft auch, ob eine Anforderung zum selektiven Zurücksetzen vorhanden ist, wenn ein Benutzer eine App zum ersten Mal startet und sich mit einem Geschäfts-, Uni- oder Schulkonto anmeldet.
 
@@ -177,7 +178,7 @@ Ja! Ein IT-Administrator kann eine App-Schutzrichtlinie für die [Intune Managed
 Ein Großteil der App-Schutzfunktionen ist in die Unternehmensportal-App integriert. Eine Registrierung der Geräte ist _nicht erforderlich_, allerdings wird immer die Unternehmensportal-App benötigt. Bei MAM-WE muss lediglich die Unternehmensportal-App auf dem Gerät des Endbenutzers installiert sein.
 
 **Wie funktionieren die verschiedenen Zugriffseinstellungen für den Intune-App-Schutz unter Android, die für mehrere Apps und Benutzer konfiguriert sind?**<br></br>
-Zugriffsrichtlinien für den Intune-App-Schutz werden in einer bestimmten Reihenfolge auf den Geräten von Endbenutzern angewendet, wenn diese versuchen, über ihr Unternehmenskonto auf eine App zuzugreifen. In der Regel haben Blöcke Vorrang vor verwerfbaren Warnungen. Es wird z.B. eine Einstellung der mindestens erforderlichen Android-Patch-Version, die den Benutzer auffordert, ein Patchupgrade auszuführen, im Anschluss an die Einstellung angewendet, die dem Benutzer den Zugriff verweigert (wenn dies auf den Benutzer/die App zutrifft). In diesem Szenario konfiguriert der IT-Administrator die Einstellung für die mindestens erforderliche Version des Android-Patch auf den 1.3.2018 und die für die mindestens erforderliche Version des Android-Patch, die nur für Warnungen gilt, auf den 1.2.2018. Gleichzeitig versucht das Gerät, das noch die Patch-Version vom 1.1.2018 verwendet, auf die App zuzugreifen. In Folge dessen wird der Endbenutzer basierend auf restriktiveren Einstellungen für die mindestens erforderliche Version des Android-Patch blockiert und erhält keinen Zugriff. 
+Zugriffsrichtlinien für den Intune-App-Schutz werden in einer bestimmten Reihenfolge auf den Geräten von Endbenutzern angewendet, wenn diese versuchen, über ihr Unternehmenskonto auf eine App zuzugreifen. In der Regel haben Blöcke Vorrang vor verwerfbaren Warnungen. Es wird z. B. eine Einstellung der mindestens erforderlichen Android-Patch-Version, die den Benutzer auffordert, ein Patchupgrade auszuführen, im Anschluss an die Einstellung angewendet, die dem Benutzer den Zugriff verweigert (wenn dies auf den Benutzer/die App zutrifft). In diesem Szenario konfiguriert der IT-Administrator die Einstellung für die mindestens erforderliche Version des Android-Patch auf den 1.3.2018 und die für die mindestens erforderliche Version des Android-Patch, die nur für Warnungen gilt, auf den 1.2.2018. Gleichzeitig versucht das Gerät, das noch die Patch-Version vom 1.1.2018 verwendet, auf die App zuzugreifen. In Folge dessen wird der Endbenutzer basierend auf restriktiveren Einstellungen für die mindestens erforderliche Version des Android-Patch blockiert und erhält keinen Zugriff. 
 
 Wenn verschiedene Arten von Einstellungen verarbeitet werden müssen, haben die Anforderungen hinsichtlich bestimmter App-Versionen Vorrang. Erst danach werden Anforderungen berücksichtigt, die eine Version des Android-Betriebssystems und Android-Patch-Versionen betreffen. Anschließend werden in derselben Reihenfolge mögliche Warnungen für sämtliche Einstellungstypen überprüft.
 
