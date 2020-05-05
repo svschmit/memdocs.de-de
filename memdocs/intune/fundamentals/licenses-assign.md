@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b8552bd6bb570c91e84acd40cd2b654696eca972
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326775"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210348"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Zuweisen von Lizenzen zu Benutzern, damit sie ihre Geräte bei Intune registrieren können
 
@@ -36,7 +36,7 @@ Sie können das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.c
 
 1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Benutzer** > **Alle Benutzer**,wählen Sie anschließend einen Benutzer aus, und klicken Sie dann auf **Lizenzen** > **Zuweisungen**.
 
-2. Wählen Sie **Intune** > **Speichern** aus.
+2. Wählen Sie **Intune** > **Speichern** aus. Wenn Sie Enterprise Mobility + Security E5 oder eine andere Lizenz verwenden möchten, aktivieren Sie stattdessen diese Option.
 
    ![Screenshot: Produktlizenzbereich im Microsoft 365 Admin Center](./media/licenses-assign/mem-assign-license.png)
 

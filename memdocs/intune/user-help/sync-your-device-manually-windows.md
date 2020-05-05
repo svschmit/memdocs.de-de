@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f9e62cd4c4034e4cf2eafaea56aa3e5175b1797e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cc2fbfac43916a8298646f6ff57c146c45966b1c
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335743"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254808"
 ---
 # <a name="sync-your-windows-device-manually"></a>Manuelles Synchronisieren des Windows-Geräts
 
@@ -40,7 +40,7 @@ Intune unterstützt die manuelle Synchronisierung über die Unternehmensportal-A
 * [Windows Phone 8.1](#windows-phone-81)    
 
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Direktes Synchronisieren über die Unternehmensportal-App für Windows
-Führen Sie die folgenden Schritte aus, um Windows 10-Geräte, auf denen Creators Update (Version 1703) oder höher ausgeführt wird, manuell zu synchronisieren.
+Führen Sie die folgenden Schritte aus, um Windows 10-Geräte, auf denen das Creators Update (Version 1709) oder höher ausgeführt wird, manuell zu synchronisieren.
 
 1. Öffnen Sie die Unternehmensportal-App auf Ihrem Gerät.
 

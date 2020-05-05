@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326051"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254842"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Verwenden und Verwalten von Android Enterprise-Geräten mit OEMConfig in Microsoft Intune
 
@@ -151,17 +151,21 @@ Im Vergleich zu Standard-Apps erweitern OEMConfig-Apps die verwalteten Konfigura
 
 | OEM | Paket-ID | OEM-Dokumentation (falls verfügbar) |
 | --- | --- | ---|
-| Samsung | com.samsung.android.knox.kpu | [Administratorhandbuch für das Knox Service Plugin](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
-| Zebra Technologies | com.zebra.oemconfig.common | [Übersicht zu OEMConfig für Zebra](http://techdocs.zebra.com/oemconfig ) |
+| Ascom | com.ascom.myco.oemconfig | |
+| Cipherlab | com.cipherlab.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
+| HMDGlobal – 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
+| HMDGlobal – 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Samsung | com.samsung.android.knox.kpu | [Administratorhandbuch für das Knox Service Plugin](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Seuic | com.seuic.seuicoemconfig | |
 | Spectralink: Barcodes | com.spectralink.barcode.service |  |
 | Spectralink: Schaltflächen | com.spectralink.buttons |  |
 | Spectralink: Gerät | com.spectralink.slnkdevicesettings  |  |
 | Spectralink: Protokollierung | com.spectralink.slnklogger |  |
 | Spectralink: VQO | com.spectralink.slnkvqo |  |
-| Seuic | com.seuic.seuicoemconfig | |
 | Unitech Electronics | com.unitech.oemconfig | |
+| Zebra Technologies | com.zebra.oemconfig.common | [Übersicht zu OEMConfig für Zebra](http://techdocs.zebra.com/oemconfig ) |
 
 -----------------
 

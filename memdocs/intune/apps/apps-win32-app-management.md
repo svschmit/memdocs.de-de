@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0af3574d5ca05a076cb62f899a0ce93aaf02ef09
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80863178"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254604"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Eigenständiges Intune – Win32-App-Verwaltung
 
@@ -356,6 +356,11 @@ In der Unternehmensportal-App werden Endbenutzern außerdem zusätzliche Statusm
 
 ## <a name="set-win32-app-availability-and-notifications"></a>Festlegen der Verfügbarkeit und Benachrichtigungen von Win32-Apps
 Sie können den Beginn und das Ende der Verfügbarkeit einer Win32-App konfigurieren. Die Intune-Verwaltungserweiterung startet zum Startzeitpunkt den Download der App-Inhalte und sorgt dafür, dass diese für die erforderliche Absicht zwischengespeichert werden. Die App wird zu einem bestimmten Endzeitpunkt installiert. Für verfügbare Apps wird durch die Startzeit vorgegeben, wann die App im Unternehmensportal sichtbar ist, und Inhalte werden heruntergeladen, wenn der Endbenutzer die App vom Unternehmensportal anfordert. Außerdem können Sie eine Neustarttoleranzperiode festlegen. 
+
+> [!IMPORTANT]
+> Die Einstellung **Kulanzzeitraum für Geräteneustart** im Abschnitt **Zuweisung** ist nur verfügbar, wenn Sie das **Verhalten beim Geräteneustart** im Abschnitt **Programm** auf eine der folgenden Optionen festlegen:
+> - **Verhalten auf Grundlage von Rückgabecodes bestimmen**
+> - **Intune erzwingt einen verbindlichen Geräteneustart**
 
 Legen Sie die App-Verfügbarkeit basierend auf einem Datum und einer Uhrzeit für eine erforderliche App fest, indem Sie die folgenden Schritte ausführen:
 

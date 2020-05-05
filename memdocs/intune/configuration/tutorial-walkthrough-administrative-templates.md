@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1bb178c03682b9dd04902fecd50e5f2c9f01d0b
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022856"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254859"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Verwenden der Cloud zum Konfigurieren einer Gruppenrichtlinie für Windows 10-Geräte mit ADMX-Vorlagen und Microsoft Intune
 
@@ -53,7 +53,7 @@ Am Ende dieses Labs können Sie Intune und Microsoft 365 verwenden, um Ihre Ben
 
 Diese Funktion gilt für:
 
-- Windows 10, Version 1703 und höher
+- Windows 10, Version 1709 und höher
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -132,7 +132,7 @@ In den folgenden Schritten erstellen Sie Sicherheitsgruppen und fügen diesen Gr
 2. Legen Sie folgende Einstellungen fest:
 
     - **Gruppentyp**: Klicken Sie auf **Sicherheit**.
-    - **Gruppenname**: Geben Sie **Alle Geräte von Studenten mit Windows 10** ein.
+    - **Gruppenname**: Geben Sie **Alle Geräte von Studenten mit Windows 10** ein. 
     - **Mitgliedschaftstyp**: Klicken Sie auf **Zugewiesen**.
 
 3. Klicken Sie auf **Members** (Mitglieder) und fügen Sie Geräte hinzu.

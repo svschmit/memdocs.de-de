@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 55c98368619338bb7018be0651f6cde4054cf9cf
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079704"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254995"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Überwachen der Geräteverschlüsselung mit Intune
 
@@ -56,7 +56,7 @@ Im Bereich „Verschlüsselungsbericht“ werden alle von Ihnen verwalteten Ger�
     - macOS, Version 10.13 oder höher
 
     **Für Windows 10-Geräte:**
-    - Version 1703 oder höher von *Business*, *Enterprise* oder *Education* oder Version 1809 oder höher von *Pro*
+    - Version 1709 oder höher von *Business*, *Enterprise* oder *Education* oder Version 1809 oder höher von *Pro*
     - Das Gerät muss über einen TPM-Chip verfügen.
 
     Weitere Informationen finden Sie in der Windows-Dokumentation unter [BitLocker configuration service provider (CSP) (BitLocker-Konfigurationsdienstanbieter (Configuration Service Provider, CSP))](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
@@ -229,7 +229,7 @@ Intune gewährt Zugriff auf das Azure AD-Blatt für BitLocker, sodass Sie sich �
 
    Wenn keine Schlüssel in Azure AD verfügbar sind, zeigt Intune die Meldung *Für dieses Gerät wurde kein BitLocker-Schlüssel gefunden* an.
 
-Informationen zu BitLocker stehen über den [BitLocker-Konfigurationsdienstanbieter](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (Configuration Service Provider, CSP) zur Verfügung. Der BitLocker-CSP wird ab der Windows 10-Version 1703 unterstützt, und ab der Windows 10 Pro-Version 1809.
+Informationen zu BitLocker stehen über den [BitLocker-Konfigurationsdienstanbieter](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (Configuration Service Provider, CSP) zur Verfügung. Der BitLocker-CSP wird ab Windows 10, Version 1709 und für Windows 10 Pro, Version 1809 und höher unterstützt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

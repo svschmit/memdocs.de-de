@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 676af3373acd399056a0ebdc77c9152442a72101
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084402"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182275"
 ---
 # <a name="install-mobile-threat-defense"></a>Installieren von Mobile Threat Defense   
 
@@ -30,7 +30,7 @@ Möglicherweise müssen Sie aufgrund der Sicherheitsanforderungen Ihrer Organisa
 
 Wenn die erforderliche MTD-App nicht installiert ist, können Sie sich bei geschützten Apps mit Ihrem Geschäfts-, Schul- oder Unikonto nicht anmelden. In diesem Artikel lernen Sie, [wie Sie eine MTD-App installieren](set-up-mobile-threat-defense.md#install-app), damit die Blockierung aufgehoben wird.  
 
-Es gibt zahlreiche Apps von MTD-Anbietern, die installiert werden können. Ihre Organisation wird Ihnen mitteilen, welche Sie verwenden sollen. 
+Es gibt eine Vielzahl verschiedener Mobile Threat Defense-Apps, die Sie installieren können. Ihre Organisation wird Sie darüber informieren, welche App verwendet werden soll. Wenn Sie zur Installation der App aufgefordert werden, aber keine weiteren Anweisungen oder einen Link zum Abrufen der App erhalten, wenden Sie sich an einen Mitarbeiter Ihres IT-Supports. 
 
 
 ## <a name="information-your-organization-can-see"></a>Von Ihrer Organisation einsehbare Informationen   

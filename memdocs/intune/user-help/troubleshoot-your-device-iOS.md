@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/02/2017
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,16 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e8b2fe2cfa080c5fffc1e66e66a397a036d794c6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65a7c561e8686a88367d70bf17d0f08eee80af02
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347183"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210331"
 ---
-# <a name="fix-common-issues-with-your-ios-device"></a>Behandeln häufig auftretender Probleme mit dem iOS-Gerät
+# <a name="fix-common-problems-with-your-ios-device"></a>Behandeln häufig auftretender Probleme mit Ihrem iOS-Gerät
 
-Gelegentlich können Probleme mit dem iOS-Gerät auftreten, die Sie möglicherweise selbst behandeln können. Im Folgenden finden Sie einige der häufiger auftretenden Probleme, bei denen Sie zunächst versuchen können, sie selbst zu behandeln. Bei komplexeren Problemen empfehlen wir Ihnen, sich über die Kontaktinformationen auf der [Unternehmensportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980) an den Support Ihres Unternehmens zu wenden.
+Verwenden Sie die Links in diesem Artikel, um Antworten auf häufige Fragen zur iOS-Registrierung oder zum Beheben iOS-bezogener Probleme zu erhalten. Wenn Sie eine Frage zu einem Thema haben, das hier nicht aufgeführt wird, oder Sie weitere Hilfe benötigen, wenden Sie sich mithilfe der Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980) an einen Mitarbeiter Ihres IT-Supports.  
 
 - [Ich muss die Verbindung zu einem gefährdeten iOS-Geräts wiederherstellen](how-to-reconnect-a-compromised-ios-device.md)
 - [Ich muss Fehlermeldungen an den Support meines Unternehmens senden](send-errors-to-your-it-admin-ios.md)
@@ -38,5 +38,5 @@ Gelegentlich können Probleme mit dem iOS-Gerät auftreten, die Sie möglicherwe
 - [Wie finde ich die Seriennummer auf meinem Gerät?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [Ich muss mein iOS-Gerät aktualisieren](you-need-to-update-your-ios-device.md)
 - [Meine iOS-Version wird noch nicht unterstützt](your-ios-version-isnt-yet-supported.md)
-- [Ich muss eine Mobile Threat Defense-App auf meinem iOS-Gerät installieren](you-are-prompted-to-install-mtd-ios.md)
+- [Ich muss eine Mobile Threat Defense-App auf meinem iOS-Gerät installieren](set-up-mobile-threat-defense.md)
 - [Ich muss eine Bedrohung beseitigen, die eine Mobile Threat Defense-App auf meinem iOS-Gerät erkannt hat](you-need-to-resolve-a-threat-found-by-mtd-ios.md)

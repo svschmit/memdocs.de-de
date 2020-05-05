@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 4babd715df08a905a5ceed6ec881cbfe07f5de19
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407841"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209872"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Einstellungen für Windows 10-Geräte (und höher) zum Zulassen oder Einschränken von Features mit Intune
 
@@ -81,11 +81,13 @@ Diese Einstellungen verwenden den [ApplicationManagement-Richtlinien-CSP](https:
 
   [ApplicationManagement/AllowGameDVR-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **Apps nur aus Store:** Diese Einstellung bestimmt, was geschieht, wenn Benutzer Apps aus anderen Quellen als dem Microsoft Store installieren. Folgende Optionen sind verfügbar:
+- **Apps nur aus Store:** Diese Einstellung bestimmt, was geschieht, wenn Benutzer Apps aus anderen Quellen als dem Microsoft Store installieren. Sie verhindert nicht die Installation von Inhalten von USB-Geräten, Netzwerkfreigaben oder anderen Quellen außerhalb des Internets. Verwenden Sie einen vertrauenswürdigen Browser, um sicherzustellen, dass diese Schutzmaßnahmen wie erwartet funktionieren.
+
+  Folgende Optionen sind verfügbar:
 
   - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem standardmäßig zu, dass Endbenutzer Apps aus anderen Quellen als dem Microsoft Store herunterladen, einschließlich der Installation von Apps, die in anderen Richtlinieneinstellungen definiert sind.  
   - **Anywhere:** Diese Einstellung deaktiviert App-Empfehlungen und ermöglicht Benutzern die Installation von Apps aus beliebigen Quellen.  
-  - **Nur Store:** Diese Einstellung erzwingt, dass Endbenutzer nur Apps aus dem Microsoft Store installieren können.
+  - **Nur Store:** Damit soll verhindert werden, dass schädliche Inhalte Ihre Benutzergeräte beeinträchtigen, wenn Sie ausführbare Inhalte aus dem Internet herunterladen. Wenn Benutzer versuchen, Apps aus dem Internet zu installieren, wird die Installation blockiert. Benutzern wird eine Nachricht angezeigt, in der der Download von Apps aus dem Microsoft Store empfohlen wird.
   - **Empfehlungen:** Diese Einstellung legt fest, dass dem Benutzer eine Meldung angezeigt wird, die den Download aus dem Microsoft Store empfiehlt, wenn er eine App aus dem Internet installiert, die auch im Store verfügbar ist.  
   - **Store bevorzugen:** Bei dieser Einstellung werden Benutzer gewarnt, wenn sie Apps aus anderen Quellen als dem Microsoft Store installieren.
 
@@ -140,10 +142,14 @@ Diese Einstellungen verwenden den [Bluetooth-Richtlinien-CSP](https://docs.micro
 
 Diese Einstellungen verwenden den [Kontenrichtlinien-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts), der auch die unterstützten Windows-Editionen auflistet.
 
+> [!IMPORTANT]
+> Das Blockieren oder Deaktivieren dieser Microsoft-Kontoeinstellungen kann sich auf Registrierungsszenarien auswirken, bei denen sich Benutzer bei Azure AD anmelden müssen. Sie verwenden z. B. [AutoPilot mit intensiver Benutzerunterstützung](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Normalerweise wird den Benutzern im Fenster ein Azure AD-Zeichen angezeigt. Wenn diese Einstellungen auf **Blockieren** oder **Deaktivieren** festgelegt sind, wird das Azure AD-Zeichen in der Option möglicherweise nicht angezeigt. Stattdessen werden die Benutzer aufgefordert, die EULA zu akzeptieren und ein lokales Konto zu erstellen, was möglicherweise nicht Ihren Wünschen entspricht.
+
 - **Microsoft-Konto**: **Blockieren** verhindert, dass Endbenutzer dem Gerät ein Microsoft-Konto zuordnen. **Nicht konfiguriert** (Standard) ermöglicht das Hinzufügen und Verwenden eines Microsoft-Kontos.
+
 - **Nicht-Microsoft-Konto:** **Blockieren** verhindert, dass Endbenutzer Nicht-Microsoft-Konten über die Benutzeroberfläche hinzufügen können. **Nicht konfiguriert** (Standard) erlaubt dem Benutzer, E-Mail-Konten hinzuzufügen, die nicht mit einem Microsoft-Konto verknüpft sind.
 - **Settings synchronization for Microsoft account** (Einstellungssynchronisierung für das Microsoft-Konto): **Nicht konfiguriert** (Standard) ermöglicht das Synchronisieren der mit einem Microsoft-Konto verknüpften Geräte- und App-Einstellungen zwischen Geräten. **Blockieren** verhindert diese Synchronisierung.
-- **Anmelde-Assistent für Microsoft-Konten:** Bei Festlegung auf **Nicht konfiguriert** (Standard) können Benutzer den **Anmelde-Assistenten für Microsoft-Konten** (wlidsvc-Dienst) starten und beenden. Dieser Betriebssystemdienst ermöglicht Benutzern die Anmeldung bei ihrem Microsoft-Konto. **Deaktivieren** verhindert, dass Endbenutzer den Anmelde-Assistenten für Microsoft-Konten (wlidsvc-Dienst) steuern können.
+- **Anmelde-Assistent für Microsoft-Konten:** Bei Festlegung auf **Nicht konfiguriert** (Standard) können Benutzer den **Anmelde-Assistenten für Microsoft-Konten** (wlidsvc-Dienst) starten und beenden. Dieser Betriebssystemdienst ermöglicht Benutzern die Anmeldung bei ihrem Microsoft-Konto. **Deaktivieren** legt den Anmelde-Assistenten für Microsoft-Konten (wlidsvc-Dienst) auf „Deaktiviert“ fest und verhindert, dass Endbenutzer ihn manuell starten können.
 
 ## <a name="cloud-printer"></a>Clouddrucker
 
@@ -669,7 +675,7 @@ Diese Einstellungen verwenden den [Startrichtlinien-CSP](https://docs.microsoft.
 
 ## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender SmartScreen
 
-- **SmartScreen für Microsoft Edge**: **Anfordern** deaktiviert den Microsoft Defender SmartScreen und hindert Benutzer an seiner Aktivierung. **Nicht konfiguriert** (Standard) aktiviert SmartScreen. Schützt Benutzer vor potenziellen Bedrohungen und verhindert, dass Benutzer diese Einstellung deaktivieren.
+- **SmartScreen für Microsoft Edge**: **Erforderlich** aktiviert Microsoft Defender SmartScreen und hindert Benutzer an der Deaktivierung dieses Features. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem aktiviert SmartScreen möglicherweise standardmäßig und gestattet Benutzern das Aktivieren/Deaktivieren dieses Features.
 
   Microsoft Edge verwendet Microsoft Defender SmartScreen (aktiviert), um Benutzer vor potenziellen Phishingangriffen und Schadsoftware zu schützen.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80808140"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254638"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrieren von Geräten in Intune mithilfe eines Geräteregistrierungs-Manager-Kontos
 
@@ -43,6 +43,13 @@ DEM-Benutzerkonten und Geräte, die mit einem DEM-Benutzerkonto registriert werd
 - Jedes Gerät, das bei DEM-Konten registriert ist, muss für die Verwaltung durch Intune korrekt lizenziert sein. Bei der Lizenz kann es sich um eine Intune-Benutzerlizenz oder um eine Intune-Gerätelizenz handeln.
 - Wenn Sie [Android Enterprise-Arbeitsprofilgeräte über ein DEM-Konto registrieren](android-work-profile-enroll.md), besteht pro Konto ein Grenzwert von 10 registrierbaren Geräten.
 - Das [Registrieren von vollständig verwalteten Android Enterprise-Geräten](android-fully-managed-enroll.md) mit DEM-Konten wird nicht unterstützt.
+- Durch die Anwendung einer Azure AD-Geräteeinschränkung auf ein DEM-Konto wird das Erreichen des Limits von 1.000 Geräten verhindert, die das DEM-Konto registrieren kann.
+
+## <a name="enrollment-methods-supported-by-dem-accounts"></a>Von DEM-Konten unterstützte Registrierungsmethoden
+
+- [Windows Autopilot](enrollment-autopilot.md)
+- [Massenregistrierung für Windows-Geräte](windows-bulk-enroll.md)
+- DEM-initiiert über Unternehmensportal
 
 ## <a name="add-a-device-enrollment-manager"></a>Hinzufügen eines Geräteregistrierungs-Managers
 
@@ -52,14 +59,13 @@ DEM-Benutzerkonten und Geräte, die mit einem DEM-Benutzerkonto registriert werd
 
 3. Geben Sie auf dem Blatt **Benutzer hinzufügen** einen Benutzerprinzipalnamen für den Geräteregistrierungs-Manager-Benutzer ein, und wählen Sie **Hinzufügen** aus. Der Geräteregistrierungs-Manager-Benutzer wird der Liste der Geräteregistrierungs-Manager-Benutzer hinzugefügt.
 
-## <a name="permissions-for-dem"></a>Berechtigungen für DEM
+## <a name="permissions-required-to-create-dem-accounts"></a>Erforderliche Berechtigungen zum Erstellen von DEM-Konten
 
 Die Azure AD-Rollen globaler Administrator oder Intune-Dienstadministrator sind erforderlich, um
 - einem Azure AD-Benutzerkonto die DEM-Berechtigung zu gewähren
 - alle DEM-Benutzer anzuzeigen
 
 Wenn einem Benutzer keine globale Administratorrolle oder Intune-Dienstadministratorrolle zugewiesen ist, aber Leseberechtigungen für die ihm zugewiesene Rolle „Geräteregistrierungs-Manager“ aktiviert sind, kann dieser nur die von ihm erstellten DEM-Benutzer sehen.
-
 
 ## <a name="remove-device-enrollment-manager-permissions"></a>Entfernen der DEM-Berechtigungen
 

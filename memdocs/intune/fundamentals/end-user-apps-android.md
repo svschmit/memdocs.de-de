@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4c0c913d3bc1467096090ac4e80d1d9d5f578a1b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79372550"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182309"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Wie Ihre Android-Benutzer Apps erhalten  
 
@@ -33,12 +33,12 @@ Dieser Artikel bietet grundlegende Informationen dazu, wie und wo Android-Gerät
 | App-Typ | Branchenspezifische Apps | Play Store-Apps  |
 | ------------- |-------------| -----|
 | Verfügbare Apps      | Benutzer tippen im Unternehmensportal auf **Installieren**. Es wird eine Benachrichtigung angezeigt, auf die die Benutzer tippen, um die Installation zu starten. Nachdem die Installation erfolgreich durchgeführt wurde, verschwindet die Benachrichtigung. | Benutzer tippen im Unternehmensportal auf die App und werden zu einer App-Seite im Play Store weitergeleitet. Dort starten sie die Installation.|
-| Required apps      | **Auf Geräten mit Android 9.0 und früher** wird Benutzern eine Benachrichtigung angezeigt, die sie nicht ignorieren können. In dieser werden sie darauf hingewiesen, dass sie eine App herunterladen müssen. Benutzer tippen auf die Benachrichtigung, um den Download und die Installation zu starten. Nachdem die Installation erfolgreich durchgeführt wurde, verschwindet die Benachrichtigung. **Auf Geräten mit Android 10 und höher** wird Benutzern eine Benachrichtigung angezeigt, die sie nicht ignorieren können. In dieser werden sie darauf hingewiesen, dass sie eine App herunterladen müssen. Benutzer tippen auf die Benachrichtigung, um den Download starten. Anschließend wird eine Benachrichtigung angezeigt, über die sie die Installation der App starten können. Nachdem die Installation erfolgreich durchgeführt wurde, verschwindet die Benachrichtigung.| Benutzern wird eine Benachrichtigung angezeigt, die sie nicht verwerfen können und in der sie darauf hingewiesen werden, dass sie eine App installieren müssen. Benutzer tippen auf die Benachrichtigung und werden zu einer App-Seite im Play Store weitergeleitet. Dort starten sie die Installation. Nachdem die Installation erfolgreich durchgeführt wurde, verschwindet die Benachrichtigung. |
+| Required apps      | Benutzern wird eine Benachrichtigung angezeigt, die sie nicht verwerfen können und in der sie darauf hingewiesen werden, dass sie eine App installieren müssen. Benutzer tippen auf die Benachrichtigung, um die Installation zu starten. Nachdem die Installation erfolgreich durchgeführt wurde, verschwindet die Benachrichtigung.    | Benutzern wird eine Benachrichtigung angezeigt, die sie nicht verwerfen können und in der sie darauf hingewiesen werden, dass sie eine App installieren müssen. Benutzer tippen auf die Benachrichtigung und werden zu einer App-Seite im Play Store weitergeleitet. Dort starten sie die Installation. Nachdem die Installation erfolgreich durchgeführt wurde, verschwindet die Benachrichtigung. |
 
-Ihre Benutzer müssen die Installation aus unbekannten Quellen zulassen, damit [branchenspezifische Apps](../apps/lob-apps-android.md) installiert werden können. Diese Einstellung befindet sich normalerweise an zwei verschiedenen Stellen:
+Ihre Benutzer müssen die Installation aus unbekannten Quellen zulassen, damit [branchenspezifische Apps](../apps/lob-apps-android.md) installiert werden können. Diese Einstellung befindet sich je nach Android-Version normalerweise an zwei verschiedenen Stellen:
 
-* **Android 7.1.2 und früher**: **Einstellungen** > **Sicherheit** > **Unknown sources** (Unbekannte Quellen)
-* **Android 8.0 und höher**: **Einstellungen** > **Apps & Benachrichtigungen** > **Special app access** > **Install unknown apps** > **Unternehmensportal** > **Allow from this source** (Spezieller App-Zugriff > Unbekannte App installieren > Unternehmensportal > Aus dieser Quelle zulassen)
+* Android 7.1.2 und höher: **Einstellungen** > **Sicherheit** > **Unbekannte Quellen**
+* Android 8.0 und höher: **Einstellungen** > **Apps & Benachrichtigungen** > **Special app access** > **Install unknown apps** > **Unternehmensportal** > **Allow from this source** (Spezieller App-Zugriff > Unbekannte App installieren > Unternehmensportal > Aus dieser Quelle zulassen)
 
 In diesem Fall informiert die Unternehmensportal-App den Benutzer und führt ihn zur entsprechenden Einstellung. 
 
@@ -47,13 +47,13 @@ In diesem Fall informiert die Unternehmensportal-App den Benutzer und führt ihn
 | App-Typ | Branchenspezifische Apps | Play Store-Apps  |
 | ------------- |-------------| -----|
 | Verfügbare Apps      | Benutzer tippen im Unternehmensportal auf **Installieren**. Die App wird ohne weiteres Eingreifen der Benutzer installiert. | Benutzer tippen im Unternehmensportal auf die App und werden zu einer App-Seite im Play Store weitergeleitet. Dort starten sie die Installation.|
-| Required apps      | **Auf Geräten mit Android 9.0 und früher** wird die App ohne Benutzerinteraktion installiert. **Auf Geräten mit Android 10 und höher** wird Benutzern eine Benachrichtigung angezeigt, die sie nicht ignorieren können. In dieser werden sie darauf hingewiesen, dass sie eine App herunterladen müssen. Benutzer tippen auf die Benachrichtigung, um die Installation zu starten. Nachdem die Installation erfolgreich durchgeführt wurde, verschwindet die Benachrichtigung. | Benutzern wird eine Benachrichtigung angezeigt, die sie nicht verwerfen können und in der sie darauf hingewiesen werden, dass sie eine App installieren müssen. Benutzer tippen auf die Benachrichtigung und werden zu einer App-Seite im Play Store weitergeleitet. Dort starten sie die Installation. Nachdem die Installation erfolgreich durchgeführt wurde, verschwindet die Benachrichtigung. |
+| Required apps      | Die App wird ohne weiteres Eingreifen der Benutzer installiert.    | Benutzern wird eine Benachrichtigung angezeigt, die sie nicht verwerfen können und in der sie darauf hingewiesen werden, dass sie eine App installieren müssen. Benutzer tippen auf die Benachrichtigung und werden zu einer App-Seite im Play Store weitergeleitet. Dort starten sie die Installation. Nachdem die Installation erfolgreich durchgeführt wurde, verschwindet die Benachrichtigung. |
 
 Apps können verwaltet oder nicht verwaltet sein, wie unten beschrieben. Das Verfahren, mit dem Apps in die Verwaltung eingebunden werden, ist das gleiche für alle Arten von Android-Geräten.
 
-**Verwaltete Apps**: Dabei handelt es sich um Apps, die mittels Richtlinien verwaltet werden. Sie wurden von Intune „umschlossen“ oder mit dem Intune App SDK erstellt. Diese Apps können von Intune verwaltet werden, und ihnen lassen sich Anwendungsrichtlinien zuweisen.
+* Verwaltete Apps: Hierbei handelt es sich um Apps, die mithilfe von Richtlinien verwaltet werden. Sie wurden von Intune „umschlossen“ oder mit dem Intune App SDK erstellt. Diese Apps können von Intune verwaltet werden, und ihnen lassen sich Anwendungsrichtlinien zuweisen.
 
-**Nicht verwaltete Apps**: Dabei handelt es sich um Apps, die nicht mittels Richtlinien verwaltet werden. Diese wurden nicht von Intune „umschlossen“ oder enthalten das Intune App SDK nicht. Diesen Apps können keine Anwendungsrichtlinien zugewiesen werden.
+* Nicht verwaltete Apps: Dies sind Apps, die nicht mithilfe von Richtlinien verwaltet werden. Diese wurden nicht von Intune „umschlossen“ oder enthalten das Intune App SDK nicht. Diesen Apps können keine Anwendungsrichtlinien zugewiesen werden.
 
 ## <a name="zebra-devices-with-zebra-mobility-extensions"></a>Zebra-Geräte mit Zebra Mobility Extensions
 

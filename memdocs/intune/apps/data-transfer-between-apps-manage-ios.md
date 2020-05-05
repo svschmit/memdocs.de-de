@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d3b794fdd180ad655b7cd11cc5c1f6d11bc874e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f0a7bbdd5bb27b6fe17f5b4f44302551ff67de5d
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075454"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254978"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Verwalten der Datenübertragung zwischen iOS-Apps in Microsoft Intune
 
@@ -45,7 +45,7 @@ Verwenden Sie App-Schutzrichtlinien mit dem iOS-Feature **Open-in Management**, 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurieren der Benutzer-UPN-Einstellung für Microsoft Intune oder Drittanbieter-EMM
 Die Konfiguration der Benutzer-UPN-Einstellung ist **erforderlich**, damit Geräte, die mit Intune oder der EMM-Lösung eines Drittanbieters verwaltet werden, das registrierte Benutzerkonto identifizieren können. Die UPN-Konfigurationen funktioniert in Verbindung mit den App-Schutzrichtlinien, die Sie über Intune bereitstellen. Das folgende Verfahren stellt einen allgemeinen Ablauf zum Konfigurieren der UPN-Einstellung und der resultierenden Benutzeroberfläche dar:
 
-1. [Erstellen und Zuweisen von App-Schutzrichtlinien](app-protection-policies.md) für iOS/iPadOS im [Azure-Portal](https://portal.azure.com). Konfigurieren Sie Richtlinieneinstellungen für alle Unternehmensanforderungen, und wählen Sie die iOS-Apps aus, für die diese Richtlinie gelten soll.
+1. Wechseln Sie zum [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), und [erstellen und weisen Sie eine App-Schutzrichtlinie](app-protection-policies.md) für iOS/iPadOS zu. Konfigurieren Sie Richtlinieneinstellungen für alle Unternehmensanforderungen, und wählen Sie die iOS-Apps aus, für die diese Richtlinie gelten soll.
 
 2. Stellen Sie die Apps und das E-Mail-Profil bereit, das mit Intune oder der MDM-Lösung eines Drittanbieters verwaltet werden soll, indem Sie die folgenden allgemeinen Schritte ausführen. Dies wird auch im *Beispiel 1* behandelt.
 
