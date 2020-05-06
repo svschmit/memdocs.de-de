@@ -2,7 +2,7 @@
 title: Internetbasierte Clientverwaltung
 titleSuffix: Configuration Manager
 description: Erstellen Sie einen Plan für die Verwaltung internetbasierter Clients in Configuration Manager.
-ms.date: 05/16/2017
+ms.date: 04/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,193 +10,172 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 93c6f5166a26db9da1026191f8b07aa88a6f0cfd
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f7054c75643c6ffa37decba74f9fe85831728985
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076746"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587222"
 ---
 # <a name="plan-for-internet-based-client-management-in-configuration-manager"></a>Planen der internetbasierten Clientverwaltung in Configuration Manager
 
 *Gilt für: Configuration Manager (Current Branch)*
 
-Mithilfe der internetbasierten Clientverwaltung (IBCM) können Sie Configuration Manager-Clients verwalten, wenn diese nicht mit Ihrem Unternehmensnetzwerk, sondern standardmäßig mit dem Internet verbunden sind. Diese Möglichkeit bietet eine Reihe von Vorteilen, einschließlich geringerer Kosten, da keine VPNs (Virtuelle Private Netzwerke) ausgeführt werden müssen und Softwareupdates umgehend bereitgestellt werden können.  
+Verwenden Sie die internetbasierte Clientverwaltung (IBCM), um Configuration Manager-Clients zu verwalten, wenn diese nicht mit Ihrem internen Netzwerk verbunden sind. Vorteile der Verwendung von IBCM:
 
- Für die Verwaltung von Clientcomputern in einem öffentlichen Netzwerk gelten höhere Sicherheitsanforderungen. Bei der internetbasierten Clientverwaltung müssen sowohl von den Clients, als auch von den Standortsystemservern, mit denen von den Clients eine Verbindung hergestellt wird, PKI-Zertifikate verwendet werden. Hierdurch wird gewährleistet, dass Verbindungen von einer unabhängigen Stelle authentifiziert und Daten bei der Übertragung von und zu diesen Standortsystemen mit Secure Sockets Layer (SSL) verschlüsselt werden.  
+- Vollständige Kontrolle über Server und Rollen, die den Dienst bereitstellen
+- Keine Abhängigkeit von einem Clouddienst
+- Möglicherweise wird kein virtuelles privates Netzwerk (VPN) benötigt
+- Alle Kosten sind dem lokalen Dienst zugeordnet
 
- In den folgenden Abschnitten wird die Planung der internetbasierten Clientverwaltung eingehender erörtert.  
+Aufgrund der höheren Sicherheitsanforderungen für die Verwaltung von Clientcomputern in einem öffentlichen Netzwerk erfordert IBCM die Verwendung von PKI-Zertifikaten. Mit dieser Konfiguration wird sichergestellt, dass Verbindungen von einer unabhängigen Zertifizierungsstelle authentifiziert werden. Wenn IBCM-Clients und -Standortserver Daten senden, sind diese verschlüsselt und geschützt.  
 
-##  <a name="features-that-are-not-supported-on-the-internet"></a>Features, die im Internet nicht unterstützt werden  
- Einige Clientverwaltungsfunktionen eignen sich nicht für das Internet und werden daher bei der Clientverwaltung im Internet nicht unterstützt. Viele Features, die bei der internetbasierten Verwaltung nicht unterstützt werden, sind auf die Active Directory Domain Services angewiesen oder für ein öffentliches Netzwerk ungeeignet, wie z.B. Netzwerkermittlung und Wake-On-LAN (WOL).  
+## <a name="client-communications"></a>Clientkommunikation
 
- Die folgenden Features werden bei Clientverwaltung im Internet nicht unterstützt:  
+Die folgenden Standortsystemrollen an primären Standorten unterstützen Verbindungen von Clients, die sich an nicht vertrauenswürdigen Standorten befinden:
 
-- Clientbereitstellung über das Internet, wie Clientpush und die auf Softwareupdates basierende Clientbereitstellung. Verwenden Sie stattdessen die manuelle Clientinstallation.  
+> [!NOTE]
+> Während IBCM den Fokus hauptsächlich auf internetbasierte Szenarios legt, wird das gleiche Verhalten auf Clients in einer nicht vertrauenswürdigen Active Directory-Gesamtstruktur angewandt. Sekundäre Standorte unterstützen keine Clientverbindungen von nicht vertrauenswürdigen Standorten.
 
-- Automatische Standortzuweisung  
+- Zertifikatregistrierungspunkt für das Configuration Manager-Richtlinienmodul (NDES)
 
-- Wake-On-LAN  
+- Verteilungspunkt
 
-- Betriebssystembereitstellung Sie können aber Tasksequenzen bereitstellen, mit denen kein Betriebssystem bereitgestellt wird. Dazu gehören beispielsweise Tasksequenzen zur Ausführung von Skripts und Wartungstasks auf Clients.  
+- Cloudbasierter Verteilungspunkt
 
-- Remotesteuerung  
+- Anmeldungsproxypunkt
 
-- Softwarebereitstellung für Benutzer, es sei denn, der Benutzer kann vom internetbasierten Verwaltungspunkt in den Active Directory Domain Services mit der Windows-Authentifizierung (Kerberos oder NTLM) authentifiziert werden. Dies ist möglich, wenn die Gesamtstruktur, in der das Benutzerkonto sich befindet, vom internetbasierten Verwaltungspunkt als vertrauenswürdig eingestuft wird.  
+- Fallbackstatuspunkt
 
-  Im Übrigen wird von der internetbasierten Clientverwaltung kein Roaming unterstützt. Mithilfe von Roaming kann von Clients immer der nächstgelegene Verteilungspunkt zum Herunterladen von Inhalt ermittelt werden. Bei den im Internet verwalteten Clients erfolgt die Kommunikation mit Standortsystemen über den jeweils zugewiesenen Standort. Dies ist nur möglich, wenn diese Standortsysteme zur Verwendung eines Internet-FQDN konfiguriert wurden und Clientverbindungen aus dem Internet von den Standortsystemrollen gestattet werden. Eines der internetbasierten Standortsysteme wird auf nicht deterministische Weise und unabhängig von der Bandbreite oder vom physischen Standort von den Clients ausgewählt.  
+- Verwaltungspunkt
 
-  Softwareupdatepunkte, von denen Verbindungen aus dem Internet akzeptiert werden, werden jetzt immer von internetbasierten Configuration Manager-Clients geprüft. Auf diese Weise wird festgestellt, welche Softwareupdates erforderlich sind. Allerdings wird von internetbasierten Clients immer zuerst versucht, die Softwareupdates von Microsoft Update herunterzuladen, anstatt von einem internetbasierten Verteilungspunkt. Nur wenn dies nicht möglich ist, wird versucht, die erforderlichen Softwareupdates von einem internetbasierten Verteilungspunkt herunterzuladen. Softwareupdates werden von Clients, die nicht für die internetbasierte Clientverwaltung konfiguriert sind, immer über Configuration Manager-Verteilungspunkte und nie von Microsoft Update heruntergeladen.  
- 
-> [!Tip]  
-> Der Configuration Manager-Client bestimmt automatisch, ob er sich im Intranet oder im Internet befindet. Wenn der Client einen Domänencontroller oder einen lokalen Verwaltungspunkt kontaktieren kann, wird der Verbindungstyp auf „Derzeit Intranet“ festgelegt. Andernfalls schaltet er auf „Derzeit Internet“ um, und der Client verwendet die Verwaltungspunkte, Softwareupdatepunkte und Verteilungspunkte, die seinem Standort zu Kommunikationszwecken zugewiesen sind.
+- Softwareupdatepunkt
 
-##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>Überlegungen zur Clientkommunikation über das Internet oder eine nicht vertrauenswürdige Gesamtstruktur  
- Die folgenden, an primären Standorten installierten Standortsystemrollen unterstützen Verbindungen von Clients, die sich an nicht vertrauenswürdigen Standorten wie dem Internet oder einer nicht vertrauenswürdigen Gesamtstruktur befinden (sekundäre Standorte unterstützen keine Clientverbindungen von nicht vertrauenswürdigen Standorten):  
+> [!NOTE]
+> Die Unterstützung für die Anwendungskatalogrollen endete mit Version 1910. Weitere Informationen finden Sie unter [Entfernen des Anwendungskatalogs](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat). Für Configuration Manager-Versionen 1906 und früher, die weiterhin unterstützt werden, kann der Anwendungskatalog-Websitepunkt Verbindungen von internetbasierten Clients akzeptieren.
 
-- Anwendungskatalog-Websitepunkt  
+### <a name="about-internet-facing-site-systems"></a>Informationen zu Standortsystemen mit Internetzugriff
 
-    > [!Important]  
-    > Die Unterstützung für die Anwendungskatalogrollen endet mit Version 1910. Weitere Informationen finden Sie unter [Entfernen des Anwendungskatalogs](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
+Eine Vertrauensstellung zwischen der Gesamtstruktur eines Clients und des Standortsystemservers ist nicht erforderlich. Wenn die Gesamtstruktur jedoch mit einem Standortsystem mit Internetzugriff der Gesamtstruktur vertraut, die die Benutzerkonten enthält, unterstützt diese Konfiguration benutzerbasierte Richtlinien für Geräte im Internet, wenn Sie die **Clientrichtlinie**-Clienteinstellung **Benutzerrichtlinienanforderungen von Internetclients aktivieren** aktivieren.
 
-- Configuration Manager-Richtlinienmodul  
+Aus den nachstehenden Konfigurationsbeispielen geht hervor, unter welchen Umständen Benutzerrichtlinien für Geräte im Internet von der IBCM unterstützt werden:
 
-- Verteilungspunkt (HTTPS ist für cloudbasierte Verteilungspunkte erforderlich)  
+- Der internetbasierte Verwaltungspunkt befindet sich im Umkreisnetzwerk. Dieses Netzwerk verfügt auch über einen schreibgeschützten Domänencontroller zum Authentifizieren des Benutzers. Eine Firewall zwischen dem Umkreisnetzwerk und den internen Netzwerken lässt Active Directory-Pakete zu.
 
-- Anmeldungsproxypunkt  
+- Das Benutzerkonto befindet sich in der intranetbasierten Gesamtstruktur. Der internetbasierte Verwaltungspunkt befindet sich in der umkreisbasierten Gesamtstruktur. Die Umkreisgesamtstruktur vertraut der internen Gesamtstruktur. Eine Firewall zwischen dem Umkreisnetzwerk und den internen Netzwerken lässt die Authentifizierungspakete zu.
 
-- Fallbackstatuspunkt  
+- Das Benutzerkonto und der internetbasierte Verwaltungspunkt befinden sich in der intranetbasierten Gesamtstruktur. Sie veröffentlichen den Verwaltungspunkt über einen Webproxyserver im Internet.
 
-- Verwaltungspunkt  
+### <a name="use-a-web-proxy-server"></a>Verwenden eines Webproxyservers
 
-- Softwareupdatepunkt  
+Sie können internetbasierte Standortsysteme im Intranet platzieren, wenn Sie diese über einen Webproxyserver im Internet veröffentlichen. Konfigurieren Sie diese Standortsysteme nur für Clientverbindungen aus dem Internet oder sowohl für Clientverbindungen aus dem Internet als auch für Clientverbindungen aus dem Intranet. Einen Webproxyserver können Sie für SSL-zu-SSL-Bridging (Secure Sockets Layer) oder SSL-Tunneling konfigurieren.
 
-  **Informationen zu Standortsystemen mit Internetzugriff:**    
-  Es gibt zwar keine Voraussetzung, eine Vertrauensstellung zwischen der Gesamtstruktur eines Clients und der des Standortservers einzurichten, aber wenn die Gesamtstruktur mit einem Standortsystem mit Internetzugriff der Gesamtstruktur vertraut, die die Benutzerkonten enthält, unterstützt diese Konfiguration benutzerbasierte Richtlinien für Geräte im Internet, wenn Sie die **Clientrichtlinien**-Clienteinstellung **Benutzerrichtlinienanforderungen von Internetclients aktivieren** aktivieren.  
+#### <a name="ssl-bridging-to-ssl"></a>SSL-zu-SSL-Bridging
 
-  Aus den nachstehenden Konfigurationsbeispielen geht hervor, unter welchen Umständen Benutzerrichtlinien für Geräte im Internet von der internetbasierten Clientverwaltung unterstützt werden:  
+SSL-zu-SSL-Bridging ist die empfohlene und sicherere Konfiguration, da die SSL-Beendigung mit Authentifizierung verwendet wird. Sie authentifiziert Clientcomputer mit der Computerauthentifizierung. SSL-Bridging wird von mobilen Geräten, die Sie mithilfe von Configuration Manager registriert haben, nicht unterstützt.
 
-- Der internetbasierte Verwaltungspunkt befindet sich im Umkreisnetzwerk, wo der Benutzer von einem schreibgeschützten Domänencontroller authentifiziert wird und Active Directory-Pakete von einer beteiligten Firewall zugelassen werden.  
+Mit SSL-Beendigung auf dem Proxy werden Pakete aus dem Internet überprüft, bevor diese zum internen Netzwerk weitergeleitet werden. Die vom Client eingehende Verbindung wird vom Proxy authentifiziert und beendet. Anschließend wird eine neue authentifizierte Verbindung mit dem internetbasierten Standortsystem hergestellt. Wenn Configuration Manager-Clients einen Proxy verwenden, ist dessen Identität (GUID) sicher im Client in der Paketnutzlast enthalten. Der Proxy wird vom Verwaltungspunkt nicht als Client angesehen. Configuration Manager unterstützt kein HTTP-zu-HTTPS- oder HTTPS-zu-HTTP-Bridging.
 
-- Das Benutzerkonto befindet sich in Gesamtstruktur A (im Intranet) und der internetbasierte Verwaltungspunkt in Gesamtstruktur B (im Umkreisnetzwerk). Gesamtstruktur A wird von Gesamtstruktur B als vertrauenswürdig eingestuft, und die Authentifizierungspakete werden von einer beteiligten Firewall zugelassen.  
+> [!NOTE]
+> Configuration Manager bietet keine Unterstützung, SSL-Bridgingkonfigurationen von Drittanbietern festzulegen. Beispiele: NetScaler von Citrix oder BIG-IP von F5. Wenden Sie sich an Hersteller Ihres Geräts, um es für die Verwendung mit Configuration Manager zu konfigurieren.
 
-- Das Benutzerkonto und der internetbasierte Verwaltungspunkt befinden sich in Gesamtstruktur A (im Intranet). Der Verwaltungspunkt wird über einen Webproxyserver im Internet veröffentlicht (z.B. Forefront Threat Management Gateway).  
+#### <a name="tunneling"></a>Tunneling
 
-> [!NOTE]  
->  Sollte die Kerberos-Authentifizierung nicht möglich sein, wird automatisch die Authentifizierung über NTLM versucht.  
+Wenn von Ihrem Proxywebserver die Voraussetzungen für die Unterstützung von SSL-Bridging nicht erfüllt werden, steht Ihnen als weitere Möglichkeit die Verwendung von SSL-Tunneling mit Configuration Manager zur Verfügung. Sie können auch SSL-Tunneling verwenden, um mobile Geräte zu unterstützen, die Sie mit Configuration Manager registrieren. Diese Option ist weniger sicher, da der Proxy die SSL-Pakete aus dem Internet ohne SSL-Beendigung an die Standortsysteme weiterleitet. Der Proxy überprüft die Pakete nicht auf schädlichen Inhalt. Bei der Verwendung von SSL-Tunneling müssen vom Proxywebserver keine Zertifikatanforderungen erfüllt werden.
 
- Wie aus dem vorstehenden Beispiel hervorgeht, können Sie internetbasierte Standortsysteme im Intranet platzieren, wenn diese über einen Webproxyserver wie ISA Server und Forefront Threat Management Gateway im Internet veröffentlicht werden. Sie können für diese Standortsysteme festlegen, dass Clientverbindungen nur aus dem Internet oder sowohl aus dem Intranet als auch aus dem Internet unterstützt werden. Einen Webproxyserver können Sie für SSL-zu-SSL-Bridging (Secure Sockets Layer) oder SSL-Tunneling konfigurieren (wobei von Ersterem ein höheres Maß an Sicherheit geboten wird):  
+## <a name="plan-for-internet-based-clients"></a>Planen internetbasierter Clients
 
--   **SSL-zu-SSL-Bridging:**    
-    Wenn Sie Proxywebserver bei der internetbasierten Clientverwaltung einsetzen, ist SSL-zu-SSL-Bridging empfehlenswert, bei dem ein SSL-Tunnelabschluss mit Authentifizierung verwendet wird. Die Authentifizierung von Clientcomputern muss über die Computerauthentifizierung erfolgen. Die Authentifizierung der Legacyclients mobiler Geräte erfolgt über die Benutzerauthentifizierung. SSL-Bridging wird von mobilen Geräten, die mithilfe von Configuration Manager angemeldet wurden, nicht unterstützt.  
+Entscheiden Sie sich, ob Sie Ihre internetbasierten Clients für die Verwaltung sowohl im Intranet als auch im Internet oder für die reine Internetverwaltung konfigurieren möchten. Sie können diese Verwaltungsoption nur bei der Clientinstallation konfigurieren. Wenn Sie diese später ändern möchten, müssen Sie den Client neu installieren.
 
-     Der SSL-Tunnelabschluss für den Proxywebserver hat den Vorteil, dass Pakete aus dem Internet überprüft werden, bevor sie an das interne Netzwerk weitergeleitet werden. Die vom Client eingehende Verbindung wird vom Proxywebserver authentifiziert und beendet, und dann wird eine neue authentifizierte Verbindung mit dem internetbasierten Standortsystem hergestellt. Wenn von Configuration Manager-Clients ein Proxywebserver verwendet wird, wird die Clientidentität (Client-GUID) sicher als Bestandteil der Paketnutzdaten transportiert, sodass der Proxywebserver vom Verwaltungspunkt nicht als Client betrachtet wird. In Configuration Manager wird kein HTTP-zu-HTTPS- oder HTTPS-zu-HTTP-Bridging unterstützt.  
-     
-    > [!Note]  
-    > Configuration Manager bietet keine Unterstützung, SSL-Bridgingkonfigurationen von Drittanbietern festzulegen. Beispiele: NetScaler von Citrix oder BIG-IP von F5. Wenden Sie sich an Hersteller Ihres Geräts, um es für die Verwendung mit Configuration Manager zu konfigurieren.  
+> [!NOTE]
+> Wenn Sie einen Verwaltungspunkt für die Unterstützung internetbasierter Clients konfigurieren, werden Clients, die eine Verbindung mit dem Verwaltungspunkt herstellen, internetfähig, sobald sie zum nächsten Mal ihre Liste der verfügbaren Verwaltungspunkte aktualisieren.
+>
+> Sie müssen die Konfiguration der reinen Internetclientverwaltung nicht auf das Internet beschränken. Sie können diese auch im Intranet verwenden.
 
--   **Tunneling**:   
-    Falls die Anforderungen für SSL-Bridging vom Proxywebserver nicht erfüllt werden können oder falls Sie die Internetunterstützung für mobile Geräte, die mithilfe von Configuration Manager registriert wurden, konfigurieren möchten, wird auch SSL-Tunneling unterstützt. Diese Option ist weniger sicher, da die SSL-Pakete aus dem Internet ohne SSL-Tunnelabschluss an die Standortsysteme weitergeleitet werden und daher nicht auf schädliche Inhalte überprüft werden können. Bei der Verwendung von SSL-Tunneling müssen vom Proxywebserver keine Zertifikatanforderungen erfüllt werden.  
+Bei Clients, die Sie nur für die reine Internetverwaltung konfigurieren, ist die Kommunikation nur mit Standortsystemen möglich, die Sie für Clientverbindungen aus dem Internet konfigurieren. Verwenden Sie diese Konfiguration in den folgenden Szenarios:
 
-##  <a name="planning-for-internet-based-clients"></a>Planung für internetbasierte Clients  
- Sie müssen entscheiden, ob die Clientcomputer, die über das Internet verwaltet werden sollen, für die Verwaltung im Intranet und im Internet oder lediglich für die internetbasierte Clientverwaltung konfiguriert werden. Die Konfiguration der Clientverwaltungsoption ist nur während der Installation eines Clientcomputers möglich. Sollten Sie Ihre Meinung später ändern, müssen Sie den Client neu installieren.  
+- Wenn Sie wissen, dass ein Computer niemals eine Verbindung mit Ihrem Intranet herstellen wird. Dazu zählen beispielsweise POS-Computer (Point-of-Sale) an Remotestandorten.
+- Wenn Sie die Clientkommunikation auf HTTPS beschränken möchten. Grund hierfür kann beispielsweise die Unterstützung von Firewallsicherheitsrichtlinien oder eingeschränkten Sicherheitsrichtlinien sein.
+- Wenn Sie internetbasierte Standortsysteme in einem Umkreisnetzwerk installieren und diese Server als Configuration Manager-Clients verwalten möchten.
 
-> [!NOTE]  
->  Wenn Sie einen internetfähigen Verwaltungspunkt konfigurieren, werden Clients, die eine Verbindung zu dem Verwaltungspunkt herstellen internetfähig, wenn sie als Nächstes die Liste der verfügbaren Verwaltungspunkte aktualisieren.  
+> [!NOTE]
+> Wenn Sie Arbeitsgruppenclients im Internet verwalten möchten, konfigurieren Sie diese für die reine Internetverwaltung.
+>
+> Wenn Sie ein mobiles Gerät so konfigurieren, dass es einen internetbasierten Verwaltungspunkt verwendet, wird es automatisch für die reine Internetverwaltung konfiguriert.
 
-> [!TIP]  
->  Sie müssen die Konfiguration der internetbasierten Clientverwaltung nicht auf das Internet beschränken, sondern können sie auch im Intranet einsetzen.  
+Sie können andere Clients sowohl für die Internet- als auch für die Intranetclientverwaltung konfigurieren. Wenn diese eine Netzwerkveränderung erkennen, wechseln sie automatisch zwischen der IBCM und der Intranetclientverwaltung. Falls eine Verbindung mit einem Verwaltungspunkt möglich ist, der Clientverbindungen im Intranet unterstützt, bzw. ein solcher Verwaltungspunkt gefunden wird, werden diese Clients als Intranetclients verwaltet. Intranetclients verfügen über den vollständigen Configuration Manager-Funktionsumfang. Falls keine Verbindung mit einem Verwaltungspunkt möglich ist, der Clientverbindungen im Intranet unterstützt, bzw. kein solcher Verwaltungspunkt gefunden wird, versuchen die Clients, eine Verbindung mit einem internetbasierten Verwaltungspunkt herzustellen. Wenn Sie damit Erfolg haben, werden diese Clients fortan von den internetbasierten Standortsystemen an ihrem zugewiesenen Standort verwaltet.
 
- Bei Clients, die nur für die internetbasierte Clientverwaltung konfiguriert sind, ist die Kommunikation nur mit Standortsystemen möglich, die für Clientverbindungen aus dem Internet konfiguriert sind. Diese Konfiguration eignet sich für Computer, bei denen eine Verbindung mit dem Unternehmensintranet grundsätzlich ausgeschlossen werden kann, z. B. Point-of-Sale-Computer an Remotestandorten. Sie ist gegebenenfalls auch dann die richtige Lösung, wenn Sie die Clientkommunikation auf HTTPS beschränken möchten (z.B. zur Unterstützung von Firewall- und Sicherheitsrichtlinien). Denkbar ist ihre Verwendung auch, wenn Sie internetbasierte Standortsysteme in einem Umkreisnetzwerk installieren und diese Server mit dem Configuration Manager-Client verwalten möchten.  
+Der Vorteil des automatischen Wechsels liegt darin, dass Clients alle Funktionen verwenden können, wenn sie eine Verbindung mit dem Intranet herstellen. Bei einer Verbindung mit dem Internet erhalten sie zudem Zugriff auf wichtige Verwaltungsfunktionen. Downloads von Inhalten, die im Internet starten, können nahtlos im Intranet fortgesetzt werden und umgekehrt.
 
- Wenn Sie Arbeitsgruppen im Internet verwalten möchten, müssen Sie bei der Installation angeben, dass von ihnen nur Internetverbindungen zugelassen werden.  
+## <a name="prerequisites"></a>Voraussetzungen
 
-> [!NOTE]  
->  Clients für mobile Geräte werden automatisch nur für das Internet konfiguriert, wenn sie zur Verwendung eines internetbasierten Verwaltungspunkts konfiguriert sind.  
+Für die IBCM in Configuration Manager gelten die folgenden Abhängigkeiten:
 
- Andere Clientcomputer können für die Clientverwaltung über das Internet oder das Intranet konfiguriert werden. Bei einer Netzwerkänderung ist ein automatischer Wechsel zwischen internet- und intranetbasierter Clientverwaltung möglich. Falls keine Verbindung mit einem für Clientverbindungen im Intranet konfigurierten Verwaltungspunkt möglich ist bzw. kein solcher Verwaltungspunkt gefunden wird, werden diese Clients als Intranetclients mit voller Configuration Manager-Verwaltungsfunktionalität verwaltet. Falls keine Verbindung mit einem für Clientverbindungen im Intranet konfigurierten Verwaltungspunkt möglich ist bzw. kein solcher Verwaltungspunkt gefunden wird, wird versucht, eine Verbindung mit einem internetbasierten Verwaltungspunkt herzustellen. Ist dies möglich, werden diese Clients von den internetbasierten Standortsystemen am zugewiesenen Standort verwaltet.  
+- Clients benötigen eine Internetverbindung. Configuration Manager verwendet die bestehende Internetverbindung des Geräts. Mobile Geräte müssen über eine direkte Internetverbindung verfügen. Vollständige Clientcomputer benötigen entweder eine direkte Internetverbindung oder müssen eine Verbindung über einen Proxywebserver herstellen.
 
- Der automatische Wechsel zwischen internet- und intranetbasierter Clientverwaltung bietet folgende Vorteile: Bei einer Verbindung mit dem Intranet stehen den Clientcomputern automatisch alle Configuration Manager-Features zur Verfügung, und bei einer Verbindung mit dem Internet werden wichtige Verwaltungsfunktionen weiterhin verwendet. Außerdem kann ein im Internet begonnener Download nahtlos im Intranet fortgeführt werden und umgekehrt.  
+- Standortsysteme, die IBCM unterstützen, benötigen eine Internetverbindung und müssen sich in einer Active Directory-Domäne befinden. Für internetbasierte Standortsysteme ist keine Vertrauensstellung mit der Active Directory-Gesamtstruktur des Standortservers erforderlich. Wenn jedoch die Authentifizierung des Benutzers mithilfe der Windows-Authentifizierung durch den internetbasierten Verwaltungspunkt möglich ist, werden Benutzerrichtlinien unterstützt. Wenn bei der Windows-Authentifizierung ein Fehler auftritt, werden nur Geräterichtlinien unterstützt.
 
-##  <a name="prerequisites-for-internet-based-client-management"></a>Voraussetzungen für die internetbasierte Clientverwaltung  
- Für die internetbasierte Clientverwaltung in Configuration Manager gelten die folgenden externen Abhängigkeiten:  
+    > [!NOTE]
+    > Aktivieren Sie zusätzlich die folgenden Clienteinstellungen in der Gruppe **Clientrichtlinie**, um Benutzerrichtlinien zu unterstützen:
+    >
+    > - **Benutzerrichtlinienabruf auf Clients aktivieren**
+    > - **Benutzerrichtlinienanforderungen von Internetclients aktivieren**  
 
-- Über das Internet verwaltete Clients müssen über eine Internetverbindung verfügen.  
+- Eine Public Key-Infrastruktur (PKI) zum Bereitstellen und Verwalten der erforderlichen Zertifikate für internetbasierte Client und Standortsystemserver. Weitere Informationen zu PKI-Zertifikatanforderungen finden Sie unter [PKI-Zertifikatanforderungen](../../plan-design/network/pki-certificate-requirements.md).
 
-   Von Configuration Manager werden vorhandene Internetverbindungen von Internetdienstanbietern (Internet Service Provider, ISP) verwendet, bei denen es sich um permanente oder temporäre Verbindungen handeln kann. Für mobile Clientgeräte muss es eine direkte Internetverbindung geben. Bei Clientcomputern hingegen ist eine direkte Internetverbindung oder eine Verbindung über einen Proxywebserver möglich.  
+- Registrieren öffentlicher DNS-Hosteinträge für die Internet-FQDNs (vollqualifizierte Domänennamen) von Standortsystemen, die IBCM unterstützen
 
-- Standortsysteme, von den die internetbasierte Clientverwaltung unterstützt wird, müssen eine Internetverbindung haben und sich in einer Active Directory-Domäne befinden.  
+### <a name="client-communication-requirements"></a>Anforderungen an die Clientkommunikation
 
-   Für internetbasierte Standortsysteme ist keine Vertrauensstellung mit der Active Directory-Gesamtstruktur des Standortservers erforderlich. Wenn aber die Authentifizierung des Benutzers mithilfe der Windows-Authentifizierung durch den internetbasierten Verwaltungspunkt möglich ist, werden Benutzerrichtlinien unterstützt. Falls bei der Windows-Authentifizierung ein Fehler auftritt, werden nur Computerrichtlinien unterstützt.  
+Beteiligte Firewalls oder Proxyserver müssen die Clientkommunikation für internetbasierte Standortsysteme zulassen:
 
-  > [!NOTE]
-  >  Zur Unterstützung von Benutzerrichtlinien müssen Sie die beiden folgenden Clienteinstellungen unter **Clientrichtlinie** auf **Wahr** festlegen:  
-  > 
-  > - **Benutzerrichtlinienabruf auf Clients aktivieren**  
-  >   -   **Benutzerrichtlinienanforderungen von Internetclients aktivieren**  
+- Unterstützung von HTTP 1.1  
 
-   Bei einem internetbasierten Anwendungskatalog-Websitepunkt müssen Benutzer, deren Computer sich im Internet befinden, ebenfalls über die Windows-Authentifizierung authentifiziert werden. Diese Anforderung besteht unabhängig von Benutzerrichtlinien.  
+- Zulassen des HTTP-Inhaltstyps mehrteiliger MIME-Anlagen (mehrteilige/gemischte und Anwendungs-/Oktettstream)  
 
-- Sie benötigen eine Public Key-Infrastruktur (PKI) zur Bereitstellung und Verwaltung der Zertifikate, die für die Clients erforderlich sind und. Die Zertifikate müssen sowohl im Internet als auch auf den internetbasierten Standortsystemservern verwaltet werden.  
+#### <a name="verbs"></a>Verben
 
-   Weitere Informationen zu den PKI-Zertifikaten finden Sie unter [PKI-Zertifikatanforderungen für Configuration Manager](../../plan-design/network/pki-certificate-requirements.md).  
+Lassen Sie die folgenden Verben für die internetbasierten Standortsystem-Serverrollen zu:
 
-- Der internetgestützte, vollständig qualifizierte Domänenname (FQDN) von Standortsystemen, die die internetbasierte Clientverwaltung unterstützen, muss auf öffentlichen DNS-Servern als Hosteintrag registriert sein.  
+| Role-Eigenschaft | Verben |
+|------|-------|
+| Verwaltungspunkt | - HEAD<br>- CCM_POST<br>- BITS_POST<br>- GET<br>- PROPFIND |
+| Verteilungspunkt | - HEAD<br>- GET<br>- PROPFIND |
+| Fallbackstatuspunkt | POST |
+| Anwendungskatalog-Websitepunkt | -POST<br>-GET |
 
-- Beteiligte Firewalls oder Proxyserver müssen die mit internetbasierten Standortsystemen verbundene Clientkommunikation zulassen.  
+#### <a name="http-headers"></a>HTTP-Header
 
-   Anforderungen für die Clientkommunikation:  
+Lassen Sie die folgenden HTTP-Header für die internetbasierten Standortsystem-Serverrollen zu:
 
-  - Unterstützung von HTTP 1.1  
+| Role-Eigenschaft | HTTP-Header |
+|------|--------------|
+| Verwaltungspunkt | - Range:<br>- CCMClientID:<br>- CCMClientIDSignature:<br>- CCMClientTimestamp:<br>- CCMClientTimestampsSignature: |
+| Verteilungspunkt | Bereich: |
 
-  - Zulassen des HTTP-Inhaltstyps mehrteiliger MIME-Anlagen (mehrteilige/gemischte und Anwendungs-/Oktettstream)  
+Informationen zu ähnlichen Kommunikationsanforderungen bei Verwendung des Softwareupdatepunkts für Clientverbindungen über das Internet finden Sie in der Dokumentation zu Windows Server Update Services (WSUS).
 
-  - Zulassen der folgenden Verben für den internetbasierten Verwaltungspunkt:  
+## <a name="unsupported-features"></a>Nicht unterstützte Funktionen
 
-    -   HEAD  
+Nicht alle Clientverwaltungsfunktionen sind für das Internet geeignet. Configuration Manager unterstützt einige Funktionen für Clients im Internet nicht. Diese nicht unterstützten Funktionen beruhen in der Regel auf Active Directory Domain Services oder sind für ein öffentliches Netzwerk nicht geeignet.
 
-    -   CCM_POST  
+Die folgenden Funktionen werden bei der Verwaltung von Clients mit IBCM über das Internet nicht unterstützt:
 
-    -   BITS_POST  
+- Clientbereitstellung über das Internet, wie Clientpush und die auf Softwareupdates basierende Clientbereitstellung. Verwenden Sie die manuelle Clientinstallation.
 
-    -   GET  
+- Automatische Standortzuweisung
 
-    -   PROPFIND  
+- Wake-On-LAN
 
-  - Zulassen der folgenden Verben für den internetbasierten Verteilungspunkt:  
+- Bereitstellung des Betriebssystems. Allerdings können Sie Tasksequenzen bereitstellen, die kein Betriebssystem bereitstellen.
 
-    -   HEAD  
+- Remotesteuerung
 
-    -   GET  
+- Softwarebereitstellung für Benutzer. Diese Funktion basiert auf dem Anwendungskatalog, der veraltet ist.
 
-    -   PROPFIND  
+- Clientroaming. Mithilfe von Roaming kann von Clients immer der nächstgelegene Verteilungspunkt zum Herunterladen von Inhalt ermittelt werden. Eines der internetbasierten Standortsysteme wird auf nicht deterministische Weise und unabhängig von der Bandbreite oder vom physischen Standort von den Clients ausgewählt.
 
-  - Zulassen der folgenden Verben für den internetbasierten Fallbackstatuspunkt:  
+Wenn Sie einen Softwareupdatepunkt dahingehend konfigurieren, dass er Verbindungen aus dem Internet akzeptiert, werden internetbasierte Clients immer mit diesem Softwareupdatepunkt überprüft. Auf diese Weise wird festgestellt, welche Softwareupdates erforderlich sind. Wenn diese Clients mit dem Internet verbunden sind, versuchen sie immer zuerst, die Softwareupdates über Microsoft Update herunterzuladen, anstatt über einen internetbasierten Verteilungspunkt. Wenn dies nicht möglich ist, versuchen sie, die erforderlichen Softwareupdates über einen internetbasierten Verteilungspunkt herunterzuladen.
 
-    -   POST  
-
-  - Zulassen der folgenden Verben für den internetbasierten Anwendungskatalog-Websitepunkt:  
-
-    -   POST  
-
-    -   GET  
-
-  - Zulassen der folgenden HTTP-Header für den internetbasierten Verwaltungspunkt:  
-
-    -   Bereich:  
-
-    -   CCMClientID:  
-
-    -   CCMClientIDSignature:  
-
-    -   CCMClientTimestamp:  
-
-    -   CCMClientTimestampsSignature:  
-
-  - Zulassen des folgenden HTTP-Headers für den internetbasierten Verwaltungspunkt:  
-
-    -   Bereich:  
-
-    Informationen zu diesen Anforderungen finden Sie in der Dokumentation zur Firewall oder zum Proxyserver.  
-
-    Informationen zu ähnlichen Kommunikationsanforderungen bei Verwendung des Softwareupdatepunkts für Clientverbindungen über das Internet finden Sie in der Dokumentation zu Windows Server Update Services (WSUS). Informationen für WSUS auf Windows Server 2003 finden Sie beispielsweise in [Anhang D: Sicherheitseinstellungen](https://go.microsoft.com/fwlink/p/?LinkId=143368), dem Bereitstellungsanhang für Sicherheitseinstellungen.
+> [!TIP]
+> Der Configuration Manager-Client bestimmt automatisch, ob er sich im Intranet oder im Internet befindet. Wenn der Client einen Domänencontroller oder einen lokalen Verwaltungspunkt kontaktieren kann, wird sein Verbindungstyp auf „Derzeit *Intranet*“ festgelegt. Andernfalls wechselt er zu „Derzeit *Internet*“ und kommuniziert mit den Standortsystemen, die seinem Standort zugewiesen sind.

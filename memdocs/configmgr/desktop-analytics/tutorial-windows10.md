@@ -10,12 +10,12 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a13a22cc7e9ced580229306ab3680fca61319992
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2456f530444fa5d9514247edd77cbe7b02f62c38
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706388"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126017"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Bereitstellen von Windows 10 für den Pilotversuch
 
@@ -219,8 +219,7 @@ Configuration Manager erstellt eine Richtlinie für Einstellungen, um Geräte in
 
 Überwachen Sie die Konfiguration Ihrer Geräte für Desktop Analytics. Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Softwarebibliothek**, erweitern Sie den Knoten **Desktop Analytics-Wartung**, und wählen Sie das Dashboard **Verbindungsintegrität** aus.  
 
-Configuration Manager synchronisiert Ihre Sammlungen innerhalb von 60 Minuten nach dem Erstellen der Verbindung. Navigieren Sie im Desktop Analytics-Portal zu **Weltweiter Pilot**, und sehen Sie Ihre Configuration Manager-Gerätesammlungen ein.
-
+Configuration Manager synchronisiert Ihre Sammlungen innerhalb von 60 Minuten nach dem Erstellen der Verbindung. Navigieren Sie im Desktop Analytics-Portal zu **Weltweiter Pilot**, und zeigen Sie Ihre Configuration Manager-Gerätesammlungen an. Es kann zwei bis drei Tage dauern, bis der Rest des Portals die gesamten Daten anzeigt. Weitere Informationen finden Sie unter [Datenlatenz](troubleshooting.md#data-latency).
 
 ## <a name="create-a-desktop-analytics-deployment-plan"></a>Erstellen eines Desktop Analytics-Bereitstellungsplans
 

@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d48908cc99b086a9d7e975e30f226b1b252a8db
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 67b6fc51493dce4ee1718586cbf454da91883409
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771256"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254621"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planen von Cloud Management Gateway in Configuration Manager
 
@@ -226,6 +226,7 @@ Die folgende Tabelle enthält die CMG-Unterstützung für Configuration Manager-
 | Mac-, Linux- und UNIX-Clients     | ![Nicht unterstützt](media/Red_X.png) |
 | Peercache     | ![Nicht unterstützt](media/Red_X.png) |
 | Lokale Verwaltung mobiler Geräte     | ![Nicht unterstützt](media/Red_X.png) |
+| BitLocker-Verwaltung     | ![Nicht unterstützt](media/Red_X.png) |
 
 |Key|
 |--|

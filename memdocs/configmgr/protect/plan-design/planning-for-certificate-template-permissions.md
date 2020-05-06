@@ -10,12 +10,12 @@ ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 075d371a334f26a788c656fe85ec01ae2338eb26
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 91434b70ca514430ab4cfd6815186bc6d6bc33db
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074825"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210127"
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-configuration-manager"></a>Planen der Berechtigungen von Zertifikatvorlagen für Zertifikatprofile in Configuration Manager
 
@@ -40,7 +40,7 @@ Die folgenden Informationen können Ihnen beim Planen der Konfiguration von Bere
 ## <a name="adding-read-and-enroll-permissions-for-users-and-computers"></a>Hinzufügen der Berechtigungen „Lesen“ und „Anmelden“ für Benutzer und Computer  
  Das Hinzufügen der Berechtigungen „Lesen“ und „Registrieren“ für Benutzer und Computer kann angemessen sein, wenn das Infrastrukturteam Ihrer Zertifizierungsstelle von einem separaten Team verwaltet wird und dieses wünscht, dass mithilfe von Configuration Manager überprüft wird, ob Benutzer über ein gültiges Konto für Active Directory Domain Services verfügen, bevor es diesen Benutzern ein Zertifikatprofil zur Anforderung eines Benutzerzertifikats sendet. Bei dieser Konfiguration müssen Sie mindestens eine Sicherheitsgruppe angeben, die die Benutzer enthält, und diesen Gruppen die Berechtigungen „Lesen“ und „Anmelden“ für die Zertifikatvorlagen zuweisen. In diesem Szenario wird die Sicherheitssteuerung vom Zertifizierungsstellenadministrator verwaltet.  
 
- Entsprechend können Sie mindestens eine Sicherheitsgruppe angeben, die die Computerkonten enthält, und diesen Gruppen die Berechtigungen „Lesen“ und „Anmelden“ für die Zertifikatvorlagen zuweisen. Wenn Sie ein Computerzertifikatprofil für einen Computer bereitstellen, der ein Domänenmitglied ist, müssen dem Computerkonto dieses Computers die Berechtigungen „Lesen“ und „Anmelden“ zugewiesen werden. Diese Berechtigungen sind nicht erforderlich, wenn der Computer kein Mitglied einer Domäne ist, also wenn es sich beispielsweise um einen Arbeitsgruppencomputer oder um ein persönliches mobiles Gerät handelt.  
+ Entsprechend können Sie mindestens eine Sicherheitsgruppe angeben, die die Computerkonten enthält, und diesen Gruppen die Berechtigungen „Lesen“ und „Anmelden“ für die Zertifikatvorlagen zuweisen. Wenn Sie ein Computerzertifikatprofil für einen Computer bereitstellen, der ein Domänenmitglied ist, müssen dem Computerkonto dieses Computers die Berechtigungen „Lesen“ und „Anmelden“ zugewiesen werden. Diese Berechtigungen sind nicht erforderlich, wenn der Computer kein Domänenmitglied ist. Wenn es sich beispielsweise um einen Arbeitsgruppencomputer oder ein persönliches mobiles Gerät handelt.  
 
  Obwohl bei dieser Konfiguration eine zusätzliche Sicherheitsmaßnahme zum Einsatz kommt, wird diese Methode nicht empfohlen. Der Grund ist, dass die angegebenen Benutzer oder Besitzer der Geräte Zertifikate unabhängig von Configuration Manager anfordern und Werte für den Zertifikatantragsteller angeben können, mit deren Hilfe die Identität eines anderen Benutzers oder Geräts angenommen werden kann.  
 

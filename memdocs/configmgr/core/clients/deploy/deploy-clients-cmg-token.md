@@ -2,7 +2,7 @@
 title: Tokenbasierte Authentifizierung für CMG
 titleSuffix: Configuration Manager
 description: Registrieren Sie einen Client im internen Netzwerk für ein eindeutiges Token, oder erstellen Sie ein Token für die Massenregistrierung internetbasierter Geräte.
-ms.date: 04/01/2020
+ms.date: 04/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae92fa2f8e3ee3270de4777fd889bc5fc16a6de4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694138"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587274"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Tokenbasierte Authentifizierung für Cloud Management Gateway
 
@@ -99,7 +99,7 @@ Das Token wird nicht auf dem Client oder am Standort gespeichert. Kopieren Sie d
 
 #### <a name="lifetime"></a>/lifetime
 
-Verwenden Sie dies mit dem `/new`-Parameter, um den Gültigkeitszeitraum des Tokens anzugeben. Geben Sie einen ganzzahligen Wert in Minuten ein. Der Standardwert beträgt 4.320 (drei Tage).
+Verwenden Sie dies mit dem `/new`-Parameter, um den Gültigkeitszeitraum des Tokens anzugeben. Geben Sie einen ganzzahligen Wert in Minuten ein. Der Standardwert beträgt 4.320 (drei Tage). Der Höchstwert liegt bei 10.080 (7 Tage).
 
 Beispiel: `BulkRegistrationTokenTool.exe /lifetime:4320`
 

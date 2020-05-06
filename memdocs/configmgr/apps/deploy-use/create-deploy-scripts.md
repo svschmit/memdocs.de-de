@@ -2,7 +2,7 @@
 title: Erstellen und Ausführen von Skripts
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie PowerShell-Skripts erstellt und auf Clientgeräten ausgeführt werden.
-ms.date: 04/01/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1c15106eeecdac0377900d913160bc23614327db
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689658"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605183"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole
 
@@ -98,7 +98,7 @@ Diese Genehmigung erfolgt in erster Linie in der Testphase der Skriptentwicklung
 >Als bewährte Methode sollten Sie nicht zulassen, dass Skriptautoren ihre eigenen Skripts genehmigen können. Dies sollte nur in einer Testumgebung gestattet sein. Bedenken Sie die möglichen Auswirkungen, die eine Änderung dieser Einstellung in einer Produktionsumgebung mit sich bringt.
 
 ## <a name="security-scopes"></a>Sicherheitsbereichen
-*(Mit Version 1710 eingeführt)*  
+  
 Die Funktion „Skripts ausführen“ arbeitet mit Sicherheitsbereichen, einer bereits vorhandenen Configuration Manager-Funktion, um die Erstellung und Ausführung von Skripts zu steuern, indem Kategorien zugewiesen werden, die Benutzergruppen darstellen. Weitere Informationen zum Verwenden von Sicherheitsbereichen finden Sie unter [Konfigurieren der rollenbasierten Verwaltung für Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a> Erstellen von Sicherheitsrollen für Skripts
@@ -168,11 +168,11 @@ Die drei Sicherheitsrollen zum Ausführen von Skripts werden standardmäßig nic
 5. Schließen Sie den Assistenten ab. Das neue Skript wird in der Liste **Skript** mit dem Status **Warten auf Genehmigung** angezeigt. Bevor Sie dieses Skript auf Clientgeräten ausführen können, müssen Sie es genehmigen. 
 
 > [!IMPORTANT]
-> Vermeiden Sie im Skript einen Neustart des Geräts oder einen Neustart des Configuration Manager-Agents, wenn Sie das Feature „Skripts ausführen“ verwenden. Dies könnte zu einem kontinuierlichen Neustartzustand führen. Bei Bedarf stehen ab Configuration Manager, Version 1710, Erweiterungen für das Clientbenachrichtigungsfeature zur Verfügung, die das Neustarten von Geräten ermöglichen. Anhand der Spalte [Neustart steht aus](../../core/clients/manage/manage-clients.md#restart-clients) können Sie Geräte identifizieren, für die ein Neustart erforderlich ist. 
+> Vermeiden Sie im Skript einen Neustart des Geräts oder einen Neustart des Configuration Manager-Agents, wenn Sie das Feature „Skripts ausführen“ verwenden. Dies könnte zu einem kontinuierlichen Neustartzustand führen. Bei Bedarf stehen Erweiterungen für die Clientbenachrichtigungsfunktion zur Verfügung, die das Neustarten von Geräten ermöglichen. Anhand der Spalte [Neustart steht aus](../../core/clients/manage/manage-clients.md#restart-clients) können Sie Geräte identifizieren, für die ein Neustart erforderlich ist. 
 > <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>Skriptparameter
-*(Mit Version 1710 eingeführt)*  
+
 Durch Hinzufügen von Parametern zu einem Skript können Sie Ihre Arbeit flexibler gestalten. Sie können bis zu 10 Parameter einschließen. Im Folgenden wird die aktuelle Fähigkeit der Funktion „Skripts ausführen“ mit Skriptparametern für die Datentypen *String* und *Integer* dargelegt. Listen mit vordefinierten Werten sind ebenfalls verfügbar. Wenn das Skript nicht unterstützte Datentypen aufweist, erhalten Sie eine Warnung.
 
 Klicken Sie im Dialogfeld **Skript erstellen** unter **Skript** auf **Skriptparameter**.
@@ -180,9 +180,8 @@ Klicken Sie im Dialogfeld **Skript erstellen** unter **Skript** auf **Skriptpara
 Jeder Parameter Ihres Skripts hat ein eigenes Dialogfeld, in dem Sie weitere Details und eine Validierung hinzufügen können. Wenn ein Standardparameter im Skript vorhanden ist, wird er in der Parameterbenutzeroberfläche aufgelistet, und Sie können ihn festlegen. Configuration Manager überschreibt den Standardwert nicht, da der Dienst nie direkt das Skript verändert. Stellen Sie sich dieses Prinzip als „vorab aufgefüllte, vorgeschlagene Werte“ vor, die auf der Benutzeroberfläche bereitgestellt werden. Der Zugriff auf die „Standardwerte“ wird zur Laufzeit jedoch von Configuration Manager nicht genehmigt. Sie können dieses Problem umgehen, indem Sie das Skript so bearbeiten, dass es die richtigen Standardwerte enthält. <!--17694323-->
 
 >[!IMPORTANT]
-> Parameterwerte dürfen keinen Apostroph enthalten. </br></br>
-> Es gibt ein bekanntes Problem in Configuration Manager, Version 1802: Parameter mit Leerzeichen werden nicht ordnungsgemäß an das Skript übergeben. Wenn ein Leerzeichen im Parameter verwendet wird, wird nur das erste Element im Parameter an das Skript übergeben, alles nach dem Leerzeichen wird nicht übergeben. Administratoren können dieses Problem in Skripts umgehen, indem sie Leerzeichen durch alternative Zeichen ersetzen und sie konvertieren oder indem sie andere Methoden nutzen.
-
+> Parameterwerte dürfen kein einfaches Anführungszeichen enthalten. </br></br>
+> Es ist ein bekanntes Problem, dass Parameterwerte, die einfache Anführungszeichen enthalten oder darin eingeschlossen sind, nicht ordnungsgemäß an das Skript übergeben werden. Wenn Sie Standardparameterwerte angeben, die ein Leerzeichen innerhalb eines Skripts enthalten, verwenden Sie stattdessen doppelte Anführungszeichen. Wenn beim Erstellen oder Ausführen eines **Skripts** Standardparameterwerte angegeben werden, muss der Standardwert unabhängig davon, ob er ein Leerzeichen enthält, nicht in doppelte oder einfache Anführungszeichen eingeschlossen werden.
 
 ### <a name="parameter-validation"></a>Validierung von Parametern
 
@@ -282,22 +281,31 @@ Das Skript wird mit dem Konto *System* oder *Computer* auf den entsprechenden Zi
 
 ## <a name="script-monitoring"></a>Skriptüberwachung
 
-Nachdem Sie mit der Anwendung eines Skripts auf eine Sammlung von Geräten begonnen haben, gehen Sie wie folgt vor, um den Vorgang zu überwachen. Ab Version 1710 können Sie ein Skript in Echtzeit überwachen, während es ausgeführt wird, und Sie können auch zu einem Bericht für eine bestimmte Ausführung von „Skript ausführen“ zurückkehren. Die Skriptstatusdaten werden als Teil des [Wartungstasks zum Löschen veralteter Clientvorgänge](../../core/servers/manage/reference-for-maintenance-tasks.md) oder durch Löschen des Skripts bereinigt.<br>
+Nachdem Sie mit der Anwendung eines Skripts auf eine Sammlung von Geräten begonnen haben, gehen Sie wie folgt vor, um den Vorgang zu überwachen. Sie können ein Skript in Echtzeit überwachen, während es ausgeführt wird, und später zum Zustand und den Ergebnissen einer bestimmten Ausführung von „Skript ausführen“ zurückkehren. Die Skriptstatusdaten werden als Teil des [Wartungstasks zum Löschen veralteter Clientvorgänge](../../core/servers/manage/reference-for-maintenance-tasks.md) oder durch Löschen des Skripts bereinigt.<br>
 
 ![Skriptüberwachung: Status der Skriptausführung](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. Klicken Sie in der Configuration Manager-Konsole auf **Überwachung**.
 2. Klicken Sie im Arbeitsbereich **Überwachung** auf **Skriptstatus**.
 3. In der Liste **Skriptstatus** sehen Sie die Ergebnisse für jedes Skript, das Sie auf Clientgeräten ausgeführt haben. Der Exitcode **0** eines Skripts bedeutet im Allgemeinen, dass das Skript erfolgreich ausgeführt wurde.
-    - Ab der Configuration Manager-Version 1802 wird die Skriptausgabe auf 4 KB beschränkt, wodurch die Anzeige übersichtlicher wird.  <!--510013-->
-   
+
+ 
    ![Skriptmonitor: gekürztes Skript](./media/run-scripts/Script-monitoring-truncated.png)
 
-## <a name="script-output-in-1810"></a>Skriptausgabe in 1810
+## <a name="script-output"></a>Skriptausgabe
 
-Sie können die ausführliche Skriptausgabe im nicht formatierten Format oder im strukturierten JSON-Format anzeigen. Diese Formatierung vereinfacht das Lesen und Analysieren der Ausgabe. Wenn das Skript einen gültigen JSON-formatierten Text zurückgibt, zeigen Sie dann die ausführliche Ausgabe entweder als **JSON-Ausgabe** oder **Nicht formatierte Ausgabe** an. Andernfalls ist die einzige Option **Skriptausgabe**.
+Clients geben die Skriptausgabe mithilfe der JSON-Formatierung zurück, indem sie die Ergebnisse des Skripts über die Pipeline an das Cmdlet [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) übergeben. Das JSON-Format gibt stets eine lesbare Skriptausgabe zurück. Bei Skripts, die keine Objekte als Ausgabe zurückgeben, konvertiert das Cmdlet „ConvertTo-Json“ die Ausgabe in eine einfache Zeichenfolge, die der Client statt JSON zurückgibt.  
 
-### <a name="example-script-output-is-valid-json"></a>Beispiel: Die Skriptausgabe weist ein gültiges JSON-Format auf.
+- Skripts mit unbekanntem Ergebnis oder einem Client, der offline war, werden nicht in den Diagrammen oder Datasets angezeigt. <!--507179-->
+- Vermeiden Sie die Rückgabe einer umfassenden Skriptausgabe, da diese auf 4 KB beschränkt wird. <!--508488-->
+- Konvertieren Sie Enumerationsobjekte in Zeichenfolgenwerte, damit die JSON-Formatierung bei der Anzeige der Skripts korrekt verwendet wird. <!--508377-->
+
+   ![Konvertieren eines Enumerationsobjekts in einen Zeichenfolgenwert](./media/run-scripts/enum-tostring-JSON.png)
+
+Sie können die ausführliche Skriptausgabe im nicht formatierten Format oder im strukturierten JSON-Format anzeigen. Diese Formatierung vereinfacht das Lesen und Analysieren der Ausgabe. Wenn das Skript gültigen Text im JSON-Format zurückgibt oder die Ausgabe mithilfe des PowerShell-Cmdlets [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) in JSON konvertiert werden kann, zeigen Sie die ausführliche Ausgabe entweder als **JSON-Ausgabe** oder als **unformatierte Ausgabe** an. Andernfalls ist die einzige Option **Skriptausgabe**.
+
+### <a name="example-script-output-is-convertible-to-valid-json"></a>Beispiel: Die Skriptausgabe kann in ein gültiges JSON-Format konvertiert werden.
+
 Befehl: `$PSVersionTable.PSVersion`  
 
 ``` Output
@@ -307,34 +315,14 @@ Major  Minor  Build  Revision
 ```
 
 ### <a name="example-script-output-isnt-valid-json"></a>Beispiel: Die Skriptausgabe weist kein gültiges JSON-Format auf.
+
 Befehl: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise
 ```
 
-- 1810-Clients geben eine Ausgabe von weniger als 80KB über einen schnellen Kommunikationskanal an den Standort zurück. Durch diese Änderung wird die Leistung vom Anzeigen des Skripts und Abfragen der Ausgabe verbessert.  
-
-  - Wenn die Ausgabe des Skripts oder der Abfrage 80 KB überschreitet, sendet der Client die Daten über eine Zustandsmeldung.  
-  - Clients vor Version 1802 verwenden weiterhin Zustandsmeldungen.
-
-## <a name="script-output-pre-1810"></a>Skriptausgabe vor 1810
-
-- Ab der Configuration Manager-Version 1802 wird für die Rückgabe der Skriptausgabe JSON verwendet. Dieses Format gibt konsistent eine lesbare Skriptausgabe zurück. 
-- Skripts mit unbekanntem Ergebnis oder einem Client, der offline war, werden nicht in den Diagrammen oder Datasets angezeigt. <!--507179-->
-- Vermeiden Sie die Rückgabe einer umfassenden Skriptausgabe, da diese auf 4 KB beschränkt wird. <!--508488-->
-- Einige Funktionen im Zusammenhang mit der Skriptausgabeformatierung sind nicht verfügbar, wenn die Configuration Manager-Version 1802 (oder eine neuere Version) mit einer älteren Clientversion verwendet wird. <!--508487-->
-    - Bei einer Konfigurations-Manager-Clientversion, die neuer als Version 1802 ist, erhalten Sie eine Zeichenfolgeausgabe.
-    -  Für die Konfigurations-Manager-Clientversion 1802 und höher erhalten Sie die JSON-Formatierung.
-        - Sie erhalten z.B. möglicherweise Ergebnisse mit TEXT auf einer Clientversion und „TEXT“ (die Ausgabe ist in doppelte Anführungszeichen eingeschlossen) auf einer anderen Version, die im Diagramm als zwei verschiedene Kategorien angezeigt werden.
-        - Wenn Sie dieses Verhalten umgehen möchten, führen Sie das Skript ggf. für zwei verschiedene Sammlungen aus. Eines mit der Clientversion, die älter als Version 1802 ist, und ein anderes mit der Clientversion 1802 und höher. Oder Sie konvertieren ein Enumerationsobjekt in einen Zeichenfolgenwert, damit die JSON-Formatierung bei der Anzeige der Skripts korrekt verwendet wird. 
-- Konvertieren Sie Enumerationsobjekte in Zeichenfolgenwerte, damit die JSON-Formatierung bei der Anzeige der Skripts korrekt verwendet wird. <!--508377-->
-
-   ![Konvertieren eines Enumerationsobjekts in einen Zeichenfolgenwert](./media/run-scripts/enum-tostring-JSON.png)
-
 ## <a name="log-files"></a>Protokolldateien
-
-Ab Version 1810 wurde die zusätzliche Protokollierung zur Problembehandlung hinzugefügt.
 
 - Für den Client standardmäßig unter C:\Windows\CCM\logs:  
   - **Scripts.log**  

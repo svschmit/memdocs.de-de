@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: ef8fb81b7be05d21eec5a4d1b544ee1a7d34bd07
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358700"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693488"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurieren der Managed Home Screen-App von Microsoft für Android Enterprise
 
@@ -66,7 +66,6 @@ In der nachstehenden Tabelle sind die verfügbaren Konfigurationsschlüssel, Wer
 | App-Symbolgröße festlegen | integer | 2 | Ermöglicht es Ihnen, die Symbolgröße für Apps festzulegen, die auf dem Startbildschirm angezeigt werden. Sie können folgende Werte in dieser Konfiguration für unterschiedliche Größen auswählen: „0“ (Kleinste), „1“ (Klein), „2“ (Normal), „3“ (Groß) und „4“ (Größte). |
 | Symbol für App-Ordner festlegen | integer | 0 | Ermöglicht es Ihnen, die Darstellung von App-Ordnern auf dem Startbildschirm zu definieren. Sie können die Darstellung aus folgenden Werten auswählen: „Dunkel Quadrat(0)“; „Dunkel Kreis (1)“; „Hell Quadrat(2)“; „Hell Kreis (3)“. |
 | Bildschirmausrichtung festlegen | integer | 1 | Ermöglicht es Ihnen, die Ausrichtung des Startbildschirms auf „Hochformat“, „Querformat“ oder „Automatisch drehen“ festzulegen. Sie können die Ausrichtung festlegen, indem Sie die Werte „1“ (für „Hochformat“), „2“ (für „Querformat“) oder „3“ (für „Automatisch drehen“) eingeben. |
-| Gerätetelemetrie aktivieren | bool | FALSE | Ermöglicht es, dass die gesamte Telemetrie für Managed Home Screen erfasst wird. Wenn Sie dies aktivieren, kann Microsoft die Nutzungstelemetriedaten des Geräts erfassen, z.B., wie oft eine bestimmte App auf dem jeweiligen Gerät gestartet wurde. |
 | Festlegen von Anwendungen für die Zulassungsliste | bundleArray | FALSE | Ermöglicht es Ihnen, aus den auf dem Gerät installierten Apps diejenige Gruppe von Apps zu definieren, die auf dem Startbildschirm sichtbar sein soll. Sie können die Apps definieren, indem Sie den App-Paketnamen der Apps eingeben, die Sie sichtbar machen möchten. Mit „com.microsoft.emmx“ beispielsweise können Einstellungen auf dem Startbildschirm angezeigt werden. Die Apps, die Sie der Zulassungsliste in diesem Abschnitt hinzufügen, sollten bereits auf dem Gerät installiert sein, damit sie auf dem Startbildschirm sichtbar sind. |
 | Angeheftete Weblinks festlegen | bundleArray | FALSE | Ermöglicht es Ihnen, Websites als Schnellstartsymbole auf dem Startbildschirm anzuheften. Bei dieser Konfiguration können Sie die URL definieren und auf dem Startbildschirm hinzufügen, damit sie der Endbenutzer mit einem einfachen Tippen im Browser starten kann. |
 | Bildschirmschoner aktivieren | bool | FALSE | Dient dazu, den Bildschirmschonermodus zu aktivieren bzw. zu deaktivieren. Wenn „true“ festgelegt wird, können Sie **screen_saver_image**, **screen_saver_show_time**,**inactive_time_to_show_screen_saver** und **media_detect_screen_saver** konfigurieren. |
@@ -78,10 +77,17 @@ In der nachstehenden Tabelle sind die verfügbaren Konfigurationsschlüssel, Wer
 | Typ der virtuellen Startschaltfläche | string | swipe_up | Verwenden Sie **swipe_up** für den Zugriff auf die Startschaltfläche mit einem Wischen nach oben. Verwenden Sie **float** für den Zugriff auf eine angeheftete persistente Startschaltfläche, die der Endbenutzer auf dem Bildschirm verschieben kann. |
 | Anzeigeleiste für Akku- und Signalstärke | bool | True  | Wenn Sie diese Einstellung auf `True` festlegen, wird die Anzeigeleiste für Akku- und Signalstärke eingeblendet. |
 | Kennwort für Aufgabensperrmodus beenden | string |   | Geben Sie einen 4- bis 6-stelligen Code ein, der für die vorübergehende Aufhebung des Aufgabensperrmodus zur Problembehandlung verwendet werden soll. |
+| Verwaltete Einstellung anzeigen | bool | TRUE | „Verwaltete Einstellung“ ist eine Managed Home Screen-App, die nur angezeigt wird, wenn Sie Einstellungen für den Schnellzugriff konfiguriert haben, darunter **WLAN-Einstellung anzeigen**, **Bluetooth-Einstellung anzeigen**, **Lautstärkeeinstellung anzeigen** und **Taschenlampeneinstellung anzeigen**. Auf diese Einstellungen kann auch zugegriffen werden, indem Sie auf dem Display mit dem Finger nach unten wischen. Legen Sie diesen Schlüssel auf `False` fest, um die App „Verwaltete Einstellung“ auszublenden und Endbenutzern den Zugriff auf die Einstellungen nur zu ermöglichen, indem sie eine Wischbewegung nach unten durchführen.    |
+| Einfachen Zugriff auf das Menü „Debuggen“ aktivieren | bool | FALSE | Legen Sie diese Einstellung auf `True` fest, um das Menü „Debuggen“ aus der Anwendung „Verwaltete Einstellungen“ oder durch Wischen nach unten auf dem Managed Home Screen aufzurufen. Im Menü „Debuggen“ befindet sich derzeit die Möglichkeit, den Kioskmodus zu verlassen, und es wird durch etwa 15-maliges Klicken auf die Schaltfläche „Zurück“ aufgerufen. Lassen Sie diese Einstellung auf `False` festgelegt, damit der Einstiegspunkt zum Menü „Debuggen“ nur über die Schaltfläche „Zurück“ erreichbar bleibt.   |
 | WLAN-Einstellung anzeigen | bool | FALSE | Wenn Sie diese Einstellung auf `True` festlegen, kann der Endbenutzer WLAN aktivieren oder deaktivieren oder aber eine Verbindung mit verschiedenen WLAN-Netzwerken herstellen.  |
+| WLAN-Zulassungsliste aktivieren | bool | FALSE | Legen Sie diese Einstellung auf `True` fest, und füllen Sie die **WLAN-Zulassungsliste** aus, um einzuschränken, welche WLAN-Netzwerke auf dem Managed Home Screen angezeigt werden. Legen Sie diese Einstellung auf `False` fest, um alle möglichen verfügbaren WLAN-Netzwerke anzuzeigen, die das Gerät ermittelt hat. Beachten Sie, dass diese Einstellung nur dann relevant ist, wenn **WLAN-Einstellung anzeigen** auf `True` festgelegt wurde und die **WLAN-Zulassungsliste** ausgefüllt wurde.   |
+| WLAN-Zulassungsliste| bundleArray | FALSE | Ermöglicht es Ihnen, alle SSIDs der WLAN-Netzwerke aufzulisten, die das Gerät auf dem Managed Home Screen anzeigen soll. Diese Liste ist nur relevant, wenn **WLAN-Einstellung anzeigen** und **WLAN-Zulassungsliste aktivieren** auf `True` festgelegt wurden. Wenn eine der beiden Optionen auf `False` festgelegt wurde, müssen Sie diese Konfiguration nicht ändern.    |
 | Bluetooth-Einstellung anzeigen | bool | FALSE | Wenn Sie diese Einstellung auf `True` festlegen, kann der Endbenutzer Bluetooth aktivieren oder deaktivieren und eine Verbindung mit verschiedenen Bluetooth-fähigen Geräten herstellen.   |
+| Lautstärkeeinstellung anzeigen | bool | FALSE | Wenn diese Einstellung auf `True` festgelegt wird, kann der Endbenutzer auf einen Schieberegler zur Einstellung der Medienlautstärke zugreifen.   |
+| Taschenlampeneinstellung anzeigen | bool | FALSE | Wenn diese Einstellung auf `True` festgelegt wird, kann der Endbenutzer die Taschenlampe des Geräts ein- oder ausschalten. Wenn das Gerät keine Taschenlampe unterstützt, wird diese Einstellung auch dann nicht angezeigt, wenn sie auf `True` festgelegt ist.   |
+| Einstellung für Geräteinformationen anzeigen | bool | FALSE | Wenn diese Einstellung auf `True` festgelegt wird, kann der Endbenutzer über die App „Verwaltete Einstellungen“ oder durch Wischen nach unten eine QuickInfo zum Gerät anzeigen. Zu den verfügbaren Informationen gehören Marke, Modell und Seriennummer des Geräts.   |
 | Anwendungen im Ordner sind nach Namen sortiert | bool | TRUE | Wenn Sie diese Einstellung auf `False` festlegen, werden all Elemente in einem Ordner in der Reihenfolge angezeigt, in der sie angegeben wurden. Andernfalls werden sie alphabetisch angezeigt.   |
-| Anwendungsreihenfolge aktiviert | bool | FALSE | Wenn Sie diese Einstellung auf `True` festlegen, kann die Reihenfolge von Anwendungen, Weblinks und Ordner auf dem Managed Home Screen festgelegt werden. Nachdem Sie die Einstellung aktiviert haben, legen Sie die Reihenfolge mit **app_order** fest. So können Endbenutzer Bluetooth aktivieren oder deaktivieren und eine Verbindung mit verschiedenen Bluetooth-fähigen Geräten herstellen.   |
+| Anwendungsreihenfolge aktiviert | bool | FALSE | Wenn Sie diese Einstellung auf `True` festlegen, kann die Reihenfolge von Anwendungen, Weblinks und Ordner auf dem Managed Home Screen festgelegt werden. Nachdem die Option aktiviert wurde, legen Sie die Reihenfolge mit **app_order** fest.   |
 | Anwendungsreihenfolge | bundleArray | FALSE | Hiermit können Sie die Reihenfolge von Anwendungen, Weblinks und Ordnern auf dem Managed Home Screen festlegen. Um diese Einstellung zu verwenden, muss **Startbildschirm sperren** aktiviert, **Rastergröße festlegen** definiert und **Anwendungsreihenfolge aktiviert** auf `True` festgelegt sein.   |
 
 ## <a name="enter-json-data"></a>Eingeben von JSON-Daten
@@ -124,10 +130,6 @@ Dies ist ein Beispiel für ein JSON-Skript, in dem alle verfügbaren Konfigurati
         {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "enable_telemetry",
-            "valueBool": false
         },
         {
             "key": "applications",
@@ -182,6 +184,51 @@ Dies ist ein Beispiel für ein JSON-Skript, in dem alle verfügbaren Konfigurati
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "show_flashlight_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_volume_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_device_info_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_managed_setting",
+            "valueBool": false
+        },
+        {
+            "key": "enable_easy_access_debugmenu",
+            "valueBool": false
+        },
+        {
+            "key": "enable_wifi_allowlist",
+            "valueBool": false
+        },
+        {
+            "key": "wifi_allowlist",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 1 here"
+                        }
+                    ]
+                },   
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 2 here"
+                        }
+                    ]
+                }  
+            ]
         },
         {
             "key": "grid_size",
@@ -335,7 +382,7 @@ Dies ist ein Beispiel für ein JSON-Skript, in dem alle verfügbaren Konfigurati
 Mit der App „Managed Home Screen“ ist nun der Zugriff auf die Android Device Policy-App von Google möglich. Die App „Managed Home Screen“ ist ein benutzerdefiniertes Startprogramm, das für Geräte verwendet wird, die bei Intune als dedizierte Android Enterprise-Geräte (AE) registriert sind und den Kioskmodus mit mehreren Apps verwenden. Zu Unterstützungs- und Debugzwecken können Sie auf die Android Device Policy-App zugreifen oder Benutzer auf diese weiterleiten. Diese Startfunktion ist verfügbar, sobald das Gerät registriert wird und sich bei der App „Managed Home Screen“ einloggt. Für diese Funktion sind keine weiteren Installationen nötig.
 
 ## <a name="managed-home-screen-debug-screen"></a>Managed Home Screen-Debugbildschirm
-Sie können auf den Managed Home Screen-Debugbildschirm zugreifen, indem Sie auf die Schaltfläche **Zurück** klicken, bis der Debugbildschirm angezeigt wird (klicken Sie mindestens 15 mal auf die Schaltfläche **Zurück**). Von diesem Debugbildschirm aus können Sie die Android Device Policy-Anwendung starten, Protokolle anzeigen und hochladen oder den Kioskmodus vorübergehend anhalten, um das Gerät zu aktualisieren. Weitere Informationen zum Anhalten des Kioskmodus finden Sie unter **Kioskmodus verlassen** in den [Einstellungen dedizierter Geräte](../configuration/device-restrictions-android-for-work.md#dedicated-devices) in Android Enterprise.
+Sie können auf den Managed Home Screen-Debugbildschirm zugreifen, indem Sie auf die Schaltfläche **Zurück** klicken, bis der Debugbildschirm angezeigt wird (klicken Sie mindestens 15 mal auf die Schaltfläche **Zurück**). Von diesem Debugbildschirm aus können Sie die Android Device Policy-Anwendung starten, Protokolle anzeigen und hochladen oder den Kioskmodus vorübergehend anhalten, um das Gerät zu aktualisieren. Weitere Informationen zum Anhalten des Kioskmodus finden Sie unter **Kioskmodus verlassen** in den [Einstellungen dedizierter Geräte](../configuration/device-restrictions-android-for-work.md#dedicated-devices) in Android Enterprise. Wenn Sie einen einfacheren Zugriff auf den Debugbildschirm des Managed Home Screens wünschen, können Sie das Menü **Einfachen Zugriff auf das Menü „Debuggen“ aktivieren** mithilfe von Richtlinien zur Anwendungskonfiguration auf `True` festlegen. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
