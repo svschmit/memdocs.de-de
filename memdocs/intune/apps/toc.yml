@@ -147,12 +147,12 @@
               href: apps-configure-chrome-android.md
         - name: Per Volumenlizenz erworbene Apps und Bücher
           items:
-            - name: Verwalten von VPP-Apps und -Büchern
+            - name: Übersicht über den Erwerb per Volumenlizenz
               href: vpp-apps.md
               displayName: vpp; volume purchased
-            - name: VPP-Apps für iOS
+            - name: Per Volumenlizenz erworbene iOS-Apps
               href: vpp-apps-ios.md
-            - name: Apps im Microsoft Store für Unternehmen
+            - name: Apps aus Microsoft Store für Unternehmen
               href: windows-store-for-business.md
             - name: iOS-E-Books
               href: vpp-ebooks-ios.md
@@ -206,6 +206,10 @@
           href: app-install-error-codes.md
         - name: Problembehandlung der Verwaltung von mobilen Geräten
           href: troubleshoot-mam.md
+        - name: Überprüfen der App-Schutzprotokolle
+          href: app-protection-policy-settings-log.md
+        - name: Problembehandlung bei der Richtlinienbereitstellung für den App-Schutz
+          href: troubleshoot-app-protection-policy-deployment.md
 - name: Reference
   items:
     - name: Schützen von Apps mit dem Intune App SDK

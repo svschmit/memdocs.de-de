@@ -2,7 +2,7 @@
 title: Protokolldateireferenz
 titleSuffix: Configuration Manager
 description: Dies ist eine Referenz zu sämtlichen Protokolldateien für Configuration Manager-Client und -Server sowie abhängigen Komponenten.
-ms.date: 11/29/2019
+ms.date: 04/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6cd64d49abf7392c949a76ef198dabfc543dce7c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110167"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166536"
 ---
 # <a name="log-file-reference"></a>Protokolldateireferenz
 
@@ -29,86 +29,85 @@ In den folgenden Abschnitten finden Sie Details zu den verschiedenen verfügbare
 
 - [Clientprotokolldateien](#BKMK_ClientLogs)  
 
-    - [Clientvorgänge](#BKMK_ClientOpLogs)  
+  - [Clientvorgänge](#BKMK_ClientOpLogs)  
 
-    - [Clientinstallation](#BKMK_ClientInstallLog)  
+  - [Clientinstallation](#BKMK_ClientInstallLog)  
 
-    - [Client für Linux und UNIX](#BKMK_LogFilesforLnU)  
+  - [Client für Linux und UNIX](#BKMK_LogFilesforLnU)  
 
-    - [Client für Macintosh-Computer](#BKMK_LogfilesforMac)  
+  - [Client für Macintosh-Computer](#BKMK_LogfilesforMac)  
 
 - [Serverprotokolldateien](#BKMK_ServerLogs)  
 
-    - [Standortserver und Standortsysteme](#BKMK_SiteSiteServerLog)  
+  - [Standortserver und Standortsysteme](#BKMK_SiteSiteServerLog)  
 
-    - [Standortserverinstallation](#BKMK_SiteInstallLog)
+  - [Standortserverinstallation](#BKMK_SiteInstallLog)
 
-    - [Data Warehouse-Dienstpunkt](#BKMK_DataWarehouse)
+  - [Data Warehouse-Dienstpunkt](#BKMK_DataWarehouse)
 
-    - [Fallbackstatuspunkt](#BKMK_FSPLog)  
+  - [Fallbackstatuspunkt](#BKMK_FSPLog)  
 
-    - [Verwaltungspunkt](#BKMK_MPLog)  
+  - [Verwaltungspunkt](#BKMK_MPLog)  
 
-    - [Dienstverbindungspunkt](#BKMK_WITLog)  
+  - [Dienstverbindungspunkt](#BKMK_WITLog)  
 
-    - [Softwareupdatepunkt](#BKMK_SUPLog)  
+  - [Softwareupdatepunkt](#BKMK_SUPLog)  
 
 - [Protokolldateien für Configuration Manager-Funktionen](#BKMK_FunctionLogs)  
 
-    - [Anwendungsverwaltung](#BKMK_AppManageLog)  
+  - [Anwendungsverwaltung](#BKMK_AppManageLog)  
 
-    - [Asset Intelligence](#BKMK_AILog)  
+  - [Asset Intelligence](#BKMK_AILog)  
 
-    - [Sicherung und Wiederherstellung:](#BKMK_BnRLog)  
+  - [Sicherung und Wiederherstellung:](#BKMK_BnRLog)  
 
-    - [Zertifikatregistrierung](#BKMK_CertificateEnrollment)
+  - [Zertifikatregistrierung](#BKMK_CertificateEnrollment)
 
-    - [Clientbenachrichtigung](#BKMK_BGB)
+  - [Clientbenachrichtigung](#BKMK_BGB)
 
-    - [Cloudverwaltungsgateway](#cloud-management-gateway)
+  - [Cloudverwaltungsgateway](#cloud-management-gateway)
 
-    - [Konformitätseinstellungen und Zugriff auf Unternehmensressourcen](#BKMK_CompSettingsLog)  
+  - [Konformitätseinstellungen und Zugriff auf Unternehmensressourcen](#BKMK_CompSettingsLog)  
 
-    - [Configuration Manager-Konsole](#BKMK_ConsoleLog)  
+  - [Configuration Manager-Konsole](#BKMK_ConsoleLog)  
 
-    - [Content Management](#BKMK_ContentLog)  
+  - [Content Management](#BKMK_ContentLog)  
 
-    - [Desktop Analytics](#desktop-analytics)
+  - [Desktop Analytics](#desktop-analytics)
 
-    - [Ermittlung](#BKMK_DiscoveryLog)  
+  - [Ermittlung](#BKMK_DiscoveryLog)  
 
-    - [Endpoint Protection](#BKMK_EPLog)  
+  - [Endpoint Protection](#BKMK_EPLog)  
 
-    - [Erweiterungen](#BKMK_Extensions)  
+  - [Erweiterungen](#BKMK_Extensions)  
 
-    - [Inventur](#BKMK_InventoryLog)  
+  - [Inventur](#BKMK_InventoryLog)  
 
-    - [Migration](#BKMK_MigrationLog)  
+  - [Migration](#BKMK_MigrationLog)  
 
-    - [Mobile Geräte](#BKMK_MDMLog)  
+  - [Mobile Geräte](#BKMK_MDMLog)  
 
-    - [Bereitstellung des Betriebssystems](#BKMK_OSDLog)  
+  - [Bereitstellung des Betriebssystems](#BKMK_OSDLog)  
 
-    - [Energieverwaltung](#BKMK_PowerMgmtLog)  
+  - [Energieverwaltung](#BKMK_PowerMgmtLog)  
 
-    - [Remotesteuerung](#BKMK_RCLog)  
+  - [Remotesteuerung](#BKMK_RCLog)  
 
-    - [Berichterstellung](#BKMK_ReportLog)  
+  - [Berichterstellung](#BKMK_ReportLog)  
 
-    - [Rollenbasierte Verwaltung](#BKMK_RBALog)  
+  - [Rollenbasierte Verwaltung](#BKMK_RBALog)  
 
-    - [Softwaremessung](#BKMK_MeteringLog)  
+  - [Softwaremessung](#BKMK_MeteringLog)  
 
-    - [Softwareupdates](#BKMK_SU_NAPLog)  
+  - [Softwareupdates](#BKMK_SU_NAPLog)  
 
-    - [Wake-On-LAN](#BKMK_WOLLog)  
+  - [Wake-On-LAN](#BKMK_WOLLog)  
 
-    - [Windows 10-Wartung](#BKMK_WindowsServicingLog)
+  - [Windows 10-Wartung](#BKMK_WindowsServicingLog)
 
-    - [Windows Update-Agent](#BKMK_WULog)  
+  - [Windows Update-Agent](#BKMK_WULog)  
 
-    - [WSUS-Server](#BKMK_WSUSLog)  
-
+  - [WSUS-Server](#BKMK_WSUSLog)  
 
 ## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a> Clientprotokolldateien
 
@@ -120,6 +119,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 
 |Protokollname|Beschreibung|  
 |--------------|-----------------|  
+|ADALOperationProvider.log|Enthält Informationen zu Anforderungen von Clientauthentifizierungstoken mit der Azure Active Directory-Authentifizierungsbibliothek (ADAL)|
 |BitLockerManagementHandler.log|Zeichnet Informationen über BitLocker-Verwaltungsrichtlinien auf.|
 |CAS.log|Der Content Access Service. Verwaltet den lokalen Paketcache auf dem Client.|  
 |Ccm32BitLauncher.log|Zeichnet Aktionen zum Starten von Anwendungen auf dem Client auf, die mit *run as 32 bit* (im 32-Bit-Modus ausführen) gekennzeichnet sind.|  
@@ -131,11 +131,12 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |Ccmperf.log|Zeichnet Aktivitäten im Zusammenhang mit Wartung und Erfassung von Daten zu Clientleistungsindikatoren auf.|  
 |CcmRestart.log|Zeichnet Neustartaktivitäten zu Clientdiensten auf.|  
 |CCMSDKProvider.log|Zeichnet Aktivitäten im Zusammenhang mit den Client-SDK-Schnittstellen auf.|  
+|ccmsqlce.log|Dieses Protokoll zeichnet Aktivitäten für die SQL Compact-Edition auf, die der Client verwendet. Es wird in der Regel nur verwendet, wenn Sie die Debugprotokollierung aktivieren oder ein Problem mit der Komponente vorliegt. Der Clientintegritätstask (ccmeval) korrigiert Probleme mit dieser Komponente in der Regel selbst.|
 |CertificateMaintenance.log|Verwaltet Zertifikate für die Active Directory-Domänendienste und die Verwaltungspunkte.|  
 |CIDownloader.log|Zeichnet Details zu Downloads von Konfigurationselementdefinitionen auf.|  
-|CITaskMgr.log|Zeichnet Tasks auf, die für jede Anwendung und jeden Bereitstellungstyp initiiert werden, wie z.B. Herunterladen von Inhalten oder Installieren und Deinstallieren von Aktionen.|  
+|CITaskMgr.log|Dieses Protokoll zeichnet Tasks für jeden Anwendungs- und Bereitstellungstyp auf, z. B. für das Herunterladen von Inhalten oder das Installieren und Deinstallieren.|  
 |ClientAuth.log|Zeichnet das Signieren und Authentifizieren des Clients auf.|  
-|ClientIDManagerStartup.log|Erstellt und verwaltet die Client-GUID und identifiziert Tasks, die während der Anmeldung und Zuweisung von Clients ausgeführt werden.|  
+|ClientIDManagerStartup.log|Dieses Protokoll erstellt und verwaltet die Client-GUID und identifiziert Tasks während der Anmeldung und Zuweisung von Clients.|  
 |ClientLocation.log|Zeichnet Tasks im Zusammenhang mit der Clientstandortzuweisung auf.|  
 |CMHttpsReadiness.log|Zeichnet die Ergebnisse der Ausführung des Configuration Manager-Tools zur Überprüfung der HTTPS-Bereitschaft auf. Mithilfe dieses Tools wird überprüft, ob Computer über ein PKI-Clientauthentifizierungszertifikat verfügen, das für Configuration Manager verwendet werden kann.|  
 |CmRcService.log|Zeichnet Informationen für den Remotesteuerungsdienst auf.|  
@@ -192,7 +193,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |ccmsetup.log|Zeichnet ccmsetup.exe-Tasks für Clienteinstellung, Clientupgrade und Cliententfernung auf. Ist für die Problembehandlung bei Clientinstallationsproblemen hilfreich.|  
 |ccmsetup-ccmeval.log|Zeichnet ccmsetup.exe-Tasks für Clientstatus und -wiederherstellung auf.|  
 |CcmRepair.log|Zeichnet Reparaturaktivitäten des Client-Agents auf.|  
-|client.msi.log|Zeichnet die von „client.msi“ ausgeführten Setuptasks auf. Ist für die Problembehandlung bei Problemen beim Installieren oder Entfernen von Clients hilfreich.|  
+|client.msi.log|Dieses Protokoll zeichnet die von „client.msi“ erledigten Setuptasks auf. Ist für die Problembehandlung bei Problemen beim Installieren oder Entfernen von Clients hilfreich.|  
 
 ### <a name="client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a> Client für Linux und UNIX
 
@@ -208,28 +209,28 @@ Vom Configuration Manager-Client für Linux und UNIX werden Informationen in fol
 
 |Protokollname|Details|
 |-------------------|-----------------------------------------------------------------|
-|Scxcm.log| Das ist die Protokolldatei für den Kerndienst des Configuration Manager-Clients für Linux und UNIX (ccmexec.bin). Diese Protokolldatei enthält Informationen zur Installation und zum laufenden Vorgang von ccmexec.bin.<br /><br /> Standardmäßig befindet sich diese Datei unter **/var/opt/microsoft/scxcm.log**<br /><br /> Für das Ändern des Speicherorts der Protokolldatei bearbeiten Sie **/opt/microsoft/configmgr/etc/scxcm.conf** , und ändern Sie das Feld **PATH** . Sie müssen den Clientcomputer oder den Dienst nicht neu starten, damit die Änderungen wirksam werden.<br /><br /> Für den Protokolliergrad können Sie eine von vier unterschiedlichen Einstellungen vornehmen. |
-| Scxcmprovider.log |Das ist die Protokolldatei für den CIM-Dienst des Configuration Manager-Clients für Linux und UNIX (omiserver.bin). Diese Protokolldatei enthält Informationen zu den laufenden Vorgängen von nwserver.bin.<br /><br /> Dieses Protokoll befindet sich unter<strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong><br /><br /> Für eine Änderung des Speicherorts der Protokolldatei bearbeiten Sie **/opt/microsoft/omi/etc/scxcmprovider.conf** , und ändern Sie das Feld **PATH** . Sie müssen den Clientcomputer oder den Dienst nicht neu starten, damit die Änderungen wirksam werden.<br /><br /> Für den Protokolliergrad können Sie eine von drei unterschiedlichen Einstellungen vornehmen.|
+|Scxcm.log| Das ist die Protokolldatei für den Kerndienst des Configuration Manager-Clients für Linux und UNIX (ccmexec.bin). Diese Protokolldatei enthält Informationen zur Installation und zum laufenden Vorgang von ccmexec.bin. Standardmäßig befindet sich diese Protokolldatei unter **/var/opt/microsoft/scxcm.log**. Für das Ändern des Speicherorts der Protokolldatei bearbeiten Sie **/opt/microsoft/configmgr/etc/scxcm.conf** , und ändern Sie das Feld **PATH** . Sie müssen den Clientcomputer oder den Dienst nicht neu starten, damit die Änderungen wirksam werden. Für den Protokolliergrad können Sie eine von vier unterschiedlichen Einstellungen vornehmen. |
+| Scxcmprovider.log |Das ist die Protokolldatei für den CIM-Dienst des Configuration Manager-Clients für Linux und UNIX (omiserver.bin). Diese Protokolldatei enthält Informationen zu den laufenden Vorgängen von nwserver.bin. Dieses Protokoll befindet sich unter `/var/opt/microsoft/configmgr/scxcmprovider.log`. Für eine Änderung des Speicherorts der Protokolldatei bearbeiten Sie **/opt/microsoft/omi/etc/scxcmprovider.conf** , und ändern Sie das Feld **PATH** . Sie müssen den Clientcomputer oder den Dienst nicht neu starten, damit die Änderungen wirksam werden. Für den Protokolliergrad können Sie eine von drei unterschiedlichen Einstellungen vornehmen.|
 
 Beide Protokolldateien unterstützen mehrere Protokolliergrade:  
 
 - **scxcm.log**. Für eine Änderung des Protokolliergrads bearbeiten Sie **/opt/microsoft/configmgr/etc/scxcm.conf** und ändern Sie jede Instanz des Tags **MODUL** auf den gewünschten Protokolliergrad  
 
-    - FEHLER: Weist auf Probleme hin, die Ihr Eingreifen erfordern.  
+  - FEHLER: Weist auf Probleme hin, die Ihr Eingreifen erfordern.  
 
-    - WARNUNG: Weist auf mögliche Probleme für Clientvorgänge hin.  
+  - WARNUNG: Weist auf mögliche Probleme für Clientvorgänge hin.  
 
-    - INFO: Ausführlichere Protokollierung, durch die der Status verschiedener Ereignisse auf dem Client angegeben wird.  
+  - INFO: Ausführlichere Protokollierung, durch die der Status verschiedener Ereignisse auf dem Client angegeben wird.  
 
-    - TRACE: Ausführliche Protokollierung, die normalerweise zur Problemdiagnose verwendet wird.  
+  - TRACE: Ausführliche Protokollierung, die normalerweise zur Problemdiagnose verwendet wird.  
 
 - **scxcmprovider.log**. Für eine Änderung des Protokolliergrads bearbeiten Sie **/opt/microsoft/omi/etc/ scxcmprovider.conf** und ändern Sie jede Instanz des Tags **MODUL** in den erwünschten Protokolliergrad.  
 
-    - FEHLER: Weist auf Probleme hin, die Ihr Eingreifen erfordern.  
+  - FEHLER: Weist auf Probleme hin, die Ihr Eingreifen erfordern.  
 
-    - WARNUNG: Weist auf mögliche Probleme für Clientvorgänge hin.
+  - WARNUNG: Weist auf mögliche Probleme für Clientvorgänge hin.
 
-    - INFO: Ausführlichere Protokollierung, durch die der Status verschiedener Ereignisse auf dem Client angegeben wird.  
+  - INFO: Ausführlichere Protokollierung, durch die der Status verschiedener Ereignisse auf dem Client angegeben wird.  
 
 Unter normalen Betriebsbedingungen sollte der Protokollgrad FEHLER verwendet werden. Diese Protokollebene erstellt die kleinste Protokolldatei. Mit der Steigerung des Protokollgrads von FEHLER zu WARNUNG zu INFO zu ABLAUFVERFOLGUNG wird die Protokolldatei mit jedem Schritt größer, da mehr Daten hineingeschrieben werden.  
 
@@ -243,17 +244,16 @@ Weitere Informationen über **logrotate**finden Sie in der Dokumentation zu den 
 
 ### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a> Client für Macintosh-Computer
 
-Vom Configuration Manager-Client für Mac-Computer werden Informationen in folgenden Protokolldateien aufgezeichnet:  
+Vom Configuration Manager-Client für Mac-Computer werden Informationen in folgenden Protokolldateien auf dem Mac-Computer aufgezeichnet:  
 
-|Protokollname|Details|  
-|--------------|-------------|  
-|CCMClient-&lt;*Datum_Zeit>* .log|Zeichnet Aktivitäten auf, die mit Vorgängen des Macintosh-Clients verknüpft sind. Dazu gehören Anwendungsverwaltung, Inventur und Fehlerprotokollierung.<br /><br /> Diese Protokolldatei befindet sich im Ordner „/Library/Application Support/Microsoft/CCM/Logs“ auf dem Macintosh-Computer.|  
-|CCMAgent-&lt;*Datum_Zeit>* .log|Zeichnet Informationen zu Clientvorgängen auf, einschließlich von Benutzeranmeldungs- und -abmeldungsvorgängen und Macintosh-Computeraktivität.<br /><br /> Diese Protokolldatei befindet sich im Ordner ~/Library/Logs auf dem Macintosh-Computer.|  
-|CCMNotifications-&lt;*Datum_Zeit>* .log|Zeichnet Aktivitäten auf, die mit Configuration Manager-Benachrichtigungen verknüpft sind, die auf dem Macintosh-Computer angezeigt werden.<br /><br /> Diese Protokolldatei befindet sich im Ordner ~/Library/Logs auf dem Macintosh-Computer.|  
-|CCMPrefPane-&lt;*Datum_Zeit>* .log|Zeichnet Aktivitäten auf, die mit dem Configuration Manager-Dialogfeld für Einstellungen auf dem Macintosh-Computer verknüpft sind. Dazu gehören der allgemeine Status und die Fehlerprotokollierung.<br /><br /> Diese Protokolldatei befindet sich im Ordner ~/Library/Logs auf dem Macintosh-Computer.|  
+|Protokollname|Details|Standort|
+|--------------|-------------|-------------|
+|CCMClient-&lt;*Datum_Zeit>* .log|Zeichnet Aktivitäten auf, die mit Vorgängen des Macintosh-Clients verknüpft sind. Dazu gehören Anwendungsverwaltung, Inventur und Fehlerprotokollierung.| `/Library/Application Support/Microsoft/CCM/Logs`|  
+|CCMAgent-&lt;*Datum_Zeit>* .log|Zeichnet Informationen zu Clientvorgängen auf, einschließlich von Benutzeranmeldungs- und -abmeldungsvorgängen und Macintosh-Computeraktivität.| `~/Library/Logs`|  
+|CCMNotifications-&lt;*Datum_Zeit>* .log|Zeichnet Aktivitäten auf, die mit Configuration Manager-Benachrichtigungen verknüpft sind, die auf dem Macintosh-Computer angezeigt werden.| `~/Library/Logs`|  
+|CCMPrefPane-&lt;*Datum_Zeit>* .log|Zeichnet Aktivitäten auf, die mit dem Configuration Manager-Dialogfeld für Einstellungen auf dem Macintosh-Computer verknüpft sind. Dazu gehören der allgemeine Status und die Fehlerprotokollierung.| `~/Library/Logs`|  
 
 Zusätzlich wird in der Protokolldatei **SMS_DM.log** auf dem Standortsystemserver die Kommunikation zwischen Macintosh-Computern und dem Verwaltungspunkt aufgezeichnet, der für mobile Geräte und Mac-Computer aktiviert ist.  
-
 
 ## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a> Serverprotokolldateien
 
@@ -277,6 +277,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |CertMgr.log|Zeichnet die Zertifikataktivitäten für die standortinterne Kommunikation auf.|Standortsystemserver|  
 |chmgr.log|Zeichnet die Aktivitäten des Clientintegritäts-Managers auf.|Standortserver|  
 |Cidm.log|Zeichnet Änderungen an den Clienteinstellungen durch den SMS-Clientinstallationsdaten-Manager (CIDM) auf.|Standortserver|  
+|CollectionAADGroupSyncWorker.log | Ab Version 2002 ist dies die Protokolldatei zum Synchronisieren der Sammlungsmitgliedschaftsergebnisse mit Azure Active Directory. In Version 1910 und früher wurde die Protokollierung für diese Funktion in „SMS_AZUREAD_DISCOVERY_AGENT.log“ kombiniert. | Standortserver|
 |colleval.log|Zeichnet Details zum Erstellen, Ändern und Löschen von Sammlungen durch den Sammlungsauswerter auf.|Standortserver|  
 |compmon.log|Zeichnet den Status von Threadkomponenten auf, die für den Standortserver überwacht werden.|Standortsystemserver|  
 |compsumm.log|Zeichnet die Tasks der Statuszusammenfassung für Komponenten auf.|Standortserver|  
@@ -284,7 +285,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |dataldr.log|Zeichnet Informationen zur Verarbeitung von MIF-Dateien und Hardwareinventur in der Configuration Manager-Datenbank auf.|Standortserver|  
 |ddm.log|Zeichnet die Aktivitäten des Ermittlungsdaten-Managers auf.|Standortserver|  
 |despool.log|Zeichnet die eingehende Datenkommunikation zwischen Standorten auf.|Standortserver|  
-|distmgr.log|Zeichnet Details zu Paketerstellung, Komprimierung, Deltareplikation und Informationsupdates auf.|Standortserver|  
+|distmgr.log|Zeichnet Details zu Paketerstellung, Komprimierung, Deltareplikation und Informationsupdates auf. Es kann auch andere Aktivitäten aus der Komponente des Verteilungs-Managers umfassen. Dazu zählen beispielsweise das Installieren eines Verteilungspunkts, Verbindungsversuche und das Installieren von Komponenten. Weitere Informationen zu anderen Funktionen, die dieses Protokoll verwenden, finden Sie unter [Dienstverbindungspunkt](#BKMK_WITLog) und [Bereitstellung des Betriebssystems](#BKMK_OSDLog).|Standortserver|  
 |EPCtrlMgr.log|Zeichnet Informationen zur Synchronisierung von Schadsoftwarebedrohungsdaten vom Endpoint Protection-Server für Standortsystemrollen in die Configuration Manager-Datenbank auf.|Standortserver|  
 |EPMgr.log|Zeichnet den Status der Endpoint Protection-Standortsystemrolle auf.|Standortsystemserver|  
 |EPSetup.log|Stellt Informationen zur Installation der Endpoint Protection-Standortsystemrolle bereit.|Standortsystemserver|  
@@ -296,7 +297,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |inboxmgr.log|Zeichnet Aktivitäten im Zusammenhang mit der Dateiübertragung zwischen Eingangsboxordnern auf.|Standortserver|  
 |inboxmon.log|Zeichnet Aktivitäten in Zusammenhang mit der Verarbeitung von Eingangsboxdateien und Updates von Leistungsindikatoren auf.|Standortserver|  
 |invproc.log|Zeichnet die Weiterleitung von MIF-Dateien von einem sekundären Standort an dessen übergeordneten Standort auf.|Standortserver|  
-|migmctrl.log|Zeichnet Informationen zu Migrationsaktionen auf, einschließlich Migrationsaufträge, freigegebener Verteilungspunkte und Upgrades von Verteilungspunkten.|Standort der obersten Ebene in der Configuration Manager-Hierarchie und jeder untergeordnete primäre Standort<br /><br /> Verwenden Sie in einer Hierarchie mit mehreren primären Standorten die Protokolldatei, die auf dem Standort der zentralen Verwaltung erstellt wurde.|  
+|migmctrl.log|Zeichnet Informationen zu Migrationsaktionen auf, einschließlich Migrationsaufträge, freigegebener Verteilungspunkte und Upgrades von Verteilungspunkten.|Standort der obersten Ebene in der Configuration Manager-Hierarchie und jeder untergeordnete primäre Standort Verwenden Sie in einer Hierarchie mit mehreren primären Standorten die Protokolldatei, die auf dem Standort der zentralen Verwaltung erstellt wurde.|  
 |mpcontrol.log|Zeichnet die Registrierung des Verwaltungspunks in Windows Internet Name Service (WINS) auf. Zeichnet alle 10 Minuten die Verfügbarkeit des Verwaltungspunkts auf.|Standortsystemserver|  
 |mpfdm.log|Zeichnet die Aktionen der Verwaltungspunktkomponente auf, von der Clientdateien in den entsprechenden Ordner INBOXES auf dem Standortserver verschoben werden.|Standortsystemserver|  
 |mpMSI.log|Zeichnet die Details zur Installation des Verwaltungspunkts auf.|Standortserver|  
@@ -323,7 +324,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |sitecomp.log|Zeichnet Details zur Wartung der installierten Standortkomponenten auf allen Standortsystemservern des Standorts auf.|Standortserver|  
 |sitectrl.log|Zeichnet Änderungen der Standorteinstellungen auf, die an Standortsteuerungsobjekten in der Datenbank vorgenommen werden.|Standortserver|  
 |sitestat.log|Zeichnet den Verfügbarkeits- und Speicherplatzüberwachungsprozess aller Standortsysteme auf.|Standortserver|
-|SMS_AZUREAD_DISCOVERY_AGENT.log| Protokolldatei zum Synchronisieren der Sammlungsmitgliedschaftsergebnisse mit Azure Active Directory. Diese wurde erstmalig als Vorabfeature in Configuration Manager, Version 1906 eingeführt.| Standortserver|
+|SMS_AZUREAD_DISCOVERY_AGENT.log| Hierbei handelt es sich um die Protokolldatei für die Azure Active Directory-Ermittlung (Azure AD) von Benutzern und Benutzergruppen. In Version 1910 und früher umfasste es zudem die Synchronisierung der Sammlungsmitgliedschaftsergebnisse in Azure AD.| Standortserver|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Protokolldatei für die Komponente, die Apps aus Microsoft Store für Unternehmen synchronisiert.|Standortserver|
 |SMS_ISVUPDATES_SYNCAGENT.log| Protokolldatei für die Synchronisierung von Softwareupdates von Drittanbietern| Softwareupdatepunkt der obersten Ebene der Configuration Manager-Hierarchie|
 |SMS_OrchestrationGroup.log| Protokolldatei für Orchestrierungsgruppen|Standortserver|
@@ -355,7 +356,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |ConfigMgrSetup.log|Zeichnet Ausgabedetails des Standortserver-Setups auf.|Standortserver|  
 |ConfigMgrSetupWizard.log|Zeichnet Informationen im Zusammenhang mit Aktivitäten im Setup-Assistenten auf.|Standortserver|  
 |SMS_BOOTSTRAP.log|Zeichnet Informationen zum Fortschritt beim Starten der Installation des sekundären Standorts auf. Informationen zum eigentlichen Installationsvorgang sind in ConfigMgrSetup.log enthalten.|Standortserver|  
-|smstsvc.log|Zeichnet Informationen zu Installation, Nutzung und Entfernung eines Windows-Dienstes auf, der zum Testen von Netzwerkverbindungen und Berechtigungen zwischen Servern mithilfe des Computerkontos des Servers, der die Verbindung initiiert, verwendet wird.|Standortserver und Standortsystemserver|  
+|smstsvc.log|Dieses Protokoll zeichnet Informationen zum Installieren, Verwenden und Entfernen eines Windows-Diensts auf. Windows verwendet diesen Dienst, um die Netzwerkkonnektivität und die Berechtigungen zwischen Servern zu testen. Dabei wird das Computerkonto des Servers verwendet, der die Verbindung herstellt.|Standortserver und Standortsystemserver|  
 
 ### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a> Data Warehouse-Dienstpunkt
 
@@ -426,7 +427,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |sitecomp.log|Zeichnet Details zur Installation des Dienstverbindungspunkts auf.|Standortserver|  
 |SmsAdminUI.log|Zeichnet die Aktivität der Configuration Manager-Konsole auf|Computer, auf dem die Configuration Manager-Konsole ausgeführt wird|  
 |SMS_CLOUDCONNECTION.log|Zeichnet Informationen zu Clouddiensten auf.|Computer mit dem Dienstverbindungspunkt|
-|SMSProv.log|Zeichnet die vom SMS-Anbieter ausgeführten Aktivitäten auf. Configuration Manager-Konsolenaktivitäten verwenden den SMS-Anbieter.|Computer mit dem SMS-Anbieter|  
+|SMSProv.log|Dieses Protokoll zeichnet die Aktivitäten des SMS-Anbieters auf. Configuration Manager-Konsolenaktivitäten verwenden den SMS-Anbieter.|Computer mit dem SMS-Anbieter|  
 |SrvBoot.log|Zeichnet Details zum Dienstverbindungspunkt-Installationsdienst auf.|Computer mit dem Dienstverbindungspunkt|  
 |Statesys.log|Zeichnet die Verarbeitung von Verwaltungsmeldungen zu mobilen Geräten auf.|Primärer Standort und Standort der zentralen Verwaltung|  
 
@@ -527,7 +528,7 @@ In der folgenden Tabelle werden die Configuration Manager-Protokolldateien aufge
 |Crpmsi.log|Zeichnet Einzelheiten über die Installation und Konfiguration des Zertifikatregistrierungspunkts auf.|Zertifikatregistrierungspunkt|  
 |NDESPlugin.log|Zeichnet die Aktivitäten der Abfrageüberprüfung und Zertifikatregistrierung auf.|Configuration Manager-Richtlinienmodul und der Registrierungsdienst für Netzwerkgeräte|  
 
-Prüfen Sie außer den Configuration Manager-Protokolldateien auch die Windows-Anwendungsprotokolle in der Ereignisanzeige auf dem Server, auf dem der Registrierungsdienst für Netzwerkgeräte ausgeführt wird, sowie auf dem Hostserver des Zertifikatregistrierungspunkts. Achten Sie beispielsweise auf Nachrichten mit der Quellangabe **NetworkDeviceEnrollmentService** . 
+Prüfen Sie zusammen mit den Configuration Manager-Protokolldateien auch die Windows-Anwendungsprotokolle in der Ereignisanzeige auf dem Server, auf dem der Registrierungsdienst für Netzwerkgeräte ausgeführt wird, sowie auf dem Hostserver des Zertifikatregistrierungspunkts. Achten Sie beispielsweise auf Nachrichten mit der Quellangabe **NetworkDeviceEnrollmentService** .
 
 Sie können auch die folgenden Protokolldateien verwenden:  
 
@@ -559,12 +560,11 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|
 |--------------|-----------------|----------------------------|  
-|CloudMgr.log|Zeichnet Details zur Bereitstellung des Cloudverwaltungsgateway-Dienstes, den laufenden Dienststatus und Nutzungsdaten, die mit dem Dienst verknüpft sind, auf.<br>Sie können den Protokolliergrad konfigurieren, indem Sie den Wert von **Logging level** im Registrierungsschlüssel HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER bearbeiten.|Der Ordner *installdir* auf dem primären Standortserver oder Clientzugriffsserver.|
-|CMGSetup.log<sup>[Hinweis 1](#bkmk_note1)</sup>|Zeichnet Details zur zweiten Phase der Bereitstellung des Cloudverwaltungsgateways (lokale Bereitstellung in Azure) auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
-|CMGHttpHandler.log<sup>[Hinweis 1](#bkmk_note1)</sup>|Zeichnet Details zur HTTP-Handlerbindung des Cloudverwaltungsgateways mit Internetinformationsdiensten in Azure auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.<br>Ab Version 1806 ist dieses Protokoll nicht vorhanden. Die Funktionalität der Komponente wird mit der CMG-Dienstkomponente zusammengeführt. Beachten Sie stattdessen CMGService.log.<!--SCCMDocs-pr issue #2822-->|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
-|CMGService.log<sup>[Hinweis 1](#bkmk_note1)</sup>|Zeichnet Details über die Kernkomponente des Cloudverwaltungsgateway-Diensts in Azure auf.<br>Sie können die Protokollierungsstufe mithilfe der Einstellung **Ablaufverfolgungsebene** (**Informationen** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure-Portal\Konfiguration der Clouddienste** konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
-|SMS_Cloud_<br>ProxyConnector.log|Zeichnet Details zum Einrichten von Verbindungen zwischen dem Cloud-Management-Gateway-Dienst und dem Verbindungspunkt für das Cloudverwaltungsgateway auf.|Standortsystemserver|
-|CMGContentService.log<sup>[Hinweis 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->Wenn Sie einem CMG ermöglichen, auch Inhalte von Azure Storage bereitzustellen, zeichnet dieses Protokoll die Details dieses Dienstes auf.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
+|CloudMgr.log|Zeichnet Details zur Bereitstellung des Cloudverwaltungsgateway-Dienstes, den laufenden Dienststatus und Nutzungsdaten, die mit dem Dienst verknüpft sind, auf. Bearbeiten Sie den Wert **Protokolliergrad** im folgenden Registrierungsschlüssel, um den Protokolliergrad zu konfigurieren: `HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|Der Ordner *installdir* auf dem primären Standortserver oder Clientzugriffsserver.|
+|CMGSetup.log <sup>[Hinweis 1](#bkmk_note1)</sup>|Dieses Protokoll zeichnet Details zur zweiten Phase der Bereitstellung des Cloudverwaltungsgateways (lokale Bereitstellung in Azure) auf. Verwenden Sie die Einstellung **Ablaufverfolgungsebene** (**Information** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure portal\Cloud services configuration** (Azure-Portal\Clouddienstkonfiguration), um den Protokolliergrad zu konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
+|CMGService.log <sup>[Hinweis 1](#bkmk_note1)</sup>|Dieses Protokoll zeichnet Details über die Kernkomponente des Cloudverwaltungsgateway-Diensts in Azure auf. Verwenden Sie die Einstellung **Ablaufverfolgungsebene** (**Information** (Standard), **Ausführlich**, **Fehler**) auf der Registerkarte **Azure portal\Cloud services configuration** (Azure-Portal\Clouddienstkonfiguration), um den Protokolliergrad zu konfigurieren.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
+|SMS_Cloud_ProxyConnector.log|Zeichnet Details zum Einrichten von Verbindungen zwischen dem Cloud-Management-Gateway-Dienst und dem Verbindungspunkt für das Cloudverwaltungsgateway auf.|Standortsystemserver|
+|CMGContentService.log <sup>[Hinweis 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->Wenn Sie einem CMG ermöglichen, auch Inhalte von Azure Storage bereitzustellen, zeichnet dieses Protokoll die Details dieses Dienstes auf.|Die **%approot%\logs** auf Ihrem Azure-Server oder der Ordner „SMS/Logs“ auf dem Standortsystemserver|
 
 - Verwenden Sie für die Problembehandlung von Bereitstellungen **CloudMgr.log** und **CMGSetup.log**.
 - Verwenden Sie für die Problembehandlung der Dienstintegrität **CMGService.log** und **SMS_Cloud_ProxyConnector.log**.
@@ -594,7 +594,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |--------------|-----------------|----------------------------|  
 |ConfigMgrAdminUISetup.log|Zeichnet die Installation der Configuration Manager-Konsole auf|Computer, auf dem die Configuration Manager-Konsole ausgeführt wird|  
 |SmsAdminUI.log|Zeichnet Informationen zum Betrieb der Configuration Manager-Konsole auf|Computer, auf dem die Configuration Manager-Konsole ausgeführt wird|  
-|SMSProv.log|Zeichnet die vom SMS-Anbieter ausgeführten Aktivitäten auf. Configuration Manager-Konsolenaktivitäten verwenden den SMS-Anbieter.|Standortserver oder Standortsystemserver|  
+|SMSProv.log|Dieses Protokoll zeichnet die Aktivitäten des SMS-Anbieters auf. Configuration Manager-Konsolenaktivitäten verwenden den SMS-Anbieter.|Standortserver oder Standortsystemserver|  
 
 ### <a name="content-management"></a><a name="BKMK_ContentLog"></a> Content Management
 
@@ -687,7 +687,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
-|migmctrl.log|Zeichnet Informationen zu Migrationsaktionen auf, einschließlich Migrationsaufträge, freigegebener Verteilungspunkte und Upgrades von Verteilungspunkten.|Standort der obersten Ebene in der Configuration Manager-Hierarchie und jeder untergeordnete primäre Standort<br /><br /> Verwenden Sie in einer Hierarchie mit mehreren primären Standorten die Protokolldatei, die auf dem Standort der zentralen Verwaltung erstellt wurde.|  
+|migmctrl.log|Zeichnet Informationen zu Migrationsaktionen auf, einschließlich Migrationsaufträge, freigegebener Verteilungspunkte und Upgrades von Verteilungspunkten.|Standort der obersten Ebene in der Configuration Manager-Hierarchie und jeder untergeordnete primäre Standort Verwenden Sie in einer Hierarchie mit mehreren primären Standorten die Protokolldatei, die auf dem Standort der zentralen Verwaltung erstellt wurde.|  
 
 ### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a> Mobile Geräte
 
@@ -760,7 +760,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |MCSSetup.log|Zeichnet Details zur Installation der Multicastserverrolle auf.|Standortsystemserver|  
 |MCSMSI.log|Zeichnet Details zur Installation der Multicastserverrolle auf.|Standortsystemserver|  
 |Mcsperf.log|Zeichnet Details zu Updates von Multicastleistungsindikatoren auf.|Standortsystemserver|  
-|MP_ClientIDManager.log|Zeichnet Antworten des Verwaltungspunkts auf Client-ID-Anforderungen auf, die durch Tasksequenzen über PXE oder über Startmedien initiiert wurden.|Standortsystemserver|  
+|MP_ClientIDManager.log|Dieses Protokoll zeichnet Antworten des Verwaltungspunkts auf Client-ID-Anforderungen auf, die durch Tasksequenzen über PXE oder über Startmedien gestartet wurden.|Standortsystemserver|  
 |MP_DriverManager.log|Zeichnet Antworten des Verwaltungspunkts auf Aktionsanforderungen über die Tasksequenz „Treiber automatisch anwenden“ auf.|Standortsystemserver|  
 |OfflineServicingMgr.log|Zeichnet Details zur Planung von Offlinewartungsmaßnahmen und zum Anwenden von Updates auf WIM-Dateien des Betriebssystems auf.|Standortsystemserver|  
 |Setupact.log|Zeichnet Details zu Windows-Sysprep- und -Setup-Protokollen auf. Weitere Informationen finden Sie in den [Protokolldateien](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Client|  
@@ -772,7 +772,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |smpperf.log|Zeichnet Details zu Updates von Leistungsindikatoren für Zustandsmigrationspunkte auf.|Standortsystemserver|  
 |smspxe.log|Zeichnet Details zu den Antworten an Clients mit PXE-Start sowie Details zur Erweiterung von Startimages und Startdateien auf.|Standortsystemserver|  
 |smssmpsetup.log|Zeichnet Installations- und Konfigurationsdetails zum Zustandsmigrationspunkt auf.|Standortsystemserver|
-| SMS_PhasedDeployment.log| Protokolldatei für stufenweise Bereitstellungen|Standort der obersten Ebene in der Configuration Manager-Hierarchie| 
+| SMS_PhasedDeployment.log| Protokolldatei für stufenweise Bereitstellungen|Standort der obersten Ebene in der Configuration Manager-Hierarchie|
 |Smsts.log|Zeichnet Tasksequenzaktivitäten auf.|Client|  
 |TSAgent.log|Zeichnet das Ergebnis von Tasksequenzabhängigkeiten vor dem Starten einer Tasksequenz auf.|Client|  
 |TaskSequenceProvider.log|Zeichnet Details zu Tasksequenzen auf, wenn diese importiert, exportiert oder bearbeitet werden.|Standortsystemserver|  
@@ -835,10 +835,10 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |PolicyEvaluator.log|Zeichnet Details zur Auswertung von Richtlinien auf Clientcomputern, einschließlich Softwareupdates, auf.|Client|  
 |RebootCoordinator.log|Zeichnet Details zur Koordinierung von Systemneustarts auf Clientcomputern nach der Installation von Softwareupdates auf.|Client|  
 |ScanAgent.log|Zeichnet Details zu Überprüfungsanforderungen für Softwareupdates, zum WSUS-Speicherort sowie zu entsprechenden Aktionen auf.|Client|  
-|SdmAgent.log|Zeichnet Details zur Nachverfolgung von Wiederherstellung und Konformität auf. Die Protokolldatei für Softwareupdates „Updateshandler.log“ bietet jedoch umfangreichere Informationen zur Installation der für die Konformität benötigten Softwareupdates.<br /><br /> Diese Protokolldatei wird mit Kompatibilitätseinstellungen gemeinsam genutzt.|Client|  
+|SdmAgent.log|Zeichnet Details zur Nachverfolgung von Wiederherstellung und Konformität auf. Die Protokolldatei für Softwareupdates „Updateshandler.log“ bietet jedoch umfangreichere Informationen zur Installation der für die Konformität benötigten Softwareupdates. Diese Protokolldatei wird mit Kompatibilitätseinstellungen gemeinsam genutzt.|Client|  
 |ServiceWindowManager.log|Zeichnet Details zur Auswertung von Wartungsfenstern auf.|Client|
-|SMS_ISVUPDATES_SYNCAGENT.log| Protokolldatei für die Synchronisierung von Softwareupdates von Drittanbietern| Softwareupdatepunkt der obersten Ebene der Configuration Manager-Hierarchie| 
-|SMS_OrchestrationGroup.log| Protokolldatei für Orchestrierungsgruppen|Standortserver| 
+|SMS_ISVUPDATES_SYNCAGENT.log| Protokolldatei für die Synchronisierung von Softwareupdates von Drittanbietern| Softwareupdatepunkt der obersten Ebene der Configuration Manager-Hierarchie|
+|SMS_OrchestrationGroup.log| Protokolldatei für Orchestrierungsgruppen|Standortserver|
 |SmsWusHandler.log|Zeichnet Details zum Überprüfungsvorgang für das Inventurprogramm für Microsoft Updates auf.|Client|  
 |StateMessage.log|Zeichnet Details zu Zustandsmeldungen für Softwareupdates auf, die erstellt und an den Verwaltungspunkt gesendet werden.|Client|  
 |SUPSetup.log|Zeichnet Details zur Installation des Softwareupdatepunkts auf. Nach Abschluss der Softwareupdatepunkt-Installation wird **Installation was successful** in diese Protokolldatei geschrieben.|Standortsystemserver|  
@@ -895,7 +895,6 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |SoftwareDistribution.log|Zeichnet Details zu Softwareupdates auf, die von der konfigurierten Updatequelle zur WSUS-Serverdatenbank synchronisiert werden.|WSUS-Server|  
 
 Diese Protokolldateien befinden sich im Ordner `%ProgramFiles%\Update Services\LogFiles`.
-
 
 ## <a name="see-also"></a>Weitere Informationen:
 

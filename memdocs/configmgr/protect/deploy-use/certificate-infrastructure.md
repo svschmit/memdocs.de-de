@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ca500ebbbbf8b2672492fec383feab49bfea0a52
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074995"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210110"
 ---
 # <a name="configure-certificate-infrastructure"></a>Konfigurieren der Zertifikatinfrastruktur
 
@@ -34,7 +34,7 @@ Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifika
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>So installieren und konfigurieren Sie den Registrierungsdienst für Netzwerkgeräte und die Abhängigkeiten  
 
-1. Installieren und konfigurieren Sie auf einem Server unter Windows Server 2012 R2 den Rollendienst „Registrierungsdienst für Netzwerkgeräte“ für die Serverrolle „Active Directory-Zertifikatdienste“. Weitere Informationen finden Sie im [Leitfaden für den Registrierungsdienst für Netzwerkgeräte](https://go.microsoft.com/fwlink/p/?LinkId=309016) in der Bibliothek zu Active Directory-Zertifikatdiensten in TechNet.  
+1. Installieren und konfigurieren Sie auf einem Server unter Windows Server 2012 R2 den Rollendienst „Registrierungsdienst für Netzwerkgeräte“ für die Serverrolle „Active Directory-Zertifikatdienste“. Weitere Informationen finden Sie im [Leitfaden zum Registrierungsdienst für Netzwerkgeräte](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
 
 2. Überprüfen Sie die Sicherheitsberechtigungen für die Zertifikatvorlagen, die vom Registrierungsdienst für Netzwerkgeräte verwendet werden, und ändern Sie sie bei Bedarf:  
 
@@ -44,7 +44,7 @@ Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifika
 
    -   Für das SCEP-Dienstkonto (Simple Certificate Enrollment-Protokoll), das vom Anwendungspool des Registrierungsdiensts für Netzwerkgeräte verwendet wird: die Berechtigungen **Lesen** und **Anmelden**.  
 
-        Diese Anforderung gilt nicht nur für Configuration Manager, sondern ist Bestandteil der Konfiguration des Registrierungsdiensts für Netzwerkgeräte. Weitere Informationen finden Sie im [Leitfaden für den Registrierungsdienst für Netzwerkgeräte](https://go.microsoft.com/fwlink/p/?LinkId=309016) in der Bibliothek zu Active Directory-Zertifikatdiensten in TechNet.  
+        Diese Anforderung gilt nicht nur für Configuration Manager, sondern ist Bestandteil der Konfiguration des Registrierungsdiensts für Netzwerkgeräte. Weitere Informationen finden Sie im [Leitfaden zum Registrierungsdienst für Netzwerkgeräte](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
 
    > [!TIP]  
    >  Die vom Registrierungsdienst für Netzwerkgeräte verwendeten Zertifikatvorlagen sind unter dem folgenden Registrierungsschlüssel auf dem Server angegeben, auf dem der Registrierungsdienst für Netzwerkgeräte ausgeführt wird: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -69,7 +69,7 @@ Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifika
 
    - Legen Sie den Schlüssel **MaxRequestBytes** auf **16777216**fest.  
 
-     Weitere Informationen finden Sie im Artikel [820129: Http.sys-Registrierungseinstellungen für Windows](https://go.microsoft.com/fwlink/?LinkId=309013) in der Microsoft Knowledge Base.  
+     Weitere Informationen finden Sie im Microsoft-Support-Artikel [820129: Http.sys-Registrierungseinstellungen für Windows](https://support.microsoft.com/help/820129).
 
 6. Ändern Sie auf dem gleichen Server im IIS-Manager (Internet Information Services, Internetinformationsdienste) die Einstellungen für die Anforderungsfilterung für die Anwendung /certsrv/mscep. Starten Sie dann den Server neu. Im Dialogfeld **Einstellungen für die Anforderungsfilterung bearbeiten** sollten die Einstellungen unter **Anforderungslimits** wie folgt lauten:  
 
@@ -79,7 +79,7 @@ Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifika
 
    - **Maximale Länge einer Abfragezeichenfolge (Bytes)** : **65534**  
 
-     Weitere Informationen zu diesen Einstellungen und deren Konfiguration finden Sie im Thema [Requests Limits (Anforderungslimits)](https://go.microsoft.com/fwlink/?LinkId=309014) der Bibliothek mit IIS-Referenzen.  
+     Weitere Informationen zu diesen Einstellungen und deren Konfiguration finden Sie unter [Anforderungslimits](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
 
 7. Wenn Sie ein Zertifikat mit einem kürzeren Gültigkeitszeitraum als dem der verwendeten Zertifikatvorlage anfordern möchten, gilt: Diese Konfiguration ist für eine Unternehmenszertifizierungsstelle standardmäßig deaktiviert. Sie können diese Option für eine Unternehmenszertifizierungsstelle mit dem Befehlszeilentool „Certutil“ aktivieren. Verwenden Sie dann die folgenden Befehle, um den Zertifikatdienst zu beenden und neu zu starten:  
 
@@ -89,9 +89,9 @@ Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifika
 
    3. **net start certsvc**  
 
-      Weitere Informationen finden Sie unter [Certificate Services Tools and Settings (Tools und Einstellungen für Zertifikatdienste)](https://go.microsoft.com/fwlink/p/?LinkId=309015) in der PKI-Technologiebibliothek auf TechNet.  
+      Weitere Informationen finden Sie unter [Tools und Einstellungen der Zertifikatdienste](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
 
-8. Verwenden Sie den folgenden Link als Beispiel, um zu überprüfen, ob der Registrierungsdienst für Netzwerkgeräte funktioniert: **https://server.contoso.com/certsrv/mscep/mscep.dll** . Es sollte die integrierte Webseite „Registrierungsdienst für Netzwerkgeräte“ angezeigt werden. Auf dieser Webseite wird der Dienst erläutert, und Sie erfahren, dass Netzwerkdienste die URL zum Übermitteln von Zertifikatanforderungen verwenden.  
+8. Verwenden Sie den folgenden Link als Beispiel, um zu überprüfen, ob der Registrierungsdienst für Netzwerkgeräte funktioniert: `https://server.contoso.com/certsrv/mscep/mscep.dll`. Es sollte die integrierte Webseite „Registrierungsdienst für Netzwerkgeräte“ angezeigt werden. Auf dieser Webseite wird der Dienst erläutert, und Sie erfahren, dass Netzwerkdienste die URL zum Übermitteln von Zertifikatanforderungen verwenden.  
 
    Nachdem Sie den Registrierungsdienst für Netzwerkgeräte und die Abhängigkeiten konfiguriert haben, können Sie den Zertifikatregistrierungspunkt installieren und konfigurieren.
 
@@ -125,7 +125,7 @@ Sie müssen mindestens einen Zertifikatregistrierungspunkt in der Configuration 
    - Wenn Sie **SCEP-Zertifikatanforderungen verarbeiten** ausgewählt haben, nehmen Sie folgende Konfiguration vor:
      -   **Websitename**, **HTTPS-Portnummer** und **Name der virtuellen Anwendung** für den Zertifikatregistrierungspunkt. Diese Felder werden automatisch mit Standardwerten ausgefüllt. 
      -   **URL für Registrierungsdienst für Netzwerkgeräte und Zertifikat der Stammzertifizierungsstelle**: Klicken Sie auf **Hinzufügen**, und geben Sie anschließend im Dialogfeld **URL und Zertifikat der Stammzertifizierungsstelle hinzufügen** Folgendes an:
-         - **URL für den Registrierungsdienst für Netzwerkgeräte**: Geben Sie die URL im folgenden Format an: https:// *<Server_FQDN>* /certsrv/mscep/mscep.dll. Beispiel: Wenn der FQDN des Servers, der den Registrierungsdienst für Netzwerkgeräte ausführt, „server1.contoso.com“ lautet, geben Sie **https://server1.contoso.com/certsrv/mscep/mscep.dll** ein.
+         - **URL für den Registrierungsdienst für Netzwerkgeräte**: Geben Sie die URL im folgenden Format an: https:// *<Server_FQDN>* /certsrv/mscep/mscep.dll. Beispiel: Wenn der FQDN des Servers, der den Registrierungsdienst für Netzwerkgeräte ausführt, „server1.contoso.com“ lautet, geben Sie `https://server1.contoso.com/certsrv/mscep/mscep.dll` ein.
          - **Zertifikat der Stammzertifizierungsstelle**: Navigieren Sie zu der CER-Zertifikatdatei, die Sie in **Schritt 1: Installieren und Konfigurieren des Registrierungsdiensts für Netzwerkgeräte und der Abhängigkeiten** erstellt und gespeichert haben, und wählen Sie sie aus. Mit diesem Zertifikat der Stammzertifizierungsstelle kann das Clientauthentifizierungszertifikat, das vom Configuration Manager-Richtlinienmodul verwendet wird, durch den Zertifikatregistrierungspunkt überprüft werden.  
 
    - Wenn Sie **PFX-Zertifikatanforderungen verarbeiten** ausgewählt haben, konfigurieren Sie die Verbindungsdetails und die Anmeldeinformationen für die ausgewählte Zertifizierungsstelle.
@@ -157,7 +157,7 @@ Sie müssen mindestens einen Zertifikatregistrierungspunkt in der Configuration 
 
     -   Verwenden Sie auf dem Standortsystemserver die Datei „ *<Configuration Manager-Installationspfad\>* \Logs\crpsetup.log“ und die Datei „ *<Configuration Manager-Installationspfad\>* \Logs\crpmsi.log“. Bei einer erfolgreichen Installation wird der Exitcode 0 zurückgegeben.  
 
-    -   Überprüfen Sie mit einem Browser, ob Sie eine Verbindung mit der URL des Zertifikatregistrierungspunkts herstellen können. Beispiel: https://server1.contoso.com/CMCertificateRegistration. Es sollte eine Seite mit einem **Serverfehler** für den Anwendungsnamen mit einer HTTP 404-Beschreibung angezeigt werden.  
+    -   Überprüfen Sie mithilfe eines Browsers, ob Sie eine Verbindung mit der URL des Zertifikatregistrierungspunkts herstellen können. Beispiel: `https://server1.contoso.com/CMCertificateRegistration`. Es sollte eine Seite mit einem **Serverfehler** für den Anwendungsnamen mit einer HTTP 404-Beschreibung angezeigt werden.  
 
 11. Suchen Sie nach der exportierten Zertifikatdatei für die Stammzertifizierungsstelle, die vom Zertifikatregistrierungspunkt automatisch im folgenden Ordner auf dem primären Standortservercomputer erstellt wurde: *<Configuration Manager-Installationspfad\>* \inboxes\certmgr.box. Speichern Sie diese Datei an einem sicheren Speicherort, auf den Sie zu einem späteren Zeitpunkt während der Installation des Configuration Manager-Richtlinienmoduls auf dem Server mit dem Registrierungsdienst für Netzwerkgeräte sicher zugreifen können.  
 
@@ -185,7 +185,7 @@ Sie müssen das Configuration Manager-Richtlinienmodul auf jedem Server installi
 
 4. Übernehmen Sie auf der Seite **Installationsordner** den standardmäßigen Installationsordner für das Richtlinienmodul, oder geben Sie einen anderen Ordner an, und klicken Sie dann auf **Weiter**.  
 
-5. Geben Sie auf der Seite **Zertifikatregistrierungspunkt** die URL des Zertifikatregistrierungspunkts an, indem Sie den FQDN des Standortsystemservers und den Namen der virtuellen Anwendung verwenden, der in den Eigenschaften des Zertifikatregistrierungspunkts aufgeführt ist. Der Standardname der virtuellen Anwendung lautet „CMCertificateRegistration“. Beispiel: Wenn der Standortsystemserver den FQDN „server1.contoso.com“ aufweist und Sie den Standardnamen der virtuellen Anwendung verwendet haben, geben Sie **https://server1.contoso.com/CMCertificateRegistration** an.  
+5. Geben Sie auf der Seite **Zertifikatregistrierungspunkt** die URL des Zertifikatregistrierungspunkts an, indem Sie den FQDN des Standortsystemservers und den Namen der virtuellen Anwendung verwenden, der in den Eigenschaften des Zertifikatregistrierungspunkts aufgeführt ist. Der Standardname der virtuellen Anwendung lautet „CMCertificateRegistration“. Beispiel: Wenn der Standortsystemserver den FQDN „server1.contoso.com“ aufweist und Sie den Standardnamen der virtuellen Anwendung verwendet haben, geben Sie `https://server1.contoso.com/CMCertificateRegistration` an.
 
 6. Übernehmen Sie den Standardport **443** , oder geben Sie die alternative Portnummer an, die vom Zertifikatregistrierungspunkt verwendet wird. Klicken Sie dann auf **Weiter**.  
 

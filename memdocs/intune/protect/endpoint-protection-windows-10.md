@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f9b2247c73866d3faaa48fa00d509df1695cb6a
-ms.sourcegitcommit: a383820fe31aab17618926550118be0800cc8ed6
+ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82104329"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506589"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Einstellungen für Windows 10 (und höher), um Geräte zu schützen, die Intune verwenden.
 
@@ -747,17 +747,6 @@ Diese Einstellungen gelten speziell für Festplattenlaufwerke.
     Konfigurieren Sie, welche BitLocker-Wiederherstellungsinformationen in Azure AD gespeichert werden. Es stehen die folgenden Optionen zur Auswahl:  
     - **Wiederherstellungskennwörter und Schlüsselpakete sichern**  
     - **Nur Wiederherstellungskennwörter sichern**  
-
-  - **Rotation von clientgesteuerten Wiederherstellungskennwörtern**  
-    **Standardeinstellung:** Schlüsselrotation für Azure AD-eingebundene Geräte aktiviert  
-    BitLocker-CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
-    
-    Mit dieser Einstellung wird nach der Wiederherstellung eines Betriebssystemlaufwerks eine vom Client gesteuerte Rotation des Wiederherstellungskennworts gestartet (über bootmgr oder WinRE).  
-
-    - Nicht konfiguriert  
-    - Schlüsselrotation deaktiviert  
-    - Schlüsselrotation für Azure AD-eingebundene Geräte aktiviert  
-    - Schlüsselrotation für Azure AD- und hybrid eingebundene Geräte aktiviert  
 
   - **Vor dem Aktivieren von BitLocker Wiederherstellungsinformationen in Azure Active Directory speichern**  
     **Standardeinstellung:** Nicht konfiguriert  

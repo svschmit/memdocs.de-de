@@ -5,17 +5,17 @@ description: Erfahren Sie, wie sie internetbasierte Windows 10-Geräte für die 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 32c148b695a47241c6646a2a7309f0a27f3b3070
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691048"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137914"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Vorbereiten von internetbasierten Geräten für die Co-Verwaltung
 
@@ -65,7 +65,7 @@ Für internetbasierte Geräte im zweiten Pfad müssen Sie eine App in Intune ers
 
 3. Kopieren Sie die Befehlszeile auf der Registerkarte **Aktivierung**. Fügen Sie sie in Editor ein, um sie für den nächsten Prozess zu speichern.  
 
-Die folgende Befehlszeile ist ein Beispiel: `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC"`
+Die folgende Befehlszeile ist ein Beispiel: `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
 <!--1358215-->
 Bestimmen Sie, welche Befehlszeileneigenschaften für Ihre Umgebung erforderlich sind:  
@@ -91,14 +91,14 @@ Bestimmen Sie, welche Befehlszeileneigenschaften für Ihre Umgebung erforderlich
 
     Weitere Informationen finden Sie unter [Informationen zu Parametern und Eigenschaften für die Clientinstallation in Configuration Manager – PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts).
 
-Auf der Website werden zusätzliche Azure AD-Informationen für Cloud Management Gateway (CMG) veröffentlicht. Ein in Azure AD eingebundener Client ruft diese Informationen beim ccmsetup-Prozess von Cloud Management Gateway ab und verwendet dabei den gleichen Mandanten, mit dem er verknüpft ist. Dieses Verhalten vereinfacht das Registrieren von Geräten zur gemeinsamen Verwaltung in einer Umgebung mit mehreren Azure AD-Mandanten. Die einzigen beiden erforderlichen ccmsetup-Eigenschaften sind **CCMHOSTNAME** und **SMSSiteCode**.<!--3607731-->
+Auf der Website werden zusätzliche Azure AD-Informationen für Cloud Management Gateway (CMG) veröffentlicht. Ein in Azure AD eingebundener Client ruft diese Informationen beim ccmsetup-Prozess von Cloud Management Gateway ab und verwendet dabei den gleichen Mandanten, mit dem er verknüpft ist. Dieses Verhalten vereinfacht das Registrieren von Geräten zur gemeinsamen Verwaltung in einer Umgebung mit mehreren Azure AD-Mandanten. Die einzigen beiden erforderlichen ccmsetup-Eigenschaften sind **CCMHOSTNAME** und **SMSSITECODE**.<!--3607731-->
 
 > [!NOTE]
 > Wenn Sie den Configuration Manager-Client bereits von Intune aus bereitstellen, aktualisieren Sie die Intune-App mit einer neuen Befehlszeile und einer neuen MSI-Komponente. <!-- SCCMDocs-pr issue 3084 -->
 
 Das folgende Beispiel enthält alle diese Eigenschaften:
 
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001`
+`CCMSETUPCMD="CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001"`
 
 Weitere Informationen finden Sie unter [Informationen zu Clientinstallationseigenschaften](../core/clients/deploy/about-client-installation-properties.md).
 

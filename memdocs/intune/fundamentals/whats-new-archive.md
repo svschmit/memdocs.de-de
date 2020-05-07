@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c3adb6f1548c0b332aaa477014f07559ffc826c1
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255012"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842290"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Neuerungen in Microsoft Intune (vorherige Monate)
 
@@ -4187,7 +4187,7 @@ In einem Intune-Geräteeinschränkungsprofil können Sie jetzt die folgenden [Be
 - Geben Sie an, ob die Benachrichtigungssounds zulässig sind.
 
 ### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously---737837---"></a>Konfigurieren von iOS-Apps für die autonome Ausführung im Einzelanwendungsmodus<!-- 737837 -->
-Sie können jetzt ein Intune-Geräteprofil verwenden, um iOS-Geräte so zu konfigurieren, dass bestimmte Apps im [autonomen Einzelanwendungsmodus](../configuration/device-restrictions-ios.md#autonomous-single-app-mode) ausgeführt werden. Wenn dieser Modus konfiguriert ist und die App ausgeführt wird, wird das Gerät gesperrt, sodass es nur die App ausführen kann. Ein Beispiel hierfür ist, wenn Sie eine App konfigurieren, mit der Benutzer einen Test auf dem Gerät ausführen können. Wenn die Aktionen der App abgeschlossen sind oder Sie diese Richtlinie entfernen, kehrt das Gerät in seinen normalen Zustand zurück.
+Sie können jetzt ein Intune-Geräteprofil verwenden, um iOS-Geräte so zu konfigurieren, dass bestimmte Apps im [autonomen Einzelanwendungsmodus](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam) ausgeführt werden. Wenn dieser Modus konfiguriert ist und die App ausgeführt wird, wird das Gerät gesperrt, sodass es nur die App ausführen kann. Ein Beispiel hierfür ist, wenn Sie eine App konfigurieren, mit der Benutzer einen Test auf dem Gerät ausführen können. Wenn die Aktionen der App abgeschlossen sind oder Sie diese Richtlinie entfernen, kehrt das Gerät in seinen normalen Zustand zurück.
 
 ### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices---723765---"></a>Konfigurieren vertrauenswürdiger Domänen für das Durchsuchen von E-Mails und das Webbrowsen auf iOS-Geräten<!-- 723765 -->
 Sie können in einem iOS-Geräteeinschränkungsprofil jetzt die folgenden [Domäneneinstellungen](../configuration/device-restrictions-ios.md#domains) konfigurieren:

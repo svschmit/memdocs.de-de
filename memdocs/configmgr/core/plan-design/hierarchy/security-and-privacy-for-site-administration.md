@@ -2,7 +2,7 @@
 title: Sicherheit und Datenschutz für die Standortverwaltung
 titleSuffix: Configuration Manager
 description: Optimieren von Sicherheit und Datenschutz für die Standortverwaltung in Configuration Manager
-ms.date: 07/26/2019
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35c2738b363895671528196e99b324fd2fe6f5a7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 923018e35fae1ec1f5e9c0869ef22d43b5de552b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704578"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182258"
 ---
 # <a name="security-and-privacy-for-site-administration-in-configuration-manager"></a>Sicherheit und Datenschutz für die Standortverwaltung in Configuration Manager
 
@@ -169,7 +169,11 @@ Weitere Informationen zu den verschiedenen Wake-On-LAN-Technologien finden Sie u
 
 ### <a name="if-you-use-email-notification-configure-authenticated-access-to-the-smtp-mail-server"></a>Wenn Sie E-Mail-Benachrichtigungen verwenden, konfigurieren Sie einen authentifizierten Zugriff auf den SMTP-E-Mail-Server
 
-Verwenden Sie nach Möglichkeit einen Mailserver, der den authentifizierten Zugriff unterstützt. Verwenden Sie für die Authentifizierung das Computerkonto des Standortservers. Falls Sie ein Benutzerkonto für die Authentifizierung angeben müssen, verwenden Sie eines mit den geringsten Berechtigungen.  
+Verwenden Sie nach Möglichkeit einen Mailserver, der den authentifizierten Zugriff unterstützt. Verwenden Sie für die Authentifizierung das Computerkonto des Standortservers. Falls Sie ein Benutzerkonto für die Authentifizierung angeben müssen, verwenden Sie eines mit den geringsten Berechtigungen. 
+
+### <a name="enforce-ldap-channel-binding-and-ldap-signing"></a>Erzwingen der LDAP-Kanalbindung und der LDAP-Signatur
+
+Die Sicherheit von Active Directory-Domänencontrollern kann verbessert werden, indem der Server so konfiguriert wird, dass er SASL-LDAP-Bindungen (Simple Authentication and Security Layer) ablehnt, die keine Signatur anfordern, oder einfache LDAP-Bindungen ablehnt, die auf einer Klartextverbindung ausgeführt werden. Ab Version 1910 unterstützt Configuration Manager das Erzwingen der LDAP-Kanalbindung und der LDAP-Signatur. Weitere Informationen finden Sie unter [2020 LDAP-Kanalbindung und LDAP-Signaturanforderung für Windows](https://support.microsoft.com/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). <!--6244453-->
 
 
 ## <a name="security-guidance-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> Sicherheitsempfehlungen für den Standortserver
