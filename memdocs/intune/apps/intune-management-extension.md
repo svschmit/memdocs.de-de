@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a773c449b0b6d60b9cf7bf6a280cc371d9c4cf03
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 749377ceecf29d9b900cff108fc4b736d6b8d0f2
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80979221"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605166"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Verwenden von PowerShell-Skripts auf Windows 10-Geräten in Intune
 
@@ -30,7 +30,7 @@ Verwenden Sie die Verwaltungserweiterung von Microsoft Intune, um PowerShell-Skr
 
 Diese Funktion gilt für:
 
-- Windows 10 und höher
+- Windows 10 und höher (mit Ausnahme von Windows 10 Home)
 
 > [!NOTE]
 > Wenn die Voraussetzungen der Intune-Verwaltungserweiterung erfüllt sind, wird die Intune-Verwaltungserweiterung automatisch installiert, sobald dem Benutzer oder Gerät ein PowerShell-Skript oder eine Win32-App zugewiesen ist. Weitere Informationen finden Sie in den [Voraussetzungen](../apps/intune-management-extension.md#prerequisites) der Intune-Verwaltungserweiterung.
@@ -47,7 +47,7 @@ Die Intune-Verwaltungserweiterung ergänzt die integrierten MDM-Features für Wi
 
 Für die Intune-Verwaltungserweiterung sind folgende Voraussetzungen erforderlich. Wenn diese Voraussetzungen erfüllt sind, wird die Intune-Verwaltungserweiterung automatisch installiert, sobald dem Benutzer oder Gerät ein PowerShell-Skript oder eine Win32-App zugewiesen ist.
 
-- Geräte mit Windows 10, Version 1607 oder höher: Wenn das Gerät mithilfe der [automatischen Massenregistrierung](../enrollment/windows-bulk-enroll.md) registriert wurde, muss es mindestens Windows 10, Version 1703 ausführen. Die Intune-Verwaltungserweiterung wird unter Windows 10 im S Modus nicht unterstützt, da im S Modus keine Apps ausgeführt werden können, die nicht aus dem Store stammen. 
+- Geräte mit Windows 10, Version 1607 oder höher: Wenn das Gerät mithilfe der [automatischen Massenregistrierung](../enrollment/windows-bulk-enroll.md) registriert wurde, muss es mindestens Windows 10, Version 1709 ausführen. Die Intune-Verwaltungserweiterung wird unter Windows 10 im S Modus nicht unterstützt, da im S Modus keine Apps ausgeführt werden können, die nicht aus dem Store stammen. 
   
 - Mit Azure Active Directory (Azure AD) verknüpfte Geräte, einschließlich:  
   

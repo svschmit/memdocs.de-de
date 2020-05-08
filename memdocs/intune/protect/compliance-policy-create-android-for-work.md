@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/07/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26bd9a92343c1ddcc31c1ff65b43643f3d9e22c9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d419eb341d3d15a8307396d1bcf13235201606f4
+ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353358"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729240"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Android Enterprise-Einstellungen, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen
 
@@ -41,11 +41,24 @@ Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die 
 
 [Erstellen einer Konformitätsrichtlinie](create-compliance-policy.md#create-the-policy) Wählen Sie **Android Enterprise** als **Plattform** aus.
 
+
 ## <a name="device-owner"></a>Geräteeigentümer
+
+### <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+- **Anfordern, dass das Gerät höchstens das angegebene Computerrisiko aufweist**  
+
+  Wählen Sie das maximal zulässige Computerrisiko für Geräte aus, die von Microsoft Defender ATP bewertet wurden. Geräte, die diesen Wert überschreiten, werden als nicht konform gekennzeichnet.
+  - **Nicht konfiguriert** (*Standardeinstellung*)
+  - **Clear** (Deaktiviert)
+  - **Niedrig**
+  - **Mittel**
+  - **Hoch**
 
 ### <a name="device-health"></a>Geräteintegrität
 
-- **Anfordern, dass das Gerät höchstens der angegebenen Gerätebedrohungsstufe entspricht**: Wählen Sie die höchste zulässige Gerätebedrohungsstufe aus, die von Ihrem [Mobile Threat Defense-Dienst](mobile-threat-defense.md) ausgewertet wird. Geräte, die diese Bedrohungsstufe überschreiten, werden als nicht konform gekennzeichnet. Wählen Sie die zulässige Bedrohungsstufe aus, um diese Einstellung zu verwenden:
+- **Anfordern, dass das Gerät höchstens der angegebenen Gerätebedrohungsstufe entspricht**  
+  Wählen Sie die höchste zulässige Gerätebedrohungsstufe aus, die von Ihrem [Mobile Threat Defense-Dienst](mobile-threat-defense.md) ausgewertet wird. Geräte, die diese Bedrohungsstufe überschreiten, werden als nicht konform gekennzeichnet. Wählen Sie die zulässige Bedrohungsstufe aus, um diese Einstellung zu verwenden:
 
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
   - **Gesichert**: Diese Option ist die sicherste und bedeutet, dass auf dem Gerät keine Bedrohungen vorhanden sein können. Wenn auf dem Gerät Bedrohungen jeglicher Stufen erkannt werden, wird es als nicht konform bewertet.
@@ -53,12 +66,13 @@ Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die 
   - **Mittel**: Das Gerät wird als konform bewertet, wenn auf dem Gerät Bedrohungen auf niedriger oder mittlerer Stufe gefunden werden. Wenn auf dem Gerät Bedrohungen hoher Stufen erkannt werden, wird es als nicht konform bewertet.
   - **Hoch**: Dies ist die am wenigsten sichere Option, die alle Bedrohungsebenen zulässt. Es ist möglicherweise hilfreich, diese Lösung nur zu Berichtszwecken zu verwenden.
   
-> [!NOTE] 
+> [!NOTE]
 > Alle MTD-Anbieter (Mobile Threat Defense) werden für Bereitstellungen für Android Enterprise-Gerätebesitzer unterstützt, die die App-Konfiguration verwenden. Informieren Sie sich bei Ihrem MTD-Anbieter über die spezifische Konfiguration, die zum Unterstützen von Android Enterprise-Gerätebesitzerplattformen in Intune erforderlich ist.
 
 #### <a name="google-play-protect"></a>Google Play Protect
 
-- **SafetyNet-Gerätenachweis**: Legen Sie die Integritätsstufe des [SafetyNet-Nachweises](https://developer.android.com/training/safetynet/attestation.html) fest, die eingehalten werden muss. Folgende Optionen sind verfügbar:
+- **SafetyNet-Gerätenachweis**  
+  Legen Sie die Integritätsstufe des [SafetyNet-Nachweises](https://developer.android.com/training/safetynet/attestation.html) fest, die eingehalten werden muss. Folgende Optionen sind verfügbar:
   - **Nicht konfiguriert** (*Standardeinstellung*): Die Einstellung wird bei der Konformitätsprüfung nicht ausgewertet.
   - **Grundlegende Integrität prüfen**
   - **Grundlegende Integrität und zertifizierte Geräte prüfen**
@@ -67,94 +81,119 @@ Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die 
 
 #### <a name="operating-system-version"></a>Version des Betriebssystems
 
-- **Mindestversion des Betriebssystems**: Wenn ein Gerät die Anforderung an die Mindestversion des Betriebssystems nicht erfüllt, wird es als nicht konform gemeldet. Ein Link zur Vorgehensweise zum Upgrade wird angezeigt. Der Endbenutzer kann ein Upgrade für sein Gerät durchführen und dann auf Organisationsressourcen zugreifen.
+- **Minimales Release des Betriebssystems**  
+  Wenn ein Gerät die Anforderung an die Mindestversion des Betriebssystems nicht erfüllt, wird es als nicht konform gemeldet. Ein Link zur Vorgehensweise zum Upgrade wird angezeigt. Der Endbenutzer kann ein Upgrade für sein Gerät durchführen und dann auf Organisationsressourcen zugreifen.
 
   *Standardmäßig ist keine Version konfiguriert*.
 
-- **Maximale Version des Betriebssystems**: Wenn auf einem Gerät eine neuere Betriebssystemversion verwendet wird, als die in der Regel angegebene Version, wird der Zugriff auf Organisationsressourcen gesperrt. Der Benutzer wird aufgefordert, sich an den zuständigen IT-Administrator zu wenden. Das Gerät kann solange nicht auf Ressourcen der Organisation zugreifen, bis die Regel geändert und die betreffende Betriebssystemversion zugelassen wird.
+- **Maximales Release des Betriebssystems**  
+  Wenn auf einem Gerät eine neuere Betriebssystemversion verwendet wird, als die in der Regel angegebene Version, wird der Zugriff auf Organisationsressourcen gesperrt. Der Benutzer wird aufgefordert, sich an den zuständigen IT-Administrator zu wenden. Das Gerät kann solange nicht auf Ressourcen der Organisation zugreifen, bis die Regel geändert und die betreffende Betriebssystemversion zugelassen wird.
 
   *Standardmäßig ist keine Version konfiguriert*.
 
-- **Mindestens erforderliche Sicherheitspatchebene**:  Wählen Sie die älteste Sicherheitspatchebene, die ein Gerät haben darf. Geräte, die nicht mindestens diese Patchebene aufweisen, sind nicht konform. Das Datum muss im Format JJJJ-MM-TT eingegeben werden.
+- **Mindestens erforderliche Sicherheitspatchebene**  
+  Wählen Sie die älteste Sicherheitspatchebene, die ein Gerät haben darf. Geräte, die nicht mindestens diese Patchebene aufweisen, sind nicht konform. Das Datum muss im Format JJJJ-MM-TT eingegeben werden.
 
   *Standardmäßig ist kein Datum konfiguriert*.
 
-
 ### <a name="system-security"></a>Systemsicherheit
 
-- **Anfordern eines Kennworts zum Entsperren mobiler Geräte:** 
+- **Anfordern eines Kennworts zum Entsperren mobiler Geräte**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
   - **Erforderlich**: Benutzer müssen ein Kennwort eingeben, bevor sie auf ihr Gerät zugreifen können.
-  - **Erforderlicher Kennworttyp:** Wählen Sie aus, ob ein Kennwort nur aus numerischen Zeichen oder aus einer Kombination aus Ziffern und anderen Zeichen bestehen soll. Folgende Optionen sind verfügbar:
-    - **Gerätestandard**: Zur Auswertung der Kennwortkonformität sollten Sie in jedem Fall eine andere Einstellung für die Kennwortstärke als **Gerätestandard** angeben.  
-    - **Kennwort erforderlich, keine Einschränkungen**
-    - **Schwach biometrisch** - [ Vergleich von stark und schwach biometrisch](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (öffnet Android-Website)
-    - **Numerisch** (*Standardeinstellung*): Kennwort darf nur aus Zahlen bestehen. Beispiel: `123456789`. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
-    - **Numerisch komplex**: Sich wiederholende oder fortlaufende Ziffern wie „1111“ oder „1234“ sind nicht zulässig. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
-    - **Alphabetisch**: Buchstaben des Alphabets sind erforderlich. Zahlen und Symbole sind nicht erforderlich. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
-    - **Alphanumerisch**: Schließt Großbuchstaben, Kleinbuchstaben und Ziffern ein. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
-    - **Alphanumerisch mit Symbolen**: Schließt Großbuchstaben, Kleinbuchstaben, Ziffern, Interpunktionszeichen und Symbole ein. Geben Sie außerdem Folgendes ein:
-    
-    Je nachdem, welchen *Kennworttyp* Sie auswählen, stehen die folgenden Einstellungen zur Verfügung:  
-    - **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).  
 
-    - **Erforderliche Zeichenanzahl**: Geben Sie die erforderliche Anzahl von Zeichen des Kennworts ein (0 bis 16 Zeichen).
+- **Erforderlicher Kennworttyp**  
+  Wählen Sie aus, ob ein Kennwort nur aus numerischen Zeichen oder aus einer Kombination aus Ziffern und anderen Zeichen bestehen soll. Folgende Optionen sind verfügbar:
+  - **Gerätestandard**: Zur Auswertung der Kennwortkonformität sollten Sie in jedem Fall eine andere Einstellung für die Kennwortstärke als *Gerätestandard* angeben.
+  - **Kennwort erforderlich, keine Einschränkungen**
+  - **Schwach biometrisch** - [ Vergleich von stark und schwach biometrisch](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (öffnet Android-Website)
+  - **Numerisch** (*Standardeinstellung*): Kennwort darf nur aus Zahlen bestehen. Beispiel: `123456789`. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
+  - **Numerisch komplex**: Sich wiederholende oder fortlaufende Ziffern wie „1111“ oder „1234“ sind nicht zulässig. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
+  - **Alphabetisch**: Buchstaben des Alphabets sind erforderlich. Zahlen und Symbole sind nicht erforderlich. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
+  - **Alphanumerisch**: Schließt Großbuchstaben, Kleinbuchstaben und Ziffern ein. Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
+  - **Alphanumerisch mit Symbolen**: Schließt Großbuchstaben, Kleinbuchstaben, Ziffern, Interpunktionszeichen und Symbole ein.
 
-    - **Erforderliche Anzahl Kleinbuchstaben**: Geben Sie die erforderliche Anzahl Kleinbuchstaben für das Kennwort ein, von 0 bis 16 Zeichen.
+  Je nachdem, welchen *Kennworttyp* Sie auswählen, stehen die folgenden Einstellungen zur Verfügung:
+  - **Minimale Kennwortlänge**  
+    Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).  
 
-    - **Erforderliche Anzahl Großbuchstaben**: Geben Sie die erforderliche Anzahl Großbuchstaben für das Kennwort ein, von 0 bis 16 Zeichen.
+  - **Erforderliche Anzahl von Zeichen**  
+    Geben Sie die erforderliche Anzahl von Zeichen des Kennworts ein (0 bis 16 Zeichen).
 
-    - **Erforderliche Anzahl anderer Zeichen als Buchstaben**: Geben Sie die erforderliche Anzahl anderer Zeichen als Buchstaben (alles außer Buchstaben im Alphabet) für das Kennwort ein, von 0 bis 16 Zeichen.
+  - **Erforderliche Anzahl von Kleinbuchstaben**  
+    Geben Sie die erforderliche Anzahl Kleinbuchstaben für das Kennwort ein, von 0 bis 16 Zeichen.
 
-    - **Erforderliche Anzahl numerischer Zeichen**: Geben Sie die erforderliche Anzahl numerischer Zeichen (`1`, `2`, `3` usw.) für das Kennwort ein, von 0 bis 16 Zeichen.
-    
-    - **Erforderliche Anzahl Symbole**: Geben Sie die erforderliche Anzahl der Symbole (`&`, `#`, `%` usw.) für das Kennwort ein, von 0 bis 16 Zeichen.
- 
-- **Minuten der Inaktivität vor Anforderung des Kennworts:** Geben Sie die Leerlaufzeit ein, nach der ein Benutzer sein Kennwort erneut eingeben muss. Zu den Optionen gehören der Standardwert *Nicht konfiguriert* und Werte von *1 Minute* bis *8 Stunden*.
+  - **Erforderliche Anzahl von Großbuchstaben**  
+    Geben Sie die erforderliche Anzahl Großbuchstaben für das Kennwort ein, von 0 bis 16 Zeichen.
 
-- **Anzahl Tage bis zum Kennwortablauf**: Geben Sie die Anzahl der Tage von 1–365 an, bis das Gerätekennwort geändert werden muss. Geben Sie beispielsweise zum Ändern des Kennworts nach 60 Tagen `60` ein. Wenn das Kennwort abläuft, werden Benutzer aufgefordert, ein neues Kennwort zu erstellen.
+  - **Erforderliche Anzahl anderer Zeichen als Buchstaben**  
+    Geben Sie die erforderliche Anzahl anderer Zeichen als Buchstaben (alles außer Buchstaben im Alphabet) für das Kennwort ein, von 0 bis 16 Zeichen.
 
-   *Standardmäßig ist kein Wert konfiguriert*.
+  - **Erforderliche Anzahl numerischer Zeichen**  
+    Geben Sie die erforderliche Anzahl numerischer Zeichen (`1`, `2`, `3` usw.) für das Kennwort ein, von 0 bis 16 Zeichen.
 
-- **Anzahl erforderlicher Kennwörter, bevor ein Benutzer ein Kennwort wiederverwenden kann**: Geben Sie die Anzahl von vorherigen Kennwörtern ein, die nicht wiederverwendet werden dürfen, von 1 bis 24. Verwenden Sie diese Einstellung, um zu verhindern, dass der Benutzer zuvor verwendete Kennwörter erstellt.  
+  - **Erforderliche Anzahl von Symbolen**  
+    Geben Sie die erforderliche Anzahl der Symbole (`&`, `#`, `%` usw.) für das Kennwort ein, von 0 bis 16 Zeichen.
+
+  - **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Anforderung eines Kennworts**  
+    Geben Sie die Leerlaufzeit ein, nach der ein Benutzer sein Kennwort erneut eingeben muss. Zu den Optionen gehören der Standardwert *Nicht konfiguriert* und Werte von *1 Minute* bis *8 Stunden*.
+
+  - **Anzahl von Tagen bis zum Kennwortablauf**  
+    Geben Sie die Anzahl der Tage von 1–365 an, bis das Gerätekennwort geändert werden muss. Geben Sie beispielsweise zum Ändern des Kennworts nach 60 Tagen `60` ein. Wenn das Kennwort abläuft, werden Benutzer aufgefordert, ein neues Kennwort zu erstellen.
+
+    *Standardmäßig ist kein Wert konfiguriert*.
+
+  - **Anzahl erforderlicher Kennwörter, bevor ein Benutzer ein Kennwort wiederverwenden kann**  
+    Geben Sie die Anzahl von vorherigen Kennwörtern ein, die nicht wiederverwendet werden dürfen, von 1 bis 24. Verwenden Sie diese Einstellung, um zu verhindern, dass der Benutzer zuvor verwendete Kennwörter erstellt.  
 
     *Standardmäßig ist keine Version konfiguriert*.
 
 #### <a name="encryption"></a>Verschlüsselung
 
-- **Verschlüsselung des Datenspeichers auf dem Gerät**: 
+- **Verschlüsselung des Datenspeichers auf dem Gerät**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
-  - **Anfordern:** Bei dieser Einstellung wird der Datenspeicher auf Ihren Geräten verschlüsselt.  
+  - **Anfordern:** Bei dieser Einstellung wird der Datenspeicher auf Ihren Geräten verschlüsselt.
 
   Diese Einstellung muss nicht konfiguriert werden, da Android Enterprise-Arbeitsprofilgeräte eine Verschlüsselung erzwingen.
 
 ## <a name="work-profile"></a>Arbeitsprofil
 
-### <a name="device-health"></a>Geräteintegrität
+### <a name="microsoft-defender-atp---for-work-profile"></a>Microsoft Defender ATP: *für Arbeitsprofil*
 
-- **Geräte mit entfernten Nutzungsbeschränkungen**: 
+- **Anfordern, dass das Gerät höchstens das angegebene Computerrisiko aufweist**  
+  Wählen Sie das maximal zulässige Computerrisiko für Geräte aus, die von Microsoft Defender ATP bewertet wurden. Geräte, die diesen Wert überschreiten, werden als nicht konform gekennzeichnet.
+  - **Nicht konfiguriert** (*Standardeinstellung*)
+  - **Clear** (Deaktiviert)
+  - **Niedrig**
+  - **Mittel**
+  - **Hoch**
+
+### <a name="device-health---for-work-profile"></a>Integrität für Geräte: *für Arbeitsprofil*
+
+- **Geräte mit entfernten Nutzungsbeschränkungen**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
-  - **Blockieren**: Geräte mit Jailbreak oder entfernten Nutzungsbeschränkungen werden als nicht konform gekennzeichnet.  
+  - **Blockieren**: Geräte mit Jailbreak oder entfernten Nutzungsbeschränkungen werden als nicht konform gekennzeichnet.
 
-- **Anfordern, dass das Gerät höchstens der angegebenen Gerätebedrohungsstufe entspricht**: Wählen Sie die höchste zulässige Gerätebedrohungsstufe aus, die von Ihrem [Mobile Threat Defense-Dienst](mobile-threat-defense.md) ausgewertet wird. Geräte, die diese Bedrohungsstufe überschreiten, werden als nicht konform gekennzeichnet. Wählen Sie die zulässige Bedrohungsstufe aus, um diese Einstellung zu verwenden:
-
+- **Anfordern, dass das Gerät höchstens der angegebenen Gerätebedrohungsstufe entspricht**  
+  Wählen Sie die höchste zulässige Gerätebedrohungsstufe aus, die von Ihrem [Mobile Threat Defense-Dienst](mobile-threat-defense.md) ausgewertet wird. Geräte, die diese Bedrohungsstufe überschreiten, werden als nicht konform gekennzeichnet. Wählen Sie die zulässige Bedrohungsstufe aus, um diese Einstellung zu verwenden:
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
   - **Gesichert**: Diese Option ist die sicherste und bedeutet, dass auf dem Gerät keine Bedrohungen vorhanden sein können. Wenn auf dem Gerät Bedrohungen jeglicher Stufen erkannt werden, wird es als nicht konform bewertet.
   - **Niedrig**: Das Gerät wird als konform bewertet, wenn nur Bedrohungen auf niedrigen Stufen vorliegen. Durch Bedrohungen höherer Stufen wird das Gerät in einen nicht kompatiblen Status versetzt.
   - **Mittel**: Das Gerät wird als konform bewertet, wenn auf dem Gerät Bedrohungen auf niedriger oder mittlerer Stufe gefunden werden. Wenn auf dem Gerät Bedrohungen hoher Stufen erkannt werden, wird es als nicht konform bewertet.
   - **Hoch**: Dies ist die am wenigsten sichere Option, die alle Bedrohungsebenen zulässt. Es ist möglicherweise hilfreich, diese Lösung nur zu Berichtszwecken zu verwenden.
 
-#### <a name="google-play-protect"></a>Google Play Protect
+#### <a name="google-play-protect---for-work-profile"></a>Google Play Protect: *für Arbeitsprofil*
 
-- **Google Play Services ist konfiguriert**: 
+- **Google Play Services ist konfiguriert**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
-  - **Erforderlich**: Erzwingt, dass die Google Play Services-App installiert und aktiviert ist. Google Play Services ermöglicht Sicherheitsupdates und stellt eine grundlegende Abhängigkeit für viele Sicherheitsfunktionen auf zertifizierten Google-Geräten dar. 
+  - **Erforderlich**: Erzwingt, dass die Google Play Services-App installiert und aktiviert ist. Google Play Services ermöglicht Sicherheitsupdates und stellt eine grundlegende Abhängigkeit für viele Sicherheitsfunktionen auf zertifizierten Google-Geräten dar.
   
-- **Aktueller Sicherheitsanbieter**: 
+- **Aktueller Sicherheitsanbieter**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
-  - **Erforderlich**: Erzwingt, dass ein aktueller Sicherheitsanbieter ein Gerät vor bekannten Sicherheitslücken schützen kann. 
+  - **Erforderlich**: Erzwingt, dass ein aktueller Sicherheitsanbieter ein Gerät vor bekannten Sicherheitslücken schützen kann.
   
-- **SafetyNet-Gerätenachweis**: Legen Sie die Integritätsstufe des [SafetyNet-Nachweises](https://developer.android.com/training/safetynet/attestation.html) fest, die eingehalten werden muss. Folgende Optionen sind verfügbar:
+- **SafetyNet-Gerätenachweis**  
+  Legen Sie die Integritätsstufe des [SafetyNet-Nachweises](https://developer.android.com/training/safetynet/attestation.html) fest, die eingehalten werden muss. Folgende Optionen sind verfügbar:
   - **Nicht konfiguriert** (*Standardeinstellung*): Die Einstellung wird bei der Konformitätsprüfung nicht ausgewertet.
   - **Grundlegende Integrität prüfen**
   - **Grundlegende Integrität und zertifizierte Geräte prüfen**
@@ -162,27 +201,30 @@ Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die 
 > [!NOTE]
 > Auf Android Enterprise-Geräten ist die Einstellung **Bedrohungsüberprüfung für Apps** eine Gerätekonfigurationsrichtlinie. Administratoren können mithilfe einer Richtlinie die Einstellung auf einem Gerät aktivieren. Siehe [Einstellungen für Geräteeinschränkungen für Android Enterprise](../configuration/device-restrictions-android-for-work.md).
 
-### <a name="device-properties"></a>Geräteeigenschaften
+### <a name="device-properties---for-work-profile"></a>Geräteeigenschaften: *für Arbeitsprofil*
 
-#### <a name="operating-system-version"></a>Version des Betriebssystems
+#### <a name="operating-system-version---for-work-profile"></a>Betriebssystemversion: *für Arbeitsprofil*
 
-- **Mindestversion des Betriebssystems**: Wenn ein Gerät die Anforderung an die Mindestversion des Betriebssystems nicht erfüllt, wird es als nicht konform gemeldet. Ein Link zur Vorgehensweise zum Upgrade wird angezeigt. Der Endbenutzer kann ein Upgrade für sein Gerät durchführen und dann auf Organisationsressourcen zugreifen.
-
-  *Standardmäßig ist keine Version konfiguriert*.
-
-- **Maximale Version des Betriebssystems**: Wenn auf einem Gerät eine neuere Betriebssystemversion verwendet wird, als die in der Regel angegebene Version, wird der Zugriff auf Organisationsressourcen gesperrt. Der Benutzer wird aufgefordert, sich an den zuständigen IT-Administrator zu wenden. Das Gerät kann solange nicht auf Ressourcen der Organisation zugreifen, bis die Regel geändert und die betreffende Betriebssystemversion zugelassen wird.
+- **Minimales Release des Betriebssystems**  
+Wenn ein Gerät die Anforderung an die Mindestversion des Betriebssystems nicht erfüllt, wird es als nicht konform gemeldet. Ein Link zur Vorgehensweise zum Upgrade wird angezeigt. Der Endbenutzer kann ein Upgrade für sein Gerät durchführen und dann auf Organisationsressourcen zugreifen.
 
   *Standardmäßig ist keine Version konfiguriert*.
 
-### <a name="system-security"></a>Systemsicherheit
+- **Maximales Release des Betriebssystems**  
+Wenn auf einem Gerät eine neuere Betriebssystemversion verwendet wird, als die in der Regel angegebene Version, wird der Zugriff auf Organisationsressourcen gesperrt. Der Benutzer wird aufgefordert, sich an den zuständigen IT-Administrator zu wenden. Das Gerät kann solange nicht auf Ressourcen der Organisation zugreifen, bis die Regel geändert und die betreffende Betriebssystemversion zugelassen wird.
 
-- **Anfordern eines Kennworts zum Entsperren mobiler Geräte:** 
-  - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet. 
+  *Standardmäßig ist keine Version konfiguriert*.
+
+### <a name="system-security---for-work-profile"></a>Systemsicherheit: *für Arbeitsprofil*
+
+- **Anfordern eines Kennworts zum Entsperren mobiler Geräte**  
+  - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
   - **Erforderlich**: Benutzer müssen ein Kennwort eingeben, bevor sie auf ihr Gerät zugreifen können.  
 
   Diese Einstellung wird auf Geräteebene angewendet. Wenn Sie nur ein Kennwort auf Arbeitsprofilebene anfordern müssen, verwenden Sie eine Konfigurationsrichtlinie. Siehe [Gerätekonfigurationseinstellungen für Android Enterprise](../configuration/device-restrictions-android-for-work.md).
 
-- **Erforderlicher Kennworttyp:** Wählen Sie aus, ob ein Kennwort nur aus numerischen Zeichen oder aus einer Kombination aus Ziffern und anderen Zeichen bestehen soll. Folgende Optionen sind verfügbar:
+- **Erforderlicher Kennworttyp**  
+  Wählen Sie aus, ob ein Kennwort nur aus numerischen Zeichen oder aus einer Kombination aus Ziffern und anderen Zeichen bestehen soll. Folgende Optionen sind verfügbar:
   - **Gerätestandard**
   - **Biometrie auf niedriger Sicherheitsstufe**
   - **Mindestens numerisch** (*Standard*): Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
@@ -191,26 +233,31 @@ Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die 
   - **Mindestens alphanumerisch**: Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
   - **Mindestens alphanumerisch mit Symbolen**: Geben Sie die **minimale Kennwortlänge** ein, die Benutzer für das Kennwort eingeben müssen (4 bis 16 Zeichen).
 
-  Je nachdem, welchen *Kennworttyp* Sie auswählen, stehen die folgenden Einstellungen zur Verfügung:  
-  - **Minuten der Inaktivität vor Anforderung des Kennworts:** Geben Sie die Leerlaufzeit ein, nach der ein Benutzer sein Kennwort erneut eingeben muss. Zu den Optionen gehören der Standardwert *Nicht konfiguriert* und Werte von *1 Minute* bis *8 Stunden*.
+  Je nachdem, welchen *Kennworttyp* Sie auswählen, stehen die folgenden Einstellungen zur Verfügung:
 
-  - **Anzahl Tage bis zum Kennwortablauf**: Geben Sie die Anzahl der Tage von 1–365 an, bis das Gerätekennwort geändert werden muss. Geben Sie beispielsweise zum Ändern des Kennworts nach 60 Tagen `60` ein. Wenn das Kennwort abläuft, werden Benutzer aufgefordert, ein neues Kennwort zu erstellen.
+  - **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Anforderung eines Kennworts**  
+    Geben Sie die Leerlaufzeit ein, nach der ein Benutzer sein Kennwort erneut eingeben muss. Zu den Optionen gehören der Standardwert *Nicht konfiguriert* und Werte von *1 Minute* bis *8 Stunden*.
 
-  - **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen). 
-  
-  - **Anzahl vorheriger Kennwörter zum Verhindern der Wiederverwendung:** Geben Sie die Anzahl von vorherigen Kennwörtern ein, die nicht wiederverwendet werden dürfen. Verwenden Sie diese Einstellung, um zu verhindern, dass der Benutzer zuvor verwendete Kennwörter erstellt.
+  - **Anzahl von Tagen bis zum Kennwortablauf**  
+    Geben Sie die Anzahl der Tage von 1–365 an, bis das Gerätekennwort geändert werden muss. Geben Sie beispielsweise zum Ändern des Kennworts nach 60 Tagen `60` ein. Wenn das Kennwort abläuft, werden Benutzer aufgefordert, ein neues Kennwort zu erstellen.
 
-#### <a name="encryption"></a>Verschlüsselung
+  - **Minimale Kennwortlänge**  
+    Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).
 
-- **Verschlüsselung des Datenspeichers auf dem Gerät**: 
+  - **Anzahl vorheriger Kennwörter, deren Wiederverwendung verhindert wird**  
+    Geben Sie die Anzahl von vorherigen Kennwörtern ein, die nicht wiederverwendet werden dürfen. Verwenden Sie diese Einstellung, um zu verhindern, dass der Benutzer zuvor verwendete Kennwörter erstellt.
+
+#### <a name="encryption---for-work-profile"></a>Verschlüsselung: *für Arbeitsprofil*
+
+- **Verschlüsselung des Datenspeichers auf dem Gerät**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
   - **Anfordern:** Bei dieser Einstellung wird der Datenspeicher auf Ihren Geräten verschlüsselt.  
 
   Diese Einstellung muss nicht konfiguriert werden, da Android Enterprise-Arbeitsprofilgeräte eine Verschlüsselung erzwingen.
 
-#### <a name="device-security"></a>Gerätesicherheit
+#### <a name="device-security---for-work-profile"></a>Gerätesicherheit: *für Arbeitsprofil*
 
-- **Apps von unbekannten Quellen blockieren**: 
+- **Apps von unbekannten Quellen blockieren**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
   - **Blockieren:** Mit dieser Einstellung werden Geräte blockiert, bei denen die Einstellung **Sicherheit** > **Unbekannte Quellen** aktiviert ist (*wird von Android 4.0 bis Android 7.x, aber nicht von Android 8.0 und höher unterstützt*).  
 
@@ -221,7 +268,7 @@ Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die 
 
   Sie müssen diese Einstellung nicht konfigurieren, da Android Enterprise-Arbeitsprofilgeräte die Installation aus unbekannten Quellen stets einschränken.
 
-- **Laufzeitintegrität der Unternehmensportal-App**: 
+- **Laufzeitintegrität der Unternehmensportal-App**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
   - **Erforderlich**: Wählen Sie diese Einstellung aus, um sicherzustellen, dass die Unternehmensportal-App alle folgenden *Anforderungen* erfüllt:
     - Die Standardlaufzeitumgebung ist installiert.
@@ -229,13 +276,14 @@ Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die 
     - Die App befindet sich nicht im Debug-Modus.
     - Die App wurde aus einer bekannten Quelle installiert.
 
-- **USB-Debugging auf Gerät blockieren**: 
+- **USB-Debugging auf Gerät blockieren**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
   - **Blockieren**: Mit dieser Einstellung wird verhindert, dass Geräte das USB-Debuggingfeature verwenden.  
 
   Sie müssen diese Einstellungen nicht konfigurieren, da USB-Debuggen auf Android Enterprise-Geräten bereits deaktiviert ist.
 
-- **Mindestens erforderliche Sicherheitspatchebene**:  Wählen Sie die älteste Sicherheitspatchebene, die ein Gerät haben darf. Geräte, die nicht mindestens diese Patchebene aufweisen, sind nicht konform. Das Datum muss im Format JJJJ-MM-TT eingegeben werden.
+- **Mindestens erforderliche Sicherheitspatchebene**  
+  Wählen Sie die älteste Sicherheitspatchebene, die ein Gerät haben darf. Geräte, die nicht mindestens diese Patchebene aufweisen, sind nicht konform. Das Datum muss im Format JJJJ-MM-TT eingegeben werden.
 
   *Standardmäßig ist kein Datum konfiguriert*.
 
