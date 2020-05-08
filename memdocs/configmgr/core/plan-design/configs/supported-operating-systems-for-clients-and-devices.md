@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078684"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904532"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Unterstützte Betriebssystemversionen für Clients und Geräte für Configuration Manager
 
@@ -209,7 +209,7 @@ Weitere Informationen finden Sie unter [Gewusst wie: Bereitstellen von Clients f
 > [!Important]  
 > In Configuration Manager, Version 1902 wird der Support für Linux und UNIX als Client eingestellt. Die Einstellung wurde mit [Version 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support) angekündigt. Ziehen Sie deshalb Microsoft Azure Management zum Verwalten von Linux-Servern in Betracht. Azure-Lösungen verfügen über umfangreiche Linux-Unterstützung, die i.d.R. über die Funktionen von Configuration Manager hinausgeht (einschließlich der End-to-End-Patchverwaltung für Linux).
 
-Die Clientinstallationspakete für Linux und UNIX werden nicht mit den Configuration Manager-Medien bereitgestellt. Laden Sie die **Clients für weitere Betriebssysteme** aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184) herunter. Zusätzlich zu den Clientinstallationspaketen umfasst der Clientdownload das Skript zur Verwaltung der Clientinstallation auf den einzelnen Computern.  
+Die Clientinstallationspakete für Linux und UNIX werden nicht mit den Configuration Manager-Medien bereitgestellt. Laden Sie die **Clients für weitere Betriebssysteme** aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719) herunter. Zusätzlich zu den Clientinstallationspaketen umfasst der Clientdownload das Skript zur Verwaltung der Clientinstallation auf den einzelnen Computern.  
 
 ### <a name="requirements-and-limitations"></a>Anforderungen und Einschränkungen
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6c6ff51edbd04a6d68f2770af123b1ac431542d2
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073941"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904703"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Neuerungen in Version 1702 von Configuration Manager
 
@@ -28,8 +28,8 @@ Das Update 1702 für Configuration Manager (Current Branch) ist als konsolenint
 > Sie müssen eine Baselineversion von Configuration Manager verwenden, um einen neuen Standort zu installieren.  
 >
 > Weitere Informationen:    
-> - [Installieren von neuen Standorten](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Installieren von Updates an Standorten](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Installieren von neuen Standorten](../../servers/deploy/install/installing-sites.md)  
+> - [Installieren von Updates an Standorten](../../servers/manage/updates.md)  
 > - [Baseline- und Updateversionen](../../servers/manage/updates.md#bkmk_Baselines)
 
 Die folgenden Abschnitte enthalten Details zu Änderungen und neuen Funktionen, die in Version 1702 von Configuration Manager eingeführt wurden.  
@@ -71,7 +71,7 @@ Die **Feedback**optionen finden Sie hier:
 - Wenn Sie mit der rechten Maustaste auf ein beliebiges Objekt in der Konsole klicken.   
    ![Rechtsklick](./media/feedback-option.png)   
 
-  Wenn Sie **Feedback** auswählen, öffnet sich die [Configuration Manager UserVoice-Feedback-Website](https://go.microsoft.com/fwlink/?linkid=617029).
+  Wenn Sie **Feedback** auswählen, öffnet sich die [Configuration Manager UserVoice-Feedback-Website](https://configurationmanager.uservoice.com/forums/300492-ideas).
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>Änderungen an Updates und Wartung

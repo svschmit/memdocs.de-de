@@ -5,34 +5,58 @@ description: Von Intune unterstützte Einstellungen für Sicherheitsbaselines zu
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+zone_pivot_groups: atp-baseline-versions
+ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397508"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693394"
 ---
+<!-- Pivots in use: 
+::: zone pivot="atp-april-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone-end
+-->
+
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Microsoft Defender Advanced Threat Protection-Baselineeinstellungen für Intune
 
 Zeigen Sie die Baselineeinstellungen für Microsoft Defender Advanced Threat Protection an, die von Microsoft Intune unterstützt werden. Die Standardeinstellungen der ATP-Baseline (Advanced Threat Protection) entsprechen der für ATP empfohlenen Konfiguration und stimmen möglicherweise nicht mit den Standardeinstellungen anderer Sicherheitsbaselines überein.
 
-Die Angaben in diesem Artikel gelten für Version 3 der Microsoft Defender ATP-Baseline, die am 1. März 2020 veröffentlicht wurde.
+::: zone pivot="atp-april-2020"
+
+Die Angaben in diesem Artikel gelten für Version 4 der Microsoft Defender ATP-Baseline, die am 21. April 2020 veröffentlicht wurde. Verwenden Sie die im Bereich *Versionen* für diese Baseline verfügbare Aktion [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) (Baselines vergleichen), um zu sehen, was sich in dieser Version der Baseline im Vergleich zu früheren Versionen geändert hat.
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+Die Angaben in diesem Artikel gelten für Version 3 der Microsoft Defender ATP-Baseline, die am 1. März 2020 veröffentlicht wurde. Verwenden Sie die im Bereich *Versionen* für diese Baseline verfügbare Aktion [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) (Baselines vergleichen), um zu sehen, was sich in dieser Version der Baseline im Vergleich zu früheren Versionen geändert hat.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 Die Microsoft Defender Advanced Threat Protection-Baseline ist verfügbar, wenn Ihre Umgebung den Anforderungen zur Verwendung von [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) entspricht.
 
 Diese Baseline wurde für physische Geräte optimiert und wird zurzeit nicht für die Verwendung auf virtuellen Computern (VMs) oder VDI-Endpunkten empfohlen. Bestimmte Baselineeinstellungen können sich auf interaktive Remotesitzungen in virtualisierten Umgebungen auswirken. Weitere Informationen finden Sie unter [Increase compliance to the Microsoft Defender ATP security baseline (Erhöhung der Compliance für die Microsoft Defender ATP-Sicherheitsbaseline)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline).
+
 
 ## <a name="application-guard"></a>Application Guard
 
@@ -630,11 +654,26 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Ja** (*Standardeinstellung*): Alle heruntergeladenen Dateien und Anlagen werden überprüft. Die Einstellung wird auf den Standardwert des Clients zurückgesetzt, d. h. aktiviert. Der Benutzer kann diese jedoch ändern. Verwenden Sie einen benutzerdefinierten URI, um diese Einstellung zu deaktivieren.
   - **Nicht konfiguriert**: Die Einstellung wird auf den Standardwert des Clients zurückgesetzt, d. h. aktiviert. Der Benutzer kann diese jedoch ändern. Verwenden Sie einen benutzerdefinierten URI, um diese Einstellung zu deaktivieren.
 
+::: zone-end
+::: zone pivot="atp-april-2020"
+
+- **Zugriffsbasierten Schutz blockieren**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **Ja**
+  - **Nicht konfiguriert** (*Standardeinstellung*)
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
 - **Zugriffsbasierten Schutz blockieren**  
   CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
   - **Ja** (*Standardeinstellung*)
   - **Nicht konfiguriert**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Browserskripts überprüfen**  
   CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
@@ -863,6 +902,8 @@ Weitere Informationen finden Sie in der Windows-Dokumentation unter [PassportFor
     - **Nicht zulässig**
     - **Erforderlich**
     - **Zulässig** (*Standardeinstellung*)
+
+::: zone-end
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359466"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587250"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Endpoint Protection-Einstellungen in Intune unter macOS  
 
@@ -113,6 +113,18 @@ Weitere Informationen zu den Einstellungen von Apple FileVault finden Sie unter 
 
   - **Zulässige Anzahl von Umgehungen**  
   Hiermit wird festgelegt, wie häufig ein Benutzer Aufforderungen zum Aktivieren von FileVault ignorieren kann, bevor FileVault für die Benutzeranmeldung als erforderlich festgelegt wird. 
+
+    > [!IMPORTANT]
+    >
+    > Es gibt ein bekanntes Problem mit dem Wert **Kein Limit, immer auffordern**. Statt es dem Benutzer zu ermöglichen, Verschlüsselung bei der Anmeldung zu umgehen, fordert diese Einstellung Geräteverschlüsselung bei der nächsten Anmeldung. Dieses in MC210922 gemeldete Problem wird voraussichtlich Ende Juni behoben.
+    >
+    > Wenn es behoben ist, kann für diese Einstellung der Wert Null (**0**) angegeben werden, durch den das Gerät beim nächsten Anmelden auf dem Gerät eine Verschlüsselung durchführen muss. Wenn Intune ein Update durchführt, in dem dieses Problem behoben wird, werden außerdem alle Richtlinien, für die **Kein Limit, immer auffordern** festgelegt ist, so aktualisiert, dass sie den neuen Wert **0** verwenden, durch den das derzeitige Verhalten des Erzwingens von Verschlüsselung beibehalten wird.
+    >
+    > Sobald das Problem behoben wurde, können Sie die Möglichkeit zum Umgehen des Erzwingens von Verschlüsselung verwenden, indem Sie diese Einstellung so neu konfigurieren, dass **Kein Limit, immer auffordern** festgelegt ist, da diese Einstellung dann wie ursprünglich erwartet funktioniert und es Benutzern ermöglicht, das Verschlüsseln des Geräts zu umgehen.
+    >
+    > Wenn bei Ihnen macOS-Geräte registriert sind, können Sie weitere Informationen anzeigen, wenn Sie sich beim [Microsoft Endpoint Manager-Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) anmelden. Navigieren Sie dort zu **Mandantenverwaltung** > **Mandantenstatus**, klicken Sie auf **Dienstintegrität und Nachrichtencenter**, und suchen Sie nach der Nachrichten-ID **MC210922**.
+
+    <br> 
 
     - **Nicht konfiguriert**: Die Verschlüsselung auf dem Gerät ist erforderlich, bevor die nächste Anmeldung zugelassen wird.  
     - **1** bis **10**: Benutzern das Ignorieren der Eingabeaufforderung ein- bis zehnmal gestatten, bevor die Verschlüsselung auf dem Gerät erforderlich ist.  

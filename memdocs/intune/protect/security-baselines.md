@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: faf117f3eedbfe7527606d7a0942cab644c700cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615653"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693419"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurieren von Windows 10-Geräten in Intune mithilfe von Sicherheitsbaselines
 
@@ -56,7 +56,8 @@ Die folgenden Sicherheitsbaseline-Instanzen können für Intune verwendet werden
 
 - **Microsoft Defender ATP-Baseline**
    *(Um diese Baseline verwenden zu können, muss Ihre Umgebung die Voraussetzungen für die Verwendung von [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) erfüllen)* .
-  - [Microsoft Defender ATP-Baselineversion 3](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP-Baseline aus dem April 2020: Version 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [Microsoft Defender ATP-Baseline aus dem März 2020: Version 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
   > Die Microsoft Defender ATP-Sicherheitsbaseline wurde für physische Geräte optimiert und ist zurzeit nicht für die Verwendung auf virtuellen Computern (VMs) oder VDI-Endpunkten empfehlenswert. Bestimmte Baselineeinstellungen können sich auf interaktive Remotesitzungen in virtualisierten Umgebungen auswirken.  Weitere Informationen finden Sie unter [Increase compliance to the Microsoft Defender ATP security baseline (Erhöhung der Compliance für die Microsoft Defender ATP-Sicherheitsbaseline)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline).
@@ -73,15 +74,21 @@ Wenn Sie bereit sind, zu einer neueren Version einer von Ihnen verwendeten Basel
 
 Bei jeder neuen Versionsinstanz einer Baseline können Einstellungen hinzugefügt oder entfernt oder andere Änderungen vorgenommen werden. Wenn beispielsweise in neuen Versionen von Windows 10 neue Windows 10-Einstellungen verfügbar werden, erhält die MDM-Sicherheitsbaseline möglicherweise eine neue Versionsinstanz, die die neuesten Einstellungen enthält.
 
-Im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) wird unter **Endpunktsicherheit** > **Sicherheitsbaselines** eine Liste der verfügbaren Baselines angezeigt. Die Liste umfasst den Vorlagennamen der Baseline, wie viele Profile Sie besitzen, die diesen Baselinetyp verwenden, wie viele einzelne Instanzen (Versionen) des Baselinetyps verfügbar sind, und ein *Datum der letzten Veröffentlichung*, das angibt, wann die neueste Version der Baselinevorlage verfügbar wurde.
+Im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) wird unter **Endpunktsicherheit** > **Sicherheitsbaselines** eine Liste der verfügbaren Baselines angezeigt. Die Liste umfasst den Namen der Baselinevorlage, die Anzahl Ihrer Profile, die diesen Baselinetyp verwenden, die Anzahl von verfügbaren einzelnen Instanzen (Versionen) des Baselinetyps sowie ein *Datum der letzten Veröffentlichung*, das angibt, wann die neueste Version der Baselinevorlage verfügbar gemacht wurde.
 
-Um weitere Informationen zu den von Ihnen verwendeten Baselineversionen anzuzeigen, wählen Sie eine Baselinekachel aus, um deren Blatt *Übersicht* zu öffnen, und wählen Sie dann **Versionen** aus. Intune zeigt Details zu den Versionen dieser Baseline an, die von Ihren Profilen verwendet werden. Im Bereich „Versionen“ können Sie eine einzelne Version auswählen, um nähere Informationen über die Profile einzusehen, die diese Version verwenden. Sie können auch zwei verschiedene Versionen auswählen und dann **Baselines vergleichen** wählen, um eine CSV-Datei herunterzuladen, in der diese Unterschiede detailliert beschrieben sind.
-
-![Baselines vergleichen](./media/security-baselines/compare-baselines.png)
-
-Wenn Sie ein Sicherheitsbaseline-*Profil* erstellen, verwendet das Profil automatisch die zuletzt veröffentlichte Instanz der Sicherheitsbaseline.  Sie können zuvor erstellte Profile, die eine frühere Instanz der Baselineversion verwenden, weiterhin einsetzen und bearbeiten, einschließlich der mit einer Vorschauversion erstellten Baselines.
+Um weitere Informationen zu den von Ihnen verwendeten Baselineversionen anzuzeigen, wählen Sie eine Baselinekachel aus, um deren Blatt *Übersicht* zu öffnen, und wählen Sie dann **Versionen** aus. Intune zeigt Details zu den Versionen dieser Baseline an, die von Ihren Profilen verwendet werden, einschließlich der neuesten und jeweils aktuellen Baselineversion.  Sie können auf eine einzelne Version klicken, um nähere Informationen über die Profile einzusehen, die diese Version verwenden.
 
 Sie können die [Version einer Baseline ändern](#change-the-baseline-version-for-a-profile), die mit einem bestimmten Profil verwendet wird. Das bedeutet, dass Sie bei Veröffentlichung einer neuen Version kein neues Baselineprofil erstellen müssen, um in den Genuss der Vorteile zu kommen. Stattdessen können Sie, wenn Sie soweit sind, ein Baselineprofil auswählen und dann die integrierte Option verwenden, um die Instanzversion für dieses Profil in eine neue zu ändern.
+
+### <a name="compare-baseline-versions"></a>Vergleichen von Baselineversionen
+
+Im Bereich **Versionen** für eine Sicherheitsbaseline finden Sie eine Liste der einzelnen Versionen dieser Baseline, die Sie bereitgestellt haben. Diese Liste enthält auch die neueste und aktive Version der Baseline. Wenn Sie ein neues *Sicherheitsbaselineprofil* erstellen, verwendet dieses Profil die neueste Version der Sicherheitsbaseline.  Sie können zuvor erstellte Profile, die eine frühere Baselineversion verwenden, weiterhin einsetzen und bearbeiten, einschließlich der mit einer Vorschauversion erstellten Baselines.
+
+Wenn Sie wissen möchten, was sich zwischen zwei Versionen geändert hat, aktivieren Sie bei zwei verschiedenen Versionen die Kontrollkästchen, und klicken Sie dann auf **Compare baselines** (Baselines vergleichen), um eine CSV-Datei herunterzuladen, in der diese Unterschiede dargestellt sind. 
+
+In der heruntergeladenen Datei wird jede Einstellung in den beiden Baselineversionen aufgeführt und angegeben, ob sich diese Einstellung geändert hat (*notEqual*) oder unverändert geblieben ist (*equal*). Darüber hinaus ist der Standardwert für die jeweilige Einstellung nach Version angegeben sowie ob die Einstellung in der neueren Version *hinzugefügt* oder *entfernt* wurde.
+
+![Baselines vergleichen](./media/security-baselines/compare-baselines.png)
 
 ## <a name="avoid-conflicts"></a>Vermeiden von Konflikten
 
@@ -199,6 +206,14 @@ Nach dem Speichern im Anschluss an die Konvertierung wird die Baseline für zuge
 Wenn eine Einstellung der Sicherheitsbaseline nicht mehr für ein Gerät gilt oder die Einstellungen in einer Baseline auf *Nicht konfiguriert* festgelegt sind, werden diese Einstellungen auf einem Gerät nicht auf eine zuvor verwaltete Konfiguration zurückgesetzt. Stattdessen behalten die zuvor verwalteten Einstellungen auf dem Gerät ihre letzten Konfigurationen, wie sie von der Baseline empfangen wurden, bis ein anderer Prozess diese Einstellungen auf dem Gerät aktualisiert.
 
 Andere Prozesse, die später die Einstellungen auf dem Gerät ggf. ändern, sind eine andere oder neue Sicherheitsbaseline, ein Gerätekonfigurationsprofil, Gruppenrichtlinienkonfigurationen oder die manuelle Bearbeitung der Einstellungen auf dem Gerät.
+
+### <a name="older-baseline-versions"></a>Ältere Baselineversionen
+
+Der Microsoft Endpoint Manager aktualisiert die Versionen von integrierten Sicherheitsbaselines abhängig von den sich ändernden Anforderungen einer typischen Organisation. Jedes neue Release führt zu einem Versionsupdate für eine bestimmte Baseline. Es wird erwartet, dass Kunden die jeweils aktuelle Baselineversion als Ausgangspunkt für ihre Gerätekonfigurationsprofile verwenden.
+
+Wenn keine Profile mehr vorhanden sind, die eine ältere in Ihrem Mandanten aufgeführte Baseline verwenden, führt der Microsoft Endpoint Manager nur die neueste verfügbare Baselineversion auf.
+
+Wenn Sie über ein Profil verfügen, das mit einer älteren Baseline verknüpft ist, wird diese ältere Baseline weiterhin aufgeführt.
 
 ## <a name="co-managed-devices"></a>Gemeinsam verwaltete Geräte
 

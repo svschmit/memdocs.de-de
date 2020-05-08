@@ -28,9 +28,11 @@ Durch die automatische Registrierung können Benutzer ihre Windows 10-Geräte in
    - **Alle**: Alle Benutzer können ihre Windows 10-Geräte automatisch registrieren.
 
       > [!IMPORTANT]
-      > Für BYOD-Geräte hat der MAM-Benutzerbereich Vorrang, wenn sowohl der MAM- als auch der MDM-Benutzerbereich (automatische MDM-Registrierung) für alle Benutzer aktiviert sind (oder für die gleichen Gruppen von Benutzern). Das Gerät verwendet dann WIP-Richtlinien (Windows Information Protection) (sofern Sie diese konfiguriert haben) und wird nicht für die mobile Geräteverwaltung registriert.
+      > Für Windows BYOD-Geräte hat der MAM-Benutzerbereich Vorrang, wenn sowohl der MAM- als auch der MDM-Benutzerbereich (automatische MDM-Registrierung) für alle Benutzer (oder für die gleichen Gruppen von Benutzern) aktiviert sind. Das Gerät wird nicht beim MDM registriert, und WIP-Richtlinien (Windows Information Protection) werden angewendet, sofern Sie diese konfiguriert haben.
       >
-      > Für unternehmenseigene Geräte hat der MDM-Benutzerbereich Vorrang, wenn beide Bereiche aktiviert sind. Die Geräte werden für die mobile Geräteverwaltung registriert.
+      > Wenn Sie die automatische Registrierung für Windows BYOD-Geräte bei einem MDM aktivieren möchten, gehen Sie wie folgt vor: Legen Sie den MDM-Benutzerbereich auf **Alle** fest (oder auf **Einige**, und geben Sie eine Gruppe an) und den MAM-Benutzerbereich auf **Keine** (oder **Einige**, und geben Sie eine Gruppe an, wobei Sie sicherstellen müssen, dass Benutzer nicht Mitglied einer Gruppe sind, die sowohl für den MDM- als auch für den MAM-Benutzerbereich als Ziel verwendet wird).
+      >
+      >Für [unternehmenseigene Geräte](../enrollment/enrollment-restrictions-set.md#blocking-personal-windows-devices) hat der MDM-Benutzerbereich Vorrang, wenn sowohl der MDM- als auch der MAM-Benutzerbereich aktiviert ist. Das Gerät wird automatisch beim konfigurierten MDM registriert.
 
    > [!NOTE]
    > Der MDM-Benutzerbereich muss auf eine Azure AD-Gruppe eingestellt sein, die Benutzerobjekte enthält.

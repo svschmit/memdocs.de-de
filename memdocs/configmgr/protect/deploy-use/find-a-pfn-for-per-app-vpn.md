@@ -10,12 +10,12 @@ ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f109e4ea4bee4a1de767508d62bc3f080d24f625
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 49f9f7972d5e48b0ec646568d85376027bf278c3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697118"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906811"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>Suchen eines Paketfamiliennamens (PFN) für Pro-App-VPN
 
@@ -26,7 +26,7 @@ Es gibt zwei Methoden, einen PFN zu suchen, sodass Sie ein Pro-App-VPN konfiguri
 
 ## <a name="find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer"></a>Suchen eines PFN für eine App, die auf einem Windows-10-Computer installiert ist
 
-Wenn die App, mit der Sie arbeiten, bereits auf einem Windows-10-Computer installiert ist, können Sie das PowerShell-Cmdlet [Get-AppxPackage](https://technet.microsoft.com/library/hh856044.aspx) zum Abrufen des PFN verwenden.
+Wenn die App, mit der Sie arbeiten, bereits auf einem Windows-10-Computer installiert ist, können Sie das PowerShell-Cmdlet [Get-AppxPackage](https://docs.microsoft.com/powershell/module/appx/get-appxpackage?view=win10-ps) zum Abrufen des PFN verwenden.
 
 Die Syntax für Get-AppxPackage lautet:
 

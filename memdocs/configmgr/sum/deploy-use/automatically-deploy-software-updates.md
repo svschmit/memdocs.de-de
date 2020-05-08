@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: eca3227a023561a099804ef0928bfee7a7aff2c6
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: fc2f2644ff042598d3df0ddfc1fd9d4d1adcc34a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110439"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906777"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Automatisches Bereitstellen von Softwareupdates  
 
@@ -85,7 +85,7 @@ Sie können Softwareupdates mithilfe einer ADR automatisch genehmigen und bereit
 
      - Das Limit für Softwareupdates in einer automatischen Bereitstellungsregel ist 1.000.  
 
-     - Filtern Sie bei Bedarf nach Inhaltsgrößen für Softwareupdates in Regeln für die automatische Bereitstellung. Weitere Informationen finden Sie unter [Configuration Manager und vereinfachte Windows-Wartung auf vorherigen Betriebssystemebene](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).  
+     - Filtern Sie bei Bedarf nach Inhaltsgrößen für Softwareupdates in Regeln für die automatische Bereitstellung. Weitere Informationen finden Sie unter [Configuration Manager und vereinfachte Windows-Wartung auf vorherigen Betriebssystemebene](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).  
 
      - Ab Version 1910 können Sie **Bereitgestellt** jetzt als Updatefilter für die Regeln zur automatischen Bereitstellung verwenden. Mit diesem Filter können neue Updates identifiziert werden, die möglicherweise auf Ihre Pilot- oder Testsammlungen angewendet werden müssen. Mit diesem Softwareupdatefilter können Sie außerdem die erneute Bereitstellung älterer Updates vermeiden. 
          - Beachten Sie bei Verwendung der Option **Bereitgestellt** als Filter, dass Sie das Update möglicherweise bereits in einer anderen Sammlung – z.B. einer Pilot- oder Testsammlung – bereitgestellt haben. <!--4852033-->

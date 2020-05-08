@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536846"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538142"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Was ist die Microsoft Intune App-Verwaltung?
 
@@ -109,6 +109,11 @@ Im oberen Bereich des Navigationsmenüs für die App-Workload sind häufig verwe
     - **App-Kategorien**: Hiermit können Sie App-Kategorienamen hinzufügen, anheften und löschen.
     - **E-Books**: Einige App-Stores bieten die Möglichkeit, mehrere Lizenzen für Apps oder Bücher zu erwerben, die in Ihrem Unternehmen verwendet werden sollen. Weitere Informationen finden Sie unter [Verwalten von per Volumenlizenz erworbenen Apps und Büchern mit Microsoft Intune](vpp-apps.md).
 - **Hilfe und Support**: Hiermit können Sie Probleme behandeln, Unterstützung anfordern oder den Intune-Status anzeigen. Weitere Informationen finden Sie unter [Problembehandlung](../fundamentals/help-desk-operators.md).
+
+### <a name="try-the-interactive-guide"></a>Interaktiven Leitfaden testen
+Der interaktive Leitfaden [Verwalten und Schützen von mobilen Anwendungen und Desktopanwendungen mit dem Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) führt Sie Schritt für Schritt durch das Microsoft Endpoint Manager-Admin Center, um Ihnen zu zeigen, wie Sie in Intune registrierte Geräte verwalten, die Konformität mit Richtlinien erzwingen und die Daten Ihrer Organisation schützen.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="additional-information"></a>Zusätzliche Informationen
 Die folgenden Konsolenelemente stellen App-bezogene Funktionen bereit:

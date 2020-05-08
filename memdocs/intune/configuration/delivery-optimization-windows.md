@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 71039737a74aebb3066c001536aaf677a0467696
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345675"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506538"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Übermittlungsoptimierungseinstellungen in Microsoft Intune
 
@@ -39,22 +39,28 @@ Weitere Informationen zur Übermittlungsoptimierung unter Windows 10 finden Sie
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 
 3. Geben Sie die folgenden Eigenschaften ein:
+   - **Plattform**: Wählen Sie **Windows 10 und höher** aus.
+   - **Profiltyp**: Wählen Sie **Übermittlungsoptimierung** aus.
 
-    - **Name:** Geben Sie einen aussagekräftigen Namen für das neue Profil ein.
-    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
-    - **Plattform**: Wählen Sie **Windows 10 und höher** aus.
-    - **Profiltyp**: Wählen Sie **Übermittlungsoptimierung** aus.
+4. Wählen Sie **Erstellen** aus.
 
-4. Wählen Sie **Einstellungen** > **Konfigurieren** aus, und definieren Sie, wie Updates und Apps heruntergeladen werden sollen. Weitere Informationen zu verfügbaren Einstellungen finden Sie unter [Delivery optimization settings for Intune (Übermittlungsoptimierungseinstellungen für Intune)](delivery-optimization-settings.md).
+5. Geben Sie auf der Seite **Grundeinstellungen** einen Namen und eine Beschreibung für das Profil ein, und klicken Sie dann auf **Weiter**.
 
-5. Wählen Sie anschließend **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern.
+6. Legen Sie auf der Seite **Konfigurationseinstellungen** fest, wie Updates und Apps heruntergeladen werden sollen. Weitere Informationen zu verfügbaren Einstellungen finden Sie unter [Delivery optimization settings for Intune (Übermittlungsoptimierungseinstellungen für Intune)](delivery-optimization-settings.md).
 
-Das Profil wird erstellt und in der Liste angezeigt. [Weisen](device-profile-assign.md) Sie als Nächstes das Profil zu, und [überwachen Sie dessen Status](device-profile-monitor.md).
+   Wenn Sie fertig sind mit dem Konfigurieren der Einstellungen, klicken Sie auf **Weiter**.
 
-<!-- ## Move existing update rings to delivery optimization
+7. Klicken Sie auf der Seite **Bereich (Markierungen)** auf **Bereichstags auswählen**, um den Bereich *Markierungen auswählen* zu öffnen, in dem Sie dem Profil Bereichstags zuweisen.
+  
+   Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
--->
+8. Wählen Sie auf der Seite **Zuweisungen** die Gruppen aus, die dieses Profil erhalten sollen. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](../configuration/device-profile-assign.md).
+
+   Wählen Sie **Weiter** aus.
+
+9. Verwenden Sie auf der Seite **Anwendbarkeitsregeln** die Optionen **Regel**, **Eigenschaft**und **Wert**, um zu definieren, wie dieses Profil in zugewiesenen Gruppen angewendet wird.
+
+10. Klicken Sie, wenn Sie fertig sind, auf der Seite **Bewerten + erstellen** auf **Erstellen**. Das Profil wird erstellt und in der Liste angezeigt. [Weisen](device-profile-assign.md) Sie als Nächstes das Profil zu, und [überwachen Sie dessen Status](device-profile-monitor.md).
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Entfernen der Übermittlungsoptimierung aus den Windows 10-Updateringen
 

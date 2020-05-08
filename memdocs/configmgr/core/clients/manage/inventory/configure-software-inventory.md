@@ -10,12 +10,12 @@ ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 74436eb95166ae9bc78d7ae22881b709349bf847
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f6fcf4736c30d8743d0d26b52aac60ef12b5c9cd
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695438"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906299"
 ---
 # <a name="how-to-configure-software-inventory-in-configuration-manager"></a>Konfigurieren der Softwareinventur in Configuration Manager
 
@@ -44,7 +44,7 @@ Mithilfe dieses Verfahrens werden die Clientstandardeinstellungen für die Softw
    > [!TIP]
    >   Der Fehlercode 80041006 in der inventoryprovider.log-Datei bedeutet, dass der WMI-Anbieter über nicht genügend Arbeitsspeicher verfügt. Das bedeutet, dass die Beschränkung des Speicherkontingents für den Anbieter erreicht wurde und der Inventuranbieter nicht mehr fortgeführt werden kann.
    > In diesem Fall erstellt der Inventur-Agent einen leeren Bericht. D.h. keine Inventurelemente werden gemeldet. <br/>
-   > Sie können den Bereich der Softwareinventursammlung reduzieren, um diesen Fehler zu beheben. Wenn der Fehler auftritt, nachdem der Inventurbereich eingeschränkt wurde, können Sie zur Lösung des Problems die in der [_ProviderHostQuotaConfiguration](https://msdn.microsoft.com/library/aa394671)-Klasse definierte [MemoryPerHost](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/)-Eigenschaft erhöhen.
+   > Sie können den Bereich der Softwareinventursammlung reduzieren, um diesen Fehler zu beheben. Wenn der Fehler auftritt, nachdem der Inventurbereich eingeschränkt wurde, können Sie zur Lösung des Problems die in der [_ProviderHostQuotaConfiguration](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration)-Klasse definierte [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319)-Eigenschaft erhöhen.
 
 <!--SMS.480648 include WMI Out of memory tip -->
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54e18ae8da6d534e26e37da8fba898e60f5a2986
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
+ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079840"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82745204"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Überwachen von Intune-Richtlinien zur Gerätekompatibilität
 
@@ -102,6 +102,11 @@ Durch diese Aktion wird das Fenster **Gerätekonformität** geöffnet, in dem Ge
 ![Bild vom Dashboard mit weiteren Details zum Gerät mit diesem spezifischen Zustand](./media/compliance-policy-monitor/drill-down-details.png)
 
 Wenn Sie alle Geräte im Besitz eines spezifischen Benutzers anzeigen möchten, können Sie außerdem das Berichtsdiagramm filtern, indem Sie die E-Mail-Adresse des Benutzers eingeben.
+
+> [!TIP]
+> Wenn beim Gerät kein Benutzer angemeldet ist, sendet das Gerät mit der Zielrichtlinie zur Gerätekonformität einen Konformitätsbericht zurück an Intune, in dem **Systemkonto** als der Benutzerprinzipalname angezeigt wird. Dies liegt daran, dass für eine Richtlinie zur Gerätekonformität entweder eine Gruppe von Benutzern oder von Geräten als Ziel festgelegt wurde und kein Benutzer beim Gerät angemeldet war, als die Konformitätsrichtlinie ausgewertet wurde.
+>
+> Wenn mehrere Benutzer beim selben Gerät angemeldet sind und das Gerät zufällig als Ziel einer Konformitätsrichtlinie verwendet wird, die alle derzeit beim Gerät angemeldeten Benutzer abdeckt, kann es sein, dass der Konformitätsbericht dasselbe Gerät mehrmals anzeigt. Dies liegt daran, dass jeder beim Gerät angemeldete Benutzer die Konformitätsrichtlinie auswerten und zurück an Intune melden muss.
 
 #### <a name="filter-and-columns"></a>Filter und Spalten
 

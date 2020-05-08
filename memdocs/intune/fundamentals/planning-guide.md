@@ -13,17 +13,17 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 613bb0ddf935815a4022fa483e0aad615c64121a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080095"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802037"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Bereitstellungsplanungs-, Entwurfs- und Implementierungshandbuch für Intune
 
@@ -53,7 +53,10 @@ Dieses Handbuch enthält Abschnitte, in denen Sie lückenlos durch die Bereitste
 
 Dieses Handbuch enthält außerdem zusätzliche technische Informationen und Tabellenvorlagen zum Unterstützen des Planungs-, Entwurfs- und Implementierungsprozesses zur Bereitstellung von Intune.
 
-- [Weitere Ressourcen: Links und Tabellenvorlagen](planning-guide-resources.md)
+### <a name="additional-resources"></a>Zusätzliche Ressourcen
+
+- [Leitfaden für Microsoft Endpoint Manager-PoC (Proof of Concept):](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc) Dieser Leitfaden soll ein Framework bereitstellen sowie eine technische Anleitung zum Ausführen eines erfolgreichen PoC innerhalb einer Organisation.
+- [Links und Tabellenvorlagen](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>Annahmen
 

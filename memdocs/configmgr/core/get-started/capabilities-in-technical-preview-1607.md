@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7ec5802a8931bc4397eaf302920f09d8597802fe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73aac9e1bfb7b902a7db28ba4be00a2a02277324
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705558"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905698"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-configuration-manager"></a>Funktionen in der Technical Preview 1607 für Configuration Manager
 
@@ -62,7 +62,7 @@ Benutzerdefiniertes Branding für das Softwarecenter wird gemäß den folgenden 
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>Verwenden derselben Netzwerkadapter für mehrere PXE-initiierte Bereitstellungen
 In Technical Preview-Version 1607 können Sie bei der Verwendung eines Ethernet-Adapters für das Abbilden mehrere Geräte (z.B. ein USB-Ethernetadapter, den Sie auf mehreren Geräten verwenden) eine neue Einstellung aktivieren, mit der Sie Hardware-IDs für die Ethernet-Adapter eingeben können. Configuration Manager ignoriert die Hardware-IDs in der Liste für die Clientregistrierung, oder wenn er eine PXE-Installation ausführt.
 
-Weitere Informationen zu diesem Problem finden Sie auf dem englischsprachigen [Blog des Configuration Manager OSD-Supportteams](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/).  
+Weitere Informationen zu diesem Problem finden Sie auf dem englischsprachigen [Blog des Configuration Manager OSD-Supportteams](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721).  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>Aktivieren des Features zum Verwalten von doppelten Hardware-IDs  
 1. Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung** > **Übersicht** > **Clouddienste** > **Updates und Wartung** > **Features**.

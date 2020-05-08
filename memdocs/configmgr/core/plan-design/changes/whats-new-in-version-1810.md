@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a9770dca209669659abf6e4fc9c23d5e6972981
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073550"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906247"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Neuerungen in Version 1810 von Configuration Manager (Current Branch)
 
@@ -43,7 +43,7 @@ Erfahren Sie mehr zu Änderungen bei der Unterstützung, bevor sie in [entfernte
 
 Ab dem 14. August 2018 gilt das Feature für die hybride Verwaltung mobiler Geräte als veraltet. Weitere Informationen finden Sie unter [Hybride Verwaltung mobiler Geräte](../../../mdm/understand/what-happened-to-hybrid.md).<!--Intune feature 2683117-->  
 
-Der Support für System Center Endpoint Protection (SCEP) für Mac und Linux (alle Versionen) endet am 31. Dezember 2018. Die Verfügbarkeit der neuen Virusdefinitionen für SCEP für Mac und SCEP für Linux wird möglicherweise nach Ende der Unterstützung eingestellt. Weitere Informationen finden Sie im [Blogbeitrag zum Ende des Supports](https://go.microsoft.com/fwlink/?linkid=870182).
+Der Support für System Center Endpoint Protection (SCEP) für Mac und Linux (alle Versionen) endet am 31. Dezember 2018. Die Verfügbarkeit der neuen Virusdefinitionen für SCEP für Mac und SCEP für Linux wird möglicherweise nach Ende der Unterstützung eingestellt. Weitere Informationen finden Sie im [Blogbeitrag zum Ende des Supports](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).
 
 Klassische Dienstbereitstellungen in Azure sind jetzt in Configuration Manager veraltet. Verwenden Sie ab jetzt Azure Resource Manager-Bereitstellungen für Cloud Management Gateway und den Cloudverteilungspunkt. Weitere Informationen finden Sie unter [Planen des Cloudverwaltungsgateways](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
 

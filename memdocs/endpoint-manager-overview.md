@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 05/04/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 939224776199407abb6a508f25bf5dadbacb882f
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 1dee569d6f2ce4ed1a3bc278c9c9a886f9d23974
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "82135988"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782257"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Übersicht über Microsoft Endpoint Manager
 
@@ -60,7 +60,7 @@ Endpoint Manager umfasst die folgenden Dienste:
 
   Als Teil von Endpoint Manager werden für Co-Verwaltung Cloudfeatures, wie z. B. bedingter Zugriff, verwendet. Sie belassen einige Aufgaben lokal, während Sie andere Aufgaben mit Intune in der Cloud ausführen.
 
-  Weitere Informationen finden Sie unter [Was ist Co-Verwaltung?](https://docs.microsoft.com/configmgr/comanage/overview).
+  Weitere Informationen finden Sie unter [What is co-management? (Was ist die Co-Verwaltung?)](https://docs.microsoft.com/configmgr/comanage/overview).
 
 - **Desktop Analytics**: Desktop Analytics ist ein cloudbasierter Dienst, der in Configuration Manager integriert ist. Der Dienst bietet Einblicke und Informationen, mit denen Sie fundiertere Entscheidungen zur Updatebereitschaft Ihrer Windows-Clients treffen können. Desktop Analytics kombiniert Daten aus Ihrer Organisation mit Daten, die von Millionen von mit der Microsoft-Cloud verbunden Geräten aggregiert wurden. Der Dienst bietet Informationen zu Sicherheitsupdates, Apps und Geräten in Ihrer Organisation und deckt Kompatibilitätsprobleme mit Apps und Treibern auf. Erstellen Sie ein Pilotprojekt für Geräte, die am ehesten die nützlichsten Erkenntnisse zu Ressourcen in Ihrer Organisation bieten.
 
@@ -102,11 +102,11 @@ Sie können sich Endpoint Manager auch in drei Varianten vorstellen: Cloud, loka
 
 ## <a name="what-you-need-to-get-started"></a>Was Sie für die ersten Schritte benötigen
 
+Der Microsoft Endpoint Manager ist eine Lösungsplattform, die verschiedene Technologien vereint. Es handelt sich nicht um eine neue Lizenz. Die Dienste werden gemäß den jeweiligen Lizenzbedingungen lizenziert. Weitere Informationen finden Sie unter [Ressourcen zur Lizenzierung](https://www.microsoft.com/licensing/product-licensing/products).
+
 Wenn Sie derzeit Configuration Manager nutzen, erhalten Sie auch Microsoft Intune zur Co-Verwaltung Ihrer Windows-Geräte. Für andere Plattformen, wie z. B. iOS/iPadOS und Android, benötigen Sie eine eigene Intune-Lizenz.
 
-In den meisten Szenarien ist Microsoft 365 wohl die beste Option, da Ihnen damit Endpoint Manager und Office 365 zur Verfügung stehen.
-
-Weitere Informationen finden Sie unter [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+In den meisten Szenarien ist Microsoft 365 wohl die beste Option, da Ihnen damit Endpoint Manager und Office 365 zur Verfügung stehen. Weitere Informationen finden Sie unter [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

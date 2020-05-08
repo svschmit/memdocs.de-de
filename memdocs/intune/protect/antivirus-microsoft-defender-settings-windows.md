@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086675"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802020"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Einstellungen für die Microsoft Defender Antivirus-Richtlinie unter Windows 10 in Microsoft Intune
 
@@ -82,7 +82,7 @@ Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswäh
   - **Ja**: Die Verwendung der Echtzeitüberwachung wird erzwungen. Gerätebenutzer können diese Einstellung nicht ändern.
 
 - **Zugriffsschutz aktivieren**  
-  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
 
   Konfigurieren Sie einen Virenschutz, der im Gegensatz zum bedarfsgesteuerten Schutz kontinuierlich aktiv ist.
 
@@ -90,8 +90,16 @@ Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswäh
   - **Nein**: Blockiert den Zugriffsschutz auf Geräten. Gerätebenutzer können diese Einstellung nicht ändern.
   - **Ja**: Zugriffsschutz ist auf Geräten aktiv.
 
+- **Überwachung für eingehende und ausgehende Dateien**  
+  CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
+
+  Konfigurieren Sie diese Einstellung, um festzulegen, welche NTFS-Datei- und Programmaktivität überwacht werden soll.
+  - **Alle Dateien überwachen** (*Standardeinstellung*)
+  - **Nur eingehende Dateien überwachen**
+  - **Nur ausgehende Dateien überwachen**
+
 - **Verhaltensüberwachung aktivieren**  
-  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
   Standardmäßig verwendet Defender auf Windows 10-Desktop-Geräten die Funktion der Verhaltensüberwachung.
 
@@ -109,7 +117,7 @@ Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswäh
   - **Ja**: Der Netzwerkschutz ist aktiviert. Gerätebenutzer können diese Einstellung nicht ändern.
 
 - **Alle heruntergeladenen Dateien und Anlagen überprüfen**  
-  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
 
   Konfigurieren Sie Defender so, dass alle heruntergeladenen Dateien und Anlagen überprüft werden.
 
@@ -118,7 +126,7 @@ Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswäh
   - **Ja**: Defender überprüft alle heruntergeladenen Dateien und Anlagen. Gerätebenutzer können diese Einstellung nicht ändern.
 
 - **In Microsoft-Browsern verwendete Skripts überprüfen**  
-  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054)
 
   Konfigurieren Sie Defender für die Überprüfung von Skripts.
 
@@ -127,7 +135,7 @@ Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswäh
   - **Ja**: Defender überprüft Skripts. Gerätebenutzer können diese Einstellung nicht ändern.
 
 - **Netzwerkdateien überprüfen**  
-  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
 
   Konfigurieren Sie Defender für die Überprüfung von Netzwerkdateien.
 
@@ -136,7 +144,7 @@ Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswäh
   - **Ja**: Die Überprüfung von Netzwerkdateien ist aktiviert. Gerätebenutzer können diese Einstellung nicht ändern.
 
 - **E-Mails überprüfen**  
-  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
 
   Konfigurieren Sie Defender für die Überprüfung von eingehenden E-Mails.
 
@@ -147,7 +155,7 @@ Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswäh
 ## <a name="remediation"></a>Wartung
 
 - **Anzahl von Tagen (0–90) zum Aufbewahren der unter Quarantäne gestellten Schadsoftware**  
-  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
 
   Geben Sie an, für wie viele Tage – von 0 bis 90 – das System unter Quarantäne gestellte Elemente speichern soll, bevor sie automatisch entfernt werden. Bei Angabe des Werts 0 verbleiben Elemente in der Quarantäne und werden nicht automatisch entfernt.
 
@@ -160,7 +168,7 @@ Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswäh
   - **Alle Beispiele automatisch senden**
 
 - **Aktion für potenziell unerwünschte Apps**  
-  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051&clcid=0x409)
+  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
 
   Geben Sie den Erkennungsgrad für potenziell unerwünschte Anwendungen (Potentially Unwanted Applications, PUAs) an. Defender warnt Benutzer, wenn potenziell unerwünschte Software heruntergeladen oder versucht wird, solche Software auf einem Gerät zu installieren.
 
@@ -170,7 +178,7 @@ Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswäh
   - **Überwachungsmodus**: Defender erkennt potenziell unerwünschte Anwendungen, führt aber keine Aktion aus. Sie finden Informationen zu den Anwendungen, bei denen Defender Aktionen ausgeführt hätte, indem Sie nach Ereignissen suchen, die von Defender in der Ereignisanzeige erstellt wurden.
 
 - **Aktionen bei erkannten Bedrohungen**  
-  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938&clcid=0x409)
+  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
 
   Geben Sie die Aktion an, die Defender bei erkannter Schadsoftware basierend auf der Bedrohungsstufe der Schadsoftware ausführen soll.
   
@@ -193,7 +201,7 @@ Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswäh
 ## <a name="scan"></a>Überprüfen
 
 - **Archivdateien überprüfen**  
-  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   Konfigurieren Sie Defender so, dass Archivdateien wie z. B. ZIP- oder CAB-Dateien überprüft werden.
 
@@ -203,7 +211,7 @@ Erfahren Sie mehr
   - **Ja**: Die Überprüfung von Archivdateien wird aktiviert. Gerätebenutzer können diese Einstellung nicht ändern.
 
 - **Niedrige CPU-Priorität für geplante Überprüfungen verwenden**  
-  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944&clcid=0x409)
+  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   Konfigurieren Sie eine niedrige CPU-Priorität für geplante Überprüfungen.
   - **Nicht konfiguriert** (*Standardeinstellung*): Die Einstellung wird auf den Standardwert des Systems zurückgesetzt, d. h. die CPU-Priorität wird nicht geändert.
@@ -211,7 +219,7 @@ Erfahren Sie mehr
   - **Ja**: Bei geplanten Überprüfungen wird eine niedrige CPU-Priorität verwendet. Gerätebenutzer können diese Einstellung nicht ändern.
 
 - **Vollständige Aufholüberprüfung deaktivieren**  
-  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042&clcid=0x409)
+  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
   Konfigurieren Sie Aufholüberprüfungen für geplante vollständige Überprüfungen. Eine Aufholüberprüfung ist eine Überprüfung, die gestartet wird, da eine reguläre Überprüfung ausgelassen wurde. In der Regel werden diese geplanten Überprüfungen ausgelassen, weil der Computer zum geplanten Zeitpunkt ausgeschaltet war.
 
@@ -220,7 +228,7 @@ Erfahren Sie mehr
   - **Ja**: Aufholüberprüfungen für geplante vollständige Überprüfungen werden erzwungen und können vom Benutzer nicht deaktiviert werden. Wenn ein Computer bei zwei aufeinanderfolgenden geplanten Überprüfungen offline ist, wird eine Aufholüberprüfung gestartet, sobald sich der nächste Benutzer am Computer anmeldet. Wenn keine geplante Überprüfung konfiguriert wurde, werden auch keine Aufholüberprüfungen durchgeführt. Gerätebenutzer können diese Einstellung nicht ändern.
 
 - **Schnelle Aufholüberprüfung deaktivieren**  
-  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941&clcid=0x409)
+  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
   Konfigurieren Sie Aufholüberprüfungen für geplante Schnellüberprüfungen. Eine Aufholüberprüfung ist eine Überprüfung, die gestartet wird, da eine reguläre Überprüfung ausgelassen wurde. In der Regel werden diese geplanten Überprüfungen ausgelassen, weil der Computer zum geplanten Zeitpunkt ausgeschaltet war.
 
@@ -229,12 +237,12 @@ Erfahren Sie mehr
   - **Ja**: Aufholüberprüfungen für geplante Schnellüberprüfungen werden erzwungen und können vom Benutzer nicht deaktiviert werden. Wenn ein Computer bei zwei aufeinanderfolgenden geplanten Überprüfungen offline ist, wird eine Aufholüberprüfung gestartet, sobald sich der nächste Benutzer am Computer anmeldet. Wenn keine geplante Überprüfung konfiguriert wurde, werden auch keine Aufholüberprüfungen durchgeführt. Gerätebenutzer können diese Einstellung nicht ändern.
 
 - **CPU-Auslastungslimit pro Überprüfung**  
-  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Geben Sie den durchschnittlichen CPU-Auslastungsfaktor für die Defender-Überprüfung als Prozentwert zwischen 0 und 100 an.
 
 - **Bei vollständiger Überprüfung zugeordnete Netzlaufwerke überprüfen**  
-  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   Konfigurieren Sie Defender für die Überprüfung von zugeordneten Netzwerklaufwerken.
 
@@ -243,13 +251,13 @@ Erfahren Sie mehr
   - **Ja**: Überprüfungen von zugeordneten Netzwerklaufwerken sind aktiviert. Gerätebenutzer können diese Einstellung nicht ändern.
 
 - **Tägliche Schnellüberprüfung ausführen um**  
-  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
+  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Wählen Sie die Uhrzeit aus, zu der Defender-Schnellüberprüfungen ausgeführt werden sollen.
   Die Standardeinstellung ist **Nicht konfiguriert**.
 
 - **Überprüfungstyp**  
-  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
   Wählen Sie aus, welche Art von Überprüfung Defender ausführen soll.
 
@@ -271,14 +279,14 @@ Erfahren Sie mehr
 ## <a name="updates"></a>Updates
 
 - **Eingeben, wie oft (0–24 Stunden) nach Security Intelligence-Updates gesucht wird**  
-  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Geben Sie ein Intervall zwischen 0 und 24 Stunden an, in dem nach Signaturen gesucht werden soll. Der Wert 0 führt dazu, dass nicht nach neuen Signaturen gesucht wird. Beim Wert 2 erfolgt alle zwei Stunden eine Suche usw.
 
 ## <a name="user-experience"></a>Benutzerfreundlichkeit
 
 - **Benutzerzugriff auf Microsoft Defender-App zulassen**  
-  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  
+  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
 
   - **Nicht konfiguriert** (*Standardeinstellung*): Die Einstellung wird auf den Standardwert des Clients zurückgesetzt, d. h. Benutzeroberfläche und Benachrichtigungen sind zulässig.
   - **Nein**: Auf die Benutzeroberfläche von Defender kann nicht zugegriffen werden, und Benachrichtigungen werden unterdrückt.

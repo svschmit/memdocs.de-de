@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 151b258826dcb65b3311b81e3c47bc5c089cb017
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: c9b23d68928b183a70e8069edbf6027ddc0436ed
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771213"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587310"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Verwenden von Zertifikaten zur Authentifizierung in Microsoft Intune
 
@@ -99,7 +99,9 @@ Sie verwenden diese CER-Datei, wenn Sie [vertrauenswürdige Zertifikatprofile er
 
 ## <a name="create-trusted-certificate-profiles"></a>Erstellen von vertrauenswürdigen Zertifikatprofilen
 
-Sie müssen ein vertrauenswürdiges Zertifikatprofil erstellen und bereitstellen, bevor Sie ein aus SCEP, PKCS oder PKCS importiertes Zertifikatprofil erstellen. Das Bereitstellen eines vertrauenswürdigen Zertifikatsprofils für dieselben Gruppen, die die anderen Zertifikatsprofiltypen erhalten, stellt sicher, dass jedes Gerät die Rechtmäßigkeit Ihrer Zertifizierungsstelle erkennen kann. SCEP-Zertifikatprofile verweisen direkt auf ein vertrauenswürdiges Zertifikatprofil. PKCS-Zertifikatprofile verweisen nicht auf das Profil des vertrauenswürdigen Zertifikats, sondern direkt auf den Server, der Ihre Zertifizierungsstelle hostet. Über PKCS importierte Zertifikatprofile verweisen nicht direkt auf das Profil des vertrauenswürdigen Zertifikats, sie können es jedoch auf dem Gerät verwenden. Durch die Bereitstellung eines vertrauenswürdigen Zertifikatprofils auf Geräten wird sichergestellt, dass dieses Vertrauen aufgebaut wird. Wenn die Stammzertifizierungsstelle von einem Gerät nicht als vertrauenswürdig eingestuft wird, tritt bei der Richtlinie für das SCEP- oder PKCS-Zertifikatprofil ein Fehler auf.
+Sie müssen ein vertrauenswürdiges Zertifikatprofil erstellen und bereitstellen, bevor Sie ein aus SCEP, PKCS oder PKCS importiertes Zertifikatprofil erstellen. Das Bereitstellen eines vertrauenswürdigen Zertifikatsprofils für dieselben Gruppen, die die anderen Zertifikatsprofiltypen erhalten, stellt sicher, dass jedes Gerät die Rechtmäßigkeit Ihrer Zertifizierungsstelle erkennen kann. Dies betrifft z. B. VPN-, WLAN- und E-Mail-Profile.
+
+SCEP-Zertifikatprofile verweisen direkt auf ein vertrauenswürdiges Zertifikatprofil. PKCS-Zertifikatprofile verweisen nicht auf das Profil des vertrauenswürdigen Zertifikats, sondern direkt auf den Server, der Ihre Zertifizierungsstelle hostet. Über PKCS importierte Zertifikatprofile verweisen nicht direkt auf das Profil des vertrauenswürdigen Zertifikats, sie können es jedoch auf dem Gerät verwenden. Durch die Bereitstellung eines vertrauenswürdigen Zertifikatprofils auf Geräten wird sichergestellt, dass dieses Vertrauen aufgebaut wird. Wenn die Stammzertifizierungsstelle von einem Gerät nicht als vertrauenswürdig eingestuft wird, tritt bei der Richtlinie für das SCEP- oder PKCS-Zertifikatprofil ein Fehler auf.
 
 Erstellen Sie ein separates vertrauenswürdiges Zertifikatprofil für jede Geräteplattform, die Sie unterstützen möchten, genauso wie bei den SCEP-, PKCS- und über PKCS importierten Zertifikatprofilen.
 

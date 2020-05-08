@@ -10,12 +10,12 @@ ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d0968a61be4e450bb145b309f61de0d6c212549
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2b5bcbce659601e10f44f06af94eb939767a389a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694818"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906621"
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>Vorbereiten der Bereitstellung von Clientsoftware auf Macs
 
@@ -27,7 +27,7 @@ Führen Sie die folgenden Schritte aus, um sicherzustellen, dass Sie zum [Bereit
 
 ## <a name="mac-prerequisites"></a>Voraussetzungen für Mac-Computer
 
-Das Mac-Clientinstallationspaket wird nicht mit den Configuration Manager-Medien geliefert. Laden Sie die **Clients für weitere Betriebssysteme** aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184) herunter.  
+Das Mac-Clientinstallationspaket wird nicht mit den Configuration Manager-Medien geliefert. Laden Sie die **Clients für weitere Betriebssysteme** aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719) herunter.  
 
 Eine Liste der unterstützten Versionen finden Sie unter [Unterstützte Betriebssysteme für Clients und Geräte](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 

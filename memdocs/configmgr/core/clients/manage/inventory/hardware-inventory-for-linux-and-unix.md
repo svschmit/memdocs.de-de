@@ -10,12 +10,12 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1bdfb8c6d528c12581f05f86111a1a76d2259faa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f4b822475111352c5dcf23f4868a1fa43ec3a7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695428"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906269"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Hardwareinventur für Linux- und UNIX in Configuration Manager
 
@@ -105,7 +105,7 @@ Aktionen für die Hardwareinventur werden in die Clientprotokolldatei **scxcm.lo
 ###  <a name="create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> Erstellen Sie einen benutzerdefinierten Hardwareinventuranbieter für Linux- und UNIX-Computer:  
  Verwenden Sie **OMI Source – v.1.0.6**, und befolgen Sie die Anweisungen im Handbuch für die ersten Schritte mit OMI, um einen benutzerdefinierten Hardwareinventuranbieter für den Configuration Manager-Client für Linux und UNIX zu erstellen. Dieser Prozess umfasst das Erstellen einer MOF-Datei (Managed Object Format), die das Schema für den neuen Anbieter definiert. Später importieren Sie die MOF-Datei in Configuration Manager, um die Unterstützung der neuen benutzerdefinierten Inventurklasse zu aktivieren.  
 
- Sowohl „OMI Source – v.1.0.6“ als auch das Handbuch für die ersten Schritte mit OMI können auf der [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) -Website heruntergeladen werden. Sie finden diese Downloads auf der Registerkarte für **Dokumente** der folgenden Webseite der Website „OpenGroup.org“: [Open Management Infrastructure (OMI)](https://go.microsoft.com/fwlink/p/?LinkId=286805).  
+ Sowohl „OMI Source – v.1.0.6“ als auch das Handbuch für die ersten Schritte mit OMI können auf der [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) -Website heruntergeladen werden. Sie finden diese Downloads auf der Registerkarte für **Dokumente** der folgenden Webseite der Website „OpenGroup.org“: [Open Management Infrastructure (OMI)](https://collaboration.opengroup.org/omi/).  
 
 ###  <a name="configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> Konfigurieren Sie jeden Computer, der Linux oder UNIX ausführt, mit dem benutzerdefinierten Hardwareinventuranbieter:  
  Nachdem Sie einen benutzerdefinierten Inventuranbieter erstellt haben, müssen Sie die Anbieterbibliotheksdatei auf jeden Computer kopieren und dann registrieren, der über zu erfassendes Inventar verfügt.  

@@ -17,20 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80233495"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538095"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune ist ein MDM- und MAM-Anbieter für Ihre Geräte
 
 Microsoft Intune ist ein cloudbasierter Dienst, der sich auf die Verwaltung mobiler Geräte (MDM, Mobile Device Management) und mobiler Anwendungen (MAM, Mobile Application Management) konzentriert. Intune ist in der [EMS-Suite (Enterprise Mobility + Security)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security) von Microsoft enthalten und ermöglicht Ihren Benutzern, produktiv zu sein, während die Daten ihrer Organisation geschützt bleiben. Sie wird in andere Dienste einschließlich Microsoft 365 und Azure Active Directory (Azure AD) integriert, um zu steuern, wer worauf Zugriff hat, und in Azure Information Protection für den Datenschutz. Wenn Sie EMS zusammen mit Microsoft 365 bereitstellen, können Ihre Mitarbeiter auf allen ihren Geräten produktiv arbeiten, während die Informationen Ihres Unternehmens geschützt bleiben.
 
-![Abbild der Intune-Architektur](./media/what-is-intune/intunearch_sm.png)
-
-Hier können Sie sich eine [größere Version](./media/what-is-intune/intunearchitecture.svg) des Intune-Architekturschaubilds ansehen.
+[![Bild mit der Intune-Architektur](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
 Mit Intune können Sie folgende Aktionen ausführen:
 
@@ -61,6 +59,11 @@ Wenn Geräte in Intune registriert und verwaltet werden, können Administratoren
 - [Anwenden von Einstellungen und Funktionen auf Ihren Geräten mit Geräteprofilen](../configuration/device-profiles.md)
 
 - [Schützen von Geräten mit Microsoft Intune](../protect/device-protect.md)
+
+### <a name="try-the-interactive-guide"></a>Interaktiven Leitfaden testen
+Der interaktive Leitfaden [Verwalten von Geräten mit dem Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager) führt Sie Schritt für Schritt durch das Microsoft Endpoint Manager-Admin Center, um Ihnen zu zeigen, wie Sie mobile Anwendungen und Desktopanwendungen verwalten und schützen.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="manage-apps"></a>Verwalten von Apps
 

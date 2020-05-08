@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eda58982094860ccf075bcd2d1d8ed9e3d3bb2df
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706918"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906101"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Einführung in Long-Term Servicing Branch von Configuration Manager
 
@@ -53,7 +53,7 @@ Cloudintegrationen sowie alle Features, die im Current Branch von Configuration 
 
 ## <a name="find-ltsb-documentation"></a>Suchen der Long-Term Servicing Branch-Dokumentation
 
-Der Long-Term Servicing Branch basiert auf der Current Branch-Version 1606. Verwenden Sie die [Dokumentation zu Current Branch](https://docs.microsoft.com/sccm/), die Warnungen und Einschränkungen speziell zum Long-Term Servicing Branch enthält. Diese Warnungen und Einschränkungen werden in folgenden Artikeln behandelt:
+Der Long-Term Servicing Branch basiert auf der Current Branch-Version 1606. Verwenden Sie die [Dokumentation zu Current Branch](https://docs.microsoft.com/mem/configmgr/), die Warnungen und Einschränkungen speziell zum Long-Term Servicing Branch enthält. Diese Warnungen und Einschränkungen werden in folgenden Artikeln behandelt:
 
 - [Installieren und Upgraden mit dem Baselinemedium von Version 1606 für System Center Configuration Manager](install-the-ltsb.md)
 - [Upgrade von Long-Term Servicing Branch auf Current Branch](convert-to-current-branch.md)
@@ -68,7 +68,7 @@ Kunden mit aktiver Software Assurance für Configuration Manager-Lizenzen oder m
 
 Kunden, die über unbefristete Rechte für System Center Configuration Manager verfügen, oder die die Software Assurance oder das Abonnement nach dem 1. Oktober auslaufen lassen, können die LTSB-Version von System Center Configuration Manager installieren, die zu dem Zeitpunkt vorhanden ist, an dem die Software Assurance oder das Abonnement ausläuft.
 
-Weitere Informationen über diese Lizenzen finden Sie in den [vollständigen Nutzungsbedingungen für die Produkte, die Sie über Microsoft-Volumenlizenzprogramme erwerben können](https://go.microsoft.com/fwlink/?LinkId=800052).
+Weitere Informationen über diese Lizenzen finden Sie in den [vollständigen Nutzungsbedingungen für die Produkte, die Sie über Microsoft-Volumenlizenzprogramme erwerben können](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 Weitere Informationen zur Lizenzierung für Configuration Manager-Branches finden Sie unter [Lizenzierung und Branches für System Center Configuration Manager](learn-more-editions.md).
 

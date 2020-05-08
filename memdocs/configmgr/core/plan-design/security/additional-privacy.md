@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6891a46050bb83e54fb34b97d9129fcb5873785
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701418"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906572"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Weitere Informationen zum Datenschutz für Configuration Manager
 
@@ -91,6 +91,6 @@ Weitere Informationen finden Sie unter [Endpoint Protection](../../../protect/de
 
 Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Überwachung**, wählen Sie den Knoten **Standorthierarchie** aus, und wechseln Sie zu **Geografische Ansicht**. In dieser Ansicht können Sie von Bing Karten bereitgestellte Karten verwenden, um die physische Configuration Manager-Servertopologie anzuzeigen. Zum Aktivieren dieses Features werden von Ihnen bereitgestellte Standortinformationen von Ihrem Server an den Webdienst Bing Maps übertragen.
 
-Microsoft verwendet die Informationen, um Microsoft Bing Maps sowie andere Websites und Dienste zu betreiben und zu verbessern. Weitere Informationen finden Sie in der [Datenschutzerklärung von Microsoft](https://go.microsoft.com/fwlink/?LinkId=823548).
+Microsoft verwendet die Informationen, um Microsoft Bing Maps sowie andere Websites und Dienste zu betreiben und zu verbessern. Weitere Informationen finden Sie in der [Datenschutzerklärung von Microsoft](https://privacy.microsoft.com/privacystatement).
 
 Sie haben die Wahl, die geografische Ansicht der Standorthierarchie nicht zu verwenden. Die Standardansicht „Hierarchiediagramm“ ermöglicht Ihnen, die Hierarchie anzusehen, ohne den Dienst Bing Karten zu verwenden.

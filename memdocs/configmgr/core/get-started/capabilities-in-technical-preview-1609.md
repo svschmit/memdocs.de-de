@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7e803dd1cbacbbd65a5f2968e217656b088d281
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705448"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905702"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funktionen in der Technical Preview 1609 für Configuration Manager
 
@@ -51,7 +51,6 @@ Wenn dieser Dienst aktiviert ist, zeigt der Setup-Assistent von Apple während d
 
 Mit Upgrade Analytics können Sie die Gerätebereitschaft und -kompatibilität mit Windows 10 bewerten und analysieren, um einfachere und reibungslose Upgrades zu ermöglichen. Durch die Integration von Upgrade Analytics in Configuration Manager können Sie auf die Upgradekompatibilitätsdaten in der Administratorkonsole von Configuration Manager zugreifen und anschließend über die Geräteliste Geräte für ein Upgrade oder eine Wiederherstellung auswählen.
 
-Erfahren Sie mehr über Upgrade Analytics in [Get started with Upgrade Analytics (Erste Schritte mit Upgrade Analytics)](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started).
 
 ## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Native Verbindungstypen für hybride Windows 10-VPN-Profile
 
@@ -348,7 +347,7 @@ Das Dashboard zeigt Diagramme für Folgendes an:
 - Office 365-Clientversionen
 - Office 365-Clientsprachen
 - Office 365-Clientkanäle     
-Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
+Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Regeln zur automatischen Bereitstellung, die Office 365-Client in der Gruppe verfügbarer Produkte ausgewählt haben.
 
 Über das Dashboard können Sie die folgenden Aktionen ausführen:

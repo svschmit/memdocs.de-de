@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 824eaeb939249e1bcc2ed21d5815a0a72dc54797
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700268"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906477"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Sichern eines Configuration Manager-Standorts
 
@@ -231,7 +231,7 @@ Die Writer-ID für den SMS-Writer lautet **03ba67dd-dc6d-4729-a038-251f7018463b*
 Der SMS-Writer-Dienst muss unter dem lokalen Systemkonto ausgeführt werden.  
 
 ### <a name="volume-shadow-copy-service"></a>Volumeschattenkopie-Dienst  
-Der Volumeschattenkopie-Dienst (Volume Shadow Copy Service, VSS) ist ein Satz COM APIs, mit denen ein Framework implementiert wird. Dank dieses Frameworks können Volumesicherungen ausgeführt werden, während von Anwendungen auf einem System weiterhin auf die Volumes geschrieben wird. Mit dem VSS wird eine konsistente Schnittstelle bereitgestellt, mit der Benutzeranwendungen, die zum Ausführen eines Updates für Daten auf einem Datenträger dienen (SMS-Writer-Dienst), und Benutzeranwendungen, die zur Anwendungssicherung verwendet werden (Sicherungs-Manager-Dienst), koordiniert werden können. Weitere Informationen finden Sie unter [Volumeschattenkopie-Dienst](https://go.microsoft.com/fwlink/p/?LinkId=241968).  
+Der Volumeschattenkopie-Dienst (Volume Shadow Copy Service, VSS) ist ein Satz COM APIs, mit denen ein Framework implementiert wird. Dank dieses Frameworks können Volumesicherungen ausgeführt werden, während von Anwendungen auf einem System weiterhin auf die Volumes geschrieben wird. Mit dem VSS wird eine konsistente Schnittstelle bereitgestellt, mit der Benutzeranwendungen, die zum Ausführen eines Updates für Daten auf einem Datenträger dienen (SMS-Writer-Dienst), und Benutzeranwendungen, die zur Anwendungssicherung verwendet werden (Sicherungs-Manager-Dienst), koordiniert werden können. Weitere Informationen finden Sie unter [Volumeschattenkopie-Dienst](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service).  
 
 
 

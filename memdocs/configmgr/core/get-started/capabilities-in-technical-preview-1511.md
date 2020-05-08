@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076338"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905847"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funktionen in der Technical Preview 1511 für Configuration Manager
 
@@ -34,7 +34,7 @@ Für Computer, die über WUfB verbunden sind, kann Configuration Manager keine M
 
 -   Windows 10 Desktop Pro oder Windows 10 Enterprise Edition, Version 1511 oder höher  
 
--   Computer, die über [Windows Update für Unternehmen](https://technet.microsoft.com/library/mt622730\(v=vs.85\).aspx)verwaltet werden sollen.  
+-   Computer, die über [Windows Update für Unternehmen](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb)verwaltet werden sollen.  
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!  
  Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Feedbackinformationen oben in diesem Thema, um uns Ihre Erfahrungen mitzuteilen:  
@@ -67,7 +67,7 @@ Wenn Microsoft ein neues Office 365-Desktopclientupdate in Windows Server Update
 
 4. Sie können die Kompatibilität für Office 365-Updates mithilfe der Überwachung und Berichte in der Konsole überprüfen.  
 
-   Detaillierte Anweisungen finden Sie unter [Verwalten von Updates für Office 365 ProPlus mit dem Microsoft Endpoint Configuration Manager](https://technet.microsoft.com/library/mt628083.aspx).  
+   Detaillierte Anweisungen finden Sie unter [Verwalten von Updates für Office 365 ProPlus mit dem Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Unterstützung für SQL Server AlwaysOn für hoch verfügbare Datenbanken  
  Configuration Manager unterstützt jetzt die Verwendung einer SQL Server Always On-Verfügbarkeitsgruppe zum Hosten der Standortdatenbank.  Wenn Sie einen neuen Standort installieren, können Sie das Setup anweisen, anstatt einer normalen Instanz von SQL Server die Verfügbarkeitsgruppe zu verwenden.  
@@ -110,7 +110,7 @@ Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Fee
  Verwenden Sie die folgenden Verfahren, um zuerst die Verfügbarkeitsgruppe zu erstellen und zu konfigurieren, und installieren Sie dann einen neuen Configuration Manager-Standort, der die Verfügbarkeitsgruppe verwendet.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>So erstellen Sie eine SQL Server AlwaysOn-Verfügbarkeitsgruppe  
-Das Verfahren zum [Erstellen einer SQL Server-Verfügbarkeitsgruppe](https://technet.microsoft.com/library/ff878265\(v=sql.120\).aspx) wird in der SQL Server-Dokumentationsbibliothek beschrieben.  Wenn Sie eine Verfügbarkeitsgruppe erstellen, vergewissern Sie sich, dass die folgenden Anforderungen für die Verwendung mit Configuration Manager erfüllt sind:  
+Das Verfahren zum [Erstellen einer SQL Server-Verfügbarkeitsgruppe](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) wird in der SQL Server-Dokumentationsbibliothek beschrieben.  Wenn Sie eine Verfügbarkeitsgruppe erstellen, vergewissern Sie sich, dass die folgenden Anforderungen für die Verwendung mit Configuration Manager erfüllt sind:  
 
 -   Maximal drei Mitglieder:  
 
@@ -165,7 +165,7 @@ Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Fee
 
 #### <a name="to-create-a-collection-for-a-server-cluster"></a>So erstellen Sie eine Sammlung für einen Servercluster  
 
-1.  [Erstellen Sie eine Gerätesammlung](https://technet.microsoft.com/library/gg712295.aspx), die die Server im Cluster enthält.  
+1.  [Erstellen Sie eine Gerätesammlung](../clients/manage/collections/create-collections.md), die die Server im Cluster enthält.  
 
 2.  Klicken Sie im Arbeitsbereich **Bestand und Kompatibilität** auf **Gerätesammlungen**, klicken Sie mit der rechten Maustaste auf die Sammlung mit den Servern im Cluster, und klicken Sie dann auf **Eigenschaften**.  
 
@@ -200,6 +200,6 @@ Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Fee
 
 #### <a name="to-deploy-software-updates-to-the-server-cluster"></a>So stellen Sie Softwareupdates für den Servercluster bereit  
 
-1.  [Stellen Sie Softwareupdates](https://technet.microsoft.com/library/gg712304.aspx) für die Serverclustersammlung bereit.  
+1.  [Stellen Sie Softwareupdates](../../sum/deploy-use/deploy-software-updates.md) für die Serverclustersammlung bereit.  
 
-2.  [Überwachen Sie die Softwareupdatebereitstellung](https://technet.microsoft.com/library/gg712304.aspx).  
+2.  [Überwachen Sie die Softwareupdatebereitstellung](../../sum/deploy-use/monitor-software-updates.md).  

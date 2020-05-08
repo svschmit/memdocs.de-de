@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b74a8c1daff31a8ffca8a38e6449aeeef1bb9b2d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5bdfd566682156e39e1dbed7c55af85b20a78671
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697178"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906678"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -92,7 +92,7 @@ Endpoint Protection verwaltet und überwacht Microsoft Defender Advanced Threat 
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Endpoint Protection-Client für Macintosh-Computer und Linux-Server  
 
 > [!Important]  
-> Der Support für System Center Endpoint Protection (SCEP) für Mac und Linux (alle Versionen) endet am 31. Dezember 2018. Die Verfügbarkeit der neuen Virusdefinitionen für SCEP für Mac und SCEP für Linux wird möglicherweise nach Ende der Unterstützung eingestellt. Weitere Informationen finden Sie im [Blogbeitrag zum Ende des Supports](https://go.microsoft.com/fwlink/?linkid=870182).  
+> Der Support für System Center Endpoint Protection (SCEP) für Mac und Linux (alle Versionen) endet am 31. Dezember 2018. Die Verfügbarkeit der neuen Virusdefinitionen für SCEP für Mac und SCEP für Linux wird möglicherweise nach Ende der Unterstützung eingestellt. Weitere Informationen finden Sie im [Blogbeitrag zum Ende des Supports](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).  
 
  System Center Endpoint Protection umfasst einen Endpoint Protection-Client für Linux- und Macintosh-Computer. Diese Clients werden nicht mit Configuration Manager bereitgestellt. Stattdessen müssen Sie die folgenden Produkte aus dem [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx) herunterladen:  
 

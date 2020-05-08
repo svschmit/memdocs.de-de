@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b30386745244900e7f525f8f45b25a598628bf43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b709d6ec0c0cda188502c314d945a70e8de71288
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078735"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905251"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-configuration-manager"></a>Funktionen in der Technical Preview 1804 für Configuration Manager
 
@@ -134,8 +134,6 @@ Wenn Sie versuchen, Feedback von einem Gerät zu senden, das nicht auf das Inter
 
 Verwenden Sie das Supportcenter zur Behebung von Clientproblemen, Anzeigen von Protokollen in Echtzeit oder zum Erfassen des Zustands eines Configuration Manager-Clientcomputers zur späteren Analyse. Das Supportcenter ist ein einziges Tool, das viele Problembehandlungstools für Administratoren konsolidiert. In Technical Preview steht eine Vorschau der neuesten Version des Supportcenters zur Verfügung. Diese enthält Fehlerbehebungen, Verbesserungen und eine Vorschau der neuen Protokollanzeige. Das Installationsprogramm für das Supportcenter finden Sie auf dem Standortserver im Ordner **cd.latest\SMSSETUP\Tools\SupportCenter**.
 
- > [!Tip]  
- > Ältere Dokumentationen zu vorhandenen Funktionen im Supportcenter stehen unter [TechNet](https://technet.microsoft.com/library/dn688621.aspx) zur Verfügung. Relevante Informationen werden derzeit zur docs.microsoft.com-Bibliothek migriert.  
 
 ### <a name="new-support-center-features"></a>Neue Features des Supportcenters  
 

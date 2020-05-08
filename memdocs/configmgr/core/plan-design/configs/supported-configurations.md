@@ -10,12 +10,12 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 09618acc1c0950c3eaae79cca59fcf71dc7ef61e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 66770ea14c3ae53bad8e6df61b54c7c5e2d2aaa0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688518"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904572"
 ---
 # <a name="supported-configurations-for-configuration-manager"></a>Unterstützte Konfigurationen für Configuration Manager
 
@@ -27,12 +27,12 @@ Die Informationen in diesem und den folgenden Themen sind entscheidend, um wicht
 
 Wenn eine Configuration Manager-Funktion spezifischere Konfigurationen erfordert, werden diese Informationen in die funktionsspezifische Dokumentation aufgenommen und ergänzen diese allgemeineren Konfigurationsdetails.  
 
- Die in den folgenden Abschnitten beschriebenen Produkte und Technologien werden von Configuration Manager unterstützt. Die Tatsache, dass diese Produkte und Technologien hier beschrieben werden, bedeutet jedoch nicht, dass damit der Support über den Support Lifecycle der jeweiligen Produkte hinaus erweitert wurde. Produkte, deren Supportlebenszyklus abgelaufen ist, werden für die Verwendung mit Configuration Manager nicht mehr unterstützt. Dies umfasst alle Produkte, die durch das Programm [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) abgedeckt sind. Weitere Informationen zum Microsoft Support Lifecycle finden Sie auf der Website [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270). Weitere Informationen zu Extended Security Updates in Configuration Manager finden Sie unter [Unterstützte Betriebssystemversionen für Clients und Geräte für Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
+ Die in den folgenden Abschnitten beschriebenen Produkte und Technologien werden von Configuration Manager unterstützt. Die Tatsache, dass diese Produkte und Technologien hier beschrieben werden, bedeutet jedoch nicht, dass damit der Support über den Support Lifecycle der jeweiligen Produkte hinaus erweitert wurde. Produkte, deren Supportlebenszyklus abgelaufen ist, werden für die Verwendung mit Configuration Manager nicht mehr unterstützt. Dies umfasst alle Produkte, die durch das Programm [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) abgedeckt sind. Weitere Informationen zum Microsoft Support Lifecycle finden Sie auf der Website [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). Weitere Informationen zu Extended Security Updates in Configuration Manager finden Sie unter [Unterstützte Betriebssystemversionen für Clients und Geräte für Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
 > [!NOTE]  
->  Informationen zur Microsoft Support Lifecycle-Richtlinie finden Sie auf der Website mit häufig gestellten Fragen zur Microsoft Support Lifecycle-Richtlinie unter [Microsoft Support Lifecycle-Richtlinie – Häufig gestellte Fragen (FAQs)](https://go.microsoft.com/fwlink/p/?LinkId=31976).  
+>  Informationen zur Microsoft Support Lifecycle-Richtlinie finden Sie auf der Website mit häufig gestellten Fragen zur Microsoft Support Lifecycle-Richtlinie unter [Microsoft Support Lifecycle-Richtlinie – Häufig gestellte Fragen (FAQs)](https://support.microsoft.com/lifecycle).  
 
- Darüber hinaus werden Produkte und Produktversionen, die in den folgenden Themen nicht aufgeführt sind, nicht von Configuration Manager unterstützt, außer dies wurde im [Blog für Enterprise Mobility und Security](https://blogs.technet.microsoft.com/enterprisemobility/) angekündigt.  Der Inhalt in diesem Blog wird von Zeit zu Zeit einer Aktualisierung an dieser Stelle der Dokumentation vorangestellt.
+ Darüber hinaus werden Produkte und Produktversionen, die in den folgenden Themen nicht aufgeführt sind, nicht von Configuration Manager unterstützt, außer dies wurde im [Blog für Enterprise Mobility und Security](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity) angekündigt.  Der Inhalt in diesem Blog wird von Zeit zu Zeit einer Aktualisierung an dieser Stelle der Dokumentation vorangestellt.
 
 
 -  [Size and scale numbers (Anpassen und Skalieren von Zahlen)](../../../core/plan-design/configs/size-and-scale-numbers.md)  

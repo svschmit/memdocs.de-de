@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073708"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904697"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Neuerungen in Version 1706 von Configuration Manager
 
@@ -28,8 +28,8 @@ Das Update 1706 für Configuration Manager (Current Branch) ist als konsolenint
 > Sie müssen eine Baselineversion von Configuration Manager verwenden, um einen neuen Standort zu installieren.  
 >
 > Weitere Informationen:    
-> - [Installieren von neuen Standorten](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Installieren von Updates an Standorten](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Installieren von neuen Standorten](../../servers/deploy/install/installing-sites.md)  
+> - [Installieren von Updates an Standorten](../../servers/manage/updates.md)  
 > - [Baseline- und Updateversionen](../../servers/manage/updates.md#bkmk_Baselines)  
 
 Die folgenden Abschnitte enthalten Details zu Änderungen und neue Funktionen, die in Version 1706 von Configuration Manager eingeführt wurden.  
