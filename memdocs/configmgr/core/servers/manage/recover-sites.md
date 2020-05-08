@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14f319cfa1d09cf21cc5da5ed4a9fde9b9b9799b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708528"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903955"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Wiederherstellen eines Configuration Manager-Standorts
 
@@ -193,7 +193,7 @@ Verwenden Sie diese Option, wenn es auf dem Configuration Manager-Standortdatenb
 
 Configuration Manager ermöglicht die Änderungsnachverfolgung für die Standortdatenbank in SQL Server. Bei der Änderungsnachverfolgung können von Configuration Manager Informationen über die Änderungen abgefragt werden, die seit einem früheren Zeitpunkt an den Datenbanktabellen vorgenommen wurden. Mit der Beibehaltungsdauer wird angegeben, wie lange Informationen zur Änderungsnachverfolgung beibehalten werden. Für die Standortdatenbank ist standardmäßig eine Beibehaltungsdauer von fünf Tagen konfiguriert. Beim Wiederherstellen einer Standortdatenbank richtet sich der Wiederherstellungsprozess danach, ob die Sicherung innerhalb oder außerhalb der Beibehaltungsdauer liegt. Wenn beispielsweise Ihr Server von SQL Server ausfällt und die letzte Sicherung vor sieben Tagen erstellt wurde, liegt die Sicherung außerhalb der Beibehaltungsdauer.
 
-Weitere Informationen zur SQL Server-Änderungsnachverfolgung finden Sie in den folgenden Blogbeiträgen des SQL Server-Teams: [Change Tracking Cleanup – part 1 (Cleanup für die Änderungsnachverfolgung – Teil 1)](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/) und [Change Tracking Cleanup – part 2 (Cleanup für die Änderungsnachverfolgung – Teil 2)](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2).
+Weitere Informationen zur SQL Server-Änderungsnachverfolgung finden Sie in den folgenden Blogbeiträgen des SQL Server-Teams: [Change Tracking Cleanup – part 1 (Cleanup für die Änderungsnachverfolgung – Teil 1)](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) und [Change Tracking Cleanup – part 2 (Cleanup für die Änderungsnachverfolgung – Teil 2)](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Erneute Initialisierung von Standortdaten oder globalen Daten
 

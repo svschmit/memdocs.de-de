@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 503bb6d2293b4b5efb1d84980225a9d7052e1656
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705108"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905326"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Funktionen in der Technical Preview 1710 für Configuration Manager
 
@@ -125,7 +125,7 @@ Nach der Erstellung der Exploit Guard-Richtlinien stellen Sie sie mithilfe des A
 
 ## <a name="limited-support-for-cng-certificates"></a>Eingeschränkte Unterstützung für CNG-Zertifikate
 <!-- 1356191 -->
-Ab diesem Release können Sie Zertifikatvorlagen des Typs [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) für die folgenden Szenarios verwenden:
+Ab diesem Release können Sie Zertifikatvorlagen des Typs [Cryptography API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) für die folgenden Szenarios verwenden:
 
 - Clientregistrierung und Kommunikation mit einem HTTPS-Verwaltungspunkt   
 - Softwareverteilung und Anwendungsbereitstellung mit einem HTTPS-Verteilungspunkt   

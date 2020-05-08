@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d3ae44892cd46a438113fb54dad0e290b8fb148e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 556ddb10f0ba25fc1c3cf4b215d5058d3221c7fe
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707738"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906465"
 ---
 # <a name="checklist-for-installing-update-1702-for-configuration-manager"></a>Checkliste für die Installation von Update 1702 für Configuration Manager
 
@@ -89,7 +89,7 @@ Weitere Informationen finden Sie unter [Site and site system prerequisites for S
 
 **Überprüfen Sie die Version des Windows Assessment and Deployment Kit (ADK) für Windows 10** Das ADK für Windows 10 sollte Version 1607 oder höher haben. Wenn Sie das ADK aktualisieren müssen, sollten Sie dies vor dem Update von Configuration Manager machen. So wird sichergestellt, dass die Standardstartabbilder automatisch auf die neueste Version der Windows PE aktualisiert werden. (Benutzerdefinierte Startabbilder müssen manuell aktualisiert werden.)
 
-Wenn Sie den Standort vor dem Update des ADKs aktualisieren, finden Sie unter [Configuration Manager and the Windows ADK for Windows 10, version 1607 (Configuration Manager und das Windows ADK für Windows 10, Version 1607)](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) ein Skript zum erneuten Generieren der Startabbilder.
+Wenn Sie den Standort vor dem Update des ADKs aktualisieren, finden Sie unter [Configuration Manager and the Windows ADK for Windows 10, version 1607 (Configuration Manager und das Windows ADK für Windows 10, Version 1607)](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047) ein Skript zum erneuten Generieren der Startabbilder.
 
 **Überprüfen des Standort- und Hierarchiestandorts, um ungelöste Probleme zu beheben:** Bevor Sie das Update für einen Standort durchführen, sollten Sie alle Betriebsprobleme beheben, die den Standortserver, den Standortdatenbankserver und die auf Remotecomputern installierten Standortsystemrollen betreffen. Betriebsprobleme können die Ursache für Fehler beim Update von Standorten sein.
 

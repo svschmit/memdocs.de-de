@@ -10,12 +10,12 @@ ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4b7db4537965b17cd56cc4d996eec576c2b18965
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3825ef9b9b1efd576a31742e0fdbe7c2bc3b1628
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706048"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906845"
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-configuration-manager"></a>Sicherheit und Datenschutz für Zertifikatprofile in Configuration Manager
 
@@ -27,7 +27,7 @@ ms.locfileid: "81706048"
 
 |Bewährte Sicherheitsmethode|Weitere Informationen|  
 |----------------------------|----------------------|  
-|Bestimmen und beachten Sie die bewährten Sicherheitsmethoden für den Registrierungsdienst für Netzwerkgeräte. Dazu zählt die Konfiguration der NDES-Website in Internetinformationsdienste (IIS), um SSL zu erfordern und Clientzertifikate zu ignorieren.|Weitere Informationen finden Sie unter [Network Device Enrollment Service Guidance (Anleitung zum Registrierungsdienst für Netzwerkgeräte)](https://go.microsoft.com/fwlink/p/?LinkId=309016) in der Bibliothek zu Active Directory-Zertifikatdiensten auf der TechNet-Website.|  
+|Bestimmen und beachten Sie die bewährten Sicherheitsmethoden für den Registrierungsdienst für Netzwerkgeräte. Dazu zählt die Konfiguration der NDES-Website in Internetinformationsdienste (IIS), um SSL zu erfordern und Clientzertifikate zu ignorieren.|Weitere Informationen finden Sie im [Leitfaden zum Registrierungsdienst für Netzwerkgeräte](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).|  
 |Wählen Sie bei der Konfiguration von SCEP-Zertifikatprofilen die sichersten Optionen aus, die von den Geräten und Ihrer Infrastruktur unterstützt werden können.|Bestimmen, implementieren und beachten Sie die bewährten Sicherheitsmethoden, die für Ihre Geräte und die Infrastruktur empfohlen wurden.|  
 |Geben Sie manuell die Affinität zwischen Benutzer und Gerät an, statt zuzulassen, dass die Benutzer das primäre Gerät selbst bestimmen. Aktivieren Sie darüber hinaus die verwendungsbasierte Konfiguration nicht.|Wenn Sie die Option **Zertifikatregistrierung nur auf dem primären Gerät des Benutzers zulassen** in einem SCEP-Zertifikatprofil anklicken, betrachten Sie die von Benutzern oder vom Gerät gesammelten Informationen nicht als autoritativ. Wenn Sie SCEP-Zertifikatprofile mit dieser Konfiguration bereitstellen und die Affinität zwischen Benutzer und Gerät nicht von einem vertrauenswürdigen Administrator angegeben wurde, kann dies zu Rechteerweiterungen führen, und nicht autorisierten Benutzern werden möglicherweise Zertifikate zur Authentifizierung erteilt.<br /><br /> **Hinweis:** Wenn Sie die verwendungsbasierte Konfiguration zulassen, werden diese Informationen mithilfe von Statusmeldungen erfasst, die nicht von Configuration Manager geschützt werden. Sie können diese Bedrohung durch SMB-Signaturen oder IPsec zwischen Clientcomputern und dem Verwaltungspunkt verringern.|  
 |Fügen Sie den Zertifikatvorlagen nicht die Berechtigungen Lesen und Anmelden für Benutzer hinzu, oder konfigurieren Sie den Zertifikatregistrierungspunkt so, dass die Überprüfung von Zertifikatvorlagen übersprungen wird.|Obwohl Configuration Manager die zusätzliche Überprüfung unterstützt, wenn Sie die Sicherheitsberechtigungen zum Lesen und Registrieren für Benutzer hinzufügen, und Sie den Zertifikatregistrierungspunkt so konfigurieren können, dass die Überprüfung übersprungen wird, wenn keine Authentifizierung möglich ist, ist keine dieser Konfigurationen eine bewährte Sicherheitsmethode. Weitere Informationen finden Sie unter [Planen der Berechtigungen von Zertifikatvorlagen für Zertifikatprofile](../../protect/plan-design/planning-for-certificate-template-permissions.md).|  

@@ -10,12 +10,12 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ba1f41af778602fb95d268c071b5f0d1dde158c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ad92e4906c45b5c720ab35efc055449a27cc0850
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693388"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906219"
 ---
 # <a name="security-and-privacy-for-migration-to-configuration-manager-current-branch"></a>Sicherheit und Datenschutz für die Migration zu Configuration Manager (Current Branch)
 
@@ -48,9 +48,9 @@ Wenn Sie Daten von einem Quellstandort zu einem Zielstandort migrieren, gehen al
 
  Weitere Informationen zu Sicherheit und Datenschutz finden Sie unter folgenden Themen:  
 
--   Weitere Informationen zum Configuration Manager 2007-Datenschutz finden Sie unter [Sicherheit und Datenschutz für Configuration Manager 2007](https://go.microsoft.com/fwlink/p/?LinkId=216450) in der Configuration Manager 2007-Dokumentationsbibliothek.  
+-   Weitere Informationen zum Configuration Manager 2007-Datenschutz finden Sie unter [Sicherheit und Datenschutz für Configuration Manager 2007](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10)) in der Configuration Manager 2007-Dokumentationsbibliothek.  
 
--   Weitere Informationen zum System Center 2012 Configuration Manager-Datenschutz finden Sie unter [Sicherheit und Datenschutz für System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682033.aspx) in der System Center 2012 Configuration Manager-Dokumentationsbibliothek.  
+-   Weitere Informationen zum System Center 2012 Configuration Manager-Datenschutz finden Sie unter [Sicherheit und Datenschutz für System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10)) in der System Center 2012 Configuration Manager-Dokumentationsbibliothek.  
 
 -   Weitere Informationen zum Configuration Manager-Datenschutz finden Sie unter [Sicherheit und Datenschutz für Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
 

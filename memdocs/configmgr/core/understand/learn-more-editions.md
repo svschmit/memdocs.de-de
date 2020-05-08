@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f18ed2180f1d526e2afa4872e8fa9018c7e18721
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 04ed335c65369840085fe44ba2f1b81d7806a0e3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706878"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906048"
 ---
 # <a name="licensing-and-branches-for-configuration-manager"></a>Lizenzierung und Branches für Configuration Manager
 
@@ -32,7 +32,7 @@ In diesem Artikel können Sie mehr über die Lizenzierungsanforderungen für die
 
 Kunden mit aktiver Software Assurance für Configuration Manager-Lizenzen oder mit entsprechenden Abonnementrechten ab 1. Oktober 2016 verfügen über Benutzungsrechte des Configuration Manager-Release 1606 vom Oktober 2016. Kunden, die ab dem 1. Oktober 2016 oder danach über Rechte für Configuration Manager verfügen, erhalten während der Installation zwei lizenzierte Optionen: Current Branch und Long-Term Servicing Branch (LTSB).
 
-Vollständige Nutzungsbedingungen für die Produkte, die Sie über Microsoft-Volumenlizenzprogramme erwerben, finden Sie unter [Lizenzierungsbedingungen und Dokumentation](https://go.microsoft.com/fwlink/?LinkId=800052).
+Vollständige Nutzungsbedingungen für die Produkte, die Sie über Microsoft-Volumenlizenzprogramme erwerben, finden Sie unter [Lizenzierungsbedingungen und Dokumentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 
 ## <a name="licensed-branches"></a>Lizenzierte Branches
@@ -117,7 +117,7 @@ Wenn Sie mehr über die Produktlizenzierungsdetails erfahren möchten, nutzen Si
 
 - [Übersicht über das VLSC](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Produktbedingungen für die Microsoft-Volumenlizenzierung](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Produktbedingungen für die Microsoft-Volumenlizenzierung](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - Einen Überblick über ihre Lizenzen finden Volumenlizenzkunden im [Volume Licensing-Servicecenter](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Wechseln Sie zum Menü **Lizenzen**, und wählen Sie **Licenses Summary** (Zusammenfassung der Lizenzen) aus.
 

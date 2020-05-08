@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8889c0ee306eaaf682563b2e8e72d5482054d1c7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690258"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904093"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Vorbereiten von Computern mit Windows Server zur Unterstützung von Configuration Manager
 
@@ -98,7 +98,7 @@ Die folgenden Windows-Rollen sind erforderlich, um bestimmte Funktionen zu unter
 ##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> IIS-Anforderungsfilterung für Verteilungspunkte  
 IIS verwendet standardmäßig die Filterung von Benutzeranforderungen, um Dateinamenerweiterungen und Ordnerpfade für den Zugriff über HTTP- oder HTTPS-Verbindungen zu blockieren. Auf einem Verteilungspunkt verhindert dies, dass Clients Pakete mit blockierten Erweiterungen oder Ordnerpfaden herunterladen.  
 
-Wenn Ihre Paketquelldateien Erweiterungen aufweisen, die in IIS durch Ihre Konfiguration der Anforderungsfilterung blockiert werden, müssen Sie die Anforderungsfilterung so einrichten, dass sie diese zulässt. Dies erfolgt durch [Bearbeiten des Anforderungsfilterfeatures](https://technet.microsoft.com/library/hh831621.aspx) im IIS-Manager auf Ihren Verteilungspunktcomputern.  
+Wenn Ihre Paketquelldateien Erweiterungen aufweisen, die in IIS durch Ihre Konfiguration der Anforderungsfilterung blockiert werden, müssen Sie die Anforderungsfilterung so einrichten, dass sie diese zulässt. Dies erfolgt durch [Bearbeiten des Anforderungsfilterfeatures](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) im IIS-Manager auf Ihren Verteilungspunktcomputern.  
 
 Die folgenden Dateinamenerweiterungen werden außerdem von Configuration Manager für Pakete und Anwendungen verwendet. Stellen Sie sicher, dass Ihre Konfigurationen der Anforderungsfilterung diese Erweiterungen nicht blockieren:  
 
@@ -136,4 +136,4 @@ Beispiel: Sie verfügen über Quelldateien für eine Softwarebereitstellung, die
 - HEAD
 - PROPFIND
 
-Weitere Informationen finden Sie unter [Konfigurieren der Anforderungsfilterung in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs). 
+Weitere Informationen finden Sie unter [Konfigurieren der Anforderungsfilterung in IIS](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs). 

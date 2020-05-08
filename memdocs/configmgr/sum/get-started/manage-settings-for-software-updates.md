@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2c8ca66bc83ec8eb18bc331287b6dbee47af7d85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703038"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906800"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Verwalten von Einstellungen für Softwareupdates  
 
@@ -40,7 +40,7 @@ Von Windows Update Agent (WUA) werden auf Clientcomputern bestimmte Gruppenricht
 Beim Erstellen des Softwareupdatepunkts für einen Standort erhalten Clients eine Computerrichtlinie, die den Namen für den Server des Softwareupdatepunkts enthält. Von der Computerrichtlinie wird außerdem die lokale Richtlinie **Internen Pfad für den Microsoft Updatedienst angeben** auf dem Computer konfiguriert. Der in der Einstellung **Interner Updatedienst zum Ermitteln von Updates** angegebene Servername wird von WUA abgerufen, und beim Überprüfen der Softwareupdatekompatibilität wird eine Verbindung mit diesem Server hergestellt. Wenn für die Einstellung **Internen Pfad für den Microsoft Updatedienst angeben** eine Domänenrichtlinie erstellt wird, wird hierdurch die lokale Richtlinie außer Kraft gesetzt, und über WUA wird möglicherweise eine Verbindung mit einem anderen Server als dem Softwareupdatepunkt hergestellt. In diesem Fall wird vom Client möglicherweise die Kompatibilität von Softwareupdates anhand unterschiedlicher Produkte, Klassifizierungen und Sprachen überprüft. Aus diesem Grund sollten Sie die Active Directory-Richtlinie nicht für Clientcomputer konfigurieren.  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>Gruppenrichtlinie „Signierten Inhalt von Intranet-Speicherort für Microsoft-Updatedienst zulassen“  
-Sie müssen die Gruppenrichtlinieneinstellung **Signierten Inhalt von Intranet-Speicherort für Microsoft-Updatedienst zulassen** aktivieren, damit Computer von WUA auf Softwareupdates überprüft werden können, die mit System Center Updates Publisher erstellt und veröffentlicht wurden. Wenn die Richtlinieneinstellung aktiviert ist, werden von WUA Softwareupdates zugelassen, die von einem Intranet-Speicherort stammen, sofern diese Softwareupdates im Zertifikatspeicher für **vertrauenswürdige Herausgeber** des lokalen Computers signiert wurden. Weitere Informationen zu den für Updates Publisher erforderlichen Gruppenrichtlinieneinstellungen finden Sie unter [Dokumentationsbibliothek für Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=232476).  
+Sie müssen die Gruppenrichtlinieneinstellung **Signierten Inhalt von Intranet-Speicherort für Microsoft-Updatedienst zulassen** aktivieren, damit Computer von WUA auf Softwareupdates überprüft werden können, die mit System Center Updates Publisher erstellt und veröffentlicht wurden. Wenn die Richtlinieneinstellung aktiviert ist, werden von WUA Softwareupdates zugelassen, die von einem Intranet-Speicherort stammen, sofern diese Softwareupdates im Zertifikatspeicher für **vertrauenswürdige Herausgeber** des lokalen Computers signiert wurden. Weitere Informationen zu den für Updates Publisher erforderlichen Gruppenrichtlinieneinstellungen finden Sie unter [Dokumentationsbibliothek für Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ### <a name="automatic-updates-configuration"></a>Konfiguration „Automatische Updates“  
 Mit der Funktion „Automatische Updates“ können Sicherheitsupdates und andere wichtige Downloads auf Clientcomputern empfangen werden. Automatische Updates werden über die Gruppenrichtlinieneinstellung **Automatische Updates konfigurieren** oder die Systemsteuerung des lokalen Computers konfiguriert. Wenn Automatische Updates aktiviert ist, empfangen Clientcomputer Updatebenachrichtigungen, und je nach konfigurierten Einstellungen werden von den Clientcomputern erforderliche Updates heruntergeladen und installiert. Wenn gleichzeitig Automatische Updates und Softwareupdates aktiviert sind, werden von Clientcomputern u. U. Benachrichtigungssymbole und Anzeigebenachrichtigungen für dasselbe Update angezeigt. Zudem kann von jedem Clientcomputer ein Neustartdialogfeld für dasselbe Update angezeigt werden, wenn ein Neustart erforderlich ist.  

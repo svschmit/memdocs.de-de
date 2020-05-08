@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 426767b65e0fd770a9a41ce9463948007a524c41
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078752"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905217"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Funktionen in der Technical Preview 1806.2 für Configuration Manager
 
@@ -147,7 +147,7 @@ Wenn Sie eine stufenweise Bereitstellung erstellen und eine Phase manuell konfig
 <!--1357427-->
 Configuration Manager unterstützt jetzt die Bereitstellung der neuen Formate für Windows 10-App-Pakete (.msix) und App-Bundles (.msixbundle). Die neuesten Builds von [Windows Insider Preview](https://insider.windows.com/) unterstützen derzeit diese neuen Formate.
 
-Eine Übersicht über MSIX finden Sie unter [A closer look at MSIX (MSIX von Nahem betrachtet)](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).
+Eine Übersicht über MSIX finden Sie unter [A closer look at MSIX (MSIX von Nahem betrachtet)](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).
 
 Informationen zum Erstellen einer neuen MSIX-App finden Sie unter [MSIX support introduced in Insider Build 17682 (Einführung der MSIX-Unterstützung in Insider Build 17682)](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 

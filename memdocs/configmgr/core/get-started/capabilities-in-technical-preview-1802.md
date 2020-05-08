@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 50e05d07ec3e2612c170157c45f5e64abe3766de
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cf6980def8a4f61248bd676edc0ca93f2546816e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701328"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905264"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Funktionen in der Technical Preview 1802 für Configuration Manager
 
@@ -56,7 +56,7 @@ In diesem Release können Sie jetzt die Endpoint Protection-Workload von Configu
  
 ## <a name="configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups"></a>Konfigurieren der Windows-Übermittlungsoptimierung für die Verwendung von Configuration Manager-Begrenzungsgruppen
 <!-- 1324696 -->
-Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung über Ihr gesamtes Unternehmensnetzwerk und Remotebüros hinweg zu definieren und zu regulieren. [Windows-Übermittlungsoptimierung](/windows/deployment/update/waas-delivery-optimization) ist eine cloudbasierte Peer-zu-Peer-Technologie zum gemeinsamen Nutzen von Inhalten auf Windows 10-Geräten. Ab diesem Release können Sie die Übermittlungsoptimierung so konfigurieren, dass bei der Freigabe von Inhalten für Peers Ihre Begrenzungsgruppen verwendet werden. Eine neue Clienteinstellung wendet die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client an. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich der gewünschte Inhalt befindet. 
+Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung über Ihr gesamtes Unternehmensnetzwerk und Remotebüros hinweg zu definieren und zu regulieren. [Windows-Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) ist eine cloudbasierte Peer-zu-Peer-Technologie zum gemeinsamen Nutzen von Inhalten auf Windows 10-Geräten. Ab diesem Release können Sie die Übermittlungsoptimierung so konfigurieren, dass bei der Freigabe von Inhalten für Peers Ihre Begrenzungsgruppen verwendet werden. Eine neue Clienteinstellung wendet die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client an. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich der gewünschte Inhalt befindet. 
 
 ### <a name="prerequisites"></a>Voraussetzungen
 - Die Übermittlungsoptimierung ist nur auf Windows 10-Clients verfügbar.
@@ -68,7 +68,7 @@ Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung
 2. Wählen Sie die neue Gruppe **Übermittlungsoptimierung** aus.
 3. Aktivieren Sie die Einstellung **Verwenden Sie Configuration Manager-Begrenzungsgruppen für die Gruppen-ID der Übermittlungsoptimierung**.
 
-Weitere Informationen finden Sie in den [Optionen für die Übermittlungsoptimierung](/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization) unter dem Übermittlungsmodus **Gruppe**.
+Weitere Informationen finden Sie in den [Optionen für die Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization) unter dem Übermittlungsmodus **Gruppe**.
 
 
 
@@ -96,16 +96,16 @@ Die Standardvorlage der Tasksequenz für das direkte Windows 10-Upgrade enthält
 - **Inkompatible Anwendungen entfernen:** Hiermit fügen Sie dieser Gruppe Schritte hinzu, um alle Anwendungen zu entfernen, die nicht mit dieser Version von Windows 10 kompatibel sind. Die Methoden zum Deinstallieren einer Anwendung variieren. Wenn die Anwendung den Windows Installer verwendet, kopieren Sie die Befehlszeile **Programm deinstallieren** von der Registerkarte **Programme** in den Eigenschaften des Windows Installer-Bereitstellungstyps der Anwendung. Fügen Sie dann in diese Gruppe mit der Befehlszeile zum Deinstallieren des Programms einen Schritt **Befehlszeile ausführen** ein. Beispiel: </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **Inkompatible Treiber entfernen:** Hiermit fügen Sie dieser Gruppe Schritte hinzu, um alle Treiber zu entfernen, die nicht mit dieser Version von Windows 10 kompatibel sind.
 - **Sicherheitsprogramme von Drittanbietern entfernen/anhalten:** Hiermit fügen Sie dieser Gruppe Schritte hinzu, um Sicherheitsprogramme von Drittanbietern – z.B. Antivirenprogramme – zu entfernen.
-   - Wenn Sie ein Drittanbieterprogramm zur Datenträgerverschlüsselung verwenden, geben Sie den Verschlüsselungstreiber in Windows Setup mit der [Befehlszeilenoption](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) **/ReflectDrivers** an. Fügen Sie der Tasksequenz in dieser Gruppe einen Schritt [Tasksequenzvariable festlegen](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) hinzu. Legen Sie die Tasksequenzvariable auf **OSDSetupAdditionalUpgradeOptions** fest. Legen Sie den Wert auf **/ReflectDriver** mit dem Pfad zum Treiber fest. Die [Tasksequenz-Aktionsvariable](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) fügt die von der Tasksequenz verwendete Windows Setup-Befehlszeile an. Wenden Sie sich an den Anbieter Ihrer Software, um weitere Informationen zu diesem Vorgang zu erhalten.
+   - Wenn Sie ein Drittanbieterprogramm zur Datenträgerverschlüsselung verwenden, geben Sie den Verschlüsselungstreiber in Windows Setup mit der [Befehlszeilenoption](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) **/ReflectDrivers** an. Fügen Sie der Tasksequenz in dieser Gruppe einen Schritt [Tasksequenzvariable festlegen](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) hinzu. Legen Sie die Tasksequenzvariable auf **OSDSetupAdditionalUpgradeOptions** fest. Legen Sie den Wert auf **/ReflectDriver** mit dem Pfad zum Treiber fest. Die [Tasksequenz-Aktionsvariable](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) fügt die von der Tasksequenz verwendete Windows Setup-Befehlszeile an. Wenden Sie sich an den Anbieter Ihrer Software, um weitere Informationen zu diesem Vorgang zu erhalten.
 
 ### <a name="new-groups-under-post-processing"></a>Neue Gruppen unter **Nachverarbeitung**
 - **Setupbasierte Treiber anwenden:** Hiermit fügen Sie dieser Gruppe Schritte hinzu, um setupbasierte Treiber (EXE) aus Paketen zu installieren.
 - **Sicherheitsprogramme von Drittanbietern installieren/aktivieren:** Hiermit fügen Sie dieser Gruppe Schritte hinzu, um Sicherheitsprogramme von Drittanbietern – z.B. Antivirenprogramme – zu installieren oder zu aktivieren. 
-- **Windows-Standard-Apps und Zuordnungen festlegen:** Hiermit fügen Sie dieser Gruppe Schritte hinzu, um Windows-Standard-Apps und Dateizuordnungen festzulegen. Bereiten Sie zuerst einen Referenzcomputer mit den gewünschten App-Zuordnungen vor. Führen Sie dann die folgende Befehlszeile für den Export aus: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Fügen Sie die XML-Datei zu einem Paket hinzu. Fügen Sie dann in dieser Gruppe einen Schritt [Befehlszeile ausführen](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) hinzu. Geben Sie das Paket, das die XML-Datei enthält, sowie die folgende Befehlszeile an: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Weitere Informationen finden Sie unter [Exportieren oder Importieren von standardmäßigen Anwendungszuordnungen](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
-- **Anpassungen und Personalisierungen anwenden:** Hiermit fügen Sie dieser Gruppe Schritte hinzu, um Startmenüanpassungen, z.B. das Organisieren von Programmgruppen, anzuwenden. Weitere Informationen finden Sie unter [Anpassen des Startbildschirms](/windows-hardware/manufacture/desktop/customize-the-start-screen).
+- **Windows-Standard-Apps und Zuordnungen festlegen:** Hiermit fügen Sie dieser Gruppe Schritte hinzu, um Windows-Standard-Apps und Dateizuordnungen festzulegen. Bereiten Sie zuerst einen Referenzcomputer mit den gewünschten App-Zuordnungen vor. Führen Sie dann die folgende Befehlszeile für den Export aus: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Fügen Sie die XML-Datei zu einem Paket hinzu. Fügen Sie dann in dieser Gruppe einen Schritt [Befehlszeile ausführen](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) hinzu. Geben Sie das Paket, das die XML-Datei enthält, sowie die folgende Befehlszeile an: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Weitere Informationen finden Sie unter [Exportieren oder Importieren von standardmäßigen Anwendungszuordnungen](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
+- **Anpassungen und Personalisierungen anwenden:** Hiermit fügen Sie dieser Gruppe Schritte hinzu, um Startmenüanpassungen, z.B. das Organisieren von Programmgruppen, anzuwenden. Weitere Informationen finden Sie unter [Anpassen des Startbildschirms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/customize-the-start-screen).
 
 ### <a name="additional-recommendations"></a>Weitere Empfehlungen
-- Lesen Sie die Windows-Dokumentation zum [Beheben von Windows 10-Upgradefehlern](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Dieser Artikel enthält auch detaillierte Informationen zum Upgradeprozess.
+- Lesen Sie die Windows-Dokumentation zum [Beheben von Windows 10-Upgradefehlern](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Dieser Artikel enthält auch detaillierte Informationen zum Upgradeprozess.
 - Aktivieren Sie im Standardschritt **Bereitschaft überprüfen** die Option **Mindestens erforderlicher freier Speicherplatz (MB)** . Legen Sie den Wert für das Upgrade eines 32-Bit-Betriebssystems auf mindestens **16384** (16 GB) fest. Für ein 64-Bit-System beträgt der Wert **20480** (20 GB). 
 - Verwenden Sie die [integrierte Tasksequenzvariable](../../osd/understand/task-sequence-variables.md) **SMSTSDownloadRetryCount**, um erneut zu versuchen, die Richtlinie herunterzuladen. Derzeit ist die Variable standardmäßig auf „2“ festgelegt, der Client unternimmt also zwei Wiederholungsversuche. Wenn Ihre Clients keine kabelgebundene Verbindung zum Unternehmensnetzwerk verwenden, können weitere Wiederholungen dabei helfen, dass der Client die Richtlinie abrufen kann. Die Verwendung dieser Variable hat keine negativen Nebenwirkungen, außer dass ein verzögerter Fehler auftritt, wenn die Richtlinie nicht heruntergeladen werden kann.<!-- 501016 --> Erhöhen Sie auch die Variable **SMSTSDownloadRetryDelay** vom Standardwert „15 Sekunden“.
 - Führen Sie eine Inline-Kompatibilitätsbewertung durch. 
@@ -227,14 +227,14 @@ Die Liste der [nicht unterstützten Szenarien](../plan-design/network/cng-certif
 
 ## <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>Unterstützung für Cloudverwaltungsgateway für Azure Resource Manager
 <!-- 1324735 -->
-Beim Erstellen einer Instanz des [Cloudverwaltungsgateways](../clients/manage/cmg/plan-cloud-management-gateway.md) (Cloud Management Gateway, CMG) bietet der Assistent jetzt die Option, eine **Azure Resource Manager-Bereitstellung** zu erstellen. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) ist eine moderne Plattform zum Verwalten aller Lösungsressourcen als eine einzige Entität, die als [Ressourcengruppe](/azure/azure-resource-manager/resource-group-overview#resource-groups) bezeichnet wird. Beim Bereitstellen eines Cloudverwaltungsgateways mit Azure Resource Manager verwendet der Standort Azure Active Directory (Azure AD), um die erforderlichen Cloudressourcen zu authentifizieren und zu erstellen. Diese modernisierte Bereitstellung benötigt kein klassisches Azure-Verwaltungszertifikat.  
+Beim Erstellen einer Instanz des [Cloudverwaltungsgateways](../clients/manage/cmg/plan-cloud-management-gateway.md) (Cloud Management Gateway, CMG) bietet der Assistent jetzt die Option, eine **Azure Resource Manager-Bereitstellung** zu erstellen. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) ist eine moderne Plattform zum Verwalten aller Lösungsressourcen als eine einzige Entität, die als [Ressourcengruppe](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) bezeichnet wird. Beim Bereitstellen eines Cloudverwaltungsgateways mit Azure Resource Manager verwendet der Standort Azure Active Directory (Azure AD), um die erforderlichen Cloudressourcen zu authentifizieren und zu erstellen. Diese modernisierte Bereitstellung benötigt kein klassisches Azure-Verwaltungszertifikat.  
 
 Der CMG-Assistent bietet weiterhin die Option einer **klassischen Dienstbereitstellung** mit einem Azure-Verwaltungszertifikat. Um die Bereitstellung und Verwaltung von Ressourcen zu vereinfachen, empfiehlt sich die Verwendung des Azure Resource Manager-Bereitstellungsmodells für alle neuen CMG-Instanzen. Stellen Sie nach Möglichkeit vorhandene CMG-Instanzen über Resource Manager erneut bereit.
 
 Configuration Manager migriert keine vorhandenen klassischen CMG-Instanzen zum Azure Resource Manager-Bereitstellungsmodell. Erstellen Sie mithilfe von Azure Resource Manager-Bereitstellungen neue CMG-Instanzen, und entfernen Sie dann die klassischen CMG-Instanzen. 
 
 > [!IMPORTANT]
-> Diese Funktion aktiviert nicht die Unterstützung für Azure-Clouddienstanbieter (Cloud Service Providers, CSPs). Die CMG-Bereitstellung mit Azure Resource Manager unterstützt weiterhin den klassischen Clouddienst, der von CSPs nicht unterstützt wird. Weitere Informationen finden Sie unter [verfügbare Azure-Dienste in Azure-CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+> Diese Funktion aktiviert nicht die Unterstützung für Azure-Clouddienstanbieter (Cloud Service Providers, CSPs). Die CMG-Bereitstellung mit Azure Resource Manager unterstützt weiterhin den klassischen Clouddienst, der von CSPs nicht unterstützt wird. Weitere Informationen finden Sie unter [verfügbare Azure-Dienste in Azure-CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 ### <a name="prerequisites"></a>Voraussetzungen
 - Integration in [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md). Die Azure AD-Benutzerermittlung ist nicht erforderlich.
@@ -317,7 +317,7 @@ Windows AutoPilot ist eine moderne Lösung für das Onboarding und Konfigurieren
 
 ## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Verbesserungen an Configuration Manager-Richtlinien für Windows Defender Exploit Guard
 <!-- 1356220 -->
-In Configuration Manager für [Windows Defender Exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) wurden zusätzliche Richtlinieneinstellungen für die Komponenten für die Verringerung der Angriffsfläche und den überwachten Ordnerzugriff hinzugefügt.
+In Configuration Manager für [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) wurden zusätzliche Richtlinieneinstellungen für die Komponenten für die Verringerung der Angriffsfläche und den überwachten Ordnerzugriff hinzugefügt.
 
 **Neue Einstellungen für den überwachten Ordnerzugriff**<br/>
 Es gibt zwei weitere Optionen, wenn Sie den überwachten Ordnerzugriff konfigurieren: **Nur Datenträgersektoren blockieren** und **Nur Datenträgersektoren überwachen**. Mit diesen beiden Einstellungen kann der überwachte Ordnerzugriff nur für Bootsektoren aktiviert werden, der Schutz bestimmter Ordner oder der standardmäßig geschützten Ordner wird damit nicht aktiviert. 
@@ -332,20 +332,20 @@ Es gibt zwei weitere Optionen, wenn Sie den überwachten Ordnerzugriff konfiguri
 
 ## <a name="microsoft-edge-browser-policies"></a>Richtlinien für den Microsoft Edge-Browser
 <!-- 1357310 -->
-Kunden, die den [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256)-Webbrowser auf Windows 10-Clients verwenden, können jetzt eine Richtlinie für Configuration Manager-Konformitätseinstellungen erstellen, um verschiedene Microsoft Edge-Einstellungen zu konfigurieren. Diese Richtlinie umfasst derzeit die folgenden Einstellungen:
+Kunden, die den [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge)-Webbrowser auf Windows 10-Clients verwenden, können jetzt eine Richtlinie für Configuration Manager-Konformitätseinstellungen erstellen, um verschiedene Microsoft Edge-Einstellungen zu konfigurieren. Diese Richtlinie umfasst derzeit die folgenden Einstellungen:
 - **Microsoft Edge-Browser als Standard** festlegen: Konfiguriert die Windows 10-Standard-App-Einstellung für Webbrowser auf Microsoft.
-- **Dropdown in der Adressleiste zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [AllowAddressBarDropdown-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
-- **Das Synchronisieren von Favoriten zwischen Microsoft-Browsern zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [SyncFavoritesBetweenIEAndMicrosoftEdge-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
-- **Das Löschen von Browserdaten beim Beenden zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [ClearBrowsingDataOnExit-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
-- **DNT-Kopfzeilen zulassen:** Weitere Informationen finden Sie unter [AllowDoNotTrack-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
-- **AutoAusfüllen zulassen:** Weitere Informationen finden Sie unter [AllowAutofill-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
-- **Cookies zulassen:** Weitere Informationen finden Sie unter [AllowCookies-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
-- **Popupblocker zulassen:** Weitere Informationen finden Sie unter [AllowPopups-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
-- **Suchvorschläge in Adressleiste zulassen:** Weitere Informationen finden Sie unter [AllowSearchSuggestionsinAddressBar-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
-- **Senden von Intranetdatenverkehr an Internet Explorer zulassen:** Weitere Informationen finden Sie unter [SendIntranetTraffictoInternetExplorer-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
-- **Kennwort-Manager zulassen:** Weitere Informationen finden Sie unter [AllowPasswordManager-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
-- **Entwicklertools zulassen:** Weitere Informationen finden Sie unter [AllowDeveloperTools-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
-- **Erweiterungen zulassen:** Weitere Informationen finden Sie unter [AllowExtensions-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+- **Dropdown in der Adressleiste zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [AllowAddressBarDropdown-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
+- **Das Synchronisieren von Favoriten zwischen Microsoft-Browsern zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [SyncFavoritesBetweenIEAndMicrosoftEdge-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+- **Das Löschen von Browserdaten beim Beenden zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [ClearBrowsingDataOnExit-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+- **DNT-Kopfzeilen zulassen:** Weitere Informationen finden Sie unter [AllowDoNotTrack-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+- **AutoAusfüllen zulassen:** Weitere Informationen finden Sie unter [AllowAutofill-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+- **Cookies zulassen:** Weitere Informationen finden Sie unter [AllowCookies-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+- **Popupblocker zulassen:** Weitere Informationen finden Sie unter [AllowPopups-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+- **Suchvorschläge in Adressleiste zulassen:** Weitere Informationen finden Sie unter [AllowSearchSuggestionsinAddressBar-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+- **Senden von Intranetdatenverkehr an Internet Explorer zulassen:** Weitere Informationen finden Sie unter [SendIntranetTraffictoInternetExplorer-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+- **Kennwort-Manager zulassen:** Weitere Informationen finden Sie unter [AllowPasswordManager-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+- **Entwicklertools zulassen:** Weitere Informationen finden Sie unter [AllowDeveloperTools-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+- **Erweiterungen zulassen:** Weitere Informationen finden Sie unter [AllowExtensions-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 ### <a name="prerequisites"></a>Voraussetzungen
 - In Azure Active Directory eingebundener Windows 10-Client. 

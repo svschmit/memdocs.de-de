@@ -10,12 +10,12 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4375867e70cb7f2989b78572c7fc8e005f95be73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9e8e40a6bdfa129a03e6042985e4956ffb21b5c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694038"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906317"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>Bereitstellen von Clients auf UNIX- und Linux-Servern in Configuration Manager
 
@@ -36,7 +36,7 @@ Bevor Sie einen Linux- oder UNIX-Server mit Configuration Manager verwalten kön
  Nach der Installation des Clients geben Sie die Clienteinstellungen in der Configuration Manager-Konsole an, um den Client-Agent auf die gleiche Weise wie Windows-basierte Clients zu konfigurieren. Weitere Informationen finden Sie unter  [Clienteinstellungen für Linux- und UNIX-Server](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU).  
 
 ##  <a name="about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a>Informationen zu Clientinstallationspaketen und der universelle Agent  
- Um den Client für Linux und UNIX auf einer bestimmten Plattform zu installieren, müssen Sie das entsprechende Clientinstallationspaket für den Computer verwenden, auf dem Sie den Client installieren. Die jeweiligen Clientinstallationspakete sind in jedem Clientdownload aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184)enthalten. Zusätzlich zu den Clientinstallationspaketen umfasst das Clientdownload das **install** -Skript zur Verwaltung der Clientinstallation auf den einzelnen Computern.  
+ Um den Client für Linux und UNIX auf einer bestimmten Plattform zu installieren, müssen Sie das entsprechende Clientinstallationspaket für den Computer verwenden, auf dem Sie den Client installieren. Die jeweiligen Clientinstallationspakete sind in jedem Clientdownload aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719)enthalten. Zusätzlich zu den Clientinstallationspaketen umfasst das Clientdownload das **install** -Skript zur Verwaltung der Clientinstallation auf den einzelnen Computern.  
 
  Wenn Sie einen Client installieren, können Sie unabhängig vom verwendeten Clientinstallationspaket die gleichen Schritte und Befehlszeileneigenschaften verwenden.  
 
@@ -69,7 +69,7 @@ Jedes Client-Installationspaket enthält alle erforderlichen Dateien zum Abschli
 
 ###  <a name="to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a> Installieren des Configuration Manager-Clients auf Linux- und UNIX-Servern  
 
-1.  Auf einem Windows-Computer müssen Sie [die entsprechende Clientdatei für den Linux- oder UNIX-Server herunterladen](https://go.microsoft.com/fwlink/?LinkID=525184) , den Sie verwalten möchten.  
+1.  Auf einem Windows-Computer müssen Sie [die entsprechende Clientdatei für den Linux- oder UNIX-Server herunterladen](https://www.microsoft.com/download/details.aspx?id=47719) , den Sie verwalten möchten.  
 
 2.  Führen Sie die selbstextrahierende EXE-Datei auf dem Windows-Computer aus, um das Installationsskript und die TAR-Datei für die Clientinstallation zu extrahieren.  
 

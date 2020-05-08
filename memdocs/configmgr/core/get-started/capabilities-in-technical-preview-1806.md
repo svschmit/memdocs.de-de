@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210076"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905189"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funktionen in der Technical Preview 1806 für Configuration Manager
 
@@ -81,10 +81,10 @@ SCUP unterstützt weiterhin andere Kataloge und Szenarios. Die Liste von Katalog
 
     > [!Tip]  
     > Der Softwareupdatepunkt erfordert HTTPS, da dies eine Voraussetzung für die WSUS-APIs ist, die zum Verarbeiten der Signaturzertifikate verwendet werden. Clients müssen jedoch nicht HTTPS-fähig sein. Weitere Informationen zum Aktivieren von HTTPS für WSUS finden Sie in den folgenden Artikeln:  
-    > - [2.5 Secure WSUS with the Secure Sockets Layer Protocol (2.5 Schützen von WSUS mit dem Secure Sockets Layer-Protokoll)](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [Blogbeitrag zur Unterstützung von WSUS](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
+    > - [2.5 Secure WSUS with the Secure Sockets Layer Protocol (2.5 Schützen von WSUS mit dem Secure Sockets Layer-Protokoll)](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [Blogbeitrag zur Unterstützung von WSUS](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Auf dem Softwareupdatepunkt (im Ordner „WSUSContent“) muss ausreichend Speicherplatz zur Verfügung stehen, um die Binärdateien des Quellinhalts für Updates der Drittanbietersoftware zu speichern. Der erforderliche Speicher variiert je nach Anbieter, Updatetypen und spezifischen Updates, die Sie für die Bereitstellung veröffentlichen. Wenn Sie den Ordner „WSUSContent“ auf ein anderes Laufwerk mit genügend freiem Speicherplatz verschieben müssen, finden Sie Informationen dazu unter [How to change the location where WSUS stores updates locally (Vorgehensweise: Ändern des Speicherorts für lokale WSUS-Updates)](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
+- Auf dem Softwareupdatepunkt (im Ordner „WSUSContent“) muss ausreichend Speicherplatz zur Verfügung stehen, um die Binärdateien des Quellinhalts für Updates der Drittanbietersoftware zu speichern. Der erforderliche Speicher variiert je nach Anbieter, Updatetypen und spezifischen Updates, die Sie für die Bereitstellung veröffentlichen. Wenn Sie den Ordner „WSUSContent“ auf ein anderes Laufwerk mit genügend freiem Speicherplatz verschieben müssen, finden Sie Informationen dazu unter [How to change the location where WSUS stores updates locally (Vorgehensweise: Ändern des Speicherorts für lokale WSUS-Updates)](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Aktivieren und Bereitstellen der Clienteinstellung [Softwareupdates von Drittanbietern aktivieren](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) in der Gruppe **Softwareupdates**.  
 
@@ -191,9 +191,6 @@ Außerdem gibt es die neue globale Bedingung **Are Office 365 applications manag
 <!--1357861-->
 Der Paketkonvertierungs-Manager ist nun ein integriertes Tool, mit dem Sie Legacypakete von Configuration Manager 2007 in Configuration Manager-Anwendungen (Current Branch) konvertieren können. Anschließend können Sie Features von Anwendungen verwenden, z.B. Abhängigkeiten, Anforderungsregeln und Affinität zwischen Benutzer und Gerät.
 
-> [!Tip]  
-> Ältere Dokumentationen zu vorhandenen Funktionen im Paketkonvertierungs-Manager stehen auf [TechNet](https://technet.microsoft.com/library/hh531519.aspx) zur Verfügung. Relevante Informationen werden derzeit zur docs.microsoft.com-Bibliothek migriert.
-
 ### <a name="try-it-out"></a>Probieren Sie es aus!
  Versuchen Sie, die Aufgaben fertig zu stellen. Senden Sie uns anschließend Ihr [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback), und lassen Sie uns wissen, wie es gelaufen ist.
 
@@ -206,7 +203,6 @@ Der Paketkonvertierungs-Manager ist nun ein integriertes Tool, mit dem Sie Legac
      - **Paket konvertieren:** Einige Pakete können mit dieser Aktion problemlos in Anwendungen konvertiert werden.
      - **Korrigieren und konvertieren:** Bei einigen Paketen müssen Fehler behoben werden, bevor sie in Anwendungen konvertiert werden können.  
 
-   Weitere Informationen zu diesen Aktionen finden Sie unter [Analysieren und Konvertieren von Paketen](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29).  
 
 3. Navigieren Sie zum Arbeitsbereich **Überwachung**, und wählen Sie **Package Conversion Status** (Status der Paketkonvertierung) aus. Das neue Dashboard zeigt die Gesamtanalyse und den Konvertierungsstatus der Pakete im Standort an. Eine neue Hintergrundaufgabe fasst die Daten der Analyse automatisch zusammen.  
 

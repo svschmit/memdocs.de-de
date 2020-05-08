@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05b77fa181da67858c30f48fc8045c20384953ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63f815394414167ad4f887c5970538eab22c931a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703448"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906146"
 ---
 # <a name="create-queries-in-configuration-manager"></a>Erstellen von Abfragen in Configuration Manager
 
@@ -49,9 +49,9 @@ In diesem Artikel erfahren Sie, wie Sie in Configuration Manager Abfragen erstel
     > [!TIP]  
     > Mithilfe der folgenden Referenzdokumentation können Sie eigene WQL-Abfragen erstellen:  
     >   
-    > -   [WQL (SQL für WMI)](https://go.microsoft.com/fwlink/p/?LinkId=256653)  
-    > -   [WHERE-Klausel](https://go.microsoft.com/fwlink/p/?LinkId=256654)  
-    > -   [WQL-Operatoren](https://go.microsoft.com/fwlink/p/?LinkId=256655)  
+    > -   [WQL (SQL für WMI)](https://docs.microsoft.com/windows/win32/wmisdk/wql-sql-for-wmi)  
+    > -   [WHERE-Klausel](https://docs.microsoft.com/windows/win32/wmisdk/where-clause)  
+    > -   [WQL-Operatoren](https://docs.microsoft.com/windows/win32/wmisdk/wql-operators)  
 
 8.  Geben Sie auf der Registerkarte **Kriterien** im Dialogfeld &lt;Eigenschaften der \>Abfragename **-Anweisung** Kriterien zum Optimieren der Abfrageergebnisse an. Sie könnten beispielsweise nur Ressourcen mit dem Standortcode **XYZ** zurückgeben lassen. Sie können mehrere Kriterien für eine Abfrage konfigurieren.  
 

@@ -10,12 +10,12 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ff86df999ab744d590b1ca120a8b566d18f446b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701258"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906116"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Barrierefreiheitsfunktionen in Configuration Manager
 
@@ -89,5 +89,5 @@ Weitere Informationen zu den Grundlagen der Navigation in den Configuration Mana
 - [Benutzerleitfaden des Softwarecenters](software-center.md)
 
 > [!NOTE]  
-> Die in diesem Artikel enthaltenen Informationen gelten ggf. nur für Benutzer, die Microsoft-Produkte in den USA lizenzieren lassen. Wenn Sie dieses Produkt außerhalb der USA erworben haben, enthält das Softwarepaket eine Karte mit zusätzlichen Informationen, der die Kontaktinformationen für den Microsoft-Support zu entnehmen sind. Diese Informationen finden Sie auch auf der [Microsoft-Website zur Barrierefreiheit](https://go.microsoft.com/fwlink/?LinkId=8431). Setzen Sie sich mit der Niederlassung in Ihrer Nähe in Verbindung, um herauszufinden, ob die in diesem Abschnitt aufgeführten Produkte und Dienste in Ihrem Land bzw. Ihrer Region verfügbar sind. Informationen über Eingabehilfen sind in anderen Sprachen verfügbar, darunter auf Japanisch und Französisch.  
+> Die in diesem Artikel enthaltenen Informationen gelten ggf. nur für Benutzer, die Microsoft-Produkte in den USA lizenzieren lassen. Wenn Sie dieses Produkt außerhalb der USA erworben haben, enthält das Softwarepaket eine Karte mit zusätzlichen Informationen, der die Kontaktinformationen für den Microsoft-Support zu entnehmen sind. Diese Informationen finden Sie auch auf der [Microsoft-Website zur Barrierefreiheit](https://www.microsoft.com/accessibility/). Setzen Sie sich mit der Niederlassung in Ihrer Nähe in Verbindung, um herauszufinden, ob die in diesem Abschnitt aufgeführten Produkte und Dienste in Ihrem Land bzw. Ihrer Region verfügbar sind. Informationen über Eingabehilfen sind in anderen Sprachen verfügbar, darunter auf Japanisch und Französisch.  
 

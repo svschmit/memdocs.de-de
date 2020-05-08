@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0174cea761da15cc57eeb55fba26070fe664bb76
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690508"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906931"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Bereitstellen von Windows To Go mit Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81690508"
 
 In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in Configuration Manager. Windows To Go ist ein Unternehmensfeature von Windows 8, das die Erstellung eines Windows To Go-Arbeitsbereichs ermöglicht, der von einem externen USB-Laufwerk auf Computern gestartet werden kann, die die Windows 7- oder Windows 8-Zertifizierungsanforderungen erfüllen. Dabei ist es unerheblich, welches Betriebssystem auf dem jeweiligen Computer ausgeführt wird. Von Windows To Go-Arbeitsbereichen kann dasselbe Abbild verwendet werden, das Unternehmen für Desktops und Laptops verwenden. Außerdem können die Arbeitsbereiche auf dieselbe Weise verwaltet werden.  
 
- Weitere Informationen zu Windows To Go finden Sie unter [Windows To Go: Featureübersicht](https://go.microsoft.com/fwlink/p/?LinkId=263433).  
+ Weitere Informationen zu Windows To Go finden Sie unter [Windows To Go: Featureübersicht](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Bereitstellen von Windows To Go  
  Windows To Go ist ein Betriebssystem, das auf einem externen USB-Laufwerk gespeichert wird. Sie können das Windows To Go-Laufwerk auf dieselbe Weise wie andere Betriebssystembereitstellungen bereitstellen. Da jedoch Windows To Go als benutzerzentrierte Mobilitätslösung konzipiert ist, müssen Sie beim Bereitstellen dieser Laufwerke einen etwas anderen Ansatz verfolgen.  

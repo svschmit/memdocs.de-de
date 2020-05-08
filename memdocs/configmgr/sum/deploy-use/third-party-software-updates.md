@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f430979a2189494e977c501a36f9f039f860ca7a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771446"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906745"
 ---
 # <a name="enable-third-party-updates"></a>Aktivieren von Updates von Drittanbietern 
 
@@ -30,7 +30,7 @@ Ab Version 1806 können Sie über den neue Knoten **Katalog mit Updates für Dri
 ## <a name="prerequisites"></a>Voraussetzungen 
 - Auf dem SUP (im Ordner „WSUSContent“) auf oberster Ebene muss ausreichend Speicherplatz zur Verfügung stehen, um die Binärdateien des Quellinhalts für Updates der Drittanbietersoftware zu speichern.
     - Der erforderliche Speicher variiert je nach Anbieter, Updatetypen und spezifischen Updates, die Sie für die Bereitstellung veröffentlichen.
-    - Wenn Sie den Ordner „WSUSContent“ auf ein anderes Laufwerk mit genügend freiem Speicherplatz verschieben müssen, finden Sie Informationen dazu in dem Blogbeitrag [How to change the location where WSUS stores updates locally (Ändern des Speicherorts für lokale WSUS-Updates)](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).
+    - Wenn Sie den Ordner „WSUSContent“ auf ein anderes Laufwerk mit genügend freiem Speicherplatz verschieben müssen, finden Sie Informationen dazu in dem Blogbeitrag [How to change the location where WSUS stores updates locally (Ändern des Speicherorts für lokale WSUS-Updates)](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).
 - Der Synchronisierungsdienst für Updates für Drittanbietersoftware muss Zugriff auf das Internet haben.
     - Für die Katalogliste mit Partnern wird download.microsoft.com über den HTTPS-Port 443 benötigt. 
     -  Internetzugriff auf Drittanbieterkataloge und Updateinhaltsdateien. Möglicherweise benötigen Sie neben Port 443 noch weitere Ports.
@@ -40,7 +40,7 @@ Ab Version 1806 können Sie über den neue Knoten **Katalog mit Updates für Dri
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Zusätzliche Anforderungen, wenn der SUP sich nicht auf dem Standortserver auf oberster Ebene befindet 
 
 1. Wenn sich der SUP nicht auf dem Standortserver befindet, muss Secure Sockets Layer (SSL) aktiviert sein. Dies erfordert ein Serverauthentifizierungszertifikat von einer internen Zertifizierungsstelle oder über einen öffentlichen Anbieter.
-    - [Configure SSL on WSUS (Konfigurieren von WSUS für SSL)](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [Configure SSL on WSUS (Konfigurieren von WSUS für SSL)](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - Wenn Sie SSL in WSUS konfigurieren, beachten Sie, dass einige der Webdienste und virtuellen Verzeichnisse HTTP anstelle von HTTPS verwenden. 
         - Configuration Manager lädt Inhalte von Drittanbietern für Softwareupdatepakete über HTTP aus Ihrem WSUS-Inhaltsverzeichnis herunter.   
     - [Configure SSL on SUP (Konfigurieren von SSL auf dem SUP)](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -234,7 +234,7 @@ Die Synchronisierung von Updates für Drittanbietersoftware wird auf dem Standar
 -  Configuration Manager verfügt über eine neue Version des CAB-Formats für Katalogdateien. Diese enthält die Zertifikate zu den Binärdateien des Herstellers. Diese Zertifikate werden im Arbeitsbereich **Verwaltung** unter **Sicherheit** zum Knoten **Zertifikate** hinzugefügt, wenn Sie den Katalog genehmigen und als vertrauenswürdig einstufen.  
      - Sie können auch weiter ältere Versionen von CAB-Dateien verwenden, wenn die Download-URL HTTPS enthält und die Updates signiert sind. Dann kann der Inhalt nicht veröffentlicht werden, weil die Zertifikate zu diesen Binärdateien nicht in der CAB-Datei gespeichert sind und noch nicht genehmigt wurden. Sie können dieses Problem umgehen, wenn Sie das Zertifikat im Knoten **Zertifikate** suchen, blockieren und anschließend das Update erneut veröffentlichen. Wenn Sie mehrere Updates veröffentlichen, die mit verschiedenen Zertifikaten signiert wurden, müssen Sie die Blockierung für jedes Zertifikat aufheben, das verwendet wird.
      - Weitere Informationen finden Sie in der nachfolgenden Tabelle in den Statusmeldungen 11523 und 11524.
--  Wenn der Dienst zur Synchronisierung von Updates für Drittanbietersoftware auf dem Softwareupdatepunkt der obersten Ebene einen Proxyserver für den Internetzugriff benötigt, treten bei der Überprüfung digitaler Signaturen möglicherweise Fehler auf. Um dieses Problem zu beheben, konfigurieren Sie die WinHTTP-Proxyeinstellungen im Standortsystem. Weitere Informationen finden Sie unter [Netsh-Befehle für Windows Hypertext Transfer Protocol (WinHTTP)](https://go.microsoft.com/fwlink/p/?linkid=199086).
+-  Wenn der Dienst zur Synchronisierung von Updates für Drittanbietersoftware auf dem Softwareupdatepunkt der obersten Ebene einen Proxyserver für den Internetzugriff benötigt, treten bei der Überprüfung digitaler Signaturen möglicherweise Fehler auf. Um dieses Problem zu beheben, konfigurieren Sie die WinHTTP-Proxyeinstellungen im Standortsystem. Weitere Informationen finden Sie unter [Netsh-Befehle für Windows Hypertext Transfer Protocol (WinHTTP)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
 - Bei der Verwendung eines CMG zum Speichern von Inhalten werden die Inhalte für Updates für Drittanbietersoftware nicht auf Clients heruntergeladen, wenn die [Clienteinstellung](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) **Clients das Herunterladen von Deltainhalten ermöglichen (falls verfügbar)** aktiviert ist. <!--6598587-->
 
 ## <a name="status-messages"></a>Statusmeldungen

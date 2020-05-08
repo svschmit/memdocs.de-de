@@ -10,12 +10,12 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7610b0e60f3ea02918c9dd98858a3b2bfd7c712
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f8dd7c4c561ca22c679ee8ae03764ebb20b87664
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708198"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906087"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Aktivieren der Datenfreigabe für Desktop Analytics
 
@@ -74,6 +74,9 @@ Konfigurieren Sie zum Aktivieren der Datenfreigabe den Proxyserver so, dass die 
 > Aus Gründen des Datenschutzes und der Datenintegrität führt Windows bei der Kommunikation mit den Diagnosedatenendpunkten eine Prüfung auf ein Microsoft SSL-Zertifikat (Anheften von Zertifikaten) aus. SSL-Abfangen und -Untersuchung sind somit nicht möglich. Um Desktop Analytics nutzen zu können, müssen Sie diese Endpunkte aus der SSL-Untersuchung ausschließen.<!-- BUG 4647542 -->
 
 Seit Version 2002 gilt Folgendes: Wenn die Verbindung des Configuration Manager-Standorts mit den erforderlichen Endpunkten für einen Clouddienst nicht hergestellt werden kann, wird eine kritische Statusmeldung mit der ID 11488 ausgegeben. Wenn keine Verbindung mit dem Dienst hergestellt werden kann, wird der Status der Komponente „SMS_SERVICE_CONNECTOR“ in „kritisch“ geändert. Zeigen Sie detaillierte Statusinformationen im Knoten [Komponentenstatus](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) in der Configuration Manager-Konsole an.<!-- 5566763 -->
+
+> [!NOTE]
+> Weitere Informationen zum IP-Adressbereich von Microsoft finden Sie unter [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602) (Öffentlicher IP-Adressraum von Microsoft). Diese Adressen werden regelmäßig aktualisiert. Es gibt keine dienstspezifische Granularität, alle IP-Adressen in diesen Bereichen können verwendet werden.
 
 ### <a name="server-connectivity-endpoints"></a>Serverkonnektivitäts-Endpunkte
 

@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9777fb12a2d63a990587386ac33cb2749bf19a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702818"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905128"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Planen der Migration von Configuration Manager-Objekten zu Configuration Manager (Current Branch)
 
@@ -123,7 +123,7 @@ Die folgenden Betriebssystem-Bereitstellungsobjekte können von einer unterstüt
 Es können Konfigurationselemente und Konfigurationsbasislinien migriert werden.  
 
 > [!NOTE]  
->  Die Migration nicht interpretierter Konfigurationselemente aus Configuration Manager 2007-Quellhierarchien wird nicht unterstützt. Sie können solche Konfigurationselemente nicht in die Zielhierarchie migrieren oder importieren. Weitere Informationen zu nicht interpretierten Konfigurationselementen finden Sie im Abschnitt „Nicht interpretierte Konfigurationselemente“ des Themas [Informationen zu Konfigurationselementen in der Verwaltung gewünschter Konfigurationen](https://go.microsoft.com/fwlink/?LinkId=103846) in der Configuration Manager 2007-Dokumentationsbibliothek.  
+>  Die Migration nicht interpretierter Konfigurationselemente aus Configuration Manager 2007-Quellhierarchien wird nicht unterstützt. Sie können solche Konfigurationselemente nicht in die Zielhierarchie migrieren oder importieren. Weitere Informationen zu nicht interpretierten Konfigurationselementen finden Sie im Abschnitt „Nicht interpretierte Konfigurationselemente“ des Themas [Informationen zu Konfigurationselementen in der Verwaltung gewünschter Konfigurationen](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) in der Configuration Manager 2007-Dokumentationsbibliothek.  
 
 Sie können Configuration Manager 2007-Konfigurationspakete importieren. Beim Importvorgang wird das Konfigurationspaket automatisch so konvertiert, dass es mit Configuration Manager (Current Branch) kompatibel ist.  
 

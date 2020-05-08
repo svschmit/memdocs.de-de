@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073958"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904813"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Neuerungen in Version 1610 von Configuration Manager
 
@@ -29,8 +29,8 @@ Das Update 1610 für Configuration Manager (Current Branch) ist als konsolenint
 > Sie müssen eine Baselineversion von Configuration Manager verwenden, um einen neuen Standort zu installieren.  
 >
 > Weitere Informationen:    
-> - [Installieren von neuen Standorten](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Installieren von Updates an Standorten](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Installieren von neuen Standorten](../../servers/deploy/install/installing-sites.md)  
+> - [Installieren von Updates an Standorten](../../servers/manage/updates.md)  
 > - [Baseline- und Updateversionen](../../servers/manage/updates.md#bkmk_Baselines)
 
 Die folgenden Abschnitte enthalten Details zu Änderungen und neue Funktionen, die in Version 1610 von Configuration Manager eingeführt wurden.  
@@ -168,7 +168,7 @@ Diese Aktion bewirkt nicht, dass die Anwendung auf Geräten deinstalliert wird. 
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtern nach Inhaltsgröße in automatischen Bereitstellungsregeln
 Sie können jetzt nach Inhaltsgrößen für Softwareupdates in automatischen Bereitstellungsregeln filtern. Um nur Softwareupdates herunterzuladen, die kleiner als 2 MB sind, können Sie z.B. den Filter **Inhaltsgröße (KB)** auf **< 2048** festlegen. Mit diesem Filter wird verhindert, dass große Softwareupdates automatisch heruntergeladen werden. So wird die vereinfachte Windows-Wartung vorheriger Versionen unterstützt, wenn die Bandbreite eingeschränkt ist. Details hierzu finden Sie in den folgenden Abschnitten:
-- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/) (Configuration Manager und vereinfachte Windows-Wartung auf vorherigen Betriebssystemen)
+- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056) (Configuration Manager und vereinfachte Windows-Wartung auf vorherigen Betriebssystemen)
 - [Automatisches Bereitstellen von Softwareupdates](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 Führen Sie einen der folgenden Schritte aus, um das Feld **Inhaltsgröße (KB)** zu konfigurieren:

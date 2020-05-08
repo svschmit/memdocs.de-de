@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 138ff268f42dae1c15e11b34c92e6c7a3044705b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a870d2bf18b9e7f064e914f450aee0f5e3e2e545
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078446"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906716"
 ---
 # <a name="prerequisites-for-software-updates-in-configuration-manager"></a>Voraussetzungen für Softwareupdates in Configuration Manager
 
@@ -83,7 +83,7 @@ Für die Synchronisierung der Klassifizierung **Aktualisierungen** in WSUS 6.2 
 
 - Sie müssen [KB 3095113](https://support.microsoft.com/kb/3095113) (im Oktober 2015 veröffentlicht) auf Ihren Softwareupdatepunkten und Standortservern installieren, bevor Sie die Klassifikation **Upgrades** synchronisieren.
   - Dieses Update aktiviert die Klassifizierung **Aktualisierungen**.
-- Für Windows 10, Version 1607 und höher müssen Sie [KB 3159706](https://support.microsoft.com/en-us/help/3159706) installieren und konfigurieren. KB 3159706 wurde im Mai 2016 veröffentlicht.
+- Für Windows 10, Version 1607 und höher müssen Sie [KB 3159706](https://support.microsoft.com/help/3159706) installieren und konfigurieren. KB 3159706 wurde im Mai 2016 veröffentlicht.
   - Mit diesem Update kann WSUS die Dateien, mit denen Windows 10 ab Version 1607 aktualisiert wird, nativ entschlüsseln.
 
 >[!IMPORTANT]
@@ -95,7 +95,7 @@ Die in diesem Abschnitt beschriebenen Updates und Probleme betreffen nur WSUS-Ve
 
 ### <a name="historical-information-about-kb-3095113"></a>Verlaufsinformationen zu KB 3095113
 
- [KB 3095113](https://support.microsoft.com/kb/3095113) wurde im Oktober 2015 [als Hotfix veröffentlicht](https://blogs.technet.microsoft.com/wsus/2015/12/03/important-update-for-wsus-4-0-kb-3095113/), um auch Windows 10-Upgrades für WSUS zu unterstützen. Mit diesem Update kann WSUS Updates in der Klassifizierung **Aktualisierungen** für Windows 10 synchronisieren und verteilen.
+ [KB 3095113](https://support.microsoft.com/kb/3095113) wurde im Oktober 2015 [als Hotfix veröffentlicht](https://docs.microsoft.com/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113), um auch Windows 10-Upgrades für WSUS zu unterstützen. Mit diesem Update kann WSUS Updates in der Klassifizierung **Aktualisierungen** für Windows 10 synchronisieren und verteilen.
 
 Wenn Sie Upgrades synchronisieren, ohne zuerst [KB 3095113](https://support.microsoft.com/kb/3095113) installiert zu haben, füllen Sie die WSUS-Datenbank (SUSDB) mit unbrauchbaren Daten auf. Diese Daten müssen gelöscht werden, bevor Upgrades ordnungsgemäß bereitgestellt werden können. Windows 10-Upgrades in diesem Zustand können nicht mithilfe des Assistenten zum Herunterladen von Softwareupdates heruntergeladen werden.
 
@@ -115,13 +115,13 @@ ERROR: DownloadContentFiles() failed with hr=0x80073633
 # This log is truncated for readability.
 ```
 
-Wenn diese Fehler in der Vergangenheit auftraten, wurden sie durch eine geänderte Version der [Lösungsschritte für WSUS](https://blogs.technet.microsoft.com/wsus/2016/01/29/how-to-delete-upgrades-in-wsus/) behoben. Da diese Schritte denen ähneln, die nach der Installation von KB 3159706 zum Vermeiden der manuellen Lösungsschritte erforderlich sind, wurden beide Lösungen im folgenden Abschnitt kombiniert:
+Wenn diese Fehler in der Vergangenheit auftraten, wurden sie durch eine geänderte Version der [Lösungsschritte für WSUS](https://docs.microsoft.com/archive/blogs/wsus/how-to-delete-upgrades-in-wsus) behoben. Da diese Schritte denen ähneln, die nach der Installation von KB 3159706 zum Vermeiden der manuellen Lösungsschritte erforderlich sind, wurden beide Lösungen im folgenden Abschnitt kombiniert:
 
 - [Wiederherstellen nach Synchronisierung der Upgrades vor der Installation von KB 3095113 oder KB 3159706](#bkmk_fix-upgrades)
 
 ### <a name="historical-information-about-kb-3159706"></a>Verlaufsinformationen zu KB 3159706
 
-KB 3148812 wurde ursprünglich im April 2016 veröffentlicht, damit WSUS die für das Upgrade von Windows 10-Paketen erforderlichen ESD-Dateien nativ entschlüsseln kann. [KB 3148812 verursachte jedoch bei einigen Kunden Probleme](https://blogs.technet.microsoft.com/wsus/2016/05/05/the-long-term-fix-for-kb3148812-issues/) und wurde durch [KB 3159706](https://support.microsoft.com/en-us/help/3159706) ersetzt. KB 3159706 muss auf allen Softwareupdatepunkten und Standortservern installiert sein, bevor Sie Geräte mit Windows 10, Version 1607 und höher bedienen können. Es können jedoch Probleme auftreten, wenn Sie nicht wissen, dass für das Update nach der Installation die folgenden manuellen Schritte anfallen:
+KB 3148812 wurde ursprünglich im April 2016 veröffentlicht, damit WSUS die für das Upgrade von Windows 10-Paketen erforderlichen ESD-Dateien nativ entschlüsseln kann. [KB 3148812 verursachte jedoch bei einigen Kunden Probleme](https://docs.microsoft.com/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues) und wurde durch [KB 3159706](https://support.microsoft.com/help/3159706) ersetzt. KB 3159706 muss auf allen Softwareupdatepunkten und Standortservern installiert sein, bevor Sie Geräte mit Windows 10, Version 1607 und höher bedienen können. Es können jedoch Probleme auftreten, wenn Sie nicht wissen, dass für das Update nach der Installation die folgenden manuellen Schritte anfallen:
 
 1. Führen Sie `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing` über eine Eingabeaufforderung mit erhöhten Rechten aus.
 1. Starten Sie den WSUS-Dienst auf allen WSUS-Servern neu.

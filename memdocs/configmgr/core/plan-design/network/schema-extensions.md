@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c78bb5876455e68292e4a69d86a256fa9e5172d0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701468"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904070"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Schemaerweiterungen für Configuration Manager
 
@@ -25,7 +25,7 @@ Sie können das Active Directory-Schema so erweitern, dass es Configuration Mana
 
 -   Es ist ratsam, das Active Directory-Schema zu erweitern, aber es ist nicht erforderlich.  
 
-Bevor Sie [das Active Directory-Schema erweitern](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), sollten Sie mit Active Directory-Domänendienste vertraut sein und wissen, wie ein [Ändern des Active Directory-Schemas](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)vorgenommen wird.  
+Bevor Sie [das Active Directory-Schema erweitern](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), sollten Sie mit Active Directory-Domänendienste vertraut sein und wissen, wie ein [Ändern des Active Directory-Schemas](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10))vorgenommen wird.  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Überlegungen zum Erweitern des Active Directory-Schemas für Configuration Manager  
 

@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 24c3a72eacea6446fb82785a25b0318d8cad0471
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691388"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904631"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Unterstützte SQL Server-Versionen für Configuration Manager
 
@@ -65,7 +65,7 @@ In einer Hierarchie mit mehreren Standorten können verschiedene Standorte versc
 - Microsoft stellt weiterhin Support für die von Ihnen verwendeten SQL Server-Versionen bereit.
 - SQL Server unterstützt Replikationen zwischen beiden SQL Server-Versionen. Weitere Informationen finden Sie unter [SQL Server replication backward compatibility](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility) (SQL Server – Abwärtskompatibilität bei Replikationen).
 
-Bei SQL Server 2016 und früher folgt die Unterstützung für jede SQL-Version und jedes Service Pack der [Microsoft-Lebenszyklusrichtlinie](https://aka.ms/sqllifecycle). Der Support für ein bestimmtes Service Pack von SQL Server beinhaltet kumulative Updates, sofern diese nicht gegen die Abwärtskompatibilität für die Basisversion des Service Packs verstoßen. Ab SQL Server 2017 werden keine Service Packs mehr veröffentlicht, da diese Version einem [modernen Wartungsmodell](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/) folgt. Das SQL Server-Team empfiehlt eine fortlaufende, [proaktive Installation kumulativer Updates](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/), sobald sie verfügbar werden.
+Bei SQL Server 2016 und früher folgt die Unterstützung für jede SQL-Version und jedes Service Pack der [Microsoft-Lebenszyklusrichtlinie](https://aka.ms/sqllifecycle). Der Support für ein bestimmtes Service Pack von SQL Server beinhaltet kumulative Updates, sofern diese nicht gegen die Abwärtskompatibilität für die Basisversion des Service Packs verstoßen. Ab SQL Server 2017 werden keine Service Packs mehr veröffentlicht, da diese Version einem [modernen Wartungsmodell](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server) folgt. Das SQL Server-Team empfiehlt eine fortlaufende, [proaktive Installation kumulativer Updates](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism), sobald sie verfügbar werden.
 
 Sofern nicht anders angegeben, werden die folgenden SQL Server-Versionen von allen aktiven Versionen von Configuration Manager-Versionen unterstützt. Beim Hinzufügen von Unterstützung für eine neue SQL Server-Version wird die Configuration Manager-Version angegeben, mit der diese Unterstützung hinzugefügt wird. Beachten Sie bei eingestelltem Support ebenfalls die Details zu den betroffenen Versionen von Configuration Manager.
 

@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 59b0b799fd54e0e613f78b11b48b53b19d20ddbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692288"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906338"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Erste Schritte mit Konformitätseinstellungen in Configuration Manager
 
@@ -107,7 +107,7 @@ Ausführlichere Informationen finden Sie unter [Aktualisieren von Windows-Gerät
 
 ## <a name="microsoft-edge-browser-profiles"></a>Microsoft Edge-Profile
 <!-- 1357310 -->
-Erstellen Sie als [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256)-Benutzer auf Windows 10-Clients ab Version 1802 eine Richtlinie für Configuration Manager-Konformitätseinstellungen, um verschiedene Microsoft Edge-Einstellungen zu konfigurieren. 
+Erstellen Sie als [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge)-Benutzer auf Windows 10-Clients ab Version 1802 eine Richtlinie für Configuration Manager-Konformitätseinstellungen, um verschiedene Microsoft Edge-Einstellungen zu konfigurieren. 
 
 Weitere Informationen finden Sie unter [Create Microsoft Edge browser profile (Microsoft Edge-Profile)](../deploy-use/browser-profiles.md).
 

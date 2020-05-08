@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076304"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905822"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funktionen in der Technical Preview 1601 für Configuration Manager
 
@@ -164,7 +164,6 @@ Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs �
 
  Configuration Manager unterstützt Sie nun bei der Verwaltung von Apps, die Sie über ein solches Programm erworben haben, indem die Lizenzinformationen aus dem App-Store importiert werden und nachverfolgt wird, wie viele Lizenzen Sie verwendet haben.  
 
- Details finden Sie unter [Verwalten von Apps, die über ein Volumenprogramm mit Configuration Manager erworben wurden](https://technet.microsoft.com/library/mt627954.aspx).  
 
 ### <a name="ios---app-configuration-for-applicationsbr-hybrid"></a>iOS – App-Konfiguration für Einstellungen<br />Hybrid  
  Einige iOS-Apps unterstützen die Vorabkonfiguration von Einstellungen, wie z. B. eines Servers oder einer Datenbank, mit dem/der die Anwendung eine Verbindung herstellen soll. Configuration Manager unterstützt jetzt die Bereitstellung von App-Konfigurationsrichtlinien auf dem Gerät, wodurch der Benutzer die App sofort nutzen kann, ohne diese Informationen kennen zu müssen. Entwickler müssen diese Funktionalität in ihren Apps aktivieren.  
