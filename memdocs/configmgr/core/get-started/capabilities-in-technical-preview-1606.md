@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05e7bbe6373ed91de5a2bb8e99a8425e733274f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705568"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905671"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Funktionen in der Technical Preview 1606 für Configuration Manager
 
@@ -80,9 +80,9 @@ Wenn Sie eine Toleranzperiode konfigurieren und das Kontrollkästchen aktivieren
 
 Device Guard ist ein Windows 10-Feature, das Hardware- und Software-Features verwendet, um genau zu kontrollieren, was zur Ausführung auf dem Gerät zulässig ist.
 
-Eine ausführliche Übersicht über die Funktionsweise und die Aktionen von Device Guard finden Sie in diesem [Technet-Artikel](https://technet.microsoft.com/itpro/windows/whats-new/device-guard-overview).
+Weitere Informationen finden Sie unter [Einführung zu Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-In diesem Release kann Configuration Manager mit Device Guard und [Windows AppLocker](https://technet.microsoft.com/library/dd723678(v=ws.10).aspx) zusammenarbeiten, damit ausführbare und DLL-Dateien, die mit Configuration Manager bereitgestellt werden, automatisch als vertrauenswürdig eingestuft werden, da sie aus einem verwalteten Installationsprogramm stammen, d.h., sie können auf dem Zielgerät ausgeführt werden und andere Software nicht, außer wenn es durch andere AppLocker-Regeln zulässig gemacht wird.  
+In diesem Release kann Configuration Manager mit Device Guard und [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) zusammenarbeiten, damit ausführbare und DLL-Dateien, die mit Configuration Manager bereitgestellt werden, automatisch als vertrauenswürdig eingestuft werden, da sie aus einem verwalteten Installationsprogramm stammen, d.h., sie können auf dem Zielgerät ausgeführt werden und andere Software nicht, außer wenn es durch andere AppLocker-Regeln zulässig gemacht wird.  
 
 Diese Funktion kann derzeit nicht über die Configuration Manager-Konsole konfiguriert werden. Zum Konfigurieren der Richtlinie müssen Sie einen Registrierungsschlüssel auf jedem Client und Windows-Dienste auf dem Client konfigurieren.
 Sobald dies geschehen ist, konfigurieren Sie die AppLocker-Richtliniendatei. Nachdem Sie die Richtliniendatei konfiguriert haben, können Sie sie auf allen kompatiblen Clientgeräten bereitstellen.
@@ -93,13 +93,11 @@ Wie alle AppLocker-Richtlinien können Richtlinien mit Manager Installer-Regeln 
 - Überwachungsmodus – Die Ausführung von Apps wird nicht verhindert, aber jede Anwendung, die blockiert worden wäre, wird in einer Protokolldatei gemeldet (Dies wird in einer späteren Release von Configuration Manager unterstützt).
 - Erzwingung aktiviert – Die Ausführung von Anwendungen wird blockiert.
 
-Weitere Informationen zur Verwendung von Device Guard mit Configuration Manager finden Sie auf dem [Enterprise Mobility und Security-Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10).
+Weitere Informationen finden Sie in den folgenden Artikeln:
 
-Weitere Informationen:
+- [Einführung zu Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Einführung zu Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies)
-- [Device Guard-Zertifizierung und -Kompatibilität](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
-- [Device Guard-Bereitstellungshandbuch](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
+- [Planen und erste Schritte beim Bereitstellungsprozess für die Windows Defender-Anwendungssteuerung](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> Verschiedene Geräteverwaltungspunkte für die lokale Verwaltung mobiler Geräte  
   Mit Technical Preview 1606 unterstützt die lokale Verwaltung mobiler Geräte (MDM) jetzt eine neue Funktion im Windows 10 Anniversary Update, die ein registriertes Gerät automatisch konfiguriert, um mehr als einen Geräteverwaltungspunkt zur Verwendung zur Verfügung zu haben. Diese Funktion lässt Fallbacks des Geräts auf einen anderen Geräteverwaltungspunkt zu, wenn der normalerweise verwendete Punkt nicht verfügbar ist. Diese Funktion ist nur auf PCs verfügbar, auf denen das Windows 10 Anniversary Update installiert ist.  
@@ -180,7 +178,7 @@ Stellen Sie sicher, dass Sie die Abonnement-ID kopieren, die dem Verwaltungszert
 #### <a name="set-up-cloud-proxy-service"></a>Einrichten des Cloudproxydiensts
 
 1. Navigieren Sie in der Configuration Manager-Konsole zu **Verwaltung > Clouddienste > Cloudproxydienst**.
-2. Klicken Sie auf **Cloudproxydienst erstellen** .
+2. Klicken Sie auf **Cloudproxydienst erstellen **.
 3. Geben Sie im Assistenten zur Erstellung von Cloudproxydiensten Ihre Azure-Abonnement-ID (aus dem Azure-Verwaltungsportal kopiert) ein, klicken Sie auf „Durchsuchen“, und wählen Sie die Zertifikatdatei aus, die Sie als Azure-Verwaltungszertifikat hochgeladen haben. Klicken Sie auf **Weiter**. Warten Sie einige Augenblicke, bis sich die Konsole mit Azure verbindet.
 4. Füllen Sie die zusätzlichen Details im Assistenten aus:
     - Geben Sie den privaten Schlüssel (PFX-Datei) an, den Sie aus dem benutzerdefinierten SSL-Zertifikat exportiert haben.
@@ -194,8 +192,8 @@ Stellen Sie sicher, dass Sie die Abonnement-ID kopieren, die dem Verwaltungszert
 
 1. Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung > Standortkonfiguration > Standorte**.
 2. Wählen Sie den primären Standort für die Clients aus, die Sie über den Cloudproxydienst verwalten möchten, und klicken Sie auf **Eigenschaften**.
-3. Aktivieren Sie das Kontrollkästchen neben **Use PKI client certificate (client authentication) when available**  (PKI-Clientzertifikat (Clientauthentifizierung) verwenden, sofern verfügbar) auf der Registerkarte Clientcomputerkommunikation im Eigenschaftenblatt für den primären Standort.
-4. Stellen Sie sicher, dass Sie das Kontrollkästchen neben **Die Zertifikatsperrliste für Standortsysteme wird von Clients überprüft**  deaktivieren. Diese Option wäre nur erforderlich, wenn Sie Ihre CRL veröffentlichen würden.
+3. Aktivieren Sie das Kontrollkästchen neben **Use PKI client certificate (client authentication) when available ** (PKI-Clientzertifikat (Clientauthentifizierung) verwenden, sofern verfügbar) auf der Registerkarte Clientcomputerkommunikation im Eigenschaftenblatt für den primären Standort.
+4. Stellen Sie sicher, dass Sie das Kontrollkästchen neben **Die Zertifikatsperrliste für Standortsysteme wird von Clients überprüft ** deaktivieren. Diese Option wäre nur erforderlich, wenn Sie Ihre CRL veröffentlichen würden.
 5. Klicken Sie auf **OK**.
 
 #### <a name="add-the-cloud-proxy-connector-point"></a>Hinzufügen des Cloudproxy-Connectorpunkts
@@ -221,7 +219,7 @@ Nachdem Clients die neue Speicherortinformationen für Cloudproxydienst haben, �
 
 Ab Technical Preview 1606 können Sie eine Configuration Manager-Client-Agenteinstellung anstatt der Gruppenrichtlinie verwenden, um Office 365-Clients zum Empfangen von Updates von Configuration Manager zu aktivieren. Nachdem Sie diese Einstellung konfiguriert und Updates für Office 365 bereitgestellt haben, kommuniziert der Configuration Manager-Client-Agent mit dem Office 365-Client-Agent, um Office 365-Updates von einem Verteilungspunkt herunterzuladen und zu installieren. Configuration Manager macht auch eine Bestandsaufnahme der Client-Agenteinstellungen.
 
-Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates](https://technet.microsoft.com/library/mt741983.aspx).
+Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Einrichten der Configuration Manager-Clienteinstellung, zum Verwalten des Office 365-Client-Agents
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung** > **Übersicht** > **Clienteinstellungen**.
