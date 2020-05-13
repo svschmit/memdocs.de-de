@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 373c3c5a6a3167943d78e5a17ac9b7cab8afba8a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183074"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943857"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Verwalten des Webzugriffs mithilfe von Microsoft Edge mit Microsoft Intune
 
@@ -351,7 +351,7 @@ Standardmäßig bietet Microsoft Edge auf iOS an, die Kennwörter Ihrer Benutzer
 
 |    Key    |    Wert    |
 |-----------------------|-----------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    Der Wert **password** verhindert, dass Aufforderungen angezeigt werden, Kennwörter für den Endbenutzer zu speichern.    |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    Der Wert **password** verhindert, dass Aufforderungen angezeigt werden, Kennwörter für den Endbenutzer zu speichern.    |
 
 ### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>Verhindern, dass Benutzer Microsoft Edge Erweiterungen hinzufügen 
 

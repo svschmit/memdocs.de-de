@@ -5,7 +5,7 @@ description: Überprüfen Sie die Standardeinstellungen und die verfügbaren Ein
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,16 +13,17 @@ ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 zone_pivot_groups: windows-mdm-versions
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696494"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943908"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Einstellungen für Windows MDM-Sicherheitsbaselines in Intune
 
@@ -31,10 +32,13 @@ ms.locfileid: "80696494"
 - Weitere Informationen zur Verwendung von Sicherheitsbaselines mit Intune und zum Aktualisieren der Baselineversion in Ihren Sicherheitsbaselineprofilen finden Sie unter [Verwenden von Sicherheitsbaselines](security-baselines.md).
 - Die neueste Baselineversion ist die **MDM-Sicherheitsbaseline für Mai 2019**.
 
+Verwenden Sie die im Bereich *Versionen* für diese Baseline verfügbare Aktion [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) (Baselines vergleichen), um zu sehen, was sich in dieser Version der Baseline im Vergleich zu früheren Versionen geändert hat.
+
 Wählen Sie die Version der Baseline aus, die Sie prüfen möchten.
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 
 ::: zone pivot="mdm-may-2019"
+
 **MDM-Sicherheitsbaseline für Mai 2019**:  
 > [!NOTE]
 > Im Juni 2019 wurde eine allgemein verfügbare Version (keine Vorschauversion) der Vorlage *MDM-Sicherheitsbaseline für Mai 2019* veröffentlicht. Diese Version der Sicherheitsbaseline ersetzt die vorherige Baseline *MDM-Sicherheitsbaseline für Oktober 2018*.  Profile, die vor der Bereitstellung der Baseline für Mai 2019 erstellt wurden, werden nicht auf die Einstellungen und Werte dieser Version aktualisiert.  Obwohl Sie basierend auf der Vorschauversion der Vorlage keine neuen Profile erstellen können, können Sie Profile, die Sie mit dieser Version erstellt haben, bearbeiten und weiterhin verwenden.
@@ -43,6 +47,7 @@ Weitere Informationen zu den Änderungen in dieser Version im Vergleich zur vorh
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
 **Vorschau: MDM-Sicherheitsbaseline für Oktober 2018**:  
 > [!NOTE]
 > Hierbei handelt es sich um die Vorschauversion der MDM-Sicherheitsbaseline, die im Oktober 2018 veröffentlicht wurde. Sie wurde im Juni 2019 durch die allgemein verfügbare (keine Vorschauversion) Vorlage *MDM-Sicherheitsbaseline für Mai 2019* ersetzt. Profile, die vor der Bereitstellung der *MDM-Sicherheitsbaseline für Mai 2019* erstellt wurden, werden nicht auf die Einstellungen und Werte dieser Version aktualisiert. Obwohl Sie basierend auf der Vorschauversion der Vorlage keine neuen Profile erstellen können, können Sie Profile, die Sie mit dieser Version erstellt haben, bearbeiten und weiterhin verwenden.
@@ -143,11 +148,17 @@ Weitere Informationen finden Sie unter [Richtlinie CSP – BitLocker](https://do
 
   Konfigurieren Sie bei der Richtlinie für BitLocker-Verschlüsselung von Wechseldatenträgern die folgende Einstellung:
 
-  - **Verschlüsselung für Schreibzugriff anfordern**:  
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+  - **Block write access to removable data-drives not protected by BitLocker** (Schreibzugriff auf Wechseldatenträger ohne BitLocker-Schutz blockieren):  
     **Standardeinstellung:** Ja
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
+  - **Verschlüsselung für Schreibzugriff anfordern**:  
+    **Standardeinstellung:** Ja
 
 - **BitLocker-Richtlinie für Wechseldatenträger**:  
   Diese Richtlinieneinstellung wird verwendet, um die Verschlüsselungsmethode und Verschlüsselungsstärke zu steuern. Die Werte dieser Richtlinie bestimmen die Stärke der Verschlüsselung, die BitLocker für die Verschlüsselung verwendet. Unternehmen sollten die Verschlüsselungsstufe für erhöhte Sicherheit steuern (AES-256 ist sicherer als AES-128). Wenn Sie diese Einstellung aktivieren, können Sie einen Verschlüsselungsalgorithmus konfigurieren und für Festplattenlaufwerke, Betriebssystemlaufwerke und Wechseldatenträger die Verschlüsselungsstärke für Schlüssel individuell konfigurieren. Für Festplatten- und Betriebssystemlaufwerke wird die Verwendung des XTS-AES-Algorithmus empfohlen. Für Wechseldatenträger sollten Sie AES-CBC 128-Bit oder AES-CBC 256-Bit verwenden, wenn es in anderen Geräten verwendet wird, auf denen nicht Windows 10, Version 1511 oder höher ausgeführt wird. Das Ändern der Verschlüsselungsmethode hat keine Auswirkungen, wenn das Laufwerk bereits verschlüsselt ist oder die Verschlüsselung gerade ausgeführt wird. In diesen Fällen wird diese Richtlinieneinstellung ignoriert.  
@@ -281,7 +292,7 @@ Weitere Informationen finden Sie unter [Policy CSP – Defender (Richtlinien-Kon
 
 Weitere Informationen finden Sie unter [Policy CSP – DeviceGuard (Richtlinien-Konfigurationsdienstanbieter: DeviceGuard)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) in der Windows-Dokumentation.
 
-- **Credential Guard**:  
+- **Turn on credential guard** (Credential Guard aktivieren):  
   Mit dieser Einstellung können Benutzer Credential Guard mit virtualisierungsbasierter Sicherheit aktivieren, um den Schutz von Anmeldeinformationen beim nächsten Neustart zu unterstützen.  
   [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067044)
 
@@ -381,7 +392,7 @@ Weitere Informationen finden Sie unter [Policy CSP - DeviceLock (Richtlinien-CSP
 
     **Standardeinstellung:** 60
 
-  - **Erforderlicher Kennworttyp:**  
+  - **Erforderliches Kennwort:**  
     Bestimmt den Typ der erforderlichen PIN oder des erforderlichen Kennworts.  
     [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067027)
 
@@ -463,24 +474,24 @@ Weitere Informationen finden Sie unter [Policy CSP - EventLogService (Richtlinie
 Weitere Informationen finden Sie unter [Policy CSP - Experience (Richtlinien-Konfigurationsdienstanbieter: Experience)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) in Ihrer Windows-Dokumentation.
 
 - **Windows-Blickpunkt blockieren**:  
-  Ermöglicht IT-Administratoren, alle Features von Windows-Blickpunkt zu deaktivieren – Windows-Blickpunkt auf dem Sperrbildschirm, Windows-Tipps, Microsoft-Features für Endbenutzer und weitere ähnliche Features.  
+  Hiermit wird IT-Administratoren gestattet, alle Windows-Blickpunkt-Features zu deaktivieren (blockieren). Dies schließt Windows-Blickpunkt auf dem Sperrbildschirm, Windows-Tipps, Microsoft-Features für Endbenutzer und weitere zugehörige Features ein.  
   [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067037)
 
   **Standardeinstellung:** Ja
 
-  Wenn *Windows-Blickpunkt blockieren* auf *Ja* festgelegt wurde, stehen die folgenden Einstellungen zur Verfügung.
+  Ist *Windows-Blickpunkt blockieren* auf *Nicht konfiguriert* festgelegt, wird Windows-Blickpunkt nicht auf den Geräten blockiert, und Sie können die folgenden Einstellungen konfigurieren, um ausgewählte Elemente für Windows-Blickpunkt zu blockieren:
 
   - **Drittanbietervorschläge in Windows-Blickpunkt blockieren**:  
     Gibt an, ob App- und Inhaltsvorschläge durch Herausgeber von Drittanbieter-Software in Features von Windows-Blickpunkt (z.B. Windows-Blickpunkt auf dem Sperrbildschirm, vorgeschlagene Apps im Startmenü oder Windows-Tipps) zulässig sind. Benutzer sehen möglicherweise trotzdem Vorschläge für Microsoft-Features, -Apps und -Dienste.  
     [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067045)
 
-    **Standardeinstellung:** Ja
+    **Standardeinstellung:** Nicht konfiguriert
 
   - **Bestimmte Funktionen für Endbenutzer blockieren**:  
     Ermöglicht IT-Administratoren das Aktivieren von Funktionen, die normalerweise nur für Endbenutzer bestimmt sind, beispielsweise Startvorschläge, Mitgliedschaftsbenachrichtigungen, App-Installation nach Anzeige der Windows-Willkommensseite und Kachelumleitungen.  
     [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067054)
 
-    **Standardeinstellung:** Ja
+    **Standardeinstellung:** Nicht konfiguriert
 
 ## <a name="exploit-guard"></a>Exploit Guard
 
@@ -889,7 +900,7 @@ Weitere Informationen finden Sie unter [Policy CSP - Internet Explorer (Richtlin
 
   **Standardeinstellung:** Aktiviert
 
-- **Internet Explorer: Vertrauenswürdige Zone: Keine Antischadsoftware für ActiveX-Steuerelemente ausführen**:  
+- **Internet Explorer trusted zone do not run antimalware against Active X controls** (Vertrauenswürdige Zone in Internet Explorer: Keine Antischadsoftware für ActiveX-Steuerelemente ausführen):  
   Mit dieser Richtlinieneinstellung können Sie bestimmen, ob von Internet Explorer Antischadsoftwareprogramme für ActiveX-Steuerelemente ausgeführt werden, um zu überprüfen, ob sie sicher auf Seiten geladen werden können. Wenn Sie diese Richtlinieneinstellung aktivieren, prüft Internet Explorer nicht anhand des Antischadsoftwareprogramms, ob das Erstellen einer Instanz des ActiveX-Steuerelements sicher ist. Wenn Sie diese Richtlinieneinstellung deaktivieren, prüft Internet Explorer immer anhand des Antischadsoftwareprogramms, ob das Erstellen einer Instanz des ActiveX-Steuerelements sicher ist. Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, prüft Internet Explorer immer anhand des Antischadsoftwareprogramms, ob das Erstellen einer Instanz des ActiveX-Steuerelements sicher ist. Benutzer können diese Option über die Sicherheitseinstellungen von Internet Explorer aktivieren und deaktivieren.  
   [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067115)
 
@@ -1501,7 +1512,7 @@ Weitere Informationen finden Sie unter [Policy CSP – LocalPoliciesSecurityOpti
 
   **Standardeinstellung:** Ja
   
-- **UIAccess-Anwendungen für sichere Speicherorte zulassen**:  
+- **Nur UIAccess-Anwendungen für sichere Speicherorte zulassen:**  
   Mit dieser Sicherheitseinstellung können Sie bestimmen, ob Programme für Bedienungshilfen für die Benutzeroberfläche (UIAccess oder UIA) automatisch den sicheren Desktop für Eingabeaufforderungen mit erhöhten Rechten eines Standardbenutzers deaktivieren kann.
 
   - *Ja*: UIA-Programme, darunter Windows-Remoteunterstützung, deaktivieren automatisch den sicheren Desktop für Eingabeaufforderungen für erhöhte Rechte. Wenn Sie die Richtlinieneinstellung „Benutzerkontensteuerung: Bei Benutzeraufforderung nach erhöhten Rechten zum sicheren Desktop wechseln“ nicht deaktivieren, werden die Eingabeaufforderungen auf dem Desktop des interaktiven Benutzers und nicht auf dem sicheren Desktop angezeigt.
@@ -1539,151 +1550,168 @@ Weitere Informationen finden Sie unter [Policy CSP – LocalPoliciesSecurityOpti
 
 Weitere Informationen finden Sie unter [Policy CSP - Defender (Richtlinien-Konfigurationsdienstanbieter: Defender)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in Ihrer Windows-Dokumentation.
 
-- **Eingehende E-Mail überprüfen:**  
-  Gestattet oder verweigert das Überprüfen von E-Mails.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **Standardeinstellung:** Ja
-
-- **Office-Apps: Starten untergeordneter Prozesse**:  
-  Das Erstellen von untergeordneten Prozessen mit Office-Apps ist nicht gestattet. Dazu zählen Microsoft Word, Excel, PowerPoint, OneNote und Access. Dies ist ein typisches Verhalten für eine Schadsoftware, besonders für makrobasierte Angriffe, mit denen versucht wird, Office-Apps zum Starten oder Herunterladen ausführbarer schädlicher Dateien zu verwenden.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **Standardeinstellung:** Blockieren
-
-- **Defender: Zustimmung für Stichprobenübermittlung**:  
-  Diese Einstellung sucht nach der Benutzerzustimmungsebene in Microsoft Defender, um Daten zu senden. Wenn die erforderliche Zustimmung bereits erteilt wurde, sendet Microsoft Defender die Daten. Wenn nicht (und wenn der Benutzer angegeben hat, nie zu fragen), wird die Benutzeroberfläche gestartet, um den Benutzer zur Bestätigung aufzufordern (wenn Defender/AllowCloudProtection gestattet ist), bevor Daten gesendet werden.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **Standardeinstellung:** Sichere Beispiele automatisch senden
-
-- **Signature update interval (in hours)** (Intervall zum Aktualisieren von Signaturen (in Stunden)):  
-  Intervall zum Aktualisieren von Signaturen in Windows Defender in Stunden.
-
-  **Standardeinstellung:** 4
-
-- **Ausführungstyp für heruntergeladene Nutzlast für Skript**:  
-  Ausführungstyp für heruntergeladene Nutzlast für Skript in Defender.
-
-  **Standardeinstellung:** Blockieren
-  
-- **Diebstahl von Anmeldeinformationen verhindern**:  
-  Microsoft Defender Credential Guard nutzt auf Virtualisierung basierende Sicherheitsverfahren, um Geheimnisse zu isolieren, sodass nur privilegierte Systemsoftware auf diese Daten zugreifen kann. Nicht autorisierter Zugriff auf diese geheimen Schlüssel kann zum Diebstahl von Anmeldeinformationen führen, z. B. durch einen Pass-the-Hash- oder einen Pass-the-Ticket-Angriff. Microsoft Defender Credential Guard verhindert diese Angriffe durch den Schutz von NTLM-Kennworthashes, Kerberos Ticket-Granting Tickets und Anmeldeinformationen, die von Anwendungen als Domänenanmeldeinformationen gespeichert werden.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **Standardeinstellung:** Aktivieren Sie
-
-- **Ausführungstyp für E-Mail-Inhalt**:  
-  Diese Regel verhindert die Ausführung oder das Starten der folgenden Dateitypen aus einer E-Mail, die in Microsoft Outlook oder einem webbasierten E-Mail-Dienst (z. B. Gmail.com oder Outlook.com) angezeigt wird: ausführbare Dateien (z.B. EXE, DLL oder SCR), Skriptdateien (z.B. PS PowerShell, VBS VisualBasic oder JS JavaScript) und Skriptarchivdateien.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **Standardeinstellung:** Blockieren
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Adobe Reader in einem untergeordneten Prozess starten**:  
+- **Block Adobe Reader from creating child processes** (Adobe Reader am Erstellen von untergeordneten Prozessen hindern):  
 Diese Regel verhindert Angriffe, indem Adobe Reader am Erstellen zusätzlicher Prozesse gehindert wird. Über Social Engineering oder Exploits kann Schadsoftware zusätzliche Payloads herunterladen und starten sowie Adobe Reader unterbrechen. Durch das Blockieren der Generierung untergeordneter Prozesse durch Adobe Reader wird Malware, die versucht, sie als Vektor zu verwenden, an der Verbreitung gehindert.
 [Erfahren Sie mehr](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **Standardeinstellung:** Aktivieren Sie
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Netzwerkschutz**:  
-  Mit dieser Richtlinieneinstellung können Sie den Netzwerkschutz in Microsoft Defender Exploit Guard aktivieren (blockieren/überwachen) oder deaktivieren. Der Netzwerkschutz ist ein Feature von Microsoft Defender Exploit Guard, das Arbeitnehmer beim Verwenden von Apps vor dem Zugriff auf Phishingwebsites, Websites mit Exploits und schädliche Inhalte im Internet schützt. Dabei wird auch verhindert, dass Browser von Drittanbietern Verbindungen zu gefährlichen Websites herstellen. Der Werttyp ist Integer. Wenn Sie diese Einstellung aktivieren, wird der Netzwerkschutz aktiviert, und Arbeitnehmer können ihn nicht mehr deaktivieren. Sein Verhalten kann mit den folgenden Optionen gesteuert werden: Blockieren und Überwachen. Wenn Sie diese Richtlinie mit der Option „Blockieren“ aktivieren, können Benutzer und Anwendungen keine Verbindungen zu gefährlichen Domänen herstellen. Diese Aktivität wird im Microsoft Defender Security Center angezeigt. Wenn Sie diese Richtlinie mit der Option „Überwachen“ aktivieren, können Benutzer/Anwendungen Verbindungen zu gefährlichen Domänen herstellen. Diese Aktivität wird jedoch trotzdem im Microsoft Defender Security Center angezeigt. Wenn Sie diese Richtlinie deaktivieren, können Benutzer/Anwendungen Verbindungen zu gefährlichen Domänen herstellen. Im Microsoft Defender Security Center werden keine Netzwerkaktivitäten angezeigt. Wenn Sie diese Richtlinie nicht konfigurieren, wird die Blockierung des Netzwerks standardmäßig deaktiviert.  
-  [Erfahren Sie mehr](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+- **Office: Kommunikations-Apps starten in untergeordnetem Prozess**:  
+  [Schützen von Geräten vor Exploits](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **Standardeinstellung:** Aktivieren Sie
+
+- **Eingeben, wie oft (0–24 Stunden) nach Security Intelligence-Updates gesucht wird**  
+  CSP: [Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
+  
+  Geben Sie an, wie oft nach neuen Signaturen gesucht werden soll. Der Wert 1 bedeutet eine Stunde, 2 bedeutet zwei Stunden und so weiter.
+
+  **Standardeinstellung:** 4
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 - **Defender-Überprüfungstag planen**:  
   Defender-Überprüfungstag planen.
 
   **Standardeinstellung:** Täglich
 
-- **Schutz über die Cloud**:  
-  Um Ihren PC bestmöglich zu schützen, sendet Microsoft Defender Informationen zu jedem entdeckten Problem an Microsoft. Microsoft analysiert diese Informationen, erfährt mehr über die Probleme, die Sie und andere Kunden betreffen, und bietet verbesserte Lösungen an.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067039)
+- **Von der Cloud bereitgestellten Schutz aktivieren:**  
+  CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  Wenn „Ja“ festgelegt ist, sendet Microsoft Defender zu jedem entdeckten Problem Informationen an Microsoft. Wenn „Nicht konfiguriert“ festgelegt ist, verwendet der Client die Standardeinstellung, bei der das Feature zwar aktiviert ist, aber vom Benutzer deaktiviert werden kann.
 
   **Standardeinstellung:**  Ja  
 
-- **Potenziell unerwünschte App-Aktion in Defender**:  
-  Das Feature zum Schutz vor potenziell unerwünschten Anwendungen (Potentially Unwanted Applications, PUAs) in Microsoft Defender Antivirus kann solche Anwendungen identifizieren und verhindern, dass diese auf Endpunkte in ihrem Netzwerk heruntergeladen und dort installiert werden. Bei diesen Anwendungen handelt es sich nicht um Viren, Schadsoftware oder andere Arten von Bedrohungen. Diese Anwendungen können Aktionen auf Endpunkten ausführen, die deren Leistung oder Verwendung beeinträchtigen. Mit PUAs können auch Anwendungen gemeint sein, die einen schlechten Ruf haben. Typisches PUA-Verhalten umfasst: verschiedene Arten von Softwarebündelungen, die Einschleusung von Werbung in Webbrowser sowie Treiber- und Registrierungsoptimierungen, die Probleme erkennen, eine Zahlung zur Fehlerbehebung anfordern, aber auf dem Endpunkt verbleiben und weder Änderungen noch Optimierungen vornehmen (auch bekannt als „Rogue-Sicherheitssoftware“). Diese Anwendungen können das Risiko einer Infektion mit Schadsoftware für Ihr Netzwerk erhöhen, das Identifizieren von Infektionen erschweren und unnötig IT-Ressourcen zum Bereinigen der Anwendungen belegen.  
-  [Erfahren Sie mehr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+- **Echtzeitschutz aktivieren**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  **Standardeinstellung:** Blockieren  
+  Wenn für diese Einstellung „Ja“ festgelegt ist, wird die Echtzeitüberwachung erzwungen und kann vom Benutzer nicht deaktiviert werden. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert des Clients zurückgesetzt, d. h. aktiviert. Der Benutzer kann dies jedoch ändern. Verwenden Sie einen benutzerdefinierten URI, um die Echtzeitüberwachung zu deaktivieren.
 
-- **Verborgener Makrocodetyp von Skripten**:  
-  Schadsoftware und andere Bedrohungen versuchen möglicherweise ihren schädlichen Code in einigen Skriptdateien zu verbergen oder auszublenden. Mit dieser Regel wird verhindert, dass verborgen scheinende Skripts ausgeführt werden.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **Standardeinstellung:** Blockieren
-
-- **Scan removable drives during a full scan** (Bei einer vollständigen Überprüfung Wechseldatenträger überprüfen):  
-  Ermöglicht es Microsoft Defender, Wechseldatenträger (z. B. Flashlaufwerke) während einer vollständigen Überprüfung auf schädliche und unerwünschte Software zu untersuchen. Microsoft Defender Antivirus überprüft alle Dateien auf USB-Geräten, bevor die Dateien ausgeführt werden.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067036)
-
-  **Standardeinstellung:** Ja  
+  **Standardeinstellung:**  Ja  
 
 - **Archivdateien überprüfen:**  
-  Archivdateien überprüfen in Defender.
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
+  
+  Wenn für diese Einstellung „Ja“ festgelegt ist, wird das Überprüfen von Archivdateien wie ZIP- oder CAB-Dateien erzwungen. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert des Clients zurückgesetzt, d. h., archivierte Dateien werden überprüft. Der Benutzer kann die Überprüfung jedoch deaktivieren.
 
   **Standardeinstellung:** Ja
 
-- **Verhaltensüberwachung:**  
-  Gestattet oder verweigert die Microsoft Defender-Funktion zur Verhaltensüberwachung. Eingebettet in Windows 10, sammeln und verarbeiten diese Sensoren Signale zum Verhalten des Betriebssystems und senden diese Sensordaten an Ihre private, isolierte Cloudinstanz von Microsoft Defender ATP.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067111)
+- **Verhaltensüberwachung aktivieren:**  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
+
+  Wenn für diese Einstellung „Ja“ festgelegt ist, wird die Verhaltensüberwachung erzwungen und kann vom Benutzer nicht deaktiviert werden. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert des Clients zurückgesetzt, d. h. aktiviert. Der Benutzer kann dies jedoch ändern. Verwenden Sie einen benutzerdefinierten URI, um die Echtzeitüberwachung zu deaktivieren.
 
   **Standardeinstellung:** Ja
 
-- **Scan files opened from network folders** (Über Netzwerkordner geöffnete Dateien überprüfen):  
-  Wenn Dateien schreibgeschützt sind, können Benutzer entdeckte Schadsoftware nicht entfernen.
+- **Eingehende E-Mail überprüfen:**  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
+
+  Wenn „Ja“ festgelegt ist, werden das E-Mail-Postfach sowie E-Mail-Dateien wie PST-, DBX-, MNX-, MIME- und BINHEX-Dateien überprüft. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert des Clients zurückgesetzt, d. h., E-Mail-Dateien werden nicht überprüft.
 
   **Standardeinstellung:** Ja
 
-- **Nicht vertrauenswürdiger USB-Prozesstyp**:  
-  Mit dieser Regel können Administratoren verhindern, dass nicht signierte oder nicht vertrauenswürdige ausführbare Dateien von USB-Wechseldatenträgern, einschließlich SD-Karten, ausgeführt werden.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067100)
+- **Scan removable drives during a full scan** (Bei einer vollständigen Überprüfung Wechseldatenträger überprüfen):  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
 
-  **Standardeinstellung:** Blockieren
+  Wenn „Ja“ festgelegt ist, werden bei einer vollständigen Überprüfung Wechseldatenträger (z. B. USB-Speichersticks) überprüft. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert des Clients zurückgesetzt, d. h., Wechseldatenträger werden überprüft. Der Benutzer kann diese Überprüfung jedoch deaktivieren.
+  **Standardeinstellung:** Ja  
 
-- **Office-Apps: Codeeinschleusung in andere Prozesse**:  
-  Office-Apps einschließlich Word, Excel, PowerPoint und OneNote können keinen Code in andere Prozesse einfügen. Dieses Verfahren zum Ausführen von schädlichem Code ist typisch für Schadsoftware bei dem Versuch, die Aktivität vor Antivirusprogrammen zu verstecken.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067019)
+- **Block Office applications from injecting code into other processes** (Einschleusung von Code durch Office-Anwendungen in andere Prozesse blockieren):  
+  [Schützen von Geräten vor Exploits](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  Wenn „Ja“ festgelegt ist, wird die Einschleusung von Code durch Office-Anwendungen in andere Prozesse blockiert. Wenn „Nur überwachen“ festgelegt ist, werden statt des Blockierens Windows-Ereignisse ausgelöst. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h. deaktiviert. Diese ASR-Regel wird über die folgende GUID gesteuert: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Standardeinstellung:**  Blockieren
 
-- **Win32-Importtyp aus Office-Makrocode gestatten**:  
-  Schadsoftware kann Makrocode in Office-Dateien verwenden, um Win32-DLLs zu importieren und zu laden, mit denen API-Aufrufe ausgeführt werden, um eine weitere Infektion des gesamten Systems zu ermöglichen. Mit dieser Regel wird versucht, Office-Dateien zu blockieren, die Makrocode enthalten, der Win32-DLLs importieren kann. Dazu zählen Microsoft Word, Excel, PowerPoint und OneNote.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067130)
+- **Erstellung ausführbarer Inhalte durch Office-Anwendungen blockieren**  
+  [Schützen von Geräten vor Exploits](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  Wenn „Ja“ festgelegt ist, dürfen Office-Anwendungen keine ausführbaren Inhalte erstellen. Wenn „Nur überwachen“ festgelegt ist, werden statt des Blockierens Windows-Ereignisse ausgelöst. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h. deaktiviert. Diese ASR-Regel wird über die folgende GUID gesteuert: 3B576869-A4EC-4529-8536-B80A7769E899
+
+  **Standardeinstellung:**  Blockieren
+
+- **Alle Office-Anwendungen am Erstellen von untergeordneten Prozessen hindern**  
+  [Schützen von Geräten vor Exploits](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  Wenn der Überwachungsmodus aktiviert ist, werden statt des Blockierens Windows-Ereignisse ausgelöst. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h. deaktiviert. Diese ASR-Regel wird über die folgende GUID gesteuert: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
+
+  **Standardeinstellung:**  Blockieren
+
+- **Block Win32 API calls from Office macro** (Win32-API-Aufrufe von Office-Makros blockieren):  
+  [Schützen von Geräten vor Exploits](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  Wenn „Ja“ festgelegt ist, wird die Verwendung von Win32-API-Aufrufen durch Office-Makros wird blockiert. Wenn „Nur überwachen“ festgelegt ist, werden statt des Blockierens Windows-Ereignisse ausgelöst. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h. deaktiviert. Diese ASR-Regel wird über die folgende GUID gesteuert: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  
+  **Standardeinstellung:** Blockieren
+
+- **Block execution of potentially obfuscated scripts (js/vbs/ps)** (Ausführung möglicherweise verschleierter Skripts blockieren (JS/VBS/PS)):  
+  [Schützen von Geräten vor Exploits](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  Wenn „Ja“ festgelegt ist, blockiert Microsoft Defender die Ausführung verschleierter Skripts. Wenn „Nur überwachen“ festgelegt ist, werden statt des Blockierens Windows-Ereignisse ausgelöst. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h. deaktiviert. Diese ASR-Regel wird über die folgende GUID gesteuert: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  
+  **Standardeinstellung:** Blockieren
+
+- **Ausführungstyp für E-Mail-Inhalt**:    
+  [Download ausführbarer Inhalte aus E-Mail- und Webmailclients blockieren](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  Wenn „Ja“ festgelegt ist, werden ausführbare Inhalte blockiert, die über E-Mail-Clients oder Webmailclients heruntergeladen wurden. Wenn „Nur überwachen“ festgelegt ist, werden statt des Blockierens Windows-Ereignisse ausgelöst. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h. deaktiviert.
 
   **Standardeinstellung:** Blockieren
 
-- **Defender: Cloudblockierungsebene**  
-  Defender-Cloud-Block-Level.
+- **Diebstahl von Anmeldeinformationen verhindern**:  
+  [Schützen von Geräten vor Exploits](https://go.microsoft.com/fwlink/?linkid=874499)
+  
+  Wenn „Ja“ festgelegt ist, werden Versuche, Anmeldeinformationen über „lsass.exe“ zu stehlen, blockiert. Wenn „Nur überwachen“ festgelegt ist, werden statt des Blockierens Windows-Ereignisse ausgelöst. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h. deaktiviert. Diese ASR-Regel wird über die folgende GUID gesteuert: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
 
-  **Standardeinstellung:** Nicht konfiguriert
+  **Standardeinstellung:** Aktivieren Sie
 
-- **Real-time monitoring** (Echtzeitüberwachung):  
-  Für Defender ist eine Echtzeitüberwachung erforderlich.
+- **Potenziell unerwünschte App-Aktion in Defender**:  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
 
-  **Standardeinstellung:** Ja
+  Das Feature zum Schutz vor potenziell unerwünschten Anwendungen (Potentially Unwanted Applications, PUAs) in Microsoft Defender Antivirus kann solche Anwendungen identifizieren und verhindern, dass diese auf Endpunkte in ihrem Netzwerk heruntergeladen und dort installiert werden. Bei diesen Anwendungen handelt es sich nicht um Viren, Schadsoftware oder andere Arten von Bedrohungen. Diese Anwendungen können Aktionen auf Endpunkten ausführen, die deren Leistung oder Verwendung beeinträchtigen. Mit PUAs können auch Anwendungen gemeint sein, die einen schlechten Ruf haben. Typisches PUA-Verhalten umfasst: verschiedene Arten von Softwarebündelungen, die Einschleusung von Werbung in Webbrowser sowie Treiber- und Registrierungsoptimierungen, die Probleme erkennen, eine Zahlung zur Fehlerbehebung anfordern, aber auf dem Endpunkt verbleiben und weder Änderungen noch Optimierungen vornehmen (auch bekannt als „Rogue-Sicherheitssoftware“). Diese Anwendungen können das Risiko einer Infektion mit Schadsoftware für Ihr Netzwerk erhöhen, das Identifizieren von Infektionen erschweren und unnötig IT-Ressourcen zum Bereinigen der Anwendungen belegen.
+
+  **Standardeinstellung:** Blockieren
+
+- **Block untrusted and unsigned processes that run from USB** (Blockieren von nicht vertrauenswürdigen und nicht signierten Prozessen, die von USB ausgeführt werden):  
+  [Schützen von Geräten vor Exploits](https://go.microsoft.com/fwlink/?linkid=874502)
+  
+  Wenn „Ja“ festgelegt ist, werden nicht vertrauenswürdige/nicht signierte Prozesse blockiert, die von einem USB-Laufwerk aus ausgeführt werden. Wenn „Nur überwachen“ festgelegt ist, werden statt des Blockierens Windows-Ereignisse ausgelöst. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h. deaktiviert. Diese ASR-Regel wird über die folgende GUID gesteuert: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+
+  **Standardeinstellung:** Blockieren
+
+- **Netzwerkschutz**:  
+  [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  Wenn „Ja“ festgelegt ist, ist der Netzwerkschutz für alle Benutzer im System aktiviert. Der Netzwerkschutz schützt Mitarbeiter vor betrügerischen Phishingversuchen und dem Zugriff auf schädliche Inhalte im Internet. Dies umfasst auch Browser von Drittanbietern. Wenn „Nur überwachen“ festgelegt ist, wird der Zugriff auf gefährliche Domänen für Benutzer nicht blockiert, es werden jedoch stattdessen Windows-Ereignisse ausgelöst. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h. deaktiviert.
+
+  **Standardeinstellung:** Aktivieren Sie
+
+- **Defender: Zustimmung für Stichprobenübermittlung**:  
+  [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Diese Einstellung sucht nach der Benutzerzustimmungsebene in Microsoft Defender, um Daten zu senden. Wenn die erforderliche Zustimmung bereits erteilt wurde, sendet Microsoft Defender die Daten. Wenn nicht (und wenn der Benutzer angegeben hat, nie zu fragen), wird die Benutzeroberfläche gestartet, um nach der Benutzerzustimmung zu fragen (wenn Defender/AllowCloudProtection gestattet ist), bevor Daten gesendet werden.
+
+  **Standardeinstellung:** Sichere Beispiele automatisch senden
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Office: Kommunikations-Apps starten in untergeordnetem Prozess**:  
-  **Standardeinstellung:**  Aktivieren Sie
+- **Netzwerkdateien überprüfen**  
+  [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049)
+
+  - **Standardeinstellung:** Ja
+
+- **Starten heruntergeladener ausführbarer Inhalte durch JavaScript oder VBScript blockieren**  
+  [Schützen von Geräten vor Exploits](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  Wenn „Ja“ festgelegt ist, blockiert Microsoft Defender das Ausführen von JavaScript- oder VBScript-Dateien, die aus dem Internet heruntergeladen wurden. Wenn „Nur überwachen“ festgelegt ist, werden statt des Blockierens Windows-Ereignisse ausgelöst. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h. deaktiviert. Diese ASR-Regel wird über die folgende GUID gesteuert: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Office-Apps: Erstellung oder Start ausführbarer Inhalte**  
-  Diese Regel zielt auf typische Verhalten von verdächtigen und schädlichen Add-Ons und Skripts (Erweiterungen) ab, die ausführbare Dateien erstellen oder starten. Dies ist ein typisches Verfahren von Schadsoftware. Die Verwendung von Erweiterungen durch Office-Apps wird blockiert. Typischerweise verwenden diese Erweiterungen den Windows Scripting Host (WSH-Dateien), um Skripts auszuführen, die bestimmte Aufgaben automatisieren oder von Benutzern erstellte Add-On-Features bieten.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **Standardeinstellung:** Blockieren
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## <a name="ms-security-guide"></a>MSSecurityGuide
 
@@ -1733,7 +1761,7 @@ Weitere Informationen finden Sie unter [Policy CSP - MSSLegacy (Richtlinen-CSP: 
 
   **Standardeinstellung:** Höchster Schutz
 
-- **Netzwerk-ICMP-Umleitungen setzen OSPF-generierte Routen außer Kraft**:  
+- **Network ICMP redirects override OSPF generated routes** (Netzwerk-ICMP-Umleitungen setzen OSPF-generierte Routen außer Kraft):  
   [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067326)
 
   **Standardeinstellung:** Deaktiviert
@@ -1787,19 +1815,21 @@ Erfahren Sie mehr unter [Richtlinien-CSP: RemoteAssistance](https://docs.microso
 
   **Standardeinstellung:** Remoteunterstützung deaktivieren
 
-  Wenn die Einstellung auf *Remoteunterstützung aktivieren* festgelegt ist, konfigurieren Sie die folgenden weiteren Einstellungen:
+<!-- These settings are not available: 
+  When set to *Enable Remote Assistance*, configure the following additional settings:
 
-  - **Angeforderte Remoteunterstützung: Berechtigung:**  
-    **Standardeinstellung:** Anzeigen
+  - **Remote Assistance solicited permission**:  
+    **Default**: View
 
-  - **Maximaler Zeitwert des Tickets**:  
-    **Standardeinstellung:** *Nicht konfiguriert*
+  - **Maximum ticket time value**:  
+    **Default**: *Not configured*
 
-  - **Maximaler Ticketzeitraum**:  
-    **Standardeinstellung:** Minuten
+  - **Maximum ticket time period**:  
+    **Default**: Minutes
 
-  - **E-Mail-Einladungsmethode:**  
-    **Standardeinstellung:** Einfache MAPI
+  - **E-Mail invitation method**:  
+    **Default**: Simple MAPI
+-->
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1917,6 +1947,9 @@ Weitere Informationen finden Sie unter [Policy CSP - Search (Richtlinien-Konfigu
 
 Weitere Informationen finden Sie unter [Policy CSP - SmartScreen (Richtlinien-Konfigurationsdienstanbieter: SmartScreen)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in Ihrer Windows-Dokumentation.
 
+::: zone-end
+::: zone pivot="mdm-preview"
+
 - **Ausführen nicht überprüfter Dateien blockieren**:  
   Hindern Sie Benutzer am Ausführen von nicht überprüften Dateien.
 
@@ -1933,6 +1966,26 @@ Weitere Informationen finden Sie unter [Policy CSP - SmartScreen (Richtlinien-Ko
   [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067168)
 
   **Standardeinstellung:** Ja
+
+::: zone-end
+::: zone pivot="mdm-may-201"
+
+- **Windows SmartScreen aktivieren**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  Wenn „Ja“ festgelegt ist, wird die Verwendung von SmartScreen wird für alle Benutzer erzwungen. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h., SmartScreen ist aktiviert. Der Benutzer kann diese Einstellung jedoch ändern. Verwenden Sie einen benutzerdefinierten URI, um SmartScreen zu deaktivieren.
+
+  **Standardeinstellung:** Ja
+
+- **Ignorieren von SmartScreen-Warnungen durch die Benutzer blockieren**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+  Wenn „Ja“ festgelegt ist, stellt SmartScreen keine Option bereit, mit der der Benutzer die Warnung ignorieren und die App ausführen kann. Die Warnung wird angezeigt, der Benutzer kann Sie jedoch umgehen. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h., eine Außerkraftsetzung durch den Benutzer ist möglich. Diese Einstellung erfordert, dass die Einstellung „Enforce SmartScreen for apps and files“ (SmartScreen für Apps und Dateien erzwingen) aktiviert ist.
+
+  **Standardeinstellung:** Ja
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 ## <a name="system"></a>System
 
@@ -1991,52 +2044,40 @@ Weitere Informationen finden Sie unter [Policy CSP - WindowsConnectionManager (R
 
 ## <a name="windows-hello-for-business"></a>Windows Hello for Business
 
-- **Aktivieren Sie diese Option, um erweitertes Antispoofing zu verwenden, falls verfügbar:**
+- **Windows Hello for Business blockieren**  
+  Windows Hello for Business ist eine alternative Methode zum Anmelden bei Windows durch Ersetzen von Kennwörtern, Smartcards und virtuellen Smartcards. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, stellt das Gerät Windows Hello for Business bereit. Wenn Sie diese Richtlinieneinstellung aktivieren, stellt das Gerät Windows Hello for Business für keinen Benutzer bereit.
 
-  Wenn diese Option festgelegt ist, wird erweitertes Antispoofing verwendet, falls verfügbar. Wenn diese Option nicht festgelegt ist, wird Antispoofing blockiert. Wenn diese Option nicht konfiguriert ist, werden die für den Client vorgenommenen Konfigurationen berücksichtigt.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067192)
+  **Standardeinstellung:** Aktiviert
+  
+  Wenn *Deaktiviert* festgelegt ist, können Sie die folgenden Einstellungen konfigurieren:
 
-  **Standardeinstellung:** Ja
+  - **PIN-Mindestlänge**  
+    Die PIN-Mindestlänge muss zwischen 4 und 127 Zeichen liegen.
 
-- **Konfigurieren von Windows Hello for Business**
+    **Standardeinstellung:** *Nicht konfiguriert*
 
-  Windows Hello for Business ist eine alternative Methode zum Anmelden bei Windows durch Ersetzen von Kennwörtern, Smartcards und virtuellen Smartcards.
+  - **Aktivieren Sie diese Option, um erweitertes Antispoofing zu verwenden, falls verfügbar:**  
+    [Anti-spoofing protection](https://go.microsoft.com/fwlink/?linkid=2067192) (Schutz vor Spoofing)
 
-  > [!IMPORTANT]
-  > Die Optionen für diese Einstellung erfüllen nicht ihren eigentlichen Zweck. Die Option *Ja* aktiviert Windows Hello nicht, sondern wird als *Nicht konfiguriert* verarbeitet. Wenn diese Einstellung auf *Nicht konfiguriert* festgelegt ist, wird Windows Hello auf Geräten aktiviert, die diese Baseline empfangen.
-  >
-  > Die folgenden Beschreibungen wurden diesem gegensätzlichen Verhalten entsprechend überarbeitet. Dieser Fehler soll in einem späteren Update dieser Sicherheitsbaseline behoben werden.
+    Wenn diese Option aktiviert ist, verwenden Geräte erweitertes Antispoofing, falls verfügbar. Wenn sie nicht konfiguriert ist, wird die Clientkonfiguration für Antispoofing verwendet.
 
-  - Wenn diese Option auf *Nicht konfiguriert* festgelegt ist, wird Windows Hello aktiviert, und das Gerät stellt Windows Hello for Business bereit.
-  - Wenn diese Einstellung auf *Ja* festgelegt ist, hat die Baseline keinerlei Einfluss auf die Richtlinieneinstellung des Geräts. Wenn Windows Hello for Business also auf einem Gerät deaktiviert ist, bleibt dies so. Ebenfalls bleibt der Dienst aktiviert, wenn er zuvor bereits aktiviert wurde.
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+    **Standardeinstellung:** Nicht konfiguriert
 
-  Sie können Windows Hello for Business nicht über diese Baseline deaktivieren. Sie können Windows Hello for Business bei der Konfiguration der [Windows-Registrierung](windows-hello.md) oder als Bestandteil eines Gerätekonfigurationsprofils zum [Identitätsschutz](identity-protection-configure.md) deaktivieren.  
+  - **Kleinbuchstaben in PIN**:  
+    Wenn diese Option als erforderlich festgelegt ist, muss die Benutzer-PIN mindestens einen Kleinbuchstaben enthalten.
 
-  **Standardeinstellung:** Ja
+    **Standardeinstellung:** Nicht zulässig
 
-- **Kleinbuchstaben in PIN vorschreiben**:  
-  Wenn diese Option als erforderlich festgelegt ist, muss die Benutzer-PIN mindestens einen Kleinbuchstaben enthalten.
+  - **Sonderzeichen in PIN**:  
+    Wenn diese Option als erforderlich festgelegt ist, muss die Benutzer-PIN mindestens ein Sonderzeichen enthalten.
 
-  **Standardeinstellung:** Zulässig
+    **Standardeinstellung:** Nicht zulässig
+ 
 
-- **Sonderzeichen in PIN vorschreiben**:  
-  Wenn diese Option als erforderlich festgelegt ist, muss die Benutzer-PIN mindestens ein Sonderzeichen enthalten.
+  - **Großbuchstaben in PIN**:  
+    Wenn diese Option als erforderlich festgelegt ist, muss die Benutzer-PIN mindestens einen Großbuchstaben enthalten.
 
-  **Standardeinstellung:** Zulässig
-
-- **PIN-Mindestlänge**:  
-  Die PIN-Mindestlänge muss zwischen 4 und 127 Zeichen liegen.
-
-  **Standardeinstellung:** 6
-
-- **Großbuchstaben in PIN vorschreiben**:  
-  Wenn diese Option als erforderlich festgelegt ist, muss die Benutzer-PIN mindestens einen Großbuchstaben enthalten.
-
-  **Standardeinstellung:** Zulässig
+    **Standardeinstellung:** Nicht zulässig
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -2062,7 +2103,7 @@ Weitere Informationen finden Sie unter [Policy CSP - WindowsInkWorkspace (Richtl
 
 Weitere Informationen finden Sie unter [Policy CSP - WindowsPowerShell (Richtlinien-Konfigurationsdienstanbieter - WindowsPowerShell)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) in Ihrer Windows-Dokumentation.
 
-- **PowerShell-Shellskriptblock-Protokollierung**:  
+- **Protokollierung von PowerShell-Skriptblöcken:**  
   Mit dieser Richtlinieneinstellung können alle PowerShell-Skript-Eingaben im Microsoft-Windows-PowerShell/Operational-Ereignisprotokoll protokolliert werden. Wenn Sie diese Richtlinieneinstellung aktivieren, protokolliert Windows PowerShell die Verarbeitung von Befehlen, Skriptblöcken, Funktionen und Skripts, unabhängig davon, ob diese interaktiv oder automatisch aufgerufen wurden. Wenn Sie diese Richtlinieneinstellung deaktivieren, ist das Protokollieren von PowerShell-Skript-Eingaben deaktiviert. Wenn Sie die Protokollierung von Skriptblockaufrufen aktivieren, protokolliert PowerShell zusätzlich Protokollereignisse, wenn ein Befehl, ein Skriptblock, eine Funktion oder Skriptstarts oder -stops aufgerufen werden. Das Aktivieren der Protokollierung von Aufrufen führt zu einer großen Anzahl von Ereignisprotokollen. Anmerkung: Diese Richtlinieneinstellung ist sowohl unter„Computerkonfiguration“ als auch unter „Benutzerkonfiguration“ im Editor für Gruppenrichtlinien vorhanden. Die Richtlinieneinstellung in der Computerkonfiguration hat Vorrang vor der Richtlinieneinstellung in der Benutzerkonfiguration.  
   [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067330)
 
