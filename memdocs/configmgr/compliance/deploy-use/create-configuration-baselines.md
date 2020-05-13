@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2028974c166e060f445b255db6c5af707725a3f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693288"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906662"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Erstellen von Konfigurationsbaselines in Configuration Manager
 
@@ -23,6 +23,9 @@ ms.locfileid: "81693288"
 
 
 Konfigurationsbaselines in Configuration Manager enthalten vordefinierte Konfigurationselemente und gegebenenfalls andere Konfigurationsbaselines. Nachdem eine Konfigurationsbasislinie erstellt wurde, können Sie sie für eine Sammlung bereitstellen. Auf diese Weise wird die Konfigurationsbasislinie von Geräten in dieser Sammlung heruntergeladen und deren Konformität mit der Konfigurationsbasislinie ausgewertet.  
+
+> [!TIP]
+> Es gibt keine Möglichkeit, die Reihenfolge anzugeben, in der die Konfigurationselemente in einer Baseline vom Configuration Manager-Client ausgewertet werden. Diese ist nicht deterministisch.<!-- MEMDocs#175 -->
 
 ## <a name="configuration-baselines"></a>Konfigurationsbasislinien
 

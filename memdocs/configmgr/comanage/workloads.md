@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 8c91ba1c2b4b5ef7072c030eddd9b97dd69933e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075709"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842222"
 ---
 # <a name="co-management-workloads"></a>Workloads für die Co-Verwaltung
 
@@ -75,14 +75,13 @@ Die Endpoint Protection-Workload umfasst die Windows Defender-Suite mit Antischa
 - Windows Defender Application Control  
 - Windows Defender Security Center  
 - Windows Defender Advanced Threat Protection (wird jetzt Microsoft Defender Advanced Threat Protection genannt)
-- Windows Information Protection  
 
 Weitere Informationen zu diesem Intune-Feature finden Sie unter [Endpoint Protection für Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > Wenn Sie diese Workload wechseln, werden die Configuration Manager-Richtlinien auf dem Gerät beibehalten, bis sie von den Intune-Richtlinien überschrieben werden. Mit diesem Verhalten wird sichergestellt, dass das Gerät während des Übergangs über Schutzrichtlinien verfügt.
 >
-> Die Endpoint Protection-Workload ist auch Teil der Gerätekonfiguration. Das gleiche Verhalten wird angewendet, wenn Sie die Workload für die [Gerätekonfiguration](#device-configuration) wechseln.<!-- SCCMDocs.nl-nl issue #4 -->
+> Die Endpoint Protection-Workload ist auch Teil der Gerätekonfiguration. Das gleiche Verhalten wird angewendet, wenn Sie die Workload für die [Gerätekonfiguration](#device-configuration) wechseln.<!-- SCCMDocs.nl-nl issue #4 --> Wenn Sie die Workload für die Gerätekonfiguration wechseln, umfasst diese auch Richtlinien für die Windows Information Protection-Funktion, die nicht in der Endpoint Protection-Workload enthalten ist.<!-- 4184095 -->
 >
 > Die Microsoft Defender Antivirus-Einstellungen, die Bestandteil des Profiltyps „Geräteeinschränkungen“ für die Intune-Gerätekonfiguration sind, sind nicht im Bereich des Schiebereglers für den Endpunktschutz enthalten. Verwenden Sie zum Verwalten von Microsoft Defender Antivirus für gemeinsam verwaltete Geräte mit aktiviertem Endpunktschutz-Schieberegler die neuen Antivirenrichtlinien in **Microsoft Endpoint Manager Admin Center** > **Endpunktsicherheit** > **Virenschutz**. Für den neuen Richtlinientyp sind neue und verbesserte Optionen verfügbar, außerdem werden alle im Profil „Geräteeinschränkungen“ vorhandenen Einstellungen unterstützt. <!--6609171-->
 >
@@ -97,6 +96,9 @@ Die Gerätekonfigurationsworkload umfasst Einstellungen, die Sie für Geräte in
 Sie können immer noch Einstellungen von Configuration Manager für gemeinsam verwaltete Geräte bereitstellen, obwohl Intune die Autorität für die Gerätekonfiguration inne hat. Diese Ausnahme kann verwendet werden, um Einstellungen zu konfigurieren, die Ihre Organisation benötigt, die aber noch nicht in Intune verfügbar sind. Geben Sie diese Ausnahme in einer [Configuration Manager-Konfigurationsbaseline](../compliance/deploy-use/create-configuration-baselines.md) an. Aktivieren Sie bei der Erstellung der Baselinie die Option **Diese Baseline auch immer für gemeinsam verwaltete Clients anwenden**. Sie können sie später auf der Registerkarte **Allgemein** der Eigenschaften einer vorhandenen Baseline ändern.  
 
 Weitere Informationen zu diesem Intune-Feature finden Sie unter [Erstellen eines Geräteprofils in Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
+
+> [!NOTE]
+> Wenn Sie die Workload für die Gerätekonfiguration wechseln, umfasst diese auch Richtlinien für die Windows Information Protection-Funktion, die nicht in der Endpoint Protection-Workload enthalten ist.<!-- 4184095 -->
 
 ## <a name="office-click-to-run-apps"></a>Office-Klick-und-Los-Apps
 

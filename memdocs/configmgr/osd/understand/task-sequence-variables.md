@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 991b3e2ab654aff56d982c587ccc4bda53694294
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703258"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782116"
 ---
 # <a name="task-sequence-variables"></a>Tasksequenzvariablen
 
@@ -177,7 +177,7 @@ Gibt den Hersteller des Computers an.
 
 ### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a> _SMSTSMDataPath
 
-Gibt den Pfad an, der von der Variablen [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) definiert wird. Wenn Sie die Variable „SMSTSLocalDataDrive“ vor dem Starten der Tasksequenz definieren (z.B. durch Festlegen einer Sammlungsvariablen), definiert Configuration Manager die Variable „_SMSTSMDataPath“, sobald die Tasksequenz gestartet wird.
+Gibt den Pfad an, der von der Variablen [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) definiert wird. Dieser Pfad gibt an, wo die Tasksequenz während der Ausführung temporäre Cachedateien auf dem Zielcomputer speichert. Wenn Sie die Variable „SMSTSLocalDataDrive“ vor dem Starten der Tasksequenz definieren (z.B. durch Festlegen einer Sammlungsvariablen), definiert Configuration Manager die Variable „_SMSTSMDataPath“, sobald die Tasksequenz gestartet wird.
 
 ### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a> _SMSTSMediaType
 
@@ -1592,9 +1592,9 @@ Verwenden Sie diese Variable, um die Anzeigesprache eines sprachneutralen Starti
 
 ### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a> SMSTSLocalDataDrive
 
-Gibt an, wo die Tasksequenz während der Ausführung temporäre Dateien auf dem Zielcomputer speichert.
+Gibt an, wo die Tasksequenz während der Ausführung temporäre Cachedateien auf dem Zielcomputer speichert.
 
-Legen Sie diese Variable fest, bevor die Tasksequenz gestartet wird, indem Sie beispielsweise eine Sammlungsvariable bestimmen. Sobald die Tasksequenz gestartet wird, definiert Configuration Manager die Variable [_SMSTSMDataPath](#SMSTSMDataPath).
+Legen Sie diese Variable fest, bevor die Tasksequenz gestartet wird, indem Sie beispielsweise eine Sammlungsvariable bestimmen. Nach dem Start der Tasksequenz definiert Configuration Manager die [_SMSTSMDataPath](#SMSTSMDataPath)-Variable basierend darauf, wofür die SMSTSLocalDataDrive-Variable definiert wurde.
 
 ### <a name="smstsmp"></a><a name="SMSTSMP"></a> SMSTSMP
 
@@ -1638,7 +1638,7 @@ Verwenden Sie diese Variable, um Inhalt im Tasksequenzcache vorübergehend beizu
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Gibt einen Befehl an, der nach Abschluss der Tasksequenz ausgeführt wird. Geben Sie beispielsweise ein Skript an, das das Schreiben von Filtern auf eingebetteten Geräten ermöglicht, nachdem die Tasksequenz ein Betriebssystem auf dem Gerät bereitgestellt hat.
+Gibt einen Befehl an, der nach Abschluss der Tasksequenz ausgeführt wird. Geben Sie beispielsweise `shutdown.exe /r /t 30 /f` an, um den Computer 30 Sekunden nach Abschluss der Tasksequenz neu zu starten.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

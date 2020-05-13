@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a505296fe51aae996d429fe7da2033d3a787ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706668"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906008"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Welcher Branch von Configuration Manager soll verwendet werden?
 
@@ -47,7 +47,7 @@ Microsoft plant mehrere jährliche Updatereleases für die Current Branch-Versio
 
 Verwenden Sie [Baselinemedien](../servers/manage/updates.md#bkmk_Baselines), um Current Branch als neuen Standort zu installieren. Verwenden Sie ebenfalls Baselinemedien, um für System Center 2012 Configuration Manager mit Service Pack 2 oder System Center 2012 R2 Configuration Manager mit Service Pack 1 ein Upgrade auszuführen. Der Zugriff auf diese Medien hängt davon ab, welche Lizenzierung von Configuration Manager Ihre Organisation besitzt.
 
-Mithilfe der Baselinemedien können Sie auch einen neuen Standort als Evaluierungsversion von Current Branch installieren. Für die Evaluierungsversion ist keine Lizenz erforderlich. Sie können die Evaluierungsversion 180 Tage lang verwenden. Diese Version unterstützt ein Upgrade auf eine lizenzierte Version von Current Branch. Wenn Sie nur eine Evaluierungsversion installieren möchten, erhalten Sie diese unter [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
+Mithilfe der Baselinemedien können Sie auch einen neuen Standort als Evaluierungsversion von Current Branch installieren. Für die Evaluierungsversion ist keine Lizenz erforderlich. Sie können die Evaluierungsversion 180 Tage lang verwenden. Diese Version unterstützt ein Upgrade auf eine lizenzierte Version von Current Branch. Wenn Sie nur eine Evaluierungsversion installieren möchten, erhalten Sie diese im [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
 > [!NOTE]
 > Verwenden Sie Baselinemedien zum Installieren von Standorten für eine neue Configuration Manager-Hierarchie. Wenn Sie bereits eine Baselineversion installiert haben, aktualisieren Sie Ihre Standorte mithilfe von konsoleninternen Updates auf eine neue Version.  
@@ -89,7 +89,7 @@ Verwenden Sie die [Baselinemedien](../servers/manage/updates.md#bkmk_Baselines) 
 >  
 > Wenn Sie Configuration Manager Version 1606 in Volume Licensing Service Center (VLSC) suchen möchten, wechseln Sie zur Registerkarte **Downloads and Keys** (Downloads und Schlüssel) von [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), suchen Sie nach `System Center 2016`, und wählen Sie **System Center 2016 Datacenter** oder **System Center 2016 Standard** aus.  
 >  
-> Sie können auch eine Evaluierungsversion von System Center 2016 erhalten, die Sie im [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) herunterladen können.  
+> Sie können auch eine Evaluierungsversion von System Center 2016 im [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) erhalten.  
 
 ### <a name="features-of-the-ltsb"></a>Features von LTSB
 

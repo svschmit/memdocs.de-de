@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: c38230b44f7f18e3f60cb4c88b31a03e10a37d30
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705598"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905751"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Funktionen in der Technical Preview 1605 für Configuration Manager
 
@@ -192,7 +192,7 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
 #### <a name="general-prerequisites"></a>Allgemeine Voraussetzungen  
 
--   Stellen Sie sicher, dass Sie die [Vorbereitungsschritte für die lokale Verwaltung mobiler Geräte](https://technet.microsoft.com/library/mt613153.aspx) durchgeführt und [Ihre Geräte registriert](https://technet.microsoft.com/library/mt627870.aspx) haben.  
+-   Stellen Sie sicher, dass Sie die [Vorbereitungsschritte für lokales MDM](../../mdm/plan-design/plan-on-premises-mdm.md) durchgeführt und [Ihre Geräte registriert](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md) haben.  
 
 -   Stellen Sie sicher, dass Configuration Manager über eine aktive Verbindung zu Microsoft Intune verfügt, um die beste Anwendungsinstallation mit dem Unternehmensportal zu garantieren.  
 
@@ -284,7 +284,7 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>So erstellen Sie eine Sammlung für eine Servergruppe  
 
-1.  [Erstellen Sie eine Gerätesammlung](https://technet.microsoft.com/library/gg712295.aspx), die die Computer in der Servergruppe enthält.  
+1.  [Erstellen Sie eine Gerätesammlung](../clients/manage/collections/create-collections.md), die die Computer in der Servergruppe enthält.  
 
 2.  Klicken Sie im Arbeitsbereich **Bestand und Kompatibilität** auf **Gerätesammlungen**, klicken Sie mit der rechten Maustaste auf die Sammlung mit den Computern in der Servergruppe, und klicken Sie anschließend auf **Eigenschaften**.  
 
@@ -325,9 +325,9 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
 #### <a name="to-deploy-software-updates-to-the-server-group-and-monitor-status"></a>Bereitstellen von Softwareupdates für die Servergruppe und Überwachen des Status  
 
-1.  [Bereitstellen von Softwareupdates](https://technet.microsoft.com/library/gg712304.aspx) für die Servergruppensammlung.  
+1.  [Bereitstellen von Softwareupdates](../../sum/deploy-use/deploy-software-updates.md) für die Servergruppensammlung.  
 
-2.  [Überwachen der Softwareupdatebereitstellung](https://technet.microsoft.com/library/gg712304.aspx). Zusätzlich zu den standardmäßigen Überwachungsansichten für die Bereitstellung von Softwareupdates wird eine neue Statusbeschreibung angezeigt, wenn ein Client darauf wartet, die Softwareupdates zu installieren. Für den neuen Status wird **Auf die Sperre warten** angezeigt.  
+2.  [Überwachen der Softwareupdatebereitstellung](../../sum/deploy-use/monitor-software-updates.md). Zusätzlich zu den standardmäßigen Überwachungsansichten für die Bereitstellung von Softwareupdates wird eine neue Statusbeschreibung angezeigt, wenn ein Client darauf wartet, die Softwareupdates zu installieren. Für den neuen Status wird **Auf die Sperre warten** angezeigt.  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>So löschen Sie die Bereitstellungssperren für Computer in einer Servergruppe  
 
