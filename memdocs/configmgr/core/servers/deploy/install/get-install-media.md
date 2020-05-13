@@ -10,12 +10,12 @@ ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5d59e165f2bb20ad6851f7d52c94d39e1ec9e4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb9bfc252c82e477359a4c14cbe92a6dc11257bd
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700808"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906510"
 ---
 # <a name="where-to-get-installation-media-for-configuration-manager"></a>Informationen zu Bezugsquellen für Installationsmedien für Configuration Manager
 
@@ -25,6 +25,6 @@ Wenn Sie über Volumenlizenzen für Configuration Manager mit Software Assurance
 
 Wenn Sie über eine Configuration Manager-Lizenz von EMS, Microsoft 365 oder einem Cloud Solution Provider (CSP) verfügen, lesen Sie [Häufig gestellte Fragen zum Produkt und zur Lizenzierung](../../../understand/product-and-licensing-faq.md#bkmk_csp).
 
-Wenn Sie Volumenlizenzen für Configuration Manager erwerben möchten, wenden Sie sich an Ihren bevorzugten Microsoft-Händler, oder prüfen Sie die Informationen unter [Lizenzerwerb über Volumenlizenzprogramme](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). Sie können auch Medien von der [TechNet Evaluation Center]( https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)-Website herunterladen, um eine Evaluierungsversion von Configuration Manager zu installieren.
+Wenn Sie Volumenlizenzen für Configuration Manager erwerben möchten, wenden Sie sich an Ihren bevorzugten Microsoft-Händler, oder prüfen Sie die Informationen unter [Lizenzerwerb über Volumenlizenzprogramme](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). Sie können auch Medien von der [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)-Website herunterladen, um eine Evaluierungsversion von Configuration Manager zu installieren.
 
 Weitere Informationen zu Baselinemedien für Configuration Manager finden Sie unter [Baseline- und Updateversionen](../../manage/updates.md#bkmk_Baselines).

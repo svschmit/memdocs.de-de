@@ -10,12 +10,12 @@ ms.assetid: e67c691e-62ef-4f43-9cfb-0e957d1e7a5f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a20ee62fefd401e56abbf86beed0c4685b19ea39
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f63c52fcd2aaccbfbe04160581318126bc53db12
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689738"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643132"
 ---
 # <a name="create-application-groups"></a>Erstellen von Anwendungsgruppen
 
@@ -66,3 +66,4 @@ Um Probleme bei der Bereitstellung einer App-Gruppe zu behandeln, verwenden Sie 
 - Nehmen Sie keine Apps in die Gruppe auf, die einen Neustart erfordern, da sonst bei der Gruppenbereitstellung Fehler auftreten können.
 - *Version 1906*: Sie können die App-Gruppe nicht für eine Benutzersammlung bereitstellen.
 - *Version 1906*: Benutzer können die App-Gruppe im Softwarecenter nicht **deinstallieren**.
+- Wenn Sie eine App löschen, die Teil einer App-Gruppe ist, wird beim nächsten Anzeigen der Eigenschaften der App-Gruppe die folgende Warnung eingeblendet: „Nicht zu allen Anwendungen in der Gruppe können Informationen geladen werden.“ Nehmen Sie eine einfache Änderung an der App-Gruppe vor, und speichern Sie sie. Fügen Sie z. B. in **Administratorkommentare** ein Leerzeichen hinzu. Wenn Sie die Änderung speichern, wird die gelöschte App aus der Gruppe entfernt.<!-- 7099542 -->

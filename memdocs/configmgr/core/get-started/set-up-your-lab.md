@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a23f6106a8c922b3ff4e8306fb76aec4fd26b148
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 216c61a671d7d06e434fa399bb3bae12e12f7275
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691408"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905163"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Einrichten eines Configuration Manager-Labs
 
@@ -31,9 +31,9 @@ Gemäß der Anleitung in diesem Thema können Sie eine Laborumgebung einrichten,
 
 -   **Für die Laborumgebung wird das Betriebssystem Windows Server 2012 R2 verwendet**, unter dem Configuration Manager installiert wird.  
 
-     Sie können eine Evaluierungsversion von Windows Server 2012 R2 aus dem [TechNet Evaluierungscenter](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012) herunterladen.  
+     Sie können eine Evaluierungsversion von Windows Server 2012 R2 aus dem [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012) herunterladen.  
 
-     Ändern oder deaktivieren Sie ggf. „Verstärkte Sicherheitskonfiguration für Internet Explorer“, um einfacher auf einige der Downloads zuzugreifen, auf die in diesen Übungen Bezug genommen wird. Weitere Informationen finden Sie unter [Internet Explorer: Enhanced Security Configuration](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) (Konfiguration für erhöhte Sicherheit von Internet Explorer).  
+     Ändern oder deaktivieren Sie ggf. „Verstärkte Sicherheitskonfiguration für Internet Explorer“, um einfacher auf einige der Downloads zuzugreifen, auf die in diesen Übungen Bezug genommen wird. Weitere Informationen finden Sie unter [Verstärkte Sicherheitskonfiguration für Internet Explorer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
 -   **Die Laborumgebung verwendet SQL Server 2012 SP2** für die Standortdatenbank.  
 
@@ -45,7 +45,7 @@ Gemäß der Anleitung in diesem Thema können Sie eine Laborumgebung einrichten,
 
     -   **SQL_Latin1_General_CP1_CI_AS** als **SQL Collation** -Klasse.  
 
-    -   **Windows-Authentifizierung**[statt SQL-Authentifizierung](https://technet.microsoft.com/library/ms144284.aspx) is required.  
+    -   **Windows-Authentifizierung**[statt SQL-Authentifizierung](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15) is required.  
 
     -   Eine dedizierte **SQL Server-Instanz** ist erforderlich.  
 
@@ -61,11 +61,11 @@ Gemäß der Anleitung in diesem Thema können Sie eine Laborumgebung einrichten,
 
 -   **Der Domänencontroller verwendet Windows Server 2008 R2**, wobei Active Directory Domain Services installiert ist. Der Domänencontroller fungiert auch als Host für den DHCP- und den DNS-Server zur Verwendung mit einem vollqualifzierten Domänennamen.  
 
-     Weitere Informationen finden Sie in dieser [Übersicht von Active Directory Domain Services](https://technet.microsoft.com/library/hh831484).  
+     Weitere Informationen finden Sie in der [Übersicht über Active Directory Domain Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)).  
 
 -   **Hyper-V wird mit einigen virtuellen Computern verwendet**, um zu überprüfen, ob die in diesen Übungen ergriffenen Verwaltungsschritte wie erwartet funktionieren. Mindestens drei virtuelle Computer unter Windows 10 werden empfohlen.  
 
-     Weitere Informationen finden Sie in dieser [Übersicht über Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).  
+     Weitere Informationen finden Sie in der [Übersicht über Hyper-V](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).  
 
 -   **Administratorberechtigungen** sind für all diese Komponenten erforderlich.  
 
@@ -95,7 +95,7 @@ Nachdem Sie alle Komponenten installiert haben, müssen Sie weitere Schritte dur
 Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients die Abfrage von Standortressourcen von Active Directory Domain Services zu ermöglichen, werden in den nachfolgenden Verfahren behandelt.  
 
 ##  <a name="create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> Erstellen des System Management-Containers  
- Der in Active Directory Domain Services erforderliche System Management-Container wird von Configuration Manager nicht automatisch erstellt, wenn das Schema erweitert wird. Daher müssen Sie ihn für diese Laborumgebung erstellen. Dieser Schritt erfordert die [Installation von ADSI Edit](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit).  
+ Der in Active Directory Domain Services erforderliche System Management-Container wird von Configuration Manager nicht automatisch erstellt, wenn das Schema erweitert wird. Daher müssen Sie ihn für diese Laborumgebung erstellen. Dieser Schritt erfordert die [Installation des ADSI-Editors](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 
  Stellen Sie sicher, dass Sie mit einem Konto angemeldet sind, das im Container **System** in den Active Directory-Domänendiensten über die Rechte **Alle untergeordneten Objekte erstellen** verfügt.  
 
@@ -129,7 +129,7 @@ Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients 
 
 5.  Klicken Sie auf **OK** , um die **ADSI Edit** -Konsole zu schließen und den Vorgang abzuschließen.  
 
-     Zusätzliche Einblicke in dieses Verfahren erhalten Sie unter [Erweitern des Active Directory-Schemas für Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
+     Weitere Informationen finden Sie unter [Erweitern des Active Directory-Schemas für Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
 ##  <a name="extend-the-active-directory-schema-using-extadschexe"></a><a name="BKMK_ExtADSchLab"></a> Erweitern des Active Directory-Schemas mithilfe von "extadsch.exe"  
  Für diese Laborumgebung erweitern Sie das Active Directory-Schema, da Sie dadurch alle Configuration Manager-Features und -Funktionen mit geringstem Verwaltungsaufwand verwenden können. Die Erweiterung des Active Directory-Schemas ist eine gesamtstrukturübergreifende Konfiguration, die pro Gesamtstruktur nur einmal ausgeführt werden kann. Durch die Erweiterung des Schemas wird die Gruppe von Klassen und Attributen in der Active Directory-Basiskonfiguration dauerhaft geändert. Diese Aktion kann nicht rückgängig gemacht werden. Durch die Erweiterung des Schemas erhält Configuration Manager Zugriff auf Komponenten, die seine möglichst effiziente Ausführung in der Laborumgebung ermöglichen.  
@@ -139,7 +139,7 @@ Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients 
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>So erweitern Sie das Active Directory-Schema mithilfe von "extadsch.exe"  
 
-1.  Erstellen Sie eine Sicherung des Systemzustands für den Schemamaster-Domänencontroller. Weitere Informationen zum Sichern der Masterdomänencontroller finden Sie unter [Windows Server-Sicherung](https://technet.microsoft.com/library/cc770757.aspx).  
+1.  Erstellen Sie eine Sicherung des Systemzustands für den Schemamaster-Domänencontroller. Weitere Informationen zum Sichern der Masterdomänencontroller finden Sie unter [Windows Server-Sicherung](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11)).  
 
 2.  Navigieren Sie zu **\SMSSETUP\BIN\X64** auf den Installationsmedien.  
 
@@ -147,7 +147,7 @@ Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients 
 
 4.  Überprüfen Sie in **extadsch.log** im Stammordner des Systemlaufwerks, ob die Schemaerweiterung erfolgreich durchgeführt wurde.  
 
-     Zusätzliche Einblicke in dieses Verfahren erhalten Sie unter [Erweitern des Active Directory-Schemas für Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
+     Weitere Informationen finden Sie unter [Erweitern des Active Directory-Schemas für Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
 ##  <a name="other-required-tasks"></a><a name="BKMK_OtherTasksLab"></a> Weitere erforderliche Aufgaben  
  Vor der Installation müssen Sie folgende Aufgaben abschließen.  
@@ -158,7 +158,7 @@ Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients 
 
  **Installieren von .NET und Aktivieren von Windows Communication Foundation (WCF)**  
 
- Sie müssen zwei .NET Framework-Versionen installieren: zuerst .NET 3.5.1 und anschließend .NET 4.5.2+. Außerdem müssen Sie Windows Communication Foundation (WCF) aktivieren. WCF bietet einfachen Zugang zu verteilter Datenverarbeitung, umfassender Interoperabilität und direkte Unterstützung für die dienstorientierte Entwicklung. Zudem vereinfacht sie die Entwicklung vernetzter Anwendungen über ein dienstorientiertes Programmiermodell. Weitere Einblicke in WCF erhalten Sie unter [Was ist die Windows Communication Foundation?](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx)  
+ Sie müssen zwei .NET Framework-Versionen installieren: zuerst .NET 3.5.1 und anschließend .NET 4.5.2+. Außerdem müssen Sie Windows Communication Foundation (WCF) aktivieren. WCF bietet einfachen Zugang zu verteilter Datenverarbeitung, umfassender Interoperabilität und direkte Unterstützung für die dienstorientierte Entwicklung. Zudem vereinfacht sie die Entwicklung vernetzter Anwendungen über ein dienstorientiertes Programmiermodell. Weitere Informationen finden Sie unter [Was ist die Windows Communication Foundation?](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90)).
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>So installieren Sie .NET und aktivieren Windows Communication Foundation (WCF)  
 
@@ -198,27 +198,15 @@ Die nächsten Schritte, die erforderlich sind, um Configuration Manager-Clients 
 
 10. Nach Abschluss der .NET-Standardinstallation navigieren Sie zum [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=42643) , um den Webinstaller für .NET Framework 4.5.2 abzurufen. Klicken Sie auf die Schaltfläche **Herunterladen** , und starten Sie das Installationsprogramm mit **Ausführen** . Die erforderlichen Komponenten werden automatisch erkannt und in der ausgewählten Sprache installiert.  
 
-Die folgenden Artikel enthalten weitere Informationen darüber, warum diese .NET Framework-Versionen erforderlich sind:  
-
--   [.NET Framework – Versionen und Abhängigkeiten](https://technet.microsoft.com/library/bb822049.aspx)  
-
--   [Exemplarische Vorgehensweise zur .NET Framework 4 RTM-Anwendungskompatibilität](https://technet.microsoft.com/library/dd889541.aspx)  
-
--   [How to: Upgrade an ASP.NET Web Application to ASP.NET 4 (Vorgehensweise: Aktualisieren einer ASP.NET-Webanwendung auf ASP.NET 4)](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
-
--   [Microsoft .NET Framework Support Lifecycle-Richtlinien – häufig gestellte Fragen](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
-
--   [CLR Inside Out – In-Process Side-by-Side](https://msdn.microsoft.com/magazine/ee819091.aspx)  
-
 **Aktivieren von BITS, IIS und RDC**  
 
-Der [Background Intelligent Transfer Service (BITS)](https://technet.microsoft.com/library/dn282296.aspx) wird für Anwendungen verwendet, die Dateien asynchron zwischen einem Client und einem Server übertragen müssen. Durch Messung des Übertragungsflusses im Vorder- und Hintergrund gewährleistet BITS die Reaktionsfähigkeit anderer Netzwerkanwendungen. Dateiübertragungen werden zudem automatisch fortgesetzt, wenn eine Übertragungssitzung unterbrochen wurde.  
+Der [Background Intelligent Transfer Service (BITS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) wird für Anwendungen verwendet, die Dateien asynchron zwischen einem Client und einem Server übertragen müssen. Durch Messung des Übertragungsflusses im Vorder- und Hintergrund gewährleistet BITS die Reaktionsfähigkeit anderer Netzwerkanwendungen. Dateiübertragungen werden zudem automatisch fortgesetzt, wenn eine Übertragungssitzung unterbrochen wurde.  
 
 Sie installieren BITS für diese Laborumgebung, weil dieser Standortserver zusätzlich als Verwaltungspunkt verwendet wird.  
 
 Internetinformationsdienste (Internet Information Services, IIS) ist ein flexibler, skalierbarer Webserver, der zum Hosten verschiedener Komponenten im Web verwendet werden kann. Der Dienst wird von Configuration Manager für eine Reihe von Standortsystemrollen eingesetzt. Weitere Informationen zu IIS finden Sie unter [Websites für Standortsystemserver](../../core/plan-design/network/websites-for-site-system-servers.md).  
 
-[Remotedifferenzialkomprimierung (Remote Differential Compression, (RDC)](https://technet.microsoft.com/library/cc754372.aspx) ist eine Sammlung von APIs, über die Clientanwendungen feststellen können, ob ein Satz von Dateien geändert wurde. RDC ermöglicht der Anwendung, nur die geänderten Dateibereiche zu replizieren, und beschränkt den Netzwerkdatenverkehr dadurch auf ein Minimum.  
+[Remotedifferenzialkomprimierung (Remote Differential Compression, (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) ist eine Sammlung von APIs, über die Clientanwendungen feststellen können, ob ein Satz von Dateien geändert wurde. RDC ermöglicht der Anwendung, nur die geänderten Dateibereiche zu replizieren, und beschränkt den Netzwerkdatenverkehr dadurch auf ein Minimum.  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>So aktivieren Sie BITS-, IIS- und RDC-Standortserverrollen  
 

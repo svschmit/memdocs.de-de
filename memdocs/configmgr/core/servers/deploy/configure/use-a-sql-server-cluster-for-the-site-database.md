@@ -2,7 +2,7 @@
 title: SQL Server-Cluster
 titleSuffix: Configuration Manager
 description: Hosten der Standortdatenbank von Configuration Manager mit einem SQL Server-Cluster
-ms.date: 03/06/2019
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e731ef2d133c2187eb9eaa98c07afeed37645fa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d035e6fbd776a03ce38a4cd0fc12755100b60c91
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700848"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643249"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Hosten der Standortdatenbank mit einem SQL Server-Cluster
 
@@ -62,9 +62,12 @@ Beachten Sie die folgenden Voraussetzungen:
 
 - Aktivieren Sie zur Unterstützung der Kerberos-Authentifizierung das **TCP/IP**-Netzwerkkommunikationsprotokoll für die Netzwerkverbindung jedes SQL Server-Clusterknotens. Das **Named Pipes**-Protokoll ist nicht erforderlich, kann jedoch zur Behandlung von Problemen bei der Kerberos-Authentifizierung verwendet werden. Die Netzwerkprotokolleinstellungen werden im **SQL Server-Konfigurations-Manager** unter **SQL Server-Netzwerkkonfiguration** konfiguriert.  
 
-- Wenn Sie eine Public Key-Infrastruktur (PKI) verwenden, lesen Sie [PKI-Zertifikatanforderungen](../../../plan-design/network/pki-certificate-requirements.md). Es gelten bestimmte Zertifikatanforderungen, wenn Sie einen SQL Server-Cluster für die Standortdatenbank verwenden.  
+- Es gelten bestimmte Zertifikatanforderungen, wenn Sie einen SQL Server-Cluster für die Standortdatenbank verwenden. Weitere Informationen finden Sie in den folgenden Artikeln:
+  - [Installieren eines Zertifikats in einer SQL-Failoverclusterkonfiguration](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [PKI-Zertifikatanforderungen für Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
-
+  > [!NOTE]
+  > Wenn Sie ein Zertifikat in SQL nicht vorab bereitstellen, wird von Configuration Manager ein selbst signiertes Zertifikat für SQL erstellt und bereitgestellt.<!-- 7099499 -->
 
 ## <a name="limitations"></a>Einschränkungen
 

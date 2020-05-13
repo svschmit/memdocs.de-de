@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e486ddd8652529000c6ec02266f677e45669111
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cc679ec7e73e9d43902ad70e09fb2a01c95eed65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708998"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906882"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Anpassen von Startimages mit Configuration Manager
 
@@ -49,11 +49,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
 
 - **WinPE-WDS-Tools:** Hiermit werden die Windows-Bereitstellungsdienste installiert.  
 
-  Es gibt noch weitere Windows PE-Pakete, die Sie hinzufügen können. Die folgenden Ressourcen bieten weitere Informationen zu optionalen Komponenten, die Sie dem Startabbild hinzufügen können.  
-
-- Informationen zu Windows PE 5 finden Sie unter [WinPE: Hinzufügen von Paketen (Referenz zu optionalen Komponenten)](https://msdn.microsoft.com/library/windows/hardware/dn938382\(v=vs.85\).aspx).  
-
-- Zu Windows PE 3.1 finden Sie Informationen im Thema [Add a Package to a Windows PE Image (Hinzufügen eines Pakets zu einem Windows PE-Abbild)](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) in der Windows 7-TechNet-Dokumentationsbibliothek.  
+  Es gibt noch weitere Windows PE-Pakete, die Sie hinzufügen können. Weitere Informationen zu den optionalen Komponenten, die Sie dem Startabbild hinzufügen können, finden Sie unter [WinPE: Hinzufügen von Paketen (Referenz zu optionalen Komponenten)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >Wenn Sie von einem benutzerdefinierten Startimage mit von Ihnen hinzugefügten Tools aus in WinPE starten, können Sie eine Eingabeaufforderung von WinPE aus öffnen und den Dateinamen eines Tools eingeben, um es auszuführen. Der Speicherort dieser Tools wird automatisch der Pfadvariable hinzugefügt. Die Befehlszeile kann nur hinzugefügt werden, wenn die Einstellung **Befehlsunterstützung aktivieren (nur Test)** auf der Registerkarte **Anpassung** der Startimageeigenschaften aktiviert wird.
@@ -76,7 +72,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
     Hierbei ist C:\WinPEWAIK der Ordner, in dem das Startabbild enthalten ist, und C:\WinPEMount der bereitgestellte Ordner.  
 
    > [!NOTE]
-   >  Weitere Informationen zu DISM finden Sie im Thema [DISM - Deployment Image Servicing and Management Technical Reference (Technische Referenz zur Abbildverwaltung für die Bereitstellung - DISM)](https://technet.microsoft.com/library/hh824821.aspx) in der Windows 8.1- und Windows 8-TechNet-Dokumentationsbibliothek.
+   >  Weitere Informationen finden Sie in der [Referenz zu DISM (Deployment Image Servicing and Management)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Nach dem Bereitstellen des Startabbilds fügen Sie diesem mit DISM optionale Komponenten hinzu. In Windows PE 5 befinden sich die optionalen 64-Bit-Komponenten im Verzeichnis „<*Installationspfad*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs“.  
 
@@ -112,7 +108,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Weitere Informationen zu den optionalen Komponenten, die Sie dem Startabbild hinzufügen können, finden Sie im Thema [Windows PE Optional Components Reference (Referenz zu optionalen Komponenten in Windows PE)](https://technet.microsoft.com/library/hh824926.aspx) in der Windows 8.1- und Windows 8-TechNet-Dokumentationsbibliothek.  
+   >  Weitere Informationen zu den optionalen Komponenten, die Sie dem Startabbild hinzufügen können, finden Sie in der [Referenz zu optionalen Komponenten in Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Fügen Sie mithilfe von DISM erforderlichenfalls bestimmte Treiber zum Startabbild hinzu. Geben Sie Folgendes ein, um Treiber zum Startabbild hinzuzufügen:  
 
@@ -198,7 +194,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
     Hierbei ist C:\WinPEWAIK der Ordner, in dem das Startabbild enthalten ist, und C:\WinPEMount der bereitgestellte Ordner.  
 
    > [!NOTE]
-   >  Weitere Informationen zu DISM finden Sie im Thema [Technische Referenz zur Imageverwaltung für die Bereitstellung](https://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) in der TechNet-Dokumentationsbibliothek für Windows 7.  
+   > Weitere Informationen finden Sie in der [Referenz zu DISM (Deployment Image Servicing and Management)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Nach dem Bereitstellen des Startabbilds fügen Sie diesem mit DISM optionale Komponenten hinzu. In Windows PE 3.1 beispielsweise befinden sich die optionalen Komponenten im Verzeichnis „<*Installationspfad*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\“.  
 
@@ -228,7 +224,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Weitere Informationen zu den verschiedenen Paketen, die Sie dem Startimage hinzufügen können, finden Sie im Thema [Hinzufügen eines Pakets zu einem Windows PE-Image](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) in der TechNet-Dokumentationsbibliothek für Windows 7.  
+   >  Weitere Informationen zu den verschiedenen Paketen, die Sie dem Startabbild hinzufügen können, finden Sie unter [Hinzufügen eines Pakets zu einem Windows PE-Abbild](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Fügen Sie mithilfe von DISM erforderlichenfalls bestimmte Treiber zum Startabbild hinzu. Geben Sie Folgendes ein, um Treiber zum Startabbild hinzuzufügen:  
 

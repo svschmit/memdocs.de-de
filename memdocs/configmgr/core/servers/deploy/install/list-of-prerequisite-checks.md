@@ -2,7 +2,7 @@
 title: Voraussetzungsprüfungen
 titleSuffix: Configuration Manager
 description: Referenz zu einzelnen Voraussetzungsprüfungen für Updates von Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d8fc9abfc9fc09bc3011a3fee30b258023d04c8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700738"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943789"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Liste mit Voraussetzungsprüfungen für Configuration Manager
 
@@ -771,9 +771,9 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 Wenn Sie einen neuen Standort installieren, installiert Configuration Manager automatisch SQL Server Native Client als weitervertreibbare Komponente. Nach der Installation des Standorts führt Configuration Manager kein Upgrade für den SQL Server Native Client durch. Für eine Aktualisierung des SQL Server Native Clients ist möglicherweise ein Neustart erforderlich, der Auswirkungen auf den Standortinstallationsvorgang haben kann.
 
-Diese Überprüfung stellt sicher, dass der Standort über eine unterstützte Version von SQL Native Client verfügt. Ab Version 1810 ist die mindestens erforderliche Version SQL 2012 SP4 (`11.*.7001.0`).
+Diese Überprüfung stellt sicher, dass der Standortserver über eine unterstützte Version von SQL Native Client verfügt. Bei der Voraussetzungsprüfung wird die Version von SQL Native Client auf Remotestandortsystemen nicht überprüft.
 
-Diese SQL Native Client-Version unterstützt TLS 1.2. Weitere Informationen finden Sie in den folgenden Artikeln:
+Die Mindestversion ist SQL 2012 SP4 (`11.*.7001.0`). Diese SQL Native Client-Version unterstützt TLS 1.2. Weitere Informationen finden Sie in den folgenden Artikeln:
 
 - [Unterstützung für Microsoft SQL Server TLS 1.2 ](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 

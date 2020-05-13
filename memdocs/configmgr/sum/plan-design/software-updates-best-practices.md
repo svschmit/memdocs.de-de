@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: dc0d416fdd186dbbeb4c61d48b688072bb830485
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb9a675970abb581a793208c73506e1e94cc6f63
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708708"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906689"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Bewährte Methoden für Softwareupdates in Configuration Manager
 
@@ -39,9 +39,9 @@ Wenn Sie an einem primären Standort mehrere Softwareupdatepunkte installieren, 
 
 Weitere Informationen zur Freigabe der WSUS-Datenbank finden Sie, in englischer Sprache, in den folgenden Blogbeiträgen:  
 
-- [How to implement a shared SUSDB for Configuration Manager software update points (Implementieren einer freigegebenen SUSDB für Configuration Manager-Softwareupdatepunkte)](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/How-to-implement-a-shared-SUSDB-for-Configuration-Manager/ba-p/274103)  
+- [How to implement a shared SUSDB for Configuration Manager software update points](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/How-to-implement-a-shared-SUSDB-for-Configuration-Manager/ba-p/274103) (Implementieren einer freigegebenen SUSDB für Configuration Manager-Softwareupdatepunkte)  
 
-- [Considerations for multiple WSUS instances sharing a content database when using System Center Configuration Manager](https://blogs.technet.microsoft.com/wsus/2014/03/22/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb/) (Überlegungen zu mehreren WSUS-Instanzen, die bei der Verwendung von Configuration Manager eine Inhaltsdatenbank gemeinsam nutzen)  
+- [Considerations for multiple WSUS instances sharing a content database when using System Center Configuration Manager](https://docs.microsoft.com/archive/blogs/wsus/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb) (Überlegungen zu mehreren WSUS-Instanzen, die bei der Verwendung von Configuration Manager eine Inhaltsdatenbank gemeinsam nutzen)
 
 
 ### <a name="when-configuration-manager-and-wsus-use-the-same-sql-server-configure-one-to-use-a-named-instance-and-the-other-to-use-the-default-instance"></a><a name="bkmk_sql-instance"></a> Konfigurieren eines der Systeme für die Verwendung einer benannten Instanz und das andere für die Verwendung der Standardinstanz, wenn SQL Server sowohl von Configuration Manager als auch von WSUS verwendet wird  

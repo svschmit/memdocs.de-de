@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 926d1483739b85f787ebc9e2a992ea7ed39633c2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 460c9dd503861ba9f45e85f471bb1cb1274754a0
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706188"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782115"
 ---
 # <a name="plan-for-bitlocker-management"></a>Plan für die BitLocker-Verwaltung
 
@@ -96,7 +96,7 @@ Ermöglichen Sie es Benutzern, ein mit BitLocker verschlüsseltes Gerät mit ein
 
 - Das Benutzerkonto zur Ausführung des Portalinstallationsskripts benötigt auf dem Standortdatenbankserver **sysadmin**-Rechte für SQL. Während des Setupvorgangs legt das Skript die Anmeldung, den Benutzer und die SQL-Rollenberechtigungen für das Computerkonto des Webservers fest. Sie können dieses Benutzerkonto aus der Rolle „sysadmin“ entfernen, nachdem Sie das Setup für das Self-Service-Portal und die Verwaltungs- und Überwachungswebsite abgeschlossen haben.
 
-- Die BitLocker-Verwaltung wird nicht auf virtuellen Computern (VMs) unterstützt. Aus diesem Grund funktionieren einige Features möglicherweise nicht wie erwartet auf virtuellen Computern. Beispielsweise startet die BitLocker-Verwaltung die Verschlüsselung auf festen Laufwerken von virtuellen Computern nicht. Zusätzliche feste Laufwerke in virtuellen Computern können sich als konform erweisen, obwohl sie nicht verschlüsselt sind.
+- Die BitLocker-Verwaltung wird auf virtuellen Computern (VMs) oder Serverbetriebssystemen nicht unterstützt. Aus diesem Grund funktionieren einige Features auf virtuellen Computern oder Serverbetriebssystemen möglicherweise nicht wie erwartet. Beispielsweise startet die BitLocker-Verwaltung auf virtuellen Computern die Verschlüsselung nicht auf festen Laufwerken der virtuellen Computer. Zudem können sich feste Laufwerke in virtuellen Computern als konform erweisen, obwohl sie nicht verschlüsselt sind.
 
 > [!TIP]
 > Der Tasksequenzschritt **BitLocker aktivieren** verschlüsselt standardmäßig nur den *verwendeten Speicherplatz* auf dem Laufwerk. Die BitLocker-Verwaltung verwendet die *vollständige* Datenträgerverschlüsselung. Konfigurieren Sie diesen Tasksequenzschritt, um die Option **Vollständige Datenträgerverschlüsselung verwenden** zu aktivieren. Weitere Informationen finden Sie unter [Tasksequenzschritte – Aktivieren von BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).

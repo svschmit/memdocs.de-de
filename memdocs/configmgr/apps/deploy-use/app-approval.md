@@ -2,7 +2,7 @@
 title: Genehmigen von Anwendungen
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über die Einstellungen und Verhalten für die Genehmigung von Anwendungen in Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37c556aeda37d037fa57fdd1a6be2ab0e751194a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689758"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802054"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Genehmigen von Anwendungen in Configuration Manager
 
@@ -45,10 +45,7 @@ Wenn eine Anforderung nicht innerhalb von 30 Tagen genehmigt wird, wird sie entf
 
 Wenn Sie eine Genehmigung für die Bereitstellung in einer Gerätesammlung benötigen, wird die Anwendung nicht im Softwarecenter angezeigt. Wenn Sie eine Genehmigung für die Bereitstellung in einer Benutzersammlung benötigen, wird die Anwendung im Softwarecenter angezeigt. Sie können sie mit der Clienteinstellung **Nicht genehmigte Anwendungen im Softwarecenter ausblenden** weiterhin vor Benutzern ausblenden. Weitere Informationen finden Sie unter [Softwarecenter-Clienteinstellungen](../../core/clients/deploy/about-client-settings.md#software-center).
 
-Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie die Anforderung in der Configuration Manager-Konsole **verweigern**. Diese Aktion bewirkt nicht, dass der Client die Anwendung auf Geräten deinstalliert. Benutzer werden daran gehindert, neue Kopien der Anwendung aus dem Softwarecenter zu installieren.  
-
-> [!Important]  
-> Ab Version 1806 *ändert sich das Verhalten*, sobald Sie die Genehmigung für eine Anwendung widerrufen, die zuvor genehmigt und installiert wurde. Wenn Sie die Anforderung der Anwendung **ablehnen**, deinstalliert der Client nun die Anwendung vom Gerät des Benutzers.<!--1357891-->  
+Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie die Anforderung in der Configuration Manager-Konsole **verweigern**. Wenn Benutzer die Anwendung noch nicht installiert haben, werden sie durch diese Aktion daran gehindert, neue Kopien der Anwendung aus dem Software Center zu installieren. Wenn eine Anwendung zuvor genehmigt und installiert wurde und Sie die Anforderung der Anwendung **ablehnen**, deinstalliert der Client die Anwendung vom Gerät des Benutzers.<!--1357891-->
 
 Ab Version 1906: Wenn Sie eine App-Anforderung in der Konsole genehmigen und dann ablehnen, können Sie sie erneut genehmigen. Die App wird auf dem Client erneut installiert, nachdem Sie sie genehmigt haben.  <!-- 4224910 -->
 
@@ -90,19 +87,17 @@ Genehmigungsanforderungen für Anwendungen werden im Arbeitsbereich **Softwarebi
 
 Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie die Anforderung in der Configuration Manager-Konsole **verweigern**. Diese Aktion bewirkt nicht, dass der Client die Anwendung auf Geräten deinstalliert. Benutzer werden daran gehindert, neue Kopien der Anwendung aus dem Softwarecenter zu installieren.  
 
-
 ## <a name="email-notifications"></a><a name="bkmk_email-approve"></a> E-Mail-Benachrichtigungen
 
 <!--1321550-->
 
-Ab Version 1810 können Sie E-Mail-Benachrichtigungen für Anforderungen zur Genehmigung von Anwendungen konfigurieren. Wenn ein Benutzer eine Anwendung anfordert, erhalten Sie eine E-Mail. Klicken Sie auf die Links in der E-Mail, um die Anforderung ohne die Configuration Manager-Konsole zu genehmigen oder abzulehnen.
+Sie können E-Mail-Benachrichtigungen zum Genehmigen von Anwendungsanforderungen konfigurieren. Wenn ein Benutzer eine Anwendung anfordert, erhalten Sie eine E-Mail. Klicken Sie auf die Links in der E-Mail, um die Anforderung ohne die Configuration Manager-Konsole zu genehmigen oder abzulehnen.
 
 Beim Erstellen einer neuen Bereitstellung für die Anwendung können Sie die E-Mail-Adressen der Benutzer definieren, die die Anforderung genehmigen oder verweigern können. Wenn Sie die Liste der E-Mail-Adressen im Nachhinein bearbeiten müssen, rufen Sie den Arbeitsbereich **Überwachung** auf, erweitern Sie **Warnungen**, und wählen Sie dann den Knoten **Abonnements** aus. Klicken Sie über eines der **Anwendung per E-Mail genehmigen**-Abonnements, das mit Ihrer Anwendungsbereitstellung verknüpft ist, auf **Eigenschaften**.
 
 Wenn mehr als eine Warnung angezeigt wird, können Sie bestimmen, welche Warnung mit welcher Bereitstellung einhergeht. Öffnen Sie die Eigenschaften der Warnung, und zeigen Sie die Liste der **ausgewählten Warnungen** auf der Registerkarte „Allgemein“ an. Die Bereitstellung wird für dieses Abonnement als Warnung aktiviert.
 
 Benutzer können einen Kommentar an die Anforderung im Softwarecenter anfügen. Dieser Kommentar wird in der Anwendungsanforderung in der Configuration Manager-Konsole angezeigt. Ab Version 1902 wird dieser Kommentar auch in der E-Mail angezeigt. Die Aufnahme dieses Kommentars unterstützt die genehmigenden Personen bei der Entscheidungsfindung, ob die Anforderung zu genehmigen oder abzulehnen ist.<!--3594063-->
-
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -114,14 +109,20 @@ Durch diese Voraussetzungen erhalten Empfänger eine E-Mail mit einer Benachrich
 
 - Konfigurieren Sie [E-Mail-Benachrichtigungen für Warnungen](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
 
-- Aktivieren Sie den SMS-Anbieter, um ein Zertifikat zu verwenden.<!--SCCMDocs-pr issue 3135--> Verwenden Sie eine der folgenden Optionen:  
+    > [!NOTE]
+    > Der Administrator, der die Anwendung bereitstellt, braucht die Berechtigung zum Erstellen einer Warnung und eines Abonnements. Wenn er nicht über diese Berechtigungen verfügt, wird am Ende des **Assistenten zum Bereitstellen von Software** ein Fehler angezeigt: „Sie besitzen nicht die erforderlichen Berechtigungen, um diesen Vorgang auszuführen.“<!-- 2810283 -->
 
-    - [Erweitertes HTTP](../../core/plan-design/hierarchy/enhanced-http.md) aktivieren (empfohlen)  
+- Aktivieren Sie den SMS-Anbieter am primären Standort, um ein Zertifikat zu verwenden.<!--SCCMDocs-pr issue 3135--> Verwenden Sie eine der folgenden Optionen:  
 
-        > [!Note]  
-        > Wenn der Standort ein Zertifikat für den SMS-Anbieter erstellt, wird dieses vom Webbrowser auf dem Client nicht als vertrauenswürdig eingestuft. Anhand Ihrer Sicherheitseinstellungen wird beim Antworten auf eine Anwendungsanforderung möglicherweise eine Sicherheitswarnung angezeigt.  
+  - (Empfohlen) Aktivieren Sie [Erweitertes HTTP](../../core/plan-design/hierarchy/enhanced-http.md) für den primären Standort.
 
-    - Binden Sie ein PKI-basiertes Zertifikat in IIS manuell an Port 443 auf dem Server ein, auf dem der SMS-Anbieterrolle gehostet wird.  
+    > [!Note]  
+    > Wenn der primäre Standort ein Zertifikat für den SMS-Anbieter erstellt, wird dieses vom Webbrowser auf dem Client nicht als vertrauenswürdig eingestuft. Anhand Ihrer Sicherheitseinstellungen wird beim Antworten auf eine Anwendungsanforderung möglicherweise eine Sicherheitswarnung angezeigt.  
+
+  - Binden Sie ein PKI-basiertes Zertifikat in IIS manuell an Port 443 auf dem Server, auf dem die SMS-Anbieterrolle am primären Standort gehostet wird.
+
+> [!NOTE]
+> Wenn sich mehrere untergeordnete primäre Standorte in einer Hierarchie befinden, konfigurieren Sie diese Voraussetzungen für jeden primären Standort, an dem Sie dieses Feature aktivieren möchten. Die Links in der E-Mail-Benachrichtigung gelten für den Verwaltungsdienst am primären Standort.<!-- 7108472 -->
 
 #### <a name="to-take-action-from-internet"></a>Ergreifen von Maßnahmen über das Internet
 
@@ -129,36 +130,35 @@ Durch diese optionalen, zusätzlichen Voraussetzungen können Empfänger die Anf
 
 - Aktivieren Sie den Verwaltungsdienst für den SMS-Anbieter über Cloud Management Gateway. Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**, erweitern Sie **Standortkonfiguration**, und wählen Sie den Knoten **Server und Standortsystemrollen** aus. Wählen Sie den Server mit der Rolle „SMS-Anbieter“ aus. Wählen Sie im Detailbereich die Rolle **SMS-Anbieter** aus, und klicken Sie dann im Menüband der Registerkarte „Standortrolle“ auf **Eigenschaften**. Aktivieren Sie die Option **Datenverkehr vom Configuration Manager-Cloudverwaltungsgateway für den Verwaltungsdienst zulassen**.  
 
-    - Für den SMS-Anbieter ist **.NET 4.5.2** oder höher erforderlich.  
+- Für den SMS-Anbieter ist **.NET 4.5.2** oder höher erforderlich.  
 
-- [Cloudverwaltungsgateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+- Richten Sie [Cloud Management Gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) ein.
 
-- Binden Sie den Standort in die [Azure-Dienste](../../core/servers/deploy/configure/azure-services-wizard.md) für die **Cloudverwaltung** ein.  
+- Binden Sie den Standort in die [Azure-Dienste](../../core/servers/deploy/configure/azure-services-wizard.md) für die **Cloudverwaltung** ein.
 
-    - Aktivieren Sie [Azure AD-Benutzerermittlung](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).  
+- Aktivieren Sie [Azure AD-Benutzerermittlung](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 
-    - Konfigurieren Sie die Einstellungen in Azure AD manuell:  
+- Konfigurieren Sie die Einstellungen in Azure AD manuell:  
 
-        1. Navigieren Sie zum [Azure-Portal](https://portal.azure.com) als Benutzer mit den Berechtigungen für *Globaler Administrator*. Wechseln Sie zu **Azure Active Directory**, und wählen Sie **App-Registrierungen** aus.  
+    1. Navigieren Sie zum [Azure-Portal](https://portal.azure.com) als Benutzer mit den Berechtigungen für *Globaler Administrator*. Wechseln Sie zu **Azure Active Directory**, und wählen Sie **App-Registrierungen** aus.  
 
-        2. Wählen Sie die Anwendung aus, die Sie für die **Cloud Management**-Integration für Configuration Manager erstellt haben.  
+    1. Wählen Sie die Anwendung aus, die Sie für die **Cloud Management**-Integration für Configuration Manager erstellt haben.  
 
-        3. Wählen Sie im Menü **Verwalten** die Option **Authentifizierung** aus.  
+    1. Wählen Sie im Menü **Verwalten** die Option **Authentifizierung** aus.  
 
-            1. Fügen Sie im Bereich **Umleitungs-URIs** den folgenden Pfad ein: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. Fügen Sie im Bereich **Umleitungs-URIs** den folgenden Pfad ein: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
-            2. Ersetzen Sie `<CMG FQDN>` durch den FQDN (vollqualifizierter Domänenname) Ihres CMG-Diensts (Cloud Management Gateway). Zum Beispiel: GraniteFalls.Contoso.com.  
+        1. Ersetzen Sie `<CMG FQDN>` durch den FQDN (vollqualifizierter Domänenname) Ihres CMG-Diensts (Cloud Management Gateway). Zum Beispiel: GraniteFalls.Contoso.com.  
 
-            3. Klicken Sie dann auf **Speichern**.  
+        1. Klicken Sie dann auf **Speichern**.  
 
-        4. Wählen Sie im Menü **Verwalten** die Option **Manifest** aus.  
+    1. Wählen Sie im Menü **Verwalten** die Option **Manifest** aus.  
 
-            1. Suchen Sie im Bereich „Manifest bearbeiten“ nach der Eigenschaft **oauth2AllowImplicitFlow**.  
+        1. Suchen Sie im Bereich „Manifest bearbeiten“ nach der Eigenschaft **oauth2AllowImplicitFlow**.  
 
-            2. Ändern Sie ihren Wert in **TRUE**. Die gesamte Zeile sollte wie die folgende Beispielzeile aussehen: `"oauth2AllowImplicitFlow": true,`  
+        1. Ändern Sie ihren Wert in **TRUE**. Die gesamte Zeile sollte wie die folgende Beispielzeile aussehen: `"oauth2AllowImplicitFlow": true,`  
 
-            3. Wählen Sie **Speichern** aus.  
-
+        1. Wählen Sie **Speichern** aus.  
 
 ### <a name="configure-email-approval"></a>Konfigurieren der E-Mail-Genehmigung
 
@@ -177,7 +177,6 @@ Durch diese optionalen, zusätzlichen Voraussetzungen können Empfänger die Anf
 > Der Link zum Genehmigen oder Ablehnen steht zur einmaligen Nutzung zur Verfügung. Nehmen Sie beispielsweise an, ein Gruppenalias wird für den Empfang von Benachrichtigungen konfiguriert. Meg genehmigt die Anforderung. Nun kann Bruce die Anforderung nicht ablehnen.  
 
 Überprüfen Sie zur Problembehandlung die Datei **NotiCtrl.log**, die sich auf dem Standortserver befindet.
-
 
 ## <a name="maintenance"></a>Wartung
 

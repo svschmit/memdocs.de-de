@@ -10,12 +10,12 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cc7eb1a8ba721545bdee50d45887ab9d3aa8e952
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d3f01e54ba196ee9c27295d8f970a7dbe352f63f
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704698"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906189"
 ---
 # <a name="custom-locations-for-configuration-manager-site-database-files"></a>Benutzerdefinierte Dateispeicherorte für Standortdatenbanken mit Configuration Manager
 
@@ -36,6 +36,6 @@ ms.locfileid: "81704698"
 
 -   Beenden Sie auf dem Configuration Manager-Standortserver den Dienst **SMS_Executive**.  
 
--   Verwenden Sie die Dokumentation für Ihre Version von SQL Server, in der Sie Anweisungen zum Verschieben einer Benutzerdatenbank finden. Wenn Sie beispielsweise SQL Server 2014 nutzen, lesen Sie [Verschieben von Benutzerdatenbanken](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) in TechNet.  
+-   Weitere Informationen zum Verschieben einer Benutzerdatenbank finden Sie unter [Verschieben von Benutzerdatenbanken](https://docs.microsoft.com/sql/relational-databases/databases/move-user-databases?view=sql-server-2014).  
 
 -   Starten Sie nach dem Verschieben der Datenbankdateien den Dienst **SMS_Executive** auf dem Configuration Manager-Standortserver neu.  

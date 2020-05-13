@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a1dcd3528f4dbaacec81837150d6f8a1ad6c455
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708958"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906915"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Anpassen von Betriebssystemimages mit Configuration Manager
 
@@ -95,7 +95,7 @@ Betriebssystemimages in Configuration Manager sind WIM-Dateien und stellen eine 
     > [!IMPORTANT]  
     >  Im Tasksequenzschritt [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) wird versucht, das lokale Administratorkennwort auf dem Referenzcomputer vor der Ausführung von Sysprep auf einen leeren Wert zurückzusetzen. Wenn die lokale Sicherheitsrichtlinie **Kennwort muss Komplexitätsvoraussetzungen entsprechen** aktiviert ist, kann das Administratorkennwort nicht von diesem Tasksequenzschritt zurückgesetzt werden. Deaktivieren Sie in diesem Fall die Richtlinie, bevor Sie die Tasksequenz ausführen.  
 
-     Weitere Informationen zu Sysprep finden Sie unter [Sysprep (Systemvorbereitung) – Übersicht](https://go.microsoft.com/fwlink/?LinkId=280286).  
+     Weitere Informationen zu Sysprep finden Sie unter [Sysprep (Systemvorbereitung) – Übersicht](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
 
 -   **Mit den entsprechenden erforderlichen Tools und Skripts für die Installationsszenarien**  
 

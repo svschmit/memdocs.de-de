@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8b89f2dd9f60b43db5c4ce8956f843429b47bc62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709248"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906826"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection – von Kunden häufig gestellte Fragen
 
@@ -145,7 +145,7 @@ Verwenden Sie die Option **Computer bereinigen** , wenn Sie auf schnelle und ein
 
 -   Stellen Sie sicher, dass von Windows Defender, Ihrer Antivirus- und Antispywaresoftware, aktuelle Updates gegen potenzielle Bedrohungen verwendet werden (siehe „Wie halte ich Viren- und Sypwaredefinitionen auf dem neuesten Stand?“). Stellen Sie außerdem sicher, dass Sie immer die neueste Version von Windows Defender verwenden.  
 
--   Laden Sie Updates nur aus vertrauenswürdigen Quellen herunter. Verwenden Sie für Windows-Betriebssysteme ausschließlich die Website [Microsoft Update](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) ) und für andere Software stets die offiziellen Websites des Unternehmens oder der Person, die sie herstellt.  
+-   Laden Sie Updates nur aus vertrauenswürdigen Quellen herunter. Bei Windows-Betriebssystemen wechseln Sie immer zum [Microsoft Update-Katalog](https://catalog.update.microsoft.com).  Verwenden Sie bei anderer Software immer die offiziellen Websites des Unternehmens oder der Person, die sie erstellt hat.
 
 -   Wenn Sie eine E-Mail mit einem Anhang erhalten und Sie die Quelle nicht kennen, sollten Sie die E-Mail unverzüglich löschen. Laden Sie keine Anwendungen oder Dateien aus unbekannten Quellen herunter, und gehen Sie beim Austausch von Dateien mit anderen Benutzern sorgfältig vor.  
 

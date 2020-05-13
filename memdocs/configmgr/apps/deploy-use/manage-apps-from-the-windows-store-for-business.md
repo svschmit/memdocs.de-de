@@ -10,12 +10,12 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8ba727aff682e3efbba6a91941a5499f9f00e8b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689318"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643215"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>Verwalten von Apps aus dem Microsoft Store für Unternehmen und Bildungseinrichtungen mit Configuration Manager
 
@@ -129,6 +129,9 @@ Geben Sie auf der Seite **Konfigurationen** des Assistenten für Azure-Dienste d
 - **Selected languages** (Ausgewählte Sprachen): Wählen Sie die Sprachen aus, für die Inhalte aus dem Store synchronisiert und Benutzern im Softwarecenter angezeigt werden sollen. Wenn ein Benutzer beispielsweise die deutschsprachige Version von Windows konfiguriert, werden im Softwarecenter deutsche Zeichenfolgen für Store-Apps angezeigt. Dieses Verhalten setzt voraus, dass die Inhalte für diese Sprache synchronisiert werden und für die jeweilige Anwendung vorhanden sind.
 
 - **Standardsprache**: Wählen Sie die Standardsprache aus, die verwendet werden soll, wenn die Benutzersprache nicht verfügbar ist.  
+
+> [!NOTE]
+> Configuration Manager synchronisiert das App-Symbol nicht aus dem Store. Wenn für diese App im Software Center ein Symbol angezeigt werden soll, fügen Sie es manuell in den App-Eigenschaften hinzu. Weitere Informationen finden Sie unter [Manuelles Angeben von Anwendungsinformationen](create-applications.md#bkmk_manual-app).<!-- 2837053 -->
 
 ## <a name="create-and-deploy-the-app"></a><a name="bkmk_deploy"></a>Erstellen und Bereitstellen der App
 

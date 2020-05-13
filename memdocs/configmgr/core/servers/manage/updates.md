@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f38b8662d4d7b5e7897d0c43560a5e2a4672eee6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704318"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903939"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Updates und Wartung für Configuration Manager
 
@@ -60,11 +60,13 @@ Die folgenden unterstützten Versionen von Configuration Manager sind derzeit al
 
 | Version | Verfügbarkeitsdatum | [Supportenddatum](current-branch-versions-supported.md) | Baseline | Konsoleninternes Update |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | Mai 2020 | 1\. Oktober 2021 | Ja<sup>[Hinweis 1](#bkmk_note1)</sup> | Ja |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1\. April 2020 | 1\. Oktober 2021 | Ja<sup>[Hinweis 1](#bkmk_note1)</sup> | Ja |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29. November 2019 | 29. Mai 2021 | Nein | Ja |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26. Juli 2019 | 26. Januar 2021 | Nein | Ja |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27. März 2019 | 27. September 2020 | Ja<sup>[Hinweis 1](#bkmk_note1)</sup> | Ja |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27. November 2018 | 1\. Dezember 2020 | Nein | Ja |
+
+Das **Verfügbarkeitsdatum** entspricht dem Freigabedatum für den [Early Update Ring](checklist-for-installing-update-2002.md#early-update-ring). Baselinemedien stehen im Volume License Service Center bereit, sobald das Update global verfügbar ist.
 
 <a name="bkmk_note1"></a>
 

@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78fad6f17681fa9822a378844ea4838c50383c82
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704818"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643257"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Konfigurieren von Begrenzungsgruppen für Configuration Manager
 
@@ -211,6 +211,13 @@ Begrenzungsgruppen beinhalten die folgenden zusätzlichen Einstellungen, die Ihn
 
 Weitere Informationen zum Konfigurieren dieser Einstellungen finden Sie im Artikel zum [Konfigurieren von Begrenzungsgruppen](boundary-group-procedures.md#bkmk_config).
 
+Wenn sich ein Gerät in mehr als einer Begrenzungsgruppe befindet, gelten die folgenden Verhaltensweisen für diese Einstellungen:
+
+- **Peerdownloads in dieser Begrenzungsgruppe zulassen**: Wenn diese Option in einer der Begrenzungsgruppen deaktiviert ist, verwendet der Client keine Übermittlungsoptimierung.
+- **Bei Peerdownloads nur Peers in demselben Subnetz verwenden**: Wenn diese Option in einer der Begrenzungsgruppen deaktiviert ist, tritt diese Einstellung in Kraft.
+- **Verteilungspunkte über Peers innerhalb desselben Subnetzes vorziehen**: Wenn diese Option in einer der Begrenzungsgruppen deaktiviert ist, tritt diese Einstellung in Kraft.
+- **Cloudbasierte Quellen lokalen Quellen vorziehen**: Wenn diese Option in einer der Begrenzungsgruppen deaktiviert ist, tritt diese Einstellung in Kraft.
+
 #### <a name="allow-peer-downloads-in-this-boundary-group"></a><a name="bkmk_bgoptions1"></a> Peerdownloads in dieser Begrenzungsgruppe zulassen
 
 Diese Einstellung ist standardmäßig aktiviert. Der Verwaltungspunkt bietet Clients eine Liste der Speicherorte für Inhalt, die Peerquellen enthält. Diese Einstellung wirkt sich auch auf die Anwendung von Gruppen-IDs für die [Übermittlungsoptimierung](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization) aus.  
@@ -220,6 +227,9 @@ In zwei häufigen Szenarios sollten Sie erwägen, diese Option zu deaktivieren:
 - Wenn Sie eine Begrenzungsgruppe besitzen, die Grenzen von geografisch verstreuten Speicherorten wie einem VPN enthält. Zwei Clients können sich in der gleichen Begrenzungsgruppe befinden, da sie über VPN verbunden sind, aber an höchst unterschiedlichen Speicherorten, die zur Peerfreigabe von Inhalten nicht geeignet sind.  
 
 - Bei Verwendung einer einzigen, großen Begrenzungsgruppe für die Standortzuweisung, die nicht auf Verteilungspunkte verweist.  
+
+> [!IMPORTANT]
+> Wenn sich ein Gerät in mehr als einer Begrenzungsgruppe befindet, stellen Sie sicher, dass diese Einstellung für alle Begrenzungsgruppen des Geräts aktiviert ist. Andernfalls verwendet der Client keine Übermittlungsoptimierung. Beispielsweise wird der Registrierungsschlüssel DOGroupID nicht festgelegt.
 
 #### <a name="during-peer-downloads-only-use-peers-within-the-same-subnet"></a><a name="bkmk_bgoptions2"></a> Bei Peerdownloads nur Peers in demselben Subnetz verwenden
 

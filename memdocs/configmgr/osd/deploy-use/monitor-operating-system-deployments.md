@@ -2,7 +2,7 @@
 title: Überwachen von Betriebssystembereitstellungen
 titleSuffix: Configuration Manager
 description: Um Betriebssystembereitstellungsobjekte zu überwachen, bietet die Configuration Manager-Konsole Warnungen, Berichte und verschiedene Statusanzeigen.
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d0a430a1010611bc6a7e0871e8c59ca3d1f8de7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708478"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802165"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>Überwachen von Betriebssystembereitstellungen in Configuration Manager
 
@@ -45,6 +45,9 @@ Die Configuration Manager-Konsole bietet die folgenden Möglichkeiten zum Überw
 3.  Klicken Sie auf die Tasksequenz, deren Bereitstellungsstatus Sie überwachen möchten.  
 
 4.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Status anzeigen**.  
+
+> [!NOTE]  
+> Beim Initiieren eines Upgrades wird Statusmeldung 52200 generiert. Diese enthält den Benutzer, der das Upgrade durchgeführt hat.  
 
 ##  <a name="operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> Betriebssystembereitstellung – Berichte  
  Es stehen viele vordefinierte Berichte zur Betriebssystembereitstellung zur Verfügung. Diese sind in verschiedene Kategorien unterteilt und dienen dazu, spezifische Informationen zur Zustandsmigration und Bereitstellungen von Tasksequenzen zu liefern. Zusätzlich zu den vorkonfigurierten Berichten können Sie auch benutzerdefinierte Softwareupdateberichte erstellen, die auf die Anforderungen Ihres Unternehmens zugeschnitten sind. Weitere Informationen finden Sie unter [Vorgänge und Wartungstasks für die Berichterstellung](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  

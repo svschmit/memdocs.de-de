@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 08baf595199bdda121f897d507de97cb7e93e620
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696348"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906289"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Dashboard für Surface-Geräte in Configuration Manager
 
@@ -57,11 +57,9 @@ Im Dashboard für Surface-Geräte werden drei Diagramme für Ihre Umgebung angez
 
 ## <a name="more-information"></a>Weitere Informationen
 
-Weitere Informationen zu Surface-Geräten finden Sie auf der
-- [Surface-Website]( https://go.microsoft.com/fwlink/?linkid=861998).
+Weitere Informationen zu Surface-Geräten finden Sie auf der [Surface](https://www.microsoft.com/surface)-Website.
 
-Weitere Informationen zur Bereitstellung von Surface-Firmwareupdates in Configuration Manger finden Sie unter
-- [Verwalten von Surface-Treiberupdates in Configuration Manger]( https://support.microsoft.com/help/4098906).
+Weitere Informationen zur Bereitstellung von Surface-Firmwareupdates in Configuration Manger finden Sie unter [Verwalten von Surface-Treiberupdates](https://support.microsoft.com/help/4098906).
 
 
 

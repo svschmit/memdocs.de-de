@@ -2,7 +2,7 @@
 title: Proxyserverunterstützung
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie für Configuration Manager-Standortsystemserver Proxyserver verwendet werden.
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5581214dd786bdefd29d0e4d2626de536ad26ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 89a2f76f394d3bdf8fd6785429ae0ae60302537a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701478"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802088"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Verwenden von Proxyservern in Configuration Manager
 
@@ -50,6 +50,10 @@ Für diese Konfiguration gilt für den primären Standortserver Folgendes:
 - Er verwendet standardmäßig das Konto **System** des Computers, um die Verbindung herzustellen. Er kann bei Bedarf auch das Proxyserverkonto des Standortsystems verwenden.  
 
 - Er verwendet Windows-Webbrowser-APIs.  
+
+### <a name="cloud-management-gateway-connection-point"></a>Verbindungspunkt für das Cloud Management Gateway
+
+Der Verbindungspunkt für das Cloud Management Gateway (CMG) ist eine lokale Rolle, die mit dem CMG-Dienst in Azure kommuniziert. Weitere Informationen finden Sie unter [Planen von Cloud Management Gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
 ### <a name="distribution-point"></a>Verteilungspunkt
 
@@ -111,3 +115,7 @@ Ab Configuration Manager, Version 2002, verwenden die folgenden Features den Pro
     - **Anmeldeinformationen zum Verbinden mit dem Proxyserver verwenden:** Für viele Proxyserver wird ein Benutzer zur Authentifizierung benötigt. Standardmäßig verwendet der Standortsystemserver das zugehörige Computerkonto für die Verbindung mit dem Proxyserver. Aktivieren Sie die Option bei Bedarf, indem Sie auf **Festlegen** klicken und ein **Vorhandenes Konto** auswählen oder ein **Neues Konto** angeben. Diese Anmeldeinformationen entsprechen denen des **Proxyserverkontos des Standortsystems**.  Weitere Informationen finden Sie unter [In Configuration Manager verwendete Konten](../hierarchy/accounts.md).  
 
 4. Wählen Sie **OK**, um die neue Proxyserverkonfiguration zu speichern.  
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Wenn Ihre Organisation die Netzwerkkommunikation mit dem Internet über ein Firewall- oder Proxygerät einschränkt, müssen Sie den Zugriff auf Internetendpunkte zulassen. Weitere Informationen finden Sie unter [Internetzugriffsanforderungen](internet-endpoints.md).
