@@ -10,16 +10,17 @@ ms.assetid: d56742bc-a060-4714-a359-48f594c3eaff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 271a37c80db3a37b721918f3ee739b010c043c70
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708138"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268520"
 ---
 # <a name="get-support-for-desktop-analytics"></a>Anfordern von Support für Desktop Analytics
 
-Microsoft bietet für Desktop Analytics Unterstützung bei allgemeinen technischen Fragen, der Vertriebsvorbereitung sowie bei Fragen zu Rechnungen und Abonnements. Der Support ist für kostenpflichtige Abonnements und für Testabonnements online und telefonisch verfügbar. Der technische Onlinesupport ist nur auf Englisch und Japanisch verfügbar. Der telefonische Support und der Support zu Abrechnungen sind in zusätzlichen Sprachen verfügbar.
+Microsoft bietet für Desktop Analytics Unterstützung bei allgemeinen technischen Fragen, der Vertriebsvorbereitung sowie bei Fragen zu Rechnungen und Abonnements. Der Support ist für kostenpflichtige Abonnements und für Testabonnements online und telefonisch verfügbar. Der technische Onlinesupport ist nur auf Englisch und Japanisch verfügbar. Der telefonische Support und der Onlinesupport zu Abrechnungen sind in zusätzlichen Sprachen verfügbar.
 
 > [!TIP]
 > Bevor Sie den Microsoft-Support kontaktieren, lesen Sie zunächst die folgenden Artikel:

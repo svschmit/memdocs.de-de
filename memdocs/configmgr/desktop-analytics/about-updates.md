@@ -2,7 +2,7 @@
 title: Updates in Desktop Analytics
 titleSuffix: Configuration Manager
 description: In diesem Artikel werden Sicherheits- und Featureupdates in Desktop Analytics erläutert.
-ms.date: 08/21/2019
+ms.date: 04/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 14ae894c-26fb-4fe3-b51d-e80700122df4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec510414f11aa312e6c1a7d1d5bfa8126f473fe3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 1c79db413f8e37424b84d98d51fb584d168e3819
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706578"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268928"
 ---
 # <a name="updates-in-desktop-analytics"></a>Updates in Desktop Analytics
 
@@ -46,8 +47,20 @@ Auf Geräten wird ein Sicherheitsupdate ausgeführt, das älter ist als „Neues
 
 Das Gerät wurde von Desktop Analytics nicht bewertet. Diesen Status weisen Geräte unter Windows 7, Windows 8.1 oder Windows 10 auf, die für das Windows-Insider-Programm registriert sind.  
 
-Weist ein Windows 10-Gerät *keine Authentifizierung* mit einem Microsoft-Konto auf, werden diese Daten von Windows nicht gemeldet. Diese Authentifizierung wird im Allgemeinen im Rahmen der Out-of-Box-Experience (OOBE) des Windows Setup ausgeführt.<!-- 5148153 -->
+Klicken Sie für eine bestimmte Windows-Version auf **Mehr anzeigen**, um die Trends bei der Akzeptanz von Sicherheitsupdates anzuzeigen. Das gestapelte Flächendiagramm kategorisiert Geräte nach dem Sicherheitsupdate, das auf diesen im Laufe der Zeit installiert wurde.
 
+Klicken Sie auf **Alles anzeigen**, um den Bereitstellungsstatus für Sicherheitsupdates zu überprüfen. In dieser Ansicht werden Geräte in den folgenden Kategorien aufgelistet:
+
+- Nicht gestartet
+- In Bearbeitung
+- Abgeschlossen
+- Eingreifen erforderlich – Geräte (sortiert nach Gerätename)
+- Eingreifen erforderlich – Probleme (sortiert nach Problemtyp)
+
+Klicken Sie auf **Aktuelle Daten anzeigen**, um Geräte mit neuen Informationen anzuzeigen, die vom Dienst noch verarbeitet werden. Desktop Analytics zeigt diese Informationen nach der nächsten vollständigen Aktualisierung der Daten an.
+
+  > [!IMPORTANT]
+  > Die Desktop Analytics-Option **Aktuelle Daten anzeigen** ist veraltet. Diese Aktion wird in einer zukünftigen Version des Desktop Analytics-Diensts entfernt. Weitere Informationen finden Sie unter [Veraltete Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
 
 ## <a name="feature-updates"></a>Featureupdates
 
@@ -77,8 +90,7 @@ Auf Geräten wird ein Featureupdate ausgeführt, für das der Dienst bereits ein
 
 Das Gerät wurde von Desktop Analytics nicht bewertet. Diesen Status weisen Geräte unter Windows 7, Windows 8.1 oder Windows 10 auf, die für das Windows-Insider-Programm registriert sind.
 
-Weist ein Windows 10-Gerät *keine Authentifizierung* mit einem Microsoft-Konto auf, werden diese Daten von Windows nicht gemeldet. Diese Authentifizierung wird im Allgemeinen im Rahmen der Out-of-Box-Experience (OOBE) des Windows Setup ausgeführt.<!-- 5148153 -->
-
+Klicken Sie auf die Kachel, um die Trends bei der Akzeptanz von Funktionsupdates anzuzeigen. Das gestapelte Flächendiagramm kategorisiert Geräte nach dem Funktionsupdate, das auf diesen im Laufe der Zeit installiert wurde.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

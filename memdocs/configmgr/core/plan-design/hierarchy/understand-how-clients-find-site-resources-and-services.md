@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075658"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268996"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Informationen dazu, wie Clients Standortressourcen und -dienste für Configuration Manager suchen
 
@@ -62,7 +62,7 @@ Ein Client wählt einen Verwaltungspunkt für die Kommunikation basierend auf se
 
 Sie können bevorzugte Verwaltungspunkte verwenden. Bevorzugte Verwaltungspunkte sind Verwaltungspunkte vom zugewiesenen Standort eines Clients, die einer Begrenzungsgruppe zugeordnet sind, die vom Client verwendet wird, um Standortsystemserver zu finden. Die Zuordnung eines bevorzugten Verwaltungspunkts zu einer Begrenzungsgruppe als Standortsystemserver ist ähnlich der Zuordnung von Verteilungspunkten oder Zustandsmigrationspunkten zu einer Begrenzungsgruppe. Wenn Sie bevorzugte Verwaltungspunkte für die Hierarchie aktivieren, versucht ein Client einen bevorzugten Verwaltungspunkt zu verwenden, wenn er einen Verwaltungspunkt von seinem zugewiesenen Standort verwendet, bevor andere Verwaltungspunkte des zugewiesenen Standorts verwendet werden.  
 
-Sie können auch die Informationen im Blog zur [Affinität mit einem Verwaltungspunkt](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx) auf TechNet.com befolgen, um die Affinität mit einem Verwaltungspunkt zu konfigurieren. Die Verwaltungspunktsaffinität überschreibt das Standardverhalten für zugewiesene Verwaltungspunkte und ermöglicht dem Client, einen oder mehrere bestimmte Verwaltungspunkte zu verwenden.  
+Sie können auch die Informationen im Blog zur [Affinität mit einem Verwaltungspunkt](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) befolgen, um die Affinität mit einem Verwaltungspunkt zu konfigurieren. Die Verwaltungspunktsaffinität überschreibt das Standardverhalten für zugewiesene Verwaltungspunkte und ermöglicht dem Client, einen oder mehrere bestimmte Verwaltungspunkte zu verwenden.  
 
 Jedes Mal, wenn ein Client einen Verwaltungspunkt kontaktieren muss, überprüft er die Verwaltungspunktliste, die lokal in WMI (Windows Management Instrumentation) gespeichert ist. Der Client erstellt bei der Installation eine erste Verwaltungspunktliste. Der Client aktualisiert dann die Liste regelmäßig mit Details zu jedem Verwaltungspunkt in der Hierarchie.  
 
@@ -131,12 +131,12 @@ Nach dem Einrichten der Kommunikation mit einem Verwaltungspunkt verwendet der C
 Der Client wählt nach dem Zufallsprinzip einen neuen Verwaltungspunkt aus.  
 
 ##  <a name="active-directory"></a><a name="bkmk_ad"></a> Active Directory  
-Clients, die der Domäne beigetreten sind, können AD DS für die Dienstidentifizierung verwenden. Dafür müssen Standorte [Daten in Active Directory veröffentlichen](https://technet.microsoft.com/library/hh696543.aspx).  
+Clients, die der Domäne beigetreten sind, können AD DS für die Dienstidentifizierung verwenden. Dafür müssen Standorte [Daten in Active Directory veröffentlichen](../../servers/deploy/configure/publish-site-data.md).  
 
 Ein Client kann AD DS für die Dienstidentifizierung verwenden, wenn alle folgenden Bedingungen erfüllt sind:  
 
-- Das Active Directory-[Schema wurde erweitert](https://technet.microsoft.com/library/mt345589.aspx) oder für System Center 2012 Configuration Manager erweitert.  
-- Die [Active Directory-Gesamtstruktur ist für die Veröffentlichung konfiguriert](https://technet.microsoft.com/library/hh696542.aspx)und Configuration Manager-Standorte sind für das Veröffentlichen konfiguriert.  
+- Das Active Directory-[Schema wurde erweitert](../network/extend-the-active-directory-schema.md) oder für System Center 2012 Configuration Manager erweitert.  
+- Die [Active Directory-Gesamtstruktur ist für die Veröffentlichung konfiguriert](../../servers/deploy/configure/publish-site-data.md)und Configuration Manager-Standorte sind für das Veröffentlichen konfiguriert.  
 - Der Clientcomputer ist ein Mitglied einer Active Directory-Domäne, und der Zugriff auf den globalen Katalogserver ist möglich.  
 
 Wenn ein Client keinen Verwaltungspunkt für die Dienstidentifizierung von AD DS finden kann, versucht er, DNS zu verwenden.  
@@ -148,7 +148,7 @@ Ziehen Sie die Verwendung von DNS für die Dienstidentifizierung in Betracht, we
 - Das AD DS-Schema wurde nicht für die Unterstützung von Configuration Manager erweitert.
 - Intranetclients befinden sich in einer Gesamtstruktur, die nicht für die Configuration Manager-Veröffentlichung aktiviert ist.  
 - Sie haben Clients auf Arbeitsgruppencomputern, und diese Clients sind nicht für eine rein internetbasierte Clientverwaltung konfiguriert. (Ein für das Internet konfigurierter Arbeitsgruppenclient kommuniziert nur mit Verwaltungspunkten, die auf das Internet ausgerichtet sind, und verwendet nicht DNS für die Dienstidentifizierung.)  
-- Sie können [Clients für die Suche von Verwaltungspunkten von DNS konfigurieren](https://technet.microsoft.com/library/gg682055).  
+- Sie können [Clients für die Suche von Verwaltungspunkten von DNS konfigurieren](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
 
 Wenn ein Standort Dienstidentifizierungseinträge für Verwaltungspunkte an DNS veröffentlicht:  
 

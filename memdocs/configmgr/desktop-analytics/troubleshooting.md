@@ -10,12 +10,13 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96e9f7523ae8946b7756a8a39d1757e652eb3c8c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696898"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268248"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Problembehandlung bei Desktop Analytics
 
@@ -217,3 +218,6 @@ Wählen Sie dann **Änderungen übernehmen** aus:
 Dieser Vorgang dauert in der Regel 15 bis 60 Minuten. Die Dauer hängt von der Größe Ihres Arbeitsbereichs und vom Umfang der zu verarbeitenden Änderungen ab. Wenn Sie eine bedarfsgesteuerte Datenaktualisierung anfordern, bewirkt dies keine Änderung der Diagnosedaten.  Weitere Informationen finden Sie unter [Desktop Analytics – Häufig gestellte Fragen](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 Wenn innerhalb des obigen Zeitfensters keine Aktualisierung von Änderungen erfolgt, warten Sie weitere 24 Stunden auf die nächste tägliche Aktualisierung. Sehen Sie bei längeren Verzögerungen das Dashboard zur Dienstintegrität ein. Wenn der Dienst als fehlerfrei gemeldet wird, wenden Sie sich an den Microsoft-Support.<!-- 3896921 -->
+
+> [!IMPORTANT]
+> Die Desktop Analytics-Option **Aktuelle Daten anzeigen** ist veraltet. Diese Aktion wird in einer zukünftigen Version des Desktop Analytics-Diensts entfernt. Weitere Informationen finden Sie unter [Veraltete Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
