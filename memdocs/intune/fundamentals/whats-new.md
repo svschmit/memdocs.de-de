@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 5b3c8287d9b5ca2d46094d04ee2179128bead4a8
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619575"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991739"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Neuerungen in Microsoft Intune
 
@@ -51,6 +51,14 @@ In diesem Artikel werden die Neuheiten im [Microsoft Endpoint Manager Admin Cent
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+
+<!-- ########################## -->
+## <a name="week-of-may-4-2020"></a>Woche vom 4. Mai 2020  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Benutzeranleitung zum Abrufen von Apps im Unternehmensportal für Android nach der Arbeitsprofilregistrierung <!-- 6103999 -->
+Wir haben die In-App-Anleitungen im Unternehmensportal verbessert, um Benutzern das Auffinden und Installieren von Apps zu erleichtern. Nach der Registrierung in der Arbeitsprofilverwaltung werden Benutzer in einer Meldung darüber informiert, dass sie vorgeschlagene Apps in der Google Play-Version mit Badge finden. Der letzte Schritt von [Registrieren eines Geräts mit dem Android-Profil](../user-help/enroll-device-android-work-profile.md) wurde aktualisiert, um die neue Meldung anzuzeigen. Benutzern wird außerdem im Unternehmensportal-Drawer auf der linken Seite ein Link **Apps abrufen** angezeigt. Um Platz für diese neuen und verbesserten Benutzerfunktionen zu schaffen, wurde die Registerkarte **APPS** entfernt. Um die aktualisierten Bildschirme anzuzeigen, gehen Sie zu [Updates der Benutzeroberfläche für Endbenutzer-Apps von Intune](./whats-new-app-ui.md). 
 
 <!-- ########################## -->
 ## <a name="week-of-april-20-2020"></a>Woche vom 20. April 2020

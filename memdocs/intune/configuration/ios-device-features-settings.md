@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210221"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943874"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- und iPadOS-Geräteeinstellungen zur Verwendung gängiger iOS/iPadOS-Features in Intune
 
@@ -107,7 +107,7 @@ Sie können für den Gerätedock bis zu **sechs** Elemente hinzufügen (Apps und
       Sie können für den Gerätedock bis zu **20** Seiten hinzufügen.
 
 > [!NOTE]
-> Wenn Sie Symbole mithilfe der Dock-Einstellungen hinzufügen, sind die Symbole auf dem Startbildschirm und den Seiten gesperrt und können nicht verschoben werden. Dies kann bei iOS-/iPadOS- und MDM-Richtlinien von Apple absichtlich der Fall sein.
+> Wenn Sie die Layouteinstellungen für den Startbildschirm verwenden, um Seiten hinzuzufügen oder Seiten und Apps zum Dock hinzuzufügen, werden die Symbole auf dem Startbildschirm und den Seiten gesperrt. Sie können nicht verschoben oder gelöscht werden. Dies kann bei iOS-/iPadOS- und MDM-Richtlinien von Apple absichtlich der Fall sein.
 
 #### <a name="example"></a>Beispiel
 
@@ -350,7 +350,7 @@ Diese Funktion gilt für:
 - **Default realm** (Standardbereich) (nur „Kerberos“): Mit **Aktivieren** wird der von Ihnen eingegebene **Bereich** als Standardbereich festgelegt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig legt das Betriebssystem möglicherweise keinen Standardbereich fest.
 
   > [!TIP]
-  > -  **Aktivieren** Sie diese Einstellung, wenn Sie mehrere Kerberos-SSO-App-Erweiterungen in Ihrer Organisation konfigurieren.
+  > - **Aktivieren** Sie diese Einstellung, wenn Sie mehrere Kerberos-SSO-App-Erweiterungen in Ihrer Organisation konfigurieren.
   > - **Aktivieren** Sie diese Einstellung, wenn Sie mehrere Bereiche verwenden. Der von Ihnen eingegebene **Bereich** wird als Standardbereich festgelegt.
   > - Wenn Sie nur über einen Bereich verfügen, behalten Sie die Einstellung **Nicht konfiguriert** (Standardeinstellung) bei.
 

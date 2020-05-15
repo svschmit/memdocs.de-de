@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166550"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269013"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>iOS- und iPadOS-Geräteeinstellungen zum Zulassen oder Einschränken von Funktionen mit Intune
 
@@ -95,6 +95,10 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 - **Aktivierungssperre**: **Zulassen** aktiviert die Aktivierungssperre auf überwachten iOS/iPadOS-Geräten. Die Aktivierungssperre erschwert die erneute Aktivierung verlorener oder gestohlener Geräte. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 - **Entfernen von Apps blockieren**: **Blockieren** verhindert das Entfernen von Apps. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem Benutzern erlauben, Apps von Geräten zu entfernen.
 - **USB-Zubehör bei gesperrtem Gerät zulassen**: **Zulassen**: USB-Zubehör kann Daten mit Geräten austauschen, die seit mehr als einer Stunde gesperrt sind. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem den Modus mit USB-Einschränkung auf Geräten nicht aktualisieren, und USB-Zubehör wird daran gehindert, Daten von Geräten zu übertragen, wenn diese länger als eine Stunde gesperrt sind.
+
+  Diese Funktion gilt für:  
+  - iOS/iPadOS 11.4.1 und höher
+
 - **Automatische Datums- und Uhrzeiteinstellung erzwingen**: **Anfordern** erzwingt, dass überwachte Geräte das Datum und die Uhrzeit automatisch einstellen. Die Zeitzone für das Gerät wird aktualisiert, wenn das Gerät über Mobilfunkverbindungen verfügt oder WLAN mit Standortdiensten aktiviert ist. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 - **Erlaubnis für Kursteilnehmer vor dem Verlassen des Classroom-Kurses erforderlich**: **Anfordern** erzwingt, dass in einem nicht verwalteten Kurs registrierte Kursteilnehmer, die die Classroom-App verwenden, vom Kursleiter eine Berechtigung zum Verlassen des Kurses anfordern müssen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Es besteht die Möglichkeit, dass das Betriebssystem standardmäßig nicht erzwingt, dass Kursteilnehmer um eine Berechtigung bitten müssen.
 
@@ -292,7 +296,7 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
   Ab iOS/iPadOS 13.0 muss es sich bei Geräten mit dieser Einstellung um überwachte Geräte handeln.
 
   - **Installieren von Apps über den App Store**: **Blockieren** zeigt den App Store nicht auf dem Startbildschirm des Geräts an. Benutzer können weiterhin iTunes oder das Apple Configurator-Tool zum Installieren von Apps verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem den App Store auf dem Startbildschirm zulassen.
-  - **Automatische App-Downloads**: **Blockieren** verhindert den automatischen Download von Apps, die auf anderen Geräten erworben wurden. Updates vorhandener Apps sind nicht betroffen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem zulassen, Apps auf das Gerät herunterzuladen, die auf anderen iOS/iPadOS-Geräten gekauft wurden.
+  - **Automatische App-Downloads**: **Blockieren** verhindert den automatischen Download von Apps, die auf anderen Geräten erworben wurden, und automatische Updates für neue Apps. Updates vorhandener Apps sind nicht betroffen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem zulassen, Apps auf das Gerät herunterzuladen und zu aktualisieren, die auf anderen iOS/iPadOS-Geräten gekauft wurden.
 
 - **Anstößige iTunes-Musik, Podcasts oder Nachrichteninhalte**: **Blockieren** verhindert anstößige iTunes-Musik, Podcasts oder Nachrichteninhalte. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem zulassen, dass das Gerät im Store auf nicht jugendfreie Inhalte zugreift.
 
@@ -591,11 +595,16 @@ Apps können Sie wie folgt hinzufügen:
 
   Ab iOS/iPadOS 13.0 muss es sich bei Geräten mit dieser Einstellung um überwachte Geräte handeln.
 
-## <a name="autonomous-single-app-mode"></a>Modus der autonomen einzelnen App
+## <a name="autonomous-single-app-mode-asam"></a>Autonomer Einzelanwendungsmodus
 
-Verwenden Sie diese Einstellungen, um iOS-/iPadOS-Geräte zur Ausführung bestimmter Apps im autonomen Einzelanwendungsmodus zu konfigurieren. Wenn dieser Modus konfiguriert ist und Benutzer eine der konfigurierten Apps starten, wird das Gerät für diese App gesperrt. Benutzer können die App bzw. den Task erst dann wechseln, wenn sie die zulässige App schließen.
+Verwenden Sie diese Einstellungen, um iOS-/iPadOS-Geräte so zu konfigurieren, dass bestimmte Apps im autonomen Einzelanwendungsmodus ausgeführt werden. Wenn dieser Modus konfiguriert ist und Benutzer eine der konfigurierten Apps starten, wird das Gerät für diese App gesperrt. Benutzer können die App bzw. den Task erst dann wechseln, wenn sie die zulässige App schließen.
 
 Sie können beispielsweise für eine Schul- oder Universitätsumgebung eine App hinzufügen, mit der Benutzer einen Test auf dem Gerät durchführen können. Alternativ können Sie auch das Gerät in der Unternehmensportal-App sperren, bis sich der Benutzer authentifiziert hat. Wenn Benutzer die App-Aktionen abschließen oder Sie diese Richtlinie entfernen, kehrt das Gerät in seinen normalen Zustand zurück.
+
+> [!NOTE]
+> Nicht alle Apps unterstützen den autonomen Einzelanwendungsmodus. In der Regel ist eine Bundle-ID oder ein Schlüssel-Wert-Paar erforderlich, die bzw. das von einer App-Konfigurationsrichtlinie bereitgestellt wird, um den autonomen Einzelanwendungsmodus für eine App zu aktivieren. Weitere Informationen finden Sie im Abschnitt über die [`autonomousSingleAppModePermittedAppIDs`-Einschränkung](https://developer.apple.com/documentation/devicemanagement/restrictions) in der MDM-Dokumentation von Apple. Weitere Informationen zu den erforderlichen spezifischen Einstellungen für die App, die Sie konfigurieren, finden Sie in der Dokumentation des jeweiligen Herstellers.
+
+Zum Beispiel soll Zoom zufolge zum Konfigurieren von Zoom Rooms im autonomen Einzelanwendungsmodus die Bundle-ID `us.zoom.zpcontroller` verwendet werden. In diesem Fall nehmen Sie auch eine Änderung im Zoom-Webportal vor. Weitere Informationen finden Sie im [Zoom Help Center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Die Einstellungen gelten für: Automatisierte Geräteregistrierung (überwacht)
 
@@ -606,6 +615,8 @@ Sie können beispielsweise für eine Schul- oder Universitätsumgebung eine App 
 **Importieren** Sie alternativ eine CSV-Datei mit der Liste der App-Namen und der Bündel-IDs. **Exportieren** Sie alternativ eine vorhandene Liste, die die Apps enthält.
 
 ## <a name="kiosk"></a>Kiosk
+
+[Einzelanwendungsmodus](https://support.apple.com/guide/mdm/mdm80a981/web) wird in Intune als Kioskmodus bezeichnet.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Die Einstellungen gelten für: Automatisierte Geräteregistrierung (überwacht)
 
@@ -671,7 +682,7 @@ Sie können beispielsweise für eine Schul- oder Universitätsumgebung eine App 
 
 Der überwachte Modus von iOS/iPadOS kann nur während der ersten Einrichtung des Geräts über das Apple-Programm zur Geräteregistrierung oder mithilfe von Apple Configurator aktiviert werden. Sobald der überwachte Modus aktiviert ist, kann Intune ein Gerät mit folgenden Funktionen konfigurieren:
 
-- App-Sperre (Einzelanwendungsmodus) 
+- Kioskmodus (Einzelanwendungsmodus): Wird in der [Apple-Entwicklerdokumentation](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) als „App-Sperre“ bezeichnet.
 - Aktivierungssperre deaktivieren 
 - Modus der autonomen einzelnen App 
 - Webinhaltsfilter 

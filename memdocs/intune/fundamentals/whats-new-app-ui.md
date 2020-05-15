@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe95196da3e75dc50e585dc1c4508e8d20c7d5e3
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255029"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991776"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune
 
@@ -36,6 +36,26 @@ Wenn Sie ein Mitarbeiter oder Kursteilnehmer sind, sollten Sie sich die Screensh
 
 
 
+## <a name="week-of-may-4-2020"></a>Woche vom 4. Mai 2020  
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Benutzeranleitung zum Abrufen von Apps im Unternehmensportal für Android nach der Arbeitsprofilregistrierung <!-- 6103999 -->
+Wir haben die In-App-Anleitungen im Unternehmensportal verbessert, um Benutzern das Auffinden und Installieren von Apps zu erleichtern. Nach der Registrierung in der Arbeitsprofilverwaltung werden Benutzer in einer Meldung darüber informiert, dass sie vorgeschlagene Apps in der Google Play-Version mit Badge finden. Der letzte Schritt von [Registrieren eines Geräts mit dem Android-Profil](../user-help/enroll-device-android-work-profile.md) wurde aktualisiert, um die neue Meldung anzuzeigen. 
+
+![Beispielabbildung des Unternehmensportals mit der Aufforderung zum Öffnen der Google Play-Version mit Badge auf der Registerkarte „Geräte“.](./media/whats-new-app-ui/updated-banner-android-2005.png)  
+
+Benutzern wird außerdem im Unternehmensportal-Drawer auf der linken Seite ein Link **Apps abrufen** angezeigt. 
+
+![Beispielabbildung des Unternehmensportal-Drawers im linken Bereich mit hervorgehobenem Menüelement „Apps abrufen“.](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
+
+Um Platz für diese neuen und verbesserten Benutzerfunktionen zu schaffen, wurde die in der folgenden Abbildung dargestellte Registerkarte **APPS** entfernt.  
+
+![Beispielabbildung der jetzt entfernten Registerkarte „Apps“ im Unternehmensportal](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
+
+
+
+
+
+
+
 ## <a name="week-of-march-2-2020"></a>Woche des 2. März 2020   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Verbesserte Anmeldefunktion im Unternehmensportal für Android   
 Wir haben das Layout mehrerer Anmeldebildschirme in der Unternehmensportal-App für Android aktualisiert, um die Benutzeroberfläche moderner, einfacher und übersichtlicher zu gestalten. Alle „Unternehmensportal für Android“-Registrierungsanweisungen finden Sie unter [Registrierung Ihres Android-Geräts](../user-help/enroll-device-android-company-portal.md) oder [Registrieren eines Geräts mit dem Android-Arbeitsprofil](../user-help/enroll-device-android-work-profile.md).   
@@ -44,7 +64,7 @@ Wir haben das Layout mehrerer Anmeldebildschirme in der Unternehmensportal-App f
 |Aktualisiert|Zurück|   
 |---|---|   
 |![Beispielabbildung des neuen Anmeldebildschirms des Unternehmensportals mit der Anmeldeschaltfläche.](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Beispielabbildung der vorherigen Unternehmensportal-Anmeldeseite mit unruhigerem Design.](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
-|![Beispielabbildung des neuen Anmeldefortschrittsbildschirms mit einer Statusanzeige.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Beispielabbildung des vorherigen Anmeldefortschrittsbildschirms mit unruhigerem Design.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
+|![Beispielabbildung des neuen Anmeldefortschrittsbildschirms mit einer Statusanzeige.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Beispielabbildung des vorherigen Anmeldefortschrittsbildschirms mit unruhigerem Design.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|
 ## <a name="week-of-february-3-2020"></a>Woche am 3. Februar 2020
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>Bildschirm aus dem Unternehmensportal bzw. der Android-Arbeitsprofilregistrierung entfernt <!--6103987 -->
@@ -615,6 +635,6 @@ Es folgen die Pläne für Möglichkeiten zum Verbessern der Benutzererfahrung du
 
 
 ## <a name="see-also"></a>Weitere Informationen:
-* [Microsoft Intune-Blog](https://go.microsoft.com/fwlink/?LinkID=273882)
+* [Microsoft Intune-Blog](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [Roadmap für die Cloudplattform](https://www.microsoft.com/cloud-platform/roadmap)
 * [Neuerungen in Intune](whats-new.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64356bf9be0c2c439c1f4fc296a9728a7937b001
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086574"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943823"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Erstellen von VPN-Profilen zum Herstellen einer Verbindung mit VPN-Servern in Intune
 
@@ -182,7 +182,13 @@ VPN-Profile können eine Reihe verschiedener Verbindungstypen und Protokolle von
 
 Beim Erstellen des VPN-Profils wählen Sie ein SCEP- oder PKCS-Zertifikatprofil aus, das Sie zuvor in Intune erstellt haben. Dieses Profil wird als Identitätszertifikat bezeichnet. Es dient zur Authentifizierung anhand eines von Ihnen erstellten vertrauenswürdigen Zertifikatprofils (oder eines *Stammzertifikats*), das Sie erstellen, damit das Gerät des Benutzers eine Verbindung herstellen kann. Das vertrauenswürdige Zertifikat wird auf dem Computer zugewiesen, der die VPN-Verbindung authentifiziert, in der Regel ist dies der VPN-Server.
 
+Wenn Sie die zertifikatbasierte Authentifizierung für Ihr VPN-Profil verwenden, stellen Sie das VPN-Profil, das Zertifikatprofil und das vertrauenswürdige Stammprofil für dieselben Gruppen bereit, um sicherzustellen, dass jedes Gerät die Rechtmäßigkeit Ihrer Zertifizierungsstelle erkennen kann.
+
 Weitere Informationen zum Erstellen und Verwenden von Zertifikatprofilen in Intune finden Sie unter [Konfigurieren von Zertifikaten mit Microsoft Intune](../protect/certificates-configure.md).
+
+> [!NOTE]
+> Zertifikate, die mit dem Profiltyp **Importierte PKCS-Zertifikate** hinzugefügt werden, werden für die VPN-Authentifizierung nicht unterstützt. Zertifikate, die mit dem Profiltyp **PKCS-Zertifikate** hinzugefügt werden, werden für die VPN-Authentifizierung unterstützt.
+
 
 ### <a name="user-name-and-password"></a>Benutzername und Kennwort
 

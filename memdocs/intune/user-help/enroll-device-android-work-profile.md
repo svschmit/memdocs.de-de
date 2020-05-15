@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/08/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3007e9a40dd77e156f0c0a77214e819948fc01da
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348587"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991586"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrieren eines Geräts mit dem Android-Arbeitsprofil
 
@@ -74,6 +74,15 @@ Weitere Informationen dazu finden Sie unter [Was geschieht beim Erstellen eines 
 9. Wenn das Setup abgeschlossen ist, tippen Sie auf **FERTIG**.  
 
     ![Beispielabbildung des Unternehmensportals, Bildschirm „Geräteeinstellungen aktualisieren“, mit dem abgeschlossenen Setup und hervorgehobener Schaltfläche „Done“ (Fertig)](./media/work-profile-done-1911.png)  
+
+10. Wenn Sie aufgefordert werden, die vorgeschlagenen Apps ihrer Organisation in Google Play anzuzeigen, wählen Sie **ÖFFNEN** aus. 
+
+    ![Beispielabbildung der Aufforderung im Unternehmensportal zum Öffnen der Google Play-Version mit Badge.](./media/get-apps-banner-android-2005.png) 
+
+    Wenn Sie nicht bereit sind, Apps zu installieren, können Sie später jederzeit darauf zugreifen, indem Sie direkt zur Version mit Badge der Google Play-App wechseln. Sie können im Menü des Unternehmensportals auch **Apps abrufen** auswählen.  
+
+    ![Beispielabbildung des Menüs im Unternehmensportal mit hervorgehobenem Link „Apps abrufen“.](./media/updated-drawer-android-2005.png) 
+
 
 
 ## <a name="next-steps"></a>Nächste Schritte  

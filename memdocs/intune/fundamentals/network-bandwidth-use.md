@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357895"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943840"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Anforderungen und Bandbreite an die Intune-Netzwerkkonfiguration
 
@@ -36,7 +36,7 @@ Die Tabelle führt den ungefähren Umfang und die Häufigkeit gemeinsamer Inhalt
 > [!NOTE]
 > Um sicherzustellen, dass Geräte Updates und Inhalt von Intune empfangen, müssen Sie zeitweise mit dem Internet verbunden sein. Die Zeit, die für das Empfangen von Updates oder Inhalten benötigt wird, kann variieren, sie sollten jedoch für mindestens eine Stunde pro Tag kontinuierlich mit dem Internet verbunden sein.
 
-|Inhaltstyp|Ungefähre Größe|Häufigkeit und Details|
+|Art des Inhalts|Ungefähre Größe|Häufigkeit und Details|
 |----------------|--------------------|-------------------------|
 |Intune-Clientinstallation<br /><br />**Die folgenden Anforderungen gelten zusätzlich zur Intune-Clientinstallation**|125 MB|**Einmalig**<br /><br />Der Umfang des Clientdownloads schwankt je nach Betriebssystem des Clientcomputers.|
 |Clientregistrierungspaket|15 MB|**Einmalig**<br /><br />Weitere Downloads sind möglich, wenn Updates für diesen Inhaltstyp vorliegen.|
@@ -48,7 +48,7 @@ Die Tabelle führt den ungefähren Umfang und die Häufigkeit gemeinsamer Inhalt
 |Malwaredefinitionsupdates für Endpoint Protection|Variiert<br /><br />Normalerweise zwischen 40 KB und 2 MB|**Täglich**<br /><br />Bis zu drei Mal täglich.|
 |Endpoint Protection-Engine-Update|5 MB|**Monatlich**|
 |Softwareupdates|Variiert<br /><br />Die Größe hängt von den von Ihnen bereitgestellten Updates ab.|**Monatlich**<br /><br />Normalerweise werden Softwareupdates am zweiten Dienstag eines jeden Monats bereitgestellt.<br /><br />Durch einen neu registrierten oder bereitgestellten Computer kann mehr Netzwerkbandbreite verwendet werden, solange alle zuvor veröffentlichten Updates heruntergeladen werden.|
-|Service Packs|Variiert<br /><br />Die Größe variiert für jedes von Ihnen bereitgestellte Service Pack.|**Unterschiedlich**<br /><br />Hängt vom Zeitpunkt der Service Pack-Bereitstellung ab.|
+|Service Packs|Variiert<br /><br />Die Größe variiert für jedes von Ihnen bereitgestellte Service Pack.|**Variiert**<br /><br />Hängt vom Zeitpunkt der Service Pack-Bereitstellung ab.|
 |Softwareverteilung|Variiert<br /><br />Die Größe hängt von der von Ihnen bereitgestellten Software ab.|**Unterschiedlich**<br /><br />Hängt vom Zeitpunkt der Softwarebereitstellung ab.|
 
 ## <a name="ways-to-reduce-network-bandwidth-use"></a>Möglichkeiten zum Verringern der Bandbreitennutzung
@@ -74,14 +74,6 @@ Nachfolgend werden typische Einstellungen für die Verwendung eines Proxyservers
 
 Informationen zur Verwendung eines Proxyservers zum Zwischenspeichern von Inhalt entnehmen Sie der Dokumentation zu Ihrer Proxyserverlösung.
 
-### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>Verwenden des Background Intelligent Transfer Service (BITS) auf Computern
-
-Sie können in einem in Ihnen festgelegten Zeitraum den BITS auf einem Windows-Computer verwenden, um die Netzwerkbandbreite zu reduzieren. Sie können die BITS-Richtlinie auf der Seite **Netzwerkbandbreite** der Intune-Agent-Richtlinie konfigurieren.
-
-> [!NOTE]
-> Für die mobile Geräteverwaltung unter Windows verwendet nur die Verwaltungsschnittstelle des Betriebssystems für den App-Typ MobileMSI den BITS zum Download. AppX/MsiX verwenden ihren eigenen Nicht-BITS-Downloadstapel, und Win32-Apps verwenden die Übermittlungsoptimierung statt des BITS über den Intune-Agent.
-
-Weitere Informationen zu BITS und Windows-Computern finden Sie unter [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) in der TechNet-Bibliothek.
 
 ### <a name="delivery-optimization"></a>Übermittlungsoptimierung
 
@@ -91,14 +83,29 @@ Die vollständige Liste aller Windows 10-Versionen und Inhaltstypen, die von de
 
 Sie können die [Übermittlungsoptimierung](../configuration/delivery-optimization-settings.md) im Rahmen Ihrer Gerätekonfigurationsprofile einrichten.
 
-### <a name="use-branchcache-on-computers"></a>Verwenden von BranchCache auf Computern
+
+### <a name="background-intelligent-transfer-service-bits-and-branchcache"></a>Background Intelligent Transfer Service (BITS) und BranchCache 
+
+Sie können Ihre Windows-PCs mit Microsoft Intune entweder [mithilfe der Verwaltung mobiler Geräte (Mobile Device Management, MDM) als mobile Geräte](../enrollment/windows-enroll.md) oder mithilfe des Intune-Softwareclients als Computer verwalten. Microsoft empfiehlt Kunden, nach Möglichkeit die [MDM-Verwaltungslösung zu nutzen](../enrollment/windows-enroll.md). Bei dieser Art der Verwaltung werden BranchCache und BITS nicht unterstützt. Weitere Informationen finden Sie unter [Vergleichen der Verwaltung von Windows-PCs als Computer oder mobile Geräte](pc-management-comparison.md).
+
+#### <a name="use-bits-on-computers-requires-intune-software-client"></a>Verwenden von BITS auf Computern (erfordert den Intune-Softwareclient)
+
+Sie können in einem in Ihnen festgelegten Zeitraum den BITS auf einem Windows-Computer verwenden, um die Netzwerkbandbreite zu reduzieren. Sie können die BITS-Richtlinie auf der Seite **Netzwerkbandbreite** der Intune-Agent-Richtlinie konfigurieren.
+
+> [!NOTE]
+> Für die mobile Geräteverwaltung unter Windows verwendet nur die Verwaltungsschnittstelle des Betriebssystems für den App-Typ MobileMSI den BITS zum Download. AppX/MsiX verwenden ihren eigenen Nicht-BITS-Downloadstapel, und Win32-Apps verwenden die Übermittlungsoptimierung statt des BITS über den Intune-Agent.
+
+Weitere Informationen zu BITS und Windows-Computern finden Sie unter [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) in der TechNet-Bibliothek.
+
+
+#### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>Verwenden von BranchCache auf Computern (erfordert den Intune-Softwareclient)
 
 Intune-Clients können BranchCache verwenden, um den WAN-Datenverkehr zu verringern. Die folgenden Betriebssysteme unterstützen BranchCache:
 
-- Windows 7
+- Windows 7
 - Windows 8.0
-- Windows 8,1
-- Windows-10
+- Windows 8.1
+- Windows 10
 
 Zum Verwenden von BranchCache muss BranchCache auf dem Clientcomputer aktiviert und für den Modus **Verteilter Cache** konfiguriert sein.
 
@@ -106,8 +113,6 @@ Standardmäßig werden BranchCache und der Modus „Verteilter Cache“ auf Comp
 
 Wenn Sie BranchCache verwenden, arbeiten Sie mit den Administratoren in Ihrer Organisation, um die Gruppenrichtlinien und die Intune-Firewallrichtlinie zu verwalten. Stellen Sie sicher, dass sie keine Richtlinien bereitstellen, von denen BranchCache oder Firewall-Ausnahmen deaktiviert werden. Weitere Informationen zu BranchCache finden Sie unter [BranchCache: Übersicht](https://technet.microsoft.com/library/hh831696.aspx).
 
-> [!NOTE]
-> Sie können Ihre Windows-PCs mit Microsoft Intune entweder [mithilfe der Verwaltung mobiler Geräte (Mobile Device Management, MDM) als mobile Geräte](../enrollment/windows-enroll.md) oder mithilfe des Intune-Softwareclients als Computer verwalten. Microsoft empfiehlt Kunden, nach Möglichkeit die [MDM-Verwaltungslösung zu nutzen](../enrollment/windows-enroll.md). Bei dieser Art der Verwaltung wird BranchCache nicht unterstützt. Weitere Informationen finden Sie unter [Vergleichen der Verwaltung von Windows-PCs als Computer oder mobile Geräte](pc-management-comparison.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126061"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862376"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Erstellen und Zuweisen eines SCEP-Zertifikatprofils in Intune
 
@@ -301,7 +301,8 @@ Beachten Sie jedoch Folgendes, bevor Sie fortfahren:
 - Wenn Sie die Co-Verwaltung für Intune und Configuration Manager verwenden, bewegen Sie in Configuration Manager den [Schieberegler für Workloads](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) für die Ressourcenzugriffsrichtlinie auf **Intune** oder **Intune-Pilot**. Diese Einstellung ermöglicht es Windows 10-Clients, den Prozess zur Anforderung des Zertifikats zu starten.
 
 > [!NOTE]
-> Wenn auf iOS/iPadOS-Geräten ein SCEP-Zertifikatprofil oder ein PKCS-Zertifikatsprofil einem zusätzlichen Profil (z.B. einem WLAN- oder VPN-Profil) zugeordnet ist, erhält das Gerät ein Zertifikat für jedes der zusätzlichen Profile. Dadurch werden für das iOS/iPadOS-Gerät mehrere Zertifikate über die SCEP- oder PKCS-Zertifikatanforderung bereitgestellt. 
+> - Wenn auf iOS/iPadOS-Geräten ein SCEP-Zertifikatprofil oder ein PKCS-Zertifikatsprofil einem zusätzlichen Profil (z.B. einem WLAN- oder VPN-Profil) zugeordnet ist, erhält das Gerät ein Zertifikat für jedes der zusätzlichen Profile. Dadurch werden für das iOS/iPadOS-Gerät mehrere Zertifikate über die SCEP- oder PKCS-Zertifikatanforderung bereitgestellt. 
+> - Auf iOS 13 und macOS 10.15 gibt es einige [zusätzliche Sicherheitsanforderungen, die von Apple dokumentiert sind](https://support.apple.com/HT210176) und berücksichtigt werden müssen.  
 
 
 ## <a name="next-steps"></a>Nächste Schritte
