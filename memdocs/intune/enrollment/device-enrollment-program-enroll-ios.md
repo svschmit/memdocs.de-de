@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023349"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269064"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatisches Registrieren von iOS-/iPadOS-Geräten mit der automatischen Geräteregistrierung von Apple
 
@@ -148,8 +148,7 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 
     ![Screenshot „Profil erstellen“](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. Geben Sie zu administrativen Zwecken auf der Seite **Grundlegende Einstellungen** einen **Namen** und eine **Beschreibung** für das Profil ein. Benutzer können diese Informationen nicht sehen. Sie können das Feld **Name** zum Erstellen einer dynamischen Gruppe in Azure Active Directory verwenden. Verwenden Sie den Profilnamen, um den Parameter „enrollmentProfileName“ zu definieren, um Geräte mit diesem Registrierungsprofil zuzuweisen. Für Geräte, die über die automatische Geräteregistrierung mit Benutzeraffinität registriert werden, sorgen AAD-Benutzergruppen, bei denen der registrierte Benutzer vor der Einrichtung des Geräts Mitglied ist, für die schnellste Bereitstellung der Richtlinien auf den Geräten. Das Konfigurieren von Anwendungen und Richtlinien für dynamische Gruppen basierend auf Registrierungsprofilen führt nach Abschluss des Registrierungsflows zu einer leichten Verzögerung bei der Anwendung der Einstellungen auf die Geräte.
-Erfahren Sie mehr über [dynamische Gruppen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. Geben Sie zu administrativen Zwecken auf der Seite **Grundlegende Einstellungen** einen **Namen** und eine **Beschreibung** für das Profil ein. Benutzer können diese Informationen nicht sehen. 
 
     ![Profilname und Beschreibung](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -264,6 +263,17 @@ Erfahren Sie mehr über [dynamische Gruppen in Azure Active Directory](https://d
 16. Wählen Sie **Weiter** aus, um zur Seite **Überprüfen + erstellen** zu wechseln.
 
 17. Wählen Sie **Erstellen** aus, um das Profil zu speichern.
+
+### <a name="dynamic-groups-in-azure-active-directory"></a>Dynamische Gruppen in Azure Active Directory
+
+Sie können das Registrierungsfeld **Name** zum Erstellen einer dynamischen Gruppe in Azure Active Directory verwenden. Weitere Informationen finden Sie unter [Dynamische Gruppen in Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
+
+Sie können den Profilnamen zum Definieren des Parameters [enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) verwenden, um Geräte mit diesem Registrierungsprofil zuzuweisen.
+
+Stellen Sie für die schnellste Richtlinienbereitstellung auf ADE-Geräten mit Benutzeraffinität vor dem Einrichten des Geräts sicher, dass der Benutzer, der sich registriert ein Mitglied einer AAD-Benutzergruppe ist. 
+
+Das Zuweisen dynamischer Gruppen zu Registrierungsprofilen kann zu einer gewissen Verzögerung bei der Bereitstellung von Anwendungen und Richtlinien auf Geräten nach der Registrierung führen.
+
 
 ## <a name="sync-managed-devices"></a>Synchronisieren verwalteter Geräte
 Nachdem Intune nun die Berechtigung zum Verwalten Ihrer Geräte besitzt, können Sie Intune mit Apple synchronisieren, um Ihre verwalteten Geräte in Intune im Azure-Portal anzuzeigen.

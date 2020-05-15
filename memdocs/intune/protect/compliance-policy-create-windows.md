@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084924"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906902"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Einstellungen für Windows 10 und höher, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen
 
@@ -188,10 +188,20 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
 - **Antivirus:**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Intune überprüft das Gerät nicht auf installierte Antivirenlösungen. 
   - **Erforderlich**: Überprüfen Sie die Konformität mit Antivirenlösungen (beispielsweise Symantec und Microsoft Defender), die beim [Windows-Sicherheitscenter](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/) registriert sind.
+  
+  [DeviceStatus-CSP – DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+
+  > [!NOTE]
+  > Der DeviceStatus-CSP für Antivirus wird für *Windows 10 Home* nicht unterstützt und meldet den Status *Nicht zutreffend*. Das Intune-Team arbeitet an einer Lösung. Um diese Einschränkung zu umgehen, sollten Sie in Betracht ziehen, [Windows Defender](#defender)-Einstellungen in Ihrer Gerätekonformitätsrichtlinie zu verwenden. Windows Defender-Einstellungen werden von Windows 10 Home unterstützt.  
 
 - **Antispyware**:  
   - **Nicht konfiguriert** (*Standardeinstellung*): Intune überprüft das Gerät nicht auf installierte Antispywarelösungen.
   - **Erforderlich**: Überprüfen Sie die Konformität mit Antispywarelösungen (beispielsweise Symantec und Microsoft Defender), die beim [Windows-Sicherheitscenter](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/) registriert sind.  
+  
+  [DeviceStatus-CSP – DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+
+  > [!NOTE]
+  > Der DeviceStatus-CSP für Antispyware wird für *Windows 10 Home* nicht unterstützt und meldet den Status *Nicht zutreffend*. Das Intune-Team arbeitet an einer Lösung. Um diese Einschränkung zu umgehen, sollten Sie in Betracht ziehen, [Windows Defender](#defender)-Einstellungen in Ihrer Gerätekonformitätsrichtlinie zu verwenden. Windows Defender-Einstellungen werden von Windows 10 Home unterstützt. 
 
 ### <a name="defender"></a>Defender
 
