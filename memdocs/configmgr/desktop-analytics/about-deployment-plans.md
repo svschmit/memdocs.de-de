@@ -2,7 +2,7 @@
 title: Bereitstellungspläne in Desktop Analytics
 titleSuffix: Configuration Manager
 description: In diesem Artikel werden Bereitstellungspläne in Desktop Analytics erläutert.
-ms.date: 01/14/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 0f369f3a-f251-4f34-9302-1bdc6ea5d139
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c14eb9127b096f7fc4e4680735867913ea877f54
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706628"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268486"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Bereitstellungspläne in Desktop Analytics
 
@@ -47,8 +48,6 @@ Standardmäßig aktualisiert Desktop Analytics die Daten des Bereitstellungsplan
 
 Wählen Sie nach dem Herstellen der Verbinden von Desktop Analytics mit Configuration Manager ihre Sammlungen in den Bereitstellungsplänen aus. Mit dieser Integration können Sie Windows in einer Sammlung bereitstellen, die auf den Desktop Analytics-Daten basiert.
 
-
-
 ## <a name="readiness-rules"></a>Bereitschaftsregeln
 
 Die folgenden Bereitschaftsregeln sind in Bereitstellungsplänen verfügbar:
@@ -56,7 +55,6 @@ Die folgenden Bereitschaftsregeln sind in Bereitstellungsplänen verfügbar:
 - Ob Ihre Geräte automatisch Treiber aus Windows-Update beziehen. Wenn Geräte Treiber-Updates von Windows-Update erhalten, werden alle etwaigen im Rahmen der Bereitschaftsbewertung festgestellten Treiberprobleme automatisch als **Bereit** markiert.  
 
 - Schwellenwert für niedrige Anzahl von Installationen für Ihre Windows-Apps. Wenn eine App auf einem Prozentsatz der Computer installiert ist, der diesen Schwellenwert überschreitet, wird diese App vom Bereitstellungsplan als **Beachtenswert** markiert. Dieses Tag bedeutet, dass Sie entscheiden können, wie wichtig ein Test der App während der Pilotphase ist.  
-
 
 ## <a name="plan-assets"></a>Planobjekte
 
@@ -76,14 +74,14 @@ Die Windows-Upgradeentscheidung **Gerät ersetzen** kann einen der folgenden Gr�
 - Der Treiber einer für den Start erforderlichen Komponente im System wurde blockiert.
 - Ein Upgrade des spezifischen Typs und Modells ist nicht möglich.
 - Es gibt eine Anzeigeklassenkomponente mit einem Treiberblock, die folgende Merkmale aufweist:
-    - Es erfolgt keine Außerkraftsetzung,
-    - Es ist kein Treiber in der neuen Betriebssystemversion vorhanden.
-    - Sie ist noch nicht in Windows-Update enthalten.
+  - Es erfolgt keine Außerkraftsetzung,
+  - Es ist kein Treiber in der neuen Betriebssystemversion vorhanden.
+  - Sie ist noch nicht in Windows-Update enthalten.
 - Es gibt eine weitere Plug-and-Play-Komponente im System, die das Upgrade blockiert.
 - Es gibt eine drahtlose Komponente, die einen XP-emulierten Treiber verwendet.
 - Eine Netzwerkkomponente mit einer aktiven Verbindung verliert ihren Treiber. Mit anderen Worten: Nach dem Upgrade kann ihre Netzwerkkonnektivität verloren gehen.
 
-Die Windows-Upgradeentscheidung zur **Neuinstallation** gibt an, dass für das Upgrade im Gegensatz zu einem direkten Upgrade eine Neuinstallation erforderlich ist. 
+Die Windows-Upgradeentscheidung zur **Neuinstallation** gibt an, dass für das Upgrade im Gegensatz zu einem direkten Upgrade eine Neuinstallation erforderlich ist.
 
 Eine Windows-Upgrade-Entscheidung kann aus den folgenden Gründen **blockiert** werden:
 
@@ -102,11 +100,13 @@ Die Apps, die von Desktop Analytics als *Beachtenswert* ausgewiesen werden, basi
    > [!Tip]
    > Weitere Informationen zur App-Kategorie „Nicht wichtig“ erhalten Sie unter [Entscheidungen zum automatischen Upgrade von System-und Store-Apps](about-assets.md#bkmk_plan-autoapp). <!-- 3587232 -->
 
+Die Einstellung **Details zu App-Versionen** ist standardmäßig deaktiviert, sodass alle Versionen von Apps mit dem gleichen Namen und Herausgeber zusammengefasst werden.<!-- 5542186 --> Das Standardverhalten trägt dazu bei, die Gesamtzahl der angezeigten Apps zu reduzieren. Dadurch lasst sich der Aufwand beim Kommentieren der Apps verringern. Die App-Anzahl auf der Kachel **Beachtenswerte Apps** spiegelt ebenfalls diese Einstellung wider. Anstatt Hunderte von Instanzen von Microsoft Edge aufzulisten, wird jetzt eine Instanz für alle Versionen angezeigt. Sie können Entscheidungen einmal für alle Versionen treffen. Wenn Sie Entscheidungen für bestimmte Versionen einer App treffen müssen, aktivieren Sie diese Einstellung. Sie können diese Einstellung auch auf der Ebene der globalen Objekte konfigurieren. Weitere Informationen finden Sie unter [Informationen zu Objekten: Apps](about-assets.md#apps).
+
+Wenn die Einstellung **Details zu App-Versionen** deaktiviert ist, wird im Bereich „App-Details“ die Anzahl der App-Versionen und Sprachen angezeigt, die zusammengefasst wurden. Wenn Sie Änderungen an den App-Details speichern, gilt dies für alle Versionen. Legen Sie beispielsweise die **Upgradeentscheidung** oder **Wichtigkeit** fest. In einigen Werten wird „Mehrere“ angezeigt. Das bedeutet, dass kein konsistenter Wert für alle Versionen vorliegt. Der Dienst führt weiterhin Kompatibilitätsrisikobewertungen für jede Version durch. Aktivieren Sie **Details zu App-Versionen**, um die Kompatibilitätsrisikobewertung für eine bestimmte App-Version anzuzeigen.
 
 ### <a name="drivers"></a>Treiber
 
 Überprüfen Sie die Liste der in diesem Bereitstellungsplan enthaltenen Treiber. Legen Sie die **Upgradeentscheidung** fest, prüfen Sie die Empfehlung von Microsoft, und untersuchen Sie die Kompatibilitätsrisikofaktoren.
-
 
 ## <a name="importance"></a>Wichtigkeit
 
@@ -116,18 +116,13 @@ Wenn eine App auf weniger als 2 % der Zielgeräte installiert ist, wird sie mit
 
 Wählen Sie für Apps die Wichtigkeit **Kritisch**, **Wichtig** oder **Nicht wichtig** aus. Wenn Sie eine App als „Kritisch“ oder „Wichtig“ markieren, nimmt Desktop Analytics einige Geräte mit der betreffenden App in die Pilotbereitstellung auf. Der Dienst nimmt in den Pilotversuch mehr Instanzen einer wichtigen App auf. Wenn Sie eine App als „Nicht wichtig“ markieren, wird sie von Desktop Analytics automatisch als **Bereit für Upgrade** festgelegt.
 
-
-
 ## <a name="pilot-devices"></a>Pilotgeräte
 
 Desktop Analytics kombiniert ihre Informationen zur Wichtigkeit mit den Einstellungen des weltweiten Piloten. Anschließend wird eine Empfehlung erstellt, welche Geräte bei der Pilotbereitstellung berücksichtigt werden sollten. Die empfohlene Pilotbereitstellung umfasst Geräte mit unterschiedlichen Hardwarekonfigurationen sowie eine oder mehrere Instanzen aller kritischen und wichtigen Apps. Wenn eine App als „Kritisch“ markiert ist, empfiehlt der Dienst, weitere Geräte mit dieser App in den Pilotversuch aufzunehmen.
 
-
-
 ## <a name="deployment-plans-in-configuration-manager"></a>Bereitstellungspläne in Configuration Manager
 
 Nachdem Sie einen Bereitstellungsplan erstellt haben, stellen Sie die Produkte mithilfe von Configuration Manager bereit. Nach dem Starten der Bereitstellung überwacht Desktop Analytics die Bereitstellung gemäß den Einstellungen im Plan.
-
 
 ## <a name="next-steps"></a>Nächste Schritte
 

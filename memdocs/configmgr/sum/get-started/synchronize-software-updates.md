@@ -2,7 +2,7 @@
 title: Verwalten der Softwareupdatesynchronisierung
 titleSuffix: Configuration Manager
 description: So planen Sie die Softwareupdatesynchronisierung, starten die Softwareupdatesynchronisierung manuell, und überwachen die Softwareupdatesynchronisierung.
-ms.date: 12/20/2018
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d1b47965fa5cc36b0c0eb6d47c2214d1dceb8ee8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d36c6a02868b8ccde9538a286135b2ad1ce08f43
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692938"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269047"
 ---
 #  <a name="synchronize-software-updates"></a><a name="BKMK_SUMSync"></a> Synchronisieren von Softwareupdates
 
@@ -56,7 +56,7 @@ Gehen Sie am Standort der obersten Ebene wie folgt vor, um die Softwareupdatesyn
 
 2. Erweitern Sie im Arbeitsbereich "Softwarebibliothek" den Eintrag **Softwareupdates** , und klicken Sie auf **Alle Softwareupdates** oder **Softwareupdategruppen**.  
 
-3. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Softwareupdates synchronisieren**. Bestätigen Sie im Dialogfeld, dass Sie die Synchronisierung initiieren möchten, indem Sie auf **Ja** klicken.  
+3. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Alle Softwareupdates** auf **Softwareupdates synchronisieren**. Bestätigen Sie im Dialogfeld, dass Sie die Synchronisierung initiieren möchten, indem Sie auf **Ja** klicken.  
 
    Nach dem Start der Synchronisierung auf dem Softwareupdatepunkt können Sie den Synchronisierungsprozess in der Configuration Manager-Konsole bei allen Softwareupdatepunkten in der Hierarchie überwachen. Gehen Sie wie folgt vor, um die Softwareupdatesynchronisierung zu überwachen.  
 

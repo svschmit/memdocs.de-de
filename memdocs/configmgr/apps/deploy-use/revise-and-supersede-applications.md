@@ -2,7 +2,7 @@
 title: Überarbeiten und Ablösen von Anwendungen
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Configuration Manager-Anwendungsversionen verwenden und Anwendungen ersetzen.
-ms.date: 10/06/2016
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87804ee2a76dea918cebb964a3672ab61bf6de8d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6afed00b8207edb338b2a6dc62e083a5267fa47e
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689228"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343132"
 ---
 # <a name="revise-and-supersede-applications-in-configuration-manager"></a>Überarbeiten und Ablösen von Anwendungen in Configuration Manager
 
@@ -59,8 +59,8 @@ In diesem Thema erfahren Sie, wie Sie mit Configuration Manager-Anwendungsversio
 >  Sie können die aktuelle Anwendungsrevision nur löschen, wenn die Anwendung zuvor außer Kraft gesetzt wurde und keine Verweise enthält.  
 
 ##  <a name="application-supersedence"></a>Anwendungsablösung  
- Die Anwendungsverwaltung in Configuration Manager ermöglicht es Ihnen, vorhandene Anwendungen mithilfe einer Ablösungsbeziehung zu aktualisieren oder zu ersetzen. Wenn Sie eine Anwendung ablösen, können Sie einen neuen Bereitstellungstyp als Ersatz für den Bereitstellungstyp der abgelösten Anwendung angeben. Sie können außerdem festlegen, ob vor dem Installieren der ablösenden Anwendung ein Upgrade der abzulösenden Anwendung ausgeführt oder die abzulösende Anwendung deinstalliert werden soll.  
-
+ Die Anwendungsverwaltung in Configuration Manager ermöglicht es Ihnen, vorhandene Anwendungen mithilfe einer Ablösungsbeziehung zu aktualisieren oder zu ersetzen. Wenn Sie eine Anwendung ablösen, können Sie einen neuen Bereitstellungstyp als Ersatz für den Bereitstellungstyp der abgelösten Anwendung angeben. Sie können außerdem festlegen, ob vor dem Installieren der ablösenden Anwendung ein Upgrade der abzulösenden Anwendung ausgeführt oder die abzulösende Anwendung deinstalliert werden soll. Generell empfehlen wir, Supersenzketten auf maximal fünf Ebenen zu begrenzen.
+ 
 > [!IMPORTANT]  
 >  Wenn die Option zum Deinstallieren des abgelösten Bereitstellungstyps ausgewählt wurde, ist es nicht möglich, für die Ablösung einen Bereitstellungstyp zu verwenden, der für einen anderen Sammlungstyp bereitgestellt wurde.  Beispielsweise kann bei dieser Optionsauswahl ein Bereitstellungstyp, der für eine Gerätesammlung bereitgestellt wurde, nicht durch einen Bereitstellungstyp abgelöst werden, der für eine Benutzersammlung bereitgestellt wurde.  
 

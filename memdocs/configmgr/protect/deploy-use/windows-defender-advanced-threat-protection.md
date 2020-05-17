@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie, wie Sie Microsoft Defender Advanced Threat Protection verwalten und überwachen können. Mit diesem neuen Dienst können Unternehmen auf komplexe Angriffe reagieren.
-ms.date: 04/27/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 801aee9665e567ce1a983fba294f1e58f58eee04
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210144"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406662"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
@@ -40,10 +40,10 @@ Je nach der Version von Configuration Manager, die ausgeführt wird, ist ein Onb
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager, Version 2002 und höher
 <!--5229962-->
-- Windows 7 SP1
+Ab der Version 2002 von Configuration Manager können Sie die folgenden Betriebssysteme einbinden:
+
 - Windows 8.1
 - Windows 10, Version 1607 oder höher
-- Windows Server 2008 R2 SP1
 - Windows Server 2012 R2
 - Windows Server 2016
 - Windows Server 2016, Version 1803
@@ -57,8 +57,8 @@ Je nach der Version von Configuration Manager, die ausgeführt wird, ist ein Onb
    - Wenn Sie ein Onboarding von Windows 10, Windows Server 1803 und Windows Server 2019 durchführen:
       1. Wählen Sie **Configuration Manager (Current Branch) Version 1606** aus, und klicken Sie auf **Paket herunterladen**.
       1. Laden Sie die komprimierte Archiv-Datei (ZIP-Datei) herunter, und extrahieren Sie die Inhalte.
-   - Beim Onboarding eines anderen Windows-Betriebssystems: 
-      1. Wählen Sie in der Liste die Betriebssysteme aus, für die Sie das Onboarding durchführen möchten. Wählen Sie z. B. entweder **Windows 7 und 8.1** oder **Windows Server 2008 R2 SP1, 2012 R2 und 2016** aus.
+   - Beim Onboarding eines anderen Windows-Betriebssystems:
+      1. Wählen Sie die Betriebssysteme für das Onboarding aus der Liste aus, die im Microsoft Defender ATP-Onlinedienst angezeigt wird.
       1. Kopieren Sie die Werte für den **Arbeitsbereichsschlüssel** und die **Arbeitsbereichs-ID** aus dem Abschnitt **Verbindung konfigurieren**, sobald der Prozess abgeschlossen ist.
 
 > [!IMPORTANT]
@@ -69,7 +69,7 @@ Je nach der Version von Configuration Manager, die ausgeführt wird, ist ein Onb
 1. Wechseln Sie in der Configuration Manager-Konsole zu **Assets und Konformität** > **Endpoint Protection** > **Windows Defender ATP-Richtlinien**, und klicken Sie auf **Windows Defender ATP-Richtlinie erstellen**. Dann wird der Assistent für Microsoft Defender ATP-Richtlinien geöffnet.  
 1. Geben Sie den **Namen** und die **Beschreibung** für die Microsoft Defender ATP-Richtlinie ein, und wählen Sie **Onboarding** aus.
 1. **Wechseln** Sie zu der Konfigurationsdatei, die vom Microsoft Defender ATP-Clouddienstmandanten Ihrer Organisation bereitgestellt wurde.
-   - Geben Sie für **Windows 7 und 8.1** oder **Windows Server 2008 R2 SP1, 2012 R2 und 2016**den **Arbeitsbereichs Schlüssel** und die **Arbeitsbereichs-ID** an.
+   - Geben Sie für Windows 8.1 oder Windows Server 2012 R2 und 2016 den **Arbeitsbereichsschlüssel** und die **Arbeitsbereichs-ID** an.
    - Bei der Configuration Manager-Version 2002 benötigen Sie den **Arbeitsbereichsschlüssel** und die **Arbeitsbereichs-ID** auch, wenn Sie nur Geräte mit Windows Server 2019 und Windows Server 1803 oder höher integrieren. Sie erhalten diese Werte, indem Sie im [Microsoft Defender ATP-Onlinedienst](https://securitycenter.windows.com/) auf **Einstellungen** > **Onboarding** > **Windows 7 und 8.1** klicken. <!--7054188-->
 1. Geben Sie die Dateibeispiele an, die von verwalteten Geräten gesammelt und für Analysezwecke freigegeben werden.  
 

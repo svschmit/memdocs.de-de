@@ -10,12 +10,13 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c6b8df10a9a20c96cd2f8c1a0b6583c9c5f6e4f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: fb217a1e1ddf114155e43e8edef0c1b34842db64
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708158"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381518"
 ---
 # <a name="desktop-analytics-faq"></a>Desktop Analytics – FAQ
 
@@ -36,6 +37,9 @@ Nach dem erstmaligen Einrichten von Desktop Analytics zeigen die Berichte in Con
 - Stellen Sie [Azure AD-Anwendungen](troubleshooting.md#bkmk_AzureADApps) in Ihrer Azure AD-Instanz bereit.
 - Überprüfen Sie die Geräte, die Sie in den letzten sieben Tagen mit Ihrer Organisation verknüpft haben. Wechseln Sie im [Desktop Analytics-Portal](https://aka.ms/desktopanalytics) zum Bereich **Verbundene Dienste**. Wählen Sie **Geräte registrieren** und **Aktuelle Daten anzeigen** aus.
 
+  > [!IMPORTANT]
+  > Die Desktop Analytics-Option **Aktuelle Daten anzeigen** ist veraltet. Diese Aktion wird in einer zukünftigen Version des Desktop Analytics-Diensts entfernt. Weitere Informationen finden Sie unter [Veraltete Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
+
 Wenn die Geräte ordnungsgemäß konfiguriert sind und Sie weiterhin keine Daten in Ihrem Arbeitsbereich sehen, [kontaktieren Sie den Microsoft-Support](https://support.microsoft.com/hub/4343728/support-for-business).
 
 ## <a name="connect-configuration-manager"></a>Herstellen einer Verbindung mit Configuration Manager
@@ -47,6 +51,10 @@ Ja. Führen Sie dazu den folgenden Vorgang aus:
 - Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**, erweitern Sie den Eintrag **Clouddienste**, und wählen Sie anschließend den Knoten **Azure-Dienste** aus. Öffnen Sie die Eigenschaften für den Eintrag, der dem Desktop Analytics-Dienst zugeordnet ist.
 
 - Ändern Sie auf der Registerkarte **Desktop Analytics-Verbindung** die **Zielsammlung**, oder verwalten Sie die zusätzlichen Sammlungen.
+
+<!-- 7130169 -->
+> [!Note]
+> Fügen Sie nicht mehr als 20 Sammlungen in die Liste der zusätzlichen Sammlungen ein. Seien Sie vorsichtig bei der Gesamtanzahl der Geräte in jeder Sammlung. Schließen Sie immer Ihre [include- und exclude-Sammlungen des globalen Piloten](deploy-pilot.md#bkmk_GlobalPilot) ein.  
 
 > [!IMPORTANT]  
 > Configuration Manager verwendet eine Richtlinie für Einstellungen, um Geräte in der Zielsammlung zu konfigurieren. Diese Richtlinie enthält die Einstellungen für Diagnosedaten, um Geräten das Senden von Daten an Microsoft zu ermöglichen. Wenn Sie die Zielsammlung ändern, wird nicht die Einstellungsrichtlinie für Geräte aufgehoben, die nicht mehr in der Zielsammlung enthalten sind. Wenn Ihre Geräte nicht weiterhin Diagnosedaten senden sollen, müssen Sie die [Geräte neu konfigurieren](account-close.md#reconfigure-clients).

@@ -2,7 +2,7 @@
 title: Bewertung der Kompatibilität
 titleSuffix: Configuration Manager
 description: In diesem Artikel wird die Bewertung der Kompatibilität für Windows-Apps und -Treiber in Desktop Analytics erläutert.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.reviewer: acabello
+ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82109997"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268894"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Kompatibilitätsbewertung in Desktop Analytics
 
@@ -29,7 +30,7 @@ Desktop Analytics verwendet die folgenden Kategorien zur Kompatibilitätsbewertu
 
 - **Hoch**: Die Anwendung kann während des Upgrades oder danach mit hoher Wahrscheinlichkeit nicht ausgeführt werden. Eine Gegenmaßnahme ist möglicherweise erforderlich.
 
-- **Unbekannt**: Die App wurde nicht bewertet. Es gibt keine weitere Informationen wie z. B. *Bei Microsoft bekannte Probleme*.
+- **Unbekannt**: Die App wurde nicht bewertet. Es gibt keine sonstigen Erkenntnisse wie z. B. *MS bekannte Probleme* oder *Ready for Windows*.
 
 In der Liste der App- oder Treiberobjekte in einem Bereitstellungsplan sehen Sie diesen Wert für jedes Objekt in der Spalte **Kompatibilitätsrisiko**.
 
@@ -40,9 +41,13 @@ In der Liste der App- oder Treiberobjekte in einem Bereitstellungsplan sehen Sie
 Es gibt eine Reihe von Quellen, anhand derer Desktop Analytics die Bewertung für Anwendungen generiert:
 
 - [MS bekannte Probleme](#microsoft-known-issues)
+- [Ready for Windows](#ready-for-windows)
 - [Umfassendere Erkenntnisse](#advanced-insights)
 
 Die Bewertung für die einzelnen Quellen zur App wird in Desktop Analytics angegeben. Wählen Sie in der Liste der App-Objekte in einem Bereitstellungsplan eine einzelne App aus, um ihren Flyout-Eigenschaftenbereich zu öffnen. Eine Gesamtempfehlungs- und Bewertungsebene wird angezeigt. Im Abschnitt **Kompatibilitätsrisikofaktoren** werden die Details für diese Bewertungen angezeigt.
+
+> [!TIP]
+> Wenn im App-Detailbereich die Kompatibilitätsbewertung nicht angezeigt wird, liegt dies möglicherweise daran, dass die Einstellung **Details zu App-Versionen** deaktiviert ist. Diese Einstellung ist standardmäßig deaktiviert und fasst alle Versionen von Apps mit dem gleichen Namen und Herausgeber zusammen. Der Dienst führt weiterhin Kompatibilitätsrisikobewertungen für jede Version durch. Aktivieren Sie **Details zu App-Versionen**, um die Kompatibilitätsrisikobewertung für eine bestimmte App-Version anzuzeigen. Weitere Informationen finden Sie unter [Planobjekte](about-deployment-plans.md#plan-assets).
 
 ## <a name="microsoft-known-issues"></a>MS bekannte Probleme
 
@@ -130,6 +135,28 @@ In den Windows-Kompatibilitätsdaten sind einige Apps und Treiber mit *Safeguard
 1. Vergleichen Sie die aktuelle veröffentlichte Liste mit der Liste der Objekte in Ihrer Umgebung. Behandeln Sie alle potenziell problematischen Apps oder Treiber, indem Sie ein Update auf eine kompatible Version durchführen.
 
 [![Screenshot der Safeguard-App in Desktop Analytics](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
+## <a name="ready-for-windows"></a>Ready for Windows
+
+Der Einführungsstatus basiert auf Informationen von kommerziellen Geräten, die Daten an Microsoft weitergeben. Der Status ist in Supporthinweise von Softwareanbietern integriert.
+
+Desktop Analytics gibt den Einführungsstatus für jede Version eines Objekts an, das auf kommerziellen Geräten gefunden wurde. Dieser Status enthält keine Daten von Endanwendergeräten oder Geräten, die keine Daten übermitteln. Der Status ist möglicherweise nicht repräsentativ für die Einführungsrate auf allen Windows 10-Geräten.
+
+Mögliche Kategorien:
+
+- **Umfassend eingeführt**: Diese App wurde auf mindestens 100.000 kommerziellen Windows 10-Geräten installiert.
+
+- **Eingeführt**: Diese App wurde auf mindestens 10.000 kommerziellen Windows 10-Geräten installiert.
+
+- **Unzureichende Daten**: Zu wenige kommerzielle Windows 10-Geräte teilen Informationen zu dieser App mit Microsoft, sodass die Einführung nicht kategorisiert werden kann.
+
+- **Entwickler kontaktieren**: Möglicherweise treten Kompatibilitätsprobleme mit dieser Version der App auf. Microsoft empfiehlt, den Softwareanbieter zu kontaktieren, um weitere Informationen einzuholen.
+
+- **Unbekannt**: Für diese Version der Anwendung sind keine Informationen verfügbar. Eventuell sind Informationen zu anderen Versionen der Anwendung vorhanden.
+
+### <a name="support-statement"></a>Supporthinweis
+
+Wenn der Softwareanbieter eine oder mehrere Versionen dieser Anwendung unter Windows 10 unterstützt, wird diese Bestimmung im App-Eigenschaftenbereich angezeigt. Sehen Sie im Abschnitt „Kompatibilitätsrisikofaktoren“ den **Supporthinweis** ein.
 
 ## <a name="advanced-insights"></a>Umfassendere Erkenntnisse
 

@@ -2,7 +2,7 @@
 title: Neues in Desktop Analytics
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie eine Übersicht über die neuen Funktionen in der aktuellen monatlichen Release des Desktop Analytics-Clouddiensts.
-ms.date: 03/12/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,22 +10,33 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be314aee43e93b5e3d264c70626e2f0b85e8e7f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706378"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268162"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Neues in Desktop Analytics
 
 Informieren Sie sich jeden Monat über Neuigkeiten in Desktop Analytics.
 
 > [!TIP]
-> Das Rollout eines monatlichen Updates kann bis zu drei Tage dauern. Einige Features werden im Laufe mehrerer Wochen bereitgestellt und sind in der ersten Woche möglicherweise nicht für alle Kunden verfügbar.
+> Das Rollout eines monatlichen Updates kann bis zu drei Tage dauern. Die Einführung einiger Funktionen dauert möglicherweise mehrere Wochen, sodass sie in der ersten Woche nicht für alle Kunden verfügbar sind.
 
 Um bei einer Aktualisierung dieser Seite benachrichtigt zu werden, kopieren Sie die folgende URL, und fügen Sie sie in Ihren RSS-Feedreader ein: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="may-2020"></a>Mai 2020
+
+### <a name="reduce-the-number-of-apps-for-review"></a>Reduzieren der Anzahl von Apps für die Überprüfung
+
+<!-- 5542186 -->
+
+Um die Apps zu konsolidieren und ihre Anzahl auf der Objektseite im Portal zu reduzieren, werden nun alle Versionen von Apps mit dem gleichen Namen und Herausgeber zusammengefasst. Die App-Anzahl auf der Kachel **Beachtenswerte Apps** spiegelt diese Einstellung wider. Anstatt Hunderte von Instanzen von Microsoft Edge aufzulisten, wird jetzt eine Instanz für alle Versionen angezeigt. Sie können Entscheidungen einmal für alle Versionen treffen. Wenn Sie Entscheidungen für bestimmte Versionen einer App treffen müssen, ist dieses Verhalten konfigurierbar.
+
+Weitere Informationen finden Sie unter [Informationen zu Objekten: Apps](about-assets.md#apps).
 
 ## <a name="march-2020"></a>März 2020
 
@@ -121,3 +132,7 @@ Die Desktop Analytics-Dokumentation bezieht sich immer auf die Funktionen in der
 <!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
 
 - [Neuerungen in Version 1906](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)
+
+## <a name="deprecated-features"></a>Veraltete Features
+
+Wenn Microsoft plant, ein wichtiges Feature des Desktop Analytics-Diensts zu entfernen, wird diese Änderung im Voraus als veraltetes Feature von Configuration Manager angekündigt. Weitere Informationen finden Sie unter [Veraltete Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).

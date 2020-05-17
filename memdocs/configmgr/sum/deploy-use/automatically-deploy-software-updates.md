@@ -5,17 +5,17 @@ description: Erfahren Sie mehr über die automatische Bereitstellung von Softwar
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: fc2f2644ff042598d3df0ddfc1fd9d4d1adcc34a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d1b4329def3aee97e1684935c0c8f889c3e4e513
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906777"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269030"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Automatisches Bereitstellen von Softwareupdates  
 
@@ -211,7 +211,7 @@ Sie können Softwareupdates mithilfe einer ADR automatisch genehmigen und bereit
 
     -   **Softwareupdates aus dem Internet herunterladen:** Wählen Sie diese Einstellung aus, um die Softwareupdates von einem bestimmten Speicherort im Internet herunterzuladen. Diese Einstellung ist standardmäßig aktiviert.  
 
-    -   **Softwareupdates von einem Pfad im lokalen Netzwerk herunterladen:** Wählen Sie diese Einstellung aus, um die Softwareupdates aus einem lokalen Verzeichnis oder einem freigegebenen Ordner herunterzuladen. Diese Einstellung ist nützlich, wenn der Computer, auf dem der Assistent ausgeführt wird, keine Internetverbindung aufweist. Die Softwareupdates können von jedem Computer mit Internetzugang vorläufig heruntergeladen werden. Sie werden dann an einem Ort im lokalen Netzwerk gespeichert, auf den der Computer zugreifen kann, auf dem der Assistent ausgeführt wird.  
+    -   **Softwareupdates von einem Pfad im lokalen Netzwerk herunterladen:** Wählen Sie diese Einstellung aus, um die Softwareupdates aus einem lokalen Verzeichnis oder einem freigegebenen Ordner herunterzuladen. Diese Einstellung ist nützlich, wenn der Computer, auf dem der Assistent ausgeführt wird, keine Internetverbindung aufweist. Die Softwareupdates können von jedem Computer mit Internetzugang vorläufig heruntergeladen werden. Sie werden dann an einem Ort im lokalen Netzwerk gespeichert, auf den der Computer zugreifen kann, auf dem der Assistent ausgeführt wird. Ein weiteres Szenario könnte das Herunterladen von Inhalten sein, die über System Center Updates Publisher oder eine Patchinglösung eines Drittanbieters veröffentlicht werden. Die WSUS-Inhaltsfreigabe auf der obersten Ebene des Softwareupdatepunkts kann als Netzwerkstandort für den Download eingegeben werden, z. B. `\\server\WsusContent`. <!--memdocs-issue-211-->
 
 14. Wählen Sie auf der Seite **Sprachauswahl** die Sprachen aus, für die der Standort die ausgewählten Softwareupdates herunterlädt. Der Standort lädt diese Updates nur dann herunter, wenn sie in den ausgewählten Sprachen verfügbar sind. Softwareupdates, die nicht sprachspezifisch sind, werden immer heruntergeladen. Standardmäßig werden vom Assistenten die Sprachen ausgewählt, die Sie in den Eigenschaften des Softwareupdatepunkts konfiguriert haben. Es muss mindestens eine Sprache ausgewählt werden, bevor die nächste Seite angezeigt werden kann. Wenn Sie nur Sprachen auswählen, die von einem Softwareupdate nicht unterstützt werden, schlägt das Herunterladen des Updates fehl.  
 

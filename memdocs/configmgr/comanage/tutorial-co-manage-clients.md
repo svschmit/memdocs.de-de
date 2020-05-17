@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 918df2cded3fad48352fff6a2617b1133540c0eb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692578"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268078"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Tutorial: Aktivieren der Co-Verwaltung für vorhandene Konfigurations-Manager-Clients
 
@@ -64,9 +64,10 @@ Sofern nicht bereits in Ihrer Umgebung erfolgt, führen Sie während dieses Tuto
 
 Verwenden Sie in diesem Tutorial durchgehend die folgenden Berechtigungen, um Aufgaben auszuführen:
 
-- Ein Konto, das ein *globaler Administrator* in Azure Active Directory (Azure AD) ist 
 - Ein Konto, das *Domänenadministrator* in Ihrer lokalen Infrastruktur ist  
 - Ein Konto, das *Hauptadministrator* für *alle* Bereiche in Configuration Manager ist
+- Ein Konto, das ein *globaler Administrator* in Azure Active Directory (Azure AD) ist
+   - Stellen Sie sicher, dass Sie dem Konto, mit dem Sie sich bei Ihrem Mandanten anmelden, eine Intune-Lizenz zugewiesen haben. Andernfalls schlägt die Anmeldung mit der Fehlermeldung „Benutzer nicht erkannt“ fehl. <!--mem issue 169-->
 
 ## <a name="set-up-hybrid-azure-ad"></a>Einrichten von Hybrid-Azure AD
 

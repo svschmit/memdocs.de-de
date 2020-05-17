@@ -2,7 +2,7 @@
 title: Überwachen der Co-Verwaltung
 titleSuffix: Configuration Manager
 description: Verwenden Sie das Dashboard für die Co-Verwaltung zum Überprüfen von Informationen zu gemeinsam verwalteten Geräten.
-ms.date: 07/26/2019
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 64d34cef57a3d5f141093d2b099c0b352604be42
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e4516ca9baa7398322c204908c25248921a69d25
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688698"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268061"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Überwachen der Co-Verwaltung in Configuration Manager
 
@@ -173,7 +173,7 @@ Die Produktionsrichtlinie (CoMgmtSettingsProd) zielt auf die Sammlung **Alle Sys
 
 ## <a name="wmi-device-data"></a>WMI-Gerätedaten
 
-Fragen Sie die WMI-Klasse **SMS_Client_ComanagementState** ab. Sie können in Configuration Manager benutzerdefinierte Sammlungen erstellen, um den Bereitstellungsstatus Ihrer Co-Verwaltung zu ermitteln. Weitere Informationen zum Erstellen benutzerdefinierter Sammlungen finden Sie unter [Erstellen von Sammlungen](../core/clients/manage/collections/create-collections.md).
+Fragen Sie die **SMS_Client_ComanagementState** WMI-Klasse im **ROOT\SMS\site_&lt;SITECODE>** -Namespace auf dem Standortserver ab. Sie können in Configuration Manager benutzerdefinierte Sammlungen erstellen, um den Bereitstellungsstatus Ihrer Co-Verwaltung zu ermitteln. Weitere Informationen zum Erstellen benutzerdefinierter Sammlungen finden Sie unter [Erstellen von Sammlungen](../core/clients/manage/collections/create-collections.md).
 
 Die folgenden Felder sind in der WMI-Klasse verfügbar:  
 

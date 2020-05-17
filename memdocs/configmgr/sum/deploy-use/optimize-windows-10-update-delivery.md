@@ -2,7 +2,7 @@
 title: Optimieren der Bereitstellung von Updates für Windows 10
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Updateinhalte mit Configuration Manager verwalten, um stets auf dem neuesten Stand von Windows 10 zu bleiben.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7edd05a7b1ce105e81fd4f594d95c9dfb45f472
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771372"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267789"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimieren der Bereitstellung von Updates für Windows 10 mit Configuration Manager
 
@@ -131,7 +131,7 @@ Der Windows Update-Agent (WUA) fordert zuerst Expressinhalt an. Wenn er das Expr
 
 3. Anschließend fordert CBS den WUA auf, die erforderlichen Bereiche aus einer oder mehreren PSF-Expressdateien herunterzuladen.  
 
-4. Die Übermittlungsoptimierung führt eine Koordination mit Configuration Manager durch und lädt die Bereiche von einem lokalen Verteilungspunkt oder – falls verfügbar – Peers herunter. Wenn die Übermittlungsoptimierung deaktiviert ist, wird der intelligente Hintergrundübertragungsdienst (Background Intelligent Transfer Service, BITS) auf die gleiche Weise mit Configuration Manager verwendet, wobei Peercachequellen koordiniert werden. Die Übermittlungsoptimierung oder der BITS übergibt die Bereiche an den WUA, der sie CBS zur Anwendung und Installation zur Verfügung stellt.  
+4. Wenn die Übermittlungsoptimierung aktiviert ist und festgestellt wird, dass die Peers über die erforderlichen Bereiche verfügen, lädt der Client unabhängig vom ConfigMgr-Client von den Peers herunter. Wenn die Übermittlungsoptimierung deaktiviert ist oder keine Peers über die erforderlichen Bereiche verfügen, lädt der ConfigMgr-Client diese Bereiche von einem lokalen Verteilungspunkt (oder einem Peer oder Microsoft Update) herunter. Die Bereiche werden an den Windows Update-Agent übermittelt, sodass sie für CBS verfügbar sind, um die Bereiche anzuwenden.
 
 
 #### <a name="why-are-the-express-files-psf-so-large-when-stored-on-configuration-manager-peer-sources-in-the-ccmcache-folder"></a>Warum sind die PSF-Expressdateien so groß, wenn sie auf Configuration Manager-Peerquellen im Ordner „ccmcache“ gespeichert werden?

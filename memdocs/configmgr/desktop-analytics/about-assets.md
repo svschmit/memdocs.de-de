@@ -2,7 +2,7 @@
 title: Objekte in Desktop Analytics
 titleSuffix: Configuration Manager
 description: In diesem Artikel erfahren Sie mehr über Geräte, Treiber und Apps in Desktop Analytics.
-ms.date: 01/16/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe1338781cbb16a8485de050a294e34e487a2ecc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706648"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268911"
 ---
 # <a name="assets-in-desktop-analytics"></a>Objekte in Desktop Analytics
 
@@ -41,6 +42,10 @@ Auf der Registerkarte **Apps** werden alle installierten Apps angezeigt, die vom
 
 **Beachtenswerte** Apps sind auf mehr als 2 % der registrierten Geräte installiert.
 
+Die Einstellung **Details zu App-Versionen** ist standardmäßig deaktiviert, sodass alle Versionen von Apps mit dem gleichen Namen und Herausgeber zusammengefasst werden.<!-- 5542186 --> Das Standardverhalten trägt dazu bei, die Gesamtzahl der angezeigten Apps zu reduzieren. Dadurch lasst sich der Aufwand beim Kommentieren der Apps verringern. Die App-Anzahl auf der Kachel **Beachtenswerte Apps** spiegelt ebenfalls diese Einstellung wider. Anstatt Hunderte von Instanzen von Microsoft Edge aufzulisten, wird jetzt eine Instanz für alle Versionen angezeigt. Sie können Entscheidungen einmal für alle Versionen treffen. Wenn Sie Entscheidungen für bestimmte Versionen einer App treffen müssen, aktivieren Sie diese Einstellung. Sie können diese Einstellung auch auf der Ebene eines Bereitstellungsplans konfigurieren. Weitere Informationen finden Sie unter [Planobjekte](about-deployment-plans.md#plan-assets).
+
+Wählen Sie die App aus der Liste aus, und wählen Sie **Bearbeiten** aus. Durch diese Aktion werden Details für die App angezeigt. Wählen Sie das Dropdownmenü **Wichtigkeit** aus, und legen Sie einen Wert fest. Sie können auch einen **Besitzer**zuweisen. Wenn Sie Änderungen vornehmen, wählen Sie **Speichern** aus.
+
 Konfigurieren Sie die **Wichtigkeit** von Apps, indem Sie eine der folgenden Kategorien festlegen:
 
 - Kritisch
@@ -49,7 +54,7 @@ Konfigurieren Sie die **Wichtigkeit** von Apps, indem Sie eine der folgenden Kat
 - Nicht überprüft
 - Nicht wichtig<!-- 3587232 -->
 
-Wählen Sie die App aus der Liste aus, und wählen Sie **Bearbeiten** aus. Durch diese Aktion werden Details für die App angezeigt. Wählen Sie das Dropdownmenü **Wichtigkeit** aus, und legen Sie einen Wert fest. Sie können auch einen **Besitzer**zuweisen. Wenn Sie Änderungen vornehmen, wählen Sie **Speichern** aus.
+Wenn die Einstellung **Details zu App-Versionen** deaktiviert ist, wird im Bereich „App-Details“ die Anzahl der App-Versionen und Sprachen angezeigt, die zusammengefasst wurden. Wenn Sie Änderungen an den App-Details speichern, gilt dies für alle Versionen. Legen Sie z. B. die **Wichtigkeit** oder **Besitzer** fest. In einigen Werten wird „Mehrere“ angezeigt. Das bedeutet, dass kein konsistenter Wert für alle Versionen vorliegt.
 
 ### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" /> Entscheidungen zum automatischen Upgrade von System-und Store-Apps
 
