@@ -2,7 +2,7 @@
 title: Bereitstellen von Inhalten
 titleSuffix: Configuration Manager
 description: Hier finden Sie eine Anleitung zur Bereitstellung von Inhalten, nachdem Sie Verteilungspunkte für Configuration Manager installiert haben.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7478eff1a14eeffd4d12b1539df7c5573c6a7cb6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df26fe91f009a1a4f5d3c5a4f4adb5fe45bbd245
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707258"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343149"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>Bereitstellen und Verwalten von Inhalt mit Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "81707258"
 Nach der Installation von Verteilungspunkten für Configuration Manager können Sie mit der Bereitstellung von Inhalten beginnen. In der Regel werden Inhalte über das Netzwerk an Verteilungspunkte übertragen. Es gibt aber auch andere Optionen zum Übermitteln von Inhalten an die Verteilungspunkte. Nachdem Inhalt an einen Verteilungspunkt übertragen wurde, können Sie ihn auf Verteilungspunkten aktualisieren, neu verteilen, entfernen und überprüfen.  
 
 ##  <a name="distribute-content"></a><a name="bkmk_distribute"></a> Treiberpakete  
-Normalerweise verteilen Sie Inhalte an Verteilungspunkte, damit diese für Clientcomputer verfügbar sind. (Ausnahme: Verwendung einer bedarfsgesteuerten Verteilung von Inhalten für eine bestimmte Bereitstellung.)  Wenn Sie Inhalt verteilen, werden Inhaltsdateien von Configuration Manager in einem Paket gespeichert, das anschließend an den Verteilungspunkt verteilt wird. Die verteilbaren Inhaltstypen lauten z.B.:  
+Normalerweise verteilen Sie Inhalte an Verteilungspunkte, damit diese für Clientcomputer verfügbar sind. (Ausnahme: Verwendung einer bedarfsgesteuerten Verteilung von Inhalten für eine bestimmte Bereitstellung.) Wenn Sie Inhalt verteilen, werden Inhaltsdateien von Configuration Manager in einem Paket gespeichert, das anschließend an den Verteilungspunkt verteilt wird. Der Inhalt für das Paket wird aus der Inhaltsbibliothek des Standortservers abgerufen. Die verteilbaren Inhaltstypen lauten z.B.:  
 
 - Anwendungsbereitstellungstypen  
 
@@ -311,7 +311,7 @@ Für das Verwalten von Inhalten haben Sie die folgenden Optionen:
 
 ### <a name="update-content"></a>Inhalt aktualisieren
 Wenn der Speicherort der Quelldatei für eine Bereitstellung aktualisiert wird, indem neue Dateien hinzugefügt oder vorhandene Dateien durch aktuellere Versionen ersetzt werden, können Sie die Inhaltsdateien an den Verteilungspunkten aktualisieren, indem Sie die Aktionen **Verteilungspunkte aktualisieren** oder **Inhalt aktualisieren** ausführen.  
-- Die Inhaltsdateien werden vom Quelldateipfad in die Inhaltsbibliothek auf dem Standort kopiert, der Besitzer der Paketinhaltsquelle ist.  
+- Die Inhaltsdateien werden vom Quellspeicherort des Originalpakets in die Inhaltsbibliothek auf dem Standort kopiert, der Besitzer der Paketinhaltsquelle ist.
 - Die Paketversion wird erhöht  
 - Für jede Instanz der Inhaltsbibliothek auf Standortservern und Verteilungspunkten werden nur die geänderten Dateien aktualisiert.  
 
@@ -409,7 +409,7 @@ Sie können die Windows Management Instrumentation-Klassenmethode (WMI) **RetryC
 
 Verwenden Sie diese Methode nur, um Replikation zu erzwingen, wenn Sie Inhalt erneut verteilen müssen, nachdem es Probleme mit der normalen Inhaltsreplikation gab (In der Regel wird dies mit der Verwendung des Überwachungsknotens der Konsole bestätigt).   
 
-Weitere Informationen zu dieser SDK-Option finden Sie unter [RetryContentReplication Method in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx) („RetryContentReplication“-Methode in der Klasse „SMS_CM_UpdatePackages“) auf MSDN.Microsoft.com.
+Weitere Informationen zu dieser SDK-Option finden Sie unter der [„RetryContentReplication“-Methode in der Klasse „SMS_CM_UpdatePackages“](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md).
 
 ### <a name="remove-content"></a>Inhalt entfernen
 Wenn Sie an Verteilungspunkten keinen Inhalt mehr benötigen, können Sie die Inhaltsdateien vom Verteilungspunkt entfernen.  

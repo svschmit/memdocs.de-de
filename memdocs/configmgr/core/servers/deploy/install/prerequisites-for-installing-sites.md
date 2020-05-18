@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8362dbf5cf7264c19f683ce5a224f1e0ec348b36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700668"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268979"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Voraussetzungen für die Installation von Configuration Manager-Standorten
 
@@ -49,6 +49,9 @@ Wenn Sie einen Standort der zentralen Verwaltung im Rahmen einer Hierarchieerwei
 
         > [!IMPORTANT]  
         > Nach Abschluss des Configuration Manager-Setups muss das Standortserver-Computerkonto die Systemadministratorrechte für SQL Server beibehalten. Entfernen Sie nicht die SQL-Systemadministratorrechte aus diesem Konto.  
+
+    > [!NOTE]
+    > Weitere Informationen zur Notwendigkeit dieser Berechtigungen nach Abschluss des Setups finden Sie unter [Erweiterte Berechtigungen](../../../plan-design/hierarchy/accounts.md#elevated-permissions).
 
 - Wenn Sie einen primären Standort installieren, benötigen Sie die folgenden zusätzlichen Berechtigungen:  
 
@@ -134,7 +137,7 @@ Nachdem Sie den Standort erweitert haben, müssen Sie die folgenden Azure-Dienst
 - [Microsoft Store für Unternehmen](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Cloudverwaltungsgateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-Erneuern Sie in Version 1806 und höher den geheimen Schlüssel des Azure Active Directory-Mandanten. Weitere Informationen finden Sie unter [Geheimen Schlüssel erneuern](../configure/azure-services-wizard.md#bkmk_renew).
+Die einfachste Methode besteht darin, den geheimen Schlüssel des Azure Active Directory-Mandanten zu erneuern. Weitere Informationen finden Sie unter [Geheimen Schlüssel erneuern](../configure/azure-services-wizard.md#bkmk_renew).
 
 Alternativ können Sie die Verbindung mit diesem Dienst entfernen und dann wieder erstellen:
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 36d256e674a0fe973eca4bc692a244af034d5cc1
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 783323c3e9218b34b1f2b7f3c7d9bb13eea44e2e
+ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076763"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83383724"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Einrichten des Cloudverwaltungsgateways für Configuration Manager
 
@@ -199,6 +199,43 @@ Dieser Befehl zeigt alle internetbasierten Verwaltungspunkte an, die dem Client 
 > [!Note]  
 > Verwenden Sie **CMGHttpHandler.log**, **CMGService.log** und **SMS_Cloud_ProxyConnector.log** für die Problembehandlung des CMG-Clientdatenverkehrs. Weitere Informationen finden Sie in den [Protokolldateien](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
+### <a name="install-off-premises-clients-using-a-cmg"></a>Installieren von externen Clients mithilfe eines CMG
+
+Um den Client-Agents auf Systemen zu installieren, die derzeit nicht mit Ihrem Intranet verbunden sind, muss eine der folgenden Bedingungen erfüllt sein. In allen Fällen ist ein lokales Administratorkonto auf den Zielsystemen erforderlich.
+
+1. Der Configuration Manager-Standort ist ordnungsgemäß für die Verwendung von PKI-Zertifikaten zur Clientauthentifizierung konfiguriert. Außerdem verfügen die Clientsysteme jeweils über ein gültiges, eindeutiges und vertrauenswürdiges Clientauthentifizierungszertifikat, das zuvor für sie ausgestellt wurde.
+
+2. Die Systeme sind in eine AD-Domäne oder in eine Azure AD Hybrid-Domäne eingebunden.
+
+3. Auf dem Standort wird Configuration Manager Version 2002 oder höher ausgeführt.
+
+Verwenden Sie für die Optionen 1 und 2 den Parameter **/mp**, um beim Aufrufen von **ccmsetup.exe** die URL des CMG anzugeben. Weitere Informationen finden Sie unter [Informationen zu Parametern und Eigenschaften für die Clientinstallation ](../../deploy/about-client-installation-properties.md#mp).
+
+Für Option 3 können Sie ab Configuration Manager Version 2002 den Client-Agent auf Systemen installieren, die nicht mit Ihrem Intranet verbunden sind, indem Sie ein Massenregistrierungstoken verwenden. Weitere Informationen zu dieser Methode finden Sie unter [Erstellen eines Massenregistrierungstokens](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+
+### <a name="configure-off-premises-clients-for-cmg"></a>Konfigurieren von externen Clients für CMG
+
+Sie können Systeme mit einem kürzlich konfigurierten CMG verbinden, wobei die folgenden Bedingungen zutreffen:  
+
+- Auf den Systemen ist der Configuration Manager-Client-Agent bereits installiert.
+
+- Systeme sind nicht verbunden und können nicht mit Ihrem Intranet verbunden werden.
+
+- Systeme erfüllen eine der folgenden Bedingungen:
+
+ - Jedes System verfügt über ein gültiges, eindeutiges und vertrauenswürdiges Clientauthentifizierungszertifikat, das zuvor für das System ausgestellt wurde.
+ 
+ - In Azure AD-Domäne eingebunden
+ 
+ - In Azure AD Hybrid-Domäne eingebunden.
+
+- Sie können oder wollen den vorhandenen Client-Agent nicht vollständig neu installieren.
+
+- Sie verfügen über eine Methode, um den Registrierungswert eines Computers zu ändern und den **SMS-Agent-Host**-Dienst mit einem lokalen Administratorkonto neu zu starten.
+
+Um die Verbindung auf diesen Systemen zu erzwingen, erstellen Sie den Registrierungswert **CMGFQDNs** (vom Typ REG_SZ) unter **HKLM\Software\Microsoft\CCM**. Legen Sie diesen Wert auf die URL des CMGs fest (z. B. `https://contoso-cmg.contoso.com`). Starten Sie anschließend den **SMS-Agent-Host**-Dienst auf dem Clientsystem neu.
+
+Wenn für den Configuration Manager-Client kein aktuelles CMG oder kein Verwaltungspunkt mit Internetzugriff in der Registrierung festgelegt ist, wird automatisch der Registrierungswert **CMGFQDNs** überprüft. Diese Überprüfung erfolgt alle 25 Stunden, wenn der **SMS-Agent-Host**-Dienst gestartet oder eine Netzwerkänderung erkannt wird. Wenn der Client eine Verbindung mit dem Standort herstellt und ein CMG feststellt, wird dieser Wert automatisch aktualisiert.
 
 ## <a name="modify-a-cmg"></a>Ändern eines CMG
 

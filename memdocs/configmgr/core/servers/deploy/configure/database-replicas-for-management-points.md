@@ -2,7 +2,7 @@
 title: Verwaltungspunkt-Datenbankreplikate
 titleSuffix: Configuration Manager
 description: Verwenden Sie ein Datenbankreplikat zum Verringern der CPU-Last des Standortdatenbankservers mithilfe von Verwaltungspunkten.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8d413221f7dc4ea905844ad3b2dbe08826314a54
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3daf23f17719e111dacd45e6176c5f697a3d3224
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704668"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343115"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Datenbankreplikate für Verwaltungspunkte für Configuration Manager
 
@@ -57,7 +57,7 @@ Configuration Manager-Standorte können ein Datenbankreplikat zum Verringern der
 
     -   Die Standortdatenbank muss das Datenbankreplikat **veröffentlichen** , und jeder Remoteserver mit einem Datenbankreplikat muss die veröffentlichten Daten **abonnieren** .  
 
-    -   Der SQL Server-Computer, auf dem die Standortdatenbank gehostet wird, und der SQL Server-Computer, auf dem ein Datenbankreplikat gehostet wird, müssen zur Unterstützung einer **maximalen Textgröße für Replikation** von 2 GB konfiguriert werden. Ein Beispiel dafür, wie Sie dies für SQL Server 2012 konfigurieren, finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Textgröße für Replikation](https://go.microsoft.com/fwlink/p/?LinkId=273960).  
+    -   Der SQL Server-Computer, auf dem die Standortdatenbank gehostet wird, und der SQL Server-Computer, auf dem ein Datenbankreplikat gehostet wird, müssen zur Unterstützung einer **maximalen Textgröße für Replikation** von 2 GB konfiguriert werden. Ein Beispiel dafür, wie Sie dies für SQL Server 2012 konfigurieren, finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Textgröße für Replikation](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
 
 -   **Selbstsigniertes Zertifikat:** Zum Konfigurieren eines Datenbankreplikats müssen Sie auf dem Datenbankreplikatserver ein selbstsigniertes Zertifikat erstellen und jedem Verwaltungspunkt, von dem dieser Datenbankreplikatserver verwendet werden soll, verfügbar machen.  
 
@@ -82,6 +82,8 @@ Configuration Manager-Standorte können ein Datenbankreplikat zum Verringern der
 -   **Upgrades auf Configuration Manager (Current Branch)** : Bevor Sie entweder ein Upgrade eines Standorts von System Center 2012 Configuration Manager auf Configuration Manager (Current Branch) ausführen oder Configuration Manager (Current Branch) auf das neueste Release aktualisieren, müssen Sie Datenbankreplikate für Verwaltungspunkte deaktivieren.  Nach dem Upgrade des Standorts können Sie die Datenbankreplikate für Verwaltungspunkte neu konfigurieren.  
 
 -   **Mehrere Replikate auf einer einzelnen SQL Server-Instanz:**  Wenn Sie einen Datenbankreplikatserver zum Hosten mehrerer Datenbankreplikate für Verwaltungspunkte konfigurieren (wobei sich jedes Replikat in einer eigenen Instanz befinden muss), müssen Sie (in Schritt 4 des folgenden Abschnitts) ein geändertes Konfigurationsskript verwenden. Dies verhindert das Überschreiben des selbstsignierten Zertifikats, das von zuvor konfigurierten Datenbankreplikaten auf diesem Server verwendet wird.  
+
+- Benutzerbereitstellungen im Software Center funktionieren nicht mit einem Verwaltungspunkt, der ein SQL-Replikat verwendet. <!--sccmdocs-1011-->
 
 ##  <a name="configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a> Konfigurieren von Datenbankreplikaten  
 Zum Konfigurieren eines Datenbankreplikats müssen die folgenden Schritte ausgeführt werden:  
@@ -172,7 +174,7 @@ Verwenden Sie das folgende Verfahren als Beispiel für die Konfiguration eines D
         -   Wenn der SQL Server-Agent mit einem anderen Konto ausgeführt wird, wählen Sie **Unter dem folgenden Windows-Konto ausführen**, und konfigurieren Sie dann dieses Konto. Sie können ein Windows-Konto oder ein SQL Server-Konto angeben.  
 
         > [!IMPORTANT]  
-        >  Sie müssen dem Konto, unter dem der Verteilungs-Agent ausgeführt wird, Berechtigungen für den Herausgeber als Pullabonnement erteilen. Informationen zum Konfigurieren dieser Berechtigungen finden Sie unter [Sicherheit für den Verteilungs-Agent](https://go.microsoft.com/fwlink/p/?LinkId=238463) in der SQL Server TechNet-Bibliothek.  
+        >  Sie müssen dem Konto, unter dem der Verteilungs-Agent ausgeführt wird, Berechtigungen für den Herausgeber als Pullabonnement erteilen. Informationen zum Konfigurieren dieser Berechtigungen finden Sie unter [Sicherheit für den Verteilungs-Agent](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
 
       - Wählen Sie unter **Verbindung mit dem Verteiler herstellen**die Option **Identität des Prozesskontos annehmen**aus.  
 
@@ -457,7 +459,7 @@ Sie müssen die Kommunikation zwischen dem Standortdatenbankserver und dem Daten
 -   Für jedes nachfolgende Datenbankreplikat, das Sie mithilfe dieses Skripts konfigurieren, müssen Sie den Anzeigenamen des Zertifikats aktualisieren.  Bearbeiten Sie hierzu die Zeile **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** , indem Sie **ConfigMgr SQL Server Identification Certificate** durch einen Namen wie  **ConfigMgr SQL Server Identification Certificate1**ersetzen.  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> Verwalten von Konfigurationen von Datenbankreplikaten  
- Wenn Sie an einem Standort ein Datenbankreplikat verwenden, finden Sie in den folgenden Abschnitten Informationen zum Deinstallieren eines Datenbankreplikats sowie eines Standorts, der ein Datenbankreplikat verwendet. Außerdem erhalten Sie Informationen zum Verschieben der Standortdatenbank auf eine neue Installation von SQL Server. Wenn Sie anhand der Informationen in den folgenden Abschnitten Veröffentlichungen löschen, richten Sie sich nach dem Leitfaden zum Löschen der transaktionalen Replikation für die Version von SQL Server, die Sie für das Datenbankreplikat verwenden. Wenn Sie z.B. SQL Server 2008 R2 verwenden, finden Sie weitere Informationen unter [How to: Löschen einer Veröffentlichung (Replikationsprogrammierung mit Transact-SQL)](https://go.microsoft.com/fwlink/p/?LinkId=273934).  
+ Wenn Sie an einem Standort ein Datenbankreplikat verwenden, finden Sie in den folgenden Abschnitten Informationen zum Deinstallieren eines Datenbankreplikats sowie eines Standorts, der ein Datenbankreplikat verwendet. Außerdem erhalten Sie Informationen zum Verschieben der Standortdatenbank auf eine neue Installation von SQL Server. Wenn Sie anhand der Informationen in den folgenden Abschnitten Veröffentlichungen löschen, richten Sie sich nach dem Leitfaden zum Löschen der transaktionalen Replikation für die Version von SQL Server, die Sie für das Datenbankreplikat verwenden. Weitere Informationen finden Sie unter [Löschen einer Veröffentlichung](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
 
 > [!NOTE]  
 >  Nachdem Sie eine Standortdatenbank wiederhergestellt haben, die für Datenbankreplikate konfiguriert war, müssen Sie vor der Verwendung der Datenbankreplikate jedes Replikat neu konfigurieren, indem Sie die Veröffentlichungen und die Abonnements neu erstellen.  

@@ -2,7 +2,7 @@
 title: Einblicke für die Verwaltung
 titleSuffix: Configuration Manager
 description: Informationen zur Funktionalität für Verwaltungseinblicke, die in der Configuration Manager-Konsole verfügbar ist.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9aae1da48deabd0cc339cd25055827caf07354b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 69b2533dd5c86124a6aff9feac7306ecf16c6e5a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694448"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268962"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Verwaltungseinblicke in Configuration Manager
 
@@ -146,13 +146,13 @@ Ab Version 1902 gibt es neue Regeln mit Empfehlungen für die Verwaltung von Sam
 
 - **Collections with the same re-evaluation start time** (Sammlungen mit der gleichen Startzeit für eine Neuauswertung): Diese Sammlungen weisen den gleichen Neuauswertungszeitpunkt wie andere Sammlungen auf. Ändern Sie den Neuauswertungszeitpunkt, um Konflikte zu vermeiden.  
 
-- **Collections with query time over two seconds** (Sammlungen mit einer Abfragedauer von mehr als zwei Sekunden): Überprüfen Sie die Abfrageregeln für diese Sammlung. Ziehen Sie eine Änderung oder das Löschen der Sammlung in Betracht.
+- **Collections with query time over 5 minutes** (Sammlungen mit einer Abfragedauer von mehr als 5 Minuten): Überprüfen Sie die Abfrageregeln für diese Sammlung. Ziehen Sie eine Änderung oder das Löschen der Sammlung in Betracht.
 
 - Die folgenden Regeln schließen Konfigurationen ein, die unnötige Lasten an dem Standort verursachen können. Überprüfen Sie diese Sammlungen, und löschen Sie diese entweder anschließend, oder deaktivieren Sie die Regelauswertung:  
 
   - **Collections with no query rules and incremental updates enabled** (Sammlungen ohne Abfrageregeln und mit aktivierten inkrementellen Updates)  
 
-  - **Collections with no query rules and enabled for scheduled or incremental evaluation** (Sammlungen ohne Abfrageregeln und mit aktivierter geplanter oder inkrementeller Auswertung)  
+  - **Collections with no query rules and enabled for any schedule** (Sammlungen ohne Abfrageregeln und aktiviert für jeden Plan)  
 
   - **Collections with no query rules and schedule full evaluation selected** (Sammlungen ohne Abfrageregeln und aktiviertem Zeitplan für eine vollständige Auswertung)  
 

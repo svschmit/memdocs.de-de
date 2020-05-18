@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1435c1ab6be8c80178566ae9d354084fddebb22a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 3374a912b8235f546ec551bd1a964f9fc957b96d
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771353"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991693"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informationen zu Clienteinstellungen in Configuration Manager
 
@@ -325,9 +325,9 @@ Wenn Clients erforderliche Softwareupdates zum Stichtag der Bereitstellung ohne 
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>Karenzzeit für Erzwingung nach Bereitstellungsfrist (Stunden)
 
-Wenn Sie den Benutzern mehr Zeit zum Installieren erforderlicher Anwendungen oder Softwareupdates nach der Frist gewähren möchten, legen Sie diese Einstellung auf **Ja** fest. Diese Toleranzperiode gilt für einen Computer, der für einen längeren Zeitraum ausgeschaltet ist, und für den der Benutzer viele Anwendungs- oder Updatebereitstellungen installieren muss. Diese Einstellung kann sehr nützlich sein, damit beispielsweise ein Benutzer, der aus dem Urlaub zurückkehrt, nicht lange warten muss, während der Client überfällige Anwendungsbereitstellungen installiert.
+Wenn Sie den Benutzern mehr Zeit zum Installieren erforderlicher Anwendungs- oder Softwareupdatebereitstellungen nach der Frist gewähren möchten, legen Sie einen Wert für diese Option fest. Diese Toleranzperiode gilt für einen Computer, der für einen längeren Zeitraum ausgeschaltet ist, und für den der Benutzer viele Anwendungs- oder Updatebereitstellungen installieren muss. Diese Einstellung kann sehr nützlich sein, damit beispielsweise ein Benutzer, der aus dem Urlaub zurückkehrt, nicht lange warten muss, während der Client überfällige Anwendungsbereitstellungen installiert.
 
-Legen Sie eine Karenzzeit von 1 bis 120 Stunden fest. Verwenden Sie diese Einstellung mit der Bereitstellungseigenschaft **Erzwingung für diese Bereitstellung basierend auf den Benutzereinstellungen innerhalb der Karenzzeit verzögern, die in den Clienteinstellungen definiert ist**. Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+Legen Sie eine Karenzzeit von 0 bis 120 Stunden fest. Verwenden Sie diese Einstellung mit der Bereitstellungseigenschaft **Erzwingung für diese Bereitstellung basierend auf den Benutzereinstellungen innerhalb der Karenzzeit verzögern, die in den Clienteinstellungen definiert ist**. Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
 
 ## <a name="computer-restart"></a>Computerneustart

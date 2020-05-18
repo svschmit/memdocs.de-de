@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
+ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587274"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83383723"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Tokenbasierte Authentifizierung für Cloud Management Gateway
 
@@ -102,6 +102,28 @@ Das Token wird nicht auf dem Client oder am Standort gespeichert. Kopieren Sie d
 Verwenden Sie dies mit dem `/new`-Parameter, um den Gültigkeitszeitraum des Tokens anzugeben. Geben Sie einen ganzzahligen Wert in Minuten ein. Der Standardwert beträgt 4.320 (drei Tage). Der Höchstwert liegt bei 10.080 (7 Tage).
 
 Beispiel: `BulkRegistrationTokenTool.exe /lifetime:4320`
+
+## <a name="bulk-registration-token-management"></a>Verwaltung des Massenregistrierungstokens
+
+Sie können zuvor erstellte Massenregistrierungstoken und deren Lebensdauer in der Configuration Manager-Konsole anzeigen und ihre Verwendung bei Bedarf blockieren. In der Standortdatenbank werden Massenregistrierungstoken jedoch nicht gespeichert.
+
+#### <a name="to-review-a-bulk-registration-token"></a>So überprüfen Sie ein Massenregistrierungstoken
+
+1. Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.
+
+2. Erweitern Sie im Arbeitsbereich „Verwaltung“ den Eintrag **Sicherheit**, und klicken Sie auf **Zertifikate**. In der-Konsole werden alle standortbezogenen Zertifikate und Massenregistrierungstoken im Detailbereich aufgelistet.
+
+3. Wählen Sie das zu überprüfende Massenregistrierungstoken aus.
+
+Sie können bestimmte Massenregistrierungstoken basierend auf ihrer GUID identifizieren. GUIDs für Massenregistrierungstoken werden zum Zeitpunkt der Tokenerstellung angezeigt. Sie können bei Bedarf auch nach der Spalte **Typ** filtern oder sortieren.
+
+#### <a name="to-block-a-bulk-registration-token"></a>So blockieren Sie ein Massenregistrierungstoken
+
+1. Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.
+
+2. Erweitern Sie im Arbeitsbereich „Verwaltung“ den Eintrag **Sicherheit**, klicken Sie auf **Zertifikate**, und wählen Sie das zu blockierende Massenregistrierungstoken aus.
+
+3. Wählen Sie auf der Registerkarte **Start** des Menübands oder im Kontextmenü die Option **Blockieren** aus. Umgekehrt können Sie die Blockierung zuvor blockierter Massenregistrierungstoken aufheben, indem Sie auf der Registerkarte **Start** des Menübands oder im Kontextmenü die Option **Blockierung aufheben** auswählen.
 
 ## <a name="see-also"></a>Weitere Informationen:
 
