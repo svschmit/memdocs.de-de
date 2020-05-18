@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 253de522937e48fa1f3939c7303faf7e43e4e047
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d7432b3522d5292e2c2afc1dac6b8db3382cca12
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704538"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343166"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Die Inhaltsbibliothek in Configuration Manager
 
@@ -90,6 +90,8 @@ Eine Remoteinhaltsbibliothek ist eine Voraussetzung für die [Hochverfügbarkeit
 - Das Computerkonto des Standortservers muss über die Berechtigung **Vollzugriff** für den Netzwerkpfad verfügen, auf den Sie die Inhaltsbibliothek verschieben. Diese Berechtigung gilt sowohl für die Freigabe als auch für das Dateisystem. Auf dem Remotesystem werden keine Komponenten installiert.
 
 - Der Standardserver darf nicht über die Verteilungspunktrolle verfügen. Der Verteilungspunkt verwendet ebenfalls die Inhaltsbibliothek, und diese Rolle unterstützt keine Remoteinhaltsbibliothek. Nachdem die Inhaltsbibliothek verschoben wurde, können Sie die Verteilungspunktrolle nicht mehr zum Standortserver hinzufügen.  
+
+- Das Remotesystem für die Inhaltsbibliothek muss sich in einer vertrauenswürdigen Domäne befinden.
 
 > [!Important]  
 > Verwenden Sie einen freigegebenen Netzwerkspeicherort nicht erneut für mehrere Standorte. Verwenden Sie beispielsweise nicht denselben Pfad für einen Standort der zentralen Verwaltung und einen untergeordneten primären Standort. Diese Konfiguration könnte die Inhaltsbibliothek beschädigen, und Sie müssten diese neu erstellen.<!--SCCMDocs-pr issue 2764-->  
@@ -196,3 +198,5 @@ Die folgenden Tipps können Ihnen beim Beheben von Problemen mit der Inhaltsbibl
 - Um festzustellen, ob Hashkonflikte vorliegen, überprüfen Sie das Paket von der Configuration Manager-Konsole.  
 
 - Verteilen Sie als letzte Möglichkeit zur Problembehebung den Inhalt erneut. Dadurch sollten die meisten Probleme beheben werden.  
+
+Ausführlichere Informationen finden Sie unter [Grundlegendes zur Inhaltsverteilung in Configuration Manager und Fehlerbehebung](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager).

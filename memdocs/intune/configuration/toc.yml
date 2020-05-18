@@ -82,8 +82,12 @@
         - name: StageNow-Protokolle und allgemeine Probleme
           href: android-zebra-mx-logs-troubleshoot.md
     - name: OEMConfig unter Android Enterprise
-      href: android-oem-configuration-overview.md
-      displayName: 'original equipment manufacturers, schema'
+      displayName: 'original equipment manufacturers, schema, zebra, order'
+      items:
+        - name: Erste Schritte
+          href: android-oem-configuration-overview.md
+        - name: Profile auf Zebra-Geräten
+          href: oemconfig-zebra-android-devices.md
     - name: Kiosks und dedizierte Geräte
       href: kiosk-settings.md
       displayName: 'single app, multi app'

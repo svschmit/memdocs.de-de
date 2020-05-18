@@ -20,6 +20,7 @@
 #### Registrieren mit abgeleiteten Anmeldeinformationen
 ##### [Registrieren mit Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [Registrieren mit Intercede](enroll-android-device-intercede.md)
+##### [Registrieren mit DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Zum Setup der neuen Geräteverwaltung wechseln](move-to-new-device-management-setup.md)
 ### [Verwenden verwalteter Apps auf Ihrem Gerät](use-managed-apps-on-your-device-android.md)
 ### [Verschlüsseln Ihres Geräts](encrypt-your-device-android.md)

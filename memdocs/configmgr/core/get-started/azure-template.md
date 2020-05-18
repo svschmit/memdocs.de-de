@@ -10,16 +10,16 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd2a8b3bfb7c4b8af277616c7eaed329bc143bb7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691398"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406689"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Erstellen eines Configuration Manager-Labs in Azure
 
-*Gilt für: Configuration Manager (Technical Preview-Branch)*
+*Gilt für: Configuration Manager (Current Branch, Technical Preview-Branch)*
 
 <!--3556017-->
 
@@ -35,8 +35,8 @@ Weitere Informationen finden Sie unter [Configuration Manager in Azure](../under
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Für diesen Vorgang benötigen Sie ein Azure-Abonnement, mit dem Sie folgende Objekte erstellen können: 
-- Zwei virtuelle Computer vom Typ „Standard_B2s“ für Domänencontroller und MP- und DP-Rollen
-- Einen virtuellen Computer vom Typ „Standard_B2ms“ für primäre Standortserver und SQL-Datenbank-Server
+- Zwei virtuelle Computer vom Typ „Standard_B2s“ für Domänencontroller, Verwaltungspunkt und Verteilungspunkt.
+- Einen virtuellen Computer vom Typ „Standard_B2ms“ für den primären Standortserver und den SQL-Datenbank-Server.
 - Standard_LRS-Speicherkonto
 
 > [!Tip]  
@@ -102,7 +102,7 @@ Bei dem Präfix, das Sie in der Bereitstellungsvorlage angegeben haben, handelt 
 ### `<prefix>DC01`
 
 - Active Directory-Domänencontroller
-- Standard_B2s mit zwei CPUs und 4 GB Arbeitsspeicher
+- Standard_B2s mit zwei Prozessoren und 4 GB Arbeitsspeicher
 - Windows Server 2019 Datacenter Edition
 
 #### <a name="windows-features-and-roles"></a>Windows-Features und -Rollen
@@ -113,7 +113,7 @@ Bei dem Präfix, das Sie in der Bereitstellungsvorlage angegeben haben, handelt 
 
 ### `<prefix>PS01`
 
-- Standard_B2ms mit zwei CPUs und 8 GB Arbeitsspeicher
+- Standard_B2ms mit zwei Prozessoren und 8 GB Arbeitsspeicher
 - Windows Server 2016 Datacenter Edition
 - SQL Server
 - Windows 10 ADK mit Windows PE 
@@ -127,7 +127,7 @@ Bei dem Präfix, das Sie in der Bereitstellungsvorlage angegeben haben, handelt 
 
 ### `<prefix>DPMP01`
 
-- Standard_B2s mit zwei CPUs und 4 GB Arbeitsspeicher
+- Standard_B2s mit zwei Prozessoren und 4 GB Arbeitsspeicher
 - Windows Server 2019 Datacenter Edition
 - Verteilungspunkt
 - Verwaltungspunkt

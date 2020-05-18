@@ -2,7 +2,7 @@
 title: Suchen nach Hilfe
 titleSuffix: Configuration Manager
 description: Suchen Sie Ressourcen für zusätzliche Informationen zu Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6610e86c12b6f7704b65dc11c476fa09e8f2ae63
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707158"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343183"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Suchen nach Hilfe für die Verwendung von Configuration Manager
 
@@ -127,6 +127,13 @@ Wenn Sie uns ein **Lächeln** oder ein **Stirnrunzeln senden**, werden die folge
         - `-s --silent` Keine Protokollierung an die Konsole (Kann nicht mit --verbose kombiniert werden)
         - `-v, --verbose` Ausgabe ausführlicher Protokolle an die Konsole (Kann nicht mit --silent kombiniert werden)
         - `--help` Zeigt den Hilfebildschirm an
+    
+    - Ab Version 1910 unterstützt das UploadOfflineFeedback-Hilfsprogramm die Verwendung eines Proxyservers. Sie können die folgenden Parameter angeben:
+        - `-x, --proxy` Gibt einen Proxyserver für die Internetverbindung an.
+        - `-o, --port` Gibt den Port für den Proxyserver für die Internetverbindung an.
+        - `-u, --user` Gibt den Benutzernamen für den Proxyserver für die Internetverbindung an.
+        - `-w, --password` Gibt das Kennwort für den Proxyserver für die Internetverbindung an. Geben Sie ein Sternchen (&#42;) ein, um eine Eingabeaufforderung für das Kennwort zu erhalten. Das Kennwort wird nicht angezeigt, während Sie es an der Eingabeaufforderung eingeben. Es wird dringend empfohlen, ein Sternchen (&#42;) zu verwenden, um eine Eingabeaufforderung für die Kennworteingabe anzuzeigen, da reiner Text in der Befehlszeile weniger sicher ist.
+        - `-i` Verbindungsüberprüfung überspringen: Überspringt die Überprüfung der Netzwerkverbindung, lädt lediglich Feedback mit den angegebenen Einstellungen hoch.
 
 ## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a> Confirmation of console feedback (Bestätigung des Konsolenfeedbacks)
 

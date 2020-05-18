@@ -2,20 +2,20 @@
 title: Verwendete Konten
 titleSuffix: Configuration Manager
 description: Identifizieren und verwalten Sie die Windows-Gruppen, Konten und SQL-Objekte in Configuration Manager.
-ms.date: 10/23/2019
+ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.technology: Configuration Manager-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6808fed9fa9aaf894e3975066eb7707880b7948
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5bd1284b96e1739126b8d6ee19f20699d47e5880
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073414"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267985"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>In Configuration Manager verwendete Konten
 
@@ -24,9 +24,9 @@ ms.locfileid: "82073414"
 Verwenden Sie die folgenden Informationen, um die in Configuration Manager verwendeten Windows-Gruppen, Konten und SQL-Objekte, deren Verwendung sowie ggf. geltende Anforderungen zu identifizieren.  
 
 - [Windows-Gruppen, die von Configuration Manager erstellt und verwendet werden](#bkmk_groups)  
-  - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
-  - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
-  - [ConfigMgr-Remotesteuerungsbenutzer](#configmgr-remote-control-users)  
+  - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+  - [Configuration Manager_DViewAccess](#configmgr_dviewaccess)  
+  - [Configuration Manager-Remotesteuerungsbenutzer](#configmgr_rcusers)  
   - [SMS-Administratoren](#sms-admins)  
   - [SMS_SiteSystemToSiteServerConnection_MP_&lt;Standortcode\>](#bkmk_remotemp)  
   - [SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;Standortcode\>](#bkmk_remoteprov)  
@@ -96,7 +96,7 @@ Die folgenden Windows-Gruppen werden von Configuration Manager automatisch erste
 > Wenn von Configuration Manager eine Gruppe auf einem Computer erstellt wird, der ein Domänenmitglied ist, ist die Gruppe eine lokale Sicherheitsgruppe. Wenn der Computer ein Domänencontroller ist, ist die Gruppe eine lokale Gruppe der Domäne. Die Art der Gruppe wird für alle Domänencontroller in der Domäne freigegeben.  
 
 
-### <a name="configmgr_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> ConfigMgr_CollectedFilesAccess
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> Configuration Manager_CollectedFilesAccess
 
 Diese Gruppe wird von Configuration Manager für den Zugriff auf Dateien verwendet, die von der Softwareinventur gesammelt wurden.  
 
@@ -114,14 +114,14 @@ Die Gruppenmitgliedschaft wird von Configuration Manager automatisch verwaltet. 
 Standardmäßig besitzt diese Gruppe die **Leseberechtigung** für den folgenden Ordner auf dem Standortserver: `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`.  
 
 
-### <a name="configmgr_dviewaccess"></a><a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Configuration Manager_DViewAccess  
 
 Diese Gruppe ist eine lokale Sicherheitsgruppe, die von Configuration Manager auf dem Standortdatenbankserver oder dem Datenbankreplikatserver für einen untergeordneten primären Standort erstellt wird. Der Standort erstellt diese, wenn Sie verteilte Ansichten für die Datenbankreplikation zwischen Standorten in einer Hierarchie verwenden. Sie enthält den Standortserver und die SQL Server-Computerkonten des Standorts der zentralen Verwaltung.
 
 Weitere Informationen finden Sie unter [Datenübertragungen zwischen Standorten](data-transfers-between-sites.md).
 
 
-### <a name="configmgr-remote-control-users"></a>ConfigMgr Remote Control Users  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a> Configuration Manager-Remotesteuerungsbenutzer  
 
 Diese Gruppe wird von Configuration Manager-Remotetools verwendet, um die Konten und Gruppen zu speichern, die Sie in der Liste **Zugelassene Viewer** einrichten. Der Standort ordnet diese Liste den verschiedenen Clients zu.  
 
@@ -245,6 +245,8 @@ Standardmäßig besitzt diese Gruppe die Berechtigung **Vollzugriff** für folge
 
 Sie können die folgenden Konten für Configuration Manager einrichten.  
 
+> [!TIP]
+> Verwenden Sie kein Prozentzeichen (`%`) im Kennwort für Konten, die Sie in der Configuration Manager-Konsole angeben. Das Konto kann ansonsten nicht authentifiziert werden.<!-- SCCMDocs#1032 -->
 
 ### <a name="active-directory-group-discovery-account"></a>Konto für die Active Directory-Sicherheitsgruppenermittlung  
 
@@ -382,7 +384,7 @@ Clientcomputer verwenden das **Netzwerkzugriffskonto**, wenn über ihr lokales C
 
 Ein Konfigurations-Manager-Client versucht zunächst, das Computerkonto zu verwenden, um den Inhalt herunterzuladen. Wenn dieser Vorgang fehlschlägt, wird automatisch ein erneuter Versuch mit dem Netzwerkzugriffskonto gestartet.  
 
-Ab Version 1806 kann eine Arbeitsgruppe oder ein mit Azure AD verknüpfter Client ohne Netzwerkzugriffskonto sicher von Verteilungspunkten auf Inhalt zugreifen. Dieses Verhalten umfasst die Bereitstellung von Betriebssystemen mit einer Tasksequenz, die über Startmedien, PXE oder das Softwarecenter ausgeführt wird. Weitere Informationen finden Sie unter [Enhanced HTTP (Erweitertes HTTP)](enhanced-http.md).<!--1358228,1358278-->
+Wenn Sie den Standort für HTTPS oder [erweitertes HTTP](enhanced-http.md) konfigurieren, kann eine Arbeitsgruppe oder ein mit Azure AD verknüpfter Client ohne Netzwerkzugriffskonto sicher von Verteilungspunkten auf Inhalt zugreifen. Dieses Verhalten umfasst die Bereitstellung von Betriebssystemen mit einer Tasksequenz, die über Startmedien, PXE oder das Softwarecenter ausgeführt wird.<!--1358228,1358278--> Weitere Informationen finden Sie unter [Kommunikation zwischen Client und Verwaltungspunkt](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
 
 > [!Note]  
 > Wenn Sie **Erweitertes HTTP** so konfigurieren, dass kein Netzwerkzugriffskonto erforderlich ist, muss auf dem Verteilungspunkt Windows Server 2012 oder höher ausgeführt werden. <!--SCCMDocs-pr issue #2696-->
@@ -643,41 +645,41 @@ Dieses Objekt dient zum Ausführen von SQL Reporting-Ausführungen.  Die folgen
 
 ## <a name="database-roles-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlroles"></a>Datenbankrollen, die von Configuration Manager in SQL verwendet werden
 <!--SCCMDocs issue #1160-->
-Configuration Manager erstellt und verwaltet automatisch folgende Rollenobjekte in SQL. Diese Rollen ermöglichen den Zugriff auf bestimmte gespeicherte Prozeduren, Tabellen, Sichten und Funktionen, um die erforderlichen Aktionen der einzelnen Rollen auszuführen, um Daten aus der ConfigMgr-Datenbank abzurufen oder Daten in sie einzufügen. Diese Objekte befinden sich in der Configuration Manager-Datenbank unter „Security/Roles/Database Roles“.
+Configuration Manager erstellt und verwaltet automatisch folgende Rollenobjekte in SQL. Diese Rollen ermöglichen den Zugriff auf bestimmte gespeicherte Prozeduren, Tabellen, Sichten und Funktionen, um die erforderlichen Aktionen der einzelnen Rollen auszuführen, um Daten aus der Configuration Manager-Datenbank abzurufen oder Daten in sie einzufügen. Diese Objekte befinden sich in der Configuration Manager-Datenbank unter „Security/Roles/Database Roles“.
 
 > [!IMPORTANT]  
-> Das Ändern oder Entfernen dieser Objekte kann in einer Configuration Manager-Umgebung zu erheblichen Problemen führen.  Es empfiehlt sich, diese Objekte nicht zu ändern.
+> Das Ändern oder Entfernen dieser Objekte kann in einer Configuration Manager-Umgebung zu erheblichen Problemen führen. Ändern Sie diese Objekte nicht. Die folgende Liste dient nur zu Informationszwecken.
 
 ### <a name="smsdbrole_aitool"></a>smsdbrole_AITool
 
-Asset Intelligence-Volumenlizenzimport. ConfigMgr erteilt diese Berechtigung für Benutzerkonten basierend auf dem RBA-Zugriff, um die Volumenlizenz für die Verwendung mit Asset Intelligence importieren zu können.  Dieses Konto kann mit einer vollständigen Administratorrolle oder einer Asset-Manager-Rolle hinzugefügt werden.
+Asset Intelligence-Volumenlizenzimport. Configuration Manager erteilt diese Berechtigung für Benutzerkonten basierend auf dem RBA-Zugriff, um die Volumenlizenz für die Verwendung mit Asset Intelligence importieren zu können.  Dieses Konto kann mit einer vollständigen Administratorrolle oder einer Asset-Manager-Rolle hinzugefügt werden.
 
 ### <a name="smsdbrole_aius"></a>smsdbrole_AIUS
 
-Asset Intelligence-Updatesynchronisierung. ConfigMgr erteilt dem Computerkonto, das das Konto für den Asset Intelligence-Synchronisierungspunkt hostet, Zugriff für den Abruf von Asset Intelligence-Proxydaten und das Anzeigen ausstehender KI-Daten für den Upload.
+Asset Intelligence-Updatesynchronisierung. Configuration Manager erteilt dem Computerkonto, das das Konto für den Asset Intelligence-Synchronisierungspunkt hostet, Zugriff für den Abruf von Asset Intelligence-Proxydaten und das Anzeigen ausstehender KI-Daten für den Upload.
 
 ### <a name="smsdbrole_amtsp"></a>smsdbrole_AMTSP
 
 Out-of-Band-Verwaltung. Diese Rolle wird von der Configuration Manager AMT-Rolle zum Abrufen von Daten auf Geräten verwendet, die Intel AMT unterstützt haben.
 
 > [!NOTE]  
-> Diese Rolle ist in neueren Versionen von ConfigMgr veraltet.
+> Diese Rolle ist in neueren Versionen von Configuration Manager veraltet.
 
 ### <a name="smsdbrole_crp"></a>smsdbrole_CRP
 
-Zertifikatregistrierungspunkt-Unterstützung für SCEP (System Center Endpoint Protection). ConfigMgr gewährt die Berechtigung für das Computerkonto des Standortsystems, das den Zertifikatregistrierungspunkt für SCEP-Unterstützung für Signierung und Erneuerung von Zertifikaten unterstützt.
+Der Zertifikatregistrierungspunkt zur Unterstützung des Simple Certificate Enrollment-Protokolls (SCEP). Configuration Manager gewährt die Berechtigung für das Computerkonto des Standortsystems, das den Zertifikatregistrierungspunkt für SCEP-Unterstützung für Signierung und Erneuerung von Zertifikaten unterstützt.
 
 ### <a name="smsdbrole_crppfx"></a>smsdbrole_CRPPfx
 
-PFX-Unterstützung des Zertifikatregistrierungspunks. ConfigMgr gewährt die Berechtigung für das Computerkonto des Standortsystems, das den Zertifikatregistrierungspunkt unterstützt, der für PFX-Unterstützung für Signierung und Erneuerung von Zertifikaten konfiguriert ist.
+PFX-Unterstützung des Zertifikatregistrierungspunks. Configuration Manager gewährt die Berechtigung für das Computerkonto des Standortsystems, das den Zertifikatregistrierungspunkt unterstützt, der für PFX-Unterstützung für Signierung und Erneuerung von Zertifikaten konfiguriert ist.
 
 ### <a name="smsdbrole_dmp"></a>smsdbrole_DMP
 
-Geräteverwaltungspunkt. ConfigMgr gewährt diese Berechtigung dem Computerkonto für einen Verwaltungspunkt mit der Option „Allow mobile devices and Mac Computer to use this management point“ (Mobilgeräten und Mac-Computern die Verwendung dieses Verwaltungspunkts erlauben), um Unterstützung für bei MDM angemeldete Geräte bereitzustellen.
+Geräteverwaltungspunkt. Configuration Manager gewährt diese Berechtigung dem Computerkonto für einen Verwaltungspunkt mit der Option „Verwendung dieses Verwaltungspunkts durch mobile Geräte und Macintosh-Computer zulassen“, um Unterstützung für bei MDM angemeldete Geräte bereitzustellen.
 
 ### <a name="smsdbrole_dmpconnector"></a>smsdbrole_DmpConnector
 
-Dienstverbindungspunkt. ConfigMgr erteilt diese Berechtigung dem Computerkonto, das den Dienstverbindungspunkt hostet, um Telemetriedaten abzurufen und bereitzustellen, Cloud Services zu verwalten und Dienstupdates abzurufen.
+Dienstverbindungspunkt. Configuration Manager erteilt diese Berechtigung dem Computerkonto, das den Dienstverbindungspunkt hostet, um Telemetriedaten abzurufen und bereitzustellen, Cloud Services zu verwalten und Dienstupdates abzurufen.
 
 ### <a name="smsdbrole_dviewaccess"></a>smsdbrole_DViewAccess
 
@@ -685,11 +687,11 @@ Verteilte Ansichten. Configuration Manager gewährt diese Berechtigung dem Compu
 
 ### <a name="smsdbrole_dwss"></a>smsdbrole_DWSS
 
-Data Warehouse. ConfigMgr erteilt diese Berechtigung dem Computerkonto, das die Data Warehouse-Rolle hostet.
+Data Warehouse. Configuration Manager erteilt diese Berechtigung dem Computerkonto, das die Data Warehouse-Rolle hostet.
 
 ### <a name="smsdbrole_enrollsvr"></a>smsdbrole_EnrollSvr
 
- Anmeldungspunkt. ConfigMgr erteilt diese Berechtigung für das Computerkonto, das den Anmeldungspunkt hostet, um die Geräteregistrierung über MDM zuzulassen.
+ Anmeldungspunkt. Configuration Manager erteilt diese Berechtigung für das Computerkonto, das den Anmeldungspunkt hostet, um die Geräteregistrierung über MDM zuzulassen.
 
 ### <a name="smsdbrole_extract"></a>smsdbrole_extract
 
@@ -697,26 +699,26 @@ Bietet Zugriff auf alle erweiterten Schemaansichten.
 
 ### <a name="smsdbrole_hmsuser"></a>smsdbrole_HMSUser
 
-Hierarchie-Manager-Dienst. ConfigMgr erteilt Berechtigungen für dieses Konto, um Failoverstatusmeldungen und SQL Server Broker-Transaktionen zwischen Standorten innerhalb einer Hierarchie zu verwalten.
+Hierarchie-Manager-Dienst. Configuration Manager erteilt Berechtigungen für dieses Konto, um Failoverstatusmeldungen und SQL Server Broker-Transaktionen zwischen Standorten innerhalb einer Hierarchie zu verwalten.
 
 > [!NOTE]  
 > Die smdbrole_WebPortal-Rolle ist standardmäßig ein Mitglied dieser Rolle.
 
 ### <a name="smsdbrole_mcs"></a>smsdbrole_MCS
 
-Multicast-Dienst. ConfigMgr erteilt diese Berechtigung dem Computerkonto des Verteilungspunkts, der Multicast unterstützt.
+Multicast-Dienst. Configuration Manager erteilt diese Berechtigung dem Computerkonto des Verteilungspunkts, der Multicast unterstützt.
 
 ### <a name="smsdbrole_mp"></a>smsdbrole_MP
 
-Verwaltungspunkt. ConfigMgr erteilt diese Berechtigung für das Computerkonto, das die Verwaltungspunktrolle hostet, um Unterstützung für ConfigMgr-Clients bereitzustellen.
+Verwaltungspunkt. Configuration Manager erteilt diese Berechtigung für das Computerkonto, das die Verwaltungspunktrolle hostet, um Unterstützung für Configuration Manager-Clients bereitzustellen.
 
 ### <a name="smsdbrole_mpmbam"></a>smsdbrole_MPMBAM
 
-Verwaltungspunkt für Microsoft BitLocker Administration and Monitoring. ConfigMgr erteilt diese Berechtigung für das Computerkonto, das den Verwaltungspunkt hostet, der MBAM für eine Umgebung verwaltet.
+Verwaltungspunkt für Microsoft BitLocker Administration and Monitoring. Configuration Manager erteilt diese Berechtigung für das Computerkonto, das den Verwaltungspunkt hostet, der MBAM für eine Umgebung verwaltet.
 
 ### <a name="smsdbrole_mpusersvc"></a>smsdbrole_MPUserSvc
 
-Verwaltungspunkt-Anwendungsanforderung. ConfigMgr erteilt diese Berechtigung für das Computerkonto, das den Verwaltungspunkt hostet, um benutzerbasierte Anwendungsanforderungen zu unterstützen.
+Verwaltungspunkt-Anwendungsanforderung. Configuration Manager erteilt diese Berechtigung für das Computerkonto, das den Verwaltungspunkt hostet, um benutzerbasierte Anwendungsanforderungen zu unterstützen.
 
 ### <a name="smsdbrole_siteprovider"></a>smsdbrole_siteprovider
 
@@ -724,16 +726,37 @@ SMS-Anbieter. Configuration Manager erteilt diese Berechtigung dem Computerkonto
 
 ### <a name="smsdbrole_siteserver"></a>smsdbrole_siteserver
 
-Standortserver. ConfigMgr erteilt diese Berechtigung dem Computerkonto, der den primären oder den CAS-Standort hostet.
+Standortserver. Configuration Manager erteilt diese Berechtigung dem Computerkonto, der den primären oder den CAS-Standort hostet.
 
 ### <a name="smsdbrole_sup"></a>smsdbrole_SUP
 
-Softwareupdatepunkt. ConfigMgr erteilt diese Berechtigung für das Computerkonto, das den Softwareupdatepunkt für das Arbeiten mit Drittanbieterupdates hostet.
+Softwareupdatepunkt. Configuration Manager erteilt diese Berechtigung für das Computerkonto, das den Softwareupdatepunkt für das Arbeiten mit Drittanbieterupdates hostet.
 
 ### <a name="smsdbrole_webportal"></a>smsdbrole_WebPortal
 
-Anwendungskatalog-Websitepunkt. ConfigMgr erteilt die Berechtigung für das Computerkonto, das den Anwendungskatalog-Websitepunkt hostet, um benutzerbasierte Anwendungsbereitstellung bereitzustellen.
+Anwendungskatalog-Websitepunkt. Configuration Manager erteilt die Berechtigung für das Computerkonto, das den Anwendungskatalog-Websitepunkt hostet, um benutzerbasierte Anwendungsbereitstellung bereitzustellen.
 
 ### <a name="smsschm_users"></a>smsschm_users
 
-Benutzerberichtzugriff. ConfigMgr gewährt den Zugriff auf das Konto, das für das Konto des Reporting Services-Punkts verwendet wird, um den Zugriff auf die SMS-Berichtsansichten zum Anzeigen der Configuration Manager-Berichtsdaten zu ermöglichen.  Die Daten werden durch die Verwendung von RBA weiter eingeschränkt.
+Benutzerberichtzugriff. Configuration Manager gewährt den Zugriff auf das Konto, das für das Konto des Reporting Services-Punkts verwendet wird, um den Zugriff auf die SMS-Berichtsansichten zum Anzeigen der Configuration Manager-Berichtsdaten zu ermöglichen.  Die Daten werden durch die Verwendung von RBA weiter eingeschränkt.
+
+## <a name="elevated-permissions"></a>Erweiterte Berechtigungen
+
+<!-- SCCMDocs#405 -->
+
+Configuration Manager erfordert, dass einige Konten über erweiterte Berechtigungen für laufende Vorgänge verfügen. Ziehen Sie z. B. [Voraussetzungen für die Installation eines primären Standorts](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri) zurate. In der folgenden Liste sind diese Berechtigungen aufgeführt und die Gründe zusammengefasst, warum sie benötigt werden.
+
+- Das Computerkonto des primären Standortservers und des Standortservers der zentralen Verwaltung erfordert:
+
+  - Lokale Administratorrechte für alle Standortsystemserver. Diese Berechtigung dient dazu, Systemdienste zu verwalten, zu installieren und zu entfernen. Beim Hinzufügen oder Entfernen von Rollen werden vom Standortserver auch lokale Gruppen auf dem Standortsystem aktualisiert.
+
+  - Zugriff des Systemadministrators auf die SQL-Instanz für die Standortdatenbank. Diese Berechtigung dient dazu, SQL für den Standort zu konfigurieren und zu verwalten. Configuration Manager ist nicht nur eine Datenbank, sondern eng in SQL integriert.
+
+- Benutzerkonten in der Rolle „Hauptadministrator“ erfordern Folgendes:
+
+  - Lokale Administratorrechte auf allen Standortservern. Diese Berechtigung dient dazu, Systemdienste, Registrierungsschlüssel und -werte sowie WMI-Objekte anzuzeigen, zu bearbeiten, zu entfernen und zu installieren.
+
+  - Zugriff des Systemadministrators auf die SQL-Instanz für die Standortdatenbank. Diese Berechtigung dient dazu, die Datenbank während des Setups oder der Wiederherstellung zu installieren und zu aktualisieren. Dies ist auch für SQL-Wartung und den Betrieb erforderlich, beispielsweise das Neuindizieren und Aktualisieren von Statistiken.
+
+    > [!NOTE]
+    > Einige Organisationen entscheiden sich möglicherweise dafür, den Systemadministratorzugriff zu entfernen und ihn nur bei Bedarf zu gewähren. Dieses Verhalten wird manchmal als „Just-in-Time (JIT)-Zugriff“ bezeichnet. In diesem Fall sollten Benutzer mit der Rolle „Hauptadministrator“ aber dennoch Zugriff zum Lesen, Aktualisieren und Ausführen gespeicherter Prozeduren in der Configuration Manager-Datenbank erhalten. Diese Berechtigungen ermöglichen es ihnen, die meisten Probleme ohne uneingeschränkten Systemadministratorzugriff zu beheben.
