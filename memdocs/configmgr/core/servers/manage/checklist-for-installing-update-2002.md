@@ -2,7 +2,7 @@
 title: Checkliste für Version 2002
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie Informationen zu Vorbereitungen, die Sie treffen müssen, bevor Sie ein Update auf Version 2002 von Configuration Manager durchführen.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f2abac1810b5ab40e3c253b6aee7aa970174d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63293c103cf8a19d006bd700cac6c370ba5e7391
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708058"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268945"
 ---
 # <a name="checklist-for-installing-update-2002-for-configuration-manager"></a>Checkliste für die Installation von Update 2002 für Configuration Manager
 
@@ -68,33 +68,35 @@ Bei der ersten Verwendung einer Configuration Manager-Konsole nach Abschluss des
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
- -->
+Ab dem 11. Mai 2020 ist Version 2002 global für alle Kunden zur Installation verfügbar. Wenn Sie sich zuvor für den anfänglichen Updatering angemeldet haben, warten Sie auf das Update für die aktuelle Branchversion.
 
-Derzeit wird Version 2002 für den Early Update Ring freigegeben. Zum Installieren dieses Updates müssen Sie sich anmelden. Mit dem folgenden PowerShell-Skript wird Ihre Hierarchie oder der eigenständige primäre Standort dem Early Update Ring für Version 2002 hinzugefügt:
+<!--
+At this time, version 2002 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2002:
 
-[Anmeldeskript für Version 2002](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2002 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Microsoft signiert das Skript digital und bündelt es in einer signierten selbst extrahierenden ausführbaren Datei.
+<!--
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> Das Update der Version 2002 gilt nur für Standorte, an denen Version 1810 oder höher ausgeführt wird.
+> The version 2002 update is only applicable to sites running version 1810 or later.
 
-So melden Sie sich beim Early Update Ring an:
+To opt-in to the early update ring:
 
-1. Öffnen von Windows PowerShell und **Als Administrator ausführen**
-1. Führen Sie das Skript **EnableEarlyUpdateRing2002.ps1** mit der folgenden Syntax aus:
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableEarlyUpdateRing2002.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2002.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Dabei bezieht sich `SiteServer` auf den Standort der zentralen Verwaltung oder den eigenständigen primären Standortserver. Beispiel: `EnableEarlyUpdateRing2002.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
 
-1. Suchen Sie nach Updates. Weitere Informationen finden Sie unter [Abrufen aller verfügbaren Updates](install-in-console-updates.md#get-available-updates).
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-Das Update der Version 2002 sollte nun in der Konsole verfügbar sein.
+The version 2002 update should now be available in the console.
 
 > [!Important]  
-> Mit diesem Skript wird Ihr Standort nur dem Early Update Ring für Version 2002 hinzugefügt. Es handelt sich nicht um eine dauerhafte Änderung.
+> This script only adds your site to the early update ring for version 2002. It's not a permanent change.
+ -->
 
 ## <a name="checklist"></a>Prüfliste
 
