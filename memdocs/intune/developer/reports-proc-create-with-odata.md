@@ -106,7 +106,7 @@ Jetzt verfügen Sie über eine Visualisierung der Verteilung von Herstellern und
 
 Sie können Ihrer Treemap einen Filter hinzufügen, damit Sie mithilfe Ihrer App zusätzliche Fragen beantworten können.
 
-1. Um einen Filter hinzuzufügen, wählen Sie zunächst die Berichtscanvas aus, und klicken Sie anschließend unter **Visualisierungen** auf das ![Slicer-Symbol](./media/reports-proc-create-with-odata/reports-create-slicer.png) (**Treemap mit Datenmodell und unterstützten Beziehungen**). Die leere **Slicervisualisierung** wird in der Canvas angezeigt.
+1. Um einen Filter hinzuzufügen, wählen Sie zunächst die Berichtscanvas aus, und klicken Sie anschließend unter **Visualisierungen** auf das **Slicer-Symbol** (![Treemap mit Datenmodell und unterstützten Beziehungen](./media/reports-proc-create-with-odata/reports-create-slicer.png)). Die leere **Slicervisualisierung** wird in der Canvas angezeigt.
 2. Suchen Sie im Bereich **Felder** nach der `ownerTypes`-Tabelle.
 3. Erweitern Sie die `ownerTypes`-Tabelle, und klicken Sie auf das Datenfeld `ownerTypeName`.
 4. Ziehen Sie das Datenfeld `onwerTypeName` aus der `ownerTypes`-Tabelle in den Bereich **Filter**, und legen Sie es im Abschnitt **Filter für diese Seite** auf dem Feld mit der Bezeichnung **Hier Datenfelder hinzufügen** ab.  

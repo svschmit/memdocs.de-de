@@ -61,7 +61,7 @@ Endbenutzer können Ihnen die Protokolle mithilfe einer E-Mail-App auf dem Gerä
 
 ## <a name="read-the-logs"></a>Lesen der Protokolle
 
-Wenn Sie sich die Protokolle ansehen, finden Sie überall dort, wo Sie das `<characteristic-error>`-Tag finden, einen Fehler. Fehlerdetails werden in die `<parm-error>`-Eigenschaft des `desc`-Tags geschrieben.
+Wenn Sie sich die Protokolle ansehen, finden Sie überall dort, wo Sie das `<characteristic-error>`-Tag finden, einen Fehler. Fehlerdetails werden in die `desc`-Eigenschaft des `<parm-error>`-Tags geschrieben.
 
 ## <a name="error-types"></a>Fehlertypen
 
