@@ -27,7 +27,7 @@ Ab Version 1906 können Sie über die Configuration Manager-Konsole Anwendungen 
 
 - Aktivieren Sie das [optionale Feature](../../core/servers/manage/install-in-console-updates.md#bkmk_options) **Anwendungsanforderungen für Benutzer pro Gerät genehmigen**.  
 
-- [Stellen Sie die Anwendung für eine Gerätesammlung als ](deploy-applications.md)Verfügbar *bereit.*  
+- [Stellen Sie die Anwendung für eine Gerätesammlung als *Verfügbar* bereit.](deploy-applications.md)  
 
     - Wählen Sie auf der Seite **Bereitstellungseinstellungen** des Bereitstellungs-Assistenten die folgende Option aus: **Ein Administrator muss eine Anforderung für diese Anwendung auf dem Gerät genehmigen**.  
 
