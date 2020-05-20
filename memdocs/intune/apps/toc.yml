@@ -165,7 +165,7 @@
             - name: Übersicht über App-Schutzrichtlinien
               href: app-protection-policy.md
               displayName: app; protection; policy
-            - name: Datenschutzframework mit APP
+            - name: Datenschutzframework mithilfe von App-Schutzrichtlinien
               href: app-protection-framework.md
             - name: Erstellen von App-Schutzrichtlinien
               items:
