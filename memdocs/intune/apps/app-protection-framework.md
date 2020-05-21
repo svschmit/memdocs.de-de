@@ -55,7 +55,7 @@ Wie Sie in der obigen Tabelle sehen, sollten alle Änderungen an den App-Schutzr
 
 Beim Testen der APP-Änderungen sollten Sie die [zeitliche Planung der Implementierung](app-protection-policy-delivery.md) berücksichtigen. Der Status der APP-Implementierung für einen Benutzer kann überwacht werden. Weitere Informationen finden Sie unter [Überwachen von App-Schutzrichtlinien](app-protection-policies-monitor.md).
 
-Mithilfe von Edge und der URL *about:Intunehelp* können Sie einzelne APP-Einstellungen für einzelne Apps auf Geräten überprüfen. Weitere Informationen finden Sie unter [Überprüfen der Protokolle für Client-App-Schutz](app-protection-policy-settings-log.md) und [Einstellungen für das APP-Datenschutzframework](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Mithilfe von Microsoft Edge und der URL *about:Intunehelp* können Sie einzelne APP-Einstellungen für einzelne Apps auf Geräten überprüfen. Weitere Informationen finden Sie unter [Überprüfen der Protokolle für Client-App-Schutz](app-protection-policy-settings-log.md) und [Einstellungen für das APP-Datenschutzframework](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>Einstellungen für das APP-Datenschutzframework
 

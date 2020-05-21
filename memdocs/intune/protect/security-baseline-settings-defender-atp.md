@@ -67,10 +67,10 @@ Während der Verwendung von Microsoft Edge schützt Microsoft Defender Applicati
 - **Application Guard für Microsoft Edge aktivieren (Optionen)**  
   CSP: [Settings/AllowWindowsDefenderApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872350)
   
-  - **Aktiviert für Edge** (*Standardeinstellung*): Application Guard öffnet nicht genehmigte Websites in einem virtualisierten Hyper-V-Browsercontainer.
+  - **Aktiviert für Microsoft Edge** (*Standardeinstellung*): Application Guard öffnet nicht genehmigte Websites in einem virtualisierten Hyper-V-Browsercontainer.
   - **Nicht konfiguriert**: Jede beliebige Website (vertrauenswürdig oder nicht vertrauenswürdig) wird auf dem Gerät geöffnet und nicht in einem virtualisierten Container.  
   
-  Wenn *Aktiviert für Edge* festgelegt ist, können Sie *Externen Inhalt von genehmigten Nicht-Unternehmensstandorten blockieren* und das *Verhalten der Zwischenablage* konfigurieren.
+  Wenn *Aktiviert für Microsoft Edge* festgelegt ist, können Sie *Externen Inhalt von genehmigten Nicht-Unternehmensstandorten blockieren* und das *Verhalten der Zwischenablage* konfigurieren.
 
   - **Externen Inhalt von genehmigten Nicht-Unternehmensstandorten blockieren**  
     CSP: [Settings/BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)

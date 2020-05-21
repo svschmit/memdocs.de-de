@@ -111,7 +111,7 @@ Als Microsoft Intune-Administrator können Sie steuern, welche Benutzerkonten zu
 
    > [!NOTE]
    > Die folgenden Apps verarbeiten die oben genannte App-Konfiguration und lassen nur Organisationskonten zu:
-   > - Edge für Android (42.0.4.4048 und höher)
+   > - Microsoft Edge für Android (42.0.4.4048 und höher)
    > - Office, Word, Excel, PowerPoint für Android (16.0.9327.1000 und höher)
    > - OneDrive für Android (5.28 und höher)
    > - Outlook für Android (2.2.222 und höher)

@@ -197,7 +197,7 @@ Ein dritter Anbieter, DISA Purebred, wird in einer zukünftigen Version für And
 
 *Diese neue Baseline wird über die nächsten Wochen für Mandanten eingeführt. Wir gehen davon aus, dass allen Mandanten diese neue Baseline Anfang Mai zur Verfügung steht.*
 
-Eine neue Version der [Microsoft Edge-Sicherheitsbaseline](../protect/security-baselines.md#available-security-baselines) ist jetzt verfügbar und wird als allgemein verfügbar (GA) veröffentlicht. Die vorherige Edge-Baseline befand sich in der Vorschauversion.  Die neue Basisversion ist April 2020 (Microsoft Edge-Version 80 und höher). 
+Eine neue Version der [Microsoft Edge-Sicherheitsbaseline](../protect/security-baselines.md#available-security-baselines) ist jetzt verfügbar und wird als allgemein verfügbar (GA) veröffentlicht. Die vorherige Microsoft Edge-Baseline befand sich in der Vorschauversion.  Die neue Basisversion ist April 2020 (Microsoft Edge-Version 80 und höher). 
 
 Mit der Veröffentlichung dieser neuen Baseline sind Sie nicht mehr in der Lage, Profile auf Grundlage der vorherigen Baselineversion zu erstellen, aber Sie können weiterhin Profile verwenden, die Sie mit diesen Versionen erstellt haben. Sie haben auch die Möglichkeit, vorhandene Profile zu [aktualisieren, damit Sie die neueste Baselineversion](../protect/security-baselines.md#change-the-baseline-version-for-a-profile) verwenden können. 
 
@@ -303,7 +303,7 @@ Diese Änderungen werden im Verlauf des März im Rahmen der Bereitstellung des I
 ### <a name="device-configuration"></a>Gerätekonfiguration
 
 #### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Neue Benutzeroberfläche für die Erstellung von administrativen Vorlagen auf Windows-Geräten<!--5096036 -->
-Basierend auf dem Feedback unserer Kunden und im Zuge der Einführung der neuen Vollbildansicht für Azure haben wir die Benutzeroberfläche für Profile für administrative Vorlagen neu erstellt und eine Ordneransicht hinzugefügt. Einstellungen oder vorhandene Profile wurden nicht geändert. Ihre vorhandenen Profile bleiben also unverändert und können in der neuen Ansicht verwendet werden. Sie können weiterhin durch alle Einstellungsoptionen navigieren, indem Sie **Alle Einstellungen** auswählen und die Suche verwenden. Die Strukturansicht ist in „Computerkonfigurationen“ und „Benutzerkonfigurationen“ unterteilt. Die Einstellungen für Windows, Office und Edge finden Sie in den jeweiligen Ordnern.  
+Basierend auf dem Feedback unserer Kunden und im Zuge der Einführung der neuen Vollbildansicht für Azure haben wir die Benutzeroberfläche für Profile für administrative Vorlagen neu erstellt und eine Ordneransicht hinzugefügt. Einstellungen oder vorhandene Profile wurden nicht geändert. Ihre vorhandenen Profile bleiben also unverändert und können in der neuen Ansicht verwendet werden. Sie können weiterhin durch alle Einstellungsoptionen navigieren, indem Sie **Alle Einstellungen** auswählen und die Suche verwenden. Die Strukturansicht ist in „Computerkonfigurationen“ und „Benutzerkonfigurationen“ unterteilt. Die Einstellungen für Windows, Office und Microsoft Edge finden Sie in den jeweiligen Ordnern.  
 
 Gilt für:
 - Windows 10 und höher
@@ -803,7 +803,7 @@ Gilt für:
 ### <a name="app-management"></a>App-Verwaltung
 
 #### <a name="migrating-to-microsoft-edge-for-managed-browsing-scenarios---5173762---"></a>Migrieren zu Microsoft Edge für das verwaltete Durchsuchen<!-- 5173762 -->
-Im Hinblick auf die Einstellung von Intune Managed Browser wurden Änderungen an den App-Schutzrichtlinien vorgenommen, um die erforderlichen Schritte zu vereinfachen, die für die Umstellung Ihrer Benutzer auf Edge nötig sind. Die Optionen für die App-Schutzrichtlinieneinstellung **Übertragung von Webinhalt in andere Apps einschränken** wurden aktualisiert, sodass die folgenden Optionen verfügbar sind:
+Im Hinblick auf die Einstellung von Intune Managed Browser wurden Änderungen an den App-Schutzrichtlinien vorgenommen, um die erforderlichen Schritte zu vereinfachen, die für die Umstellung Ihrer Benutzer auf Microsoft Edge nötig sind. Die Optionen für die App-Schutzrichtlinieneinstellung **Übertragung von Webinhalt in andere Apps einschränken** wurden aktualisiert, sodass die folgenden Optionen verfügbar sind:
 
 - Jede App
 - Intune Managed Browser
