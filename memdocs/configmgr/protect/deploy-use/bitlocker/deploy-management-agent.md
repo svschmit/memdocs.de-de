@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075012"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428586"
 ---
 # <a name="deploy-bitlocker-management"></a>Bereitstellen der BitLocker-Verwaltung
 
@@ -205,7 +205,7 @@ Bei einem Wechsel der Quelle für die Verschlüsselungsverwaltung sollten Sie [e
 
 Weitere Informationen zur Verwaltung von BitLocker mit Intune finden Sie in den folgenden Artikeln:
 
-- [Verwenden der Geräteverschlüsselung mit Intune](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Verwenden der Geräteverschlüsselung mit Intune](../../../../intune/protect/encrypt-devices.md)
 - [Troubleshooting für BitLocker-Richtlinien in Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>Nächste Schritte

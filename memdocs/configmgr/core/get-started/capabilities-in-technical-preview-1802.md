@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cf6980def8a4f61248bd676edc0ca93f2546816e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 94208da3eda33cba69f04bbbf42edd08b585c1c4
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905264"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428189"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Funktionen in der Technical Preview 1802 für Configuration Manager
 
@@ -112,7 +112,7 @@ Die Standardvorlage der Tasksequenz für das direkte Windows 10-Upgrade enthält
    - Fügen Sie an einem frühen Punkt in der Gruppe **Für Aktualisierung vorbereiten** einen zweiten Schritt **Betriebssystem aktualisieren** hinzu. Nennen Sie den Schritt *Upgradebewertung*. Geben Sie das gleiche Upgradepaket an, und aktivieren Sie die Option **Kompatibilitätsprüfung für Windows Setup ausführen, ohne Upgrade zu starten**. Aktivieren Sie **Bei Fehler fortsetzen** auf der Registerkarte „Optionen“. 
    - Fügen Sie unmittelbar nach dem Schritt *Upgradebewertung* einen Schritt **Befehlszeile ausführen** hinzu. Geben Sie die folgende Befehlszeile an:</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>Fügen Sie auf der Registerkarte **Optionen** die folgende Bedingung hinzu: </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>Dieser Rückgabecode ist die dezimale Entsprechung von MOSETUP_E_COMPAT_SCANONLY (0xC1900210), einer erfolgreichen Kompatibilitätsüberprüfung ohne Fehler. Wenn der Schritt *Upgradebewertung* erfolgreich ausgeführt wurde und diesen Code zurückgibt, wird dieser Schritt übersprungen. Wenn der Bewertungsschritt einen anderen Rückgabecode zurückgibt, führt dieser Schritt in der Tasksequenz mit dem Rückgabecode aus der Windows Setup-Kompatibilitätsüberprüfung zu einem Fehler.
    - Weitere Informationen finden Sie unter [Betriebssystem aktualisieren](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS).
-- Wenn Sie das Gerät während dieser Tasksequenz von BIOS zu UEFI konvertieren möchten, finden Sie weitere Informationen unter [Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+- Wenn Sie das Gerät während dieser Tasksequenz von BIOS zu UEFI konvertieren möchten, finden Sie weitere Informationen unter [Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 Wenn Sie weitere Empfehlungen oder Vorschläge unterbreiten möchten, senden Sie **Feedback** von der Registerkarte **Startseite** des Menübands.
 

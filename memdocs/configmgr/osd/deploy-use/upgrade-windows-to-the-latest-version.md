@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d604095ec3097581289a05cd306b865dbd7da99a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8bfb45ba835851c33d6017f7f0a884bd2c1e9421
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703328"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429326"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Aktualisieren von Windows auf die neueste Version unter Verwendung von Configuration Manager
 
@@ -85,7 +85,7 @@ Die folgenden Tasks sind mit einem direkten Upgrade nicht möglich. Dafür müss
 
   - Ändern der Datenträgerpartitionen
   - Ändern der Systemarchitektur von x86 in x64
-  - Implementieren von UEFI. (Weitere Informationen zu einer anderen Möglichkeit finden Sie unter [Convert from BIOS to UEFI during an in-place upgrade (Wechsel von BIOS zu UEFI während eines direkten Upgrades)](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
+  - Implementieren von UEFI. (Weitere Informationen zu einer anderen Möglichkeit finden Sie unter [Convert from BIOS to UEFI during an in-place upgrade (Wechsel von BIOS zu UEFI während eines direkten Upgrades)](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).)
   - Anpassen der Standardbetriebssystemsprache  
 
 - Es gibt benutzerdefinierte Anforderungen, z.B. die Verwendung eines benutzerdefinierten Basisimages mit Festplattenverschlüsselung eines Drittanbieters oder das Durchführen von WinPE-Offlinevorgängen.  
