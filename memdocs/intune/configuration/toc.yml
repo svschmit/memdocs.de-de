@@ -18,8 +18,12 @@
     - name: Profilübersicht
       href: device-profile-create.md
     - name: Benutzerdefinierte Einstellungen
-      href: custom-settings-configure.md
-      displayName: oma-uri
+      displayName: 'oma-uri, csp'
+      items:
+        - name: Erstellen benutzerdefinierter Profile
+          href: custom-settings-configure.md
+        - name: Hololens 2-Beispiel
+          href: custom-profile-hololens.md
     - name: Einschränken von Geräteeinstellungen und -funktionen
       href: device-restrictions-configure.md
       displayName: device restrictions

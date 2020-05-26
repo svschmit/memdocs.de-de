@@ -70,9 +70,9 @@ Verwenden Sie die folgenden Schritte, um erste Schritte mit dieser Funktion ausz
 
 ### <a name="review-configuration-manager-client-health-in-intune"></a>Überprüfen der Configuration Manager-Clientintegrität in Intune
 
-1. Melden Sie sich beim [Azure-Portals](https://portal.azure.com/)angemeldet sind.  
+1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/) an.  
 
-2. Wählen Sie **Alle Dienste** > **Intune**. Intune befindet sich im Abschnitt **Monitoring + Management**.  
+2. Wählen Sie **Alle Dienste** > **Intune** aus. Intune befindet sich im Abschnitt **Überwachung + Verwaltung**.  
 
 3. Nachdem Sie den Bereich **Microsoft Intune** geöffnet haben, navigieren Sie im Menü unter **Hilfe und Support** zur Seite **Problembehandlung**.  
 
