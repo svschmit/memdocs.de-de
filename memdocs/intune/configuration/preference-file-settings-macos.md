@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: reference
+ms.date: 05/05/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551492"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988671"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Hinzufügen einer Eigenschaftenlistendatei zu macOS-Geräten mit Microsoft Intune
 
@@ -44,9 +45,6 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 - Nur manche Apps arbeiten mit verwalteten Einstellungen, und selbst bei diesen Apps können Sie möglicherweise nicht alle Einstellungen verwalten.
 - Stellen Sie sicher, dass Sie Eigenschaftenlistendateien hochladen, die die Gerätekanaleinstellungen und nicht die Benutzerkanaleinstellungen konfigurieren. Eigenschaftenlistendateien beziehen sich auf das gesamte Gerät.
 
-> [!NOTE]
-> Die Intune-Benutzeroberfläche (User Interface, UI) wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie die in diesem Artikel beschriebenen Einstellungen erstellen oder bearbeiten.
-
 ## <a name="create-the-profile"></a>Erstellen des Profils
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
@@ -66,9 +64,13 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 
 7. Konfigurieren Sie Ihre Einstellungen in den **Konfigurationseinstellungen**:
 
-    - **Name der bevorzugten Domäne:** Eigenschaftenlistendateien werden üblicherweise für Webbrowser (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) und benutzerdefinierte Apps verwendet. Wenn Sie eine bevorzugte Domäne erstellen, wird auch eine Bundle-ID erstellt. Geben Sie die Bundle-ID ein, z. B. `com.company.application`. Geben Sie beispielsweise `com.Contoso.applicationName`, `com.Microsoft.Edge` oder `com.microsoft.wdav` ein.
+    - **Name der bevorzugten Domäne:** Geben Sie die Bundle-ID ein, z. B. `com.company.application`. Geben Sie beispielsweise `com.Contoso.applicationName`, `com.Microsoft.Edge` oder `com.microsoft.wdav` ein.
+
+      Eigenschaftenlistendateien werden üblicherweise für Webbrowser (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) und benutzerdefinierte Apps verwendet. Wenn Sie eine bevorzugte Domäne erstellen, wird auch eine Bundle-ID erstellt.
+
     - **Datei mit Eigenschaftenliste:** Wählen Sie die mit Ihrer App verknüpfte Eigenschaftenlistendatei aus. Stellen Sie sicher, dass es sich dabei um eine `.plist`- oder `.xml`-Datei handelt. Laden Sie z. B. eine Datei mit dem Namen `YourApp-Manifest.plist` oder `YourApp-Manifest.xml` hoch.
-    - **Dateiinhalte**: Die Schlüsselinformationen in der Eigenschaftenlistendatei werden angezeigt. Wenn Sie die Schlüsselinformationen ändern müssen, öffnen Sie die Listendatei in einem anderen Editor, und laden Sie die Datei noch mal in Intune hoch.
+
+      Die Schlüsselinformationen in der Eigenschaftenlistendatei werden angezeigt. Wenn Sie die Schlüsselinformationen ändern müssen, öffnen Sie die Listendatei in einem anderen Editor, und laden Sie die Datei noch mal in Intune hoch.
 
     Stellen Sie sicher, dass Ihre Datei richtig formatiert ist. Die Datei sollte nur Schlüssel-Wert-Paare enthalten und nicht in `<dict>`-, `<plist>`- oder `<xml>`-Tags eingeschlossen sein. Ihre Eigenschaftenlistendatei sollte z. B. ähnlich aussehen wie die folgende Datei:
 
@@ -93,6 +95,6 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Das Profil ist nun erstellt, führt aber noch keine Aktionen durch. Die nächsten Schritte sind das [Zuweisen von Benutzer- und Geräteprofilen in Microsoft Intune](device-profile-assign.md) und das [Überwachen von Geräteprofilen in Microsoft Intune](device-profile-monitor.md).
+[Zuweisen von Profilen](device-profile-assign.md) und [Überwachen von Profilen](device-profile-monitor.md)
 
 Weitere Informationen zu Einstellungsdateien für Microsoft Edge finden Sie unter [Konfigurieren der Microsoft Edge-Richtlinieneinstellungen für macOS mithilfe einer Eigenschaftsliste (.plist)](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).

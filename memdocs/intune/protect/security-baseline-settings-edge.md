@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 861d7f526711f2169e8fd03b3df09659440523b9
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693456"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556318"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -47,8 +47,7 @@ Machen Sie sich mit den Baselineeinstellungen für den Microsoft Edge-Webbrowser
 ::: zone-end
 ::: zone pivot="edge-april-2020"
 
-*Diese neue Baseline wird über die nächsten Wochen für Mandanten eingeführt. Wir gehen davon aus, dass allen Mandanten diese neue Baseline Anfang Mai zur Verfügung steht.*
-Verwenden Sie die im Bereich *Versionen* für diese Baseline verfügbare Aktion [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) (Baselines vergleichen), um zu sehen, was sich in dieser Version der Baseline im Vergleich zu früheren Versionen geändert hat.
+Verwenden Sie die im Bereich *Versionen* für diese Baseline verfügbare Aktion [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) (Baselines vergleichen), um zu sehen, was sich in dieser Version der Baseline im Vergleich zu früheren Versionen geändert hat. Verwenden Sie die im Bereich *Versionen* für diese Baseline verfügbare Aktion [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) (Baselines vergleichen), um zu sehen, was sich in dieser Version der Baseline im Vergleich zu früheren Versionen geändert hat.
 
 ::: zone-end
 ::: zone pivot="edge-october-2019,edge-april-2020"

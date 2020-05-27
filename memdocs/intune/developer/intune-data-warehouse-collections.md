@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a4d468c62132c6af4477ba48f17ac9b21013e51
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022736"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709450"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune Data Warehouse-Sammlungen
 
@@ -193,6 +193,8 @@ Die Entität **DeviceConfigurationProfileUserActivity** listet die Anzahl der Be
 | OSVersion                  | Betriebssystemversion                                                                                                                                                                          |
 | JailBroken                 | Gibt an, ob das Gerät mit Jailbreak oder Rooting manipuliert wurde.                                                                                                                                         |
 | DeviceCategoryKey          | Schlüssel des Gerätekategorieattributs für dieses Gerät.                                                                                                                                    |
+
+
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
 Die Entität **DeviceRegistrationState** stellt den Registrierungstyp dar, auf den von anderen Data Warehouse-Sammlungen verwiesen wird. 
 
@@ -222,7 +224,6 @@ In der Entität **device** werden alle für die Verwaltung registrierten Geräte
 | DeviceRegistrationState    | Schlüssel des Clientregistrierungsstatus-Attributs für dieses Gerät.                                                                                                                      |
 | OwnerTypeKey               | Schlüssel des Besitzertypattributs für dieses Gerät: Unternehmen, persönlich oder unbekannt.                                                                                                    |
 | EnrolledDateTime           | Zeitpunkt der Registrierung dieses Geräts.                                                                                                                                         |
-| EthernetMacAddress           | Der eindeutige Netzwerkbezeichner dieses Geräts.                                                                                                                                        |
 | LastSyncDateTime           | Letztes bekanntes Einchecken des Geräts mit Intune.                                                                                                                                              |
 | ManagementAgentKey         | Der Schlüssel des Verwaltungs-Agents, der mit diesem Gerät verknüpft ist.                                                                                                                             |
 | ManagementStateKey         | Der Schlüssel des Verwaltungsstatus, der mit diesem Gerät verknüpft ist und den neuesten Zustand einer Remoteaktion angibt oder anzeigt, ob das Gerät per Jailbreak oder Rootzugriff manipuliert wurde.                                                |
@@ -244,16 +245,12 @@ In der Entität **device** werden alle für die Verwaltung registrierten Geräte
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Gibt an, ob das Gerät überwacht wird.                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | Freier Speicherplatz in Bytes.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Gesamte Speicherkapazität in Bytes.                                                                                                                                                                |
 | EncryptionState            | In diesem Feld wird der Verschlüsselungsstatus des Geräts angezeigt.                                                                                                                                                      |
 | SubscriberCarrier          | Netzbetreiber des Abonnenten des Geräts                                                                                                                                                       |
 | PhoneNumber                | Telefonnummer des Geräts                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Mobilfunktechnologie des Geräts                                                                                                                                                    |
 | WiFiMacAddress             | WiFi-MAC                                                                                                                                                                              |
-| Modell                      | Das Gerätemodell.                                                                                                                                                                      |
-| Office365Version           | Die auf dem Gerät installierte Version von Office 365.                                                                                                                             |
-| PhysicalMemoryInBytes      | Der physische Speicher in Bytes.                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes

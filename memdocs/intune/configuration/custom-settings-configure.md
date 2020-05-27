@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ddbb82d3cd5c86ff32917013edd4f16b303678fe
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551363"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990098"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Erstellen eines Profils mit benutzerdefinierten Einstellungen in Intune
 
@@ -31,9 +31,6 @@ Benutzerdefinierte Einstellungen werden für jede Plattform anders konfiguriert.
 Weitere Informationen zu Konfigurationsprofilen finden Sie unter [Was sind Microsoft Intune-Geräteprofile?](device-profiles.md).
 
 Dieser Artikel veranschaulicht, wie Sie ein benutzerdefiniertes Profil für den Android-Geräteadministrator sowie für Android Enterprise, iOS/iPadOS, macOS und Windows erstellen. Sie können auch alle verfügbaren Einstellungen für die verschiedenen Plattformen anzeigen.
-
-> [!NOTE]
-> Die Intune-Benutzeroberfläche (User Interface, UI) wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie die in diesem Artikel beschriebenen Einstellungen erstellen oder bearbeiten.
 
 ## <a name="create-the-profile"></a>Erstellen des Profils
 

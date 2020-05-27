@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24663f8338f03fab53369689b4a61b5bd1bec63f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536880"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991218"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Einrichten eines Pro-App-VPN für iOS-Geräte in Intune
 
@@ -75,7 +75,7 @@ Importieren Sie das Stammzertifikat des VPN-Servers, das von der Zertifizierungs
 3. Geben Sie die folgenden Eigenschaften ein:
 
     - **Plattform**: Wählen Sie **iOS/iPadOS** aus.
-    - **Profiltyp**: Wählen Sie **Vertrauenswürdiges Zertifikat**.
+    - **Profil**: Wählen Sie **Vertrauenswürdiges Zertifikat**.
 
 4. Wählen Sie **Erstellen** aus.
 5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
@@ -113,7 +113,7 @@ Das VPN-Profil enthält das SCEP- oder PKCS-Zertifikat, das die Anmeldeinformati
 3. Geben Sie die folgenden Eigenschaften ein:
 
     - **Plattform**: Wählen Sie **iOS/iPadOS** aus.
-    - **Profiltyp**: Wählen Sie **VPN** aus.
+    - **Profil**: Wählen Sie **VPN** aus.
 
 4. Wählen Sie **Erstellen** aus.
 5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:

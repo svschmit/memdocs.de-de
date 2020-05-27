@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551384"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988813"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Erstellen einer Konformitätsrichtlinie in Microsoft Intune
 
@@ -51,16 +51,13 @@ Stellen Sie zum Verwenden von Konformitätsrichtlinien folgendes sicher:
   - Android Enterprise
   - iOS
   - macOS
-  - Windows-10
-  - Windows 8,1
+  - Windows 10
+  - Windows 8.1
   - Windows Phone 8.1
 
 - Registrieren Sie Geräte in Intune (nur dann können Sie den Konformitätsstatus ermitteln).
 
 - Registrieren Sie Geräte für einen Benutzer oder registrieren Sie ohne einen Hauptbenutzer. Für mehrere Benutzer registrierte Geräte werden nicht unterstützt.
-
-> [!NOTE]
-> Die Intune-Benutzeroberfläche (User Interface, UI) wird auf eine Vollbildversion aktualisiert, und dies kann einige Wochen in Anspruch nehmen. Bis Ihr Mandant dieses Update erhält, haben Sie einen etwas anderen Workflow, wenn Sie die in diesem Artikel beschriebenen Einstellungen erstellen oder bearbeiten.
 
 ## <a name="create-the-policy"></a>Erstellen der Richtlinie
 
@@ -134,7 +131,7 @@ If the **Evaluate** button is grayed out, make sure the policy is assigned to on
 
 ## <a name="refresh-cycle-times"></a>Aktualisierungszykluszeit
 
-Intune verwendet verschiedene Aktualisierungszyklen, um nach Updates der Konformitätsrichtlinien zu suchen. Wenn ein Gerät vor Kurzem registriert wurde, wird der Check-In häufiger durchgeführt. Unter [Richtlinien- und Profilaktualisierungszyklen](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) werden die geschätzten Aktualisierungszeiten aufgeführt.
+Intune verwendet verschiedene Aktualisierungszyklen, um nach Updates der Konformitätsrichtlinien zu suchen. Wenn das Gerät kürzlich registriert wurde, wird der Check-In häufiger durchgeführt. Unter [Richtlinien- und Profilaktualisierungszyklen](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) werden die geschätzten Aktualisierungszeiten aufgeführt.
 
 Benutzer können jederzeit die Unternehmensportal-App öffnen und das Gerät synchronisieren, um sofort nach Richtlinienupdates zu suchen.
 
