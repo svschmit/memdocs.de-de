@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 1bd4ff4b25fcd4cf77366c93fcc1259ea2b5749f
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268180"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551603"
 ---
 <!-- 
 - Feature 1357546
@@ -107,11 +107,12 @@ Exemplarische Vorgehensweisen mit Anleitungen, die Ihnen bei der Problembehandlu
 
 ## <a name="new-and-updated-support-articles"></a>Neue und aktualisierte Supportartikel
 
-Supportartikel, die neu sind oder zwischen dem 21. Februar und 19. März 2020 aktualisiert wurden.
+Supportartikel, die neu sind oder zwischen dem 20. März und dem 15. Mai 2020 aktualisiert wurden
 
-- [4552430 KB: Die Synchronisierung der Kategorie von Drittanbieterupdates wird in Configuration Manager auf den Standard zurückgesetzt](https://support.microsoft.com/help/4552430)
-- [KB 4551013: Überarbeitete Updates von Drittanbietern können nicht in Configuration Manager heruntergeladen werden](https://support.microsoft.com/help/4551013)
-- [KB 4552181: Inhaltsverteilung in Configuration Manager kommt zum Stillstand (Current Branch-Version 1910)](https://support.microsoft.com/help/4552181)
-- [KB 4550023: Eine in-Place-Upgrade-Tasksequenz von Configuration Manager wird nach einem Windows 10-Upgrade-Rollback angehalten](https://support.microsoft.com/help/4550023)
+- [KB 4561494: Microsoft Edge-Anwendung schlägt in Configuration Manager fehl](https://support.microsoft.com/help/4561494)
+- [KB 4551059: Remotekonsole für Configuration Manager friert alle 10 Minuten für 20 Sekunden ein](https://support.microsoft.com/help/4551059)
+- [KB 4556203: Übersicht über die Änderungen in Microsoft Endpoint Configuration Manager Current Branch, Version 2002](https://support.microsoft.com/help/4556203)
+- [KB 4553501: Update für Microsoft Endpoint Configuration Manager, Version 2002, früher Updatering](https://support.microsoft.com/help/4553501)
+- [KB 4561945: Fehlermeldung „Die zugrunde liegende Verbindung wurde geschlossen“ wird angezeigt, wenn das Dienstverbindungstool die Datei „ConfigMgr.AdminUIContent.cab“ herunterlädt](https://support.microsoft.com/help/4561945)
 
 Informationen zum Abonnieren von Atom- oder RSS-Benachrichtigungen für neue Configuration Manager-Supportartikel finden Sie unter [Updates für Supportinhalte](https://support.microsoft.com/help/4089498/). Wählen Sie **Microsoft Endpoint Configuration Manager** aus.  

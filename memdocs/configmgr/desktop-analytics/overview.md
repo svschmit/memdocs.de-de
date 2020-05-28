@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 23af311a78058240e6ebf8a2ca3c9e0fcdaf711f
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: e9031b09fa6749d619c8048e70331a6f7c67d472
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268554"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633340"
 ---
 # <a name="what-is-desktop-analytics"></a>Was ist Desktop Analytics?
 
@@ -94,7 +94,7 @@ Zum Verwenden von Desktop Analytics müssen Sie sicherstellen, dass Ihre Umgebun
     > Desktop Analytics unterstützt mehrere Configuration Manager-Hierarchien, deren Berichte und Meldungen an einen einzigen Azure AD-Mandanten gesendet werden.<!-- 4814075 --> Wenn Sie in Ihrer Umgebung über mehrere Hierarchien verfügen, haben Sie folgende Möglichkeiten:
     >
     > - Einsatz unterschiedlicher kommerzieller IDs und Azure AD-Mandanten.
-    > - Konfigurieren einer einzigen kommerziellen ID für beide Hierarchien, um denselben Azure AD-Mandanten und dieselbe Desktop Analytics-Instanz zu nutzen.
+    > - Konfigurieren einer einzigen kommerziellen ID für beide Hierarchien, um denselben Azure AD-Mandanten und dieselbe Desktop Analytics-Instanz zu nutzen. Verwenden Sie [verschiedenen Apps](connect-configmgr.md#bkmk_connect), um die einzelnen Hierarchien zu verbinden. Nachdem Sie eine Hierarchie vom Portal entkoppeln, kann es bis zu 30 Minuten dauern, bis Änderungen angezeigt werden. 
 
 - Geräte unter Windows 7, Windows 8.1 oder Windows 10  
 

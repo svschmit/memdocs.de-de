@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7476f27c050a7870cd8f860f2e1b6bfa3d68a7e9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696288"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427763"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Vorgehensweise: Upgraden von Clients für Windows-Computer in Configuration Manager
 
@@ -97,7 +97,7 @@ Gehen Sie wie folgt vor, um das automatische Clientupgrade am CAS zu konfigurier
 Diese Einstellungen werden beim nächsten Herunterladen einer Richtlinie auf Clients übertragen.
 
 > [!NOTE]
-> Bei Clientupgrades werden Configuration Manager-Wartungsfenster berücksichtigt, die Sie konfiguriert haben.
+> Bei Clientupgrades werden Configuration Manager-Wartungsfenster berücksichtigt, die Sie konfiguriert haben. Der Thread „execmgr“ führt das Clientsetup-Bootstrapprogramm (ccmsetup.exe) nur während eines Wartungsfensters aus. Wenn auf dem Gerät eine Windows-Edition mit einem Schreibfilter ausgeführt wird, versucht ccmsetup, den Download und die Installation gleichzeitig auszuführen. Andernfalls legt ccmsetup einen zufälligen Zeitpunkt für den Download von Inhalten fest. Nachdem der Inhalt heruntergeladen und die lokale Richtlinie kompiliert wurde, plant execmgr das Clientupgrade während des nächsten Wartungsfensters.<!-- SCCMDocs#896 -->
 
 ## <a name="next-steps"></a>Nächste Schritte
 

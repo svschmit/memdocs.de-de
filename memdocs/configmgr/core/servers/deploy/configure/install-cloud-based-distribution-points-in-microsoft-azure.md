@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 30cd61240b09f821d8b18c37e6accc7450f35817
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701668"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427713"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Installieren eines Cloudverteilungspunkts für Configuration Manager
 
@@ -215,6 +215,8 @@ Clientstandardeinstellungen ermöglichen Clients automatisch die Verwendung von 
 ## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a> Verwalten und Überwachen  
 
 Überwachen Sie den Inhalt, den Sie an einen Cloudverteilungspunkt verteilen, so wie bei der Verteilung an jeden anderen lokalen Verteilungspunkt. Weitere Informationen finden Sie unter [Überwachen von Inhalt](monitor-content-you-have-distributed.md).
+
+Wenn Sie die Liste der Cloudverteilungspunkte in der Konsole aufrufen, können Sie der Liste zusätzliche Spalten hinzufügen. In der Spalte **Data egress** (Datenausgang) wird die Datenmenge angezeigt, die Clients in den letzten 30 Tagen vom Dienst heruntergeladen haben.<!-- SCCMDocs#755 -->
 
 ### <a name="alerts"></a><a name="bkmk_alerts"></a> Warnungen  
 
