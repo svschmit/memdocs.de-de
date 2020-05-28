@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782116"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429813"
 ---
 # <a name="task-sequence-variables"></a>Tasksequenzvariablen
 
@@ -1832,6 +1832,10 @@ Legen Sie diese Variable fest, um den Typ der Informationen zu steuern, der vom 
 - `1`: Schließen Sie den aktuellen Schritt und die Gesamtschritte in den Fortschrittstext ein. Beispiel: **2 von 10**
 - `2`: Schließen Sie den aktuellen Schritt, die Gesamtschritte und den Prozentsatz mit ein, der den Fortschritt anzeigt. Beispiel: **2 von 10 (Fortschritt 20 %)**
 - `3`: Schließen Sie den Prozentsatz ein, der den Fortschritt anzeigt. Beispiel: **(Fortschritt 20 %)**
+
+### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a> TSUEFIDrive
+
+Findet in den Eigenschaften einer FAT32-Partition im Feld **Variable** Verwendung. Wenn die Tasksequenz diese Variable erkennt, wird der Datenträger auf den Wechsel zu UEFI vorbereitet, bevor der Computer neu gestartet wird. Weitere Informationen finden Sie unter [Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
 
 ### <a name="workingdirectory"></a><a name="WorkingDirectory"></a> WorkingDirectory
 

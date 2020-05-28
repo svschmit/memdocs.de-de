@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 6f481fa54a8018137a4b45bc62f6fde9c1f1165b
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381576"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764236"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> Endpunktanalyse (Vorschauversion)
 
@@ -102,6 +102,8 @@ Ein schreibgeschützter Benutzer benötigt sowohl für die Kategorie **Geräteko
 
 Für proaktive Korrekturen benötigt der Benutzer in der Kategorie **Gerätekonfigurationen** Berechtigungen, die seiner Rolle entsprechen.  Berechtigungen in der Kategorie **Endpunktanalyse** sind nicht erforderlich, wenn der Benutzer nur proaktive Korrekturen verwendet.
 
+Ein [Intune-Dienstadministrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) muss die Lizenzierungsanforderungen bestätigen, bevor die proaktiven Korrekturen zum ersten Mal verwendet werden.
+
 ## <a name="start-gathering-data"></a><a name="bkmk_uea_start"></a> Beginn des Sammelns von Daten
 - Wenn Sie nur von Intune verwaltete Geräte registrieren, fahren Sie mit dem Abschnitt [Durchführen des Onboardings im Endpunktanalyseportal](#bkmk_uea_onboard) fort.
 
@@ -112,7 +114,7 @@ Für proaktive Korrekturen benötigt der Benutzer in der Kategorie **Gerätekonf
 
 ### <a name="enroll-devices-managed-by-configuration-manager"></a><a name="bkmk_uea_cm_enroll"></a> Registrieren von Geräten, die von Configuration Manager verwaltet werden
 <!--6051638, 5924760-->
-Bevor Sie Configuration Manager-Geräte registrieren, überprüfen Sie die [Voraussetzungen](#bkmk_uea_prereq) beispielsweise dass [Microsoft Endpoint Manager-Mandanten anfügen](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) aktiviert ist. Wenn Sie nur von Intune verwaltete Geräte registrieren, fahren Sie mit dem Abschnitt [Durchführen des Onboardings im Endpunktanalyseportal](#bkmk_uea_onboard) fort.
+Bevor Sie Configuration Manager-Geräte registrieren, überprüfen Sie die [Voraussetzungen](#bkmk_uea_prereq) beispielsweise dass [Microsoft Endpoint Manager-Mandanten anfügen](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) aktiviert ist. 
 
 #### <a name="enable-endpoint-analytics-data-collection-in-configuration-manager"></a><a name="bkmk_uea_cm_enable"></a> Aktivieren der Datensammlung für Endpunktanalyse in Configuration Manager
 
@@ -238,7 +240,7 @@ Wenn Sie auf ein bestimmtes Gerät durchklicken, wird dessen Start- und Anmeldev
 Die Seite **Startleistung** enthält Registerkarten für die Berichterstellung, die Unterstützung für die Erkenntnisse bieten, wie z. B.:
 1. **Modellleistung**. Auf dieser Registerkarte sehen Sie die Leistung für Systemstart und Anmeldung aufgeschlüsselt nach Gerätemodell. Damit können Sie ermitteln, ob Leistungsprobleme auf bestimmte Modelle beschränkt sind.
 1. **Geräteleistung**. Diese Registerkarte zeigt Metriken für Systemstart und Anmeldung für all Ihre Geräte. Sie können nach einer bestimmten Metrik sortieren (z. B. nach der Anmeldezeit für Gruppenrichtlinien), um zu ermitteln, welche Geräte die schlechtesten Werte für diese Metrik aufweisen. So erhalten Sie Informationen zu einer möglichen Problembehandlung. Sie können auch anhand des Namens nach einem Gerät suchen. Wenn Sie auf ein Gerät klicken, können Sie den Start- und Anmeldeverlauf anzeigen und so ermitteln, ob vor Kurzem ein Wertrückgang verzeichnet wurde.
-1. **Startprozesse**. Diese Registerkarte (sofern sie angezeigt wird; wir haben einen Flight dieses Features nur für einige Benutzer bereitgestellt, da es sich noch in der Entwicklung befindet) zeigt, welche Prozesse sich auf die Anmeldephase „Zeit bis Desktopreaktion“ in einer Weise auswirken, dass nach dem Rendern des Desktops eine CPU-Auslastung von über 50 % bestehen bleibt.
+1. **Startprozesse**. Startprozesse können sich für Benutzer negativ auf die Dienstqualität auswirken, da sie die Wartezeit erhöhen, bis der Desktop reaktionsfähig wird. Diese Registerkarte (sofern sie angezeigt wird; wir haben einen Flight dieses Features nur für einige Benutzer bereitgestellt, da es sich noch in der Entwicklung befindet) zeigt, welche Prozesse sich auf die Anmeldephase „Zeit bis Desktopreaktion“ in einer Weise auswirken, dass nach dem Rendern des Desktops eine CPU-Auslastung von über 50 % bestehen bleibt. In der Tabelle werden nur Prozesse aufgelistet, die mindestens 10 Geräte in Ihrem Mandanten betreffen.  
 
 ## <a name="proactive-remediations"></a><a name="bkmk_uea_prs"></a> Proaktive Korrekturen
 

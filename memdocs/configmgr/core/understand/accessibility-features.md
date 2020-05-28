@@ -2,7 +2,7 @@
 title: Barrierefreiheit
 titleSuffix: Configuration Manager
 description: Enthält Informationen zu den Funktionen, die Configuration Manager für jeden zugänglich machen.
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906116"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556029"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Barrierefreiheitsfunktionen in Configuration Manager
 
@@ -45,7 +46,7 @@ Verwenden Sie zum Zugriff auf einen Arbeitsbereich die folgenden Tastenkombinati
 |STRG+4|  Verwaltung|
 
 
-### <a name="other-keyboard-shortcuts"></a>Andere Tastenkombinationen
+### <a name="other-console-shortcuts"></a>Andere Tastenkombination für die Konsole
 
 |Tastenkombination|  Zweck|
 |--------|--------|  
@@ -56,6 +57,14 @@ Verwenden Sie zum Zugriff auf einen Arbeitsbereich die folgenden Tastenkombinati
 |STRG+D|legt den Fokus auf den Detailbereich fest, sofern verfügbar|
 |ALT     |schaltet den Fokus auf das Menüband ein und aus|
 
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a> CMPivot-Tastenkombinationen
+
+Die meisten [Tastenkombinationen für WebBrowser](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) funktionieren in CMPivot.
+
+|Tastenkombination|Zweck|
+|--------|--------|  
+|STRG+1|Fokus auf die erste Registerkarte setzen|
+|ALT+&lt;|Zurück zur Adresse navigieren|
 
 
 ## <a name="other-accessibility-features"></a>Andere Barrierefreiheitsfunktionen
@@ -85,7 +94,7 @@ Verwenden Sie zum Zugriff auf einen Arbeitsbereich die folgenden Tastenkombinati
 ## <a name="see-also"></a>Weitere Informationen:
 
 Weitere Informationen zu den Grundlagen der Navigation in den Configuration Manager-Benutzeroberflächen finden Sie in den folgenden Artikeln:
-- [Verwenden der Configuration Manager-Konsole](../servers/manage/admin-console.md)  
+- [Verwenden der Configuration Manager-Konsole](../servers/manage/admin-console.md)
 - [Benutzerleitfaden des Softwarecenters](software-center.md)
 
 > [!NOTE]  

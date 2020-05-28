@@ -10,18 +10,18 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d35f36b6578359f62f21b4e2208a70ace22cf0d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691258"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764049"
 ---
 # <a name="conditional-access-with-co-management"></a>Bedingter Zugriff mit Co-Verwaltung
 
-Der bedingte Zugriff stellt sicher, dass nur vertrauenswürdige Benutzer über vertrauenswürdige Apps auf Unternehmensressourcen auf vertrauenswürdigen Geräten zugreifen können. Er wird von Grund auf neu in der Cloud erstellt. Unabhängig davon, ob Sie Geräte mit Intune verwalten oder Ihre Configuration Manager-Bereitstellung um Co-Verwaltung erweitern, ist die Funktionsweise identisch.
+Durch den bedingten Zugriff wird sichergestellt, dass nur vertrauenswürdige Benutzer über vertrauenswürdige Apps auf vertrauenswürdigen Geräten auf Unternehmensressourcen zugreifen können. Er wird von Grund auf neu in der Cloud erstellt. Unabhängig davon, ob Sie Geräte mit Intune verwalten oder Ihre Configuration Manager-Bereitstellung um Co-Verwaltung erweitern, ist die Funktionsweise identisch.
 
-Im folgenden Video erläutern und demonstrieren Senior Programm Manager Joey Glocke und Product Marketing Manager Locky Ainley den bedingten Zugriff mit Co-Verwaltung:
+Im folgenden Video erläutern und demonstrieren Senior Program Manager Joey Glocke und Product Marketing Manager Locky Ainley den bedingten Zugriff mit Co-Verwaltung:
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player]
 
@@ -37,22 +37,22 @@ Im Rahmen der Co-Verwaltung wertet Intune jedes Gerät in Ihrem Netzwerk aus, um
 
     - Diese Auswertung erfolgt nach der Sicherheitsverletzung und basiert auf Incidents.  
 
-Microsoft Corporate Vice President Brad Anderson hat in der Keynote zur Ignite 2018 bedingten Zugriff mit Livedemos ausführlich erläutert. 
+Microsoft Corporate Vice President Brad Anderson hat den bedingten Zugriff in der Keynote zur Ignite 2018 ausführlich mit Livedemos erläutert. 
 
 > [!VIDEO https://www.youtube.com/embed/7tDbUhVCX_I?start=1071]
 
-Bedingter Zugriff bietet Ihnen auch einen zentralen Ort, an dem Sie die Integrität aller mit dem Netzwerk verbundenen Geräte einsehen können. Sie profitieren von den Vorteilen der Cloudskalierung, die sich insbesondere beim Testen von Configuration Manager-Produktionsinstanzen bewährt.
+Mit dem bedingten Zugriff erhalten Sie auch einen zentralen Ort, an dem Sie die Integrität aller mit dem Netzwerk verbundenen Geräte einsehen können. Sie profitieren von den Vorteilen der Cloudskalierung, die sich insbesondere beim Testen von Configuration Manager-Produktionsinstanzen bewährt.
 
 
 ## <a name="benefits"></a>Vorteile
 
-Jedes IT-Team ist von Netzwerksicherheit besessen. Es ist zwingend erforderlich, dass jedes Gerät Ihren Sicherheits- und Geschäftsanforderungen entspricht, bevor es auf Ihr Netzwerk zugreift. Mit bedingten Zugriff können Sie die folgenden Faktoren ermitteln: 
+Jedes IT-Team ist von Netzwerksicherheit besessen. Es ist zwingend erforderlich, dass jedes Gerät Ihren Sicherheits- und Geschäftsanforderungen entspricht, bevor es auf Ihr Netzwerk zugreift. Mit dem bedingten Zugriff können Sie die Folgendes ermitteln: 
 - Ob jedes Gerät verschlüsselt ist  
 - Ob Malware installiert ist  
 - Ob seine Einstellungen aktualisiert werden  
 - Ob Nutzungsbeschränkungen entfernt wurden  
 
-Bedingter Zugriff kombiniert präzise Kontrolle über Unternehmensdaten mit einer Benutzererfahrung, die die Produktivität der Mitarbeiter auf jedem Gerät von jedem Ort aus maximiert.
+Der bedingte Zugriff kombiniert präzise Kontrolle über Unternehmensdaten mit einer Benutzeroberfläche, die die Produktivität der Mitarbeiter auf jedem Gerät maximiert, egal wo sie sich befinden.
 
 Das folgende Video zeigt, wie [Advanced Thread Protection](https://www.microsoft.com/windowsforbusiness/windows-atp) (ATP) in gängige Szenarien integriert wird, die Sie regelmäßig erleben:
 
@@ -60,17 +60,17 @@ Das folgende Video zeigt, wie [Advanced Thread Protection](https://www.microsoft
 
 Durch Co-Verwaltung kann Intune die Verantwortlichkeiten von Configuration Manager für die Bewertung der Einhaltung Ihrer Sicherheitsstandards bei erforderlichen Updates oder Apps übernehmen. Dieses Verhalten ist wichtig für jedes IT-Unternehmen, das Configuration Manager weiterhin für komplexe App- und Patchverwaltung einsetzen möchte.
 
-Bedingter Zugriff ist auch ein wichtiger Teil der Entwicklung Ihrer [Zero Trust Network](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/14/building-zero-trust-networks-with-microsoft-365/)-Architektur. Mit bedingtem Zugriff decken kompatible Gerätezugriffssteuerungen die grundlegenden Ebenen des Zero Trust Network ab. Diese Funktionalität ist ein wesentlicher Aspekt für die zukünftige Sicherung Ihres Unternehmens.
+Der bedingte Zugriff ist auch ein wichtiger Teil der Entwicklung Ihrer [Zero Trust-Netzwerkarchitektur](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/14/building-zero-trust-networks-with-microsoft-365/). Dank des bedingten Zugriffs wird die Grundfunktionalität des Zero Trust-Netzwerks von den Zugriffsteuerungsfunktionen der konformen Geräte abgedeckt. Diese Funktionalität ist ein wesentlicher Aspekt für die zukünftige Sicherung Ihres Unternehmens.
 
-Weitere Informationen finden Sie im Blogbeitrag zu [Enhancing conditional access with machine-risk data from Microsoft Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559) (Optimieren des bedingten Zugriffs mit Computerrisikodaten aus Microsoft Defender Advanced Threat Protection).
+Weitere Informationen finden Sie im Blogbeitrag zu [Optimieren des bedingten Zugriffs mit Computerrisikodaten aus Microsoft Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559).
 
 
 
 ## <a name="case-studies"></a>Fallstudien
 
-Das IT-Beratungsunternehmen Wipro schützt und verwaltet die von allen 91.000 Mitarbeitern genutzten Geräte mit bedingtem Zugriff. In einer aktuellen Fallstudie hat der Vice President der IT bei Wipro Folgendes angemerkt:
+Das IT-Beratungsunternehmen Wipro schützt und verwaltet die Geräte, die von den 91.000 Mitarbeitern genutzt werden, mithilfe des bedingten Zugriffs. In einer aktuellen Fallstudie hat der Vice President der IT bei Wipro Folgendes angemerkt:
 
-> *Das Erreichen des bedingten Zugriffs ist ein großer Gewinn für Wipro. Jetzt verfügen alle unsere Mitarbeiter bei Bedarf über mobilen Zugriff auf Informationen.* 
+> *Der bedingte Zugriff ist ein großer Gewinn für Wipro. Jetzt verfügen alle unsere Mitarbeiter bei Bedarf über mobilen Zugriff auf Informationen.* 
 > *Wir haben unseren Sicherheitsstatus und unsere Mitarbeiterproduktivität verbessert. Jetzt profitieren 91.000 Mitarbeiter überall von einem hochsicheren Zugriff auf mehr als 100 Apps und von jedem Gerät aus.*
 
 <!-- waiting for the case study to be public
@@ -79,41 +79,41 @@ For more information, see [Wipro drives mobile productivity with Microsoft cloud
 
 Weitere Beispiele: 
 
-- Nestlé nutzt app-basierten bedingten Zugriff für über 150.000 Mitarbeiter.  
+- Nestlé nutzt den app-basierten bedingten Zugriff für über 150.000 Mitarbeiter.  
 
 - Das Automatisierungssoftwareunternehmen Cadence, das nun sicherstellen kann, dass „nur noch verwaltete Geräte Zugriff auf Office 365-Apps wie Teams und das Intranet des Unternehmens haben“. Es kann seinen Mitarbeitern auch „einen sichereren Zugriff auf andere cloudbasierte Apps wie Workday und Salesforce“ bieten. Weitere Informationen zu den Erfahrungen, die Cadence mit Intune gemacht hat, finden Sie unter [Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365) (Cadence erhöht das Geschäftstempo mit Tools für die mobile Zusammenarbeit in Microsoft 365).
 
 Intune ist auch vollständig in Partner wie Cisco ISE, Aruba Clear Pass und Citrix NetScaler integriert. Mit diesen Partnern können Sie Zugriffssteuerungen auf der Grundlage der Intune-Anmeldung und des Compliancestatus der Geräte auf diesen anderen Plattformen verwalten.
 
 Weitere Informationen finden Sie in den folgenden Videos:
-- [Brad Anderson zeigt bedingten Zugriff im Detail](https://youtu.be/8321obNofgM?t=547)  
+- [Brad Anderson zeigt den bedingten Zugriff im Detail](https://youtu.be/8321obNofgM?t=547)  
 - [Weitere Details von Endpoint Zone 1805](https://youtu.be/f-ILlEuBFZg?t=196)  
 
 
 ## <a name="value-proposition"></a>Leistungsversprechen
 
-Mit bedingtem Zugriff und ATP-Integration stärken Sie eine grundlegende Komponente jeder IT-Organisation: sicheren Cloudzugriff.
+Mit dem bedingtem Zugriff und einer ATP-Integration stärken Sie eine grundlegende Komponente einer jeden IT-Organisation: den sicheren Cloudzugriff.
 
-Bei mehr als 63 % aller Datenschutzverletzungen erhalten die Angreifer durch schwache, unterlassene oder gestohlene Benutzeranmeldeinformationen Zugriff auf das Netzwerk des Unternehmens. Da sich bedingter Zugriff auf die Sicherung der Benutzeridentität konzentriert, wird der Diebstahl von Anmeldeinformationen eingeschränkt. Bedingter Zugriff verwaltet und schützt Ihre Identitäten, unabhängig davon, ob sie berechtigt oder nicht berechtigt sind. Es gibt keine bessere Möglichkeit, die Geräte und die darauf gespeicherten Daten zu schützen.
+Bei mehr als 63 % aller Datenschutzverletzungen erhalten die Angreifer durch schwache, unterlassene oder gestohlene Benutzeranmeldeinformationen Zugriff auf das Netzwerk des Unternehmens. Da der bedingte Zugriff die Benutzeridentität sichert, schränkt er den Diebstahl von Anmeldeinformationen ein. Der bedingter Zugriff verwaltet und schützt Ihre Identitäten, unabhängig davon, ob sie privilegiert oder nicht privilegiert sind. Es gibt keine bessere Möglichkeit, die Geräte und die darauf gespeicherten Daten zu schützen.
 
-Da bedingter Zugriff eine Kernkomponente von Enterprise Mobility + Security (EMS) ist, ist weder eine lokale Einrichtung noch eine lokale Architektur erforderlich. Mit Intune und Azure Active Directory (Azure AD) können Sie bedingten Zugriff in der Cloud schnell konfigurieren. Wenn Sie derzeit Configuration Manager verwenden, können Sie Ihre Umgebung mit Co-Verwaltung problemlos auf die Cloud ausweiten und sofort mit der Nutzung beginnen.
+Da der bedingte Zugriff eine Kernkomponente von Enterprise Mobility + Security (EMS) ist, ist weder eine lokale Einrichtung noch eine lokale Architektur erforderlich. Mit Intune und Azure Active Directory (Azure AD) können Sie den bedingten Zugriff in der Cloud schnell konfigurieren. Wenn Sie derzeit Configuration Manager verwenden, können Sie Ihre Umgebung mit Co-Verwaltung problemlos auf die Cloud ausweiten und sofort mit der Nutzung beginnen.
 
-Weitere Informationen zur ATP-Integration finden Sie im Blogbeitrag [Microsoft Defender ATP device risk score exposes new cyberattack, drives Conditional access to protect networks](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/) (Microsoft Defender ATP-Geräterisikobewertung deckt neue Cyberangriffe auf und steuert bedingten Zugriff zum Schutz von Netzwerken). Darin wird beschrieben, wie eine erfahrene Hackergruppe noch nie zuvor gesehene Tools eingesetzt hat. Die Microsoft-Cloud hat sie erkannt und aufgehalten, weil die betroffenen Benutzer über bedingten Zugriff verfügten. Das Eindringen hat die risikobasierte Richtlinie für den bedingten Zugriff des Geräts aktiviert. Obwohl der Angreifer bereits im Netzwerk Fuß gefasst hatte, wurden die angegriffenen Computer automatisch vom Zugriff auf Dienste und Daten der Organisation, die von Azure AD verwaltet werden, ausgeschlossen.
+Weitere Informationen zur ATP-Integration finden Sie im Blogbeitrag [Microsoft Defender ATP-Risikobewertung für Geräte deckt neue Cyberangriffe auf und treibt den Netzwerkschutz mithilfe des bedingten Zugriffs an](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/). Darin wird beschrieben, wie eine erfahrene Hackergruppe noch nie zuvor gesehene Tools eingesetzt hat. Die Hacker wurden jedoch von der Microsoft-Cloud erkannt und aufgehalten, weil die betroffenen Benutzer über bedingten Zugriff verfügten. Der Angriff hat die risikobasierte Geräterichtlinie für den bedingten Zugriff aktiviert. Obwohl der Angreifer bereits im Netzwerk Fuß gefasst hatte, wurden die angegriffenen Computer automatisch vom Zugriff auf Dienste und Daten der Organisation, die von Azure AD verwaltet werden, ausgeschlossen.
 
 
 
 ## <a name="configure"></a>Konfigurieren
 
-Bedingter Zugriff ist einfach zu verwenden, wenn Sie [Co-Verwaltung](how-to-enable.md) aktivieren. Dazu muss die Workload der **Compliancerichtlinien** in Intune verschoben werden. Weitere Informationen finden Sie unter [Verschieben von Configuration Manager-Workloads zu Intune](how-to-switch-workloads.md). 
+Der bedingte Zugriff ist einfach zu verwenden, wenn Sie die [Co-Verwaltung](how-to-enable.md) aktivieren. Dazu muss die Workload der **Compliancerichtlinien** in Intune verschoben werden. Weitere Informationen finden Sie unter [Verschieben von Configuration Manager-Workloads zu Intune](how-to-switch-workloads.md). 
 
-Weitere Informationen zum Verwenden bedingten Zugriffs finden in den folgenden Artikeln: 
+Weitere Informationen zum bedingten Zugriff finden in den folgenden Artikeln: 
 
-- [Bedingter Zugriff mit Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)  
+- [Bedingter Zugriff in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
 
 - [Intune-Gerätekonformitätsrichtlinien](https://docs.microsoft.com/intune/device-compliance)  
 
 - [App-basierter bedingter Zugriff mit Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> Funktionen für bedingten Zugriff werden sofort für Azure AD Hybrid Join-Geräte verfügbar. Zu diesen Funktionen gehören mehrstufige Authentifizierung und Azure AD Hybrid Join-Zugriffssteuerung. Dieses Verhalten ist darauf zurückzuführen, dass sie auf Azure AD-Eigenschaften basieren. Um die konfigurationsbasierte Auswertung von Intune und Configuration Manager zu nutzen, aktivieren Sie die Co-Verwaltung. Diese Konfiguration ermöglicht Ihnen die Zugriffssteuerung für konforme Geräte direkt aus Intune heraus. Außerdem steht Ihnen die Funktion zur Auswertung der Compliancerichtlinien von Intune zur Verfügung.  
+> Die Features für den bedingten Zugriff sind sofort für Geräte mit Azure AD-Hybrideinbindung verfügbar. Zu diesen Funktionen gehören mehrstufige Authentifizierung und Azure AD Hybrid Join-Zugriffssteuerung. Dieses Verhalten ist darauf zurückzuführen, dass sie auf Azure AD-Eigenschaften basieren. Um die konfigurationsbasierte Auswertung von Intune und Configuration Manager zu nutzen, aktivieren Sie die Co-Verwaltung. Diese Konfiguration ermöglicht Ihnen die Zugriffssteuerung für konforme Geräte direkt aus Intune heraus. Außerdem steht Ihnen die Funktion zur Auswertung der Compliancerichtlinien von Intune zur Verfügung.  
 

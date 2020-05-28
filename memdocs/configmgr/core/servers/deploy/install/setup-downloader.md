@@ -1,8 +1,8 @@
 ---
-title: Setup-Downloadprogramm
+title: Setupdownloadtool
 titleSuffix: Configuration Manager
-description: Erfahren Sie mehr über diese eigenständige Anwendung, die sicherstellen soll, dass Ihre Standortinstallation aktuelle Versionen der wichtigsten Installationsdateien verwendet.
-ms.date: 01/22/2020
+description: Mit dem eigenständigen Tool können Sie die aktuelle Version der für das Setup wesentlichen Installationsdateien herunterladen.
+ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,102 +10,113 @@ ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2fa1899f8e7dc14812f9f9ecf889350a153b2d25
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2da8aed5cfe4a478010165445094f1fce4627d9a
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700568"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428831"
 ---
 # <a name="setup-downloader-for-configuration-manager"></a>Setup-Downloadprogramm für Configuration Manager
 
 *Gilt für: Configuration Manager (Current Branch)*
 
-Bevor Sie das Setup zum Installieren oder Upgraden eines Configuration Manager-Standorts ausführen, können Sie die eigenständige Setup-Downloadanwendung für die zu installierende Version von Configuration Manager verwenden, um aktualisierte Setupdateien herunterzuladen.  
+Bevor Sie das Configuration Manager-Setup ausführen, um einen Standort zu installieren oder zu aktualisieren, können Sie mit dem eigenständigen Setupdownloadtool die aktualisierten Setupdateien herunterladen. Führen Sie das Tool einfach in der Version von Configuration Manager aus, die Sie installieren möchten. Verwenden Sie aktualisierte Setupdateien, um sicherzustellen, dass Ihre Standortinstallation die aktuelle Version der wesentlichen Installationsdateien verwendet:
 
-Die Verwendung aktualisierter Setupdateien stellt sicher, dass für Ihre Standortinstallation aktuelle Versionen der wichtigsten Installationsdateien verwendet werden. Übersicht:   
--   Wenn Sie das Setup-Downloadprogramm zum Herunterladen von Dateien vor dem Starten des Setups verwenden, geben Sie einen Ordner zum Speichern der Dateien an.  
--   Das Konto, mit dem Sie das Setup-Downloadprogramm ausführen, benötigt **Vollzugriff**-Berechtigungen für den Downloadordner.  
--   Beim Ausführen von Setup zum Installieren oder Aktualisieren eines Standorts können Sie das Setup anweisen, diese lokale Kopie von Dateien zu verwenden, die Sie zuvor heruntergeladen haben. Dies verhindert, dass das Setup eine Verbindung mit Microsoft herstellen muss, wenn Sie die Installation oder das Upgrade des Standorts starten.  
--   Sie können die gleiche lokale Kopie der Setupdateien für nachfolgende Standortinstallationen oder -upgrades verwenden.  
+Wenn Sie das Setupdownloadprogramm verwenden, geben Sie einen Ordner an, der die Dateien enthalten soll. Das Konto, mit dem Sie das Tool ausführen, benötigt die Berechtigung **Vollzugriff** für den Downloadordner. Während des Setups zum Installieren oder Aktualisieren eines Standorts können Sie diese lokale Kopie von Dateien angeben, die Sie zuvor heruntergeladen haben. Dies verhindert, dass beim Setup eine Verbindung zu Microsoft hergestellt wird, wenn Sie die Installation oder das Upgrade des Standorts starten. Sie können die gleiche lokale Kopie der Setupdateien für weitere Standortinstallationen oder -upgrades derselben Version verwenden.
 
-Die folgenden Dateitypen werden vom Setup-Downloadprogramm heruntergeladen:  
--   Erforderliche verteilbare Dateien  
--   Sprachpakete  
--   Die neuesten Produktupdates für Setup  
+Das Setupdownloadtool lädt die folgenden Dateitypen herunter:
 
-Sie haben zwei Optionen zum Ausführen des Setup-Downloadprogramms:
+- Erforderliche verteilbare Dateien
+- Sprachpakete
+- Die neuesten Produktupdates für das Setup
+
+Es gibt zwei Optionen für die Ausführung des Setupdownloadprogramms:
+
 - Die Anwendung mit der Benutzeroberfläche ausführen
-- Die Anwendung für Befehlszeilenoptionen an einer Eingabeaufforderung ausführen
+- Die Anwendung aufgrund zusätzlicher Befehlszeilenoptionen in einer Eingabeaufforderung ausführen
 
+Wenn Ihre Organisation die Netzwerkkommunikation mit dem Internet über ein- Firewall oder Proxygerät einschränkt, müssen Sie dem Tool den Zugriff auf Internetendpunkte gestatten. Das Gerät, auf dem das Tool ausgeführt wird, benötigt Internetzugriff, so wie auch der Dienstverbindungspunkt. Weitere Informationen finden Sie unter [Internetzugriffsanforderungen](../../../plan-design/network/internet-endpoints.md#bkmk_scp).<!-- SCCMDocs#677 -->
 
-## <a name="run-setup-downloader-with-the-user-interface"></a><a name="bkmk_ui"></a> Ausführen des Setup-Downloadprogramm über die Benutzeroberfläche  
+## <a name="run-setup-downloader-with-the-user-interface"></a><a name="bkmk_ui"></a> Ausführen des Setupdownloadprogramms über die Benutzeroberfläche
 
-1.  Öffnen Sie auf einem Computer mit Internetzugriff den Windows-Explorer, und wechseln Sie zu **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**.  
+1. Navigieren Sie auf einem Computer mit Internetzugriff zu den Installationsmedien für die Version von Configuration Manager, die Sie installieren möchten.
 
-2.  Doppelklicken Sie auf **Setupdl.exe**, um das Setup-Downloadprogramm zu öffnen.   
+1. Führen Sie im Unterordner **SMSSETUP\BIN\X64** die Datei **Setupdl.exe** aus.
 
-3. Geben Sie den Pfad zu dem Ordner mit den aktuellen Installationsdateien an, und klicken Sie dann auf **Herunterladen**. Das Setup-Downloadprogramm überprüft die Dateien im Downloadordner. Es werden nur die Dateien heruntergeladen, die fehlen oder die neuer sind als vorhandene Dateien. Es werden Unterordner für die heruntergeladenen Sprachen und weitere erforderliche Unterordner erstellt.  
+1. Geben Sie den Pfad zu dem Ordner ein, in dem die aktualisierten Installationsdateien gespeichert werden sollen, und klicken Sie dann auf **Herunterladen**. Das Setupdownloadprogramm überprüft die Dateien, die derzeit im Downloadordner enthalten sind. Es werden nur die Dateien heruntergeladen, die fehlen oder die neuer sind als vorhandene Dateien. Außerdem erstellt das Programm Unterordner für die heruntergeladenen Sprachen und weitere erforderliche Komponenten.
 
-4.  Überprüfen Sie die Downloadergebnisse anhand der Datei **ConfigMgrSetup.log** im Stammverzeichnis von Laufwerk C.  
+1. Die Downloadergebnisse können Sie sich unter **C:\ConfigMgrSetup.log** ansehen.
 
-## <a name="run-setup-downloader-from-a-command-prompt"></a><a name="bkmk_cmd"></a> Ausführen des Setup-Downloadprogramms über eine Eingabeaufforderung  
+## <a name="run-setup-downloader-from-a-command-prompt"></a><a name="bkmk_cmd"></a> Ausführen des Setupdownloadprogramms in einer Eingabeaufforderung
 
-1.  Gehen Sie in einem Eingabeaufforderungsfenster zu **&lt;*Configuration Manager-Installationsmedium*\>\SMSSETUP\BIN\X64**.   
+1. Öffnen Sie eine Eingabeaufforderung, und ändern Sie den Pfad zu den Installationsmedien für die Version von Configuration Manager, die Sie installieren möchten.
 
-2.  Führen Sie **Setupdl.exe** aus, um das Setup-Downloadprogramm zu öffnen.
+1. Wechseln Sie in den Unterordner **SMSSETUP\BIN\X64**, und führen Sie **Setupdl.exe** mit den erforderlichen Optionen aus.
 
-    Sie können die folgenden Befehlszeilenoptionen mit **Setupdl.exe** verwenden:   
+1. Die Downloadergebnisse können Sie sich unter **C:\ConfigMgrSetup.log** ansehen.
 
-    -   **/VERIFY:** Verwenden Sie diese Option, um die Dateien im Downloadordner einschließlich der Sprachdateien zu überprüfen. Überprüfen Sie anhand der Liste in der Datei ConfigMgrSetup.log im Stammverzeichnis des Laufwerks C, welche Dateien veraltet sind. Wenn Sie diese Option verwenden, werden keine Dateien heruntergeladen.  
+### <a name="command-line-options"></a>Befehlszeilenoptionen
 
-    -   **/VERIFYLANG:** Verwenden Sie diese Option, um die Sprachdateien im Downloadordner zu überprüfen. Überprüfen Sie anhand der Liste in der Datei ConfigMgrSetup.log im Stammverzeichnis des Laufwerks C, welche Sprachdateien veraltet sind.
+Sie können die folgenden Befehlszeilenoptionen mit **Setupdl.exe** verwenden:
 
-    -   **/LANG:** Verwenden Sie diese Option, um nur die Sprachdateien in den Downloadordner herunterzuladen.  
+- **/VERIFY:** Mit dieser Option werden die Dateien im Downloadordner überprüft, einschließlich der Sprachdateien. Die Liste der veralteten Dateien finden Sie unter **C:\ConfigMgrSetup.log**. Wenn Sie diese Option verwenden, werden keine Dateien heruntergeladen.
 
-    -   **/NOUI:** Verwenden Sie diese Option, um das Setup-Downloadprogramm zu starten, ohne die Benutzeroberfläche anzuzeigen. Sie müssen dann den **Downloadpfad** als Teil der Befehlszeile bei der Eingabeaufforderung angeben.  
+- **/VERIFYLANG:** Mit dieser Option werden die Sprachdateien im Downloadordner überprüft. Die Liste der veralteten Sprachdateien finden Sie unter **C:\ConfigMgrSetup.log**.
 
-    -   **&lt;DownloadPath:\>** Sie können den Pfad zum Downloadordner angeben, um den Überprüfungs- oder den Downloadvorgang automatisch zu starten. Wenn Sie die Option **/NOUI** verwenden, müssen Sie den Downloadpfad angeben. Geschieht dies nicht, müssen Sie den Pfad angeben, sobald das Setup-Downloadprogramm geöffnet wird. Wenn der Ordner nicht vorhanden ist, wird er vom Setup-Downloadprogramm erstellt.  
+- **/LANG:** Mit dieser Option werden nur die Sprachdateien in den Downloadordner heruntergeladen.
 
-    Beispielbefehle:
+- **/NOUI:** Mit dieser Option wird das Setupdownloadprogramm ohne Verwendung der Benutzeroberfläche gestartet. Wenn Sie diese Option verwenden, ist der **Downloadpfad** erforderlich.
 
-    -   **setupdl &lt;DownloadPath\>**  
+- **Download path** (Downloadpfad): Damit die Überprüfungs- oder der Download automatisch gestartet wird, müssen Sie den Pfad zum Downloadordner angeben. Wenn Sie die Option **/NOUI** verwenden, ist der Downloadpfad erforderlich. Wenn Sie keinen Downloadpfad angeben, werden Sie vom Setupdownloadprogramm aufgefordert, den Pfad anzugeben. Wenn der Ordner nicht vorhanden ist, wird er vom Setupdownloadprogramm erstellt.
 
-        -   Das Setup-Downloadprogramm wird gestartet. Die Dateien im angegebenen Downloadordner werden überprüft, und nur fehlende Dateien oder Dateien mit aktuelleren Versionen werden heruntergeladen.     
+### <a name="example-commands"></a>Beispielbefehle
 
-    -   **setupdl /VERIFY &lt;Downloadpfad\>**  
+#### <a name="example-1"></a>Beispiel 1
 
-        -   Das Setup-Downloadprogramm wird gestartet. Die Dateien im angegebenen Downloadordner werden überprüft.  
+Das Setupdownloadprogramm überprüft die Dateien im angegebenen Downloadordner und lädt anschließend Dateien herunter.
 
-    -   **setupdl /NOUI &lt;Downloadpfad\>**  
+`setupdl.exe C:\Download`
 
-        -   Das Setup-Downloadprogramm wird gestartet. Die Dateien im angegebenen Downloadordner werden überprüft, und nur fehlende oder aktuellere Dateien werden heruntergeladen.  
+#### <a name="example-2"></a>Beispiel 2
 
-    -   **setupdl /LANG &lt;Downloadpfad\>**  
+Das Setupdownloadprogramm überprüft nur die Dateien im angegebenen Downloadordner.
 
-        -   Das Setup-Downloadprogramm wird gestartet. Die Sprachdateien im angegebenen Downloadordner werden überprüft, und nur fehlende oder aktuellere Sprachdateien werden heruntergeladen.  
+`setupdl.exe /VERIFY C:\Download`
 
-    -   **setupdl /VERIFY**  
+#### <a name="example-3"></a>Beispiel 3
 
-        -   Das Setup-Downloadprogramm wird gestartet. Anschließend müssen Sie den Pfad für den Downloadordner angeben. Nachdem Sie auf **Überprüfen** geklickt haben, werden die Dateien im Downloadordner vom Setup-Downloadprogramm überprüft.  
+Das Setupdownloadprogramm überprüft die Dateien im angegebenen Downloadordner und lädt anschließend Dateien herunter. Das Tool weist keine Benutzeroberfläche auf.
 
-3.  Überprüfen Sie die Downloadergebnisse anhand der Datei **ConfigMgrSetup.log** im Stammverzeichnis von Laufwerk C.
+`setupdl.exe /NOUI C:\Download`
 
-## <a name="copy-setup-downloader-files-to-another-computer"></a><a name="bkmk_cp-files"></a> Kopieren von Setup-Downloadprogrammdateien auf einen anderen Computer
+#### <a name="example-4"></a>Beispiel 4
+
+Das Setupdownloadprogramm überprüft die Sprachdateien im angegebenen Downloadordner und lädt anschließend nur die Sprachdateien herunter.
+
+`setupdl.exe /LANG C:\Download`
+
+## <a name="copy-setup-downloader-files-to-another-computer"></a><a name="bkmk_cp-files"></a> Kopieren von Dateien des Setupdownloadprogramms auf einen anderen Computer
 
 1. Gehen Sie im Windows-Explorer zu einem der folgenden Speicherorte:
 
     - **&lt;Configuration Manager-Installationsmedium>\SMSSETUP\BIN\X64**
+
     - **&lt;Configuration Manager-Installationspfad>\BIN\X64**
-    
+
 1. Kopieren Sie die folgenden Dateien in denselben Zielordner auf dem anderen Computer:
-    
+
     - **setupdl.exe**
+
     - **.\\&lt;Sprache>\\setupdlres.dll**
-      - Diese Datei befindet sich im Unterordner für die Installationssprache. Englisch beispielsweise befindet sich im Unterordner `00000409`.
 
-    Beispielsweise sollten die Zielordnerpfade auf Ihrem Gerät wie folgt aussehen:
-    - C:\ConfigManInstall\setupdl.exe
-    - C:\ConfigManInstall\00000409\setupdlres.dll
+        > [!NOTE]
+        > Diese Datei befindet sich im Unterordner für die Installationssprache. Englisch beispielsweise befindet sich im Unterordner `00000409`.
 
-1. Starten Sie das Setup-Downloadprogramm auf dem Computer entweder über die [Benutzeroberfläche](#bkmk_ui) oder die [Eingabeaufforderung](#bkmk_cmd). Wie das funktioniert, wurde in den obigen Abschnitten beschrieben.
+    Die Zielordnerpfade auf Ihrem Gerät wie folgt aussehen:
+
+    - `C:\ConfigManInstall\setupdl.exe`
+
+    - `C:\ConfigManInstall\00000409\setupdlres.dll`
+
+1. Führen Sie das Setupdownloadprogramm auf dem Zielcomputer aus. Verwenden Sie dazu entweder die [Benutzeroberfläche](#bkmk_ui) oder die [Eingabeaufforderung](#bkmk_cmd).

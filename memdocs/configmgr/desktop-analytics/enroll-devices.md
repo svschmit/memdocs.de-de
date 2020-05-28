@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acb8900a57408152133637ead3b8a0cf4732b4a7
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268724"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633320"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Registrieren von Geräten in Desktop Analytics
 
@@ -126,7 +126,7 @@ Diese Einstellung kann mit einer Option in den Configuration Manager-Einstellung
 
 Im Allgemeinen verwenden Sie Configuration Manager-Sammlungen, um Desktop Analytics-Einstellungen und -Registrierung zu steuern. Verwenden Sie direkte Mitgliedschaften oder Abfragen, um Geräte in die Sammlung einzuschließen oder aus der Sammlung auszuschließen. Weitere Informationen finden Sie unter [Erstellen von Sammlungen](../core/clients/manage/collections/create-collections.md).
 
-Configuration Manager konfiguriert nur die Windows-Einstellungen, wenn noch kein Wert vorhanden ist. Wenn Sie abweichende Einstellungen für eine eindeutige Gruppe von Geräten konfigurieren müssen, können Sie [Gruppenrichtlinien](group-policy-settings.md) verwenden. Von der Gruppenrichtlinie gesteuerte Einstellungen haben Vorrang vor Configuration Manager-Einstellungen.
+Configuration Manager konfiguriert nur die Windows-Einstellungen, wenn noch kein Wert vorhanden ist. Wenn Sie abweichende Einstellungen für eine eindeutige Gruppe von Geräten konfigurieren müssen, können Sie [Gruppenrichtlinien](group-policy-settings.md) verwenden. Von der Gruppenrichtlinie gesteuerte Einstellungen haben Vorrang vor Configuration Manager-Einstellungen. Der Status von Geräten, für die die Gruppenrichtlinie gilt, wird im Dashboard [Verbindungsintegrität](monitor-connection-health.md) möglicherweise nicht korrekt angezeigt.
 
 Beim Konfigurieren der Diagnosedatenebene legen Sie die Obergrenze für das Gerät fest. Standardmäßig können Benutzer in Windows 10, Version 1803 und höher, eine niedrigere Ebene festlegen. Sie können dieses Verhalten mithilfe der Gruppenrichtlinien-Einstellung **Benutzeroberfläche für die Festlegung der Telemetrieaktivierung konfigurieren** steuern. Weitere Informationen finden Sie unter [Gruppenrichtlinieneinstellungen für Desktop Analytics](group-policy-settings.md).
 

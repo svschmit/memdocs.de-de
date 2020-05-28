@@ -5,17 +5,17 @@ description: Erfahren Sie mehr über die automatische Bereitstellung von Softwar
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/11/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: d1b4329def3aee97e1684935c0c8f889c3e4e513
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269030"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709433"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Automatisches Bereitstellen von Softwareupdates  
 
@@ -49,7 +49,7 @@ Sie können Softwareupdates mithilfe einer ADR automatisch genehmigen und bereit
 
          - Die Vorlage **Office 365-Clientupdates** stellt allgemeine Einstellungen bereit, die bei der Bereitstellung von Updates für Office 365 Pro Plus-Clients verwendet werden sollen.
              > [!Note]
-             > Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Wenn Ihre ADRs auf der Eigenschaft „Title“ aufbauen, müssen Sie sie ab dem 9. Juni 2020 bearbeiten. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` ist ein Beispiel für den neuen Titel. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Wenn Ihre ADRs auf der Eigenschaft „Title“ aufbauen, müssen Sie sie ab dem 9. Juni 2020 bearbeiten. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` ist ein Beispiel für den neuen Titel. Weitere Informationen zum Ändern von Regeln für die automatische Bereitstellung finden Sie unter [Updatekanäle für Microsoft 365-Apps](manage-office-365-proplus-updates.md#bkmk_channel). Weitere Informationen zur Namensänderung finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
          - Die Vorlage **SCEP- und Windows Defender Antivirus-Updates** stellt allgemeine Einstellungen bereit, die bei der Bereitstellung von Endpoint Protection-Definitionsupdates verwendet werden sollen.  
 

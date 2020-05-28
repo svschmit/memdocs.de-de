@@ -5,17 +5,17 @@ description: Configuration Manager synchronisiert Office 365-Clientupdates aus d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 4967b8b289d54a6355cb0a1e6454d5fac469a733
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 09d8f0a37e9ed4308c5c8ffcf005c788612be235
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110405"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709501"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Verwalten von Office 365 ProPlus mit Configuration Manager
 
@@ -224,7 +224,33 @@ Verwenden Sie eine der folgenden Methoden, um sicherzustellen, dass der Updateka
     Beispiel: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Klicken Sie auf **OK**. 
 
-## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a><a name="bkmk_channel"></a> Ändern des Updatekanals nach dem Aktivieren des Erhalts von Updates für Office 365-Clients über Configuration Manager
+## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a> Updatekanäle für Microsoft 365-Apps
+<!--6298093-->
+Als Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt wurde, wurden auch die Namen der Updatekanäle aktualisiert. Wenn Sie Updates mithilfe von Regeln für die automatische Bereitstellung (Automatic Deployment Rules, ADRs) bereitstellen, müssen Sie Änderungen an Ihren ADRs vornehmen, wenn diese sich auf der Eigenschaft **Title** basieren. Dies liegt daran, dass sich der Name der Updatepakete im Microsoft Update-Katalog ändert.
+
+Derzeit beginnt der Titel eines Updatepakets für Office 365 ProPlus mit „Office 365-Clientupdate“, zum Beispiel:
+
+&nbsp; &nbsp; Office 365-Clientupdate: Version 1908 für den halbjährlichen Kanal für die x64-basierte Edition (Build 11929.20648)
+
+Bei Updatepaketen, die ab dem 9. Juni veröffentlicht werden, beginnt der Titel mit „Microsoft 365-App-Update“, zum Beispiel:
+
+&nbsp; &nbsp; Microsoft 365-App-Update: Version 1908 für den halbjährlichen Kanal für die x64-basierte Edition (Build 11929.50000)
+</br>
+</br>
+
+|Neuer Kanalname|Vorheriger Kanalname|
+|--|--|
+|Halbjährlicher Enterprise-Kanal|Halbjährlicher Kanal|
+|Halbjährlicher Enterprise-Kanal (Vorschau)|Halbjährlicher Kanal (gezielt)|
+|Monatlicher Enterprise-Kanal|N/V|
+|Aktueller Kanal|Monatlicher Kanal|
+|Aktueller Kanal (Vorschau)|Monatlicher Kanal (gezielt)|
+|Betakanal|Insider|
+
+Weitere Informationen zum Bearbeiten von ADRs finden Sie unter [Automatisches Bereitstellen von Softwareupdates](automatically-deploy-software-updates.md). Weitere Informationen zur Namensänderung finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+
+
+## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Ändern des Updatekanals nach dem Aktivieren des Erhalts von Updates für Office 365-Clients über Configuration Manager
 
 Nach der Bereitstellung von Office 365 ProPlus können Sie den Updatekanal per Gruppenrichtlinie oder mit dem Office-Bereitstellungstool (ODT) ändern. Beispielsweise können Sie ein Gerät aus „Halbjährlicher Kanal“ in „Halbjährlicher Kanal (gezielt)“ verschieben. Beim Wechseln des Kanals wird Office automatisch aktualisiert, ohne dass die Vollversion neu installiert oder heruntergeladen werden muss. Weitere Informationen finden Sie unter [Ändern des Office 365 ProPlus-Updatekanals für Geräte in Ihrer Organisation](https://docs.microsoft.com//deployoffice/change-update-channels).
 

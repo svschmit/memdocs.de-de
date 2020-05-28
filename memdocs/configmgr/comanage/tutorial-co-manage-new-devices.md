@@ -5,17 +5,17 @@ description: Informationen zum Konfigurieren der Co-Verwaltung für neue interne
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 75016e8028dde29c83ae7e7f5a23a1f6dbb4417f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692988"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428615"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutorial: Aktivieren der Co-Verwaltung für neue internetbasierte Geräte
 
@@ -237,11 +237,11 @@ Führen Sie das folgende Verfahren auf dem primären Standortserver aus.
 
    1. Wählen Sie die Web-App aus, die Sie erstellt haben.
 
-   2. Gehen Sie zu **Einstellungen > Erforderliche Berechtigungen**, wählen Sie **Berechtigungen erteilen** und dann **Ja** aus.  
+   2. Navigieren Sie zu **API-Berechtigungen**. Klicken Sie auf die Option **Administratorzustimmung für <your tenant> erteilen** und dann auf **Ja**.  
 
    3. Wählen Sie die Native Client-App aus, die Sie erstellt haben.
 
-   4. Gehen Sie zu **Einstellungen > Erforderliche Berechtigungen**, wählen Sie **Berechtigungen erteilen** und dann **Ja** aus.  
+   4. Navigieren Sie zu **API-Berechtigungen**. Klicken Sie auf die Option **Administratorzustimmung für <your tenant> erteilen** und dann auf **Ja**.
 
 9. Wechseln Sie in der Configuration Manager-Konsole zu **Verwaltung > Übersicht > Clouddienste > Azure-Dienste**, und wählen Sie Ihren Azure-Dienst aus. Klicken Sie dann mit der rechten Maustaste auf **Azure Active Directory-Benutzerermittlung**, und wählen Sie **Vollständige Ermittlung jetzt ausführen** aus. Wählen Sie zum Bestätigen der Aktion **Ja** aus.  
 
@@ -383,11 +383,11 @@ Wenn dann ein zuvor nicht verwaltetes Windows 10-Gerät bei Intune registriert w
 
 ### <a name="create-an-intune-app-to-install-the-configuration-manager-client"></a>Erstellen einer Intune-App zum Installieren des Configuration Manager-Clients
 
-1. Melden Sie sich vom primären Standortserver aus beim [Azure-Portal](https://portal.azure.com/) an, und wechseln Sie zu **Intune > Client-Apps > Apps > Hinzufügen**.
+1. Melden Sie sich auf dem primären Standortserver im [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com) an, und navigieren Sie zu **Anwendungen** > **Alle Apps** > **Hinzufügen**.
 
-2. Für **App-Typ**: Wählen Sie **Branchenspezifische App** aus.
+2. Wählen Sie unter **Sonstige** für den App-Typ die Option **Branchenspezifische App** aus.
 
-3. Wählen Sie **App-Paketdatei** aus, navigieren Sie dann zum Speicherort der Configuration Manager-Datei **ccmsetup.msi**, und wählen Sie dann **Öffnen > OK** aus.
+3. Navigieren Sie zum Speicherort der Configuration Manager-Datei **ccmsetup.msi**, und klicken Sie dann auf **Öffnen > OK**, um zur **App-Paketdatei** zu gelangen.
 Beispiel: *C:\Programme\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*.
 
 4. Wählen Sie **App-Informationen** aus, und geben Sie dann die folgenden Details an:
@@ -412,11 +412,11 @@ Beispiel: *C:\Programme\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*.
 
 Im folgenden Verfahren wird die App für die Installation des Configuration Manager-Clients bereitgestellt, den Sie im vorherigen Verfahren erstellt haben.
 
-1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/) an.  Wählen Sie **Alle Dienste > Intune > Client-Apps > Apps** und dann **ConfigMgr Client Setup Bootstrap** aus, die App, die Sie zum Bereitstellen des Configuration Manager-Clients erstellt haben.  
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com) an. Klicken Sie auf **Anwendungen** > **Alle Apps**, und wählen Sie **ConfigMgr Client Setup Bootstrap** aus. Dabei handelt es sich um die App, die Sie erstellt haben, um den Configuration Manager-Client bereitzustellen.  
 
-2. Wählen Sie **Zuweisungen > Gruppe hinzufügen** aus.  Legen Sie für **Zuweisungstyp** **Erforderlich** fest, und legen Sie dann mit **Eingeschlossene Gruppen** und **Ausgeschlossene Gruppen** die Azure Active Directory-Gruppen (AD) fest, die Benutzer und Geräte enthalten, die Sie in die Co-Verwaltung einbeziehen möchten.  
+2. Klicken Sie auf **Eigenschaften**, dann bei **Zuweisungen** auf **Bearbeiten**. Klicken Sie bei den Zuweisungen des Typs **Erforderlich** auf **Gruppe hinzufügen**, um die Azure Active Directory-Gruppen (AD) festzulegen, die Benutzer und Geräte enthalten, die Sie in die Co-Verwaltung einbeziehen möchten.  
 
-3. Wählen Sie dann **OK** aus, und **Speichern** Sie die Konfiguration.
+3. Klicken Sie auf **Überprüfen und speichern**, und **speichern** Sie die Konfiguration.
 Die App wird jetzt von Benutzern und Geräten benötigt, denen Sie sie zugewiesen haben. Nachdem die App den Configuration Manager-Client auf einem Gerät installiert hat, wird es mit der Co-Verwaltung verwaltet.
 
 ## <a name="summary"></a>Zusammenfassung

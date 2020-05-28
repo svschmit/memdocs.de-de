@@ -2,7 +2,7 @@
 title: Empfohlene Hardware
 titleSuffix: Configuration Manager
 description: Hier finden Sie Informationen über empfohlene Hardware, mit deren Hilfe Sie Ihre Configuration Manager-Umgebung über eine einfache Bereitstellung hinaus skalieren können.
-ms.date: 05/23/2018
+ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d741e34325da859d4fe1f0af554544ce146a42f9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 36b90627f25c5cf19b867a78e141b69266478c58
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702118"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428785"
 ---
 # <a name="recommended-hardware-for-configuration-manager"></a>Recommended hardware for Configuration Manager (Empfohlene Hardware für Configuration Manager)
 
@@ -23,29 +23,30 @@ ms.locfileid: "81702118"
 
 Die folgenden Empfehlungen sind Leitlinien zur Unterstützung der Skalierung Ihrer Configuration Manager-Umgebung, um mehr als eine sehr grundlegende Bereitstellung von Standorten, Standortsystemen und Clients zu unterstützen. Sie sollen nicht jede denkbare Standort- und Hierarchiekonfiguration abdecken.  
 
-Verwenden Sie diese Informationen in den folgenden Abschnitten als Leitfaden zur Unterstützung bei der Auswahl von Hardware, mit der Clients und Standorte die Verarbeitungslasten für die verfügbaren Configuration Manager-Features mit den Standardkonfigurationen bewältigen können.  
+Die folgenden Abschnitte sollen Ihnen helfen, Ihre Hardware zu planen. Stellen Sie sicher, dass Ihre Hardware auf die Verarbeitungslasten von Clients und Standorten ausgelegt ist, die die verfügbaren Configuration Manager-Features verwenden.
 
+Weitere Informationen finden Sie im [Configuration Manager Perf and Scale Guidance Whitepaper](https://gallery.technet.microsoft.com/Configuration-Manager-ba55428e) (Whitepaper zur Leistung und Skalierung von Configuration Manager).
 
+## <a name="site-systems"></a><a name="bkmk_ScaleSieSystems"></a> Standortsysteme
 
-##  <a name="site-systems"></a><a name="bkmk_ScaleSieSystems"></a> Standortsysteme  
-In diesem Abschnitt werden die empfohlenen Hardwarekonfigurationen für Configuration Manager-Standortsysteme für Bereitstellungen beschrieben, von denen die maximale Anzahl von Clients unterstützt wird und von denen die meisten oder alle Configuration Manager-Features genutzt werden. Für Bereitstellungen, die weniger als die maximale Anzahl von Clients unterstützen und nicht alle verfügbare Features verwenden, werden unter Umständen weniger Computerressourcen benötigt. Im Allgemeinen beschränken unter anderem folgende Hauptfaktoren in dieser Reihenfolge die Gesamtleistung des Systems:  
+In diesem Abschnitt werden die empfohlenen Hardwarekonfigurationen für Configuration Manager-Standortsysteme aufgeführt. Anhand dieser Empfehlungen können Sie die maximale Anzahl von Clients und die meisten oder alle Configuration Manager-Features verwenden. Wenn Ihre Umgebung weniger als die maximale Anzahl von Clients unterstützt und dort nicht alle verfügbaren Features verwendet werden, werden unter Umständen weniger Ressourcen benötigt. Im Allgemeinen beschränken die folgenden Hauptfaktoren die Gesamtleistung des Systems:
 
-1.  E/A-Festplattenleistung  
+1. E/A-Festplattenleistung
 
-2.  Verfügbarer Arbeitsspeicher  
+2. Verfügbarer Arbeitsspeicher
 
-3.  CPU  
+3. CPU
 
-Verwenden Sie zur Leistungsoptimierung RAID 10-Konfigurationen für alle Datenlaufwerke und 1 GBit/s-Ethernet-Netzwerkverbindungen.  
+Verwenden Sie zur Leistungsoptimierung RAID 10-Konfigurationen für alle Datenlaufwerke und 1 GBit/s-Ethernet-Netzwerkverbindungen.
 
-###  <a name="site-servers"></a><a name="bkmk_ScaleSiteServer"></a> Standortserver  
+### <a name="site-servers"></a><a name="bkmk_ScaleSiteServer"></a> Standortserver
 
 |Standortkonfiguration|CPU (Kerne)|Arbeitsspeicher (GB)|Speicherbelegung für SQL Server (%)|  
 |-------------------------------|---------------|---------------|----------------------------------------|  
-|Eigenständiger primärer Standortserver mit einer Datenbankstandortrolle auf dem gleichen Server<sup>1</sup>|16|96|80|  
+|Eigenständiger primärer Standortserver mit einer Datenbankstandortrolle auf dem gleichen Server<sup>[Hinweis 1](#bkmk_note1)</sup>|16|96|80|  
 |Eigenständiger primärer Standortserver mit einer Remotestandortdatenbank|8|16|-|  
 |Remotedatenbankserver für einen eigenständigen primären Standort|16|72|90|  
-|Standortserver der zentralen Verwaltung mit einer Datenbankstandortrolle auf dem gleichen Server<sup>1</sup>|20|128|80|  
+|Standortserver der zentralen Verwaltung mit einer Datenbankstandortrolle auf dem gleichen Server<sup>[Hinweis 1](#bkmk_note1)</sup>|20|128|80|  
 |Standortserver der zentralen Verwaltung mit einer Remotestandortdatenbank|8|16|-|  
 |Remotedatenbankserver für einen Standort der zentralen Verwaltung|16|96|90|  
 |Untergeordneter primärer Standort mit einer Datenbankstandortrolle auf dem gleichen Server|16|96|80|  
@@ -53,95 +54,99 @@ Verwenden Sie zur Leistungsoptimierung RAID 10-Konfigurationen für alle Datenla
 |Remotedatenbankserver für einen untergeordneten primären Standort|16|72|90|  
 |Sekundärer Standortserver|8|16|-|  
 
-<sup>1</sup> Wenn Standortserver und SQL Server auf demselben Computer installiert sind, unterstützt die Bereitstellung eine maximale [Größe und Anzahl](size-and-scale-numbers.md) für Standorte und Clients. Diese Konfiguration kann [Hochverfügbarkeitsoptionen für Configuration Manager](../../servers/deploy/configure/high-availability-options.md) wie die Verwendung eines SQL Server-Clusters begrenzen. Darüber hinaus sollten Benutzer mit größeren Installationen die Verwendung einer Konfiguration mit einem SQL Server-Remotecomputer in Betracht ziehen, weil zur Unterstützung des SQL Server- und Configuration Manager-Standortservers höhere E/A-Anforderungen erforderlich sind, wenn beide auf demselben Computer ausgeführt werden.  
+#### <a name="note-1-collocated-sql"></a><a name="bkmk_note1"></a> Hinweis 1: Koinstallation von SQL Server
 
-###  <a name="remote-site-system-servers"></a><a name="bkmk_RemoteSiteSystem"></a> Remote-Standortsystemserver  
-Der folgende Leitfaden gilt für Computer, die eine einzelne Standortsystemrolle innehaben. Planen Sie Anpassungen ein, wenn Sie mehrere Standortsystemrollen auf demselben Computer installieren.  
+Wenn der Standortserver und SQL Server auf demselben Computer installiert sind, unterstützt die Bereitstellung eine maximale [Größe und Anzahl](size-and-scale-numbers.md) von Standorten und Clients. Diese Konfiguration kann jedoch [hoch verfügbare Optionen](../../servers/deploy/configure/high-availability-options.md) wie die Verwendung eines SQL Server-Clusters einschränken. Wenn Ihre Umgebung größer ist, sollten Sie aufgrund der höheren E/A-Anforderungen (zwecks Unterstützung beider Rollen auf demselben Computer) in Betracht ziehen, einen Remoteserver unter SQL Server zu verwenden.
+
+### <a name="remote-site-system-servers"></a><a name="bkmk_RemoteSiteSystem"></a> Remote-Standortsystemserver
+
+Der folgende Leitfaden gilt für Computer, die eine einzelne Standortsystemrolle innehaben. Planen Sie Anpassungen ein, wenn Sie mehrere Standortsystemrollen auf demselben Computer installieren.
 
 |Standortsystemrolle|CPU (Kerne)|Arbeitsspeicher (GB)|Speicherplatz (GB)|  
 |----------------------|---------------|---------------|--------------------|  
 |Verwaltungspunkt|4|8|50|  
-|Verteilungspunkt|2|8|Je nach Bedarf des Betriebssystems und zum Speichern von bereitgestelltem Inhalt erforderlich|  
-|Softwareupdatepunkt<sup>1</sup>|8|16|Je nach Bedarf des Betriebssystems und zum Speichern von bereitgestellten Updates erforderlich|  
+|Verteilungspunkt|2|8|Je nach Anforderungen des Betriebssystems und zum Speichern von bereitgestelltem Inhalt erforderlich|  
+|Softwareupdatepunkt <sup>[Hinweis 2](#bkmk_note2)</sup>|8|16|Je nach Anforderungen des Betriebssystems und zum Speichern von bereitgestellten Updates erforderlich|  
 |Alle anderen Standortsystemrollen|4|8|50|  
 
-<sup>1</sup> Der Computer, auf dem ein Softwareupdatepunkt gehostet wird, erfordert die folgenden Konfigurationen für IIS-Anwendungspools:  
+#### <a name="note-2-wsus-configurations"></a><a name="bkmk_note2"></a> Hinweis 2: WSUS-Konfigurationen
+
+Der Computer, auf dem ein Softwareupdatepunkt gehostet wird, erfordert die folgenden Konfigurationen für IIS-Anwendungspools:  
 
 - Erhöhen Sie die **WsusPool-Warteschlangenlänge** auf **2000**.  
 
 - Erhöhen Sie die **Begrenzung des privaten Speichers für WsusPool** auf das Vierfache, oder legen Sie den Wert auf **0** (unbegrenzt) fest.  
 
-###  <a name="disk-space-for-site-systems"></a><a name="bkmk_DiskSpace"></a> Speicherplatz für Standortsysteme  
-Die Datenträgerzuordnung und -konfiguration trägt zur Leistung von Configuration Manager bei. Da jede Configuration Manager-Umgebung anders ist, können die gewählten Werte vom folgenden Leitfaden abweichen.  
+### <a name="disk-space-for-site-systems"></a><a name="bkmk_DiskSpace"></a> Speicherplatz für Standortsysteme
 
-Platzieren Sie jedes Objekt zur Leistungsoptimierung auf einem separaten, dedizierten RAID-Volume. Verwenden Sie zur Leistungsoptimierung für alle Datenvolumes (Configuration Manager und Datenbankdateien) RAID 10.  
+Die Zuordnung und -konfiguration von Datenträgern trägt zur Leistung von Configuration Manager bei. Da jede Configuration Manager-Umgebung anders ist, können die gewählten Werte vom folgenden Leitfaden abweichen.
+
+Platzieren Sie jedes Objekt zur Leistungsoptimierung auf einem separaten, dedizierten RAID-Volume. Verwenden Sie zur Leistungsoptimierung für alle Datenvolumes (Configuration Manager und Datenbankdateien) RAID 10.
 
 |Datennutzung|Mindesspeicherplatz auf dem Datenträger|25.000 Clients|50.000 Clients|100.000 Clients|150.000 Clients|700.000 Clients (Standort der zentralen Verwaltung)|  
 |----------------|------------------------|--------------------|--------------------|---------------------|---------------------|-----------------------------------------------------|  
-|Betriebssystem|Siehe Leitfaden für das Betriebssystem|Siehe Leitfaden für das Betriebssystem|Siehe Leitfaden für das Betriebssystem|Siehe Leitfaden für das Betriebssystem|Siehe Leitfaden für das Betriebssystem|Siehe Leitfaden für das Betriebssystem|  
 |Configuration Manager-Anwendung und Protokolldateien|25 GB|50 GB|100 GB|200 GB|300 GB|200 GB|  
 |MDF-Standortdatenbankdatei|75 GB je 25.000 Clients|75 GB|150 GB|300 GB|500 GB|2 TB|  
 |LDF-Standortdatenbankdatei|25 GB je 25.000 Clients|25 GB|50 GB|100 GB|150 GB|100 GB|  
 |Temporäre Datenbankdateien (MDF und LDF)|Nach Bedarf|Nach Bedarf|Nach Bedarf|Nach Bedarf|Nach Bedarf|Nach Bedarf|  
-|Inhalt (Verteilungspunktfreigaben)|Nach Bedarf<sup>1</sup>|Nach Bedarf<sup>1</sup>|Nach Bedarf<sup>1</sup>|Nach Bedarf<sup>1</sup>|Nach Bedarf<sup>1</sup>|Nach Bedarf<sup>1</sup>|  
 
-<sup>1</sup> Die Speicherplatzrichtlinien für Datenträger verstehen sich ausschließlich des für Inhalte in der Inhaltsbibliothek auf dem Standortserver oder an Verteilungspunkten erforderlichen Speicherplatzes. Informationen zur Planung der Inhaltsbibliothek finden Sie unter [The content library in System Center Configuration Manager](../../../core/plan-design/hierarchy/the-content-library.md) (Inhaltsbibliothek in System Center Configuration Manager).  
+Weitere Informationen zum Windows-Systemdatenträger finden Sie im Größenleitfaden zur installierten Betriebssystemversion.
 
-Beachten Sie bei der Planung für Speicherplatzanforderungen zusätzlich zu diesem Leitfaden die folgenden Leitlinien:  
+Bei Inhalten in Verteilungspunkten hängt die Größe von Ihren Bereitstellungen ab. Der für die Inhaltsbibliothek auf dem Standortserver oder für die Verteilungspunkte erforderliche Speicherplatz wird in diesem Leitfaden nicht angegeben. Weitere Informationen finden Sie unter [Die Inhaltsbibliothek](../../../core/plan-design/hierarchy/the-content-library.md).
 
-- Für jeden Client sind ca. 5 MB Speicherplatz erforderlich.  
+Wenn Sie die Speicherplatzanforderungen planen, sollten Sie zusätzlich die folgenden Leitlinien berücksichtigen:
 
-- Planen Sie für die temporäre Datenbank eines primären Standorts 25 % bis 30 % der Größe der MDF-Standortdatenbankdatei ein. Der tatsächliche Platzbedarf kann erheblich geringer oder höher sein. Dies ist von der Leistung des Standortservers und der Menge kurz- und langfristig eingehender Daten abhängig.  
+- Für jeden Client sind ca. 5–10 MB Speicherplatz in der Datenbank erforderlich. Diese Zahl hängt vom Typ der Hierarchie, von der Konfiguration und von der Anzahl der Clients ab. Die Größe fällt in größeren Umgebungen im Allgemeinen geringer aus. Kleinere Standorte haben eine höhere Datenbanknutzung pro Client.<!-- SCCMDocs#1048 -->
 
-  > [!NOTE]  
-  >  Wenn Sie über 50.000 oder mehr Clients an einem Standort verfügen, planen Sie die Verwendung von vier oder mehr MDF-Dateien für die temporäre Datenbank ein.  
+- Rechnen Sie für die temporäre Datenbank eines primären Standorts mit einer Gesamtgröße, die 25–30 % der MDF-Datei der Standortdatenbank beträgt. Die tatsächliche Größe kann kleiner oder größer ausfallen. Dies ist von der Leistung des Standortservers und der Datenmenge abhängig, die innerhalb von kurzen und langen Zeiträumen eingehen.
 
-- Die temporäre Datenbank für einen Standort der zentralen Verwaltung ist in der Regel deutlich kleiner als die Datenbank für einen primären Standort.  
+  > [!NOTE]
+  > Wenn Sie über 50.000 oder mehr Clients an einem Standort verfügen, sollten Sie vier oder mehr MDF-Dateien für temporäre Datenbanken einplanen.
 
-- Die Datenbankgröße für den sekundären Standort ist wie folgt eingeschränkt:  
+- Die Größe einer temporären Datenbank für einen Standort der zentralen Verwaltung ist in der Regel deutlich kleiner als die für einen primären Standort.
 
-  - SQL Server 2012 Express: 10 GB  
+- Wenn Sie für die Datenbank des sekundären Standorts SQL Server Express verwenden, ist die Datenbankgröße auf 10 GB beschränkt.
 
-  - SQL Server 2014 Express: 10 GB  
+## <a name="clients"></a><a name="bkmk_ScaleClient"></a> Clients
 
-##  <a name="clients"></a><a name="bkmk_ScaleClient"></a> Clients  
-In diesem Abschnitt werden die empfohlenen Hardwarekonfigurationen für Computer bestimmt, die durch die Verwendung von Configuration Manager-Clientsoftware verwaltet werden.  
+In diesem Abschnitt werden die empfohlenen Hardwarekonfigurationen für Computer bestimmt, die durch die Verwendung von Configuration Manager-Clientsoftware verwaltet werden.
 
-### <a name="client-for-windows-computers"></a>Client für Windows-Computer  
-Nachfolgend sind die Mindestanforderungen für Windows-Computer aufgeführt, die Sie mit Configuration Manager verwalten, einschließlich Embedded-Betriebssysteme:  
+### <a name="client-for-windows-computers"></a>Client für Windows-Computer
 
-- **Prozessor und Arbeitsspeicher:** Weitere Informationen entnehmen Sie den Prozessor- und Arbeitsspeicheranforderungen des Computerbetriebssystems.  
+Die folgenden Mindestanforderungen gelten für Windows-Computer, die mit Configuration Manager verwaltet werden. Dazu zählen auch Embedded-Betriebssysteme:
 
-- **Speicherplatz:** 500 MB verfügbarer Speicherplatz (5 GB empfohlen) für den Configuration Manager-Clientcache Weniger Speicherplatz ist erforderlich, wenn Sie benutzerdefinierte Einstellungen zur Installation des Configuration Manager-Clients verwenden:  
+- **Prozessor und Arbeitsspeicher:** Weitere Informationen entnehmen Sie den Prozessor- und RAM-Anforderungen des Betriebssystems.
 
-    - Verwenden Sie die Client.msi-Eigenschaft SMSCACHESIZE, um eine Cachedatei festzulegen, die kleiner als die Standardgröße von 5.120 MB ist. Die Mindestgröße beträgt 1 MB. Beispiel: Durch `CCMSetup.exe SMSCachesize=2` wird ein Cache von 2 MB erstellt.  
+- **Speicherplatz:** 500 MB verfügbarer Speicherplatz, 5 GB für den Configuration Manager-Clientcache empfohlen. Wenn Sie den Configuration Manager-Client über benutzerdefinierte Einstellungen installieren, ist weniger Speicherplatz erforderlich:
 
-    Weitere Informationen zu diesen Clientinstallationseinstellungen finden Sie unter [Informationen zu Clientinstallationseigenschaften](../../../core/clients/deploy/about-client-installation-properties.md).  
+  - Verwenden Sie die „client.msi“-Eigenschaft **SMSCACHESIZE**, um eine Cachegröße festzulegen, die kleiner als die Standardgröße von 5120 MB ist. Die Mindestgröße beträgt 1 MB. Im folgenden Beispiel wird ein Cache mit 2 MB erstellt: `CCMSetup.exe SMSCACHESIZE=2`
 
-    > [!TIP]  
-    > Die Clientinstallation mit minimalem Speicherplatz ist hilfreich für Windows Embedded-Geräte, die in der Regel über kleinere Datenträgergrößen als Windows-Standardcomputer verfügen.  
+    Weitere Informationen finden Sie unter [Informationen zu Clientinstallationseigenschaften](../../../core/clients/deploy/about-client-installation-properties.md).
 
-Nachfolgend sind zusätzliche Mindestanforderungen an die Hardware für optionale Funktionen in Configuration Manager aufgeführt.  
+    > [!TIP]
+    > Die Clientinstallation mit minimalem Speicherplatz ist hilfreich für Windows Embedded-Geräte, die in der Regel über kleinere Datenträgergrößen als Windows-Standardcomputer verfügen.
 
-- **Betriebssystembereitstellung:** 384 MB RAM  
+Die folgenden zusätzlichen Mindestanforderungen an die Hardware gelten für optionale Funktionen in Configuration Manager:
 
-- **Softwarecenter:** Prozessor mit 500 MHz  
+- **Bereitstellung des Betriebssystems:** mindestens 384 MB RAM
 
-- **Remotesteuerung:** Pentium 4- (3 GHz, einzelner Kern) oder vergleichbare CPU mit Hyperthreading und mindestens 1 GB RAM für optimale Leistung  
+- **Softwarecenter:** mindestens ein 500-MHz-Prozessor
 
-### <a name="client-for-linux-and-unix"></a>Client für Linux und UNIX  
-Nachfolgend sind die Mindestanforderungen für Linux- und UNIX-Server aufgeführt, die Sie mit Configuration Manager verwalten.  
+- **Remotesteuerung:** Für eine optimale Leistung mindestens ein Pentium 4 mit Hyperthreading und 3 GHz (einzelner Kern) oder einer vergleichbaren CPU und mindestens 1 GB RAM
+
+### <a name="client-for-linux-and-unix"></a>Client für Linux und UNIX
+
+Die folgenden Mindestanforderungen gelten für Linux- und UNIX-Server, die mit Configuration Manager verwaltet werden.
 
 |Anforderungen|Details|  
 |-----------------|-------------|  
-|Prozessor und Arbeitsspeicher|Weitere Informationen entnehmen Sie den Prozessor- und Arbeitsspeicheranforderungen des Computerbetriebssystems.|  
-|Speicherplatz|500 MB verfügbarer Speicherplatz (5 GB empfohlen) für den Configuration Manager-Clientcache|  
+|Prozessor und Arbeitsspeicher|Weitere Informationen entnehmen Sie den Prozessor- und RAM-Anforderungen des Computerbetriebssystems.|  
+|Speicherplatz|500 MB verfügbarer Speicherplatz, 5 GB für den Configuration Manager-Clientcache empfohlen|  
 |Netzwerkverbindungen|Configuration Manager-Clientcomputer müssen über eine Netzwerkverbindung mit Configuration Manager-Standortsystemen verfügen, um die Verwaltung zu ermöglichen.|  
 
-##  <a name="configuration-manager-console"></a><a name="bkmk_ScaleConsole"></a> Configuration Manager-Konsole  
-Die Anforderungen in der folgenden Tabelle gelten für alle Computer, auf denen die Configuration Manager-Konsole ausgeführt wird.  
+## <a name="configuration-manager-console"></a><a name="bkmk_ScaleConsole"></a> Configuration Manager-Konsole
 
-**Mindestkonfiguration der Hardware:**  
+Die folgenden minimalen Hardwareanforderungen gelten für alle Computer, auf denen die Configuration Manager-Konsole ausgeführt wird:
 
 - Intel i3 oder vergleichbare CPU  
 
@@ -156,16 +161,8 @@ Die Anforderungen in der folgenden Tabelle gelten für alle Computer, auf denen 
 |144 / 150 %|1600 x 1200|  
 |196 / 200 %|2500 x 1600|  
 
-**Unterstützung für PowerShell:**  
+## <a name="lab-deployments"></a><a name="bkmk_ScaleLab"></a> Laborbereitstellungen
 
-Wenn Sie PowerShell-Unterstützung auf einem Computer installieren, auf dem die Configuration Manager-Konsole ausgeführt wird, können Sie PowerShell-Cmdlets auf diesem Computer ausführen, um Configuration Manager zu verwalten.
-
-- PowerShell 3.0 oder höher wird unterstützt.
-
-Zusätzlich zu PowerShell wird die Windows Management Framework-Version (WMF) 3.0 unterstützt.   
-
-
-##  <a name="lab-deployments"></a><a name="bkmk_ScaleLab"></a> Laborbereitstellungen  
 Verwenden Sie die folgenden Hardwaremindestempfehlungen für Labor- und Testbereitstellungen von Configuration Manager. Diese Empfehlungen gelten für alle Standorttypen mit bis zu 100 Clients:  
 
 |Role-Eigenschaft|CPU (Kerne)|Arbeitsspeicher (GB)|Speicherplatz (GB)|  

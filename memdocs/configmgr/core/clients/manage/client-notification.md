@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a00f77a5a902728a7c41905314511cffcfa81a5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694958"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427822"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Clientbenachrichtigung in Configuration Manager
 
@@ -153,6 +153,9 @@ Ab Version 1910 gibt es in der Configuration Manager-Konsole neue Geräteaktion
 Weitere Informationen zu diesen Einstellungen finden Sie unter [Informationen zu Protokolldateien](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client).
 
 Verfolgen Sie den Status der Aufgabe in der Datei **diagnostics.log** auf dem Client nach. Beim Erfassen von Clientprotokollen werden zusätzliche Informationen in der Datei **MP_SinvCollFile.log** auf dem Verwaltungspunkt und in der Datei **sinvproc.log** auf dem Standortserver gesammelt.
+
+> [!Tip]
+> Gesammelte Clientprotokolle werden gemäß den Einstellungen für die Dateisammlung der Softwareinventur gespeichert. Die Dateien werden auf dem Standortserver im Verzeichnis **Inboxes\sinv.box\FileCol** gespeichert. Es wurde kein Limit für die Anzahl der Versionen definiert. Der Standortwartungstask [Veraltete gesammelte Dateien löschen](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) löscht die Dateien regelmäßig in bestimmten Zeitabständen. Das Standardintervall beträgt 90 Tage.
 
 ### <a name="prerequisites---client-diagnostics"></a>Voraussetzungen: Clientdiagnose
 
