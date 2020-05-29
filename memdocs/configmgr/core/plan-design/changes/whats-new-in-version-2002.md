@@ -2,7 +2,7 @@
 title: Neuerungen in Version 2002
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 2002 des Current Branchs von Configuration Manager eingeführt wurden.
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381552"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126480"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Neuerungen in Version 2002 von Configuration Manager (Current Branch)
 
@@ -328,6 +328,15 @@ Weitere Informationen finden Sie unter [Synchronisieren von Office 365-Updates 
 
 <!-- 5229962 -->
 Configuration Manager hat die Unterstützung für das Onboarding von Geräten in Microsoft Defender ATP erweitert. Weitere Informationen finden Sie unter [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+
+## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Durchführen des Onboardings für Konfigurations-Manager-Clients in Microsoft Defender ATP über das Microsoft Endpoint Manager Admin Center
+<!--5691658-->
+Sie können nun die Onboardingrichtlinien von Microsoft Defender ATP-Endpunkterkennung und -reaktion für verwaltete Konfigurations-Manager-Clients bereitstellen. Diese Clients benötigen keine Azure AD- oder MDM-Registrierung, und die Richtlinie ist auf ConfigMgr-Sammlungen anstatt auf Azure AD-Gruppen ausgerichtet.
+
+Diese Funktion ermöglicht Kunden, sowohl Intune MDM als auch das EDR/ATP-Onboarding des Konfigurations-Manager-Clients über eine einzelne Verwaltungsbenutzeroberfläche zu verwalten: das Microsoft Endpoint Manager Admin Center. Weitere Informationen finden Sie unter [Endpunkterkennung und Antwortrichtlinie für Endpunktsicherheit in Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
+
+> [!Important]
+> Sie benötigen für dieses Feature das in Ihrer Umgebung installierte Hotfixrollup [KB4563473](https://support.microsoft.com/help/4563473).
 
 ### <a name="improvements-to-bitlocker-management"></a>Verbesserungen der BitLocker-Verwaltung
 

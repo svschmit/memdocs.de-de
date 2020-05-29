@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ac4eed771e9e5d5a98ac0d3fb5c5f7ecceb5798a
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268843"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824017"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Bereitstellen für die Pilotphase mit Desktop Analytics
 
@@ -101,7 +101,12 @@ Erstellen Sie vor dem Bereitstellen von Windows zuerst die Softwareobjekte in Co
 
 ## <a name="deploy-to-pilot-devices"></a>Bereitstellen auf Pilotgeräten
 
-Configuration Manager erstellt anhand der Daten aus Desktop Analytics Sammlungen für die Pilotbereitstellung und die Produktionsbereitstellung. Führen Sie die folgenden Schritte aus, um eine stufenweise Bereitstellung mit Desktop Analytics-Integration zu erstellen und die Integrität der Geräte nach jeder Bereitstellungsphase sicherzustellen:
+Configuration Manager erstellt anhand der Daten aus Desktop Analytics Sammlungen für die Pilotbereitstellung und die Produktionsbereitstellung. Diese Sammlungen befinden sich im Arbeitsbereich **Bestand und Kompatibilität**, im Knoten **Gerätesammlungen** und im Ordner **Bereitstellungspläne**.
+
+> [!IMPORTANT]
+> Diese Sammlungen werden von Configuration Manager für Desktop Analytics-Bereitstellungspläne verwaltet. Manuelle Änderungen werden nicht unterstützt.
+
+Führen Sie die folgenden Schritte aus, um eine stufenweise Bereitstellung mit Desktop Analytics-Integration zu erstellen und die Integrität der Geräte nach jeder Bereitstellungsphase sicherzustellen:
 
 1. Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Softwarebibliothek**, erweitern Sie den Knoten **Desktop Analytics-Wartung**, und wählen Sie den Knoten **Bereitstellungspläne** aus.  
 

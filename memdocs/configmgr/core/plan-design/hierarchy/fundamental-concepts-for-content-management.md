@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1355b6d670e94d985717dfb32386f579cba42a0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078667"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878956"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Grundlegende Konzepte für die Inhaltsverwaltung in Configuration Manager
 
@@ -156,7 +156,7 @@ Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung
 Ab Version 1906 können Sie einen Microsoft Connected Cache-Server auf Ihren Verteilungspunkten installieren. Wenn Sie diese Art von Inhalt lokal zwischenspeichern, können Ihre Clients von dem Feature zur Übermittlungsoptimierung profitieren, und Sie können dabei helfen, WAN-Links zu schützen.
 
 > [!NOTE]
-> Ab Version 1910 wird dieses Feature als **Microsoft Connected Cache** bezeichnet. Zuvor wurde es als Übermittlungsoptimierung durch netzwerkinternen Cache (Delivery Optimization In-Network Cache, DOINC) bezeichnet.
+> Ab Version 1910 wird dieses Feature als **Microsoft Connected Cache** bezeichnet. Zuvor wurde es als Übermittlungsoptimierung durch netzwerkinternen Cache (Delivery Optimization In-Network Cache) bezeichnet.
 
 Dieser Cacheserver dient als bedarfsgesteuerter transparenter Cache für Inhalt, der von der Übermittlungsoptimierung heruntergeladen wird. Verwenden Sie Clienteinstellungen, um sicherzustellen, dass dieser Server nur Mitgliedern der lokalen Begrenzungsgruppe für Configuration Manager angeboten wird.
 

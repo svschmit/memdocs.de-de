@@ -2,7 +2,7 @@
 title: Anmerkungen zu dieser Version
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Knowledge Base-Artikel des Microsoft-Supports beschrieben wurden.
-ms.date: 04/08/2020
+ms.date: 05/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da0b9fc5600a957680ad22e54edc176c892527a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700648"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823961"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Anmerkungen zu dieser Version für Configuration Manager
 
@@ -33,6 +33,8 @@ Informationen zu den neuen, in den verschiedenen Versionen eingeführten Feature
 - [Neuerungen in Version 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Neuerungen in Version 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
 - [Neuerungen in Version 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
+
+Informationen zu den neuen Features in Desktop Analytics finden Sie unter [Neues in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
 > [!Tip]  
 > Um bei einer Aktualisierung dieser Seite benachrichtigt zu werden, kopieren Sie die folgende URL, und fügen Sie sie in Ihren RSS-Feedreader ein: `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
@@ -165,6 +167,15 @@ Erstellen Sie zum Umgehen dieses Problems eine benutzerdefinierte Sicherheitsrol
 Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Sicherheitsrollen](../configure/configure-role-based-administration.md#BKMK_CreateSecRole).
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
+
+### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> Ein erweitertes Sicherheitsupdate für Windows 7 bewirkt, dass für sie **Registrierung nicht möglich** angezeigt wird.
+
+<!-- 7283186 -->
+_Gilt für: Configuration Manager, Version 1902, 1906, 1910 und 2002_
+
+Im erweiterten Sicherheitsupdate (Extended Security Update, ESU) für Windows 7 vom April 2020 wurde die mindestens erforderliche Version von „diagtrack.dll“ von 10586 in 10240 geändert. Diese Änderung bewirkt, dass für Windows 7-Geräte **Registrierung nicht möglich** auf dem Desktop Analytics-Dashboard **Verbindungsintegrität** angezeigt wird. Wenn Sie einen Drilldown zur Geräteansicht für diesen Status ausführen, wird in der Eigenschaft **DiagTrack-Dienstkonfiguration** der folgende Status angezeigt: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+
+Für dieses Problem ist keine Problemumgehung erforderlich. Deinstallieren Sie das ESU von April nicht. Bei ansonsten ordnungsgemäßer Konfiguration melden die Windows 7-Geräte weiterhin Diagnosedaten an den Desktop Analytics-Dienst und werden weiterhin im Portal angezeigt.
 
 ### <a name="if-you-use-hardware-inventory-for-distributed-views-you-cant-onboard-to-desktop-analytics"></a>Wenn Sie die Hardwareinventur für verteilte Ansichten verwenden, ist eine Integration in Desktop Analytics nicht möglich
 

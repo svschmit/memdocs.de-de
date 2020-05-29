@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643257"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153417"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Konfigurieren von Begrenzungsgruppen für Configuration Manager
 
@@ -154,8 +154,16 @@ Wenn Sie den Inhalt so konfigurieren, dass er bei Bedarf verteilt wird und diese
 
 ### <a name="client-installation"></a><a name="bkmk_ccmsetup"></a> Clientinstallation
 
+Das Configuration Manager-Clientinstallationsprogramm CCMSetup kann Installationsinhalte von einer lokalen Quelle oder über einen Verwaltungspunkt abrufen. Das anfängliche Verhalten hängt von den Befehlszeilenparametern ab, die Sie zum Installieren des Clients verwenden:<!-- MEMDocs#286 -->
+
+- Wenn Sie weder den Parameter **/mp** noch **/source** verwenden, versucht CCMSetup, eine Liste der Verwaltungspunkte von Active Directory oder DNS abzurufen.
+- Wenn Sie nur **/source** angeben, wird die Installation vom angegebenen Pfad erzwungen. Verwaltungspunkte werden nicht ermittelt. Wenn „ccmsetup.cab“ nicht unter dem angegebenen Pfad gefunden wird, tritt bei CCMSetup ein Fehler auf.
+- Wenn Sie sowohl **/mp** als auch **/source** angeben, werden die angegebenen Verwaltungspunkte überprüft und ggf. ermittelt. Wird kein gültiger Verwaltungspunkt gefunden, wird auf den angegebenen Quellpfad zurückgegriffen.
+
+Weitere Informationen zu diesen CCMSetup-Parametern finden Sie unter [Informationen zu Parametern und Eigenschaften für die Clientinstallation](../../../clients/deploy/about-client-installation-properties.md).
+
 <!--1358840-->
-Bei der Installation des Konfigurations-Manager-Clients kontaktiert der Ccmsetup-Vorgang den Verwaltungspunkt, um den erforderlichen Inhalt zu suchen. Der Verwaltungspunkt gibt Verteilungspunkte basierend auf der Konfiguration der Begrenzungsgruppe zurück. Wenn Sie Beziehungen für die Begrenzungsgruppe definieren, gibt der Verwaltungspunkt Verteilungspunkte in der folgenden Reihenfolge zurück:
+Wenn CCMSetup den Verwaltungspunkt kontaktiert, um den erforderlichen Inhalt zu finden, gibt der Verwaltungspunkt basierend auf der Konfiguration der Begrenzungsgruppe Verteilungspunkte zurück. Wenn Sie Beziehungen für die Begrenzungsgruppe definieren, gibt der Verwaltungspunkt Verteilungspunkte in der folgenden Reihenfolge zurück:
 
 1. Aktuelle Begrenzungsgruppe  
 2. Benachbarte Begrenzungsgruppen  

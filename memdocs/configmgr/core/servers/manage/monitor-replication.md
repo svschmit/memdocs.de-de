@@ -10,12 +10,12 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 96cce5d4aaa352177b1c24ff78cf15e90ea6e823
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4a9ae791582911f91e5f76b841248ad5085d8170
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694408"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879817"
 ---
 # <a name="monitor-database-replication"></a>Überwachen der Datenbankreplikation
 
@@ -122,7 +122,10 @@ Sie können RLA entweder mithilfe der Configuration Manager-Konsole oder über e
 
 - Ausführung in der Configuration Manager-Konsole: Navigieren Sie zum Arbeitsbereich **Überwachung**, und wählen Sie den Knoten **Datenbankreplikation** aus. Wählen Sie den Replikationslink aus, den Sie analysieren möchten, und wählen Sie dann im Menüband **Replikationslinkanalyse** aus.  
 
-- Geben Sie an einer Eingabeaufforderung den folgenden Befehl ein: `%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+- Geben Sie an einer Eingabeaufforderung den folgenden Befehl ein: `%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+
+    > [!IMPORTANT]
+    > Ab Version 1910 wurde dieser Pfad so geändert, dass der `Microsoft Endpoint Manager`-Ordner verwendet wird. Stellen Sie sicher, dass Sie keine ältere Version der Datei verwenden, die möglicherweise in einem anderen Ordner vorhanden ist.
 
 Wenn Sie RLA ausführen, werden mithilfe mehrerer Diagnoseregeln und Prüfungen Probleme erkannt. Anschließend werden die Probleme angezeigt, die vom Tool ermittelt werden. Wenn eine Anleitung zum Beheben eines Problems vorliegt, wird diese angezeigt. Wenn RLA ein Problem automatisch beheben kann, wird diese Option angezeigt.
 

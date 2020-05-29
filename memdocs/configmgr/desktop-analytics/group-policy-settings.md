@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 8251e21c7eccb87b764af75e883018bdc894ca37
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 4536adad3114b944baa6c75ac4e246ecddf4a2d2
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268673"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153438"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Gruppenrichtlinieneinstellungen für Desktop Analytics
 
@@ -80,7 +80,7 @@ Die Gruppenrichtlinieneinstellungen in der folgenden Tabelle haben das größte 
 | **Kommerzielle ID konfigurieren** | CommercialId | Wenn Sie diese Richtlinie auf einen anderen Wert festlegen, wird die von Configuration Manager festgelegte kommerzielle ID überschrieben. Wenn es sich nicht um dieselbe ID handelt, werden konfigurierte Geräte möglicherweise nicht in Desktop Analytics angezeigt. |
 | **Telemetrie zulassen** | AllowTelemetry | Wenn Sie diese Richtlinie auf einen anderen Wert festlegen, setzt sie die globale Diagnosedatenebene außer Kraft, die Sie in Configuration Manager für die Zielsammlung festgelegt haben. |
 | **Erweiterte Diagnosedaten auf das für Windows Analytics erforderliche Minimum beschränken** | LimitEnhancedDiagnosticDataWindowsAnalytics | Diese Richtlinie ist abhängig von der vorherigen AllowTelemetry-Einstellung. Abhängig von der Ebene, die Sie im Configuration Manager oder mit der Gruppenrichtlinie festlegen, kann diese Richtlinie die Diagnosedatenebene auf dem Gerät in **Erweitert** oder **Erweitert (begrenzt)** ändern. Diese Richtlinie gilt nur, wenn AllowTelemetry auf `2` (**Erweitert**) festgelegt ist. |
-| **Senden von Gerätenamen in Windows-Diagnosedaten zulassen** | AllowDeviceNameInTelemetry | Wenn Sie sich dafür entscheiden, Gerätenamen im Configuration Manager zu senden, können Sie diese Richtlinie durch Konfigurieren dieser Richtlinie auf „Deaktiviert“ außer Kraft setzen. Wenn Sie diese Einstellung deaktivieren, werden Gerätenamen in Desktop Analytics als „Unbekannt“ angezeigt. Weitere Informationen finden Sie unter [Gerätename](enroll-devices.md#device-name). |
+| **Senden von Gerätenamen in Windows-Diagnosedaten zulassen** | AllowDeviceNameInTelemetry | Wenn Sie sich dafür entscheiden, Gerätenamen im Configuration Manager zu senden, können Sie diese Richtlinie durch Konfigurieren mit „Deaktiviert“ außer Kraft setzen. Wenn Sie diese Einstellung deaktivieren, werden Gerätenamen in Desktop Analytics als „Unbekannt“ angezeigt. Weitere Informationen finden Sie unter [Gerätename](enroll-devices.md#device-name). |
 | **Verwendung des authentifizierten Proxys für den Dienst „Benutzererfahrung und Telemetrie im verbundenen Modus“ konfigurieren** | DisableEnterpriseAuthProxy | Wenn Sie Configuration Manager-Geräte für die Verwendung eines benutzerauthentifizierten Proxys (`0`) konfigurieren, dann sendet das Gerät die Diagnosedaten im Systemkontext und nicht im Kontext des Benutzers, wenn Sie diese Richtlinie so konfiguriert haben, dass **die Verwendung eines authentifizierten Proxys deaktiviert wird** (`1`). Wenn Sie das Gerät nicht im Systemkontext mit einem Proxy konfigurieren oder sich das Gerät nicht beim Proxy authentifizieren kann, dann kann Windows keine Diagnosedaten an Desktop Analytics senden. |
 
 > [!NOTE]

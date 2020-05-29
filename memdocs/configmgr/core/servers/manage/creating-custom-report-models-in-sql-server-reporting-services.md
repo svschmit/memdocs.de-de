@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 590f3adec168fe6d7f4718505bd6f7d6b9f7c25f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fe570eeedc2c050bdaf27903d30ddffff63109d9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692728"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879164"
 ---
 # <a name="creating-custom-report-models-for-configuration-manager-in-sql-server-reporting-services"></a>Erstellen benutzerdefinierter Berichtsmodelle für Configuration Manager in SQL Server Reporting Services
 
@@ -413,7 +413,7 @@ In Configuration Manager sind Beispielberichtsmodelle enthalten. Sie können abe
 
 9. Speichern und schließen Sie die Datei _&lt;Modellname\>_ **.smdl**.  
 
-10. Kopieren Sie die Datei _&lt;Modellname\>_ **.smdl** in den Ordner „ *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other“ auf dem Configuration Manager-Standortserver.  
+10. Kopieren Sie die Datei _&lt;Modellname\>_ **.smdl** in den Ordner „ *%programfiles%* \Microsoft Endpoint Manager\AdminConsole\XmlStorage\Other“ auf dem Configuration Manager-Standortserver.  
 
     > [!IMPORTANT]  
     >  Nach dem Kopieren der Berichtsmodelldatei auf den Configuration Manager-Standortserver müssen Sie die Configuration Manager-Konsole beenden und neu starten, um das Berichtsmodell im **Assistenten zum Erstellen von Berichten** verwenden zu können.  

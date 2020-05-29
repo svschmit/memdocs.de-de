@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3374a912b8235f546ec551bd1a964f9fc957b96d
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991693"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877519"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informationen zu Clienteinstellungen in Configuration Manager
 
@@ -363,7 +363,7 @@ Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Verwenden von Configuration Manager-Begrenzungsgruppen zum Festlegen der Gruppen-ID für die Übermittlungsoptimierung
 
-Klicken Sie auf **Ja**, um die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client festzulegen. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich der gewünschte Inhalt befindet.
+Klicken Sie auf **Ja**, um die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client festzulegen. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich der gewünschte Inhalt befindet. Wenn Sie diese Einstellung aktivieren, wird auf Zielclients auch der Downloadmodus für die Übermittlungsoptimierung auf die Option „Gruppe (2)“ festgelegt.
 
 > [!Note]
 > Microsoft empfiehlt, dass der Client die Möglichkeit haben sollte, diese Einstellung über eine lokale Richtlinie anstelle einer Gruppenrichtlinie zu konfigurieren. So kann die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client festgelegt werden. Weitere Informationen finden Sie unter [Übermittlungsoptimierung](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -509,13 +509,12 @@ Wählen Sie eine der folgenden Optionen für diese Einstellung aus:
 
     - Erforderliche Bereitstellungen (bei Erreichen des Installationsstichtags)  
 
-    > [!IMPORTANT]  
-    > Der Client lässt Softwareinstallationen über das Softwarecenter unabhängig von den Einstellungen für die getaktete Internetverbindung immer zu.  
-
     Wenn der Client das Datenübertragungslimit der getakteten Internetverbindung erreicht, versucht er nicht mehr, mit Configuration Manager-Standorten zu kommunizieren.  
 
 - **Blockieren:** Der Konfigurations-Manager-Client versucht nicht, mit Configuration Manager-Standorten zu kommunizieren, wenn eine getaktete Internetverbindung verwendet wird. Dies ist die Standardoption.  
 
+> [!IMPORTANT]  
+> Der Client lässt Softwareinstallationen über das Softwarecenter unabhängig von den Einstellungen für die getaktete Internetverbindung immer zu. Wenn der Benutzer eine Softwareinstallation anfordert, während sich das Gerät in einem getakteten Netzwerk befindet, wird die Absicht des Benutzers vom Software Center berücksichtigt.<!-- MEMDocs#285 -->
 
 
 ## <a name="power-management"></a>Energieverwaltung  

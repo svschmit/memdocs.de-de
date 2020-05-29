@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba67fee260867494302e49b7c9d3a97480e236b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708378"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823978"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Konfigurieren der Berichterstattung in Configuration Manager
 
@@ -130,7 +130,7 @@ Weitere Informationen zum Konfigurieren von Standortsystemen finden Sie unter [I
 
     - **Konto des Reporting Services-Punkts**: Wählen Sie **Festlegen** und dann ein zu verwendendes Konto aus. SQL Server Reporting Services auf dem Reporting Services-Punkt stellt mit diesem Konto die Verbindung mit der Configuration Manager-Standortdatenbank her. Diese Verbindung dient zum Abrufen der Daten für einen Bericht. Wählen Sie **Vorhandenes Konto** aus, um ein Windows-Benutzerkonto anzugeben, das Sie zuvor als Configuration Manager-Konto konfiguriert haben. Wählen Sie **Neues Konto** aus, um ein Windows-Benutzerkonto anzugeben, das derzeit nicht für die Verwendung konfiguriert ist. Dem angegebenen Benutzer wird von Configuration Manager automatisch Zugriff auf die Standortdatenbank erteilt.  
 
-        Das Konto, über das Reporting Services ausgeführt wird, muss zur lokalen Sicherheitsgruppe **Windows-Autorisierungszugriffsgruppe** der Domäne gehören. Außerdem muss die Berechtigung **tokenGroupsGlobalAndUniversal lesen** auf **Zulassen** festgelegt sein. Für Benutzer, die zu einer anderen Domäne als das Konto des Reporting Services-Punkts gehören, muss zur erfolgreichen Ausführung von Berichten eine bidirektionale Vertrauensstellung eingerichtet sein.
+        Das Konto, über das Reporting Services ausgeführt wird, muss zur lokalen Sicherheitsgruppe **Windows-Autorisierungszugriffsgruppe** der Domäne gehören. Dadurch wird dem Konto für alle Benutzerobjekte innerhalb der Domäne für das **tokenGroupsGlobalAndUniversal**-Attribut die Berechtigung **Lesen zulassen** gewährt. Für Benutzer, die zu einer anderen Domäne als das Konto des Reporting Services-Punkts gehören, muss zur erfolgreichen Ausführung von Berichten eine bidirektionale Vertrauensstellung eingerichtet sein.
 
         Das angegebene Windows-Benutzerkonto und das zugehörige Kennwort werden verschlüsselt und in der Reporting Services-Datenbank gespeichert. Die Daten werden von Reporting Services über dieses Konto und Kennwort aus der Standortdatenbank abgerufen und für Berichte verwendet.  
 

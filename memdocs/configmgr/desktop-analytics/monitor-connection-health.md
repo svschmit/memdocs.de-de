@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 6eb0a99043eefcdb54c27a183fbc1e1eec8899bf
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268639"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864870"
 ---
 # <a name="monitor-connection-health"></a>Überwachen der Verbindungsintegrität
 
@@ -104,6 +104,9 @@ Das Gerät verfügt über folgende Attribute:
 Configuration Manager erkennt ein oder mehrere Blockierprobleme, die die Geräteregistrierung verhindern. Weitere Informationen finden Sie in der Liste der [Desktop Analytics-Geräteeigenschaften in Configuration Manager](#bkmk_config-issues).  
 
 Beispielsweise hat der Configuration Manager-Client nicht mindestens die Versionsnummer 1902 (5.0.8790). Aktualisieren Sie den Client auf die neueste Version. Aktivieren Sie ggf. das automatische Clientupdate für den Configuration Manager-Standort. Weitere Informationen finden Sie unter [Upgrade clients (Aktualisieren von Clients)](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
+
+> [!TIP]
+> In Verbindung mit dem erweiterten Sicherheitsupdate von April 2020 (ESU) für Windows 7 ist das Problem bekannt, dass Geräte diesen Fehler fälschlicherweise melden. Weitere Informationen finden Sie in den [Versionsanmerkungen](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 Ab Version 2002 können Sie Probleme mit der Clientproxykonfiguration in zwei Bereichen leichter erkennen:
 
@@ -410,6 +413,9 @@ Wenn diese Überprüfung erfolgreich ist, wird die DiagTrack-Komponente ordnungs
 Andernfalls wird möglicherweise einer der folgenden Fehler angezeigt:
 
 - Die Komponente "Benutzererfahrung und Telemetrie im verbundenen Modus" (diagtrack.dll) ist veraltet. Überprüfen Sie die Anforderungen.  
+
+    > [!TIP]
+    > In Verbindung mit dem erweiterten Sicherheitsupdate von April 2020 (ESU) für Windows 7 ist das Problem bekannt, dass Geräte diesen Fehler fälschlicherweise melden. Weitere Informationen finden Sie in den [Versionsanmerkungen](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 - Die Komponente "Benutzererfahrung und Telemetrie im verbundenen Modus" (diagtrack.dll) wurde nicht gefunden. Überprüfen Sie die Anforderungen.  
 

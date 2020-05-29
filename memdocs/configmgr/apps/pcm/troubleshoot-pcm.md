@@ -10,12 +10,12 @@ ms.assetid: cb616925-bb94-4b7c-a867-b3d95aef4d5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f9d2a7d4a16f85e9a5f78dd6251754d86527da87
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 05110714d3aa8ca48ff9384f0116338b0092fde1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688978"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877620"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>Beheben von Problemen mit dem Paketkonvertierungs-Manager
 
@@ -58,10 +58,13 @@ In der Configuration Manager-Konsole werden im Detailbereich des Knotens **Paket
 
 ### <a name="enable-logging"></a>Aktivieren der Protokollierung
 
-Wenn Sie die Protokollierung für den Paketkonvertierungs-Manager aktivieren, protokolliert dieser alle seine Aktionen, Ausnahmen und Fehler. 
+Wenn Sie die Protokollierung für den Paketkonvertierungs-Manager aktivieren, protokolliert dieser alle seine Aktionen, Ausnahmen und Fehler.
 
 Ändern Sie zum Aktivieren der Protokollierung für diese Komponente in Configuration Manager die Datei **Microsoft.ConfigurationManagement.exe.Config**. Diese Konfigurationsdatei befindet sich standardmäßig im folgenden Pfad:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+
+> [!IMPORTANT]
+> Ab Version 1910 wurde dieser Pfad so geändert, dass der `Microsoft Endpoint Manager`-Ordner verwendet wird. Stellen Sie sicher, dass Sie keine ältere Version der Datei verwenden, die möglicherweise in einem anderen Ordner vorhanden ist.
 
 Fügen Sie die folgenden XML-Elemente für **switches** und **trace** in das Element **system.diagnostics** hinter dem letzten Element **sources** ein:
 

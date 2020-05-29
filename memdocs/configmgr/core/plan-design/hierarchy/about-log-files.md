@@ -10,12 +10,12 @@ ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6be23adc7ac082545bffeef59ed52d3455d9931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 588bccc533909f2438dc61d6f25b39c3a582c71b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703748"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879025"
 ---
 # <a name="about-log-files-in-configuration-manager"></a>Grundlegendes zu Protokolldateien in Configuration Manager
 
@@ -211,7 +211,10 @@ Legen Sie für die Verteilungspunktrolle beispielsweise Folgendes fest:
 
 Gehen Sie wie folgt vor, um die Ausführlichkeitsstufe der Datei „AdminUI.log“ für die Configuration Manager-Konsole zu ändern:
 
-1. Öffnen Sie die Konsolenkonfigurationsdatei **Microsoft.ConfigurationManagement.exe.config** in einem XML-Editor wie Editor. Die Standardkonfigurationsdatei befindet sich an folgendem Speicherort: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. Öffnen Sie die Konsolenkonfigurationsdatei **Microsoft.ConfigurationManagement.exe.config** in einem XML-Editor wie Editor. Die Standardkonfigurationsdatei befindet sich an folgendem Speicherort: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+    > [!IMPORTANT]
+    > Ab Version 1910 wurde dieser Pfad so geändert, dass der `Microsoft Endpoint Manager`-Ordner verwendet wird. Stellen Sie sicher, dass Sie keine ältere Version der Datei verwenden, die möglicherweise in einem anderen Ordner vorhanden ist.
 
 1. Ändern Sie unter dem Element **system.diagnostics** > **sources** > **source** das Attribut **switchValue** von `Error` in `Verbose`. Beispiel:
 
@@ -240,7 +243,7 @@ Standardmäßig werden folgende Speicherorte verwendet. Wenn Sie die Installatio
 - Client: `C:\Windows\CCM\logs`
 - Server: `C:\Program Files\Microsoft Configuration Manager\Logs`
 - Verwaltungspunkt: `C:\SMS_CCM\Logs`
-- Configuration Manager-Konsole: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Configuration Manager-Konsole: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - IIS: `C:\inetpub\logs\logfiles\w3svc1`
 
 ### <a name="task-sequence-log-locations"></a>Protokollspeicherorte für Tasksequenzen

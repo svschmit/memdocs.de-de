@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: cb7cc71618ad0f86abce3ab76d6344e0d23bfc58
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427822"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153422"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Clientbenachrichtigung in Configuration Manager
 
@@ -140,7 +140,7 @@ Ab Version 1910 gibt es in der Configuration Manager-Konsole neue Geräteaktion
 
 - **Aktivieren ausführlicher Protokollierung**: Ändern Sie die globale Protokollebene für die CCM-Komponente in „Ausführlich“, und aktivieren Sie Debugprotokollierung.
 - **Deaktivieren ausführlicher Protokollierung**: Ändern Sie die globale Protokollebene in „Standard“, und deaktivieren Sie Debugprotokollierung.
-- **Clientprotokolle erfassen** (ab 2002): Eine Clientbenachrichtigung wird an die ausgewählten Clients gesendet, um die CCM-Protokolle zu erfassen. Die Protokolle werden mithilfe der Dateisammlungen der Softwareinventur zurückgegeben. <!--4226618-->
+- **Clientprotokolle erfassen** (ab 2002): Die Site sendet eine Clientbenachrichtigung an die ausgewählten Clients, um die CCM-Protokolle zu erfassen. Die Protokolle werden vom Client mithilfe desselben Kanals als Softwareinventur-Dateisammlung an den Verwaltungspunkt gesendet. <!--4226618--> Sie müssen die Softwareinventur nicht in den Clienteinstellungen aktivieren.<!-- MEMDocs#305 -->
    - Die Größenbeschränkung für die komprimierten Clientprotokolle beträgt 100 MB. <!--6366098-->
    - Sie können diese Dateien mit dem [Ressourcen-Explorer](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag) verwalten und anzeigen.
 
