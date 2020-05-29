@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a670660bcf7b3f5cb8209aaf6d0b59eb0f343e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691238"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983826"
 ---
 # <a name="paths-to-co-management"></a>Pfade zur Co-Verwaltung
 
@@ -45,7 +45,6 @@ Gehen Sie für die Einrichtung wie folgt vor:
         - Für Verbunddomänen
 - Client-Agent-Einstellungen für Hybrid-Azure AD-Einbindung
 - Konfigurieren der automatischen Registrierung von Geräten in Intune
-- Zuweisen von Intune-Benutzerlizenzen
 - Aktivieren der Co-Verwaltung in Configuration Manager
 
 Ein Tutorial zu diesem Pfad finden Sie unter [Tutorial: Aktivieren der Co-Verwaltung für vorhandene Configuration Manager-Clients](tutorial-co-manage-clients.md).

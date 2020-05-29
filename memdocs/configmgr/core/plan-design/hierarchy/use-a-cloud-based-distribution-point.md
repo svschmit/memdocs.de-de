@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a14b79a9e7fd91b6470836b4271a669725065bd
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771163"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987719"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Verwenden eines Cloudverteilungspunkts in Configuration Manager
 
@@ -174,7 +174,9 @@ Wenn Sie einen Cloudverteilungspunkt in der Hierarchie verwenden, dann nutzen Si
 
 ### <a name="deployment-settings"></a>Bereitstellungseinstellungen
 
-- Wenn Sie eine Tasksequenz mit der Option **Inhalt lokal herunterladen, wenn er von der ausgeführten Tasksequenz benötigt wird** bereitstellen, enthält der Verwaltungspunkt keinen Cloudverteilungspunkt als Inhaltsort. Stellen Sie die Tasksequenz mit der Option **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen** für Clients bereit, um einen Cloudverteilungspunkt zu verwenden.  
+- **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist** Ab Version 1910 kann die Tasksequenz-Engine Pakete bei Bedarf von einem für Inhalte aktivierten CMG oder einem Cloudverteilungspunkt herunterladen. Diese Änderung bietet noch mehr Flexibilität für Bereitstellungen von direkten Windows 10-Upgrades auf internetbasierten Geräten.
+
+- **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen** In Configuration Manager, Version 1906 und früher, funktionieren andere Optionen wie **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist** in diesem Szenario nicht. Die Tasksequenzengine kann Inhalte nicht aus einer Cloudquelle herunterladen. Der Configuration Manager-Client muss die Inhalte aus der Cloudquelle herunterladen, bevor die Tasksequenz gestartet wird. Sie können diese Option in der Version 1910 immer noch verwenden, wenn dies erforderlich ist, um Ihren Anforderungen zu entsprechen.
 
 - Ein Cloudverteilungspunkt unterstützt keine Paketbereitstellung mit der Option **Programm vom Verteilungspunkt ausführen**. Verwenden Sie die Bereitstellungsoption **Inhalt vom Verteilungspunkt herunterladen und lokal ausführen**.  
 
