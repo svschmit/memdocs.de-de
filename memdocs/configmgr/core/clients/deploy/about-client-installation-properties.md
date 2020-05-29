@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428592"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153449"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informationen zu Parametern und Eigenschaften für die Clientinstallation in Configuration Manager
 
@@ -80,6 +80,8 @@ Beispiel: `ccmsetup.exe /?`
 
 Gibt den Speicherort für den Dateidownload an. Verwenden Sie einen lokalen oder einen UNC-Pfad. Die Dateien werden mithilfe des SMB-Protokolls (Server Message Block) auf das Gerät heruntergeladen. Zum Verwenden von **/source** muss das Windows-Benutzerkonto der Clientinstallation über **Leseberechtigungen** für den Speicherort verfügen.
 
+Weitere Informationen dazu, wie CCMSetup Inhalte herunterlädt, finden Sie unter [Begrenzungsgruppen – Clientinstallation](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Dieser Artikel enthält auch Details zum Verhalten von CCMSetup, wenn Sie sowohl den Parameter **/mp** als auch **/source** verwenden.
+
 > [!TIP]  
 > Sie können den Parameter **/source** mehrmals in der Befehlszeile verwenden, um alternative Downloadspeicherorte anzugeben.  
 
@@ -88,6 +90,8 @@ Beispiel: `ccmsetup.exe /source:"\\server\share"`
 ### <a name="mp"></a>/mp
 
 Gibt einen Quellenverwaltungspunkt für Computer an, mit denen eine Verbindung hergestellt werden soll. Computer suchen über diesen Verwaltungspunkt nach dem nächstgelegenen Verteilungspunkt für die Installationsdateien. Wenn keine Verteilungspunkte vorhanden sind oder Computer die Dateien auch nach Ablauf von vier Stunden nicht von den Verteilungspunkten herunterladen können, werden die Dateien vom angegebenen Verwaltungspunkt heruntergeladen.  
+
+Weitere Informationen dazu, wie CCMSetup Inhalte herunterlädt, finden Sie unter [Begrenzungsgruppen – Clientinstallation](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Dieser Artikel enthält auch Details zum Verhalten von CCMSetup, wenn Sie sowohl den Parameter **/mp** als auch **/source** verwenden.
 
 > [!IMPORTANT]  
 > Dieser Parameter gibt einen ersten Verwaltungspunkt für Computer an, um eine Downloadquelle zu ermitteln. Hierfür kommt jeder Verwaltungspunkt jedes Standorts in Frage. Er *weist* den Client nicht dem angegebenen Verwaltungspunkt zu.
