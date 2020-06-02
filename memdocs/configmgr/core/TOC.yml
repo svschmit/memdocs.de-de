@@ -264,6 +264,8 @@
       items:
         - name: Technical Preview – Übersicht
           href: get-started/technical-preview.md
+        - name: 2005-Features
+          href: get-started/2020/technical-preview-2005.md
         - name: 2004-Features
           href: get-started/2020/technical-preview-2004.md
         - name: 2003-Features
@@ -272,10 +274,6 @@
           href: get-started/2020/technical-preview-2002-2.md
         - name: 2002-Features
           href: get-started/2020/technical-preview-2002.md
-        - name: 2001.2-Features
-          href: get-started/2020/technical-preview-2001-2.md
-        - name: 2001-Features
-          href: get-started/2020/technical-preview-2001.md
     - name: Migrieren von Daten zwischen Hierarchien
       items:
         - name: Migration – Übersicht
@@ -470,6 +468,8 @@
       href: servers/manage/management-insights.md
     - name: CMPivot
       items:
+        - name: CMPivot-Übersicht
+          href: servers/manage/cmpivot-overview.md
         - name: Verwenden von CMPivot
           href: servers/manage/cmpivot.md
         - name: Problembehandlung für CMPivot
