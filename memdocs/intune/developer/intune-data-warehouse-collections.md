@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 7b58a24340741621a4034ed4f77ad1298251a692
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709450"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165871"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune Data Warehouse-Sammlungen
 
@@ -33,7 +33,7 @@ Die folgenden Intune Data Warehouse-Sammlungen bieten die Eigenschaften, Beschre
 Die **appRevision**-Entität listet alle Versionen von Apps auf.
 
 |          Eigenschaft          |                                      Beschreibung                                      |                Beispiel               |
-|:--------------------------:|:-------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|---------------------------------------------------------------------------------------|--------------------------------------|
 | AppKey                     | Eindeutiger Bezeichner der App                                                         | 123                                  |
 | ApplicationId              | Eindeutiger Bezeichner einer App – ähnlich wie AppKey, dieser Schlüssel ist jedoch ein natürlicher Schlüssel.        | b66bc706-ffff-7437-0340-032819502773 |
 | Revision                   | Die Version, die vom Administrator beim Upload der Binärdatei erwähnt wurde.                   | 2                                    |
@@ -54,7 +54,7 @@ Die **appRevision**-Entität listet alle Versionen von Apps auf.
 Die Entität **appType** führt die Installationsquelle einer App auf.
 
 |   Eigenschaft  |        Beschreibung        |
-|:-----------:|:-------------------------:|
+|-------------|---------------------------|
 | AppTypeID   | ID für den Typ           |
 | AppTypeKey  | Untergeordneter Schlüssel für den Schlüssel |
 | AppTypeName | App-Typ                  |
@@ -62,7 +62,7 @@ Die Entität **appType** führt die Installationsquelle einer App auf.
 ### <a name="example"></a>Beispiel
 
 | AppTypeID |                Name               |                     Beschreibung                     |
-|:---------:|:---------------------------------:|:---------------------------------------------------:|
+|-----------|-----------------------------------|-----------------------------------------------------|
 | 0         | Android Store-App               | Eine Android Store-App.                             |
 | 1         | Android-Branchen-App                 | Eine branchenspezifische Android-App.                  |
 | 2         | Verwaltete Android Store-App (MAM) | Eine Android Store-App, für die die Verwaltung aktiviert ist. |
@@ -81,7 +81,7 @@ Die Entität **appType** führt die Installationsquelle einer App auf.
 In der folgenden Tabelle sind die Zuweisungsstatus der Konformitätsrichtlinien von Geräten zusammengefasst. Es ist die Anzahl der Geräte aufgeführt, die in jedem Konformitätszustand zu finden sind.
 
 |    Eigenschaft   |                                                                                      Beschreibung                                                                                     |  Beispiel |
-|:-------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | DateKey       | Datumsschlüssel, der angibt, wann die Zusammenfassung für die Konformitätsrichtlinie erstellt wurde.                                                                                                                   | 20161204 |
 | Unbekannt       | Anzahl der Geräte, die offline sind oder aus einem anderen Grund nicht mit Intune oder Azure AD kommunizieren können.                                                                           | 5        |
 | NotApplicable | Anzahl der Geräte, auf denen vom Administrator festgelegte Gerätekonformitätsrichtlinien nicht angewendet werden.                                                                                     | 201      |
@@ -94,7 +94,7 @@ In der folgenden Tabelle sind die Zuweisungsstatus der Konformitätsrichtlinien 
 In der folgenden Tabelle sind die Zuweisungsstatus der Konformitätsrichtlinien von Geräten auf der Basis von Richtlinien und Richtlinientyp zusammengefasst. Es ist die Anzahl der Geräte aufgeführt, die in jedem Konformitätszustand für jede zugewiesene Konformitätsrichtlinie zu finden sind.
 
 |      Eigenschaft     |                                                                                      Beschreibung                                                                                     |  Beispiel |
-|:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | DateKey           | Datumsschlüssel, der angibt, wann die Zusammenfassung für die Konformitätsrichtlinie erstellt wurde.                                                                                                                   | 20161219 |
 | PolicyKey         | Schlüssel für die Konformitätsrichtlinie, für die die Zusammenfassung erstellt wurde.                                                                                                                   | 10178    |
 | PolicyPlatformKey | Schlüssel für den Plattformtyp der Konformitätsrichtlinie, für den die Zusammenfassung erstellt wurde.                                                                                            | 5        |
@@ -107,7 +107,7 @@ In der folgenden Tabelle sind die Zuweisungsstatus der Konformitätsrichtlinien 
 ## <a name="compliancestates"></a>complianceStates
 
 |      Eigenschaft      |                       Beschreibung                      |
-|:------------------:|:------------------------------------------------------:|
+|--------------------|--------------------------------------------------------|
 | complianceStatus   | Konformitätsstatus von Geräten mit mdmStatusKey       |
 | complianceStateKey | Konformitätsschlüssel gemäß des Geräte- und Konformitätsstatus |
 | complianceStateID  | Die ID, die mit diesem Konformitätsstatus übereinstimmt                |
@@ -115,7 +115,7 @@ In der folgenden Tabelle sind die Zuweisungsstatus der Konformitätsrichtlinien 
 ### <a name="example"></a>Beispiel
 
 |  complianceStatus  |                       Beschreibung                      |
-|:------------------:|:------------------------------------------------------:|
+|--------------------|--------------------------------------------------------|
 |    Unbekannt         |    Unbekannt                                                                        |
 |    Kompatibel       |    Kompatibel.                                                                      |
 |    Nicht richtlinienkonform    |       Gerät ist nicht konform und wird nicht in die Unternehmensressourcen einbezogen.             |
@@ -128,7 +128,7 @@ In der folgenden Tabelle sind die Zuweisungsstatus der Konformitätsrichtlinien 
 Die **date**-Entität stellt Datumsangaben dar, die auf mehrere Data Warehouse-Entitäten verweisen.
 
 |     Eigenschaft    |                       Beschreibung                      |    Beispiel    |
-|:---------------:|:------------------------------------------------------:|:-------------:|
+|-----------------|--------------------------------------------------------|---------------|
 | DateKey         | Eindeutiger Bezeichner für dieses Datum im Data Warehouse | 20160703      |
 | FullDate        | Dieses Datum wird im vollständigen Datums- und Uhrzeitformat dargestellt        | 3\.7.2016 0:00 |
 | DayOfWeek       | Wochentag                                            | 1             |
@@ -151,7 +151,7 @@ Die **date**-Entität stellt Datumsangaben dar, die auf mehrere Data Warehouse-E
 ## <a name="devicecategories"></a>deviceCategories
 
 |      Eigenschaft      |                                    Beschreibung                                   |                Beispiel               |
-|:------------------:|:--------------------------------------------------------------------------------:|:------------------------------------:|
+|--------------------|----------------------------------------------------------------------------------|--------------------------------------|
 | deviceCategoryID   | Der eindeutige Bezeichner für die Gerätekategorie.                                       | fb415ba2-7c08-41f6-a5e5-685b50da2c4c |
 | deviceCategoryKey  | Der eindeutige Bezeichner der Gerätekategorie im Data Warehouse – Ersatzschlüssel. | 1                                    |
 | deviceCategoryName | Der Anzeigename für die Gerätekategorie.                                            | Smartphones                          |
@@ -160,7 +160,7 @@ Die **date**-Entität stellt Datumsangaben dar, die auf mehrere Data Warehouse-E
 Die Entität **DeviceConfigurationProfileDeviceActivity** listet die Anzahl der Geräte mit dem Zustand „erfolgreich“, „ausstehend“, „fehlerhaft“ oder „Fehler“ pro Tag auf. Die Anzahl gibt die Gerätekonfigurationsprofile an, die der Entität zugewiesen sind. Wenn ein Gerät beispielsweise den Zustand „erfolgreich“ für alle zugewiesenen Richtlinien aufweist, wird der Zähler für „erfolgreich“ für diesen Tag um eins erhöht. Wenn einem Gerät zwei Profile zugewiesen sind, von denen eines den Zustand „erfolgreich“ und eines den Zustand „Fehler“ aufweist, erhöht die Entität den Zähler für „erfolgreich“ und versetzt das Gerät in den Zustand „Fehler“. Die Entität listet für die letzten 30 Tage auf, wie viele Geräte an einem bestimmten Tag in welchem Zustand waren.
 
 |  Eigenschaft |                                          Beschreibung                                          |  Beispiel |
-|:---------:|:---------------------------------------------------------------------------------------------:|:--------:|
+|-----------|-----------------------------------------------------------------------------------------------|----------|
 | DateKey   | Datumsschlüssel für den Zeitpunkt, zu dem das Einchecken des Gerätekonfigurationsprofils im Data Warehouse aufgezeichnet wurde. | 20160703 |
 | Pending   | Anzahl eindeutiger Geräte im Zustand „ausstehend“                                                    | 123      |
 | Erfolgreich | Anzahl eindeutiger Geräte im Zustand „erfolgreich“                                                    | 12       |
@@ -181,7 +181,7 @@ Die Entität **DeviceConfigurationProfileUserActivity** listet die Anzahl der Be
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 |          Eigenschaft          |                                                                                      Beschreibung                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DateKey                    | Verweis auf die Datumstabelle, die den Tag angibt                                                                                                                                          |
 | DeviceKey                  | Der eindeutige Bezeichner des Geräts im Data Warehouse – Ersatzschlüssel. Dies ist ein Verweis auf die Gerätetabelle, die die Intune-Geräte-ID enthält.                               |
 | DeviceName                 | Der Name des Geräts auf Plattformen, die das Benennen von Geräten ermöglichen. Auf anderen Plattformen wird von Intune einen Namen aus anderen Eigenschaften erstellt. Dieses Attribut kann nicht für alle Geräte zur Verfügung stehen. |
@@ -199,7 +199,7 @@ Die Entität **DeviceConfigurationProfileUserActivity** listet die Anzahl der Be
 Die Entität **DeviceRegistrationState** stellt den Registrierungstyp dar, auf den von anderen Data Warehouse-Sammlungen verwiesen wird. 
 
 |           Eigenschaft          |                                     Beschreibung                                     |
-|:---------------------------:|:-----------------------------------------------------------------------------------:|
+|-----------------------------|-------------------------------------------------------------------------------------|
 | deviceRegistrationStateID   | Der eindeutige Bezeichner für den Registrierungsstatus                                            |
 | deviceRegistrationStateKey  | Der eindeutige Bezeichner des Registrierungsstatus im Data Warehouse – Ersatzschlüssel |
 | deviceRegistrationStateName | Registrierungsstatus                                                                  |
@@ -216,7 +216,7 @@ Die Entität **DeviceRegistrationState** stellt den Registrierungstyp dar, auf d
 In der Entität **device** werden alle für die Verwaltung registrierten Geräte und ihre entsprechenden Eigenschaften aufgelistet.
 
 |          Eigenschaft          |                                                                                       Beschreibung                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DeviceKey                  | Der eindeutige Bezeichner des Geräts im Data Warehouse – Ersatzschlüssel.                                                                                                               |
 | DeviceId                   | Eindeutiger Bezeichner des Geräts.                                                                                                                                                     |
 | DeviceName                 | Der Name des Geräts auf Plattformen, die das Benennen von Geräten ermöglichen. Auf anderen Plattformen wird von Intune ein Name anhand anderer Eigenschaften erstellt. Dieses Attribut kann nicht für alle Geräte zur Verfügung stehen. |
@@ -257,7 +257,7 @@ In der Entität **device** werden alle für die Verwaltung registrierten Geräte
 Die Entität **deviceType** stellt den Gerätetyp dar, auf den von anderen Data Warehouse-Entitäten verwiesen wird. Der Gerätetyp beschreibt in der Regel entweder das Gerätemodell, den Hersteller oder eine Kombination aus beidem.
 
 |    Eigenschaft    |                                  Beschreibung                                 |
-|:--------------:|:----------------------------------------------------------------------------:|
+|----------------|------------------------------------------------------------------------------|
 | DeviceTypeID   | Eindeutiger Bezeichner des Gerätetyps                                       |
 | DeviceTypeKey  | Der eindeutige Bezeichner des Gerätetyps im Data Warehouse – Ersatzschlüssel. |
 | DeviceTypeName | Gerätetyp                                                                |
@@ -265,7 +265,7 @@ Die Entität **deviceType** stellt den Gerätetyp dar, auf den von anderen Data 
 ### <a name="example"></a>Beispiel
 
 | deviceTypeID |        Name       |                      Beschreibung                      |
-|:------------:|:-----------------:|:-----------------------------------------------------:|
+|--------------|-------------------|-------------------------------------------------------|
 | -1           | Nicht verfügbar   | Der Gerätetyp ist nicht verfügbar.                     |
 | 0            | desktop-           | Windows Desktop-Gerät                              |
 | 1            | Windows           | Windows-Gerät                                      |
@@ -294,7 +294,7 @@ Die Entität **deviceType** stellt den Gerätetyp dar, auf den von anderen Data 
 Die Entität **deviceEnrollmentType** gibt an, wie ein Gerät registriert wurde. Der Registrierungstyp erfasst die Registrierungsmethode. In den Beispielen werden die verschiedenen Registrierungstypen und ihre Bedeutung aufgelistet.
 
 |         Eigenschaft         |                                    Beschreibung                                    |
-|:------------------------:|:---------------------------------------------------------------------------------:|
+|--------------------------|-----------------------------------------------------------------------------------|
 | deviceEnrollmentTypeID   | Der eindeutige Bezeichner des Registrierungstyps.                                       |
 | deviceEnrollmentTypeKey  | Eindeutiger Bezeichner des Registrierungstyps im Data Warehouse – Ersatzschlüssel. |
 | deviceEnrollmentTypeName | Registrierungstypname.                                                           |
@@ -302,7 +302,7 @@ Die Entität **deviceEnrollmentType** gibt an, wie ein Gerät registriert wurde.
 ### <a name="example"></a>Beispiel
 
 | enrollmentTypeID |                Name                |                                        Beschreibung                                       |
-|:----------------:|:----------------------------------:|:----------------------------------------------------------------------------------------:|
+|------------------|------------------------------------|------------------------------------------------------------------------------------------|
 | 0                | Unbekannt                            | Registrierungstyp wurde nicht gesammelt                                                      |
 | 1                | UserEnrollment                     | Benutzergesteuerte Registrierung über BYOD-Kanal.                                           |
 | 2                | DeviceEnrollmentManager            | Benutzerregistrierung mit einem Geräteregistrierungs-Manager-Konto.                              |
@@ -406,7 +406,7 @@ Die Entität **enrollmentFailureReason** gibt eine ausführlichere Ursache für 
 Die **intuneManagementExtension** listet täglich den Integritätsstatus von **intuneManagementExtension** auf jedem Windows 10-Gerät auf. Die Daten der letzten 60 Tage werden aufbewahrt.
 
 |       Eigenschaft      |                          Beschreibung                          | Beispiel |
-|:-------------------:|:-------------------------------------------------------------:|:-------:|
+|---------------------|---------------------------------------------------------------|---------|
 | DateKey             | Eindeutiger Datumsbezeichner                                | 123     |
 | TenantKey           | Eindeutiger Mandantenbezeichner                              | 456     |
 | DeviceKey           | Eindeutiger Bezeichner des Geräts                              | 789     |
@@ -417,7 +417,7 @@ Die **intuneManagementExtension** listet täglich den Integritätsstatus von **i
 **intuneManagementExtensionHealthState** listet alle möglichen Status der **IntuneManagementExtension** auf.
 
 |      Eigenschaft     |                   Beschreibung                  | Beispiel |
-|:-----------------:|:----------------------------------------------:|:-------:|
+|-------------------|------------------------------------------------|---------|
 | ExtensionStateKey | Eindeutiger Bezeichner des Integritätszustands.           | 2       |
 | ExtensionState    | Der Integritätsstatus einer IntuneManagementExtension. | Healthy |
 
@@ -425,7 +425,7 @@ Die **intuneManagementExtension** listet täglich den Integritätsstatus von **i
 Die Entität **IntuneManagementExtensionVersion** listet alle von **IntuneManagementExtension** verwendeten Versionen auf.
 
 |       Eigenschaft      |                          Beschreibung                          | Beispiel |
-|:-------------------:|:-------------------------------------------------------------:|:-------:|
+|---------------------|---------------------------------------------------------------|---------|
 | ExtensionVersionKey | Eindeutiger Bezeichner für die IntuneManagementExtension-Version. | 1       |
 | ExtensionVersion    | Die vierstellige Versionsnummer                                   | 1.0.2.0 |
 
@@ -512,7 +512,7 @@ Die Entität **MamPlatform** führt Plattformnamen und -typen auf, auf denen ein
 Die Entität **managementAgentType** stellt die Agents dar, die zum Verwalten von Geräten verwendet werden.
 
 |         Eigenschaft        |                                       Beschreibung                                       |
-|:-----------------------:|:---------------------------------------------------------------------------------------:|
+|-------------------------|-----------------------------------------------------------------------------------------|
 | ManagementAgentTypeID   | Eindeutige Bezeichner des Verwaltungs-Agent-Typen                                         |
 | ManagementAgentTypeKey  | Eindeutiger Bezeichner des Verwaltungs-Agent-Typen im Data Warehouse – Ersatzschlüssel. |
 | ManagementAgentTypeName | Gibt an, welche Art von Agent zum Verwalten des Geräts verwendet wird                              |
@@ -520,7 +520,7 @@ Die Entität **managementAgentType** stellt die Agents dar, die zum Verwalten vo
 ### <a name="example"></a>Beispiel
 
 | ManagementAgentTypeID |                Name               |                                  Beschreibung                                 |
-|:---------------------:|:---------------------------------:|:----------------------------------------------------------------------------:|
+|-----------------------|-----------------------------------|------------------------------------------------------------------------------|
 | 1                     | EAS                               | Das Gerät wird mithilfe von Exchange Active Sync verwaltet.                         |
 | 2                     | MDM                               | Das Gerät wird mit einem MDM-Agent verwaltet.                                   |
 | 3                     | EasMdm                            | Das Gerät wird sowohl von Exchange Active Sync als auch einem MDM-Agent verwaltet.        |
@@ -537,7 +537,7 @@ Die Entität **managementAgentType** stellt die Agents dar, die zum Verwalten vo
 Die Entität **managementState** stellt Details zum Status des Geräts bereit. Details können nützlich sein, wenn Remoteaktionen angewendet werden, das Gerät per Jailbreak oder Rootzugriff manipuliert wurde.
 
 |       Eigenschaft      |                                     Beschreibung                                    |
-|:-------------------:|:----------------------------------------------------------------------------------:|
+|---------------------|------------------------------------------------------------------------------------|
 | managementStateID   | Der eindeutige Bezeichner des Verwaltungsstatus.                                       |
 | managementStateKey  | Der eindeutige Bezeichner des Verwaltungsstatus im Data Warehouse – Ersatzschlüssel. |
 | managementStateName | Gibt den Status der Remoteaktion an, die auf dieses Gerät angewendet wurde.                 |
@@ -545,7 +545,7 @@ Die Entität **managementState** stellt Details zum Status des Geräts bereit. D
 ### <a name="example"></a>Beispiel
 
 | managementStateID |      Name      |                                                   Beschreibung                                                   |
-|:-----------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------:|
+|-------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
 | 0                 | Verwaltet        | Verwaltet ohne ausstehende Remoteaktionen.                                                                       |
 | 1                 | RetirePending  | Für das Gerät steht ein Befehl zum Außerkraftsetzen aus.                                                             |
 | 2                 | RetireFailed   | Der Befehl zum Außerkraftsetzen konnte auf dem Gerät nicht ausgeführt werden.                                                                      |
@@ -563,7 +563,7 @@ Die Entität **managementState** stellt Details zum Status des Geräts bereit. D
 Die Entität MobileAppInstallState stellt den Installationsstatus für eine mobile Anwendung dar, nachdem sie einer Gruppe, die Geräte und/oder Benutzer enthält, zugewiesen wurde.
 
 |       Eigenschaft      |                        Beschreibung                       |
-|:-------------------:|:--------------------------------------------------------:|
+|---------------------|----------------------------------------------------------|
 | AppInstallStateKey  | Die eindeutige ID des App-Installationsstatus für Ihr Konto |
 | AppInstallState     | Enumerationswert des App-Installationsstatus                     |
 | AppInstallStateName | Name des App-Installationsstatus                           |
@@ -572,7 +572,7 @@ Die Entität MobileAppInstallState stellt den Installationsstatus für eine mobi
 Stellt den Installationsstatus einer mobilen App für einen bestimmten Gerätetyp unter Verwendung der mobilen Anwendungsverwaltung mit Microsoft Intune dar.
 
 |      Eigenschaft      |                                                          Beschreibung                                                          |
-|:------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | DateKey            | Schlüssel des Datums, an dem der App-Installationsstatus erfasst wurde                                                                     |
 | AppKey             | Schlüssel der mobilen App, mit der eine Instanz von AppRevision identifiziert wird.                                                          |
 | DeviceTypeKey      | Schlüssel des Gerätetyps, der der mobilen Anwendung zugeordnet ist.                                                              |
@@ -584,7 +584,7 @@ Stellt den Installationsstatus einer mobilen App für einen bestimmten Gerätety
 Die Entität **ownerType** gibt an, ob ein Gerät einem Unternehmen oder einer Privatperson gehört, oder ob der Besitzer unbekannt ist.
 
 |    Eigenschaft   |                                                                                     Beschreibung                                                                                    |           Beispiel          |
-|:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
 | ownerTypeID   | Eindeutiger Bezeichner des Besitzertyps                                                                                                                                               |                            |
 | ownerTypeKey  | Eindeutiger Bezeichner des Besitzertyps im Data Warehouse – Ersatzschlüssel.                                                                                                       |                            |
 | ownerTypeName | Stellt den Besitzertypen der Geräte dar:  Corporate (Unternehmen): Das Gerät gehört einem Unternehmen.  Persönlich: Das Gerät befindet sich im Privatbesitz (BYOD).   Unbekannt: Es liegen keine Informationen zu diesem Gerät vor. | Corporate Personal Unknown |
@@ -596,7 +596,7 @@ Die Entität **ownerType** gibt an, ob ein Gerät einem Unternehmen oder einer P
 Die Entität **Policy** (Richtlinie) listet Gerätekonfigurationsprofile, Appkonfigurationsprofile und Kompatibilitätsrichtlinien auf. Sie können die Richtlinien mit der mobilen Geräteverwaltung (MDM) zu einer Gruppe in Ihrem Unternehmen zuweisen.
 
 |          Eigenschaft          |                                                                       Beschreibung                                                                      |                Beispiel               |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 | PolicyKey                  | Eindeutiger Schlüssel, der die Richtlinie im Data Warehouse darstellen soll                                                                                              | 123                                  |
 | PolicyId                   | Eindeutiger Bezeichner der Richtlinie im Data Warehouse                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
 | PolicyName                 | Name der Richtlinie                                                                                                                                    | "Windows 10-Baseline"                |
@@ -610,7 +610,7 @@ Die Entität **Policy** (Richtlinie) listet Gerätekonfigurationsprofile, Appkon
 In der folgenden Tabelle ist die Anzahl der Geräte mit dem Zustand „erfolgreich“, „ausstehend“, „fehlerhaft“ oder „Fehler“ pro Tag aufgeführt. Die Anzahl spiegelt die Daten pro Richtlinientypprofil wider. Wenn ein Gerät beispielsweise den Zustand „erfolgreich“ für alle zugewiesenen Richtlinien aufweist, wird der Zähler für „erfolgreich“ für diesen Tag um eins erhöht. Wenn einem Gerät zwei Profile zugewiesen sind, von denen eines den Zustand „erfolgreich“ und eines den Zustand „Fehler“ aufweist, erhöht die Entität den Zähler für „erfolgreich“ und versetzt das Gerät in den Zustand „Fehler“. Die Entität **policyDeviceActivity** listet für die letzten 30 Tage auf, wie viele Geräte an einem bestimmten Tag in welchem Zustand waren.
 
 |  Eigenschaft |                                           Beschreibung                                           |        Beispiel        |
-|:---------:|:-----------------------------------------------------------------------------------------------:|:---------------------:|
+|-----------|-------------------------------------------------------------------------------------------------|-----------------------|
 | DateKey   | Datumsschlüssel für den Zeitpunkt, zu dem das Einchecken des Gerätekonfigurationsprofils im Data Warehouse aufgezeichnet wurde. | 20160703              |
 | Pending   | Anzahl eindeutiger Geräte im Zustand „ausstehend“.                                                    | 123                   |
 | Erfolgreich | Anzahl eindeutiger Geräte im Zustand „erfolgreich“.                                                    | 12                    |
@@ -621,7 +621,7 @@ In der folgenden Tabelle ist die Anzahl der Geräte mit dem Zustand „erfolgrei
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
 |        Eigenschaft        |                      Beschreibung                      |     Beispiel    |
-|:----------------------:|:-----------------------------------------------------:|:--------------:|
+|------------------------|-------------------------------------------------------|----------------|
 | PolicyPlatformTypeKey  | Der eindeutige Schlüssel für den Plattformtyp der Richtlinie.        | 20170519       |
 | PolicyPlatformTypeId   | Der eindeutige Bezeichner für den Plattformtyp der Richtlinie. | 1              |
 | PolicyPlatformTypeName | Der Name für den Plattformtyp der Richtlinie.              | AndroidForWork |
@@ -630,7 +630,7 @@ In der folgenden Tabelle ist die Anzahl der Geräte mit dem Zustand „erfolgrei
 Die Entität **PolicyTypeActivity** listet die Gesamtzahl der Geräte im Zustand „erfolgreich“, „ausstehend“, „fehlerhaft“ oder „Fehler“ auf. Diese Zustände werden im Bezug auf ein Gerätekonfigurationsprofil, ein Appkonfigurationsprofil oder eine Kompatibiliätsrichtlinie pro Tag aufgelistet.
 
 |    Eigenschaft   |                                          Beschreibung                                          |           Beispiel           |
-|:-------------:|:---------------------------------------------------------------------------------------------:|:---------------------------:|
+|---------------|-----------------------------------------------------------------------------------------------|-----------------------------|
 | DateKey       | Datumsschlüssel für den Zeitpunkt, zu dem das Einchecken des Gerätekonfigurationsprofils im Data Warehouse aufgezeichnet wurde. | 20160703                    |
 | PolicyKey     | Der Richtlinienschlüssel kann mit der Richtlinie verknüpft werden, um den Richtliniennamen zu erhalten.                                | Windows 10-Baseline         |
 | PolicyTypeKey | Der Typ des Richtlinienschlüssels kann mit dem Richtlinientyp verknüpft werden, um den Namen des Richtlinientyps zu erhalten.             | Windows 10-Kompatibilitätsrichtlinien |
@@ -643,7 +643,7 @@ Die Entität **PolicyTypeActivity** listet die Gesamtzahl der Geräte im Zustand
 Die Entität **PolicyType** listet Gerätekonfigurationsprofile, Appkonfigurationsprofile und Kompatibilitätsrichtlinien auf. Sie können die Richtlinien mit der mobilen Geräteverwaltung (MDM) zu einer Gruppe in Ihrem Unternehmen zuweisen.
 
 |    Eigenschaft    |                       Beschreibung                      |            Beispiel            |
-|:--------------:|:------------------------------------------------------:|:-----------------------------:|
+|----------------|--------------------------------------------------------|-------------------------------|
 | PolicyTypeId   | Eindeutiger Bezeichner der Richtlinie im Quellsystem  | 123                           |
 | PolicyTypeKey  | Eindeutiger Bezeichner der Richtlinie im Data Warehouse | 1                             |
 | PolicyTypeName | Name des Richtlinientyps                               | Windows 10-Kompatibilitätsrichtlinie |
@@ -652,7 +652,7 @@ Die Entität **PolicyType** listet Gerätekonfigurationsprofile, Appkonfiguratio
 In der folgenden Tabelle ist die Anzahl der Benutzer mit dem Zustand „erfolgreich“, „ausstehend“, „fehlerhaft“ oder „Fehler“ pro Tag aufgeführt. Die Anzahl spiegelt die Daten pro Richtlinientypprofil wider. Wenn ein Benutzer beispielsweise den Zustand „erfolgreich“ für alle zugewiesenen Richtlinien aufweist, wird der Zähler für „erfolgreich“ für diesen Tag um eins erhöht. Wenn einem Benutzer zwei Profile zugewiesen sind, von denen eines den Zustand „erfolgreich“ und eines den Zustand „Fehler“ aufweist, wird der Benutzer für den Zustand „Fehler“ gezählt. Die Entität **PolicyUserActivity** listet für die letzten 30 Tage auf, wie viele Benutzer an einem bestimmten Tag in welchem Zustand waren.
 
 |  Eigenschaft |                                          Beschreibung                                          |       Beispiel       |
-|:---------:|:---------------------------------------------------------------------------------------------:|:-------------------:|
+|-----------|-----------------------------------------------------------------------------------------------|---------------------|
 | DateKey   | Datumsschlüssel für den Zeitpunkt, zu dem das Einchecken des Gerätekonfigurationsprofils im Data Warehouse aufgezeichnet wurde. | 20160703            |
 | Pending   | Anzahl eindeutiger Geräte im Zustand „ausstehend“                                                    | 123                 |
 | Erfolgreich | Anzahl eindeutiger Geräte im Zustand „erfolgreich“                                                    | 12                  |
@@ -680,7 +680,7 @@ Eine **termsAndConditions**-Entität stellt Metadaten und Inhalt einer bestimmte
 Die Entität **UserDeviceAssociation** enthält Zuweisungen von Benutzergeräten in Ihrer Organisation.
 
 |        Name        |                                             Beschreibung                                            |     Beispiel     |
-|:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
+|--------------------|----------------------------------------------------------------------------------------------------|-----------------|
 | UserKey            | Eindeutiger Bezeichner für den Benutzer im Data Warehouse   (Ersatzschlüssel)                            | 123             |
 | DeviceKey          | Eindeutiger Bezeichner für das Gerät im Data Warehouse                                             | 123             |
 | CreatedDateTimeUTC | Zeitpunkt, zu dem die Benutzergerätezuordnung erstellt wurde. Verwendet UTC-Format                     | 23.11.2016 0:00 |
@@ -693,7 +693,7 @@ Die Entität **user** listet alle Benutzer von Azure Active Directory (Azure AD)
 Die Entitätssammlung **user** enthält Benutzerdaten. Zu diesen Datensätzen gehören Benutzerzustände während der Datensammlung, selbst wenn der Benutzer entfernt wurde. Beispielsweise kann ein Benutzer in Intune hinzugefügt und dann im Verlauf des letzten Monats entfernt worden sein. Auch wenn dieser Benutzer zum Zeitpunkt der Berichterstellung nicht vorhanden ist, liegen Angaben zu Benutzer und Zustand in den Daten aus dem vorherigen Monat vor. Sie können einen Bericht erstellen, der die Dauer der Präsenz des Benutzers in Ihren Daten zeigt.
 
 |          Eigenschaft          |                                                                                                           Beschreibung                                                                                                          |                Beispiel               |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 | UserKey                    | Eindeutiger Bezeichner des Benutzers im Data Warehouse – Ersatzschlüssel.                                                                                                                                                         | 123                                  |
 | UserId                     | Eindeutiger Bezeichner des Benutzers – ähnlich wie UserKey, ist jedoch ein natürlicher Schlüssel.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | E-Mail-Adresse des Benutzers                                                                                                                                                                                                     | John@constoso.com                    |
@@ -718,7 +718,7 @@ Eine **userTermsAndConditionsAcceptance**-Entität stellt den Akzeptanzstatus ei
 Die Entität **vppProgramType** führt mögliche VPP-Programmtypen für eine App auf.
 
 |      Eigenschaft      |          Beschreibung         |
-|:------------------:|:----------------------------:|
+|--------------------|------------------------------|
 | VppProgramTypeID   | ID für den Typen.           |
 | VppProgramTypeKey  | Ersatzschlüssel für den Schlüssel. |
 | VppProgramTypeName | VPP-Programmtyp.          |
@@ -726,7 +726,7 @@ Die Entität **vppProgramType** führt mögliche VPP-Programmtypen für eine App
 ### <a name="example"></a>Beispiel
 
 |             VppProgramID             |         Name        | Beschreibung                |
-|:------------------------------------:|:-------------------:|----------------------------|
+|--------------------------------------|---------------------|----------------------------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft           | VPP-Programm von Microsoft. |
 | 00000000-0000-0000-0000-000000000000 | Noch nicht verfügbar | Standardwert, kein VPP.   |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple               | VPP-Programm von Apple.     |

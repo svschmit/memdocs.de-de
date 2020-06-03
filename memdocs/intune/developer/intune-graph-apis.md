@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0412f15912ac9017ebc49f974ec621d86f8b6c0e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b87b2528dce4d007f2a2031a11fd69ea774c2033
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989098"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165905"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Verwenden von Azure AD für den Zugriff auf die Intune-APIs in Microsoft Graph
 
@@ -143,7 +143,7 @@ Weitere Informationen:
 Wenn Sie Microsoft Graph Berechtigungen erteilen, können Sie angeben, dass folgende Bereiche den Zugriff auf die Intune-Features steuern sollen. In der folgenden Tabelle werden die Berechtigungsbereiche der Intune-API zusammengefasst.  Die erste Spalte enthält den Namen der Funktion entsprechend der Anzeige im Azure-Portal, die zweite den Namen des Berechtigungsbereichs.
 
 Einstellung _Zugriff aktivieren_ | Bereichsname
-:--|:--
+:--|---
 __Remoteaktionen mit Auswirkungen auf Benutzer auf Microsoft Intune-Geräten ausführen__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
 __Microsoft Intune-Geräte lesen und schreiben__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
 __Microsoft Intune-Geräte lesen__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
