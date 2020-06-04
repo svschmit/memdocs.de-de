@@ -10,12 +10,12 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 693f661f2a2db59335ec8e463842a0ad03c977f3
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: f9fafcc4b5462afb1b8e528837ea6ba61203e73d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724784"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347140"
 ---
 # <a name="manage-apps-for-on-premises-mdm-in-configuration-manager"></a>Verwalten von Apps für die lokale Verwaltung mobiler Geräte (MDM) in Configuration Manager
 
@@ -61,4 +61,4 @@ Bereitstellen und Überwachen von Anwendungen für mobile Geräte in Configurati
 
 ## <a name="next-step"></a>Nächster Schritt
 
-Wenn Sie Änderungen vornehmen, deinstallieren oder eine bereitgestellte Anwendung durch eine neue Anwendung ersetzen möchten, verwalten Sie Sie genauso wie jede beliebige app in Configuration Manager. Weitere Informationen finden Sie unter [Aktualisieren und Deinstallieren von Anwendungen ](../../apps/deploy-use/update-and-retire-applications.md).
+Wenn Sie Änderungen vornehmen, deinstallieren oder eine bereitgestellte Anwendung durch eine neue Anwendung ersetzen möchten, verwalten Sie Sie genauso wie jede beliebige app in Configuration Manager. Weitere Informationen finden Sie unter [Überarbeiten und Ablösen von Anwendungen](../../apps/deploy-use/revise-and-supersede-applications.md).
