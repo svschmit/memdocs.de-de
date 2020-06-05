@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd9741cfa8cf9edd03d723e63ed1936e1c986d08
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989042"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126514"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Verschieben von Android-Geräten aus dem Geräteadministrator in die Arbeitsprofilverwaltung
 
@@ -72,10 +72,10 @@ Wenn Benutzer bemerken, dass ihr Gerät aus diesem Grund nicht mehr konform ist,
       - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
       - Für US-Regierungsorganisationen können Sie stattdessen diesen Link verwenden: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
-    > [!NOTE]
-    > - Natürlich können Sie in Ihren Mitteilungen an Benutzer auch benutzerfreundlichen Hypertext für die Links verwenden. Verkürzen Sie URLs jedoch nicht, da die Links in diesem Fall möglicherweise nicht funktionieren.
-    > - Wenn das Android-Unternehmensportal im Hintergrund offen ist und der Benutzer auf den Link tippt, wird er möglicherweise auf die zuletzt im Portal geöffnete Seite weitergeleitet.
-    > - Benutzer müssen auf einem Android-Gerät auf den Link tippen. Wenn sie ihn stattdessen in einen Browser kopieren, wird dadurch nicht das Android-Unternehmensportal gestartet. 
+      > [!NOTE]
+      > - Natürlich können Sie in Ihren Mitteilungen an Benutzer auch benutzerfreundlichen Hypertext für die Links verwenden. Verkürzen Sie URLs jedoch nicht, da die Links in diesem Fall möglicherweise nicht funktionieren.
+      > - Wenn das Android-Unternehmensportal im Hintergrund offen ist und der Benutzer auf den Link tippt, wird er möglicherweise auf die zuletzt im Portal geöffnete Seite weitergeleitet.
+      > - Benutzer müssen auf einem Android-Gerät auf den Link tippen. Wenn sie ihn stattdessen in einen Browser kopieren, wird dadurch nicht das Android-Unternehmensportal gestartet. 
 
     Wählen Sie **Weiter** aus.
 
