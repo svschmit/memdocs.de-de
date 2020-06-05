@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b87b2528dce4d007f2a2031a11fd69ea774c2033
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: e3c83859d56b23974e95299c76b0d65512da0a0e
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165905"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455088"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Verwenden von Azure AD für den Zugriff auf die Intune-APIs in Microsoft Graph
 
@@ -352,7 +352,7 @@ Dieses Beispiel zeigt, wie Sie C# zum Abrufen einer Liste von Geräten verwenden
 4. Fügen Sie am Anfang der Datei **Program.cs** die folgenden Anweisungen ein:
 
     ``` csharp
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;</p>
+    using Microsoft.IdentityModel.Clients.ActiveDirectory;
     using System.Net.Http;
     ```
 

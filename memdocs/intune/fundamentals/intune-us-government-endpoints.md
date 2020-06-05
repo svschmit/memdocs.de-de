@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28454fc067a7d8ab281b92d571a872bd9e0aa2d0
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d1574e07ca58debaef5bbc134a86d76aa21778a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991158"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347247"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>US Government-Endpunkte für Microsoft Intune
 
@@ -61,22 +61,9 @@ In den folgenden Tabellen sind die Ports und Dienste aufgeführt, auf die der In
 - MS Graph: https:\//graph.microsoft.us
 - ADRS: https:\//enterpriseregistration.microsoftonline.us
 
-## <a name="windows-push-notification-services"></a>Windows-Pushbenachrichtigungsdienste
-Für von Intune verwaltete Geräte, die mithilfe der mobilen Geräteverwaltung (Mobile Device Management, MDM) verwaltet werden, sind Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS) für Geräteaktionen und andere sofortige Aktivitäten erforderlich. Weitere Informationen finden Sie unter [Enterprise-Firewall und Proxykonfigurationen zur Unterstützung von WNS-Datenverkehr](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
+[!INCLUDE [Intune notices](../includes/windows-push-notification-services.md)]
 
-## <a name="apple-device-network-information"></a>Informationen zum Netzwerk von Apple-Geräten
-
-|**Verwendung**|**Hostname (IP-Adresse/-Subnetz)**|**Protokoll**|**Port**|
-|------------|-----------|------------|-----------|
-|Abrufen und Anzeigen von Inhalten von Apple-Servern|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br>\*.phobos.itunes-apple.com.akadns.net|HTTP|80|
-|Kommunikation mit APNs-Servern|#-courier.push.apple.com<br># ist eine zufällige Zahl zwischen 0 und 50.|TCP|5223 und 443|
-|Verschiedene Funktionen, z. B. Zugriff auf das Internet, den iTunes Store, den macOS App Store, iCloud, Messaging usw.|phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net|HTTP/HTTPS|80 oder 443|
-
-Weitere Informationen finden Sie in folgenden Quellen:
-
-- [Von Apple-Softwareprodukten verwendete TCP- und UDP-Ports](https://support.apple.com/HT202944)
-- [Informationen zu macOS-, iOS- und iTunes-Server-Hostverbindungen und iTunes-Hintergrundprozessen](https://support.apple.com/HT201999)
-- [Wenn Ihre macOS- und iOS-Clients keine Apple Push-Benachrichtigungen empfangen](https://support.apple.com/HT203609)
+[!INCLUDE [Intune notices](../includes/apple-device-network-information.md)]
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Netzwerkendpunkte für Microsoft Intune](intune-endpoints.md)

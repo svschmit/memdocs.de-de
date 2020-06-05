@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Betriebssystemversionen mit Microsoft Intune
+title: Verwalten von Betriebssystemversionen mit Intune
 titleSuffix: Microsoft Intune
 description: Erfahren Sie, wie Sie Betriebssystemversionen plattformübergreifend mit Microsoft Intune verwalten können.
 keywords: ''
@@ -14,12 +14,12 @@ ms.localizationpriority: high
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c25a40d288b643c289c05322e3e2d4677afb0b60
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e4135dc90ff2739cb27ac95afa095bdfaf375d82
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362237"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330932"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Verwalten von Betriebssystemversionen mit Intune
 Für aktuelle mobile Plattformen und Desktopplattformen werden ständig größere Updates, Patches und neue Versionen herausgegeben. Es gibt Steuerelemente, mit denen Sie Updates und Patches unter Windows vollständig verwalten können. Andere Plattformen wie iOS/iPadOS und Android verlangen, dass die Endbenutzer in diesen Vorgang involviert sind.  Microsoft Intune verfügt über Funktionen, mit denen Sie Ihre Betriebssystemversionsverwaltung plattformübergreifend strukturieren können.
@@ -78,13 +78,13 @@ Weitere Informationen finden Sie unter [Erstellen und Zuweisen von App-Schutzric
 
 ## <a name="managing-a-new-operating-system-version-rollout"></a>Verwalten eines Rollout einer neuen Betriebssystemversion
 Sie können die Funktionen von Intune, die in diesem Artikel beschrieben werden, nutzen, um die Geräte in Ihrer Organisation innerhalb der von Ihnen definierten Zeitachse auf eine neue Betriebssystemversion umzuziehen. Die folgenden Schritte stellen ein Beispiel für ein Bereitstellungsmodell dar, mit dem Sie die Benutzer innerhalb von sieben Tagen von einer Betriebssystemversion auf eine andere umziehen lassen können.
-- **Schritt 1**: Verwenden Sie Registrierungsbeschränkungen, um die neue Betriebssystemversion als Mindestversion festzulegen, damit ein Gerät registriert werden kann. Damit wird gewährleistet, dass neue Benutzergeräte zum Zeitpunkt der Registrierung kompatibel sind.
-- **Schritt 2a**: Verwenden Sie die Intune-App-Schutzrichtlinien, um Benutzer zu warnen, wenn eine App geöffnet oder fortgesetzt wird, für die eine neue Betriebssystemversion erforderlich ist.
+- **Schritt 1**: Verwenden Sie Registrierungseinschränkungen, um die neue Betriebssystemversion V2 als Mindestversion festzulegen, die zum Registrieren des Geräts erforderlich ist. Damit wird gewährleistet, dass neue Benutzergeräte zum Zeitpunkt der Registrierung kompatibel sind.
+- **Schritt 2a:** Verwenden Sie die Intune-App-Schutzrichtlinien, um Benutzer zu warnen, wenn eine App geöffnet oder fortgesetzt wird, für die eine neue Betriebssystemversion V2 erforderlich ist.
 - **Schritt 2b:** Verwenden Sie Gerätekompatibilitätsrichtlinien, um eine neue Betriebssystemversion als Mindestversion für ein Gerät festzulegen, damit es kompatibel ist. Verwenden Sie **Aktionen** bei Kompatibilitätsverstößen, um eine siebentägige Toleranzperiode einzuräumen und den Benutzer eine E-Mail-Benachrichtigung zukommen zu lassen, in der die Zeitachse und die Anforderungen angegeben werden.
   - In diesen Richtlinien, die den Benutzern per E-Mail, im Intune-Unternehmensportal, und beim Öffnen einer App, für die die App-Schutzrichtlinie aktiviert ist, übermittelt werden, wird darüber informiert, dass vorhandene Geräte aktualisiert werden müssen.
   - Sie können einen Kompatibilitätsbericht ausführen, um Benutzer zu ermitteln, deren Geräte nicht kompatibel sind. 
-- **Schritt 3a**: Verwenden Sie die Intune-App-Schutzrichtlinien, um Benutzer beim Öffnen oder Fortsetzen einer App zu blockieren, wenn das Gerät nicht unter der neusten Betriebssystemversion läuft.
-- **Schritt 3b**: Verwenden Sie Gerätekompatibilitätsrichtlinien, um eine neu Betriebssystemversion als Mindestversion für ein Gerät festzulegen, damit es kompatibel ist.
+- **Schritt 3a:** Verwenden Sie die Intune-App-Schutzrichtlinien, um Benutzer beim Öffnen oder Fortsetzen einer App zu blockieren, wenn das Gerät die neuen Betriebssystemversion V2 nicht ausführt.
+- **Schritt 3b:** Verwenden Sie Gerätekompatibilitätsrichtlinien, um eine neue Betriebssystemversion als Mindestversion für ein Gerät festzulegen, damit es kompatibel ist.
   - In diesen Richtlinien wird festgelegt, dass Geräte aktualisiert werden müssen, damit sie weiterhin Zugriff auf Organisationsdaten haben. Geschützte Dienste werden blockiert, wenn sie auf Geräten mit bedingtem Zugriff verwendet werden. Apps, für die eine App-Schutzrichtlinie aktiviert ist, werden beim Öffnen oder beim Zugreifen auf Organisationsdaten blockiert.
 
 ## <a name="next-steps"></a>Nächste Schritte
