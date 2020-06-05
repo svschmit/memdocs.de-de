@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e44dbb8e29da829e3455121700e8901a3b3fc98
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 63000a7285b2d1d6505a739f186dc9168e7f3fca
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81007622"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853586"
 ---
 # <a name="review-client-app-protection-logs"></a>Überprüfen der Schutzprotokolle für Client-Apps
 
 Erfahren Sie mehr über die Einstellungen, die Sie in den App-Schutzprotokollen überprüfen können. Greifen Sie durch Aktivieren der Intune-Diagnose auf einem mobilen Client auf Protokolle zu. 
 
 Der Prozess zum Aktivieren und Sammeln von Protokollen unterscheidet sich je nach Plattform:
-- **iOS-/iPadOS-Geräte**: Verwenden Sie Microsoft Edge für iOS/iPadOS, um Protokolle zu sammeln. Details hierzu finden Sie unter [Verwalten des Webzugriffs mithilfe von Microsoft Edge mit Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+- **iOS-/iPadOS-Geräte**: Verwenden Sie Microsoft Edge für iOS/iPadOS, um Protokolle zu sammeln. Ausführliche Informationen finden Sie unter [Verwenden von Microsoft Edge für iOS und Android für den Zugriff auf Protokolle von verwalteten Apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 - **Windows 10-Geräte:** Verwenden Sie *MDMDiag* und Ereignisprotokolle. Weitere Informationen finden Sie unter [Diagnostizieren von MDM-Fehlern unter Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) in der Referenz zur Windows-Clientverwaltung und im Blogbeitrag [Troubleshooting Windows 10 Intune Policy Failures (Behandeln von Problemen mit Intune-Richtlinien unter Windows 10)](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
-- **Android-Geräte**: Verwenden Sie Microsoft Edge für Android, um Protokolle zu sammeln. Details hierzu finden Sie unter [Verwalten des Webzugriffs mithilfe von Microsoft Edge mit Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+- **Android-Geräte**: Verwenden Sie Microsoft Edge für Android, um Protokolle zu sammeln. Ausführliche Informationen finden Sie unter [Verwenden von Microsoft Edge für iOS und Android für den Zugriff auf Protokolle von verwalteten Apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
   > [!Note]
   > Auf vollständig verwalteten Android-Geräten wird in manchen Fällen möglicherweise die Intune-Unternehmensportal-App unter „Alle Apps“ angezeigt. Dies kann passieren, wenn eine mit einer App-Schutzrichtlinie verknüpfte App nicht installiert ist oder nicht gestartet wird. 

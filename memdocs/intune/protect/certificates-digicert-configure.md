@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de7b96b5ad54a207b92221f7685f6c7f50942c46
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079874"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990354"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Einrichten des Intune Certificate Connectors für die DigiCert-PKI-Plattform
 
@@ -32,7 +32,7 @@ Verwenden Sie den Intune Certificate Connector, um PKCS-Zertifikate von der Digi
 > [!TIP]
 > DigiCert hat den Geschäftsbereich Website Security und die damit verbundenen PKI-Lösungen von Symantec übernommen. Weitere Informationen zu dieser Änderung finden Sie im [Artikel des technischen Supports von Symantec](https://support.symantec.com/en_US/article.INFO4722.html).
 
-Wenn Sie den Intune Certificate Connector bereits zum Ausstellen von Zertifikaten einer Microsoft-Zertifizierungsstelle über PKCS oder System Center Endpoint Protection einsetzen, können Sie mit demselben Connector PKCS-Zertifikate einer DigiCert-Zertifizierungsstelle konfigurieren und ausstellen. Nachdem Sie die Konfiguration zur Unterstützung der DigiCert-Zertifizierungsstelle abgeschlossen haben, kann der Intune Certificate Connector die folgenden Zertifikate ausstellen:
+Wenn Sie den Intune Certificate Connector bereits zum Ausstellen von Zertifikaten einer Microsoft-Zertifizierungsstelle über PKCS oder das Simple Certificate Enrollment-Protokoll einsetzen, können Sie mit demselben Connector PKCS-Zertifikate einer DigiCert-Zertifizierungsstelle konfigurieren und ausstellen. Nachdem Sie die Konfiguration zur Unterstützung der DigiCert-Zertifizierungsstelle abgeschlossen haben, kann der Intune Certificate Connector die folgenden Zertifikate ausstellen:
 
 * PKCS-Zertifikate einer Microsoft-Zertifizierungsstelle
 * PKCS-Zertifikate einer DigiCert-Zertifizierungsstelle

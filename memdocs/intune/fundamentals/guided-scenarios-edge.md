@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5c2af6ce301b0a5de06cbbd4126b1661ca21fb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49f9b9076d20c1f5d4740a6f8b1b9883e12ce629
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359065"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853535"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Geführtes Szenario: Bereitstellen von Microsoft Edge für Mobilgeräte
 
@@ -90,6 +90,5 @@ Im letzten Schritt können Sie eine Zusammenfassung der von Ihnen konfigurierten
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Verbessern Sie die Sicherheit von Microsoft Edge, indem Sie die Integration der Intune-App-Schutzrichtlinie einrichten. Weitere Informationen finden Sie unter [Anwendungsschutzrichtlinien für Microsoft Edge](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge).
-- Wenn Sie Intranetsites einschließen möchten, informieren Sie sich darüber, wie Sie den Zugriff mit der Integration des Azure-Anwendungsproxys schützen können. Weitere Informationen finden Sie unter [Konfigurieren von Anwendungsproxyeinstellungen für Microsoft Edge](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge).
-
+- Verbessern Sie die Sicherheit von Microsoft Edge, indem Sie die Integration der Intune-App-Schutzrichtlinie einrichten. Weitere Informationen finden Sie unter [Erstellen von Intune-App-Schutzrichtlinien](../apps/manage-microsoft-edge.md#create-intune-app-protection-policies).
+- Wenn Sie Intranetsites einschließen möchten, informieren Sie sich darüber, wie Sie den Zugriff mit der Integration des Azure-Anwendungsproxys schützen können. Weitere Informationen finden Sie unter [Verwalten der Proxykonfiguration](../apps/manage-microsoft-edge.md#manage-proxy-configuration).

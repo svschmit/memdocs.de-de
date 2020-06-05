@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,15 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696451"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690679"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Verwenden der Seite des Intune-Mandantenstatus
-Bei der Mandantenstatusseite von Microsoft Intune handelt es sich um einen zentralen Hub, auf dem Sie aktuelle und wichtige Details zu Ihrem Mandanten abrufen können. Diese Details umfassen u. a. die Lizenzverfügbarkeit und -verwendung, den Connectorstatus und wichtige Mitteilungen zum Intune-Dienst.  
+
+Bei der Mandantenstatusseite von Microsoft Intune handelt es sich um einen zentralen Hub, auf dem Sie aktuelle und wichtige Details zu Ihrem Mandanten abrufen können. Diese Details umfassen u. a. die Lizenzverfügbarkeit und -verwendung, den Connectorstatus und wichtige Mitteilungen zum Intune-Dienst.
+
+> [!TIP]
+> Ein Mandant ist eine Instanz von Azure Active Directory (Azure AD). Ihr Intune-Abonnement wird von einem Azure AD-Mandanten gehostet. Weitere Informationen finden Sie in der Azure AD-Dokumentation unter [Schnellstart: Einrichten eines Mandanten](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant).
 
 Melden Sie sich zum Anzeigen des Dashboards beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, wechseln Sie zu **Mandantenverwaltung**, und wählen Sie dann **Mandantenstatus** aus.
 
@@ -64,20 +68,20 @@ Wenn Sie beispielsweise den Connector **VPP-Ablaufdatum** auswählen, wird die S
 ## <a name="service-health-dashboard"></a>Dashboard zur Dienstintegrität  
 Auf dem Dashboard zur Dienstintegrität können Sie Details zu *Dienstvorfällen* anzeigen, die sich auf Ihren Mandanten auswirken, und *Neuigkeiten zu Intune*, die Informationen zu Updates und geplanten Änderungen bereitstellen.
 
-### <a name="intune-service-health"></a>Intune Service Health
+### <a name="intune-service-health-and-message-center"></a>Intune-Dienstintegrität und -Nachrichtencenter
 Sie können Details zu aktiven Vorfällen und Empfehlungen anzeigen, ohne zum Dashboard zur Dienstintegrität von Microsoft 365 oder dem Nachrichtencenter navigieren zu müssen. Sie finden diese jeweils im [Microsoft 365 Admin Center](https://admin.microsoft.com). Es werden nur Vorfälle angezeigt, die sich auf ihren Mandanten auswirken.  
 
 Wenn Sie einen Incident auswählen, werden die jeweiligen Details direkt auf der Seite des Mandantenstatus angezeigt. Wählen Sie **Letzte Incidents/Beratungen anzeigen** auswählen, können Sie die neuesten Empfehlungen und Incidents anzeigen. Wenn das Microsoft 365 Admin Center geöffnet wird, können Sie die Empfehlungen und Incidents Ihres Mandanten für die letzten 30 Tage anzeigen.  
 
-Ihr Konto muss die Rolle **Globaler Administrator** oder **Dienstadministrator** in Azure Active Directory oder im Microsoft 365 Admin Center besitzen, damit Sie Informationen für *Intune Service Health* anzeigen können. Melden Sie sich am [Microsoft 365 Admin Center](https://admin.microsoft.com) mit den globalen Administratorberechtigungen an, um diese Berechtigungen zuzuweisen. Klicken Sie auf **Benutzer > Aktive Rollen**, und wählen Sie dann das Konto aus, auf das der Zugriff erforderlich ist. Klicken Sie für Rollen auf **Bearbeiten**, wählen Sie *Dienstadministrator* oder *Globaler Administrator* aus, und **speichern** Sie anschließend Ihre Änderung, um die Berechtigungen zuzuweisen.  
+Ihr Konto muss in Azure Active Directory oder im Microsoft 365 Admin Center die Rolle **Globaler Administrator** oder **Dienstsupportadministrator** besitzen, damit Sie Informationen für *Intune Service Health* aufrufen können. Melden Sie sich am [Microsoft 365 Admin Center](https://admin.microsoft.com) mit den globalen Administratorberechtigungen an, um diese Berechtigungen zuzuweisen. Klicken Sie auf **Benutzer > Aktive Rollen**, und wählen Sie dann das Konto aus, auf das der Zugriff erforderlich ist. Klicken Sie für Rollen auf **Bearbeiten**, wählen Sie *Dienstsupportadministrator* oder *Globaler Administrator* aus, und **speichern** Sie anschließend Ihre Änderung, um die Berechtigungen zuzuweisen.  
 
 Sie können Ihre Kommunikationseinstellungen für Intune Service Health nur über das Microsoft 365 Admin Center einrichten.
 
-### <a name="intune-news"></a>Neuerungen für Intune  
+### <a name="intune-message-center"></a>Intune-Nachrichtencenter  
 Zeigen Sie informative Mitteilungen vom Team des Intune-Diensts an, ohne durch das gesamte Office-Nachrichtencenter navigieren zu müssen. Diese Mitteilungen sind beispielsweise Benachrichtigungen zu Änderungen, die zuletzt im Intune-Dienst vorgenommen wurden oder die demnächst für Ihren Mandanten vorgesehen sind.  
 
 Standardmäßig werden die 10 aktuellsten und aktiven Meldungen angezeigt. Wenn Sie ältere Nachrichten abrufen möchten, klicken Sie auf **Frühere Nachrichten anzeigen**, um das *Nachrichtencenter* im Microsoft 365 Admin Center zu öffnen.  
 
-Ihr Konto muss die Rolle **globaler Administrator** oder **Dienstadministrator** in Azure Active Directory besitzen, um Informationen zu Neuigkeiten zu Intune abrufen zu können. Alternativ muss die Rolle **Nachrichtencenter-Leseberechtigter** im Microsoft 365 Admin Center zugewiesen sein.  Melden Sie sich am [Microsoft 365 Admin Center](https://admin.microsoft.com) mit den Administratorberechtigungen an, um diese Berechtigung zuzuweisen. Klicken Sie auf **Benutzer > Aktive Rollen**, und wählen Sie dann das Konto aus, auf das der Zugriff erforderlich ist. Klicken Sie für *Rollen* auf **Bearbeiten**, wählen Sie *Teams-Kommunikationsadministrator* aus, und **speichern** Sie anschließend Ihre Änderung, um die Berechtigungen zuzuweisen.  
+Ihr Konto muss in Azure Active Directory die Rolle **Globaler Administrator** oder **Dienstsupportadministrator** besitzen, um Neuigkeiten zu Intune abrufen zu können. Alternativ muss die Rolle **Nachrichtencenter-Leseberechtigter** im Microsoft 365 Admin Center zugewiesen sein.  Melden Sie sich am [Microsoft 365 Admin Center](https://admin.microsoft.com) mit den Administratorberechtigungen an, um diese Berechtigung zuzuweisen. Klicken Sie auf **Benutzer > Aktive Rollen**, und wählen Sie dann das Konto aus, auf das der Zugriff erforderlich ist. Klicken Sie für *Rollen* auf **Bearbeiten**, wählen Sie *Teams-Kommunikationsadministrator* aus, und **speichern** Sie anschließend Ihre Änderung, um die Berechtigungen zuzuweisen.  
 
-Sie können Ihre Kommunikationseinstellungen für Neuigkeiten zu Intune nur über das Microsoft 365 Admin Center einrichten.
+Sie können Ihre Kommunikationseinstellungen für das Intune-Nachrichtencenter nur über das Microsoft 365 Admin Center einrichten.

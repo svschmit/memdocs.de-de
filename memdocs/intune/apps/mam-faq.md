@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183008"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989984"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Häufig gestellte Fragen zu MAM und App-Schutz
 
@@ -78,7 +78,7 @@ Jede App, die in das [Intune App SDK](../developer/app-sdk.md) integriert oder v
 
 Das Intune SDK-Entwicklungsteam testet und unterstützt aktiv Apps, die mit den nativen Android-, iOS/iPadOS-Plattformen (Obj-C, Swift), Xamarin- und Xamarin.Forms-Plattformen erstellt wurden. Während einige Kunden das Intune SDK erfolgreich in andere Plattformen wie React Native und NativeScript integrieren konnten, bieten wir keine expliziten Anleitungen oder Plug-Ins für App-Entwickler, die andere als unsere unterstützten Plattformen verwenden.
 
-**Unterstützt das Intune App SDK die Microsoft Authentication Library (MSAL) oder soziale Konten?**<br></br>
+**Unterstützt das Intune App SDK die Microsoft-Authentifizierungsbibliothek (MSAL)?**<br></br>
 Intune App SDK kann für die Authentifizierung und bedingte Startszenarios entweder die Azure Active Directory-Authentifizierungsbibliothek oder die Microsoft-Authentifizierungsbibliothek verwenden. Es verwendet außerdem ADAL/MSAL zum Registrieren der Benutzeridentität beim MAM-Dienst für Verwaltungsszenarien ohne Geräteregistrierung.
 
 **Welche zusätzlichen Anforderungen gelten für die Verwendung der [mobilen Outlook-App](https://products.office.com/outlook)?**
@@ -170,7 +170,7 @@ Intune kann App-Daten auf drei Arten zurücksetzen: vollständiges Zurücksetzen
 Der Intune-App-Schutz basiert darauf, dass die Identität des Benutzers in der App und im Intune App SDK konsistent ist. Die einzige Möglichkeit, dies zu garantieren, ist eine moderne Authentifizierung. Es gibt Szenarien, in denen Apps möglicherweise mit einer lokalen Konfiguration funktionieren. Dies ist aber weder konsistent noch garantiert.
 
 **Gibt es eine sichere Möglichkeit, Weblinks in verwalteten Apps zu öffnen?**<br></br>
-Ja! Ein IT-Administrator kann eine App-Schutzrichtlinie für die [Intune Managed Browser-App](../apps/app-configuration-managed-browser.md) einrichten und bereitstellen, ein von Microsoft Intune entwickelter Webbrowser, der problemlos mit Intune verwaltet werden kann. Der IT-Administrator kann festlegen, dass alle Weblinks in über Intune verwaltete Apps mit der Managed Browser-App geöffnet werden müssen.
+Ja! Ein IT-Administrator kann App-Schutzrichtlinien für die Microsoft Edge-App bereitstellen und festlegen. Der IT-Administrator kann festlegen, dass alle Weblinks in über Intune verwaltete Apps mit der Microsoft Edge-App geöffnet werden müssen.
 
 ## <a name="app-experience-on-android"></a>Apps unter Android
 
@@ -211,7 +211,7 @@ Die Richtlinien für den Intune-App-Schutz ermöglichen es Ihnen, den App-Zugrif
 Durch diese Maßnahmen sollen die Daten Ihrer Organisation innerhalb der App und auf App-Ebene geschützt werden. Dieses Feature ist nur für iOS/iPadOS verfügbar und erfordert, dass das Intune App SDK für iOS, Version 9.0.1 oder höher in betreffende Anwendungen integriert wird. Die Integration des SDK ist erforderlich, damit das Verhalten für die Zielanwendungen erzwungen werden kann. Diese Integration erfolgt kontinuierlich und ist abhängig von den jeweiligen Anwendungsteams. Zu den betreffenden Apps zählen z. B. WXP, Outlook, Managed Browser und Yammer.
   
 **Ich kann die iOS-Freigabeerweiterung verwenden, um Geschäfts-, Uni- oder Schuldaten in nicht verwalteten Apps zu öffnen, auch wenn die Datenübertragungsrichtlinie auf „nur verwaltete Apps“ oder „keine Apps“ festgelegt ist. Führt das nicht zu Datenlecks?**<br></br>
-Die Intune-App-Schutzrichtlinie kann die iOS-Freigabeerweiterung nicht steuern, ohne das Gerät zu verwalten. Daher _**verschlüsselt Intune „unternehmenseigene“ Daten, bevor diese außerhalb der App freigegeben werden**_ . Sie können dies überprüfen, indem Sie versuchen, die „unternehmenseigene“ Datei außerhalb der verwalteten App zu öffnen. Die Datei sollte verschlüsselt sein und außerhalb der verwalteten App nicht geöffnet werden können.
+Die Intune-App-Schutzrichtlinie kann die iOS-Freigabeerweiterung nicht steuern, ohne das Gerät zu verwalten. Daher _**verschlüsselt Intune „unternehmenseigene“ Daten, bevor diese außerhalb der App freigegeben werden**_. Sie können dies überprüfen, indem Sie versuchen, die „unternehmenseigene“ Datei außerhalb der verwalteten App zu öffnen. Die Datei sollte verschlüsselt sein und außerhalb der verwalteten App nicht geöffnet werden können.
 
 **Wie funktionieren die verschiedenen Zugriffseinstellungen für den Intune-App-Schutz unter iOS, die für dieselben Apps und Benutzer konfiguriert sind?**<br></br>
 Zugriffsrichtlinien für den Intune-App-Schutz werden in einer bestimmten Reihenfolge auf den Geräten von Endbenutzern angewendet, wenn diese versuchen, über ihr Unternehmenskonto auf eine App zuzugreifen. In der Regel hat ein Zurücksetzungsvorgang Vorrang vor einem Block. Verwerfbare Warnungen werden erst als letztes berücksichtigt. Im Anschluss an die Einstellung, die dem Benutzer den Zugriff verweigert, wird z. B. eine Einstellung der mindestens erforderlichen iOS/iPadOS-Version angewendet, die den Benutzer auffordert, ein Update des iOS/iPadOS-Betriebssystems auszuführen (wenn dies auf den Benutzer/die App zutrifft). In diesem Szenario konfiguriert der IT-Administrator die Einstellung für die mindestens erforderliche iOS/iPadOS-Version auf Version 11.0.0.0 und die mindestens erforderliche iOS/iPadOS-Version, die nur für Warnungen gilt, auf 11.1.0.0. Gleichzeitig versucht das Gerät, auf dem noch die iOS/iPadOS-Version 10 installiert ist, auf die App zuzugreifen. In Folge dessen wird der Endbenutzer basierend auf restriktiveren Einstellungen für die mindestens erforderliche iOS/iPadOS-Version blockiert und erhält keinen Zugriff.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa861a266f89b82fdd2d6e73d30fdc2e58da33b4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0cd3505d0a0067adfe9082d7aa3882f3421a2183
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086909"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429601"
 ---
 # <a name="email-profile-settings-for-devices-running-windows-10-in-microsoft-intune"></a>E-Mail-Profileinstellungen für Geräte in Microsoft Intune, die unter Windows 10 ausgeführt werden
 
@@ -40,10 +40,10 @@ Mit den E-Mail-Profileinstellungen können Sie die E-Mail-App auf Ihren Geräten
   - **SAM-Kontoname**: Erfordert die Domäne, z.B. `domain\user1`. Geben Sie außerdem Folgendes ein:  
     - **Quelle für Benutzerdomänenname**: Wählen Sie zwischen **AAD** (Azure Active Directory) oder **Benutzerdefiniert**.
 
-      Wenn Sie die Attribute von **AAD** abrufen möchten, geben Sie Folgendes ein:
+      Geben Sie beim Abrufen der Attribute von **AAD** auch Folgendes ein:
       - **Attribut für Benutzerdomänenname aus AAD**: Rufen Sie entweder das Attribut **Vollständiger Domänenname** oder das Attribut **NetBIOS-Name** des Benutzers ab.
 
-      Wenn Sie sich dazu entscheiden, die Attribute **Benutzerdefiniert** zu verwenden, geben Sie Folgendes ein:
+      Geben Sie bei Verwendung von **benutzerdefinierten Attributen** auch Folgendes ein:
       - **Zu verwendender benutzerdefinierter Domänenname**: Geben Sie einen Wert ein, den Intune als Domänennamen verwenden kann, z. B. `contoso.com` oder `contoso`.
 
 - **Attribut für E-Mail-Adresse aus AAD**: Intune ruft dieses Attribut aus Azure Active Directory (AAD) ab. Wählen Sie aus, wie die E-Mail-Adresse für den Benutzer generiert wird. Folgende Optionen sind verfügbar:
@@ -59,9 +59,11 @@ Mit den E-Mail-Profileinstellungen können Sie die E-Mail-App auf Ihren Geräten
 - **Menge an E-Mails für die Synchronisierung**: Wählen Sie die Anzahl der Tage aus, für die E-Mails synchronisiert werden sollen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Wählen Sie **Unbegrenzt** aus, um alle verfügbaren E-Mails zu synchronisieren.
 - **Synchronisierungszeitplan**: Wählen Sie den Zeitplan aus, nach dem Geräte mit Daten vom Exchange-Server synchronisiert werden. Sie können auch **Bei Eintreffen von Nachrichten** auswählen, wodurch Daten synchronisiert werden, sobald sie eintreffen. Oder wählen Sie **Manuell** aus, damit der Gerätebenutzer die Synchronisierung startet.
 
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+
 ### <a name="content-sync"></a>Inhaltsynchronisierung
 
-- **Zu synchronisierender Inhaltstyp**: Wählen Sie die Inhaltstypen aus, die auf Geräten synchronisiert werden sollen:
+- **Zu synchronisierender Inhaltstyp**: Wählen Sie die Inhaltstypen aus, die auf Geräten synchronisiert werden sollen. Folgende Optionen sind verfügbar:
   - **Kontakte:** **Ein** synchronisiert die Kontakte. **Aus** synchronisiert die Kontakte nicht automatisch. Benutzer synchronisieren manuell.
   - **Kalender:** **Ein** synchronisiert den Kalender. **Aus** synchronisiert die Kontakte nicht automatisch. Benutzer synchronisieren manuell.
   - **Aufgaben:** **Ein** synchronisiert die Tasks. **Aus** synchronisiert die Tasks nicht automatisch. Benutzer synchronisieren manuell.
@@ -70,4 +72,6 @@ Mit den E-Mail-Profileinstellungen können Sie die E-Mail-App auf Ihren Geräten
 
 Sie können auch die E-Mail-Einstellungen auf [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md) und [iOS/iPadOS](email-settings-ios.md) konfigurieren. 
 
-[Konfigurieren von E-Mail-Einstellungen in Intune](email-settings-configure.md).
+[Erfahren Sie mehr über die E-Mail-Einstellungen in Intune](email-settings-configure.md).
+
+[Weisen Sie das Profil zu](device-profile-assign.md), und [überwachen Sie dessen Status](device-profile-monitor.md).

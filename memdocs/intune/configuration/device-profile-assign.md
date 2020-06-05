@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078276"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989019"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Zuweisen von Benutzer- und Geräteprofilen in Microsoft Intune
 
@@ -48,7 +48,7 @@ Stellen Sie sicher, dass Sie die richtige Rolle für die Zuweisung von Profilen 
 3. Wählen Sie das Profil, das Sie zuweisen möchten, und klicken Sie dann auf **Assignments** (Zuweisungen).
 4. Wählen Sie aus, ob Sie Gruppen **einschließen** oder **ausschließen** möchten, und wählen Sie Ihre Gruppen anschließend aus. Wenn Sie Ihre Gruppen auswählen, wählen Sie eine Azure AD-Gruppe aus. Halten Sie die **STRG**-Taste gedrückt, um mehrere Gruppen auszuwählen, und wählen Sie Ihre Gruppen anschließend aus.
 
-    ![Screenshot der Optionen zum Ein- oder Ausschließen von Gruppen aus einer Profilzuweisung](./media/device-profile-assign/group-include-exclude.png)
+    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Screenshot der Optionen zum Ein- oder Ausschließen von Gruppen aus einer Profilzuweisung in Microsoft Intune":::
 
 5. **Speichern** Sie die Änderungen.
 
@@ -109,7 +109,7 @@ Es hat sich bewährt, Profile speziell für Ihre Benutzergruppen zu erstellen un
 
 Wenn Sie Ihre Profile zuweisen, können Sie für da Ein- und Ausschließen von Gruppen die folgende Tabelle zurate ziehen. Ein Häkchen bedeutet, dass die Zuweisung unterstützt wird:
 
-![Unterstützte Optionen schließen Gruppen in eine Profilzuweisung ein oder daraus aus](./media/device-profile-assign/include-exclude-user-device-groups.png)
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups.png" alt-text="Unterstützte Optionen schließen Gruppen in eine Profilzuweisung ein oder daraus aus":::
 
 ### <a name="what-you-should-know"></a>Was Sie wissen sollten
 

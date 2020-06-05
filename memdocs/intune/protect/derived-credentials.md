@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 5/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8d4b866ca2086ae11efa10f1967b08f12e55919
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: d1b13d29f42778d73d4df4a86127b070db5dc601
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881025"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989807"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Verwenden abgeleiteter Anmeldeinformationen in Microsoft Intune
 
@@ -63,7 +63,7 @@ Intune unterstützt abgeleitete Anmeldeinformationen auf den folgenden Plattform
 
 Intune unterstützt pro Mandant einen einzelnen Zertifikataussteller für abgeleitete Anmeldeinformationen. Sie können Intune so konfigurieren, dass die folgenden Zertifikataussteller verwendet werden:
 
-- **DISA Purebred** (nur iOS): https:\//cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (nur iOS): https://public.cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
@@ -112,6 +112,7 @@ Im Folgenden finden Sie wichtige Überlegungen zu jedem unterstützten Partner. 
 Überprüfen Sie den plattformspezifischen Benutzerworkflow für die Geräte, die Sie mit abgeleiteten Anmeldeinformationen verwenden werden.
 
 - [iOS und iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+- [Vollständig verwaltete Android Enterprise-Geräte](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
 
 **Zu den wichtigsten Anforderungen gehören**:
 
@@ -226,7 +227,10 @@ Zusätzlich zur Bereitstellung der App mit Intune müssen Sie ein App-bezogenes 
   
 1. Laden Sie die DISA Purebred-Anwendung herunter: https:\//cyber.mil/pki-pke/purebred/.
 
-2. Stellen Sie die DISA Purebred-App in Intune bereit. Informationen finden Sie unter [Hinzufügen von branchenspezifischen iOS-Apps zu Microsoft Intune](../apps/lob-apps-ios.md).
+2. Stellen Sie die DISA Purebred-App in Intune bereit. 
+
+   - Informationen finden Sie unter [Hinzufügen von branchenspezifischen iOS-Apps zu Microsoft Intune](../apps/lob-apps-ios.md).
+   - Weitere Informationen finden Sie unter [Hinzufügen von branchenspezifischen Android-Apps zu Microsoft Intune](../apps/lob-apps-android.md).
 
 3. [Erstellen Sie ein App-bezogenes VPN](../configuration/vpn-settings-configure.md) für die DISA Purebred-Anwendung.
 

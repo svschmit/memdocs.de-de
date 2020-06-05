@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/05/2019
-ms.topic: conceptual
+ms.date: 05/22/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9104716c469168a5ab2c5c1b49caf14071150db1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326923"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988909"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Registrierung von Windows-Geräten
 
@@ -68,9 +68,9 @@ Wenn sich Standardbenutzer mit ihren Azure AD-Anmeldeinformationen anmelden, erh
 Um die Registrierung zu vereinfachen, erstellen Sie einen Domänennamenserver-Alias (DNS; Eintragstyp CNAME), der Registrierungsanforderungen an Intune-Server umleitet. Andernfalls müssen Benutzer, die eine Verbindung mit Intune herstellen möchten, während der Registrierung den Intune-Servernamen eingeben.
 
 **Schritt 1: Erstellen von CNAME-Einträgen** (optional)<br>
-Erstellen Sie CNAME DNS-Ressourceneinträge für die Domäne des Unternehmens. Wenn die Website Ihres Unternehmens beispielsweise „contoso.com“ heißt, würden Sie einen CNAME im DNS erstellen, der „EnterpriseEnrollment.contoso.com“ an „enterpriseenrollment-s.manage.microsoft.com“ umleitet.
+Erstellen Sie CNAME-DNS-Ressourceneinträge für die Domäne des Unternehmens. Wenn die Website Ihres Unternehmens beispielsweise „contoso.com“ heißt, würden Sie einen CNAME im DNS erstellen, der „EnterpriseEnrollment.contoso.com“ an „enterpriseenrollment-s.manage.microsoft.com“ umleitet.
 
-Obwohl das Erstellen eines CNAME-DNS-Eintrags optional ist, ist die Registrierung mit einem CNAME-Eintrag für den Benutzer leichter. Wenn kein CNAME-Eintrag für die Registrierung gefunden wurde, werden Benutzer dazu aufgefordert, manuell den MDM-Servernamen „enrollment.manage.microsoft.com“ einzugeben.
+Obwohl das Erstellen eines CNAME-DNS-Eintrags optional ist, ist die Registrierung mit einem CNAME-Eintrag für den Benutzer leichter. Wenn kein CNAME-Eintrag für die Registrierung gefunden wurde, werden Benutzer aufgefordert, manuell den MDM-Servernamen „enrollment.manage.microsoft.com“ einzugeben.
 
 |Typ|Hostname|Verweist auf|TTL|
 |----------|---------------|---------------|---|
@@ -95,8 +95,8 @@ Der Contoso DNS-Administrator sollte die folgenden CNAMEs erstellen:
 
 Die Weitergabe von Änderungen an DNS-Einträgen kann bis zu 72 Stunden dauern. Sie können die DNS-Änderung in Intune erst überprüfen, wenn der DNS-Eintrag verteilt ist.
 
-## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Zusätzliche Endpunkte werden unterstützt, aber nicht empfohlen
-„EnterpriseEnrollment-s.manage.microsoft.com“ ist der bevorzugte vollqualifizierte Domänenname für die Registrierung, es gibt jedoch zwei andere Endpunkte, die bereits von Kunden verwendet wurden und unterstützt werden. „EnterpriseEnrollment.manage.microsoft.com“ (ohne „-s“) und „manage.microsoft.com“ sind beide gültige Ziele für den Server für die automatische Ermittlung, allerdings muss der Benutzer dann auf einer Bestätigungsmeldung auf „OK“ tippen. Wenn Sie auf „EnterpriseEnrollment-s.manage.microsoft.com“ verweisen, muss der Benutzer keinen zusätzlichen Bestätigungsschritt vornehmen. Deshalb wird diese Konfiguration empfohlen.
+## <a name="additional-endpoints-are-used-but-no-longer-supported"></a>Zusätzliche Endpunkte werden verwendet, aber nicht mehr unterstützt
+„EnterpriseEnrollment-s.manage.microsoft.com“ ist der bevorzugte FQDN (vollqualifizierter Domänenname) für die Registrierung. Es gibt zwei weitere Endpunkte, die in der Vergangenheit von Kunden verwendet wurden und weiterhin funktionieren. Diese werden jedoch nicht mehr unterstützt. „EnterpriseEnrollment.manage.microsoft.com“ (ohne „-s“) und „manage.microsoft.com“ sind beide gültige Ziele für den Server für die automatische Ermittlung, allerdings muss der Benutzer dann auf einer Bestätigungsmeldung auf „OK“ tippen. Wenn Sie auf „EnterpriseEnrollment-s.manage.microsoft.com“ verweisen, muss der Benutzer keinen zusätzlichen Bestätigungsschritt vornehmen. Deshalb wird diese Konfiguration empfohlen.
 
 ## <a name="alternate-methods-of-redirection-are-not-supported"></a>Alternative Umleitungsmethoden werden nicht unterstützt
 Das Verwenden einer anderen Methode als die CNAME-Konfiguration wird nicht unterstützt. Beispielsweise wird die Verwendung eines Proxyservers zum Umleiten von „enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc“ auf „enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc“ oder „manage.microsoft.com/EnrollmentServer/Discovery.svc“ nicht unterstützt.

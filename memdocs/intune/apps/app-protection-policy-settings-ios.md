@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eda210408adbb15d82d6bfc31bef2f225f53bc6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65ba8319668baed6605bb8d0f409a4ea19a5140f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80863076"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990110"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Einstellungen für App-Schutzrichtlinien für iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -48,7 +48,7 @@ Es gibt drei Kategorien von Richtlinieneinstellungen: *Datenverschiebung*, *Zugr
 | <ul><ui>**Benutzer das Speichern von Kopien in den ausgewählten Diensten ermöglichen** | Benutzer können Speichervorgänge in den ausgewählten Diensten (OneDrive for Business, SharePoint und lokaler Speicher) durchführen. Alle anderen Dienste werden blockiert.| **0 ausgewählt**  |
 | **Ausschneiden, Kopieren und Einfügen zwischen Apps einschränken** | Geben Sie an, wann Ausschneide-, Kopier- und Einfügeaktionen in dieser App erlaubt sind. Wählen Sie aus unter: <ul><li>**Blockiert:**  Hiermit werden keine Ausschneide-, Kopier- und Einfügeaktionen zwischen dieser App und anderen Apps zugelassen.</li><li>**Richtlinienverwaltete Apps:** Hiermit werden Ausschneide-, Kopier- und Einfügeaktionen zwischen dieser App und anderen richtlinienverwalteten Apps zugelassen.</li><li>**Richtlinienverwaltete Apps mit Einfügen:** Hiermit werden Ausschneide- oder Kopieraktionen zwischen dieser App und anderen richtlinienverwalteten Apps zugelassen. Einfügen von Daten aus beliebigen Apps in diese App zulassen.</li><li>**Alle Apps:** Keine Einschränkungen für Ausschneide-, Kopier- und Einfügeaktionen in und aus dieser App.</ul> | **Any app**   |
 | <ul><ui>**Zeichenlimit für Ausschneiden und Kopieren für alle Apps** | Legen Sie die Anzahl von Zeichen fest, die aus Unternehmensdaten und -konten ausgeschnitten oder kopiert werden können.  Damit kann die festgelegte Zeichenanzahl unabhängig von der Einstellung **Ausschneiden, Kopieren und Einfügen mit anderen Apps einschränken** mit einer beliebigen Anwendung geteilt werden.<p>Standardwert = 0<p>**Hinweis**: *Die App muss Version 9.0.14 oder höher des Intune SDK aufweisen.*  | **0**   |
-| **Benachrichtigungen zu Organisationsdaten** | Geben Sie an, wie Organisationsdaten über Benachrichtigungen des Betriebssystems für Organisationskonten freigegeben werden. Diese Richtlinieneinstellung wirkt sich auf das lokale Gerät und alle verbundenen Geräte, wie Wearables und intelligente Lautsprecher, aus. In Apps werden möglicherweise zusätzliche Steuerelemente zum Anpassen des Benachrichtigungsverhaltens bereitgestellt, oder es werden nicht alle Werte berücksichtigt. Wählen Sie aus unter: <ul><li>**Blockiert:** Benachrichtigungen werden nicht freigegeben.</li><ul><li>Wenn dies von der App nicht unterstützt wird, sind Benachrichtigungen zulässig.</li></ul><li>**Organisationsdaten blockieren**: Organisationsdaten werden z. B. nicht in Benachrichtigungen freigegeben.</li><UL><li>„Sie haben eine neue E-Mail“, „Sie haben ein Meeting“</li><li>Wenn dies von der App nicht unterstützt wird, werden Benachrichtigungen blockiert.</li></ul><li>**Zulassen:** Hiermit werden Organisationsdaten in Benachrichtigungen freigegeben.</li></ul> <p>**Hinweis**: *Diese Einstellung muss von der App unterstützt werden. Aktuell wird diese Einstellung von Outlook für iOS, Version 4.15.0 oder höher unterstützt.* | **Zulassen**   |
+| **Benachrichtigungen zu Organisationsdaten** | Geben Sie an, wie Organisationsdaten über Benachrichtigungen des Betriebssystems für Organisationskonten freigegeben werden. Diese Richtlinieneinstellung wirkt sich auf das lokale Gerät und alle verbundenen Geräte, wie Wearables und intelligente Lautsprecher, aus. In Apps werden möglicherweise zusätzliche Steuerelemente zum Anpassen des Benachrichtigungsverhaltens bereitgestellt, oder es werden nicht alle Werte berücksichtigt. Wählen Sie aus unter: <ul><li>**Blockiert:** Benachrichtigungen werden nicht freigegeben.</li><ul><li>Wenn dies von der App nicht unterstützt wird, sind Benachrichtigungen zulässig.</li></ul><li>**Organisationsdaten blockieren**: Organisationsdaten werden z. B. nicht in Benachrichtigungen freigegeben.</li><UL><li>„Sie haben eine neue E-Mail“, „Sie haben ein Meeting“</li><li>Wenn dies von der App nicht unterstützt wird, werden Benachrichtigungen blockiert.</li></ul><li>**Zulassen:** Hiermit werden Organisationsdaten in Benachrichtigungen freigegeben.</li></ul> <p>**Hinweis**: *Diese Einstellung muss von der App unterstützt werden. Aktuell wird diese Einstellung von Outlook für iOS, Version 4.34.0 oder höher unterstützt.* | **Zulassen**   |
 | **Tastaturen von Drittanbietern** | Wählen Sie **Blockieren** aus, um die Verwendung von Tastaturen von Drittanbietern in verwalteten Apps zu verhindern.<p>Wenn diese Einstellung aktiviert ist, erhält der Benutzer eine einmalige Meldung, die angibt, das die Verwendung von Tastaturen von Drittanbietern gesperrt ist. Diese Meldung wird angezeigt, wenn der Benutzer zum ersten Mal mit Unternehmensdaten interagiert, bei denen die Verwendung einer Tastatur erforderlich ist. Bei der Verwendung verwalteter Anwendungen ist nur die Standardtastatur von iOS/iPadOS verfügbar, alle anderen Tastaturen sind deaktiviert. Diese Einstellung betrifft sowohl Organisationskonten als auch persönliche Konten für Anwendungen mit mehreren Identitäten. Diese Einstellung wirkt sich nicht auf die Verwendung von Drittanbieter-Tastaturen in nicht verwalteten Apps aus.<p>**Hinweis:** Zur Verwendung dieses Features muss Version 12.0.16 oder höher des Intune SDK installiert sein. Bei Apps mit den SDK-Versionen 8.0.14 bis einschließlich 12.0.15 wird dieses Feature für Apps mit mehreren Identitäten nicht richtig angewendet. Weitere Informationen finden Sie unter [Bekanntes Problem: Tastaturen von Drittanbietern werden in iOS/iPadOS für persönliche Konten nicht blockiert](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Updated-Known-issue-Third-party-keyboards-are-not-blocked-in-iOS/ba-p/339486). | **Zulassen**  |
 
 ### <a name="encryption"></a>Verschlüsselung

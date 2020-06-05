@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: samyada
-ms.openlocfilehash: 9a0687b9e3938c93cfaebe0e064fd994077a92af
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 325460e4d487ade7337fc99b8a77fd3182d6cc17
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086688"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430109"
 ---
 # <a name="settings-for-microsoft-defender-atp-for-mac-in-microsoft-intune"></a>Einstellungen für Microsoft Defender ATP für Mac in Microsoft Intune
 
 Sehen Sie sich die Einstellungen für das *Antivirus*-Profil an, die Sie für Microsoft Defender ATP für Mac in Microsoft Intune konfigurieren können. Weitere Informationen zu diesen Einstellungen finden Sie in der Windows-Dokumentation unter [Microsoft Defender Advanced Threat Protection für Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).
+
+Erfahren Sie mehr über dich Verwendung von [Endpunktsicherheitsrichtlinien](../protect/endpoint-security-policy.md) in Intune.
 
 **Microsoft Defender ATP**
 

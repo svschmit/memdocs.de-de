@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771428"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165718"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App
 
@@ -42,7 +42,7 @@ In der folgenden Tabelle finden Sie Details zur Anpassung des Brandings für die
 | **Name der Organisation** | Dieser Name wird im gesamten Messaging auf der Oberfläche für Endbenutzer angezeigt. Über die Einstellung **In Kopfzeile anzeigen** kann der Name auch in Kopfzeilen angezeigt werden. Die maximale Länge beträgt 40 Zeichen. |
 | **Farbe** | Über die Option **Standard** stehen fünf Standardfarben zur Auswahl. Über die Option **Benutzerdefiniert** können Sie eine bestimmte Farbe anhand eines Hexadezimalwerts auswählen. |
 | **Farbdesign** | Legen Sie das Farbdesign fest, das auf der gesamten Oberfläche für Endbenutzer angezeigt werden soll. Die Textfarbe wird automatisch auf Schwarz oder Weiß festgelegt, dass sie auf der ausgewählten Designfarbe möglichst gut sichtbar ist. |
-| **In Kopfzeile anzeigen** | Wählen Sie aus, ob in Kopfzeilen der Benutzeroberfläche **Unternehmenslogo und -name**, **nur das Unternehmenslogo** oder **nur der Unternehmensname** angezeigt werden soll. Die Vorschaufelder unten zeigen nur die Logos, nicht den Namen.  |
+| **In Kopfzeile anzeigen** | Wählen Sie aus, ob in Kopfzeilen der Benutzeroberfläche das **Organisationslogo und der Organisationsname**, **nur das Organisationslogo**  oder **nur der Organisationsname** angezeigt werden soll. Die Vorschaufelder unten zeigen nur die Logos, nicht den Namen.  |
 | **Logo für Hintergrund in Designfarbe hochladen** | Laden Sie das Logo hoch, das Sie auf der ausgewählten Designfarbe anzeigen möchten. Um eine optimale Darstellung zu erzielen, laden Sie ein Logo mit transparentem Hintergrund hoch. Im Vorschaufeld unterhalb der Einstellung können Sie die Darstellung sehen.<p>Maximale Bildgröße: 400 × 400 px<br>Maximale Dateigröße:   750 KB<br>Dateityp: PNG, JPG oder JPEG |
 | **Logo für weißen oder hellen Hintergrund hochladen** | Laden Sie das Logo hoch, das Sie vor weißen oder hellen Hintergründen anzeigen möchten. Um eine optimale Darstellung zu erzielen, laden Sie ein Logo mit transparentem Hintergrund hoch. Im Vorschaufeld unterhalb der Einstellung können Sie die Darstellung vor einem weißen Hintergrund sehen.<p>Maximale Bildgröße: 400 × 400 px<br>Maximale Dateigröße: 750 KB<br>Dateityp: PNG, JPG oder JPEG |
 | **Markenimage hochladen** | Laden Sie ein Bild hoch, das für die Marke Ihrer Organisation steht.<p><ul><li>Empfohlene Bildbreite: Größer als 1125 px (mindestens 650 px)</li><li>Maximale Bildgröße: 1,3 MB</li><li>Dateityp: PNG, JPG oder JPEG</li><li>Das Logo wird an folgenden Stellen angezeigt:</li><ul><li>iOS/iPadOS-Unternehmensportal: Hintergrundbild auf der Profilseite des Benutzers.</li><li>Unternehmensportal-Website:   Hintergrundbild auf der Profilseite des Benutzers</li><li>Android-Intune-App: Im Drawer und als Hintergrundbild auf der Profilseite des Benutzers</li></ul></ul> |
@@ -86,21 +86,25 @@ Geben Sie die Supportinformationen Ihrer Organisation ein, sodass Mitarbeiter ga
 
 ## <a name="configuration"></a>Konfiguration
 
-Die folgende Tabelle enthält zusätzliche Konfigurationsinformationen:
+Sie können die Benutzeroberfläche des Unternehmensportals speziell für die Registrierung, den Datenschutz, Benachrichtigungen, App-Quellen und Self-Service-Aktionen konfigurieren.
+
+### <a name="enrollment"></a>Anmeldung
+
+Die folgende Tabelle enthält registrierungsspezifische Konfigurationsinformationen:
 
 | Feldname | Maximale Länge | Weitere Informationen |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URL zur Datenschutzerklärung | 79 | Legen Sie fest, dass die Datenschutzerklärung Ihrer Organisation angezeigt wird, wenn Benutzer auf entsprechende Links klicken. Sie müssen eine gültige URL im Format `https://www.contoso.com` eingeben. |
-| Datenschutzmeldung im Unternehmensportal für iOS/iPadOS | 520 | Behalten Sie die Standardeinstellung bei, oder legen Sie eine benutzerdefinierte Nachricht fest, um die Elemente aufzulisten, die Ihre Organisation auf verwalteten iOS/iPadOS-Geräten anzeigen darf. Mithilfe von Markdown können Sie Aufzählungspunkte, Fett- und Kursivformatierung sowie Links hinzufügen. |
-| Geräteregistrierung | N/V | Geben Sie an, ob und wie Benutzer aufgefordert werden sollen, sich bei der mobilen Geräteverwaltung anzumelden. Details finden Sie im Folgenden. |
-| Benachrichtigung über Gerätebesitz | N/V | Senden Sie eine Pushbenachrichtigung an Ihre Android- und iOS-Unternehmensportalbenutzer, wenn ihr Gerätebesitzertyp von „Persönlich“ in „Unternehmen“ geändert wird. Diese Pushbenachrichtigung ist standardmäßig deaktiviert. Wenn der Gerätebesitz auf „Unternehmen“ festgelegt wird, hat Intune einen umfassenderen Zugriff auf das Gerät, einschließlich des vollständigen App-Inventars, der FileVault-Schlüsselrotation, des Abrufs von Rufnummern und einiger ausgewählter Remoteaktionen. Weitere Informationen finden Sie unter [Ändern des Gerätebesitzes](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Geräteregistrierung | N/V | Hier geben Sie an, ob und wie Benutzer aufgefordert werden sollen, sich für die mobile Geräteverwaltung zu registrieren. Weitere Informationen finden Sie unter [Optionen für die Einstellung „Geräteregistrierung“](../apps/company-portal-app.md#device-enrollment-setting-options). |
 
-### <a name="device-enrollment-setting-options"></a>Optionen für die Einstellung „Geräteregistrierung“
+#### <a name="device-enrollment-setting-options"></a>Optionen für die Einstellung „Geräteregistrierung“
 
 > [!NOTE]
 > Damit die Einstellung „Geräteregistrierung“ unterstützt wird, müssen Endbenutzer über eine der folgenden Unternehmensportalversionen verfügen:
 > - Unternehmensportal unter iOS/iPadOS: Version 4.4 oder höher
 > - Unternehmensportal unter Android: Version 5.0.4715.0 oder höher 
+
+> [!IMPORTANT]
+> Die folgenden Einstellungen gelten nicht für iOS-/iPadOS-Geräte, die dafür konfiguriert sind, sich über die [automatische Geräteregistrierung](../enrollment/device-enrollment-program-enroll-ios.md) zu registrieren. Unabhängig von dieser Einstellung werden iOS-/iPadOS-Geräte, die sich ihrer Konfiguration gemäß über die automatische Geräteregistrierung registrieren, während des Willkommensflows registriert. Die Benutzer werden beim Start des Unternehmensportals aufgefordert, sich anzumelden.
 
 |    Optionen für die Geräteregistrierung    |    Beschreibung    |    Eingabeaufforderungen als Prüfliste    |    Benachrichtigung    |    Gerätedetailstatus    |    App-Detailstatus (einer App, die eine Registrierung erfordert)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
@@ -110,11 +114,51 @@ Die folgende Tabelle enthält zusätzliche Konfigurationsinformationen:
 
 <sup>(1)</sup> **Bekanntes Problem:** Wenn Sie Apps so einrichten, dass zur Installation eine Registrierung erforderlich ist, und gleichzeitig die Geräteregistrierung auf „Nicht verfügbar“ festlegen, fordert die Unternehmensportal-App unter Android die Benutzer dennoch zur Registrierung auf. Dieses Verhalten wird in Kürze entfernt.
 
-> [!NOTE]
-> Wenn Sie Azure Government verwenden, werden dem Endbenutzer App-Protokolle angeboten. Er kann nun entscheiden, wie er diese teilen möchte, wenn der er den Prozess zum Abrufen von Hilfe zu einem Problem startet. Wird Azure Government jedoch nicht verwendet, sendet das Unternehmensportal App-Protokolle direkt an Microsoft, wenn der Benutzer den Prozess zum Anfordern von Hilfe zu einem Problem startet. Das Senden der App-Protokolle an Microsoft erleichtert die Problembehandlung und -behebung.
+### <a name="privacy"></a>Datenschutz
+
+Die folgende Tabelle enthält datenschutzspezifische Konfigurationsinformationen:
+
+| Feldname | Maximale Länge | Weitere Informationen |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URL zur Datenschutzerklärung | 79 | Legen Sie fest, dass die Datenschutzerklärung Ihrer Organisation angezeigt wird, wenn Benutzer auf entsprechende Links klicken. Sie müssen eine gültige URL im Format `https://www.contoso.com` eingeben. |
+| Datenschutzmeldung im Unternehmensportal für iOS/iPadOS | 520 | Behalten Sie die **Standardeinstellung** bei, oder legen Sie eine **benutzerdefinierte** Nachricht fest, um die Elemente aufzulisten, die in Ihrer Organisation nicht auf verwalteten iOS-/iPadOS-Geräten angezeigt werden dürfen. Mithilfe von Markdown können Sie Aufzählungspunkte, Fett- und Kursivformatierung sowie Links hinzufügen. Benutzern wird außerdem eine Liste der Elemente und Aktionen angezeigt, die in Ihrer Organisation aufgerufen und ausgeführt werden dürfen. Diese Liste wird jedoch automatisch von Intune generiert und ist nicht anpassbar. |
+
+### <a name="device-ownership-notification"></a>Benachrichtigung über Gerätebesitz
+
+Die folgende Tabelle enthält benachrichtigungsspezifische Konfigurationsinformationen:
+
+| Feldname | Maximale Länge | Weitere Informationen |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Pushbenachrichtigung an Benutzer senden, wenn sich der Besitztyp des Geräts von „Persönlich“ in „Unternehmen“ ändert (nur Android und iOS/iPadOS) | N/V | Senden Sie eine Pushbenachrichtigung an Ihre Android- und iOS-Unternehmensportalbenutzer, wenn ihr Gerätebesitzertyp von „Persönlich“ in „Unternehmen“ geändert wird. Diese Pushbenachrichtigung ist standardmäßig deaktiviert. Wenn der Gerätebesitz auf „Unternehmen“ festgelegt wird, hat Intune einen umfassenderen Zugriff auf das Gerät, einschließlich des vollständigen App-Inventars, der FileVault-Schlüsselrotation, des Abrufs von Rufnummern und einiger ausgewählter Remoteaktionen. Weitere Informationen finden Sie unter [Ändern des Gerätebesitzes](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+
+### <a name="app-sources"></a>App-Quellen
+
+Sie können auswählen, welche zusätzlichen App-Quellen im Unternehmensportal angezeigt werden. Die folgende Tabelle enthält spezifische Konfigurationsinformationen zur App-Quelle:
+
+| Feldname | Maximale Länge | Weitere Informationen |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Azure AD-Unternehmensanwendungen | N/V | Klicken Sie auf **Ausblenden** oder **Zeigen**, damit **Azure AD-Unternehmensanwendungen** jedem Endbenutzer im Unternehmensportal angezeigt werden. Weitere Informationen finden Sie unter [Einstellungsoptionen für App-Quellen](../apps/company-portal-app.md#app-source-setting-options). |
+| Office Online-Anwendungen | N/V | Klicken Sie auf **Ausblenden** oder **Anzeigen**, damit **Office Online-Anwendungen** jedem Endbenutzer im Unternehmensportal angezeigt werden. Weitere Informationen finden Sie unter [Einstellungsoptionen für App-Quellen](../apps/company-portal-app.md#app-source-setting-options). |
+
+#### <a name="app-source-setting-options"></a>Einstellungsoptionen für App-Quellen
 
 > [!NOTE]
-> In Übereinstimmung mit den Richtlinien von Microsoft und Apple werden die von unserem Dienst gesammelten Daten keinesfalls an Dritte verkauft.
+> Auf der Website des Unternehmensportals werden initial Apps aus anderen Microsoft-Diensten angezeigt.
+
+Sie können **Azure AD-Unternehmensanwendungen** und **Office Online-Anwendungen** für alle Endbenutzer im Unternehmensportal ausblenden oder anzeigen lassen. Wenn Sie auf **Anzeigen** klicken, wird der gesamte Anwendungskatalog aus den ausgewählten, dem Benutzer zugewiesenen Microsoft-Diensten im Unternehmensportal anzeigt. **Azure AD-Unternehmensanwendungen** werden über das [Azure-Portal](https://portal.azure.com) registriert und zugewiesen. **Office Online-Anwendungen** werden mithilfe der im [M365-Admin Center](https://admin.microsoft.com) verfügbaren Steuerfunktionen für die Lizenzierung zugewiesen. Diese Konfigurationseinstellung finden Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) unter **Mandantenverwaltung** > **Anpassung**. Standardmäßig wird jede zusätzliche App auf **Ausblenden** festgelegt. 
+
+### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Anpassen von Self-Service-Geräteaktionen für Benutzer im Unternehmensportal
+
+Sie können die verfügbaren Self-Service-Geräteaktionen anpassen, die Endbenutzern in der App und auf der Website des Unternehmensportals angezeigt werden. Damit nicht beabsichtigte Geräteaktionen vermieden werden, können Sie Einstellungen für die Unternehmensportal-App konfigurieren. Klicken Sie dazu auf **Mandantenverwaltung** > **Anpassung**. 
+
+Die folgenden Aktionen sind verfügbar:
+- Schaltfläche **Entfernen** auf unternehmenseigenen Windows-Geräten ausblenden
+- Schaltfläche **Zurücksetzen** auf unternehmenseigenen Windows-Geräten ausblenden
+- Schaltfläche **Entfernen** auf unternehmenseigenen iOS-/iPadOS-Geräten ausblenden
+- Schaltfläche **Zurücksetzen** auf unternehmenseigenen iOS-/iPadOS-Geräten ausblenden
+
+> [!NOTE]
+> Mit diesen Aktionen lassen sich Geräteaktionen in der App und auf der Website des Unternehmensportals einschränken. Damit werden jedoch keine Richtlinien zur Einschränkung von Geräten implementiert. Damit Benutzer ihre Geräte nicht über die Einstellungen auf die Werkseinstellungen zurücksetzen oder die mobile Geräteverwaltung entfernen, müssen Sie Richtlinien für Geräteeinschränkungen konfigurieren. 
 
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Vom Unternehmensportal abgeleitete Anmeldeinformationen für iOS/iPadOS-Geräte
 
@@ -136,7 +180,7 @@ Endbenutzer können mithilfe von Tastenkombinationen (Tastenkombinations-Editor)
 Die folgenden Tastenkombinationen stehen Ihnen in der Windows-Unternehmensportal-App zur Verfügung.
 
 | Bereich | Beschreibung | Tastenkombination |
-|:------------------:|:--------------:|:-----------------:|
+|--------------------|----------------|-------------------|
 | Navigationsmenü | Navigation | ALT+M |
 |  | -Startseite | ALT+H |
 |  | Alle Apps | Alt+A |
@@ -159,7 +203,9 @@ Endbenutzer können zudem die verfügbaren Tastenkombinationen in der Windows-Un
 
 ## <a name="user-self-service-device-actions-from-the-company-portal"></a>Self-Service-Geräteaktionen für Benutzer im Unternehmensportal
 
-Benutzer können über die Unternehmensportal-App, die Unternehmensportal-Website oder die Intune-App unter Android Aktionen auf ihren lokalen oder Remotegeräten ausführen. Die von Benutzern ausführbaren Aktionen variieren je nach Geräteplattform und -konfiguration. In allen Fällen können Remotegeräteaktionen nur vom primären Benutzer eines Geräts ausgeführt werden.
+Benutzer können über die Unternehmensportal-App, die Website des Unternehmensportals oder die Intune-App unter Android Aktionen auf ihren lokalen Geräten oder Remotegeräten ausführen. Die von Benutzern ausführbaren Aktionen variieren je nach Geräteplattform und -konfiguration. In allen Fällen können Remotegeräteaktionen nur vom primären Benutzer eines Geräts ausgeführt werden.  
+
+Die folgenden Aktionen sind Beispiele für verfügbare Self-Service-Geräteaktionen:
 
 - **Außerbetriebnahme**: Entfernt das Gerät aus der Intune-Verwaltung. In der Unternehmensportal-App und der Unternehmensportal-Website wird dies als **Entfernen** angezeigt.
 - **Zurücksetzen**: Diese Aktion initiiert eine Rücksetzung des Geräts. In der Unternehmensportal-Website wird dies als **Zurücksetzen** angezeigt, in der iOS/iPadOS-Unternehmensportal-App als **Auf Werkseinstellungen zurücksetzen**.
@@ -169,14 +215,16 @@ Benutzer können über die Unternehmensportal-App, die Unternehmensportal-Websit
 - **Passcode zurücksetzen**: Diese Aktion wird zum Zurücksetzen des Passcodes eines Geräts verwendet. Auf iOS/iPadOS-Geräten wird der Passcode entfernt, und der Endbenutzer muss in den Einstellungen einen neuen Code eingeben. Auf unterstützten Android-Geräten wird ein neuer Passcode von Intune generiert und temporär im Unternehmensportal angezeigt.
 - **Schlüsselwiederherstellung**: Diese Aktion wird verwendet, um einen persönlichen Wiederherstellungsschlüssel für verschlüsselte macOS-Geräte von der Unternehmensportalwebsite wiederherzustellen. 
 
+Informationen zum Anpassen der verfügbaren Self-Service-Benutzeraktionen finden Sie unter [Anpassen von Self-Service-Geräteaktionen für Benutzer im Unternehmensportal](../apps/company-portal-app.md#customizing-user-self-service-actions-for-the-company-portal).
+
 ### <a name="self-service-actions"></a>Self-Service-Aktionen
 
 Einige Plattformen und Konfigurationen lassen keine Self-Service-Geräteaktionen zu. In der folgenden Tabelle finden Sie weitere Informationen zu Self-Service-Aktionen:
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Außerkraftsetzen | Verfügbar<sup>(1)</sup> | Verfügbar | Verfügbar | Verfügbar<sup>(7)</sup> |
-| Zurücksetzen | Verfügbar | Verfügbar<sup>(5)</sup> | N/V | Verfügbar<sup>(7)</sup> |
+| Außerkraftsetzen | Verfügbar<sup>(1)</sup> | Verfügbar<sup>(9)</sup> | Verfügbar | Verfügbar<sup>(7)</sup> |
+| Zurücksetzen | Verfügbar | Verfügbar<sup>(5)</sup><sup>(9)</sup> | N/V | Verfügbar<sup>(7)</sup> |
 | Umbenennen<sup>(4)</sup> | Verfügbar | Verfügbar | Verfügbar | Verfügbar |
 | Sync | Verfügbar | Verfügbar | Verfügbar | Verfügbar |
 | Remotesperre | Nur Windows Phone | Verfügbar | Verfügbar | Verfügbar |
@@ -190,8 +238,17 @@ Einige Plattformen und Konfigurationen lassen keine Self-Service-Geräteaktionen
 <sup>(5)</sup>**Löschen** ist auf iOS/iPadOS-Geräten, die vom Benutzer registriert werden, nicht verfügbar.<br>
 <sup>(6)</sup> Das **Zurücksetzen von Passcodes** wird in einigen Android- und Android Enterprise-Konfigurationen nicht unterstützt. Weitere Informationen finden Sie unter [Zurücksetzen oder Entfernen eines Gerätepasscodes in Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> Aktionen für **Außerbetriebnahme** und **Zurücksetzen** sind in Szenarios mit Android Enterprise-Gerätebesitzern (COPE, COBO, COSU) nicht verfügbar.<br>
-<sup>(8)</sup> **Passcode zurücksetzen** wird auf von Benutzern registrierten iOS/iPadOS-Geräten nicht unterstützt.
+<sup>(8)</sup> **Passcode zurücksetzen** wird auf von Benutzern registrierten iOS/iPadOS-Geräten nicht unterstützt.<br>
+<sup>(9)</sup> Die Optionen **Zurückziehen** und **Zurücksetzen** sind auf allen iOS-/iPadOS-Geräten deaktiviert, die für die automatische Geräteregistrierung (früher „DEP“) konfiguriert sind.
+
+### <a name="app-logs"></a>App-Protokolle
+
+Wenn Sie Azure Government verwenden, werden dem Endbenutzer App-Protokolle angeboten. Er kann nun entscheiden, wie er diese teilen möchte, wenn der er den Prozess zum Abrufen von Hilfe zu einem Problem startet. Wird Azure Government jedoch nicht verwendet, sendet das Unternehmensportal App-Protokolle direkt an Microsoft, wenn der Benutzer den Prozess zum Anfordern von Hilfe zu einem Problem startet. Das Senden der App-Protokolle an Microsoft erleichtert die Problembehandlung und -behebung.
+
+> [!NOTE]
+> In Übereinstimmung mit den Richtlinien von Microsoft und Apple werden die von unserem Dienst gesammelten Daten keinesfalls an Dritte verkauft.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
+- [Konfigurieren des Logos und der Markenfarbe Ihrer Organisation für neue Registerkartenseiten in Microsoft Edge](manage-microsoft-edge.md#organization-logo-and-brand-color)
 - [Hinzufügen von Apps](apps-add.md)

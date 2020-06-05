@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b8bde6b7979cfe3b936a08630e23e19fc7e5a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615057"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989315"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurieren von Aktionen für nicht konforme Geräte in Intune
 
@@ -55,11 +55,25 @@ Wenn die E-Mail gesendet wurde, bezieht Intune Einzelheiten zu dem nicht konform
 
 - **Nicht konformes Gerät remote sperren:** Verwenden Sie diese Aktion, um eine Remotesperre für ein Gerät auszugeben. Zum Entsperren des Geräts wird der Benutzer dann zur Eingabe einer PIN oder eines Kennworts aufgefordert. Weitere Informationen zur Funktion [Remotesperre](../remote-actions/device-remote-lock.md).
 
+  Folgende Plattformen unterstützen diese Aktion:
+  - Android:
+    - Android-Geräteadministrator
+    - Android Enterprise-Gerätebesitzer
+    - Android Enterprise: Arbeitsprofil
+    - Android Enterprise-Kioskgeräte
+  - iOS/iPadOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 und höher
+
 - **Retire the noncompliant device** (Nicht konformes Gerät deaktivieren): Diese Aktion entfernt alle Unternehmensdaten vom Gerät und dann das Gerät aus der Intune-Verwaltung. Damit ein Gerät nicht versehentlich gelöscht wird, unterstützt diese Aktion einen minimalen Zeitplan von **30** Tagen.
 
   Folgende Plattformen unterstützen diese Aktion:
-  - Android
-  - iOS
+  - Android:
+    - Android-Geräteadministrator
+    - Android Enterprise-Gerätebesitzer
+    - Android Enterprise: Arbeitsprofil
+  - iOS/iPadOS
   - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 und höher
@@ -161,7 +175,7 @@ Sie können beim Erstellen einer Konformitätsrichtlinie oder Aktualisieren eine
 
    - **Nicht konformes Gerät remote sperren:** Sperren Sie das Gerät, wenn es nicht konform ist. Durch diese Aktion wird der Benutzer zur Eingabe einer PIN oder eines Kennworts gezwungen, um das Gerät zu entsperren
 
-   - **Retire the noncompliant device** (Nicht konformes Gerät deaktivieren): Wenn das Gerät nicht konform ist, entfernen Sie alle Unternehmensdaten vom Gerät, und entfernen Sie das Gerät aus der Intune-Verwaltung. Damit ein Gerät nicht versehentlich gelöscht wird, unterstützt diese Aktion einen minimalen Zeitplan von **30** Tagen.
+   - **Retire the noncompliant device** (Nicht konformes Gerät deaktivieren): Wenn das Gerät nicht konform ist, entfernen Sie alle Unternehmensdaten vom Gerät, und entfernen Sie das Gerät aus der Intune-Verwaltung.
 
    - **Pushbenachrichtigung an Endbenutzer senden**: Konfigurieren Sie diese Aktion so, dass eine Pushbenachrichtigung über die Nichtkonformität an ein Gerät über die Unternehmensportal-App oder die Intune-App auf dem Gerät gesendet wird.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e92315377a839a537dfc4c2da00d282d2cddf58f
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359357"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429085"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Verwenden benutzerdefinierter Einstellungen für macOS-Geräte in Microsoft Intune
 
@@ -39,7 +39,7 @@ Dieser Artikel enthält eine Anleitung zur Verwendung von Apple Configurator und
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie das Profil.](custom-settings-configure.md)
+[Erstellen Sie ein benutzerdefiniertes macOS-Profil](custom-settings-configure.md).
 
 ## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
 
@@ -57,16 +57,16 @@ Dieser Artikel enthält eine Anleitung zur Verwendung von Apple Configurator und
 
 ## <a name="custom-configuration-profile-settings"></a>Einstellungen für das benutzerdefinierte Konfigurationsprofil
 
-- **Name des benutzerdefinierten Konfigurationsprofils:** Geben Sie einen Namen für die Richtlinie ein. Dieser Name wird auf dem Gerät und im Intune-Status angezeigt.
-- **Konfigurationsprofildatei:** Navigieren Sie zum mit Apple Configurator oder dem Apple-Profil-Manager erstellten Konfigurationsprofil. Die importierte Datei wird im Bereich **Dateiinhalt** angezeigt.
+- **Konfigurationsprofilname:** Geben Sie einen Namen für die Richtlinie ein. Dieser Name wird auf dem Gerät und im Intune-Status angezeigt.
+- **Konfigurationsprofildatei**: Navigieren Sie zur Datei `.xml` oder `.mobileconfig`, die Sie mit Apple Configurator oder dem Apple-Profil-Manager erstellt haben. Die maximale Dateigröße beträgt 1 Million Bytes (1 MB). Die Datei, die Sie importieren, wird angezeigt. Sie können eine Datei auch **entfernen**, nachdem sie hinzugefügt wurde.
 
   Sie können Ihren `.mobileconfig`-Dateien auch Gerätetoken hinzufügen. Gerätetoken werden verwendet, um gerätespezifische Informationen hinzuzufügen. Geben Sie zum Beispiel zur Anzeige der Seriennummer `{{serialnumber}}` ein. Auf dem Gerät wird ein Text angezeigt, der für jedes Gerät eindeutig ist und der etwa folgendermaßen aussieht: `123456789ABC`. Achten Sie darauf, bei der Eingabe von Variablen geschweifte Klammern `{{ }}` zu verwenden. [App-Konfigurationstoken](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) umfassen eine Reihe von Variablen, die Sie nutzen können. Zudem können Sie `deviceid` oder einen anderen gerätespezifischen Wert verwenden.
 
   > [!NOTE]
-  > Variablen werden in der Benutzeroberfläche nicht überprüft, und die Groß-/Kleinschreibung muss beachtet werden. Daher gibt es möglicherweise Profile, die mit fehlerhaften Eingaben gespeichert wurden. Wenn Sie beispielsweise `{{DeviceID}}` anstelle von `{{deviceid}}` eingeben, wird die Zeichenfolge anstelle der eindeutigen Geräte-ID angezeigt. Vergewissern Sie sich, dass die eingegebenen Informationen korrekt sind.
+  > Variablen werden in der Benutzeroberfläche nicht überprüft, und die Groß-/Kleinschreibung muss beachtet werden. Daher gibt es möglicherweise Profile, die mit fehlerhaften Eingaben gespeichert wurden. Wenn Sie beispielsweise `{{DeviceID}}` anstelle von `{{deviceid}}` eingeben, wird die Zeichenfolge anstelle der eindeutigen Geräte-ID angezeigt. Stellen Sie sicher, dass die eingegebenen Informationen korrekt sind.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Das Profil ist nun erstellt, führt aber vielleicht noch keine Aktionen durch. Die nächsten Schritte sind das [Zuweisen von Profilen](device-profile-assign.md) und das [Überwachen deren Status](device-profile-monitor.md).
+[Zuweisen von Profilen](device-profile-assign.md) und [Überwachen von Profilen](device-profile-monitor.md)
 
 Erstellen Sie ein [benutzerdefiniertes Profil auf iOS/iPadOS-Geräten](custom-settings-ios.md).

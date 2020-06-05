@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fd9741cfa8cf9edd03d723e63ed1936e1c986d08
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80624914"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989042"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Verschieben von Android-Geräten aus dem Geräteadministrator in die Arbeitsprofilverwaltung
 
@@ -59,14 +59,18 @@ Wenn Benutzer bemerken, dass ihr Gerät aus diesem Grund nicht mehr konform ist,
     ![Blockieren von Geräten](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. Auf der Seite **Standorte** können Sie bei Bedarf Standorte hinzufügen. Klicken Sie dann auf **Weiter**.
-6. Bei den **Aktionen bei Nichtkonformität** können Sie die Aktion **E-Mail an Endbenutzer senden** festlegen.
 
-    ![Senden von E-Mails](./media/android-move-device-admin-work-profile/send-email.png)
+6. Auf der Registerkarte **Aktionen bei Nichtkonformität** können Sie die [verfügbaren Aktionen für die Nichtkonformität](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) konfigurieren, um die Endbenutzerfreundlichkeit für diesen Flow anzupassen.
 
+    ![Aktionen bei Nichtkonformität](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
-    In der E-Mail-Nachricht an Benutzer können Sie die folgende URL angeben. Mit dieser URL wird das Android-Unternehmensportal auf der Seite **Geräteeinstellungen aktualisieren** geöffnet. Auf dieser Seite startet der Flow für den Wechsel zur Arbeitsprofilverwaltung.
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
-    - Für US-Regierungsorganisationen können Sie stattdessen diesen Link verwenden: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
+    Dies sind einige zu berücksichtigende Aktionen:
+
+    - **Gerät als nicht konform markieren:** Standardmäßig ist diese Aktion auf 0 (null) Tage festgelegt, sodass Geräte sofort als nicht konform gekennzeichnet werden. Wenn Sie die Anzahl der Tage erhöhen, erhalten Benutzer eine Toleranzperiode, in der sie den Flow anzeigen können, um zur Arbeitsprofilverwaltung zu wechseln, ohne als nichtkonform gekennzeichnet zu werden. Wenn die Anzahl der Tage beispielsweise auf 14 Tage festgelegt wird, haben Benutzer zwei Wochen Zeit, vom Geräteadministrator in die Arbeitsprofilverwaltung zu wechseln, ohne Gefahr zu laufen, den Zugriff auf Ressourcen zu verlieren.
+    - **Pushbenachrichtigung an Endbenutzer senden**: Konfigurieren Sie diese Einstellung, um Pushbenachrichtigungen an Geräte von Geräteadministratoren zu senden. Wenn ein Benutzer die Benachrichtigung auswählt, wird das Android-Unternehmensportal auf der Seite **Geräteeinstellungen aktualisieren** gestartet, auf der der Flow zum Wechseln zur Arbeitsprofilverwaltung gestartet werden kann.
+    - **E-Mail an Endbenutzer senden:** Konfigurieren Sie diese Einstellung, um E-Mails an Benutzer zu senden, die sie über den Wechsel vom Geräteadministrator zur Arbeitsprofilverwaltung informiert. In der E-Mail können Sie die nachfolgende URL einfügen. Wenn auf diese geklickt wird, wird das Android-Unternehmensportal auf der Seite „Geräteeinstellungen aktualisieren“ gestartet, auf der der Flow zum Wechseln zur Arbeitsprofilverwaltung gestartet werden kann.
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+      - Für US-Regierungsorganisationen können Sie stattdessen diesen Link verwenden: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
     > [!NOTE]
     > - Natürlich können Sie in Ihren Mitteilungen an Benutzer auch benutzerfreundlichen Hypertext für die Links verwenden. Verkürzen Sie URLs jedoch nicht, da die Links in diesem Fall möglicherweise nicht funktionieren.

@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 2db33dbe94ff5aef62563531149250fbd4268acc
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269064"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986981"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatisches Registrieren von iOS-/iPadOS-Geräten mit der automatischen Geräteregistrierung von Apple
 
@@ -39,14 +39,11 @@ Um die automatische Geräteregistrierung zu aktivieren, müssen Sie die Portale 
 
 ## <a name="automated-device-enrollment-and-the-company-portal"></a>Automatische Geräteregistrierung und das Unternehmensportal
 
-Die automatische Geräteregistrierung ist mit der App Store-Version der Unternehmensportal-App nicht kompatibel. Sie können Benutzern Zugriff auf die Unternehmensportal-App auf ADE-Geräten gewähren. Sie sollten diesen Zugriff bereitstellen, damit Benutzer wählen können, welche Unternehmens-Apps sie auf ihrem Gerät verwenden möchten, oder damit sie eine moderne Authentifizierungsmethode verwenden können, um den Registrierungsprozess abzuschließen. 
+Die automatische Geräteregistrierung ist mit der App Store-Version der Unternehmensportal-App nicht kompatibel. Sie können Benutzern Zugriff auf die Unternehmensportal-App über ein ADE-Gerät gewähren. Sie sollten diesen Zugriff bereitstellen, damit Benutzer wählen können, welche Unternehmens-Apps sie auf ihrem Gerät verwenden möchten, oder damit sie eine moderne Authentifizierungsmethode verwenden können, um den Registrierungsprozess abzuschließen. 
 
 Sie können die moderne Authentifizierung während der Registrierung aktivieren, indem Sie die App mithilfe von **Unternehmensportal mit VPP installieren** (Apple Volume Purchase Program) im ADE-Profil per Push auf das Gerät übertragen. Weitere Informationen finden Sie unter [Automatisches Registrieren von iOS-/iPadOS-Geräten mit der automatischen Geräteregistrierung von Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 Damit das Unternehmensportal automatisch Updates ausführt und um die Unternehmensportal-App auf Geräten bereitzustellen, die bereits mit der automatischen Geräteregistrierung registriert wurden, stellen Sie die Unternehmensportal-App über Intune als erforderliche VPP-App (Apple Volume Purchase Program) mit angewendeter [Anwendungskonfigurationsrichtlinie](../apps/app-configuration-policies-use-ios.md) bereit.
-
-> [!NOTE]
-> Während der automatischen Geräteregistrierung und während das Unternehmensportal im Einzel-App-Modus ausgeführt wird, führt das Klicken auf den **Weitere Informationen**-Link aufgrund des Einzel-App-Modus zu einer Fehlermeldung. Nach Abschluss der Registrierung können Sie sich weitere Informationen im Unternehmensportal ansehen, wenn sich das Gerät nicht mehr im Modus „Einzelne App“ befindet. 
 
 ## <a name="what-is-supervised-mode"></a>Überwachter Modus
 
@@ -212,7 +209,7 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 
      > [!NOTE]
      > Wenn **Mit Computern synchronisieren** auf **Alle ablehnen** festgelegt ist, wird der Port auf iOS- und iPadOS-Geräten beschränkt. Der Port kann ausschließlich zum Laden verwendet werden. Die Verwendung von iTunes oder Apple Configurator 2 an diesem Port wird blockiert.
-     Wenn **Mit Computern synchronisieren:** auf **Apple Configurator nach Zertifikat zulassen** festgelegt ist, stellen Sie sicher, dass Sie eine lokale Kopie des Zertifikats speichern, auf die Sie später zugreifen können. Sie können keine Änderungen an der hochgeladenen Kopie vornehmen. Es ist wichtig, dieses Zertifikat aufzubewahren, damit es auch in Zukunft verfügbar ist. 
+     Wenn **Sync with computers** (Mit Computern synchronisieren) auf **Apple Configurator nach Zertifikat zulassen** festgelegt ist, stellen Sie sicher, dass Sie eine lokale Kopie des Zertifikats speichern, auf die Sie später zugreifen können. Sie können keine Änderungen an der hochgeladenen Kopie vornehmen. Es ist wichtig, dieses Zertifikat beizubehalten, damit es weiterhin zugänglich ist. Zum Herstellen einer Verbindung mit dem iOS/iPadOS-Gerät über ein macOS-Gerät oder PC muss dasselbe Zertifikat auf dem Gerät installiert sein, von dem die Verbindung mit dem iOS/iPadOS-Gerät ausgeht, das mit dem automatischen Geräteregistrierungsprofil mit dieser Konfiguration und dem Zertifikat registriert wurde.
 
 12. Wenn Sie im vorherigen Schritt **Apple Configurator nach Zertifikat zulassen** ausgewählt haben, müssen Sie ein Apple Configurator-Zertifikat zum Importieren auswählen.
 
@@ -235,29 +232,33 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 
     | Bildschirmeinstellungen des Setup-Assistenten | Wenn Sie während des Setups des Geräts auf **Anzeigen** klicken, führt das Gerät die folgenden Aktionen durch: |
     |------------------------------------------|------------------------------------------|
-    | <strong>Kennung</strong> | Es fordert den Benutzer auf, eine Kennung einzugeben. Verlangen Sie immer eine Kennung (Passcode) für ungeschützte Geräte, es sei denn, der Zugriff ist auf andere Weise geschützt (etwa im Kioskmodus, in dem das Gerät auf eine App beschränkt wird). |
-    | <strong>Standortdienste</strong> | Es fordert den Benutzer auf, seinen Standort anzugeben. |
-    | <strong>Wiederherstellen</strong> | Es zeigt den Bildschirm „Apps & Daten“ an. Über diesen Bildschirm hat der Benutzer die Möglichkeit, Daten aus der iCloud-Sicherung wiederherzustellen oder aus dieser zu übertragen, wenn er das Gerät einrichtet. |
-    | <strong>iCloud und Apple-ID</strong> | Es lässt zu, dass der Benutzer sich mit seiner Apple-ID anmelden und iCloud verwenden kann.                         |
-    | <strong>Geschäftsbedingungen</strong> | Es verlangt, dass der Benutzer die Nutzungsbedingungen von Apple akzeptiert. |
-    | <strong>Touch ID</strong> | Es lässt zu, dass der Benutzer die Identifikation per Fingerabdruck für das Gerät einrichtet. |
-    | <strong>Apple Pay</strong> | Es lässt zu, dass der Benutzer Apple Pay auf dem Gerät einrichtet. |
-    | <strong>Zoom</strong> | Es lässt zu, dass der Benutzer die Anzeige vergrößern bzw. verkleinern kann, während er das Gerät einrichtet. |
-    | <strong>Siri</strong> | Es lässt zu, dass der Benutzer Siri einrichtet. |
-    | <strong>Diagnosedaten</strong> | Zeigt dem Benutzer den Bildschirm „Diagnose“ an. Über diesen Bildschirm kann der Benutzer Diagnosedaten an Apple senden. |
-    | <strong>Displayfarbton</strong> | Geben Sie dem Benutzer die Möglichkeit, den Anzeigefarbton zu aktivieren. |
-    | <strong>Datenschutz</strong> | Lassen Sie den Benutzer auf den Bildschirm Privatsphäre zugreifen. |
-    | <strong>Android-Migration</strong> | Ermöglichen Sie dem Benutzer die Migration von Dateien von einem Android-Gerät. |
-    | <strong>iMessage und FaceTime</strong> | Ermöglichen Sie dem Benutzer, iMessage und FaceTime einzurichten. |
-    | <strong>Onboarding</strong> | Zeigen Sie den Benutzern Onboarding-Bildschirme zu Informationszwecken an, z. B. „Deckblatt“, „Multitasking“ oder „Steuerungscenter“. |
-    | <strong>Watch-Migration</strong> | Ermöglichen Sie dem Benutzer die Migration von Dateien von einem Überwachungsgerät. |
-    | <strong>Bildschirmzeit</strong> | Aktivieren Sie den Bildschirm „Bildschirmzeit“. |
-    | <strong>Softwareupdate</strong> | Lassen Sie erforderliche Softwareupdates anzeigen. |
-    | <strong>SIM-Setup</strong> | Ermöglichen Sie dem Benutzer, einen Mobilfunkplan hinzuzufügen. |
-    | <strong>Darstellung</strong> | Zeigen Sie den Bildschirm „Darstellung“ für den Benutzer an. |
+    | <strong>Kennung</strong> | Es fordert den Benutzer auf, eine Kennung einzugeben. Verlangen Sie immer eine Kennung (Passcode) für ungeschützte Geräte, es sei denn, der Zugriff ist auf andere Weise geschützt (etwa im Kioskmodus, in dem das Gerät auf eine App beschränkt wird). Für iOS/iPadOS 7.0 und höher |
+    | <strong>Standortdienste</strong> | Es fordert den Benutzer auf, seinen Standort anzugeben. Für macOS 10.11 und höher sowie iOS/iPadOS 7.0 und höher |
+    | <strong>Wiederherstellen</strong> | Es zeigt den Bildschirm „Apps & Daten“ an. Über diesen Bildschirm hat der Benutzer die Möglichkeit, Daten aus der iCloud-Sicherung wiederherzustellen oder aus dieser zu übertragen, wenn er das Gerät einrichtet. Für macOS 10.9 und höher sowie iOS/iPadOS 7.0 und höher |
+    | <strong>iCloud und Apple-ID</strong> | Es lässt zu, dass der Benutzer sich mit seiner Apple-ID anmelden und iCloud verwenden kann. Für macOS 10.9 und höher sowie iOS/iPadOS 7.0 und höher   |
+    | <strong>Geschäftsbedingungen</strong> | Es verlangt, dass der Benutzer die Nutzungsbedingungen von Apple akzeptiert. Für macOS 10.9 und höher sowie iOS/iPadOS 7.0 und höher |
+    | <strong>Touch ID</strong> | Es lässt zu, dass der Benutzer die Identifikation per Fingerabdruck für das Gerät einrichtet. Für macOS 10.12.4 und höher sowie iOS/iPadOS 8.1 und höher |
+    | <strong>Apple Pay</strong> | Es lässt zu, dass der Benutzer Apple Pay auf dem Gerät einrichtet. Für macOS 10.12.4 und höher sowie iOS/iPadOS 7.0 und höher |
+    | <strong>Zoom</strong> | Es lässt zu, dass der Benutzer die Anzeige vergrößern bzw. verkleinern kann, während er das Gerät einrichtet. Für iOS/iPadOS 8.3 und höher |
+    | <strong>Siri</strong> | Es lässt zu, dass der Benutzer Siri einrichtet. Für macOS 10.12 und höher sowie iOS/iPadOS 7.0 und höher |
+    | <strong>Diagnosedaten</strong> | Zeigt dem Benutzer den Bildschirm „Diagnose“ an. Über diesen Bildschirm kann der Benutzer Diagnosedaten an Apple senden. Für macOS 10.9 und höher sowie iOS/iPadOS 7.0 und höher |
+    | <strong>Displayfarbton</strong> | Geben Sie dem Benutzer die Möglichkeit, den Anzeigefarbton zu aktivieren. Für macOS 10.13.6 und höher sowie iOS/iPadOS 9.3.2 und höher |
+    | <strong>Datenschutz</strong> | Lassen Sie den Benutzer auf den Bildschirm Privatsphäre zugreifen. Für macOS 10.13.4 und höher sowie iOS/iPadOS 11.3 und höher |
+    | <strong>Android-Migration</strong> | Ermöglichen Sie dem Benutzer die Migration von Dateien von einem Android-Gerät. Für iOS/iPadOS 9.0 und höher|
+    | <strong>iMessage und FaceTime</strong> | Ermöglichen Sie dem Benutzer, iMessage und FaceTime einzurichten. Für iOS/iPadOS 9.0 und höher |
+    | <strong>Onboarding</strong> | Zeigen Sie den Benutzern Onboarding-Bildschirme zu Informationszwecken an, z. B. „Deckblatt“, „Multitasking“ oder „Steuerungscenter“. Für iOS/iPadOS 11.0 und höher |
+    | <strong>Watch-Migration</strong> | Ermöglichen Sie dem Benutzer die Migration von Dateien von einem Überwachungsgerät. Für iOS/iPadOS 11.0 und höher|
+    | <strong>Bildschirmzeit</strong> | Aktivieren Sie den Bildschirm „Bildschirmzeit“. Für macOS 10.15 und höher sowie iOS/iPadOS 12.0 und höher |
+    | <strong>Softwareupdate</strong> | Lassen Sie erforderliche Softwareupdates anzeigen. Für iOS/iPadOS 12.0 und höher |
+    | <strong>SIM-Setup</strong> | Ermöglichen Sie dem Benutzer, einen Mobilfunkplan hinzuzufügen. Für iOS/iPadOS 12.0 und höher |
+    | <strong>Darstellung</strong> | Zeigen Sie den Bildschirm „Darstellung“ für den Benutzer an. Für macOS 10.14 und höher sowie iOS/iPadOS 13.0 und höher |
     | <strong>Express-Sprache</strong>| Zeigen Sie den Bildschirm „Express-Sprache“ für den Benutzer an. |
     | <strong>Bevorzugte Sprache</strong> | Ermöglichen Sie dem Benutzer, seine **Bevorzugte Sprache** auszuwählen. |
-    | <strong>Migration von Gerät zu Gerät</strong> | Ermöglichen Sie dem Benutzer, Daten von seinem alten Gerät auf dieses Gerät zu migrieren.|
+    | <strong>Migration von Gerät zu Gerät</strong> | Ermöglichen Sie dem Benutzer, Daten von seinem alten Gerät auf dieses Gerät zu migrieren. Für iOS/iPadOS 13.0 und höher |
+    | <strong>Registrierung</strong> | Mit dieser Einstellung wird dem Benutzer die Registrierungsanzeige angezeigt. Für macOS 10.9 und höher |
+    | <strong>FileVault</strong> | Mit dieser Einstellung wird dem Benutzer die Anzeige für die FileVault 2-Verschlüsselung angezeigt. Für macOS 10.10 und höher |
+    | <strong>iCloud-Diagnose</strong> | Mit dieser Einstellung wird dem Benutzer die Anzeige für die iCloud-Analyse angezeigt. Für macOS 10.12.4 und höher |
+    | <strong>iCloud-Speicher</strong> | Mit dieser Einstellung wird dem Benutzer die Anzeige für Dokumente und den Desktop angezeigt. Für macOS 10.13.4 und höher |
     
 
 16. Wählen Sie **Weiter** aus, um zur Seite **Überprüfen + erstellen** zu wechseln.
@@ -282,7 +283,7 @@ Nachdem Intune nun die Berechtigung zum Verwalten Ihrer Geräte besitzt, können
 
    Zur Befolgung der Apple-Bedingungen für zulässigen Datenverkehr des Registrierungsprogramms erzwingt Intune die folgenden Einschränkungen:
    - Eine vollständige Synchronisation kann nicht öfter als einmal alle sieben Tage erfolgen. Während einer vollständigen Synchronisierung ruft Intune die vollständig aktualisierte Liste der Seriennummern auf, die dem mit Intune verbundenen Apple MDM-Server zugewiesen sind. Wenn ein ADE-Gerät aus dem Intune-Portal gelöscht wird, sollte seine Zuweisung zum Apple-MDM-Server im ADE-Portal aufgehoben werden. Wird seine Zuweisung nicht aufgehoben, wird es solange nicht erneut in Intune importiert, bis die vollständige Synchronisierung ausgeführt wird.   
-   - Die Synchronisierung wird automatisch alle 24 Stunden ausgeführt. Sie können eine Synchronisierung ebenfalls durchführen, indem Sie auf die Schaltfläche **Synchronisierung** klicken (nicht öfter als einmal alle 15 Minuten). Alle Synchronisierungsanforderungen müssen innerhalb von 15 Minuten abgeschlossen werden. Die Schaltfläche **Synchronisierung** bleibt bis zum Abschluss der Synchronisierung deaktiviert. Durch diese Synchronisierung werden vorhandene Gerätestatus aktualisiert und neue Geräte importiert, die dem Apple MDM-Server zugewiesen sind.   
+   - Die Synchronisierung wird automatisch alle 12 Stunden ausgeführt. Sie können eine Synchronisierung ebenfalls durchführen, indem Sie auf die Schaltfläche **Synchronisierung** klicken (nicht öfter als einmal alle 15 Minuten). Alle Synchronisierungsanforderungen müssen innerhalb von 15 Minuten abgeschlossen werden. Die Schaltfläche **Synchronisierung** bleibt bis zum Abschluss der Synchronisierung deaktiviert. Durch diese Synchronisierung werden vorhandene Gerätestatus aktualisiert und neue Geräte importiert, die dem Apple MDM-Server zugewiesen sind.   
 
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Zuweisen eines Registrierungsprofils an Geräte

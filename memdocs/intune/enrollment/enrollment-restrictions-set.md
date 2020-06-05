@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4da13b77b52a8110072dcba208b70d1ce0407cbb
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c1bbcfc953945f7e8525cb7dc7edf3b1dd8a2f5c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077987"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989083"
 ---
 # <a name="set-enrollment-restrictions"></a>Festlegen von Registrierungseinschränkungen
 
@@ -83,12 +83,14 @@ Auf den Gerätetyp und das Gerätelimit bezogene Registrierungsbeschränkungen w
 
 6. Wählen Sie unter **Persönliches Eigentum** die Option **Zulassen** für die Plattformen, die Sie als Geräte im persönlichen Besitz zulassen möchten.
 7. Geben Sie unter **Gerätehersteller** eine durch Trennzeichen getrennte Liste der Hersteller ein, die Sie blockieren möchten.
-8. Klicken Sie auf **Weiter**, um zur Seite **Zuweisungen** zu gelangen.
-9. Klicken Sie auf **Wählen Sie die Gruppen aus, die eingeschlossen werden sollen.** , und verwenden Sie dann das Suchfeld, um die Gruppen zu finden, die Sie in diese Einschränkung einschließen möchten. Die Beschränkung gilt nur für Gruppen, denen sie zugewiesen ist. Wenn Sie nicht mindestens einer Gruppe eine Beschränkung zuweisen, hat sie keine Wirkung. Klicken Sie anschließend auf **Auswählen**. 
+8. Wählen Sie **Weiter** aus, um zur Seite **Bereichstags** zu gelangen.
+9. Fügen Sie auf der Seite **Bereichstags** optional die Bereichstags hinzu, die Sie auf diese Einschränkung anwenden möchten. Weitere Informationen zu Bereichsmarkierungen finden Sie unter [Use role-based access control and scope tags for distributed IT (Verwenden der rollenbasierten Zugriffssteuerung und von Bereichsmarkierungen für verteilte IT)](../fundamentals/scope-tags.md). Bei Verwendung von Bereichstags mit Registrierungseinschränkungen können Benutzer nur Richtlinien neu anordnen, über deren Bereich sie verfügen. Das gilt auch für die Reihenfolge der Richtlinienpositionen. Benutzern wird die tatsächliche Richtlinienprioritätsnummer für alle Richtlinien angezeigt. Ein bereichsbezogener Benutzer kann die relative Priorität seiner Richtlinien nachvollziehen, selbst wenn ihm nicht alle anderen Richtlinien angezeigt werden.
+10. Klicken Sie auf **Weiter**, um zur Seite **Zuweisungen** zu gelangen.
+11. Klicken Sie auf **Wählen Sie die Gruppen aus, die eingeschlossen werden sollen.** , und verwenden Sie dann das Suchfeld, um die Gruppen zu finden, die Sie in diese Einschränkung einschließen möchten. Die Beschränkung gilt nur für Gruppen, denen sie zugewiesen ist. Wenn Sie nicht mindestens einer Gruppe eine Beschränkung zuweisen, hat sie keine Wirkung. Klicken Sie anschließend auf **Auswählen**. 
     ![Screenshot: Auswählen der Plattformeinstellungen](./media/enrollment-restrictions-set/select-groups.png)
-10. Klicken Sie auf **Weiter**, um zur Seite **Überprüfen + erstellen** zu gelangen.
-11. Klicken Sie auf **Erstellen**, um die Einschränkung zu erstellen.
-12. Die neue Beschränkung wird mit einer Priorität knapp über dem Standardwert erstellt. Sie können [die Priorität ändern](#change-enrollment-restriction-priority).
+12. Klicken Sie auf **Weiter**, um zur Seite **Überprüfen + erstellen** zu gelangen.
+13. Klicken Sie auf **Erstellen**, um die Einschränkung zu erstellen.
+14. Die neue Beschränkung wird mit einer Priorität knapp über dem Standardwert erstellt. Sie können [die Priorität ändern](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Erstellen einer Gerätelimiteinschränkung
@@ -98,12 +100,14 @@ Auf den Gerätetyp und das Gerätelimit bezogene Registrierungsbeschränkungen w
 3. Klicken Sie auf **Weiter**, um zur Seite **Gerätelimit** zu gelangen.
 4. Wählen Sie unter **Gerätelimit** die maximale Anzahl von Geräten aus, die ein Benutzer registrieren kann.
     ![Screenshot: Auswählen des Gerätelimits](./media/enrollment-restrictions-set/choose-device-limit.png)
-5. Klicken Sie auf **Weiter**, um zur Seite **Zuweisungen** zu gelangen.
-6. Klicken Sie auf **Wählen Sie die Gruppen aus, die eingeschlossen werden sollen.** , und verwenden Sie dann das Suchfeld, um die Gruppen zu finden, die Sie in diese Einschränkung einschließen möchten. Die Beschränkung gilt nur für Gruppen, denen sie zugewiesen ist. Wenn Sie nicht mindestens einer Gruppe eine Beschränkung zuweisen, hat sie keine Wirkung. Klicken Sie anschließend auf **Auswählen**. 
+5. Wählen Sie **Weiter** aus, um zur Seite **Bereichstags** zu gelangen.
+6. Fügen Sie auf der Seite **Bereichstags** optional die Bereichstags hinzu, die Sie auf diese Einschränkung anwenden möchten. Weitere Informationen zu Bereichsmarkierungen finden Sie unter [Use role-based access control and scope tags for distributed IT (Verwenden der rollenbasierten Zugriffssteuerung und von Bereichsmarkierungen für verteilte IT)](../fundamentals/scope-tags.md). Bei Verwendung von Bereichstags mit Registrierungseinschränkungen können Benutzer nur Richtlinien neu anordnen, über deren Bereich sie verfügen. Das gilt auch für die Reihenfolge der Richtlinienpositionen. Benutzern wird die tatsächliche Richtlinienprioritätsnummer für alle Richtlinien angezeigt. Ein bereichsbezogener Benutzer kann die relative Priorität seiner Richtlinien nachvollziehen, selbst wenn ihm nicht alle anderen Richtlinien angezeigt werden.
+7. Klicken Sie auf **Weiter**, um zur Seite **Zuweisungen** zu gelangen.
+8. Klicken Sie auf **Wählen Sie die Gruppen aus, die eingeschlossen werden sollen.** , und verwenden Sie dann das Suchfeld, um die Gruppen zu finden, die Sie in diese Einschränkung einschließen möchten. Die Beschränkung gilt nur für Gruppen, denen sie zugewiesen ist. Wenn Sie nicht mindestens einer Gruppe eine Beschränkung zuweisen, hat sie keine Wirkung. Klicken Sie anschließend auf **Auswählen**. 
     ![Screenshot: Auswählen von Gruppen](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-7. Klicken Sie auf **Weiter**, um zur Seite **Überprüfen + erstellen** zu gelangen.
-8. Klicken Sie auf **Erstellen**, um die Einschränkung zu erstellen.
-9. Die neue Beschränkung wird mit einer Priorität knapp über dem Standardwert erstellt. Sie können [die Priorität ändern](#change-enrollment-restriction-priority).
+9. Klicken Sie auf **Weiter**, um zur Seite **Überprüfen + erstellen** zu gelangen.
+10. Klicken Sie auf **Erstellen**, um die Einschränkung zu erstellen.
+11. Die neue Beschränkung wird mit einer Priorität knapp über dem Standardwert erstellt. Sie können [die Priorität ändern](#change-enrollment-restriction-priority).
 
 Während der BYOD-Registrierung erhalten Benutzer eine Benachrichtigung darüber, wenn das Limit registrierter Geräte erreicht ist. Diese sieht bei iOS beispielsweise folgendermaßen aus:
 
@@ -126,7 +130,7 @@ Während der BYOD-Registrierung erhalten Benutzer eine Benachrichtigung darüber
 
 Sie können die Einstellungen für eine Registrierungseinschränkung ändern, indem Sie die folgenden Schritte ausführen. Diese Einschränkungen haben keine Auswirkungen auf Geräte, die bereits registriert wurden. Geräte, die mit dem [Intune-PC-Agent](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) registriert sind, können nicht über dieses Feature blockiert werden.
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Registrierungsbeschränkungen**, wählen Sie die zu ändernde Einschränkung aus, und klicken Sie dann auf **Eigenschaften**.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu > **Geräte** > **Registrierungsbeschränkungen**, wählen Sie die zu ändernde Einschränkung aus, und klicken Sie dann auf **Eigenschaften**.
 2. Klicken Sie neben den Einstellungen, die Sie ändern möchten, auf **Bearbeiten**.
 3. Nehmen Sie auf der Seite **Bearbeiten** die gewünschten Änderungen vor, und fahren Sie auf der Seite **Überprüfen und speichern** fort. Klicken Sie abschließend auf **Speichern**.
 

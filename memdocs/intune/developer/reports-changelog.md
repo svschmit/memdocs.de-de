@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 90d1ab0792e329616fce525cfe672c07219908b5
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881042"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165854"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Änderungsprotokoll für die Intune Data Warehouse-API
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Bleiben Sie auf dem neuesten Stand bezüglich Updates für Intune Data Warehouse.
+
+## <a name="2004"></a>2004 
+_Veröffentlicht: April 2020_
+
+### <a name="beta-changes"></a>Beta-Änderungen
+
+In der folgenden Tabelle werden die Eigenschaften aufgeführt, die zur Entität **device** in Intune Data Warehouse hinzugefügt wurden.
+
+|    Sammlung                          |    Änderung     |    Beschreibung                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    hinzugefügt    |    Windows-Betriebssystemedition                                                                                                                                                                                                                                                                     |
+
+## <a name="2003"></a>2003 
+_Veröffentlicht: März 2020_
+
+### <a name="beta-changes"></a>Beta-Änderungen
+
+In der folgenden Tabelle werden die Eigenschaften aufgeführt, die zur Entität **device** in Intune Data Warehouse hinzugefügt wurden.
+
+|    Sammlung                          |    Änderung     |    Beschreibung                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    hinzugefügt    |    Der eindeutige Netzwerkbezeichner dieses Geräts.                                                                                                                                                                                                                                                                     |
+|    model    |    hinzugefügt    |    Das Gerätemodell.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    hinzugefügt    |    Die auf dem Gerät installierte Version von Office 365.                                                                                                                                                                                                                                                                     |
+
+In der folgenden Tabelle werden die Eigenschaften aufgeführt, die zur Entität **devicePropertyHistory** in Intune Data Warehouse hinzugefügt wurden.
+
+|    Sammlung                          |    Änderung     |    Beschreibung                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    hinzugefügt    |    Der physische Speicher in Bytes.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes     |    hinzugefügt    |    Speicherplatz insgesamt in Bytes                                                                                                                                                                                                                                                                     |
 
 ## <a name="1903-part-2"></a>1903 (Teil 2)
 _Veröffentlicht: April 2019_
@@ -43,7 +74,7 @@ Die folgende Tabelle enthält die in jüngster Zeit entfernten Sammlungen und de
 |    mobileAppDeviceUserInstallStatus    |    Entfernt    |    Verwenden Sie stattdessen [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts).                                                                                                                                                                                                                                                                     |
 |    enrollmentTypes                     |    Entfernt    |    Verwenden Sie stattdessen [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes).                                                                                                                                                                                                                                                                                      |
 |    mdmStatuses                         |    Entfernt    |    Verwenden Sie stattdessen [ComplianceStates](intune-data-warehouse-collections.md#compliancestates).                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    Entfernt    |    Verwenden Sie stattdessen in den Sammlungen `azureAdRegistered`devices[ und ](intune-data-warehouse-collections.md#devices)devicePropertyHistories[ die ](intune-data-warehouse-collections.md#devicepropertyhistories)-Eigenschaft.                                                                                                                                                                                                             |
+|    workPlaceJoinStateTypes             |    Entfernt    |    Verwenden Sie stattdessen in den Sammlungen [devices](intune-data-warehouse-collections.md#devices) und [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) die `azureAdRegistered`-Eigenschaft.                                                                                                                                                                                                             |
 |    clientRegistrationStateTypes        |    Entfernt    |    Verwenden Sie stattdessen [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates).                                                                                                                                                                                                                                                                             |
 |    currentUser                         |    Entfernt    |    Verwenden Sie stattdessen die Sammlung [users](intune-data-warehouse-collections.md#users).                                                                                                                                                                                                                                                                                                      |
 |    mdmDeviceInventoryHistories         |    Entfernt    |    Viele der Eigenschaften waren unnötig oder befinden sich nun in den Sammlungen [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) oder [devices](intune-data-warehouse-collections.md#devices). **mdmDeviceInventoryHistories**-Eigenschaften, die nicht bereits in diesen beiden Sammlungen aufgeführt sind, stehen nicht mehr zur Verfügung. Siehe die folgenden Details.    |

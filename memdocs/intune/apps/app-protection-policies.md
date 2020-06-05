@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 379ceb4bf99081e5544be15d338aade0eb5a7a60
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 91ca1e8a710e13e393af5bb3723ca1086e37887d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323608"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988604"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Erstellen und Zuweisen von App-Schutzrichtlinien
 
@@ -33,9 +33,19 @@ Informieren Sie sich, wie Sie Microsoft Intune-App-Schutzrichtlinien (APP) für 
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-App-Schutzrichtlinien können unabhängig davon auf Apps angewendet werden, ob die Geräte, auf denen die Apps ausgeführt werden, von Intune verwaltet werden. Eine ausführlichere Beschreibung der Funktionsweise von App-Schutzrichtlinien und der von Intune-App-Schutzrichtlinien unterstützten Szenarien finden Sie unter [Was sind Microsoft Intune-App-Schutzrichtlinien?](app-protection-policy.md).
+App-Schutzrichtlinien können unabhängig davon auf Apps angewendet werden, ob die Geräte, auf denen die Apps ausgeführt werden, von Intune verwaltet werden. Eine ausführlichere Beschreibung der Funktionsweise von App-Schutzrichtlinien und der von Intune-App-Schutzrichtlinien unterstützten Szenarios finden Sie in der [Übersicht über die App-Schutzrichtlinien](app-protection-policy.md).
 
-Wenn Sie nach einer Liste der unterstützten MAM-Apps suchen, finden Sie weitere Informationen in der [Liste der MAM-Apps](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+Die in den App-Schutzrichtlinien verfügbaren Optionen ermöglichen Organisationen, den Schutz an ihre speziellen Anforderungen anzupassen. Für einige ist es jedoch möglicherweise nicht offensichtlich, welche Richtlinieneinstellungen genau erforderlich sind, um ein vollständiges Szenario zu implementieren. Microsoft hat eine Taxonomie für das APP-Datenschutzframework für die mobile iOS- und Android-App-Verwaltung eingeführt, um Organisationen dabei zu unterstützen, den Schutz für Clientendpunkte zu priorisieren.
+
+Das APP-Datenschutzframework ist in drei verschiedene Konfigurationsebenen unterteilt, wobei jede Ebene auf der vorherigen Ebene aufbaut:
+
+- **Einfacher Datenschutz für Unternehmen** (Ebene 1): Diese Ebene stellt sicher, dass Apps mit einer PIN geschützt und verschlüsselt ist und selektive Löschvorgänge durchführen. Bei Android-Geräten überprüft diese Ebene den Nachweis von Android-Geräten. Dabei handelt es sich um eine Konfiguration auf Einstiegsebene, die ähnliche Datenschutzkontrolle in Exchange Online-Postfachrichtlinien bereitstellt und die IT sowie die Benutzerauffüllung in APP einführt.
+- **Erweiterter Datenschutz für Unternehmen** (Ebene 2): Diese Ebene führt APP-Mechanismen zur Verhinderung von Datenlecks sowie die mindestens erforderlichen Betriebssystemanforderungen ein. Dies ist die Konfiguration, die auf die meisten Mobilgerätebenutzer angewendet wird, die auf Unternehmensdaten oder Daten einer Bildungseinrichtung zugreifen.
+- **Hoher Datenschutz für Unternehmen** (Ebene 3): Mit dieser Ebene werden Mechanismen zum erweiterten Datenschutz, die verbesserte PIN-Konfiguration sowie APP Mobile Threat Defense eingeführt. Diese Konfiguration ist geeignet für Benutzer, die auf Daten mit hohen Risiken zugreifen.
+
+Die spezifischen Empfehlungen für jede Konfigurationsebene sowie die minimalen zu schützenden Apps finden Sie unter [Datenschutzframework mithilfe von App-Schutzrichtlinien](app-protection-framework.md).
+
+Eine Liste der Apps, die das Intune SDK integriert haben, finden Sie unter [Durch Microsoft Intune geschützte Apps](apps-supported-intune-apps.md).
 
 Informationen zum Hinzufügen von Line-of-Business-Apps (LOB) Ihrer Organisation zu Microsoft Intune in Vorbereitung auf App-Schutzrichtlinien finden Sie unter [Hinzufügen von Apps zu Microsoft Intune](apps-add.md).
 

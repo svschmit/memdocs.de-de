@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/14/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327451"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988466"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Erstellen eines Geräteprofils in Microsoft Intune
 
@@ -85,10 +85,9 @@ Wählen Sie dann den Profiltyp aus. Die konfigurierbaren Einstellungen variieren
 - [VPN](vpn-settings-configure.md)
 - [WLAN](wi-fi-settings-configure.md)
 
-Wenn Sie beispielsweise **iOS/iPadOS** für die Plattform auswählen, werden Ihnen Profiltypoptionen ähnlich den folgenden angezeigt:
+Wenn Sie beispielsweise **iOS/iPadOS** für die Plattform auswählen, werden Ihnen Profiloptionen ähnlich den folgenden angezeigt:
 
-> [!div class="mx-imgBorder"]
-> ![Erstellen eines iOS/iPadOS-Profils in Intune](./media/device-profile-create/create-device-profile.png)
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Erstellen eines iOS/iPadOS-Profils in Microsoft Intune":::
 
 ## <a name="scope-tags"></a>Festlegen von Tags
 
@@ -129,10 +128,9 @@ Beim Zuweisen von Profilen zu Gruppen fungieren die Anwendbarkeitsregeln als Fil
 
 ### <a name="add-a-rule"></a>Hinzufügen einer Regel
 
-1. Wählen Sie **Anwendbarkeitsregeln** aus. Sie können die **Regel**, die **Eigenschaft** und die **Betriebssystemedition** auswählen:
+1. Wählen Sie **Anwendbarkeitsregeln** aus. Sie können die **Regel** und **Eigenschaft** auswählen:
 
-    > [!div class="mx-imgBorder"]
-    > ![Hinzufügen einer Anwendbarkeitsregel zu einem Gerätekonfigurationsprofil in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Hinzufügen einer Anwendbarkeitsregel zu einem Windows 10-Gerätekonfigurationsprofil in Microsoft Intune":::
 
 2. Wählen Sie unter **Regel** aus, ob Sie Benutzer oder Gruppen einschließen oder ausschließen möchten. Folgende Optionen sind verfügbar:
 
@@ -174,12 +172,11 @@ Erstellen Sie Profile unter Berücksichtigung folgender Empfehlungen:
 
 - Trennen Sie Benutzerrichtlinien von Geräterichtlinien.
 
-  Beispielsweise haben [Administrative Vorlagen in Intune](administrative-templates-windows.md) Hunderte von ADMX-Einstellungen. Diese Vorlagen zeigen, ob eine Einstellung für Benutzer oder Geräte gilt. Weisen Sie bei der Erstellung von Administratorvorlagen Ihre Benutzereinstellungen einer Benutzergruppe und Ihre Geräteeinstellungen einer Gerätegruppe zu.
+  Beispielsweise gibt es für [Administrative Vorlagen in Intune](administrative-templates-windows.md) Tausende ADMX-Einstellungen. Diese Vorlagen zeigen, ob eine Einstellung für Benutzer oder Geräte gilt. Weisen Sie bei der Erstellung von Administratorvorlagen Ihre Benutzereinstellungen einer Benutzergruppe und Ihre Geräteeinstellungen einer Gerätegruppe zu.
 
   Die folgende Abbildung zeigt ein Beispiel einer Einstellung, die für Benutzer und/oder Geräte gelten kann:
 
-  > [!div class="mx-imgBorder"]
-  > ![Intune-Administratorvorlage, die für Benutzer und Geräte gilt](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune-Administratorvorlage, die für Benutzer und Geräte gilt":::
 
 - Jedes Mal, wenn Sie eine einschränkende Richtlinie erstellen, sollten Sie diese Änderung Ihren Benutzern mitteilen. Wenn Sie z. B. die Kennungsanforderung von vier auf sechs Zeichen ändern, informieren Sie Ihre Benutzer, bevor Sie die Richtlinie zuweisen.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac6650f06abddd2633e73f39a6bf72d54e344a61
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079194"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428974"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Troubleshooting für BitLocker-Richtlinien in Microsoft Intune
 
@@ -169,11 +169,11 @@ Sie sollten nun gut darüber informiert sein, wie Sie überprüfen, ob die BitLo
      
 **Die BitLocker-Verschlüsselung wird nicht automatisch ausgeführt**: Sie haben eine Richtlinie für Endpoint Protection konfiguriert und die Einstellung „Warnung zu anderer Datenträgerverschlüsselung“ auf „Blockieren“ festgelegt, doch der Verschlüsselungsassistent wird weiterhin angezeigt:
 
-- **Bestätigen Sie, dass die Windows-Version die automatische Verschlüsselung unterstützt**: Die dafür erforderliche Mindestversion ist 1803. Ist der Benutzer kein Administrator auf dem Gerät, lautet die Mindestversion 1809. Darüber hinaus wurde bei Version 1809 Unterstützung für Geräte hinzugefügt, die modernen Standby nicht unterstützen.
+- **Bestätigen Sie, dass die Windows-Version die automatische Verschlüsselung unterstützt**: Die dafür erforderliche Mindestversion ist 1803. Wenn der Benutzer kein Administrator auf dem Gerät ist, ist mindestens Version 1809 erforderlich. Darüber hinaus wurde bei Version 1809 Unterstützung für Geräte hinzugefügt, die modernen Standby nicht unterstützen.
 
 **Ein mit BitLocker verschlüsseltes Gerät wird als nicht kompatibel mit den Konformitätsrichtlinien von Intune angezeigt**: Dieses Problem tritt auf, wenn die BitLocker-Verschlüsselung noch nicht abgeschlossen ist. Je nach Faktoren wie der Größe des Datenträgers, der Anzahl von Dateien und den BitLocker-Einstellungen, kann die BitLocker-Verschlüsselung einige Zeit in Anspruch nehmen. Sobald die Verschlüsselung abgeschlossen ist, wird das Gerät als kompatibel angezeigt. Auch direkt nach der Installation von Windows-Updates können Geräte vorübergehend als nicht kompatibel angezeigt werden.
 
-**Geräte werden mithilfe eines 128-Bit-Algorithmus verschlüsselt, obwohl in der Richtlinie 256 Bit angegeben sind**: Die Standardverschlüsselung eines Laufwerks erfolgt in Windows 10 über XTS-AES mit 128 Bit. Informationen zum Festlegen einer 256-Bit-Verschlüsselung für BitLocker im Autopilot-Modus finden Sie in [diesem Handbuch](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
+**Geräte werden mithilfe eines 128-Bit-Algorithmus verschlüsselt, obwohl in der Richtlinie 256 Bit angegeben sind:** Die Standardverschlüsselung eines Laufwerks erfolgt in Windows 10 über XTS-AES mit 128 Bit. Informationen zum Festlegen einer 256-Bit-Verschlüsselung für BitLocker im Autopilot-Modus finden Sie in [diesem Handbuch](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
 
 
 **Beispieluntersuchung**

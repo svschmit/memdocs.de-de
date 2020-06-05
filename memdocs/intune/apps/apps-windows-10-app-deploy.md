@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079313"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985922"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Windows 10-App-Bereitstellung mit Microsoft Intune 
 
@@ -92,7 +92,9 @@ Sie können Apps je nach Typ auf zwei Arten auf Windows 10-Geräten installiere
 > [!NOTE]
 > Für Win32-Apps, die als Apps im „Dualmodus“ erstellt wurden, muss der Administrator wählen, ob die App als App im „Benutzermodus“ oder „Computermodus“ für alle Zuweisungen fungieren soll, die dieser Instanz zugeordnet sind. Der Bereitstellungskontext kann nicht je Zuweisung geändert werden.  
 
-Apps können nur im Gerätekontext installiert werden, wenn sie vom Gerät und vom Intune-App-Typ unterstützt werden. Sie können die folgenden App-Typen im Gerätekontext installieren und diese Apps einer Gerätegruppe zuweisen:
+Apps können nur im Gerätekontext installiert werden, wenn sie vom Gerät und vom Intune-App-Typ unterstützt werden. Gerätekontextinstallationen werden auf Windows 10-Desktopgeräten und Teams-Geräten wie Surface Hub unterstützt. Sie werden nicht auf Geräten (z. B. Microsoft HoloLens) unterstützt, auf denen Windows Holographic for Business ausgeführt wird.
+
+Sie können die folgenden App-Typen im Gerätekontext installieren und diese Apps einer Gerätegruppe zuweisen:
 
 - Win32-Apps
 - Offline lizenzierte Apps im Microsoft Store für Unternehmen

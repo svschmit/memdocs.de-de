@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef23854fd3fee0883f6f91415a40ebbcc1b3c240
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c145a4b7fa150a9d42c9bf20eca4f85f6356acf8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80620575"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988506"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Verwalten von iOS- und macOS-Apps, die über das Apple Volume Purchase Program mit Microsoft Intune erworben wurden
 
@@ -50,7 +50,7 @@ Erworbene Apps können mit zwei Arten von Lizenzen, die Apple für iOS/iPadOS- u
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | App Store-Anmeldung | Nicht erforderlich. | Endbenutzer müssen eine eindeutige Apple ID verwenden, wenn sie zur Anmeldung beim App Store aufgefordert werden. |
 | Gerätekonfiguration, die den Zugriff auf den App Store blockiert | Apps können über das Unternehmensportal installiert und aktualisiert werden. | Die Einladung zur Teilnahme am Apple VPP erfordert Zugriff auf den App Store. Wenn Sie eine Richtlinie zum Deaktivieren des App Store festgelegt haben, funktioniert die Benutzerlizenzierung für VPP-Apps nicht. |
-| Automatisches App-Update | Wie vom Intune-Administrator in den Einstellungen von Apple VPP-Token konfiguriert, wobei der Zuweisungstyp der App erforderlich ist.<p>Wenn der Zuweisungstyp für registrierte Geräte verfügbar ist, können verfügbare App-Updates über das Unternehmensportal installiert werden. | Gemäß der Konfiguration durch den Endbenutzer in persönlichen App Store-Einstellungen. Kann nicht vom Intune-Administrator verwaltet werden. |
+| Automatisches App-Update | Entsprechend der Konfiguration durch den Intune-Administrator in den Einstellungen von Apple VPP-Token konfiguriert.<p>Wenn der Zuweisungstyp für registrierte Geräte verfügbar ist, können verfügbare App-Updates auch über das Unternehmensportal installiert werden, indem die Aktion **Aktualisieren** auf der Seite zu den App-Details ausgewählt wird. | Gemäß der Konfiguration durch den Endbenutzer in persönlichen App Store-Einstellungen. Kann nicht vom Intune-Administrator verwaltet werden. |
 | Benutzerregistrierung | Nicht unterstützt. | Unterstützt bei Verwenden verwalteter Apple-IDs. |
 | Bücher | Nicht unterstützt. | Unterstützt. |
 | Verwendete Lizenzen | 1 Lizenz pro Gerät. Die Lizenz ist dem Gerät zugeordnet. | 1 Lizenz für bis zu 5 Geräte, die dieselbe persönliche Apple-ID verwenden. Die Lizenz ist dem Benutzer zugeordnet.<p>Ein Endbenutzer, der in Intune einer persönlichen Apple-ID und einer verwalteten Apple-ID zugeordnet ist, beansprucht 2 App-Lizenzen. |
@@ -88,7 +88,7 @@ Migrieren Sie in Apple Business Manager oder Apple School Manager vorhandene erw
 2. Stellen Sie sicher, dass alle VPP-Einkäufer in Ihrer Organisation Schritt 1 abgeschlossen haben, bevor Sie fortfahren.
 3. Überprüfen Sie, ob alle erworbenen Apps und Lizenzen in Apple Business Manager oder Apple School Manager zu „Apps und Bücher“ migriert wurden.
 4. Laden Sie das neue Standorttoken herunter, indem Sie zu **Apple Business (oder School) Manager** > **Einstellungen** > **Apps und Bücher** > **Meine Servertoken** wechseln.
-5. Aktualisieren Sie das Standorttoken im Microsoft Endpoint Manager Admin Center, indem Sie zu **Mandantenverwaltung** > **Connectors und Token** > **Apple-VPP-Token** navigieren und das Token synchronisieren.
+5. Aktualisieren Sie das Standorttoken im Microsoft Endpoint Manager Admin Center, indem Sie zu **Mandantenverwaltung** > **Connectors und Token** > **Apple-VPP-Token** navigieren und das Token manuell hochladen.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Hochladen eines Apple VPP- oder Standorttokens
 
@@ -108,7 +108,7 @@ Migrieren Sie in Apple Business Manager oder Apple School Manager vorhandene erw
     - **Automatische App-Updates**: Mit **On** (Ein) und **Off** (Aus) können Sie automatische Updates aktivieren oder deaktivieren. Wenn diese Option aktiviert ist, erkennt Intune Updates für VPP-Apps in App Store und überträgt diese beim Geräte-Check-In automatisch mithilfe von Push auf das Gerät.
 
         > [!NOTE]
-        > Automatische App-Updates für Apple VPP-Apps aktualisieren nur die Apps automatisch, die mit der Installationsabsicht **Erforderlich** bereitgestellt wurden. Bei Apps, die mit der Installationsabsicht **Verfügbar** bereitgestellt wurden, generiert das automatische Update eine Statusmeldung für den IT-Administrator, die darüber informiert, dass eine neue Version der App verfügbar ist. Diese Statusmeldung wird angezeigt, wenn Sie die App auswählen, den Geräteinstallationsstatus auswählen und die Statusdetails überprüfen.  
+        > Automatische App-Updates für Apple VPP-Apps werden nur für **erforderliche** und **verfügbare** Installationsabsichten aktualisiert. Bei Apps, die mit der Installationsabsicht **Verfügbar** bereitgestellt wurden, generiert das automatische Update eine Statusmeldung für den IT-Administrator, die darüber informiert, dass eine neue Version der App verfügbar ist. Diese Statusmeldung wird angezeigt, wenn Sie die App auswählen, den Geräteinstallationsstatus auswählen und die Statusdetails überprüfen.  
 
     - **Ich erteilen Microsoft die Berechtigung, sowohl Benutzer- und Geräteinformationen an Apple zu senden.** – Sie müssen **Ich stimme zu** auswählen, um fortzufahren. Informationen dazu, welche Daten Microsoft an Apple sendet, finden Sie unter [Von Intune an Apple gesendete Daten](../protect/data-intune-sends-to-apple.md).
 5. Wenn Sie fertig sind, klicken Sie auf **Erstellen**. Das Token wird im Bereich mit der Liste der Token angezeigt.

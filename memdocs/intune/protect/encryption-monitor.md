@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254995"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989651"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Überwachen der Geräteverschlüsselung mit Intune
 
@@ -169,68 +169,20 @@ Wenn Sie den Bereich „Verschlüsselungsbericht“ anzeigen, können Sie auf **
 
 Dieser Bericht kann bei der Identifizierung von Problemen von Gerätegruppen verwendet werden. Beispielsweise können Sie den Bericht verwenden, um eine Liste der macOS-Geräte zu erstellen, für die *der Benutzer bereits FileVault aktiviert hat*. So können die Geräte ermittelt werden, die manuell entschlüsselt werden müssen, damit Intune deren FileVault-Einstellungen verwalten kann.
 
-## <a name="filevault-recovery-keys"></a>FileVault-Wiederherstellungsschlüssel
+## <a name="manage-recovery-keys"></a>Verwalten von Wiederherstellungsschlüsseln
 
-Wenn Intune zum ersten Mal ein macOS-Gerät mithilfe von FileVault verschlüsselt, wird ein persönlicher Wiederherstellungsschlüssel erstellt. Bei der Verschlüsselung zeigt das Gerät dem Endbenutzer den persönlichen Schlüssel einmal an.
+Ausführliche Informationen zum Verwalten von Wiederherstellungsschlüsseln finden Sie in den folgenden Intune-Dokumentationen:
 
-Bei verwalteten Geräten kann Intune eine Kopie des persönlichen Wiederherstellungsschlüssels hinterlegen. Durch die Hinterlegung von Schlüsseln können Intune-Administratoren die Schlüssel zum Schutz von Geräten rotieren, und die Benutzer können verlorene oder rotierte persönliche Wiederherstellungsschlüssel wiederherstellen.
+macOS FileVault:
+- [Abrufen persönlicher Wiederherstellungsschlüssel](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Rotieren von Wiederherstellungsschlüsseln](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [Wiederherstellen von Wiederherstellungsschlüsseln](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Intune unterstützt mehrere Optionen für das Rotieren oder Wiederherstellen von persönlichen Wiederherstellungsschlüsseln. Beispielsweise werden Schlüssel rotiert, wenn der aktuelle persönliche Schlüssel verloren geht oder als gefährdet eingestuft wird.
-
-> [!IMPORTANT]
-> Geräte, die von Benutzern anstelle von Intune verschlüsselt werden, können nicht von Intune verwaltet werden. Das bedeutet, dass Intune die persönlichen Wiederherstellungsschlüssel dieser Geräte nicht hinterlegen und die Rotation des Wiederherstellungsschlüssels nicht verwalten kann. Bevor Intune FileVault und die Wiederherstellungsschlüssel für das Gerät verwalten kann, muss der Benutzer sein Gerät entschlüsseln und dann von Intune wieder verschlüsseln lassen.
-
-### <a name="rotate-recovery-keys"></a>Rotieren von Wiederherstellungsschlüsseln
-
-- **Automatische Rotation:** Als Administrator können Sie festlegen, dass durch die FileVault-Einstellung „Rotation für persönlichen Wiederherstellungsschlüssel“ in regelmäßigen Abständen automatisch neue Wiederherstellungsschlüssel erstellt werden. Wenn ein neuer Schlüssel für ein Gerät generiert wird, wird dieser nicht dem Benutzer angezeigt. Stattdessen muss der Benutzer den Schlüssel entweder bei einem Administrator anfragen oder über die Unternehmensportal-App abrufen.
-
-- **Manuelle Rotation:** Als Administrator können Sie Informationen zu einem über FileVault verschlüsselten Gerät abrufen, das Sie mit Intune verwalten. Anschließend können Sie den Wiederherstellungsschlüssel für Unternehmensgeräte manuell rotieren. Wiederherstellungsschlüssel für persönliche Geräte können nicht rotiert werden.
-
-  So rotieren Sie einen Wiederherstellungsschlüssel:
-
-  1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
-  
-  2. Klicken Sie auf **Geräte** > **Alle Geräte**.
-  
-  3. Wählen Sie aus der Geräteliste das verschlüsselte Gerät aus, für das Sie den Schlüssel rotieren möchten. Klicken Sie dann unter „Überwachen“ auf  **Wiederherstellungsschlüssel**.
-  
-  4. Klicken Sie im Bereich „Wiederherstellungsschlüssel“ auf die Option **FileVault-Wiederherstellungsschlüssel rotieren**.
-
-     Wenn das Gerät das nächste Mal bei Intune eincheckt, wird dann der persönliche Schlüssel rotiert. Falls erforderlich kann der neue Schlüssel vom Endbenutzer über das Unternehmensportal abgerufen werden.
-
-### <a name="recover-recovery-keys"></a>Wiederherstellen von Wiederherstellungsschlüsseln
-
-- **Administrator:** Administratoren können keine persönlichen Wiederherstellungsschlüssel für Geräte abrufen, die mit FileVault verschlüsselt sind.
-
-- **Endbenutzer:** Endbenutzer können ihre persönlichen Wiederherstellungsschlüssel für ihre verwalteten Geräte über die Unternehmensportal-Website abrufen. Über die Unternehmensportal-App ist dies nicht möglich.
-
-  So rufen Sie einen Wiederherstellungsschlüssel ab:
-  
-  1. Melden Sie sich auf einem beliebigen Gerät bei der *Intune-Unternehmensportal*-Website an.
-
-  2. Navigieren Sie im Portal zu **Geräte**, und wählen Sie das macOS-Gerät aus, das über FileVault verschlüsselt ist.
-
-  3. Klicken Sie auf **Wiederherstellungsschlüssel abrufen**. Dann wird der aktuelle Wiederherstellungsschlüssel angezeigt.
-
-## <a name="bitlocker-recovery-keys"></a>BitLocker-Wiederherstellungsschlüssel
-
-Intune gewährt Zugriff auf das Azure AD-Blatt für BitLocker, sodass Sie sich über das Intune-Portal die BitLocker-Schlüssel-IDs und -Wiederherstellungsschlüssel für Ihre Windows 10-Geräte ansehen können. Damit auf ein Gerät zugegriffen werden kann, müssen die dazugehörigen Schlüssel in Azure AD hinterlegt sein.
-
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
-
-2. Klicken Sie auf **Geräte** > **Alle Geräte**.
-
-3. Wählen Sie ein Gerät aus der Liste aus, und wählen Sie dann unter *Überwachung* die Option **Recovery keys** (Wiederherstellungsschlüssel) aus.
-  
-   Wenn Schlüssel in Azure AD verfügbar sind, sind die folgenden Informationen verfügbar:
-   - BitLocker-Schlüssel-ID
-   - BitLocker-Wiederherstellungsschlüssel
-   - Laufwerkstyp
-
-   Wenn keine Schlüssel in Azure AD verfügbar sind, zeigt Intune die Meldung *Für dieses Gerät wurde kein BitLocker-Schlüssel gefunden* an.
-
-Informationen zu BitLocker stehen über den [BitLocker-Konfigurationsdienstanbieter](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (Configuration Service Provider, CSP) zur Verfügung. Der BitLocker-CSP wird ab Windows 10, Version 1709 und für Windows 10 Pro, Version 1809 und höher unterstützt.
+Windows 10 BitLocker:
+- [Rotieren von BitLocker-Wiederherstellungsschlüsseln](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erstellen Sie eine [Gerätekonformitätsrichtlinie](compliance-policy-create-windows.md).
+[Verwalten der BitLocker-Richtlinie](../protect/encrypt-devices.md)
+
+[Verwalten der FileVault-Richtlinie](encrypt-devices-filevault.md)
