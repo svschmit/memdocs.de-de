@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824063"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428637"
 ---
 # <a name="what-is-desktop-analytics"></a>Was ist Desktop Analytics?
 
@@ -70,9 +70,6 @@ Zum Verwenden von Desktop Analytics müssen Sie sicherstellen, dass Ihre Umgebun
 ### <a name="technical"></a>Technisch
 
 - Sie benötigen ein aktives Azure-Abonnement mit den Berechtigungen eines [globalen Administrators](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions). [Microsoft-Konten](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) werden nicht unterstützt.  
-
-    > [!Important]  
-    > Desktop Analytics erfordert derzeit, dass Sie einen Office 365-Dienst in Ihrem Azure AD-Mandanten bereitstellen. Dies wird künftig nicht mehr erforderlich sein.
 
     - Berechtigungen als **Arbeitsbereichsbesitzer** zum **Einrichten Ihres Arbeitsbereichs** sowie die folgenden Rollen:  
 

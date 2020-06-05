@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268248"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428585"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Problembehandlung bei Desktop Analytics
 
@@ -68,7 +68,7 @@ Desktop Analytics fügt Ihrer Azure AD-Instanz die folgenden Anwendungen hinzu:
 
 - **MALogAnalyticsReader**: Diese Anwendung überwacht Ihren Azure Log Analytics-Arbeitsbereich, um sicherzustellen, dass die tägliche Momentaufnahme erfolgreich kopiert wurde. Weitere Informationen erhalten Sie unter [Anwendungsrolle MALogAnalyticsReader](#bkmk_MALogAnalyticsReader).  
 
-- **Office365-Clientadministrator:** Diese Anwendung ermöglicht Configuration Manager das Abrufen der Bereitstellungsplaninformationen und des Status der Gerätebereitschaft von Desktop Analytics.
+- **Desktop Analytics**: Diese Anwendung ermöglicht Configuration Manager das Abrufen der Bereitstellungsplaninformationen und des Status der Gerätebereitschaft von Desktop Analytics.
 
 Wenn Sie diese Apps nach Abschluss des Setups bereitstellen müssen, wechseln Sie zum Bereich **Verbundene Dienste**. Wählen Sie **Benutzer- und Apps-Zugriff konfigurieren** aus, und stellen Sie die Apps bereit.  
 

@@ -2,7 +2,7 @@
 title: Upgraden von Clients unter Windows
 titleSuffix: Configuration Manager
 description: Upgraden von Clients für Windows-Computer in Configuration Manager.
-ms.date: 08/27/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8b0a69b07a3be633434203f93b0724cec4ea88a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427763"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347139"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Vorgehensweise: Upgraden von Clients für Windows-Computer in Configuration Manager
 
@@ -59,9 +59,6 @@ Ein Client kann in den folgenden Szenarien automatisch aktualisiert werden:
 > Um die verschiedenen in Ihrer Hierarchie vorhandenen Versionen des Configuration Manager-Clients zu ermitteln, können Sie im Berichtsordner **Standort – Clientinformationen** den Bericht **Anzahl von Configuration Manager-Clients nach Clientversionen** ausführen.  
 
 Configuration Manager erstellt standardmäßig ein Upgradepaket. Das Paket wird automatisch an alle Verteilungspunkte in der Hierarchie gesendet. Wenn Sie Änderungen am Client Paket am CAS vornehmen, aktualisiert Configuration Manager das Paket automatisch und verteilt es neu. Ein Beispiel für eine Änderung ist, wenn Sie ein Clientsprachpaket hinzufügen. Wenn Sie das automatische Clientupgrade aktivieren, wird das neue Clientsprachpaket automatisch auf allen Clients installiert.
-
-> [!NOTE]  
-> Configuration Manager sendet das Clientupgradepaket nicht automatisch an cloudbasierte Verteilungspunkte von Configuration Manager.  
 
 Aktivieren Sie das automatische Clientupgrade in Ihrer Hierarchie. Diese Konfiguration hält Ihre Clients mit weniger Aufwand auf dem neuesten Stand.  
 
