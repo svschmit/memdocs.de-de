@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 179314f363c8f086239b2c926c4bed8d09c68204
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4f85c30c9472849d26802c8cdccd7a95006a3e4a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364161"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984009"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Steuern von Zugriff, Konten und Energiefunktionen auf gemeinsam genutzten PCs oder von mehreren Benutzern verwendeten Geräten mit Intune
 
@@ -46,18 +46,39 @@ Wenn das Profil in Intune erstellt wird, stellen Sie das Profil für die Geräte
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 3. Geben Sie die folgenden Eigenschaften ein:
 
+   - **Plattform**: Wählen Sie **Windows 10 und höher** aus.
+   - **Profil**: Wählen Sie **Freigegebenes, von mehreren Benutzern verwendetes Gerät**  aus.
+
+4. Wählen Sie **Erstellen** aus.
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
+
    - **Name:** Geben Sie einen aussagekräftigen Namen für das neue Profil ein.
    - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
-   - **Plattform**: Wählen Sie **Windows 10 und höher** aus.
-   - **Profiltyp**: Wählen Sie **Freigegebenes, von mehreren Benutzern verwendetes Gerät**  aus.
 
-4. Konfigurieren Sie die Einstellungen für [Windows 10 und höher](shared-user-device-settings-windows.md) oder [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
+6. Wählen Sie **Weiter** aus.
+7. Die verfügbaren **Konfigurationseinstellungen** variieren je nach ausgewählter Plattform. Wählen Sie Ihre Plattform für detaillierte Einstellungen aus:
 
-5. Wählen Sie **OK** > **Erstellen** aus, um die Änderungen zu speichern.
+    - [Windows 10 und höher](shared-user-device-settings-windows.md)
+    - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
-Das Profil ist nun erstellt und in der Liste enthalten, führt aber noch keine Aktionen durch. Achten Sie darauf, dass Sie Gerätegruppen in Ihrer Organisation das [Profil zuweisen](device-profile-assign.md).
+8. Wählen Sie **Weiter** aus.
+
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
+
+    Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Gerätegruppe aus, der Ihr Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+    > [!NOTE]
+    > Achten Sie darauf, dass Sie Gerätegruppen in Ihrer Organisation das Profil zuweisen.
+
+11. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf **Erstellen** klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
+
+Wenn die Geräte das nächste Mal einchecken, wird die Richtlinie angewendet.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 - Sehen sie sich die Übersicht über alle Einstellungen für [Windows 10 und höher](shared-user-device-settings-windows.md) oder [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) an.
-- [Zuweisen von Profilen](device-profile-assign.md) und [Überwachen von Profilen](device-profile-monitor.md)
+- [Überwachen Sie den Profilstatus](device-profile-monitor.md), [nachdem das Profil zugewiesen wurde](device-profile-assign.md).

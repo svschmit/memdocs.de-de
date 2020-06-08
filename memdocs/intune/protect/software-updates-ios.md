@@ -5,20 +5,20 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4de042fdc443a43e8a34a2eb433ecad34152887a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350719"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988288"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Hinzufügen von iOS/iPadOS-Softwareupdaterichtlinien in Intune
 
@@ -33,6 +33,10 @@ Diese Funktion gilt für:
 - iPadOS 13.0 und höher (überwacht)
 
 Das Gerät wird standardmäßig etwa alle acht Stunden bei Intune eingecheckt. Wenn ein Update über eine Updaterichtlinie verfügbar ist, wird das Update vom Gerät heruntergeladen. Das Gerät installiert dann das Update beim nächsten Einchecken innerhalb Ihrer Zeitplankonfiguration. Obwohl während des Updateprozesses in der Regel keine Benutzerinteraktion erforderlich ist, muss der Benutzer, wenn das Gerät über einen Passcode verfügt, diesen eingeben, um ein Softwareupdate zu starten. Profile verhindern nicht, dass Benutzer das Betriebssystem manuell aktualisieren. Benutzer können daran gehindert werden, das Betriebssystem manuell mit einer Gerätekonfigurationsrichtlinie zu aktualisieren, um die Sichtbarkeit von Softwareupdates einzuschränken.
+
+> [!NOTE]
+> Wenn Sie den [autonomen Einzelanwendungsmodus](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam) (Autonomous Single App Mode, ASAM) verwenden, sollten die Auswirkungen von Betriebssystemupdates berücksichtigt werden, da das resultierende Verhalten möglicherweise unerwünscht ist.
+Führen Sie Tests durch, um die Auswirkungen von Betriebssystemupdates auf die App zu bewerten, die Sie im autonomen Einzelanwendungsmodus ausführen.
 
 ## <a name="configure-the-policy"></a>Konfigurieren der Richtlinie
 
@@ -70,7 +74,9 @@ Das Gerät wird standardmäßig etwa alle acht Stunden bei Intune eingecheckt. W
        Wenn Sie keine Zeiten zum Starten oder Beenden konfigurieren, führt die Konfiguration zu keiner Einschränkung, und Updates können jederzeit installiert werden.  
 
        > [!NOTE]
-       > Wenn Sie die Sichtbarkeit von Softwareupdates für einen bestimmten Zeitraum auf Ihren überwachten iOS/iPadOS-Geräten verzögern möchten, konfigurieren Sie diese Einstellungen unter [Geräteeinschränkungen](../configuration/device-restrictions-ios.md#general). Softwareupdaterichtlinien setzen jegliche Geräteeinschränkungen außer Kraft. Wenn Sie sowohl eine Softwareupdaterichtlinie als auch eine Einschränkung zum Verzögern der Sichtbarkeit von Softwareupdates festlegen, erzwingt das Gerät ein Softwareupdate gemäß der Richtlinie. Die Einschränkung bewirkt, dass Benutzer die Option zum Ausführen des Geräteupdates nicht selbst sehen, und das Update wird wie im Rahmen Ihrer iOS-Updaterichtlinie durchgeführt.
+       > Sie können Einstellungen unter [Geräteeinschränkungen](../configuration/device-restrictions-ios.md#general) konfigurieren, um ein Update für einen bestimmten Zeitraum auf Ihren überwachten iOS/iPadOs-Geräten vor Gerätebenutzern zu verbergen. Ein Einschränkungszeitraum gibt Ihnen die Möglichkeit, ein Update zu testen, bevor es Benutzern zur Installation zur Verfügung steht. Nachdem die Geräteeinschränkungsdauer abgelaufen ist, wird das Update für Benutzer sichtbar. Benutzer können dieses dann installieren. Alternativ wird es möglicherweise von Ihren Softwareupdaterichtlinien automatisch später installiert.
+       >
+       > Wenn Sie eine Geräteeinschränkung zum Auszublenden von Updates verwenden, überprüfen Sie Ihre Softwareupdaterichtlinien, um sicherzustellen, dass diese den Stichtag für die Installation des Updates nicht vor dem Ende der Einschränkungsperiode festlegen. Die Softwareupdaterichtlinien installieren Updates auf Grundlage ihres eigenen Zeitplans, unabhängig davon, ob das Update für den Gerätebenutzer sichtbar ist oder nicht.
 
    Nachdem Sie die *Updaterichtlinieneinstellungen* konfiguriert haben, klicken Sie auf **Weiter**.
 

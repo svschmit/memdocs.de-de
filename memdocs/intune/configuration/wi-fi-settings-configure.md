@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: ca2a5ddd3d2b4c0aa93c7c955d0d688944ee8f95
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587287"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985498"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Hinzufügen und Verwenden von WLAN-Einstellungen auf Microsoft Intune-Geräten
 
@@ -39,11 +39,11 @@ In diesem Artikel sind die Schritte zum Erstellen eines WLAN-Profils aufgelistet
 
 WLAN-Profile unterstützen folgende Geräteplattformen:
 
-- Android 4 und höher
+- Android 5 und neuer
 - Android Enterprise und -Kiosk
-- iOS 8.0 und höher
+- iOS 11.0 und neuer
 - iOS 13.0 und höher
-- macOS X 10.11 und neuer
+- macOS X 10.12 und neuer
 - Windows 10 und höher, Windows 10 Mobile und Windows Holographic for Business
 
 > [!NOTE]
@@ -69,7 +69,7 @@ WLAN-Profile unterstützen folgende Geräteplattformen:
       > [!TIP]
       >
       > - Für **Android Enterprise**-Geräte, die als dedizierte Geräte (Kiosk) ausgeführt werden, wählen Sie **Nur Gerätebesitzer** > **WLAN** aus.
-      > - Für **Windows 8.1 und höher** können Sie **WLAN (Import)** auswählen. Mit dieser Option können Sie WLAN-Einstellungen als XML-Datei importieren, die Sie zuvor von einem anderen Gerät exportiert haben.
+      > - Für **Windows 8.1 und neuer** können Sie **WLAN (Import)** auswählen. Mit dieser Option können Sie WLAN-Einstellungen als XML-Datei importieren, die Sie zuvor von einem anderen Gerät exportiert haben.
 
 4. Wählen Sie **Erstellen** aus.
 5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
@@ -84,8 +84,8 @@ WLAN-Profile unterstützen folgende Geräteplattformen:
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), einschließlich dedizierter Geräte
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
-    - [Windows 10 und höher](wi-fi-settings-windows.md)
-    - [Windows 8.1 und höher](wi-fi-settings-import-windows-8-1.md) (einschließlich Windows Holographic for Business)
+    - [Windows 10 und höher](wi-fi-settings-windows.md)
+    - [Windows 8.1 und neuer](wi-fi-settings-import-windows-8-1.md) (einschließlich Windows Holographic for Business)
 
 8. Wählen Sie **Weiter** aus.
 9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).

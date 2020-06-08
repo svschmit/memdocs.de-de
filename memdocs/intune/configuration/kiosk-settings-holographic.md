@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/18/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18de92792582d4c6753bc8657c56d73fa1509788
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3d54e02c7bb88354ec59a9a8ce780ff559377466
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359143"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556097"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Geräteeinstellungen bei Windows Holographic for Business zur Ausführung als Kiosk in Intune
 
@@ -34,50 +34,79 @@ Weitere Informationen zur Windows-Kioskfunktion in Intune finden Sie unter [Konf
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie das Profil.](kiosk-settings.md#create-the-profile)
+- [Erstellen Sie ein Windows 10-Konfigurationsprofil für Kioskgeräte für mehrere Benutzer](kiosk-settings.md#create-the-profile).
 
-## <a name="single-full-screen-app-kiosks"></a>Kiosk mit einzelner Vollbild-App
+  Beim Erstellen eines Windows 10-Konfigurationsprofils für Kioskgeräte für mehrere Benutzer gibt es mehr Einstellungen, als in diesem Artikel aufgeführt werden. Die Einstellungen in diesem Artikel werden auf Geräten mit Windows Holographic for Business unterstützt.
 
-Wenn Sie den Einzel-App-Kioskmodus auswählen, nehmen Sie die folgenden Einstellungen vor:
+- Dieses Kioskprofil steht in direktem Zusammenhang mit dem Geräteeinschränkungsprofil, das Sie mithilfe der [Microsoft Edge-Kioskeinstellungen](device-restrictions-windows-holographic.md#microsoft-edge-browser) erstellen. Zusammenfassung:
 
-- **Typ der Benutzeranmeldung:** Wählen Sie **Lokales Benutzerkonto** aus, um das lokale Benutzerkonto (auf dem Gerät) oder ein Microsoft-Konto (MSA) einzugeben, das der Kiosk-App zugeordnet ist. Der Typ **Autologon** wird unter Windows Holographic for Business nicht unterstützt.
+  1. Erstellen Sie das Kioskprofil, um das Gerät im Kioskmodus auszuführen.
+  2. Erstellen Sie das [Geräteeinschränkungsprofil](device-restrictions-windows-holographic.md#microsoft-edge-browser), und konfigurieren Sie spezifische Features und Einstellungen, die in Microsoft Edge zulässig sind.
 
-- **Anwendungstyp:** Wählen Sie **Store-App** aus.
+> [!IMPORTANT]
+> Achten Sie darauf, dass Sie dieses Kioskprofil den gleichen Geräten wie Ihr [Microsoft Edge-Profil](device-restrictions-windows-holographic.md#microsoft-edge-browser) zuweisen.
 
-- **App zur Ausführung im Kioskmodus:** Klicken Sie auf **Store-App hinzufügen**, und wählen Sie eine App aus der Liste aus.
+## <a name="single-app-full-screen-kiosk"></a>Einzelne App, Vollbildkiosk
+
+Hiermit wird nur eine App auf dem Gerät ausgeführt. Wenn sich der Benutzer anmeldet, wird eine bestimmte App gestartet. Dieser Modus hindert den Benutzer auch daran, neue Apps zu öffnen oder die App zu ändern, die ausgeführt wird.
+
+- **Typ der Benutzeranmeldung:** Wählen Sie den Kontotyp aus, der die App ausführt. Folgende Optionen sind verfügbar:
+
+  - **Automatische Anmeldung (Windows 10, Version 1803 und neuer):** Wird unter Windows Holographic for Business nicht unterstützt.
+  - **Lokales Benutzerkonto:** Geben Sie das lokale Benutzerkonto (auf dem Gerät) an. Geben Sie alternativ ein Microsoft Account-Konto (MSA) ein, das der Kiosk-App zugeordnet ist. Das von Ihnen eingegebene Konto wird zum Anmelden im Kiosk verwendet.
+
+    Für Kioske in öffentlichen Umgebungen sollte ein Benutzertyp mit dem geringsten Privileg verwendet werden.
+
+- **Anwendungstyp:** Wählen Sie **Store-App hinzufügen** aus.
+
+  - **App zur Ausführung im Kioskmodus:** Wählen Sie eine App in der Liste aus.
 
     Es sind keine Apps aufgelistet? Fügen Sie einige mithilfe der Schritte unter [Client-Apps](../apps/apps-add.md) hinzu.
 
-    Klicken Sie auf **OK**, um die Änderungen zu speichern.
+## <a name="multi-app-kiosk"></a>Kiosk mit mehreren Apps
 
-## <a name="multi-app-kiosks"></a>Kiosks für mehrere Apps
+Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. Diese Apps sind die einzigen Apps, die der Benutzer öffnen kann. Wenn bei einer App eine Abhängigkeit von einer anderen App vorliegt, müssen beide in der Liste zulässiger Apps enthalten sein.
 
-Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. Diese Apps sind die einzigen Apps, die der Benutzer öffnen kann. Wenn Sie den Multi-App-Kioskmodus auswählen, nehmen Sie die folgenden Einstellungen vor:
+- **Geräte unter Windows 10 im S Modus als Ziel verwenden:** Klicken Sie auf **Nein**. Der S Modus wird unter Windows Holographic for Business nicht unterstützt.
 
-- **Geräte unter Windows 10 im S Modus als Ziel verwenden:** Wählen Sie **Nein** aus. Der S Modus wird unter Windows Holographic for Business nicht unterstützt.
+- **Typ der Benutzeranmeldung:** Fügen Sie mindestens ein Benutzerkonto hinzu, das die von Ihnen hinzugefügten Apps verwenden kann. Folgende Optionen sind verfügbar:
 
-- **Typ der Benutzeranmeldung:** Fügen Sie mindestens ein Benutzerkonto hinzu, das die von Ihnen hinzugefügten Apps verwenden kann. Folgende Optionen sind verfügbar: 
-
-  - **Auto logon** (Automatische Anmeldung): Wird unter Windows Holographic for Business nicht unterstützt.
+  - **Automatische Anmeldung (Windows 10, Version 1803 und neuer):** Wird unter Windows Holographic for Business nicht unterstützt.
   - **Lokale Benutzerkonten:** **Fügen Sie das lokale Benutzerkonto (auf dem Gerät) hinzu**. Das von Ihnen eingegebene Konto wird zum Anmelden im Kiosk verwendet.
   - **Azure AD-Benutzer oder Gruppe (Windows 10, Version 1803 und höher):** Bei dieser Option sind Benutzeranmeldeinformationen für die Anmeldung auf dem Gerät erforderlich. Wählen Sie **Hinzufügen** aus, um Azure AD-Benutzer oder Gruppen aus der Liste auszuwählen. Sie können mehrere Benutzer und Gruppen auswählen. Wählen Sie **OK** aus, um die Änderungen zu speichern.
   - **HoloLens-Besucher:** Beim Besucherkonto handelt es sich um ein Gastkonto, für das keine Anmeldeinformationen oder Authentifizierung erforderlich ist. Weitere Informationen dazu finden Sie unter [shared PC mode concepts (Konzepte für den Modus „Freigegebener Computer“)](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
-- **Anwendungen:** Wählen Sie die Apps aus, die auf dem Kioskgerät ausgeführt werden sollen. Denken Sie daran, dass Sie mehrere Apps hinzufügen können.
+- **Browser und Anwendungen**: Wählen Sie die Apps aus, die auf dem Kioskgerät ausgeführt werden sollen. Denken Sie daran, dass Sie mehrere Apps hinzufügen können.
 
-  - **Store-App hinzufügen:** Wählen Sie eine vorhandene App aus, die Sie zu Intune hinzugefügt oder dort unter [Client-Apps](../apps/apps-add.md) bereitgestellt haben, einschließlich branchenspezifischer Apps. Wenn keine Apps in der Liste aufgeführt sind, unterstützt Intune zahlreiche [App-Typen](../apps/apps-add.md), die Sie [zu Intune hinzufügen](../apps/store-apps-windows.md) können.
-  - **Win32-App hinzufügen:** Wird unter Windows Holographic for Business nicht unterstützt.
-  - **Nach AUMID hinzufügen:** Fügen Sie mit dieser Option Windows-Apps für den Posteingang hinzu. Geben Sie die folgenden Eigenschaften ein: 
+  - **Browser**
+    - **Microsoft Edge hinzufügen**: Microsoft Edge wird dem App-Raster hinzugefügt, und alle Anwendungen können in diesem Kiosk ausgeführt werden. Wählen Sie den Microsoft Edge-Kioskmodustyp aus:
 
-    - **Anwendungsname:** Erforderlich. Geben Sie einen Namen für die Anwendung ein.
-    - **Anwendungsbenutzermodell-ID (AUMID):** Erforderlich. Geben Sie die AUMID der Windows-App ein. Weitere Informationen zum Abrufen dieser ID finden Sie unter [Ermitteln der Anwendungsbenutzermodell-ID einer installierten App](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
-    - **Kachelgröße:** Erforderlich. Wählen Sie eine der folgenden App-Kachelgrößen aus: „Klein“, „Mittelgroß“, „Breit“ oder „Groß“.
+      - **Normalmodus (Vollversion von Microsoft Edge)** : Führt eine Vollversion von Microsoft Edge mit sämtlichen Funktionen für das Browsen aus. Benutzerdaten und -zustand werden zwischen Sitzungen beibehalten.
+      - **Öffentliches Browsen (InPrivate)** : Hiermit wird eine Version von Microsoft Edge InPrivate mit mehreren Registerkarten mit einer für Kioske ausgelegten Benutzeroberfläche im Vollbildmodus ausgeführt.
 
-- **Einstellungen für Kioskbrowser:** Wird unter Windows Holographic for Business nicht unterstützt.
+      Weitere Informationen zu diesen Optionen finden Sie unter [Bereitstellen des Microsoft Edge-Kioskmodus](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+
+      > [!NOTE]
+      > Mit dieser Einstellung wird der Microsoft Edge-Browser auf dem Gerät aktiviert. Erstellen Sie zum Konfigurieren spezifischer Microsoft Edge-Einstellungen ein Geräteeinschränkungsprofil (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **Windows 10** (Plattform) > **Geräteeinschränkungen** > **Microsoft Edge-Browser**). Der [Microsoft Edge-Browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) beschreibt und führt alle Holographic for Business-Einstellungen auf.
+
+    - **Kioskbrowser hinzufügen**: Wird unter Windows Holographic for Business nicht unterstützt.
+
+  - **Anwendungen**
+    - **Store-App hinzufügen:** Wählen Sie eine vorhandene App aus, die Sie zu Intune hinzugefügt oder dort unter [Client-Apps](../apps/apps-add.md) bereitgestellt haben, einschließlich branchenspezifischer Apps. Wenn keine Apps in der Liste aufgeführt sind, unterstützt Intune zahlreiche [App-Typen](../apps/apps-add.md), die Sie [zu Intune hinzufügen](../apps/store-apps-windows.md) können.
+    - **Win32-App hinzufügen:** Wird unter Windows Holographic for Business nicht unterstützt.
+    - **Nach AUMID hinzufügen:** Mit dieser Option können Sie Windows-Posteingangs-Apps wie Editor oder Rechner hinzufügen. Geben Sie die folgenden Eigenschaften ein:
+
+      - **Anwendungsname:** Erforderlich. Geben Sie einen Namen für die Anwendung ein.
+      - **Anwendungsbenutzermodell-ID (AUMID):** Erforderlich. Geben Sie die AUMID der Windows-App ein. Weitere Informationen zum Abrufen dieser ID finden Sie unter [Ermitteln der Anwendungsbenutzermodell-ID einer installierten App](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+
+    - **AutoLaunch**: (Optional) Nachdem Sie Ihre Apps und Ihren Browser hinzugefügt haben, wählen Sie eine App oder einen Browser aus, die bzw. der jeweils automatisch geöffnet werden soll, wenn sich der Benutzer anmeldet. Nur eine App oder ein Browser kann mit automatisch gestartet werden.
+    - **Kachelgröße:** Erforderlich. Nachdem Sie Ihre Apps hinzugefügt haben, wählen Sie eine kleine, mittlere, breite oder große App-Kachelgröße aus.
 
 - **Alternatives Startlayout verwenden:** Wählen Sie **Ja** aus, um eine XML-Datei einzufügen, die beschreibt, wie die Apps im Startmenü dargestellt werden (u. a. die Reihenfolge der Apps). Verwenden Sie diese Option, wenn Sie in Ihrem Startmenü weitere Anpassungen vornehmen möchten. [Startlayout anpassen und exportieren](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens): Diese Option umfasst eine Anleitung und eine XML-Datei für Windows Holographic for Business-Geräte.
 
 - **Windows-Taskleiste:** Wird unter Windows Holographic for Business nicht unterstützt.
+- **Zugriff auf Downloadordner zulassen**: Wird unter Windows Holographic for Business nicht unterstützt.
+- **Wartungsfenster für App-Neustarts angeben**: Wird unter Windows Holographic for Business nicht unterstützt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

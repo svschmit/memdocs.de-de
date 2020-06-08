@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2020
-ms.topic: conceptual
+ms.date: 05/12/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254842"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990178"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Verwenden und Verwalten von Android Enterprise-Geräten mit OEMConfig in Microsoft Intune
 
@@ -31,6 +31,8 @@ Sie können OEMConfig in Microsoft Intune verwenden, um OEM-spezifische Einstell
 Diese Funktion gilt für:  
 
 - Android Enterprise
+
+Verwenden Sie die [mobilen Zebra-Erweiterungen (MX)](android-zebra-mx-overview.md), um Zebra Technologies-Geräte mit dem Android-Geräteadministrator zu verwalten.
 
 Dieser Artikel enthält Informationen zu OEMConfig und zu den Voraussetzungen. Außerdem wird erläutert, wie Sie ein Konfigurationsprofil erstellen, und es werden alle in Intune unterstützten OEMConfig-Apps aufgelistet.
 
@@ -56,7 +58,9 @@ Beachten Sie bei der Verwendung von OEMConfig die folgenden Informationen:
 - Intune stellt das Schema der OEMConfig-App zur Verfügung, damit Sie es konfigurieren können. Intune überprüft oder ändert das von der App bereitgestellte Schema nicht. Wenn das Schema falsch ist oder falsche Daten enthält, werden diese Daten weiterhin an Geräte gesendet. Wenn Sie ein Problem feststellen, das auf dieses Schema zurückzuführen ist, kontaktieren Sie den OEM, damit dieser Ihnen weiterhilft.
 - Intune beeinflusst oder steuert die Inhalte des App-Schemas nicht. Beispielsweise hat Intune keine Kontrolle über Zeichenfolgen, Sprachen, zulässige Aktionen usw. Es wird empfohlen, den OEM zu kontaktieren und um Informationen zur Verwaltung seiner Geräte mit OEMConfig zu bitten.
 - OEMs können ihre unterstützten Features und Schemas jederzeit aktualisieren und eine neue App im Google Play Store hochladen. Intune synchronisiert immer die neuste Version der OEMConfig-App aus dem Google Play Store. Ältere Versionen des Schemas oder der App verwaltet Intune nicht. Wenn Versionskonflikte auftreten, sollten Sie den OEM kontaktieren und um weitere Informationen bitten.
-- Weisen Sie einem Gerät ein OEMConfig-Profil zu. Wenn einem Gerät mehrere Profile zugewiesen werden, kann dies zu inkonsistentem Verhalten führen. Das OEMConfig-Modell unterstützt nur eine einzelne Richtlinie pro Gerät.
+- Sie können auf Zebra-Geräten mehrere Profile erstellen und diese dann dem gleichen Gerät zuweisen. Weitere Informationen finden Sie unter [OEMConfig auf Zebra-Geräten](oemconfig-zebra-android-devices.md).
+
+  Das OEMConfig-Modell auf Nicht-Zebra-Geräten unterstützt nur eine einzelne Richtlinie pro Gerät. Wenn einem Gerät mehrere Profile zugewiesen werden, kann dies zu inkonsistentem Verhalten führen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -83,7 +87,7 @@ Vergewissern Sie sich, dass das Gerät OEMConfig unterstützt, dass die richtige
 3. Geben Sie die folgenden Eigenschaften ein:
 
     - **Plattform**: Wählen Sie **Android Enterprise** aus.
-    - **Profiltyp**: Klicken Sie auf **OEMConfig**.
+    - **Profil**: Klicken Sie auf **OEMConfig**.
 
 4. Wählen Sie **Erstellen** aus.
 5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
@@ -145,7 +149,7 @@ Wenn das Gerät das nächste Mal nach Konfigurationsupdates sucht, werden die vo
 
 ## <a name="supported-oemconfig-apps"></a>Unterstützte OEMConfig-Apps
 
-Im Vergleich zu Standard-Apps erweitern OEMConfig-Apps die verwalteten Konfigurationsberechtigungen, die von Google gewährt werden, um komplexere Schemas zu unterstützen. Intune unterstützt derzeit die folgenden OEMConfig-Apps:
+Im Vergleich zu Standard-Apps erweitern OEMConfig-Apps die verwalteten Konfigurationsberechtigungen, die von Google gewährt werden, um komplexere Schemas und Funktionen zu unterstützen. OEMs müssen ihre OEMConfig-Apps bei Google registrieren. Wenn Sie sich nicht registrieren, funktionieren diese Features möglicherweise nicht wie erwartet. Intune unterstützt derzeit die folgenden OEMConfig-Apps:
 
 -----------------
 
@@ -153,6 +157,7 @@ Im Vergleich zu Standard-Apps erweitern OEMConfig-Apps die verwalteten Konfigura
 | --- | --- | ---|
 | Ascom | com.ascom.myco.oemconfig | |
 | Cipherlab | com.cipherlab.oemconfig | |
+| Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
 | HMDGlobal – 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal – 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 

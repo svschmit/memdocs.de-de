@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/11/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023247"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989482"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Hinzufügen von Apps zu Microsoft Intune 
 
@@ -43,6 +43,7 @@ Intune unterstützt eine Vielzahl von App-Typen. Jeder App-Typ hat unterschiedli
 | Interne (branchenspezifische) Apps | Intune installiert die App auf dem Gerät (Sie stellen die Installationsdatei zur Verfügung). | Sie müssen ein Update für die App ausführen. |
 | Apps, die bereits integriert sind (integrierte Apps) | Intune installiert die App auf dem Gerät.  | App-Updates werden automatisch ausgeführt. |
 | Apps im Web (Weblink) | Intune erstellt eine Verknüpfung zu der Web-App auf dem Startbildschirm des Geräts. | App-Updates werden automatisch ausgeführt. |
+| Apps aus anderen Microsoft-Diensten  | Intune erstellt eine Verknüpfung mit der App im Unternehmensportal. Weitere Informationen finden Sie unter [Einstellungsoptionen für App-Quellen](../apps/company-portal-app.md#app-source-setting-options). | App-Updates werden automatisch ausgeführt. |
 
 ### <a name="specific-app-type-details"></a>Details zu den jeweiligen App-Typen
  
@@ -70,7 +71,6 @@ Die folgende Tabelle führt die verschiedenen App-Typen auf und erläutert, wie 
 | Android Enterprise-System-Apps  | Store-App  | Wählen Sie **Android Enterprise-System-App** als **App-Typ** aus, und geben Sie dann den Namen der App, den Herausgeber und die Paketdatei ein.  |
 | Windows-App (Win32)  | LOB-App  | Wählen Sie **Windows-App (Win32)** als **App-Typ** aus, wählen Sie **App-Paketdatei** aus, und geben Sie dann eine Installationsdatei mit der Erweiterung **.intunewin** an.  |
 | Branchenspezifische macOS-Apps | LOB-App  | Wählen Sie **Branchenspezifisch** als **App-Typ** aus, wählen Sie dann die **App-Paketdatei** und dann eine Installationsdatei mit der Erweiterung **.intunemac** aus.  |
-
 
 <sup>1</sup> Weitere Informationen zu Android Enterprise und den Android-Arbeitsprofilen finden Sie unter [Grundlegendes zu lizenzierten Apps](apps-add.md#understanding-licensed-apps).
 
@@ -112,6 +112,7 @@ Sie können unter folgenden App-Typen wählen:
 - **Apps aus dem Store**: Apps, die in die Stores von Microsoft, iOS/iPadOS oder Android hochgeladen wurden, sind Store-Apps. Der Anbieter der Store-App verwaltet die Updates für die App und stellt sie bereit. Wählen Sie die App aus der Store-Liste aus, und machen Sie sie mithilfe von Intune für alle Benutzer verfügbar.
 - **Intern erstellte (branchenspezifische) Apps**: Intern erstelle Apps gelten als branchenspezifische Apps. Die Funktionen dieses App-Typs wurden für eine der von Intune unterstützten Plattformen wie Windows, iOS/iPadOS, macOS oder Android erstellt. Ihre Organisation erstellt Updates als unabhängige Dateien und stellt sie für Sie bereit. Sie fügen dann mithilfe von Intune die Updates für die App-Benutzer hinzu und stellen sie bereit.
 - **Apps im Web**: Web-Apps sind Client-Server-Anwendungen. Der Server stellt die Web-App bereit, welche die Benutzeroberfläche, den Inhalt und die Funktionen umfasst. Webhostingplattformen bieten häufig Vorteile unter anderen in den Bereichen Sicherheit und Lastenausgleich. Der App-Typ wird separat im Web verwaltet. Verwenden Sie Intune, um auf diesen App-Typ zu verweisen. Sie legen ebenfalls fest, welche Benutzergruppen auf diese App zugreifen können. Beachten Sie, dass Android keine Web-Apps unterstützt.
+- **Apps aus anderen Microsoft-Diensten:** Apps, die aus Azure AD oder Office Online stammen. **Azure AD-Unternehmensanwendungen** werden über das [Azure-Portal](https://portal.azure.com) registriert und zugewiesen. **Office Online-Anwendungen** werden mithilfe der im [M365-Admin Center](https://admin.microsoft.com) verfügbaren Steuerfunktionen für die Lizenzierung zugewiesen. Sie können Azure AD-Unternehmensanwendungen und Office Online-Anwendungen für Endbenutzer im Unternehmensportal ausblenden oder anzeigen lassen. Diese Konfigurationseinstellung finden Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) unter **Mandantenverwaltung** > **Anpassung**. Für jeden Endbenutzer können Sie im Unternehmensportal **Azure AD-Unternehmensanwendungen** oder **Office Online-Anwendungen** entweder **ausblenden** oder **anzeigen**. Jeder Endbenutzer sieht den gesamten Anwendungskatalog für den ausgewählten Microsoft-Dienst. Standardmäßig wird jede zusätzliche App auf **Ausblenden** festgelegt. Weitere Informationen finden Sie unter [Einstellungsoptionen für App-Quellen](../apps/company-portal-app.md#app-source-setting-options). 
 
 Wenn Sie festlegen, welche Apps Ihre Organisation benötigt, überprüfen Sie, wie die Apps mit Clouddiensten zusammenarbeiten, auf welche Daten die App zugreift, ob die Apps für BYOD-Benutzer verfügbar sind und ob die Apps Internetzugriff erfordern.
 
