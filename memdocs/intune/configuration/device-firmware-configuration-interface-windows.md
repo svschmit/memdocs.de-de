@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df8f6ba6873e98663be853e134995bab640541fc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2f598a73275e257fca3ff4024641fce54c3dabd2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79361119"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983844"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Verwenden von DFCI-Profilen (Device Firmware Configuration Interface) auf Windows-Geräten in Microsoft Intune (Public Preview)
-
-
 
 Wenn Sie Intune zum Verwalten von Autopilot-Geräten verwenden, können Sie nach deren Registrierung mithilfe von DFCI (Firmware Configuration Interface) UEFI-Einstellungen (BIOS) verwalten. Eine Übersicht über die Vorteile, Szenarios und Voraussetzungen finden Sie in der [Übersicht zu DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -81,31 +79,35 @@ Dieses Profil enthält die von Ihnen konfigurierten DFCI-Einstellungen.
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 3. Geben Sie die folgenden Eigenschaften ein:
 
+    - **Plattform**: Wählen Sie **Windows 10 und höher** aus.
+    - **Profil**: Wählen Sie **Device Firmware Configuration Interface** aus.
+
+4. Wählen Sie **Erstellen** aus.
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
+
     - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Richtlinien so, dass Sie diese später leicht wiedererkennen. Ein guter Profilname ist beispielsweise **Windows: Konfigurieren von DFCI-Einstellungen auf Windows-Geräten**.
     - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
-    - **Plattform**: Wählen Sie **Windows 10 und höher** aus.
-    - **Profiltyp**: Wählen Sie **Device Firmware Configuration Interface** aus.
 
-4. Konfigurieren Sie die Einstellungen:
+6. Wählen Sie **Weiter** aus.
+7. Konfigurieren Sie in den **Konfigurationseinstellungen** die folgenden Einstellungen:
 
     - **Lokalem Benutzer das Ändern von UEFI-Einstellungen erlauben (BIOS):** Folgende Optionen sind verfügbar:
       - **Nur nicht konfigurierte Einstellungen:** Der lokale Benutzer kann *abgesehen* von den von Intune explizit auf **Aktivieren** oder **Deaktivieren** festgelegten Einstellungen alle Einstellungen ändern.
       - **Keine**: Der lokale Benutzer darf keine UEFI-Einstellungen (BIOS) einschließlich der nicht im DFCI-Profil angezeigten Einstellungen ändern.
 
     - **CPU- und E/A-Virtualisierung:** Folgende Optionen sind verfügbar:
-        - **Nicht konfiguriert:** Intune verändert nichts und behält alle Einstellungen bei.
+        - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
         - **Aktiviert**: Das BIOS ermöglicht dem Betriebssystem die Verwendung der CPU- und E/A-Funktionen der Plattform. Virtualisierungsbasierte Sicherheit- und Device Guard-Technologien werden eingeschaltet.
-        - **Deaktivieren:** Das BIOS deaktiviert die CPU- und E/A-Virtualisierungsfunktionen der Plattform und verhindert deren Verwendung.
     - **Kameras:** Folgende Optionen sind verfügbar:
-        - **Nicht konfiguriert:** Intune verändert nichts und behält alle Einstellungen bei.
+        - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
         - **Aktiviert**: Alle integrierten Kameras, die direkt von UEFI (BIOS) verwaltet werden, sind aktiviert. Peripheriegeräte wie USB-Kameras sind nicht betroffen.
         - **Deaktiviert:** Alle integrierten Kameras, die direkt von UEFI (BIOS) verwaltet werden, sind deaktiviert. Peripheriegeräte wie USB-Kameras sind nicht betroffen.
     - **Mikrofone und Lautsprecher:**  Folgende Optionen sind verfügbar:
-        - **Nicht konfiguriert:** Intune verändert nichts und behält alle Einstellungen bei.
+        - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
         - **Aktiviert**: Alle integrierten Mikrofone und Lautsprecher, die direkt von UEFI (BIOS) verwaltet werden, sind aktiviert. Peripheriegeräte wie USB-Geräte sind nicht betroffen.
         - **Deaktiviert:** Alle integrierten Mikrofone und Lautsprecher, die direkt von UEFI (BIOS) verwaltet werden, sind deaktiviert. Peripheriegeräte wie USB-Geräte sind nicht betroffen.
     - **Radios (Bluetooth, WLAN, NFC usw.):** Folgende Optionen sind verfügbar:
-        - **Nicht konfiguriert:** Intune verändert nichts und behält alle Einstellungen bei.
+        - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
         - **Aktiviert**: Alle integrierten Radios, die direkt von UEFI (BIOS) verwaltet werden, sind aktiviert. Peripheriegeräte wie USB-Geräte sind nicht betroffen.
         - **Deaktiviert:** Alle integrierten Radios, die direkt von UEFI (BIOS) verwaltet werden, sind deaktiviert. Peripheriegeräte wie USB-Geräte sind nicht betroffen.
 
@@ -113,19 +115,31 @@ Dieses Profil enthält die von Ihnen konfigurierten DFCI-Einstellungen.
         > Wenn Sie die Einstellung **Radios** deaktivieren, ist für das Gerät eine kabelgebundene Netzwerkverbindung erforderlich. Andernfalls kann das Gerät nicht verwaltet werden.
 
     - **Von externen Medien aus starten (USB, SD):** Folgende Optionen sind verfügbar:
-        - **Nicht konfiguriert:** Intune verändert nichts und behält alle Einstellungen bei.
+        - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
         - **Aktiviert**: UEFI (BIOS) ermöglicht das Starten von externen Medien aus (nicht über Festplattenspeicher).
         - **Deaktiviert:** UEFI (BIOS) lässt das Starten von externen Medien über Speicher, die keine Festplattenspeicher sind, nicht zu.
-    - **Von Netzwerkadaptern aus starten:**  Folgende Optionen sind verfügbar:
-        - **Nicht konfiguriert:** Intune verändert nichts und behält alle Einstellungen bei.
+    - **Von Netzwerkadaptern aus starten:** Folgende Optionen sind verfügbar:
+        - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
         - **Aktiviert**: UEFI (BIOS) ermöglicht das Starten von integrierten Netzwerkschnittstellen aus.
         - **Deaktiviert:** UEFI (BIOS) lässt das Starten von integrierten Netzwerkschnittstellen aus nicht zu.
 
-5. Wenn Sie fertig sind, wählen Sie **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern. Das Profil wird erstellt und in der Liste angezeigt.
+8. Wählen Sie **Weiter** aus.
+
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
+
+    Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Benutzergruppen aus, denen Ihr Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+11. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf **Erstellen** klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
+
+Wenn die Geräte das nächste Mal einchecken, wird die Richtlinie angewendet.
 
 ## <a name="assign-the-profiles-and-reboot"></a>Zuweisen der Profile und Neustarten
 
-Nach dem Erstellen der Profile [können diese zugewiesen werden](../configuration/device-profile-assign.md). Stellen Sie sicher, dass Sie die Profile Ihren Azure AD-Sicherheitsgruppen zuweisen, die Ihre DFCI-Geräte enthalten.
+Stellen Sie sicher, dass Sie die Profile Ihren Azure AD-Sicherheitsgruppen [zuweisen](../configuration/device-profile-assign.md), die Ihre DFCI-Geräte enthalten. Das Profil kann beim Erstellen oder anschließend zugewiesen werden.
 
 Wenn das Gerät das Windows Autopilot ausführt, kann DFCI während „Seite zum Registrierungsstatus“ einen Neustart erzwingen. Mit diesem ersten Neustart wird UEFI in Intune registriert. 
 
@@ -179,4 +193,4 @@ Wenn die DFCI-Richtlinie angewendet wird, können lokale Benutzer von DFCI konfi
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Überwachen Sie nach dem Zuweisen des Profils dessen Status](device-profile-monitor.md).
+[Überwachen Sie den Profilstatus](device-profile-monitor.md), [nachdem das Profil zugewiesen wurde](device-profile-assign.md).

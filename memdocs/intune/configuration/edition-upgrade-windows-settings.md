@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ab94c3cc8bb9009d49a6b301d9a67fa6ffc5f1a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a91a84ece833bf893395e494a0e99fa675f14c2a
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364304"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429657"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Windows 10-Geräteeinstellungen (und höher) zum Upgrade von Editionen oder Aktivieren des S-Modus in Intune
 
@@ -38,18 +38,20 @@ Weitere Informationen zu diesem Feature finden Sie unter [Verwenden eines Konfig
 
 ## <a name="edition-upgrade"></a>Upgrade der Edition
 
-- **Edition, auf die upgegradet werden soll:** Wählen Sie die Windows 10-Edition aus, auf die Sie das Upgrade durchführen. Für die Geräte, die das Ziel dieser Richtlinie sind, wird ein Upgrade auf die von Ihnen gewählte Edition durchgeführt.
-- **Product Key:** Geben Sie den Product Key ein, den Sie von Microsoft erhalten haben. Nach dem Erstellen der Richtlinie mit dem Product Key kann dieser nicht aktualisiert werden und wird aus Sicherheitsgründen ausgeblendet. Geben Sie den gesamten Schlüssel erneut ein, um den Product Key zu ändern.
-- **Lizenzdatei:** Wählen Sie für **Windows 10 Holographic for Business** oder die **Windows 10 Mobile**-Edition **Durchsuchen** aus, um die Lizenzdatei auszuwählen, die Sie von Microsoft erhalten haben. Diese Lizenzdatei enthält Lizenzinformationen für die Editionen, auf die Sie die Geräte upgraden.
+- **Edition, auf die upgegradet werden soll**: Wählen Sie die Windows 10-Edition aus, auf die Sie das Upgrade durchführen. Für die Geräte, die das Ziel dieser Richtlinie sind, wird ein Upgrade auf die von Ihnen gewählte Edition durchgeführt.
+- **Product Key**: Geben Sie den Product Key ein, den Sie von Microsoft erhalten haben. Nach dem Erstellen der Richtlinie mit dem Product Key kann dieser nicht aktualisiert werden und wird aus Sicherheitsgründen ausgeblendet. Geben Sie den gesamten Schlüssel erneut ein, um den Product Key zu ändern.
+- **Lizenzdatei**: Wählen Sie für **Windows 10 Holographic for Business** oder die **Windows 10 Mobile**-Edition **Durchsuchen** aus, um die Lizenzdatei auszuwählen, die Sie von Microsoft erhalten haben. Diese Lizenzdatei enthält Lizenzinformationen für die Editionen, auf die Sie die Geräte upgraden.
 
 ## <a name="mode-switch"></a>Moduswechsel
 
-- **Keine Konfiguration**: Ein Gerät im S-Modus bleibt im S-Modus. Ein Endbenutzer kann das Gerät aus dem S Modus holen.
-- **Keep in S mode** (Im S Modus lassen): Der Endbenutzer kann das Gerät nicht aus dem S Modus holen.
-- **Switch** (Verlassen): Das Gerät wird aus dem S Modus geholt.
+- **Verlassen des S-Modus**: Das Gerät wird aus dem S-Modus geholt. Folgende Optionen sind verfügbar:
+
+  - **Keine Konfiguration**: Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Standardmäßig bleibt das S-Modus-Gerät im S-Modus. Der Benutzer kann das Gerät aus dem S-Modus holen.
+  - **Im S Modus lassen**: Verhindert, dass Benutzer das Gerät aus dem S-Modus holen.
+  - **Verlassen**: Benutzer können das Gerät aus dem S-Modus holen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Das Profil ist nun erstellt, führt aber vielleicht noch keine Aktionen durch. Denken Sie daran, das [Profil zuzuweisen](device-profile-assign.md) und [seinen Status zu überwachen](device-profile-monitor.md).
+[Weisen Sie das Profil zu](device-profile-assign.md), und [überwachen Sie dessen Status](device-profile-monitor.md).
 
 Sie können auch Editionsupgradeprofile für [Windows Holographic for Business](holographic-upgrade.md)-Geräte erstellen.

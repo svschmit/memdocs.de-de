@@ -1,11 +1,11 @@
 ---
 title: Einstellungen für Windows Holographic for Business-Geräte – Microsoft Intune – Azure | Microsoft-Dokumentation
-description: 'In diesem Artikel erhalten Sie Informationen zum Konfigurieren von Einstellungen zur Geräteeinschränkung in Microsoft Intune für Windows Holographic for Business. Die folgenden Aspekte werden behandelt: Aufhebung einer Registrierung, Geolocation, Kennwörter, Installieren von Apps aus dem App Store, Cookies und Popupmenüs in Microsoft Edge, Microsoft Defender, Suchen, Cloud und Speicher, Bluetooth-Verbindungen, Systemzeit und Nutzungsdaten in Azure.'
+description: In diesem Artikel erhalten Sie Informationen zum Konfigurieren von Einstellungen zur Geräteeinschränkung in Microsoft Intune für Windows Holographic for Business. Aufhebung einer Registrierung, Geolocation, Kennwörter, Installieren von Apps aus dem App Store, Cookies und Popupmenüs in Microsoft Edge, Microsoft Defender, Suchen, Cloud und Speicher, Bluetooth-Verbindungen, Systemzeit und Nutzungsdaten in Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,98 +15,144 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a207c34c0d46b423eda44abf953e9c084cc9b2d
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 301cdd9403b0bb3e2d64c8707782ecbc639dc044
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078225"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556046"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Windows Holographic for Business-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
-
-
 In diesem Artikel werden die verschiedenen Einstellungen aufgeführt und beschrieben, die Sie für Windows Holographic for Business-Geräte steuern können, z.B. Microsoft Hololens. Als Bestandteil Ihrer Lösung für die mobile Geräteverwaltung (Mobile Device Management, MDM) verwenden Sie diese Einstellungen, um Features zuzulassen oder zu deaktivieren, die Sicherheit zu steuern und mehr.
+
+Als Intune-Administrator können Sie für Ihre Geräte diese Einstellungen erstellen und ihnen zuweisen.
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie ein Profil für die Gerätekonfiguration.](device-restrictions-configure.md#create-the-profile)
+[Erstellen Sie ein Konfigurationsprofil für Windows 10-Geräteeinschränkungen](device-restrictions-configure.md#create-the-profile).
 
-## <a name="general"></a>Allgemein
-
-- **Manuelles Aufheben der Registrierung**: Ermöglicht dem Benutzer das manuelle Löschen des Unternehmensbereichskontos vom Gerät.
-- **Cortana**: Aktivieren oder deaktivieren Sie den Sprach-Assistenten Cortana.
-- **Geolocation**: Gibt an, ob das Gerät Ortungsdienstinformationen verwenden kann.
-
-## <a name="password"></a>Kennwort
-
-- **Kennwort**: Der Endbenutzer muss ein Passwort eingeben, um auf das Gerät zugreifen zu können.
-- **Kennwort anfordern, wenn das Gerät aus Leerlaufzustand zurückkehrt**: Gibt an, dass der Benutzer ein Kennwort zum Entsperren des Geräts eingeben muss.
+Beim Erstellen eines Konfigurationsprofils für Windows 10-Geräteeinschränkungen gibt es mehr Einstellungen, als in diesem Artikel aufgeführt werden. Die Einstellungen in diesem Artikel werden auf Geräten mit Windows Holographic for Business unterstützt.
 
 ## <a name="app-store"></a>App Store
 
-- **Apps aus Store automatisch aktualisieren**: Apps aus dem Microsoft Store können automatisch aktualisiert werden.
-- **Installation vertrauenswürdiger Apps**: Ermöglicht das Querladen von Apps, die mit einem vertrauenswürdigen Zertifikat signiert sind.
-- **Entwicklersperre aufheben**: Ermöglicht dem Endbenutzer, Windows-Entwicklereinstellungen – z.B. das Zulassen quergeladener Apps – zu ändern.
+- **Apps aus Store automatisch aktualisieren**: Mit der Option **Blockieren** wird verhindert, dass Updates automatisch über den Microsoft Store installiert werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem standardmäßig zu, dass Apps, die aus dem Microsoft Store heruntergeladen und installiert werden, automatisch aktualisiert werden.
 
-## <a name="microsoft-edge-browser"></a>Microsoft Edge-Browser
+  [ApplicationManagement/AllowAppStoreAutoUpdate-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
 
-- **Cookies**: Erlaubt Browsern das Speichern von Internetcookies auf dem Gerät.
-- **Popups**: Blockiert Popupfenster im Browser (gilt nur für Windows 10 Desktop).
-- **Suchvorschläge**: Ermöglicht der Suchmaschine, schon während der Eingabe von Suchausdrücken Websites vorzuschlagen.
-- **Kennwort-Manager**: Aktiviert oder deaktiviert den Kennwort-Manager von Microsoft Edge.
-- **DNT-Kopfzeilen senden**: Konfiguriert den Microsoft Edge-Browser zum Senden von DNT-Kopfzeilen (Do Not Track, nicht nachverfolgen) an Websites, die Benutzer besuchen.
+- **Installation vertrauenswürdiger Apps**: Wählen Sie diese Option aus, wenn Apps installiert werden können, die nicht aus dem Microsoft Store stammen. Dies wird auch als Querladen bezeichnet. Querladen bedeutet Installieren und anschließendes Ausführen oder Testen einer App, die nicht durch den Microsoft Store zertifiziert ist. Beispielsweise kann es sich um eine App handeln, die nur für Ihr Unternehmen intern ist. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Blockieren:** Verhindert Querladen. Apps, die nicht auf dem Microsoft Store stammen, können nicht installiert werden.
+  - **Zulassen:** Ermöglicht Querladen. Apps, die nicht auf dem Microsoft Store stammen, können installiert werden.
 
-## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender SmartScreen
+  [ApplicationManagement/AllowAllTrustedApps-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
-- **SmartScreen für Microsoft Edge**: Hiermit wird Edge SmartScreen für den Zugriff auf Website- und Dateidownloads aktiviert.
+- **Entwicklersperre aufheben**: Ermöglicht es Benutzern, Windows-Entwicklereinstellungen – z. B. das Zulassen quergeladener Apps – zu ändern. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Blockieren:** Verhindert den Entwicklermodus und das Querladen von Apps.
+  - **Zulassen:** Erlaubt den Entwicklermodus und das Querladen von Apps.
 
-## <a name="search"></a>Suchen
-
-- **Standortsuche:** Hiermit geben Sie an, ob bei der Suche der Standort verwendet werden kann. Informationen
-
-## <a name="cloud-and-storage"></a>Cloud und Speicher
-
-- **Microsoft-Konto**: Ermöglicht dem Benutzer, das Gerät einem Microsoft-Konto zuzuordnen.
+  [ApplicationManagement/AllowDeveloperUnlock-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)
 
 ## <a name="cellular-and-connectivity"></a>Mobilfunk und Konnektivität
 
-- **Bluetooth**: Steuert, ob der Benutzer Bluetooth auf dem Gerät aktivieren und konfigurieren kann.
-- **Bluetooth-Erkennbarkeit**: Ermöglicht die Erkennung dieses Geräts durch andere Bluetooth-Geräte.
-- **Bluetooth-Ankündigung**: Ermöglicht Geräten den Empfang von Ankündigungen über Bluetooth.
+- **Bluetooth**: **Blockieren** verhindert, dass Benutzer Bluetooth aktivieren können. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt die Verwendung von Bluetooth auf dem Gerät möglicherweise standardmäßig.
+
+  [Connectivity/AllowBluetooth-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowbluetooth)
+
+- **Bluetooth-Erkennbarkeit**: **Blockieren** verhindert die Erkennung dieses Geräts durch andere für Bluetooth aktivierte Geräte. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem standardmäßig zu, dass andere Bluetooth-fähige Geräte (z. B. ein Kopfhörer) das Gerät erkennen.
+
+  [Bluetooth/AllowDiscoverableMode-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+- **Bluetooth-Ankündigung**: **Blockieren** verhindert, dass das Gerät Bluetooth-Ankündigungen sendet. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem standardmäßig zu, dass das Gerät Bluetooth-Ankündigungen sendet.
+
+  [Bluetooth/AllowAdvertising-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+## <a name="cloud-and-storage"></a>Cloud und Speicher
+
+- **Microsoft-Konto**: Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, dem Gerät ein Microsoft-Konto zuzuordnen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem standardmäßig zu, dass ein Microsoft-Konto hinzugefügt und verwendet wird.
+
+  [Accounts/AllowMicrosoftAccountConnection-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts#accounts-allowmicrosoftaccountconnection)
 
 ## <a name="control-panel-and-settings"></a>Systemsteuerung und Einstellungen
 
-- **Änderung der Systemzeit**: hindert Benutzer daran, die Systemzeit auf dem Gerät zu ändern.
+- **Änderung der Systemzeit**: **Blockieren** hindert Benutzer daran, die Datums- und Uhrzeiteinstellungen auf dem Gerät zu ändern. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem Benutzern erlauben, diese Einstellungen zu ändern.
 
-## <a name="kiosk---obsolete"></a>Kiosk – veraltet
+  [Settings/AllowDateTime-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowdatetime)
 
-Diese Einstellungen sind schreibgeschützt und können nicht verändert werden. Informationen zum Konfigurieren des Kioskmodus finden Sie unter [Kiosk settings (Kioskeinstellungen)](kiosk-settings-holographic.md).
+## <a name="general"></a>Allgemein
 
-Ein Kiosk-Gerät führt in der Regel eine spezifische App aus. Benutzer werden daran gehindert, auf Features oder Funktionen auf dem Gerät außerhalb von Kiosk-Apps zuzugreifen.
+- **Manuelles Aufheben der Registrierung**: **Blockieren** verhindert, dass Benutzer das Arbeitsplatzkonto über die Arbeitsplatz-Systemsteuerung auf dem Gerät löschen können. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
-- **Kioskmodus**: Gibt den Typ des Kioskmodus an, der von der Richtlinie unterstützt wird. Zu den Optionen gehören:
+  [Experience/AllowManualMDMUnenrollment-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment)
 
-  - **Nicht konfiguriert** (Standardeinstellung): Die Richtlinie aktiviert keinen Kioskmodus. 
-  - **Kiosk mit einzelner App**: Das Profil erlaubt dem Gerät die Ausführung von nur einer App. Wenn sich der Benutzer anmeldet, wird eine bestimmte App gestartet. Dieser Modus hindert den Benutzer auch daran, neue Apps zu öffnen oder die App zu ändern, die ausgeführt wird.
-  - **Kiosk mit mehreren Apps**: Das Profil erlaubt dem Gerät, mehrere Apps auszuführen. Es sind nur die Apps, die Sie hinzufügen, für den Benutzer verfügbar. Der Vorteil eines Kiosks mit mehreren Apps oder eines Geräts mit festem Zweck ist eine leicht verständliche Benutzererfahrung für einzelne Personen, da sie nur auf die Apps zugreifen, die sie benötigen. Apps, die sie nicht benötigen, werden aus der Ansicht entfernt. 
-  
-    Wenn Sie einem Kiosk mit mehreren Apps Apps hinzufügen, fügen Sie auch eine Datei für das Layout des Startmenüs hinzu. Die [Datei für das Layout des Startmenüs](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others) enthält XML-Beispiele, die in Intune verwendet werden können. 
+- **Geolocation**: **Blockieren** verhindert, dass Benutzer Ortungsdienste auf dem Gerät aktivieren können. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
-### <a name="single-app-kiosks"></a>Kiosks für einzelne Apps
+  [Experience/AllowFindMyDevice-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowfindmydevice)
 
-Legen Sie folgende Einstellungen fest:
+- **Cortana**: **Blockieren** deaktiviert den Sprach-Assistenten Cortana auf dem Gerät. Wenn Cortana deaktiviert ist, können Benutzer trotzdem suchen, um Elemente auf dem Gerät zu finden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem Cortana standardmäßig zu.
 
-- **Benutzerkonto**: Geben Sie das (auf das Gerät bezogene) lokale Benutzerkonto oder die Azure AD-Kontoanmeldung ein, das bzw. die der Kiosk-App zugeordnet ist. Geben Sie für Konten, die Mitglieder von Azure AD-Domänen sind, das Konto in der Form `domain\username@tenant.org` ein. 
+  [Experience/AllowCortana-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
-    Für Kiosks in öffentlichen Umgebungen, für die die automatische Anmeldung aktiviert ist, muss ein Benutzertyp mit den geringsten Berechtigungen (z.B. das lokale Standardbenutzerkonto) verwendet werden. Verwenden Sie das `AzureAD\user@contoso.com`-Format, um ein Azure Active Directory-Konto (AD) für den Kioskmodus zu konfigurieren.
+## <a name="microsoft-edge-browser"></a>Microsoft Edge-Browser
 
-- **Anwendungsbenutzermodell-ID (AUMID) der App**: Geben Sie die AUMID der Kiosk-App ein. Weitere Informationen finden Sie unter [Find the Application User Model ID of an installed app (Ermitteln der Anwendungsbenutzer-ID einer installierten App)](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+- **Startoberfläche** > **Popups zulassen**: **Ja** (Standard) lässt Popups im Webbrowser zu. **Nein** verhindert Popupfenster im Browser.
+
+  [Browser/AllowPopups-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)
+
+- **Favoriten und Suche** > **Suchvorschläge anzeigen**: **Ja** (Standard) ermöglicht es der Suchmaschine, Websites während der Eingabe von Suchausdrücken in der Adressleiste vorzuschlagen. **Nein** verhindert die Verwendung dieser Funktion.
+
+  [Browser/AllowSearchSuggestionsinAddressBar-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)
+
+- **Datenschutz-und Sicherheit** > **Kennwort-Manager zulassen**: **Ja** (Standard) ermöglicht es, dass Microsoft Edge automatisch den Kennwort-Manager verwendet. Dies ermöglicht es Benutzern, Kennwörter auf dem Gerät zu speichern und zu verwalten. **Nein** verhindert, dass Microsoft Edge den Kennwort-Manager verwendet.
+
+  [Browser/AllowPasswordManager-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)
+
+- **Datenschutz und Sicherheit** > **Cookies**: Wählen Sie aus, wie Cookies im Webbrowser verarbeitet werden sollen. Folgende Optionen sind verfügbar:
+  - **Zulassen:** ermöglicht das Speichern von Cookies auf dem Gerät.
+  - **Block all cookies** (Alle Cookies blockieren): Cookies werden nicht auf dem Gerät gespeichert.
+  - **Nur Cookies von Drittanbietern blockieren:** Cookies von Drittanbietern oder Partnern werden nicht auf dem Gerät gespeichert.
+
+  [Browser/AllowCookies-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)
+
+- **Datenschutz-und Sicherheit** > **DNT-Kopfzeilen senden**: **Ja** sendet DNT-Kopfzeilen an Websites, die Nachverfolgungsinformationen anfordern (empfohlen). **Nein** (Standard) sendet keine Header, die Websites das Nachverfolgen von Benutzern ermöglichen. Diese Einstellung kann von Benutzern konfiguriert werden.
+
+  [Browser/AllowDoNotTrack-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)
+
+## <a name="microsoft-defender-smartscreen"></a>Microsoft Defender SmartScreen
+
+- **SmartScreen für Microsoft Edge**: **Erforderlich** aktiviert Microsoft Defender SmartScreen und hindert Benutzer an der Deaktivierung dieses Features. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem aktiviert SmartScreen möglicherweise standardmäßig und gestattet Benutzern das Aktivieren/Deaktivieren dieses Features.
+
+  [Browser/AllowSmartScreen-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+
+## <a name="password"></a>Kennwort
+
+- **Kennwort:** Wenn **Anfordern** festgelegt wird, müssen Benutzer ein Kennwort eingeben, um auf das Gerät zuzugreifen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem den Zugriff auf Geräte möglicherweise ohne Kennwort zu. Diese Einstellung gilt nur für lokale Konten. Kennwörter für Domänenkonten werden weiterhin von Active Directory (AD) und Azure AD konfiguriert.
+
+  [DeviceLock/DevicePasswordEnabled-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
+
+- **Kennwort anfordern, wenn das Gerät aus Leerlaufzustand zurückkehrt**: **Anfordern** zwingt Benutzer zur Eingabe eines Kennworts, um das Gerät zu entsperren, nachdem es im Leerlauf war. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig fordert das Betriebssystem möglicherweise keine PIN und kein Kennwort nach dem Leerlauf an.
+
+  [DeviceLock/AllowIdleReturnWithoutPassword-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowidlereturnwithoutpassword)
 
 ## <a name="reporting-and-telemetry"></a>Berichterstellung und Telemetrie
 
-- **Nutzungsdaten freigeben**: Wählen Sie die Ebene der Diagnosedatenübermittlung.
+- **Nutzungsdaten freigeben**: Wählen Sie die Ebene der Diagnosedaten aus, die gesendet werden. Folgende Optionen sind verfügbar:
+
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Es wird keine Einstellung erzwungen. Benutzer wählen die Ebene für die Übermittlung aus. Möglicherweise gibt das Betriebssystem standardmäßig keine Daten frei.
+  - **Sicherheit**: Informationen, die erforderlich sind, um Windows sicherer zu machen, einschließlich Daten zu den Einstellungen der Komponente „Benutzererfahrung und Telemetrie im verbundenen Modus“, zum Tool zum Entfernen bösartiger Software und zu Microsoft Defender
+  - **Standard**: Grundlegende Geräteinformationen, z. B. qualitätsbezogene Daten, App-Kompatibilität, App-Nutzungsdaten und Daten aus der Sicherheitsebene
+  - **Erweitert**: Zusätzliche Informationen, z. B. zur Verwendung von Windows, Windows Server, System Center oder Anwendungen, Leistungsdaten, erweiterte Zuverlässigkeitsdaten sowie Daten der Ebenen „Standard“ und „Sicherheit“
+  - **Vollständig**: Alle Daten, die zur Identifizierung und Behebung von Problemen erforderlich sind, sowie Daten der Ebenen „Sicherheit“, „Standard“ und „Erweitert“.
+
+  [System/AllowTelemetry-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
+
+## <a name="search"></a>Suchen
+
+- **Standortsuche**: **Blockieren** verhindert, dass Windows Search den Standort verwendet. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Es besteht die Möglichkeit, dass das Betriebssystem dieses Feature standardmäßig nicht zulässt.
+
+  [Search/AllowSearchToUseLocation-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-allowsearchtouselocation)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Zuweisen von Profilen](device-profile-assign.md) und [Überwachen von Profilen](device-profile-monitor.md)
+[Weisen Sie das Profil zu](device-profile-assign.md), und [überwachen Sie seinen Status](device-profile-monitor.md).

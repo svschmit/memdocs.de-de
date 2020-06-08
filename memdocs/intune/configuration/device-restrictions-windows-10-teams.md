@@ -1,12 +1,12 @@
 ---
-title: Microsoft Intune-Geräteeinschränkungen für Windows 10 Team
+title: Surface Hub Windows 10 Team-Geräteeinschränkungen in Microsoft Intune – Azure | Microsoft-Dokumentation
 titleSuffix: ''
-description: In diesem Artikel erfahren Sie etwas über die verfügbaren Geräteeinschränkungen für Windows 10 Team-Geräte.
+description: Verwenden Sie Intune, um Einstellungen für Surface Hub-Geräte mit Windows 10 Team hinzuzufügen oder zu konfigurieren.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,40 +16,69 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31457667612617bb573ddfb145ed26f70de33159
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b57bc0b7c76a6b67a26c7b1fdacb7880173a055c
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79361652"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429689"
 ---
-# <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Einstellungen für Geräteeinschränkungen für Windows 10 Team in Microsoft Intune
+# <a name="windows-10-team-settings-to-allow-or-restrict-features-on-surface-hub-devices-using-intune"></a>Windows 10 Team-Einstellungen zum Zulassen oder Einschränken von Features auf Surface Hub-Geräten mit Intune
 
-In diesem Artikel erhalten Sie Informationen zu den Einstellungen für Microsoft Intune-Geräteeinschränkungen, die Sie für Windows 10 Team-Geräte konfigurieren können.
+In diesem Artikel erhalten Sie Informationen zu den Einstellungen für Microsoft Intune-Geräteeinschränkungen, die Sie für Windows 10 Team-Geräte (einschließlich Surface Hub-Geräte) konfigurieren können.
+
+## <a name="before-you-begin"></a>Vorbereitung
+
+[Erstellen des Geräteprofils](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="apps-and-experience"></a>Apps und Benutzerfreundlichkeit
 
-- **Bildschirm aktivieren, wenn eine Person im Raum ist:** Erlaubt das automatische Aktivieren des Geräts, wenn der Sensor eine Person im Raum erkennt.
-- **Anzeige von Besprechungsinformationen auf dem Willkommensbildschirm:** Aktivieren Sie diese Option, um die Informationen auszuwählen, die auf der Kachel „Besprechungen“ auf dem Willkommensbildschirm angezeigt werden. Sie können:
-  - **Nur Organisator und Zeit anzeigen**
-  - **Organisator, Zeit und Thema anzeigen (Thema bei privaten Besprechungen ausblenden)**
-- **URL für Hintergrundbild des Willkommensbildschirms:** Aktivieren Sie diese Einstellung, um auf dem **Willkommensbildschirm** von Windows 10 Team-Geräten einen benutzerdefinierten Hintergrund aus der angegebenen URL anzuzeigen.<br>Das Bild muss im PNG-Format vorliegen, und die URL muss mit **https://** beginnen.
+Diese Einstellungen verwenden den [SurfaceHub-CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+
+- **Bildschirm aktivieren, wenn eine Person im Raum ist**: **Blockieren** verhindert das automatische Aktivieren des Bildschirms, wenn der Sensor des Geräts eine Person im Raum erkennt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Besprechungsinformationen auf Willkommensbildschirm anzeigen**: Wählen Sie die Informationen aus, die auf der Kachel „Besprechungen“ des Willkommensbildschirms angezeigt werden. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Nur Organisator und Uhrzeit**
+  - **Organisator, Uhrzeit und Thema (Thema bei privaten Besprechungen ausgeblendet)**
+- **URL für Hintergrundbild des Willkommensbildschirms**: Geben Sie die URL einer PNG-Bilddatei ein, die Sie als benutzerdefinierten Hintergrund auf dem **Willkommensbildschirm** auf Windows 10 Team-Geräten anzeigen möchten. Das Bild muss im PNG-Format vorliegen, und die URL muss mit `https://` beginnen.
+- **App „Verbinden“ automatisch starten**: **Blockieren** verhindert, dass die App „Verbinden“ beim Starten einer Projektion automatisch geöffnet wird. Wenn sie blockiert ist, können Benutzer die App „Verbinden“ über die Einstellungen des Hubs manuell starten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Anmeldevorschläge**: **Blockieren** deaktiviert das automatische Ausfüllen des Anmeldedialogfelds mit eingeladenen Personen aus geplanten Besprechungen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Meine Besprechungen und Dateien**: **Blockieren** deaktiviert das Feature **Meine Besprechungen und Dateien** im Startmenü. Dieses Feature zeigt die Besprechungen und Dateien des angemeldeten Benutzers aus Office 365 an. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 
-- **Azure Operational Insights:** Azure Operational Insights ist Teil der Microsoft Operations Manager-Suite und sammelt, speichert und analysiert Protokolldateidaten von Windows 10-Team-Geräten.
-Zum Herstellen einer Verbindung mit Azure Operational Insights geben Sie eine **Arbeitsbereichs-ID** und einen **Arbeitsbereichsschlüssel**  ein.
+- **Azure Operational Insights**: **Aktivieren** erfasst, speichert und analysiert Protokolldaten von Windows 10 Team-Geräten mit Azure Operational Insights. Azure-Operational Insights ist Teil der Microsoft Operations Manager-Suite. Geben Sie zum Herstellen einer Verbindung mit Azure Operational Insights eine **Arbeitsbereichs-ID** und einen **Arbeitsbereichsschlüssel** ein.
+
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erfasst das Betriebssystem diese Daten nicht.
 
 ## <a name="maintenance"></a>Wartung
 
-- **Wartungsfenster für Updates:** Konfiguriert das Fenster, in dem Updates am Gerät vorgenommen werden können. Sie können die **Startzeit** des Fensters und **Dauer in Stunden** (1 bis 5 Stunden) konfigurieren.
+Diese Einstellungen verwenden den [SurfaceHub-CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+
+- **Wartungsfenster für Updates**: **Aktivieren** erstellt ein Wartungsfenster, in dem Updates installiert werden können. Geben Sie die **Startzeit** des Wartungsfensters und die **Dauer in Stunden** an. Diese kann zwischen 1 und 5 Stunden betragen.
+
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+
+## <a name="session"></a>Sitzung
+
+Diese Einstellungen verwenden den [SurfaceHub-CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+
+- **Lautstärke**: Geben Sie den Wert für die Standardlautstärke für eine neue Sitzung ein (0 bis 100). Wenn kein Wert angegeben wird, ändert oder aktualisiert Intune diese Einstellung nicht. Standardmäßig legt das Betriebssystem die Lautstärke auf 45 fest.
+- **Bildschirmtimeout**: Geben Sie die Anzahl der Minuten ein, nach der der Bildschirm des Hubs ausgeschaltet wird.
+- **Sitzungstimeout**: Geben Sie die Anzahl der Minuten ein, nach der die Sitzung durch ein Timeout beendet wird.
+- **Zeitlimit für Energiesparmodus**: Geben Sie die Anzahl der Minuten ein, nach der der Hub in den Energiesparmodus wechselt.
+- **Sitzung fortsetzen**: **Blockieren** verhindert, dass Benutzer eine Sitzung fortsetzen können, wenn ein Sitzungstimeout auftritt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
 ## <a name="wireless-projection"></a>Drahtlose Projektion
 
-- **PIN für Funkprojektion:** Gibt an, ob Sie eine PIN eingeben müssen, bevor Sie die drahtlosen Projektionsfunktionen des Geräts verwenden können.
-- **Miracast-Funkprojektion:** Aktivieren Sie diese Option, wenn Sie auf dem Gerät mit Windows 10-Team erlauben möchten, für Miracast aktivierte Geräte zum Projizieren zu verwenden.
-- **Kanal für die Miracast-Funkprojektion**: Wählen Sie den Miracast-Kanal aus, der zum Herstellen der Verbindung verwendet wird.
+Diese Einstellungen verwenden den [SurfaceHub-CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+
+- **PIN für Funkprojektion**: **Anfordern** zwingt Benutzer zur Eingabe einer PIN, bevor sie die Funkprojektionsfeatures des Geräts verwenden können. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Miracast-Funkprojektion**: **Blockieren** verhindert die Verwendung von Miracast-fähigen Geräten zum Projizieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+- **Kanal für die Miracast-Funkprojektion**: Wählen Sie den Miracast-Kanal aus, um die Verbindung herzustellen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Verwenden Sie die Informationen unter [Konfigurieren von Einstellungen für Geräteeinschränkungen](device-restrictions-configure.md), um das Profil zu speichern und es Benutzern und Geräten zuzuweisen.
+Weitere Informationen finden Sie unter [So konfigurieren Sie Einstellungen für Geräteeinschränkungen in Microsoft Intune](device-restrictions-configure.md).
+
+[Weisen Sie das Profil zu](device-profile-assign.md), und [überwachen Sie seinen Status](device-profile-monitor.md).

@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739905"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990315"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurieren des lokalen Exchange-Zugriffs für Intune
 
@@ -66,7 +66,10 @@ Bevor Sie den bedingten Zugriff konfigurieren, überprüfen Sie, ob folgende Kon
 - **Native E-Mail-App unter iOS/iPadOS:** Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
 - **EAS-E-Mail-Clients wie Gmail unter Android 4 oder höher:** Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
 
+- **EAS-E-Mail-Clients unter Android-Geräteadministrator**: Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
+
 - **EAS-E-Mail-Clients auf Android-Arbeitsprofilgeräten:** Auf Android-Arbeitsprofilgeräten werden nur *Gmail* und *Nine Work for Android Enterprise* unterstützt. Damit der bedingte Zugriff mit Android-Arbeitsprofilen funktioniert, müssen Sie ein E-Mail-Profil für die *Gmail*- oder *Nine Work for Android Enterprise*-App erstellen und diese Apps als erforderliche Installation bereitstellen. Nachdem Sie die App bereitgestellt haben, können Sie den gerätebasierten bedingten Zugriff einrichten.
+
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>So richten Sie den bedingten Zugriff für Android-Arbeitsprofilgeräten ein
 

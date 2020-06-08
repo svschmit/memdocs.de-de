@@ -1,13 +1,13 @@
 ---
-title: Verschlüsseln von Geräten mit der von Plattformen unterstützten Verschlüsselungsmethode
+title: Verschlüsseln von Windows 10-Geräten mit BitLocker in Intune
 titleSuffix: Microsoft Intune
-description: Verschlüsseln Sie Geräte mithilfe von integrierten Verschlüsselungsmethoden wie BitLocker oder FileVault, und verwalten Sie die Wiederherstellungsschlüssel für diese verschlüsselten Geräte über das Intune-Portal.
+description: Verschlüsseln Sie Geräte mithilfe der integrierten BitLocker-Verschlüsselungsmethode, und verwalten Sie die Wiederherstellungsschlüssel für diese verschlüsselten Geräte über das Intune-Portal.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,114 +17,103 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322468"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989669"
 ---
-# <a name="use-device-encryption-with-intune"></a>Verwenden der Geräteverschlüsselung mit Intune
+# <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Verwalten der BitLocker-Richtlinie für Windows 10 in Intune
 
-Verwenden Sie Intune, um Geräte mit integrierter Laufwerk- oder Datenträgerverschlüsselung zu verwalten, damit die Daten auf Ihren Geräten geschützt werden.
+Verwenden Sie Intune, um die BitLocker-Laufwerkverschlüsselung auf Geräten unter Windows 10 zu konfigurieren.
 
-Konfigurieren Sie die Datenträgerverschlüsselung als Teil eines Gerätekonfigurationsprofils für Endpoint Protection. Die folgenden Plattformen und Verschlüsselungstechnologien werden von Intune unterstützt:
+BitLocker ist auf Geräten verfügbar, auf denen Windows 10 oder höher ausgeführt wird. Einige Einstellungen für BitLocker erfordern, dass das Gerät über ein unterstütztes TPM verfügt.
 
-- macOS: FileVault
-- Windows 10 und höher: BitLocker
+Verwenden Sie einen der folgenden Richtlinientypen, um BitLocker auf Ihren verwalteten Geräten zu konfigurieren:
 
-Intune beinhaltet auch einen integrierten [Verschlüsselungsbericht](encryption-monitor.md), in dem Details zum Verschlüsselungsstatus Ihrer verwalteten Geräte angezeigt werden.
+- **[Endpunktsicherheit-Datenträgerverschlüsselungsrichtlinie für Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)** . Das BitLocker-Profil in *Endpunktsicherheit* ist eine fokussierte Gruppe von Einstellungen, die für die Konfiguration von BitLocker vorgesehen ist.
 
-## <a name="filevault-encryption-for-macos"></a>FileVault-Verschlüsselung für macOS
+  Sehen Sie sich die BitLocker-Einstellungen an, die in [BitLocker-Profile aus der Datenträgerverschlüsselungsrichtlinie](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker) verfügbar sind.
 
-Verwenden Sie Intune, um die FileVault-Datenträgerverschlüsselung auf macOS-Geräten zu konfigurieren. Verwenden Sie anschließend den Intune-Verschlüsselungsbericht, um die Verschlüsselungsdetails für diese Geräte anzuzeigen und Wiederherstellungsschlüssel für mit FileVault verschlüsselte Geräte zu verwalten.
+- **[Gerätekonfigurationprofil für Endpunktschutz für Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)** . Die BitLocker-Einstellungen gehören zu den verfügbaren Einstellungskategorien für Windows 10-Endpunktschutz.
 
-Damit FileVault auf dem Gerät funktioniert, ist eine vom Benutzer genehmigte Geräteregistrierung erforderlich. Der Benutzer muss das Verwaltungsprofil manuell anhand von Systemeinstellungen genehmigen, damit die Registrierung als vom Benutzer genehmigt angesehen wird.
+  Zeigen Sie die [BitLocker-Einstellungen an, die in Endpunktschutzprofilen für die Gerätekonfigurationsrichtlinie für BitLocker verfügbar sind](../protect/endpoint-protection-windows-10.md#windows-settings).
 
-FileVault ist ein Verschlüsselungsprogramm für ganze Datenträger, das im Lieferumfang von macOS enthalten ist. Verwenden Sie Intune, um FileVault auf Geräten zu konfigurieren, auf denen **macOS 10.13 oder höher** ausgeführt wird.
+> [!TIP]
+> Intune beinhaltet einen integrierten [Verschlüsselungsbericht](encryption-monitor.md), in dem Details zum Verschlüsselungsstatus Ihrer verwalteten Geräte angezeigt werden. Sobald Intune ein Windows 10-Gerät mit BitLocker verschlüsselt, können Sie die BitLocker-Wiederherstellungsschlüssel im Verschlüsselungsbericht einsehen und abrufen.
+>
+> Sie können über Ihre Geräte wie bei Azure Active Directory (Azure AD) auch auf wichtige Informationen zu BitLocker zugreifen.
+[Verschlüsselungsbericht](encryption-monitor.md), in dem Details zum Verschlüsselungsstatus Ihrer verwalteten Geräte angezeigt werden.
 
-Erstellen Sie zum Konfigurieren von FileVault ein [Gerätekonfigurationsprofil](endpoint-protection-configure.md) für Endpoint Protection unter macOS. Die FileVault-Einstellungen gehören zu den verfügbaren Einstellungskategorien in Endpoint Protection unter macOS.
+## <a name="permissions-to-manage-bitlocker"></a>Berechtigungen zum Verwalten von BitLocker
 
-Sobald Sie eine Richtlinie für die Geräteverschlüsselung mit FileVault erstellt haben, wird die Richtlinie in zwei Phasen auf die Geräte angewendet. Zuerst wird das Gerät vorbereitet, damit Intune den Wiederherstellungsschlüssel abrufen und sichern kann. Dies wird als Schlüsselhinterlegung bezeichnet. Sobald dieser Vorgang abgeschlossen ist, kann die Datenträgerverschlüsselung beginnen.
+Damit Sie BitLocker in Intune verwalten können, muss Ihr Konto in Intune über die entsprechenden Berechtigungen für [rollenbasierte Zugriffssteuerung](../fundamentals/role-based-access-control.md) (RBAC) verfügen.
 
-![FileVault-Einstellungen](./media/encrypt-devices/filevault-settings.png)
+Im Folgenden werden die BitLocker-Berechtigungen aufgelistet, die zur Kategorie der Remoteaufgaben gehören, sowie die integrierten RBAC-Rollen für das Erteilen der jeweiligen Berechtigung:
 
-Ausführliche Informationen zur FileVault-Einstellung, die Sie mit Intune verwalten können, finden Sie unter [FileVault](endpoint-protection-macos.md#filevault) im Intune-Artikel für Endpoint Protection-Einstellungen unter macOS.
-
-### <a name="permissions-to-manage-filevault"></a>Berechtigungen zum Verwalten von FileVault
-
-Damit Sie FileVault in Intune verwalten können, muss Ihr Konto in Intune über die entsprechenden Berechtigungen für die [rollenbasierte Zugriffssteuerung](../fundamentals/role-based-access-control.md) (RBAC) verfügen.
-
-Im Folgenden sind die FileVault-Berechtigungen aufgelistet, die zur Kategorie der **Remoteaufgaben** gehören, sowie die integrierten RBAC-Rollen für das Erteilen der jeweiligen Berechtigung:
- 
-- **Get FileVault key** (FileVault-Schlüssel erhalten):
-  - Helpdesk-Operator
-  - Endpoint security manager (Endpunktsicherheits-Manager)
-
-- **Rotate FileVault key** (FileVault-Schlüssel rotieren)
+- **Rotieren von BitLocker-Schlüsseln**
   - Helpdesk-Operator
 
-### <a name="how-to-configure-macos-filevault"></a>Konfigurieren von FileVault unter macOS
+## <a name="create-and-deploy-policy"></a>Erstellen und Bereitstellen einer Richtlinie
+
+Verwenden Sie eines der folgenden Verfahren, um den von Ihnen bevorzugten Richtlinientyp zu erstellen.
+
+### <a name="create-an-endpoint-security-policy-for-bitlocker"></a>Erstellen einer Endpunktsicherheitsrichtlinie für BitLocker
+
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
+
+2. Wählen Sie **Endpunktsicherheit** > **Datenträgerverschlüsselung** > **Richtlinie erstellen** aus.
+
+3. Legen Sie die folgenden Optionen fest:
+   1. **Plattform**: Windows 10 oder höher
+   2. **Profil**: BitLocker
+
+   ![Auswählen des BitLocker-Profils](./media/encrypt-devices/select-windows-bitlocker-es.png)
+
+4. Konfigurieren Sie auf der Seite **Konfigurationseinstellungen** die Einstellungen für BitLocker entsprechend Ihren Geschäftsanforderungen.  
+
+   Wenn Sie BitLocker unbeaufsichtigt aktivieren möchten, finden Sie weitere Informationen zu weiteren Voraussetzungen und den jeweils zu verwendenden Einstellungskonfigurationen unter [Unbeaufsichtigtes Aktivieren von BitLocker auf Geräten](#silently-enable-bitlocker-on-devices) in diesem Artikel.
+
+   Wählen Sie **Weiter** aus.
+
+5. Klicken Sie auf der Seite **Bereich (Markierungen)** auf **Bereichstags auswählen**, um den Bereich „Markierungen auswählen“ zu öffnen, in dem Sie dem Profil Bereichstags zuweisen.
+
+   Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
+
+6. Wählen Sie auf der Seite **Zuweisungen** die Gruppen aus, die dieses Profil erhalten sollen. Weitere Informationen zum Zuweisen von Profilen finden Sie unter „Zuweisen von Benutzer- und Geräteprofilen“.
+
+   Wählen Sie **Weiter** aus.
+
+7. Klicken Sie, wenn Sie fertig sind, auf der Seite **Bewerten + erstellen** auf **Erstellen**. Das neue Profil wird in der Liste angezeigt, wenn Sie den Richtlinientyp für das Profil auswählen, das Sie erstellt haben.
+
+### <a name="create-a-device-configuration-profile-for-bitlocker"></a>Erstellen eines Gerätekonfigurationsprofils für BitLocker
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 
 3. Legen Sie die folgenden Optionen fest:
+   1. **Plattform**: Windows 10 und höher
+   2. **Profiltyp**: Endpoint Protection
 
-   - Plattform: macOS
-   - Profiltyp: Endpoint Protection
-
-4. Klicken Sie auf **Einstellungen** > **FileVault**.
-
-5. Klicken Sie dann unter *FileVault* auf **Aktivieren**.
-
-6. Als *Art des Wiederherstellungsschlüssels* wird nur **Persönlicher Schlüssel** unterstützt.
-
-   Fügen Sie ggf. eine Meldung hinzu, um den Endbenutzern zu erläutern, wie sie den Wiederherstellungsschlüssel für ihr Gerät abrufen können. Diese Informationen können für Ihre Endbenutzer nützlich sein, wenn Sie die Einstellung für die Rotation persönlicher Wiederherstellungsschlüssel verwenden. Dadurch können regelmäßig automatisch neue Wiederherstellungsschlüssel für die Geräte generiert werden.
-
-   Beispiel: Melden Sie sich auf einem beliebigen Gerät bei der Intune-Unternehmensportal-Website an, um verlorene oder kürzlich rotierte Wiederherstellungsschlüssel abrufen. Navigieren Sie im Portal zu *Geräte*, wählen Sie das Gerät aus, für das FileVault aktiviert ist, und klicken Sie dann auf *Wiederherstellungsschlüssel abrufen*. Dann wird der aktuelle Wiederherstellungsschlüssel angezeigt.
-
-7. Konfigurieren Sie die restlichen [FileVault-Einstellungen](endpoint-protection-macos.md#filevault) entsprechend Ihren Geschäftsanforderungen, und wählen Sie anschließend **OK** aus.
-
-  8. Schließen Sie die Konfiguration zusätzlicher Einstellungen ab, und speichern Sie anschließend das Profil.  
-
-### <a name="manage-filevault"></a>Verwalten von FileVault
-
-Sobald Intune ein macOS-Gerät mit FileVault verschlüsselt, können Sie die FileVault-Wiederherstellungsschlüssel anzeigen und verwalten, wenn Sie den Intune-[Verschlüsselungsbericht](encryption-monitor.md) anzeigen.
-
-Nachdem Intune ein macOS-Gerät mit FileVault verschlüsselt hat, können Sie den persönlichen Wiederherstellungsschlüssel dieses Geräts im Webunternehmensportal auf einem beliebigen Gerät anzeigen. Wählen Sie im Webunternehmensportal das verschlüsselte macOS-Gerät aus, und wählen Sie anschließend „Wiederherstellungsschlüssel abrufen“ als Remotegeräteaktion aus.
-
-### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Abrufen eines persönlichen Wiederherstellungsschlüssels von MEM-verschlüsselten macOS-Geräten
-
-Endbenutzer können ihren persönlichen Wiederherstellungsschlüssel (FileVault-Schlüssel) über die iOS-Unternehmensportal-App, die Android-Unternehmensportal-App oder die Android-Intune-App abrufen. Das Gerät mit dem persönlichen Wiederherstellungsschlüssel muss bei Intune registriert und über Intune mit FileVault verschlüsselt sein. Über die iOS-Unternehmensportal-App, die Android-Unternehmensportal-App, die Android-Intune-App oder die Unternehmensportal-Website können Endbenutzer den **FileVault**-Wiederherstellungsschlüssel anzeigen, den sie für den Zugriff auf ihre Mac-Geräte benötigen. Benutzer können **Geräte** > *verschlüsseltes und registriertes macOS-Gerät* > **Wiederherstellungsschlüssel abrufen** auswählen. Der Browser zeigt das Web-Unternehmensportal und darin den Wiederherstellungsschlüssel an. 
-
-## <a name="bitlocker-encryption-for-windows-10"></a>BitLocker-Verschlüsselung für Windows 10
-
-Verwenden Sie Intune, um die BitLocker-Laufwerkverschlüsselung auf Geräten unter Windows 10 zu konfigurieren. Rufen Sie dann im Intune-Verschlüsselungsbericht die Verschlüsselungsdetails zu diesen Geräten ab. Sie können über Ihre Geräte wie bei Azure Active Directory (Azure AD) auch auf wichtige Informationen zu BitLocker zugreifen.
-
-BitLocker ist auf Geräten verfügbar, auf denen **Windows 10 oder höher** ausgeführt wird.
-
-Erstellen Sie zum Konfigurieren von BitLocker ein [Gerätekonfigurationsprofil](endpoint-protection-configure.md) für Endpoint Protection für Windows 10 oder höher. Die BitLocker-Einstellungen befinden sich bei Endpoint Protection unter Windows 10 unter „Windows-Verschlüsselungseinstellungen“.
-
-![BitLocker-Einstellungen](./media/encrypt-devices/bitlocker-settings.png)
-
-### <a name="how-to-configure-windows-10-bitlocker"></a>Konfigurieren von BitLocker unter Windows 10
-
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
-
-2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
-
-3. Legen Sie die folgenden Optionen fest:
-
-   - Plattform: Windows 10 und höher
-   - Profiltyp: Endpoint Protection
+   ![Auswählen des BitLocker-Profils](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Klicken Sie auf **Einstellungen** > **Windows-Verschlüsselung**.
 
-5. Konfigurieren Sie die Einstellungen für BitLocker entsprechend Ihren Geschäftsanforderungen, und klicken Sie dann auf **OK**.
+   ![BitLocker-Einstellungen](./media/encrypt-devices/bitlocker-settings.png)
 
-6. Schließen Sie die Konfiguration zusätzlicher Einstellungen ab, und speichern Sie anschließend das Profil.
+5. Konfigurieren Sie die Einstellungen für BitLocker entsprechend Ihren Geschäftsanforderungen.
+
+   Wenn Sie BitLocker unbeaufsichtigt aktivieren möchten, finden Sie weitere Informationen zu weiteren Voraussetzungen und den jeweils zu verwendenden Einstellungskonfigurationen unter [Unbeaufsichtigtes Aktivieren von BitLocker auf Geräten](#silently-enable-bitlocker-on-devices) in diesem Artikel.
+
+6. Klicken Sie auf **OK**.
+
+7. Schließen Sie die Konfiguration zusätzlicher Einstellungen ab, und speichern Sie anschließend das Profil.
+
+## <a name="manage-bitlocker"></a>Verwalten von BitLocker
+
+Informationen zu Geräten, die die BitLocker-Richtlinie erhalten, finden Sie unter [Überwachen der Datenträgerverschlüsselung](../protect/encryption-monitor.md). Sie können die BitLocker-Wiederherstellungsschlüssel auch anzeigen und abrufen, wenn Sie den Verschlüsselungsbericht anzeigen.
 
 ### <a name="silently-enable-bitlocker-on-devices"></a>Aktivieren von BitLocker auf Geräten ohne Meldung
 
@@ -139,22 +128,35 @@ Ein Gerät muss die folgenden Bedingungen erfüllen, damit BitLocker ohne Meldun
 
 **BitLocker-Richtlinienkonfiguration:**
 
-Die folgenden zwei Einstellungen der [BitLocker-Grundeinstellungen](../protect/endpoint-protection-windows-10.md#bitlocker-base-settings) müssen in der BitLocker-Richtlinie konfiguriert:
+Die folgenden zwei Einstellungen der *BitLocker-Grundeinstellungen* müssen in der BitLocker-Richtlinie konfiguriert:
 
 - **Warnung zu anderer Datenträgerverschlüsselung** = *Blockieren*.
 - **Standardbenutzern das Aktivieren der Verschlüsselung bei Azure AD-Verknüpfung erlauben** = *Zulassen*
 
-Die Verwendung einer Systemstart-PIN oder eines Systemstartschlüssels **darf nicht von der BitLocker-Richtlinie erfordert werden**. Wenn eine TPM-Systemstart-PIN oder Systemstartschlüssel *erforderlich* ist, kann BitLocker nicht ohne Meldung aktiviert werden, da eine Interaktion mit dem Endbenutzer erforderlich ist.  Diese Anforderung wird mithilfe der folgenden drei [BitLocker-Einstellungen für das Betriebssystemlaufwerk](../protect/endpoint-protection-windows-10.md#bitlocker-os-drive-settings) in derselben Richtlinie erfüllt:
+Die Verwendung einer Systemstart-PIN oder eines Systemstartschlüssels **darf nicht von der BitLocker-Richtlinie erfordert werden**. Wenn eine TPM-Start-PIN oder ein Startschlüssel *erforderlich* ist, kann BitLocker nicht unbeaufsichtigt aktiviert werden und erfordert einen Eingriff vom Endbenutzer.  Diese Anforderung wird mithilfe der folgenden drei *BitLocker-Einstellungen für das Betriebssystemlaufwerk* in derselben Richtlinie erfüllt:
 
 - **Systemstart-PIN für kompatibles TPM** darf nicht auf *Systemstart-PIN mit TPM erforderlich* festgelegt sein.
 - **Systemstartschlüssel für kompatibles TPM** darf nicht auf *Systemstartschlüssel mit TPM erforderlich* festgelegt sein.
 - **Systemstartschlüssel und -Systemstart-PIN für kompatibles TPM** darf nicht auf *Systemstartschlüssel und -PIN mit TPM erforderlich* festgelegt sein.
 
+### <a name="view-details-for-recovery-keys"></a>Anzeigen von Details zu Wiederherstellungsschlüsseln
 
+Intune gewährt Zugriff auf das Azure AD-Blatt für BitLocker, sodass Sie sich über das Intune-Portal die BitLocker-Schlüssel-IDs und -Wiederherstellungsschlüssel für Ihre Windows 10-Geräte ansehen können. Damit auf ein Gerät zugegriffen werden kann, müssen die dazugehörigen Schlüssel in Azure AD hinterlegt sein.
 
-### <a name="manage-bitlocker"></a>Verwalten von BitLocker
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 
-Sobald Intune ein Windows 10-Gerät mit BitLocker verschlüsselt, können Sie die BitLocker-Wiederherstellungsschlüssel im Intune-[Verschlüsselungsbericht](encryption-monitor.md) einsehen und abrufen.
+2. Klicken Sie auf **Geräte** > **Alle Geräte**.
+
+3. Wählen Sie ein Gerät aus der Liste aus, und wählen Sie dann unter *Überwachung* die Option **Recovery keys** (Wiederherstellungsschlüssel) aus.
+  
+   Wenn Schlüssel in Azure AD verfügbar sind, sind die folgenden Informationen verfügbar:
+   - BitLocker-Schlüssel-ID
+   - BitLocker-Wiederherstellungsschlüssel
+   - Laufwerkstyp
+
+   Wenn keine Schlüssel in Azure AD verfügbar sind, zeigt Intune die Meldung *Für dieses Gerät wurde kein BitLocker-Schlüssel gefunden* an.
+
+Informationen zu BitLocker stehen über den [BitLocker-Konfigurationsdienstanbieter](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (Configuration Service Provider, CSP) zur Verfügung. Der BitLocker-CSP wird ab der Windows 10-Version 1703 unterstützt, und ab der Windows 10 Pro-Version 1809.
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>Drehen von BitLocker-Wiederherstellungsschlüsseln
 
@@ -171,7 +173,7 @@ Geräte müssen die folgenden Voraussetzungen erfüllen, damit der BitLocker-Wie
   - **Rotation von clientgesteuerten Wiederherstellungskennwörtern**
 
   Diese Einstellung finden Sie unter *Windows-Verschlüsselung* als Teil einer Gerätekonfigurationsrichtlinie für Windows 10 Endpoint Protection.
-  
+
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>So drehen Sie den BitLocker-Wiederherstellungsschlüssel
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
@@ -180,16 +182,12 @@ Geräte müssen die folgenden Voraussetzungen erfüllen, damit der BitLocker-Wie
 
 3. Wählen Sie in der Liste der von Ihnen verwalteten Geräte ein Gerät aus, und klicken Sie erst auf **Mehr** und anschließend auf die Remotegeräteaktion **BitLocker-Schlüsselrotation**.
 
+4. Wählen Sie auf der Seite **Übersicht** des Geräts die Option **BitLocker-Schlüsselrotation** aus. Wenn diese Option nicht angezeigt wird, wählen Sie die Auslassungspunkte ( **...** ) aus, um zusätzliche Optionen anzuzeigen, und wählen Sie dann die **BitLocker-Schlüsselrotation**-Remotegeräteaktion aus.
+
+   ![Auswählen der Auslassungspunkte, um weitere Optionen anzuzeigen](./media/encrypt-devices/select-more.png)
+
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erstellen Sie eine [Gerätekonformitätsrichtlinie](compliance-policy-create-windows.md).
+[Verwalten der FileVault-Richtlinie](../protect/encrypt-devices-filevault.md)
 
-Verwenden Sie den Verschlüsselungsbericht, um Folgendes zu verwalten:
-
-- [BitLocker-Wiederherstellungsschlüssel](encryption-monitor.md#bitlocker-recovery-keys)
-- [FileVault-Wiederherstellungsschlüssel](encryption-monitor.md#filevault-recovery-keys)
-
-Überprüfen Sie die Verschlüsselungseinstellungen, die Sie mit Intune für Folgendes konfigurieren können:
-
-- [BitLocker](endpoint-protection-windows-10.md#windows-encryption)
-- [FileVault](endpoint-protection-macos.md#filevault)
+[Überwachen der Datenträgerverschlüsselung](../protect/encryption-monitor.md)

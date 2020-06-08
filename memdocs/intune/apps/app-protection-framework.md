@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82182292"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853569"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Datenschutzframework mithilfe von App-Schutzrichtlinien 
 
@@ -55,7 +55,7 @@ Wie Sie in der obigen Tabelle sehen, sollten alle Änderungen an den App-Schutzr
 
 Beim Testen der APP-Änderungen sollten Sie die [zeitliche Planung der Implementierung](app-protection-policy-delivery.md) berücksichtigen. Der Status der APP-Implementierung für einen Benutzer kann überwacht werden. Weitere Informationen finden Sie unter [Überwachen von App-Schutzrichtlinien](app-protection-policies-monitor.md).
 
-Mithilfe von Microsoft Edge und der URL *about:Intunehelp* können Sie einzelne APP-Einstellungen für einzelne Apps auf Geräten überprüfen. Weitere Informationen finden Sie unter [Überprüfen der Protokolle für Client-App-Schutz](app-protection-policy-settings-log.md) und [Einstellungen für das APP-Datenschutzframework](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Mithilfe von Microsoft Edge und der URL *about:Intunehelp* können Sie einzelne APP-Einstellungen für einzelne Apps auf Geräten überprüfen. Weitere Informationen finden Sie unter [Überprüfen von Client-App-Schutzprotokollen](app-protection-policy-settings-log.md) und [Verwenden von Edge für iOS und Android, um auf Protokolle verwalteter Apps zuzugreifen](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>Einstellungen für das APP-Datenschutzframework
 
@@ -127,20 +127,20 @@ Die Richtlinien der Stufe 1 erzwingen eine solide Datenzugriffsebene und minimi
 
 #### <a name="conditional-launch"></a>Bedingter Start 
 
-| Einstellung | Beschreibung der Einstellung |          Wert/Aktion  |          Plattform        | Hinweise |
+| Einstellung | Beschreibung der Einstellung |          Wert / Aktion  |          Plattform        | Hinweise |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| App-Bedingungen |       Maximal zulässige PIN-Versuche  |          5/PIN zurücksetzen  |          iOS/iPadOS, Android  |                  |
-| App-Bedingungen |       Offline-Toleranzperiode  |          720/Zugriff blockieren (Minuten)  |          iOS/iPadOS, Android  |                  |
-| App-Bedingungen |       Offline-Toleranzperiode  |          90/Daten löschen (Tage)  |          iOS/iPadOS, Android  |                  |
-| Gerätebedingungen  |       Geräte mit Jailbreak/entfernten Nutzungsbeschränkungen  |        Nicht verfügbar/Zugriff blockieren  |          iOS/iPadOS, Android  |                  |
-| Gerätebedingungen  |       SafetyNet-Gerätenachweis  |          Basisintegrität und zertifizierte Geräte/Zugriff blockieren  |          Android  |          <p>Diese Einstellung konfiguriert „SafetyNet Attestation“ von Google auf Endbenutzergeräten. Die Basisintegrität überprüft die Integrität des Geräts. Für Geräte mit Rootzugriff, Emulatoren, virtuelle Geräte und Geräte, die Anzeichen von Manipulationen aufweisen, schlägt die Überprüfung der Basisintegrität fehl. </p><p> Die Option „Basisintegrität und zertifizierte Geräte“ überprüft die Kompatibilität des Geräts mit Google-Diensten. Nur unveränderte Geräte, die von Google zertifiziert wurden, bestehen diese Überprüfung.</p>  |
-| Gerätebedingungen  |       Bedrohungsüberprüfung für Apps erzwingen  |        Nicht verfügbar/Zugriff blockieren  |          Android  |          Diese Einstellung sorgt dafür, dass die Verify Apps-Überprüfung von Google für Endbenutzergeräte aktiviert ist. Wenn diese Einstellung konfiguriert ist, wird der Zugriff für den Endbenutzer so lange gesperrt, bis er auf seinem Android-Gerät die App-Überprüfung von Google aktiviert.        |
+| App-Bedingungen |       Maximal zulässige PIN-Versuche  |          5 / PIN zurücksetzen  |          iOS/iPadOS, Android  |                  |
+| App-Bedingungen |       Offline-Toleranzperiode  |          720 / Zugriff blockieren (Minuten)  |          iOS/iPadOS, Android  |                  |
+| App-Bedingungen |       Offline-Toleranzperiode  |          90 / Daten löschen (Tage)  |          iOS/iPadOS, Android  |                  |
+| Gerätebedingungen  |       Geräte mit Jailbreak/entfernten Nutzungsbeschränkungen  |        Nicht verfügbar / Zugriff blockieren  |          iOS/iPadOS, Android  |                  |
+| Gerätebedingungen  |       SafetyNet-Gerätenachweis  |          Basisintegrität und zertifizierte Geräte / Zugriff blockieren  |          Android  |          <p>Diese Einstellung konfiguriert „SafetyNet Attestation“ von Google auf Endbenutzergeräten. Die Basisintegrität überprüft die Integrität des Geräts. Für Geräte mit Rootzugriff, Emulatoren, virtuelle Geräte und Geräte, die Anzeichen von Manipulationen aufweisen, schlägt die Überprüfung der Basisintegrität fehl. </p><p> Die Option „Basisintegrität und zertifizierte Geräte“ überprüft die Kompatibilität des Geräts mit Google-Diensten. Nur unveränderte Geräte, die von Google zertifiziert wurden, bestehen diese Überprüfung.</p>  |
+| Gerätebedingungen  |       Bedrohungsüberprüfung für Apps erzwingen  |        Nicht verfügbar / Zugriff blockieren  |          Android  |          Diese Einstellung sorgt dafür, dass die Verify Apps-Überprüfung von Google für Endbenutzergeräte aktiviert ist. Wenn diese Einstellung konfiguriert ist, wird der Zugriff für den Endbenutzer so lange gesperrt, bis er auf seinem Android-Gerät die App-Überprüfung von Google aktiviert.        |
 
 #### <a name="level-2-enterprise-enhanced-data-protection"></a>Stufe 2: Erweiterter Datenschutz für Unternehmen
 
 Bei Stufe 2 handelt es sich um die Datenschutzkonfiguration, die als Standard für Geräte empfohlen wird, deren Benutzer Zugriff auf vertraulichere Daten haben. Heutzutage sind diese Geräte in Unternehmen oftmals Angriffen ausgesetzt. Für diese Empfehlungen wird keine große Menge an Personal oder Sicherheitsexperten mit viel Erfahrung angenommen, und deshalb sollte sich diese Stufe für die meisten Unternehmen eignen. Bei dieser Konfiguration wird die Konfiguration der Stufe 1 ausgeweitet, indem Datenübertragungsszenarios eingeschränkt werden und eine minimale Betriebssystemversion erzwungen wird.
 
-Die in Stufe 2 erzwungenen Richtlinieneinstellungen umfassen alle für Stufe 1 empfohlenen Richtlinieneinstellungen. Dazu kommen die untenstehenden Richtlinieneinstellungen bzw. sie werden aktualisiert, um weitere Steuerungsmöglichkeiten zu implementieren, was Stufe 2 zu einer erweiterten Konfiguration im Vergleich zu Stufe 1 macht. Diese Einstellungen können eine etwas höhere Auswirkung auf Benutzer oder Anwendungen haben. Sie erzwingen aber auch eine Datenschutzebene, die geeigneter für die Risiken ist, denen Benutzer ausgesetzt sind, die Zugriff auf vertrauliche Daten auf mobilen Geräten haben.
+Die in Stufe 2 erzwungenen Richtlinieneinstellungen umfassen alle für Stufe 1 empfohlenen Richtlinieneinstellungen. Aufgelistet werden nur die untenstehenden Einstellungen, die hinzugefügt oder geändert wurden, um weitere Steuerungsmöglichkeiten und eine erweiterte Konfiguration im Vergleich zu Stufe 1 zu implementieren. Diese Einstellungen können eine etwas höhere Auswirkung auf Benutzer oder Anwendungen haben. Sie erzwingen aber auch eine Datenschutzebene, die geeigneter für die Risiken ist, denen Benutzer ausgesetzt sind, die Zugriff auf vertrauliche Daten auf mobilen Geräten haben.
 
 #### <a name="data-protection"></a>Datenschutz
 
@@ -157,17 +157,17 @@ Die in Stufe 2 erzwungenen Richtlinieneinstellungen umfassen alle für Stufe 1
 
 #### <a name="conditional-launch"></a>Bedingter Start
 
-| Einstellung | Beschreibung der Einstellung |          Wert/Aktion  |          Plattform        | Hinweise |
+| Einstellung | Beschreibung der Einstellung |          Wert / Aktion  |          Plattform        | Hinweise |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Gerätebedingungen  |       Mindestversion für Betriebssystem  |          *Format: Hauptversion.Nebenversion.Buildversion <br>Beispiel:   12.4.6*/Zugriff blockieren |          iOS/iPadOS        | Microsoft empfiehlt das Konfigurieren der Mindesthauptversion für das iOS-Betriebssystem, um übereinstimmende unterstützte iOS-Versionen für Microsoft-Apps verwenden zu können.   Microsoft-Apps unterstützen einen N-1-Ansatz, wobei N für die aktuelle iOS-Hauptversion steht. Als Werte für Neben- und Buildversionen empfiehlt Microsoft, dafür zu sorgen, dass die Geräte über die aktuellen entsprechenden Sicherheitsupdates verfügen. Unter [Apple-Sicherheitsupdates](https://support.apple.com/en-us/HT201222) finden Sie die aktuellen Empfehlungen von Apple. |
 | Gerätebedingungen  |       Mindestversion für Betriebssystem  |          *Format: Hauptversion.Nebenversion<br> Beispiel: 5.0*/Zugriff blockieren   |          Android        | Microsoft empfiehlt das Konfigurieren der Mindesthauptversion für das Android-Betriebssystem, um übereinstimmende unterstützte Android-Versionen für Microsoft-Apps verwenden zu können. OEMs und Geräte, für die von Android Enterprise empfohlene Anforderungen gelten, müssen die aktuelle Versandversion und ein Upgrade auf die nächste Version unterstützen.   Aktuell empfiehlt Android für Wissensarbeiter Android 8.0 und höher.   Unter [Anforderungen für „Android Enterprise Recommended“](https://www.android.com/enterprise/recommended/requirements/) finden Sie Informationen zu den aktuellen Empfehlungen von Android. |
-| Gerätebedingungen  |       Mindestversion für Patch  |          *Format:   JJJJ-MM-TT <br> Beispiel: 2020-01-01*/Zugriff blockieren  |          Android        | Android-Geräte können monatliche Sicherheitsupdates erhalten, aber das Release hängt von den OEMs und/oder Netzbetreibern ab. Unternehmen sollten dafür sorgen, dass bereitgestellte Android-Geräte Sicherheitsupdates erhalten, bevor diese Einstellung implementiert wird. Unter [Android-Sicherheitsbulletins](https://source.android.com/security/bulletin/) finden Sie die aktuellen Updates.  |
+| Gerätebedingungen  |       Mindestversion für Patch  |          *Format:   JJJJ-MM-TT <br> Beispiel: 2020-01-01* / Zugriff blockieren  |          Android        | Android-Geräte können monatliche Sicherheitsupdates erhalten, aber das Release hängt von den OEMs und/oder Netzbetreibern ab. Unternehmen sollten dafür sorgen, dass bereitgestellte Android-Geräte Sicherheitsupdates erhalten, bevor diese Einstellung implementiert wird. Unter [Android-Sicherheitsbulletins](https://source.android.com/security/bulletin/) finden Sie die aktuellen Updates.  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>Stufe 3: Hoher Datenschutz für Unternehmen 
 
 Bei Stufe 3 handelt es sich um die Datenschutzkonfiguration, die als Standard für Organisationen empfohlen wird, die über ein großes und gut ausgebildetes Sicherheitsteam verfügen, oder für bestimmte Benutzer und Gruppen, auf die von Kontrahenten besonders abgezielt werden könnte. Auf solche Organisationen wird oft von mit hohen finanziellen Mitteln und gutem Know-how ausgestatteten Kontrahenten abgezielt. Deshalb sind die zusätzlichen beschriebenen Einschränkungen und Steuerungsmöglichkeiten erforderlich. Bei dieser Konfiguration wird die Konfiguration der Stufe 2 ausgeweitet, indem zusätzliche Datenübertragungsszenarios eingeschränkt werden, die Komplexität der PIN-Konfiguration erhöht und Bedrohungserkennung auf Mobilgeräten hinzugefügt wird.  
 
-Die in Stufe 3 erzwungenen Richtlinieneinstellungen umfassen alle für Stufe 2 und Stufe 1 empfohlenen Richtlinieneinstellungen. Dazu werden die untenstehenden Richtlinieneinstellungen hinzugefügt bzw. sie werden aktualisiert, um eine striktere Datenschutzkonfiguration und Steuerungsmöglichkeiten zu implementieren. Diese Richtlinieneinstellungen können sich stark auf Benutzer oder Anwendungen auswirken, indem eine Sicherheitsebene erzwungen wird, die den Risiken angemessen ist, denen sich die betroffenen Organisationen ausgesetzt sehen.  
+Die in Stufe 3 erzwungenen Richtlinieneinstellungen umfassen alle für Stufe 2 empfohlenen Richtlinieneinstellungen. Aufgelistet werden nur die untenstehenden Einstellungen, die hinzugefügt oder geändert wurden, um weitere Steuerungsmöglichkeiten und eine erweiterte Konfiguration im Vergleich zu Stufe 2 zu implementieren. Diese Richtlinieneinstellungen können sich stark auf Benutzer oder Anwendungen auswirken, indem eine Sicherheitsebene erzwungen wird, die den Risiken angemessen ist, denen sich die betroffenen Organisationen ausgesetzt sehen.  
 
 #### <a name="data-protection"></a>Datenschutz
 
@@ -190,11 +190,11 @@ Die in Stufe 3 erzwungenen Richtlinieneinstellungen umfassen alle für Stufe 2
 
 #### <a name="conditional-launch"></a>Bedingter Start
 
-| Einstellung | Beschreibung der Einstellung |          Wert/Aktion  |          Plattform        | Hinweise |
+| Einstellung | Beschreibung der Einstellung |          Wert / Aktion  |          Plattform        | Hinweise |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Gerätebedingungen  |       Mindestversion für Betriebssystem  |          *Format: Hauptversion.Nebenversion<br> Beispiel: 8.0*/Zugriff blockieren   |          Android        | Microsoft empfiehlt das Konfigurieren der Mindesthauptversion für das Android-Betriebssystem, um übereinstimmende unterstützte Android-Versionen für Microsoft-Apps verwenden zu können. OEMs und Geräte, für die von Android Enterprise empfohlene Anforderungen gelten, müssen die aktuelle Versandversion und ein Upgrade auf die nächste Version unterstützen.   Aktuell empfiehlt Android für Wissensarbeiter Android 8.0 und höher.   Unter [Anforderungen für „Android Enterprise Recommended“](https://www.android.com/enterprise/recommended/requirements/) finden Sie Informationen zu den aktuellen Empfehlungen von Android. |
-|       Gerätebedingungen  |          Geräte mit Jailbreak/entfernten Nutzungsbeschränkungen  |        Nicht verfügbar/Daten löschen  |          iOS/iPadOS, Android        |  |
-|       Gerätebedingungen  |          Maximal zulässige Bedrohungsstufe  |          Gesichert/Zugriff blockieren  |          iOS/iPadOS, Android        | <p>Nicht registrierte Geräte können mithilfe der Mobile Threat Defense auf Bedrohungen untersucht werden. Weitere Informationen finden Sie unter [Aktivieren des Mobile Threat Defense-Connectors in Intune für nicht registrierte Geräte](https://aka.ms/mtdmamdocs).      </p><p>     Wenn das Gerät registriert ist, kann diese Einstellung übersprungen und stattdessen die Mobile Threat Defense für registrierte Geräte bereitgestellt werden. Weitere Informationen finden Sie unter [Erstellen einer Mobile Threat Defense-Gerätekompatibilitätsrichtlinie (MTD) mit Intune](../protect/mtd-device-compliance-policy-create.md).</p> |
+| Gerätebedingungen  |       Mindestversion für Betriebssystem  |          *Format: Hauptversion.Nebenversion<br> Beispiel: 8.0* / Zugriff blockieren   |          Android        | Microsoft empfiehlt das Konfigurieren der Mindesthauptversion für das Android-Betriebssystem, um übereinstimmende unterstützte Android-Versionen für Microsoft-Apps verwenden zu können. OEMs und Geräte, für die von Android Enterprise empfohlene Anforderungen gelten, müssen die aktuelle Versandversion und ein Upgrade auf die nächste Version unterstützen.   Aktuell empfiehlt Android für Wissensarbeiter Android 8.0 und höher.   Unter [Anforderungen für „Android Enterprise Recommended“](https://www.android.com/enterprise/recommended/requirements/) finden Sie Informationen zu den aktuellen Empfehlungen von Android. |
+|       Gerätebedingungen  |          Geräte mit Jailbreak/entfernten Nutzungsbeschränkungen  |        Nicht verfügbar / Daten löschen  |          iOS/iPadOS, Android        |  |
+|       Gerätebedingungen  |          Maximal zulässige Bedrohungsstufe  |          Gesichert / Zugriff blockieren  |          iOS/iPadOS, Android        | <p>Nicht registrierte Geräte können mithilfe der Mobile Threat Defense auf Bedrohungen untersucht werden. Weitere Informationen finden Sie unter [Aktivieren des Mobile Threat Defense-Connectors in Intune für nicht registrierte Geräte](https://aka.ms/mtdmamdocs).      </p><p>     Wenn das Gerät registriert ist, kann diese Einstellung übersprungen und stattdessen die Mobile Threat Defense für registrierte Geräte bereitgestellt werden. Weitere Informationen finden Sie unter [Erstellen einer Mobile Threat Defense-Gerätekompatibilitätsrichtlinie (MTD) mit Intune](../protect/mtd-device-compliance-policy-create.md).</p> |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

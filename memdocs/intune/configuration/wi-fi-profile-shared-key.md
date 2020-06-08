@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 28dfeecf841eb1b9c69f46b2002b350c83514e1d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086453"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990572"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Verwenden eines benutzerdefinierten Geräteprofils zum Erstellen eines WLAN-Profils mit einem vorinstallierten Schlüssel in Intune
 
@@ -52,12 +52,17 @@ Dieses Features unterstützt folgende Betriebssysteme:
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 3. Geben Sie die folgenden Eigenschaften ein:
 
+    - **Plattform**: Wählen Sie Ihre Plattform aus.
+    - **Profil**: Klicken Sie auf **Benutzerdefiniert**.
+
+4. Wählen Sie **Erstellen** aus.
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
+
     - **Name:** Geben Sie einen aussagekräftigen Namen für die Richtlinie ein. Benennen Sie Ihre Richtlinien so, dass Sie diese später leicht wiedererkennen. Ein geeigneter Richtlinienname ist beispielsweise **Benutzerdefinierte Profileinstellungen für OMA-URI-WLAN für Android-Geräteadministratorgeräte**.
     - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
-    - **Plattform**: Wählen Sie Ihre Plattform aus.
-    - **Profiltyp**: Klicken Sie auf **Benutzerdefiniert**.
 
-4. Wählen Sie in **Einstellungen** die Option **Hinzufügen** aus. Geben Sie eine neue OMA-URI-Einstellung mit folgenden Eigenschaften ein:
+6. Wählen Sie **Weiter** aus.
+7. Wählen Sie unter **Konfigurationseinstellungen** die Option **Hinzufügen** aus. Geben Sie eine neue OMA-URI-Einstellung mit folgenden Eigenschaften ein:
 
     1. **Name:** Geben Sie einen Namen für die OMA-URI-Einstellung ein.
     2. **Beschreibung:** Geben Sie eine Beschreibung für die OMA-URI-Einstellung ein. Diese Einstellung ist optional, wird jedoch empfohlen.
@@ -74,10 +79,22 @@ Dieses Features unterstützt folgende Betriebssysteme:
     4. **Datentyp**: Wählen Sie **Zeichenfolge** aus.
 
     5. **Wert:** Fügen Sie Ihren XML-Code ein. Sehen Sie sich das [Beispiel](#android-or-windows-wi-fi-profile-example) in diesem Artikel an. Aktualisieren Sie jeden Wert mit dem entsprechenden Wert für Ihre Netzwerkeinstellungen. Der Kommentarabschnitt des Codes enthält einige Hinweise.
+    6. Klicken Sie auf **Hinzufügen**, um die Änderungen zu speichern.
 
-5. Wenn Sie fertig sind, wählen Sie **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern.
+8. Wählen Sie **Weiter** aus.
 
-Ihr Profil wird in der Profilliste angezeigt. Im nächsten Schritt [weisen Sie dieses Profil](device-profile-assign.md) Ihren Benutzergruppen zu. Diese Richtlinie kann nur Benutzergruppen zugewiesen werden.
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
+
+    Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Benutzergruppen aus, denen Ihr Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+
+    > [!NOTE]
+    > Diese Richtlinie kann nur Benutzergruppen zugewiesen werden.
+
+    Wählen Sie **Weiter** aus.
+
+11. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf **Erstellen** klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
 
 Wenn sich die einzelnen Geräte das nächste Mal anmelden, wird die Richtlinie angewendet, und auf dem Gerät wird ein WLAN-Profil erstellt. Das Gerät kann dann automatisch eine Verbindung mit dem Netzwerk herstellen.
 

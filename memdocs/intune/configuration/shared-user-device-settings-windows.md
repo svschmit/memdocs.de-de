@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c76045413324deef395f546033d37ec47405a28f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79361587"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429504"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Einstellungen für Windows 10 (und höher) für die Verwaltung von gemeinsam genutzten Geräten mithilfe von Intune
 
@@ -42,32 +42,57 @@ Weitere Informationen zu diesem Intune-Feature finden Sie unter [Control access,
 
 Diese Einstellungen verwenden den [SharedPC-CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
 
-- **Modus für gemeinsame PC-Nutzung:** Klicken Sie auf **Aktivieren**, um den Modus für gemeinsame PC-Nutzung zu aktivieren. In diesem Modus kann sich nur jeweils ein Benutzer auf dem Gerät anmelden. Ein anderer Benutzer kann sich erst anmelden, nachdem der aktuelle Benutzer sich abgemeldet hat. **Nicht konfiguriert** (Standard):Diese Einstellung wird von Intune nicht verwaltet und nicht mithilfe von Richtlinien auf den Geräten kontrolliert.
+- **Modus für gemeinsame PC-Nutzung:** **Aktivieren** aktiviert den Modus für gemeinsame PC-Nutzung. In diesem Modus kann sich nur jeweils ein Benutzer auf dem Gerät anmelden. Ein anderer Benutzer kann sich erst anmelden, nachdem der aktuelle Benutzer sich abgemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 - **Gastkonto:** Aktivieren Sie diese Einstellung, damit die Option „Gast“ auf dem Anmeldebildschirm verfügbar ist. Für Gastkonten sind keine Anmeldeinformationen und keine Authentifizierung erforderlich. Für diese Einstellung wird bei jeder Verwendung ein neues lokales Konto erstellt. Folgende Optionen sind verfügbar:
   - **Gast:** Erstellt ein lokales Gastkonto auf dem Gerät.
   - **Domäne:** Erstellt ein Gastkonto in Azure Active Directory (AD).
   - **Gast und Domäne:** Erstellt ein lokales Gastkonto auf dem Gerät und ein Gastkonto in Azure Active Directory (AD).
-- **Kontoverwaltung:** Legen Sie diese Option auf **Aktivieren** fest, damit lokale Gastkonten und Konten in AD und Azure AD automatisch gelöscht werden. Wenn ein Benutzer sich von einem Gerät abmeldet oder die Systemwartung ausgeführt wird, werden diese Konten gelöscht. Wenn diese Option aktiviert ist, sollten sie auch die folgenden festlegen:
-  - **Kontolöschung:** Legen Sie fest, wann Konten gelöscht werden sollen: **Bei Erreichen des Schwellenwerts für Speicherplatz**, **Bei Erreichen des Schwellenwerts für Speicherplatz und inaktive Konten** oder **Sofort nach der Abmeldung**. Geben Sie außerdem Folgendes ein:
+- **Kontoverwaltung:** Entscheiden Sie, ob Konten automatisch gelöscht werden sollen. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Aktiviert**: Konten, die von Gästen erstellt werden, und Konten in AD und Azure AD werden automatisch gelöscht. Wenn ein Benutzer sich von einem Gerät abmeldet oder die Systemwartung ausgeführt wird, werden diese Konten gelöscht.
+
+    Geben Sie außerdem Folgendes ein:
+
+    - **Kontolöschung:** Legen Sie fest, wann Konten gelöscht werden sollen:
+      - **Bei Erreichen des Schwellenwerts für Speicherplatz**
+      - **Bei Erreichen des Schwellenwerts für Speicherplatz und inaktive Konten**
+      - **Sofort nach der Abmeldung**
+
+    Geben Sie außerdem Folgendes ein:
+
     - **Schwellenwert (%) für das Starten von Löschungen:** Geben Sie einen Prozentsatz (0 – 100) für den Speicherplatz ein. Wenn der gesamte Speicherplatz unter den eingegebenen Wert fällt, werden die zwischengespeicherten Konten gelöscht. Es werden fortlaufend Konten gelöscht, um Speicherplatz freizugeben. Die Konten, die am längsten inaktiv sind, werden zuerst gelöscht.
     - **Schwellenwert (%) für das Beenden von Löschungen:** Geben Sie einen Prozentsatz (0 – 100) für den Speicherplatz ein. Wenn der gesamte Speicherplatz dem eingegebenen Wert entspricht, werden keine Konten mehr gelöscht.
+    - **Schwellenwert für inaktive Konten**: Geben Sie die Anzahl der aufeinander folgenden Tage ein, bevor das Konto gelöscht wird, das sich nicht angemeldet hat (0 bis 60 Tage).
 
-  Legen Sie die Option auf **Deaktivieren** fest, um die lokalen, AD- und Azure AD-Gastkonten beizubehalten.
+  - **Deaktiviert:** Die lokalen und die Azure AD-Konten, die von Gästen erstellt werden, bleiben auf dem Gerät erhalten und werden nicht gelöscht.
 
-- **Lokaler Speicher:** Wählen Sie **Aktiviert** aus, um zu verhindern, dass Benutzer Dateien auf der Festplatte des Geräts speichern und von dort aufrufen. Wählen Sie **Deaktiviert** aus, wenn Sie Benutzern das Aufrufen von Dateien und das lokale Speichern von Dateien über den Datei-Explorer ermöglichen möchten. **Nicht konfiguriert** (Standard):Diese Einstellung wird von Intune nicht verwaltet und nicht mithilfe von Richtlinien auf den Geräten kontrolliert.
-- **Energieverwaltungsrichtlinien:** Wenn Sie diese Option auf **Aktiviert** festlegen, können Benutzer den Ruhezustand nicht deaktivieren, die Aktionen für den Energiesparmodus nicht überschreiben (z. B. das Zuklappen des Geräts) und die Energieeinstellungen nicht ändern. Wenn Sie diese Option auf **Deaktiviert** festlegen, können Benutzer das Gerät in den Ruhezustand versetzen, das Gerät schließen, um den Energiesparmodus zu aktivieren und die Energieeinstellungen ändern. **Nicht konfiguriert** (Standard):Diese Einstellung wird von Intune nicht verwaltet und nicht mithilfe von Richtlinien auf den Geräten kontrolliert.
+- **Lokaler Speicher:** Mit dem lokalen Speicher können Benutzer Dateien auf der Festplatte des Geräts speichern und anzeigen. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Aktiviert**: Verhindert, dass Benutzer Dateien auf der Festplatte des Geräts speichern und von dort anzeigen.
+  - **Deaktiviert:** Ermöglicht Benutzern das Aufrufen von Dateien und das lokale Speichern von Dateien über den Datei-Explorer.
+
+- **Energieverwaltungsrichtlinien:** Erlaubt oder verhindert, dass Benutzer die Energieeinstellungen ändern können. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Aktiviert**: Benutzer können den Ruhezustand nicht deaktivieren, die Aktionen für den Energiesparmodus nicht überschreiben (z. B. das Zuklappen des Geräts) und die Energieeinstellungen nicht ändern.
+  - **Deaktiviert:** Benutzer können das Gerät in den Ruhezustand versetzen, das Gerät schließen, um den Energiesparmodus zu aktivieren und die Energieeinstellungen ändern.
+
 - **Timeout für Energiesparmodus (in Sekunden):** Geben Sie an, wie viele Sekunden das Gerät inaktiv sein muss (0 bis 18000), bevor es in den Energiesparmodus versetzt wird. `0` bedeutet, dass sich das Gerät niemals im Ruhezustand befindet. Wenn Sie keine Zeit festlegen, wird das Gerät nach 3.600 Sekunden (60 Minuten) in den Energiesparmodus versetzt.
-- **Anmeldung bei PC-Reaktivierung:** Legen Sie diese Option auf **Aktiviert** fest, damit sich Benutzer mit einem Kennwort anmelden müssen, wenn das Gerät aus dem Energiesparmodus gestartet wird. Legen Sie die Option auf **Deaktiviert** fest, damit die Benutzer keinen Benutzernamen und kein Kennwort eingeben müssen. **Nicht konfiguriert** (Standard):Diese Einstellung wird von Intune nicht verwaltet und nicht mithilfe von Richtlinien auf den Geräten kontrolliert.
+
+- **Anmeldung bei PC-Reaktivierung:** Wählen Sie aus, ob sich Benutzer anmelden müssen, wenn das Gerät den Energiesparmodus verlässt. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Aktiviert**: Verlangt, dass sich Benutzer mit einem Kennwort anmelden müssen, wenn das Gerät aus dem Energiesparmodus reaktiviert wird.
+  - **Deaktiviert:** Benutzer müssen keinen Benutzernamen und kein Kennwort eingeben.
+
 - **Startzeitpunkt für Wartung (in Minuten ab Mitternacht):** Geben Sie die Zeit in Minuten ein (0 – 1440), zu der automatische Wartungstasks (z. B. Windows Update) ausgeführt werden sollen. Die Standardzeit für den Start ist auf Mitternacht bzw. null (`0`) Minuten festgelegt. Ändern Sie die Startzeit, indem Sie eine Startzeit in Minuten (von Mitternacht aus) eingeben. Wenn Sie die Wartung beispielsweise um 2 Uhr morgens durchführen möchten, geben Sie `120` ein. Wenn Sie die Wartung um 20 Uhr durchführen möchten, geben Sie `1200` ein.
-- **Education-Richtlinien:** Wählen Sie **Aktiviert** aus, um die empfohlenen (eingeschränkteren) Einstellungen für Geräte in Bildungseinrichtungen zu verwenden. Wählen Sie **Deaktiviert** aus, damit die empfohlenen Standardrichtlinien für Geräte in Bildungseinrichtungen nicht verwendet werden. **Nicht konfiguriert** (Standard):Diese Einstellung wird von Intune nicht verwaltet und nicht mithilfe von Richtlinien auf den Geräten kontrolliert.
+
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+
+- **Education-Richtlinien:** Wählen Sie diese Option aus, wenn Richtlinien für Bildungseinrichtungen aktiviert sind. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Aktiviert**: Verwendet die empfohlenen (eingeschränkteren) Einstellungen für Geräte in Bildungseinrichtungen.
+  - **Deaktiviert:** Die empfohlenen Standardrichtlinien für Geräte in Bildungseinrichtungen werden nicht verwendet.
 
   Weitere Informationen zu den Bildungsrichtlinien finden Sie unter [Windows 10 configuration recommendations for education customers (Empfehlungen für die Konfiguration von Windows 10 für Kunden im Bildungsbereich)](https://docs.microsoft.com/education/windows/configure-windows-for-education).
-
-- **Schnelle erste Anmeldung** (veraltet): Wählen Sie **Aktiviert** aus, damit Benutzer die schnelle erste Anmeldung nutzen können. Wenn für diese Einstellung die Option **Aktiviert** ausgewählt wurde, verbindet das Gerät neue Azure AD-Konten ohne Administratorberechtigungen automatisch mit den vorkonfigurierten lokalen Kandidatenkonten. Wählen Sie **Deaktiviert** aus, um die schnelle erste Anmeldung zu verhindern. **Nicht konfiguriert** (Standard):Diese Einstellung wird von Intune nicht verwaltet und nicht mithilfe von Richtlinien auf den Geräten kontrolliert.
-
-  Diese Einstellung wird in einem zukünftigen Release entfernt. Verwenden Sie diese Einstellung nicht.
-
-  [Authentication/EnableFastFirstSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablefastfirstsignin)
 
 > [!TIP]
 > [Einrichten eines gemeinsam genutzten oder Gast-PC](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (öffnet eine andere Dokumentationswebsite) ist eine großartige Ressource für dieses Windows 10-Feature. Hier finden Sie Konzepte und Gruppenrichtlinien, die im Modus für gemeinsame PC-Nutzung festgelegt werden können.

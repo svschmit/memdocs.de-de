@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023179"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990328"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden importierter PKCS-Zertifikate mit Intune
 
@@ -148,7 +148,7 @@ Das PowerShell-Modul stellt Methoden zum Erstellen eines Schlüssels mithilfe de
 
 3. Um das Modul zu importieren, führen Sie `Import-Module .\IntunePfxImport.psd1` aus.
 
-4. Führen Sie anschließend `Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"` aus.
+4. Führen Sie anschließend `Add-IntuneKspKey -ProviderName "Microsoft Software Key Storage Provider" -KeyName "PFXEncryptionKey"` aus.
 
    > [!TIP]
    > Der von Ihnen verwendete Anbieter muss erneut ausgewählt werden, wenn Sie PFX-Zertifikate importieren. Sie können den **Microsoft-Anbieter für Softwareschlüsselspeicher** verwenden, aber auch die Verwendung eines anderen Anbieters wird unterstützt. Der Schlüsselname wird auch als Beispiel angegeben, und Sie können einen anderen Schlüsselnamen Ihrer Wahl verwenden.
@@ -187,7 +187,7 @@ Wählen Sie den Schlüsselspeicheranbieter aus, der dem Anbieter entspricht, den
 
 3. Führen Sie zum Importieren des Moduls `Import-Module .\IntunePfxImport.psd1` aus.
 
-4. Führen Sie zum Authentifizieren bei Intune Graph `$authResult = Get-IntuneAuthenticationToken -AdminUserName "<Admin-UPN>"` aus.
+4. Führen Sie zum Authentifizieren bei Intune Graph `Set-IntuneAuthenticationToken  -AdminUserName "<Admin-UPN>"` aus.
 
    > [!NOTE]
    > Weil die Authentifizierung anhand von Graph ausgeführt wird, müssen Sie für die AppID Berechtigungen bereitstellen. Wenn Sie dieses Hilfsprogramm zum ersten Mal verwenden, ist ein *globaler Administrator* erforderlich. Die PowerShell-Cmdlets verwenden die gleiche AppID, die auch für die [PowerShell-Intune-Beispiele](https://github.com/microsoftgraph/powershell-intune-samples) verwendet wird.
@@ -200,10 +200,15 @@ Wählen Sie den Schlüsselspeicheranbieter aus, der dem Anbieter entspricht, den
 
    > [!NOTE]
    > Wenn Sie das Zertifikat von einem anderen System als dem Server importieren, auf dem der Connector installiert ist, müssen Sie den folgenden Befehl mit dem Schlüsseldateipfad verwenden: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
+   >
+   > *VPN* wird nicht als IntendedPurpose unterstützt. 
 
-7. Importieren Sie das **UserPFXCertificate**-Objekt in Intune, indem Sie `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject` ausführen.
 
-8. Um zu überprüfen, ob das Zertifikat importiert wurde, führen Sie `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"` aus.
+7. Importieren Sie das **UserPFXCertificate**-Objekt in Intune, indem Sie `Import-IntuneUserPfxCertificate -CertificateList $userPFXObject` ausführen.
+
+8. Um zu überprüfen, ob das Zertifikat importiert wurde, führen Sie `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"` aus.
+
+9.  Führen Sie `Remove-IntuneAuthenticationToken` als bewährte Methode aus, um den AAD-Tokencache zu bereinigen, ohne darauf zu warten, dass das Token abläuft.
 
 Weitere Informationen zu anderen verfügbaren Befehlen finden Sie in der Infodatei unter [PFXImport PowerShell Project in GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 

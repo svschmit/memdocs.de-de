@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086505"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429491"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Geräteeinstellungen für Windows 10 und Windows Holographic zum Hinzuzufügen von VPN-Verbindungen mithilfe von Intune
 
@@ -66,7 +66,7 @@ Abhängig von den ausgewählten Einstellungen können nicht alle der aufgeführt
   - **PPTP**
 
   Wenn Sie einen VPN-Verbindungstyp auswählen, werden Sie möglicherweise aufgefordert, folgende Einstellungen vorzunehmen:  
-  - **Immer aktiv:** **Aktivieren** Sie diese Option, um die VPN-Verbindung automatisch bei folgenden Ereignissen herzustellen:
+  - **Immer aktiv:** **Aktivieren** stellt automatisch bei folgenden Ereignissen eine VPN-Verbindung her:
     - Benutzer melden sich an ihren Geräten an.
     - Das Netzwerk auf dem Gerät ändert sich.
     - Der Bildschirm wird auf dem Gerät wieder eingeschaltet, nachdem er ausgeschaltet war.
@@ -114,8 +114,9 @@ Weitere Informationen zum Erstellen von benutzerdefinierten EAP-XML finden Sie u
 
   - **Dieser Verbindung WIP zuordnen:** Geben Sie eine **WIP-Domäne für diese Verbindung** ein.
   - **Apps dieser Verbindung zuordnen:** Sie können die **VPN-Verbindung auf diese Apps beschränken** und dann **Zugeordnete Apps** hinzufügen. Die von Ihnen eingegebenen Apps verwenden automatisch die VPN-Verbindung. Der App-Typ bestimmt den App-Bezeichner. Geben Sie für eine universelle App den Paketfamiliennamen ein. Geben Sie für eine Desktop-App den Dateipfad der App ein.
-  >[!IMPORTANT]
-  >Es wird empfohlen, alle App-Listen schützen, die für Pro-App-VPNs erstellt sind. Wenn ein nicht autorisierter Benutzer die Liste ändert, und Sie sie in die Liste der Apps für Pro-App-VPNs importieren, autorisieren Sie damit möglicherweise den VPN-Zugriff auf Apps, auf die nicht zugegriffen werden soll. Eine Möglichkeit, App-Listen zu sichern, ist die Verwendung einer Zugriffssteuerungsliste (Access Control List, ACL).
+
+  > [!IMPORTANT]
+  > Es wird empfohlen, alle App-Listen schützen, die für Pro-App-VPNs erstellt sind. Wenn ein nicht autorisierter Benutzer die Liste ändert, und Sie sie in die Liste der Apps für Pro-App-VPNs importieren, autorisieren Sie damit möglicherweise den VPN-Zugriff auf Apps, auf die nicht zugegriffen werden soll. Eine Möglichkeit, App-Listen zu sichern, ist die Verwendung einer Zugriffssteuerungsliste (Access Control List, ACL).
 
 - **Regeln für den Netzwerkdatenverkehr für diese VPN-Verbindung:** Wählen Sie die Protokolle, die lokalen und Remoteports sowie die Adressbereiche aus, die für die VPN-Verbindung aktiviert werden sollen. Wenn Sie keine Regel für den Netzwerkdatenverkehr erstellen, werden alle Protokolle, Ports und Adressbereiche aktiviert. Nachdem Sie eine Regel erstellt haben, werden nur die in dieser Regel festgelegten Protokolle, Ports und Adressbereiche von der VPN-Verbindung verwendet.
 

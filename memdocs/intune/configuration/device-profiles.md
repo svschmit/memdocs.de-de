@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/07/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359303"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983807"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Anwenden von Einstellungen und Funktionen auf Ihren Geräten mit Geräteprofilen in Microsoft Intune
 
@@ -60,7 +60,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 - iOS/iPadOS
 - macOS
 - Windows Phone 8.1
-- Windows 8,1
+- Windows 8.1
 - Windows 10 und höher
 
 ## <a name="custom-profile"></a>Benutzerdefiniertes Profil
@@ -179,7 +179,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 ## <a name="extensions"></a>-Erweiterungen
 
-[Kernel-Erweiterungen](kernel-extensions-overview-macos.md) ermöglichen es Administratoren, Funktionen oder Programme auf Kernel-Ebene auf macOS-Geräten hinzuzufügen. Konfigurieren Sie diese Einstellungen, um allen Erweiterungen eines bestimmten Entwicklers oder Partners zu vertrauen oder bestimmte Kernelerweiterungen zuzulassen.
+[macOS-Systemerweiterungen und Kernelerweiterungen](kernel-extensions-overview-macos.md) ermöglichen Administratoren das Hinzufügen von Funktionen oder Programmen, die die nativen Funktionen des Betriebssystems erweitern. Konfigurieren Sie diese Einstellungen, um allen Erweiterungen eines bestimmten Entwicklers oder Partners zu vertrauen oder bestimmte Erweiterungen zuzulassen.
 
 Dieses Features unterstützt folgende Betriebssysteme:
 
@@ -271,7 +271,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 - iOS/iPadOS
 - macOS
 - Windows Phone 8.1
-- Windows 8,1
+- Windows 8.1
 - Windows 10 und höher
 
 ## <a name="wi-fi"></a>WLAN

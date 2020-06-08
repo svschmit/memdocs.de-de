@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/29/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: eaca235305507065cb716e3427e52c679c1a5dad
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587250"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427782"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Endpoint Protection-Einstellungen in Intune unter macOS  
 
@@ -30,84 +30,31 @@ In diesem Artikel werden die Endpoint Protection-Einstellungen beschrieben, die 
 
 [Erstellen eines Endpoint Protection-Profils für macOS](endpoint-protection-configure.md)
 
-## <a name="gatekeeper"></a>Gatekeeper  
+## <a name="filevault"></a>FileVault
 
-- **Apps aus den folgenden Downloadquellen zulassen**  
-  Schränken Sie die Apps ein, die auf einem Gerät gestartet werden können, je nach Herkunft ein. Dadurch sollen Geräte vor Schadsoftware geschützt werden, außerdem werden nur Apps von vertrauenswürdigen Quellen zugelassen.  
-
-  - **Nicht konfiguriert**  
-  - **Mac App Store**  
-  - **Mac App Store und verifizierte Entwickler**  
-  - **Anywhere** (Beliebig)  
-
-  **Standardeinstellung:** Nicht konfiguriert  
-
-- **Benutzer kann Gatekeeper außer Kraft setzen**  
-  Hindert Benutzer am Außerkraftsetzen der Gatekeeper-Einstellungen und vom Installieren von Apps durch STRG+Klick. Wenn diese Einstellung aktiviert ist, kann der Benutzer eine beliebige App mithilfe von STRG+Klick installieren.  
- 
-  - **Nicht konfiguriert**: Benutzer können Apps per STRG+Klick installieren.  
-  - **Blockieren**: Verhindert, dass Benutzer Apps per STRG+Klick installieren können  
-
-  **Standardeinstellung:** Nicht konfiguriert  
-
-## <a name="firewall"></a>Firewall  
-
-Verwenden Sie die Firewall, um Verbindungen pro Anwendung statt pro Port zu steuern. Wenn Sie die Einstellung „Pro Anwendung“ verwenden, können Sie die Vorteile des Schutzes durch die Firewall besser nutzen. Dadurch wird ebenfalls verhindert, dass unerwünschte Apps die Netzwerkports steuern, die für zulässige Apps geöffnet sind.  
-
-**Allgemein**
-- **Firewall**  
-  Aktivieren Sie die Firewall, um zu konfigurieren, wie eingehende Verbindung in Ihrer Umgebung behandelt werden.  
-  - **Nicht konfiguriert**  
-  - **Aktivieren**  
-
-  **Standardeinstellung:** Nicht konfiguriert  
-
-- **Eingehende Verbindungen**  
-  Blockiert alle eingehenden Verbindungen außer denen, die für grundlegende Internetdienste erforderlich sind, z.B. DHCP, Bonjour und IPSec. Durch dieses Feature werden alle Freigabedienste blockiert, z.B. die Dateifreigabe und die Bildschirmfreigabe. Wenn Sie Freigabedienste verwenden, behalten Sie *Nicht konfiguriert* für diese Einstellung bei.  
-  - **Nicht konfiguriert**  
-  - **Blockieren**  
-
-  **Standardeinstellung:** Nicht konfiguriert  
-
-**Zulassen oder Blockieren eingehender Verbindungen für bestimmte Apps.**  
-
-  - **Zugelassene Apps**  
-    Wählen Sie die Apps aus, die explizit für eingehende Verbindungen zugelassen sind.  
-
-  - **Blockierte Apps**  
-    Wählen Sie die Apps aus, für die eingehende Verbindungen blockiert werden sollen.  
-
-  - **Geschützter Modus**  
-    Hindern Sie den Computer daran, auf Suchanforderungen zu antworten, indem Sie den geschützten Modus aktivieren. Das Gerät antwortet weiterhin auf eingehende Anforderungen für autorisierte Apps. Unerwartete Anforderungen, wie z.B. ICMP (Ping), werden ignoriert.  
-    - **Nicht konfiguriert**  
-    - **Aktivieren**  
-
-    **Standardeinstellung:** Nicht konfiguriert  
-
-## <a name="filevault"></a>FileVault  
 Weitere Informationen zu den Einstellungen von Apple FileVault finden Sie unter [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) in den Ressourcen für Apple-Entwickler. 
 
 > [!IMPORTANT]  
 > Ab macOS 10.15 muss die MDM-Registrierung vom Benutzer genehmigt werden. 
 
-- **FileVault**  
+- **FileVault aktivieren**  
   Sie können die vollständige Datenträgerverschlüsselung mithilfe von XTS-AES 128 mit FileVault auf Geräten *aktivieren*, auf denen macOS 10.13 und höher ausgeführt wird.  
   - **Nicht konfiguriert**  
-  - **Aktivieren**  
+  - **Ja**  
 
   **Standardeinstellung:** Nicht konfiguriert  
 
   - **Art des Wiederherstellungsschlüssels**  
     *Persönliche Schlüssel*: Wiederherstellungsschlüssel werden für Geräte erstellt. Konfigurieren Sie die folgenden Einstellungen für den persönlichen Schlüssel.  
 
-    - **Speicherort des persönlichen Wiederherstellungsschlüssels**: Legen Sie eine kurze Nachricht an den Benutzer fest, die erklärt, wie und wo dieser den persönlichen Wiederherstellungsschlüssel abrufen kann. Dieser Text wird in die Meldung eingefügt, die dem Benutzer auf dem Anmeldebildschirm angezeigt wird, wenn dieser sein Kennwort vergessen hat und zur Eingabe des persönlichen Wiederherstellungsschlüssels aufgefordert wird.  
+    - **Beschreibung des Hinterlegungsstandorts für den persönlichen Wiederherstellungsschlüssel**: Legen Sie eine kurze Nachricht an den Benutzer fest, die erklärt, wie und wo dieser den persönlichen Wiederherstellungsschlüssel abrufen kann. Dieser Text wird in die Meldung eingefügt, die dem Benutzer auf dem Anmeldebildschirm angezeigt wird, wenn dieser sein Kennwort vergessen hat und zur Eingabe des persönlichen Wiederherstellungsschlüssels aufgefordert wird.  
 
     - **Rotation für persönlichen Wiederherstellungsschlüssel**: Geben Sie an, wie häufig der persönliche Wiederherstellungsschlüssel für ein Gerät rotiert werden soll. Sie können die Standardeinstellung **Nicht konfiguriert** oder einen Wert von **1** bis **12** Monaten festlegen.  
 
   - **Aufforderung bei Abmeldung deaktivieren**  
     Mit dieser Option wird verhindert, dass die Aufforderung dem Benutzer bei der Abmeldung angezeigt wird, der die Aktivierung von FileVault anfordert.  Wenn diese Option deaktiviert ist, wird die Eingabeaufforderung bei der Abmeldung deaktiviert, und der Benutzer wird stattdessen aufgefordert, wenn er sich anmeldet.  
     - **Nicht konfiguriert**  
-    - **Deaktivieren**: Deaktiviert die Eingabeaufforderung bei der Abmeldung
+    - **Ja**: Deaktiviert die Eingabeaufforderung bei der Abmeldung.
 
     **Standardeinstellung:** Nicht konfiguriert  
 
@@ -124,15 +71,66 @@ Weitere Informationen zu den Einstellungen von Apple FileVault finden Sie unter 
     >
     > Wenn bei Ihnen macOS-Geräte registriert sind, können Sie weitere Informationen anzeigen, wenn Sie sich beim [Microsoft Endpoint Manager-Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) anmelden. Navigieren Sie dort zu **Mandantenverwaltung** > **Mandantenstatus**, klicken Sie auf **Dienstintegrität und Nachrichtencenter**, und suchen Sie nach der Nachrichten-ID **MC210922**.
 
-    <br> 
-
     - **Nicht konfiguriert**: Die Verschlüsselung auf dem Gerät ist erforderlich, bevor die nächste Anmeldung zugelassen wird.  
     - **1** bis **10**: Benutzern das Ignorieren der Eingabeaufforderung ein- bis zehnmal gestatten, bevor die Verschlüsselung auf dem Gerät erforderlich ist.  
     - **Kein Limit, immer auffordern**: Der Benutzer wird aufgefordert, FileVault zu aktivieren, aber die Verschlüsselung ist nicht erforderlich.  
  
     **Standardeinstellung:** *Variiert*: Wenn die Einstellung *Aufforderung bei Abmeldung deaktivieren* auf **Nicht konfiguriert** festgelegt ist, wird diese Einstellung standardmäßig auf **Nicht konfiguriert** festgelegt. Wenn *Aufforderung bei Abmeldung deaktivieren* auf **Deaktivieren** festgelegt ist, ist diese Einstellung standardmäßig auf **1** festgelegt, und der Wert **Nicht konfiguriert** steht nicht zur Auswahl.
 
-Weitere Informationen zu FileVault mit Intune finden Sie unter [FileVault-Wiederherstellungsschlüssel](encryption-monitor.md#filevault-recovery-keys).
+Weitere Informationen zu FileVault mit Intune finden Sie unter [Verwalten von FileVault](../protect/encrypt-devices-filevault.md#manage-filevault).
+
+## <a name="firewall"></a>Firewall  
+
+Verwenden Sie die Firewall, um Verbindungen pro Anwendung statt pro Port zu steuern. Wenn Sie die Einstellung „Pro Anwendung“ verwenden, können Sie die Vorteile des Schutzes durch die Firewall besser nutzen. Dadurch wird ebenfalls verhindert, dass unerwünschte Apps die Netzwerkports steuern, die für zulässige Apps geöffnet sind.  
+
+- **Firewall aktivieren**  
+  Aktivieren Sie die Firewall, um zu konfigurieren, wie eingehende Verbindung in Ihrer Umgebung behandelt werden.  
+  - **Nicht konfiguriert**  
+  - **Ja**  
+
+  **Standardeinstellung:** Nicht konfiguriert  
+
+- **Alle eingehenden Verbindungen sperren**  
+  Blockiert alle eingehenden Verbindungen außer denen, die für grundlegende Internetdienste erforderlich sind, z.B. DHCP, Bonjour und IPSec. Durch dieses Feature werden alle Freigabedienste blockiert, z.B. die Dateifreigabe und die Bildschirmfreigabe. Wenn Sie Freigabedienste verwenden, behalten Sie *Nicht konfiguriert* für diese Einstellung bei.  
+  - **Nicht konfiguriert**  
+  - **Ja**  
+
+  **Standardeinstellung:** Nicht konfiguriert  
+
+- **Eingehende Verbindungen für die folgenden Apps zulassen**: Wählen Sie die Apps aus, die eingehende Verbindungen empfangen dürfen. Folgende Optionen sind verfügbar:
+  - **Apps nach Paket-ID hinzufügen**: Geben Sie die [Paket-ID](../configuration/bundle-ids-built-in-ios-apps.md) der App ein. Eine Liste der integrierten Apple-Apps finden Sie auf [dieser Apple-Website](https://support.apple.com/HT208094).
+  - **Store-App hinzufügen:** Wählen Sie eine Store-App aus, die Sie zuvor in Intune hinzugefügt haben. Weitere Informationen finden Sie unter [Hinzufügen von Apps zu Microsoft Intune](../apps/apps-add.md).
+
+- **Eingehende Verbindungen für die folgenden Apps blockieren**: Wählen Sie die Apps aus, die keine eingehenden Verbindungen empfangen dürfen. Folgende Optionen sind verfügbar:
+  - **Apps nach Paket-ID hinzufügen**: Geben Sie die [Paket-ID](../configuration/bundle-ids-built-in-ios-apps.md) der App ein. Eine Liste der integrierten Apple-Apps finden Sie auf [dieser Apple-Website](https://support.apple.com/HT208094).
+  - **Store-App hinzufügen:** Wählen Sie eine Store-App aus, die Sie zuvor in Intune hinzugefügt haben. Weitere Informationen finden Sie unter [Hinzufügen von Apps zu Microsoft Intune](../apps/apps-add.md).
+
+- **Geschützten Modus aktivieren**  
+  Hindern Sie den Computer daran, auf Suchanforderungen zu antworten, indem Sie den geschützten Modus aktivieren. Das Gerät antwortet weiterhin auf eingehende Anforderungen für autorisierte Apps. Unerwartete Anforderungen, wie z.B. ICMP (Ping), werden ignoriert.  
+  - **Nicht konfiguriert**  
+  - **Ja**  
+
+  **Standardeinstellung:** Nicht konfiguriert  
+
+## <a name="gatekeeper"></a>Gatekeeper  
+
+- **Apps aus den folgenden Downloadquellen zulassen**  
+  Schränken Sie die Apps ein, die auf einem Gerät gestartet werden können, je nach Herkunft ein. Dadurch sollen Geräte vor Schadsoftware geschützt werden, außerdem werden nur Apps von vertrauenswürdigen Quellen zugelassen.  
+
+  - **Nicht konfiguriert**  
+  - **Mac App Store**  
+  - **Mac App Store und verifizierte Entwickler**  
+  - **Anywhere** (Beliebig)  
+
+  **Standardeinstellung:** Nicht konfiguriert  
+
+- **Dem Benutzer das Außerkraftsetzen von Gatekeeper nicht gestatten**  
+  Hindert Benutzer am Außerkraftsetzen der Gatekeeper-Einstellungen und vom Installieren von Apps durch STRG+Klick. Wenn diese Einstellung aktiviert ist, kann der Benutzer eine beliebige App mithilfe von STRG+Klick installieren.  
+
+  - **Nicht konfiguriert**: Benutzer können Apps per STRG+Klick installieren.  
+  - **Ja**: Verhindert, dass Benutzer Apps per STRG+KLICK installieren können.  
+
+  **Standardeinstellung:** Nicht konfiguriert  
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: d533acfa60672bed3d6919116f11f43d525b6551
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693419"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988329"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurieren von Windows 10-Geräten in Intune mithilfe von Sicherheitsbaselines
 
@@ -74,17 +74,21 @@ Wenn Sie bereit sind, zu einer neueren Version einer von Ihnen verwendeten Basel
 
 Bei jeder neuen Versionsinstanz einer Baseline können Einstellungen hinzugefügt oder entfernt oder andere Änderungen vorgenommen werden. Wenn beispielsweise in neuen Versionen von Windows 10 neue Windows 10-Einstellungen verfügbar werden, erhält die MDM-Sicherheitsbaseline möglicherweise eine neue Versionsinstanz, die die neuesten Einstellungen enthält.
 
-Im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) wird unter **Endpunktsicherheit** > **Sicherheitsbaselines** eine Liste der verfügbaren Baselines angezeigt. Die Liste umfasst den Namen der Baselinevorlage, die Anzahl Ihrer Profile, die diesen Baselinetyp verwenden, die Anzahl von verfügbaren einzelnen Instanzen (Versionen) des Baselinetyps sowie ein *Datum der letzten Veröffentlichung*, das angibt, wann die neueste Version der Baselinevorlage verfügbar gemacht wurde.
+Im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) wird unter **Endpunktsicherheit** > **Sicherheitsbaselines** eine Liste der verfügbaren Baselines angezeigt. Die Liste enthält:
+- den Namen der Baselinevorlage,
+- die Anzahl der Profile, die diesen Baselinetyp verwenden,
+- die Anzahl der verfügbaren separaten Instanzen (Versionen) des Baselinentyps,
+- ein Datum *Zuletzt veröffentlicht*, das angibt, wann die neueste Version der Baselinevorlage verfügbar wurde.
 
-Um weitere Informationen zu den von Ihnen verwendeten Baselineversionen anzuzeigen, wählen Sie eine Baselinekachel aus, um deren Blatt *Übersicht* zu öffnen, und wählen Sie dann **Versionen** aus. Intune zeigt Details zu den Versionen dieser Baseline an, die von Ihren Profilen verwendet werden, einschließlich der neuesten und jeweils aktuellen Baselineversion.  Sie können auf eine einzelne Version klicken, um nähere Informationen über die Profile einzusehen, die diese Version verwenden.
+Um weitere Informationen zu den von Ihnen verwendeten Baselineversionen anzuzeigen, wählen Sie eine Baseline aus, um deren Blatt *Übersicht* zu öffnen, und wählen Sie dann **Versionen** aus. Intune zeigt Details zu den Versionen dieser Baseline an, die von Ihren Profilen verwendet werden. Die Details umfassen die neueste und die aktuelle Baselineversion. Sie können auf eine einzelne Version klicken, um nähere Informationen über die Profile einzusehen, die diese Version verwenden.
 
-Sie können die [Version einer Baseline ändern](#change-the-baseline-version-for-a-profile), die mit einem bestimmten Profil verwendet wird. Das bedeutet, dass Sie bei Veröffentlichung einer neuen Version kein neues Baselineprofil erstellen müssen, um in den Genuss der Vorteile zu kommen. Stattdessen können Sie, wenn Sie soweit sind, ein Baselineprofil auswählen und dann die integrierte Option verwenden, um die Instanzversion für dieses Profil in eine neue zu ändern.
+Sie können die [Version einer Baseline ändern](#change-the-baseline-version-for-a-profile), die mit einem bestimmten Profil verwendet wird. Wenn Sie die Version ändern, müssen Sie kein neues Baselineprofil erstellen, um die Vorteile aktualisierter Versionen nutzen zu können. Stattdessen können Sie ein Baselineprofil auswählen und die integrierte Option verwenden, um die Instanzversion für dieses Profil in eine neue Version zu ändern.
 
 ### <a name="compare-baseline-versions"></a>Vergleichen von Baselineversionen
 
 Im Bereich **Versionen** für eine Sicherheitsbaseline finden Sie eine Liste der einzelnen Versionen dieser Baseline, die Sie bereitgestellt haben. Diese Liste enthält auch die neueste und aktive Version der Baseline. Wenn Sie ein neues *Sicherheitsbaselineprofil* erstellen, verwendet dieses Profil die neueste Version der Sicherheitsbaseline.  Sie können zuvor erstellte Profile, die eine frühere Baselineversion verwenden, weiterhin einsetzen und bearbeiten, einschließlich der mit einer Vorschauversion erstellten Baselines.
 
-Wenn Sie wissen möchten, was sich zwischen zwei Versionen geändert hat, aktivieren Sie bei zwei verschiedenen Versionen die Kontrollkästchen, und klicken Sie dann auf **Compare baselines** (Baselines vergleichen), um eine CSV-Datei herunterzuladen, in der diese Unterschiede dargestellt sind. 
+Wenn Sie wissen möchten, was sich zwischen zwei Versionen geändert hat, aktivieren Sie bei zwei verschiedenen Versionen die Kontrollkästchen, und klicken Sie dann auf **Compare baselines** (Baselines vergleichen). Sie werden aufgefordert, eine CSV-Datei herunterzuladen, die diese Unterschiede detailliert erläutert.
 
 In der heruntergeladenen Datei wird jede Einstellung in den beiden Baselineversionen aufgeführt und angegeben, ob sich diese Einstellung geändert hat (*notEqual*) oder unverändert geblieben ist (*equal*). Darüber hinaus ist der Standardwert für die jeweilige Einstellung nach Version angegeben sowie ob die Einstellung in der neueren Version *hinzugefügt* oder *entfernt* wurde.
 
@@ -207,11 +211,41 @@ Wenn eine Einstellung der Sicherheitsbaseline nicht mehr für ein Gerät gilt od
 
 Andere Prozesse, die später die Einstellungen auf dem Gerät ggf. ändern, sind eine andere oder neue Sicherheitsbaseline, ein Gerätekonfigurationsprofil, Gruppenrichtlinienkonfigurationen oder die manuelle Bearbeitung der Einstellungen auf dem Gerät.
 
+### <a name="duplicate-a-security-baseline"></a>Duplizieren einer Sicherheitsbaseline
+
+Sie können Duplikate ihrer Sicherheitsbaselines erstellen. Ein Szenario, in dem das Duplizieren einer Baseline nützlich ist, liegt beispielsweise vor, wenn Sie einer Teilmenge von Geräten eine ähnliche, aber unterschiedliche Baseline zuweisen möchten. Indem Sie ein Duplikat erstellen, müssen Sie die gesamte Baseline nicht manuell neu erstellen. Stattdessen können Sie jede der aktuellen Baselines duplizieren und dann nur die Änderungen vornehmen, die für die neue Instanz erforderlich sind. Sie können z. B. nur eine bestimmte Einstellung und die Gruppe ändern, der die Baseline zugewiesen wird.
+
+Wenn Sie ein Duplikat erstellen, müssen Sie der Kopie einen neuen Namen geben. Die Kopie wird mit denselben Einstellungskonfigurationen und Bereichstags wie das Original erstellt, aber ohne Zuweisungen. Sie müssen die neue Baseline bearbeiten, um Zuweisungen hinzuzufügen.
+
+Alle Sicherheitsbaselines unterstützen das Erstellen eines Duplikats.
+
+Nachdem Sie eine Baseline dupliziert haben, überprüfen und bearbeiten Sie die neue Instanz, um Änderungen an der Konfiguration vorzunehmen.
+
+#### <a name="to-duplicate-a-baseline"></a>So duplizieren Sie eine Baseline
+
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
+2. Navigieren Sie zu **Endpunktsicherheit** > **Sicherheitsbaselines**, wählen Sie den Typ der Baseline aus, die Sie duplizieren möchten, und wählen Sie dann **Profile** aus.
+3. Klicken Sie mit der rechten Maustaste auf das Profil, das Sie duplizieren möchten, und wählen Sie **Duplizieren** aus, oder wählen Sie die Auslassungspunkte ( **...** ) rechts neben der Baseline aus, und wählen Sie dann **Duplizieren** aus.
+4. Geben Sie einen **neuen Namen** für die Basislinie an, und wählen Sie dann **Speichern** aus.
+
+Nach einer *Aktualisierung* wird das neue Baselineprofil in Admin Center angezeigt.
+
+#### <a name="to-edit-a-baseline"></a>So bearbeiten Sie eine Baseline
+
+1. Wählen Sie die Baseline aus, und wählen Sie dann **Eigenschaften** aus.
+2. Wählen Sie **Einstellungen** aus, um die Liste der Einstellungskategorien in der Baseline zu erweitern. Sie können die Einstellungen in dieser Ansicht nicht ändern, aber Sie können überprüfen, wie sie konfiguriert sind.
+3. Um die Einstellungen zu ändern, wählen Sie **Bearbeiten** für jede Kategorie aus, in der Sie eine Änderung vornehmen möchten:
+   - Grundlagen
+   - Zuweisungen
+   - Festlegen von Tags
+   - Konfigurationseinstellungen
+4. Nachdem Sie Änderungen vorgenommen haben, wählen Sie **Speichern** aus, um Ihre Änderungen zu speichern.  Sie müssen Änderungen an einer Kategorie speichern, bevor Sie Änderungen an weiteren Kategorien vornehmen können.
+
 ### <a name="older-baseline-versions"></a>Ältere Baselineversionen
 
 Der Microsoft Endpoint Manager aktualisiert die Versionen von integrierten Sicherheitsbaselines abhängig von den sich ändernden Anforderungen einer typischen Organisation. Jedes neue Release führt zu einem Versionsupdate für eine bestimmte Baseline. Es wird erwartet, dass Kunden die jeweils aktuelle Baselineversion als Ausgangspunkt für ihre Gerätekonfigurationsprofile verwenden.
 
-Wenn keine Profile mehr vorhanden sind, die eine ältere in Ihrem Mandanten aufgeführte Baseline verwenden, führt der Microsoft Endpoint Manager nur die neueste verfügbare Baselineversion auf.
+Wenn keine Profile mehr vorhanden sind, die eine ältere in Ihrem Mandanten aufgeführte Baseline verwenden, führt Microsoft Endpoint Manager nur die neueste verfügbare Baselineversion auf.
 
 Wenn Sie über ein Profil verfügen, das mit einer älteren Baseline verknüpft ist, wird diese ältere Baseline weiterhin aufgeführt.
 

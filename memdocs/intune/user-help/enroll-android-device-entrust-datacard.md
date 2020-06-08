@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/17/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bff61c63e9845dc6d90333fb99534235e388db6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 16d14a802c82918656741c137da672e501ddd41a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81616098"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879379"
 ---
 # <a name="set-up-android-device-with-company-portal-and-entrust-datacard"></a>Einrichten eines Android-Geräts über das Unternehmensportal und Entrust Datacard
 
@@ -134,7 +134,7 @@ In diesem Abschnitt scannen Sie den von Ihrem Unternehmen bereitgestellten QR-Co
 ### <a name="token-enrollment"></a>Registrierung per Token  
 In diesem Abschnitt geben Sie das von Ihrem Unternehmen bereitgestellte Token ein. Wenn Sie fertig sind, werden Sie an die Schritte für die Geräteregistrierung weitergeleitet.  
 
-1. Geben Sie **afw#setup** auf dem Google-Anmeldebildschirm in das Feld **Email or phone** (E-Mail-Adresse oder Telefonnummer) ein. Tippen Sie auf **Weiter**. 
+1. Geben Sie **afw#setup** auf dem Google-Anmeldebildschirm in das Feld **Email or phone** (E-Mail-Adresse oder Telefonnummer) ein. Tippen Sie dann auf **Weiter**. 
 
    ![Beispielbild des Google-Anmeldebildschirms mit „afw#setup“ im Feld](./media/token-intune-app-01.png)   
 
@@ -161,7 +161,7 @@ In diesem Abschnitt geben Sie das von Ihrem Unternehmen bereitgestellte Token ei
 
    1. Tippen Sie auf den Link zu den Setupanweisungen Ihrer Organisation. Wenn Ihre Organisation keine weiteren Anweisungen bereitstellt, werden Sie zu diesem Artikel weitergeleitet.
 
-   2. Tippen Sie auf **Beginn**. 
+   2. Tippen Sie auf **BEGIN** (Starten). 
 
    > [!div class="mx-imgBorder"]
    > ![Beispielscreenshot des Bildschirms „Zugriff auf mobile Smartcard einrichten“ im Unternehmensportal.](./media/smart-card-open-entrust-android.png)
@@ -185,7 +185,7 @@ In diesem Abschnitt geben Sie das von Ihrem Unternehmen bereitgestellte Token ei
 
     3. Fahren Sie zum nächsten Bildschirm fort. Es wird ein QR-Code mit einem numerischen Kennwort angezeigt.
 
-10. Kehren Sie zu Ihrem Android-Gerät zurück. Tippen Sie in der Intune-App auf dem Bildschirm **QR-Code abrufen** auf **Weiter**.
+10. Kehren Sie zu Ihrem Android-Gerät zurück. Tippen Sie in der Intune-App auf dem Bildschirm **QR-Code abrufen** auf **WEITER**.
 
     > [!div class="mx-imgBorder"]
     > ![Beispielscreenshot: Bildschirm „QR-Code abrufen“ im Unternehmensportals.](./media/get-qr-code-entrust-android.png)

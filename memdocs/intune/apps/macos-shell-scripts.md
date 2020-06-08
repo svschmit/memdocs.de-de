@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/30/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5839154ab0c884e933e8d11055e745d54503433
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 36b85fa6713af5679e59382efaeb354bb4949705
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619541"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990588"
 ---
-# <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Verwenden von Shellskripts auf macOS-Geräten in Intune (Public Preview)
-
-> [!NOTE]
-> Shellskripts für macOS-Geräte befinden sich derzeit in der Vorschauphase. Überprüfen Sie die Liste der [bekannten Probleme in der Vorschauversion](macos-shell-scripts.md#known-issues), bevor Sie dieses Feature verwenden.
+# <a name="use-shell-scripts-on-macos-devices-in-intune"></a>Verwenden von Shellskripts auf macOS-Geräten in Intune
 
 Verwenden Sie Shellskripts, um Funktionen zur Geräteverwaltung in Intune über die vom macOS-Betriebssystem unterstützten Funktionen hinaus zu erweitern. 
 
@@ -59,10 +56,11 @@ Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, wenn Sie S
    - **Häufigkeit der Skriptausführung**: Wählen Sie aus, wie oft das Skript ausgeführt werden soll. Wählen Sie **Nicht konfiguriert** (Standard) aus, um ein Skript nur einmal auszuführen.
    - **Maximale Anzahl von Wiederholungsversuchen bei Skriptfehlern**: Wählen Sie aus, wie oft das Skript ausgeführt werden soll, wenn es einen Exitcode ungleich 0 (null) zurückgibt (null steht für Erfolg). Wählen Sie **Nicht konfiguriert** (Standard) aus, um ein Skript nicht erneut auszuführen, wenn bei der Ausführung ein Fehler auftritt.
 5. Fügen Sie unter **Bereichsmarkierungen** optional Bereichsmarkierungen für das Skript hinzu, und klicken Sie auf **Weiter**. Sie können Bereichsmarkierungen verwenden, um zu bestimmen, wer Skripts in Intune anzeigen kann. Ausführliche Informationen zu Bereichsmarkierungen finden Sie unter [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Verwenden der rollenbasierten Zugriffssteuerung und von Bereichsmarkierungen für verteilte IT).
-6. Klicken Sie auf **Zuweisungen** > **Select groups to include** (Gruppen auswählen, die hinzugefügt werden sollen). Dann wird eine vorhandene Liste mit Azure AD Gruppen angezeigt. Wählen Sie mindestens eine Gerätegruppe aus, die die Benutzer enthält, deren macOS-Geräte das Skript erhalten sollen. Klicken Sie auf **Auswählen**. Die Gruppen, die Sie ausgewählt haben, werden in der Liste angezeigt und Ihrer Skriptrichtlinie zugeordnet.
+6. Klicken Sie auf **Zuweisungen** > **Select groups to include** (Gruppen auswählen, die hinzugefügt werden sollen). Dann wird eine vorhandene Liste mit Azure AD Gruppen angezeigt. Wählen Sie mindestens eine Benutzer- oder Gerätegruppe aus, die das Skript erhalten soll. Klicken Sie auf **Auswählen**. Die Gruppen, die Sie ausgewählt haben, werden in der Liste angezeigt und Ihrer Skriptrichtlinie zugeordnet.
    > [!NOTE]
-   > - Shellskripts in Intune können nur Azure AD-Gerätesicherheitsgruppen zugewiesen werden. Die Benutzergruppenzuweisung wird in der Vorschauversion nicht unterstützt. 
-   > - Beim Aktualisieren von Zuweisungen für Shellskripts werden auch die Zuweisungen für den [Verwaltungs-Agent von Microsoft Intune für macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos) aktualisiert.
+   > - Benutzergruppen zugewiesene Shellskripts gelten für alle Benutzer, die sich beim Mac anmelden.  
+   > - Beim Aktualisieren von Zuweisungen für Shellskripts werden auch die Zuweisungen für den [MDM-Agent von Microsoft Intune für macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos) aktualisiert.
+
 7. Unter **Überprüfen + hinzufügen** wird eine Zusammenfassung der Einstellungen angezeigt, die Sie konfiguriert haben. Klicken Sie auf **Hinzufügen**, um das Skript zu speichern. Wenn Sie auf **Hinzufügen** klicken, wird die Skriptrichtlinie für die ausgewählten Gruppen bereitgestellt.
 
 Das von Ihnen erstellte Skript wird nun in der Liste von Skripts angezeigt. 
@@ -123,7 +121,7 @@ Die Protokollsammlung kann aus einem der folgenden Gründe, die in der nachstehe
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 ### <a name="why-are-assigned-shell-scripts-not-running-on-the-device"></a>Warum werden zugewiesene Shellskripts auf dem Gerät nicht ausgeführt?
 Hierfür kann es mehrere Gründe geben:
-* Der Agent muss möglicherweise einchecken, um neue oder aktualisierte Skripts zu erhalten. Dieser Check-In-Vorgang erfolgt alle 8 Stunden und unterscheidet sich vom MDM-Check-In. Stellen Sie für einen erfolgreichen Check-In des Agents sicher, dass das Gerät aktiv und mit einem Netzwerk verbunden ist, und warten Sie, bis der Agent eingecheckt wurde.
+* Der Agent muss möglicherweise einchecken, um neue oder aktualisierte Skripts zu erhalten. Dieser Check-In-Vorgang erfolgt alle 8 Stunden und unterscheidet sich vom MDM-Check-In. Stellen Sie für einen erfolgreichen Check-In des Agents sicher, dass das Gerät aktiv und mit einem Netzwerk verbunden ist, und warten Sie, bis der Agent eingecheckt wurde. Sie können vom Endbenutzer auch verlangen, das Unternehmensportal auf dem Mac zu öffnen, das Gerät auszuwählen und auf **Einstellungen überprüfen** zu klicken.
 * Der Agent ist möglicherweise nicht installiert. Vergewissern Sie sich, dass der Agent unter `/Library/Intune/Microsoft Intune Agent.app` auf dem macOS-Gerät installiert ist.
 * Der Agent befindet sich möglicherweise nicht in einem fehlerfreien Zustand. Der Agent versucht 24 Stunden lang sich wiederherzustellen, entfernt sich selbst und installiert sich neu, falls immer noch Shellskripts zugewiesen sind.
 
@@ -149,15 +147,12 @@ Der Verwaltungs-Agent von Microsoft Intune muss auf verwalteten macOS-Geräten i
  - Der Agent überprüft die Intune-Dienste in der Regel alle 8 Stunden auf neue oder aktualisierte Skripts. Dieser Check-In-Vorgang ist unabhängig vom MDM-Check-In. 
  
  ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>Wie kann ich ein Agent-Einchecken manuell von einem Mac aus initiieren?
-Öffnen Sie auf einem verwalteten Mac, auf dem der Agent installiert ist, **Terminal**, und führen Sie den `sudo killall IntuneMdmAgent`-Befehl aus, um den `IntuneMdmAgent`-Prozess zu beenden. Der `IntuneMdmAgent`-Prozess wird sofort neu gestartet, wodurch ein Einchecken mit Intune initiiert wird.
+Öffnen Sie auf einem verwalteten Mac, auf dem der Agent installiert ist, das **Unternehmensportal**, wählen Sie das lokale Gerät aus, und klicken Sie auf **Einstellungen überprüfen**. Dadurch wird ein MDM-Check-In sowie ein Agent-Check-In initiiert.
 
-Alternativ können Sie Folgendes tun:
-1. **Aktivitätsmonitor** > **Ansicht** öffnen >  ***Alle Prozesse** auswählen.* 
-2. Suchen Sie nach Prozessen mit dem Namen `IntuneMdmAgent`. 
-3. Beenden Sie den Prozess, der für **Root-Benutzer** ausgeführt wird. 
+Öffnen Sie alternativ das **Terminal**, und führen Sie den Befehl `sudo killall IntuneMdmAgent` aus, um den `IntuneMdmAgent`-Prozess zu beenden. Der `IntuneMdmAgent`-Prozess wird sofort neu gestartet, wodurch ein Einchecken mit Intune initiiert wird.
 
 > [!NOTE]
-> Mit der Aktion **Einstellungen überprüfen** im Unternehmensportal und der Aktion **Synchronisierung** für Geräte in der Microsoft Endpoint Manager-Verwaltungskonsole wird ein MDM-Einchecken initiiert, und ein Agent-Einchecken wird nicht erzwungen.
+> Mit der Aktion **Synchronisieren** für Geräte in der Microsoft Endpoint Manager-Verwaltungskonsole wird ein MDM-Check-In initiiert, und ein Agent-Check-In wird nicht erzwungen.
 
  ### <a name="when-is-the-agent-removed"></a>Wann wird der Agent entfernt?
  Es gibt mehrere Bedingungen, die dazu führen können, dass der Agent vom Gerät entfernt wird, z. B.:
@@ -165,14 +160,14 @@ Alternativ können Sie Folgendes tun:
  - Das macOS-Gerät wird nicht mehr verwaltet.
  - Der Agent befindet sich länger als 24 Stunden (Aktivzeit des Geräts) in einem nicht wiederherstellbaren Zustand.
 
+ ### <a name="why-are-scripts-running-even-though-the-mac-is-no-longer-managed"></a>Warum werden Skripts ausgeführt, obwohl der Mac nicht mehr verwaltet wird?
+ Wenn ein Mac mit zugewiesenen Skripts nicht mehr verwaltet wird, wird der Agent nicht sofort entfernt. Der Agent erkennt beim nächsten Agent-Check-In (normalerweise alle 8 Stunden), dass der Mac nicht verwaltet wird, und bricht geplante Skriptausführungen ab. Alle lokal gespeicherten Skripts, die für eine häufigere Ausführung als das nächste geplante Agent-Check-In geplant sind, werden also ausgeführt. Wenn der Agent nicht einchecken kann, führt er bis zu 24 Stunden lang (Aktivzeit des Geräts) Wiederholungsversuche durch und entfernt sich dann vom Mac.
+ 
  ### <a name="how-to-turn-off-usage-data-sent-to-microsoft-for-shell-scripts"></a>Wie werden die an Microsoft gesendeten Nutzungsdaten für Shellskripts deaktiviert?
  Zum Deaktivieren der vom Verwaltungs-Agent von Intune an Microsoft gesendeten Nutzungsdaten öffnen Sie das Unternehmensportal, klicken auf **Menü** > **Einstellungen** >  *und deaktivieren die Option „Erlauben Sie Microsoft die Erfassung von Nutzungsdaten“* . Dadurch werden die sowohl für den Agent als auch für das Unternehmensportal gesendeten Nutzungsdaten deaktiviert.
 
 ## <a name="known-issues"></a>Bekannte Probleme
-- **Benutzergruppenzuweisung:** Benutzergruppen zugewiesene Shellskripts gelten nicht für Geräte. Die Zuweisung von Benutzergruppen wird in der Vorschauversion derzeit nicht unterstützt. Verwenden Sie die Gerätegruppenzuweisung, um Skripts zuzuweisen.
-- **Protokolle sammeln:** Die Aktion „Protokolle sammeln“ ist sichtbar. Wird jedoch der Versuch einer Protokollsammlung gestartet, wird die Meldung „Es ist ein Fehler aufgetreten“ angezeigt, und es werden keine Protokolle erfasst. Die Protokollsammlung wird in der Vorschauversion derzeit nicht unterstützt.
 - **Kein Skriptausführungsstatus:** Im unwahrscheinlichen Fall, dass ein Skript auf dem Gerät empfangen wird und das Gerät offline geschaltet wird, bevor der Ausführungsstatus gemeldet wird, meldet das Gerät den Ausführungsstatus des Skripts nicht in der Verwaltungskonsole.
-- **Benutzerstatusbericht:** Es ist ein Problem mit einem leeren Bericht aufgetreten. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Überwachen**. Der Benutzerstatus zeigt einen leeren Bericht an.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

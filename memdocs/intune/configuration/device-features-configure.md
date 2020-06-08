@@ -1,12 +1,12 @@
 ---
 title: Erstellen von iOS/iPadOS- oder macOS-Geräteprofilen in Microsoft Intune – Azure | Microsoft-Dokumentation
-description: In diesem Artikel erfahren Sie, wie Sie in Microsoft Intune ein iOS-, iPadOS- oder macOS-Geräteprofil erstellen oder ein solches Profil hinzufügen. Außerdem erfahren Sie, wie Sie Einstellungen für AirPrint, das Layout des Startbildschirms, App-Benachrichtigungen, freigegebene Geräte, einmaliges Anmelden und Webinhaltsfilter konfigurieren.
+description: Fügen Sie ein iOS-, iPadOS- oder macOS-Geräteprofil hinzu, oder erstellen Sie es. Konfigurieren Sie Einstellungen für AirPrint, das Layout des Startbildschirms, App-Benachrichtigungen, freigegebene Geräte, einmaliges Anmelden und Webinhaltsfiltereinstellungen in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 05/06/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 349fdc7b0f13f0999b8c9993bcaba1d458ebac59
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943806"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989192"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Hinzufügen von Einstellungen für iOS-, iPadOS- oder macOS-Gerätefeatures in Intune
 
@@ -54,7 +54,7 @@ Gilt für:
 
 ## <a name="app-notifications"></a>App-Benachrichtigungen
 
-Legen Sie fest, wie Apps auf iOS- und iPadOS-Geräten Benachrichtigungen empfangen sollen. Sie können beispielsweise App-Benachrichtigungen aus Intune senden, sodass diese in der Mitteilungszentrale oder auf dem Sperrbildschirm angezeigt werden oder ein akustisches Signal ertönt.
+Legen Sie fest, wie Apps auf iOS- und iPadOS-Geräten Benachrichtigungen empfangen sollen. Sie können beispielsweise App-Benachrichtigungen senden, sodass diese in der Mitteilungszentrale oder auf dem Sperrbildschirm angezeigt werden oder ein akustisches Signal ertönt.
 
 Eine Liste der Einstellungen, die Sie in Intune konfigurieren können, finden Sie unter [App-Benachrichtigungen](ios-device-features-settings.md#app-notifications).
 

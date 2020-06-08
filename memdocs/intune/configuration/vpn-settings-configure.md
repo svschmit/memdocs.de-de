@@ -1,12 +1,12 @@
 ---
 title: Hinzufügen von VPN-Einstellungen für Geräte in Microsoft Intune – Azure | Microsoft-Dokumentation
-description: Verwenden Sie für Android-Geräteadministrator-, Android Enterprise-, iOS-, iPadOS-, macOS- und Windows-Geräte integrierte Einstellungen zum Erstellen von VPN-Verbindungen (virtuelles privates Netzwerk) in Microsoft Intune.
+description: Verwenden Sie auf Android-Geräteadministrator-, Android Enterprise-, iOS-, iPadOS-, macOS- und Windows-Geräten integrierte Einstellungen zum Erstellen von VPN-Verbindungen (virtuelles privates Netzwerk) in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943823"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990263"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Erstellen von VPN-Profilen zum Herstellen einer Verbindung mit VPN-Servern in Intune
 
-Über virtuelle private Netzwerke (VPNs) erhalten Benutzer sicheren Remotezugriff auf Ihr Organisationsnetzwerk. Mithilfe eines VPN-Verbindungsprofils stellen Geräte eine Verbindung mit dem VPN-Server her. **VPN-Profile** in Microsoft Intune ermöglichen Ihnen die Zuweisung von VPN-Einstellungen für Benutzer und Geräte in Ihrer Organisation, damit diese leicht eine sichere Verbindung zu Ihrem Organisationsnetzwerk herstellen können.
+Über virtuelle private Netzwerke (VPNs) erhalten Benutzer sicheren Remotezugriff auf Ihr Organisationsnetzwerk. Mithilfe eines VPN-Verbindungsprofils stellen Geräte eine Verbindung mit dem VPN-Server her. **VPN-Profile** in Microsoft Intune weisen VPN-Einstellungen zu Benutzern und Geräten in Ihrer Organisation zu. Verwenden Sie diese Einstellungen, damit Benutzer problemlos und sicher eine Verbindung mit Ihrem Organisationsnetzwerk herstellen können.
 
 Angenommen, Sie möchten z. B. alle iOS-/iPadOS-Geräte mit den Einstellungen konfigurieren, die zum Herstellen einer Verbindung mit einer Dateifreigabe im Organisationsnetzwerk erforderlich sind. Erstellen Sie zunächst ein VPN-Profil, das diese Einstellungen enthält. Weisen Sie dieses Profil anschließend allen Benutzern zu, die über iOS-/iPadOS-Geräte verfügen. Die Benutzer sehen die VPN-Verbindung in der Liste der verfügbaren Netzwerke und können mit geringem Aufwand eine Verbindung herstellen.
 
@@ -108,7 +108,6 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
   - Android Enterprise-Arbeitsprofile
   - Android Enterprise-Gerätebesitzer (vollständig verwaltet)
   - iOS/iPadOS
-  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -182,7 +181,7 @@ VPN-Profile können eine Reihe verschiedener Verbindungstypen und Protokolle von
 
 Beim Erstellen des VPN-Profils wählen Sie ein SCEP- oder PKCS-Zertifikatprofil aus, das Sie zuvor in Intune erstellt haben. Dieses Profil wird als Identitätszertifikat bezeichnet. Es dient zur Authentifizierung anhand eines von Ihnen erstellten vertrauenswürdigen Zertifikatprofils (oder eines *Stammzertifikats*), das Sie erstellen, damit das Gerät des Benutzers eine Verbindung herstellen kann. Das vertrauenswürdige Zertifikat wird auf dem Computer zugewiesen, der die VPN-Verbindung authentifiziert, in der Regel ist dies der VPN-Server.
 
-Wenn Sie die zertifikatbasierte Authentifizierung für Ihr VPN-Profil verwenden, stellen Sie das VPN-Profil, das Zertifikatprofil und das vertrauenswürdige Stammprofil für dieselben Gruppen bereit, um sicherzustellen, dass jedes Gerät die Rechtmäßigkeit Ihrer Zertifizierungsstelle erkennen kann.
+Wenn Sie die zertifikatbasierte Authentifizierung für Ihr VPN-Profil verwenden, stellen Sie das VPN-Profil, das Zertifikatprofil und das vertrauenswürdige Stammprofil für dieselben Gruppen bereit. Diese Zuweisung stellt sicher, dass jedes Gerät die Rechtmäßigkeit Ihrer Zertifizierungsstelle erkennt.
 
 Weitere Informationen zum Erstellen und Verwenden von Zertifikatprofilen in Intune finden Sie unter [Konfigurieren von Zertifikaten mit Microsoft Intune](../protect/certificates-configure.md).
 

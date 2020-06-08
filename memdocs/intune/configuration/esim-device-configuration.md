@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 17c0c83452f7b67ad2fef660e8f0c81bc6d4b78f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086989"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989151"
 ---
-# <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Öffentliche Vorschau: Konfigurieren von eSIM-Mobilfunkprofilen in Intune
+# <a name="configure-esim-cellular-profiles-in-intune-public-preview"></a>Konfigurieren von eSIM-Mobilfunkprofilen in Intune (öffentliche Vorschau)
 
 eSIM ist ein eingebetteter SIM-Chip, mit dem Sie auf einem eSIM-fähigen Gerät, wie z.B. dem [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro), über Mobilfunk eine Verbindung mit dem Internet herstellen können. Mit einer eSIM müssen Sie keine SIM-Karte von Ihrem Mobilfunkanbieter erhalten. Wenn Sie viel reisen, können Sie zwischen den Mobilfunkanbietern und Datentarifen wechseln, um stets verbunden zu sein.
 
@@ -37,7 +37,7 @@ In Intune können Sie einmalige Aktivierungscodes importieren, die von Ihrem Mob
 
 Für die Bereitstellung von eSIM auf Ihren Geräten mithilfe von Intune ist Folgendes erforderlich:
 
-- **eSIM-fähige Geräte**, z.B. das Surface LTE. Überprüfen Sie, ob [Ihr Gerät eSIM unterstützt](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Alternativ können Sie eine Liste [einiger der bekannten eSIM-fähigen Geräte](#esim-capable-devices) anzeigen (in diesem Artikel).
+- **eSIM-fähige Geräte**, z.B. das Surface LTE: Überprüfen Sie, [ob Ihr Gerät eSIM unterstützt](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Alternativ können Sie eine Liste [einiger der bekannten eSIM-fähigen Geräte](#esim-capable-devices) anzeigen (in diesem Artikel).
 - **PC mit Windows 10 Fall Creators Update** (ab 1709), der registriert ist und von Intune MDM-verwaltet wird
 - Von Ihrem Mobilfunkanbieter bereitgestellte **Aktivierungscodes**. Diese einmaligen Aktivierungscodes werden zu Intune hinzugefügt und auf Ihren eSIM-fähigen Geräten bereitgestellt. eSIM-Aktivierungscodes können Sie bei Ihrem Mobilfunkanbieter erwerben.
 
@@ -54,21 +54,7 @@ In diesem Artikel finden Sie eine Anleitung zur Ausführung dieser Schritte.
 
 ## <a name="esim-capable-devices"></a>eSIM-fähige Geräte
 
-Die folgenden Geräte wurden als eSIM-fähig angekündigt oder sind aktuell auf dem Markt erhältlich. Überprüfen Sie auch, [ob Ihr Gerät eSIM unterstützt](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
-
-- Acer Swift 7
-- Asus NovoGo TP370QL
-- Asus TP401
-- Asus Transformer Mini T103
-- HP Elitebook G5
-- HP Envy x2
-- HP Probook G5
-- Lenovo Miix 630
-- Lenovo T480
-- Samsung Galaxy Book
-- Surface Pro LTE
-- HP Spectre Folio 13
-- Lenovo Yoga C630
+Wenn Sie sich nicht sicher sind, ob Ihre Geräte eSIM unterstützen, wenden Sie sich an den Gerätehersteller. Auf Windows-Geräten können Sie die Unterstützbarkeit von eSIM bestätigen. Weitere Informationen finden Sie unter [Verwenden von eSIM zum Abrufen einer Mobilfunk-Datenverbindung auf Ihrem Windows 10-PC](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
 
 ## <a name="step-1-add-cellular-activation-codes"></a>Schritt 1: Hinzufügen von Aktivierungscodes für Mobilfunkverbindungen
 
@@ -97,11 +83,11 @@ Stellen Sie bei der Arbeit mit der CSV-Datei, welche die Aktivierungscodes enth�
     1. Die erste Spalte enthält die ICCID (Bezeichner des SIM-Chips)
     2. Die zweite Spalte enthält die entsprechende ID, die nur durch ein Komma von der ICCID getrennt ist (kein Komma am Ende). Dieser Schritt wird im folgenden Beispiel dargestellt:
 
-        ![CSV-Beispieldatei mit Aktivierungscodes des Mobilfunkanbieters](./media/esim-device-configuration/url-activation-code-examples.png)
+        :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="CSV-Beispieldatei mit Aktivierungscodes des Mobilfunkanbieters.":::
 
 3. Der Name der CSV-Datei wird im Endpoint Manager Admin Center als Name für den Abonnementpool der Mobilfunkverbindung verwendet. In der vorherigen Abbildung lautet der Dateiname `UnlimitedDataSkynet.csv`. Folglich gibt Intune dem Abonnementpool den Namen `UnlimitedDataSkynet.csv`:
 
-    ![Der Abonnementpool der Mobilfunkverbindung wird nach dem Namen der CSV-Beispieldatei mit dem Aktivierungscode benannt](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
+    :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="Der Abonnementpool der Mobilfunkverbindung wird nach dem Namen der CSV-Beispieldatei mit dem Aktivierungscode benannt.":::
 
 ## <a name="step-2-create-an-azure-ad-device-group"></a>Schritt 2: Erstellen einer Azure AD-Gerätegruppe
 
@@ -120,7 +106,7 @@ Weisen Sie der Azure AD-Gruppe mit Ihren eSIM-Geräten das Profil zu.
 3. Wählen Sie in der Liste der Profile den Abonnementpool der eSIM-Mobilfunkverbindung aus, der zugewiesen werden soll. Wählen Sie anschließend **Zuweisungen** aus.
 4. Wählen Sie aus, ob Sie Gruppen **einschließen** oder **ausschließen** möchten, und wählen Sie die Gruppen anschließend aus.
 
-    ![Gerätegruppen für die Zuweisung des Profils einschließen](./media/esim-device-configuration/include-exclude-groups.png)
+    :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Einschließen der Gerätegruppen für die Zuweisung des Profils in Microsoft Intune.":::
 
 5. Wenn Sie Ihre Gruppen auswählen, wählen Sie eine Azure AD-Gruppe aus. Drücken Sie für die Auswahl mehrerer Gruppen die **STRG**-Taste, und wählen Sie die Gruppen aus.
 6. **Speichern** Sie anschließend Ihre Änderungen.
@@ -148,10 +134,10 @@ Nachdem Sie Ihr Geräteprofil erstellt haben, bietet Intune grafische Diagramme.
 
     Intune zeigt den Bereitstellungs- und den Installationsstatus für den Aktivierungscode der Zielgeräte an.
 
-    - **Gerät nicht synchronisiert**: Das Zielgerät hat seit der Erstellung der eSIM-Bereitstellungsrichtlinie keinen Kontakt zu Intune aufgenommen
-    - **Ausstehende Aktivierung**: Ein vorübergehender Zustand, in dem Intune den Aktivierungscode auf dem Gerät installiert
-    - **Aktiv**: Die Installation des Aktivierungscodes war erfolgreich
-    - **Fehler bei Aktivierung**: Die Installation des Aktivierungscodes ist fehlgeschlagen; weitere Informationen finden Sie im Leitfaden für die Problembehandlung.
+    - **Gerät nicht synchronisiert:** Das Zielgerät hat seit der Erstellung der eSIM-Bereitstellungsrichtlinie keinen Kontakt zu Intune aufgenommen
+    - **Aktivierung steht aus:** Ein vorübergehender Zustand, in dem Intune den Aktivierungscode auf dem Gerät installiert
+    - **Aktiv:** Die Installation des Aktivierungscodes war erfolgreich
+    - **Fehler bei der Aktivierung:** Die Installation des Aktivierungscodes ist fehlgeschlagen. Weitere Informationen finden Sie im Leitfaden zur Problembehandlung.
 
 #### <a name="view-the-detailed-device-status"></a>Anzeigen des detaillierten Gerätestatus
 
@@ -160,12 +146,12 @@ Sie können eine detaillierte Liste der Geräte überwachen und anzeigen, die un
 1. Wählen Sie **Geräte** > **eSIM-Mobilfunkprofile** und dann ein vorhandenes Abonnement aus.
 2. Wählen Sie **Gerätestatus** aus. Intune zeigt weitere Details zu dem Gerät an:
 
-    - **Gerätename**: Der Name des Zielgeräts
-    - **Benutzer**: Der Benutzer des registrierten Geräts
-    - **ICCID**: Ein eindeutiger Code, der vom Mobilfunkanbieter im Aktivierungscode des Geräts bereitgestellt wird
-    - **Aktivierungsstatus**: Der Bereitstellungs- und Installationsstatus des Aktivierungscodes auf dem Gerät von Intune
-    - **Mobilfunkstatus**: Der vom Mobilfunkanbieter bereitgestellte Status. Befassen Sie sich zur Fehlerbehebung näher mit dem Mobilfunkanbieter.
-    - **Letzter Check-in**: Das Datum, an dem das Gerät zuletzt mit Intune kommuniziert hat
+    - **Gerätename:** Der Name des Zielgeräts
+    - **Benutzer:** Der Benutzer des registrierten Geräts
+    - **ICCID:** Ein eindeutiger Code, der vom Mobilfunkanbieter im Aktivierungscode des Geräts bereitgestellt wird
+    - **Aktivierungsstatus:** Der Bereitstellungs- und Installationsstatus des Aktivierungscodes auf dem Gerät von Intune
+    - **Mobilfunkstatus:** Der vom Mobilfunkanbieter bereitgestellte Status Befassen Sie sich zur Fehlerbehebung näher mit dem Mobilfunkanbieter.
+    - **Letztes Einchecken:** Das Datum, an dem das Gerät zuletzt mit Intune kommuniziert hat
 
 ### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Überwachen von eSIM-Profildetails auf dem aktuellen Gerät
 
@@ -173,7 +159,7 @@ Sie können eine detaillierte Liste der Geräte überwachen und anzeigen, die un
 2. Wählen Sie **Mobilfunk** > **eSIM-Profile verwalten** aus.
 3. Die eSIM-Profile werden aufgeführt:
 
-    ![Anzeigen der eSIM-Profile in Ihren Geräteeinstellungen](./media/esim-device-configuration/device-settings-cellular-profiles.png)
+    :::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="Anzeigen der eSIM-Profile in Ihren Geräteeinstellungen.":::
 
 ## <a name="remove-the-esim-profile-from-device"></a>Entfernen des eSIM-Profils von dem Gerät
 
@@ -193,8 +179,9 @@ Das eSIM-Profil wird auch entfernt, wenn der Benutzer das Gerät [außer Betrieb
 - Achten Sie darauf, dass Ihre CSV-Datei ordnungsgemäß formatiert ist. Vergewissern Sie sich, dass die Datei weder doppelte Codes noch mehrere Mobilfunkanbieter oder unterschiedliche Datentarife enthält. Beachten Sie, dass jede Datei für einen Mobilfunkbetreiber und einen Datenverbindungstarif eindeutig sein muss.
 - Erstellen Sie eine statische Azure AD-Gruppe, die nur die vorgesehenen eSIM-Geräte enthält.
 - Überprüfen Sie Folgendes, wenn bei dem Bereitstellungsstatus ein Problem vorliegt:
-  - **Dateiformat nicht ordnungsgemäß**: Informationen zur ordnungsgemäßen Formatierung Ihrer Datei finden Sie unter **Schritt 1: Hinzufügen von Aktivierungscodes für Mobilfunkverbindungen** (in diesem Artikel).
-  - **Fehler bei der Aktivierung der Mobilfunkverbindung, Kontaktieren des Mobilfunkanbieters**: Der Aktivierungscode kann möglicherweise nicht in ihrem Netzwerk aktiviert werden. Alternativ können auch das Herunterladen des Profils und die Aktivierung der Mobilfunkverbindung fehlschlagen.
+  - **File format not proper** (Nicht unterstütztes Dateiformat): Weitere Informationen erhalten Sie unter **Schritt 1: Hinzufügen von Aktivierungscodes für Mobilfunkverbindungen** (in diesem Artikel), um in Erfahrung zu bringen, wie Sie Ihre Datei ordnungsgemäß formatieren.
+  - **Cellular activation failure, contact mobile operator** (Die Aktivierung der Mobilfunkverbindung ist fehlgeschlagen, wenden Sie sich an den Mobilfunkanbieter): Möglicherweise ist der Aktivierungscode nicht im Netzwerk aktiviert. Alternativ können auch das Herunterladen des Profils und die Aktivierung der Mobilfunkverbindung fehlschlagen.
 
 ## <a name="next-steps"></a>Nächste Schritte
+
 [Konfigurieren von Geräteprofilen](device-profiles.md)

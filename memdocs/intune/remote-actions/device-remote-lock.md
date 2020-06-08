@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f6cafadbecbb0e0f0287b8a6ac4db5a1168e5e84
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325137"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983088"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Remotesperren von Geräten mit Intune
 
@@ -38,14 +38,15 @@ Die **Remotesperre** wird für folgende Plattformen unterstützt:
 - Android Enterprise-Arbeitsprofilgeräte
 - iOS
 - macOS
-- Windows 10 Mobile
+- Windows 10 Mobile
 - Windows Phone 8.1 und höher
 
 Die **Remotesperre** wird für folgende Plattformen nicht unterstützt:
 - Windows 10 Desktop
 
 > [!NOTE]
-> Bei macOS-Geräten legen Sie eine Wiederherstellungs-PIN aus 6 Ziffern fest. Wenn das Gerät gesperrt ist, wird in der **Geräteübersicht** die PIN angezeigt, bis eine andere Geräteaktion gesendet wird.
+> Bei macOS-Geräten legen Sie eine Wiederherstellungs-PIN aus 6 Ziffern fest. Wenn das Gerät gesperrt ist, wird in der **Geräteübersicht** die PIN angezeigt, bis eine andere Geräteaktion gesendet wird. Stellen Sie sicher, dass Sie sich die PIN notieren, da sie nur 7 Tage nach dem Senden des Remotesperrbefehls verfügbar ist. Nach diesen 7 Tagen verfügt Intune nicht mehr über die PIN. Außerdem sollten Sie diesen Befehl für das gleiche Gerät erst dann erneut initiieren, wenn die ursprüngliche PIN zum erfolgreichen Entsperren des Geräts verwendet wurde. Sie sollten diesen Befehl senden, sich die PIN notieren und bis zum erfolgreichen Entsperren des macOS-Gerät diesen Befehl nicht erneut an dasselbe Gerät senden.  
+
 
 ## <a name="remote-lock-a-device"></a>Remotesperre für Gerät aktivieren
 

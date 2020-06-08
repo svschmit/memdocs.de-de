@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364382"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988415"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Upgraden von Windows 10-Editionen oder Verlassen des S Modus auf Geräten mit Microsoft Intune
-
-
 
 Als Bestandteil Ihrer Lösung für die mobile Geräteverwaltung (Mobile Device Management, MDM) können Sie Ihre Windows 10-Geräte upgraden. Sie können z.B. ein Upgrade Ihrer Windows 10 Professional-Geräte auf Windows 10 Enterprise durchführen. Oder Sie möchten, dass das Gerät den S Modus verlässt.
 
@@ -100,21 +98,37 @@ Die folgenden Tabelle enthält die unterstützten Upgradepfade für das Windows 
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
 3. Geben Sie die folgenden Eigenschaften ein:
 
+    - **Plattform**: Wählen Sie **Windows 10 und höher** aus.
+    - **Profil**: Wählen Sie **Upgrade der Edition** aus.
+
+4. Wählen Sie **Erstellen** aus.
+5. Geben Sie in **Grundlagen** die folgenden Eigenschaften ein:
+
     - **Name:** Geben Sie einen aussagekräftigen Namen für das neue Profil ein. Geben Sie zum Beispiel `Windows 10 edition upgrade profile` oder `Windows 10 switch off S mode` ein.
     - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
-    - **Plattform**: Wählen Sie **Windows 10 und höher** aus.
-    - **Profiltyp**: Wählen Sie **Upgrade der Edition** aus.
-    - **Einstellungen**: Geben Sie die Einstellungen ein, die Sie konfigurieren möchten. Eine Liste aller Einstellungen und ihrer Funktionen finden Sie unter:
 
-        - [Windows 10-Upgrade und S Modus](edition-upgrade-windows-settings.md)
-        - [Windows Holographic for Business](holographic-upgrade.md)
+6. Wählen Sie **Weiter** aus.
+7. Geben Sie unter **Konfigurationseinstellungen** die Einstellungen ein, die Sie konfigurieren möchten. Eine Liste aller Einstellungen und ihrer Funktionen finden Sie unter:
 
-4. Wählen Sie **OK** > **Erstellen** aus, um die Änderungen zu speichern.
+    - [Windows 10-Upgrade und S Modus](edition-upgrade-windows-settings.md)
+    - [Windows Holographic for Business](holographic-upgrade.md)
 
-Das Profil wird erstellt und in der Liste angezeigt. Denken Sie daran, das [Profil zuzuweisen](device-profile-assign.md) und [seinen Status zu überwachen](device-profile-monitor.md).
+8. Wählen Sie **Weiter** aus.
+
+9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).
+
+    Wählen Sie **Weiter** aus.
+
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Benutzergruppen aus, denen Ihr Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+
+    Wählen Sie **Weiter** aus.
+
+11. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf **Erstellen** klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
+
+Wenn die Geräte das nächste Mal einchecken, wird die Richtlinie angewendet.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem das Profil erstellt wurde, kann es zugewiesen werden. Die nächsten Schritte sind das [Zuweisen von Benutzer- und Geräteprofilen in Microsoft Intune](device-profile-assign.md) und das [Überwachen von Geräteprofilen in Microsoft Intune](device-profile-monitor.md).
+[Überwachen Sie den Profilstatus](device-profile-monitor.md), [nachdem das Profil zugewiesen wurde](device-profile-assign.md).
 
-Sehen sie sich die Upgrade- und S Modus-Einstellungen für [Windows 10](edition-upgrade-windows-settings.md)- sowie [Windows Holographic for Business](holographic-upgrade.md)-Geräte an.
+Sehen sie sich die Upgrade- und S-Modus-Einstellungen für [Windows 10](edition-upgrade-windows-settings.md)- sowie [Windows Holographic for Business](holographic-upgrade.md)-Geräte an.

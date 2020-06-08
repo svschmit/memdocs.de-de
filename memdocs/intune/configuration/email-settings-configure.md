@@ -6,8 +6,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 205c892c885682d10877aae4c92429cf59adb0ac
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587038"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989160"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Hinzufügen von E-Mail-Einstellungen für Geräte mit Intune
 
@@ -29,9 +29,9 @@ Microsoft Intune umfasst verschiedene E-Mail-Einstellungen, die Sie für Geräte
 
 Sie können E-Mail-Profile verwenden, um die integrierten E-Mail-Einstellungen auf den folgenden Geräten zu konfigurieren:
 
-- Android-Geräteadministrator auf Geräten mit Samsung Knox Standard 4.0 und höher
+- Android-Geräteadministrator auf Geräten mit Samsung Knox Standard 5.0 und höher
 - Android Enterprise
-- iOS 8.0 und höher
+- iOS 11.0 und neuer
 - iOS 13.0 und höher
 - Windows Phone 8.1 oder höher
 - Windows 10 (Desktop) und Windows 10 Mobile

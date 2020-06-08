@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210314"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882079"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Welche Informationen erhält meine Organisation, wenn ich mein Gerät registriere?
 
@@ -51,7 +51,14 @@ Ihre Organisation kann Ihre privaten Informationen nicht einsehen, wenn Sie ein 
 - IMEI
 
  > [!NOTE]
- > Für vollständig verwaltete und dedizierte Android Enterprise-Geräte kann nicht der gesamte App-Bestand angezeigt werden.    
+ > Für vollständig verwaltete und dedizierte Android Enterprise-Geräte kann nicht der gesamte App-Bestand angezeigt werden.
+ 
+ > [!NOTE]
+ > Eine App wird als **verwaltete App** betrachtet, wenn sie auf eine der folgenden Arten installiert wird:
+ > 1. Ein Benutzer installiert sie aus der Unternehmensportal-App, nachdem sie von einem Intune-Administrator als **verfügbar** veröffentlicht wurde.
+ > 2. Die App wird als **erforderlich** von einem Intune-Administrator veröffentlicht und auf dem Gerät installiert. 
+ >
+ > Wenn Sie ein IT-Administrator oder Supportmitarbeiter in Ihrer Organisation sind, finden Sie weitere Informationen zur App-Verwaltung in Intune unter [Grundlegendes zu den Funktionen von nicht verwalteten Apps, verwalteten Apps und MAM-Apps](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
     
 **Was Ihre Organisation möglicherweise außerdem sehen kann:**
 

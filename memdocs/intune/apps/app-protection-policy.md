@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078361"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989614"
 ---
 # <a name="app-protection-policies-overview"></a>Übersicht über App-Schutzrichtlinien
 
@@ -84,6 +84,18 @@ Die Plattform für Schutzrichtlinien für Intune-Apps ist auf die Plattformunter
 > [!IMPORTANT]
 > Das Intune-Unternehmensportal ist auf dem Gerät erforderlich, damit das Gerät App-Schutzrichtlinien unter Android empfangen kann. Weitere Informationen finden Sie unter [Zugriffsanforderungen für Apps im Intune-Unternehmensportal](../fundamentals/end-user-mam-apps-android.md#access-apps).
 
+## <a name="app-protection-policy-data-protection-framework"></a>Datenschutzframework für App-Schutzrichtlinien
+
+Die in den App-Schutzrichtlinien verfügbaren Optionen ermöglichen Organisationen, den Schutz an ihre speziellen Anforderungen anzupassen. Für einige Organisationen ist es jedoch möglicherweise nicht offensichtlich, welche Richtlinieneinstellungen genau erforderlich sind, um ein vollständiges Szenario zu implementieren. Microsoft hat eine Taxonomie für das App-Datenschutzframework für die mobile iOS- und Android-App-Verwaltung eingeführt, um Organisationen dabei zu unterstützen, den Schutz für Clientendpunkte zu priorisieren.
+
+Das App-Datenschutzframework ist in drei verschiedene Konfigurationsebenen unterteilt, wobei jede Ebene auf der vorherigen Ebene aufbaut:
+
+- **Einfacher Datenschutz für Unternehmen** (Ebene 1): Diese Ebene stellt sicher, dass Apps mit einer PIN geschützt und verschlüsselt werden und selektive Löschvorgänge durchführen. Bei Android-Geräten überprüft diese Ebene den Nachweis von Android-Geräten. Dabei handelt es sich um eine Konfiguration auf Einstiegsebene, die ähnliche Datenschutzkontrolle in Exchange Online-Postfachrichtlinien bereitstellt und die IT sowie die Benutzerauffüllung in die App einführt.
+- **Erweiterter Datenschutz für Unternehmen** (Ebene 2): Diese Ebene führt App-Mechanismen zur Verhinderung von Datenlecks sowie die mindestens erforderlichen Betriebssystemanforderungen ein. Dies ist die Konfiguration, die auf die meisten Benutzer von Mobilgeräten angewendet wird, die auf Unternehmensdaten oder Daten einer Bildungseinrichtung zugreifen.
+- **Hoher Datenschutz für Unternehmen** (Ebene 3): Mit dieser Ebene werden Mechanismen zum erweiterten Datenschutz, die verbesserte PIN-Konfiguration sowie APP Mobile Threat Defense eingeführt. Diese Konfiguration ist geeignet für Benutzer, die auf Daten mit hohen Risiken zugreifen.
+
+Die spezifischen Empfehlungen für jede Konfigurationsebene sowie die minimalen zu schützenden Apps finden Sie unter [Datenschutzframework mithilfe von App-Schutzrichtlinien](app-protection-framework.md).
+
 ## <a name="how-app-protection-policies-protect-app-data"></a>So schützen App-Schutzrichtlinien Ihre App-Daten
 
 ### <a name="apps-without-app-protection-policies"></a>Apps ohne App-Schutzrichtlinien
@@ -143,13 +155,13 @@ Das [Intune SDK](../developer/app-sdk.md) nutzt einige erweiterte moderne Authen
 
 Die folgende Liste enthält die Anforderungen, die für Endbenutzer bei der Verwendung von App-Schutzrichtlinien in einer mit Intune verwalteten App erfüllt sein müssen:
 
-- Der Endbenutzer muss über ein Azure Active Directory-Konto (AAD) verfügen. Informationen dazu, wie Sie Intune-Benutzer in Azure Active Directory erstellen, finden Sie unter [Hinzufügen von Benutzern und Gewähren von Administratorrechten für Intune](../fundamentals/users-add.md).
+- Der Endbenutzer muss über ein Azure Active Directory-Konto (Azure AD) verfügen. Informationen dazu, wie Sie Intune-Benutzer in Azure Active Directory erstellen, finden Sie unter [Hinzufügen von Benutzern und Gewähren von Administratorrechten für Intune](../fundamentals/users-add.md).
 
 - Dem AAD-Konto des Endbenutzers muss eine Lizenz für Microsoft Intune zugewiesen sein. Informationen zum Zuweisen von Intune-Lizenzen zu Endbenutzern finden Sie unter [Verwalten von Intune-Lizenzen](../fundamentals/licenses-assign.md).
 
 - Der Endbenutzer muss zu einer Sicherheitsgruppe gehören, für die eine App-Schutzrichtlinie gilt. Die gleiche App-Schutzrichtlinie muss für die verwendete App gelten. App-Schutzrichtlinien können in der Intune-Konsole im [Azure-Portal](https://portal.azure.com) erstellt und bereitgestellt werden. Sicherheitsgruppen können zurzeit im [Microsoft 365 Admin Center](https://admin.microsoft.com) erstellt werden.
 
-- Der Endbenutzer muss sich mit seinem AAD-Konto bei der App anmelden.
+- Der Endbenutzer muss sich mit seinem Azure AD-Konto bei der App anmelden.
 
 ## <a name="app-protection-policies-for-microsoft-office-apps"></a>App-Schutzrichtlinien für Microsoft Office-Apps
 
@@ -207,7 +219,7 @@ Ein Beispiel für „Unternehmenskontext“: Ein Benutzer startet die OneDrive-A
 Outlook bietet eine kombinierte Ansicht für „persönliche“ und „geschäftliche“ E-Mails. In dieser Situation fordert die Outlook-App beim Start zur Eingabe der Intune-PIN auf.
 
   >[!NOTE]
-  > Obwohl Microsoft Edge im „Unternehmenskontext“ ausgeführt wird, können Benutzer OneDrive-Dateien aus dem „Unternehmenskontext“ absichtlich in einen unbekannten persönlichen Cloudspeicherort verschieben. Um dies zu verhindern, konfigurieren Sie die Liste der zulässigen bzw. blockierten Websites für Edge. Informationen dazu finden Sie unter [Angeben der Liste zulässiger oder blockierter Websites für Microsoft Edge](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge).
+  > Obwohl Microsoft Edge im „Unternehmenskontext“ ausgeführt wird, können Benutzer OneDrive-Dateien aus dem „Unternehmenskontext“ absichtlich in einen unbekannten persönlichen Cloudspeicherort verschieben. Um dies zu vermeiden, finden Sie weitere Informationen unter [Verwalten eingeschränkter Websites](manage-microsoft-edge.md#manage-restricted-web-sites) und „Konfigurieren der Liste zulässiger/blockierter Websites für Edge“.
 
 Weitere Informationen zu mehreren Identitäten in Intune finden Sie unter [Durch Microsoft Intune geschützte Apps](apps-supported-intune-apps.md).
 
