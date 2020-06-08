@@ -2,7 +2,7 @@
 title: Technical Preview-Releases
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über den Technical Preview-Branch, mit dem Sie neue Funktionen und Fähigkeiten in Configuration Manager testen können.
-ms.date: 04/30/2020
+ms.date: 05/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
+ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905144"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84226258"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview für Configuration Manager
 
@@ -116,20 +116,28 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
 
 Nachfolgend sind die Features der neusten Technical Preview-Versionen für Configuration Manager dargestellt:
 
-### <a name="technical-preview-version-2004"></a>Technical Preview, Version 2004
+### <a name="technical-preview-version-2005"></a>Technical Preview, Version 2005
 
-- [Anfügen von Mandanten in Microsoft Endpoint Manager: ConfigMgr-Clientdetails](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [Benachrichtigungen von Microsoft](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [Kopieren von Ermittlungsdaten aus der Konsole](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [Verbesserungen an CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [Unterstützung für PowerShell-Version 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [Verbesserung des Tasksequenzschritts „Datenträger formatieren und partitionieren“](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [Regeln für Verwaltungserkenntnisse für die Betriebssystembereitstellung](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [PowerShell-Cmdlets für Tasksequenz-Bereitstellungstypen](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+- [Mandantenanfügung: Gerätezeitachse im Admin Center](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [Mandantenanfügung: Installieren einer Anwendung über das Admin Center](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
+- [Mandantenanfügung: CMPivot aus dem Admin Center](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
+- [Mandantenanfügung: „Skripts ausführen“ über das Admin Center](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
+- [VPN-Begrenzungstyp](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
+- [Azure AD-Authentifizierung im Softwarecenter](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
+- [Clientinstallation und -upgrade bei einer getakteten Verbindung](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
+- [Unterstützung von Tasksequenzmedien für cloudbasierten Inhalt](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
+- [Verbesserungen an Cloudverwaltungsgateway-Cmdlets](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
+- [Community Hub und GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
+- [Microsoft 365-Apps für Unternehmen](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
+- [Melden von Setup- und Upgradefehlern bei Microsoft](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
+- [Benachrichtigung über den Ablauf des geheimen Schlüssels der Azure AD-App](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
+- [Verbesserungen bei BitLocker-Tasksequenzschritten](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
+- [Verbesserungen des Inhaltsbibliothek-Bereinigungstools](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
+- [Entfernen der Eingabeaufforderung beim direkten Windows 10-Upgrade](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
 
 > [!NOTE]
 > Features, die in einer Vorgängerversion der Technical Preview verfügbar waren, bleiben auch in späteren Versionen enthalten. Ebenso bleiben Features, die Current Branch von Configuration Manager hinzugefügt wurden, in weiteren Branches der Technical Preview enthalten.
@@ -146,6 +154,17 @@ Im Folgenden werden die Features der Vorgängerversionen des Technical Preview-B
 
 > [!TIP]
 > Sobald ein neues Current Branch-Release verfügbar ist, werden die in dieser Version verfügbaren Features im aktuellen Artikel mit *Neuerungen* aufgeführt. Weitere Informationen finden Sie unter den [Neuigkeiten zu inkrementellen Versionen](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### <a name="technical-preview-version-2004"></a>Technical Preview, Version 2004
+
+- [Anfügen von Mandanten in Microsoft Endpoint Manager: ConfigMgr-Clientdetails](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [Benachrichtigungen von Microsoft](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [Kopieren von Ermittlungsdaten aus der Konsole](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [Verbesserungen an CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [Unterstützung für PowerShell-Version 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [Verbesserung des Tasksequenzschritts „Datenträger formatieren und partitionieren“](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [Regeln für Verwaltungserkenntnisse für die Betriebssystembereitstellung](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [PowerShell-Cmdlets für Tasksequenz-Bereitstellungstypen](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
 
 ### <a name="technical-preview-version-2003"></a>Technical Preview, Version 2003
 

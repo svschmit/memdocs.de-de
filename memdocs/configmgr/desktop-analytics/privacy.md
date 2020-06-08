@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd970dc1517a6fcc197b2bf39a141871b4999a02
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268418"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223649"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Desktop Analytics – Datenschutz
 
@@ -55,7 +55,7 @@ In der folgenden Abbildung wird der Fluss der Diagnosedaten von einzelnen Gerät
 
     4. Sie stellen Kompatibilitätsupdates für alle Zielgeräte bereit.  
 
-3. Geräte senden Diagnosedaten an den Microsoft-Diagnosedatenverwaltungsdienst für Windows. Dieser Dienst wird in den USA gehostet.  
+3. Geräte senden Diagnosedaten an den Microsoft-Diagnosedatenverwaltungsdienst für Windows. Alle Diagnosedaten werden über HTTPS verschlüsselt und während der Übertragung vom Gerät an diesen Dienst wird das Anheften von Zertifikaten genutzt. Der Microsoft-Diagnosedatenverwaltungsdienst wird in der USA gehostet.
 
 4. Jeden Tag erzeugt Microsoft eine Momentaufnahme der IT-bezogenen Erkenntnisse. In dieser Momentaufnahme werden die Diagnosedaten von Windows mit Ihren Eingaben für die registrierten Geräte kombiniert. Dieser Vorgang erfolgt in einem vorübergehenden Speicher, der nur von Desktop Analytics verwendet wird. Der vorübergehende Speicher wird in Microsoft-Rechenzentren in den USA gehostet. Alle Daten werden über einen verschlüsselten SSL-Kanal (HTTPS) gesendet. Die Momentaufnahmen werden nach kommerzieller ID voneinander abgegrenzt.  
 
