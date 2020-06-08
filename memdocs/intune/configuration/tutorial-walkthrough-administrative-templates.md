@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254859"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406559"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Verwenden der Cloud zum Konfigurieren einer Gruppenrichtlinie für Windows 10-Geräte mit ADMX-Vorlagen und Microsoft Intune
 
@@ -114,7 +114,7 @@ Sie können das Endpoint Manager Admin Center auch aus dem [Microsoft 365 Admin
 
 1. Wechseln Sie zu [https://admin.microsoft.com](https://admin.microsoft.com).
 2. Melden Sie sich mit dem Administratorkonto Ihres Microsoft 365-Mandantenabonnements an.
-3. Klicken Sie unter **Admin Center** auf **Alle Admin Center** > **Endpoint management** (Endpunktverwaltung). Das Endpoint Manager Admin Center wird geöffnet.
+3. Klicken Sie auf **Alle anzeigen** > **Alle Admin Center** > **Endpunktverwaltung**. Das Endpoint Manager Admin Center wird geöffnet.
 
     > [!div class="mx-imgBorder"]
     > ![Alle Admin Center im Microsoft 365 Admin Center](./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png)
@@ -123,7 +123,13 @@ Sie können das Endpoint Manager Admin Center auch aus dem [Microsoft 365 Admin
 
 Lokale Richtlinien werden in der Reihenfolge LSDOU (lokal, Standort, Domäne und Organisationseinheit) angewendet. In dieser Hierarchie überschreiben OE-Richtlinien lokale Richtlinien, Domänenrichtlinien Standortrichtlinien usw.
 
-In Intune werden Richtlinien auf Benutzer und von Ihnen erstellte Gruppen angewendet. Es gibt keine Hierarchie. Wenn in zwei Richtlinien dieselbe Einstellung aktualisiert wird, wird diese Einstellung als Konflikt angezeigt. Wenn zwei Konformitätsrichtlinien miteinander in Konflikt stehen, gilt die restriktivere Richtlinie. Wenn zwei Konfigurationsprofile miteinander in Konflikt stehen, wird die Einstellung nicht angewendet. Weitere Informationen finden Sie unter [Häufige Fragen, Probleme und entsprechende Behebungen mit Geräterichtlinien und -profilen in Microsoft Intune](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+In Intune werden Richtlinien auf Benutzer und von Ihnen erstellte Gruppen angewendet. Es gibt keine Hierarchie. Beispiel:
+
+- Wenn in zwei Richtlinien dieselbe Einstellung aktualisiert wird, wird diese Einstellung als Konflikt angezeigt.
+- Wenn zwei Konformitätsrichtlinien miteinander in Konflikt stehen, gilt die restriktivere Richtlinie.
+- Wenn zwei Konfigurationsprofile miteinander in Konflikt stehen, wird die Einstellung nicht angewendet.
+
+Weitere Informationen finden Sie unter [Häufige Fragen, Probleme und entsprechende Behebungen mit Geräterichtlinien und -profilen in Microsoft Intune](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
 
 In den folgenden Schritten erstellen Sie Sicherheitsgruppen und fügen diesen Gruppen Benutzer hinzu. Sie können Benutzer zu mehreren Gruppen hinzufügen. So ist es beispielsweise normal, dass ein Benutzer mehrere Geräte besitzt, z. B. ein Surface Pro für die Arbeit und ein mobiles Android-Gerät für den Privatgebrauch. In der Regel greifen diese Personen dann auch über ihre verschiedenen Geräte auf Organisationsressourcen zu.
 
@@ -132,7 +138,7 @@ In den folgenden Schritten erstellen Sie Sicherheitsgruppen und fügen diesen Gr
 2. Legen Sie folgende Einstellungen fest:
 
     - **Gruppentyp**: Klicken Sie auf **Sicherheit**.
-    - **Gruppenname**: Geben Sie **Alle Geräte von Studenten mit Windows 10** ein. 
+    - **Gruppenname**: Geben Sie **Alle Geräte von Studenten mit Windows 10** ein.
     - **Mitgliedschaftstyp**: Klicken Sie auf **Zugewiesen**.
 
 3. Klicken Sie auf **Members** (Mitglieder) und fügen Sie Geräte hinzu.
@@ -237,7 +243,7 @@ In diesem Abschnitt erstellen Sie eine administrative Vorlage in Intune und sehe
     - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
 
 5. Wählen Sie **Weiter** aus.
-6. Unter **Konfigurationseinstellungen** gelten Einstellungen für das Gerät (**Computerkonfiguration**) und für Benutzer **(Benutzerkonfiguration**):
+6. Wählen Sie in den **Konfigurationseinstellungen** **Alle Einstellungen** aus, um eine alphabetische Liste aller Einstellungen anzuzeigen. Konfigurieren Sie alternativ Einstellungen, die für Geräte gelten (**Computerkonfiguration**), sowie Einstellungen, die für Benutzer gelten (**Benutzerkonfiguration**):
 
     > [!div class="mx-imgBorder"]
     > ![Anwenden von ADMX-Vorlageneinstellungen auf Benutzer und Geräte in Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
@@ -305,7 +311,7 @@ In diesem Abschnitt sehen Sie sich eine Richtlinie in Intune und die entsprechen
 > [!TIP]
 > Sie können auch GPEdit (die App **Gruppenrichtlinie bearbeiten**) verwenden, um sich die integrierten Windows-Richtlinien anzusehen.
 
-#### <a name="compare-an-edge-policy"></a>Vergleichen einer Microsoft Edge-Richtlinie
+#### <a name="compare-a-microsoft-edge-policy"></a>Vergleichen einer Microsoft Edge-Richtlinie
 
 1. Navigieren Sie im Endpoint Manager Admin Center zu Ihrer Vorlage **Administratorvorlage – Geräte von Studenten mit Windows 10**.
 2. Klappen Sie **Computerkonfiguration** > **Microsoft Edge** > **Startup, homepage and new tab page** (Start, Startseite und neue Registerkartenseite) auf. Sehen Sie sich die verfügbaren Einstellungen an.
@@ -368,7 +374,7 @@ In dieser Vorlage konfigurieren Sie bestimmte Internet Explorer-Einstellungen, u
 
 3. Wählen Sie **Weiter** aus. Klicken Sie unter **Überprüfen + erstellen** auf **Erstellen**, um die Änderungen zu speichern.
 
-Sobald das Profil gespeichert wurde, gilt es für die Geräte, sobald diese sich bei Intune einchecken. Wenn die Geräte mit dem Internet verbunden sind, kann dies sofort geschehen. Weitere Informationen zu den Aktualisierungszeiten von Richtlinien finden Sie unter [Wie lange dauert es, bis Geräte Richtlinien, Profile oder Apps nach ihrer Zuweisung abrufen?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+Sobald das Profil gespeichert wurde, gilt es für die Geräte, sobald diese sich bei Intune einchecken. Wenn die Geräte mit dem Internet verbunden sind, kann dies sofort geschehen. Weitere Informationen zu den Aktualisierungszeiten von Richtlinien finden Sie unter [Wie lange dauert es, bis Geräte Richtlinien, Profile oder Apps abrufen?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 Denken Sie daran, sich nicht selbst auszusperren, wenn Sie strenge oder restriktive Richtlinien und Profile zuweisen. Es wird empfohlen, eine Gruppe zu erstellen, die von Ihren Richtlinien und Profilen ausgenommen ist. Diese Gruppe dient dazu, Zugriff zu haben, um Probleme behandeln zu können. Überwachen Sie diese Gruppe, um sicherzustellen, dass sie wie vorgesehen verwendet wird.
 
@@ -396,7 +402,7 @@ In diesem Abschnitt werden Sie in Intune eine Administratorvorlage für OneDrive
 5. Wählen Sie **Weiter** aus.
 6. Konfigurieren Sie in den **Konfigurationseinstellungen** die folgenden Einstellungen. Stellen Sie sicher, dass Sie auf **OK** klicken, um die Änderungen zu speichern:
 
-    - **Computerkonfiguration** > **Alle Einstellungen**:
+    - **Computerkonfiguration:**
       - **Benutzer automatisch mit ihren Windows-Anmeldeinformationen beim OneDrive-Synchronisierungsclient anmelden**
         - **Typ:** Gerät
         - **Wert:** Aktiviert
@@ -404,7 +410,7 @@ In diesem Abschnitt werden Sie in Intune eine Administratorvorlage für OneDrive
         - **Typ:** Gerät
         - **Wert:** Aktiviert
 
-    - **Benutzerkonfiguration** > **Alle Einstellungen**:
+    - **Benutzerkonfiguration:**
       - **Benutzer an der Synchronisierung persönlicher OneDrive-Konten hindern**
         - **Typ:** Benutzer
         - **Wert:** Aktiviert
