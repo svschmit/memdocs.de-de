@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63ffda60d00c1a386eb65d851563c911957c0acd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9d4bc2de9e16cfcf9322cf343badafe3c9a35c70
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615722"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428897"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>macOS-Gerätefunktionseinstellungen in Intune
 
@@ -31,25 +31,29 @@ Nutzen Sie diese Features, um macOS-Geräte im Rahmen Ihrer MDM-Lösung (Mobile 
 
 In diesem Artikel werden diese Einstellungen mit ihren Funktionsbeschreibungen aufgeführt. Außerdem werden die Schritte zum Abrufen von IP-Adresse, Pfad und Port von AirPrint-Druckern, die die Terminal-App (Emulator) nutzen, aufgeführt. Weitere Informationen zu Gerätefeatures finden Sie unter [Hinzufügen von Einstellungen für iOS/iPadOS- oder macOS-Gerätefunktionen in Intune](device-features-configure.md).
 
+> [!NOTE]
+> Die Benutzeroberfläche stimmt möglicherweise nicht mit den Registrierungstypen in diesem Artikel überein. Die Informationen in diesem Artikel sind richtig. Die Benutzeroberfläche wird in einem zukünftigen Release aktualisiert.
+
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie ein macOS-Gerätekonfigurationsprofil](device-features-configure.md).
+[Erstellen Sie ein macOS-Gerätefeatureprofil.](device-features-configure.md)
 
 > [!NOTE]
 > Diese Einstellungen gelten für verschiedene Registrierungstypen, wobei einige Einstellungen für alle Registrierungsoptionen gelten. Weitere Informationen zu den verschiedenen Registrierungstypen finden Sie unter [macOS-Registrierung](../enrollment/macos-enroll.md).
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Die Einstellungen gelten für: Geräteregistrierung und automatische Geräteregistrierung
+### <a name="settings-apply-to-all-enrollment-types"></a>Die Einstellungen gelten für: Alle Registrierungstypen
 
-- **IP-Adresse**: Geben Sie die IPv4- oder IPv6-Adresse des Druckers ein. Wenn Sie den Hostnamen verwenden, um Drucker zu identifizieren, erhalten Sie die IP-Adresse, indem Sie den Drucker in der Terminal-App pingen. Der Abschnitt [Abrufen von IP-Adresse und Pfad](#get-the-ip-address-and-path) (in diesem Artikel) enthält weitere Details.
-- **Pfad:** Geben Sie den Pfad des Druckers ein. Der Pfad ist für Drucker in Ihrem Netzwerk in der Regel `ipp/print`. Der Abschnitt [Abrufen von IP-Adresse und Pfad](#get-the-ip-address-and-path) (in diesem Artikel) enthält weitere Details.
-- **Port** (iOS 11.0+, iPadOS 13.0+): Geben Sie den Lauschport des AirPrint-Ziels ein. Wenn Sie diese Eigenschaft leer lassen, verwendet AirPrint den Standardport.
-- **TLS** (iOS 11.0+, iPadOS 13.0+): Wählen Sie **Aktivieren** aus, um AirPrint-Verbindungen mit Transport Layer Security (TLS) zu sichern.
+- **AirPrint-Ziele**: **Fügen Sie mindestens einen AirPrint-Drucker hinzu**, damit Benutzer von ihren Geräten drucken können. Geben Sie außerdem Folgendes ein:
+  - **Port** (iOS 11.0+, iPadOS 13.0+): Geben Sie den Lauschport des AirPrint-Ziels ein. Wenn Sie diese Eigenschaft leer lassen, verwendet AirPrint den Standardport.
+  - **IP-Adresse**: Geben Sie die IPv4- oder IPv6-Adresse des Druckers ein. Geben Sie beispielsweise `10.0.0.1` ein. Wenn Sie den Hostnamen verwenden, um Drucker zu identifizieren, erhalten Sie die IP-Adresse, indem Sie den Drucker in der Terminal-App pingen. Der Abschnitt zum [Abrufen von IP-Adresse und Pfad](#get-the-ip-address-and-path) (in diesem Artikel) enthält weitere Details dazu.
+  - **Pfad:** Geben Sie den Ressourcenpfad des Druckers ein. Der Pfad ist für Drucker in Ihrem Netzwerk in der Regel `ipp/print`. Der Abschnitt zum [Abrufen von IP-Adresse und Pfad](#get-the-ip-address-and-path) (in diesem Artikel) enthält weitere Details dazu.
+  - **TLS** (iOS 11.0+, iPadOS 13.0+): Folgende Optionen sind verfügbar:
+    - **Nein** (Standard): Transport Layer Security (TLS) wird beim Herstellen einer Verbindung mit AirPrint-Druckern nicht erzwungen.
+    - **Ja**: Sichert AirPrint-Verbindungen mit Transport Layer Security (TLS).
 
-- **Fügen** Sie den AirPrint-Server hinzu. Sie können viele AirPrint-Server hinzufügen.
-
-Sie können auch eine durch Trennzeichen getrennte Datei (CSV) **Importieren**, die eine Liste der AirPrint-Drucker enthält. Nachdem Sie AirPrint-Drucker in Intune hinzugefügt haben, können Sie diese Liste **Exportieren**.
+- **Importieren** Sie eine durch Trennzeichen getrennte Datei (CSV-Datei), die eine Liste der AirPrint-Drucker enthält. Nachdem Sie AirPrint-Drucker in Intune hinzugefügt haben, können Sie diese Liste **Exportieren**.
 
 ### <a name="get-the-ip-address-and-path"></a>Abrufen von IP-Adresse und Pfad
 
@@ -66,60 +70,88 @@ Um AirPrinter-Server hinzuzufügen, benötigen Sie die IP-Adresse des Druckers, 
 
 4. Verwenden Sie die Werte von IP-Adresse und Ressourcenpfad. In diesem Beispiel ist die IP-Adresse `10.50.25.21` und der Ressourcenpfad `/ipp/port1`.
 
+## <a name="associated-domains"></a>Zugeordnete Domänen
+
+In Intune können Sie folgende Aktionen ausführen:
+
+- Hinzufügen von mehreren Zuordnungen zwischen Apps und Domänen
+- Zuordnen von mehreren Domänen zur selben App
+
+Diese Funktion gilt für:
+
+- macOS 10.15 und neuer
+
+### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Die Einstellungen gelten für: Vom Benutzer genehmigte Geräteregistrierung und automatisierte Geräteregistrierung
+
+- **Zugeordnete Domänen**: **Fügen** Sie eine Zuordnung zwischen Ihrer Domäne und einer App hinzu. Diese Funktion gibt Anmeldeinformationen zwischen einer Contoso-App und einer Contoso-Website frei. Geben Sie außerdem Folgendes ein:
+
+  - **App-ID**: Geben Sie den App-Bezeichner der App ein, die einer Website zugeordnet werden soll. Der App-Bezeichner enthält die Team-ID und eine Bundle-ID: `TeamID.BundleID`.
+
+    Die Team-ID ist eine aus 10 Zeichen bestehende alphanumerische (Ziffern und Buchstaben) Zeichenfolge, die von Apple für Ihre App-Entwickler generiert wird, z. B. `ABCDE12345`. Auf der [Seite zur Team-ID-Ermittlung](https://help.apple.com/developer-account/#/dev55c3c710c)  (öffnet die Website von Apple) finden Sie weitere Informationen.
+
+    Die Bundle-ID identifiziert die App eindeutig und ist üblicherweise in umgekehrter Domänennamennotation formatiert. Beispielsweise lautet die Bundle-ID des Finders `com.apple.finder`. Um die Bundle-ID zu finden, verwenden Sie das AppleScript-Skript im Terminal:
+
+    `osascript -e 'id of app "ExampleApp"'`
+
+  - **Domäne:** Geben Sie die Websitedomäne ein, die einer App zugeordnet werden soll. Die Domäne enthält einen Diensttyp und einen vollqualifizierten Hostnamen, beispielsweise `webcredentials:www.contoso.com`.
+
+    Sie können alle Unterdomänen einer zugeordneten Domäne einschließen, indem Sie vor dem Domänennamen `*.` (Sternchen-Platzhalter und Punkt) eingeben. Der Punkt ist erforderlich. Exakte Domänen haben eine höhere Priorität als Platzhalterdomänen. Daher werden Muster aus übergeordneten Domänen abgeglichen, *wenn* in der vollqualifizierten Unterdomäne keine Übereinstimmung gefunden wird.
+
+    Der Diensttyp kann wie folgt lauten:
+
+    - **authsrv**: App-Erweiterung für einmaliges Anmelden
+    - **applink:** universeller Link
+    - **webcredentials:** AutoAusfüllen für Kennwörter
+
+> [!TIP]
+> Wechseln Sie zur Problembehandlung auf Ihrem macOS-Gerät zu **Systemeinstellungen** > **Profile**. Vergewissern Sie sich, dass das erstellte Profil in der Liste der Geräteprofile aufgeführt ist. Wenn das Profil aufgelistet wird, stellen Sie sicher, dass **Konfiguration der zugeordneten Domänen** im Profil enthalten ist und die richtige App-ID und die richtigen Domänen aufweist.
+
 ## <a name="login-items"></a>Anmeldeelemente
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Die Einstellungen gelten für: Alle Registrierungstypen
 
-- **Files, folders, and custom apps** (Dateien, Ordner und benutzerdefinierte Apps): **Fügen Sie den Pfad zu einer Datei, einem Ordner, einer benutzerdefinierten App oder einer System-App hinzu**, die geöffnet werden soll, wenn sich ein Benutzer auf dem Gerät anmeldet. System-Apps oder Apps, die für Ihre Organisation entwickelt oder angepasst wurden, befinden sich üblicherweise im Ordner `Applications` und weisen einen Pfad ähnlich wie `/Applications/AppName.app` auf. 
+- **Fügen Sie die Dateien, Ordner und benutzerdefinierten Apps hinzu, die bei der Anmeldung gestartet werden sollen**: **Fügen Sie den Pfad zu einer Datei, einem Ordner, einer benutzerdefinierten App oder einer System-App hinzu**, die geöffnet werden soll, wenn sich ein Benutzer auf dem Gerät anmeldet. Geben Sie außerdem Folgendes ein:
 
-  Sie können zahlreiche Dateien, Ordner und Apps hinzufügen. Geben Sie beispielsweise Folgendes ein:  
-  
-  - `/Applications/Calculator.app`
-  - `/Applications`
-  - `/Applications/Microsoft Office/root/Office16/winword.exe`
-  - `/Users/UserName/music/itunes.app`
-  
-  Wenn Sie eine App, einen Ordner oder eine Datei hinzufügen, stellen Sie sicher, dass Sie den richtigen Pfad eingeben. Nicht alle Elemente befinden sich im Ordner `Applications`. Wenn ein Benutzer ein Element von einem Speicherort an einen anderen verschiebt, ändert sich der Pfad. Dieses verschobene Element wird nicht geöffnet, wenn sich der Benutzer anmeldet.
+  - **Pfad des Elements**: Geben Sie den Pfad zur Datei, zum Ordner oder zur App ein. System-Apps oder Apps, die für Ihre Organisation entwickelt oder angepasst wurden, befinden sich üblicherweise im Ordner `Applications` und weisen einen Pfad ähnlich wie `/Applications/AppName.app` auf.
 
-- **Aus Benutzerkonfiguration ausblenden:** Mit der Einstellung **Ausblenden** wird die App nicht in der Liste der Anmeldeelemente für Benutzer und Gruppen angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem Elemente, für die Sie einstellen, dass diese beim Anmelden gestartet werden sollen, in der Liste der Anmeldeelemente für Benutzer und Gruppen an, wenn bei der Option „Ausblenden“ kein Häkchen gesetzt wird.
+    Sie können zahlreiche Dateien, Ordner und Apps hinzufügen. Geben Sie beispielsweise Folgendes ein:  
+  
+    - `/Applications/Calculator.app`
+    - `/Applications`
+    - `/Applications/Microsoft Office/root/Office16/winword.exe`
+    - `/Users/UserName/music/itunes.app`
+  
+    Wenn Sie eine App, einen Ordner oder eine Datei hinzufügen, stellen Sie sicher, dass Sie den richtigen Pfad eingeben. Nicht alle Elemente befinden sich im Ordner `Applications`. Wenn ein Benutzer ein Element von einem Speicherort an einen anderen verschiebt, ändert sich der Pfad. Dieses verschobene Element wird nicht geöffnet, wenn sich der Benutzer anmeldet.
+
+  - **Ausblenden:** Sie können die App einblenden oder ausblenden. Folgende Optionen sind verfügbar:
+    - **Nicht konfiguriert:** Dies ist der Standardwert. Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem Elemente in der Liste der Anmeldeelemente für Benutzer und Gruppen an, wenn die Option „Ausblenden“ deaktiviert wird.
+    - **Ja**: Die App wird nicht in der Liste der Anmeldeelemente für Benutzer und Gruppen angezeigt.
 
 ## <a name="login-window"></a>Fenster „Anmeldung“
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Die Einstellungen gelten für: Geräteregistrierung und automatische Geräteregistrierung
+### <a name="settings-apply-to-all-enrollment-types"></a>Die Einstellungen gelten für: Alle Registrierungstypen
 
-#### <a name="window-layout"></a>Fensterlayout
-
-- **Zusätzliche Informationen in der Menüleiste anzeigen**: Wenn der Zeitbereich auf der Menüleiste ausgewählt ist, zeigt **Zulassen** den Hostnamen und die macOS-Version an. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem diese Informationen möglicherweise nicht in der Menüleiste an.
+- **Zusätzliche Informationen in der Menüleiste anzeigen**: Wenn der Zeitbereich auf der Menüleiste ausgewählt ist, zeigt **Ja** den Hostnamen und die macOS-Version an. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem diese Informationen möglicherweise nicht in der Menüleiste an.
 - **Banner**: Geben Sie eine Meldung ein, die auf dem Anmeldebildschirm des Geräts angezeigt wird. Geben Sie beispielsweise Ihre Unternehmensinformationen, eine Begrüßungsmeldung, Informationen bei Verlust eines Geräts usw. ein.
-- **Anmeldeformat auswählen**: Wählen Sie aus, wie Benutzer sich beim Gerät anmelden können. Folgende Optionen sind verfügbar:
-  - **Nach Benutzernamen und Kennwort fragen** (Standard): Erfordert, dass Benutzer einen Benutzernamen und ein Kennwort eingeben.
-  - **Alle Benutzer auflisten und Kennwort anfordern**: Erfordert, dass Benutzer ihren Benutzernamen in einer Benutzerliste auswählen und dann ihr Kennwort eingeben. Konfigurieren Sie auch Folgendes:
+- **Textfelder für Benutzernamen und Kennwort sind erforderlich**: Wählen Sie aus, wie Benutzer sich beim Gerät anmelden können. **Ja** erfordert, dass Benutzer einen Benutzernamen und ein Kennwort eingeben. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert. Standardmäßig verlangt das Betriebssystem möglicherweise, dass Benutzer Ihren Benutzernamen aus einer Liste auswählen und dann ihr Kennwort eingeben.
 
-    - **Lokale Benutzer**: Bei Wahl von **Ausblenden** werden die lokalen Benutzerkonten nicht in der Benutzerliste angezeigt, wozu auch die Standard- und die Administratorkonten gehören können. Nur die Netzwerk- und Systembenutzerkonten werden gezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die lokalen Benutzerkonten in der Benutzerliste an.
-    - **Mobile Konten**: Bei Wahl von **Ausblenden** werden mobile Konten nicht in der Benutzerliste angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die mobilen Konten in der Benutzerliste an. Einige mobile Konten werden möglicherweise als Netzwerkbenutzer angezeigt.
-    - **Netzwerkbenutzer**: Klicken Sie auf **Anzeigen**, um die Netzwerkbenutzer in der Benutzerliste aufzulisten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Netzwerkbenutzerkonten nicht in der Benutzerliste an.
-    - **Administratorbenutzer**: Bei Wahl von **Ausblenden** werden Administratorbenutzerkonten nicht in der Benutzerliste angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Administratorbenutzerkonten in der Benutzerliste an.
-    - **Andere Benutzer**: Wählen Sie **Anzeigen** aus, um **Weitere...** Benutzer in der Benutzerliste aufzulisten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die anderen Benutzerkonten nicht in der Benutzerliste an.
+  Geben Sie außerdem Folgendes ein:
 
-#### <a name="login-screen-power-settings"></a>Energieeinstellungen auf dem Anmeldebildschirm
+  - **Lokale Benutzer ausblenden**: **Ja** zeigt die lokalen Benutzerkonten nicht in der Benutzerliste an, wozu auch Standard- und Administratorkonten gehören können. Nur die Netzwerk- und Systembenutzerkonten werden gezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die lokalen Benutzerkonten in der Benutzerliste an.
+  - **Mobile Konten ausblenden**: **Ja** zeigt mobile Konten nicht in der Benutzerliste an. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die mobilen Konten in der Benutzerliste an. Einige mobile Konten werden möglicherweise als Netzwerkbenutzer angezeigt.
+  - **Netzwerkbenutzer anzeigen**: Wählen Sie **Ja** aus, um die Netzwerkbenutzer in der Benutzerliste aufzulisten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Netzwerkbenutzerkonten nicht in der Benutzerliste an.
+  - **Administratoren des Computers ausblenden**: **Ja** zeigt Administratorbenutzerkonten nicht in der Benutzerliste an. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Administratorbenutzerkonten in der Benutzerliste an.
+  - **Andere Benutzer anzeigen**: Wählen Sie **Ja** aus, um **Weitere...** Benutzer in der Benutzerliste aufzulisten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die anderen Benutzerkonten nicht in der Benutzerliste an.
 
-- **Schaltfläche „Herunterfahren“** : Bei Wahl von **Ausblenden** wird die Schaltfläche „Herunterfahren“ nicht auf dem Anmeldebildschirm angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Schaltfläche „Ausschalten“ an.
-- **Schaltfläche „Neu starten“** : Bei Wahl von **Ausblenden** wird die Schaltfläche „Neu starten“ nicht auf dem Anmeldebildschirm angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Schaltfläche „Neustart“ an.
-- **Standbytaste**: Bei Wahl von **Ausblenden** wird die Schaltfläche „Standby“ nicht auf dem Anmeldebildschirm angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Schaltfläche „Ruhezustand“ an.
-
-#### <a name="other"></a>Andere
-
-- **Benutzeranmeldung über Konsole deaktivieren**: Bei Wahl von **Deaktivieren** wird die macOS-Befehlszeile zum Anmelden ausgeblendet. **Deaktivieren** Sie diese Einstellung für typische Benutzer. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass fortgeschrittene Benutzer sich über die macOS-Befehlszeile anmelden. Um in den Konsolenmodus zu wechseln, müssen Benutzer `>console` in das Feld „Benutzername“ eingeben und sich im Konsolenfenster authentifizieren.
-
-#### <a name="apple-menu"></a>Apple-Menü
-
-Nachdem sich Benutzer bei den Geräten angemeldet haben, beeinflussen die folgenden Einstellungen ihre Möglichkeiten.
-
-- **Herunterfahren deaktivieren**: Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Herunterfahren** gehindert, nachdem sich der Benutzer angemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Ausschalten** klicken.
-- **Neustart deaktivieren**: Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Neu starten** gehindert, nachdem sich der Benutzer angemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Neustart** klicken.
-- **Ausschalten deaktivieren**: Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Ausschalten** gehindert, nachdem sich der Benutzer angemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Power off** (Abschalten) klicken.
-- **Abmelden deaktivieren** (macOS 10.13 und höher): Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Abmelden** gehindert, nachdem sich der Benutzer angemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Abmelden** klicken.
-- **Sperrbildschirm deaktivieren** (macOS 10.13 und höher): Bei Wahl von **Deaktivieren** werden Benutzer am Auswählen der Option **Bildschirm sperren** gehindert, nachdem sich der Benutzer angemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Lock screen** (Bildschirm sperren) klicken.
+- **Schaltfläche "Herunterfahren" ausblenden**: **Ausblenden** zeigt die Schaltfläche „Herunterfahren“ nicht auf dem Anmeldebildschirm an. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Schaltfläche „Ausschalten“ an.
+- **Schaltfläche „Neustart“ ausblenden**: **Ja** zeigt die Schaltfläche „Neu starten“ nicht auf dem Anmeldebildschirm an. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Schaltfläche „Neustart“ an.
+- **Schaltfläche „Ruhezustand“ ausblenden**: **Ja** zeigt die Schaltfläche „Standby“ nicht auf dem Anmeldebildschirm an. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise die Schaltfläche „Ruhezustand“ an.
+- **Benutzeranmeldung über Konsole deaktivieren**: **Ja** blendet die macOS-Befehlszeile zum Anmelden aus. Für typische Benutzer legen Sie diese Einstellung auf **Ja** fest. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass fortgeschrittene Benutzer sich über die macOS-Befehlszeile anmelden. Um in den Konsolenmodus zu wechseln, müssen Benutzer `>console` in das Feld „Benutzername“ eingeben und sich im Konsolenfenster authentifizieren.
+- **Herunterfahren bei Anmeldung deaktivieren**: **Ja** verhindert, dass Benutzer die Option **Herunterfahren** auswählen können, nachdem sie sich angemeldet haben. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Ausschalten** klicken.
+- **Neustart bei Anmeldung deaktivieren**: **Ja** verhindert, dass Benutzer die Option **Neu starten** auswählen können, nachdem sie sich angemeldet haben. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Neustart** klicken.
+- **Ausschalten bei Anmeldung deaktivieren**: **Ja** verhindert, dass Benutzer die Option **Ausschalten** auswählen können, nachdem sie sich angemeldet haben. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Power off** (Abschalten) klicken.
+- **Abmelden bei Anmeldung deaktivieren** (macOS 10.13 oder höher): **Ja** verhindert, dass Benutzer die Option **Abmelden** auswählen können, nachdem sie sich angemeldet haben. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Abmelden** klicken.
+- **Sperrbildschirm bei Anmeldung deaktivieren** (macOS 10.13 oder höher): **Ja** verhindert, dass Benutzer die Option **Sperrbildschirm** auswählen können, nachdem sie sich angemeldet haben. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer auf dem Gerät auf das Menüelement **Lock screen** (Bildschirm sperren) klicken.
 
 ## <a name="single-sign-on-app-extension"></a>App-Erweiterung für einmaliges Anmelden
 
@@ -127,7 +159,7 @@ Diese Funktion gilt für:
 
 - macOS 10.15 und neuer
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Die Einstellungen gelten für: Alle Registrierungstypen 
+### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Die Einstellungen gelten für: Vom Benutzer genehmigte Geräteregistrierung und automatisierte Geräteregistrierung
 
 - **Typ der SSO-App-Erweiterung:** Wählen Sie den Typ der SSO-App-Erweiterung für Anmeldeinformationen aus. Folgende Optionen sind verfügbar:
 
@@ -163,7 +195,7 @@ Diese Funktion gilt für:
     - Zeichenfolge
     - Boolean: Geben Sie unter **Konfigurationswert** entweder `True` oder `False` ein.
     - Integer: Geben Sie unter **Konfigurationswert** eine Zahl ein.
-    
+
   - **Wert:** Geben Sie die Daten ein.
   
   - **Hinzufügen**: Tippen Sie auf diese Option, um Ihre Konfigurationsschlüssel hinzuzufügen.
@@ -199,42 +231,6 @@ Diese Funktion gilt für:
 - **App-Bundle-IDs** (nur „Kerberos“): Mit **Hinzufügen** werden die App-Bundle-IDs hinzugefügt, für die auf Ihren Geräten SSO verwendet werden soll. Diese Apps erhalten Zugriff auf das Kerberos-TGT (Ticket Granting Ticket) sowie das Authentifizierungsticket. Außerdem authentifizieren diese Apps Benutzer für Dienste, für die sie über Zugriffsberechtigungen verfügen.
 - **Domänenbereichszuordnung** (nur „Kerberos“): Mit **Hinzufügen** werden die Domänen-DNS-Suffixe hinzugefügt, die Ihrem Bereich zugeordnet werden sollen. Verwenden Sie diese Einstellung, wenn die DNS-Namen der Hosts nicht mit dem Bereichsnamen identisch sind. Wahrscheinlich ist es nicht erforderlich, diese Zuordnung zwischen benutzerdefinierter Domäne und Bereich zu erstellen.
 - **PKINIT-Zertifikat** (nur „Kerberos“): Mit **Auswählen** legen Sie das PKINIT-Zertifikat (Public Key Cryptography for Initial Authentication) fest, das für die Kerberos-Authentifizierung verwendet werden kann. Sie können aus [PKCS](../protect/certficates-pfx-configure.md)- oder [SCEP](../protect/certificates-scep-configure.md)-Zertifikaten auswählen, die Sie in Intune hinzugefügt haben. Weitere Informationen zu Zertifikaten finden Sie unter [Verwenden von Zertifikaten zur Authentifizierung in Microsoft Intune](../protect/certificates-configure.md).
-
-## <a name="associated-domains"></a>Zugeordnete Domänen
-
-In Intune können Sie folgende Aktionen ausführen:
-
-- Hinzufügen von mehreren Zuordnungen zwischen Apps und Domänen
-- Zuordnen von mehreren Domänen zur selben App
-
-Diese Funktion gilt für:
-
-- macOS 10.15 und neuer
-
-### <a name="settings-apply-to-all-enrollment-types"></a>Die Einstellungen gelten für: Alle Registrierungstypen
-
-- **App-ID**: Geben Sie den App-Bezeichner der App ein, die einer Website zugeordnet werden soll. Der App-Bezeichner enthält die Team-ID und eine Bundle-ID: `TeamID.BundleID`.
-
-  Die Team-ID ist eine aus 10 Zeichen bestehende alphanumerische (Ziffern und Buchstaben) Zeichenfolge, die von Apple für Ihre App-Entwickler generiert wird, z. B. `ABCDE12345`. Auf der [Seite zur Team-ID-Ermittlung](https://help.apple.com/developer-account/#/dev55c3c710c)  (öffnet die Website von Apple) finden Sie weitere Informationen.
-
-  Die Bundle-ID identifiziert die App eindeutig und ist üblicherweise in umgekehrter Domänennamennotation formatiert. Beispielsweise lautet die Bundle-ID des Finders `com.apple.finder`. Um die Bundle-ID zu finden, verwenden Sie das AppleScript-Skript im Terminal:
-
-  `osascript -e 'id of app "ExampleApp"'`
-
-- **Domäne:** Geben Sie die Websitedomäne ein, die einer App zugeordnet werden soll. Die Domäne enthält einen Diensttyp und einen vollqualifizierten Hostnamen, beispielsweise `webcredentials:www.contoso.com`.
-
-  Sie können alle Unterdomänen einer zugeordneten Domäne einschließen, indem Sie vor dem Domänennamen `*.` (Sternchen-Platzhalter und Punkt) eingeben. Der Punkt ist erforderlich. Exakte Domänen haben eine höhere Priorität als Platzhalterdomänen. Daher werden Muster aus übergeordneten Domänen abgeglichen, *wenn* in der vollqualifizierten Unterdomäne keine Übereinstimmung gefunden wird.
-
-  Der Diensttyp kann wie folgt lauten:
-
-  - **authsrv**: App-Erweiterung für einmaliges Anmelden
-  - **applink:** universeller Link
-  - **webcredentials:** AutoAusfüllen für Kennwörter
-
-- **Hinzufügen**: Wählen Sie diese Option aus, um Ihre Apps und die zugeordneten Domänen hinzuzufügen.
-
-> [!TIP]
-> Wechseln Sie zur Problembehandlung auf Ihrem macOS-Gerät zu **Systemeinstellungen** > **Profile**. Vergewissern Sie sich, dass das erstellte Profil in der Liste der Geräteprofile aufgeführt ist. Wenn das Profil aufgelistet wird, stellen Sie sicher, dass **Konfiguration der zugeordneten Domänen** im Profil enthalten ist und die richtige App-ID und die richtigen Domänen aufweist.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
