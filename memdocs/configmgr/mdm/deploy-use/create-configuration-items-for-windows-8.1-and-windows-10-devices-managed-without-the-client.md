@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8186b45a0b0c74840582052f9c585c0557180493
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724834"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506248"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Erstellen von Konfigurationselementen für Windows-Geräte mit lokalem MDM in Configuration Manager
 
@@ -89,7 +89,7 @@ Diese Einstellungen gelten nur für Geräte, auf denen Windows 10 und höher aus
 - **Anzahl der**gespeicherten Kenn Wörter: verhindert die Wiederverwendung zuvor verwendeter Kenn Wörter.
 - **Anzahl der fehlgeschlagenen Anmeldeversuche vor**dem Zurücksetzen des Geräts: Wenn diese Anzahl von Anmelde versuchen fehlschlägt, setzt MDM das Gerät zurück.
 - **Leerlaufzeit vor dem Sperren des Geräts**: Geben Sie die Zeitspanne an, die ein Gerät im Leerlauf sein kann, bevor es gesperrt ist. Das Gerät befindet sich im Leerlauf, wenn keine Benutzereingaben vorhanden sind.
-- Kenn **Wort Komplexität**: Wählen Sie aus `1234`, ob Sie eine numerische PIN wie angeben oder ob Sie ein sicheres Kennwort angeben müssen.
+- Kenn **Wort Komplexität**: Wählen Sie aus, ob Sie eine numerische PIN wie angeben `1234` oder ob Sie ein sicheres Kennwort angeben müssen.
   - **Anzahl komplexer Zeichensätze, die im Kennwort erforderlich**sind: Wenn die Kenn Wort Komplexität **stark**ist, wählen Sie aus, wie viele Zeichen Typen für das Kennwort erforderlich sind: Großbuchstaben, Kleinbuchstaben, Ziffern oder Symbole. Standardmäßig ist dieser Wert auf `2` festgelegt.
 - **Kennwortwiederherstellungs-PIN an Exchange Server senden**
 
@@ -136,7 +136,7 @@ Diese Einstellungen gelten nur für Geräte, auf denen Windows 10 und höher aus
 - **In-App-Käufe**: Hiermit wird Benutzern das tätigen in-App-Käufen gestattet oder untersagt.
 - **Store-app starten**: Deaktivieren Sie alle apps, die auf dem Gerät vorinstalliert oder vom Microsoft Store installiert wurden.
 - **Apps aus Store automatisch aktualisieren**: Hiermit wird das automatische Update von apps zugelassen oder untersagt, die vom Microsoft Store installiert werden.
-- **Installieren von apps auf dem Systemlaufwerk**: Hiermit wird das Gerät für die Installation von apps auf dem Systemlaufwerk zugelassen oder `C:` untersagt, das in der Regel das Laufwerk ist.
+- **Installieren von apps auf dem Systemlaufwerk**: Hiermit wird das Gerät für die Installation von apps auf dem Systemlaufwerk zugelassen oder untersagt, das in der Regel das `C:` Laufwerk ist.
 - **App-Daten auf System Volume installieren**: Aktivieren Sie diese Option, damit apps Daten auf dem Systemlaufwerk speichern können.
 - **Nur privaten Store verwenden**: verlangen Sie, dass Benutzer Apps aus Ihrem privaten Store herunterladen.
 - **Game DVR**: Deaktivieren der Windows-Spiel Aufzeichnung und-Übertragung
@@ -164,7 +164,7 @@ Diese Einstellungen gelten nur für Geräte unter Windows 8.1 und Windows 10.
 - **Sicherheitsstufe für Zone vertrauenswürdiger Sites**: Legen Sie die Sicherheitsstufe für die Zone vertrauenswürdiger Sites fest: hoch, Mittel hoch, Mittel, Mittel niedrig oder niedrig.
 - **Sicherheitsstufe für Zone eingeschränkter Sites**: Legen Sie die Sicherheitsstufe für die Zone Eingeschränkte Sites fest: hoch.
 - **Namespaces für Intranetzone**: Konfigurieren Sie Websites, die der Intranetzone hinzugefügt oder daraus entfernt werden
-- Wechseln **Sie zur Intranetsite für einen einzelnen Word-Eintrag**: Hiermit wird Internet Explorer das automatische wechseln zu einer Intranetsite zugelassen oder untersagt, wenn der Benutzer einen gültigen `https://`Website Namen ohne vorangestelltes Protokoll eingibt.
+- Wechseln **Sie zur Intranetsite für einen einzelnen Word-Eintrag**: Hiermit wird Internet Explorer das automatische wechseln zu einer Intranetsite zugelassen oder untersagt, wenn der Benutzer einen gültigen Website Namen ohne vorangestelltes Protokoll eingibt `https://` .
 - **Menüoption für Unternehmens Modus**: ermöglichen Sie Benutzern das Aktivieren und Deaktivieren des Unternehmens Modus über das **Internet Explorer-** Menü Extras.
   - **Speicherort des Protokollierungs Berichts (URL)**: Wenn der Unternehmens Modus aktiv ist, geben Sie eine URL zum Protokollieren der besuchten Websites an.
 - **Speicherort für Unternehmens Modus-Standortliste (URL)**: Wenn der Unternehmens Modus aktiv ist, geben Sie die Liste der Websites an, die ihn verwenden.
@@ -242,7 +242,7 @@ Diese Einstellungen gelten nur für Geräte, auf denen Windows 10 und höher aus
         - **WPA2**
         - **WPA2-PSK**
     - **Datenverschlüsselung**: Wählen Sie die Verschlüsselungsmethode aus, die von dieser Verbindung verwendet wird. Die verfügbaren Werte ändern sich je nach ausgewählter **Authentifizierungs** Methode:
-        - **Disabled**
+        - **Deaktiviert**
         - **WEP**
         - **TKIP**
         - **AES**
@@ -271,7 +271,7 @@ Wählen Sie **importieren**aus, und geben Sie dann die folgenden Werte an:
   - **Peer**
 - **Rolle**: Wenn Sie den Zertifikat Speicher des **SPC** -Zertifikats (Software Herausgeber Zertifikat) auswählen, wählen Sie die Rolle aus, die dem Zertifikat zugeordnet werden soll:
   - **Mobilfunkanbieter**
-  - **Dienst**
+  - **Manager**
   - **Benutzer authentifiziert**
   - **IT-Administrator**
   - **Benutzer nicht authentifiziert**
@@ -321,13 +321,13 @@ Diese Einstellungen gelten nur für Geräte, auf denen Windows 10 Team ausgefüh
 - **Auf dem Begrüßungsbildschirm angezeigte Besprechungs Informationen**: Wählen Sie die Art der Informationen aus, die das Gerät auf der Kachel " **Besprechungen** " auf der **Willkommens** Seite anzeigt:
   - **Nur Organisator und Zeit anzeigen**
   - **Organisator, Zeit und Thema anzeigen (Thema bei privaten Besprechungen ausblenden)**
-- **URL des Hintergrund Bilds für den Sperrbildschirm**: Geben Sie eine URL an, um einen benutzerdefinierten Hintergrund auf dem **Begrüßungs** Bildschirm eines Windows 10 Team-Geräts anzuzeigen. Starten Sie die URL `https://` mit, und verwenden Sie das PNG-Format.
+- **URL des Hintergrund Bilds für den Sperrbildschirm**: Geben Sie eine URL an, um einen benutzerdefinierten Hintergrund auf dem **Begrüßungs** Bildschirm eines Windows 10 Team-Geräts anzuzeigen. Starten Sie die URL mit, `https://` und verwenden Sie das PNG-Format.
 
 ### <a name="windows-information-protection"></a>Windows Information Protection  
 
 Weitere Informationen zum Konfigurieren des Unternehmens Datenschutzes mit Configuration Manager finden [Sie Unterschützen von Unternehmensdaten mit Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
-### <a name="microsoft-edge"></a>Microsoft Edge
+### <a name="microsoft-edge-legacy"></a>Microsoft Edge-Legacy
 
 Diese Einstellungen gelten nur für Geräte, auf denen Windows 10 und höher ausgeführt wird.  
 
@@ -342,7 +342,7 @@ Diese Einstellungen gelten nur für Geräte, auf denen Windows 10 und höher aus
 - **Extensions**: Edge-Erweiterungen zulassen oder verbieten.
 - **InPrivate-Browsen**: Hiermit wird das InPrivate-Browsen zugelassen oder verhindert, das den Verlauf oder Cookies nicht speichert
 - **Webrtc-localhost-IP-Adresse**: Hiermit wird die Anzeige der localhost-IP-Adresse des Geräts zugelassen oder untersagt, wenn der Benutzer Telefonanrufe mithilfe des Web-RTC-Protokolls ausführt.
-- **Zugriff auf about: Flags blockieren**: Hiermit wird dem Benutzer der Zugriff auf die `about:flags` Seite gestattet oder untersagt, die Entwickler-und experimentelle Einstellungen enthält.
+- **Zugriff auf about: Flags blockieren**: Hiermit wird dem Benutzer der Zugriff auf die Seite gestattet oder untersagt `about:flags` , die Entwickler-und experimentelle Einstellungen enthält.
 - **Außer Kraft setzen von SmartScreen-Aufforderung für Dateien**: Hiermit wird dem Benutzer das umgehen von SmartScreen-Filter Warnungen zum Herunterladen potenziell schädlicher Dateien gestattet oder untersagt.
 - **Außer Kraft setzen von SmartScreen-Aufforderung**: Hiermit wird dem Benutzer das umgehen von SmartScreen-Filter Warnungen zu potenziell schädlichen Websites gestattet oder untersagt.
 - **URL zum ersten Ausführen**: Geben Sie eine Website an, die angezeigt werden soll, wenn ein Benutzer zum ersten Mal Edge öffnet.
@@ -376,7 +376,7 @@ Diese Einstellungen gelten nur für Geräte, auf denen Windows 10 und höher aus
 - **Erkennung potenziell unerwünschter Anwendungen**: schützt das Gerät vor der Ausführung von Software, die von Defender als potenziell unerwünscht eingestuft wird. Sie können vor der Ausführung dieser Anwendungen schützen oder den Überwachungsmodus verwenden, um zu melden, wenn ein Benutzer eine potenziell unerwünschte Anwendung installiert.
 - **Datei-und Ordner Ausschlüsse**: Fügen Sie der Ausschlussliste eine oder mehrere Dateien und Ordner hinzu. Zum Beispiel: `C:\Path` oder `%ProgramFiles%\Path\filename.exe`. Defender enthält diese Dateien und Ordner nicht in Echt Zeit Überprüfungen oder geplante Überprüfungen.
 - **Datei Erweiterungs Ausschlüsse**: Fügen Sie der Ausschlussliste eine oder mehrere Dateierweiterungen hinzu. Zum Beispiel: `java` oder `exe`. Defender enthält keine Dateien mit diesen Erweiterungen in Echt Zeit Überprüfungen oder geplanten Überprüfungen.
-- **Prozess Ausschlüsse**: Fügen Sie der Ausschlussliste bestimmte Prozesse hinzu. Beispiel: `C:\path\myproc.exe`. Dieser Ausschlusstyp unterstützt nur die `exe`folgenden `com`Erweiterungen: `scr`, oder. Defender schließt diese Prozesse nicht in Echt Zeit Überprüfungen oder geplante Scans ein.
+- **Prozess Ausschlüsse**: Fügen Sie der Ausschlussliste bestimmte Prozesse hinzu. Beispiel: `C:\path\myproc.exe`. Dieser Ausschlusstyp unterstützt nur die folgenden Erweiterungen: `exe` , `com` oder `scr` . Defender schließt diese Prozesse nicht in Echt Zeit Überprüfungen oder geplante Scans ein.
 
 ### <a name="additional-settings"></a>Zusätzliche Einstellungen
 
