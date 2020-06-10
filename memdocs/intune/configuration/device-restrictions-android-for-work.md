@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 06/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
+ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166569"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257034"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -29,7 +29,7 @@ In diesem Artikel werden die verschiedenen Einstellungen aufgeführt und beschri
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie eine Gerätekonfigurationsprofil.](device-restrictions-configure.md)
+[Erstellen Sie ein Gerätekonfigurationsprofil.](device-restrictions-configure.md)
 
 ## <a name="device-owner-only"></a>Nur Gerätebesitzer
 
@@ -50,7 +50,7 @@ Diese Einstellungen gelten für Android Enterprise-Registrierungstypen, bei dene
 - **Datums- und Uhrzeitänderungen:** Wenn **Blockieren** festgelegt wird, können Benutzer das Datum und die Uhrzeit nicht manuell festlegen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, das Datum und die Uhrzeit auf dem Gerät festzulegen.
 - **Änderung der Lautstärke:** **Blockieren** verhindert, dass Benutzer die Lautstärke des Geräts ändern können. Außerdem wird die Hauptlautstärke des Geräts stummgeschaltet. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, die Lautstärkeeinstellungen auf dem Gerät festzulegen.
 - **Auf Werkseinstellungen zurücksetzen:** Wenn **Blockieren** festgelegt wird, können Benutzer die Option zum Zurücksetzen auf Werkseinstellungen in den Einstellungen des Geräts nicht verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, diese Einstellung auf dem Gerät zu verwenden.
-- **Abgesicherter Start:** Wenn **Blockieren** festgelegt wird, können Benutzer das Gerät nicht im abgesicherten Modus neustarten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, das Gerät im abgesicherten Modus neu zu starten.
+- **Abgesicherter Start:** Wenn **Blockieren** festgelegt wird, können Benutzer das Gerät nicht im abgesicherten Modus neu starten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, das Gerät im abgesicherten Modus neu zu starten.
 - **Statusleiste:** Wenn **Blockieren** festgelegt wird, wird der Zugriff auf die Statusleiste, einschließlich der Benachrichtigungen und Schnelleinstellungen verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig den Zugriff auf die Statusleiste.
 - **Roamingdatendienste:** **Blockieren** verhindert das Datenroaming über das Mobilfunknetzwerk. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem Datenroaming zulassen, wenn das Gerät in einem Mobilfunknetz verwendet wird.
 - **Änderung der WLAN-Einstellungen:** Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, die vom Gerätebesitzer festgelegten WLAN-Einstellungen zu ändern. Benutzer können eigene WLAN-Konfigurationen erstellen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, die WLAN-Einstellungen auf dem Gerät zu ändern.
@@ -231,8 +231,16 @@ Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dediz
 
 ### <a name="applications"></a>Applications
 
-- **Installation aus unbekannten Quellen zulassen:** Wenn **Zulassen** festgelegt wird, können Benutzer **unbekannte Quellen** aktivieren. Diese Einstellung ermöglicht die Installation von Apps aus unbekannten Quellen, einschließlich anderer Quellen als Google Play Store. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise hindert das Betriebssystem Benutzer standardmäßig am Aktivieren von **unbekannten Quellen**.
-- **Zugriff auf alle Apps im Google Play Store zulassen**: Wenn diese Option auf **Zulassen** festgelegt ist, erhalten Benutzer Zugriff auf alle Apps im Google Play Store. Sie erhalten keinen Zugriff auf die Apps, die der Administrator in [Client-Apps](../apps/apps-add-android-for-work.md) sperrt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erzwingt das Betriebssystem standardmäßig, dass Benutzer nur auf die vom Administrator zur Verfügung gestellten Apps im Google Play Store oder in [Client-Apps](../apps/apps-add-android-for-work.md) als erforderlich gekennzeichneten Apps zugreifen können.
+- **Installation aus unbekannten Quellen zulassen:** Wenn **Zulassen** festgelegt wird, können Benutzer **unbekannte Quellen** aktivieren. Diese Einstellung ermöglicht die Installation von Apps aus unbekannten Quellen, einschließlich anderer Quellen als Google Play Store. Sie ermöglicht Benutzern das Querladen von Apps auf dem Gerät mit anderen Mitteln als dem Google Play Store. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise hindert das Betriebssystem Benutzer standardmäßig am Aktivieren von **unbekannten Quellen**.
+- **Zugriff auf alle Apps im Google Play Store zulassen**: Wenn diese Option auf **Zulassen** festgelegt ist, erhalten Benutzer Zugriff auf alle Apps im Google Play Store. Sie erhalten keinen Zugriff auf die Apps, die der Administrator in [Client-Apps](../apps/apps-add-android-for-work.md) sperrt.
+
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig geht das Betriebssystem möglicherweise wie folgt vor:
+  
+  - Es erzwingt, dass Benutzer nur auf die vom Administrator zur Verfügung gestellten Apps im Google Play Store oder in [Client-Apps](../apps/apps-add-android-for-work.md) als erforderlich gekennzeichneten Apps zugreifen können. 
+  - Es deinstalliert alle Apps, bei denen erkannt wird, dass sie von Benutzern nicht aus dem Google Play Store installiert wurden.
+
+  Wenn Sie das Querladen aktivieren möchten, legen Sie die Einstellungen **Installation über unbekannte Quellen zulassen** und **Zugriff auf alle Apps im Google Play Store zulassen** auf **Zulassen** fest.
+
 - **Automatische App-Updates:** Geräte suchen täglich nach App-Updates. Wählen Sie diese Option aus, wenn automatische Updates installiert werden. Folgende Optionen sind verfügbar:
   - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
   - **Benutzerauswahl:** Dies ist möglicherweise die Standardoption des Betriebssystems. Benutzer können ihre Einstellungen in der App für verwaltetes Google Play festlegen.

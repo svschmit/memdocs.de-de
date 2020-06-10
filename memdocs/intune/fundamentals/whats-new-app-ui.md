@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991776"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166161"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune
 
@@ -34,6 +34,19 @@ Lernen Sie die neuesten Updates für die Microsoft Intune-Apps kennen. Wir verbe
 
 Wenn Sie ein Mitarbeiter oder Kursteilnehmer sind, sollten Sie sich die Screenshots und Links zur Hilfedokumentation für das Unternehmensportal ansehen. Weitere Informationen zur Benutzung der Unternehmensportal-App finden Sie in der [Benutzerhilfe-Dokumentation für das Unternehmensportal](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+
+
+## <a name="week-of-may-18-2020"></a>Woche vom 18. Mai 2020  
+### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos---6057697---"></a>Aktualisieren von Symbolen in Unternehmensportal-App für iOS/iPadOS und macOS <!--6057697 -->  
+Wir haben die Symbole im Unternehmensportal aktualisiert, um ihnen ein modernes Erscheinungsbild zu geben, das auch auf Geräten mit zwei Bildschirmen unterstützt wird und mit dem Fluent Design System von Microsoft in Einklang steht.
+
+|Aktualisiert für iOS/iPadOS|Bisher für iOS/iPadOS|   
+|---|---|   
+|![Abbildung des Unternehmensportals für iOS/iPadOS, mit Hervorhebung der aktualisierten Symbole im unteren Menü](./media/whats-new-app-ui/company-portal-ios-icons-after-2005.png)|![Abbildung der Unternehmensportal für iOS, mit Hervorhebung der bisherigen Symbole.](./media/whats-new-app-ui/company-portal-ios-icons-before-2005.png)| 
+
+|Aktualisiert für macOS|  
+|---|
+|![Abbildung des Unternehmensportal für macOS, Registerkarte „Geräte“, mit Hervorhebung der aktualisierte Symbole](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
 
 
 ## <a name="week-of-may-4-2020"></a>Woche vom 4. Mai 2020  

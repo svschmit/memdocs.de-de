@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 06/2/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364122"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301383"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Richtlinien und Profile zur Problembehandlung in Intune
 
@@ -37,14 +37,14 @@ In diesem Artikel werden häufig verwendete Methoden zur Problembehandlung aufge
 
 ## <a name="use-built-in-troubleshooting"></a>Verwenden der integrierten Problembehandlung
 
-1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Problembehandlung + Support** aus:
+1. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) die Option **Problembehandlung + Support** > **Problembehandlung** aus:
 
-    ![„Hilfe und Support“ in Intune, die Option „Problembehandlung“ ist ausgewählt](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="Wechseln Sie in Endpoint Management Admin Center und Intune zu „Problembehandlung und Support“.":::
 
 2. Klicken Sie auf **Benutzer auswählen**, wählen Sie den Benutzer aus, bei dem ein Problem auftritt, und klicken Sie auf **Auswählen**.
 3. Überprüfen Sie, ob sich grüne Häkchen neben **Intune-Lizenz** und **Kontostatus** befinden:
 
-    ![Auswahl des Benutzers in Intune und Überprüfung auf grüne Häkchen neben „Intune-Lizenz“ und „Kontostatus“](./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="Wählen Sie in Intune den Benutzer aus und überprüfen Sie, ob grüne Häkchen neben „Kontostatus“ und „Intune-Lizenz“ vorhanden sind.":::
 
     **Nützliche Links:**
 
@@ -53,21 +53,21 @@ In diesem Artikel werden häufig verwendete Methoden zur Problembehandlung aufge
 
 4. Suchen Sie unter **Geräte** das Gerät, bei dem ein Problem auftritt. Überprüfen Sie folgende Spalten:
 
-    - **Verwaltet**: Damit ein Gerät Konformitäts- oder Konfigurationsrichtlinien empfangen kann, muss diese Eigenschaft auf **MDM** oder **EAS/MDM** festgelegt sein.
+    - **Verwaltet:** Damit ein Gerät Konformitäts- oder Konfigurationsrichtlinien empfangen kann, muss diese Eigenschaft auf **MDM** oder **EAS/MDM** festgelegt sein.
 
         - Wenn **Verwaltet** nicht auf **MDM** oder **EAS/MDM** festgelegt ist, ist das Gerät nicht registriert. Es empfängt keine Konformitäts- oder Konfigurationsrichtlinien, bevor die Registrierung durchgeführt wurde.
 
         - Ein Gerät muss jedoch nicht registriert sein, um App-Schutzrichtlinien (Mobile Anwendungsverwaltung) zu empfangen. Weitere Informationen finden Sie unter [Erstellen und Zuweisen von App-Schutzrichtlinien](../apps/app-protection-policies.md).
 
-    - **Azure AD Join Type** (Azure AD-Verknüpfungstyp): Diese Spalte sollte auf **Arbeitsbereich** oder **Azure AD** festgelegt sein.
+    - **Azure AD-Verknüpfungstyp:** Diese Spalte sollte auf **Arbeitsbereich** oder **Azure AD** festgelegt sein.
  
         - Wenn die Spalte den Wert **Nicht registriert** aufweist, liegt möglicherweise ein Problem mit der Registrierung vor. Dieses Problem kann üblicherweise durch das Aufheben der Registrierung und das erneute Registrieren des Geräts behoben werden.
 
-    - **Intune compliant** (Intune-konform): Diese Option sollte auf **Ja** festgelegt sein. Wenn **Nein** angezeigt wird, liegt möglicherweise ein Problem mit den Konformitätsrichtlinien vor oder das Gerät ist nicht mit dem Intune-Dienst verbunden. Das Gerät könnte beispielsweise ausgeschaltet oder nicht mit dem Netzwerk verbunden sein. In Folge dessen wird das Gerät als „Nicht konform“ eingestuft (z.B. nach 30 Tagen).
+    - **Intune-konform:** Diese Spalte sollte auf **Ja** festgelegt sein. Wenn **Nein** angezeigt wird, liegt möglicherweise ein Problem mit den Konformitätsrichtlinien vor oder das Gerät ist nicht mit dem Intune-Dienst verbunden. Das Gerät könnte beispielsweise ausgeschaltet oder nicht mit dem Netzwerk verbunden sein. In Folge dessen wird das Gerät als „Nicht konform“ eingestuft (z.B. nach 30 Tagen).
 
         Weitere Informationen finden Sie unter [Erste Schritte mit den Gerätekonformitätsrichtlinien in Intune](../protect/device-compliance-get-started.md).
 
-    - **Azure AD compliant** (Azure AD-konform): Diese Option sollte auf **Ja** festgelegt sein. Wenn **Nein** angezeigt wird, liegt möglicherweise ein Problem mit den Konformitätsrichtlinien vor oder das Gerät ist nicht mit dem Intune-Dienst verbunden. Das Gerät könnte beispielsweise ausgeschaltet oder nicht mit dem Netzwerk verbunden sein. In Folge dessen wird das Gerät als „Nicht konform“ eingestuft (z.B. nach 30 Tagen).
+    - **Azure AD-konform:** Diese Spalte sollte auf **Ja** festgelegt sein. Wenn **Nein** angezeigt wird, liegt möglicherweise ein Problem mit den Konformitätsrichtlinien vor oder das Gerät ist nicht mit dem Intune-Dienst verbunden. Das Gerät könnte beispielsweise ausgeschaltet oder nicht mit dem Netzwerk verbunden sein. In Folge dessen wird das Gerät als „Nicht konform“ eingestuft (z.B. nach 30 Tagen).
 
         Weitere Informationen finden Sie unter [Erste Schritte mit den Gerätekonformitätsrichtlinien in Intune](../protect/device-compliance-get-started.md).
 
@@ -91,14 +91,14 @@ In diesem Artikel werden häufig verwendete Methoden zur Problembehandlung aufge
 
         **Richtlinienzustände:**
 
-        - **Nicht zutreffend:** Diese Richtlinie wird auf dieser Plattform nicht unterstützt. Beispielsweise funktionieren iOS-/iPadOS-Richtlinien nicht unter Android. Samsung KNOX-Richtlinien funktionieren nicht auf Windows-Geräten.
-        - **Konflikt**: Auf dem Gerät ist bereits eine Einstellung vorhanden, die von Intune nicht überschrieben werden kann. Möglicherweise haben Sie auch zwei Richtlinien mit der gleichen Einstellung, aber mit unterschiedlichen Werten bereitgestellt.
-        - **Ausstehend**: Das Gerät hat sich noch nicht bei Intune angemeldet, um die Richtlinie abzurufen. Möglicherweise hat das Gerät die Richtlinie auch bereits empfangen, aber keinen Status an Intune gesendet.
-        - **Fehler**: Weitere Informationen zu Fehlern und möglichen Fehlerbehebungen finden Sie unter [Behandlung von Problemen mit dem Zugriff auf Unternehmensressourcen](../fundamentals/troubleshoot-company-resource-access-problems.md).
+        - **Nicht anwendbar:** Diese Richtlinie wird auf dieser Plattform nicht unterstützt. Beispielsweise funktionieren iOS-/iPadOS-Richtlinien nicht unter Android. Samsung KNOX-Richtlinien funktionieren nicht auf Windows-Geräten.
+        - **Konflikt:** Auf dem Gerät ist bereits eine Einstellung vorhanden, die von Intune nicht überschrieben werden kann. Möglicherweise haben Sie auch zwei Richtlinien mit der gleichen Einstellung, aber mit unterschiedlichen Werten bereitgestellt.
+        - **Ausstehend:** Das Gerät hat sich noch nicht bei Intune angemeldet, um die Richtlinie zu empfangen. Möglicherweise hat das Gerät die Richtlinie auch bereits empfangen, aber keinen Status an Intune gesendet.
+        - **Fehler:** Weitere Informationen zu Fehlern und möglichen Lösungen finden Sie unter [Behandlung von Problemen mit dem Zugriff auf Unternehmensressourcen in Microsoft Intune](../fundamentals/troubleshoot-company-resource-access-problems.md).
 
         **Nützliche Links:** 
 
-        - [Möglichkeiten, die Gerätekonformitätsrichtlinien bereitzustellen](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
+        - [Möglichkeiten, die Gerätekonformitätsrichtlinien bereitzustellen](../protect/device-compliance-get-started.md)
         - [Überwachen von Intune-Richtlinien zur Gerätekonformität](../protect/compliance-policy-monitor.md)
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Ermitteln, ob ein Profil korrekt angewendet wurde
@@ -108,13 +108,13 @@ In diesem Artikel werden häufig verwendete Methoden zur Problembehandlung aufge
 
     Für jedes Gerät werden die Profile aufgelistet. Jedes Profil verfügt über einen **Status**. Der Status setzt sich aus den zugewiesenen Profilen (einschließlich Einschränkungen und Anforderungen von Hardware und Betriebssystem) zusammen. Mögliche Status sind:
 
-    - **Konform**: Das Gerät hat das Profil empfangen und meldet Intune, dass es der Einstellung entspricht.
+    - **Entsprechung:** Das Gerät hat das Profil empfangen und meldet Intune, dass es der Einstellung entspricht.
 
-    - **Nicht zutreffend**: Die Profileinstellung ist nicht zutreffend. Beispielsweise sind E-Mail-Einstellungen für iOS-/iPadOS-Geräte nicht auf ein Android-Gerät anwendbar.
+    - **Nicht zutreffend**: Diese Profileinstellung kann nicht angewendet werden. Beispielsweise sind E-Mail-Einstellungen für iOS-/iPadOS-Geräte nicht auf ein Android-Gerät anwendbar.
 
-    - **Ausstehend**: Das Profil wurde an das Gerät gesendet, hat aber noch keinen Status an Intune gemeldet. Beispiel: Verschlüsselung unter Android erfordert, dass der Benutzer die Verschlüsselung aktiviert, und sie könnte als ausstehend angezeigt werden.
+    - **Ausstehend:** Das Profil wurde an das Gerät gesendet, hat aber noch keinen Status an Intune gemeldet. Beispiel: Verschlüsselung unter Android erfordert, dass der Benutzer die Verschlüsselung aktiviert, und sie könnte als ausstehend angezeigt werden.
 
-**Nützlicher Link:** [Monitor device profiles in Microsoft Intune (Überwachen von Geräteprofilen in Microsoft Intune)](../configuration/device-profile-monitor.md)
+**Nützlicher Link:** [Überwachen von Geräteprofilen in Microsoft Intune](../configuration/device-profile-monitor.md)
 
 > [!NOTE]
 > Wenn zwei Richtlinien mit unterschiedlichen Einschränkungsstufen für das gleiche Gerät gelten, wird die restriktivere Richtlinie angewendet.
@@ -123,12 +123,12 @@ In diesem Artikel werden häufig verwendete Methoden zur Problembehandlung aufge
 
 - [Problembehandlung für iOS-/iPadOS- oder Android-Richtlinien, die nicht auf Geräte angewendet werden](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (öffnet eine andere Microsoft-Website)
 - [Problembehandlung für Intune-Richtlinienfehler unter Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (öffnet einen Blog)
-- [Problembehandlung bei benutzerdefinierten CSP-Einstellungen für Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (öffnet eine andere Microsoft-Website)
+- [Problembehandlung bei benutzerdefinierten CSP-Einstellungen für Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (öffnet eine andere Microsoft-Website)
 - [Vergleich zwischen der Windows 10-Gruppenrichtlinie und der MDM-Richtlinie von Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (öffnet eine andere Microsoft-Website)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Warnung: Fehler beim Speichern von Zugriffsregeln in Exchange
 
-**Problem**: Sie erhalten die Warnung **Fehler beim Speichern von Zugriffsregeln in Exchange**  in der Verwaltungskonsole.
+**Problem:** Sie erhalten die Warnung **Fehler beim Speichern von Zugriffsregeln in Exchange.** in der Verwaltungskonsole.
 
 Wenn Sie Richtlinien im Exchange-Arbeitsbereich „Lokale Richtlinie“ (Verwaltungskonsole) erstellt haben, aber Office 365 verwenden, werden die konfigurierten Richtlinieneinstellungen von Intune nicht erzwungen. Beachten Sie die Richtlinienquelle in der Warnung. Löschen Sie im Arbeitsbereich „Richtlinie für lokales Exchange“ die Legacyregeln. Die Legacyregeln sind globale Exchange-Regeln in Intune für lokales Exchange und für Office 365 nicht relevant. Erstellen Sie dann eine neue Richtlinie für Office 365.
 
@@ -170,7 +170,7 @@ Bei Windows-PCs, die mit dem Intune-Softwareclient verwaltet werden, können Ric
 
 4. Verschieben Sie den Schieberegler für Benachrichtigungen auf die Standardeinstellung.
 
-### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>FEHLER: Der Wert kann nicht vom Computer abgerufen werden, 0x80041013
+### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>FEHLER: Der Wert kann nicht vom Computer abgerufen werden, 0x80041013.
 
 Dieser Fehler tritt auf, wenn die Zeit auf dem lokalen System um mindestens fünf Minuten abweicht. Wenn die Zeit auf dem lokalen Computer nicht synchron ist, schlagen sichere Transaktionen fehl, da die Zeitstempel ungültig sind.
 

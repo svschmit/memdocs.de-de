@@ -1,12 +1,12 @@
 ---
 title: Gerätekonformitätsrichtlinien in Microsoft Intune – Azure | Microsoft-Dokumentation
-description: Verwenden Sie Gerätekonformitätsrichtlinien, erhalten Sie eine Übersicht über Status- und Sicherheitsebenen, verwenden Sie den InGracePeriod-Status, arbeiten Sie mit bedingtem Zugriff, und verwalten Sie Geräte ohne zugewiesene Richtlinie.
+description: Beginnen Sie mit der Verwendung von Konformitätsrichtlinien, einschließlich den Einstellungen für Konformitätsrichtlinien und den Gerätekonformitätsrichtlinien für Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/28/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,102 +16,146 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 227a44436f4490c9b3e2188609a9714a0e842149
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538160"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206314"
 ---
-# <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Legen Sie mit Intune Regeln auf Geräten fest, um Zugriff auf Ressourcen in Ihrer Organisation zu gewähren
+# <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Verwenden von Konformitätsrichtlinien zum Festlegen von Regeln für Geräte, die Sie mit Intune verwalten
 
-Viele MDM-Lösungen (Mobile Device Management) tragen zum Schutz von Unternehmensdaten bei, da Benutzer und Geräte bestimmte Anforderungen erfüllen müssen. In Intune wird dieses Feature „Konformitätsrichtlinien“ genannt. Konformitätsrichtlinien definieren Regeln und Einstellungen, die Benutzer und Geräte erfüllen müssen, um als „konform“ zu gelten. In Kombination mit dem bedingten Zugriff können Administratoren Benutzer und Geräte blockieren, die die Regeln nicht erfüllen.
+MDM-Lösungen (Mobile Device Management) wie Intune tragen zum Schutz von Unternehmensdaten bei, da Benutzer und Geräte bestimmte Anforderungen erfüllen müssen. In Intune wird dieses Feature *Konformitätsrichtlinien* genannt.
 
-Beispielsweise kann der Intune-Administrator anfordern, dass:
+Konformitätsrichtlinien in Intune:
 
-- Endbenutzer zum Zugriff auf Organisationsdaten über mobile Geräte ein Kennwort verwenden.
-- Das Gerät nicht mit Jailbreak oder Rootzugriff manipuliert wurde.
-- Das Gerät eine minimale oder maximale Betriebssystemversion hat.
-- Das Gerät höchstens einer angegebenen Gerätebedrohungsstufe entspricht
+- Konformitätsrichtlinien definieren Regeln und Einstellungen, die Benutzer und Geräte erfüllen müssen, um als „konform“ zu gelten.
+- Schließen Sie Aktionen ein, die auf nicht konforme Geräte angewendet werden. Diese Aktionen bei Nichtkonformität können Benutzer an die Gründe der Nichtkonformität warnen und Daten auf nicht konformen Geräten schützen.
+- Sie können [in Kombination mit dem bedingten Zugriff](#integrate-with-conditional-access) verwendet werden, wodurch Benutzer und Geräte blockiert werden, die nicht den Regeln entsprechen.
 
-Außerdem können Sie diese Funktion verwenden, um den Konformitätsstatus von Geräten in Ihrer Organisation zu überwachen.
+Die Konformitätsrichtlinien in Intune haben zwei Teile:
 
-> [!IMPORTANT]
-> Intune folgt bei allen Konformitätsauswertungen auf dem Gerät dem Zeitplan für das Einchecken von Geräten. Unter [Richtlinien- und Profilaktualisierungszyklen](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) werden die geschätzten Aktualisierungszeiten aufgeführt.
+- **Einstellungen für Konformitätsrichtlinien** – Mandantenweite Einstellungen, die einer integrierten Konformitätsrichtlinie entsprechen, die jedes Gerät erhält. Die Einstellungen für Konformitätsrichtlinien legen eine Baseline für die Funktionsweise von Konformitätsrichtlinien in ihrer Intune-Umgebung fest. Dazu zählt, ob Geräte, die keine Gerätekonformitätsrichtlinien erhalten haben, als konform oder nicht konform gelten.
 
-<!---### Actions for noncompliance
+- **Gerätekonformitätsrichtlinie** – Plattformspezifische Regeln, die Sie konfigurieren und für Gruppen von Benutzern oder Geräten bereitstellen.  Diese Regeln definieren die Anforderungen für Geräte, z. B. die minimalen Betriebssysteme oder die Verwendung der Datenträgerverschlüsselung. Geräte müssen diese Regeln erfüllen, um als konform eingestuft zu werden.
 
-You can specify what needs to happen when a device is determined as noncompliant. This can be a sequence of actions during a specific time.
-When you specify these actions, Intune will automatically initiate them in the sequence you specify. See the following example of a sequence of
-actions for a device that continues to be in the noncompliant status for
-a week:
+Wie bei anderen Intune-Richtlinien sind die Auswertungen der Konformitätsrichtlinie für ein Gerät davon abhängig, wann das Gerät bei Intune eingecheckt wird, und von den [Richtlinien- und Profilaktualisierungszyklen](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
-- When the device is first determined to be noncompliant, an email with noncompliant notification is sent to the user.
+## <a name="compliance-policy-settings"></a>Einstellungen für Kompatibilitätsrichtlinie
 
-- 3 days after initial noncompliance state, a follow up reminder is sent to the user.
+Die *Einstellungen für Konformitätsrichtlinien* sind mandantenweite Einstellungen, die bestimmen, wie der Intune-Konformitätsdienst mit Ihren Geräten interagiert. Diese Einstellungen unterscheiden sich von den Einstellungen, die Sie in einer Gerätekonformitätsrichtlinie konfigurieren.
 
-- 5 days after initial noncompliance state, a final reminder with a notification that access to company resources will be blocked on the device in 2 days if the compliance issues are not remediated is sent to the user.
+Um die Einstellungen für Konformitätsrichtlinien zu verwalten, melden Sie sich bei [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und wechseln Sie zu **Endpoint Security** > **Gerätekonformität** > **Einstellungen für Gerätekonformität**.
 
-- 7 days after initial noncompliance state, access to company resources is blocked. This requires that you have Conditional Access policy that specifies that access from noncompliant devices should    be blocked for services such as Exchange and SharePoint.
+Die Einstellungen für Konformitätsrichtlinien umfassen die folgenden Einstellungen:
 
-### Grace Period
+- **Geräte ohne zugewiesene Konformitätsrichtlinie kennzeichnen als**
 
-This is the time between when a device is first determined as
-noncompliant to when access to company resources on that device is blocked. This time allows for time that the user has to resolve
-compliance issues on the device. You can also use this time to create your action sequences to send notifications to the user before their access is blocked.
+  Mit dieser Einstellung wird festgelegt, wie Intune Geräte behandelt, denen keine Gerätekonformitätsrichtlinie zugewiesen wurde. Diese Einstellung verfügt über zwei Optionen:
+  - **Konform** (*Standard*): Diese Sicherheitsfunktion ist deaktiviert. Geräte, denen keine Gerätekonformitätsrichtlinie gesendet wurde, werden als *konform* betrachtet.
+  - **Nicht konform**: Diese Sicherheitsfunktion ist aktiviert. Geräte, die keine Gerätekonformitätsrichtlinie erhalten haben, werden als nicht konform betrachtet.
 
-Remember that you need to implement Conditional Access policies in addition to compliance policies in order for access to company resources to be blocked.--->
+  Wenn Sie den bedingten Zugriff mit Ihren Gerätekonformitätsrichtlinien verwenden, empfiehlt es sich, diese Einstellung in **Nicht konform** zu ändern, um sicherzustellen, dass nur Geräte, die als konform bestätigt werden, auf Ihre Ressourcen zugreifen können.
 
-## <a name="device-compliance-policies-work-with-azure-ad"></a>Gerätekonformitätsrichtlinien mit Azure AD
+  Wenn ein Endbenutzer nicht konform ist, weil ihm keine Richtlinie zugewiesen ist, wird in der [Unternehmensportal-App](../apps/company-portal-app.md) angezeigt, dass keine Konformitätsrichtlinien zugewiesen wurden.
 
-Intune verwendet den [bedingten Zugriff](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) von Azure Active Directory, um die Konformität zu erzwingen. Wenn ein Gerät in Intune registriert wird, beginnt der Azure AD-Registrierungsprozess, wodurch die Geräteinformationen in Azure AD aktualisiert werden. Ein wichtiger Teil der Information ist der Gerätekonformitätsstatus. Dieser Gerätekonformitätsstatus wird von Richtlinien für den bedingten Zugriff zum Blockieren oder Zulassen des Zugriffs auf E-Mails und andere Organisationsressourcen verwendet.
+- **Verbesserte Erkennung von Jailbreaks** (*gilt nur für iOS/iPadOS*)
 
-- Unter [Worum handelt es sich bei der Geräteverwaltung in Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/device-management-introduction) erhalten Sie weitere Informationen zur Registrierung von Geräten in Azure AD.
+  Diese Einstellung funktioniert nur mit Geräten, auf die Sie eine Gerätekompatibilitätsrichtlinie ausgerichtet haben, mit der Geräte mit Jailbreaks blockiert werden.  (Weitere Informationen finden Sie unter [Integrität für Geräte](compliance-policy-create-ios.md#device-health) Einstellungen für iOS/iPadOS).
 
-- Dieses Feature wird in den Artikeln zum [bedingten Zugriff](conditional-access.md) und zu [gängigen Vorgehensweisen zur Verwendung des bedingten Zugriffs](conditional-access-intune-common-ways-use.md) im Zusammenhang mit Intune beschrieben.
+  Diese Einstellung verfügt über zwei Optionen:
 
-## <a name="ways-to-use-device-compliance-policies"></a>Möglichkeiten, die Gerätekonformitätsrichtlinien zu verwalten
+  - **Deaktiviert** (*Standard*) Diese Sicherheitsfunktion ist deaktiviert. Diese Einstellung wirkt sich nicht auf Ihre Geräte aus, die Gerätekonformitätsrichtlinien empfangen, mit denen Geräte mit Jailbreaks blockiert werden.
+  - **Aktiviert**: Diese Sicherheitsfunktion ist aktiviert. Geräte, die Gerätekonformitätsrichtlinien zum Blockieren von Geräten mit Jailbreaks erhalten, verwenden die erweiterte Jailbreak-Erkennung.
 
-### <a name="with-conditional-access"></a>Mit bedingtem Zugriff
+  Bei Aktivierung auf einem anwendbaren iOS/iPadOS-Gerät gilt für das Gerät Folgendes:
 
-Geräten, welche die Richtlinienregeln einhalten, können Sie Zugriff auf E-Mail- und andere Organisationsressourcen gewähren. Wenn die Geräte die Richtlinienregeln nicht einhalten, erhalten sie keinen Zugriff auf Organisationsressourcen. Dies ist der bedingte Zugriff.
+  - Es aktiviert Standortdienste auf Betriebssystemebene.
+  - Es erlaubt dem Unternehmensportal immer, die Standortdienste zu nutzen.
+  - Es verwendet seine Standortdienste, um die Jailbreak-Erkennung häufiger im Hintergrund auszulösen. Die Standortdaten des Benutzers werden nicht in Intune gespeichert.
 
-### <a name="without-conditional-access"></a>Ohne bedingten Zugriff
+  In folgenden Situationen führt die verbesserte Jailbreak-Erkennung Auswertung durch:
 
-Sie können Gerätekonformitätsrichtlinien auch ohne bedingten Zugriff verwenden. Bei unabhängiger Nutzung von Kompatibilitätsrichtlinien werden die Zielgeräte ausgewertet und mit ihrem Kompatibilitätsstatus gemeldet. So können Sie beispielsweise einen Bericht dazu erstellen, wie viele Geräte nicht verschlüsselt sind oder mit Jailbreak oder Rootzugriff manipuliert wurden. Wenn Sie Kompatibilitätsrichtlinien ohne bedingten Zugriff nutzen, gelten keine Einschränkungen für den Zugriff auf Unternehmensressourcen.
+  - Die Unternehmensportal-App wird geöffnet.
+  - Das Gerät wird über eine beträchtliche Entfernung physisch bewegt, was etwa 500 Meter oder mehr beträgt. Intune kann nicht garantieren, dass durch jede bedeutende Standortänderung eine Jailbreak-Erkennungsprüfung ausgelöst wird, da dies von der Netzwerkverbindung des Geräts zum gegebenen Zeitpunkt abhängt.
 
-## <a name="ways-to-deploy-device-compliance-policies"></a>Möglichkeiten, die Gerätekonformitätsrichtlinien bereitzustellen
+  Unter iOS 13 und höher müssen Benutzer aufgrund dieses Features immer auf *Immer zulassen* klicken, wenn das Gerät sie dazu auffordert, dem Unternehmensportal weiterhin zu gestatten, ihren Standort im Hintergrund zu verwenden. Wenn Benutzer nicht jedes Mal den Standortzugriff genehmigen und eine Richtlinie mit dieser Einstellung konfiguriert haben, wird ihr Gerät als nicht konform gekennzeichnet.
 
-Sie können Benutzern die Konformitätsrichtlinie in Benutzergruppen oder Geräten in Gerätegruppen bereitstellen. Wenn Sie eine Konformitätsrichtlinie für einen Benutzer bereitstellen, wird die Konformität aller Geräte des Benutzers überprüft. Die Verwendung von Gerätegruppen in diesem Szenario hilft beim Erstellen von Konformitätsberichten.
+- **Gültigkeitszeitraum des Konformitätsstatus (Tage)** :
 
-Intune umfasst zudem einige integrierte Konformitätsrichtlinieneinstellungen. Die folgenden integrierten Richtlinien werden auf allen Geräten ausgewertet, die in Intune registriert wurden:
+  Geben Sie einen Zeitraum an, in dem Geräte erfolgreich Berichte zu allen empfangenen Konformitätsrichtlinien melden müssen. Wenn ein Gerät vor Ablauf der Gültigkeitsdauer keinen Konformitätsstatus für eine Richtlinie meldet, wird das Gerät als nicht konform behandelt.
 
-- **Geräte ohne zugewiesene Konformitätsrichtlinie kennzeichnen als**: Diese Eigenschaft verfügt über zwei Werte:
+  Der Zeitraum ist standardmäßig auf 30 Tage festgelegt. Sie können einen Zeitraum zwischen 1 und 120 Tagen konfigurieren.
 
-  - **Konform** (*Standard*): Das Sicherheitsfeature ist nicht aktiviert
-  - **Nicht konform:** Das Sicherheitsfeature ist aktiviert
+  Details zur Gerätekonformität finden Sie in der Einstellung für die Gültigkeitsdauer. Melden Sie sich bei [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an und wechseln Sie zu **Geräte** > **Überwachen** > **Einstellungskonformität**. Diese Einstellung hat den Namen **Ist aktiv** in der Spalte *Einstellung*.  Weitere Informationen zu diesen und zugehörigen Konformitätsstatusansichten finden Sie unter [Überwachen der Gerätekonformtät](compliance-policy-monitor.md).
 
-  Ist einem Gerät keine Konformitätsrichtlinie zugewiesen, dann wird dieses Gerät standardmäßig als konform erachtet. Wenn Sie den bedingten Zugriff mit Konformitätsrichtlinien verwenden, sollten Sie die Standardeinstellung auf **Nicht konform** festlegen. Falls ein Benutzer nicht konform ist, weil ihm keine Richtlinie zugewiesen ist, zeigt die [Unternehmensportal-App](../apps/company-portal-app.md)`No compliance policies have been assigned` an.
+## <a name="device-compliance-policies"></a>Konformitätsrichtlinien für Geräte
 
-- **Verbesserte Erkennung von Jailbreaks**: Wenn diese Einstellung aktiviert ist, wird der Status „Geräte mit Jailbreak“ häufiger auf iOS-/iPadOS-Geräten angezeigt. Diese Einstellung betrifft nur Geräte, die einer Compliancerichtlinie unterliegen, durch die Geräte mit Jailbreak blockiert werden. Durch die Aktivierung dieser Eigenschaft werden die Ortungsdienste des Geräts verwendet, was sich auf den Akkuverbrauch auswirken kann. Die Standortdaten des Benutzers werden nicht in Intune gespeichert und werden nur dazu verwendet, im Hintergrund die Jailbreakerkennung häufiger auszulösen. 
+Intune-Gerätekonformitätsrichtlinien:
 
-  Für die Aktivierung dieser Einstellung müssen Geräte:
-  - Ortungsdienste auf Betriebssystemebene aktivieren
-  - dem Unternehmensportal immer erlauben, die Ortungsdienste zu nutzen.
+- Definieren Regeln und Einstellungen, die Benutzer und verwaltete Geräte erfüllen müssen, um als „konform“ zu gelten. Beispiele für Regeln sind u. a. die Notwendigkeit, dass Geräte eine minimale Betriebssystemversion ausführen, nicht durch Jailbreak oder Rooting manipuliert wurden und maximal die *Bedrohungsstufe* aufweisen, die von der Bedrohungsmanagementsoftware festgelegt wurde, die Sie in Intune integriert haben.
+- Unterstützen Aktionen, die für Geräte gelten, die Ihre Konformitätsrichtlinie nicht erfüllen. Beispiele für Aktionen sind das Fernsperren oder das Senden einer E-Mail-Nachricht an den Gerätebenutzer zum Gerätestatus, damit dieser die Probleme beheben kann.
+- Werden für Benutzer in Benutzergruppen oder Geräten in Gerätegruppen bereitgestellt. Wenn eine Konformitätsrichtlinie für einen Benutzer bereitgestellt wird, werden alle Geräte des Benutzers auf Konformität überprüft. Die Verwendung von Gerätegruppen in diesem Szenario hilft beim Erstellen von Konformitätsberichten.
 
-  Sie können den Auswertungsvorgang auslösen, indem Sie die Unternehmensportal-App öffnen oder das physische Gerät an einen anderen Ort bringen, der mindestens 500 m entfernt ist. Unter iOS 13 und höher müssen Benutzer aufgrund dieses Features immer auf „Always Allow“ (Immer zulassen) zu klicken, wenn das Gerät sie dazu auffordert, dem Unternehmensportal weiterhin zu gestatten, ihren Standort im Hintergrund zu verwenden. Wenn Benutzer nicht jedes Mal den Standortzugriff genehmigen und eine Richtlinie mit dieser Einstellung konfiguriert haben, wird ihr Gerät als nicht kompatibel markiert. Beachten Sie, dass Intune nicht garantieren kann, dass durch jede bedeutende Standortänderung eine Jailbreakerkennungsprüfung ausgelöst wird, da dies von der Netzwerkverbindung des Geräts zum gegebenen Zeitpunkt abhängt.
+Wenn Sie den bedingten Zugriff verwenden, können Ihre Richtlinien für den bedingten Zugriff Ihre Gerätekonformitätsergebnisse verwenden, um den Zugriff auf Ressourcen von nicht konformen Geräten zu blockieren.
 
-- **Gültigkeitszeitraum des Konformitätsstatus (Tage)** : Geben Sie den Zeitraum an, in dem Geräte den Status für alle empfangenen Konformitätsrichtlinien melden müssen. Geräte, die innerhalb dieses Zeitraums keine Statusmeldung abgeben, werden als nicht konform behandelt. Der Standardwert beträgt 30 Tage. Der Mindestwert ist 1 Tag.
+Welche Einstellungen verfügbar sind, die Sie in einer Gerätekonformitätsrichtlinie festlegen können, hängt vom Plattformtyp ab, den Sie beim Erstellen einer Richtlinie auswählen. Verschiedene Geräteplattformen unterstützen verschiedene Einstellungen, und jeder Plattformtyp erfordert eine separate Richtlinie.  
 
-  Diese Einstellung wird als Standardkompatibilitäts-Richtlinie **Ist aktiv** (**Geräte** > **Überwachen** > **Einstellungskompatibilität**) angezeigt. Die Hintergrundaufgabe für diese Richtlinie wird einmal täglich ausgeführt.
+Die folgenden Themen sind mit dedizierten Artikeln für verschiedene Aspekte der Gerätekonfigurationsrichtlinie verknüpft.
 
-Sie können die integrierten Richtlinien verwenden, um diese Einstellungen zu überwachen. Intune wird außerdem je nach Geräteplattform in regelmäßigen Abständen [aktualisiert oder sucht nach Updates](create-compliance-policy.md#refresh-cycle-times). Unter [Häufig auftretende Probleme und Lösungen für Geräteprofile in Microsoft Intune](../configuration/device-profile-troubleshoot.md) finden Sie weitere Informationen.
+- [**Aktionen bei Nichtkonformität**](actions-for-noncompliance.md) – Jede Gerätekonformitätsrichtlinie umfasst mindestens eine Aktion bei Nichtkonformität. Diese Aktionen sind Regeln, die auf Geräte angewendet werden, die die Bedingungen nicht erfüllen, die Sie in der Richtlinie festgelegt haben.
 
-Mit Konformitätsberichten können Sie den Status von Geräten überprüfen. Weitere Informationen finden Sie unter [Überwachen von Intune-Richtlinien zur Gerätekompatibilität](compliance-policy-monitor.md).
+  Standardmäßig umfasst jede Gerätekonformitätsrichtlinie die Aktion, um ein Gerät als nicht konform zu kennzeichnen, wenn eine Richtlinienregel nicht erfüllt wird. Die Richtlinie wendet dann auf das Gerät alle zusätzlichen Aktionen bei Nichtkonformität an, die Sie konfiguriert haben, basierend auf den Zeitplänen, die Sie für diese Aktionen festgelegt haben.
 
-## <a name="non-compliance-and-conditional-access-on-the-different-platforms"></a>Nichtkonformität und bedingter Zugriff auf unterschiedlichen Plattformen
+  Aktionen bei Nichtkonformität können Benutzer warnen, wenn ihr Gerät nicht konform ist, oder Daten schützen, die möglicherweise auf einem Gerät vorliegen. Beispiele für Aktionen:
+
+  - **Senden von E-Mail-Benachrichtigungen** an Benutzer und Gruppen mit Details zum nicht konformen Gerät. Sie können die Richtlinie so konfigurieren, dass sie sofort eine E-Mail sendet, wenn das Gerät als nicht konform gekennzeichnet wird, und danach regelmäßig, bis das Gerät wieder konform ist.
+  - **Fernsperren von Geräten**, die seit einiger Zeit nicht konform sind.
+  - **Außerbetriebnahme von Geräten**, nachdem sie einige Zeit nicht konform waren. Diese Aktion entfernt das Gerät aus der Intune-Verwaltung und entfernt alle Unternehmensdaten von dem Gerät.
+
+- [**Konfigurieren von Netzwerkstandorten** – Unterstützt von Android-Geräten können Sie ](use-network-locations.md) können Sie *Netzwerkstandorte* konfigurieren, und diese Standorte dann als Regel für die Gerätekonformität verwenden. Bei diesem Regeltyp kann ein Gerät als nicht konform gekennzeichnet werden, wenn es ein bestimmtes Netzwerk verlässt oder sich außerhalb von diesem befindet. Bevor Sie eine Standortregel festlegen können, müssen Sie die Netzwerkstandorte konfigurieren.
+
+- [**Erstellen einer Richtlinie**](create-compliance-policy.md) – Mit den Informationen in diesem Artikel können Sie die Voraussetzungen überprüfen, die Optionen zum Konfigurieren von Regeln erkunden, Aktionen bei Nichtkonformität festlegen und die Richtlinie Gruppen zuweisen. Dieser Artikel enthält auch Informationen zu den Aktualisierungszeiten für Richtlinien.
+
+  In den Konformitätseinstellungen für die unterschiedlichen Geräteplattformen finden Sie weitere Informationen:
+
+  - [Android](compliance-policy-create-android.md)
+  - [Android Enterprise](compliance-policy-create-android-for-work.md)
+  - [iOS](compliance-policy-create-ios.md)
+  - [macOS](compliance-policy-create-mac-os.md)
+  - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
+  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 und höher](compliance-policy-create-windows-8-1.md)
+  - [Windows 10 und höher](compliance-policy-create-windows.md)
+
+## <a name="monitor-compliance-status"></a>Überwachen des Konformitätsstatus
+
+Intune enthält ein Dashboard für die Gerätekonformität, mit dem Sie den Konformitätsstatus von Geräten überwachen und einen Drilldown zu Richtlinien und Geräten durchführen können, um weitere Informationen zu erhalten. Weitere Informationen zu diesem Dashboard finden Sie unter [Überwachen der Gerätekonformität](compliance-policy-monitor.md).
+
+## <a name="integrate-with-conditional-access"></a>Integration mit bedingtem Zugriff
+
+Wenn Sie den bedingten Zugriff verwenden, können Sie Ihre Richtlinien für den bedingten Zugriff so konfigurieren, dass anhand der Ergebnisse Ihrer Gerätekonformitätsrichtlinien bestimmt wird, welche Geräte auf Ihre Unternehmensressourcen zugreifen können. Diese Zugriffssteuerung erfolgt zusätzlich zu und unabhängig von den Aktionen bei Nichtkonformität, die Sie in Ihre Gerätekonformitätsrichtlinien integrieren.
+
+Wenn ein Gerät in Intune registriert wird, wird es auch in Azure AD registriert. Der Konformitätsstatus für Geräte wird an Azure AD gemeldet. Wenn in Ihren Richtlinien für den bedingten Zugriff für die Zugriffsteuerung festgelegt ist, dass *das Gerät als konform gekennzeichnet sein muss*, verwendet der bedingte Zugriff diesen Konformitätsstatus, um zu bestimmen, ob der Zugriff auf E-Mails und andere Unternehmensressourcen gewährt oder blockiert wird.
+
+Wenn Sie den Gerätekonformitätsstatus mit Richtlinien für den bedingten Zugriff verwenden, müssen Sie überprüfen, wie Ihr Mandant die Einstellung *Geräte ohne zugewiesene Konformitätsrichtlinie kennzeichnen als* konfiguriert hat, was Sie unter [Einstellungen für Konformitätsrichtlinien](#compliance-policy-settings) verwalten können.
+
+Weitere Informationen zur Verwendung des bedingten Zugriffs mit ihren Gerätekonformitätsrichtlinien finden Sie unter [Gerätebasierter bedingter Zugriff.](conditional-access-intune-common-ways-use.md#device-based-conditional-access)
+
+Weitere Informationen zum bedingten Zugriff finden Sie in der Azure AD-Dokumentation:
+
+- [Was ist bedingter Zugriff?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+- [Was ist eine Geräteidentität?](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+
+### <a name="reference-for-non-compliance-and-conditional-access-on-the-different-platforms"></a>Verweis auf Nichtkonformität und bedingten Zugriff auf den unterschiedlichen Plattformen
 
 In der folgenden Tabelle wird beschrieben, wie nicht konforme Einstellungen verwaltet werden, wenn eine Konformitätsrichtlinie mit einer Richtlinie für bedingten Zugriff verwendet wird.
+
+- **Bereinigt:** Das Betriebssystem des Geräts erzwingt die Konformität. Es ist z.B. erforderlich, dass der Benutzer eine PIN festlegt.
+
+- **In Quarantäne:** Das Betriebssystem des Geräts erzwingt keine Konformität. Android- und Android Enterprise-Geräte zwingen den Benutzer z. B. nicht dazu, das Gerät zu verschlüsseln. Wenn das Gerät nicht kompatibel ist, erfolgen die folgenden Aktionen:
+  - Wenn eine Richtlinie für bedingten Zugriff für den Benutzer gilt, wird das Gerät blockiert.
+  - Die Unternehmensportal-App benachrichtigt den Benutzer über Konformitätsprobleme.
 
 ---------------------------
 
@@ -127,25 +171,10 @@ In der folgenden Tabelle wird beschrieben, wie nicht konforme Einstellungen verw
 
 ---------------------------
 
-**Bereinigt:** Das Betriebssystem des Geräts erzwingt die Konformität. Es ist z.B. erforderlich, dass der Benutzer eine PIN festlegt.
-
-**In Quarantäne:** Das Betriebssystem des Geräts erzwingt keine Konformität. Android- und Android Enterprise-Geräte zwingen den Benutzer z. B. nicht dazu, das Gerät zu verschlüsseln. Wenn das Gerät nicht kompatibel ist, erfolgen die folgenden Aktionen:
-
-- Wenn eine Richtlinie für bedingten Zugriff für den Benutzer gilt, wird das Gerät blockiert.
-- Die Unternehmensportal-App benachrichtigt den Benutzer über Konformitätsprobleme.
-
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Erstellen Sie eine Richtlinie](create-compliance-policy.md), und sehen Sie sich die Anforderungen an.
-- In den Konformitätseinstellungen für die unterschiedlichen Geräteplattformen finden Sie weitere Informationen:
-
-  - [Android](compliance-policy-create-android.md)
-  - [Android Enterprise](compliance-policy-create-android-for-work.md)
-  - [iOS](compliance-policy-create-ios.md)
-  - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
-  - [Windows 8.1 und höher](compliance-policy-create-windows-8-1.md)
-  - [Windows 10 und höher](compliance-policy-create-windows.md)
-
-- Weitere Informationen zu den Intune-Richtlinienentitäten für Data Warehouses finden Sie unter [Reference for policy entities (Referenz für Richtlinienentitäten)](../developer/reports-ref-policy.md).
+- [Standorte konfigurieren](../protect/use-network-locations.md) zur Verwendung mit Android-Geräten
+- [Erstellen und Bereitstellen einer Richtlinie](../protect/create-compliance-policy.md) und Voraussetzungen prüfen
+- [Überwachen der Gerätekonformität](../protect/compliance-policy-monitor.md)
+- [Häufige Fragen, Probleme und entsprechende Behebungen mit Geräterichtlinien und -profilen in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
+- Weitere Informationen zu den Intune-Richtlinienentitäten für Data Warehouses finden Sie unter [Referenz für Richtlinienentitäten](../developer/reports-ref-policy.md).

@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078055"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165429"
 ---
 # <a name="reference-for-devices-entities"></a>Referenz für Geräteentitäten
 
@@ -226,7 +226,7 @@ Die Entität **ManagementAgentType** stellt die Agents dar, die zum Verwalten vo
 In der Entität **devices** werden alle für die Verwaltung registrierten Geräte und ihre entsprechenden Eigenschaften aufgelistet.
 
 |          Eigenschaft          |                                                                                       Beschreibung                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | deviceKey                  | Der eindeutige Bezeichner des Geräts im Data Warehouse – Ersatzschlüssel.                                                                                                               |
 | deviceId                   | Eindeutiger Bezeichner des Geräts.                                                                                                                                                     |
 | deviceName                 | Der Name des Geräts auf Plattformen, die das Benennen von Geräten ermöglichen. Auf anderen Plattformen wird von Intune ein Name anhand anderer Eigenschaften erstellt. Dieses Attribut kann nicht für alle Geräte zur Verfügung stehen. |
@@ -263,13 +263,18 @@ In der Entität **devices** werden alle für die Verwaltung registrierten Gerät
 | cellularTechnology         | Mobilfunktechnologie des Geräts                                                                                                                                                    |
 | WiFiMacAddress             | WiFi-MAC                                                                                                                                                                              |
 | ICCID                       | Integrated Circuit Card Identifier                                                                                                                                                     |
+| windowsOsEdition           | Windows-Betriebssystemedition                                                                                                                             |
+| ethernetMacAddress           | Der eindeutige Netzwerkbezeichner dieses Geräts.                                                                                                                                        |
+| model                      | Das Gerätemodell.                                                                                                                                                                      |
+| office365Version           | Die auf dem Gerät installierte Version von Office 365.                                                                                                                             |
+
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 Die Entität **devicePropertyHistory** hat die gleichen Eigenschaften wie die Gerätetabellen und die täglichen Momentaufnahmen der einzelnen Gerätedatensätze pro Tag für die letzten 90 Tage. Die DateKey-Spalte gibt den Tag für jede Zeile an.
 
 |          Eigenschaft          |                                                                                      Beschreibung                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateKey                    | Verweis auf die Datumstabelle, die den Tag angibt                                                                                                                                          |
 | deviceKey                  | Der eindeutige Bezeichner des Geräts in Data Warehouse – Ersatzschlüssel. Dies ist ein Verweis auf die Gerätetabelle, die die Intune-Geräte-ID enthält.                               |
 | deviceName                 | Der Name des Geräts auf Plattformen, die das Benennen von Geräten ermöglichen. Auf anderen Plattformen wird von Intune einen Namen aus anderen Eigenschaften erstellt. Dieses Attribut kann nicht für alle Geräte zur Verfügung stehen. |
@@ -281,4 +286,6 @@ Die Entität **devicePropertyHistory** hat die gleichen Eigenschaften wie die Ge
 | OSVersion                  | Betriebssystemversion                                                                                                                                                                          |
 | jailBroken                 | Gibt an, ob das Gerät mit Jailbreak oder Rooting manipuliert wurde.                                                                                                                                         |
 | deviceCategoryKey          | Schlüssel des Gerätekategorieattributs für dieses Gerät. 
+| physicalMemoryInBytes      | Der physische Speicher in Bytes.                                                                                                                                                          |
+| totalStorageSpaceInBytes   | Gesamte Speicherkapazität in Bytes.                                                                                                                                                                |
 

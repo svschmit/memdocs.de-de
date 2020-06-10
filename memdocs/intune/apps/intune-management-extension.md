@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990720"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270938"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Verwenden von PowerShell-Skripts auf Windows 10-Geräten in Intune
 
@@ -68,7 +68,7 @@ Für die Intune-Verwaltungserweiterung sind folgende Voraussetzungen erforderlic
     
     - Über die Anmeldung des Benutzers auf dem Gerät mithilfe seines Azure AD-Kontos und der anschließenden Registrierung bei Intune.
 
-  - Gemeinsam verwaltete Geräte, die Configuration Manager und Intune verwenden – Stellen Sie sicher, dass die Workload **Apps** auf **Pilot Intune** oder **Intune** festgelegt ist. Weitere Informationen finden Sie in den folgenden Artikeln: 
+  - Gemeinsam verwaltete Geräte, die Configuration Manager und Intune verwenden – Stellen Sie bei der Installation von Win32-Apps sicher, dass die **Apps**-Workload auf **Pilot Intune-** oder **Intune-** festgelegt ist. PowerShell-Skripts werden auch dann ausgeführt, wenn die **Apps**-Workload auf **Configuration Manager** festgelegt ist. Die Intune-Verwaltungserweiterung wird auf einem Gerät bereitgestellt, wenn Sie ein PowerShell-Skript für das Gerät als Ziel angeben. Wie bereits erwähnt, muss es sich bei dem Gerät jedoch um ein in Azure AD- oder Azure AD Hybrid eingebundenes Gerät handeln, und es muss Windows 10, Version 1607 oder höher, ausgeführt werden. Weitere Informationen finden Sie in den folgenden Artikeln: 
   
     - [Was ist Co-Verwaltung?](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [Client-Apps-Workload](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)

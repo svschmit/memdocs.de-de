@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 05/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f86b418df46069b2a33dd56d06e0e82dbbbf8090
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 734a1361d8889ca1463e8d8986239e088b90cd09
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81538448"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206365"
 ---
 # <a name="use-the-jamf-cloud-connector-with-microsoft-intune"></a>Verwenden des Jamf-Cloudconnectors mit Microsoft Intune
 
@@ -157,13 +157,15 @@ Wenn Sie derzeit über eine manuell konfigurierte Integration zwischen Intune un
 
    ![Auswählen des Cloudconnectors in der Jamf Pro-Konsole](./media/conditional-access-jamf-cloud-connector/select-cloud-connector.png)
 
-6. Wählen Sie aus dem Popupmenü **Sovereign Cloud** den Standort Ihrer Sovereign Cloud von Microsoft aus.
+6. Wählen Sie aus dem Popupmenü **Sovereign Cloud** den Standort Ihrer Sovereign Cloud von Microsoft aus. Wenn Sie Ihre vorherige Integration mit dem Jamf-Cloudconnector ersetzen, können Sie diesen Schritt überspringen, wenn der Speicherort angegeben wurde.
 
 7. Wählen Sie eine der folgenden Landing Page-Optionen für Computer aus, die von Microsoft Azure nicht erkannt werden:
    - **Seite „Jamf Pro-Standardgeräteregistrierung“** : Abhängig vom Status des macOS-Geräts leitet diese Option Benutzer entweder zum Jamf Pro-Geräteregistrierungsportal (zur Registrierung bei Jamf Pro) oder zur Intune-Unternehmensportal-App (zur Registrierung bei Azure AD) um.
    - **Seite „Zugriff verweigert“**
    - **Benutzerdefinierte URL**
-
+  
+   Wenn Sie Ihre vorherige Integration mit dem Jamf Cloud Connector ersetzen, können Sie diesen Schritt überspringen, wenn die Landing Page angegeben wurde.
+  
 8. Wählen Sie **Verbinden** aus. Sie werden zur Registrierung der Jamf Pro-Anwendungen zu Azure umgeleitet.
 
    Wenn Sie dazu aufgefordert werden, geben Sie Ihre Microsoft Azure-Anmeldeinformationen an, und folgen Sie den Anweisungen auf dem Bildschirm, um die angeforderten Berechtigungen zu erteilen. Sie erteilen Berechtigungen für den **Cloudconnector** und dann wieder für die **Cloudconnector-App für die Benutzerregistrierung**. Beide Apps sind in Azure als Unternehmensanwendungen registriert.
@@ -283,6 +285,10 @@ Ja. Sie können den Verbindungstyp wieder in „Manuell“ ändern und die Schri
 ### <a name="permissions-were-modified-on-one-or-both-required-apps-cloud-connector-and-cloud-connector-user-registration-app-and-registration-is-not-working-is-this-supported"></a>Die Berechtigungen wurden für eine oder beide erforderlichen Apps (*Cloudconnector* und *Cloudconnector-App für die Benutzerregistrierung*) geändert und die Registrierung funktioniert nicht, wird dies unterstützt?
 
 Das Ändern der Berechtigungen für die Apps wird nicht unterstützt.
+
+### <a name="is-there-a-log-file-in-jamf-pro-that-shows-if-the-connection-type-has-been-changed"></a>Gibt es eine Protokolldatei in Jamf Pro, die anzeigt, ob der Verbindungstyp geändert wurde?
+
+Ja, die Änderungen werden in der Datei „jamfchangemanagement.log“ protokolliert. Melden Sie sich zum Anzeigen der Änderungsverwaltungsprotokolle bei Jamf Pro an, und wechseln Sie zu **Einstellungen** > **Systemeinstellungen** > **Änderungsverwaltung** > **Protokolle**, suchen Sie unter**Objekttyp** nach **Bedingter Zugriff** und klicken Sie dann auf **Details**, um die Änderungen anzuzeigen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

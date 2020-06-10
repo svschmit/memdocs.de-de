@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2019
+ms.date: 05/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 081d293432e15fccfd2b30d2eb7b7c300789e74f
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360014"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270972"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Erstellen eines Intune-Berichts aus dem OData-Feed mit Power BI
 
@@ -47,16 +47,16 @@ Die Verwendung der Begriffe *Entität* und *Tabelle* erscheint Ihnen möglicherw
 
 ## <a name="install-power-bi-desktop"></a>Installieren von Power BI Desktop
 
-Installieren Sie die neueste Version von Power BI Desktop. Sie können Power BI Desktop aus [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop) herunterladen.
+Installieren Sie die neueste Version von Power BI Desktop. Sie können Power BI Desktop hier herunterladen: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>Stellen Sie eine Verbindung zum OData-Feed für das Intune Data Warehouse für Ihren Mandanten her.
 
 > [!Note]  
 > Sie benötigen in Intune eine Berechtigung, um auf **Berichte** zugreifen zu können. Weitere Informationen finden Sie unter [Autorisierung](reports-api-url.md#authorization).
 
-1. Melden Sie sich bei [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) an.
-2. Öffnen Sie den Bereich **Intune Data Warehouse**, indem Sie den Data Warehouse-Link unter **Weitere Aufgaben** auf der rechten Seite des Blatts **Microsoft Intune – Übersicht** auswählen.
-3. Kopieren Sie die benutzerdefinierte Feed-URL. Beispiel: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
+2. Wählen Sie **Berichte** > **Intune Data Warehouse** > **Data Warehouse** aus.
+3. Kopieren Sie die benutzerdefinierte Feed-URL. Beispiel: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 4. Öffnen Sie Power BI Desktop.
 5. Klicken Sie auf der Menüleiste auf **Datei** > **Daten abrufen** > **OData-Feed**.
 6. Fügen Sie die im vorherigen Schritt kopierte benutzerdefinierte Feed-URL in das URL-Feld im Fenster **OData-Feed** ein.

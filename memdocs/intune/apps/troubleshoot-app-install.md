@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c98de99eb8f72840080ca720465559c462bc77f
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023366"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270890"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Problembehandlung bei der App-Installation
 
@@ -107,6 +107,18 @@ Es gelten besondere Anforderungen, die beim Sammeln von Protokolldateien zu beac
 - Die Sammlung von Win32-App-Installationsprotokollen ist für Apps aktiviert, die die App-Zuweisungsabsicht (Erforderlich, Verfügbar und Deinstallieren) erfüllen.
 - Gespeicherte Protokolle werden verschlüsselt, um alle personenbezogenen Informationen zu schützen, die in den Protokollen enthalten sind.
 - Wenn Sie Supporttickets für Win32-App-Fehler öffnen, fügen Sie die zugehörigen Fehlerprotokolle wie vorstehend beschrieben hinzu.
+
+## <a name="app-types-supported-on-arm64-devices"></a>Auf ARM64-Geräten unterstützte App-Typen
+
+Zu den auf ARM64-Geräten unterstützten App-Typen zählen die folgenden:
+- Web-Apps, für die kein verwalteter Browser geöffnet werden muss. 
+- Microsoft Store für Unternehmen-Apps oder universelle branchenspezifische Apps von Windows (`.appx`) mit einer der folgenden Kombinationen von `TargetDeviceFamily` und `ProcessorArchitectures` Elementen:
+  - `TargetDeviceFamily` umfasst Desktop-Apps, universelle Apps und Windows8x-Apps. Windows8x-Apps gelten nur als Online Microsoft Store für Unternehmen-Apps.
+  - `ProcessorArchitecture` umfasst x86-Apps, ARM-Apps, ARM64-Apps und neutrale Apps.
+- Windows Store-Anwendungen
+- Branchenspezifische mobile MSI-Apps
+- Win32-Apps mit der Anforderungsregel 32-Bit.
+- Klick-und-Los-Apps in Windows Office, wenn die 32-Bit-oder x86-Architektur ausgewählt ist.
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Problembehandlung bei Apps aus dem Microsoft Store
 

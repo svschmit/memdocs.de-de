@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise umfasst Microsoft Intune. Erfahren Sie, wi
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/28/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44f9446299bb20bd73890a67ec33c3d8e7a36e48
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988147"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223627"
 ---
 # <a name="device-management-overview"></a>Übersicht über die Geräteverwaltung
 
@@ -41,7 +41,7 @@ Die Antwort ist [Microsoft Intune](what-is-intune.md). Intune bietet die Verwalt
 
 Intune ist in Microsoft Azure und Microsoft 365 enthalten und lässt sich in Azure Active Directory (Azure AD) integrieren. Azure AD hilft bei der Kontrolle, welche Personen auf welche Daten Zugriff haben.
 
-## <a name="microsoft-intune"></a>Microsoft Intune
+## <a name="microsoft-intune"></a>Microsoft Intune
 
 Viele Unternehmen wie Microsoft verwenden Intune, um proprietäre Daten zu schützen, auf die Benutzer von ihren unternehmenseigenen und privaten mobilen Geräten aus zugreifen können. Intune enthält Konfigurationsrichtlinien für Geräte und Apps, Richtlinien für Softwareupdates und Installationsstatus (Diagramme, Tabellen und Berichte), die Ihnen helfen, den Datenzugriff zu schützen und zu überwachen.
 
@@ -57,9 +57,19 @@ Mit Intune können Sie mehrere Geräte pro Person und die darauf ausgeführten v
 
 Weitere Informationen zu Intune finden Sie unter [Was ist Microsoft Intune?](what-is-intune.md).
 
+## <a name="co-management"></a>Co-Verwaltung
+
+Viele Organisationen verwenden lokale Configuration Manager zum Verwalten von Geräten, einschließlich Desktops und Servern. Sie können Ihre lokale Configuration Manager in Microsoft Intune an die Cloud anbinden. Mit der Cloudanbindung profitieren Sie von den Vorteilen von Intune und der Cloud, wie z. B. [bedingter Zugriff](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [Ausführen von Remoteaktionen](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [mithilfe von Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot)und mehr.
+
+Der [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) ist eine Lösungsplattform, die verschiedene Dienste vereint. Er umfasst [Microsoft Intune](what-is-intune.md) für die cloudbasierte Geräteverwaltung und [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) für die Geräteverwaltung mit Cloudanbindung.
+
+Wenn Sie Configuration Manager verwenden und bereit sind, einige Aufgaben in die Cloud zu verschieben, dann ist die Co-Verwaltung die richtige Antwort.
+
+Weitere Informationen zur Cloudanbindung Ihrer Configuration Manager finden Sie unter [Was ist Co-Verwaltung?](https://docs.microsoft.com/mem/configmgr/comanage/overview).
+
 ## <a name="integration-with-secure-and-protect-services"></a>Integration mit Diensten für Sicherheit und Schutz
 
-Eine Hauptaufgabe einer jeden Lösung für die Geräteverwaltung ist es, Sicherheit und Schutz zu bieten. Intune leistet bei der Integration mit anderen Diensten hervorragende Arbeit, um diese Aufgabe zu erfüllen. Beispiele:
+Eine Hauptaufgabe einer jeden Lösung für die Geräteverwaltung ist es, Sicherheit und Schutz zu bieten. Intune leistet bei der Integration mit anderen Diensten hervorragende Arbeit, um diese Aufgabe zu erfüllen. Beispiel:
 
 - **Microsoft 365** ist eine Schlüsselkomponente zur Vereinfachung gängiger IT-Aufgaben. Im Microsoft 365 Admin Center können Sie Benutzer erstellen und Gruppen verwalten. Außerdem erhalten Sie Zugriff auf andere Dienste wie z.B. Intune und Azure AD.
 
@@ -88,7 +98,7 @@ Das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?l
 
 Im Admin Center für die Geräteverwaltung haben Sie folgende Optionen:
 
-- [Geräte registrieren](../enrollment/device-enrollment.md)
+- [Registrieren von Geräten](../enrollment/device-enrollment.md)
 - [Festlegen der Gerätekonformität](../protect/device-compliance-get-started.md)
 - [Verwalten von Geräten](../remote-actions/device-management.md)
 - [Verwalten von Apps](../apps/app-management.md)  
