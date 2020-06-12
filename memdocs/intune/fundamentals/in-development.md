@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562ef1eaa1cc98e3f5a654e90e4779e228768b6
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 90039e9bb75bcf7c266ac033408f87d37e27ef8d
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311202"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436753"
 ---
 # <a name="in-development-for-microsoft-intune"></a>In der Entwicklung befindliche Features für Microsoft Intune
 
@@ -161,7 +161,7 @@ Für iOS/iPadOS- und macOS-Geräte werden neue Fehler gemeldet, einschließlich:
 - Die Anzahl der entfernten Apple Business Manager-Geräte wird zur Seitenübersicht hinzugefügt, auf der Sie den Status Ihrer Geräte sehen.
 
 ### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>BYOD-Geräte können VPN für die Bereitstellung verwenden<!--5015344 -->
-Dieses Feature ist möglicherweise verzögert.
+Mit der neuen Autopilot-Profiloption **Überprüfung der Domänenkonnektivität überspringen** können Sie hybrid in Azure AD eingebundene Geräte ohne Zugriff auf Ihr Unternehmensnetzwerk mithilfe Ihres eigenen Drittanbieter-Win32-VPN-Clients bereitstellen. Die neue Option finden Sie unter [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Geräte**  > **Windows** > **Windows-Registrierung** > **Bereitstellungsprofile** > **Profil erstellen** > **Willkommensseite**.
 
 ### <a name="shared-ipads-for-business--6367326---"></a>Gemeinsam genutzte iPads für Unternehmen<!--6367326 -->
 Sie können mit Intune und Apple Business Manager problemlos und sicher gemeinsam genutzte iPads einrichten, sodass Geräte durch mehrere Mitarbeiter verwendet werden können. Das Apple-Feature [Gemeinsam genutztes iPad](https://developer.apple.com/education/shared-ipad/) bietet eine personalisierte Benutzeroberfläche für mehrere Benutzer, während Benutzerdaten beibehalten werden. Durch Verwendung einer verwalteten Apple-ID können Benutzer auf ihre Apps, Daten und Einstellungen zugreifen, nachdem sie sich in ihrer Organisation an einem gemeinsam genutzten iPad angemeldet haben. Gemeinsam genutzte iPads arbeiten mit Verbundidentitäten.
