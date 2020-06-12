@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877519"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347167"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informationen zu Clienteinstellungen in Configuration Manager
 
@@ -98,7 +98,7 @@ Aktiviert den [Peercache](../../plan-design/hierarchy/client-peer-cache.md) für
 Ab Version 1906 können Sie für den Configuration Manager-Client festlegen, wie lange Inhalte mindestens im Cache aufbewahrt werden sollen. Diese Clienteinstellung definiert die minimale Zeitspanne, die der Configuration Manager-Agent warten sollte, bevor er Inhalt aus dem Cache entfernt, wenn mehr Speicherplatz benötigt wird.
 
 Standardmäßig ist dieser Wert auf 1.440 Minuten (24 Stunden) festgelegt.
-Der Maximalwert für diese Einstellung ist 10,080 Minuten (1 Woche).
+Der Maximalwert für diese Einstellung ist 10.080 Minuten (eine Woche).
 
 Diese Einstellung bietet Ihnen mehr Kontrolle über den Clientcache auf verschiedenen Gerätetypen. Sie können den Wert auf Clients mit kleinen Festplatten verringern, die keine vorhandenen Inhalte aufbewahren müssen, ehe eine weitere Bereitstellung erfolgt.
 
@@ -114,7 +114,7 @@ Gibt an, wie häufig die Clientrichtlinie von folgenden Konfigurations-Manager-C
 - Macintosh-Computer  
 - Computer, auf denen Linux oder UNIX ausgeführt wird  
 
-Dieser Wert ist standardmäßig auf 60 Minuten festgelegt. Die Reduzierung dieses Wertes führt dazu, dass Clients den Standort häufiger abfragen. Bei vielen Clients kann sich dieses Verhalten negativ auf die Standortleistung auswirken. Der [Leitfaden für Größe und Skalierung](../../plan-design/configs/size-and-scale-numbers.md) basiert auf dem Standardwert. Die Erhöhung dieses Wertes führt dazu, dass Clients den Standort seltener abfragen. Das Herunterladen und Verarbeiten von Änderungen an Clientrichtlinien, einschließlich neuer Bereitstellungen, durch Clients dauert länger.<!-- SCCMDocs issue 823 -->
+Dieser Wert ist standardmäßig auf 60 Minuten festgelegt. Die Reduzierung dieses Wertes führt dazu, dass Clients den Standort häufiger abfragen. Bei vielen Clients kann dieses Verhalten einen negativen Einfluss auf die Standortleistung haben. Der [Leitfaden für Größe und Skalierung](../../plan-design/configs/size-and-scale-numbers.md) basiert auf dem Standardwert. Die Erhöhung dieses Wertes führt dazu, dass Clients den Standort seltener abfragen. Das Herunterladen und Verarbeiten von Änderungen an Clientrichtlinien, einschließlich neuer Bereitstellungen, durch Clients dauert länger.<!-- SCCMDocs issue 823 -->
 
 ### <a name="enable-user-policy-on-clients"></a>Benutzerrichtlinie auf Clients aktivieren
 
@@ -276,7 +276,7 @@ Konfigurieren Sie, wie Benutzer Software, Softwareupdates und Tasksequenzen inst
 
 Wenn die Computer eine BitLocker-PIN-Eingabe erfordern, kann mit dieser Option die notwendige Eingabe einer PIN umgangen werden, wenn der Computer nach der Installation von Software neu gestartet wird.  
 
-- **Immer:** BitLocker wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, und der Initiierung eines Computerneustarts vorübergehend angehalten. Diese Einstellung gilt nur, wenn der Neustart eines Computers von Configuration Manager initiiert wird. Wenn der Benutzer den Computer neu startet, ist es trotz dieser Einstellung weiterhin erforderlich, die BitLocker-PIN einzugeben. Die BitLocker-Anforderung zur Eingabe einer PIN wird nach dem Start von Windows wieder eingesetzt.
+- **Immer:** Configuration Manager hält BitLocker nach der Installation von Software, für die ein Neustart erforderlich ist, vorübergehend an und startet den Computer neu. Diese Einstellung wird nur angewendet, wenn Configuration Manager den Computer neu startet. Wenn der Benutzer den Computer neu startet, ist es trotz dieser Einstellung weiterhin erforderlich, die BitLocker-PIN einzugeben. Die BitLocker-Anforderung zur Eingabe einer PIN wird nach dem Start von Windows wieder eingesetzt.
 
 - **Nie:** BitLocker wird von Configuration Manager nach der Installation von Software, für die ein Neustart erforderlich ist, nicht angehalten. In diesem Fall kann die Softwareinstallation erst abgeschlossen werden, wenn der Benutzer die PIN eingibt, um den Standardstartvorgang abzuschließen und Windows zu laden.
 
@@ -329,29 +329,11 @@ Wenn Sie den Benutzern mehr Zeit zum Installieren erforderlicher Anwendungs- ode
 
 Legen Sie eine Karenzzeit von 0 bis 120 Stunden fest. Verwenden Sie diese Einstellung mit der Bereitstellungseigenschaft **Erzwingung für diese Bereitstellung basierend auf den Benutzereinstellungen innerhalb der Karenzzeit verzögern, die in den Clienteinstellungen definiert ist**. Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
-
 ## <a name="computer-restart"></a>Computerneustart
 
-Die folgende Einstellung muss eine kürzere Dauer als das kürzeste Wartungsfenster aufweisen, das auf den Computer angewendet wird:
+Weitere Informationen zu diesen Einstellungen finden Sie unter [Benachrichtigungen zum Geräteneustart](device-restart-notifications.md).<!-- 7182335 -->
 
-- **Temporäre Benachrichtigung für Benutzer anzeigen, in der auf das Intervall (in Minuten) bis zum Abmelden des Benutzers oder Neustart des Computers hingewiesen wird**
-- **Nicht vom Benutzer schließbares Dialogfeld anzeigen, in der das Countdownintervall (in Minuten) bis zum Abmelden des Benutzers oder Neustart des Computers angezeigt wird**
-
-
-Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartungsfenstern](../manage/collections/use-maintenance-windows.md).
-
-- **Dauer für erneute Erinnerung für Countdownbenachrichtigungen zum Computerneustart (Minuten) angeben** (ab Version 1906)<!--3976435-->
-  - Der Standardwert beträgt 240 Minuten.
-  - Die Dauer bis zur wiederholten Erinnerung sollte kürzer sein als der Wert der temporären Benachrichtigung minus dem Wert der Benachrichtigung, die der Benutzer nicht schließen kann.
-  - Weitere Informationen finden Sie unter [Benachrichtigungen zum Geräteneustart](device-restart-notifications.md).
-
-**Wenn für eine Bereitstellung ein Neustart erforderlich ist, dem Benutzer ein Dialogfeld anstelle einer Popupbenachrichtigung anzeigen**<!--3555947-->: Ab Version 1902 wird die Benutzeroberfläche durch die Konfiguration dieser Einstellung auf **Ja** deutlicher gestaltet. Diese Einstellung gilt für alle Bereitstellungen von Anwendungen, Tasksequenzen und Softwareupdates. Weitere Informationen finden Sie unter [Planen für Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
-
-> [!IMPORTANT]
-> In Configuration Manager 1902 ersetzt das Dialogfeld unter bestimmten Umständen keine Popupbenachrichtigungen. Installieren Sie zur Behebung dieses Problems das [Updaterollup für Configuration Manager Version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
-
-
-## <a name="delivery-optimization"></a>Übermittlungsoptimierung 
+## <a name="delivery-optimization"></a>Übermittlungsoptimierung
 
 <!-- 1324696 -->
 Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung über Ihr gesamtes Unternehmensnetzwerk und Remotebüros hinweg zu definieren und zu regulieren. [Windows-Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) ist eine cloudbasierte Peer-zu-Peer-Technologie zum gemeinsamen Nutzen von Inhalten auf Windows 10-Geräten. Konfigurieren Sie die Übermittlungsoptimierung so, dass bei der Freigabe von Inhalten für Peers Ihre Begrenzungsgruppen verwendet werden.
@@ -363,7 +345,7 @@ Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Verwenden von Configuration Manager-Begrenzungsgruppen zum Festlegen der Gruppen-ID für die Übermittlungsoptimierung
 
-Klicken Sie auf **Ja**, um die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client festzulegen. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich der gewünschte Inhalt befindet. Wenn Sie diese Einstellung aktivieren, wird auf Zielclients auch der Downloadmodus für die Übermittlungsoptimierung auf die Option „Gruppe (2)“ festgelegt.
+Klicken Sie auf **Ja**, um die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client festzulegen. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich die Inhalte befinden. Wenn Sie diese Einstellung aktivieren, wird auf Zielclients auch der Downloadmodus für die Übermittlungsoptimierung auf die Option „Gruppe (2)“ festgelegt.
 
 > [!Note]
 > Microsoft empfiehlt, dass der Client die Möglichkeit haben sollte, diese Einstellung über eine lokale Richtlinie anstelle einer Gruppenrichtlinie zu konfigurieren. So kann die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client festgelegt werden. Weitere Informationen finden Sie unter [Übermittlungsoptimierung](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -411,7 +393,7 @@ Wählen Sie **Ja** aus, um einen Computerneustart nach der Installation des Endp
 
 ### <a name="allowed-period-of-time-users-can-postpone-a-required-restart-to-complete-the-endpoint-protection-installation-hours"></a>Zulässiges Zeitintervall (Stunden), um das Benutzer einen für den Abschluss der Installation von Endpoint Protection erforderlichen Neustart verschieben können
 
-Wenn ein Neustart nach der Installation eines Endpoint Protection-Clients erforderlich ist, gibt diese Einstellung an, um wie viele Stunden der Benutzer den erforderlichen Neustart verschieben kann. Für diese Einstellung ist es erforderlich, dass die Einstellung **Erforderliche Neustarts nach der Installation des Endpoint Protection-Clients unterdrücken** auf **Nein** festgelegt ist.  
+Wenn ein Neustart nach der Installation eines Endpoint Protection-Clients erforderlich ist, gibt diese Einstellung an, um wie viele Stunden der Benutzer den erforderlichen Neustart verschieben kann. Für diese Einstellung muss die folgende Einstellung deaktiviert werden: **Erforderliche Neustarts nach der Installation des Endpoint Protection-Clients unterdrücken**.
 
 ### <a name="disable-alternate-sources-such-as-microsoft-windows-update-microsoft-windows-server-update-services-or-unc-shares-for-the-initial-definition-update-on-client-computers"></a>Alternative Quellen (wie z.B. Microsoft Windows Update, Microsoft Windows Server Update Services oder UNC-Freigaben) für das erste Definitionsupdate auf Clientcomputern deaktivieren
 
@@ -423,7 +405,7 @@ Wählen Sie **Ja** aus, wenn durch Configuration Manager nur das erste Definitio
 
 ### <a name="polling-interval-for-mobile-device-legacy-clients"></a>Abrufintervall für Legacyclients mobiler Geräte
 
-Wählen Sie **Intervall festlegen** aus, um die Zeitdauer in Minuten oder Stunden festzulegen, während der ältere mobile Geräte Richtlinien abrufen. Zu diesen Geräten zählen Plattformen wie Windows CE, Mac OS X und Unix oder Linux.
+Wählen Sie **Intervall festlegen** aus, um die Zeitdauer in Minuten oder Stunden festzulegen, während der ältere mobile Geräte Richtlinien abrufen. Zu diesen Geräten zählen Plattformen wie Windows CE, macOS und Unix oder Linux.
 
 ### <a name="polling-interval-for-modern-devices-minutes"></a>Abrufintervall für moderne Geräte (Minuten)
 
@@ -529,7 +511,7 @@ Wählen Sie **Ja** aus, damit Softwarecenter-Benutzer ihre Computer von den konf
 
 ### <a name="allow-network-wake-up"></a>Netzwerkreaktivierung zulassen
 
-Wurde in 1810 hinzugefügt. Wenn **Aktivieren** festgelegt wurde, werden die Energieeinstellungen auf dem Netzwerkadapter so konfiguriert, dass der Adapter das Gerät reaktivieren kann. Wenn **Deaktivieren** festgelegt wurde, werden die Energieeinstellungen auf dem Netzwerkadapter so konfiguriert, dass der Adapter das Gerät nicht reaktivieren kann.
+Wenn Sie diese Einstellung aktivieren, konfiguriert der Client die Energieeinstellungen auf dem Computer so, dass der Netzwerkadapter das Gerät reaktivieren kann. Wenn Sie die Einstellung deaktivieren, kann der Computer nicht von seinem Netzwerkadapter reaktiviert werden.
 
 ### <a name="enable-wake-up-proxy"></a>Aktivierungsproxy zulassen
 
@@ -549,7 +531,7 @@ Konfigurieren Sie dann bei Bedarf folgende zusätzliche Einstellungen:
     > [!IMPORTANT]  
     > Dieser Wert muss mit dem Wert in den **Eigenschaften**des Standorts übereinstimmen. Wenn Sie den Wert an einem Ort ändern, wird er am anderen Ort nicht automatisch aktualisiert.  
 
-- **Windows Defender Firewall-Ausnahme für Aktivierungsproxy:** Der Konfigurations-Manager-Client konfiguriert die Portnummer des Aktivierungsproxys automatisch auf Geräten, die Windows Defender Firewall ausführen. Wählen Sie **Konfigurieren** aus, um die gewünschten Firewallprofile anzugeben.  
+- **Windows Defender Firewall-Ausnahme für Aktivierungsproxy:** Der Konfigurations-Manager-Client konfiguriert die Portnummer des Aktivierungsproxys automatisch auf Geräten, die Windows Defender Firewall ausführen. Wählen Sie **Konfigurieren** aus, um die Firewallprofile anzugeben.  
 
     Falls auf Clients eine andere Firewall ausgeführt wird, konfigurieren Sie diese manuell so, dass die **Portnummer des Aktivierungsproxy (UDP)** zugelassen wird.  
 
@@ -586,7 +568,7 @@ Geben Sie Benutzern die Möglichkeit, Datenübertragungen zu akzeptieren oder zu
 
 ### <a name="grant-remote-control-permission-to-local-administrators-group"></a>Der lokalen Administratorgruppe Berechtigung zur Remotesteuerung gewähren
 
-Wählen Sie aus, ob lokale Administratoren auf dem Server, von dem die Remotesteuerungsverbindung initiiert wurde, Remotesteuerungssitzungen auf Clientcomputern herstellen können.  
+Wählen Sie aus, ob lokale Administratoren auf dem Server, von dem die Remotesteuerungsverbindung gestartet wurde, Remotesteuerungssitzungen mit Clientcomputern erstellen können.  
 
 ### <a name="access-level-allowed"></a>Zulässige Zugriffsstufe
 
@@ -620,7 +602,7 @@ Wählen Sie diese Option aus, damit über einen Sound angegeben wird, dass eine 
 
 Legen Sie diese Einstellung auf **Ja** fest, um die Verwaltung nicht angeforderter Remoteunterstützungssitzungen durch Configuration Manager zuzulassen.  
 
-Bei nicht angeforderten Remoteunterstützungssitzungen hat der Benutzer am Clientcomputer keine Unterstützung zum Initiieren einer Sitzung angefordert.  
+Bei nicht angeforderten Remoteunterstützungssitzungen hat der Benutzer am Clientcomputer keine Unterstützung zum Starten der Sitzung angefordert.  
 
 ### <a name="manage-solicited-remote-assistance-settings"></a>Einstellungen für angeforderte Remoteunterstützung verwalten
 
@@ -630,7 +612,7 @@ Bei angeforderten Remoteunterstützungssitzungen hat der Benutzer am Clientcompu
 
 ### <a name="level-of-access-for-remote-assistance"></a>Zugriffsstufe für Remoteunterstützung
 
-Wählen Sie die Zugriffsstufe für Remoteunterstützungssitzungen aus, die über die Configuration Manager-Konsole initiiert werden. Wählen Sie eine der folgenden Optionen aus:
+Wählen Sie die Zugriffsstufe für Remoteunterstützungssitzungen aus, die über die Configuration Manager-Konsole gestartet werden. Wählen Sie eine der folgenden Optionen aus:
 
 - **Keine** (Standard)
 - **Remoteansicht**
@@ -671,7 +653,7 @@ Wenn Sie diese Option aktivieren, werden Anwendungen, die zwar für den Benutzer
 
 ### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a> Installierte Anwendungen im Softwarecenter ausblenden
 
-Wenn Sie diese Option aktivieren, werden bereits installierte Anwendungen nicht mehr auf der Registerkarte „Anwendungen“ angezeigt. Diese Option ist als Standard festgelegt, wenn Sie Configuration Manager 1802 installieren oder ein Upgrade auf diese Version durchführen. Installierte Anwendungen können weiterhin auf der Registerkarte „Installationsstatus“ überprüft werden. <!--1357592-->
+Wenn Sie diese Option aktivieren, werden bereits installierte Anwendungen nicht mehr auf der Registerkarte „Anwendungen“ angezeigt. Diese Option ist als Standard festgelegt, wenn Sie Configuration Manager installieren oder ein Upgrade durchführen. Installierte Anwendungen können weiterhin auf der Registerkarte „Installationsstatus“ überprüft werden. <!--1357592-->
 
 ### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a> Link zum Anwendungskatalog im Softwarecenter ausblenden
 
@@ -694,9 +676,9 @@ Verfügbare Registerkarten:
 - **Installationsstatus**
 - **Gerätekonformität**
 - **Optionen**
-- Fügen Sie bis zu fünf benutzerdefinierte Registerkarten hinzu, indem Sie auf die Schaltfläche **Hinzufügen** klicken.
+- Fügen Sie bis zu fünf benutzerdefinierte Registerkarten hinzu, indem Sie auf die Schaltfläche **Registerkarte hinzufügen** klicken.
   - Geben Sie **Registerkartenname** und **Inhalts-URL** für die benutzerdefinierte Registerkarte an.
-  - Klicken Sie auf **Löschen**, um eine benutzerdefinierte Registerkarte zu entfernen.  
+  - Wählen Sie **Registerkarte löschen** aus, um eine benutzerdefinierte Registerkarte zu entfernen.  
 
   >[!Important]  
   > - Einige Websitefunktionen können bei Verwendung als benutzerdefinierte Registerkarte im Softwarecenter möglicherweise nicht verwendet werden. Daher sollten Sie die Ergebnisse vor der Bereitstellung für Clients testen. <!--519659-->
@@ -731,9 +713,9 @@ Wenn Ihre Organisation beispielsweise keine Konformitätsrichtlinien verwendet u
 
   - Im Softwarecenter werden immer Ihre Standardeinstellungen verwendet. Benutzer können diesen Filter ändern, im Softwarecenter werden deren Einstellungen jedoch nicht beibehalten.  
 
-- Legen Sie für die **Standardanwendungsansicht** entweder die **Kachelansicht** oder die **Listenansicht** fest. 
+- Legen Sie für die **Standardanwendungsansicht** entweder die **Kachelansicht** oder die **Listenansicht** fest.
 
-  - Wenn ein Benutzer diese Konfiguration ändert, werden die Benutzereinstellungen zukünftig im Softwarecenter beibehalten. 
+  - Wenn ein Benutzer diese Konfiguration ändert, werden die Benutzereinstellungen zukünftig im Softwarecenter beibehalten.
 
 
 ## <a name="software-deployment"></a>Softwarebereitstellung  
@@ -745,7 +727,7 @@ Konfigurieren Sie einen Zeitplan für die erneute Auswertung der Anforderungsreg
 > [!IMPORTANT]  
 > Diese Einstellung wirkt sich mehr auf den lokalen Client als auf das Netzwerk oder den Standortserver aus. Ein aggressiverer Zeitplan für die erneute Auswertung wirkt sich negativ auf die Leistung Ihrer Netzwerk- und Clientcomputer aus. Es wird nicht empfohlen, einen niedrigeren Wert als den Standardwert einzustellen. Wenn Sie diesen Wert ändern, sollten Sie die Leistung genau überwachen.  
 
-Initiieren Sie diese Aktion auf einem Client, indem Sie in der **Configuration Manager**-Systemsteuerung auf der Registerkarte **Aktionen** die Option **Evaluationszyklus für die Anwendungsbereitstellung** auswählen.  
+Starten Sie diese Aktion auf einem Client, indem Sie in der **Configuration Manager**-Systemsteuerung auf der Registerkarte **Aktionen** die Option **Evaluationszyklus für die Anwendungsbereitstellung** auswählen.  
 
 
 
@@ -854,9 +836,9 @@ Verwenden Sie diese Einstellung, um Softwareupdates auf Configuration Manager-Cl
 
 ### <a name="software-update-scan-schedule"></a>Zeitplan für Softwareupdateprüfung
 
-Wählen Sie **Zeitplan** aus, um anzugeben, wie oft der Client eine Konformitätsbewertung initiiert. Bei dieser Überprüfung wird der Zustand von Softwareupdates auf dem Client (z.B. „Erforderlich“ oder „Installiert“) bestimmt. Weitere Informationen zur Konformitätsbewertung finden Sie unter [Software updates compliance assessment (Bewertung der Konformität von Softwareupdates)](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
+Wählen Sie **Zeitplan** aus, um anzugeben, wie oft der Client eine Konformitätsbewertung startet. Bei dieser Überprüfung wird der Zustand von Softwareupdates auf dem Client (z.B. „Erforderlich“ oder „Installiert“) bestimmt. Weitere Informationen zur Konformitätsbewertung finden Sie unter [Software updates compliance assessment (Bewertung der Konformität von Softwareupdates)](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
 
-Diese Überprüfung verwendet standardmäßig einen einfachen Zeitplan und wird alle sieben Tage initiiert. Sie können einen benutzerdefinierten Zeitplan erstellen. Dabei können Sie einen exakten Starttag und eine exakte Startzeit angeben, die koordinierte Weltzeit (Universal Coordinated Time, UTC) oder die lokale Zeit verwenden und das Wiederholungsintervall für einen bestimmten Wochentag konfigurieren.  
+Diese Überprüfung verwendet standardmäßig einen einfachen Zeitplan, bei dem die Bewertung alle sieben Tage gestartet wird. Sie können einen benutzerdefinierten Zeitplan erstellen. Dabei können Sie einen exakten Starttag und eine exakte Startzeit angeben, die koordinierte Weltzeit (Universal Coordinated Time, UTC) oder die lokale Zeit verwenden und das Wiederholungsintervall für einen bestimmten Wochentag konfigurieren.  
 
 > [!NOTE]  
 > Wenn Sie ein Intervall von weniger als einem Tag angeben, wird in Configuration Manager automatisch der Standardwert von einem Tag festgelegt.  
@@ -868,14 +850,14 @@ Diese Überprüfung verwendet standardmäßig einen einfachen Zeitplan und wird 
 
 Wählen Sie **Zeitplan** aus, um zu konfigurieren, wie häufig der Client-Agent für Softwareupdates den Installationsstatus der Softwareupdates auf Configuration Manager-Clientcomputern neu auswertet. Wenn bereits installierte Softwareupdates nicht mehr auf Clientcomputern vorhanden, aber weiterhin erforderlich sind, werden diese durch den Client erneut installiert.
 
-Passen Sie diesen Zeitplan gemäß Ihrer Unternehmensrichtlinie für die Konformität von Softwareupdates an, und legen Sie fest, ob Benutzer Softwareupdates deinstallieren können. Jeder Zyklus für eine Neuauswertung der Bereitstellung führt zu Aktivitäten des Netzwerks und des Prozessors des Clientcomputers. Diese Einstellung verwendet standardmäßig einen einfachen Zeitplan und initiiert die Überprüfung der Neuauswertung für die Bereitstellung alle sieben Tage.  
+Passen Sie diesen Zeitplan gemäß Ihrer Unternehmensrichtlinie für die Konformität von Softwareupdates an, und legen Sie fest, ob Benutzer Softwareupdates deinstallieren können. Jeder Zyklus für eine Neuauswertung der Bereitstellung führt zu Aktivitäten des Netzwerks und des Prozessors des Clientcomputers. Diese Einstellung verwendet standardmäßig einen einfachen Zeitplan, bei dem die Überprüfung zur Neuauswertung für die Bereitstellung alle sieben Tage gestartet wird.  
 
 > [!NOTE]  
 > Wenn Sie ein Intervall von weniger als einem Tag angeben, wird in Configuration Manager automatisch der Standardwert von einem Tag festgelegt.  
 
 ### <a name="when-any-software-update-deployment-deadline-is-reached-install-all-other-software-update-deployments-with-deadline-coming-within-a-specified-period-of-time"></a>Wenn der Stichtag für eine beliebige Softwareupdatebereitstellung erreicht wird, auch alle anderen Softwarebereitstellungen mit Stichtag innerhalb eines angegebenen Zeitraums installieren
 
-Legen Sie diese Option auf **Ja** fest, um alle Softwareupdates von erforderlichen Bereitstellungen zu installieren, deren Stichtage innerhalb eines angegebenen Zeitraums liegen. Wenn der Stichtag für eine erforderliche Bereitstellung für ein Softwareupdate erreicht wird, initiiert der Client die Installation der Softwareupdates in der Bereitstellung. Diese Einstellung bestimmt, ob Softwareupdates von anderen erforderlichen Bereitstellungen installiert werden sollen, deren Stichtag innerhalb der angegebenen Zeit liegt.  
+Legen Sie diese Option auf **Ja** fest, um alle Softwareupdates von erforderlichen Bereitstellungen zu installieren, deren Stichtage innerhalb eines angegebenen Zeitraums liegen. Wenn der Stichtag für eine erforderliche Bereitstellung eines Softwareupdates erreicht ist, startet der Client die Installation der Softwareupdates in der Bereitstellung. Diese Einstellung bestimmt, ob Softwareupdates von anderen erforderlichen Bereitstellungen installiert werden sollen, deren Stichtag innerhalb der angegebenen Zeit liegt.  
 
 Verwenden Sie diese Einstellung, um die Installation von erforderlichen Softwareupdates zu beschleunigen. Diese Einstellung kann potenziell auch die Clientsicherheit erhöhen, die Anzahl von Benachrichtigungen an den Benutzer verringern und die Anzahl von Clientneustarts reduzieren. Standardmäßig ist die Priorität auf den Wert **Nein**eingestellt.  
 
@@ -911,7 +893,7 @@ Wenn diese Option auf **Ja** festgelegt ist, ermöglicht sie die Konfiguration v
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> Installation von Softwareupdates im Wartungsfenster "Alle Bereitstellungen" aktivieren, wenn das Wartungsfenster "Softwareupdate" verfügbar ist
 
-Ab Version 1810 gilt: Wenn Sie diese Option auf **Ja** festlegen und für den Client mindestens ein Wartungsfenster für „Softwareupdate“ definiert ist, werden Softwareupdates während eines Wartungsfensters „Alle Bereitstellungen“ installiert.
+Wenn Sie diese Option auf **Ja** festlegen und für den Client mindestens ein Wartungsfenster für „Softwareupdate“ definiert ist, werden Softwareupdates während eines Wartungsfensters „Alle Bereitstellungen“ installiert.
 
 Standardmäßig ist die Priorität auf den Wert **Nein**eingestellt. Dieser Wert führt zum gleichen Verhalten wie zuvor: Wenn beide Typen vorhanden sind, wird das Fenster ignoriert. <!--2839307-->
 
@@ -943,7 +925,7 @@ Diese Clienteinstellung bietet die folgenden Optionen:
 
     - Konfiguriert die Datei „setupconfig.ini“ auf dem Gerät mit der [Windows-Befehlszeilenoption für Setup](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options), `/Priority Normal`.
 
-- **Niedrig:** Sie können weiterhin mit dem Gerät arbeiten, während der Download und die Updates im Hintergrund ausgeführt werden. Die gesamte Installationszeit ist länger, aber dafür ist die Unterbrechung für den Benutzer kürzer. Möglicherweise müssen Sie die maximale Update-Laufzeit verlängern, um bei Verwendung dieser Option ein Timeout zu vermeiden.  
+- **Niedrig:** Sie können weiterhin mit dem Gerät arbeiten, während der Download und die Updates im Hintergrund ausgeführt werden. Die gesamte Installationszeit ist länger, aber dafür ist die Unterbrechung für den Benutzer kürzer. Möglicherweise müssen Sie die maximale Laufzeit von Updates verlängern, um bei Verwendung dieser Option ein Timeout zu vermeiden.  
 
     - Entfernt die [Windows-Befehlszeilenoption für Setup](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options), `/Priority`, aus der Datei „setupconfig.ini“.
 

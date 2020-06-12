@@ -10,12 +10,12 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4922502b49ab2da9ce393fab809e4dc583fd962
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84ef4e37ddf756f04101c9cdec0ec7a4ed91688d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694838"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270836"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Sicherheit und Datenschutz für Konfigurations-Manager-Clients
 
@@ -48,7 +48,7 @@ Falls Sie die PKI-Authentifizierung nicht verwenden können, geben Sie durch die
 - Automatisch für Computer in vertrauenswürdigen Domänen
 - Automatisch für alle Computer  
 
-Die sicherste Genehmigungsmethode ist die automatische Genehmigung von Clients, die Mitglieder einer vertrauenswürdigen Domäne sind. Überprüfen und genehmigen Sie anschließend manuell alle anderen Computer. Die automatische Genehmigung aller Clients ist nur dann empfehlenswert, wenn Sie über andere Zugriffssteuerungsmethoden verfügen, mit denen Sie verhindern können, dass nicht vertrauenswürdige Computer auf das Netzwerk zugreifen.  
+Die sicherste Genehmigungsmethode ist die automatische Genehmigung von Clients, die Mitglieder einer vertrauenswürdigen Domäne sind. Diese Option umfasst Clients von verbundenen Azure AD-Mandanten (Azure Active Directory), die in eine Clouddomäne eingebunden sind.<!-- MEMDocs#318 --> Überprüfen und genehmigen Sie anschließend manuell alle anderen Computer. Die automatische Genehmigung aller Clients ist nur dann empfehlenswert, wenn Sie über andere Zugriffssteuerungsmethoden verfügen, mit denen Sie verhindern können, dass nicht vertrauenswürdige Computer auf das Netzwerk zugreifen.  
 
 Weitere Informationen zum manuellen Genehmigen von Computern finden Sie unter [Verwalten von Clients mithilfe des Knotens „Geräte“](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode).  
 

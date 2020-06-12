@@ -2,7 +2,7 @@
 title: Installieren von Clients mit Azure AD
 titleSuffix: Configuration Manager
 description: Installieren und Zuweisen von Configuration Manager-Clients auf Windows 10-Geräten mithilfe von Azure Active Directory zur Authentifizierung
-ms.date: 03/20/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a55440e7ba61ec62d9f0c91c0a23b98bab5884c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b447e5c8d34a4b8758fa0fd6109113b0675a635
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694108"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347014"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Installieren und Zuweisen von Configuration Manager-Windows 10-Clients über das Internet mit Authentifizierung über Azure AD
 
@@ -38,9 +38,9 @@ Die Einrichtung von Azure AD kann für einige Kunden einfacher sein als die Einr
 
 - Benutzeranforderungen:  
 
-  - Der angemeldete Benutzer muss eine Azure AD-Identität sein.
+  - Beim angemeldeten Benutzer muss es sich um eine Azure AD-Identität handeln.
 
-  - Wenn der Benutzer eine Verbundsidentität oder synchronisierte Identität ist, müssen Sie in Configuration Manager die [Active Directory-Benutzerermittlung](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) und die [Azure AD-Benutzerermittlung](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc) verwenden. Weitere Informationen zu Hybrididentitäten finden Sie unter [Definieren einer Strategie zur Hybrididentitätsübernahme](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->  
+  - Wenn der Benutzer eine Verbundidentität oder eine synchronisierte Identität ist, müssen Sie in Configuration Manager sowohl die [Active Directory-Benutzerermittlung](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) als auch die [Azure AD-Benutzerermittlung](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc) konfigurieren. Weitere Informationen zu Hybrididentitäten finden Sie unter [Definieren einer Strategie zur Hybrididentitätsübernahme](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 - Zusätzlich zu den [erforderlichen Komponenten](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq) für die Standortsystemrolle des Verwaltungspunkts müssen Sie auch **ASP.NET 4.5** auf diesem Server installieren. Bei der Aktivierung von ASP.NET 4.5 werden weitere Optionen automatisch ausgewählt, die Sie ebenfalls verwenden müssen.  
 
@@ -61,26 +61,29 @@ Nachdem Sie diese Aktionen ausgeführt haben, wird Ihr Configuration Manager-Sta
 
 ## <a name="configure-client-settings"></a>Konfigurieren von Clienteinstellungen
 
-Die folgenden Clienteinstellungen unterstützen das Einbinden von Windows 10-Geräten in Azure AD. Außerdem können damit internetbasierte Clients das CMG und den Cloudverteilungspunkt verwenden.
+Mit diesen Clienteinstellungen können Sie Windows 10-Geräte als hybrid eingebundene Geräte konfigurieren. Außerdem können damit internetbasierte Clients das CMG und den Cloudverteilungspunkt verwenden.
 
-1. Konfigurieren Sie die folgenden Clienteinstellungen im Abschnitt **Clouddienste** anhand der Informationen in [Konfigurieren von Clienteinstellungen](configure-client-settings.md).  
+1. Konfigurieren Sie die folgenden Clienteinstellungen in der Gruppe **Clouddienste**. Weitere Informationen finden Sie unter [Konfigurieren von Clienteinstellungen](configure-client-settings.md).
 
     - **Zugriff auf Cloudverteilungspunkt zulassen**: Aktivieren Sie diese Einstellung, um internetbasierte Geräte beim Abrufen des zur Installation des Konfigurations-Manager-Clients erforderlichen Inhalts zu unterstützen. Wenn am Cloudverteilungspunkt der Inhalt nicht verfügbar ist, können Geräte diesen über das CMG abrufen. Der Bootstrap für die Clientinstallation sendet vier Stunden lang wiederholt Anforderungen an den Cloudverteilungspunkt, bevor das CMG als Ausweichlösung verwendet wird.<!--495533-->  
 
     - **Automatische Registrierung neuer, in die Domäne eingebundener Windows 10-Geräte bei Azure Active Directory**: Legen Sie diese Option auf **Ja** oder **Nein** fest. Der Standardwert für diese Einstellung ist **Ja**. Dieses Verhalten ist auch die Standardeinstellung in Version 1709 von Windows 10.
 
+        > [!TIP]
+        > Hybrid eingebundene Geräte werden in eine lokale Active Directory-Domäne eingebunden und in Azure AD registriert. Weitere Informationen finden Sie unter [In Azure AD eingebundene Hybridgeräte](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
+
     - **Ermöglichen Sie Clients die Verwendung eines Cloudverwaltungsgateways**: Legen Sie **Ja** (Standardeinstellung) oder **Nein** fest.  
 
 2. Stellen Sie die Clienteinstellungen in der gewünschten Sammlung von Geräten bereit. Stellen Sie diese Einstellungen nicht für Benutzersammlungen bereit.
 
-Um zu bestätigen, dass das Gerät in Azure AD eingebunden wurde, müssen Sie `dsregcmd.exe /status` mit der Eingabeaufforderung ausführen. Im Feld **AzureAdjoined** wird in den Ergebnissen **JA** angezeigt, wenn das Gerät in Azure AD eingebunden ist.
+Um zu bestätigen, dass das Gerät hybrid eingebunden wurde, führen Sie an der Eingabeaufforderung `dsregcmd.exe /status` aus. Wenn das Gerät in Azure AD oder hybrid eingebunden ist, wird im Feld **AzureAdjoined** in den Ergebnissen **JA** angezeigt. Weitere Informationen finden Sie unter [dsregcmd-Befehl – Gerätestatus](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
 ## <a name="install-and-register-the-client-using-azure-ad-identity"></a>Installieren und Registrieren des Clients mithilfe einer Azure AD-Identität
 
 Wenn Sie den Client mithilfe einer Azure AD-Identität manuell installieren möchten, ist es zuerst erforderlich, dass Sie sich mit der allgemeinen Vorgehensweise unter [Manuelles Installieren von Clients](deploy-clients-to-windows-computers.md#BKMK_Manual) vertraut machen.
 
- > [!Note]  
- > Das Gerät benötigt zwar Zugriff auf das Internet, um Azure AD kontaktieren zu können, muss aber nicht internetbasiert sein.
+> [!Note]  
+> Das Gerät benötigt zwar Zugriff auf das Internet, um Azure AD kontaktieren zu können, muss aber nicht internetbasiert sein.
 
 Im folgenden Beispiel wird die allgemeine Syntax für den Befehl demonstriert, der mit der Befehlszeile ausgeführt wird: `ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
 
@@ -94,7 +97,7 @@ Der Parameter **/mp** und die Eigenschaft **CCMHOSTNAME** legen je nach Szenario
 
 Die Eigenschaft **SMSMP** legt entweder den lokalen oder internetbasierten Verwaltungspunkt fest.
 
-Im folgenden Beispiel wird ein Cloudverwaltungsgateway verwendet. Darin werden die Beispielwerte ersetzt: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+Im folgenden Beispiel wird ein Cloudverwaltungsgateway verwendet. Es ersetzt Beispielwerte: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
 Auf der Website werden zusätzliche Azure AD-Informationen für Cloud Management Gateway (CMG) veröffentlicht. Ein in Azure AD eingebundener Client ruft diese Informationen beim ccmsetup-Prozess von Cloud Management Gateway ab und verwendet dabei den gleichen Mandanten, mit dem er verknüpft ist. Dieses Verhalten vereinfacht die Installation des Clients in einer Umgebung mit mehreren Azure AD-Mandanten. Die einzigen beiden erforderlichen ccmsetup-Eigenschaften sind **CCMHOSTNAME** und **SMSSiteCode**.<!--3607731-->
 

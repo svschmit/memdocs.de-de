@@ -2,7 +2,7 @@
 title: Standortwiederherstellung
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Ihre Standorte in Configuration Manager wiederherstellen können.
-ms.date: 08/23/2019
+ms.date: 06/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903955"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301434"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Wiederherstellen eines Configuration Manager-Standorts
 
@@ -347,6 +347,10 @@ Wiederholen Sie diesen Vorgang für jeden anderen PXE-fähigen lokalen Verteilun
     - **PowerShell-Skript ausführen**: Wenn Sie die Option **Diesen Schritt unter folgendem Konto ausführen** verwenden, wählen Sie **Festlegen** aus. Geben Sie das Kennwort ein, bestätigen Sie es, und wählen Sie dann **Überprüfen** aus.
 
 Wiederholen Sie diesen Vorgang für alle Tasksequenzen.
+
+### <a name="recreate-bootable-media-and-prestaged-media-in-non-pki-environments"></a>Neuerstellen von startbaren Medien und vorab bereitgestellten Medien in Nicht-PKI-Umgebungen
+
+In Nicht-PKI-Umgebungen basieren selbstsignierte Zertifikate in startbaren und vorab bereitgestellten Medien auf den Computerschlüsseln des Servers, auf dem die Medien erstellt wurden. Aus diesem Grund müssen alle auf diesem Server erstellten startbaren und vorab bereitgestellten Medien neu erstellt werden, wenn im Rahmen einer Wiederherstellung die Hardware des Servers geändert oder das Betriebssystem neu installiert wird. Weitere Informationen zum Erstellen von startbaren und vorab bereitgestellten Medien finden Sie unter [Erstellen von startbaren Medien](../../../osd/deploy-use/create-bootable-media.md) und [Erstellen von vorab bereitgestellten Medien](../../../osd/deploy-use/create-prestaged-media.md).
 
 ### <a name="reenter-sideloading-keys"></a>Erneutes Eingeben von Sideload-Schlüsseln
 

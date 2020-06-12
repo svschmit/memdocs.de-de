@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764236"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428683"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> Endpunktanalyse (Vorschauversion)
 
@@ -347,8 +347,11 @@ Im Folgenden finden Sie nun eine Checkliste zur Problembehandlung:
 1. Geräte, die erfolgreich für die Datensammlung konfiguriert wurden, müssen nach Aktivieren der Datensammlung neu gestartet werden. Anschließend kann es bis zu 24 Stunden dauern, bis das Gerät auf der Registerkarte zur Geräteleistung angezeigt wird.
 1. Wenn Ihr Gerät erfolgreich für die Datensammlung konfiguriert und anschließend neu gestartet wurde und nach 24 Stunden immer noch nicht angezeigt wird, kann das Gerät unsere Sammlungsendpunkte möglicherweise nicht erreichen. Dieses Problem kann auftreten, wenn Ihr Unternehmen einen Proxyserver verwendet und die Endpunkte im Proxy nicht aktiviert wurden. Weitere Informationen finden Sie unter [Problembehandlung für Endpunkte](#bkmk_uea_endpoints).
 
+### <a name="data-collection-for-intune-managed-devices"></a>Datensammlung für Geräte, die über Intune verwaltet werden
 
-### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> Endpunkte
+Endpoint Analytics nutzt die Windows 10- und Windows Server-Komponente „Benutzererfahrung und Telemetrie im verbundenen Modus“ (DiagTrack), um die Daten der Geräte zu erfassen, die über Intune verwaltet werden. Stellen Sie sicher, dass der Dienst **Benutzererfahrung und Telemetrie im verbundenen Modus** auf dem Gerät ausgeführt wird.
+
+#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> Endpunkte
 
 Damit Geräte bei der Endpunktanalyse registriert werden können, müssen sie die erforderlichen Funktionsdaten an Microsoft senden. Wenn in Ihrer Umgebung ein Proxyserver verwendet wird, orientieren Sie sich beim Konfigurieren des Proxys an diesen Informationen.
 
@@ -364,15 +367,15 @@ Konfigurieren Sie zum Aktivieren der Freigabe von Funktionsdaten den Proxyserver
 | `https://*.manage.microsoft.com` | Dieser Endpunkt wird zum Synchronisieren von Gerätesammlung und Geräten mit der Endpunktanalyse verwendet (nur auf der Configuration Manager-Serverrolle). Weitere Informationen finden Sie unter [Konfigurieren des Proxys für einen Standortsystemserver](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 
 
-### <a name="proxy-server-authentication"></a>Proxyserverauthentifizierung
+#### <a name="proxy-server-authentication"></a>Proxyserverauthentifizierung
 
 Wenn Ihre Organisation die Proxyserverauthentifizierung für den Internetzugriff verwendet, stellen Sie sicher, dass die Daten nicht aufgrund der Authentifizierung blockiert werden. Wenn Ihr Proxy es nicht zulässt, dass Geräte diese Daten senden, werden sie in Desktop Analytics nicht angezeigt.
 
-#### <a name="bypass-recommended"></a>Umgehung (empfohlen)
+##### <a name="bypass-recommended"></a>Umgehung (empfohlen)
 
 Konfigurieren Sie die Proxyserver so, dass keine Proxyauthentifizierung für den Datenverkehr zu den Datenfreigabe-Endpunkten erforderlich ist. Diese Option ist die umfassendste Lösung. Sie funktioniert für alle Windows 10-Versionen.  
 
-#### <a name="user-proxy-authentication"></a>Benutzerproxyauthentifizierung
+##### <a name="user-proxy-authentication"></a>Benutzerproxyauthentifizierung
 
 Konfigurieren Sie die Geräte so, dass der Kontext des angemeldeten Benutzers für die Proxyauthentifizierung verwendet wird. Für diese Methode werden die folgenden Konfigurationen benötigt:
 
@@ -385,7 +388,7 @@ Konfigurieren Sie die Geräte so, dass der Kontext des angemeldeten Benutzers f�
 > [!IMPORTANT]
 > Die Benutzerproxyauthentifizierung ist inkompatibel mit der Verwendung von Microsoft Defender Advanced Threat Protection. Dieses Verhalten ist darauf zurückzuführen, dass bei dieser Authentifizierung der Registrierungsschlüssel **DisableEnterpriseAuthProxy** auf `0` festgelegt ist, während er für Microsoft Defender ATP auf `1` festgelegt sein muss. Weitere Informationen finden Sie unter [Konfigurieren von Computerproxy- und Internetverbindungseinstellungen in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
-#### <a name="device-proxy-authentication"></a>Geräteproxyauthentifizierung
+##### <a name="device-proxy-authentication"></a>Geräteproxyauthentifizierung
 
 Dieser Ansatz unterstützt folgende Szenarien:
 

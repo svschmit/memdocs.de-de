@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906386"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270853"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Erstellen von Windows-Anwendungen in Configuration Manager
 
@@ -39,7 +39,7 @@ Stellen Sie eine Anwendung mit einem Windows-App-Paket für alle Benutzer auf de
 > [!Important]  
 > Beachten Sie bei der Installation, Bereitstellung und Aktualisierung, dass verschiedene Versionen des gleichen Windows-App-Pakets auf einem Gerät zu unerwarteten Ergebnissen führen können. Dieses Verhalten kann auftreten, wenn Sie Configuration Manager zum Bereitstellen der App verwenden, aber dann zulassen, dass Benutzer die App über den Microsoft Store aktualisieren können. Weitere Informationen finden Sie im Abschnitt „Nächste Schritte“ unter [Verwalten von Apps aus dem Microsoft Store für Unternehmen](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).  
 
-Wenn Sie eine offline lizenzierte App bereitstellen, lässt Configuration Manager nicht zu, dass Windows die App automatisch über den Microsoft Store aktualisiert.  
+Bei der Bereitstellung von Offline-Apps mit dem Konfigurations-Manager-Client auf Windows 10-Geräten müssen Sie sicherstellen, dass Benutzer nicht über die Berechtigung verfügen, Anwendungen zu aktualisieren, die nicht Teil der Configuration Manager-Bereitstellungen sind. Die Steuerung der Updates von Offline-Apps ist in Umgebungen mit mehreren Benutzern (z.B. Kursräumen) besonders wichtig. Weitere Informationen finden Sie unter [Verwalten von Apps aus dem Microsoft Store für Unternehmen und Bildungseinrichtungen mit Configuration Manager](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).<!-- MEMDocs#316 -->
 
 Configuration Manager unterstützt die App-Bereitstellung unter allen unterstützten Versionen von Windows 10.<!--SCCMDocs-pr issue 2762-->
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 67a0ad9eeb7e5ced358a44b17fd8f1c0b05fa2b8
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824165"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223668"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Neuerungen in Microsoft Intune
 
@@ -54,7 +54,22 @@ In diesem Artikel werden die Neuheiten im [Microsoft Endpoint Manager Admin Cent
 
 <!-- ########################## -->
 
+## <a name="week-of-may-25-2020"></a>Woche vom 25. Mai 2020
+
+### <a name="app-management"></a>App-Verwaltung
+
+#### <a name="windows-32-bit-x86-apps-on-arm64-devices---5477661---"></a>Windows-32-Bit-Apps (x86) auf ARM64-Geräten<!-- 5477661 -->
+Windows-32-Bit-Apps (x86), die für ARM64-Geräte bereitgestellt werden können, werden jetzt im Unternehmensportal angezeigt. Weitere Informationen zu Windows-32-Bit-Apps finden Sie unter [Win32-App-Verwaltung](../apps/apps-win32-app-management.md).
+
+#### <a name="windows-company-portal-app-icon---7114635---"></a>Symbol für Windows-Unternehmensportal-App<!-- 7114635 -->
+Das Symbol für die Windows-Unternehmensportal-App wurde aktualisiert. Weitere Informationen zum Unternehmensportal finden Sie unter [Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App](../apps/company-portal-app.md).
+
 ## <a name="week-of-may-18-2020"></a>Woche vom 18. Mai 2020
+
+### <a name="app-management"></a>App-Verwaltung  
+
+#### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>Aktualisierung von Symbolen in der Unternehmensportal-App für iOS/iPadOS und macOS<!--6057697 -->
+Wir haben die Symbole im Unternehmensportal aktualisiert, um ihnen ein moderneres Erscheinungsbild zu geben, das auch auf Geräten mit zwei Bildschirmen unterstützt wird und mit dem Fluent Design System von Microsoft in Einklang steht. Um sich die aktualisierten Symbole anzusehen, wechseln Sie zu [Updates der Benutzeroberfläche für Endbenutzer-Apps von Intune](./whats-new-app-ui.md). 
 
 ### <a name="device-security"></a>Gerätesicherheit
 
@@ -158,7 +173,7 @@ Gilt für:
 #### <a name="enrollment-restrictions-support-scope-tags--4209550----"></a>Registrierungsbeschränkungen unterstützen Bereichstags<!--4209550  -->
 Sie können ab sofort Registrierungsbeschränkungen zu Bereichstags hinzufügen. Wechseln Sie hierzu im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu  > **Geräte** > **Registrierungsbeschränkungen** > **Einschränkung erstellen**. Wenn Sie eine Beschränkung des gewünschten Typs erstellen, wird die Seite **Bereichstags** angezeigt. Weitere Informationen finden Sie unter [Festlegen von Registrierungseinschränkungen](../enrollment/enrollment-restrictions-set.md).
 
-#### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>Autopilot-Unterstützung für HoloLens 2-Geräte<!--6305220  -->
+#### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>Autopilot-Unterstützung für Hololens 2-Geräte<!--6305220  -->
 Windows Autopilot unterstützt ab sofort HoloLens 2-Geräte. Weitere Informationen zur Verwendung von Autopilot für HoloLens finden Sie unter [Windows Autopilot für HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -258,7 +273,7 @@ Microsoft Endpoint Manager vereint Configuration Manager und Intune in einer ein
 Microsoft Office 365 ProPlus wird in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). In unserer Dokumentation wird üblicherweise Microsoft 365-Apps verwendet. Im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) finden Sie die Apps-Suite, indem Sie auf **Apps** > **Windows** > **Hinzufügen** klicken. Weitere Informationen zum Hinzufügen von Apps finden Sie unter [Hinzufügen von Apps zu Microsoft Intune](../apps/apps-add.md).
 
 <!-- ########################## -->
-## <a name="week-of-april-13-2020-2004-service-release"></a>Woche vom 13. April 2020 (Dienstrelease 2004)
+## <a name="week-of-april-13-2020-2004-service-release"></a>Woche vom 13. April 2020 (2004 Dienstrelease)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>App-Verwaltung
@@ -596,7 +611,7 @@ Im Intune Data Warehouse stehen weitere Gerätebestandseigenschaften zur Verfüg
 
 Die folgenden Eigenschaften werden jetzt über die Betasammlung [devicePropertyHistory](../developer/reports-ref-devices.md#devicepropertyhistories) verfügbar gemacht:
 - `physicalMemoryInBytes`: Der physische Speicher in Byte.
-- `totalStorageSpaceInBytes`: Die Gesamtspeicherkapazität in Byte.
+- `totalStorageSpaceInBytes`: Gesamtspeicherkapazität in Bytes
 
 Weitere Informationen finden Sie unter [Microsoft Intune Data Warehouse-API](../developer/reports-nav-intune-data-warehouse.md).
 
@@ -981,7 +996,7 @@ Gilt für:
 
 - Windows 10 und höher
 
-## <a name="week-of-december-9-2019-1912-service-release"></a>Woche vom 9. Dezember 2019 (Dienstrelease 1912)
+## <a name="week-of-december-9-2019-1912-service-release"></a>Woche vom 9. Dezember 2019 (1912 Dienstrelease)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>App-Verwaltung
@@ -1088,7 +1103,7 @@ Configuration Manager-Kunden mit Software Assurance können die Intune-Co-Verwal
 Weitere Informationen finden Sie unter [Lizenzierungsbestimmungen](https://www.microsoft.com/en-us/Licensing/product-licensing/products).
 
 <!-- ########################## -->
-## <a name="week-of-november-18-2019-1911-service-release"></a>Woche vom 18. November 2019 (Dienstrelease 1911)
+## <a name="week-of-november-18-2019-1911-service-release"></a>Woche vom 18. November 2019 (1911 Dienstrelease)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>App-Verwaltung

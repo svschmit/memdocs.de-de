@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989482"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428626"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Hinzufügen von Apps zu Microsoft Intune 
 
@@ -187,6 +187,25 @@ Die automatische Neuinstallation, Aktualisierung oder Entfernung einer erforderl
 - Wenn die Installation der erforderlichen App fehlschlägt oder die App nicht auf dem Gerät vorhanden ist, überprüft Intune die Kompatibilität und installiert die App erneut, sobald der im Zeitplan festgelegte Zyklus beendet ist.  
 - Ein Administrator machte eine App für eine Benutzergruppe verfügbar, und ein Endbenutzer installiert die App über das Unternehmensportal auf dem Gerät. Später aktualisiert der Administrator die App von Version 1 auf Version 2. Intune aktualisiert dann die App, sobald der im Zeitplan festgelegte Zyklus beendet ist. Voraussetzung dafür ist, dass die vorherige Version der App immer noch auf dem Gerät vorhanden ist.
 - Wenn der Administrator eine Lösung für eine Deinstallationsabsicht bereitstellt, die App auf dem Gerät vorhanden ist und ein Fehler bei der Deinstallation auftritt, überprüft Intune die Kompatibilität und deinstalliert die App, sobald der im Zeitplan festgelegte Zyklus beendet ist.   
+
+## <a name="uninstall-an-app"></a>Deinstallieren einer App
+
+Wenn Sie eine App auf Benutzergeräten deinstallieren müssen, führen Sie die folgenden Schritte aus.
+
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
+2. Wählen Sie **Apps** > **Alle Apps** > *die App* > **Zuweisungen** > **Gruppe hinzufügen** aus.
+3. Wählen Sie im Bereich **Gruppe hinzufügen** die Option **Deinstallieren** aus.
+4. Wählen Sie **Eingeschlossene Gruppen** aus, um die Benutzergruppen auszuwählen, denen diese App zugewiesen werden soll.
+5. Wählen Sie die Gruppen aus, auf die die Deinstallationszuweisung angewendet werden sollen.
+6. Klicken Sie auf der Seite **Gruppen auswählen** auf **Auswählen**.
+7. Klicken Sie im Bereich **Zuweisen** auf **OK**, um die Zuweisung festzulegen.
+8. Wenn Sie Benutzergruppen von dieser App-Zuweisung ausschließen möchten, wählen Sie **Gruppen ausschließen** aus.
+9. Wenn Sie auszuschließende Gruppen ausgewählt haben, wählen Sie in **Gruppen auswählen** die Option **Auswählen** aus.
+10. Wählen Sie im Bereich **Gruppe hinzufügen** die Option **OK** aus.
+11. Wählen Sie im Bereich **Zuweisungen** die Option **Speichern** aus.
+
+> [!IMPORTANT]
+> Wenn Sie die App erfolgreich deinstallieren möchten, entfernen Sie unbedingt die Mitglieder oder Gruppenzuweisung für die Installation, bevor Sie diese für die Deinstallation zuweisen. Wenn eine Gruppe jeweils zur Installation und Deinstallation einer App zugewiesen ist, wird die App nicht entfernt.
 
 ## <a name="app-installation-errors"></a>App-Installationsfehler
 

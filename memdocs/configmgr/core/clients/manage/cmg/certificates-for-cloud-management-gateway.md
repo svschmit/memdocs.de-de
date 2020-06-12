@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 33e4ecbac965206ec4043f5adf91d2dbfb9602d8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694938"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347201"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Zertifikate für das Cloudverwaltungsgateway
 
@@ -238,15 +238,16 @@ Konfigurieren Sie einen lokalen Verwaltungspunkt mit einem der folgenden Clientv
 
 #### <a name="legend-of-terms"></a>Legende für Begriffe
 
-- *Arbeitsgruppe*: Das Gerät ist nicht in eine Domäne oder in Azure AD eingebunden, verfügt jedoch über ein [Clientauthentifizierungszertifikat](#bkmk_clientauth).  
-- *In AD-Domäne eingebunden:* Sie verknüpfen das Gerät mit einer lokalen Active Directory-Domäne.  
-- *In Azure AD eingebunden:* Auch bekannt als „In Clouddomäne eingebunden“. Sie verknüpfen das Gerät mit einem Azure Active Directory-Mandanten.  
-- *Hybrid eingebunden:* Sie verknüpfen das Gerät sowohl mit einer Active Directory-Domäne als auch mit einem Azure AD-Mandanten.  
-- *HTTP*: In den Verwaltungspunkteigenschaften legen Sie **HTTP** für die Clientverbindungen fest.  
-- *HTTPS*: In den Verwaltungspunkteigenschaften legen Sie **HTTPS** für die Clientverbindungen fest.  
-- *E-HTTP*: Bei den Standorteigenschaften auf der Registerkarte **Kommunikation mit Clientcomputern** legen Sie **HTTPS oder HTTP** als Standortsystemeinstellung fest und aktivieren die Option **Für HTTP-Websitesysteme von Configuration Manager generierte Zertifikate verwenden**. Sie konfigurieren den Verwaltungspunkt für HTTP. Der HTTP-Verwaltungspunkt ist für die HTTP- und HTTPS-Kommunikation (Tokenauthentifizierungsszenarios) bereit.  
+- *Arbeitsgruppe*: Das Gerät ist nicht in eine Domäne oder in Azure AD eingebunden, verfügt jedoch über ein [Clientauthentifizierungszertifikat](#bkmk_clientauth).
+- *In AD-Domäne eingebunden:* Sie binden das Gerät in eine lokale Active Directory-Domäne ein.
+- *In Azure AD eingebunden:* Dies wird auch als „in eine Clouddomäne eingebunden“ bezeichnet. Sie verknüpfen das Gerät mit einem Azure Active Directory-Mandanten. Weitere Informationen finden Sie unter [In Azure AD eingebundene Geräte](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
+- *Hybrid eingebunden:* Sie binden das Gerät in Ihre lokale Active Directory-Instanz ein und registrieren es in Azure Active Directory. Weitere Informationen finden Sie unter [In Azure AD eingebundene Hybridgeräte](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *HTTP*: In den Verwaltungspunkteigenschaften legen Sie **HTTP** für die Clientverbindungen fest.
+- *HTTPS*: In den Verwaltungspunkteigenschaften legen Sie **HTTPS** für die Clientverbindungen fest.
+- *E-HTTP*: Bei den Standorteigenschaften auf der Registerkarte **Kommunikation mit Clientcomputern** legen Sie **HTTPS oder HTTP** als Standortsystemeinstellung fest und aktivieren die Option **Für HTTP-Websitesysteme von Configuration Manager generierte Zertifikate verwenden**. Sie konfigurieren den Verwaltungspunkt für HTTP. Der HTTP-Verwaltungspunkt ist für die HTTP- und HTTPS-Kommunikation (Tokenauthentifizierungsszenarios) bereit.
+
     > [!Note]
-    > Ab Version 1906 heißt diese Registerkarte **Sichere Kommunikation**.<!-- SCCMDocs#1645 -->  
+    > Ab Version 1906 heißt diese Registerkarte **Sichere Kommunikation**.<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Azure-Verwaltungszertifikat
 

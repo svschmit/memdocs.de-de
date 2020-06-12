@@ -2,7 +2,7 @@
 title: Voraussetzungen für die Bereitstellung des Windows-Clients
 titleSuffix: Configuration Manager
 description: Hier erhalten Sie Informationen über die Voraussetzungen für die Bereitstellung von Configuration Manager-Clients auf Windows-Computern.
-ms.date: 11/29/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d4cd7ffe38f7191a5361ad2e89817ea80f9f093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2aa375d0521e6088904ebe9a1f10af83f4bc261f
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694788"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428559"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Voraussetzungen zum Bereitstellen von Clients für Windows-Computer in Configuration Manager
 
@@ -28,18 +28,20 @@ Weitere Informationen zu den Mindestanforderungen an Hardware und Betriebssystem
 > [!NOTE]  
 > Bei den in diesem Artikel aufgeführten Softwareversionsnummern handelt es sich um die erforderlichen Mindestversionsnummern.  
 
-
 ## <a name="prerequisites-for-windows-clients"></a><a name="BKMK_prereqs_computers"></a> Voraussetzungen für Windows-Clients  
 
 Mithilfe der folgenden Informationen können Sie die Voraussetzungen für die Installation des Konfigurations-Manager-Clients auf Windows-Computern bestimmen.  
 
-### <a name="dependencies-external-to-configuration-manager"></a>Externe Abhängigkeiten von Configuration Manager  
+### <a name="dependencies-external-to-configuration-manager"></a>Externe Abhängigkeiten von Configuration Manager
 
-|Komponente|Beschreibung|  
-|---|---|  
-|Windows Installer Version 3.1.4000.2435|Erforderlich, um die Verwendung der Microsoft Windows Installer-Updatedateien (.msp) für Pakete und Softwareupdates zu unterstützen.|  
-|Microsoft Background Intelligent Transfer Service (BITS) Version 2.5|Erforderlich, um Datenübertragungen eingeschränkter Bandbreite zwischen dem Clientcomputer und den Configuration Manager-Standortsystemen zu ermöglichen. BITS wird während der Clientinstallation nicht automatisch heruntergeladen. Wenn BITS auf Computern installiert wird, ist in der Regel ein Neustart zum Abschließen der Installation erforderlich.<br /><br /> Die meisten Betriebssysteme enthalten BITS. Wenn das nicht der Fall ist, installieren Sie BITS, bevor Sie den Konfigurations-Manager-Client installieren.|  
-|Microsoft-Aufgabenplanung|Aktivieren Sie diesen Dienst auf dem Client, um die Clientinstallation abzuschließen.|  
+Viele dieser Komponenten sind Dienste oder Features, die Windows standardmäßig aktiviert. Diese Komponenten sollten auf Configuration Manager-Clients nicht deaktiviert werden.
+
+|Komponente|Beschreibung|
+|---|---|
+|Windows Installer|Erforderlich, um die Verwendung der Windows Installer-Dateien für Anwendungen und Softwareupdates zu unterstützen.|
+|Microsoft Background Intelligent Transfer Service (BITS)|Erforderlich, um Datenübertragungen eingeschränkter Bandbreite zwischen dem Clientcomputer und den Configuration Manager-Standortsystemen zu ermöglichen.|
+|Microsoft-Aufgabenplanung|Erforderlich für Clientvorgänge wie z. B. das regelmäßige Auswerten der Integrität von Configuration Manager-Clients.|
+|Microsoft Remote Differential Compression (RDC)|Ist erforderlich, um die Datenübertragung über das Netzwerk zu optimieren.|
 |Unterstützung für SHA-2-Codesignieren|Ab Version 1906 müssen Clients den SHA-2-Codesignaturalgorithmus unterstützen. Weitere Informationen finden Sie unter [Unterstützung für SHA-2-Codesignieren](#bkmk_sha2).|
 
 #### <a name="sha-2-code-signing-support"></a><a name="bkmk_sha2"></a> Unterstützung für SHA-2-Codesignieren
@@ -64,18 +66,15 @@ Wenn Sie einen Client in einer Windows-Version verwalten müssen, für die kein 
 
 Der Konfigurations-Manager-Client verfügt über externe Abhängigkeiten. Diese Abhängigkeiten hängen von der Version des Betriebssystems und der installierten Software auf dem Clientcomputer ab.  
 
-Wenn der Client diese Abhängigkeiten benötigt, um die Installation abzuschließen, werden sie automatisch installiert.  
+Wenn der Client diese Abhängigkeiten benötigt, um die Installation abzuschließen, werden sie automatisch installiert.
 
-|Komponente|Beschreibung|  
-|---|---|  
-|Windows Update Agent Version 7.0.6000.363|Wird von Windows zur Unterstützung der Updateerkennung und -bereitstellung benötigt.|  
-|Microsoft Core XML Services (MSXML) Version 6.20.5002 oder höher|Wird unter Windows zur Unterstützung der Verarbeitung von XML-Dokumenten benötigt.|  
-|Microsoft Remote Differential Compression (RDC)|Ist erforderlich, um die Datenübertragung über das Netzwerk zu optimieren.|  
-|Microsoft Visual C++ 2013 Redistributable Version 12.0.21005.1|Ist zur Unterstützung von Clientoperationen erforderlich. Wenn Sie dieses Update auf Clientcomputern installieren, kann ein Neustart zum Abschließen der Installation erforderlich sein.|  
-|Microsoft Visual C++ 2005 Redistributable Version 8.0.50727.42|Für die Version 1606 und ältere Versionen ist erforderlich, das Microsoft SQL Server Compact-Operationen unterstützt werden.|  
-|Windows Imaging APIs 6.0.6001.18000|Ist erforderlich für die Verwaltung von Windows-Imagedateien (.wim) mit Configuration Manager.|  
-|Microsoft-Richtlinienplattform 1.2.3514.0|Ist erforderlich, damit Konformitätseinstellungen von Clients ausgewertet werden können.|  
-|Microsoft .NET Framework 4.5.2|Ist zur Unterstützung von Clientoperationen erforderlich. Wird automatisch auf dem Clientcomputer installiert, wenn Microsoft .NET Framework 4.5 oder höher nicht installiert ist. Weitere Informationen finden Sie im nächsten Abschnitt unter [Weitere Informationen über Microsoft .NET Framework, Version 4.5.2](#dotNet).|  
+|Komponente|Beschreibung|
+|---|---|
+|Microsoft Core XML Services (MSXML), Version 6.20.5002 oder höher (`msxml6.msi`)|Wird unter Windows zur Unterstützung der Verarbeitung von XML-Dokumenten benötigt.|
+|Microsoft Visual C++ 2013 Redistributable, Version 12.0.40660.0 (`vcredist_x*.exe`)|Ist zur Unterstützung von Clientoperationen erforderlich. Wenn Sie dieses Update auf Clientcomputern installieren, kann ein Neustart zum Abschließen der Installation erforderlich sein.|<!-- SCCMDocs#1526 -->
+|Windows Imaging APIs 6.0.6001.18000 oder höher (`wimgapi.msi`)|Ist erforderlich für die Verwaltung von Windows-Imagedateien (.wim) mit Configuration Manager.|
+|Microsoft-Richtlinienplattform 1.2.3514.0 oder höher (`MicrosoftPolicyPlatformSetup.msi`)|Ist erforderlich, damit Konformitätseinstellungen von Clients ausgewertet werden können.|  
+|Microsoft .NET Framework 4.5.2 oder höher (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|Ist zur Unterstützung von Clientoperationen erforderlich. Wird automatisch auf dem Clientcomputer installiert, wenn Microsoft .NET Framework 4.5 oder höher nicht installiert ist. Weitere Informationen finden Sie im nächsten Abschnitt unter [Weitere Informationen über Microsoft .NET Framework, Version 4.5.2](#dotNet).|  
 |Microsoft SQL Server Compact 4.0 SP1-Komponenten|Ist erforderlich zum Speichern von Informationen zu Clientoperationen.|  
 
 > [!Important]
@@ -120,7 +119,7 @@ Die folgenden Voraussetzungen gelten für die verschiedenen Clientinstallationsm
 
 #### <a name="client-push-installation"></a>Clientpushinstallation  
 
-- Der Standort verwendet Clientpushinstallationskonten, um eine Verbindung mit Computern herzustellen und den Client zu installieren. Legen Sie diese Konten auf der Registerkarte **Konten** der Eigenschaften der Clientpushinstallation fest. Das Konto muss ein Mitglied der lokalen Gruppe „Administratoren“ auf dem Zielcomputer sein.  
+- Der Standort verwendet Clientpushinstallationskonten, um eine Verbindung mit Computern herzustellen und den Client zu installieren. Legen Sie diese Konten auf der Registerkarte **Konten** der Eigenschaften der Clientpushinstallation fest. Das Konto muss Mitglied der lokalen Gruppe „Administratoren“ auf dem Zielcomputer sein.  
 
     Wenn Sie kein Clientpushinstallationskonto angeben, wird das Konto des Standortservercomputers verwendet.  
 

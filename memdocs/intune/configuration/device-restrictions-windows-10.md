@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864893"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311173"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Einstellungen für Windows 10-Geräte (und höher) zum Zulassen oder Einschränken von Features mit Intune
 
@@ -1095,7 +1095,8 @@ Diese Einstellungen verwenden den [Defender-Richtlinien-CSP](https://docs.micros
 - **Möglichweise unerwünschte Software erkennen:** Mit dieser Funktion werden potenziell unerwünschte Anwendungen ermittelt und blockiert, sodass diese Anwendungen in Ihrem Netzwerk nicht heruntergeladen und installiert werden können. Diese Anwendungen werden nicht als Viren, Schadsoftware oder andere Arten von Bedrohungen betrachtet. Sie können jedoch Aktionen auf Endpunkten ausführen, die deren Leistung oder Verwendung beeinträchtigen. Wählen Sie die gewünschte Schutzebene aus, wenn Windows potenziell unerwünschte Anwendungen erkennt. Folgende Optionen sind verfügbar:
 
   - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Möglicherweise wird diese Funktion standardmäßig von Microsoft Defender deaktiviert.
-  - **Blockieren:** Microsoft Defender erkennt potenziell unerwünschte Anwendungen, und erkannte Elemente werden blockiert. Diese Elemente werden Im Verlauf zusammen mit anderen Bedrohungen angezeigt.
+  - **Off**: Der PUA-Schutz ist deaktiviert.
+  - **Aktivieren**: Microsoft Defender erkennt potenziell unerwünschte Anwendungen, und erkannte Elemente werden blockiert. Diese Elemente werden Im Verlauf zusammen mit anderen Bedrohungen angezeigt.
   - **Überwachung**: Microsoft Defender erkennt potenziell unerwünschte Anwendungen, führt jedoch keine Aktion aus. Sie können Informationen zu den Anwendungen überprüfen, gegen die Microsoft Defender Maßnahmen einleiten würde. Suchen Sie z. B. in der Ereignisanzeige nach durch Microsoft Defender erstellten Ereignissen.
 
   Weitere Informationen zu potenziell unerwünschten Apps finden Sie unter [Erkennen und Blockieren möglicherweise unerwünschter Anwendungen](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).

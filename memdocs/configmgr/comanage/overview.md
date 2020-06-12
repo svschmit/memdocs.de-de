@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e06dc0d40eb6359d11ef31045989d7ed398b3687
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690998"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347184"
 ---
 # <a name="what-is-co-management"></a>Was ist Co-Verwaltung?
 
@@ -100,9 +100,9 @@ Die Aktivierung von Co-Verwaltung selbst erfordert nicht, dass Sie Azure AD an I
 
 ### <a name="azure-ad"></a>Azure AD
 
-- Windows 10-Geräte müssen mit Azure AD verknüpft sein. Sie können einem der folgenden Typen angehören:  
+- Windows 10-Geräte müssen mit Azure AD verbunden sein. Sie können einem der folgenden Typen angehören:  
 
-  - [In Hybrid-Azure AD eingebunden](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), wenn das Gerät in Ihre lokale Active Directory-Instanz und Azure Active Directory eingebunden ist.  
+  - [In Hybrid-Azure AD eingebunden](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), wenn das Gerät mit Ihrer lokalen Active Directory-Instanz verknüpft und für Azure Active Directory registriert ist.
 
   - [In Azure AD eingebunden](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) (ausschließlich). (Dieser Typ wird manchmal auch als „in die Clouddomäne eingebunden“ bezeichnet.)<!--SCCMDocs issue 605-->  
 

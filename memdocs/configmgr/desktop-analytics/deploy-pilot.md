@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 3aa722415248ad9275c6ad065f0120bfe78d3ce4
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824017"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311219"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Bereitstellen für die Pilotphase mit Desktop Analytics
 
@@ -104,7 +104,7 @@ Erstellen Sie vor dem Bereitstellen von Windows zuerst die Softwareobjekte in Co
 Configuration Manager erstellt anhand der Daten aus Desktop Analytics Sammlungen für die Pilotbereitstellung und die Produktionsbereitstellung. Diese Sammlungen befinden sich im Arbeitsbereich **Bestand und Kompatibilität**, im Knoten **Gerätesammlungen** und im Ordner **Bereitstellungspläne**.
 
 > [!IMPORTANT]
-> Diese Sammlungen werden von Configuration Manager für Desktop Analytics-Bereitstellungspläne verwaltet. Manuelle Änderungen werden nicht unterstützt.
+> Diese Sammlungen werden von Configuration Manager für Desktop Analytics-Bereitstellungspläne verwaltet. Manuelle Änderungen werden nicht unterstützt. Wenn Sie eine dieser Sammlungen löschen, funktioniert Desktop Analytics nicht, und Sie müssen [Configuration Manager erneut verbinden](connect-configmgr.md).<!--7208090-->
 
 Führen Sie die folgenden Schritte aus, um eine stufenweise Bereitstellung mit Desktop Analytics-Integration zu erstellen und die Integrität der Geräte nach jeder Bereitstellungsphase sicherzustellen:
 

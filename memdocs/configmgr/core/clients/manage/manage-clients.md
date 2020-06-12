@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d7697f8b5a2017aa732c52512bf31598c070fbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696078"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270819"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Verwalten von Clients in Configuration Manager
 
@@ -103,7 +103,7 @@ Weitere Informationen finden Sie unter [Konfigurieren von Clienteinstellungen](.
 
 ### <a name="approve"></a>Genehmigen
 
-Wenn die Kommunikation zwischen Client und Standortsystemen über HTTP erfolgt und ein selbstsigniertes Zertifikat verwendet wird, müssen Sie die Clients genehmigen, um sie als vertrauenswürdige Computer zu identifizieren. Standardmäßig werden Clients aus der gleichen Active Directory-Gesamtstruktur und aus vertrauenswürdigen Gesamtstrukturen von der Standortkonfiguration automatisch genehmigt. Aufgrund dieses Standardverhaltens müssen Sie nicht jeden Client manuell genehmigen. Arbeitsgruppencomputer und andere Computer, die Sie als vertrauenswürdig einstufen, die jedoch nicht genehmigt sind, müssen Sie jedoch manuell genehmigen.
+Wenn die Kommunikation zwischen Client und Standortsystemen über HTTP erfolgt und ein selbstsigniertes Zertifikat verwendet wird, müssen Sie die Clients genehmigen, um sie als vertrauenswürdige Computer zu identifizieren. Standardmäßig werden Clients aus der gleichen Active Directory-Gesamtstruktur, aus vertrauenswürdigen Gesamtstrukturen sowie verbundene Azure AD-Mandanten (Azure Active Directory) von der Standortkonfiguration automatisch genehmigt<!-- MEMDocs#318 -->. Aufgrund dieses Standardverhaltens müssen Sie nicht jeden Client manuell genehmigen. Arbeitsgruppencomputer und andere Computer, die Sie als vertrauenswürdig einstufen, die jedoch nicht genehmigt sind, müssen Sie jedoch manuell genehmigen.
 
 > [!IMPORTANT]  
 > Bei nicht genehmigten Clients sind einige Verwaltungsfunktionen möglicherweise nicht ausführbar. Dieses Szenario wird jedoch für Configuration Manager nicht unterstützt.  

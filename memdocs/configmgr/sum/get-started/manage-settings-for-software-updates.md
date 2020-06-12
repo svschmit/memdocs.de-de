@@ -2,7 +2,7 @@
 title: Verwalten von Einstellungen für Softwareupdates
 titleSuffix: Configuration Manager
 description: Enthält Informationen zu Clienteinstellungen, die für Softwareupdates an Ihrem Standort geeignet sind, nachdem Sie den Softwareupdatepunkt installiert haben.
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906800"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436668"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Verwalten von Einstellungen für Softwareupdates  
 
@@ -113,13 +113,13 @@ Auf der Registerkarte **Ablösungsinformationen** können Sie die folgenden Info
 In den Eigenschaften können Sie Softwareupdateeinstellungen für mehrere Softwareupdates konfigurieren. Die meisten Softwareupdateeinstellungen können Sie nur am Standort der zentralen Verwaltung oder an einem eigenständigen primären Standort konfigurieren. In den folgenden Abschnitten wird erläutert, wie Sie Einstellungen für Softwareupdates konfigurieren.  
 
 ####  <a name="set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> Festlegen der maximalen Laufzeit  
-Legen Sie auf der Registerkarte **Maximale Laufzeit** den Zeitraum fest, innerhalb dessen ein Softwareupdate auf Clientcomputern abgeschlossen sein muss. Wenn das Update länger als maximal vorgesehen dauert, wird von Configuration Manager eine Statusmeldung erstellt, und die Bereitstellung wird nicht mehr auf die Softwareupdateinstallation überwacht. Sie können diese Einstellung nur am Standort der zentralen Verwaltung oder an einem eigenständigen primären Standort konfigurieren.  
+Legen Sie auf der Registerkarte **Maximale Laufzeit** den Zeitraum fest, innerhalb dessen ein Softwareupdate auf Clientcomputern abgeschlossen sein muss. Wenn das Update länger als maximal vorgesehen dauert, wird von Configuration Manager eine Statusmeldung erstellt, und die Installation der Softwareupdates wird angehalten. Sie können diese Einstellung nur am Standort der zentralen Verwaltung oder an einem eigenständigen primären Standort konfigurieren.  
 
 Von Configuration Manager wird auch festgestellt, ob die Softwareupdateinstallation in einem konfigurierten Wartungsfenster gestartet werden muss. Ist der Wert der maximalen Laufzeit größer als die verfügbare verbleibende Zeit im Wartungsfenster, wird die Softwareupdateinstallation bis zum Beginn des nächsten Wartungsfensters aufgeschoben. Müssen mehrere Softwareupdates auf einem Clientcomputer mit einem konfigurierten Wartungsfenster (Zeitraum) installiert werden, wird das Softwareupdate mit der geringsten maximalen Laufzeit zuerst installiert. Dann folgt das Softwareupdate mit der zweitniedrigsten maximalen Laufzeit usw. Vor der Installation der einzelnen Softwareupdates wird vom Client überprüft, ob das verfügbare Wartungsfenster für die Softwareupdateinstallation lang genug ist. Nach Beginn einer Softwareupdateinstallation wird die Installation fortgesetzt, selbst wenn das Ende des Wartungsfensters überschritten wird. Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartungsfenstern](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 Auf der Registerkarte **Maximale Laufzeit** können Sie die folgenden Einstellungen anzeigen und konfigurieren:  
 
-- **Maximale Laufzeit:** Hiermit wird die maximale Anzahl von Minuten festgelegt, die für eine Softwareupdateinstallation zur Verfügung stehen, bevor die Installation nicht mehr von Configuration Manager überwacht wird. Mit dieser Einstellung wird auch bestimmt, ob für die Updateinstallation genug Zeit zur Verfügung steht, bevor das Wartungsfenster endet. Die Standardeinstellung lautet 60 Minuten für Service Packs. Für andere Softwareupdatetypen lautet der Standardwert 10 Minuten, wenn Sie eine Neuinstallation der Configuration Manager-Version 1511 oder höher durchführen, und 5 Minuten, wenn Sie von einer früheren Version aktualisiert haben. Die zulässigen Werte reichen von 5 bis 9999 Minuten.  
+- **Maximale Laufzeit:** Mit dieser Einstellung wird die maximale Dauer der Softwareupdateinstallation in Minuten angegeben, bevor die Installation von Configuration Manager angehalten wird. Mit dieser Einstellung wird auch bestimmt, ob für die Updateinstallation genug Zeit zur Verfügung steht, bevor das Wartungsfenster endet. Die Standardeinstellung lautet 60 Minuten für Service Packs. Für andere Softwareupdatetypen lautet der Standardwert 10 Minuten, wenn Sie eine Neuinstallation der Configuration Manager-Version 1511 oder höher durchführen, und 5 Minuten, wenn Sie von einer früheren Version aktualisiert haben. Die zulässigen Werte reichen von 5 bis 9999 Minuten.  
 
 > [!IMPORTANT]  
 >  Stellen Sie sicher, dass der Wert für die maximale Laufzeit kleiner als das konfigurierte Wartungsfenster ist, oder erhöhen Sie die Dauer des Wartungsfensters auf einen Wert, der größer als die maximale Laufzeit ist. Andernfalls wird die Softwareupdateinstallation niemals initiiert.  
