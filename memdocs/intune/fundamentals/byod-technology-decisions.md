@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079279"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455241"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Technologieentscheidungen zur Ermöglichung von BYOD mit Microsoft Enterprise Mobility + Security (EMS)
 
@@ -72,14 +72,14 @@ Nach wie vor sind zahlreiche Organisationen oftmals mit besonderen Risiken konfr
 |Gefährdetes Benutzerkonto | Blockieren von Benutzern mit hohem Risiko | Blockieren von Benutzern mit hohem Risiko |
 |Gefährdetes Benutzerkonto | Geräte-PIN | App-PIN |
 | | | |
-| Gefährdetes Gerät oder gefährdete App | Erzwingen eines konformen Geräts | Prüfen auf Jailbreaks beim App-Start |
+| Gefährdetes Gerät oder gefährdete App | Erzwingen eines konformen Geräts | Jailbreak-/Stammprüfung beim App-Start |
 | Gefährdetes Gerät oder gefährdete App | Verschlüsseln von Gerätedaten | App-Daten verschlüsseln |
 | | | |
 |Verlust oder Diebstahl eines Geräts | Entfernen aller Gerätedaten | Entfernen aller App-Daten|
 | | | |
-| Versehentliche Datenfreigabe oder Speichern an unsicheren Speicherorten | Einschränken von Datensicherungen für Geräte | Einschränken von Vorgängen zum Ausschneiden, Kopieren bzw. Einfügen|
+| Versehentliche Datenfreigabe oder Speichern an unsicheren Speicherorten | Einschränken von Datensicherungen für Geräte | Beschränken von Sicherungen von Organisationsdaten |
 | Versehentliche Datenfreigabe oder Speichern an unsicheren Speicherorten | Einschränken der Speicherfunktion | Einschränken der Speicherfunktion |
-|Versehentliche Datenfreigabe oder Speichern an unsicheren Speicherorten | Drucken deaktivieren | Nicht zutreffend|
+|Versehentliche Datenfreigabe oder Speichern an unsicheren Speicherorten | Drucken deaktivieren | Drucken von Organisationsdaten deaktivieren |
 
 ## <a name="next-steps"></a>Nächste Schritte
 Jetzt ist es an der Zeit zu entscheiden, ob BYOD in Ihrer Organisation ermöglicht und der Schwerpunkt dabei auf der Geräte- oder App-Verwaltung oder auf einer Kombination beider Optionen liegen soll. Die Wahl der Implementierung liegt bei Ihnen. Dabei können Sie darauf vertrauen, dass die Identitäts- und Sicherheitsfeatures von Azure AD in beiden Fällen verfügbar sind.  

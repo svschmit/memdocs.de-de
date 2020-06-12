@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424778a86ebf3bac750e17359204ef6be3aaa71c
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166041"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436804"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Vorbereiten von iOS-Apps für App-Schutzrichtlinien mit dem Intune App Wrapping Tool
 
@@ -323,7 +323,7 @@ Damit eine vollständige Funktionalität gewährleistet werden kann, müssen die
 
 ## <a name="setting-app-entitlements"></a>Festlegen von App-Berechtigungen
 
-Vor dem Umschließen Ihrer App können Sie *Berechtigungen* erteilen, um der App zusätzliche Berechtigungen und Funktionen zu gewähren, die über das hinaus gehen, was einer App typischerweise gestattet ist. Eine *Berechtigungsdatei* wird während der Codesignatur verwendet, um spezielle Berechtigungen innerhalb Ihrer App anzugeben (z. B. Zugriff auf einen freigegebenen Schlüsselbund). Bestimmte App-Dienste (*Funktionen*) werden während der App-Entwicklung innerhalb von Xcode aktiviert. Nach ihrer Aktivierung werden die Funktionen in Ihrer Berechtigungsdatei wiedergegeben. Weitere Informationen zu Berechtigungen und Funktionen finden Sie unter [Hinzufügen von Funktionen](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in der iOS-Entwicklerbibliothek. Eine vollständige Liste der unterstützten Funktionen finden Sie unter [Unterstützte Funktionen](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
+Vor dem Umschließen Ihrer App können Sie *[Berechtigungen](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html)* erteilen, um der App zusätzliche Berechtigungen und Funktionen zu gewähren, die über das hinaus gehen, was einer App typischerweise gestattet ist. Eine *Berechtigungsdatei* wird während der Codesignatur verwendet, um spezielle Berechtigungen innerhalb Ihrer App anzugeben (z. B. Zugriff auf einen freigegebenen Schlüsselbund). Bestimmte App-Dienste (*Funktionen*) werden während der App-Entwicklung innerhalb von Xcode aktiviert. Nach ihrer Aktivierung werden die Funktionen in Ihrer Berechtigungsdatei wiedergegeben. Weitere Informationen zu Berechtigungen und Funktionen finden Sie unter [Hinzufügen von Funktionen](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in der iOS-Entwicklerbibliothek. Eine vollständige Liste der unterstützten Funktionen finden Sie unter [Unterstützte Funktionen](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Unterstützte Funktionen für das App Wrapping Tool für iOS
 

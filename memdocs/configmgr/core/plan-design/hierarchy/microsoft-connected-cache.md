@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878489"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455275"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Microsoft Connected Cache in Configuration Manager
 
@@ -63,7 +63,7 @@ Wenn Sie Clients für die Verwendung des Connected Cache-Servers konfigurieren, 
 
   - Das ARR-Feature ([Routing von Anwendungsanforderungen](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview)) von IIS darf nicht vorinstalliert sein. Connected Cache installiert ARR und konfiguriert die zugehörigen Einstellungen. Microsoft kann nicht garantieren, dass die ARR-Konfiguration von Connected Cache nicht mit anderen Anwendungen auf dem Server in Konflikt steht, die dieses Feature ebenfalls verwenden.
 
-  - Der Verteilungspunkt benötigt Zugriff auf die Microsoft-Cloud über das Internet. Die genauen URLs können je nach cloudfähigem Inhalt variieren. Weitere Informationen finden Sie unter [Internetzugriffsanforderungen](../network/internet-endpoints.md).
+  - Der Verteilungspunkt benötigt Zugriff auf die Microsoft-Cloud über das Internet. Die genauen URLs können je nach cloudfähigem Inhalt variieren. Stellen Sie sicher, dass auch die Endpunkte für die Übermittlungsoptimierung zugelassen werden. Weitere Informationen finden Sie unter [Internetzugriffsanforderungen](../network/internet-endpoints.md).
 
   - Ab Version 2002 kann die Connected Cache-Anwendung einen nicht authentifizierten Proxyserver für den Internetzugriff verwenden. Weitere Informationen finden Sie unter [Konfigurieren des Proxys für einen Standortsystemserver](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 

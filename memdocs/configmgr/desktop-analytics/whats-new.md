@@ -2,7 +2,7 @@
 title: Neues in Desktop Analytics
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie eine Übersicht über die neuen Funktionen in der aktuellen monatlichen Release des Desktop Analytics-Clouddiensts.
-ms.date: 05/11/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268162"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454952"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Neues in Desktop Analytics
 
@@ -27,6 +27,12 @@ Informieren Sie sich jeden Monat über Neuigkeiten in Desktop Analytics.
 
 Um bei einer Aktualisierung dieser Seite benachrichtigt zu werden, kopieren Sie die folgende URL, und fügen Sie sie in Ihren RSS-Feedreader ein: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="june-2020"></a>Juni 2020
+
+### <a name="improvement-to-prerequisites"></a>Verbesserung der Voraussetzungen
+
+Desktop Analytics erfordert nicht länger, dass Sie einen Office 365-Dienst in Ihrem Azure Active Directory-Mandanten (Azure AD) bereitstellen. Die **Office365-Clientadministrator**-App in Azure AD ist jetzt die **Desktop Analytics**-App und ermöglicht Configuration Manager den Abruf von Dienstinformationen und -status.
 
 ## <a name="may-2020"></a>Mai 2020
 

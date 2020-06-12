@@ -1,5 +1,5 @@
 ---
-title: Lookout MTD-Connector mit Microsoft Intune
+title: Integrieren von Lookout Mobile Endpoint mit Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Informationen zum Integrieren von Intune mit Lookout Mobile Threat Defense (MTD), um den Zugriff von mobilen Geräten auf Ihre Unternehmensressourcen zu steuern.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c3ca25ce4bf4f6520e7ef5f7e3aaaff958060a2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1083e195cee20c3df9572db94395d462f9531a39
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990808"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330949"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Lookout Mobile Endpoint Security-Connector mit Intune
 
@@ -83,7 +83,7 @@ Wenn Apps, die Schadsoftware enthalten, auf Geräten erkannt werden, können Sie
 > [!div class="mx-imgBorder"]
 > ![Darstellung der Richtlinie, die den Zugriff aufgrund von Apps mit Schadsoftware blockiert](./media/lookout-mobile-threat-defense-connector/malicious-apps-blocked.png)
 
-*Nach Korrektur erteilter Zugriff:*
+*Zugriff nach Beseitigung gewährt:*
 
 > [!div class="mx-imgBorder"]
 > ![Darstellung des gewährten Zugriffs auf Geräte nach der Beseitigung](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
@@ -97,26 +97,26 @@ Erkennen Sie Bedrohungen Ihres Netzwerks, wie etwa Man-in-the-Middle-Angriffe, u
 > [!div class="mx-imgBorder"]
 > ![Darstellung des blockierten WLAN-Zugriffs basierend auf Netzwerkbedrohungen](./media/lookout-mobile-threat-defense-connector/network-wifi-blocked.png)
 
-*Nach Korrektur erteilter Zugriff:*
+*Zugriff nach Beseitigung gewährt:*
 
 > [!div class="mx-imgBorder"]
 > ![Darstellung des bedingten Zugriffs, der nach Beseitigung der Bedrohung den Zugriff gewährt](./media/lookout-mobile-threat-defense-connector/network-wifi-unblocked.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf der Bedrohung für das Netzwerk
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf Netzwerkbedrohungen
 
-Erkennen von Bedrohungen Ihres Netzwerks, wie etwa Man-in-the-Middle-Angriffen, und Verhindern der Synchronisierung von Unternehmensdateien auf der Grundlage des Geräterisikos.
+Erkennen Sie Bedrohungen für Ihr Netzwerk wie Man-in-the-Middle-Angriffe, und verhindern Sie die Synchronisierung von Unternehmensdateien basierend auf den Risiken für Geräte.
 
 *Blockieren des Zugriffs auf SharePoint Online bei Erkennen von Bedrohungen für das Netzwerk*
 
 > [!div class="mx-imgBorder"]
 > ![Darstellung des blockierten Zugriffs auf SharePoint Online](./media/lookout-mobile-threat-defense-connector/network-spo-blocked.png)
 
-*Nach Korrektur erteilter Zugriff:*
+*Zugriff nach Beseitigung gewährt:*
 
 > [!div class="mx-imgBorder"]
 > ![Darstellung des gewährten Zugriffs, nachdem die Netzwerkbedrohung beseitigt wurde](./media/lookout-mobile-threat-defense-connector/network-spo-unblocked.png)
 
-### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Steuern des Zugriffs auf nicht registrierte Geräte bei Bedrohungen durch böswillige Apps
+### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Steuern des Zugriffs auf nicht registrierte Geräte bei Bedrohungen durch Apps mit Schadsoftware
 
 Wenn die MTD-Lösung von Lookout for Work ein Gerät für infiziert hält:
 > [!div class="mx-imgBorder"]

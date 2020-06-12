@@ -10,12 +10,12 @@ ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c2347275ffdc194e73cf792d6f83ffa75732f8c4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691128"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455164"
 ---
 # <a name="deploy-a-task-sequence"></a>Bereitstellen einer Tasksequenz
 
@@ -154,19 +154,7 @@ Mithilfe der folgenden Vorgehensweise können Sie eine Tasksequenz auf Computern
 
 9. Geben Sie auf der Seite **Verteilungspunkte** die folgenden Informationen an:  
 
-    - **Bereitstellungsoptionen**: Geben Sie eine der folgenden Optionen an:  
-
-        > [!NOTE]  
-        > Wenn Sie zum Bereitstellen eines Betriebssystems einen Multicast verwenden, laden Sie den Inhalt entweder je nach Bedarf oder vor Ausführung der Tasksequenz auf die Computer herunter.  
-
-        - **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist**: Geben Sie an, dass Clients den Inhalt vom Verteilungspunkt herunterladen, wenn dieser von der Tasksequenz benötigt wird. Der Client startet die Tasksequenz. Wenn ein Schritt in der Tasksequenz Inhalte benötigt, wird es heruntergeladen, bevor der Schritt ausgeführt wird.  
-
-        - **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen**: Geben Sie an, dass Clients den gesamten Inhalt vom Verteilungspunkt herunterladen, bevor die Tasksequenz ausgeführt wird. Wenn Sie auf der Seite **Bereitstellungseinstellungen** angegeben haben, dass die Tasksequenz für die Bereitstellung per PXE und Startmedien verfügbar ist, wird diese Option nicht angezeigt.  
-
-        - **Auf Inhalt direkt von einem Verteilungspunkt aus zugreifen, wenn er von der ausgeführten Tasksequenz benötigt wird**: Geben Sie an, dass Clients den Inhalt vom Verteilungspunkt ausführen. Diese Option ist nur verfügbar, wenn Sie alle der Tasksequenz zugeordneten Pakete für die Verwendung einer Paketfreigabe auf dem Verteilungspunkt aktivieren. Verwenden Sie für ein Paket unter **Eigenschaften** jeweils die Registerkarte **Datenzugriff** , um für Inhalte die Nutzung einer Paketfreigabe zu aktivieren.  
-
-            > [!IMPORTANT]  
-            > Aus Sicherheitsgründen empfiehlt es sich, die Option **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist** oder **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen** auszuwählen. Wenn Sie eine dieser Optionen auswählen, erstellt Configuration Manager einen Hashwert für das Paket, um die Paketintegrität gewährleisten zu können. Wenn Sie die Option **Auf Inhalt direkt von einem Verteilungspunkt aus zugreifen, wenn er von der ausgeführten Tasksequenz benötigt wird** auswählen, wird der Hashwert des Pakets vor dem Ausführen des angegebenen Programms nicht überprüft. Da die Paketintegrität in diesem Fall nicht gewährleistet werden kann, können Benutzer mit Administratorrechten Paketinhalte ändern oder manipulieren.  
+    - **Bereitstellungsoptionen**: Weitere Informationen finden Sie unter[Bereitstellungsoptionen](#bkmk_deploy-options).
 
     - **Remoteverteilungspunkt verwenden, wenn kein lokaler Verteilungspunkt verfügbar ist**: Geben Sie an, ob Verteilungspunkte über eine benachbarte Begrenzungsgruppe von Clients zum Herunterladen des Inhalts verwendet werden können, der für die Tasksequenz erforderlich ist.  
 
@@ -178,6 +166,63 @@ Mithilfe der folgenden Vorgehensweise können Sie eine Tasksequenz auf Computern
 10. Wenn Sie diese Einstellungen zur erneuten Verwendung speichern möchten, wählen Sie auf der Registerkarte **Zusammenfassung** die Option **Als Vorlage speichern** aus. Benennen Sie die Vorlage, und wählen Sie die Einstellungen aus, die gespeichert werden sollen.  
 
 11. Schließen Sie den Assistenten ab.  
+
+### <a name="deployment-options"></a><a name="bkmk_deploy-options"></a> Bereitstellungsoptionen
+
+<!-- MEMDocs#328, SCCMDocs#2114 -->
+
+Diese Optionen befinden sich auf der Registerkarte **Verteilungspunkte** der Tasksequenzbereitstellung. Sie sind dynamisch und basieren auf anderen Auswahlmöglichkeiten bei der Bereitstellung und den Attributen der Tasksequenz. Möglicherweise werden nicht alle Optionen angezeigt.
+
+> [!NOTE]  
+> Wenn Sie zum Bereitstellen eines Betriebssystems einen Multicast verwenden, laden Sie den Inhalt entweder je nach Bedarf oder vor Ausführung der Tasksequenz auf die Computer herunter.  
+
+- **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist**: Geben Sie an, dass Clients den Inhalt vom Verteilungspunkt herunterladen, wenn dieser von der Tasksequenz benötigt wird. Der Client startet die Tasksequenz. Wenn ein Schritt in der Tasksequenz Inhalte benötigt, wird es heruntergeladen, bevor der Schritt ausgeführt wird.  
+
+- **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen**: Geben Sie an, dass Clients den gesamten Inhalt vom Verteilungspunkt herunterladen, bevor die Tasksequenz ausgeführt wird. Wenn Sie auf der Seite **Bereitstellungseinstellungen** angegeben haben, dass die Tasksequenz für die Bereitstellung per PXE und Startmedien verfügbar ist, wird diese Option nicht angezeigt.  
+
+- **Auf Inhalt direkt von einem Verteilungspunkt aus zugreifen, wenn er von der ausgeführten Tasksequenz benötigt wird**: Geben Sie an, dass Clients den Inhalt vom Verteilungspunkt ausführen. Diese Option ist nur verfügbar, wenn Sie alle der Tasksequenz zugeordneten Pakete für die Verwendung einer Paketfreigabe auf dem Verteilungspunkt aktivieren. Verwenden Sie für ein Paket unter **Eigenschaften** jeweils die Registerkarte **Datenzugriff** , um für Inhalte die Nutzung einer Paketfreigabe zu aktivieren.  
+
+> [!IMPORTANT]  
+> Aus Sicherheitsgründen empfiehlt es sich, die Option **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist** oder **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen** auszuwählen. Wenn Sie eine dieser Optionen auswählen, erstellt Configuration Manager einen Hashwert für das Paket, um die Paketintegrität gewährleisten zu können. Wenn Sie die Option **Auf Inhalt direkt von einem Verteilungspunkt aus zugreifen, wenn er von der ausgeführten Tasksequenz benötigt wird** auswählen, wird der Hashwert des Pakets vor dem Ausführen des angegebenen Programms nicht überprüft. Da die Paketintegrität in diesem Fall nicht gewährleistet werden kann, können Benutzer mit Administratorrechten Paketinhalte ändern oder manipulieren.  
+
+#### <a name="example-1-one-deployment-option"></a>Beispiel 1: Eine Bereitstellungsoption
+
+Sie stellen eine Tasksequenz zur Betriebssystembereitstellung bereit, die den Datenträger zurücksetzt und ein Image löscht. Auf der Seite **Bereitstellungseinstellungen** stellen Sie sie für eine Option zur Verfügung, die Medien und PXE umfasst:
+
+:::image type="content" source="media/deploy-setting-make-available.png" alt-text="Bereitstellen der Tasksequenz und Option „Verfügbarmachen für“":::
+
+Auf der Seite **Verteilungspunkte** gibt es nur eine Bereitstellungsoption:
+
+- **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist**
+
+:::image type="content" source="media/deploy-option-1.png" alt-text="Tasksequenz bereitstellen und eine Bereitstellungsoption":::
+
+Die Option **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen** ist nicht verfügbar, da die Bereitstellung für Medien und PXE verfügbar gemacht wird.
+
+Die Option **Auf Inhalt direkt von einem Verteilungspunkt aus zugreifen, wenn er von der ausgeführten Tasksequenz benötigt wird** ist ebenso nicht verfügbar. Nicht für alle Inhalte, auf die verwiesen wird, wird eine Paketfreigabe verwendet.
+
+#### <a name="example-2-two-deployment-options"></a>Beispiel 2: Zwei Bereitstellungsoptionen
+
+Sie stellen eine Tasksequenz zur Betriebssystembereitstellung bereit, die den Datenträger zurücksetzt und ein Image löscht. Auf der Seite **Bereitstellungseinstellungen** machen Sie sie für **Nur Configuration Manager-Clients** verfügbar. Auf der Seite **Verteilungspunkte** gibt es zwei Bereitstellungsoptionen:
+
+- **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist**
+- **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen**
+
+:::image type="content" source="media/deploy-option-2.png" alt-text="Tasksequenz bereitstellen und zwei Bereitstellungsoptionen":::
+
+Die Option **Auf Inhalt direkt von einem Verteilungspunkt aus zugreifen, wenn er von der ausgeführten Tasksequenz benötigt wird** ist ebenso nicht verfügbar. Nicht für alle Inhalte, auf die verwiesen wird, wird eine Paketfreigabe verwendet.
+
+#### <a name="example-3-three-deployment-options"></a>Beispiel 3: Drei Bereitstellungsoptionen
+
+Sie verfügen über mehrere Pakete mit administrativen Skripts und zugeordneten Inhalten. Auf der Registerkarte **Datenzugriff** der Paketeigenschaften können Sie alle Pakete für folgende Option konfigurieren: **Copy the content in this package to a package share on distribution points** (Den Inhalt in diesem Paket in eine Paketfreigabe auf Verteilungspunkten kopieren).
+
+Sie erstellen eine Tasksequenz, die nur einige Schritte zum **Installieren von Paketen** für diese Skriptpakete besitzt, und stellen sie dann bereit. Auf der Seite **Bereitstellungseinstellungen** ist die einzige Option für das Verfügbarmachen **Nur Configuration Manager-Clients**. Diese Option ist die einzige verfügbare Option. Die Tasksequenz ist nicht für die Betriebssystembereitstellung vorgesehen, da ihr kein Startimage zugeordnet ist. Auf der Seite **Verteilungspunkte** gibt es drei Bereitstellungsoptionen:
+
+- **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist**
+- **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen**
+- **Auf Inhalt direkt von einem Verteilungspunkt aus zugreifen, wenn er von der ausgeführten Tasksequenz benötigt wird**
+
+:::image type="content" source="media/deploy-option-3.png" alt-text="Tasksequenz bereitstellen und drei Bereitstellungsoptionen":::
 
 ## <a name="deploy-windows-10-in-place-upgrade-via-cmg"></a>Bereitstellen eines direkten Upgrades für Windows 10 über das CMG
 

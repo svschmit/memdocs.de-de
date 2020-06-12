@@ -1,5 +1,5 @@
 ---
-title: Symantec-Connector mit Microsoft Intune
+title: Verwenden des Symantec Endpoint Protection Mobile-Connectors in Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Informationen zum Integrieren von Intune in Symantec Endpoint Protection Mobile, um den Zugriff mobiler Geräte auf Ihre Unternehmensressourcen zu steuern.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dcca264716b35600addd917e0ee7f309f530b70
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b078996ba5c7822ce9d8273be1df96a7aad0248b
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988349"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330966"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile-Connector
 
@@ -90,7 +90,7 @@ Wenn Apps, die Schadsoftware enthalten, auf Geräten erkannt werden, können Sie
 
 ![Darstellung des Szenarios, wenn Apps mit Schadsoftware erkannt werden](./media/skycure-mobile-threat-defense-connector/symantec-arch-1.png)
 
-*Nach Korrektur erteilter Zugriff:*
+*Zugriff nach Beseitigung gewährt:*
 
 ![Darstellung des gewährten Zugriffs nach Beseitigung von erkannten Apps mit Schadsoftware](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
@@ -102,11 +102,11 @@ Erkennen Sie Bedrohungen wie **Man-in-the-Middle** im Netzwerk, und schützen Si
 
 ![Blockieren des Netzwerkzugriffs über WLAN](./media/skycure-mobile-threat-defense-connector/symantec-arch-3.png)
 
-*Nach Korrektur erteilter Zugriff:*
+*Zugriff nach Beseitigung gewährt:*
 
 ![Zugriff erteilt nach der Behebung](./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf der Bedrohung für das Netzwerk
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf Netzwerkbedrohungen
 
 Erkennen von Bedrohungen wie **Man-in-the-Middle** im Netzwerk und Verhindern der Synchronisierung von Unternehmensdateien auf der Grundlage des Geräterisikos.
 
@@ -114,7 +114,7 @@ Erkennen von Bedrohungen wie **Man-in-the-Middle** im Netzwerk und Verhindern de
 
 ![Blockieren von SharePoint Online bei Erkennung von Bedrohungen für das Netzwerk](./media/skycure-mobile-threat-defense-connector/symantec-arch-5.png)
 
-*Nach Korrektur erteilter Zugriff:*
+*Zugriff nach Beseitigung gewährt:*
 
 ![Zugriff erteilt nach der Behebung für Sharepoint-Beispiel](./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png)
 

@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709388"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455020"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Tokenbasierte Authentifizierung für Cloud Management Gateway
 
@@ -60,10 +60,16 @@ Wenn Sie Clients im internen Netzwerk nicht installieren und registrieren könne
 
 1. Installieren Sie den Konfigurations-Manager-Client auf einem internetbasierten Gerät. Fügen Sie den Clientinstallationsparameter [ **/regtoken**](about-client-installation-properties.md#regtoken) ein. Die folgende Beispielbefehlszeile enthält die anderen erforderlichen Setupparameter und -eigenschaften:
 
-    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
+    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
 
     > [!TIP]
     > Weitere Informationen zu dieser Befehlszeile finden Sie unter [Installieren und Registrieren des Clients mithilfe einer Azure AD-Identität](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity). Dieser Prozess ist ähnlich, und es werden nur die Azure AD-Eigenschaften nicht verwendet.
+
+Überprüfen Sie die folgende Protokolldatei auf einen ähnlichen Eintrag, um dies zu überprüfen:<!-- bug 7357499 -->
+
+```ClientLocation.log
+Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
+```
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
@@ -107,23 +113,23 @@ Beispiel: `BulkRegistrationTokenTool.exe /lifetime 4320`
 
 Sie können zuvor erstellte Massenregistrierungstoken und deren Lebensdauer in der Configuration Manager-Konsole anzeigen und ihre Verwendung bei Bedarf blockieren. In der Standortdatenbank werden Massenregistrierungstoken jedoch nicht gespeichert.
 
-#### <a name="to-review-a-bulk-registration-token"></a>So überprüfen Sie ein Massenregistrierungstoken
+### <a name="review-a-bulk-registration-token"></a>Überprüfen eines Massenregistrierungstokens
 
-1. Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.
+1. Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**.
 
-2. Erweitern Sie im Arbeitsbereich „Verwaltung“ den Eintrag **Sicherheit**, und klicken Sie auf **Zertifikate**. In der-Konsole werden alle standortbezogenen Zertifikate und Massenregistrierungstoken im Detailbereich aufgelistet.
+2. Erweitern Sie **Sicherheit**, und klicken Sie auf den Knoten **Zertifikate**. In der-Konsole werden alle standortbezogenen Zertifikate und Massenregistrierungstoken im Detailbereich aufgelistet.
 
 3. Wählen Sie das zu überprüfende Massenregistrierungstoken aus.
 
-Sie können bestimmte Massenregistrierungstoken basierend auf ihrer GUID identifizieren. GUIDs für Massenregistrierungstoken werden zum Zeitpunkt der Tokenerstellung angezeigt. Sie können bei Bedarf auch nach der Spalte **Typ** filtern oder sortieren.
+Sie können bei nach der Spalte **Typ** filtern oder sortieren. Identifizieren Sie bestimmte Massenregistrierungstoken basierend auf ihrer GUID. Wenn Sie ein Massenregistrierungstoken erstellen, zeigt das Tool die GUID an.
 
-#### <a name="to-block-a-bulk-registration-token"></a>So blockieren Sie ein Massenregistrierungstoken
+### <a name="block-a-bulk-registration-token"></a>Blockieren eines Massenregistrierungstokens
 
-1. Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung**.
+1. Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**.
 
-2. Erweitern Sie im Arbeitsbereich „Verwaltung“ den Eintrag **Sicherheit**, klicken Sie auf **Zertifikate**, und wählen Sie das zu blockierende Massenregistrierungstoken aus.
+2. Erweitern Sie **Sicherheit**, klicken Sie auf den Knoten **Zertifikate**, und wählen Sie das zu blockierende Massenregistrierungstoken aus.
 
-3. Wählen Sie auf der Registerkarte **Start** des Menübands oder im Kontextmenü die Option **Blockieren** aus. Umgekehrt können Sie die Blockierung zuvor blockierter Massenregistrierungstoken aufheben, indem Sie auf der Registerkarte **Start** des Menübands oder im Kontextmenü die Option **Blockierung aufheben** auswählen.
+3. Wählen Sie auf der Registerkarte **Start** des Menübands oder im Kontextmenü die Option **Blockieren** aus. Wenn Sie die Blockierung von zuvor blockierten Massenregistrierungstoken aufheben möchten, klicken Sie auf die Aktion**Blockierung aufheben**.
 
 ## <a name="see-also"></a>Weitere Informationen:
 

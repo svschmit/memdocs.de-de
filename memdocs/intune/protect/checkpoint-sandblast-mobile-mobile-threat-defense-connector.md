@@ -1,5 +1,5 @@
 ---
-title: Einrichten von Check Point SandBlast MTD
+title: Einrichten des Check Point SandBlast MTD-Connectors mit Intune
 titleSuffix: Microsoft Intune
 description: Hier finden Sie Informationen zum Integrieren von Check Point SandBlast Mobile Threat Defense in Intune, um den Zugriff mobiler Geräte auf Ihre Unternehmensressourcen zu steuern.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9c1450af064caa1f7572da0ab4753e9db68484c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a0645c771b304bfb4930f5cd365b9291366499b1
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989262"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330915"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Check Point SandBlast Mobile Threat Defense-Connector in Intune
 
@@ -72,7 +72,7 @@ Wenn Apps, die Schadsoftware enthalten, auf Geräten erkannt werden, können Sie
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD blockiert, wenn Apps mit Schadsoftware entdeckt werden](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.PNG)
 
-*Nach Korrektur erteilter Zugriff:*
+*Zugriff nach Beseitigung gewährt:*
 
 > [!div class="mx-imgBorder"]
 > ![Zugriff für Check Point MTD gewährt](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
@@ -86,12 +86,12 @@ Erkennen Sie Bedrohungen wie **Man-in-the-Middle** im Netzwerk, und schützen Si
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD blockiert den Netzwerkzugriff über WLAN](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.PNG)
 
-*Nach Korrektur erteilter Zugriff:*
+*Zugriff nach Beseitigung gewährt:*
 
 > [!div class="mx-imgBorder"]
 > ![Zugriff für Check Point MTD über WLAN gewährt](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.PNG)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf der Bedrohung für das Netzwerk
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf Netzwerkbedrohungen
 
 Erkennen von Bedrohungen wie **Man-in-the-Middle** im Netzwerk und Verhindern der Synchronisierung von Unternehmensdateien auf der Grundlage des Geräterisikos.
 
@@ -100,7 +100,7 @@ Erkennen von Bedrohungen wie **Man-in-the-Middle** im Netzwerk und Verhindern de
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD blockiert den Zugriff auf SharePoint Online](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.PNG)
 
-*Nach Korrektur erteilter Zugriff:*
+*Zugriff nach Beseitigung gewährt:*
 
 > [!div class="mx-imgBorder"]
 > ![Zugriff für Check Point MTD auf SharePoint Online gewährt](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.PNG)

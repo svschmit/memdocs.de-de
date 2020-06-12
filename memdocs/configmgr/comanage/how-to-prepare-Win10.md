@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: e6582599a02f4a8196ee739ca875df4d158a993e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 66e6156466d0432aaa8b3b162263f8207bdc9d78
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427779"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455105"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Vorbereiten von internetbasierten Geräten für die Co-Verwaltung
 
@@ -78,7 +78,7 @@ Bestimmen Sie, welche Befehlszeileneigenschaften für Ihre Umgebung erforderlich
   - AADCLIENTAPPID  
   - AADRESOURCEURI  
 
-- Die folgende Eigenschaft ist erforderlich, wenn der Client zurück in das Intranet wechselt:  
+- Verwenden Sie die folgende Eigenschaft, wenn der Client zurück in das Intranet wechselt:
   - SMSMP  
 
 - Wenn Sie Ihr eigenes PKI-Zertifikat verwenden und Ihre CRL im Internet nicht veröffentlicht wird, ist der folgende Parameter erforderlich:  

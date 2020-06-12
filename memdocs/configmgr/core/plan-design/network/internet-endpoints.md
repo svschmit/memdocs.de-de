@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110133"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454969"
 ---
 # <a name="internet-access-requirements"></a>Erforderliche Berechtigungen für den Internetzugriff
 
@@ -38,7 +38,7 @@ Andere Configuration Manager-Features erfordern möglicherweise zusätzliche End
 
 Seit Version 2002 gilt Folgendes: Wenn die Verbindung des Configuration Manager-Standorts mit den erforderlichen Endpunkten für einen Clouddienst nicht hergestellt werden kann, wird eine kritische Statusmeldung mit der ID 11488 ausgegeben. Wenn keine Verbindung mit dem Dienst hergestellt werden kann, wird der Status der Komponente „SMS_SERVICE_CONNECTOR“ in „kritisch“ geändert. Zeigen Sie detaillierte Statusinformationen im Knoten [Komponentenstatus](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) in der Configuration Manager-Konsole an.<!-- 5566763 -->
 
-### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"/> Updates und Wartung
+### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a> Updates und Wartung
 
 Weitere Informationen zu dieser Funktion finden Sie unter [Updates und Wartung für Configuration Manager](../../servers/manage/updates.md).
 
@@ -86,6 +86,18 @@ Wenn Sie Windows 10-Geräte in Microsoft Intune für die Co-Verwaltung registrie
 ## <a name="microsoft-store-for-business"></a>Microsoft Store für Unternehmen
 
 Wenn Sie Configuration Manager in den [Microsoft Store für Unternehmen](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) integrieren, stellen Sie sicher, dass der Dienstverbindungspunkt und die entsprechenden Geräte auf den Clouddienst zugreifen können. Weitere Informationen finden Sie unter [Proxykonfiguration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+
+## <a name="delivery-optimization"></a>Übermittlungsoptimierung
+
+Wenn Sie die Übermittlungsoptimierung verwenden, müssen Clients mit dem Clouddienst kommunizieren: `*.do.dsp.mp.microsoft.com`
+
+Verteilungspunkte, die Microsoft Connected Cache unterstützen, benötigen auch diese Endpunkte.
+
+Weitere Informationen finden Sie in den folgenden Artikeln:
+
+- [Häufig gestellte Fragen zur Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Grundlegende Konzepte für die Inhaltsverwaltung in Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
+- [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
 ## <a name="cloud-services"></a><a name="bkmk_cloud"></a> Clouddienste
 

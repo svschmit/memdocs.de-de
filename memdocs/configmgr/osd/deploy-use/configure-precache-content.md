@@ -10,12 +10,12 @@ ms.assetid: 9d1e8252-99e3-48aa-bfa5-0cf4cd6637b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 184bdc58ac6dc0e311875cc1ddab8c605d8eec32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ec465f3dee33ca311aec120e74a2994a81a90ec9
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704208"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455224"
 ---
 # <a name="configure-pre-cache-content-for-task-sequences"></a>Konfigurieren der in einem vorgeschalteten Cache gespeicherten Inhalte für Tasksequenzen
 
@@ -101,7 +101,6 @@ Beispielsweise wird im folgenden Schritt **Betriebssystem aktualisieren** die en
 >
 > Fügen Sie zuerst die Sprache hinzu, indem Sie die Bedingung für die **Betriebssystemsprache** festlegen. Bearbeiten Sie dann die WMI-Abfrage so, dass sie die Architekturklausel beinhaltet.
 
-
 ### <a name="3-deploy-the-task-sequence"></a><a name="bkmk_deploy"></a> 3. Bereitstellen der Tasksequenz
 
 [Stellen Sie die Tasksequenz bereit](deploy-a-task-sequence.md). Konfigurieren Sie für die Zwischenspeicherungsfunktion die folgenden Einstellungen:  
@@ -115,8 +114,7 @@ Beispielsweise wird im folgenden Schritt **Betriebssystem aktualisieren** die en
 - Konfigurieren Sie auf der Registerkarte **Verteilungspunkte** die Einstellungen der **Bereitstellungsoptionen**. Wenn der Inhalt nicht vorab zwischengespeichert wird, bevor ein Benutzer die Installation startet, verwendet der Client diese Einstellungen.  
 
     > [!Important]  
-    > Verwenden Sie für Tasksequenzen, bei denen ein Betriebssystemimage installiert wird, nicht die Bereitstellungsoption **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist**. Wenn die Tasksequenz den Datenträger zurücksetzt, bevor sie das Betriebssystemimage anwendet, entfernt sie den Clientcache. Da der Inhalt nicht mehr vorhanden ist, kann die Tasksequenz nicht ausgeführt werden.<!-- SCCMDocs-PR #1338 -->
-
+    > Verwenden Sie für Tasksequenzen, bei denen ein Betriebssystemimage installiert wird, nicht die Bereitstellungsoption **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist**. Wenn die Tasksequenz den Datenträger zurücksetzt, bevor sie das Betriebssystemimage anwendet, entfernt sie den Clientcache. Da der Inhalt nicht mehr vorhanden ist, kann die Tasksequenz nicht ausgeführt werden.<!-- SCCMDocs-PR #1338 --> Diese Bereitstellungsoptionen sind dynamisch und basieren auf anderen Optionen, die Sie für die Bereitstellung auswählen. Weitere Informationen finden Sie unter [Deploy a task sequence](deploy-a-task-sequence.md#bkmk_deploy-options).<!-- MEMDocs#328, SCCMDocs#2114 -->
 
 ## <a name="user-experience"></a>Benutzerfreundlichkeit
 
@@ -125,7 +123,6 @@ Beispielsweise wird im folgenden Schritt **Betriebssystem aktualisieren** die en
 - Wenn der Client die Bereitstellung für Benutzer verfügbar macht, wird eine Benachrichtigung angezeigt, um Benutzer über die neue Bereitstellung zu informieren. Die Tasksequenz ist jetzt im Softwarecenter sichtbar. Der Benutzer kann zum Softwarecenter navigieren und auf **Installieren** klicken, um die Installation zu starten.  
 
 - Wenn der Client den Inhalt nicht vollständig zwischengespeichert hat, und der Benutzer die Tasksequenz installiert, verwendet der Client die Einstellungen, die Sie auf der Registerkarte **Bereitstellungsoption** der Bereitstellung angegeben haben.  
-
 
 ## <a name="see-also"></a>Weitere Informationen:
 

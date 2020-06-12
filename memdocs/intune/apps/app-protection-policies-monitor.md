@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f39681bf954e84376e5d8e3862354a2a10b1003a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988114"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455071"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Überwachen von App-Schutzrichtlinien
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Sie können den Status der App-Schutzrichtlinien überwachen, die Sie im Bereich „Intune-App-Schutz“ für Benutzer im [Azure-Portal](https://portal.azure.com) angewendet haben. Darüber hinaus finden Sie hier Informationen über die Benutzer, die von den App-Schutzrichtlinien betroffenen sind, deren Konformitätsstatus sowie Probleme, die möglicherweise bei den Benutzern auftreten.
+Sie können den Status der App-Schutzrichtlinien überwachen, die Sie im Bereich „Intune-App-Schutz“ für Benutzer in Intune angewendet haben. Darüber hinaus finden Sie hier Informationen über die Benutzer, die von den App-Schutzrichtlinien betroffenen sind, deren Konformitätsstatus sowie Probleme, die möglicherweise bei den Benutzern auftreten.
 
 Es gibt drei verschiedenen Stellen, an denen App-Schutzrichtlinien überwacht werden können:
 - Zusammenfassungsansicht
@@ -43,10 +43,9 @@ Die Beibehaltungsdauer für den Schutz von App-Daten beträgt 90 Tage. Alle App-
 ## <a name="summary-view"></a>Zusammenfassungsansicht
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
-3. Wählen Sie **Apps** > **Überwachen** > **Status des App-Schutzes** aus.
+2. Wählen Sie **Apps** > **Überwachen** > **Status des App-Schutzes** aus.
 
-   ![Screenshot der Zusammenfassungskachel des Bereichs der mobilen Anwendungsverwaltung mit Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
-
+Die folgende Liste enthält Details zum App-Schutzstatus: 
 - **Zugewiesene Benutzer:** Die Gesamtzahl von zugewiesenen Benutzern in Ihrem Unternehmen, die eine App verwenden, die einer Richtlinie in einem geschäftlichen Kontext zugeordnet ist, und geschützt und lizenziert sind, sowie die zugewiesenen Benutzer, die nicht geschützt und lizenziert sind.
 - **Gekennzeichnete Benutzer:** Die Anzahl von Benutzern, bei deren Geräten Probleme auftreten. Geräte mit Jailbreak (iOS/iPadOS) oder Rootzugriff (Android) werden unter **Gekennzeichnete Benutzer** gemeldet. Hier werden auch Benutzer gemeldet, deren Geräte von der Google-SafetyNet-Überprüfung beim Gerätenachweis gekennzeichnet wurden (wenn diese vom IT-Administrator aktiviert wurde). 
 - **Benutzer mit potenziell schädlichen Apps**: Die Anzahl der Benutzer, die eine schädliche App auf ihrem Android-Gerät haben könnten, wird von Google Play Protect erkannt. 

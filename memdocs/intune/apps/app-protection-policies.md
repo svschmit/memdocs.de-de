@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91ca1e8a710e13e393af5bb3723ca1086e37887d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988604"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84331000"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Erstellen und Zuweisen von App-Schutzrichtlinien
 
@@ -51,7 +51,7 @@ Informationen zum Hinzufügen von Line-of-Business-Apps (LOB) Ihrer Organisation
 
 ## <a name="app-protection-policies-for-iosipados-and-android-apps"></a>App-Schutzrichtlinien für iOS-/iPadOS- und Android-Apps
 
-Befolgen Sie beim Erstellen neuer App-Schutzrichtlinien für iOS-/iPadOS- und Android-Apps einen modernen Intune-Prozessablauf für App-Schutzrichtlinien.
+Befolgen Sie beim Erstellen neuer App-Schutzrichtlinien für iOS-/iPadOS- und Android-Apps einen modernen Intune-Prozessablauf für App-Schutzrichtlinien. Weitere Informationen zum Erstellen von App-Schutzrichtlinien für Windows-Apps finden Sie unter [Erstellen und Bereitstellen von WIP-Richtlinien (Windows Information Protection) in Intune](../apps/windows-information-protection-policy-create.md).
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Erstellen einer iOS-/iPadOS- oder Android-App-Schutzrichtlinie
 
