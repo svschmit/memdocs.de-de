@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428683"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455122"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> Endpunktanalyse (Vorschauversion)
 
@@ -56,7 +56,7 @@ Stellen Sie sicher, dass Sie die Voraussetzungen erfüllen, und beginnen Sie dan
 
 Für diese Vorschau können Sie Geräte über Configuration Manager oder Microsoft Intune registrieren. 
 
-Zum Registrieren von Geräten über Intune ist bei dieser Vorschau Folgendes erforderlich:
+#### <a name="to-enroll-devices-via-intune-this-preview-requires"></a><a name="bkmk_uea__intune_prereq"></a> Zum Registrieren von Geräten über Intune ist bei dieser Vorschau Folgendes erforderlich:
 - Bei Intune registrierte Windows 10-Geräte
 - Erkenntnisse zur Startleistung sind nur für Geräte verfügbar, auf denen Version 1903 oder höher von Windows 10 Enterprise ausgeführt wird (Home- und Professional-Editionen werden derzeit nicht unterstützt). Darüber hinaus muss es sich bei den Geräten um in Azure AD eingebundene (Hybrid-) Geräte handeln. Geräte, die dem Arbeitsplatz beigetreten sind, werden derzeit nicht unterstützt.
 - Netzwerkkonnektivität von Geräten zur öffentlichen Microsoft-Cloud. Weitere Informationen finden Sie unter [Endpunkte](#bkmk_uea_endpoints).
@@ -64,11 +64,12 @@ Zum Registrieren von Geräten über Intune ist bei dieser Vorschau Folgendes erf
    - Durch Klicken auf **Start** stimmen Sie zu und bestätigen, dass Ihre Kundendaten außerhalb des von Ihnen bei der Bereitstellung Ihres Microsoft Intune-Clients ausgewählten Speicherorts gespeichert werden können.
    - Nachdem Sie zum Sammeln von Daten auf **Starten** geklickt haben, können andere schreibgeschützte Rollen die Daten anzeigen.
 
-Zum Registrieren von Geräten über Configuration Manager ist bei dieser Vorschau Folgendes erforderlich:
+#### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a> Zum Registrieren von Geräten über Configuration Manager ist bei dieser Vorschau Folgendes erforderlich:
 - Configuration Manager, Version 2002 oder höher
 - Clients mit Upgrade auf Version 2002 oder höher
 - Aktiviertes [Anfügen von Mandanten in Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) mit Nordamerika oder Europa als Azure-Mandantenstandort (wird bald auf andere Regionen ausgeweitet)
 
+#### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a> Die Skripterstellung für proaktive Korrekturen erfordert Folgendes:
 Unabhängig davon, ob Geräte über Intune oder Configuration Manager registriert werden, gelten für die [**Skripterstellung für proaktive Korrekturen**](#bkmk_uea_prs) die folgenden Anforderungen:
 - Bei den Geräten muss es sich um in Azure AD eingebundene (Hybrid-) Geräte handeln, die eine der folgenden Bedingungen erfüllen:
 - Ein Windows 10 Enterprise-, Professional- oder Education-Gerät, das von Intune verwaltet wird
