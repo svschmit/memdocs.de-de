@@ -1,5 +1,5 @@
 ---
-title: Microsoft Endpoint Manager-Mandanten anfügen
+title: Anfügen von Mandanten in Microsoft Endpoint Manager
 titleSuffix: Configuration Manager
 description: Laden Sie Ihre Configuration Manager-Geräte in den clouddienst hoch, und nehmen Sie im Admin Center Aktionen vor.
 ms.date: 04/10/2020
@@ -10,18 +10,18 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: e2b8c07a64265d33ade0b1c2c08c2d9c4096b741
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693463"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795617"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Microsoft Endpoint Manager-Mandanten anfügen: Geräte Synchronisierung und Geräte Aktionen
 <!--3555758 live 3/4/2020-->
 *Gilt für: Configuration Manager (Current Branch)*
 
-Microsoft Endpoint Manager ist eine integrierte Lösung für die Verwaltung all Ihrer Geräte. Microsoft vereint Configuration Manager und InTune in einer einzigen Konsole mit dem Namen **Microsoft Endpoint Manager Admin Center**.
+Microsoft Endpoint Manager ist eine integrierte Lösung für die Verwaltung all Ihrer Geräte. Microsoft vereint Configuration Manager und Intune in einer einzigen Konsole namens **Microsoft Endpoint Manager Admin Center**.
 
 Ab Configuration Manager Version 2002 können Sie Ihre Configuration Manager Geräte in den Cloud-Dienst hochladen und im Admin Center auf dem Blatt **Geräte** Aktionen ausführen.
 
@@ -39,10 +39,7 @@ Ab Configuration Manager Version 2002 können Sie Ihre Configuration Manager Ger
 ## <a name="internet-endpoints"></a>Internet Endpunkte
 
 - `https://aka.ms/configmgrgateway`
-- `https://gateway.configmgr.manage.microsoft.com`
-- `https://us.gateway.configmgr.manage.microsoft.com`
-- `https://eu.gateway.configmgr.manage.microsoft.com`
-
+- `https://*.manage.microsoft.com` <!--7424742-->
 
 ## <a name="enable-device-upload"></a>Aktivieren des Geräte Uploads
 
@@ -55,40 +52,40 @@ Ab Configuration Manager Version 2002 können Sie Ihre Configuration Manager Ger
 
 Wenn Sie derzeit die Co-Verwaltung aktiviert haben, bearbeiten Sie die Eigenschaften der Co-Verwaltung, um den Geräte Upload mithilfe der folgenden Anweisungen zu aktivieren:
 
-1. Wechseln Sie in der Configuration Manager-Verwaltungskonsole zu **Verwaltung** > **Übersicht** > **Cloud Services** > **Co-Verwaltung**.
-1. Klicken Sie mit der rechten Maustaste auf die Co-Verwaltungs Einstellungen, und wählen Sie **Eigenschaften**.
-1. Wählen Sie auf der Registerkarte **Upload konfigurieren** die Option **in das Microsoft Endpoint Manager Admin Center hochladen**aus. Klicken Sie auf **Anwenden**.
-   - Die Standardeinstellung für den Geräte Upload sind **alle meine Geräte, die von Microsoft Endpoint Configuration Manager verwaltet werden**. Bei Bedarf können Sie den Upload auf eine einzelne Geräte Sammlung beschränken.
+1. Navigieren Sie in der Configuration Manager-Administratorkonsole zu **Verwaltung** > **Übersicht** > **Clouddienste** > **Co-Verwaltung**.
+1. Klicken Sie mit der rechten Maustaste auf die Co-Verwaltungseinstellungen und dann auf **Eigenschaften**.
+1. Klicken Sie in der Registerkarte **Configure upload** (Upload konfigurieren) auf **Upload to Microsoft Endpoint Manager admin center** (Upload ins Microsoft Endpoint Manager Admin Center). Klicken Sie auf **Übernehmen**.
+   - Die Standardeinstellung für den Upload von Geräten ist **All my devices managed by Microsoft Endpoint Configuration Manager** (Alle von Microsoft Endpoint Configuration Manager verwalteten Geräte). Bei Bedarf können Sie den Upload auf eine einzelne Geräte Sammlung beschränken.
 
    [![Konfigurations-Assistent für die Co-Verwaltung](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
-1. Melden Sie sich bei entsprechender Aufforderung mit Ihrem *globalen Administrator* Konto an.
-1. Klicken Sie auf **Ja** , um die Benachrichtigung **Create Aad Application** zu akzeptieren. Diese Aktion stellt einen Dienst Prinzipal bereit und erstellt eine Azure AD Anwendungs Registrierung, um die Synchronisierung zu vereinfachen.
-1. Klicken Sie auf **OK** , um die Eigenschaften der Co-Verwaltung zu beenden, nachdem Sie die Änderungen vorgenommen haben.
+1. Melden Sie sich mit Ihrem *globalen Administratorkonto* an, wenn Sie dazu aufgefordert werden.
+1. Klicken Sie auf **Ja**, um die Meldung **AAD-Anwendung erstellen** zu akzeptieren. Durch diese Aktion wird ein Dienstprinzipal bereitgestellt und eine Azure AD-Anwendungsregistrierung erstellt, um das Synchronisieren zu vereinfachen.
+1. Klicken Sie auf **OK**, um die Eigenschaften für die Co-Verwaltung zu verlassen, sobald Sie alle Änderungen vorgenommen haben.
 
 
 ### <a name="use-the-configure-co-management-wizard-to-enable-device-upload"></a><a name="bkmk_config"></a>Aktivieren des Geräte Uploads mithilfe des Assistenten zum Konfigurieren der Co-Verwaltung
 Wenn Sie die Co-Verwaltung nicht aktiviert haben, verwenden Sie den Assistenten zum **Konfigurieren der Co-Verwaltung** , um den Geräte Upload zu aktivieren. Sie können Ihre Geräte hochladen, ohne die automatische Registrierung für die Co-Verwaltung zu aktivieren oder Workloads zu InTune zu wechseln. Aktivieren Sie den Geräte Upload mithilfe der folgenden Anweisungen:
 
-1. Wechseln Sie in der Configuration Manager-Verwaltungskonsole zu **Verwaltung** > **Übersicht** > **Cloud Services** > **Co-Verwaltung**.
-1. Klicken Sie im Menüband auf **Co-Verwaltung konfigurieren** , um den Assistenten zu öffnen.
-1. Wählen Sie auf der Seite für das Mandanten- **Onboarding** die Option **azurepubliccloud** für Ihre Umgebung aus. Azure Government Cloud wird nicht unterstützt.
-1. Klicken Sie auf **Anmelden**. Melden Sie sich mit Ihrem *globalen Administrator* Konto an.
+1. Navigieren Sie in der Configuration Manager-Administratorkonsole zu **Verwaltung** > **Übersicht** > **Clouddienste** > **Co-Verwaltung**.
+1. Klicken Sie im Menüband auf **Configure co-management** (Co-Verwaltung konfigurieren), um den Assistenten zu öffnen.
+1. Wählen Sie auf der Seite **Onboarding von Mandanten** **AzurePublicCloud** als Umgebung aus. Azure Government-Clouds werden nicht unterstützt.
+1. Klicken Sie auf **Anmelden**. Melden Sie sich mit Ihrem *globalen Administratorkonto* an.
 1. Stellen Sie sicher, dass die Option **auf das Microsoft Endpoint Manager Admin Center hochladen** auf der Seite für das **Onboarding** von Mandanten ausgewählt ist.
    - Stellen Sie sicher, dass die Option **automatische Client Registrierung für die Co-Verwaltung aktivieren** nicht aktiviert ist, wenn Sie die Co-Verwaltung jetzt nicht aktivieren möchten. Wenn Sie die Co-Verwaltung aktivieren möchten, wählen Sie die Option aus.
    - Wenn Sie die Co-Verwaltung zusammen mit dem Hochladen von Geräten aktivieren, erhalten Sie weitere Seiten im Assistenten, um den Vorgang abzuschließen. Weitere Informationen finden Sie unter [Aktivieren der Co-Verwaltung](../comanage/how-to-enable.md).
 
    [![Konfigurations-Assistent für die Co-Verwaltung](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
-1. Klicken Sie auf **weiter** und dann auf **Ja** , um die Benachrichtigung **Create Aad Application** zu akzeptieren. Diese Aktion stellt einen Dienst Prinzipal bereit und erstellt eine Azure AD Anwendungs Registrierung, um die Synchronisierung zu vereinfachen.
+1. Klicken Sie auf **Weiter** und dann auf **Ja**, um die Meldung **AAD-Anwendung erstellen** zu akzeptieren. Durch diese Aktion wird ein Dienstprinzipal bereitgestellt und eine Azure AD-Anwendungsregistrierung erstellt, um das Synchronisieren zu vereinfachen.
 1. Wählen Sie auf der Seite **Upload konfigurieren** die empfohlene Einstellung für den Geräte Upload für alle Geräte aus, die **von Microsoft Endpoint Configuration Manager verwaltet**werden. Bei Bedarf können Sie den Upload auf eine einzelne Geräte Sammlung beschränken.
-1. Klicken Sie auf **Zusammenfassung** , um Ihre Auswahl zu überprüfen, **und klicken Sie**
-1. Wenn der Assistent abgeschlossen ist, klicken Sie auf **Schließen**.  
+1. Klicken Sie auf **Zusammenfassung**, um Ihre Auswahl zu überprüfen, und klicken Sie dann auf **Weiter**.
+1. Klicken Sie auf **Schließen**, wenn der Assistent abgeschlossen ist.  
 
 
 ## <a name="review-your-upload"></a><a name="bkmk_review"></a>Überprüfen des Uploads
 
-1. Öffnen Sie **cmgatewaysyncuploadworker. log** aus &lt;ConfigMgr-Installationsverzeichnis> \Logs.
-1. Der nächste Synchronisierungs Zeitpunkt wird durch Protokolleinträge wie angegeben `Next run time will be at approximately: 02/28/2020 16:35:31`.
-1. Suchen Sie `Batching N records`für Geräte Uploads nach Protokoll Einträgen ähnlich wie. **N** ist die Anzahl von Geräten, die in die Cloud hochgeladen werden. 
+1. Öffnen Sie **cmgatewaysyncuploadworker. log** aus &lt; ConfigMgr-Installationsverzeichnis> \Logs.
+1. Der nächste Synchronisierungs Zeitpunkt wird durch Protokolleinträge wie angegeben `Next run time will be at approximately: 02/28/2020 16:35:31` .
+1. Suchen Sie für Geräte Uploads nach Protokoll Einträgen ähnlich wie `Batching N records` . **N** ist die Anzahl von Geräten, die in die Cloud hochgeladen werden. 
 1. Der Upload erfolgt alle 15 Minuten, wenn Änderungen vorgenommen werden. Nachdem die Änderungen hochgeladen wurden, kann es bis zu 10 Minuten dauern, bis Client Änderungen im **Microsoft Endpoint Manager Admin Center**angezeigt werden.
 
 ## <a name="perform-device-actions"></a>Ausführen von Geräte Aktionen
@@ -98,9 +95,9 @@ Wenn Sie die Co-Verwaltung nicht aktiviert haben, verwenden Sie den Assistenten 
    [![Alle Geräte im Microsoft Endpoint Manager Admin Center](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Klicken Sie auf ein Gerät, um seine **Übersichts** Seite zu laden.
 1. Klicken Sie auf eine der folgenden Aktionen:
-   - **Synchronisierungs Computer Richtlinie**
-   - **Benutzer Richtlinie synchronisieren**
-   - **App-Evaluierungszeitraum**
+   - **Computerrichtlinie synchronisieren**
+   - **Benutzerrichtlinie synchronisieren**
+   - **App-Evaluierungszyklus**
 
    [![Geräte Übersicht im Microsoft Endpoint Manager Admin Center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
