@@ -78,6 +78,9 @@
     - name: Einstellungsdatei unter macOS
       href: preference-file-settings-macos.md
       displayName: 'property list files, plist'
+    - name: Kabelnetzwerke unter macOS
+      href: wired-networks-configure.md
+      displayName: 802.1x
     - name: Erweiterung der Mobilität auf Zebra-Geräten
       displayName: 'mx, android, stagenow'
       items:
@@ -183,6 +186,8 @@
               href: vpn-settings-macos.md
             - name: WLAN
               href: wi-fi-settings-macos.md
+            - name: Verkabelte Netzwerke
+              href: wired-network-settings-macos.md
         - name: Windows 10 und höher
           items:
             - name: Benutzerdefiniert
