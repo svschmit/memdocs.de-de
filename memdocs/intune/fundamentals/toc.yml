@@ -17,7 +17,7 @@
         - name: Features in der Entwicklung
           href: in-development.md
         - name: Wichtige Hinweise
-          href: 'whats-new.md#notices'
+          href: whats-new.md#notices
 - name: Schnellstarts
   items:
     - name: Intune kostenlos testen
@@ -163,6 +163,8 @@
               href: china.md
         - name: Anmelden bei Intune
           href: account-sign-up.md
+        - name: Nicht lizenzierte Administratoren
+          href: unlicensed-admins.md
         - name: Konfigurieren von Domänen
           href: custom-domain-name-configure.md
         - name: Hinzufügen von Benutzern

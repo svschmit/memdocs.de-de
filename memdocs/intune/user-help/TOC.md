@@ -83,7 +83,7 @@
 ### [Was geschieht, wenn Sie Ihr Gerät mithilfe des Unternehmensportals zurücksetzen?](effects-of-device-reset-company-portal-ios.md)
 ### [Aufheben der Registrierung Ihres Geräts](unenroll-your-device-from-intune-ios.md)
 #### [Was geschieht, wenn Sie die Registrierung für Ihr Gerät aufheben?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
-### [Manuelles Synchronisieren des Geräts](sync-your-device-manually-ios.md)
+### [Manuelles Synchronisieren eines iOS-Geräts](sync-your-device-manually-ios.md)
 
 ### [Behandeln häufig auftretender Probleme mit iOS](troubleshoot-your-device-iOS.md)
 #### [Wiederherstellen der Verbindung eines gefährdeten iOS-Geräts](how-to-reconnect-a-compromised-ios-device.md)
@@ -115,6 +115,7 @@
 ### [Registrieren Ihres macOS-Geräts](enroll-your-device-in-intune-macos-cp.md)
 ### [Registrieren eines von Ihrer Organisation bereitgestellten macOS-Geräts](enroll-company-device-macos.md)  
 ### [Aufheben der Registrierung Ihres macOS-Geräts](unenroll-your-device-from-intune-macos.md)  
+### [Manuelles Synchronisieren eines macOS-Geräts](sync-your-device-manually-macos.md)
 ### [Behandeln häufig auftretender Probleme mit macOS](troubleshoot-your-device-macos.md)
 #### [Meine macOS-Version wird noch nicht unterstützt.](your-macos-version-isnt-yet-supported.md)
 #### [Aktualisieren Ihres macOS-Geräts](you-need-to-update-your-macos-device.md)
