@@ -6,7 +6,7 @@ keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 06/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0db0c43d60b2b42d35e397924c8555b1ac3d64a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c3267bf4e59d6745e480a81f8bdc39cfa2827ea4
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988613"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506331"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Einrichten eines TEM-Diensts (Telecom Expense Management) in Intune
 
@@ -46,9 +46,6 @@ Um den Datalert-Dienst mit Intune zu verwenden, müssen Sie einige Konfiguration
 ## <a name="supported-platforms"></a>Unterstützte Plattformen
 
 - Geräte unter Android-Geräteadministrator 4.4 und höher, auf denen Knox verwendet werden kann (Samsung)
-
-  Auf dieser [Samsung-Website](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) werden die Android-Versionen aufgelistet, die Knox unterstützen.
-
 - iOS 8.0 und höher
 - iOS 13.0 und höher
 

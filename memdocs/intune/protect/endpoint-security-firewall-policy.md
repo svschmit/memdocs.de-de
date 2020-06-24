@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: f98d7a30d219aee63e38a63a74d8f1713deb198a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431617"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776870"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Firewallrichtlinie für Endpunktsicherheit in Intune
 
-Verwenden Sie die Firewallrichtlinie für Endpunktsicherheit in Intune, um eine integrierte Firewall für Geräte zu konfigurieren, die unter macOS und Windows 10 ausgeführt werden. Integrierte Firewalls sind in BitLocker für Windows-Geräten und FileVault für macOS enthalten.
+Verwenden Sie die Firewallrichtlinie für Endpunktsicherheit in Intune, um eine integrierte Firewall für Geräte zu konfigurieren, die unter macOS und Windows 10 ausgeführt werden.
 
 Obwohl Sie die gleichen Firewalleinstellungen mithilfe von Endpoint Protection-Profilen für die Gerätekonfiguration konfigurieren können, enthalten die Gerätekonfigurationsprofile zusätzliche Einstellungskategorien. Diese zusätzlichen Einstellungen stehen nicht im Zusammenhang mit Firewalls und können die Konfiguration reiner Firewalleinstellungen für Ihre Umgebung erschweren.
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c447c9187696a8e918886117847dde6421b4014
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990749"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721906"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Verwenden der rollenbasierten Zugriffssteuerung und Bereichsmarkierungen für verteilte IT
 
@@ -81,7 +81,6 @@ Bei der Arbeit mit Bereichsmarkierungen sollten Sie Folgendes beachten:
 - Sie können einem Intune-Objekttyp Bereichstags zuweisen, wenn der Mandant mehrere Versionen desselben Objekts akzeptiert (z. B. als Rollenzuweisung oder als Apps).
   Die folgenden Intune-Objekte sind Ausnahmen zu dieser Regel und unterstützen derzeit keine Bereichstags:
     - Windows ESP-Profile
-    - Gerätekategorien
     - Registrierungseinschränkungen
     - Bezeichner von Unternehmensgeräten
     - Autopilotgeräte
