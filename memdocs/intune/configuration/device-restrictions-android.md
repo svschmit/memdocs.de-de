@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862359"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093681"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listen der Standardeinstellungen für Geräteeinschränkungen für Android und Samsung KNOX in Intune
 
@@ -193,4 +193,4 @@ Kioskeinstellungen gelten nur für Samsung KNOX Standard-Geräte, und nur für A
 
 [Zuweisen von Profilen](device-profile-assign.md) und [Überwachen von Profilen](device-profile-monitor.md)
 
-Außerdem können Sie Kioskmodusprofile für [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)- und [Windows 10](kiosk-settings.md)-Geräte erstellen.
+Außerdem können Sie Kioskmodusprofile für [Android Enterprise](device-restrictions-android-for-work.md#device-experience)- und [Windows 10](kiosk-settings.md)-Geräte erstellen.

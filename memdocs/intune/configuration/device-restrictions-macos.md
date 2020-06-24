@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e48ba131d97e68570f1d6cb85b285ddc3198971c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429751"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680403"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS-Geräteeinstellungen zum Zulassen oder Einschränken von Funktionen mit Intune
 
@@ -190,7 +190,7 @@ Diese Funktion gilt für:
 
   - **Codeanforderung**: Geben Sie die Codesignatur für die Anwendung oder den Prozess ein.
 
-    Eine Codesignatur wird erstellt, wenn eine App oder eine Binärdatei mit einem Entwicklerzertifikat signiert wird. Um die Bezeichnung zu ermitteln, führen Sie den Befehl `codesign` manuell in der Terminal-App aus: `codesign --display -r -/path/to/app/binary`. Die Codesignatur ist alles, was nach `=>`angezeigt wird.
+    Eine Codesignatur wird erstellt, wenn eine App oder eine Binärdatei mit einem Entwicklerzertifikat signiert wird. Um die Bezeichnung zu ermitteln, führen Sie den Befehl `codesign` manuell in der Terminal-App aus: `codesign --display -r - /path/to/app/binary`. Die Codesignatur ist alles, was nach `=>`angezeigt wird.
 
   - **Statische Codeüberprüfung aktivieren**: Wählen Sie für die App oder den Prozess **Ja** aus, um die Codeanforderung statisch zu validieren. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 

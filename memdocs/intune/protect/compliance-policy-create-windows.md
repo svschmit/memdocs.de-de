@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2019
+ms.date: 06/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 972596cd3973c84c4f00409464f2fe621efc1369
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906902"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107411"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Einstellungen für Windows 10 und höher, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen
 
@@ -46,13 +46,12 @@ Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die 
 - **BitLocker erforderlich**:  
    Die Windows BitLocker-Laufwerksverschlüsselung verschlüsselt alle auf einem Volume mit Windows-Betriebssystem gespeicherten Daten. BitLocker verwendet das Trusted Platform Module (TPM), um das Windows-Betriebssystem und Benutzerdaten zu schützen. TPM stellt auch sicher, dass ein Computer auch dann nicht manipuliert wird, wenn er unbeaufsichtigt gelassen, verloren oder gestohlen wird. Wenn der Computer mit einem kompatiblen TPM ausgestattet ist, verwendet BitLocker das TPM zum Sperren der Verschlüsselungsschlüssel, die die Daten schützen. Daher kann erst auf die Schlüssel zugegriffen werden, nachdem das TPM den Zustand des Computers überprüft hat.  
 
-   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
-   - **Erforderlich**: Das Gerät kann Daten, die auf dem Laufwerk gespeichert sind, vor unbefugtem Zugriff schützen, wenn das System ausgeschaltet ist oder sich im Ruhezustand befindet.  
-
+  - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
+  - **Erforderlich**: Das Gerät kann Daten, die auf dem Laufwerk gespeichert sind, vor unbefugtem Zugriff schützen, wenn das System ausgeschaltet ist oder sich im Ruhezustand befindet.  
 
 - **Sicherer Start muss auf dem Gerät aktiviert sein**:  
-    - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
-    - **Erforderlich**: Das System ist gezwungen, in einem vom Hersteller als vertrauenswürdig eingestuften Zustand zu starten. Die zum Starten des Computers verwendeten Kernkomponenten müssen zudem über die richtigen kryptografischen Signaturen verfügen, denen der Hersteller des Geräts vertraut. Die Signatur wird von der UEFI-Firmware überprüft, bevor der Computer gestartet werden kann. Wenn Dateien derart manipuliert werden, dass ihre Signatur beschädigt wird, wird das System nicht gestartet.
+  - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
+  - **Erforderlich**: Das System ist gezwungen, in einem vom Hersteller als vertrauenswürdig eingestuften Zustand zu starten. Die zum Starten des Computers verwendeten Kernkomponenten müssen zudem über die richtigen kryptografischen Signaturen verfügen, denen der Hersteller des Geräts vertraut. Die Signatur wird von der UEFI-Firmware überprüft, bevor der Computer gestartet werden kann. Wenn Dateien derart manipuliert werden, dass ihre Signatur beschädigt wird, wird das System nicht gestartet.
 
   > [!NOTE]
   > Die Einstellung **Sicherer Start muss auf dem Gerät aktiviert sein** wird von einigen TPM 1.2- und TPM 2.0-Geräten unterstützt. Für Geräte, die TPM 2.0 oder höher nicht unterstützen, wird der Richtlinienstatus in Intune als **Nicht konform** angezeigt. Weitere Informationen zu unterstützten Versionen finden Sie unter [Integritätsnachweis für Geräte](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
@@ -60,7 +59,7 @@ Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die 
 - **Codeintegrität erforderlich**:  
   Die Codeintegrität ist ein Feature, das die Integrität eines Treibers oder einer Systemdatei jedes Mal überprüft, wenn diese(r) in den Speicher geladen wird.
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
-  -  **Erforderlich**: Erzwingt Codeintegrität, wodurch erkannt wird, ob ein nicht signierter Treiber oder eine Systemdatei in den Kernel geladen wird. Zudem wird erkannt, ob eine Systemdatei durch Schadsoftware geändert wurde, die von einem Benutzerkonto mit Administratorrechten ausgeführt wird.
+  - **Erforderlich**: Erzwingt Codeintegrität, wodurch erkannt wird, ob ein nicht signierter Treiber oder eine Systemdatei in den Kernel geladen wird. Zudem wird erkannt, ob eine Systemdatei durch Schadsoftware geändert wurde, die von einem Benutzerkonto mit Administratorrechten ausgeführt wird.
 
 Weitere Ressourcen:
 
@@ -104,7 +103,7 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
 
 - **Gerätekonformität in Configuration Manager erforderlich**:  
   - **Nicht konfiguriert** (*Standardeinstellung*): Intune prüft keine der Configuration Manager-Einstellungen auf Konformität.
-  - **Erforderlich**: Erzwingt, dass alle Einstellungen (Konfigurationselemente) in Configuration Manager konform sind.  
+  - **Erforderlich**: Erzwingt, dass alle Einstellungen (Konfigurationselemente) in Configuration Manager konform sind.
 
     Beispielsweise sollen alle Softwareupdates auf Geräten installiert werden. In Configuration Manager hat diese Anforderung den Zustand „Installiert“. Falls sich Programme auf dem Gerät in einem unbekannten Zustand befinden, so ist das Gerät in Intune nicht konform.
 
@@ -128,7 +127,7 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
   
   Wenn der Wert *Alphanumerisch* festgelegt wird, sind die folgenden Einstellungen verfügbar.  
   - **Kennwortkomplexität**:  
-    Folgende Optionen sind verfügbar: 
+    Folgende Optionen sind verfügbar:
     - **Ziffern und Kleinbuchstaben erforderlich** (*Standardeinstellung*)
     - **Ziffern, Kleinbuchstaben und Großbuchstaben erforderlich**
     - **Ziffern, Kleinbuchstaben, Großbuchstaben und Sonderzeichen erforderlich**
@@ -172,7 +171,7 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
 
 - **Firewall:**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Intune steuert weder die Microsoft Defender Firewall noch die vorhandenen Einstellungen.
-  - **Erforderlich**: Aktiviert die Microsoft Defender Firewall und hindert Benutzer an seiner Deaktivierung  
+  - **Erforderlich**: Aktiviert die Microsoft Defender Firewall und hindert Benutzer an seiner Deaktivierung
 
   [Firewall-CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
@@ -181,27 +180,21 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
 
 - **Trusted Platform Module (TPM)** :  
   - **Nicht konfiguriert** (*Standardeinstellung*): Intune überprüft das Gerät nicht auf eine TPM-Chip-Version.
-  - **Erforderlich**: Intune überprüft die Version des TPM-Chips auf Konformität. Das Gerät ist konform, wenn die Version des TPM-Chips höher als **0** (Null) ist. Das Gerät ist nicht konform, wenn auf dem Gerät keine TPM-Version vorhanden ist.  
+  - **Erforderlich**: Intune überprüft die Version des TPM-Chips auf Konformität. Das Gerät ist konform, wenn die Version des TPM-Chips höher als **0** (Null) ist. Das Gerät ist nicht konform, wenn auf dem Gerät keine TPM-Version vorhanden ist.
 
   [DeviceStatus-CSP – DeviceStatus/TPM/SpecificationVersion-Knoten](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirus:**  
-  - **Nicht konfiguriert** (*Standardeinstellung*): Intune überprüft das Gerät nicht auf installierte Antivirenlösungen. 
+  - **Nicht konfiguriert** (*Standardeinstellung*): Intune überprüft das Gerät nicht auf installierte Antivirenlösungen.
   - **Erforderlich**: Überprüfen Sie die Konformität mit Antivirenlösungen (beispielsweise Symantec und Microsoft Defender), die beim [Windows-Sicherheitscenter](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/) registriert sind.
-  
-  [DeviceStatus-CSP – DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
-  > [!NOTE]
-  > Der DeviceStatus-CSP für Antivirus wird für *Windows 10 Home* nicht unterstützt und meldet den Status *Nicht zutreffend*. Das Intune-Team arbeitet an einer Lösung. Um diese Einschränkung zu umgehen, sollten Sie in Betracht ziehen, [Windows Defender](#defender)-Einstellungen in Ihrer Gerätekonformitätsrichtlinie zu verwenden. Windows Defender-Einstellungen werden von Windows 10 Home unterstützt.  
+  [DeviceStatus-CSP – DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 - **Antispyware**:  
   - **Nicht konfiguriert** (*Standardeinstellung*): Intune überprüft das Gerät nicht auf installierte Antispywarelösungen.
-  - **Erforderlich**: Überprüfen Sie die Konformität mit Antispywarelösungen (beispielsweise Symantec und Microsoft Defender), die beim [Windows-Sicherheitscenter](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/) registriert sind.  
-  
-  [DeviceStatus-CSP – DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  - **Erforderlich**: Überprüfen Sie die Konformität mit Antispywarelösungen (beispielsweise Symantec und Microsoft Defender), die beim [Windows-Sicherheitscenter](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/) registriert sind.
 
-  > [!NOTE]
-  > Der DeviceStatus-CSP für Antispyware wird für *Windows 10 Home* nicht unterstützt und meldet den Status *Nicht zutreffend*. Das Intune-Team arbeitet an einer Lösung. Um diese Einschränkung zu umgehen, sollten Sie in Betracht ziehen, [Windows Defender](#defender)-Einstellungen in Ihrer Gerätekonformitätsrichtlinie zu verwenden. Windows Defender-Einstellungen werden von Windows 10 Home unterstützt. 
+  [DeviceStatus-CSP – DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -212,7 +205,7 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
   - **Erforderlich**: Aktiviert den Antischadsoftwaredienst von Microsoft Defender und hindert Benutzer an seiner Deaktivierung
 
 - **Mindestversion der Microsoft Defender-Antischadsoftware**:  
-  Geben Sie die zulässige Mindestversion des Microsoft Defender-Antischadsoftwarediensts ein. Geben Sie beispielsweise `4.11.0.0` ein. Wenn das Feld leer gelassen wird, wird eine beliebige Version des Microsoft Defender-Antischadsoftwarediensts verwendet.  
+  Geben Sie die zulässige Mindestversion des Microsoft Defender-Antischadsoftwarediensts ein. Geben Sie beispielsweise `4.11.0.0` ein. Wenn das Feld leer gelassen wird, wird eine beliebige Version des Microsoft Defender-Antischadsoftwarediensts verwendet.
 
   *Standardmäßig ist keine Version konfiguriert*.
 
@@ -244,7 +237,6 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
   - **Hoch**: Dies ist die am wenigsten sichere Option, die alle Bedrohungsebenen zulässt. Es ist möglicherweise hilfreich, diese Lösung nur zu Berichtszwecken zu verwenden.
   
   Informationen zum Einrichten von Microsoft Defender ATP (Advanced Threat Protection) als Bedrohungsschutzdienst finden Sie unter [Aktivieren von Microsoft Defender ATP mit bedingtem Zugriff](advanced-threat-protection.md).
-
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 
