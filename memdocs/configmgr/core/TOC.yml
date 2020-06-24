@@ -584,6 +584,8 @@
               href: servers/manage/introduction-to-reporting.md
             - name: Integrieren mit dem Power BI-Berichtsserver
               href: servers/manage/powerbi-report-server.md
+            - name: Installieren von Power BI-Beispielberichten
+              href: servers/manage/powerbi-sample-reports.md
             - name: Planen der Berichterstellung
               items:
                 - name: Planen der Berichterstellung
