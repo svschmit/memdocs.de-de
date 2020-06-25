@@ -75,3 +75,6 @@
                 - name: Mandantenanfügung
                   tocHref: /mem/configmgr/tenant-attach/
                   topicHref: /mem/configmgr/tenant-attach/
+            - name: Endpunktanalyse
+              tocHref: /mem/analytics/
+              topicHref: /mem/analytics/

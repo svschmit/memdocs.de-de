@@ -258,6 +258,8 @@
               href: troubleshoot-scep-certificate-delivery.md
             - name: Berichterstellung für die Zertifikatbereitstellung
               href: troubleshoot-scep-certificate-reporting.md
+        - name: Problembehandlung bei PKCS-Zertifikatprofilen
+          href: troubleshoot-pkcs-certificate-profiles.md
         - name: Exchange Connector-Problembehandlung
           items:
             - name: Exchange Connector-Problembehandlung
