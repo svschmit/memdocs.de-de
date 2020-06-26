@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864870"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746560"
 ---
 # <a name="monitor-connection-health"></a>Überwachen der Verbindungsintegrität
 
@@ -217,7 +217,7 @@ Andernfalls wird möglicherweise einer der folgenden Fehler angezeigt:
 
 - Die Datensammlung zur Geräte-App-Kompatibilität (SetRequestAllAppraiserVersions) kann nicht konfiguriert werden. Details zur Ausnahme finden Sie in den Protokollen.  
 
-- RequestAllAppraiserVersions kann nicht in den Registrierungsschlüssel `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser` geschrieben werden. Überprüfen Sie die Berechtigungen.  
+- RequestAllAppraiserVersions kann nicht in den Registrierungsschlüssel `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser` geschrieben werden. Überprüfen Sie die Berechtigungen.  
 
 Überprüfen Sie die Berechtigungen für diesen Registrierungsschlüssel. Vergewissern Sie sich, dass das lokale Systemkonto auf diesen Schlüssel zugreifen kann, der für den Configuration Manager-Client festgelegt werden soll.  
 
@@ -343,7 +343,7 @@ Unter Windows 7 ist die Einstellung „DisableEnterpriseAuthProxy“ standardm�
 
 Diese Eigenschaft zeigt möglicherweise die folgenden Fehler an:
 
-- Der Authentifizierungsproxy ist aktiviert. Legen Sie DisableEnterpriseAuthProxy in `HKLM\Software\Policies\Microsoft\Windows\DataCollection` auf 0 fest.
+- Der Authentifizierungsproxy ist aktiviert. Legen Sie DisableEnterpriseAuthProxy in `HKLM:\Software\Policies\Microsoft\Windows\DataCollection` auf 0 fest.
 
 - Die Prüfung auf den Status des Authentifizierungsproxys ist nicht möglich. Details zur Ausnahme finden Sie in den Protokollen.
 
