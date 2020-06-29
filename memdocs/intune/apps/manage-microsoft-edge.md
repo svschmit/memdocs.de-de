@@ -1,12 +1,12 @@
 ---
-title: Verwalten von Edge für iOS und Android mit Intune
+title: Verwalten von Microsoft Edge für iOS und Android mit Intune
 titleSuffix: ''
-description: Nutzen Sie die Intune-App-Schutzrichtlinien für Edge für iOS und Android, um sicherzustellen, dass der Zugriff auf Unternehmenswebsites stets mit entsprechenden Sicherheitsvorkehrungen erfolgt.
+description: Nutzen Sie die Intune-App-Schutz- und Konfigurationsrichtlinien mit Edge für iOS und Android, um sicherzustellen, dass der Zugriff auf Unternehmenswebsites stets mit entsprechenden Sicherheitsvorkehrungen erfolgt.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0a886aba8e1966e47e9ea11c99cb97c35c4f5a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988378"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973059"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Verwalten des Webzugriffs mithilfe von Edge für iOS und Android mit Microsoft Intune
 
@@ -42,7 +42,7 @@ Die vielfältigsten und umfangreichsten Schutzfunktionen für Office 365-Daten 
 ## <a name="apply-conditional-access"></a>Aktivieren des bedingten Zugriff
 Organisationen können Richtlinien für bedingten Zugriff von Azure AD nutzen, um sicherzustellen, dass Benutzer nur mit Edge für iOS und Android auf Geschäfts-, Schul- oder Uni-Inhalte zugreifen können. Dazu benötigen Sie eine Richtlinie für bedingten Zugriff, die für alle potenziellen Benutzer gilt. Einzelheiten zur Erstellung dieser Richtlinie finden Sie unter [Erzwingen einer App-Schutzrichtlinie für den Cloud-App-Zugriff mit bedingtem Zugriff](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Folgen Sie [Szenario 2: Browser-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), wodurch Edge für iOS und Android zugelassen wird, aber andere Webbrowser auf dem Mobilgerät gehindert werden, eine Verbindung mit Office 365-Endpunkten herzustellen.
+1. Befolgen Sie die Anweisungen unter [Szenario 2: Browser-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien.](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies) So kann Edge für iOS und Android zugelassen werden, aber andere Webbrowser werden auf dem Mobilgerät daran gehindert, eine Verbindung mit Office 365-Endpunkten herzustellen.
 
    >[!NOTE]
    > Diese Richtlinie stellt sicher, dass mobile Benutzer in Edge für iOS und Android auf alle Office 365-Endpunkte zugreifen können. Diese Richtlinie verhindert auch, dass Benutzer die Einstellung InPrivate für den Zugriff auf Office 365-Endpunkte nutzen können.
@@ -63,7 +63,7 @@ Die spezifischen Empfehlungen für jede Konfigurationsebene sowie die zumindest 
 
 Unabhängig davon, ob das Gerät in einer UEM-Lösung (Unified Endpoint Management) registriert ist, muss eine Intune-App-Schutzrichtlinie sowohl für iOS- als auch für Android-Apps erstellt werden, indem die Schritte unter [Erstellen und Zuweisen von App-Schutzrichtlinien](app-protection-policies.md) ausgeführt werden. Diese Richtlinien müssen mindestens die folgenden Bedingungen erfüllen:
 
-1. Sie umfassen alle mobilen Microsoft-Anwendungen wie Outlook, OneDrive, Office oder Teams. Damit wird sichergestellt, dass Benutzer in jeder Microsoft-App sicher auf Geschäfts-, Schul- oder Unidaten zugreifen und diese bearbeiten können.
+1. Sie umfassen alle mobilen Microsoft 365-Anwendungen wie Edge, Outlook, OneDrive, Office oder Teams. Damit wird sichergestellt, dass Benutzer in jeder Microsoft-App sicher auf Geschäfts-, Schul- oder Unidaten zugreifen und diese bearbeiten können.
 
 2. Sie werden allen Benutzern zugewiesen. Dadurch wird sichergestellt, dass alle Benutzer unabhängig davon, ob sie Edge für iOS oder Android nutzen, geschützt sind.
 
@@ -143,7 +143,7 @@ Um das Logo und die Farbe Ihrer Organisation hochzuladen, führen Sie zuerst die
 
 Verwenden Sie nun die folgenden Schlüssel-Wert-Paare, um das Branding Ihrer Organisation in Edge für iOS und Android zu übernehmen:
 
-|    Schlüssel    |    Wert    |
+|    Key    |    Wert    |
 |--------------------------------------------------------------------|------------|
 |    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    **TRUE**: Das Markenlogo der Organisation wird angezeigt.<br>**FALSE** (Standard): Das Logo wird nicht angezeigt.    |
 |    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    **TRUE**: Die Markenfarbe der Organisation wird angezeigt.<br>**FALSE** (Standard): Die Markenfarbe der Organisation wird nicht angezeigt.    |
@@ -278,7 +278,7 @@ Organisationen haben die Möglichkeit, die Edge-Synchronisierung unter iOS und A
 
 ### <a name="manage-restricted-web-sites"></a>Verwalten eingeschränkter Websites
 
-Organisationen können festlegen, auf welche Websites Benutzer im Kontext des Geschäfts-, Schul- oder Unikontos in Edge für iOS und Android zugreifen können. Wenn Sie eine Zulassungsliste verwenden, können Ihre Benutzer nur auf die Websites zugreifen, die explizit aufgelistet sind. Wenn Sie eine Sperrliste verwenden, können Benutzer auf alle Websites mit Ausnahme derjenigen zugreifen, die explizit blockiert sind. Sie sollten entweder nur eine Zulassungsliste oder nur eine Sperrliste vorgeben, nicht beide Listen. Wenn Sie beide Listen vorgeben, wird nur die Zulassungsliste berücksichtigt.
+Organisationen können festlegen, auf welche Websites Benutzer im Kontext des Geschäfts-, Schul- oder Unikontos in Edge für iOS und Android zugreifen können. Wenn Sie eine Zulassungsliste verwenden, können Ihre Benutzer nur auf die Websites zugreifen, die explizit aufgelistet sind. Wenn Sie eine Sperrliste verwenden, können Benutzer auf alle Websites mit Ausnahme derjenigen zugreifen, die explizit blockiert sind. Sie sollten entweder nur eine Zulassungsliste oder nur eine Blockierungsliste vorgeben, nicht beide Listen. Wenn Sie beide Listen vorgeben, wird nur die Zulassungsliste berücksichtigt.
 
 Organisation legen auch fest, was passiert, wenn ein Benutzer versucht, zu einer eingeschränkten Website zu navigieren. Übergänge sind standardmäßig zulässig. Wenn die Organisation es erlaubt, können eingeschränkte Websites im Kontext des persönlichen Kontos, im InPrivate-Kontext des Azure AD-Kontos oder unabhängig davon, ob die Website vollständig gesperrt ist, geöffnet werden. Weitere Informationen zu den verschiedenen unterstützten Szenarien finden Sie unter [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333) (Übergänge zu eingeschränkten Websites in der mobilen Version von Microsoft Edge). Durch das Erlauben von Übergängen bleiben die Benutzer der Organisation geschützt, während gleichzeitig die Unternehmensressourcen abgesichert bleiben.
 
@@ -443,3 +443,4 @@ Informationen zum Anzeigen von Protokollen auf Android-Geräten finden Sie unter
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Was sind App-Schutzrichtlinien?](app-protection-policy.md) 
+- [App-Konfigurationsrichtlinien für Microsoft Intune](app-configuration-policies-overview.md)

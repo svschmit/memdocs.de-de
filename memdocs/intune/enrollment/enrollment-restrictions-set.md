@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1bbcfc953945f7e8525cb7dc7edf3b1dd8a2f5c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989083"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746492"
 ---
 # <a name="set-enrollment-restrictions"></a>Festlegen von Registrierungseinschränkungen
 
@@ -64,7 +64,7 @@ Auf den Gerätetyp und das Gerätelimit bezogene Registrierungsbeschränkungen w
 3. Klicken Sie auf **Weiter**, um zur Seite **Plattformeinstellungen** zu gelangen.
 4. Wählen Sie unter **Plattform** die Option **Zulassen** für diejenigen Plattformen aus, für die diese Einschränkung zulässig sein soll.
     ![Screenshot: Auswählen der Plattformeinstellungen](./media/enrollment-restrictions-set/choose-platform-settings.png)
-5. Wählen Sie unter **Versionen** die Mindest- und die Maximalversion aus, die von den Plattformen unterstützt werden soll. Versionseinschränkungen gelten nur für Geräte, die beim Unternehmensportal registriert sind.
+5. Wählen Sie unter **Versionen** die Mindest- und die Maximalversion aus, die von den Plattformen unterstützt werden soll. Für iOS und Android gelten die Versionseinschränkungen nur für Geräte, die beim Unternehmensportal registriert sind.
      Folgende Versionsformate werden unterstützt:
     - Android-Geräteadministrator und Android Enterprise-Arbeitsprofil unterstützen „Hauptversion.Nebenversion.Revision.Build“.
     - iOS/iPadOS unterstützt major.minor.rev. Die Betriebssystemversionen gelten nicht für Apple-Geräte, die mit dem Programm zur Geräteregistrierung, dem Apple School Manager oder der App Apple Configurator registriert werden.
@@ -130,7 +130,7 @@ Während der BYOD-Registrierung erhalten Benutzer eine Benachrichtigung darüber
 
 Sie können die Einstellungen für eine Registrierungseinschränkung ändern, indem Sie die folgenden Schritte ausführen. Diese Einschränkungen haben keine Auswirkungen auf Geräte, die bereits registriert wurden. Geräte, die mit dem [Intune-PC-Agent](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) registriert sind, können nicht über dieses Feature blockiert werden.
 
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu > **Geräte** > **Registrierungsbeschränkungen**, wählen Sie die zu ändernde Einschränkung aus, und klicken Sie dann auf **Eigenschaften**.
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Registrierungsbeschränkungen**, wählen Sie die zu ändernde Einschränkung aus, und klicken Sie dann auf **Eigenschaften**.
 2. Klicken Sie neben den Einstellungen, die Sie ändern möchten, auf **Bearbeiten**.
 3. Nehmen Sie auf der Seite **Bearbeiten** die gewünschten Änderungen vor, und fahren Sie auf der Seite **Überprüfen und speichern** fort. Klicken Sie abschließend auf **Speichern**.
 
