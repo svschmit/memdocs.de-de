@@ -135,8 +135,6 @@
               href: app-configuration-managed-home-screen-app.md
             - name: Vergleich des Intune-Unternehmensportals
               href: company-portal-app.md
-            - name: Konfigurieren von Managed Browser
-              href: app-configuration-managed-browser.md
             - name: Konfigurieren von Microsoft Launcher
               href: configure-microsoft-launcher.md
             - name: Konfigurieren von Microsoft Edge
