@@ -1,11 +1,11 @@
 ---
-title: Manuelles Synchronisieren des iOS-Geräts | Microsoft-Dokumentation
-description: ''
+title: Manuelles Synchronisieren Ihres iOS-Geräts mit dem Intune-Unternehmensportal
+description: Initiieren Sie eine manuelle Synchronisierung über das Unternehmensportal, um Verzögerungen und Wartezeiten wie langsame oder nicht reagierende Apps zu beheben.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2018
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,32 +15,42 @@ ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: esmich
+ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 27bf115e6382b429d6555a19f655f0d5ba554ce7
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f9b4424bc7eed109846b497684e6859c5f407011
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881810"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094178"
 ---
 # <a name="sync-your-ios-device-manually"></a>Manuelles Synchronisieren des iOS-Geräts
 
-Manchmal kann es zu lange dauern, bis Ihre App aus dem Unternehmensportal heruntergeladen wird. Wenn dies der Fall ist, versuchen Sie, das Gerät manuell zu synchronisieren. Dadurch wird versucht, die Informationen abzurufen, die Ihr Gerät nicht herunterladen konnte.
+Initiieren Sie eine manuelle Synchronisierung über das Unternehmensportal, um Verzögerungen und Wartezeiten wie langsame oder nicht reagierende Apps zu beheben. Während der Synchronisierung überprüft das Unternehmensportal Ihr Gerät, um sicherzustellen, dass die Anforderungen der Organisation erfüllt werden. Es synchronisiert Ihr Gerät mit Richtlinien und Updates, über die Sie möglicherweise noch nicht verfügen. Dies kann beim Auflösen von Downloads und anderen Prozessen helfen, die gerade ausgeführt werden. 
+
+Das Unternehmensportal überprüft Ihr Gerät regelmäßig. Sie können jedoch auch die folgenden Schritte ausführen, um jederzeit eine Synchronisierung über die App zu starten. 
 
 1. Öffnen Sie die Unternehmensportal-App.
 
-2. Tippen Sie auf **Geräte**. Wenn Sie mehrere Geräte besitzen, wird Ihnen eine Liste der Geräte angezeigt. Wählen Sie das Gerät aus, das Sie derzeit verwenden. Wenn Sie nur ein Gerät besitzen, wird Ihnen direkt der Bildschirm „Gerätedetails“ angezeigt.
+2. Tippen Sie auf **Geräte**. 
+3. Wenn Sie nur über ein Gerät verfügen, wird direkt die Gerätedetailseite aufgerufen, und Sie können mit Schritt 4 fortfahren. Wenn Sie über mehrere Geräte verfügen, wird Ihnen eine Liste aller Geräte angezeigt. Wählen Sie das Gerät aus, das Sie derzeit verwenden. 
 
-    ![Screenshot des Bildschirms „Geräte“, der zwei Geräte anzeigt Unter dem oberen Gerät steht „This is the iPhone 6 Plus that you're currently using.“ (Dies ist das iPhone 6 Plus, das Sie derzeit verwenden.).](./media/ios_sync_1_CP_after_1804.png)
+    ![Screenshot: Anzeige „Geräte“ mit drei Geräten und dem aktuell verwendeten Gerät des Benutzers hervorgehoben. Unter dem oberen Gerät steht „This is the iPhone that you're currently using.“ (Dies ist das iPhone, das Sie derzeit verwenden.).](./media/ios-sync-1-company-portal-2006.png)
 
-3. Tippen Sie auf **Einstellungen überprüfen**, um Ihr Gerät zu synchronisieren. Es wird ein Ladebalken auf dem Bildschirm angezeigt, bis die Synchronisierung abgeschlossen ist.
+4. Tippen Sie auf **Check Status** (Status überprüfen), um Ihr Gerät zu synchronisieren. 
 
-    ![Screenshot der Gerätedetails, die die Zeit der letzten Anmeldung des Geräts und den Link „Einstellungen überprüfen“ anzeigen](./media/ios_sync_2_CP_after_1804.png)  
+    ![Screenshot: Gerätedetails mit hervorgehobenem Link zum Überprüfen des Status](./media/ios-sync-2-company-portal-2006.png)  
 
-   ![Screenshot der Gerätedetails, die den Ladebalken anzeigen, nachdem der Benutzer auf „Einstellungen überprüfen“ geklickt hat](./media/ios_sync_3_CP-after_1804.png)
+ 5. Warten Sie darauf, dass das Unternehmensportal den Status Ihres Geräts bestätigt. Der angezeigte Status wird aktualisiert, um Sie darüber zu informieren, ob das Gerät die Sicherheitsanforderungen Ihrer Organisation erfüllt oder nicht. 
 
-Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).
+       ![Screenshot: Gerätedetails mit hervorgehobenem Ladebalken](./media/ios-sync-3-company-portal-2006.png)
+
+
+## <a name="next-steps"></a>Nächste Schritte  
+Sobald Sie diese Schritte abgeschlossen haben, überprüfen Sie, ob Ihr Problem behoben wurde. Wenn das nicht der Fall ist, kann es hilfreich sein, die angehaltene App oder den Task neu zu starten. Benötigen Sie weitere Unterstützung? Wenden Sie sich an Ihren Ansprechpartner beim IT-Support. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+
+
 

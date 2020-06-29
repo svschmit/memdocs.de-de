@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d4bc2de9e16cfcf9322cf343badafe3c9a35c70
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428897"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093554"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>macOS-Gerätefunktionseinstellungen in Intune
 
@@ -106,11 +106,114 @@ Diese Funktion gilt für:
 > [!TIP]
 > Wechseln Sie zur Problembehandlung auf Ihrem macOS-Gerät zu **Systemeinstellungen** > **Profile**. Vergewissern Sie sich, dass das erstellte Profil in der Liste der Geräteprofile aufgeführt ist. Wenn das Profil aufgelistet wird, stellen Sie sicher, dass **Konfiguration der zugeordneten Domänen** im Profil enthalten ist und die richtige App-ID und die richtigen Domänen aufweist.
 
+## <a name="content-caching"></a>Zwischenspeicherung von Inhalten
+
+Bei der Zwischenspeicherung von Inhalten wird eine lokale Kopie des Inhalts gespeichert. Diese Informationen können von anderen Apple-Geräten ohne Verbindung mit dem Internet abgerufen werden. Dieses Zwischenspeichern beschleunigt Downloads, indem Softwareupdates, Apps, Fotos und andere Inhalte beim ersten Herunterladen gespeichert werden. Da Apps einmal heruntergeladen und für andere Geräte, Schulen und Organisationen mit vielen Geräten freigegeben werden, wird Bandbreite gespart.
+
+> [!NOTE]
+> Verwenden Sie nur ein Profil für diese Einstellungen. Wenn Sie diese Einstellungen mehreren Profilen zuweisen, tritt ein Fehler auf.
+>
+> Weitere Informationen zum Überwachen der Zwischenspeicherung von Inhalten finden Sie unter [Anzeigen der Protokolle und Statistiken für das Inhaltscaching auf dem Mac](https://support.apple.com/guide/mac-help/view-content-caching-logs-statistics-mac-mchl0d8533cd/10.15/mac/10.15) (Apple-Website wird geöffnet).
+
+Diese Funktion gilt für:
+
+- macOS 10.13.4 und höher
+
+### <a name="settings-apply-to-all-enrollment-types"></a>Die Einstellungen gelten für: Alle Registrierungstypen
+
+Weitere Informationen zu diesen Einstellungen finden Sie unter [Einstellungen der Payload „Inhaltscaching“](https://support.apple.com/guide/mdm/content-caching-mdm163612d39/1/web/1) (Apple-Website wird geöffnet).
+
+**Enable content caching** (Zwischenspeicherung aktivieren): Mit **Ja** wird die Zwischenspeicherung von Inhalten aktiviert, und Benutzer können diese nicht deaktivieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Diese Einstellung wird vom Betriebssystem möglicherweise standardmäßig deaktiviert.
+
+- **Type of content to cache** (Inhaltstyp für Zwischenspeicherung): Folgende Optionen sind verfügbar:
+  - **All content** (Alle Inhalte): Bei dieser Einstellung werden iCloud- und freigegebene Inhalte zwischengespeichert.
+  - **User content only** (Nur Benutzerinhalte): Bei dieser Einstellung werden iCloud-Inhalte einschließlich Fotos und Dokumente zwischengespeichert.
+  - **Shared content only** (Nur freigegebene Inhalte): Hier werden Apps und Softwareupdates zwischengespeichert.
+
+- **Maximale Cachegröße:** Geben Sie den maximalen Speicherplatz (in Bytes) an, der zum Zwischenspeichern von Inhalten verwendet wird. Wenn kein Wert angegeben wird (Standardeinstellung), ändert oder aktualisiert Intune diese Einstellung nicht. Standardmäßig wird dieser Wert vom Betriebssystem auf `0` Bytes (Null) festgelegt, wodurch unbegrenzter Speicherplatz für den Cache zur Verfügung gestellt wird.
+
+  Stellen Sie sicher, dass der verfügbare Speicherplatz auf den Geräten nicht überschritten wird. Weitere Informationen zur Gerätespeicherkapazität finden Sie unter [Angabe der Speicherkapazität in iOS und macOS](https://support.apple.com/HT201402) (Apple-Website wird geöffnet).
+
+- **Cache location** (Cachespeicherort): Geben Sie den Pfad zum Speichern der zwischengespeicherten Inhalte ein. Der Standardspeicherort ist `/Library/Application Support/Apple/AssetCache/Data`. Es wird empfohlen, diesen Speicherort nicht zu ändern.
+
+  Wenn Sie diese Einstellung ändern, wird der zwischengespeicherte Inhalt nicht in den neuen Speicherort verschoben. Benutzer müssen den Speicherort auf dem Gerät ändern, um den Inhalt automatisch zu verschieben (**Systemeinstellungen** > **Freigabe** > **Inhalte zwischenspeichern**).
+
+- **Port:** Geben Sie die TCP-Portnummer auf den Geräten ein (0 bis 65535), damit der Zwischenspeicher Download- und Uploadanforderungen akzeptiert. Geben Sie „`0`“ (Null; Standardeinstellung) ein, um einen beliebigen verfügbaren Port zu verwenden.
+- **Block internet connection and cache content sharing** (Internetverbindung und Freigabe von Cacheinhalten blockieren): Dies wird auch als Tethered Caching bezeichnet. Mit der Option **Ja** wird die Freigabe von Internetverbindungen und gespeicherten Inhalten für iOS/iPadOS-Geräte verhindert, die über USB-Verbindungen mit dem Mac verbunden sind. Benutzer können diese Funktion nicht aktivieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+
+- **Enable internet connection sharing** (Freigabe der Internetverbindung aktivieren): Dies wird auch als Tethered Caching bezeichnet. Mit der Option **Ja** wird die Freigabe von Internetverbindungen und gespeicherten Inhalten für iOS/iPadOS-Geräte ermöglicht, die über USB-Verbindungen mit dem Mac verbunden sind. Benutzer können diese Funktion nicht deaktivieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Diese Einstellung wird vom Betriebssystem möglicherweise standardmäßig deaktiviert.
+
+  Diese Funktion gilt für:
+
+  - macOS 10.15.4 und höher
+
+- **Enable cache to log client details** (Protokollieren von Clientdetails im Cache erlauben): Wenn diese Einstellung auf **Ja** festgelegt ist, werden die IP-Adresse und die Portnummer der Geräte protokolliert, von denen Inhalt angefordert wird. Wenn Sie Probleme mit Geräten beheben möchten, kann diese Protokolldatei helfen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Diese Informationen werden vom Betriebssystem möglicherweise standardmäßig nicht protokolliert.
+
+- **Always keep content from the cache, even when the system needs disk space for other apps** (Inhalte aus dem Cache immer beibehalten, selbst wenn das System Speicherplatz für andere Apps benötigt): Bei der Einstellung **Ja** wird der Cacheinhalt gespeichert und sichergestellt, dass nichts gelöscht wird, selbst wenn nur wenig Speicherplatz verfügbar ist. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig kann das Betriebssystem Inhalte automatisch aus dem Cache löschen, wenn Speicherplatz für andere Apps benötigt wird.
+
+  Diese Funktion gilt für:
+
+  - macOS 10.15 und neuer
+
+- **Show status alerts** (Statusmeldungen anzeigen): Bei **Ja** werden Warnungen als Systembenachrichtigungen angezeigt. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem diese Warnungen nicht als Systembenachrichtigungen an.
+
+  Diese Funktion gilt für:
+
+  - macOS 10.15 und neuer
+
+- **Prevent the device from sleeping while caching is turned on** (Bei aktivierter Zwischenspeicherung den Standbymodus des Geräts verhindern): Bei **Ja** wird verhindert, dass der Computer in den Standbymodus wechselt, wenn das Zwischenspeichern aktiviert ist. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erlaubt das Betriebssystem möglicherweise den Standbymodus.
+
+  Diese Funktion gilt für:
+
+  - macOS 10.15 und neuer
+
+- **Devices to cache** (Geräte für Zwischenspeicherung): Wählen Sie die Geräte aus, die Inhalte zwischenspeichern können. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert. 
+  - **Devices using the same local network** (Geräte, die das gleiche lokale Netzwerk verwenden): Der Inhaltscache bietet Geräten im gleichen unmittelbaren Netzwerk die Möglichkeit, Inhalte zu nutzen. Geräten in anderen Netzwerken einschließlich der Geräte, die für den Inhaltscache erreichbar sind, werden keine Inhalte bereitgestellt.
+  - **Devices using the same public IP address** (Geräte, die die gleiche öffentliche IP-Adresse verwenden): Der Inhaltscache bietet Geräten, die die gleiche öffentliche IP-Adresse verwenden, die Möglichkeit, Inhalte zu nutzen. Geräten in anderen Netzwerken einschließlich der Geräte, die für den Inhaltscache erreichbar sind, werden keine Inhalte bereitgestellt.
+  - **Devices using custom local networks** (Geräte, die benutzerdefinierte lokale Netzwerke verwenden): Der Inhaltscache stellt Inhalte für Geräte in den von Ihnen eingegebenen IP-Adressbereichen bereit.
+    - **Client listen ranges** (Clientlauschbereiche): Geben Sie den Bereich der IP-Adressen ein, die den Inhaltscache empfangen können.
+  - **Devices using custom local networks with fallback** (Geräte, die benutzerdefinierte lokale Netzwerke mit Fallback verwenden): Der Inhaltscache stellt Inhalte für Geräte in den Lauschbereichen, Peerlauschbereichen und für Geräte mit übergeordneten IP-Adressen bereit.
+    - **Client listen ranges** (Clientlauschbereiche): Geben Sie den Bereich der IP-Adressen ein, die den Inhaltscache empfangen können.
+
+- **Custom public IP addresses** (Benutzerdefinierte öffentliche IP-Adressen): Geben Sie einen Bereich öffentlicher IP-Adressen ein. Die Cloudserver verwenden diesen Bereich, um Clientgeräte mit Caches abzugleichen.
+
+- **Share content with other caches** (Inhalte für andere Caches freigeben): Wenn Ihr Netzwerk über mehr als einen Inhaltscache verfügt, werden die Inhaltscaches auf anderen Geräten automatisch zu Peers. Diese Geräte können zwischengespeicherte Software einsehen und freigeben. 
+
+  Wenn ein angefordertes Element nicht in einem Inhaltscache verfügbar ist, werden seine Peers auf das Element überprüft. Wenn das Element verfügbar ist, wird es aus dem Inhaltscache auf dem Peergerät heruntergeladen. Wenn es immer noch nicht verfügbar ist, lädt der Inhaltscache das Element über die folgenden Optionen herunter:
+
+  - übergeordnete IP-Adresse (sofern konfiguriert)
+  
+    oder
+    
+  - von Apple über das Internet
+
+  Wenn mehr als ein Inhaltscache verfügbar ist, wählen Geräte automatisch den richtigen Inhaltscache aus. 
+
+  Folgende Optionen sind verfügbar:
+
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Content caches using the same local networks** (Inhaltscaches, die dasselbe lokale Netzwerk verwenden): Ein Inhaltscache stellt nur mit anderen Inhaltscaches im gleichen unmittelbaren lokalen Netzwerk eine Peerverbindung her.
+  - **Content caches using the same public IP address** (Inhaltscaches, die dieselbe öffentliche IP-Adresse verwenden): Ein Inhaltscache stellt nur mit anderen Inhaltscaches mit der gleichen öffentlichen IP-Adresse eine Peerverbindung her.
+  - **Content caches using custom local networks** (Inhaltscaches, die benutzerdefinierte lokale Netzwerke verwenden): Ein Inhaltscache stellt nur mit anderen Inhaltscaches mit dem von Ihnen eingegebenen IP-Adressenlauschbereich eine Peerverbindung her:
+
+    - **Peer listen ranges** (Peerlauschbereiche): Geben Sie den Anfang und das Ende der IPv4- oder IPv6-IP-Adressen für Ihren Bereich ein. Der Inhaltscache antwortet nur auf Peercacheanforderungen von Inhaltscaches mit den von Ihnen eingegebenen IP-Adressbereichen.
+    - **Peer filter ranges** (Peerfilterbereiche): Geben Sie den Anfang und das Ende der IPv4- oder IPv6-IP-Adressen für Ihren Bereich ein. Der Inhaltscache filtert die Peerliste mithilfe der von Ihnen eingegebenen IP-Adressbereiche.
+
+- **Parent IP addresses** (IP-Adressen übergeordneter Caches): Geben Sie die lokale IP-Adresse eines anderen Inhaltscaches ein, der als übergeordneter Cache hinzugefügt werden soll. Der Cache lädt Inhalte in diese Caches hoch und daraus herunter, anstatt sie direkt über Apple hoch- bzw. herunterzuladen. Fügen Sie nur einmal eine übergeordnete IP-Adresse hinzu.
+- **Parent selection policy** (Richtlinie für Auswahl übergeordneter Caches): Wenn viele übergeordnete Caches vorhanden sind, wählen Sie aus, wie die übergeordnete IP-Adresse ausgewählt wird. Folgende Optionen sind verfügbar:
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+  - **Round robin** (Roundrobin): Verwenden Sie die übergeordneten IP-Adressen in der angegebenen Reihenfolge. Diese Option eignet sich für Lastenausgleichsszenarios.
+  - **First available** (Erste verfügbare IP-Adresse): Verwenden Sie immer die erste verfügbare IP-Adresse in der Liste.
+  - **Hash:** Hiermit wird ein Hashwert für den Pfadteil der angeforderten URL erstellt. Mit dieser Option wird sichergestellt, dass immer dieselbe übergeordnete IP-Adresse für dieselbe URL verwendet wird.
+  - **Random** (Zufällig): Hier wird zufällig eine IP-Adresse in der Liste verwendet. Diese Option eignet sich für Lastenausgleichsszenarios.
+  - **Sticky available** (Festgelegte Reihenfolge verfügbarer IP-Adressen): Verwenden Sie immer die erste IP-Adresse in der Liste. Wenn diese nicht verfügbar ist, verwenden Sie die zweite IP-Adresse in der Liste. Verwenden Sie weiterhin die zweite IP-Adresse, bis sie nicht verfügbar ist, und setzen Sie diesen Vorgang fort.
+
 ## <a name="login-items"></a>Anmeldeelemente
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Die Einstellungen gelten für: Alle Registrierungstypen
 
-- **Fügen Sie die Dateien, Ordner und benutzerdefinierten Apps hinzu, die bei der Anmeldung gestartet werden sollen**: **Fügen Sie den Pfad zu einer Datei, einem Ordner, einer benutzerdefinierten App oder einer System-App hinzu**, die geöffnet werden soll, wenn sich ein Benutzer auf dem Gerät anmeldet. Geben Sie außerdem Folgendes ein:
+- **Fügen Sie die Dateien, Ordner und benutzerdefinierten Apps hinzu, die bei der Anmeldung gestartet werden sollen**: Stellen Sie durch **Hinzufügen** des Pfads einer Datei, eines Ordners, einer benutzerdefinierten App oder System-App sicher, dass diese geöffnet werden, wenn sich der Benutzer auf seinem Gerät anmeldet. Geben Sie außerdem Folgendes ein:
 
   - **Pfad des Elements**: Geben Sie den Pfad zur Datei, zum Ordner oder zur App ein. System-Apps oder Apps, die für Ihre Organisation entwickelt oder angepasst wurden, befinden sich üblicherweise im Ordner `Applications` und weisen einen Pfad ähnlich wie `/Applications/AppName.app` auf.
 
@@ -124,7 +227,7 @@ Diese Funktion gilt für:
     Wenn Sie eine App, einen Ordner oder eine Datei hinzufügen, stellen Sie sicher, dass Sie den richtigen Pfad eingeben. Nicht alle Elemente befinden sich im Ordner `Applications`. Wenn ein Benutzer ein Element von einem Speicherort an einen anderen verschiebt, ändert sich der Pfad. Dieses verschobene Element wird nicht geöffnet, wenn sich der Benutzer anmeldet.
 
   - **Ausblenden:** Sie können die App einblenden oder ausblenden. Folgende Optionen sind verfügbar:
-    - **Nicht konfiguriert:** Dies ist der Standardwert. Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem Elemente in der Liste der Anmeldeelemente für Benutzer und Gruppen an, wenn die Option „Ausblenden“ deaktiviert wird.
+    - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Standardmäßig zeigt das Betriebssystem möglicherweise Elemente in der Liste der Anmeldeelemente für Benutzer und Gruppen an, wenn die Option „Ausblenden“ deaktiviert wird.
     - **Ja**: Die App wird nicht in der Liste der Anmeldeelemente für Benutzer und Gruppen angezeigt.
 
 ## <a name="login-window"></a>Fenster „Anmeldung“
@@ -161,7 +264,7 @@ Diese Funktion gilt für:
 
 ### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Die Einstellungen gelten für: Vom Benutzer genehmigte Geräteregistrierung und automatisierte Geräteregistrierung
 
-- **Typ der SSO-App-Erweiterung:** Wählen Sie den Typ der SSO-App-Erweiterung für Anmeldeinformationen aus. Folgende Optionen sind verfügbar:
+- **Typ der SSO-App-Erweiterung:** Wählen Sie den Typ der SSO-App-Erweiterung aus. Folgende Optionen sind verfügbar:
 
   - **Nicht konfiguriert:** Es werden keine App-Erweiterungen verwendet. Um eine App-Erweiterung zu deaktivieren, ändern Sie den Typ der SSO-App-Erweiterung in **Nicht konfiguriert**.
   - **Umleiten:** Verwenden Sie eine generische, anpassbare App-Erweiterung für die Umleitung, um das einmalige Anmelden (Single Sign-On, SSO) mit modernen Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterung und die Team-ID für die App-Erweiterung Ihrer Organisation kennen.
@@ -186,7 +289,7 @@ Diese Funktion gilt für:
 - **URLs** (nur „Umleiten“): Geben Sie die URL-Präfixe der Identitätsanbieter ein, in deren Auftrag die Umleitungs-App-Erweiterung die SSO-Authentifizierung nutzt. Wenn Benutzer auf diese URLs umgeleitet werden, greift die SSO-App-Erweiterung ein und fordert eine SSO-Authentifizierung an.
 
   - Alle URLs in Ihren Intune-SSO-Erweiterungsprofilen müssen eindeutig sein. Sie können eine Domäne nicht mehrfach in einem SSO-App-Erweiterungsprofil verwenden – selbst dann nicht, wenn Sie verschiedene Arten von SSO-App-Erweiterungen verwenden.
-  - Die URLs müssen mit „http://“ oder „https://“ beginnen.
+  - Die URLs müssen mit `http://` oder `https://` beginnen.
 
 - **Zusätzliche Konfiguration** („Umleiten“ und „Anmeldeinformationen“): Geben Sie zusätzliche erweiterungsspezifische Daten ein, die an die SSO-App-Erweiterung übergeben werden sollen:
   - **Schlüssel:** Geben Sie den Namen des Elements ein, das Sie hinzufügen möchten, z. B. `user name`.
@@ -214,8 +317,8 @@ Diese Funktion gilt für:
 - **Password sync** (Kennwortsynchronisierung) (nur „Kerberos“): Klicken Sie auf **Aktivieren**, um die lokalen Kennwörter Ihrer Benutzer mit Azure AD zu synchronisieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig deaktiviert das Betriebssystem möglicherweise die Kennwortsynchronisierung mit Azure AD. Verwenden Sie diese Einstellung als Alternative oder Backuplösung für das einmalige Anmelden (SSO). Diese Einstellung funktioniert nicht, wenn Benutzer mit einem mobilen Apple-Konto angemeldet sind.
 - **Windows Server Active Directory password complexity** (Windows Server Active Directory-Kennwortkomplexität) (nur „Kerberos“): Klicken Sie auf **Anfordern**, um durchzusetzen, dass Benutzer die Anforderungen an die Kennwortkomplexität erfüllen müssen, die Active Directory stellt. Weitere Informationen finden Sie unter [Kennwort muss Komplexitätsvoraussetzungen entsprechen](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig fordert das Betriebssystem möglicherweise nicht, dass Benutzer die Active Directory-Kennwortanforderungen erfüllen.
 - **Mindestkennwortlänge** (nur „Kerberos“): Geben Sie die Mindestanzahl von Zeichen ein, aus denen das Kennwort eines Benutzers bestehen muss. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise keine Mindestlänge für Benutzerkennwörter.
-- **Limit für die Wiederverwendung von Kennwörtern** (nur „Kerberos“): Geben Sie die Anzahl neuer Kennwörter ein (1–24), die verwendet werden müssen, bis ein vorheriges Kennwort für die Domäne wiederverwendet werden kann. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise kein Limit für die Wiederverwendung von Kennwörtern.
-- **Minimum password age** (Mindestkennwortalter) (nur „Kerberos“): Geben Sie die Anzahl von Tagen ein, die ein Kennwort für die Domäne verwendet werden muss, bevor ein Benutzer es ändern kann. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise kein Mindestkennwortalter, bevor ein Kennwort geändert werden kann.
+- **Limit für die Wiederverwendung von Kennwörtern** (nur „Kerberos“): Geben Sie die Anzahl neuer Kennwörter ein (1 bis 24), die verwendet werden, bis ein vorheriges Kennwort für die Domäne wiederverwendet werden kann. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise kein Limit für die Wiederverwendung von Kennwörtern.
+- **Minimum password age** (Mindestkennwortalter) (nur „Kerberos“): Geben Sie die Anzahl von Tagen ein, die ein Kennwort für die Domäne verwendet wird, bevor ein Benutzer es ändern kann. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise kein Mindestkennwortalter, bevor ein Kennwort geändert werden kann.
 - **Password expiration notification** (Benachrichtigung über Kennwortablauf) (nur „Kerberos“): Geben Sie an, wie viele Tage vor Ablauf eines Kennworts Benutzer über den bevorstehenden Ablauf ihres Kennworts benachrichtigt werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig verwendet das Betriebssystem möglicherweise `15` Tage.
 - **Kennwortablauf** (nur Kerberos): Geben Sie die Anzahl der Tage an, bis das Gerätekennwort geändert werden muss. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig ist im Betriebssystem möglicherweise eingestellt, dass Kennwörter nie ablaufen.
 - **URL für Kennwortänderung** (nur „Kerberos“): Geben Sie die URL ein, die aufgerufen wird, wenn der Benutzer eine Kerberos-Kennwortänderung einleitet.

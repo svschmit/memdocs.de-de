@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 06/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 68f8eb2ab3b7e348daa99e982e640e9bd28692d8
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990178"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264123"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Verwenden und Verwalten von Android Enterprise-Geräten mit OEMConfig in Microsoft Intune
 
@@ -116,6 +116,8 @@ Vergewissern Sie sich, dass das Gerät OEMConfig unterstützt, dass die richtige
       - Viele Einstellungen verfügen über Standardwerte, die vom OEM bereitgestellt werden. Sie können herausfinden, ob es einen Standardwert gibt, indem Sie den Mauszeiger auf das Infosymbol neben der jeweiligen Einstellung bewegen. In einer QuickInfo wird dann, falls vorhanden, der Standardwert für diese Einstellung sowie weitere vom OEM bereitgestellte Details angezeigt.
 
       - Wenn Sie auf **Löschen** klicken, wird eine Einstellung aus dem Profil gelöscht. Wenn eine Einstellung nicht im Profil enthalten ist, wird deren Wert nicht auf dem Gerät geändert, wenn das Profil angewendet wird.
+      
+      - Verwenden Sie die Schaltfläche **Suchen**, um nach Einstellungen zu suchen. Geben Sie im Seitenbereich ein Schlüsselwort ein, um alle relevanten Einstellungen und deren Beschreibungen anzuzeigen. Wählen Sie eine beliebige Einstellung aus, um die Einstellung automatisch der Struktur des Konfigurations-Designers hinzuzufügen, sofern sie dort nicht bereits vorhanden ist. Außerdem wird die Struktur automatisch geöffnet, sodass Sie die Einstellung anzeigen können. 
 
       - Wenn Sie im Konfigurations-Designer ein leeres (nicht konfiguriertes) Bundle erstellen, wird es beim Wechsel zum JSON-Editor gelöscht.
 
@@ -155,15 +157,23 @@ Im Vergleich zu Standard-Apps erweitern OEMConfig-Apps die verwalteten Konfigura
 
 | OEM | Paket-ID | OEM-Dokumentation (falls verfügbar) |
 | --- | --- | ---|
+| Archos | com.archos.oemconfig | |
 | Ascom | com.ascom.myco.oemconfig | |
+| Bluebird | com.bluebird.android.oemconfig | |
 | Cipherlab | com.cipherlab.oemconfig | |
 | Datalogic | com.datalogic.settings.oemconfig | |
-| Honeywell | com.honeywell.oemconfig |  |
+| Honeywell | com.honeywell.oemconfig | |
 | HMDGlobal – 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
-| HMDGlobal – 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
+| HMDGlobal – 4.2 | com.hmdglobal.app.oemconfig.n4_2 |
+| HMDGlobal (5.3) | com.hmdglobal.app.oemconfig.n5_3 |
+| Lenovo | com.lenovo.oemconfig.rel | |
+| LG | com.lge.android.oemconfig | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Panasonic | com.panasonic.mobile.oemconfig | |
+| Point Mobile | device.apps.emkitagent | |
 | Samsung | com.samsung.android.knox.kpu | [Administratorhandbuch für das Knox Service Plugin](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Seuic | com.seuic.seuicoemconfig | |
+| Social Mobile | com.rhinomobility.oemconfig | |
 | Spectralink: Barcodes | com.spectralink.barcode.service |  |
 | Spectralink: Schaltflächen | com.spectralink.buttons |  |
 | Spectralink: Gerät | com.spectralink.slnkdevicesettings  |  |

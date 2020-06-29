@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 9c2e6f742610eb8f2f526c6fc7a5afabfbadcbbf
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 071cab69b652193b835282603e187e4f3d0c7b0d
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990852"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879728"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>Verwalten der Gerätesicherheit mit Endgerätesicherheitsrichtlinien in Microsoft Intune
 
@@ -35,13 +35,13 @@ Diese Richtlinien finden Sie unter *Verwalten* im Knoten **Endpunktsicherheit** 
 
 Im Folgenden finden Sie kurze Beschreibungen der einzelnen Typen von Endpunktsicherheitsrichtlinien. Um mehr über die einzelnen Typen zu erfahren, einschließlich der verfügbaren Profile, folgen Sie den Links zu den Inhalten der jeweiligen Richtlinientypen:
 
-- [Antivirus](../protect/endpoint-security-antivirus-policy.md): Antivirenrichtlinien unterstützen Sicherheitsadministratoren dabei, sich auf die Verwaltung der einzelnen Gruppen von Antivireneinstellungen für verwaltete Geräte zu konzentrieren. Um die Antivirenrichtlinie zu verwenden, integrieren Sie Intune mit Microsoft Defender Advanced Threat Protection (Defender ATP) als Mobile Threat Defense-Lösung.
+- [Antivirus](../protect/endpoint-security-antivirus-policy.md): Antivirenrichtlinien unterstützen Sicherheitsadministratoren dabei, sich auf die Verwaltung der einzelnen Gruppen von Antivireneinstellungen für verwaltete Geräte zu konzentrieren. Integrieren Sie Intune mit Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) als Mobile Threat Defense-Lösung, um die Antivirenrichtlinie zu verwenden.
 
 - [Datenträgerverschlüsselung](../protect/endpoint-security-disk-encryption-policy.md): Die Datenträgerverschlüsselungsprofile für die Endpunktsicherheit konzentrieren sich ausschließlich auf die Einstellungen, die für eine integrierte Verschlüsselungsmethode für Geräte relevant sind, zum Beispiel FileVault oder BitLocker. Dieser Schwerpunkt vereinfacht Sicherheitsadministratoren die Verwaltung der Datenträgerverschlüsselungseinstellungen, ohne in einem Host mit nicht verknüpften Einstellungen navigieren zu müssen.
 
-- [Firewall](../protect/endpoint-security-firewall-policy.md): Verwenden Sie die Firewallrichtlinie für Endpunktsicherheit in Intune, um eine integrierte Firewall für Geräte zu konfigurieren, die unter macOS und Windows 10 ausgeführt werden. Integrierte Firewalls sind in BitLocker für Windows-Geräten und FileVault für macOS enthalten.
+- [Firewall](../protect/endpoint-security-firewall-policy.md): Verwenden Sie die Firewallrichtlinie für Endpunktsicherheit in Intune, um eine integrierte Firewall für Geräte zu konfigurieren, die unter macOS und Windows 10 ausgeführt werden. 
 
-- [Endpunkterkennung und -antwort](../protect/endpoint-security-edr-policy.md): Wenn Sie Defender ATP in Intune integrieren, verwenden Sie die Endpunktsicherheitsrichtlinien für die Endpunkterkennung und -antwort (EDR), um die EDR-Einstellungen zu verwalten und das Onboarding von Geräten für Defender ATP durchzuführen.
+- [Endpunkterkennung und -antwort](../protect/endpoint-security-edr-policy.md): Wenn Sie Microsoft Defender ATP mit Intune integrieren, verwenden Sie die Endpunktsicherheitsrichtlinien für die Endpunkterkennung und -antwort (EDR), um die EDR-Einstellungen zu verwalten und das Onboarding von Geräten für Microsoft Defender ATP durchzuführen.
 
 - [Verringerung der Angriffsfläche](../protect/endpoint-security-asr-policy.md) Wenn Defender Antivirus auf Ihren Windows 10-Geräten verwendet wird, können Sie Endpunktsicherheitsrichtlinien von Intune für die Verringerung der Angriffsfläche verwenden, um diese Einstellungen für Ihre Geräte zu verwalten.
 

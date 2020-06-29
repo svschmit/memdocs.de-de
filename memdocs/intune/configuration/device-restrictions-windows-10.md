@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311173"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216483"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Einstellungen für Windows 10-Geräte (und höher) zum Zulassen oder Einschränken von Features mit Intune
 
@@ -130,7 +130,7 @@ Diese Einstellungen verwenden die [Konnektivitätsrichtlinien](https://docs.micr
 Diese Einstellungen verwenden den [Bluetooth-Richtlinien-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth), der auch die unterstützten Windows-Editionen auflistet.
 
 - **Bluetooth**: **Blockieren** verhindert, dass Benutzer Bluetooth aktivieren können. **Nicht konfiguriert** (Standard) ermöglicht die Verwendung von Bluetooth auf dem Gerät.
-- **Bluetooth-Erkennbarkeit**: **Blockieren** verhindert die Erkennung dieses Geräts durch andere für Bluetooth aktivierte Geräte. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem standardmäßig zu, dass andere Bluetooth-fähige Geräte (z. B. ein Kopfhörer) das Gerät entdecken.
+- **Bluetooth-Erkennbarkeit**: **Blockieren** verhindert die Erkennung dieses Geräts durch andere für Bluetooth aktivierte Geräte. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem standardmäßig zu, dass andere Bluetooth-fähige Geräte (z. B. ein Kopfhörer) das Gerät erkennen.
 
   [Bluetooth/AllowDiscoverableMode-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
@@ -138,9 +138,13 @@ Diese Einstellungen verwenden den [Bluetooth-Richtlinien-CSP](https://docs.micro
 
   [Bluetooth/AllowPrepairing-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
 
-- **Bluetooth-Ankündigung**: **Blockieren** verhindert, dass das Gerät Bluetooth-Ankündigungen sendet. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem standardmäßig zu, dass das Gerät Bluetooth-Werbung sendet.
+- **Bluetooth-Ankündigung**: **Blockieren** verhindert, dass das Gerät Bluetooth-Ankündigungen sendet. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem standardmäßig zu, dass das Gerät Bluetooth-Ankündigungen sendet.
 
   [Bluetooth/AllowAdvertising-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+- **Bluetooth-Nahbereichsverbindungen:** Mit der Option **Blockieren** werden Benutzer daran gehindert, die schnelle Kopplung und andere Nahbereichsfunktionen zu verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise lässt das Betriebssystem standardmäßig zu, dass das Gerät Bluetooth-Ankündigungen sendet.
+
+  [Bluetooth/AllowPromptedProximalConnections-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Zulässige Bluetooth-Dienste:** **Fügen Sie** eine Liste zulässiger Bluetooth-Dienste und -Profile gibt in Form von hexadezimalen Zeichenfolgen hinzu, wie etwa `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
 
@@ -323,6 +327,9 @@ Diese Einstellungen verwenden den [Messagingrichtlinien-CSP](https://docs.micros
 
 Diese Einstellungen verwenden den [Browserrichtlinien-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser), der auch die unterstützten Windows-Editionen auflistet.
 
+> [!NOTE]
+> Die Verwendung des Browserrichtlinien-CSP gilt für Microsoft Edge-Version 45 und früher. Für Microsoft Edge Enterprise-Version 77 und höher finden Sie Informationen unter [Konfigurieren von Microsoft Edge-Richtlinieneinstellungen mit Microsoft Intune](/DeployEdge/configure-edge-with-intune).
+
 ### <a name="use-microsoft-edge-kiosk-mode"></a>Verwenden des Microsoft Edge-Kioskmodus
 
 Die verfügbaren Einstellungen hängen davon ab, was Sie wählen. Folgende Optionen sind verfügbar:
@@ -464,7 +471,7 @@ Diese Einstellungen verwenden den [NetworkProxy-Richtlinien-CSP](https://docs.mi
 
 Diese Einstellungen verwenden den [DeviceLock-Richtlinien-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), der auch die unterstützten Windows-Editionen auflistet.
 
-- **Kennwort:** Wenn **Erforderlich** festgelegt wird, müssen Benutzer ein Kennwort eingeben, um auf das Gerät zuzugreifen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem den Zugriff auf Geräte möglicherweise ohne Kennwort zu. Diese Einstellung gilt nur für lokale Konten. Kennwörter für Domänenkonten werden weiterhin von Active Directory (AD) und Azure AD konfiguriert.
+- **Kennwort:** Wenn **Anfordern** festgelegt wird, müssen Benutzer ein Kennwort eingeben, um auf das Gerät zuzugreifen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem den Zugriff auf Geräte möglicherweise ohne Kennwort zu. Diese Einstellung gilt nur für lokale Konten. Kennwörter für Domänenkonten werden weiterhin von Active Directory (AD) und Azure AD konfiguriert.
 
   [DeviceLock/DevicePasswordEnabled-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
 
@@ -638,7 +645,7 @@ Diese Einstellungen verwenden den [WirelessDisplay-Richtlinien-CSP](https://docs
 ## <a name="reporting-and-telemetry"></a>Berichterstellung und Telemetrie
 
 - **Nutzungsdaten freigeben**: Wählen Sie die Ebene der Diagnosedaten aus, die gesendet werden. Folgende Optionen sind verfügbar:
-  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Es wird keine Einstellung erzwungen. Benutzer wählen die Ebene für die Übermittlung aus. Möglicherweise teilt das Betriebssystem standardmäßig keine Daten.
+  - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Es wird keine Einstellung erzwungen. Benutzer wählen die Ebene für die Übermittlung aus. Möglicherweise gibt das Betriebssystem standardmäßig keine Daten frei.
   - **Sicherheit**: Informationen, die erforderlich sind, um Windows sicherer zu machen, einschließlich Daten zu den Einstellungen der Komponente „Benutzererfahrung und Telemetrie im verbundenen Modus“, zum Tool zum Entfernen bösartiger Software und zu Microsoft Defender
   - **Standard**: Grundlegende Geräteinformationen, z. B. qualitätsbezogene Daten, App-Kompatibilität, App-Nutzungsdaten und Daten aus der Sicherheitsebene
   - **Erweitert**: Zusätzliche Informationen, z. B. zur Verwendung von Windows, Windows Server, System Center oder Anwendungen, Leistungsdaten, erweiterte Zuverlässigkeitsdaten sowie Daten der Ebenen „Standard“ und „Sicherheit“

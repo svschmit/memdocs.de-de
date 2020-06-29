@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 228c6758feca348d2caed4eb3b54207cadf7a037
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985849"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795702"
 ---
 # <a name="configure-microsoft-launcher"></a>Konfigurieren von Microsoft Launcher
 
@@ -70,7 +70,7 @@ In der folgenden Tabelle sind die für Microsoft Launcher verfügbaren Konfigura
 |    Feed aktivieren    |    Boolesch    |    True    |    Ermöglicht es Ihnen, den Launcher-Feed auf dem Gerät zu aktivieren, wenn der Benutzer auf dem Startbildschirm nach rechts wischt.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird der Feed aktiviert.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird der Feed deaktiviert.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Ändern der Feedaktivierung durch Benutzer zulässig    |    Boolesch    |    True    |     Hiermit können Sie festlegen, ob die Einstellung **Feed aktivieren** durch Endbenutzer geändert werden darf.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird der Feed nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird der Feed bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
 |    Platzierung der Suchleiste   |    Zeichenfolge    |    Unten    |  Hiermit können Sie die **Platzierung der Suchleiste** auf dem Startbildschirm angeben. <ul><li>Wenn **Unten** festgelegt ist, befindet sich die Suchleiste am unteren Rand des Startbildschirms.</li><li>Wenn **Oben** festgelegt ist, befindet sich die Suchleiste am oberen Rand des Startbildschirms.</li><li>Wenn **Ausblenden** festgelegt ist, wird die Suchleiste vom Startbildschirm entfernt.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
-|    Ändern der Platzierung der Suchleiste durch Benutzer zulässig   |    Bool    |    True    |  Hiermit können Sie festlegen, ob die Einstellung zur **Platzierung der Suchleiste** durch Endbenutzer geändert werden darf. <ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird die Platzierung der Suchleiste nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird die Platzierung der Suchleiste bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Ändern der Platzierung der Suchleiste durch Benutzer zulässig   |    Bool    |    True    |  Hiermit können Sie festlegen, ob die Einstellung zur **Platzierung der Suchleiste** durch Endbenutzer geändert werden darf. <ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird die Platzierung der Suchleiste nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird die Platzierung der Suchleiste bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`<p>**HINWEIS:** Diese Einstellung wird für Microsoft Launcher 6.2 und höher nicht mehr erzwungen. Daher gibt es keine Auswirkungen, wenn dieser Wert auf `True` festgelegt wird. Ihre Endbenutzer können die Platzierung der Suchleiste auf ihren Geräten nicht anpassen.    |
 |    Dockmodus  |    Zeichenfolge    |    Anzeigen    | Hiermit können Sie das Dock auf dem Gerät aktivieren, wenn der Benutzer auf dem Startbildschirm nach rechts wischt.<ul><li>Wenn **Anzeigen** festgelegt ist, wird das Dock aktiviert.</li><li>Wenn **Ausblenden** festgelegt ist, wird das Dock auf dem Startbildschirm ausgeblendet, der Benutzer kann es jedoch bei Bedarf anzeigen lassen.</li><li>Wenn **Deaktiviert** festgelegt ist, wird das Dock deaktiviert.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Dock.Mode`    |
 |   Ändern des Dockmodus durch Benutzer zulässig   |    Zeichenfolge    |    True    |  Hiermit können Sie festlegen, ob die Einstellung zum Dockmodus durch Endbenutzer geändert werden darf.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird die Einstellung zum Dockmodus nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird die Einstellung zum Dockmodus bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 

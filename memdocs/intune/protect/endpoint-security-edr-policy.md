@@ -16,20 +16,20 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206331"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879669"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Endpunkterkennungs- und -antwort-Richtlinie für die Endpunktsicherheit in Intune
 
-Wenn Sie Microsoft Defender Advanced Threat Protection (Defender ATP) in Intune integrieren, können Sie Endpunktsicherheitsrichtlinien für die Endpunkterkennung und -antwort (Endpoint Detection and Response, EDR) verwenden, um die EDR-Einstellungen zu verwalten und das Onboarding von Geräten für Defender ATP durchzuführen.
+Wenn Sie Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) in Intune integrieren, können Sie Endpunktsicherheitsrichtlinien für die Endpunkterkennung und -antwort (Endpoint Detection and Response, EDR) verwenden, um die EDR-Einstellungen zu verwalten und das Onboarding von Geräten für Microsoft Defender ATP durchzuführen.
 
-Die Funktionen der Endpunkterkennung- und -antwort von Defender ATP bieten erweiterte Angriffserkennungen, die nahezu in Echtzeit erfolgen und aussagekräftig sind. Sicherheitsanalysten können damit Warnungen effektiv priorisieren, Einblicke in den gesamten Umfang einer Sicherheitsverletzung erhalten und Antwortaktionen durchführen, um Bedrohungen abzuwenden.
+Die Funktionen der Endpunkterkennung- und -antwort von Microsoft Defender ATP bieten erweiterte Angriffserkennungen, die nahezu in Echtzeit erfolgen und aussagekräftig sind. Sicherheitsanalysten können damit Warnungen effektiv priorisieren, Einblicke in den gesamten Umfang einer Sicherheitsverletzung erhalten und Antwortaktionen durchführen, um Bedrohungen abzuwenden.
 
-EDR-Richtlinien enthalten plattformspezifische Profile zum Verwalten der EDR-Einstellungen. Die Profile enthalten automatisch ein *Onboardingpaket* für Defender ATP. Die Onboardingpakete bestimmen, wie Geräte konfiguriert werden, damit sie mit Defender ATP funktionieren. Nach dem Onboarding eines Geräts können Sie mit der Verwendung von Bedrohungsdaten von diesem Gerät beginnen.
+EDR-Richtlinien enthalten plattformspezifische Profile zum Verwalten der EDR-Einstellungen. Die Profile enthalten automatisch ein *Onboardingpaket* für Microsoft Defender ATP. Die Onboardingpakete bestimmen, wie Geräte konfiguriert werden, damit sie mit Microsoft Defender ATP funktionieren. Nach dem Onboarding eines Geräts können Sie mit der Verwendung von Bedrohungsdaten von diesem Gerät beginnen.
 
 Die EDR-Richtlinien werden für Gruppen von Geräten in Azure Active Directory (Azure AD) bereitgestellt, die Sie mit Intune verwalten, sowie für Sammlungen von lokalen Geräten, die Sie mit Configuration Manager verwalten, einschließlich Windows-Servern. Die EDR-Richtlinien für die verschiedenen Verwaltungspfade erfordern unterschiedliche Onboardingpakete. Daher erstellen Sie getrennte EDR-Richtlinien für die verschiedenen Arten der von Ihnen verwalteten Geräte.
 
@@ -44,7 +44,7 @@ Rufen Sie die [Einstellungen für Endpunkterkennungs- und -antwort-Profile](endp
 
 **Allgemein:**
 
-- **Mandant für Microsoft Defender Advanced Threat Protection** – Ihr Defender ATP-Mandant muss in Ihren Microsoft Endpoint Manager-Mandanten (Intune-Abonnement) integriert werden, bevor Sie EDR-Richtlinien erstellen können. Weitere Informationen finden Sie in [Verwenden von Microsoft Defender ATP](advanced-threat-protection.md) in der Intune-Dokumentation.
+- **Mandant für Microsoft Defender Advanced Threat Protection**: Ihr Microsoft Defender ATP-Mandant muss in Ihren Microsoft Endpoint Manager-Mandanten (Intune-Abonnement) integriert werden, bevor Sie EDR-Richtlinien erstellen können. Weitere Informationen finden Sie in [Verwenden von Microsoft Defender ATP](advanced-threat-protection.md) in der Intune-Dokumentation.
 
 **So unterstützen Sie Geräte aus Configuration Manager**:
 
@@ -258,12 +258,9 @@ Details zu den von Ihnen bereitgestellten EDR-Richtlinien können Sie im Microso
 
 - Für Richtlinien, die auf die Plattform **Windows 10 und höher** (Intune) ausgerichtet sind, wird eine Übersicht über die Konformität der Richtlinie angezeigt. Sie können auch das Diagramm auswählen, um eine Liste der Geräte anzuzeigen, die die Richtlinie erhalten haben, und einen Drilldown zu einzelnen Geräten durchführen, um weitere Informationen zu erhalten.
 
-  Im Diagramm **Geräte mit ATP-Sensor** werden nur Geräte angezeigt, deren Onboarding in Defender ATP erfolgreich über das Profil **Windows 10 und höher** erfolgt ist. Um sicherzustellen, dass Sie über eine vollständige Darstellung Ihrer Geräte in diesem Diagramm verfügen, müssen Sie das Onboardingprofil auf allen Ihren Geräten bereitstellen. Geräte, deren Onboarding in Defender ATP mithilfe externer Methoden erfolgte, etwa durch Gruppenrichtlinie oder PowerShell, gelten als **Geräte ohne ATP-Sensor**.
+  Im Diagramm **Geräte mit ATP-Sensor** werden nur Geräte angezeigt, deren Onboarding in Microsoft Defender ATP erfolgreich über das Profil **Windows 10 und höher** erfolgt ist. Um sicherzustellen, dass Sie über eine vollständige Darstellung Ihrer Geräte in diesem Diagramm verfügen, müssen Sie das Onboardingprofil auf allen Ihren Geräten bereitstellen. Geräte, deren Onboarding in Microsoft Defender ATP mithilfe externer Methoden erfolgte, etwa durch Gruppenrichtlinie oder PowerShell, gelten als **Geräte ohne ATP-Sensor**.
 
 - Für Richtlinien, die auf die Plattform **Windows 10-und Windows Server** (Configuration Manager) ausgerichtet sind, wird eine Übersicht über die Konformität der Richtlinie angezeigt, aber es kann kein Drilldown durchgeführt werden, um weitere Details anzuzeigen. Die Ansicht ist begrenzt, da das Admin Center eingeschränkte Statusdetails vom Configuration Manager empfängt, der die Bereitstellung der Richtlinie auf Configuration Manager-Geräten verwaltet.
-
-
-
 
 
 [Sehen Sie sich die Einstellungen an](endpoint-security-edr-profile-settings.md), die Sie für Plattformen und Profile konfigurieren können.

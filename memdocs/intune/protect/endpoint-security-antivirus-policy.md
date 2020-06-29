@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 2f3a378cdb3b5e24371edb2fd6dc240962f80342
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879655"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Antivirenrichtlinie für Endpunktsicherheit in Intune
 
-Die Antivirenrichtlinie für Endpunktsicherheit in Intune unterstützen Sicherheitsadministratoren dabei, sich auf die Verwaltung der einzelnen Gruppen von Antivireneinstellungen für verwaltete Geräte zu konzentrieren. Um die Antivirenrichtlinie zu verwenden, integrieren Sie Intune mit Microsoft Defender Advanced Threat Protection (Defender ATP) als Mobile Threat Defense-Lösung.
+Die Antivirenrichtlinie für Endpunktsicherheit in Intune unterstützen Sicherheitsadministratoren dabei, sich auf die Verwaltung der einzelnen Gruppen von Antivireneinstellungen für verwaltete Geräte zu konzentrieren. Integrieren Sie Intune mit Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) als Mobile Threat Defense-Lösung, um die Antivirenrichtlinie zu verwenden.
 
-Die Antivirenrichtlinie umfasst mehrere Profile. Jedes Profil enthält nur die Einstellungen, die für Defender ATP Antivirus für macOS, Windows 10 oder für die Benutzererfahrung in der Windows-Sicherheits-Ap auf Windows 10-Geräten relevant sind.
+Die Antivirenrichtlinie umfasst mehrere Profile. Jedes Profil enthält nur die Einstellungen, die für den Microsoft Defender ATP-Antivirus für macOS, Windows 10 oder für die Benutzeroberfläche der Windows-Sicherheits-App auf Windows 10-Geräten relevant sind.
 
 Diese Antivirenrichtlinien finden Sie unter **Verwalten** im Knoten „Endpunktsicherheit“ im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -37,10 +37,10 @@ Antivirenrichtlinien enthalten dieselben Einstellungen wie die Profile *Endpunkt
 
 - **macOS**
   - Eine unterstützte Version von macOS
-  - Damit Intune Antivireneinstellungen auf einem Gerät verwalten kann, muss Defender ATP auf diesem Gerät installiert sein. Siehe: [Defender ATP für macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (in der Defender ATP-Dokumentation)
+  - Damit Intune Antivireneinstellungen auf einem Gerät verwalten kann, muss Microsoft Defender ATP auf diesem Gerät installiert sein. Siehe: [Microsoft Defender ATP für macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (in der Dokumentation zu Microsoft Defender ATP)
 
 - **Windows 10 und höher**
-  - Damit Intune Antivireneinstellungen auf einem Gerät verwalten kann, muss Defender ATP auf diesem Gerät installiert sein. Weitere Informationen finden Sie in [Microsoft Defender ATP für Windows](../protect/advanced-threat-protection.md) in der Intune-Dokumentation.
+  - Damit Intune Antivireneinstellungen auf einem Gerät verwalten kann, muss Microsoft Defender ATP auf diesem Gerät installiert sein. Weitere Informationen finden Sie in [Microsoft Defender ATP für Windows](../protect/advanced-threat-protection.md) in der Intune-Dokumentation.
   - Die Windows-Sicherheits-App ist auf allen Geräten installiert, auf denen Windows 10 ausgeführt wird, und es sind keine weiteren Voraussetzungen erforderlich.
 
 ## <a name="antivirus-profiles"></a>Antivirenprofile

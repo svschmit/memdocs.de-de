@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/12/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cd8c57dcaede1331838946d93c4fce16801651b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1de1b015daad50837142ce9628543f0b2d7587d7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990495"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093764"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Registrieren von macOS-Geräten in Intune
 
@@ -48,7 +48,7 @@ Die folgenden Voraussetzungen müssen vor dem Einrichten der Registrierung von m
 ## <a name="user-owned-macos-devices-byod"></a>macOS-Geräte im Besitz des Benutzers (BYOD)
 
 Benutzer können ihre eigenen persönlichen Geräte in der Intune-Verwaltung registrieren lassen. Dies wird auch als „BYOD“ oder „Bring Your Own Device“ bezeichnet. Nachdem Sie die Voraussetzungen erfüllt und Benutzerlizenzen zugewiesen haben, können Ihre Benutzer ihre Geräte registrieren, indem sie:
-- zur [Website des Unternehmensportals](https://portal.manage.microsoft.com) wechseln oder
+- zur [Unternehmensportal-Website](https://portal.manage.microsoft.com) wechseln oder
 - unter [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) die macOS-Unternehmensportal-App herunterladen.
 
 Sie können Ihren Benutzern auch einen Link zu den Schritten für die Onlineregistrierung senden: [Registrieren Ihres macOS-Geräts in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)
@@ -78,9 +78,12 @@ Für Parallels Desktop müssen Sie den Hardwaretyp sowie die Seriennummer für d
 Für VMware Fusion müssen Sie die [VMX-Datei bearbeiten](https://kb.vmware.com/s/article/1014782), um das Hardwaremodell und die Seriennummer des virtuellen Computers festzulegen. Es wird empfohlen, den Hardwaretyp des Geräts, auf dem die virtuellen Computer ausgeführt werden, mit dem Hardwaretyp der von Ihnen erstellten virtuellen Computer abzustimmen. Sie finden diesen Hardwaretyp im **Apple-Menü** > **Über diesen Mac** > **Systembericht** > **Modell-Identifizierung**. 
 
 ## <a name="user-approved-enrollment"></a>Durch den Benutzer genehmigte Registrierung
+
 Die durch den Benutzer genehmigte MDM-Registrierung ist ein Typ der macOS-Registrierung, mit dem Sie bestimmte sicherheitsrelevante Einstellungen verwalten können. Weitere Informationen finden Sie in der [Supportdokumentation von Apple](https://support.apple.com/HT208019).  
  
-Während der BYOD-Registrierung wird der Benutzer aufgefordert, das Apple-Verwaltungsprofil manuell zu genehmigen. Anweisungen werden in der Unternehmensportal-App für macOS bereitgestellt. Obwohl die Genehmigung des Verwaltungsprofils nicht erforderlich ist, um die Registrierung abzuschließen, empfiehlt Intune vom Benutzer genehmigte Registrierungen. Wenn der Benutzer das Profil während der Registrierung nicht genehmigt, kann der Benutzer zu **Systemeinstellungen** > **Profile** wechseln, das Verwaltungsprofil auswählen und auf **Genehmigen** klicken.    
+Ab Juni 2020 werden alle neuen macOS-MDM-Registrierungen in Intune einschließlich derjenigen als durch den Benutzer genehmigt angesehen, die nicht über die automatische Geräteregistrierung (ADE) registriert wurden. Der Endbenutzer muss das Verwaltungsprofil unter **Systemeinstellungen** > **Profile** manuell installieren und somit die Genehmigung des Verwaltungsprofils bereitstellen. Die Systemeinstellungen werden automatisch von der Unternehmensportal-App für BYOD-macOS-Benutzer gestartet. Die [Anweisungen zum Installieren des Verwaltungsprofils](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) werden in der Unternehmensportal-App bereitgestellt.     
+
+BYOD-macOS-MDM-Registrierungen vor Juni 2020 sind möglicherweise nicht vom Benutzer genehmigt, wenn der Endbenutzer die Genehmigung des Verwaltungsprofils unter **Systemeinstellungen** > **Profile** nicht manuell bereitgestellt hat. Bei BYOD-Registrierungen nach Juni 2020 startet die Unternehmensportal-App die **Systemeinstellungen** für den Benutzer, der daraufhin auf „Installieren“ klicken muss. Wenn der Benutzer das Verwaltungsprofil während der Registrierung nicht genehmigt hat, kann er zu **Systemeinstellungen** > **Profile** wechseln, das Verwaltungsprofil auswählen und auf **Genehmigen** klicken, um das Profil zu einem späteren Zeitpunkt zu genehmigen.
 
 ### <a name="find-out-if-a-device-is-user-approved"></a>Herausfinden, ob ein Gerät vom Benutzer genehmigt wurde
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.

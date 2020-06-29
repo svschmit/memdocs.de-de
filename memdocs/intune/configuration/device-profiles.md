@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983807"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093183"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Anwenden von Einstellungen und Funktionen auf Ihren Geräten mit Geräteprofilen in Microsoft Intune
 
@@ -41,7 +41,7 @@ In diesem Artikel erhalten Sie einen Überblick über die unterschiedlichen Arte
 
 ## <a name="administrative-templates"></a>Administrative Vorlagen
 
-[Administrative Vorlagen](administrative-templates-windows.md) enthalten Hunderte von Einstellungen, die Sie für Internet Explorer, OneDrive, Remotedesktop, Word, Excel oder andere Office-Programme konfigurieren können.
+[Administrative Vorlagen](administrative-templates-windows.md) enthalten Hunderte von Einstellungen, die Sie für Internet Explorer, Microsoft Edge, OneDrive, Remotedesktop, Word, Excel und andere Office-Programme konfigurieren können.
 
 Diese Vorlagen bieten Administratoren eine vereinfachte Ansicht der Einstellungen ähnlich wie die Gruppenrichtlinie, sind aber vollständig cloudbasiert.
 
@@ -132,7 +132,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 - Windows 10 und höher
 
-## <a name="edition-upgrade"></a>Upgrade der Edition
+## <a name="edition-upgrade-and-mode-switch"></a>Editionsupgrade und Moduswechsel
 
 Mit [Windows 10-Editionsupgrades](edition-upgrade-configure-windows-10.md) können Sie Geräte, auf denen einige Windows 10-Versionen ausgeführt werden, automatisch auf eine neuere Edition upgraden.
 
@@ -202,7 +202,15 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 - Windows 10 und höher
 
-Kioskeinstellungen sind auch als Geräteeinschränkungen für [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) und [iOS/iPadOS](device-restrictions-ios.md#kiosk) verfügbar.
+Kioskeinstellungen sind auch als Geräteeinschränkungen für [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience) und [iOS/iPadOS](device-restrictions-ios.md#kiosk) verfügbar.
+
+## <a name="mx-profile-zebra"></a>Mx-Profil (Zebra)
+
+Die [Mobility Extensions (Mx)](android-zebra-mx-overview.md) erweitern die in Intune integrierten Einstellungen, sodass Einstellungen speziell für Zebra-Geräte angepasst oder hinzugefügt werden können. Zebra-Geräte werden häufig in Fabriken und im Einzelhandel verwendet. Wenn Sie über Hunderte oder Tausende von Zebra-Geräten verfügen, können Sie diese Geräte mithilfe von Intune konfigurieren und verwalten.
+
+Dieses Features unterstützt folgende Betriebssysteme:
+
+- Android-Geräteadministrator
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -214,7 +222,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 ## <a name="oemconfig"></a>OEMConfig
 
-[OEMConfig](android-oem-configuration-overview.md) ist ein Standard, der es Originalgeräteherstellern (OEMs) und EMM-Anbietern (Enterprise Mobility Management) ermöglicht, OEM-spezifische Funktionen auf standardisierte Weise auf Android Enterprise-Geräten zu erstellen und zu unterstützen. Mit „OEMConfig“ kann ein Originalgerätehersteller ein Schema erstellen, das OEM-spezifische Verwaltungsfunktionen definiert, und es in eine App einbetten, die in Google Play hochgeladen wird. Intune liest das Schema aus der App und ermöglicht Intune-Administratoren die Konfiguration der Einstellungen im Schema.
+[OEMConfig](android-oem-configuration-overview.md) ist ein Standard auf Android Enterprise-Geräten, der es Originalgeräteherstellern (Original Equipment Manufacturer, OEM) und EMM-Anbietern (Enterprise Mobility Management) ermöglicht, OEM-spezifische Features auf standardisierte Weise zu erstellen und zu unterstützen. Mit „OEMConfig“ kann ein Originalgerätehersteller ein Schema erstellen, das OEM-spezifische Verwaltungsfunktionen definiert, und es in eine App einbetten, die in Google Play hochgeladen wird. Intune liest das Schema aus der App und ermöglicht Intune-Administratoren die Konfiguration der Einstellungen im Schema.
 
 Dieses Features unterstützt folgende Betriebssysteme:
 
@@ -222,7 +230,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 ## <a name="powershell-scripts"></a>PowerShell-Skripts
 
-[PowerShell-Skripts auf Windows 10-Geräten](../apps/intune-management-extension.md) verwenden die Intune-Verwaltungserweiterung, um Ihre PowerShell-Skripts in Intune hochzuladen und diese Skripte dann auf Ihren Geräten auszuführen. Beachten Sie auch, was für die Verwendung der Erweiterung erforderlich ist, wie sie in Intune hinzufügt wird und weitere wichtige Informationen.
+[PowerShell-Skripts](../apps/intune-management-extension.md) verwenden die Intune-Verwaltungserweiterung, um Ihre PowerShell-Skripts in Intune hochzuladen und diese dann auf Ihren Geräten auszuführen. Beachten Sie auch, was für die Verwendung der Erweiterung erforderlich ist, wie sie in Intune hinzufügt wird und weitere wichtige Informationen.
 
 Dieses Features unterstützt folgende Betriebssysteme:
 
@@ -278,7 +286,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 Mit [WLAN-Einstellungen](wi-fi-settings-configure.md) können Sie Benutzern und Geräten WLAN-Einstellungen zuweisen. Wenn Sie ein WLAN-Profil zuweisen, erhalten Benutzer Zugriff auf Ihr Unternehmens-WLAN, ohne es selbst konfigurieren zu müssen. 
 
-Dieses Features unterstützt folgende Betriebssysteme: 
+Dieses Features unterstützt folgende Betriebssysteme:
 
 - Android-Geräteadministrator
 - Android Enterprise
@@ -286,6 +294,16 @@ Dieses Features unterstützt folgende Betriebssysteme:
 - macOS
 - Windows 8.1 (nur Import)
 - Windows 10 und höher
+
+## <a name="wired-networks"></a>Verkabelte Netzwerke
+
+Mit [Kabelnetzwerken](wired-networks-configure.md) können Sie 802.1X-Kabelverbindungen für macOS-Desktopcomputer erstellen und verwalten. Wählen Sie in Ihrem Profil die Netzwerkschnittstelle und die akzeptierten EAP-Typen aus, und geben Sie die Einstellungen für die Serververtrauensstellung ein, einschließlich PKCS- und SCEP-Zertifikaten.
+
+Wenn Sie das Profil zuweisen, erhalten macOS-Desktopbenutzer Zugriff auf das Kabelnetzwerk Ihres Unternehmens, ohne diesen selbst konfigurieren zu müssen.
+
+Dieses Features unterstützt folgende Betriebssysteme:
+
+- macOS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Extensions (MX)
 

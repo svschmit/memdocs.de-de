@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551926"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814943"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- und iPadOS-Geräteeinstellungen zur Verwendung gängiger iOS/iPadOS-Features in Intune
 
@@ -78,6 +78,11 @@ Diese Funktion gilt für:
 - iOS 13.0 und höher
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Die Einstellungen gelten für: Automatisierte Geräteregistrierung (überwacht)
+
+> [!NOTE]
+> Fügen Sie dem Dock, einer Seite oder einem Ordner auf einer Seite nur eine App hinzu. Durch das Hinzufügen derselben App an allen Stellen wird verhindert, dass die App auf Geräten angezeigt wird, und es werden möglicherweise Fehlermeldungen angezeigt.
+>
+> Wenn Sie die Kamera-App z. B. einem Dock und einer Seite hinzufügen, wird die Kamera-App nicht angezeigt, und im Bericht wird möglicherweise ein Fehler für die Richtlinie angezeigt. Wählen Sie nur das Dock oder eine Seite aus, um die Kamera-App zum Startbildschirm hinzuzufügen.
 
 ### <a name="dock"></a>Dock
 
@@ -210,7 +215,7 @@ Diese Funktion gilt für:
 
 - **Fußnote im Sperrbildschirm:** Geben Sie einen Hinweis ein, der Ihnen helfen könnte, das Gerät zurückzubekommen, wenn es verloren geht oder gestohlen wird. Sie können einen beliebigen Text eingeben. Geben Sie zum Beispiel `If found, call Contoso at ...` ein.
 
-  Gerätetoken können auch verwendet werden, um gerätespezifische Informationen zu diesen Feldern hinzuzufügen. Geben Sie zum Beispiel zur Anzeige der Seriennummer `Serial Number: {{serialnumber}}` ein. Auf dem Sperrbildschirm sieht der Text dann in etwa so aus: `Serial Number 123456789ABC`. Achten Sie darauf, bei der Eingabe von Variablen geschweifte Klammern `{{ }}` zu verwenden. [App-Konfigurationstoken](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) umfassen eine Reihe von Variablen, die Sie nutzen können. Zudem können Sie `deviceName` oder einen anderen gerätespezifischen Wert verwenden.
+  Gerätetoken können auch verwendet werden, um gerätespezifische Informationen zu diesen Feldern hinzuzufügen. Geben Sie beispielsweise `Serial Number: {{serialnumber}}` oder `Device ID: {{DEVICEID}}` ein, um die Seriennummer anzuzeigen. Auf dem Sperrbildschirm sieht der Text dann in etwa so aus: `Serial Number 123456789ABC`. Achten Sie darauf, bei der Eingabe von Variablen geschweifte Klammern `{{ }}` zu verwenden. [App-Konfigurationstoken](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) umfassen eine Reihe von Variablen, die Sie nutzen können. Zudem können Sie `DEVICENAME` oder einen anderen gerätespezifischen Wert verwenden.
 
   > [!NOTE]
   > Variablen werden in der Benutzeroberfläche nicht überprüft, und die Groß-/Kleinschreibung muss beachtet werden. Daher gibt es möglicherweise Profile, die mit fehlerhaften Eingaben gespeichert wurden. Wenn Sie beispielsweise `{{DeviceID}}` anstelle von `{{deviceid}}` oder '{{DEVICEID}}' eingeben, wird die Literalzeichenfolge anstelle der eindeutigen Geräte-ID angezeigt. Stellen Sie sicher, dass die eingegebenen Informationen korrekt sind. Variablen, die vollständig klein oder groß geschrieben sind, werden unterstützt. Eine Kombination beider Schreibweisen ist jedoch nicht zulässig. 
@@ -314,6 +319,10 @@ Diese Funktion gilt für:
 - **Freigabemodus für Geräte** (nur Microsoft Azure AD): Wählen Sie **Aktivieren** aus, wenn Sie das Microsoft Enterprise SSO-Plug-In auf iOS/iPadOS-Geräten bereitstellen, die für das Feature „Freigabemodus für Geräte“ von Azure AD konfiguriert sind. Geräte im Freigabemodus ermöglichen es vielen Benutzern, sich global bei Anwendungen, die den Freigabemodus für Geräte unterstützen, an- und abzumelden. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert. Standardmäßig sind iOS/iPadOS-Geräte nicht für die gemeinsame Nutzung durch mehrere Benutzer vorgesehen.
 
   Weitere Informationen über den Freigabemodus für Geräte und wie er aktiviert wird, finden Sie unter [Übersicht über den Freigabemodus für Geräte](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) und [Freigabemodus für iOS-Geräte](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
+
+  Diese Funktion gilt für:
+  
+  - iOS/iPadOS 13.5 und höher
 
 - **Erweiterungs-ID** („Umleiten“ und „Anmeldeinformationen“): Geben Sie den Bundlebezeichner ein, der Ihre SSO-App-Erweiterung identifiziert, z. B. `com.apple.extensiblesso`.
 

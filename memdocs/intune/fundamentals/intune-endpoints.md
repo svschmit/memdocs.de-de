@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49ec674f8aa0ec0fd00aaf4be25f307158d79781
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126497"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216500"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Netzwerkendpunkte für Microsoft Intune  
 
@@ -53,7 +53,7 @@ In den folgenden Tabellen sind die Ports und Dienste aufgeführt, auf die der In
 
 |Domänen    |IP-Adresse      |
 |-----------|----------------|
-|login.microsoftonline.com <br> *.officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net| Weitere Informationen finden Sie unter [URLs und IP-Adressbereiche von Office 365](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2). |
+| login.microsoftonline.com <br> *.officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net <br> enterpriseregistration.windows.net | Weitere Informationen finden Sie unter [URLs und IP-Adressbereiche von Office 365](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2). |
 |portal.manage.microsoft.com<br> m.manage.microsoft.com |52.175.12.209<br>20.188.107.228<br>52.138.193.149<br>51.144.161.187<br>52.160.70.20<br>52.168.54.64 <br>13.72.226.202<br>52.189.220.232|
 | sts.manage.microsoft.com | 13.93.223.241 <br>52.170.32.182 <br>52.164.224.159 <br>52.174.178.4 <br>13.75.122.143 <br>52.163.120.84<br>13.73.112.122<br>52.237.192.112|
 |Manage.microsoft.com <br>i.manage.microsoft.com <br>r.manage.microsoft.com <br>a.manage.microsoft.com <br>p.manage.microsoft.com <br>EnterpriseEnrollment.manage.microsoft.com <br>EnterpriseEnrollment-s.manage.microsoft.com |40.83.123.72<br>13.76.177.110<br>52.169.9.87<br>52.174.26.23<br>104.40.82.191<br>13.82.96.212<br>52.147.8.239<br>40.115.69.185|
@@ -67,13 +67,11 @@ In den folgenden Tabellen sind die Ports und Dienste aufgeführt, auf die der In
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub02.manage.microsoft.com|137.135.130.29|
 |fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
 |fef.amsua0602.manage.microsoft.com|52.161.28.64|
-|enterpriseregistration.windows.net|52.175.211.189|
 |fef.amsua0102.manage.microsoft.com|52.242.211.0|
 |fef.amsua0702.manage.microsoft.com|52.232.225.75|
 |fef.amsub0502.manage.microsoft.com|40.67.219.144|
@@ -127,3 +125,19 @@ Für Metadaten für die Übermittlungsoptimierung:
 |Verschiedene Funktionen, z.B. Zugriff auf das Internet, den iTunes Store, den Mac App Store, iCloud, Messaging usw. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 oder 443   |
 
 Weitere Informationen finden Sie in den Apple-Artikeln [Von Apple-Softwareprodukten verwendete TCP- und UDP-Ports](https://support.apple.com/HT202944), [Informationen zu macOS-, iOS- und iTunes-Server-Hostverbindungen und iTunes-Hintergrundprozessen](https://support.apple.com/HT201999) und [Wenn Ihre macOS- und iOS-Clients keine Apple Push-Benachrichtigungen empfangen](https://support.apple.com/HT203609).  
+
+## <a name="android-port-information"></a>Android-Portinformationen
+
+Je nachdem, wie Sie Android-Geräte verwalten möchten, müssen Sie möglicherweise Google Android Enterprise-Ports öffnen und/oder Android-Pushbenachrichtigungen aktivieren. Weitere Informationen zu den unterstützten Verwaltungsmethoden für Android finden Sie in der [Dokumentation zur Android-Registrierung](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
+
+[!NOTE]
+Da Google Mobile Services in China nicht verfügbar ist, können von Intune verwaltete Geräte in China keine Features nutzen, die Google Mobile Services erfordern. Zu diesen Funktionen gehören: Google Play Protect-Funktionen wie der SafetyNet-Gerätenachweis, die Verwaltung von Apps über den Google Play Store und Android Enterprise-Funktionen (siehe diese [Google-Dokumentation](https://support.google.com/work/android/answer/6270910)). Darüber hinaus erfolgt die Kommunikation mit dem Microsoft Intune-Dienst in der Intune Unternehmensportal-App für Android über Google Mobile Services. Da Google Play-Dienste in China nicht verfügbar sind, kann es bis zu 8 Stunden dauern, bis einige Aufgaben abgeschlossen sind. Weitere Informationen finden Sie in [diesem Artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+
+### <a name="google-android-enterprise"></a>Google Android Enterprise 
+
+Google stellt Dokumentationen zu erforderlichen Netzwerkports und Zielhostnamen unter [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf) im Abschnitt **Firewall** bereit. 
+
+### <a name="android-push-notification"></a>Android-Pushbenachrichtigungen
+
+Intune nutzt Google Firebase Cloud Messaging (FCM) für Pushbenachrichtigungen, um Geräteaktionen und Check-Ins auszulösen. Dies ist für Android-Geräteadministrator und Android Enterprise erforderlich. Informationen zu den FCM-Netzwerkanforderungen finden Sie unter [FCM-Ports und Ihre Firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
+

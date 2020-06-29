@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b94146cc429f2a7f7b196f15527e8687368e6d78
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3031e909b5bd330f9ec84f05f2c83c504022d50e
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988246"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746594"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Verwenden von TeamViewer für die Remoteverwaltung von Intune-Geräten
 
@@ -69,6 +69,6 @@ Beim Starten einer Remotesitzung wird dem Benutzer auf seinem Gerät ein Benachr
 > [!NOTE]
 > Windows-Geräte, die mithilfe von Methoden wie Geräteregistrierungsmanager (DEM) und Windows Configuration Designer (WCD) registriert werden, die nicht vom Benutzer ausgeführt werden, zeigen die TeamViewer-Benachrichtigung nicht in der Unternehmensportal-App an. In diesen Szenarios wird die Verwendung des TeamViewer-Portals empfohlen, um die Sitzung zu erstellen.
 
-In TeamViewer können Sie einige Aktionen auf dem Gerät ausführen. Dazu zählt die Übernahme der Kontrolle über das Gerät. Alle Einzelheiten zu Ihren Möglichkeiten finden Sie im [TeamViewer-Leitfaden](https://www.teamviewer.com/support/documents/).
+In TeamViewer können Sie einige Aktionen auf dem Gerät ausführen. Dazu zählt die Übernahme der Kontrolle über das Gerät. Ausführliche Informationen zu Ihren Möglichkeiten finden Sie auf der [TeamViewer-Communityseite](https://community.teamviewer.com/).
 
 Wenn Sie fertig sind, schließen Sie das TeamViewer-Fenster.

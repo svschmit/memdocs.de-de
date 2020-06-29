@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562199d3490085aca26517170745802a0aef489
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989502"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093139"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Anfordern von Support für Microsoft Intune
 
@@ -41,9 +41,6 @@ Als Intune-Administrator können Sie die Option **Hilfe und Support** verwenden,
 Die Benutzeroberfläche für Hilfe und Support für Intune ist über das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) und über alle Blätter (oder Seiten) unter Intune im Azure-Portal verfügbar.
 
 Die Benutzeroberfläche *Hilfe und Support* ähnelt derjenigen im [Microsoft 365 Admin Center](https://admin.microsoft.com/) und ersetzt die bisherige Benutzeroberfläche *Hilfe und Support*, die aber für andere Dienste in Azure beibehalten wird.
-
-> [!TIP]
-> Ab dem 18. November 2019 wird eine aktualisierte und optimierte konsoleninterne Benutzeroberfläche für Hilfe und Support an die Mandanten verteilt. Wenn diese neue Benutzeroberfläche noch nicht für Sie verfügbar ist, wird sie in Kürze verfügbar sein.
 
 ### <a name="options-to-access-help-and-support"></a>Optionen für den Zugriff auf Hilfe und Support
 
@@ -66,16 +63,21 @@ Dieses Problem tritt auf, wenn Sie Ihr neues Mandantenkonto nicht über das **M3
 
 - **Aus dem Microsoft Endpoint Manager Admin Center**
 
-  - Klicken Sie in einem beliebigen Knoten im Microsoft Endpoint Manager Admin Center auf das **?** . Symbol in der oberen rechten Ecke des Portals, und verwenden Sie dann die Dropdownliste, um den Verwaltungstyp auszuwählen, für den Sie Hilfe benötigen. Das Microsoft Endpoint Manager Admin Center unterstützt die folgenden Verwaltungstypen, und Sie müssen denjenigen auswählen, für den Sie Hilfe benötigen, wie etwa Intune:
+  - Klicken Sie in einem beliebigen Knoten im Microsoft Endpoint Manager Admin Center auf das **?** . Das Symbol befindet sich im Portal in der Ecke oben rechts. Damit wird der **Hilfebereich** geöffnet. Klicken Sie auf **Hilfe und Support**, um die Seite **Verwaltungstyp auswählen** zu öffnen.
 
-    - Configuration Manager (umfasst Desktop Analytics)
+    > [!div class="mx-imgBorder"]
+    > ![Öffnen der Seite „Verwaltungstyp auswählen“](./media/get-support/management-types.png)
+
+    Verwenden Sie die Dropdownliste, um den gewünschten Verwaltungstyp auszuwählen, woraufhin die entsprechende „Hilfe und Support“-Seite geöffnet wird. Das Microsoft Endpoint Manager Admin Center unterstützt die folgenden Verwaltungstypen, und Sie müssen denjenigen auswählen, für den Sie Hilfe benötigen, wie etwa Intune:
+
+    - Configuration Manager
     - Intune
-    - Co-Verwaltung  
+    - Co-Verwaltung
 
     > [!div class="mx-imgBorder"]
     > ![Wählen Sie Ihren Verwaltungstyp aus](./media/get-support/select-management-type.png)
 
-    Nach der Auswahl eines Verwaltungstyps wird die *Hilfe und Support*-Seite geöffnet, auf der Sie Details angeben können, um zu einem bestimmten Problem [Lösungen zu finden](#find-solutions). Details werden auf dem Verwaltungstyp Ihrer Wahl basierend gefiltert.
+    Nach der Auswahl eines Verwaltungstyps wird die entsprechende *Hilfe und Support*-Seite geöffnet, auf der Sie Details angeben können, um zu einem bestimmten Problem [Lösungen zu finden](#find-solutions). Details werden auf dem Verwaltungstyp Ihrer Wahl basierend gefiltert.
 
      Wenn der richtige Verwaltungstyp nicht ausgewählt wurde **(1)** , klicken Sie auf *Verwaltungstyp auswählen* **(2)** , um zur Dropdownliste für die Auswahl des Verwaltungstyps zurückzukehren:
 

@@ -5,23 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: chmaguir, chrisbal
+ms.reviewer: chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
-ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
+ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257034"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093709"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -29,7 +29,7 @@ In diesem Artikel werden die verschiedenen Einstellungen aufgeführt und beschri
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen Sie ein Gerätekonfigurationsprofil.](device-restrictions-configure.md)
+[Erstellen Sie eine Gerätekonfigurationsprofil.](device-restrictions-configure.md)
 
 ## <a name="device-owner-only"></a>Nur Gerätebesitzer
 
@@ -50,7 +50,7 @@ Diese Einstellungen gelten für Android Enterprise-Registrierungstypen, bei dene
 - **Datums- und Uhrzeitänderungen:** Wenn **Blockieren** festgelegt wird, können Benutzer das Datum und die Uhrzeit nicht manuell festlegen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, das Datum und die Uhrzeit auf dem Gerät festzulegen.
 - **Änderung der Lautstärke:** **Blockieren** verhindert, dass Benutzer die Lautstärke des Geräts ändern können. Außerdem wird die Hauptlautstärke des Geräts stummgeschaltet. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, die Lautstärkeeinstellungen auf dem Gerät festzulegen.
 - **Auf Werkseinstellungen zurücksetzen:** Wenn **Blockieren** festgelegt wird, können Benutzer die Option zum Zurücksetzen auf Werkseinstellungen in den Einstellungen des Geräts nicht verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, diese Einstellung auf dem Gerät zu verwenden.
-- **Abgesicherter Start:** Wenn **Blockieren** festgelegt wird, können Benutzer das Gerät nicht im abgesicherten Modus neu starten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, das Gerät im abgesicherten Modus neu zu starten.
+- **Abgesicherter Start:** Wenn **Blockieren** festgelegt wird, können Benutzer das Gerät nicht im abgesicherten Modus neustarten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, das Gerät im abgesicherten Modus neu zu starten.
 - **Statusleiste:** Wenn **Blockieren** festgelegt wird, wird der Zugriff auf die Statusleiste, einschließlich der Benachrichtigungen und Schnelleinstellungen verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig den Zugriff auf die Statusleiste.
 - **Roamingdatendienste:** **Blockieren** verhindert das Datenroaming über das Mobilfunknetzwerk. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem Datenroaming zulassen, wenn das Gerät in einem Mobilfunknetz verwendet wird.
 - **Änderung der WLAN-Einstellungen:** Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, die vom Gerätebesitzer festgelegten WLAN-Einstellungen zu ändern. Benutzer können eigene WLAN-Konfigurationen erstellen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Benutzern möglicherweise standardmäßig, die WLAN-Einstellungen auf dem Gerät zu ändern.
@@ -87,93 +87,124 @@ Diese Einstellungen gelten für Android Enterprise-Registrierungstypen, bei dene
 
 - **Bedrohungsüberprüfung für Apps:** Die Standardeinstellung **Anfordern** aktiviert Google Play Protect so, dass Apps vor und nach der Installation überprüft werden. Wenn eine Bedrohung erkannt wird, wird der Benutzer gewarnt, damit er die App vom Gerät entfernt. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert. Google Play Protect wird möglicherweise nicht vom Betriebssystem zum Scannen von Apps aktiviert oder ausgeführt.
 
-### <a name="dedicated-devices"></a>Dedizierte Geräte
+### <a name="device-experience"></a>Benutzeroberfläche des Geräts
 
-Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dedizierten Geräten zu konfigurieren. Sie können Geräte zum Ausführen einer oder mehrerer Apps konfigurieren. Im Kioskmodus eines Geräts stehen nur die Apps zur Verfügung, die Sie hinzufügen. Diese Einstellungen gelten für dedizierte Android Enterprise-Geräte. Sie gelten nicht für vollständig verwaltete Android Enterprise-Geräte.
+Verwenden Sie diese Einstellungen, um eine Kioskoberfläche auf Ihren dedizierten oder vollständig verwalteten Geräten zu konfigurieren. Sie können Geräte zum Ausführen einer oder mehrerer Apps konfigurieren. Im Kioskmodus eines Geräts stehen nur die Apps zur Verfügung, die Sie hinzufügen.
 
-**Kioskmodus:** Wählen Sie aus, ob auf dem Gerät eine App oder mehrere Apps ausgeführt werden.
+**Registrierungsprofiltyp:** Wählen Sie einen Registrierungsprofiltyp aus, um mit dem Konfigurieren von Microsoft Launcher oder Microsoft Managed Home Screen auf Ihren Geräten zu beginnen. Folgende Optionen sind verfügbar:
 
-- **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
-- **Einzelne App**: Benutzer können auf dem Gerät nur auf eine einzelne App zugreifen. Wenn das Gerät gestartet wird, wird nur die jeweilige App gestartet. Benutzer können keine neuen Apps öffnen oder die ausgeführte App ändern.
+- **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Standardmäßig wird Benutzern möglicherweise die Standardbenutzeroberfläche für den Startbildschirm des Geräts angezeigt.
+- **Dediziertes Gerät:** Konfigurieren Sie eine Kioskoberfläche auf Ihren dedizierten Geräten. Stellen Sie vor dem Konfigurieren dieser Einstellungen sicher, dass Sie die gewünschten Apps für die Geräte [hinzufügen](../apps/apps-add-android-for-work.md) und [zuweisen](../apps/apps-deploy.md).
 
-  - **Verwaltete App auswählen**: Wählen Sie die verwaltete Google Play-App aus der Liste aus.
+  - **Kioskmodus:** Wählen Sie aus, ob auf dem Gerät eine App oder mehrere Apps ausgeführt werden. Folgende Optionen sind verfügbar:
 
-    Wenn keine Apps aufgelistet werden, können Sie dem Gerät [einige Android-Apps hinzufügen](../apps/apps-add-android-for-work.md). Achten Sie darauf, [die App der Gerätegruppe zuzuweisen, die für Ihre dedizierten Geräte erstellt wurde](../apps/apps-deploy.md).
+    - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+    - **Einzelne App**: Benutzer können auf dem Gerät nur auf eine einzelne App zugreifen. Wenn das Gerät gestartet wird, wird nur die jeweilige App gestartet. Benutzer können keine neuen Apps öffnen oder die ausgeführte App ändern.
 
-  > [!IMPORTANT]
-  > Wenn Sie den Kioskmodus für einzelne Apps verwenden, funktionieren Apps mit Wähltasten/Telefon-Apps möglicherweise nicht ordnungsgemäß.
+      - **App zur Verwendung im Kioskmodus auswählen:** Wählen Sie die verwaltete Google Play-App aus der Liste aus.
+
+      > [!IMPORTANT]
+      > Wenn Sie den Kioskmodus für eine einzelne App verwenden, funktionieren Wähltasten-/Telefon-Apps möglicherweise nicht ordnungsgemäß.
   
-- **Multi-App**: Benutzer können auf dem Gerät nur auf eine begrenzte Anzahl von Apps zugreifen. Wenn das Gerät gestartet wird, werden nur die von Ihnen hinzugefügten Apps gestartet. Sie können auch einige Weblinks hinzufügen, die Benutzer öffnen können. Wenn die Richtlinie angewendet wird, können Benutzer die Symbole für die zulässigen Apps auf dem Startbildschirm sehen.
+    - **Multi-App**: Benutzer können auf dem Gerät nur auf eine begrenzte Anzahl von Apps zugreifen. Wenn das Gerät gestartet wird, werden nur die von Ihnen hinzugefügten Apps gestartet. Sie können auch einige Weblinks hinzufügen, die Benutzer öffnen können. Wenn die Richtlinie angewendet wird, können Benutzer die Symbole für die zulässigen Apps auf dem Startbildschirm sehen.
 
-  > [!IMPORTANT]
-  > Für dedizierte Geräte mit mehreren Apps **muss** die [Managed Home Screen-App](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) aus Google Play:
-  >   - in Intune [als Client-App hinzugefügt](../apps/apps-add-android-for-work.md) sein
-  >   - [der Gerätegruppe zugewiesen sein](../apps/apps-deploy.md), die für Ihre dedizierten Geräte erstellt wurde.
-  >
-  > Die **Managed Home Screen**-App muss sich nicht im Konfigurationsprofil befinden, aber als Client-App hinzugefügt werden. Wenn die **Managed Home Screen**-App als Client-App hinzugefügt wird, werden alle anderen Apps, die Sie im Konfigurationsprofil hinzufügen, in der **Managed Home Screen**-App als Symbole angezeigt.
-  >
-  > Wenn Sie den Normalmodus (Kiosk mit mehreren Apps) verwenden, funktionieren Apps mit Wähltasten/Telefon-Apps möglicherweise nicht ordnungsgemäß. 
+      > [!IMPORTANT]
+      > Für dedizierte Geräte mit mehreren Apps **muss** die [Managed Home Screen-App](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) aus Google Play:
+      >   - [in Intune hinzugefügt sein](../apps/apps-add-android-for-work.md)
+      >   - [der Gerätegruppe zugewiesen sein](../apps/apps-deploy.md), die für Ihre dedizierten Geräte erstellt wurde.
+      >
+      > Die App **Managed Home Screen** muss zwar nicht im Konfigurationsprofil enthalten sein, allerdings muss sie als App hinzugefügt werden. Wenn die App **Managed Home Screen** hinzugefügt wird, werden alle anderen Apps, die Sie im Konfigurationsprofil hinzufügen, in **Managed Home Screen** als Symbole angezeigt.
+      >
+      > Wenn Sie den Normalmodus (Kiosk mit mehreren Apps) verwenden, funktionieren Apps mit Wähltasten/Telefon-Apps möglicherweise nicht ordnungsgemäß. 
 
-  - **Hinzufügen**: Wählen Sie Ihre Apps aus der Liste aus.
+      - **Hinzufügen**: Wählen Sie Ihre Apps aus der Liste aus.
 
-    Wenn die **Managed Home Screen**-App nicht aufgeführt wird, [fügen Sie sie aus Google Play hinzu](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Achten Sie darauf, [die App der Gerätegruppe zuzuweisen](../apps/apps-deploy.md), die für Ihre dedizierten Geräte erstellt wurde.
+        Wenn die **Managed Home Screen**-App nicht aufgeführt wird, [fügen Sie sie aus Google Play hinzu](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Achten Sie darauf, [die App der Gerätegruppe zuzuweisen](../apps/apps-deploy.md), die für Ihre dedizierten Geräte erstellt wurde.
 
-    Sie können auch andere [Android-Apps](../apps/apps-add-android-for-work.md) und [Web-Apps](../apps/web-app.md) hinzufügen, die von Ihrer Organisation für das Gerät erstellt wurden. Achten Sie darauf, [die App der Gerätegruppe zuzuweisen, die für Ihre dedizierten Geräte erstellt wurde](../apps/apps-deploy.md).
+        Sie können auch andere [Android-Apps](../apps/apps-add-android-for-work.md) und [Web-Apps](../apps/web-app.md) hinzufügen, die von Ihrer Organisation für das Gerät erstellt wurden. Achten Sie darauf, [die App der Gerätegruppe zuzuweisen, die für Ihre dedizierten Geräte erstellt wurde](../apps/apps-deploy.md).
 
-  - **Virtuelle Startschaltfläche:** Eine Softkey-Schaltfläche, die Benutzer auf den verwalteten Startbildschirm zurückleitet, damit Benutzer zwischen Apps wechseln können. Folgende Optionen sind verfügbar:
+      - **Virtuelle Startschaltfläche:** Eine Softkey-Schaltfläche, die Benutzer auf den verwalteten Startbildschirm zurückleitet, damit Benutzer zwischen Apps wechseln können. Folgende Optionen sind verfügbar:
+        - **Nicht konfiguriert** (Standardeinstellung): Es wird keine Startschaltfläche angezeigt. Benutzer müssen die Schaltfläche „Zurück“ verwenden, um zwischen Apps wechseln zu können.
+        - **Nach oben wischen:** Eine Startschaltfläche wird angezeigt, wenn ein Benutzer auf dem Gerät nach oben wischt.
+        - **Unverankert:** Auf dem Gerät wird dauerhaft eine unverankerte Startschaltfläche angezeigt.
 
-    - **Nicht konfiguriert** (Standardeinstellung): Es wird keine Startschaltfläche angezeigt. Benutzer müssen die Schaltfläche „Zurück“ verwenden, um zwischen Apps wechseln zu können.
-    - **Nach oben wischen:** Eine Startschaltfläche wird angezeigt, wenn ein Benutzer auf dem Gerät nach oben wischt.
-    - **Unverankert:** Auf dem Gerät wird dauerhaft eine unverankerte Startschaltfläche angezeigt.
-
-  - **Kioskmodus verlassen:** Wenn **Aktivieren** festgelegt wird, können Administratoren der Kioskmodus vorübergehend pausieren, um ein Update für das Gerät durchzuführen. Um dieses Feature verwenden zu können, führt der Administrator Folgendes aus:
+      - **Kioskmodus verlassen:** Wenn **Aktivieren** festgelegt wird, können Administratoren der Kioskmodus vorübergehend pausieren, um ein Update für das Gerät durchzuführen. Um dieses Feature verwenden zu können, führt der Administrator Folgendes aus:
   
-    1. Weiteres Betätigen der Schaltfläche „Zurück“, bis die Schaltfläche **Kiosk beenden** angezeigt wird. 
-    2. Auswählen der Schaltfläche **Kiosk beenden** und Eingabe der PIN für den **Code zum Verlassen des Kioskmodus**.
-    3. Wenn Sie fertig sind, wählen Sie die App **Verwalteter Startbildschirm** aus. Mit diesem Schritt wird das Gerät erneut im Multi-App-Kioskmodus gesperrt.
+        1. Weiteres Betätigen der Schaltfläche „Zurück“, bis die Schaltfläche **Kiosk beenden** angezeigt wird. 
+        2. Auswählen der Schaltfläche **Kiosk beenden** und Eingabe der PIN für den **Code zum Verlassen des Kioskmodus**.
+        3. Wenn Sie fertig sind, wählen Sie die App **Verwalteter Startbildschirm** aus. Mit diesem Schritt wird das Gerät erneut im Multi-App-Kioskmodus gesperrt.
 
-      Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise hindert das Betriebssystem Administratoren standardmäßig am Pausieren des Kioskmodus. Wenn der Administrator weiterhin die Schaltfläche „Zurück“ betätigt und die Schaltfläche **Kiosk beenden** auswählt, wird eine Meldung angezeigt, dass eine Kennung erforderlich ist.
+        Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise hindert das Betriebssystem Administratoren standardmäßig am Pausieren des Kioskmodus. Wenn der Administrator weiterhin die Schaltfläche „Zurück“ betätigt und die Schaltfläche **Kiosk beenden** auswählt, wird eine Meldung angezeigt, dass eine Kennung erforderlich ist.
 
-    - **Code zum Verlassen des Kioskmodus:** Geben Sie eine 4-6-stellige numerische PIN ein. Der Administrator verwendet diese PIN zum vorübergehenden Anhalten des Kioskmodus.
+      - **Code zum Verlassen des Kioskmodus:** Geben Sie eine 4-6-stellige numerische PIN ein. Der Administrator verwendet diese PIN zum vorübergehenden Anhalten des Kioskmodus.
 
-  - **Benutzerdefinierten URL-Hintergrund festlegen:** Geben Sie eine URL zum Anpassen des Hintergrundbildschirms auf dem dedizierten Gerät ein. Geben Sie beispielsweise `http://contoso.com/backgroundimage.jpg` ein.
+      - **Benutzerdefinierten URL-Hintergrund festlegen:** Geben Sie eine URL zum Anpassen des Hintergrundbildschirms auf dem dedizierten Gerät ein. Geben Sie beispielsweise `http://contoso.com/backgroundimage.jpg` ein.
 
-    > [!NOTE]
-    > In den meisten Fällen empfehlen wir, mit Bildern mit mindestens den folgenden Größen zu beginnen:
-    >
-    > - Smartphone: 1080 x 1920 Pixel
-    > - Tablet: 1920 × 1080 Pixel
-    >
-    > Für ein optimales Erlebnis und scharfe Details wird empfohlen, Bildobjekte gerätebezogen gemäß den Displayspezifikationen zu erstellen.
-    >
-    > Moderne Displays haben höhere Pixeldichten und können entsprechende Bilder mit 2K-/4K-Auflösung anzeigen.
+        > [!NOTE]
+        > In den meisten Fällen empfehlen wir, mit Bildern mit mindestens den folgenden Größen zu beginnen:
+        >
+        > - Smartphone: 1080 x 1920 Pixel
+        > - Tablet: 1920 × 1080 Pixel
+        >
+        > Für ein optimales Erlebnis und scharfe Details wird empfohlen, Bildobjekte gerätebezogen gemäß den Displayspezifikationen zu erstellen.
+        >
+        > Moderne Displays haben höhere Pixeldichten und können entsprechende Bilder mit 2K-/4K-Auflösung anzeigen.
 
-  - **WLAN-Konfiguration:** Wenn **Aktivieren** festgelegt wird, wird das WLAN-Steuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können das Gerät mit verschiedenen WLAN-Netzwerken verbinden. Durch Aktivieren dieses Features wird auch der Gerätestandort aktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das WLAN-Steuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer Verbindungen mit WLAN-Netzwerken herstellen, während Sie den verwalteten Startbildschirm verwenden.
+      - **WLAN-Konfiguration:** Wenn **Aktivieren** festgelegt wird, wird das WLAN-Steuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können das Gerät mit verschiedenen WLAN-Netzwerken verbinden. Durch Aktivieren dieses Features wird auch der Gerätestandort aktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das WLAN-Steuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer Verbindungen mit WLAN-Netzwerken herstellen, während Sie den verwalteten Startbildschirm verwenden.
 
-  - **Bluetooth-Konfiguration:** Wenn **Aktivieren** festgelegt wird, wird das Bluetooth-Steuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können Geräte über Bluetooth koppeln. Durch Aktivieren dieses Features wird auch der Gerätestandort aktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Bluetooth-Steuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer Bluetooth konfigurieren und Geräte koppeln, während sie den verwalteten Startbildschirm verwenden.
+      - **Bluetooth-Konfiguration:** Wenn **Aktivieren** festgelegt wird, wird das Bluetooth-Steuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können Geräte über Bluetooth koppeln. Durch Aktivieren dieses Features wird auch der Gerätestandort aktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Bluetooth-Steuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer Bluetooth konfigurieren und Geräte koppeln, während sie den verwalteten Startbildschirm verwenden.
 
-  - **Zugriff auf Taschenlampe:** Wenn **Aktivieren** festgelegt wird, wird das Taschenlampensteuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können die Taschenlampenfunktion ein- und ausschalten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Taschenlampensteuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer die Taschenlampe verwenden, während sie den verwalteten Startbildschirm verwenden.
+      - **Zugriff auf Taschenlampe:** Wenn **Aktivieren** festgelegt wird, wird das Taschenlampensteuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können die Taschenlampenfunktion ein- und ausschalten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Taschenlampensteuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer die Taschenlampe verwenden, während sie den verwalteten Startbildschirm verwenden.
 
-  - **Medienlautstärkeregler:** Wenn **Aktivieren** festgelegt wird, wird der Medienlautstärkeregler auf dem verwalteten Startbildschirm angezeigt und Benutzer können die Medienlautstärke des Geräts mithilfe eines Reglers anpassen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Medienlautstärkesteuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer die Medienlautstärke auf dem Gerät anpassen können, während sie den verwalteten Startbildschirm verwenden, außer die Tasten ihrer Hardware unterstützen dies.
+      - **Medienlautstärkeregler:** Wenn **Aktivieren** festgelegt wird, wird der Medienlautstärkeregler auf dem verwalteten Startbildschirm angezeigt und Benutzer können die Medienlautstärke des Geräts mithilfe eines Reglers anpassen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Medienlautstärkesteuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer die Medienlautstärke auf dem Gerät anpassen können, während sie den verwalteten Startbildschirm verwenden, außer die Tasten ihrer Hardware unterstützen dies.
 
-  - **Bildschirmschonermodus:** **Aktivieren** zeigt einen Bildschirmschoner auf dem verwalteten Startbildschirm, wenn das Gerät gesperrt ist oder im Fall eines Timeouts. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem keinen Bildschirmschoner auf dem verwalteten Startbildschirm an.
+      - **Bildschirmschonermodus:** **Aktivieren** zeigt einen Bildschirmschoner auf dem verwalteten Startbildschirm, wenn das Gerät gesperrt ist oder im Fall eines Timeouts. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem keinen Bildschirmschoner auf dem verwalteten Startbildschirm an.
 
-    Wenn diese Einstellung aktiviert ist, konfigurieren Sie auch die folgende Einstellung:
+        Wenn diese Einstellung aktiviert ist, konfigurieren Sie auch die folgende Einstellung:
 
-    - **Benutzerdefiniertes Hintergrundbild für Bildschirmschoner festlegen:** Geben Sie die URL zu einem benutzerdefinierten PNG-, JPG-, JPEG-, GIF-, MBP-, WebP- oder ICO-Bild an. Geben Sie z. B. Folgendes ein:
+        - **Benutzerdefiniertes Hintergrundbild für Bildschirmschoner festlegen:** Geben Sie die URL zu einem benutzerdefinierten PNG-, JPG-, JPEG-, GIF-, MBP-, WebP- oder ICO-Bild an. Wenn Sie keine URL eingeben, wird das Standardbild des Geräts verwendet, wenn es ein Standardbild gibt. 
+        
+          Geben Sie z. B. Folgendes ein:
 
-      - `http://www.contoso.com/image.jpg`
-      - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.webp`
+          - `http://www.contoso.com/image.jpg`
+          - `www.contoso.com/image.bmp`
+          - `https://www.contoso.com/image.webp`          
 
-      Wenn Sie keine URL eingeben, wird das Standardbild des Geräts verwendet, wenn es ein Standardbild gibt.
+          > [!TIP]
+          > Alle URLs zu Dateiressourcen, die in das Bitmap-Format umgewandelt werden können, werden unterstützt.
 
-      > [!TIP]
-      > Alle URLs zu Dateiressourcen, die in das Bitmap-Format umgewandelt werden können, werden unterstützt.
+        - **Die Anzahl von Sekunden, die das Gerät den Bildschirmschoner anzeigt, bevor der Bildschirm deaktiviert wird:** Wählen Sie aus, wie lange der Bildschirmschoner auf dem Gerät angezeigt werden soll. Geben Sie einen Wert zwischen 0 und 9999999 Sekunden ein. Der Standardwert beträgt `0` Sekunden. Wenn das Feld leer gelassen wird oder auf `0` (null) festgelegt ist, ist der Bildschirmschoner solange aktiv, bis ein Benutzer mit dem Gerät interagiert.
+        - **Anzahl von Sekunden, in denen das Gerät inaktiv ist, bevor der Bildschirmschoner angezeigt wird:** Wählen Sie aus, wie lange ein Gerät inaktiv sein kann, bevor der Bildschirmschoner angezeigt wird. Geben Sie einen Wert zwischen 1 und 9999999 Sekunden ein. Der Standardwert beträgt `30` Sekunden. Geben Sie eine Zahl ein, die größer als null (`0`) ist.
+        - **Vor dem Start des Bildschirmschoners Medien ermitteln:** **Aktivieren** (Standardwert) zeigt den Bildschirmschoner nicht an, wenn auf dem Gerät Audio- oder Videodateien wiedergeben werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem den Bildschirmschoner standardmäßig an, auch wenn Audiodateien oder Videos abgespielt werden.
 
-    - **Die Anzahl von Sekunden, die das Gerät den Bildschirmschoner anzeigt, bevor der Bildschirm deaktiviert wird:** Wählen Sie aus, wie lange der Bildschirmschoner auf dem Gerät angezeigt werden soll. Geben Sie einen Wert zwischen 0 und 9999999 Sekunden ein. Der Standardwert beträgt `0` Sekunden. Wenn das Feld leer gelassen wird oder auf `0` (null) festgelegt ist, ist der Bildschirmschoner solange aktiv, bis ein Benutzer mit dem Gerät interagiert.
-    - **Anzahl von Sekunden, in denen das Gerät inaktiv ist, bevor der Bildschirmschoner angezeigt wird:** Wählen Sie aus, wie lange ein Gerät inaktiv sein kann, bevor der Bildschirmschoner angezeigt wird. Geben Sie einen Wert zwischen 1 und 9999999 Sekunden ein. Der Standardwert beträgt `30` Sekunden. Geben Sie eine Zahl ein, die größer als null (`0`) ist.
-    - **Vor dem Start des Bildschirmschoners Medien ermitteln:** **Aktivieren** (Standardwert) zeigt den Bildschirmschoner nicht an, wenn auf dem Gerät Audio- oder Videodateien wiedergeben werden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem den Bildschirmschoner standardmäßig an, auch wenn Audiodateien oder Videos abgespielt werden.
+- **Vollständig verwaltet:** Mit dieser Einstellung wird die Microsoft Launcher-App auf vollständig verwalteten Geräten konfiguriert.
+
+  - Über **Microsoft Launcher als Standardstartprogramm festlegen:** **Aktivieren** wird Microsoft Launcher als Standardstartprogramm auf dem Startbildschirm festgelegt. Wenn Sie Launcher als Standard festlegen, können Benutzer kein anderes Startprogramm verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig wird Microsoft Launcher nicht als Standardstartprogramm erzwungen.
+
+<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+
+  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
+    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
+    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
+  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
+    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
+  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Show**: The dock is shown on devices.
+    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
+    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+
+  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
+
+  - **Search bar replacement**: Choose where to put the search bar. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Top**: Search bar is shown at the top of devices.
+    - **Bottom**: Search bar is shown at the bottom of devices.
+    - **Hide**: Search bar is hidden.
+
+  - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
+
+End of comment -->
 
 ### <a name="password"></a>Kennwort
 
@@ -231,7 +262,7 @@ Verwenden Sie diese Einstellungen, um eine Umgebung im Kioskstil auf Ihren dediz
 
 ### <a name="applications"></a>Applications
 
-- **Installation aus unbekannten Quellen zulassen:** Wenn **Zulassen** festgelegt wird, können Benutzer **unbekannte Quellen** aktivieren. Diese Einstellung ermöglicht die Installation von Apps aus unbekannten Quellen, einschließlich anderer Quellen als Google Play Store. Sie ermöglicht Benutzern das Querladen von Apps auf dem Gerät mit anderen Mitteln als dem Google Play Store. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise hindert das Betriebssystem Benutzer standardmäßig am Aktivieren von **unbekannten Quellen**.
+- **Installation aus unbekannten Quellen zulassen:** Wenn **Zulassen** festgelegt wird, können Benutzer **unbekannte Quellen** aktivieren. Diese Einstellung ermöglicht die Installation von Apps aus unbekannten Quellen, einschließlich anderer Quellen als Google Play Store. Sie ermöglicht Benutzern das Querladen von Apps auf das Gerät mit anderen Mitteln als dem Google Play Store. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise hindert das Betriebssystem Benutzer standardmäßig am Aktivieren von **unbekannten Quellen**.
 - **Zugriff auf alle Apps im Google Play Store zulassen**: Wenn diese Option auf **Zulassen** festgelegt ist, erhalten Benutzer Zugriff auf alle Apps im Google Play Store. Sie erhalten keinen Zugriff auf die Apps, die der Administrator in [Client-Apps](../apps/apps-add-android-for-work.md) sperrt.
 
   Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig geht das Betriebssystem möglicherweise wie folgt vor:
@@ -298,8 +329,9 @@ Diese Einstellung gelten für Android Enterprise-Registrierungstypen, bei denen 
 
 - **Kopieren und Einfügen zwischen Arbeitsprofilen und persönlichen Profilen:** Wenn **Blockieren** festgelegt wird, werden Kopier- und Einfügevorgänge zwischen Arbeits-Apps und persönlichen Apps verhindert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem Benutzern standardmäßig das Freigeben von Daten mithilfe von Kopier- und Einfügevorgängen bei Apps im persönlichen Profil.
 - **Datenaustausch zwischen Arbeitsprofilen und persönlichen Profilen:** Wählen Sie diese Option aus, damit Apps im Arbeitsprofil Daten mit Apps im persönlichen Profil austauschen können. Sie können z.B. Freigabeaktionen in Anwendungen steuern, wie etwa die Option **Freigeben**. in der Chrome-Browser-App. Diese Einstellung gilt nicht für das Verhalten beim Kopieren/Einfügen der Zwischenablage. Folgende Optionen sind verfügbar:
-  - **Gerätestandard:** Dies ist das standardmäßige Freigabeverhalten des Geräts, das abhängig von der Android-Version variiert. Standardmäßig ist die Freigabe von Daten des persönlichen Profils für das Arbeitsprofil zulässig. Die Freigabe von Daten des Arbeitsprofils für das persönliche Profil ist dagegen standardmäßig blockiert. Durch diese Einstellung wird die Freigabe von Daten des Arbeitsprofils für das persönliche Profil verhindert. Auf Geräten mit den Versionen 6.0 und höher blockiert Google die Freigabe vom persönlichen Profil zum Arbeitsprofil nicht.
-  - **Grenzübergreifende Freigaben verhindern:** Verhindert die Datenfreigabe zwischen Arbeits- und persönlichen Profilen
+  - **Gerätestandard:** Das standardmäßige Freigabeverhalten des Geräts variiert je nach Android-Version:
+    - Auf Geräten mit Android 6.0 oder höher ist die Freigabe im Arbeitsprofil für das persönliche Profil blockiert. Die Freigabe im persönlichen Profil für das Arbeitsprofil ist zulässig.
+    - Auf Geräten mit Android 5.0 und niedriger ist die Freigabe zwischen dem Arbeitsprofil und dem persönlichen Profil in beide Richtungen blockiert.
   - **Apps im Arbeitsprofil können Freigabeanforderungen vom persönlichen Profil verarbeiten:** Dadurch wird das integrierte Android-Feature aktiviert, das die Freigabe vom persönlichen Profil zum Arbeitsprofil erlaubt. Wenn diese Option aktiviert ist, können Daten durch eine Freigabeanfrage einer App im persönlichen Profil für Apps im Arbeitsprofil freigegeben werden. Diese Einstellung ist das Standardverhalten für Android-Geräte, die frühere Versionen als 6.0 ausführen.
   - **Keine Einschränkungen bei Freigabe:** Ermöglicht die Freigabe von Daten in beide Richtungen über die Begrenzung des Arbeitsprofils hinaus. Wenn Sie diese Einstellung auswählen, können Apps im Arbeitsprofil Daten für Apps ohne Badgeverwendung im persönlichen Profil freigeben. Diese Einstellung gestattet es verwalteten Apps im Arbeitsprofil, die Daten für Apps auf der nicht verwalteten Seite des Geräts freizugeben. Verwenden Sie diese Einstellung also mit Bedacht.
 

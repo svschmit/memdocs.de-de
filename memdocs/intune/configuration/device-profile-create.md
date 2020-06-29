@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988466"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093290"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Erstellen eines Geräteprofils in Microsoft Intune
 
-Mit Geräteprofilen können Sie Einstellungen hinzufügen und konfigurieren und diese anschließend mithilfe von Push an Geräte in Ihrer Organisation übertragen. Im Artikel [Apply features and settings on your devices using device profiles (Anwenden von Funktionen und Einstellungen auf Ihren Geräten mithilfe von Geräteprofilen in Microsoft Intune)](device-profiles.md) ist dies ausführlicher beschrieben. Sie erfahren dort u. a. mehr über die Möglichkeiten, die Sie dabei haben.
+Mit Geräteprofilen können Sie Einstellungen hinzufügen und konfigurieren und diese anschließend mithilfe von Push an Geräte in Ihrer Organisation übertragen. Weitere Informationen, auch zu Ihren Möglichkeiten, finden Sie unter [Anwenden von Einstellungen und Funktionen auf Ihren Geräten mit Geräteprofilen in Microsoft Intune](device-profiles.md).
 
 Inhalt dieses Artikels
 
@@ -84,6 +84,7 @@ Wählen Sie dann den Profiltyp aus. Die konfigurierbaren Einstellungen variieren
 - [ Vertrauenswürdiges Zertifikat](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [WLAN](wi-fi-settings-configure.md)
+- [Verkabelte Netzwerke (macOS)](wired-network-settings-macos.md)
 
 Wenn Sie beispielsweise **iOS/iPadOS** für die Plattform auswählen, werden Ihnen Profiloptionen ähnlich den folgenden angezeigt:
 
@@ -178,7 +179,7 @@ Erstellen Sie Profile unter Berücksichtigung folgender Empfehlungen:
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune-Administratorvorlage, die für Benutzer und Geräte gilt":::
 
-- Jedes Mal, wenn Sie eine einschränkende Richtlinie erstellen, sollten Sie diese Änderung Ihren Benutzern mitteilen. Wenn Sie z. B. die Kennungsanforderung von vier auf sechs Zeichen ändern, informieren Sie Ihre Benutzer, bevor Sie die Richtlinie zuweisen.
+- Jedes Mal, wenn Sie eine einschränkende Richtlinie erstellen, sollten Sie diese Änderung Ihren Benutzern mitteilen. Wenn Sie z. B. die Passcodeanforderung von vier (4) auf sechs (6) Zeichen ändern, informieren Sie Ihre Benutzer, bevor Sie die Richtlinie zuweisen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

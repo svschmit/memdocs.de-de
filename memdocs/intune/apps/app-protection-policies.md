@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84331000"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216398"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Erstellen und Zuweisen von App-Schutzrichtlinien
 
@@ -35,13 +35,13 @@ Informieren Sie sich, wie Sie Microsoft Intune-App-Schutzrichtlinien (APP) für 
 
 App-Schutzrichtlinien können unabhängig davon auf Apps angewendet werden, ob die Geräte, auf denen die Apps ausgeführt werden, von Intune verwaltet werden. Eine ausführlichere Beschreibung der Funktionsweise von App-Schutzrichtlinien und der von Intune-App-Schutzrichtlinien unterstützten Szenarios finden Sie in der [Übersicht über die App-Schutzrichtlinien](app-protection-policy.md).
 
-Die in den App-Schutzrichtlinien verfügbaren Optionen ermöglichen Organisationen, den Schutz an ihre speziellen Anforderungen anzupassen. Für einige ist es jedoch möglicherweise nicht offensichtlich, welche Richtlinieneinstellungen genau erforderlich sind, um ein vollständiges Szenario zu implementieren. Microsoft hat eine Taxonomie für das APP-Datenschutzframework für die mobile iOS- und Android-App-Verwaltung eingeführt, um Organisationen dabei zu unterstützen, den Schutz für Clientendpunkte zu priorisieren.
+Die in den App-Schutzrichtlinien verfügbaren Optionen ermöglichen Organisationen, den Schutz an ihre speziellen Anforderungen anzupassen. Für einige Organisationen ist es jedoch möglicherweise nicht offensichtlich, welche Richtlinieneinstellungen genau erforderlich sind, um ein vollständiges Szenario zu implementieren. Um Unternehmen bei der Priorisierung der Absicherung mobiler Clientendpunkte zu unterstützen, hat Microsoft für die Verwaltung mobiler iOS- und Android-Apps eine Taxonomie für sein Datenschutzframework für App-Schutzrichtlinien eingeführt.
 
-Das APP-Datenschutzframework ist in drei verschiedene Konfigurationsebenen unterteilt, wobei jede Ebene auf der vorherigen Ebene aufbaut:
+Dieses Datenschutzframework ist in drei Konfigurationsebenen unterteilt, wobei jede Ebene auf der vorherigen Ebene aufbaut:
 
-- **Einfacher Datenschutz für Unternehmen** (Ebene 1): Diese Ebene stellt sicher, dass Apps mit einer PIN geschützt und verschlüsselt ist und selektive Löschvorgänge durchführen. Bei Android-Geräten überprüft diese Ebene den Nachweis von Android-Geräten. Dabei handelt es sich um eine Konfiguration auf Einstiegsebene, die ähnliche Datenschutzkontrolle in Exchange Online-Postfachrichtlinien bereitstellt und die IT sowie die Benutzerauffüllung in APP einführt.
-- **Erweiterter Datenschutz für Unternehmen** (Ebene 2): Diese Ebene führt APP-Mechanismen zur Verhinderung von Datenlecks sowie die mindestens erforderlichen Betriebssystemanforderungen ein. Dies ist die Konfiguration, die auf die meisten Mobilgerätebenutzer angewendet wird, die auf Unternehmensdaten oder Daten einer Bildungseinrichtung zugreifen.
-- **Hoher Datenschutz für Unternehmen** (Ebene 3): Mit dieser Ebene werden Mechanismen zum erweiterten Datenschutz, die verbesserte PIN-Konfiguration sowie APP Mobile Threat Defense eingeführt. Diese Konfiguration ist geeignet für Benutzer, die auf Daten mit hohen Risiken zugreifen.
+- **Einfacher Datenschutz für Unternehmen** (Ebene 1): Diese Ebene stellt sicher, dass Apps mit einer PIN geschützt und verschlüsselt sind, und dient zum Durchführen selektiver Löschvorgänge. Bei Android-Geräten überprüft diese Ebene den Android-Gerätenachweis. Dabei handelt es sich um eine Konfiguration auf Einstiegsebene, die ähnliche Datenschutzkontrolle in Exchange Online-Postfachrichtlinien bereitstellt und der IT sowie dem Benutzerstamm eine Einführung in App-Schutzrichtlinien bietet.
+- **Erweiterter Datenschutz für Unternehmen** (Ebene 2): Diese Ebene führt Mechanismen für App-Schutzrichtlinien zur Verhinderung von Datenlecks sowie die mindestens zu erfüllenden Betriebssystemanforderungen ein. Dies ist die Konfiguration, die für die meisten mobilen Benutzer gilt, die auf Geschäfts-, Schul- oder Unidaten zugreifen.
+- **Hoher Datenschutz für Unternehmen** (Ebene 3): Auf dieser Ebene werden Mechanismen zum erweiterten Datenschutz, eine verbesserte PIN-Konfiguration sowie Mobile Threat Defense für App-Schutzrichtlinien eingeführt. Diese Konfiguration ist für Benutzer vorgesehen, die auf Hochrisikodaten zugreifen.
 
 Die spezifischen Empfehlungen für jede Konfigurationsebene sowie die minimalen zu schützenden Apps finden Sie unter [Datenschutzframework mithilfe von App-Schutzrichtlinien](app-protection-framework.md).
 
@@ -183,14 +183,14 @@ Um diese Richtlinien zu erstellen, navigieren Sie in der Intune-Konsole zu **App
 
 ### <a name="device-types"></a>Device types (Gerätetypen)
 
-- **Nicht verwaltet**: Nicht verwaltete Geräte sind Geräte, auf denen die Verwaltung mobiler Geräte von Intune nicht erkannt wurde. Dies umfasst auch Geräte, die von MDM-Drittanbietern verwaltet werden.
+- **Nicht verwaltet**: Bei iOS/iPadOS-Geräten gelten alle Geräte als nicht verwaltete Geräte, auf denen entweder die mobile Geräteverwaltung von Intune oder eine entsprechende Lösung eines Drittanbieters nicht den `IntuneMAMUPN`-Schlüssel übergeben. Bei Android-Geräten sind nicht verwaltete Geräte alle Geräte, auf denen die Verwaltung mobiler Geräte von Intune nicht erkannt wurde. Dies umfasst auch Geräte, die von MDM-Drittanbietern verwaltet werden.
 - **Mit Intune verwaltete Geräte**: Verwaltete Geräte werden von der Verwaltung mobiler Geräte von Intune verwaltet.
 - **Android-Geräteadministrator**: Von Intune verwaltete Geräte, die die Android-Geräteverwaltungs-API verwenden.
 - **Android Enterprise**: Von Intune verwaltete Geräte, die Android Enterprise-Arbeitsprofile oder Android Enterprise-Full Device Management verwenden.
 
 Android-Geräte fordern dazu auf, die Intune-Unternehmensportal-App zu installieren, unabhängig davon, welcher Gerätetyp gewählt wurde. Wenn Sie beispielsweise „Android Enterprise“ auswählen, werden Benutzer mit nicht verwalteten Android-Geräten weiterhin dazu aufgefordert.
 
-Damit unter iOS/iPadOS die Auswahl nicht verwalteter Geräte als Typ erzwungen wird, sind zusätzliche App-Konfigurationseinstellungen erforderlich. Diese Konfigurationen teilen dem APP-Dienst (App Protection Policies) mit, dass eine bestimmte App verwaltet wird und die APP-Einstellungen nicht gelten:
+Damit unter iOS/iPadOS die Auswahl als von Intune verwaltete Geräte als Typ erzwungen wird, sind zusätzliche App-Konfigurationseinstellungen erforderlich. Diese Konfigurationen teilen dem APP-Dienst (App Protection Policies) mit, dass eine bestimmte App verwaltet wird und die APP-Einstellungen nicht gelten:
 
 - **IntuneMAMUPN** muss für alle mit MDM verwalteten Anwendungen konfiguriert sein. Weitere Informationen finden Sie unter [Verwalten der Datenübertragung zwischen iOS-/iPadOS-Apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** muss für alle mit MDM verwalteten Drittanbieter- und Branchenanwendungen konfiguriert sein. **IntuneMAMDeviceID** sollte auf das Geräte-ID-Token konfiguriert sein. Beispiel: `key=IntuneMAMDeviceID, value={{deviceID}}`. Weitere Informationen finden Sie unter [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete iOS-/iPadOS-Geräte](app-configuration-policies-use-ios.md).

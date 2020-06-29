@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 06/11/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882079"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107311"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Welche Informationen erhält meine Organisation, wenn ich mein Gerät registriere?
 
@@ -55,7 +55,7 @@ Ihre Organisation kann Ihre privaten Informationen nicht einsehen, wenn Sie ein 
  
  > [!NOTE]
  > Eine App wird als **verwaltete App** betrachtet, wenn sie auf eine der folgenden Arten installiert wird:
- > 1. Ein Benutzer installiert sie aus der Unternehmensportal-App, nachdem sie von einem Intune-Administrator als **verfügbar** veröffentlicht wurde.
+ > 1. Ein Benutzer installiert sie über die Unternehmensportal-App, nachdem sie von einem Intune-Administrator als **verfügbar** veröffentlicht wurde.
  > 2. Die App wird als **erforderlich** von einem Intune-Administrator veröffentlicht und auf dem Gerät installiert. 
  >
  > Wenn Sie ein IT-Administrator oder Supportmitarbeiter in Ihrer Organisation sind, finden Sie weitere Informationen zur App-Verwaltung in Intune unter [Grundlegendes zu den Funktionen von nicht verwalteten Apps, verwalteten Apps und MAM-Apps](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
@@ -64,6 +64,6 @@ Ihre Organisation kann Ihre privaten Informationen nicht einsehen, wenn Sie ein 
 
 - Telefonnummer: Bei unternehmenseigenen Geräten ist Ihre vollständige Telefonnummer zu sehen. Bei Geräten, die persönliches Eigentum sind, werden der Organisation nur die letzten vier Ziffern Ihrer Telefonnummer angezeigt. Sie können den Besitztyp für jedes einzelne Gerät auf der jeweiligen **Gerätedetails**-Seite einsehen.
 - Speicherplatz auf dem Gerät: Wenn Sie eine erforderliche App nicht installieren können, prüft Ihre Organisation möglicherweise den freien Speicherplatz auf Ihrem Gerät, um festzustellen, ob der Speicherplatz nicht ausreicht.  
-- Speicherort: Ihre Organisation kann den Standort Ihres Geräts niemals anzeigen, es sei denn, Sie müssen ein überwachtes iOS-Gerät auffinden, das verloren gegangen ist. In der [Dokumentation zu Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) erhalten Sie weitere Informationen zu überwachten Geräten.  
-- App-Bestandsdetails: Wenn Ihr Unternehmen Mobile Threat Defense verwendet, können weitere Informationen zu den Apps auf Ihrem iOS-Gerät eingesehen werden. Erfahren Sie mehr über [Mobile Threat Defense](set-up-mobile-threat-defense.md). Auf Ihrem persönlichen Gerät kann Ihre Organisation nur sehen, welche verwalteten Apps installiert sind. Auf Ihrem unternehmenseigenen Gerät kann Ihre Organisation alle installierten Apps sehen.
+- Speicherort: Ihre Organisation kann den Standort von unternehmenseigenen Geräten sehen. Ihre Organisation kann den Gerätestandort von persönlichen Geräten nie sehen, es sei denn, sie versuchen ein verlorenes, überwachtes iOS-Gerät zu suchen. In der [Dokumentation zu Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) erhalten Sie weitere Informationen zu überwachten Geräten.  
+- App-Bestandsdetails: Wenn Ihr Unternehmen Mobile Threat Defense verwendet, können weitere Informationen zu den Apps auf Ihrem iOS-Gerät eingesehen werden. Erfahren Sie mehr über [Mobile Threat Defense](set-up-mobile-threat-defense.md). Andernfalls kann Ihre Organisation auf persönlichen Geräten nur sehen, welche verwalteten Apps installiert sind. Auf unternehmenseigenen Geräten kann Ihre Organisation alle installierten Apps sehen.
 - Netzwerkinformationen: Möglicherweise sind einige Informationen über Netzwerkverbindungen für Android-Geräte für den Support Ihrer Organisation verfügbar. Wenn Ihre Organisation beispielsweise verlangt, dass Geräte in einem bestimmten Gebäude bleiben, identifiziert Ihr Gerät das Netzwerk, mit dem es verbunden ist. 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d98f3f8205490848d9f5137e97e7796eee67a67
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436770"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093766"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Einrichten der iOS-/iPadOS- und iPadOS-Benutzerregistrierung (Vorschau)
 
@@ -42,7 +42,7 @@ Weitere Informationen zu den mit der Benutzerregistrierung verfügbaren Optionen
 
 Ein Registrierungsprofil definiert die Einstellungen, die bei der Registrierung auf eine Gruppe von Geräten angewendet werden. 
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Registrierungstypen (Vorschau)**  > **Profil erstellen** > **iOS/iPadOS**. In diesem Profil geben Sie an, welche Registrierungsmethode Ihre iOS- und iPadOS-Endbenutzer auf Geräten verwenden können, die nicht über eine Unternehmensmethode für Apple registriert werden. Wenn Sie Änderungen vornehmen möchten, können Sie dieses Profil nach der Erstellung bearbeiten.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment types (preview)**  > **Create profile** > **iOS/iPadOS** (Geräte > iOS/iPadOS > iOS-Registrierung > Registrierungstypen (Vorschau) > Profil erstellen > iOS/iPadOS). In diesem Profil geben Sie an, welche Registrierungsmethode Ihre iOS- und iPadOS-Endbenutzer auf Geräten verwenden können, die nicht über eine Unternehmensmethode für Apple registriert werden. Wenn Sie Änderungen vornehmen möchten, können Sie dieses Profil nach der Erstellung bearbeiten.
 
     ![Erstellen eines Apple-Registrierungsprofils](./media/ios-user-enrollment/create-profile.png)
 
@@ -77,7 +77,7 @@ Ein Registrierungsprofil definiert die Einstellungen, die bei der Registrierung 
 
 Wenn Sie mehr als ein Registrierungstypprofil erstellt haben, können Sie die Prioritätsreihenfolge ändern, in der sie angewendet werden.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Registrierungstypen (Vorschau)** .
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment types (preview)** (Geräte > iOS/iPadOS > iOS-Registrierung > Registrierungstypen (Vorschau)).
 2. Ziehen Sie die Profile in die Liste, und legen Sie sie in der Reihenfolge ab, in der Sie sie anwenden möchten.
 
 Bei Konflikten zwischen Profilen für einen beliebigen Benutzer wird das Profil mit höherer Priorität auf den Benutzer angewendet.

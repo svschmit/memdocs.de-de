@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9983eb211b816ae05a1f9d180a7dbb68e3fac505
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428665"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093493"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Bereitstellen von in Azure AD Hybrid eingebundenen Geräten mit Intune und Windows Autopilot
 Sie können in Azure AD Hybrid eingebundene Geräte mithilfe von Intune und Windows Autopilot einrichten. Führen Sie dazu die Schritte in diesen Artikel durch.
@@ -111,20 +111,18 @@ Der Intune-Connector für Azure AD muss auf einem Computer mit Windows Server 20
 
 Der Intune-Connector benötigt die [gleichen Endpunkte wie Intune](../fundamentals/intune-endpoints.md).
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **Windows** > **Windows-Registrierung** > **Intune-Connector für Active Directory** > **Hinzufügen**. 
-2. Folgen Sie den Anweisungen, um den Connector herunterzuladen.
-3. Öffnen Sie die heruntergeladene Connectorsetupdatei (*ODJConnectorBootstrapper.exe*), um den Connector zu installieren.
-4. Klicken Sie am Ende des Setups auf **Konfigurieren**.
-5. Klicken Sie auf **Sign In** (Anmelden).
-6. Geben Sie die Anmeldedaten für die Rolle „Globaler Administrator“ oder „Intune-Administrator“ ein.  
+1. Deaktivieren Sie die verstärkte Sicherheitskonfiguration für IE. Bei Windows Server ist die verstärkte Sicherheitskonfiguration für Internet Explorer standardmäßig aktiviert. Wenn Sie sich beim Intune-Connector für Active Directory nicht anmelden können, deaktivieren Sie die verstärkte Sicherheitskonfiguration für IE für den Administrator. [Deaktivieren der verstärkten Sicherheitskonfiguration für Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
+2. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **Windows** > **Windows-Registrierung** > **Intune-Connector für Active Directory** > **Hinzufügen**. 
+3. Folgen Sie den Anweisungen, um den Connector herunterzuladen.
+4. Öffnen Sie die heruntergeladene Connectorsetupdatei (*ODJConnectorBootstrapper.exe*), um den Connector zu installieren.
+5. Klicken Sie am Ende des Setups auf **Konfigurieren**.
+6. Klicken Sie auf **Sign In** (Anmelden).
+7. Geben Sie die Anmeldedaten für die Rolle „Globaler Administrator“ oder „Intune-Administrator“ ein.  
    Dem Benutzerkonto muss eine Intune-Lizenz zugewiesen werden.
-7. Navigieren Sie zu **Geräte** > **Windows** > **Windows-Registrierung** > **Intune-Connector für Active Directory**, und stellen Sie sicher, dass der Verbindungsstatus **Aktiv** lautet.
+8. Navigieren Sie zu **Geräte** > **Windows** > **Windows-Registrierung** > **Intune-Connector für Active Directory**, und stellen Sie sicher, dass der Verbindungsstatus **Aktiv** lautet.
 
 > [!NOTE]
 > Nach der Anmeldung im Connector dauert es möglicherweise einige Minuten, bis er im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) angezeigt wird. Er wird nur angezeigt, wenn er mit Intune kommunizieren kann.
-
-### <a name="turn-off-ie-enhanced-security-configuration"></a>Deaktivieren der verstärkten Sicherheitskonfiguration für IE
-Bei Windows Server ist die verstärkte Sicherheitskonfiguration für Internet Explorer standardmäßig aktiviert. Wenn Sie sich beim Intune-Connector für Active Directory nicht anmelden können, deaktivieren Sie die verstärkte Sicherheitskonfiguration für IE für den Administrator. [Deaktivieren der verstärkten Sicherheitskonfiguration für Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurieren von Webproxyeinstellungen
 
@@ -193,12 +191,13 @@ Autopilot-Bereitstellungsprofile werden verwendet, um die Autopilot-Geräte zu k
 4. Wählen Sie **Weiter** aus.
 5. Wählen Sie auf der Seite **Windows-Willkommensseite** als **Bereitstellungsmodus** die Option **Benutzergesteuert** aus.
 6. Wählen Sie im Feld **Azure AD beitreten als** die Option **In Azure AD Hybrid eingebunden** aus.
-7. Konfigurieren Sie die restlichen Optionen auf der Seite **Windows-Willkommensseite** nach Bedarf.
-8. Wählen Sie **Weiter** aus.
-9. Wählen Sie auf der Seite **Bereichstags** die [Bereichstags](../fundamentals/scope-tags.md) für dieses Profil aus.
-10. Wählen Sie **Weiter** aus.
-11. Wählen Sie auf der Seite **Zuweisungen** die Option **Einzuschließende Gruppen auswählen** aus, suchen Sie nach der Gerätegruppe, und wählen Sie sie durch Klicken auf **Auswählen** aus.
-12. Wählen Sie **Weiter** > **Erstellen** aus.
+7. Wenn Sie Geräte aus dem Netzwerk der Organisation mithilfe der VPN-Unterstützung bereitstellen, legen Sie für die Option **Überprüfung der Domänenkonnektivität überspringen** **Ja** fest.  Weitere Informationen finden Sie unter [Benutzergesteuerter Modus für die Azure Active Directory-Hybrideinbindung per VPN](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support).
+8. Konfigurieren Sie die restlichen Optionen auf der Seite **Windows-Willkommensseite** nach Bedarf.
+9. Wählen Sie **Weiter** aus.
+10. Wählen Sie auf der Seite **Bereichstags** die [Bereichstags](../fundamentals/scope-tags.md) für dieses Profil aus.
+11. Wählen Sie **Weiter** aus.
+12. Wählen Sie auf der Seite **Zuweisungen** die Option **Einzuschließende Gruppen auswählen** aus, suchen Sie nach der Gerätegruppe, und wählen Sie sie durch Klicken auf **Auswählen** aus.
+13. Wählen Sie **Weiter** > **Erstellen** aus.
 
 Es dauert etwa 15 Minuten, bis sich der Status des Geräteprofils von *Nicht zugewiesen* in *Wird zugewiesen* und schließlich in *Zugewiesen* ändert.
 

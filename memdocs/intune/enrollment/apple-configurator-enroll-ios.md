@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b836d3d2f319ca5ec9833e5902e6fcbb94b8dd65
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7101ad9bffcd80bd608690f22db37abbbc7a7895
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987124"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093793"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Einrichten der iOS-/iPadOS-Geräteregistrierung mit Apple Configurator
 
@@ -48,24 +48,26 @@ Die Registrierungsmethoden von Apple Configurator können nicht mit dem [Geräte
 
 Ein Registrierungsprofil für Geräte definiert die Einstellungen, die während der Registrierung angewandt werden. Diese Einstellungen werden nur einmal angewendet. Führen Sie folgende Schritte aus, um ein Registrierungsprofil zu erstellen, mit dem iOS-/iPadOS-Geräte mit Apple Configurator registriert werden.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Apple Configurator** > **Profile** > **Erstellen**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Apple Configurator).
 
-    ![Erstellen eines Profils für Apple Configurator](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
+    ![Erstellen eines Profils für Apple Configurator](./media/apple-configurator-enroll-ios/apple-configurator.png)
 
-2. Geben Sie zu administrativen Zwecken unter **Registrierungsprofil erstellen** einen **Namen** und eine **Beschreibung** für das Profil ein. Benutzer können diese Informationen nicht sehen. Sie können das Feld „Name“ zum Erstellen einer dynamischen Gruppe in Azure Active Directory verwenden. Verwenden Sie den Profilnamen, um den Parameter „enrollmentProfileName“ zu definieren, um Geräte mit diesem Registrierungsprofil zuzuweisen. Erfahren Sie mehr über dynamische Gruppen in Azure Active Directory.
+2. Klicken Sie auf **Profile** > **Erstellen**.
+
+3. Geben Sie zu administrativen Zwecken unter **Registrierungsprofil erstellen** einen **Namen** und eine **Beschreibung** für das Profil ein. Benutzer können diese Informationen nicht sehen. Sie können das Feld „Name“ zum Erstellen einer dynamischen Gruppe in Azure Active Directory verwenden. Verwenden Sie den Profilnamen, um den Parameter „enrollmentProfileName“ zu definieren, um Geräte mit diesem Registrierungsprofil zuzuweisen. Erfahren Sie mehr über dynamische Gruppen in Azure Active Directory.
 
     ![Screenshot des Bildschirms „Profil erstellen“ mit ausgewählter Option „Mit Benutzeraffinität registrieren“](./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png)
 
-3. Wählen Sie unter **Benutzeraffinität** aus, ob sich Geräte mit diesem Profil mit oder ohne einen zugewiesenen Benutzer registrieren müssen.
+4. Wählen Sie unter **Benutzeraffinität** aus, ob sich Geräte mit diesem Profil mit oder ohne einen zugewiesenen Benutzer registrieren müssen.
 
-    - **Mit Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die Benutzern gehören und das Unternehmensportal verwenden sollen, um Dienste wie z. B. die Installation von Apps nutzen zu können. Das Gerät muss mit dem Setup-Assistenten einem Benutzer zugewiesen werden und kann dann auf Unternehmensdaten und E-Mails zugreifen. Wird nur für die Registrierung des Setup-Assistenten unterstützt. Benutzeraffinität erfordert [den Endpunkt WS-Trust 13 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Erfahren Sie mehr](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Mit Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die Benutzern gehören und das Unternehmensportal verwenden sollen, um Dienste wie z. B. die Installation von Apps nutzen zu können. Das Gerät muss mit dem Setup-Assistenten einem Benutzer zugewiesen werden und kann dann auf Unternehmensdaten und E-Mails zugreifen. Wird nur für die Registrierung des Setup-Assistenten unterstützt. Benutzeraffinität erfordert [den Endpunkt WS-Trust 13 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Weitere Informationen](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)
 
     - **Ohne Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die keinem einzelnen Benutzer zugeordnet sind. Verwenden Sie diese Option für Geräte, die Aufgaben ohne den Zugriff auf lokale Benutzerdaten ausführen. Apps, die eine Benutzerzugehörigkeit erfordern (einschließlich der Unternehmensportal-App, die für die Installation branchenspezifischer Apps verwendet wird), funktionieren nicht. Dies ist für die direkte Anmeldung erforderlich.
 
      > [!NOTE]
      > Wenn **Mit Benutzeraffinität registrieren** ausgewählt ist, stellen Sie sicher, dass das Gerät innerhalb der ersten 24 Stunden der Registrierung mit dem Setup-Assistenten einem Benutzer zugeordnet wird. Andernfalls schlägt die Registrierung möglicherweise fehl, und es wird eine Zurücksetzung auf Werkseinstellungen erforderlich, um das Gerät zu registrieren.
 
-4. Wenn Sie **Mit Benutzeraffinität registrieren** ausgewählt haben, können Sie die Benutzerauthentifizierung über das Unternehmensportal statt über den Apple-Setup-Assistenten erlauben.
+5. Wenn Sie **Mit Benutzeraffinität registrieren** ausgewählt haben, können Sie die Benutzerauthentifizierung über das Unternehmensportal statt über den Apple-Setup-Assistenten erlauben.
 
     > [!NOTE]
     > Wenn Sie einen der folgenden Schritte ausführen möchten, legen Sie **Über das Unternehmensportal statt über den Setup-Assistenten authentifizieren** auf **Ja** fest.
@@ -88,7 +90,7 @@ Ein Registrierungsprofil für Geräte definiert die Einstellungen, die während 
     DLXQPCWVGHMJ, Gerätedetails
 
    Erfahren Sie, [wie Sie die Seriennummer eines iOS-/iPadOS-Geräts finden](https://support.apple.com/HT204073).
-2. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Apple Configurator** > **Geräte** > **Hinzufügen**.
+2. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Devices** > **Add** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Apple Configurator > Geräte > Hinzufügen).
 
 5. Wählen Sie ein **Registrierungsprofil** aus, das Sie auf die importierten Seriennummern anwenden möchten. Wenn die Details der neuen Seriennummer alle vorhandenen Details überschreiben sollen, aktivieren Sie **Hiermit überschreiben Sie Details für vorhandene Bezeichner**.
 6. Navigieren Sie unter **Geräte importieren** zu der CSV-Datei mit den Seriennummern, und wählen Sie **Hinzufügen** aus.
@@ -100,18 +102,18 @@ Sie können ein Registrierungsprofil beim Importieren von iOS-/iPadOS-Seriennumm
 - **AC-Profile**
 
 #### <a name="assign-from-apple-configurator-devices"></a>Zuweisen über Apple Configurator-Geräte
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Apple Configurator** > **Geräte**, wählen Sie die Seriennummern aus, und klicken Sie auf **Profil zuweisen**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Devices** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Apple Configurator > Geräte), wählen Sie die Seriennummern aus, und klicken Sie dann auf **Assign profile** (Profil zuweisen).
 2. Wählen Sie unter **Profil zuweisen** für das Profil, das Sie zuweisen möchten, **Neues Profil** und dann **Zuweisen** aus.
 
 #### <a name="assign-from-profiles"></a>Zuweisen über Profile
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Apple Configurator** > **Profile**, und wählen Sie ein Profil aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Apple Configurator > Profile), und wählen Sie ein Profil aus.
 2. Wählen Sie im Profil die Option **Zugewiesene Geräte** und dann **Zuweisen** aus.
 3. Filtern Sie nach den Seriennummern der Geräte, die Sie dem Profil zuweisen möchten, klicken Sie auf die Geräte und dann auf **Zuweisen**.
 
 ### <a name="export-the-profile"></a>Exportieren des Profils
 Nachdem Sie das Profil erstellt und die Seriennummern zugewiesen haben, müssen Sie das Profil aus Intune als URL exportieren. Anschließend importieren Sie es in Apple Configurator auf einem Mac, um es für Geräte bereitzustellen.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Apple Configurator** > **Profile**, und wählen Sie das zu exportierende Profil aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Apple Configurator > Profile), und wählen Sie ein Profil für den Export aus.
 2. Wählen Sie auf dem Profil **Profil exportieren** aus.
 3. Kopieren Sie die **Profil-URL**. Sie können sie später in Apple Configurator hinzufügen, um das von iOS-/iPadOS-Geräten verwendete Intune-Profil zu definieren.
 
@@ -136,7 +138,7 @@ Nachdem Sie das Profil erstellt und die Seriennummern zugewiesen haben, müssen 
 10. Trennen Sie das USB-Kabel, wenn die Vorbereitung des iOS-/iPadOS-Geräts abgeschlossen ist.  
 
 ### <a name="distribute-devices"></a>Verteilen von Geräten
-Die Geräte sind nun für die Unternehmensregistrierung bereit. Schalten Sie die Geräte aus, und verteilen Sie sie an Benutzer. Wenn die Benutzer die Geräte einschalten, wird der Setup-Assistent gestartet.
+Die Geräte sind nun bereit zur Unternehmensregistrierung. Schalten Sie die Geräte aus, und verteilen Sie sie an Benutzer. Wenn die Benutzer die Geräte einschalten, wird der Setup-Assistent gestartet.
 
 Nachdem Benutzer ihre Geräte erhalten haben, müssen sie den Setup-Assistenten ausführen. Auf mit Benutzeraffinität konfigurierten Geräte kann die Unternehmensportal-App installiert und ausgeführt werden, um Apps herunterzuladen und Geräte zu verwalten.
 
@@ -147,7 +149,7 @@ Apps, die eine Benutzerzugehörigkeit erfordern (einschließlich der Unternehmen
 
 ### <a name="export-the-profile-as-mobileconfig-to-iosipados-devices"></a>Exportieren des Profils als MOBILECONFIG-Datei auf iOS-/iPadOS-Geräte
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Apple Configurator** > **Profile**, wählen Sie das zu exportierende Profil aus, und klicken Sie auf **Profil exportieren**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Apple Configurator > Profile), und wählen Sie ein Profil aus, und klicken Sie dann auf **Export Profile** (Profil exportieren).
 2. Wählen Sie unter **Direkte Registrierung** die Option **Profil herunterladen** aus, und speichern Sie die Datei. Eine Registrierungsprofildatei ist nur zwei Wochen gültig. Danach muss sie neu erstellt werden.
 3. Übertragen Sie die Datei auf einen Mac-Computer, auf dem [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) ausgeführt wird, um sie direkt per Push als Verwaltungsprofil auf iOS-/iPadOS-Geräte zu verschieben.
 4. Bereiten Sie das Gerät mit Apple Configurator mithilfe der folgenden Schritte vor:

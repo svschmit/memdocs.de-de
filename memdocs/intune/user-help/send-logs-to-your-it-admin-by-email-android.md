@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8094f9739f05a7e7c0ffc10e9b4835c67c5539b3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 83a00368c7f47568497669c940e3c2904a479372
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881997"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094028"
 ---
 # <a name="upload-and-email-logs"></a>Hochladen von Protokollen und Versenden per E-Mail  
 
@@ -34,6 +34,8 @@ Die Fehlerdetails werden auf Ihrem Gerät in einem speziellen Dokument (einem so
 
 > [!Note]
 > Aktivieren Sie im Unternehmensportal die _ausführliche Protokollierung_. Auf diese Weise ist es leichter für das Supportteam Ihres Unternehmens, die Ursache des Problems zu ermitteln. Wenn Sie die Microsoft Intune-App verwenden, legen Sie für **Log detail level** (Detailgrad des Protokolls) **Verbose** (Ausführlich) fest. Durch die ausführliche Protokollierung werden alle Details eines Fehlers aufgezeichnet und in den Bericht eingefügt. Informieren Sie sich, wie Sie die [ausführliche Protokollierung aktivieren](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
+>
+> Wenn Sie eine Sovereign Cloud-Umgebung verwenden, steht Ihnen die Funktion zum Senden von Protokollen im Unternehmensportal nicht zur Verfügung. Sie müssen Protokolle dann per E-Mail senden. 
 
 ## <a name="upload-and-email-logs-from-company-portal"></a>Protokolle aus dem Unternehmensportal hochladen und per E-Mail versenden  
 

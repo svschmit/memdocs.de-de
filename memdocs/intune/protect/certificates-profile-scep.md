@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988648"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531739"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Erstellen und Zuweisen eines SCEP-Zertifikatprofils in Intune
 
@@ -226,7 +226,17 @@ Nachdem Sie [Ihre Infrastruktur für die Unterstützung von SCEP-Zertifikaten (S
 
    - **SCEP-Server-URLs**:
 
-     Geben Sie mindestens eine URL für die NDES-Server ein, die Zertifikate über SCEP ausstellen. Geben Sie zum Beispiel `https://ndes.contoso.com/certsrv/mscep/mscep.dll` ein. Sie können ggf. zusätzliche SCEP-URLs für den Lastenausgleich hinzufügen, wenn URLs mit dem Profil nach dem Zufallsprinzip auf das Gerät übertragen werden. Wenn ein SCEP-Server nicht verfügbar ist, tritt bei der SCEP-Anforderung ein Fehler auf. Außerdem ist es möglich, dass die Cert-Anforderung bei nachfolgenden Eincheckvorgängen von Geräten für denselben nicht verfügbaren Server durchgeführt wird.
+     Geben Sie mindestens eine URL für die NDES-Server ein, die Zertifikate über SCEP ausstellen. Geben Sie zum Beispiel `https://ndes.contoso.com/certsrv/mscep/mscep.dll` ein.
+
+     Sie können bei Bedarf zusätzliche SCEP-URLs für Lastenausgleiche hinzufügen. Geräte führen drei separate Aufrufe an den NDES-Server aus, um die Serverfunktionen und einen öffentlichen Schlüssel abzurufen und anschließend eine Anforderung zur Signierung zu übermitteln. Wenn Sie mehrere URLs verwenden ist es möglich, dass der Lastenausgleich zur Verwendung einer anderen URL für nachfolgende Aufrufe an einen NDES-Server führt. Wenn innerhalb derselben Anforderung ein anderer Server für einen nachfolgenden Aufruf kontaktiert wird, ist die Anforderung nicht erfolgreich.
+
+     Das Verhalten zur Verwaltung der NDES-Server-URL ist für jede Geräteplattform spezifisch:
+
+     - **Android**: Das Gerät randomisiert die Liste der URLs, die in der SCEP-Richtlinie empfangen werden, und durchläuft dann die Liste, bis ein zugänglicher NDES-Server ermittelt wird. Das Gerät verwendet dann weiterhin dieselbe URL und denselben Server für den gesamten Prozess. Wenn das Gerät auf keinen der NDES-Server zugreifen kann, wird der Prozess nicht erfolgreich ausgeführt.
+     - **iOS/iPadOS:** Intune randomisiert die URLs und stellt eine einzelne URL für ein Gerät bereit. Wenn das Gerät nicht auf den NDES-Server zugreifen kann, wird die SCEP-Anforderung nicht erfolgreich ausgeführt.
+     - **Windows**: Die Liste der NDES-URLs wird randomisiert und an das Windows-Gerät übergeben, das diese dann in der empfangenen Reihenfolge testet, bis eine verfügbare URL gefunden wird. Wenn das Gerät auf keinen der NDES-Server zugreifen kann, wird der Prozess nicht erfolgreich ausgeführt.
+
+     Wenn ein Gerät den NDES-Server in diesen drei Aufrufen nicht erreicht, wird die SCEP-Anforderung nicht erfolgreich ausgeführt. Dies kann beispielsweise der Fall sein, wenn eine Lastenausgleichslösung eine andere URL für den zweiten oder dritten Aufruf des NDES-Servers bereitstellt oder einen anderen tatsächlichen NDES-Server anhand einer virtualisierten URL für NDES zurückgibt. Nach einer nicht erfolgreichen Anforderung versucht ein Gerät, den Prozess im nächsten Richtlinienzyklus beginnend mit der randomisierten Liste der NDES-URLs (oder mit einer einzelnen URL für iOS/iPadOS) noch mal auszuführen.  
 
 8. Wählen Sie **Weiter** aus.
 

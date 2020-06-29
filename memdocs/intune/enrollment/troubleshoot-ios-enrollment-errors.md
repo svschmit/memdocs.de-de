@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/16/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326935"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093351"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Behandeln von Problemen bei der iOS/iPadOS-Geräteregistrierung in Microsoft Intune
 
@@ -66,25 +66,6 @@ Sammeln Sie die folgenden Informationen zum Problem:
 4. Wählen Sie unter **Gerätetypbeschränkungen** die Beschränkung aus, die Sie festlegen möchten. Klicken Sie dann auf **Eigenschaften** > **Plattformen auswählen**, wählen Sie **Zulassen** für **iOS** aus, und klicken Sie dann auf **OK**.
 5. Klicken Sie auf **Plattformen konfigurieren**, wählen Sie **Zulassen** für private iOS/iPadOS-Geräte aus, und klicken Sie dann auf **OK**.
 6. Registrieren Sie das Gerät erneut.
-
-**Ursache**: Die erforderlichen CNAME-Einträge in DNS sind nicht vorhanden.
-
-#### <a name="resolution"></a>Lösung
-Erstellen Sie CNAME DNS-Ressourceneinträge für die Domäne des Unternehmens. Wenn die Domäne Ihres Unternehmens beispielsweise contoso.com heißt, erstellen Sie in DNS einen CNAME-Eintrag, der EnterpriseEnrollment.contoso.com an EnterpriseEnrollment-s.manage.microsoft.com umleitet.
-
-Obwohl das Erstellen eines CNAME-DNS-Eintrags optional ist, ist die Registrierung mit einem CNAME-Eintrag für den Benutzer leichter. Wenn kein CNAME-Eintrag für die Registrierung gefunden wurde, werden Benutzer aufgefordert, manuell den MDM-Servernamen „enrollment.manage.microsoft.com“ einzugeben.
-
-Sind mehrere überprüfte Domänen vorhanden, erstellen Sie einen CNAME-Eintrag für jede Domäne. Die CNAME-Ressourceneinträge müssen die folgenden Informationen enthalten:
-
-|TYP|Hostname|Verweist auf|TTL|
-|------|------|------|------|
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|1 Stunde|
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 Stunde|
-
-Wenn Ihr Unternehmen mehrere Domänen für die Anmeldeinformationen der Benutzer verwendet, erstellen Sie CNAME-Einträge für jede Domäne.
-
-> [!NOTE]
-> Die Weitergabe von Änderungen an DNS-Einträgen kann bis zu 72 Stunden dauern. Sie können die DNS-Änderung in Intune erst überprüfen, wenn der DNS-Eintrag verteilt ist.
 
 **Ursache**: Sie registrieren ein Gerät, das zuvor mit einem anderen Benutzerkonto registriert wurde, und der vorherige Benutzer wurde nicht ordnungsgemäß aus Intune entfernt.
 
@@ -239,6 +220,16 @@ Wenn Sie ein ADE-verwaltetes Gerät einschalten, dem ein Registrierungsprofil zu
 #### <a name="resolution"></a>Lösung
 Deaktivieren Sie die mehrstufige Authentifizierung, und registrieren Sie das Gerät erneut.
 
+### <a name="authentication-doesnt-redirect-to-the-government-cloud"></a>Keine Umleitung zur Government-Cloud bei der Authentifizierung 
+
+Government-Benutzer, die sich von einem anderen Gerät aus anmelden, werden für die Authentifizierung statt zur Government-Cloud zur öffentlichen Cloud umgeleitet. 
+
+**Ursache**: Azure AD unterstützt noch keine Umleitung zur Government-Cloud, wenn Sie sich von einem anderen Gerät aus anmelden. 
+
+#### <a name="resolution"></a>Lösung 
+Verwenden Sie in der App **Einstellungen** die Einstellung **Cloud** für das Unternehmensportal unter iOS, um Government-Benutzer für die Authentifizierung zur Government-Cloud umzuleiten. Standardmäßig ist die Einstellung **Cloud** auf **Automatic** (Automatisch) festgelegt, und das Unternehmensportal führt für die Authentifizierung eine Weiterleitung zur automatisch vom Gerät erkannten Cloud durch (z. B. die öffentliche Cloud oder Government-Cloud). Government-Benutzer, die sich von einem anderen Gerät aus anmelden, müssen manuell die Government-Cloud für die Authentifizierung auswählen. 
+
+Öffnen Sie die App **Einstellungen**, und wählen Sie das Unternehmensportal aus. Tippen Sie in den Einstellungen für das Unternehmensportal auf **Cloud**. Legen Sie für die **Cloud** „Government“ fest.  
 
 ## <a name="next-steps"></a>Nächste Schritte
 

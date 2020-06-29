@@ -1,11 +1,11 @@
 ---
 title: 'Nicht konforme Nachrichten und Aktionen mit Microsoft Intune: Azure | Microsoft-Dokumentation'
-description: Erstellen einer E-Mail-Benachrichtigung für nicht konforme Geräte. Hinzufügen von Aktionen, nachdem ein Gerät als nicht konform markiert wurde, z.B. das Hinzufügen einer Toleranzperiode, in der das Gerät konform werden soll, oder das Erstellen eines Zeitplans, um den Zugriff zu blockieren, bis das Gerät konform ist. Verwenden Sie dazu Microsoft Intune in Azure.
+description: Erstellen einer E-Mail-Benachrichtigung für nicht konforme Geräte. Fügen Sie Aktionen hinzu, die für Geräte gelten, die die Konformitätsrichtlinien nicht erfüllen. Aktionen können beispielsweise das Abwarten einer Karenzzeit bis zum Erfüllen der Richtlinien, das Blockieren des Zugriffs auf Netzwerkressourcen oder das Abkoppeln des nicht konformen Gerätes umfassen.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989315"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093728"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurieren von Aktionen für nicht konforme Geräte in Intune
 
@@ -29,11 +29,11 @@ Für Geräte, die nicht Ihren Konformitätsrichtlinien oder -regeln entsprechen,
 
 ## <a name="overview"></a>Übersicht
 
-Standardmäßig enthält jede Konformitätsrichtlinie die Aktion bei Nichtkonformität von **Gerät als nicht konform markieren** mit einem Zeitplan von null Tagen (**0**). Wenn Intune feststellt, dass ein Gerät nicht konform ist, markiert Intune das Gerät sofort als „nicht konform“. Das kann das Gerät durch den [bedingten Zugriff](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) von Azure Active Directory (AD) blockiert werden.
+Standardmäßig enthält jede Konformitätsrichtlinie die Aktion bei Nichtkonformität von **Gerät als nicht konform markieren** mit einem Zeitplan von null Tagen (**0**). Wenn Intune feststellt, dass ein Gerät nicht konform ist, markiert Intune das Gerät sofort als „nicht konform“. Nachdem ein Gerät als nicht konform gekennzeichnet wurde, kann das Gerät durch den [bedingten Zugriff](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) von Azure Active Directory (AD) blockiert werden.
 
 Durch die Konfiguration von **Aktionen bei Nichtkonformität** gewinnen Sie die Flexibilität, zu entscheiden, wie und wann mit nicht konformen Geräten zu verfahren ist. Sie können beispielsweise auswählen, dass das Gerät nicht sofort blockiert werden soll, und dem Benutzer eine Toleranzperiode einräumen, in der er dafür sorgen kann, dass das Gerät konform wird.
 
-Für jede Aktion, die Sie festlegen können, können Sie einen Zeitplan konfigurieren, der bestimmt, wann diese Aktion wirksam wird, basierend auf der Anzahl der Tage, nachdem das Gerät als nicht konform markiert wurde. Sie können auch mehrere Instanzen einer Aktion konfigurieren. Wenn Sie mehrere Instanzen einer Aktion in einer Richtlinie festlegen, wird die Aktion zu dieser später geplanten Zeit erneut ausgeführt, wenn das Gerät weiterhin nicht konform ist.
+Für jede Aktion, die Sie festlegen, können Sie einen Zeitplan konfigurieren, der bestimmt, wann eine Aktion wirksam wird. Dieser Zeitplan entspricht einer Anzahl von Tagen, nachdem das Gerät als nicht konform markiert wurde. Sie können auch mehrere Instanzen einer Aktion konfigurieren. Wenn Sie mehrere Instanzen einer Aktion in einer Richtlinie festlegen, wird die Aktion zu dieser später geplanten Zeit erneut ausgeführt, wenn das Gerät weiterhin nicht konform ist.
 
 Nicht alle Aktionen sind für alle Plattformen verfügbar.
 
@@ -48,7 +48,7 @@ Im folgenden finden Sie die verfügbaren Aktionen für die Nichtkonformität. So
 - **E-Mail an Endbenutzer senden:** Diese Aktion sendet eine E-Mail-Benachrichtigung an den Benutzer.
 Wenn Sie diese Aktion aktivieren:
 
-  - Wählen Sie eine *Benachrichtigungsvorlage* aus, die mit dieser Aktion gesendet wird. Sie müssen eine [Benachrichtigungsvorlage](#create-a-notification-message-template) erstellen, bevor Sie dieser Aktion eine solche zuweisen können. Wenn Sie die benutzerdefinierte Benachrichtigung erstellen, passen Sie den Betreff und den Nachrichtentext an und können das Firmenlogo, den Firmennamen und zusätzliche Kontaktinformationen einbeziehen.
+  - Wählen Sie eine *Benachrichtigungsvorlage* aus, die mit dieser Aktion gesendet wird. Sie erstellen eine [Benachrichtigungsvorlage](#create-a-notification-message-template), bevor Sie dieser Aktion einen solchen zuweisen können. Wenn Sie die benutzerdefinierte Benachrichtigung erstellen, passen Sie den Betreff und den Nachrichtentext an und können das Firmenlogo, den Firmennamen und zusätzliche Kontaktinformationen einbeziehen.
   - Wählen Sie aus, die Nachricht an weitere Empfänger zu senden, indem Sie mindestens eine Ihrer Azure AD-Gruppen auswählen.
 
 Wenn die E-Mail gesendet wurde, bezieht Intune Einzelheiten zu dem nicht konformen Gerät in die E-Mail-Benachrichtigung ein.
@@ -100,12 +100,12 @@ Wenn die E-Mail gesendet wurde, bezieht Intune Einzelheiten zu dem nicht konform
   
   Sie können z. B. die erste Aktion für null Tage planen und dann eine zweite Instanz der Aktion hinzufügen, die für drei Tage geplant ist. Diese Verzögerung vor der zweiten Benachrichtigung gibt dem Benutzer einige Tage Zeit, um das Problem zu beheben und die zweite Benachrichtigung zu vermeiden.
 
-  Um zu vermeiden, dass Benutzer mit zu vielen doppelten Nachrichten belästigt werden, überprüfen und optimieren Sie, welche Konformitätsrichtlinien eine Pushbenachrichtigung bei Nichtkonformität enthalten, und überprüfen Sie die Zeitpläne, um zu vermeiden, dass wiederholte Benachrichtigungen für dasselbe Problem zu oft gesendet werden.
+  Überprüfen und optimieren Sie, welche Konformitätsrichtlinien bei Nichtkonformität eine Pushbenachrichtigung enthalten, um zu vermeiden, dass Benutzer mit zu vielen doppelten Nachrichten belästigt werden. Überprüfen Sie auch die Zeitpläne, um zu vermeiden, dass wiederholte Benachrichtigungen für dasselbe Problem zu oft gesendet werden.
 
   Zu berücksichtigen:
   - Bei einer einzelnen Richtlinie, die mehrere Instanzen einer für denselben Tag festgelegten Pushbenachrichtigung enthält, wird für diesen Tag nur eine einzige Benachrichtigung gesendet.
 
-  - Wenn mehrere Konformitätsrichtlinien die gleichen Konformitätsbedingungen und die Pushbenachrichtigungsaktion mit demselben Zeitplan enthalten, werden mehrere Benachrichtigungen am selben Tag an dasselbe Gerät gesendet.
+  - Wenn mehrere Konformitätsrichtlinien die gleichen Konformitätsbedingungen und die Pushbenachrichtigungsaktion mit demselben Zeitplan enthalten, sendet Intune mehrere Benachrichtigungen am selben Tag an dasselbe Gerät.
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
@@ -126,22 +126,22 @@ Plattformspezifische Informationen zum Erstellen einer Gerätekonformitätsricht
 Zum Senden einer E-Mail an Ihre Benutzer müssen Sie eine Benachrichtigungsvorlage erstellen. Wenn ein Gerät nicht konform ist, werden die Einzelheiten, die Sie in die Vorlage eingeben, in den von Ihnen an die Benutzer gesendeten E-Mails angezeigt.
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
-2. Wählen Sie **Geräte** > **Konformitätsrichtlinien** > **Benachrichtigung** > **Benachrichtigung erstellen** aus.
+2. Klicken Sie auf **Endpunktsicherheit** > **Gerätekonformität** > **Benachrichtigungen** > **Benachrichtigung erstellen**.
 3. Geben Sie dann unter *Grundlagen* die folgenden Informationen an:
 
    - **Name**
    - **Antragsteller**
    - **Message**
 
-4. Konfigurieren Sie ebenfalls unter *Grundlagen* die folgenden Optionen für die Benachrichtigung, bei denen standardmäßig *Aktiviert* ausgewählt ist:
+4. Konfigurieren Sie ebenfalls unter *Grundlagen* die folgenden Optionen für die Benachrichtigung:
 
-   - **E-Mail-Kopfzeile: Unternehmenslogo einschließen**
-   - **E-Mail-Fußzeile: Unternehmensnamen einschließen**
-   - **E-Mail-Fußzeile: Kontaktinformationen einschließen**
+   - **E-Mail-Kopfzeile: Unternehmenslogo einschließen** (Standardeinstellung: *Aktivieren*): Das Logo, das Sie für das Branding des Unternehmensportals hochladen, wird für E-Mail-Vorlagen verwendet. Weitere Informationen zum Branding des Unternehmensportals finden Sie unter [Anpassen des Unternehmensbrandings](../apps/company-portal-app.md#customizing-the-user-experience).
+   - **E-Mail-Fußzeile: Unternehmensnamen einschließen** (Standardeinstellung: *Aktivieren*)
+   - **E-Mail-Fußzeile: Kontaktinformationen einschließen** (Standardeinstellung: *Aktivieren*)
+   - **Company Portal Website Link** (Link zur Unternehmensportal-Website) (Standardeinstellung: *Deaktivieren*): Wenn diese Einstellung auf *Aktivieren* festgelegt ist, enthält die E-Mail einen Link zur Unternehmensportal-Website.
 
-   Das Logo, das Sie für das Branding des Unternehmensportals hochladen, wird für E-Mail-Vorlagen verwendet. Weitere Informationen zum Branding des Unternehmensportals finden Sie unter [Anpassen des Unternehmensbrandings](../apps/company-portal-app.md#customizing-the-user-experience).
-
-   ![Beispiel einer Benachrichtigung zur Konformität in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
+   > [!div class="mx-imgBorder"]
+   > ![Beispiel einer Benachrichtigung zur Konformität in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
    Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
 
@@ -185,7 +185,7 @@ Sie können beim Erstellen einer Konformitätsrichtlinie oder Aktualisieren eine
 
    Sie möchten den Benutzer außerdem in Ihrer Konformitätsrichtlinie benachrichtigen. Fügen Sie die Aktion **E-Mail an Endbenutzer senden** hinzu. Legen Sie für diese Aktion **E-Mail senden** den **Zeitplan** auf zwei Tage fest. Wird das Gerät oder der Endbenutzer an Tag zwei weiterhin als nicht konform ausgewertet, wird Ihre E-Mail an Tag zwei gesendet. Wenn Sie dem Benutzer an Tag fünf der Nichtkonformität erneut eine E-Mail senden möchten, fügen Sie eine weitere Aktion hinzu, und legen Sie den **Zeitplan** auf fünf Tage fest.
 
-  Weitere Informationen zur Konformität und den integrierten Aktionen finden Sie in der [Konformitätsübersicht](device-compliance-get-started.md).
+   Weitere Informationen zur Konformität und den integrierten Aktionen finden Sie in der [Konformitätsübersicht](device-compliance-get-started.md).
 
 6. Klicken Sie zum Speichern Ihrer Änderungen auf **Hinzufügen** > **OK**.
 

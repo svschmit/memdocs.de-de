@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: fbf352c3bccfb17efc35e34a2a822b6bbbcc215d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 22dc48a60d03a0cc6bc10e04bc3facbf36983ff9
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183046"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84637540"
 ---
 Diese Hinweise enthalten wichtige Informationen, die Ihnen bei der Vorbereitung auf künftige Änderungen und Features im Zusammenhang mit Intune helfen können.
 
@@ -32,27 +32,94 @@ Legacy-PC-Verwaltungsfunktionen werden ab 15. Oktober 2020 nicht mehr unterst�
 
 [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2107122)
 
+### <a name="move-to-the-microsoft-endpoint-manager-admin-center-for-all-your-intune-management"></a>Wechseln zum Microsoft Endpoint Manager Admin Center für die gesamte Intune-Verwaltung
+Im Rahmen des im März letzten Jahres veröffentlichten Beitrags MC208118 haben wir eine neue, einfache URL für die Microsoft Endpoint Manager-Verwaltung (Intune) eingeführt: [https://endpoint.microsoft.com](https://endpoint.microsoft.com). Bei Microsoft Endpoint Manager handelt es sich um eine einheitliche Plattform, die Microsoft Intune und Configuration Manager umfasst. **Ab dem 1. August 2020** entfernen wir die Intune-Verwaltung unter [https://portal.azure.com](https://portal.azure.com) und empfehlen stattdessen, [https://endpoint.microsoft.com](https://endpoint.microsoft.com) für die Endpunktverwaltung zu verwenden. 
 
-### <a name="decreasing-support-for-android-device-administrator--5857738--"></a>Verringern der Unterstützung für den Android-Geräteadministrator<!--5857738-->
-Der Android-Geräteadministrator (mit Android 2.2 veröffentlicht und manchmal auch als „Legacy“-Android-Verwaltung bezeichnet) ist eine Möglichkeit zum Verwalten von Android-Geräten. [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (veröffentlicht mit Android 5.0) bietet jetzt jedoch eine verbesserte Verwaltungsfunktionalität. In dem Bestreben, auf eine moderne, umfassendere und sicherere Geräteverwaltung umzusteigen, reduziert Google die Geräteadministratorunterstützung in neuen Android-Releases.
+
+### <a name="decreasing-support-for-android-device-administrator--7371518--"></a>Verringern der Unterstützung für den Android-Geräteadministrator<!--7371518-->
+Die Administratorverwaltung für Android-Geräte wurde im Rahmen von Android 2.2 als Möglichkeit zum Verwalten von Android-Geräten veröffentlicht. Ab Android 5 wurde das modernere Verwaltungsframework von [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) veröffentlicht (für Geräte, die eine zuverlässige Verbindung mit Google Mobile Services herstellen können). Google fördert die Verschiebung der Geräteadministratorverwaltung, indem die Verwaltungsunterstützung in neuen Android-Releases reduziert wird.
 
 #### <a name="how-does-this-affect-me"></a>Wie wirkt sich das auf mich aus?
-Die Änderungen von Google haben für Intune-Benutzer diese Folgen:  
-- Intune bietet vollständige Unterstützung für Geräte, die vom Administrator verwaltet werden und auf denen Android 10 und höher bis zum zweiten Quartal CY2020 ausgeführt wird. Geräte, die vom Geräteadministrator verwaltet werden und nach Ablauf dieser Zeit Android 10 oder höher ausführen, können nicht vollständig verwaltet werden. Dies bedeutet, dass betroffene Geräte keine neuen Kennwortanforderungen erhalten.
-    - Samsung Knox-Geräte werden in diesem Zeitraum nicht betroffen sein, da Intune durch die Integration mit der Knox-Plattform erweiterte Unterstützung bietet. Dies gibt Ihnen mehr Zeit für die Planung des Übergangs von der Geräteadministratorverwaltung.    
-- Vom Geräteadministrator verwaltete Android-Geräte, auf denen Android-Versionen unter 10 ausgeführt werden, sind nicht betroffen und können weiterhin vollständig mit dem Geräteadministrator verwaltet werden.    
-- Für alle Geräte unter Android 10 und höher hat Google für Geräteadministratorverwaltung-Agents – wie z. B. das Unternehmensportal – die Möglichkeit beschränkt, auf Gerätebezeichnerinformationen zuzugreifen. Diese Einschränkung wirkt sich nach Geräteupdates auf Android 10 oder höher auf die folgenden Intune-Features wie folgt aus:  
-    - Die Netzwerkzugriffssteuerung für VPN funktioniert nicht mehr.   
-    - Die Identifizierung von Geräten mit IMEI oder Seriennummer als unternehmenseigen kennzeichnet Geräte nicht automatisch als unternehmenseigen.  
-    - IMEI und Seriennummer sind für IT-Administratoren in Intune nicht mehr sichtbar. 
-        > [!NOTE]
-        > Dies betrifft nur vom Geräteadministrator verwaltete Geräte unter Android 10 und höher, nicht jedoch Geräte, die im Rahmen von Android Enterprise verwaltet werden. 
+Aufgrund dieser Änderungen von Google im vierten Quartal 2020 verfügen Sie nicht mehr über die umfassenden Verwaltungsfunktionen auf den betroffenen Geräten, die vom Geräteadministrator verwaltet werden. 
+
+> [!NOTE]
+> Dies wurde zuvor für das dritte Quartal 2020 angekündigt, wurde aber basierend auf den [neuesten Informationen von Google](https://www.blog.google/products/android-enterprise/da-migration/) verschoben.
+
+##### <a name="device-types-that-will-be-impacted"></a>Betroffene Gerätetypen
+Zu den von der reduzierten Geräteadministratorunterstützung betroffenen Geräten gehören jene, bei denen die folgenden drei Bedingungen zutreffen:
+- registriert über die Geräteadministratorverwaltung
+- Android 10 oder höher
+- kein Samsung-Gerät
+
+Geräte sind nicht betroffen, wenn Folgendes zutrifft:
+- nicht über die Geräteadministratorverwaltung registriert
+- Android-Version vor Android 10
+- Samsung-Geräte: Samsung Knox-Geräte werden in diesem Zeitraum nicht betroffen sein, da Intune durch die Integration mit der Knox-Plattform erweiterte Unterstützung bietet. Dadurch erhalten Sie zusätzliche Zeit, den Übergang der Geräteadministratorverwaltung für Samsung-Geräte zu planen.
+
+##### <a name="settings-that-will-be-impacted"></a>Betroffene Einstellungen
+Die [reduzierte Geräteadministratorunterstützung](https://developers.google.com/android/work/device-admin-deprecation) verhindert, dass die Konfiguration dieser Einstellungen auf betroffene Geräte angewendet wird.
+
+###### <a name="configuration-profile-device-restriction-settings"></a>Geräteeinschränkungseinstellungen für Konfigurationsprofile
+
+- **Kamera blockieren**
+- Festlegen von **Minimale Kennwortlänge**
+- Festlegen der **Anzahl von Anmeldefehlern, bevor das Gerät zurückgesetzt wird** (wird im Gegensatz zu Geräten mit festgelegtem Kennwort nicht auf Geräten ohne festgelegtes Kennwort angewendet)
+- Festlegen von **Kennwortablauf (in Tagen)**
+- Festlegen von **Erforderlicher Kennworttyp**
+- Festlegen von **Prevent use of previous passwords** (Wiederverwendung vorheriger Kennwörter verhindern)
+- Blockieren von **Smart Lock und andere Vertrauens-Agents**
+
+###### <a name="compliance-policy-settings"></a>Einstellungen für Kompatibilitätsrichtlinie
+
+- Festlegen von **Erforderlicher Kennworttyp**
+- Festlegen von **Minimale Kennwortlänge**
+- Festlegen der **Anzahl von Tagen bis zum Kennwortablauf**
+- Festlegen der **Anzahl vorheriger Kennwörter, deren Wiederverwendung verhindert wird**
+
+###### <a name="additional-impacts-based-on-android-os-version"></a>Weitere Auswirkungen auf Grundlage der Android-Betriebssystemversion
+
+**Android 10:** Für alle vom Geräteadministrator verwalteten Geräte (einschließlich Samsung) unter Android 10 und höher hat Google für Geräteadministratorverwaltung-Agents wie z. B. das Unternehmensportal die Möglichkeit beschränkt, auf Gerätebezeichnerinformationen zuzugreifen. Diese Einschränkung wirkt sich nach Geräteupdates auf Android 10 oder höher auf die folgenden Intune-Features wie folgt aus:
+- Die Netzwerkzugriffssteuerung für VPN funktioniert nicht mehr.
+- Die Identifizierung von Geräten mit IMEI oder Seriennummer als unternehmenseigen kennzeichnet Geräte nicht automatisch als unternehmenseigen.
+- Die IMEI und Seriennummer sind für IT-Administratoren in Intune nicht mehr sichtbar.
+
+**Android 11:** Wir testen derzeit die Unterstützung von Android 11 der neuesten Entwicklerbetaversion, um zu ermitteln, ob dies Auswirkungen auf vom Geräteadministrator verwaltete Geräte hat.
+
+#### <a name="user-experience-of-impacted-settings-on-impacted-devices"></a>Verwendung betroffener Einstellungen auf betroffenen Geräten
+
+Betroffene Konfigurationseinstellungen:
+- Bei bereits registrierten Geräten, auf die die Einstellungen schon angewendet wurden, werden die betroffenen Konfigurationseinstellungen weiterhin erzwungen.
+- Bei neu registrierten Geräten sowie neu zugewiesenen und aktualisierten Einstellungen werden die betroffenen Konfigurationseinstellungen nicht erzwungen. Allerdings werden alle anderen Konfigurationseinstellungen weiterhin erzwungen.
+
+Betroffene Konformitätseinstellungen:
+- Bei bereits registrierten Geräten, auf die die Einstellungen schon angewendet wurden, werden die betroffenen Konformitätseinstellungen auf der Seite „Geräteeinstellungen aktualisieren“ weiterhin als Gründe für die Nichtkonformität angezeigt. Das Gerät ist nicht konform, und die Kennwortanforderungen werden in der App „Einstellungen“ weiterhin erzwungen.
+- Bei neu registrierten Geräten sowie neu zugewiesenen und aktualisierten Einstellungen werden die betroffenen Konformitätseinstellungen auf der Seite „Geräteeinstellungen aktualisieren“ weiterhin als Gründe für die Nichtkonformität angezeigt. Das Gerät ist nicht konform, aber strengere Kennwortanforderungen werden in der App „Einstellungen“ nicht erzwungen.
+
+#### <a name="cause-of-impact"></a>Ursache der Auswirkung 
+Ab Beginn des vierten Quartals 2020 haben die Änderungen Auswirkungen auf die Geräte. Zu diesem Zeitpunkt wird ein Update für die Unternehmensportal-App bereitgestellt, durch das die Unternehmensportal-API anstelle von Ebene 28 auf Ebene 29 abzielt ([gemäß den Anforderungen von Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
+
+Dann sind von einem Geräteadministrator verwaltete und nicht von Samsung hergestellte Geräte betroffen, sobald der Benutzer diese beiden Aktionen abgeschlossen hat:
+- Update auf Android 10 oder höher
+- Aktualisieren der Unternehmensportal-App auf die Version, die auf die API-Ebene 29 abzielt
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Was muss ich als Vorbereitung auf diese Veränderung tun?
-Wir empfehlen Folgendes, um die im dritten Quartal CY2020 auftretende Einschränkung der Funktionalität zu vermeiden:
-- Binden Sie neue Geräte nicht in die Geräteadministratorverwaltung ein.
-- Wenn zu erwarten ist, dass ein Gerät ein Update auf Android 10 erhalten wird, migrieren Sie es von der Geräteadministratorverwaltung zur Android Enterprise-Verwaltung und/oder zu App-Schutzrichtlinien.
+Wir empfehlen Folgendes, um Einschränkungen der Funktionalität zu vermeiden, die im vierten Quartal 2020 eintreten werden:
+- **Neue Registrierungen:** Integrieren Sie neue Geräte in die [Android Enterprise](../enrollment/connect-intune-android-enterprise.md)-Verwaltung (falls verfügbar) und/oder [App-Schutzrichtlinien](../apps/app-protection-policies.md). Vermeiden Sie das Integrieren neuer Geräte in die Geräteadministratorverwaltung. 
+- **Zuvor registrierte Geräte:** Wenn ein von einem Geräteadministrator verwaltetes Gerät unter Android 10 oder höher ausgeführt oder ein Update auf Android 10 oder höher ausgeführt wird (insbesondere, wenn es sich um kein Samsung-Gerät handelt), verschieben Sie es von der Geräteadministratorverwaltung in die [Android Enterprise](../enrollment/connect-intune-android-enterprise.md)-Verwaltung und/oder [App-Schutzrichtlinien](../apps/app-protection-policies.md). Sie können den optimierten Flow verwenden, um [Android-Geräte aus dem Geräteadministrator in die Arbeitsprofilverwaltung zu verschieben](../enrollment/android-move-device-admin-work-profile.md).
 
 #### <a name="additional-information"></a>Zusätzliche Informationen
+- [Verschieben von Android-Geräten aus dem Geräteadministrator in die Arbeitsprofilverwaltung](../enrollment/android-move-device-admin-work-profile.md)
+- [Einrichten der Registrierung von Android Enterprise-Arbeitsprofilgeräten](../enrollment/android-work-profile-enroll.md)
+- [Einrichten der Intune-Registrierung für dedizierte Android Enterprise-Geräte](../enrollment/android-kiosk-enroll.md)
+- [Einrichten der Intune-Registrierung von vollständig verwalteten Android Enterprise-Geräten](../enrollment/android-fully-managed-enroll.md)
+- [Erstellen und Zuweisen von App-Schutzrichtlinien](../apps/app-protection-policies.md)
+- [Verwenden von Intune in Umgebungen ohne Google Mobile Services](../apps/manage-without-gms.md)
+- [Anwendungsschutzrichtlinien und Arbeitsprofile für Android Enterprise-Geräte in Intune](../apps/android-deployment-scenarios-app-protection-work-profiles.md)
+- [Google-Blog zur Veraltung des Geräteadministrators](https://www.blog.google/products/android-enterprise/da-migration/)
 - [Google-Leitfaden für die Migration vom Geräteadministrator zu Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
-- [Google-Dokumentation zum Plan, die Geräteadministrator-API als veraltet zu kennzeichnen](https://developers.google.com/android/work/device-admin-deprecation)
+- [Google-Dokumentation zu veralteten Geräteadministrator-APIs](https://developers.google.com/android/work/device-admin-deprecation)
+
+
+### <a name="plan-for-change-intune-enrollment-flow-update-for-apples-automated-device-enrollment-for-iosipados"></a>Stellen Sie sich auf eine Änderung ein: Intune-Registrierungsflowaktualisierung für die automatisierte Geräteregistrierung von Apple für iOS/iPadOS
+Im Unternehmensportal-Release von Juli ändern wir den iOS/iPadOS-Registrierungsflow für die automatisierte Geräteregistrierung von Apple (früher als Programm zur Geräteregistrierung (DEP) bezeichnet). Die Änderung des Registrierungsflows hat nur Auswirkungen während des Flows „Mit Benutzeraffinität registrieren“. Wenn Sie zuvor im Rahmen Ihrer Konfiguration „Unternehmensportal installieren“ auf „Nein“ festgelegt haben, können Benutzer die Unternehmensportal-App noch immer über den Store installieren, wodurch eine Registrierung ausgelöst wird, bei der der Benutzer die entsprechende Seriennummer hinzufügt. Mit diesem bevorstehenden Unternehmensportal-Release entfernen wir den Bestätigungsbildschirm für die Seriennummer. Stattdessen sollten Sie eine entsprechende App-Konfigurationsrichtlinie erstellen, die zusammen mit dem Unternehmensportal sicherstellt, dass sich Benutzer erfolgreich registrieren können. Andernfalls können Sie die Einstellung „Unternehmensportal installieren“ als Teil Ihrer Konfiguration auf „Ja“ festlegen. 
+ - Weitere Informationen finden Sie in [diesem Blogbeitrag](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-enrollment-flow-update-for-apple-s-automated-device/ba-p/1431629).

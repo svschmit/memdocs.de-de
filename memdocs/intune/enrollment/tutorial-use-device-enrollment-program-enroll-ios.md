@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 47f249d105fbc2481dd1d66956032c91d5006834
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078905"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093511"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Tutorial: Verwenden der Apple-Features für Unternehmensgeräteregistrierung in Apple Business Manager (ABM) zum Registrieren von iOS-/iPadOS-Geräten in Intune
 Die Geräteregistrierungsfeatures in Apple Business Manager vereinfachen das Registrieren von Geräten. Intune unterstützt auch das ältere Portal für das Programm zur Geräteregistrierung (Device Enrollment Program, DEP), doch wir empfehlen Ihnen einen Neustart mit Apple Business Manager. Mit Microsoft Intune und der Apple-Unternehmensgeräteregistrierung werden Geräte automatisch sicher registriert, wenn der Benutzer das Gerät zum ersten Mal einschaltet. Sie können Geräte daher für mehrere Benutzer bereitstellen, ohne jedes Gerät einzeln einrichten zu müssen. 
@@ -44,7 +44,7 @@ Vor der Registrierung von iOS-/iPadOS-Geräten mit den Apple-Features für Unter
 
 Sie verwenden das Apple-Portal zum Erstellen eines Tokens für die Geräteregistrierung. Sie verwenden die Portale auch, um Intune Geräte zur Verwaltung zuzuweisen.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Enrollment Program Tokens** (Registrierungsprogrammtoken) > **Hinzufügen**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > **Add** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Registrierungsprogrammtoken > Hinzufügen).
 
 2. Erteilen Sie Microsoft die Berechtigung, Benutzer- und Geräteinformationen an Apple zu senden, indem Sie auf **Ich stimme zu** klicken.
 
@@ -80,9 +80,9 @@ Sie verwenden das Apple-Portal zum Erstellen eines Tokens für die Geräteregist
 ## <a name="create-an-apple-enrollment-profile"></a>Erstellen eines Apple-Registrierungsprofils
 Nachdem Sie Ihr Token installiert haben, können Sie nun ein Registrierungsprofil für unternehmenseigene iOS-/iPadOS-Geräte erstellen. Ein Geräteregistrierungsprofil definiert die Einstellungen, die während der Registrierung auf eine Gruppe von Geräten angewendet werden.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **iOS** > **iOS enrollment** (iOS-Registrierung) > **Enrollment Program Tokens** (Registrierungsprogrammtoken).
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment Program Tokens** (Geräte > iOS/iPadOS > iOS-Registrierung > Registrierungsprogrammtoken).
 
-2. Wählen Sie das soeben installierte Token aus, und klicken Sie auf **Profile** > **Profil erstellen** > **iOS**.
+2. Wählen Sie das soeben installierte Token aus, und klicken Sie auf **Profile** > **Profil erstellen** > **iOS/iPadOS**.
 
 3. Geben Sie auf der Seite **Grundlagen** den **Namen** *TestProfile* und die **Beschreibung** *Test von ADE für iOS-/iPadOS-Geräte* ein. Benutzer können diese Informationen nicht sehen.
 
@@ -120,13 +120,13 @@ Nachdem Sie Ihr Token installiert haben, können Sie nun ein Registrierungsprofi
 
 Nachdem Sie im ABM-, ASM- oder ADE-Portal ein Registrierungsprogrammtoken erstellt und dort dem MDM-Server Geräte zugewiesen haben, können Sie warten, bis diese Geräte mit dem Intune-Dienst synchronisiert werden oder eine Synchronisierung manuell per Push starten. Ohne eine manuelle Synchronisierung kann es bis zu 24 Stunden dauern, bis Geräte im Azure-Portal angezeigt werden.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte**  >  **iOS**  >  **iOS enrollment** (iOS-Registrierung)  >  **Enrollment Program Tokens** (Registrierungsprogrammtoken), wählen Sie in der Liste ein Token aus, und klicken Sie auf **Geräte** > **Synchronisieren**.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment Program Tokens** (Geräte > iOS/iPadOS > iOS-Registrierung > Registrierungsprogrammtoken), wählen Sie in der Liste ein Token aus, und klicken Sie auf **Geräte** > **Synchronisieren**.
 
 ## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>Zuweisen eines Registrierungsprofils an iOS-/iPadOS-Geräte
 
 Sie müssen Geräten ein Profil des Registrierungsprogramms zuweisen, bevor Sie mit der Registrierung beginnen können. Diese Geräte werden mit Intune aus Apple synchronisiert und müssen im ABM-, ASM- oder ADE-Portal dem richtigen MDM-Servertoken zugewiesen werden.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte**  >  **iOS**  >  **iOS enrollment** (iOS-Registrierung)  >  **Enrollment Program Tokens** (Registrierungsprogrammtoken), und wählen Sie in der Liste Ihr Token aus.
+1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment Program Tokens** (Geräte > iOS/iPadOS > iOS-Registrierung > Registrierungsprogrammtoken), und wählen Sie in der Liste Ihr Token aus.
 2. Wählen Sie **Geräte** aus, wählen Sie in der Liste die Geräte aus, und wählen Sie dann **Profil zuweisen** aus.
 3. Wählen Sie unter **Profil zuweisen** ein Profil für die Geräte aus, und klicken Sie dann auf **Zuweisen**.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf413dc551d8be8fd646a03826fb3e5507f4d272
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ba44cca323dd2a3fbf756b86743dea403ce0b156
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988943"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093060"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrieren von iOS-/iPadOS-Geräten in Intune
 
@@ -61,7 +61,7 @@ Sie können firmeneigene iOS-/iPadOS-Geräte auch mit einem Konto für den [Ger�
 
 ## <a name="automated-device-enrollment"></a>Automatische Geräteregistrierung
 
-Organisationen können iOS-/iPadOS-Geräte über die automatische Geräteregistrierung von Apple (Automated Device Enrollment, ADE) erwerben. Mit ADE können Sie drahtlos (Over The Air) ein Registrierungsprofil bereitstellen, das Geräte für die Verwaltung registriert. Weitere Informationen finden Sie unter [Programm zur Geräteregistrierung](device-enrollment-program-enroll-ios.md).
+Organisationen können iOS-/iPadOS-Geräte über die automatische Geräteregistrierung von Apple (Automated Device Enrollment, ADE) erwerben. Mit ADE können Sie drahtlos (Over The Air) ein Registrierungsprofil bereitstellen, das Geräte für die Verwaltung registriert. Weitere Informationen finden Sie unter [Automatisches Registrieren von iOS-/iPadOS-Geräten mit der automatischen Geräteregistrierung von Apple](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Benutzerregistrierung
 Die Benutzerregistrierung bietet Administratoren im Vergleich zu anderen Registrierungsmethoden eine Teilmenge von Verwaltungsoptionen. Weitere Informationen finden Sie unter [Von der Benutzerregistrierung unterstützte Aktionen, Kennwörter und andere Optionen](ios-user-enrollment-supported-actions.md) und [Einrichten der iOS-/iPadOS- und iPadOS-Benutzerregistrierung](ios-user-enrollment.md).

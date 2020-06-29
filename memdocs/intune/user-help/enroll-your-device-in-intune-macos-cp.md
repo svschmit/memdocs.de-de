@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,27 +19,27 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2f3fe39285542199cf214c4b5bf505a176663657
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: fe405b66892ec7777d8d1572b2fb6ab6ce1aaa91
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882416"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094204"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Registrieren eines macOS-Geräts mithilfe der Unternehmensportal-App  
 
 Registrieren Sie Ihr macOS-Gerät bei der Intune-Unternehmensportal-App, um sicheren Zugriff auf E-Mails, Dateien und Apps Ihres Geschäfts-, Schul- oder Unikontos zu erhalten.
 
-Organisationen verlangen in der Regel, dass Sie Ihr Gerät registrieren, bevor Sie auf proprietäre Daten zugreifen können. Sobald Ihr Gerät registriert ist, gilt es als *verwaltet*. Ihre Organisation kann dem Gerät über einen MDM-Anbieter (Mobile Device Management, Verwaltung mobiler Geräte) wie Intune Richtlinien und Anwendungen zuweisen. Sie müssen Ihr Gerät entsprechend der Richtlinieneinstellungen Ihrer Organisation konfigurieren, um über Ihr Gerät kontinuierlich auf Ihre Geschäfts-, Schul- oder Uniressourcen zugreifen zu können.  
+Organisationen verlangen in der Regel, dass Sie Ihr Gerät registrieren, bevor Sie auf proprietäre Daten zugreifen können. Sobald Ihr Gerät registriert ist, gilt es als *verwaltet*. Ihre Organisation kann dem Gerät über einen MDM-Anbieter (Mobile Device Management, Verwaltung mobiler Geräte) wie Intune Richtlinien und Anwendungen zuweisen. Sie müssen Ihr Gerät entsprechend der Richtlinieneinstellungen Ihrer Organisation einrichten, um über Ihr Gerät kontinuierlich auf Ihre Geschäfts-, Schul- oder Uniressourcen zugreifen zu können.  
 
-In diesem Artikel wird beschrieben, wie Sie Ihr Gerät mit der Unternehmensportal-App für macOS registrieren, konfigurieren und verwalten, um die Anforderungen Ihrer Organisation zu erfüllen.  
+In diesem Artikel wird beschrieben, wie Sie Ihr Gerät mit der Unternehmensportal-App für macOS einrichten und verwalten, um die Anforderungen Ihrer Organisation zu erfüllen.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Vorteile der Unternehmensportal-App
 
 Während der ersten Einrichtung werden Sie von der Unternehmensportal-App aufgefordert, sich anzumelden und bei der Organisation zu authentifizieren. Das Unternehmensportal informiert Sie dann über jegliche Geräteeinstellungen, die Sie konfigurieren müssen, um die Anforderungen Ihrer Organisation zu erfüllen. Beispielsweise legen Organisationen oft Anforderungen an die minimale oder maximale Zeichenanzahl des Kennworts fest, die Sie einhalten müssen.    
 
-Nachdem Sie Ihr Gerät registriert haben, stellt das Unternehmensportal immer sicher, dass Ihr Gerät gemäß der Anforderungen Ihrer Organisation geschützt ist. Wenn Sie beispielsweise eine App aus einer nicht vertrauenswürdigen Quelle herunterladen, zeigt das Unternehmensportal eine Warnung an und schränkt womöglich Ihren Zugriff auf die Ressourcen der Organisation ein. App-Schutzrichtlinien wie diese sind üblich. Sie müssen wahrscheinlich die nicht vertrauenswürdige App deinstallieren, um den Zugriff wieder zu erhalten. 
+Nachdem Sie Ihr Gerät registriert haben, stellt das Unternehmensportal immer sicher, dass Ihr Gerät gemäß der Anforderungen Ihrer Organisation geschützt ist. Wenn Sie beispielsweise eine App aus einer nicht vertrauenswürdigen Quelle herunterladen, zeigt das Unternehmensportal eine Warnung an und schränkt womöglich Ihren Zugriff auf die Ressourcen der Organisation ein. App-Schutzrichtlinien wie diese sind üblich. Sie müssen die App wahrscheinlich deinstallieren, um den Zugriff wieder zu erhalten. 
 
 Wenn Ihre Organisation nach der Registrierung eine neue Sicherheitsanforderung durchsetzt, z. B. die mehrstufige Authentifizierung, erhalten Sie eine Benachrichtigung vom Unternehmensportal. Sie haben dann die Möglichkeit, Ihre Einstellungen so zu ändern, dass Sie von Ihrem Gerät aus weiterarbeiten können.  
 
@@ -67,19 +67,20 @@ Führen Sie die folgenden Schritte aus, um Ihr macOS-Gerät bei Ihrer Organisati
 
 1. Melden Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto beim Unternehmensportal an.  
 2. Wenn die App geöffnet wird, klicken Sie auf **Beginnen**.  
-3. Überprüfen Sie, was Ihre Organisation auf Ihrem registrieren Gerät sehen kann und was nicht. Wählen Sie dann **Weiter** aus.
-4.  Geben Sie Ihr Gerätekennwort in der Anzeige **Verwaltungsprofil installieren** ein, wenn Sie dazu aufgefordert werden.
+3. Überprüfen Sie, [was Ihre Organisation auf Ihrem registrieren Gerät sehen kann und was nicht](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md). Wählen Sie dann **Weiter** aus.
+4. Klicken Sie auf dem Bildschirm **Installieren des Verwaltungsprofils** auf **Profil herunterladen**.  
 
-    ![Beispielscreenshot: Anzeige „Verwaltungsprofil installieren“ mit hervorgehobener Kennworteingabeaufforderung des Unternehmensportals](./media/install-management-profile-macos-1912.PNG)   
-5. Klicken Sie in der Anzeige **Geräteverwaltung bestätigen** auf **Systemeinstellungen öffnen**.  
+    ![Beispielscreenshot: Anzeige „Verwaltungsprofil installieren“ mit hervorgehobener Kennworteingabeaufforderung des Unternehmensportals](./media/install-management-profile-macos-2006.png)   
 
-    ![Beispielscreenshot: Anzeige „Geräteverwaltung bestätigen“ mit hervorgehobener Schaltfläche „Systemeinstellungen öffnen“](./media/confirm-device-management-macos-1912.PNG)  
-6. Daraufhin werden die Systemeinstellungen Ihres Geräts geöffnet. Wählen Sie **Verwaltungsprofil** aus der Geräteprofilliste aus, und klicken Sie dann auf **Zulassen** > **Zulassen**.  
-    ![Beispielscreenshot: Systemeinstellungen und Verwaltungsprofilanzeige mit hervorgehobener Schaltfläche „Zulassen“](./media/management-profile-approve-macos-1912.PNG)   
-1. Kehren Sie zum Unternehmensportal zurück, und klicken Sie auf **Fortfahren**.    
-2. In Ihrer Organisation ist es möglicherweise erforderlich, dass Sie Ihre Geräteeinstellungen aktualisieren. Klicken Sie auf **Einstellungen überprüfen**, nachdem Sie die Einstellungen angepasst haben.  
+5. Daraufhin werden die Systemeinstellungen Ihres Geräts geöffnet.  
+    a. Klicken Sie auf **Installieren** und dann noch mal auf **Installieren**.  
+    b. Wenn Sie dazu aufgefordert werden, geben Sie Ihr Gerätekennwort ein.   
+6. Nachdem das Profil installiert wurde, wird es in der Profilliste unter **Management Profile** (Verwaltungsprofil) angezeigt.
+    ![Beispielscreenshot: Systemeinstellungen und Verwaltungsprofilanzeige mit hervorgehobener Schaltfläche „Zulassen“](./media/management-profile-approve-macos-2006.png)   
+7. Navigieren Sie zurück zum Unternehmensportal.    
+8. In Ihrer Organisation ist es möglicherweise erforderlich, dass Sie Ihre Geräteeinstellungen aktualisieren. Klicken Sie auf **Wiederholen**, nachdem Sie die Einstellungen aktualisiert haben.  
 
-    ![Beispielscreenshot: Anzeige „Geräteeinstellungen aktualisieren“ mit hervorgehobener Schaltfläche „Einstellungen überprüfen“ des Unternehmensportals](./media/update-settings-mac-1911.PNG)  
+    ![Beispielscreenshot der Anzeige „Geräteeinstellungen aktualisieren“ mit hervorgehobener Schaltfläche „Wiederholen“ im Unternehmensportal](./media/update-settings-mac-2006.png)  
 9. Klicken Sie nach Abschluss des Setups auf **Fertig**.  
 
 

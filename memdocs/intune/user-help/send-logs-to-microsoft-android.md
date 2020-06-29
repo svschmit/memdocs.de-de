@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/12/2018
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7a842e97e0c276926c07f615a7f9089a64132b50
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f83b5ae8cc621a6fab813267216900638ff27269
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881045"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094106"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Senden von Protokollen an Unternehmensportalentwickler für Android-Geräte
 
@@ -43,6 +43,9 @@ So senden Sie Protokolle an Microsoft:
     > Je nachdem, welches Android-Gerät Sie besitzen, kann **Menü** eine Schaltfläche in der Software oder eine Taste auf dem Gerät sein.
 
 3. Tippen Sie auf **Upload Logs Only** (Nur Protokolle hochladen).
+
+    > [!NOTE]
+    > Wenn Sie eine Sovereign Cloud-Umgebung verwenden, steht Ihnen die Funktion zum Senden von Protokollen im Unternehmensportal nicht zur Verfügung. Sie müssen Protokolle dann per E-Mail senden. 
 
 4. Wenn der Upload abgeschlossen wurde, erhalten Sie eine Incident-ID. Speichern Sie diese ID in Ihren Unterlagen.
 

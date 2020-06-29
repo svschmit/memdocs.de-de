@@ -1,5 +1,5 @@
 ---
-title: Einrichten einer Seite zum Registrierungsstatus
+title: Einrichten der Seite zum Registrierungsstatus
 titleSuffix: Microsoft Intune
 description: Richten Sie eine Begrüßungsseite für Benutzer ein, die Windows 10-Geräte registrieren.
 keywords: ''
@@ -18,34 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33c57e5641934200120839ad48a9a4c8b8d0a8fa
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988883"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093458"
 ---
-# <a name="set-up-an-enrollment-status-page"></a>Einrichten einer Seite zum Registrierungsstatus
+# <a name="set-up-the-enrollment-status-page"></a>Einrichten der Seite zum Registrierungsstatus
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-Auf der Seite zum Registrierungsstatus (Enrollment Status Page, ESP) werden während der erstmaligen Geräteregistrierung Installationsinformationen zu Windows 10-Geräten (ab Version 1803) angezeigt. Beispiel:
-- Bei Verwenden von [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) 
-- oder jedes Mal, wenn ein verwaltetes Gerät zum ersten Mal gestartet wird, nachdem eine Richtlinie des Typs „Seite zum Registrierungsstatus“ angewendet wurde. 
+Auf der Seite zum Registrierungsstatus wird der Bereitstellungsfortschritt angezeigt, wenn ein neues Gerät registriert wurde oder neue Benutzer sich beim Gerät anmelden.  Dies gibt IT-Administratoren die Möglichkeit, den Zugriff auf das Gerät zu verhindern (blockieren), bis es vollständig bereitgestellt wurde, und dabei gleichzeitig die Benutzer über die verbleibenden Tasks im Bereitstellungsprozess zu informieren.
 
-Mithilfe der Seite zum Registrierungsstatus können Benutzer den Status Ihres Geräts während der Geräteeinrichtung besser nachvollziehen. Sie können mehrere Profile des Typs „Seite zum Registrierungsstatus“ erstellen und auf verschiedene Benutzergruppen anwenden. Folgendes kann für Profile festgelegt werden:
-- Installationsstatus anzeigen
-- Nutzung blockieren, bis die Installation abgeschlossen ist
-- Angeben, wie ein Benutzer vorgehen kann, wenn die Geräteeinrichtung fehlschlägt.
+Die Seite zum Registrierungsstatus kann in jedem [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/)-Bereitstellungsszenario verwendet werden und auch unabhängig von Windows Autopilot als Teil der standardmäßigen Windows-Willkommensseite für Azure AD Join sowie für alle neuen Benutzer, die sich zum ersten Mal beim Gerät anmelden.
 
-Außerdem können Sie die Reihenfolge anhand der Priorität der Profile festlegen, um in Konflikt stehende Profilzuweisungen zum gleichen Benutzer zu vermeiden.
+Sie können mehrere Profile für die Seite zum Registrierungsstatus mit verschiedenen Konfigurationen für die folgenden Aspekte erstellen:
 
-> [!NOTE]
-> Die Seite zum Registrierungsstatus kann nur auf einen Benutzer abgestimmt werden, der zu einer zugewiesenen Gruppe gehört. Die Richtlinie wird zum Zeitpunkt der Registrierung auf dem Gerät für alle seine Benutzer festgelegt.  Die Geräteausrichtung für Profile vom Typ „Seite zum Registrierungsstatus“ wird derzeit nicht unterstützt.
+- Anzeigen des Installationsfortschritts
+- Blockieren des Zugriffs, bis der Bereitstellungsprozess abgeschlossen ist
+- Zeitlimits
+- Zulässige Problembehandlungsvorgänge
+
+Diese Profile werden in der Reihenfolge der Priorität angegeben. Es wird jeweils die höchste geltende Priorität verwendet.  Jedes Profil für die Seite zum Registrierungsstatus kann sich auf Gruppen mit Geräten oder Benutzern beziehen.  Beim Bestimmen des zu verwendenden Profils werden die folgenden Kriterien berücksichtigt:
+
+- Das für das Gerät bestimmte Profil mit der höchsten Priorität wird zuerst verwendet.
+- Wenn für das Gerät keine Profile vorhanden sind, wird das für den aktuellen Benutzer bestimmte Profil mit der höchsten Priorität verwendet.  (Dies gilt nur für Szenarios, in denen ein Benutzer vorhanden ist. Bei Szenarios mit intensiver Benutzerunterstützung und solchen mit automatischer Bereitstellung können nur Profile für Geräte verwendet werden.)
+- Wenn keine Profile für bestimmte Gruppen vorhanden sind, wird das Standardprofil für die Seite zum Registrierungsstatus verwendet.
 
 ## <a name="available-settings"></a>Verfügbare Einstellungen
 
- Die folgenden Einstellungen können konfiguriert werden, um das Verhalten der Seite zum Registrierungsstatus anzupassen:
+Die folgenden Einstellungen können konfiguriert werden, um das Verhalten der Seite zum Registrierungsstatus anzupassen:
 
 <table>
 <th align="left">Einstellung<th align="left">Ja<th align="left">Nein
@@ -80,7 +83,7 @@ Führen Sie die folgenden Schritte aus, um die Seite zum Registrierungsstatus zu
 
 ## <a name="set-the-enrollment-status-page-priority"></a>Festlegen der Priorität von Registrierungsstatusseiten
 
-Ein Benutzer kann vielen Gruppen angehören und viele Profile des Typs „Seite zum Registrierungsstatus“ haben. Um solche Konflikte zu handhaben, können Sie für jedes Profil die Priorität festlegen. Wenn jemand während der Registrierung mehr als ein Profil für „Seite zum Registrierungsstatus“ hat, wird nur das Profil mit der höchsten Priorität auf das zu registrierende Gerät angewendet.
+Ein Gerät oder Benutzer kann zu vielen Gruppen gehören und über mehrere Profile für die Seite zum Registrierungsstatus verfügen. Sie können steuern, welche Profile zuerst berücksichtigt werden, indem Sie die Prioritäten für jedes Profil festlegen. Die Profile mit höheren Prioritäten werden zuerst berücksichtigt.
 
 1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Windows** > **Windows-Registrierung** > **Seite zum Registrierungsstatus**.
 2. Zeigen Sie auf das Profil in der Liste.
@@ -88,7 +91,7 @@ Ein Benutzer kann vielen Gruppen angehören und viele Profile des Typs „Seite 
 
 ## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Blockieren des Zugriffs auf ein Gerät, bis eine bestimmte Anwendung installiert ist
 
-Sie können angeben, welche Apps installiert sein müssen, bevor der Benutzer auf den Desktop zugreifen kann.
+Sie können angeben, welche Apps installiert sein müssen, bevor die Seite zum Registrierungsstatus geschlossen wird.
 
 1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Geräte** > **Windows** > **Windows-Registrierung** > **Seite zum Registrierungsstatus**.
 2. Wählen Sie ein Profil und dann **Einstellungen** aus.
@@ -99,7 +102,7 @@ Sie können angeben, welche Apps installiert sein müssen, bevor der Benutzer au
 
 Die in dieser Liste enthaltenen Apps werden von Intune verwendet, um die Liste zu filtern, die als blockierend betrachtet werden soll.  Es wird nicht angegeben, welche Apps installiert werden sollen.  Wenn Sie diese Liste z. B. so konfigurieren, dass sie „App 1“, „App 2“ und „App 3“ enthält und „App 3“ und „App 4“ auf das Gerät oder den Benutzer ausgerichtet sind, verfolgt die Seite zum Registrierungsstatus nur „App 3“.  „App 4“ wird weiterhin installiert, aber die Seite zum Registrierungsstatus wartet nicht auf ihren Abschluss.
 
-Es können maximal 25 Apps angegeben werden.
+Es können maximal 100 Apps angegeben werden.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Auf der Seite zum Registrierungsstatus nachverfolgte Informationen
 
@@ -108,14 +111,16 @@ Auf der Seite zum Registrierungsstatus werden Informationen in drei Phasen nachv
 ### <a name="device-preparation"></a>Gerätevorbereitung
 
 Zur Vorbereitung des Geräts wird auf der Seite zum Registrierungsstatus Folgendes nachverfolgt:
-- TPM-Schlüsselnachweise (Trusted Platform Module) (falls zutreffend)
-- Fortschritt beim Beitritt zu Azure Active Directory
-- Registrierung bei Intune
-- Installation von Intune-Verwaltungserweiterungen
+
+- TPM-Schlüsselnachweis (Trusted Platform Module) (falls zutreffend)
+- Azure Active Directory-Beitrittsprozess
+- Intune-(MDM-)Registrierung
+- Installation der Intune-Verwaltungserweiterungen (verwendet zum Installieren von Win32-Apps)
 
 ### <a name="device-setup"></a>Geräteeinrichtung
 
-Auf der Seite zum Registrierungsstatus werden die folgenden Geräteeinrichtungselemente nachverfolgt (wenn sie „Alle Geräte“ oder einer Gerätegruppe zugeordnet sind, zu der das zu registrierende Gerät gehört):
+Auf der Seite zum Registrierungsstatus wird der Status der folgenden Geräteeinrichtungselemente angezeigt:
+
 - Sicherheitsrichtlinien
   - Ein Konfigurationsanbieter für alle Registrierungen
   - Tatsächliche CSPs, die von Intune konfiguriert wurden, werden an dieser Stelle nicht nachverfolgt.
@@ -129,7 +134,9 @@ Auf der Seite zum Registrierungsstatus werden die folgenden Geräteeinrichtungse
 - Zertifikat-Profile, die **allen Geräten** oder einer Gerätegruppe zugewiesen sind, in der das zu registrierende Gerät ein Mitglied ist, jedoch nur für Autopilot-Geräte
 
 ### <a name="account-setup"></a>Kontoeinrichtung
+
 Für die Kontoeinrichtung werden die folgenden Elemente auf der Seite zum Registrierungsstatus nachverfolgt, wenn diese dem derzeit angemeldeten Benutzer zugewiesen sind:
+
 - Sicherheitsrichtlinien
   - Ein CSP für alle Registrierungen
   - Tatsächliche CSPs, die von Intune konfiguriert wurden, werden an dieser Stelle nicht nachverfolgt.
@@ -147,7 +154,8 @@ Für die Kontoeinrichtung werden die folgenden Elemente auf der Seite zum Regist
   - Zertifikatprofile, die „Allen Benutzern“ oder einer „Benutzergruppe“ zugewiesen sind, der der sich registrierende Benutzer angehört
 
 ### <a name="troubleshooting"></a>Problembehandlung
-Die wichtigsten Fragen zur Problembehandlung
+
+Im Folgenden sind häufig gestellte Fragen zur Behandlung von Problemen im Zusammenhang mit der Seite zum Registrierungsstatus aufgeführt.
 
 - Warum wurden meine Anwendungen nicht über die Seite „Registrierungsstatus“ installiert und nachverfolgt?
   - Stellen Sie Folgendes sicher, um zu gewährleisten, dass Anwendungen über die Seite „Registrierungsstatus“ installiert und nachverfolgt werden:
@@ -193,14 +201,16 @@ Die wichtigsten Fragen zur Problembehandlung
       ```
 
 ### <a name="known-issues"></a>Bekannte Probleme
-Nachstehend sind bekannte Probleme aufgeführt. 
+
+Im Folgenden sind bekannte Probleme im Zusammenhang mit der Seite zum Registrierungsstatus aufgeführt.
+
 - Durch das Deaktivieren des ESP-Profils wird die zugehörige Richtlinie nicht von den Geräten entfernt, und den Benutzern wird weiterhin die Seite zum Registrierungsstatus angezeigt, wenn sie sich zum ersten Mal am Gerät anmelden. Die Richtlinie wird nicht entfernt, wenn das ESP-Profil deaktiviert wird. Sie müssen den OMA-URI bereitstellen, um die Seite zum Registrierungsstatus zu deaktivieren. Weitere Informationen zum Deaktivieren der Seite zum Registrierungsstatus mithilfe des OMA-URI finden Sie weiter oben. 
 - Ein Neustart während der Geräteeinrichtung zwingt den Benutzer vor dem Übergang zur Phase „Kontoeinrichtung“ zur Eingabe seiner Anmeldeinformationen. Benutzeranmeldeinformationen werden während des Neustarts nicht beibehalten. Lassen Sie den Benutzer seine Anmeldeinformationen eingeben, damit die Seite zum Registrierungsstatus fortgesetzt werden kann. 
 - Für die Seite zum Registrierungsstatus unter Windows 10-Versionen vor 1903 erfolgt während einer Registrierung des Typs „Geschäfts-, Schul- oder Unikonto hinzufügen“ immer ein Timeout. Die Seite zum Registrierungsstatus wartet auf den Abschluss der Azure AD Registrierung. Das Problem wurde für Windows 10 ab Version 1903 behoben.  
 - Azure AD Hybrid-Autopilot-Bereitstellung mit Seite zum Registrierungsstatus dauert länger als die Timeoutdauer, die im ESP-Profil angegeben ist. Bei Azure AD Hybrid-Autopilot-Bereitstellungen benötigt die Seite zum Registrierungsstatus 40 Minuten länger als der im ESP-Profil festgelegte Wert. Diese Verzögerung gibt dem lokalen AD-Connector Zeit zum Erstellen des neuen Gerätedatensatzes für Azure AD. 
 - Windows-Anmeldeseite wird im benutzergesteuerten Autopilot-Modus nicht mit dem Benutzernamen vorausgefüllt. Bei einem Neustart in der Phase „Geräteeinrichtung“ der Seite zum Registrierungsstatus gilt Folgendes:
-    - Benutzeranmeldeinformationen werden nicht beibehalten.
-    - Der Benutzer muss die Anmeldeinformationen vor dem Wechsel von der Phase „Geräteeinrichtung“ zur Phase „Kontoeinrichtung“ erneut eingeben.
+  - Benutzeranmeldeinformationen werden nicht beibehalten.
+  - Der Benutzer muss die Anmeldeinformationen vor dem Wechsel von der Phase „Geräteeinrichtung“ zur Phase „Kontoeinrichtung“ erneut eingeben.
 - Die Seite zum Registrierungsstatus ist lange im Stillstand oder beendet nie die Phase „Identifying“ (Identifizierung). Intune berechnet die ESP-Richtlinien in der Phase „Identifizierung“. Ein Gerät schließt das Berechnungen der ESP-Richtlinien ggf. nie ab, wenn dem aktuellen Benutzer keine Intune-Lizenz zugewiesen ist.  
 - Die Konfiguration der Microsoft Defender-Anwendungssteuerung bewirkt eine Aufforderung zum Neustart im Autopilot-Modus. Das Konfigurieren der Microsoft Defender-Anwendung (mit AppLocker als Kryptografiedienstanbieter) erfordert einen Neustart. Wenn diese Richtlinie konfiguriert ist, kann dies dazu führen, dass ein Gerät im Autopilot-Modus neu gestartet wird. Derzeit gibt es keine Möglichkeit, den Neustart zu unterdrücken oder zu verschieben.
 - Wenn die DeviceLock-Richtlinie (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) als Teil eines ESP-Profils aktiviert ist, kann die Windows-Willkommensseite oder automatische Anmeldung am Benutzerdesktop aus zwei Gründen unerwartet fehlschlagen.
@@ -208,4 +218,5 @@ Nachstehend sind bekannte Probleme aufgeführt.
   - Bei der automatischen Anmeldung tritt ein Fehler auf, wenn das Gerät neu gestartet wird, nachdem der Benutzer seine Azure AD-Anmeldeinformationen eingegeben, aber die ESP-Phase „Geräteeinrichtung“ noch nicht beendet hat. Dieser Fehler tritt auf, weil die ESP-Phase „Geräteeinrichtung“ nie abgeschlossen wurde. Die Problemumgehung besteht im Zurücksetzen des Geräts.
 
 ## <a name="next-steps"></a>Nächste Schritte
+
 Nachdem Sie die Windows-Registrierungsseiten eingerichtet haben, sollten Sie sich informieren, wie Sie Windows-Geräte verwalten. Weitere Informationen finden Sie unter [Was ist die Microsoft Intune-Geräteverwaltung?](../remote-actions/device-management.md).

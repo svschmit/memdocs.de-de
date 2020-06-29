@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 06/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269013"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093668"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>iOS- und iPadOS-Geräteeinstellungen zum Zulassen oder Einschränken von Funktionen mit Intune
 
@@ -72,7 +73,7 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
   - iOS 9.3 und höher
   - iOS 13.0 und höher
 
-- **Unangekündigte Bildschirmüberwachung über Classroom-App**: **Zulassen** ermöglicht Lehrkräften, die Bildschirme der iOS/iPadOS-Geräte ihrer Kursteilnehmer mithilfe der Classroom-App zu überwachen, ohne dass die Kursteilnehmer dies mitbekommen. In einer Klasse registrierte Kursteilnehmergeräte, die die Classroom-App verwenden, gewähren dem Kursleiter automatisch die Berechtigung. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem diese Funktion verhindern.
+- **Unangekündigte Bildschirmüberwachung über Classroom-App**: Mit der Option **Zulassen** können Lehrkräfte die Bildschirme der iOS/iPadOS-Geräte von Kursteilnehmern ansehen, ohne dass diese es erfahren. In einer Klasse registrierte Kursteilnehmergeräte, die die Classroom-App verwenden, gewähren dem Kursleiter automatisch die Berechtigung. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem diese Funktion verhindern.
 
   Legen Sie **Blockieren** für die Einstellung **Bildschirmaufnahme** fest, um diese Einstellung zu verwenden.
 
@@ -198,7 +199,7 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
   - **10:** Der Bildschirm wird nach zehn Minuten Inaktivität gesperrt.
   - **15:** Der Bildschirm wird nach 15 Minuten Inaktivität gesperrt.
 
-  Wenn ein Wert nicht für iOS und iPadOS zulässig ist, verwendet Apple den *niedrigsten* nächstgelegenen Wert. Wenn Sie beispielsweise `4` Minuten angeben, verwenden iPadOS-Geräte `2` Minuten. Wenn Sie `10` Minuten angeben, verwenden iOS-Geräte `5` Minuten. Dies ist eine Apple-Einschränkung.
+  Wenn ein Wert nicht für iOS und iPadOS zulässig ist, verwendet Apple den *niedrigsten* nächstgelegenen Wert. Wenn Sie beispielsweise `4` Minuten angeben, verwenden iPadOS-Geräte `2` Minuten. Wenn Sie `10` Minuten angeben, verwenden iOS-Geräte `5` Minuten. Dieses Verhalten ist eine Apple-Einschränkung.
   
   > [!NOTE]
   > Die Benutzeroberfläche von Intune für diese Einstellung trennt die von iOS und iPadOS unterstützten Werte nicht voneinander. Diese Benutzeroberfläche wird in einem zukünftigen Release möglicherweise aktualisiert.
@@ -429,6 +430,25 @@ Um diesen Listen Apps hinzuzufügen, können Sie:
 > [!IMPORTANT]
 > Geräteprofile, die Einstellungen für eingeschränkte Apps verwenden, müssen Benutzergruppen zugewiesen werden.
 
+## <a name="shared-ipad"></a>Shared iPad
+
+Diese Funktion gilt für:
+
+- iPadOS 13.4 und höher
+- Shared iPad
+
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Die Einstellungen gelten für: Automatisierte Geräteregistrierung (überwacht)
+
+- **Temporäre Shared iPad-Sitzungen blockieren:** Mit temporären Sitzungen können Benutzer sich als Gast anmelden und Benutzer müssen keine verwaltete Apple-ID und kein Kennwort eingeben.
+
+  Wenn **Ja** festgelegt ist:
+
+  - können Shared iPad-Benutzer keine temporären Sitzungen verwenden.
+  - müssen Benutzer sich mit ihrer verwalteten Apple-ID und ihrem Kennwort bei dem Gerät anmelden.
+  - wird die Option für Gastkonten nicht auf dem Sperrbildschirm der Geräte angezeigt.
+
+  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem erlaubt Shared iPad-Benutzern standardmäßig die Anmeldung beim Gerät mit dem Gastkonto. Wenn der Benutzer sich abmeldet, werden keine Daten vom Benutzer gespeichert oder mit iCloud synchronisiert.
+
 ## <a name="show-or-hide-apps"></a>Apps ein- oder ausblenden
 
 Diese Funktion gilt für:
@@ -599,12 +619,17 @@ Apps können Sie wie folgt hinzufügen:
 
 Verwenden Sie diese Einstellungen, um iOS-/iPadOS-Geräte so zu konfigurieren, dass bestimmte Apps im autonomen Einzelanwendungsmodus ausgeführt werden. Wenn dieser Modus konfiguriert ist und Benutzer eine der konfigurierten Apps starten, wird das Gerät für diese App gesperrt. Benutzer können die App bzw. den Task erst dann wechseln, wenn sie die zulässige App schließen.
 
-Sie können beispielsweise für eine Schul- oder Universitätsumgebung eine App hinzufügen, mit der Benutzer einen Test auf dem Gerät durchführen können. Alternativ können Sie auch das Gerät in der Unternehmensportal-App sperren, bis sich der Benutzer authentifiziert hat. Wenn Benutzer die App-Aktionen abschließen oder Sie diese Richtlinie entfernen, kehrt das Gerät in seinen normalen Zustand zurück.
+- Sie können beispielsweise für eine Schul- oder Universitätsumgebung eine App hinzufügen, mit der Benutzer einen Test auf dem Gerät durchführen können. Alternativ können Sie auch das Gerät in der Unternehmensportal-App sperren, bis sich der Benutzer authentifiziert hat. Wenn Benutzer die App-Aktionen abschließen oder Sie diese Richtlinie entfernen, kehrt das Gerät in seinen normalen Zustand zurück.
 
-> [!NOTE]
-> Nicht alle Apps unterstützen den autonomen Einzelanwendungsmodus. In der Regel ist eine Bundle-ID oder ein Schlüssel-Wert-Paar erforderlich, die bzw. das von einer App-Konfigurationsrichtlinie bereitgestellt wird, um den autonomen Einzelanwendungsmodus für eine App zu aktivieren. Weitere Informationen finden Sie im Abschnitt über die [`autonomousSingleAppModePermittedAppIDs`-Einschränkung](https://developer.apple.com/documentation/devicemanagement/restrictions) in der MDM-Dokumentation von Apple. Weitere Informationen zu den erforderlichen spezifischen Einstellungen für die App, die Sie konfigurieren, finden Sie in der Dokumentation des jeweiligen Herstellers.
+- Nicht alle Apps unterstützen den autonomen Einzelanwendungsmodus. In der Regel ist eine Bundle-ID oder ein Schlüssel-Wert-Paar erforderlich, die bzw. das von einer App-Konfigurationsrichtlinie bereitgestellt wird, um den autonomen Einzelanwendungsmodus für eine App zu aktivieren. Weitere Informationen finden Sie im Abschnitt über die [`autonomousSingleAppModePermittedAppIDs`-Einschränkung](https://developer.apple.com/documentation/devicemanagement/restrictions) in der MDM-Dokumentation von Apple. Weitere Informationen zu den erforderlichen spezifischen Einstellungen für die App, die Sie konfigurieren, finden Sie in der Dokumentation des jeweiligen Herstellers.
 
-Zum Beispiel soll Zoom zufolge zum Konfigurieren von Zoom Rooms im autonomen Einzelanwendungsmodus die Bundle-ID `us.zoom.zpcontroller` verwendet werden. In diesem Fall nehmen Sie auch eine Änderung im Zoom-Webportal vor. Weitere Informationen finden Sie im [Zoom Help Center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+  Zum Beispiel soll Zoom zufolge zum Konfigurieren von Zoom Rooms im autonomen Einzelanwendungsmodus die Bundle-ID `us.zoom.zpcontroller` verwendet werden. In diesem Fall nehmen Sie auch eine Änderung im Zoom-Webportal vor. Weitere Informationen finden Sie im [Zoom Help Center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+
+- Auf iOS/iPadOS-Geräten unterstützt die Unternehmensportal-App den autonomen Einzelanwendungsmodus (ASAM). Wenn die Unternehmensportal-App sich im autonomen Einzelanwendungsmodus befindet, wird das Gerät in der Unternehmensportal-App gesperrt, bis der Benutzer authentifiziert wurde. Wenn Benutzer sich bei der Unternehmensportal-App anmelden, können sie andere Apps und die Schaltfläche „Startbildschirm“ auf dem Gerät verwenden. Wenn sie sich von der Unternehmensportal-App abmelden, kehrt das Gerät in den Einzelanwendungsmodus zurück und sperrt die Unternehmensportal-App.
+
+  Geben Sie in diesen Einstellungen den Namen der Unternehmensportal-App (z. B. `Microsoft Intune Company Portal`) und die Paket-ID (`com.microsoft.CompanyPortal`) ein, um die Unternehmensportal-App in eine App zum An- und Abmelden umzuwandeln (aktivieren Sie den autonomen Einzelanwendungsmodus). Nachdem dieses Profil zugewiesen wurde, müssen Sie die Unternehmensportal-App öffnen, um die App zu sperren, damit Benutzer sich bei dieser an- und abmelden können.
+  
+  Wenn das Gerätekonfigurationsprofil entfernt wird und der Benutzer sich abmeldet, wird das Gerät nicht in der Unternehmensportal-App gesperrt.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Die Einstellungen gelten für: Automatisierte Geräteregistrierung (überwacht)
 

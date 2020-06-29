@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761f46cdf8865694ba8960044954a16c415a3eba
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4319435b170203f6dfd3763f1d05d2752fc76f8e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988221"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107523"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Suchen des primären Benutzers eines Intune-Geräts
 
@@ -45,9 +45,8 @@ Der primäre Benutzer eines Geräts kann für Windows 10-Geräte aktualisiert we
 Nachdem der primäre Benutzer aktualisiert wurde, wird er auch in Intune und auf Azure AD-Geräteblättern aktualisiert.
 >[!NOTE]
 >1. Aktualisierungen des primären Benutzers über Endpoint Manager und Azure AD können bis zu 10 Minuten in Anspruch nehmen.
->2. Der primäre Benutzer kann derzeit auf gemeinsam verwalteten Windows 10-Geräten nicht geändert werden. 
->3. Wenn Sie den primären Benutzer des Geräts ändern, werden keine Änderungen an der lokalen Gruppenmitgliedschaft wie z. B. Hinzufügen oder Entfernen von Benutzern aus der lokalen Gruppe „Administratoren“ vorgenommen.
->4. Durch das Ändern des primären Benutzers wird der „Registriert durch“-Benutzer nicht geändert. 
+>2. Wenn Sie den primären Benutzer des Geräts ändern, werden keine Änderungen an der lokalen Gruppenmitgliedschaft wie z. B. Hinzufügen oder Entfernen von Benutzern aus der lokalen Gruppe „Administratoren“ vorgenommen.
+>3. Durch das Ändern des primären Benutzers wird der „Registriert durch“-Benutzer nicht geändert. 
 
 
 ## <a name="what-is-the-primary-user"></a>Was ist der primäre Benutzer?
@@ -79,16 +78,18 @@ Intune fügt den primären Benutzer während oder kurz nach der Registrierung au
 | Windows | Registrierung nur in MDM | Registrierender Benutzer | Während der Registrierung | 
 | Windows | Hybrid AADJ und GPO für automatische Registrierung | Erster Benutzer, der sich bei Windows anmeldet | Wenn der erste Benutzer sich bei Windows anmeldet| 
 | Windows | Co-Verwaltung | Erster Benutzer, der sich bei Windows anmeldet | Wenn der erste Benutzer sich bei Windows anmeldet | 
-| Windows | Beitritt zu Azure AD (Token für Massenregistrierung) | Keine | Nicht verfügbar | 
-| Windows | Beitritt zu Azure AD (Selbstbereitstellungsmodus mit Autopilot) | Keine | Nicht verfügbar | 
+| Windows | Beitritt zu Azure AD (Token für Massenregistrierung) | Keine | Nicht zutreffend | 
+| Windows | Beitritt zu Azure AD (Selbstbereitstellungsmodus mit Autopilot) | Keine | Nicht zutreffend | 
 | Plattformübergreifend | Benutzergesteuerte Registrierung mit Unternehmensportal-App | Registrierender Benutzer | Während der Registrierung |
 | Plattformübergreifend | Geräteregistrierungs-Manager (Device Enrollment Manager, DEM) | Registrierender DEM-Benutzer | Während der Registrierung |
 | iOS/iPadOS, macOS | Automatisierte Apple-Geräteregistrierung (DEP mit Benutzeraffinität) | Registrierender Benutzer | Während der Registrierung |
-| iOS/iPadOS, macOS | Automatisierte Apple-Geräteregistrierung (DEP ohne Benutzeraffinität) | Keine | Nicht verfügbar |
-| Android | Unternehmenseigene, dedizierte Android-Geräte | Keine | Nicht verfügbar |
+| iOS/iPadOS, macOS | Automatisierte Apple-Geräteregistrierung (DEP ohne Benutzeraffinität) | Keine | Nicht zutreffend |
+| Android | Unternehmenseigene, dedizierte Android-Geräte | Keine | Nicht zutreffend |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Primärer Benutzer und Azure AD-Gerätebesitzer
 In einigen Fällen kann sich der primäre Benutzer in Intune von der Eigenschaft **Besitzer** des Azure AD-Geräts unterscheiden (kann unter **Geräte** > **Azure AD-Geräte** angezeigt werden). Der Azure AD-Gerätebesitzer wird während der Registrierung eines Geräts bei Azure Active Directory hinzugefügt.
+
+Für neu registrierte Azure AD-Geräte wird gleichzeitig die Azure AD-Eigenschaft **Besitzer** festgelegt, wenn der primäre Intune-Benutzer festgelegt wird.
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Verwalten von Geräten mit Microsoft Intune](device-management.md)

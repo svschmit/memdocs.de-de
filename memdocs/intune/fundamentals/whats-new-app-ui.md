@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166161"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740871"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune
 
@@ -34,6 +34,14 @@ Lernen Sie die neuesten Updates für die Microsoft Intune-Apps kennen. Wir verbe
 
 Wenn Sie ein Mitarbeiter oder Kursteilnehmer sind, sollten Sie sich die Screenshots und Links zur Hilfedokumentation für das Unternehmensportal ansehen. Weitere Informationen zur Benutzung der Unternehmensportal-App finden Sie in der [Benutzerhilfe-Dokumentation für das Unternehmensportal](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+
+## <a name="week-of-june-8-2020"></a>Woche vom 8. Juni 2020 
+
+### <a name="updates-to-informational-screen-in-company-portal-for-iosipados----7032452---"></a>Updates für den Informationsbildschirm im Unternehmensportal für iOS und iPadOS <!-- 7032452 -->
+Auf dem Informationsbildschirm für iOS und iPadOS im Unternehmensportal wird jetzt besser erklärt, welche Einblicke und Möglichkeiten Administratoren für Geräte zur Verfügung stehen. Diese Erläuterungen werden nur für unternehmenseigene Geräte angezeigt. Nur der angezeigte Text wurde aktualisiert, nicht die Einblicke und Möglichkeiten, die Administratoren für Benutzergeräte zur Verfügung stehen. Weitere Informationen dazu, was für den Administrator angezeigt wird, finden Sie unter [Welche Informationen erhält meine Organisation, wenn ich mein Gerät registriere?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
+
+
+[![Screenshot des Informationsbildschirms im Unternehmensportal mit dem aktualisierten Text](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
 
 
 ## <a name="week-of-may-18-2020"></a>Woche vom 18. Mai 2020  
@@ -62,12 +70,6 @@ Benutzern wird außerdem im Unternehmensportal-Drawer auf der linken Seite ein L
 Um Platz für diese neuen und verbesserten Benutzerfunktionen zu schaffen, wurde die in der folgenden Abbildung dargestellte Registerkarte **APPS** entfernt.  
 
 ![Beispielabbildung der jetzt entfernten Registerkarte „Apps“ im Unternehmensportal](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
-
-
-
-
-
-
 
 ## <a name="week-of-march-2-2020"></a>Woche des 2. März 2020   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Verbesserte Anmeldefunktion im Unternehmensportal für Android   

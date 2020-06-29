@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65ecc658b0a63b943a1008c879ae63cfc2c4e8a1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988731"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973025"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Hinzufügen von App-Konfigurationsrichtlinien für verwaltete iOS-/iPadOS-Geräte
 
@@ -106,16 +106,16 @@ Die Zeichen \{\{ und \}\} werden nur von Tokentypen verwendet und dürfen nicht 
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Nur Zulassen von konfigurierten Organisationskonten in Apps mit mehreren Identitäten 
 
-Als Microsoft Intune-Administrator können Sie steuern, welche Benutzerkonten zu Microsoft-Apps auf verwalteten Geräten hinzugefügt werden. Sie können den Zugriff auf zulässige Organisationsbenutzerkonten beschränken und persönliche Konten auf registrierten Geräten blockieren. Verwenden Sie für iOS-/iPadOS-Geräte die folgenden Schlüssel-Wert-Paare:
+Als Microsoft Intune-Administrator können Sie steuern, welche Geschäfts-, Schul- oder Unikonten zu Microsoft-Apps auf verwalteten Geräten hinzugefügt werden. Sie können den Zugriff auf zulässige Organisationsbenutzerkonten beschränken und persönliche Konten auf registrierten Geräten blockieren. Verwenden Sie für iOS-/iPadOS-Geräte die folgenden Schlüssel-Wert-Paare in einer App-Konfigurationsrichtlinie für verwaltete Geräte:
 
 | **Key** | **Werte** |
 |----|----|
-| IntuneMAMAllowedAccountsOnly | <ul><li>**Aktiviert**: Das einzige zulässige Konto ist das verwaltete Benutzerkonto, das von dem Schlüssel [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) definiert wird.</li><li>**Deaktiviert** (oder jeder andere Wert, der keine Groß-/Kleinschreibung nicht beachtende Übereinstimmung mit **Aktiviert** ist): Jedes Konto ist zulässig.</li></ul> |
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Aktiviert**: Das einzige zulässige Konto ist das verwaltete Benutzerkonto, das von dem Schlüssel [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) definiert wird.</li><li>**Deaktiviert** (oder jeder andere Wert, der keine Übereinstimmung mit **Aktiviert** ohne Beachtung der Groß-/Kleinschreibung ist): Jedes Konto ist zulässig.</li></ul> |
 | IntuneMAMUPN | <ul><li>UPN des Kontos, das zur Anmeldung bei der App berechtigt ist</li><li> Für bei Intune registrierte Geräte kann das Token <code>{{userprincipalname}}</code> verwendet werden, um das angemeldete Benutzerkonto darzustellen.</li></ul>  |
 
    > [!NOTE]
    > Die folgenden Apps verarbeiten die oben genannte App-Konfiguration und lassen nur Organisationskonten zu:
-   > - Edge für iOS (44.8.7 und höher)
+   > - Microsoft Edge für iOS (44.8.7 und höher)
    > - OneDrive für iOS (10.34 und höher)
    > - Outlook für iOS (2.99.0 und höher)
 
@@ -173,7 +173,7 @@ Intune unterstützt die folgenden Datentypen in einer Eigenschaftenliste:
 
 ### <a name="tokens-used-in-the-property-list"></a>Tokens, die in der Eigenschaftenliste verwendet werden.
 
-Darüber hinaus unterstützt Intune die folgenden Tokentypen in der Eigenschaftenliste:
+Darüber hinaus unterstützt Intune die folgenden Tokentypen in der Eigenschaftsliste:
 - \{\{userprincipalname\}\}: z. B. **John\@contoso.com**
 - \{\{mail\}\}: z. B. **John\@contoso.com**
 - \{\{partialupn\}\}: z.B. **John**

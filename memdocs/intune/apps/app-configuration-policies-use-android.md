@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb376e9574dcbbbefca3c089dc4180356b1d5a89
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973093"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Android Enterprise-Geräte
 
@@ -103,7 +103,7 @@ Wenn Sie eine Variable als Werttypen auswählen möchten, haben Sie folgende Opt
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Nur Zulassen von konfigurierten Organisationskonten in Apps mit mehreren Identitäten 
 
-Als Microsoft Intune-Administrator können Sie steuern, welche Benutzerkonten zu Microsoft-Apps auf verwalteten Geräten hinzugefügt werden. Sie können den Zugriff auf zulässige Organisationsbenutzerkonten beschränken und persönliche Konten auf registrierten Geräten blockieren. Verwenden Sie für Android-Geräte die folgenden Schlüssel/Wert-Paare:
+Als Microsoft Intune-Administrator können Sie steuern, welche Geschäfts-, Schul- oder Unikonten zu Microsoft-Apps auf verwalteten Geräten hinzugefügt werden. Sie können den Zugriff auf zulässige Organisationsbenutzerkonten beschränken und persönliche Konten auf registrierten Geräten blockieren. Verwenden Sie für Android-Geräte die folgenden Schlüssel-Wert-Paare in einer App-Konfigurationsrichtlinie für verwaltete Geräte:
 
 | **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
