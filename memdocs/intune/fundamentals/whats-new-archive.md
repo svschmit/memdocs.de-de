@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1881e43c1725d92a81d794fa240e6394eff1cbd4
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 2cf8e493ed1318fbf1e1fee6ca8a50001a586cd6
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264072"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502390"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Neuerungen in Microsoft Intune (vorherige Monate)
 
@@ -1674,7 +1674,7 @@ Verwenden Sie den neuen [Verschlüsselungsbericht (Vorschau)](../protect/encrypt
 Sie können nun Intune zum [Anzeigen von Details](../protect/encryption-monitor.md) zur BitLocker-Schlüssel-ID und den BitLocker-Wiederherstellungsschlüsseln in Azure Active Directory verwenden.
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>Microsoft Edge-Unterstützung für Intune-Szenarios auf iOS- und Android-Geräten<!-- 3411007 -->
-Microsoft Edge unterstützt alle Verwaltungsszenarios, die Intune Managed Browser unterstützt, und enthält Verbesserungen für die Benutzerfreundlichkeit. Zu den von Intune-Richtlinien aktivierten Microsoft Edge-Unternehmensfeatures gehören doppelte Identitäten, die Integration von App-Schutzrichtlinien, die Integration von Azure-Anwendungsproxys sowie verwaltete Favoriten und Verknüpfungen auf der Startseite. Weitere Informationen finden Sie unter [Microsoft Edge support (Microsoft Edge-Unterstützung)](../apps/app-configuration-managed-browser.md#microsoft-edge-support).
+Microsoft Edge unterstützt alle Verwaltungsszenarios, die Intune Managed Browser unterstützt, und enthält Verbesserungen für die Benutzerfreundlichkeit. Zu den von Intune-Richtlinien aktivierten Microsoft Edge-Unternehmensfeatures gehören doppelte Identitäten, die Integration von App-Schutzrichtlinien, die Integration von Azure-Anwendungsproxys sowie verwaltete Favoriten und Verknüpfungen auf der Startseite. Weitere Informationen finden Sie unter [Microsoft Edge support (Microsoft Edge-Unterstützung)](../apps/manage-microsoft-edge.md).
 
 #### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices--3105122----"></a>Exchange Online/Intune-Connector unterstützen Geräte mit nur Exchange Active Sync nicht mehr<!--3105122  -->
 Die Intune-Konsole unterstützt das Anzeigen und Verwalten von Geräten mit nur EAS, die über den Intune-Connector mit Exchange Online verbunden sind, nicht mehr. Stattdessen stehen Ihnen folgende Optionen zur Verfügung:
@@ -1721,7 +1721,7 @@ Sie können einem iOS-App-Bereitstellungsprofil eine Bereichsmarkierung hinzufü
 Sie können einer App-Konfigurationsrichtlinie eine Bereichsmarkierung hinzufügen, sodass nur Benutzer mit der gleichen Bereichsmarkierung wie die App-Konfigurationsrichtlinie auf diese zugreifen können. Die App-Konfigurationsrichtlinie kann nur den Apps zugeordnet werden, denen dieselben Bereichsmarkierungen zugewiesen sind. Weitere Informationen finden Sie unter [Use RBAC and scope tags (Verwenden der rollenbasierten Zugriffssteuerung und von Bereichsmarkierungen)](scope-tags.md).
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>Microsoft Edge-Unterstützung für Intune-Szenarios auf iOS- und Android-Geräten<!-- 3411007 -->
-Microsoft Edge unterstützt alle Verwaltungsszenarios, die Intune Managed Browser unterstützt, und enthält Verbesserungen für die Benutzerfreundlichkeit. Zu den von Intune-Richtlinien aktivierten Microsoft Edge-Unternehmensfeatures gehören doppelte Identitäten, die Integration von App-Schutzrichtlinien, die Integration von Azure-Anwendungsproxys sowie verwaltete Favoriten und Verknüpfungen auf der Startseite. Weitere Informationen finden Sie unter [Microsoft Edge support (Microsoft Edge-Unterstützung)](../apps/app-configuration-managed-browser.md#microsoft-edge-support).
+Microsoft Edge unterstützt alle Verwaltungsszenarios, die Intune Managed Browser unterstützt, und enthält Verbesserungen für die Benutzerfreundlichkeit. Zu den von Intune-Richtlinien aktivierten Microsoft Edge-Unternehmensfeatures gehören doppelte Identitäten, die Integration von App-Schutzrichtlinien, die Integration von Azure-Anwendungsproxys sowie verwaltete Favoriten und Verknüpfungen auf der Startseite. Weitere Informationen finden Sie unter [Microsoft Edge support (Microsoft Edge-Unterstützung)](../apps/manage-microsoft-edge.md).
 
 
 
@@ -3927,7 +3927,7 @@ Wenn das Profil an das Gerät übertragen wurde, hängt der nächste Schritt von
 #### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>Zugriff auf Protokolle von verwalteten Apps für iOS<!-- 1469920 -->
 Endbenutzer, auf deren Geräten der Managed Browser installiert ist, können jetzt auf den Verwaltungsstatus aller von Microsoft veröffentlichten Apps zugreifen und Protokolle für die Problembehandlung ihrer verwalteten iOS-Apps senden.
 
-Informationen zum Aktivieren des Problembehandlungsmodus im Managed Browser auf einem iOS-Gerät finden Sie unter [Zugreifen auf Protokolle von verwalteten Apps mithilfe des Managed Browsers unter iOS](../apps/app-configuration-managed-browser.md).
+Informationen zum Aktivieren des Problembehandlungsmodus im Managed Browser auf einem iOS-Gerät finden Sie unter [Zugreifen auf Protokolle von verwalteten Apps mithilfe des Managed Browsers unter iOS](../apps/manage-microsoft-edge.md).
 
 #### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>Verbesserungen des Workflows für das Gerätesetup im Unternehmensportal für iOS in Version 2.9.0<!-- 1417174 -->
 
@@ -4347,11 +4347,11 @@ Offline-Apps, die Sie über den Microsoft Store für Unternehmen erworben haben,
 Die Microsoft Teams-App für iOS und Android ist nun Bestandteil der genehmigten Apps für Richtlinien für App-basierten bedingten Zugriff für Exchange und SharePoint Online. Im Azure-Portal kann die App über das Blatt „Intune-App-Schutz“ für alle Mandanten konfiguriert werden, die derzeit auf den App-basierten bedingten Zugriff zurückgreifen.
 
 #### <a name="managed-browser-and-app-proxy-integration---1287310---"></a>Verwaltete Browser- und App-Proxy-Integration<!-- 1287310 -->
-Der Intune Managed Browser kann nun mit dem Azure AD-Anwendungsproxydienst integriert werden, damit Benutzer auf interne Websites zugreifen können, auch wenn Sie remote arbeiten. Benutzer des Browsers geben einfach wie gewohnt die Website-URL ein, und der Managed Browser leitet die Anfrage über das Anwendungsproxy-Webgateway weiter. Weitere Informationen finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser](../apps/app-configuration-managed-browser.md).
+Der Intune Managed Browser kann nun mit dem Azure AD-Anwendungsproxydienst integriert werden, damit Benutzer auf interne Websites zugreifen können, auch wenn Sie remote arbeiten. Benutzer des Browsers geben einfach wie gewohnt die Website-URL ein, und der Managed Browser leitet die Anfrage über das Anwendungsproxy-Webgateway weiter. Weitere Informationen finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser](../apps/manage-microsoft-edge.md).
 
 #### <a name="new-app-configuration-settings-for-the-intune-managed-browser---682951---"></a>Neue App-Konfigurationseinstellungen für Intune Managed Browser<!-- 682951 -->
 In dieser Version haben wir weitere Konfigurationen für die Intune Managed Browser-App für iOS und Android hinzugefügt. Die Standardhomepage und -lesezeichen für den Browser können mit einer App-Konfigurationsrichtlinie konfiguriert werden.
-Weitere Informationen finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser](../apps/app-configuration-managed-browser.md).
+Weitere Informationen finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für verwaltete Browser](../apps/manage-microsoft-edge.md).
 
 #### <a name="bitlocker-settings-for-windows-10----951707---"></a>Einstellungen für BitLocker für Windows 10 <!-- 951707 -->
 Sie können jetzt die BitLocker-Einstellungen für Windows 10-Geräte, mithilfe eines neuen Intune Geräteprofils konfigurieren. Sie können z.B. anfordern, dass Geräte verschlüsselt werden und auch weitere Einstellungen konfigurieren, die angewendet werden, wenn BitLocker aktiviert wird.
@@ -4438,10 +4438,10 @@ Weitere Informationen finden Sie unter [Einstellungen für App-Schutzrichtlinien
 Einige Android-Apps aus dem Store unterstützen verwaltete Konfigurationsoptionen, mit denen ein IT-Administrator steuern kann, wie eine App im Arbeitsprofil ausgeführt wird. Mit Intune können Sie jetzt die von einer App unterstützten Konfigurationen anzeigen und sie im Azure-Portal mithilfe eines Konfigurations-Designers oder JSON-Editors konfigurieren. Weitere Informationen finden Sie unter [Verwenden von App-Konfigurationen für Android for Work](../apps/app-configuration-policies-use-android.md).
 
 #### <a name="new-app-configuration-capability-for-mam-without-enrollment---677969---"></a>Neue App-Konfigurationsfunktion für MAM ohne Registrierung<!-- 677969 -->
-Sie können jetzt App-Konfigurationsrichtlinien über die Verwaltung mobiler Anwendungen (MAM) ohne Registrierungskanal erstellen. Dieses Feature entspricht den App-Konfigurationsrichtlinien, die in der App-Konfiguration für die mobile Geräteverwaltung (MDM) verfügbar sind. Ein Beispiel für die App-Konfiguration mit MAM ohne Registrierung finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für Managed Browser mit Microsoft Intune](../apps/app-configuration-managed-browser.md).
+Sie können jetzt App-Konfigurationsrichtlinien über die Verwaltung mobiler Anwendungen (MAM) ohne Registrierungskanal erstellen. Dieses Feature entspricht den App-Konfigurationsrichtlinien, die in der App-Konfiguration für die mobile Geräteverwaltung (MDM) verfügbar sind. Ein Beispiel für die App-Konfiguration mit MAM ohne Registrierung finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für Managed Browser mit Microsoft Intune](../apps/manage-microsoft-edge.md).
 
 #### <a name="configure-allowed-and-blocked-url-lists-for-the-managed-browser---682960---"></a>Konfigurieren von Listen zugelassener und blockierter URLs für den Managed Browser<!-- 682960 -->
-Sie können jetzt eine Liste zulässiger und blockierter Domänen und URLs für den Intune Managed Browser mithilfe von App-Konfigurationseinstellungen im Azure-Portal konfigurieren. Diese Einstellungen können unabhängig davon verwaltet werden, ob der Browser auf einem verwalteten oder nicht verwalteten Gerät verwendet wird. Weitere Informationen finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für Managed Browser mit Microsoft Intune](../apps/app-configuration-managed-browser.md).
+Sie können jetzt eine Liste zulässiger und blockierter Domänen und URLs für den Intune Managed Browser mithilfe von App-Konfigurationseinstellungen im Azure-Portal konfigurieren. Diese Einstellungen können unabhängig davon verwaltet werden, ob der Browser auf einem verwalteten oder nicht verwalteten Gerät verwendet wird. Weitere Informationen finden Sie unter [Verwalten des Internetzugriffs mittels Richtlinien für Managed Browser mit Microsoft Intune](../apps/manage-microsoft-edge.md).
 
 #### <a name="app-protection-policy-helpdesk-view---1069473---"></a>Helpdeskansicht der App-Schutzrichtlinie<!-- 1069473 -->
 IT-Helpdeskbenutzer können nun den Benutzerlizenzstatus und Status von App-Schutzrichtlinien, die Benutzern zugewiesen sind, auf dem Blatt „Problembehandlung“ überprüfen. Weitere Informationen finden Sie unter [Problembehandlung](./help-desk-operators.md).

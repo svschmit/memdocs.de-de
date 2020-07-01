@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093681"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502373"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listen der Standardeinstellungen für Geräteeinschränkungen für Android und Samsung KNOX in Intune
 
@@ -178,7 +178,7 @@ Fügen Sie für jede Einstellung Ihre Apps hinzu:
 
 Kioskeinstellungen gelten nur für Samsung KNOX Standard-Geräte, und nur für Apps, die Sie mit Intune verwalten.
 
-- Fügen Sie Apps hinzu, die Sie im Kioskmodus des Geräts ausführen möchten. Im Kioskmodus werden nur die Apps ausgeführt, die Sie hinzufügen; nicht hinzugefügte Apps werden nicht ausgeführt. Vorinstallierte Browser werden nicht ausgeführt, wenn das Gerät sich im Kioskmodus befindet. Wenn ein Browser erforderlich ist, erwägen Sie den Einsatz von [Managed Browser](../apps/app-configuration-managed-browser.md).
+- Fügen Sie Apps hinzu, die Sie im Kioskmodus des Geräts ausführen möchten. Im Kioskmodus werden nur die Apps ausgeführt, die Sie hinzufügen; nicht hinzugefügte Apps werden nicht ausgeführt. Vorinstallierte Browser werden nicht ausgeführt, wenn das Gerät sich im Kioskmodus befindet. Wenn ein Browser erforderlich ist, erwägen Sie den Einsatz von [Managed Browser](../apps/manage-microsoft-edge.md).
 
   Ihre App-Optionen sind:
 

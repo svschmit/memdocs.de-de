@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58c78b43fc90aba68fa20d20153b33e7879636e6
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: c0a732db0adf9d08bf8a453a365002d8e1f8b22d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166075"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502713"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Microsoft Intune App SDK – Übersicht
 Das für iOS und Android verfügbare Intune App SDK aktiviert die App für die Unterstützung der [Intune-App-Schutzrichtlinien](../apps/app-protection-policy.md). Wenn App-Schutzrichtlinien für Ihre App gelten, kann sie von Intune verwaltet werden und wird von Intune als verwaltete App erkannt. Mithilfe des SDK soll die Anzahl der vom App-Entwickler vorzunehmenden Codeänderungen minimiert werden. Sie werden feststellen, dass Sie die meisten SDK-Features aktivieren können, ohne das Verhalten Ihrer App ändern zu müssen. Um die Benutzerfreundlichkeit der App für Benutzer und IT-Administratoren zu verbessern, können Sie mithilfe der SDK-APIs das App-Verhalten an die Unterstützung von Funktionen anpassen, die Ihre Mitwirkung erfordern.
@@ -47,7 +47,7 @@ IT-Administratoren können mit einer Richtlinie erzwingen, dass auf dem Gerät g
 IT-Administratoren können Unternehmensdaten in einer von Intune verwalteten App remote zurücksetzen. Diese Funktion basiert auf der Identität, und es werden nur Dateien gelöscht, die der Unternehmensidentität des Endbenutzers zugeordnet sind. Hierfür ist die Mitwirkung der App erforderlich. Die App kann die Identität, für die die Zurücksetzung erfolgen soll, basierend auf den Benutzereinstellungen festlegen. Fehlen solche spezifischen Benutzereinstellungen in der App, besteht das Standardverhalten darin, das Anwendungsverzeichnis zu löschen und den Endbenutzer darüber zu informieren, dass der Zugriff entfernt wurde.
 
 ### <a name="enforce-the-use-of-a-managed-browser"></a>Erzwingen der Verwendung eines verwalteten Browsers
-IT-Administratoren können erzwingen, dass Weblinks in der App mit der [Intune Managed Browser-App](../apps/app-configuration-managed-browser.md) geöffnet werden. Durch diese Funktion wird sichergestellt, dass in einer Unternehmensumgebung angezeigte Links in der Domäne von Apps, die von Intune verwaltet werden, beibehalten werden.
+IT-Administratoren können erzwingen, dass Weblinks in der App mit der [Intune Managed Browser-App](../apps/manage-microsoft-edge.md) geöffnet werden. Durch diese Funktion wird sichergestellt, dass in einer Unternehmensumgebung angezeigte Links in der Domäne von Apps, die von Intune verwaltet werden, beibehalten werden.
 
 ### <a name="enforce-a-pin-policy"></a>Erzwingen einer PIN-Richtlinie
 IT-Administratoren können erzwingen, dass Endbenutzer eine PIN eingeben, ehe sie in der App Zugriff auf Unternehmensdaten erhalten. Dadurch wird sichergestellt, dass es sich bei der Person, die die App verwendet, um dieselben Person handelt, die sich ursprünglich mit ihrem Geschäfts-, Schul- oder Unikonto angemeldet hat. Wenn Endbenutzer ihre PIN konfigurieren, verwendet das Intune App SDK Azure Active Directory, um die Anmeldeinformationen der Endbenutzer mit den Daten des registrierten Intune-Kontos abzugleichen.

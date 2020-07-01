@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de83a021343b733816330bc9be94c57a57afd9f1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989845"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502628"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Verwaltungsfunktionen für registrierte Geräte in Microsoft Intune
 
@@ -55,7 +55,7 @@ Benutzer erhalten Zugriff auf das Unternehmensportal, das es ihnen ermöglicht, 
 |Mobile Anwendungsverwaltung|Konfiguriert die Einschränkungen für Apps, indem die mobile Anwendungsverwaltung für alle Geräte verwendet wird, die über Intune verwaltet oder nicht über Intune verwaltet werden. Sie können die Sicherheit Ihrer Unternehmensdaten erhöhen, indem Sie Vorgänge wie das Kopieren und Einfügen, die externe Sicherung von Daten und die Übertragung von Daten zwischen Apps einschränken.|[Konfigurieren und Bereitstellen von Verwaltungsrichtlinien für mobile Anwendungen in der Microsoft Intune-Konsole](../developer/app-wrapper-prepare-android.md)|
 |Konfiguration mobiler iOS-Apps|Verwendet Konfigurationsrichtlinien für mobile Apps, um Einstellungen für iOS-/iPadOS-Apps anzugeben, die beim Ausführen der App durch den Benutzer erforderlich sein können. Beispielsweise kann eine App erfordern, dass der Benutzer eine Portnummer oder Anmeldeinformationen angibt. Sie können die Konfiguration der App optimieren und die Anzahl von Anrufen beim Support verringern.|Lesen Sie [Konfigurieren von iOS-/iPadOS-Apps mit Konfigurationsrichtlinien für mobile Apps in Microsoft Intune](../apps/app-configuration-policies-use-ios.md).|
 |Bereitstellungsprofile für mobile iOS-/iPadOS-Apps|Hilft Ihnen, Bereitstellungsprofile für iOS-/iPadOS-Apps bereitzustellen, die demnächst ablaufen. |[Verwenden von Richtlinien für mobile iOS-/iPadOS-Bereitstellungsprofile, um zu verhindern, dass Apps ablaufen](../apps/app-provisioning-profile-ios.md)|
-|Managed Browser|Konfiguriert die Richtlinien für verwaltete Browser zur Kontrolle der Websites, die Gerätebenutzer aufrufen können. Darüber hinaus können Sie Richtlinien zur mobilen Anwendungsverwaltung auf den Managed Browser anwenden.|[Verwalten des Internetzugriffs mittels Richtlinien für Managed Browser mit Microsoft Intune](../apps/app-configuration-managed-browser.md)|
+|Managed Browser|Konfiguriert die Richtlinien für verwaltete Browser zur Kontrolle der Websites, die Gerätebenutzer aufrufen können. Darüber hinaus können Sie Richtlinien zur mobilen Anwendungsverwaltung auf den Managed Browser anwenden.|[Verwalten des Internetzugriffs mittels Richtlinien für Managed Browser mit Microsoft Intune](../apps/manage-microsoft-edge.md)|
 |Windows Hello for Business|Ermöglicht die Integration in Windows Hello for Business. Dies ist eine alternative Anmeldemethode für Windows 10, die Active Directory (lokal) oder Azure Active Directory verwendet, um Kennwörter, Smartcards oder virtuelle Smartcards zu ersetzen.|[Steuern der Einstellungen von Windows Hello for Business auf Geräten mit Microsoft Intune](../protect/windows-hello.md)|
 |Per Volumenlizenz erworbene Apps|Unterstützt Sie bei der Verwaltung von Apps, die über ein Volume Purchase Program erworben wurden. Dazu werden die Lizenzinformationen aus dem App Store importiert, es wird nachverfolgt, wie viele Lizenzen Sie verwendet haben, und verhindert, dass mehr App-Kopien installiert werden, als Sie erworben haben.|[Verwalten von Apps, die über ein Volumenprogramm erworben wurden, mithilfe von Microsoft Intune](../apps/vpp-apps.md)|
 

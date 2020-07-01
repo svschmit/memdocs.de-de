@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8605b33d8fb83fb4537182127860f0cbb098e620
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 890a42e3668b00a59f12498ab4f2ba3769225a96
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428616"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502696"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Übersicht über den App-Lebenszyklus in Microsoft Intune
 
@@ -43,7 +43,7 @@ Nachdem Sie die App zu Intune hinzugefügt haben, können Sie diese [für die vo
 Im Rahmen des App-Lebenszyklus werden regelmäßig neue Versionen von Apps veröffentlicht. Intune bietet Tools, mit denen Sie die bereitgestellten Apps leicht auf eine neuere Version [aktualisieren können](apps-add.md). Darüber hinaus können Sie für einige Apps zusätzliche Funktionalität konfigurieren, zum Beispiel:
 
 - Mit [iOS-/iPadOS-App-Konfigurationsrichtlinien](app-configuration-policies-use-ios.md) können Sie Einstellungen für kompatible iOS-/iPadOS-Apps angeben, die bei Ausführung der App verwendet werden. Eine App kann beispielsweise bestimmte Brandingeinstellungen oder den Namen eines Servers abfragen, mit dem diese eine Verbindung herstellen muss.
-- [Verwaltete Browserrichtlinien](app-configuration-managed-browser.md) helfen Ihnen beim Konfigurieren von Einstellungen für den Browser [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps), der den Standardbrowser für das Gerät ersetzt und Ihnen das Einschränken der Websites ermöglicht, die die Benutzer besuchen können.
+- [Verwaltete Browserrichtlinien](manage-microsoft-edge.md) helfen Ihnen beim Konfigurieren von Einstellungen für den Browser [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps), der den Standardbrowser für das Gerät ersetzt und Ihnen das Einschränken der Websites ermöglicht, die die Benutzer besuchen können.
 
 ## <a name="protect"></a>Schützen
 
