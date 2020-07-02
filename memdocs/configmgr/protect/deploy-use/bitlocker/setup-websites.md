@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cbd7c516515718cca96bff9b1715233964cb2aa5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699628"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715678"
 ---
 # <a name="set-up-bitlocker-portals"></a>Einrichten von BitLocker-Portalen
 
@@ -28,7 +28,7 @@ Um die folgenden BitLocker-Verwaltungskomponenten in Configuration Manager verwe
 - Self-Service-Portal für Benutzer
 - Verwaltungs- und Überwachungswebsite (Helpdesk)
 
-Sie können die Portale mit IIS auf einem vorhandenen Standortserver installieren oder einen eigenständigen Webserver verwenden, um sie zu hosten.
+Sie können die Portale auf einem vorhandenen Standortserver oder Standortsystemserver mit installiertem IIS installieren oder einen eigenständigen Webserver als Host für die Portale verwenden.
 
 > [!NOTE]
 > Installieren Sie das Self-Service-Portal und die Verwaltungs- und Überwachungswebsite nur mit einer Datenbank für den primären Standort. Installieren Sie diese Websites in einer Hierarchie für jeden primären Standort.

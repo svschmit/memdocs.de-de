@@ -5,17 +5,17 @@ description: Führen Sie diese Schritte zum Konfigurieren von Softwareupdateklas
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 7e2cc1c2dc52a0bb6eb8d0dd143cbb2d005dc6e9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078463"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84614079"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Konfigurieren der zu synchronisierenden Klassifizierungen und Produkte  
 
@@ -47,9 +47,9 @@ Die Metadaten von Softwareupdates werden während des Synchronisierungsprozesses
      - **Updaterollups:** Gibt eine getestete, kumulative Menge aller Hotfixes, Sicherheitsupdates, kritischer Updates und Updates an, die zur Erleichterung der Bereitstellung zusammengefasst sind. Ein Updaterollup betrifft in der Regel einen bestimmten Bereich, z.B. Sicherheit oder eine Produktkomponente.  
      - **Updates:** Gibt eine im großen Rahmen freigegebene Behebung für ein bestimmtes Problem an. Ein Update betrifft einen nicht schwerwiegenden, nicht sicherheitsrelevanten Fehler.  
      - **Upgrade:** Hierbei handelt es sich um ein Upgrade für Windows 10-Features und -Funktionalität. Ihre Softwareupdatepunkte und Standorte müssen mindestens WSUS 6.2 mit dem [Hotfix 3095113](https://support.microsoft.com/kb/3095113) ausführen, um die Klassifizierung **Upgrade** zu erhalten. Weitere Informationen zum Installieren dieses Updates sowie zu anderen Updates für **Aktualisierungen** finden Sie unter [Voraussetzungen für Softwareupdates in Configuration Manager – Welche Updates sind in WSUS 6.2 und 6.3 erforderlich?](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012).
-
+    
     > [!NOTE]
-    > Sie können das Kontrollkästchen **Microsoft Surface-Treiber und Firmwareupdates einbeziehen** aktivieren, um Microsoft Surface-Treiber zu synchronisieren.<!--1098490--> Weitere Informationen finden Sie im Abschnitt [Microsoft Surface-Treiber und Firmwareupdates einbeziehen](#bkmk_Surface).
+    > Sie können das Kontrollkästchen **Microsoft Surface-Treiber und Firmwareupdates einbeziehen** aktivieren, um Microsoft Surface-Treiber zu synchronisieren.<!--1098490--> Voraussetzung hierfür ist die Installation von mindestens Windows Server 2016 auf allen Softwareupdatepunkten. Wenn Sie einen Softwareupdatepunkt auf einem Computer mit Windows Server 2012 aktivieren, nachdem Sie Surface-Treiber aktiviert haben, sind die Suchergebnisse für die Treiberupdates ungenau. Dies führt zu fehlerhaften Konformitätsdaten, die in der Configuration Manager-Konsole und in Configuration Manager-Berichten angezeigt werden. Weitere Informationen finden Sie unter [Verwalten von Surface-Treibern mit Configuration Manager](../deploy-use/surface-drivers.md).
 
 5. Geben Sie auf der Seite **Produkte** die Produkte an, für die Sie Softwareupdates synchronisieren möchten. Klicken Sie dann auf **Schließen**.  
 
@@ -67,13 +67,6 @@ Die Metadaten von Softwareupdates werden während des Synchronisierungsprozesses
     > - [Automatische Bereitstellungsregeln](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process), die das Produkt **Windows 10** enthalten, werden aktualisiert, sodass sie **Windows 10, Version 1903 und höher** enthalten.
     > - [Wartungspläne](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) werden aktualisiert, sodass sie das Produkt **Windows 10, Version 1903 und höher** enthalten.
 
-## <a name="include-microsoft-surface-drivers-and-firmware-updates"></a><a name="bkmk_Surface"></a> Microsoft Surface-Treiber und Firmwareupdates einbeziehen
-
-Sie können das Kontrollkästchen **Microsoft Surface-Treiber und Firmwareupdates einbeziehen** aktivieren, um Microsoft Surface-Treiber zu synchronisieren.<!--1098490--> Auf allen Softwareupdatepunkten muss Windows Server 2016 mit dem kumulativen Update [KB4025339](https://support.microsoft.com/help/4025339) oder höher ausgeführt werden, damit Surface-Treiber erfolgreich synchronisiert werden können. Wenn Sie einen Softwareupdatepunkt auf einem Computer mit Windows Server 2012 aktivieren, nachdem Sie Surface-Treiber aktiviert haben, sind die Suchergebnisse für die Treiberupdates ungenau. Dies führt zu fehlerhaften Konformitätsdaten, die in der Configuration Manager-Konsole und in Configuration Manager-Berichten angezeigt werden.  
-
-- Dieses Feature wurde erstmals in Version 1706 als [Vorabfeature](../../core/servers/manage/pre-release-features.md) eingeführt. Ab Version 1710 können ist diese Funktion keine Vorabfunktion mehr.  
-- Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
-- Treiber für ARM-Geräte werden für die Synchronisierung nicht unterstützt.
 
 ## <a name="configuring-products-for-versions-of-windows-10"></a>Konfigurieren von Produkten für Windows 10-Versionen
 

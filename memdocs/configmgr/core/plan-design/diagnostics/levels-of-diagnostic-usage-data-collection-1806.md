@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f455615db6600a39460b0180d46039535d331f86
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e47d9ac210d4af25070c6a9cd4b710c383370f54
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695228"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506297"
 ---
 # <a name="diagnostic-and-usage-data-for-1806"></a>Diagnose- und Nutzungsdaten für 1806
 
@@ -291,7 +291,7 @@ Bei Configuration Manager Version 1806 umfasst diese Ebene folgende Daten:
 
 - Windows Hello for Business-Richtlinie (erstellt, bereitgestellt)  
 
-- ***[Neu]*** Anzahl der bereitgestellten Richtlinien für den Microsoft Edge-Browser  
+- ***[Neu]*** Anzahl der bereitgestellten Browserrichtlinien für Microsoft Edge Legacy  
 
 
 ### <a name="content"></a>Content  

@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764117"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531467"
 ---
 # <a name="plan-for-bitlocker-management"></a>Plan für die BitLocker-Verwaltung
 
@@ -23,7 +23,7 @@ ms.locfileid: "83764117"
 
 <!-- 3601034 -->
 
-Ab Version 1910 können Sie die BitLocker-Laufwerkverschlüsselung (BitLocker Drive Encryption, BDE) von Configuration Manager für lokale Windows-Clients verwalten. Configuration Manager bietet eine vollständige Lebenszyklusverwaltung für BitLocker, die die Microsoft BitLocker-Verwaltung und -Überwachung (Microsoft BitLocker Administration and Monitoring, MBAM) ersetzen kann.
+Ab Version 1910 können Sie die BitLocker-Laufwerkverschlüsselung (BitLocker Drive Encryption, BDE) von Configuration Manager für lokale Windows-Clients verwalten, die Active Directory beigetreten sind. Azure Active Directory beigetretene oder Arbeitsgruppenclients werden nicht unterstützt. Configuration Manager bietet eine vollständige Lebenszyklusverwaltung für BitLocker, die die Microsoft BitLocker-Verwaltung und -Überwachung (Microsoft BitLocker Administration and Monitoring, MBAM) ersetzen kann.
 
 > [!Note]  
 > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
@@ -92,7 +92,7 @@ Ermöglichen Sie es Benutzern, ein mit BitLocker verschlüsseltes Gerät mit ein
     > [!NOTE]
     > Installieren Sie das Self-Service-Portal und die Verwaltungs- und Überwachungswebsite nur mit einer Datenbank für den primären Standort. Installieren Sie diese Websites in einer Hierarchie für jeden primären Standort.
 
-- Installieren Sie [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) auf dem Webserver, auf dem das Self-Service-Portal gehostet wird.
+- Installieren Sie auf dem Webserver, auf dem das Self-Service-Portal gehostet wird, [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) und das Feature „.NET Framework 3.5“, ehe Sie den Installationsvorgang starten. Andere erforderliche Windows-Serverrollen und -Features werden während des Portalinstallationsprozesses automatisch installiert.
 
 - Das Benutzerkonto zur Ausführung des Portalinstallationsskripts benötigt auf dem Standortdatenbankserver **sysadmin**-Rechte für SQL. Während des Setupvorgangs legt das Skript die Anmeldung, den Benutzer und die SQL-Rollenberechtigungen für das Computerkonto des Webservers fest. Sie können dieses Benutzerkonto aus der Rolle „sysadmin“ entfernen, nachdem Sie das Setup für das Self-Service-Portal und die Verwaltungs- und Überwachungswebsite abgeschlossen haben.
 

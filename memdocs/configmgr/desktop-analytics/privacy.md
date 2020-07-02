@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223649"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795634"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Desktop Analytics – Datenschutz
 
@@ -57,6 +57,8 @@ In der folgenden Abbildung wird der Fluss der Diagnosedaten von einzelnen Gerät
 
 3. Geräte senden Diagnosedaten an den Microsoft-Diagnosedatenverwaltungsdienst für Windows. Alle Diagnosedaten werden über HTTPS verschlüsselt und während der Übertragung vom Gerät an diesen Dienst wird das Anheften von Zertifikaten genutzt. Der Microsoft-Diagnosedatenverwaltungsdienst wird in der USA gehostet.
 
+      - Bei Anwendungs- und Kernelfehlern, nicht reagierenden Anwendungen und anderen anwendungsspezifischen Problemen wird die Windows-Fehlerberichterstattungs-API verwendet, um anwendungsspezifische Problemberichte an Microsoft zu senden. Ausführliche Informationen zu diesem Dataflow finden Sie unter [Using WER](https://docs.microsoft.com/windows/win32/wer/using-wer) (Verwenden der Windows-Fehlerberichterstattung).
+      
 4. Jeden Tag erzeugt Microsoft eine Momentaufnahme der IT-bezogenen Erkenntnisse. In dieser Momentaufnahme werden die Diagnosedaten von Windows mit Ihren Eingaben für die registrierten Geräte kombiniert. Dieser Vorgang erfolgt in einem vorübergehenden Speicher, der nur von Desktop Analytics verwendet wird. Der vorübergehende Speicher wird in Microsoft-Rechenzentren in den USA gehostet. Alle Daten werden über einen verschlüsselten SSL-Kanal (HTTPS) gesendet. Die Momentaufnahmen werden nach kommerzieller ID voneinander abgegrenzt.  
 
 5. Anschließend werden die Momentaufnahmen in Ihren Azure Log Analytics-Arbeitsbereich kopiert. Diese Datenübertragung erfolgt über HTTPS über das Webhookerfassungsprotokoll, ein Feature von Log Analytics. Desktop Analytics verfügt über keine Lese- oder Schreibberechtigungen für Ihren Log Analytics-Speicher. Desktop Analytics ruft die Webhook-API mit einem SAS-URI (Shared Access Signature) auf. Anschließend ruft Log Analytics die Daten aus den Speichertabellen über HTTPS ab.
@@ -78,6 +80,8 @@ Weitere Informationen zu datenschutzrelevanten Aspekten finden Sie in den folgen
 - [Windows10, Version1809 – einfache Windows-Diagnoseereignisse und -felder](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
 - [Erweiterte Windows 10-Diagnosedatenereignisse und Felder, die von Windows Analytics verwendet werden](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+
+- [Fehlerberichterstattung zum Windows-Setup](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
 
 - [Übersicht über den Diagnosedaten-Viewer](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 

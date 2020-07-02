@@ -2,7 +2,7 @@
 title: Konfigurieren von Azure-Diensten
 titleSuffix: Configuration Manager
 description: Verbinden Sie Ihre Configuration Manager-Umgebung mit Azure-Diensten für die Cloudverwaltung, Microsoft Store für Unternehmen und Log Analytics.
-ms.date: 07/31/2019
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f36da59c6924f6d2f71d882f601c6dd563840d73
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 6ca5307de5c7df54c3cf7924bc91b0175b1bfa39
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022533"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715321"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Konfigurieren von Azure-Diensten zur Verwendung mit dem Configuration Manager
 
@@ -23,22 +23,21 @@ ms.locfileid: "82022533"
 
 Mit dem **Assistenten für Azure-Dienste** können Sie die Konfiguration der von Ihnen mit Configuration Manager verwendeten Azure-Clouddienste vereinfachen. Dieser Assistent bietet eine Erfahrung mit der allgemeinen Konfiguration durch Verwendung der Registrierungen für Azure AD-Web-Apps (Azure Active Directory). Diese Apps bieten Einzelheiten zu Abonnements und Konfiguration. Zudem authentifizieren sie die Kommunikation bei Azure AD. Durch die App müssen Sie nicht jedes Mal dieselben Informationen erneut eingeben, wenn Sie mit Azure eine neue Komponente oder einen neuen Dienst für Configuration Manager einrichten.
 
-
 ## <a name="available-services"></a>Verfügbare Dienste
 
 Konfigurieren Sie die folgenden Azure-Dienste mithilfe dieses Assistenten:  
 
 - **Cloud Management**: Dieser Dienst ermöglicht die Identifizierung von Standort und Clients über Azure AD. Durch diese Authentifizierung werden weitere Szenarios aktiviert, wie z.B.:  
 
-    - [Installieren und Zuweisen von Windows 10-Clients in Configuration Manager mit Authentifizierung über Azure AD](../../../clients/deploy/deploy-clients-cmg-azure.md)  
+  - [Installieren und Zuweisen von Windows 10-Clients in Configuration Manager mit Authentifizierung über Azure AD](../../../clients/deploy/deploy-clients-cmg-azure.md)  
 
-    - [Configure Azure AD User Discovery (Konfigurieren der Azure AD-Benutzerermittlung)](configure-discovery-methods.md#azureaadisc)  
+  - [Configure Azure AD User Discovery (Konfigurieren der Azure AD-Benutzerermittlung)](configure-discovery-methods.md#azureaadisc)  
 
-    - [Configure Azure AD User Group Discovery (Konfigurieren der Azure AD-Benutzergruppenermittlung)](configure-discovery-methods.md#bkmk_azuregroupdisco)
+  - [Configure Azure AD User Group Discovery (Konfigurieren der Azure AD-Benutzergruppenermittlung)](configure-discovery-methods.md#bkmk_azuregroupdisco)
 
-    - Unterstützung bestimmter [Cloud Management Gateway-Szenarios](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
+  - Unterstützung bestimmter [Cloud Management Gateway-Szenarios](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
 
-    - [E-Mail-Benachrichtigungen zur Genehmigung von Anwendungen](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
+  - [E-Mail-Benachrichtigungen zur Genehmigung von Anwendungen](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
 - **Log Analytics-Connector**: [Herstellen einer Verbindung mit Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Synchronisieren Sie die erfassten Daten mit Log Analytics.  
 
@@ -51,7 +50,7 @@ Konfigurieren Sie die folgenden Azure-Dienste mithilfe dieses Assistenten:
 
 Die folgende Tabelle enthält Einzelheiten zu den einzelnen Diensten.  
 
-- **Mandanten**: Die Anzahl der konfigurierbaren Dienstinstanzen. Bei jeder Instanz muss es sich um einen anderen Azure-Mandanten handeln.  
+- **Mandanten**: Die Anzahl der konfigurierbaren Dienstinstanzen. Bei jeder Instanz muss es sich um einen anderen Azure AD-Mandanten handeln.  
 
 - **Clouds**: Die globale Azure-Cloud wird von sämtlichen Diensten unterstützt. Private Clouds wie die Azure US Government Cloud werden jedoch nicht von allen Diensten unterstützt.  
 
@@ -84,7 +83,6 @@ Weitere Informationen zu Azure-Apps finden Sie in den folgenden Artikeln:
 - [Grundlagen der Anwendungsregistrierung in Azure AD](/azure/active-directory/develop/authentication-scenarios)  
 - [Registrieren Sie Ihrer Anwendung bei Ihrem Azure Active Directory-Mandanten](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
 
-
 ## <a name="before-you-begin"></a>Vorbereitung
 
 Nachdem Sie entschieden haben, mit welchem Dienst Sie sich verbinden möchten, sollten Sie sich die Tabelle unter [Dienstdetails](#service-details) ansehen. Diese Tabelle enthält die Informationen, die Sie zum Ausführen des Assistenten für Azure-Dienste benötigen. Besprechen Sie dies vorab mit Ihrem Azure AD-Administrator. Entscheiden Sie, welche der folgenden Aktionen durchgeführt werden sollen:
@@ -96,7 +94,6 @@ Nachdem Sie entschieden haben, mit welchem Dienst Sie sich verbinden möchten, s
 Bei einigen Diensten müssen die Azure AD-Apps über bestimmte Berechtigungen verfügen. Überprüfen Sie die Informationen für die einzelnen Dienste, um alle erforderlichen Berechtigungen zu bestimmen. Bevor Sie eine Web-App importieren können, muss diese z.B. zunächst von einem Administrator im [Azure-Portal](https://portal.azure.com) erstellt werden.
 
 Erteilen Sie beim Konfigurieren des Log Analytics-Connectors Ihrer neu registrierten Web-App die Berechtigung *Mitwirkender* für die Ressourcengruppe, die den relevanten Arbeitsbereich enthält. Mit dieser Berechtigung kann Configuration Manager auf diesen Arbeitsbereich zugreifen. Suchen Sie beim Zuweisen der Berechtigung im Bereich **Benutzer hinzufügen** im Azure-Portal nach dem Namen der App-Registrierung. Dieser Vorgang ist identisch mit der [Configuration Manager-Bereitstellung mit Berechtigungen für Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Ein Azure-Administrator muss diese Berechtigungen zuweisen, bevor Sie die App in Configuration Manager importieren können.
-
 
 ## <a name="start-the-azure-services-wizard"></a>Starten des Assistenten für Azure-Dienste
 
@@ -113,7 +110,6 @@ Erteilen Sie beim Konfigurieren des Log Analytics-Connectors Ihrer neu registrie
     3. Wählen Sie den Azure-Dienst aus, den Sie mit Configuration Manager verbinden möchten.  
 
 4. Klicken Sie auf **Weiter**, um mit der Seite [Azure-App-Eigenschaften](#azure-app-properties) des Assistenten für Azure-Dienste fortzufahren.  
-
 
 ## <a name="azure-app-properties"></a>Azure-App-Eigenschaften
 
@@ -151,15 +147,18 @@ Klicken Sie nach dem Auswählen, Importieren oder Erstellen einer Web-App auf **
 
 Wenn Sie auf der Seite „App“ des Assistenten für Azure-Dienste im Dialogfeld „Server-App“ die Option **Importieren** auswählen, wird das Dialogfeld „Apps importieren“ geöffnet. Auf dieser Seite können Sie die Informationen zu einer Azure AD-Web-App eingeben, die bereits im Azure-Portal erstellt wurde. Zudem werden Metadaten zu dieser Web-App in Configuration Manager importiert. Geben Sie die folgenden Informationen an:
 
-- **Name des Azure AD-Mandanten**
-- **Azure AD-Mandanten-ID**
-- **Anwendungsname**: Der Anzeigename für die App.
-- **Client-ID**
-- **Geheimer Schlüssel**
+- **Name des Azure AD-Mandanten**: Der Name Ihres Azure AD-Mandanten.
+- **ID des Azure AD-Mandanten**: Die GUID Ihres Azure AD-Mandanten.
+- **Anwendungsname**: Ein Anzeigename der App (z. B. in der App-Registrierung).
+- **Client-ID:** Der Wert **Anwendungs- (Client-) ID** der App-Registrierung. Das Format ist eine Standard-GUID.
+- **Geheimer Schlüssel**: Sie müssen den geheimen Schlüssel kopieren, wenn Sie die App in Azure AD registrieren.
 - **Ablauf des geheimen Schlüssels**: Wählen Sie im Kalender ein Datum in der Zukunft aus.
-- **App-ID-URI**: Dieser Wert muss bei Ihrem Azure AD-Mandanten eindeutig sein. Es handelt sich dabei um das Zugriffstoken, das der Configuration Manager-Client verwendet, um Zugriff auf den Dienst anzufordern. Der Standardwert beträgt `https://ConfigMgrService`.  
+- **App-ID-URI**: Dieser Wert muss bei Ihrem Azure AD-Mandanten eindeutig sein. Es handelt sich dabei um das Zugriffstoken, mit dem der Konfigurations-Manager-Client Zugriff auf den Dienst anfordert. Der Wert ist der **URI der Anwendungs-ID** des App-Registrierungseintrags im Azure AD-Portal. Das Format ähnelt `https://ConfigMgrService`.
 
 Klicken Sie nach Eingabe der Informationen auf **Überprüfen**. Klicken Sie anschließend auf **OK**, um das Dialogfeld „Apps importieren“ zu schließen. Diese Aktion kehrt entweder zur Seite [App](#azure-app-properties) des Assistenten für Azure-Dienste oder zum Dialogfeld [Server-App](#server-app-dialog) zurück.
+
+> [!TIP]
+> Wenn Sie die App in Azure AD registrieren, müssen Sie möglicherweise den folgenden **Umleitungs-URI** manuell angeben: `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Geben Sie z. B. die GUID der Client-ID der App an: `ms-appx-web://Microsoft.AAD.BrokerPlugin/a26a653e-17aa-43eb-ab36-0e36c7d29f49`.<!-- SCCMDocs#1135 -->
 
 #### <a name="create-server-application-dialog"></a>Dialogfeld „Serveranwendung erstellen“
 
@@ -167,7 +166,7 @@ Wenn Sie im Dialogfeld „Server-App“ die Option **Erstellen** auswählen, wir
 
 - **Anwendungsname**: Der Anzeigename für die App.
 - **URL für Startseite**: Dieser Wert wird nicht von Configuration Manager verwendet, ist jedoch für Azure AD erforderlich. Der Standardwert beträgt `https://ConfigMgrService`.  
-- **App-ID-URI**: Dieser Wert muss bei Ihrem Azure AD-Mandanten eindeutig sein. Es handelt sich dabei um das Zugriffstoken, das der Configuration Manager-Client verwendet, um Zugriff auf den Dienst anzufordern. Der Standardwert beträgt `https://ConfigMgrService`.  
+- **App-ID-URI**: Dieser Wert muss bei Ihrem Azure AD-Mandanten eindeutig sein. Es handelt sich dabei um das Zugriffstoken, mit dem der Konfigurations-Manager-Client Zugriff auf den Dienst anfordert. Der Standardwert beträgt `https://ConfigMgrService`.  
 - **Gültigkeitsdauer des geheimen Schlüssels:** Wählen Sie entweder **1 Jahr** oder **2 Jahre** aus der Dropdownliste aus. Ein Jahr ist der Standardwert.
 
 Klicken Sie auf **Anmelden**, um sich bei Azure als Administrator zu authentifizieren. Diese Anmeldeinformationen werden nicht in Configuration Manager gespeichert. Für diese Persona sind keine Berechtigungen in Configuration Manager erforderlich. Zudem muss das Konto nicht mit dem Konto identisch sein, auf dem der Assistent für Azure-Dienste ausgeführt wird. Nach einer erfolgreichen Authentifizierung in Azure, wird zu Referenzzwecken der **Name des Azure AD-Mandanten** auf der Seite angezeigt.
@@ -202,7 +201,7 @@ Klicken Sie nach dem Auswählen, Importieren oder Erstellen einer nativen App au
 Wenn Sie beim Dialogfeld „Client-App“ die Option **Importieren** auswählen, wird das Dialogfeld „Apps importieren“ geöffnet. Auf dieser Seite können Sie die Informationen zu einer nativen Azure AD-App eingeben, die bereits im Azure-Portal erstellt wurde. Zudem werden Metadaten zu dieser nativen App in Configuration Manager importiert. Geben Sie die folgenden Informationen an:
 
 - **Anwendungsname**: Der Anzeigename für die App.
-- **Client-ID**
+- **Client-ID:** Der Wert **Anwendungs- (Client-) ID** der App-Registrierung. Das Format ist eine Standard-GUID.
 
 Klicken Sie nach Eingabe der Informationen auf **Überprüfen**. Klicken Sie anschließend auf **OK**, um das Dialogfeld „Apps importieren“ zu schließen. Diese Aktion kehrt zum Dialogfeld [Client-App](#client-app-dialog) zurück.
 
@@ -229,11 +228,7 @@ Nach der Angabe der Web-Apps und nativen Apps auf der Seite „Apps“ fährt de
 
 Schließlich können Sie den Assistenten für Azure-Dienste über die Seiten „Zusammenfassung“, „Status“ und „Abschluss“ abschließen. Sie haben die Konfiguration eines Azure-Diensts in Configuration Manager abgeschlossen. Anhand dieser Anleitung können Sie auch weitere Azure-Dienste konfigurieren.
 
-
 ## <a name="renew-secret-key"></a><a name="bkmk_renew"></a> Geheimen Schlüssel erneuern
-
-> [!Note]
-> In Version 1802 und früher mussten Sie die App neu erstellen, um den geheimen Schlüssel einer Azure-App zu erneuern.
 
 ### <a name="renew-key-for-created-app"></a>Schlüssel für erstellte App erneuern
 
@@ -247,16 +242,14 @@ Schließlich können Sie den Assistenten für Azure-Dienste über die Seiten „
 
 Wenn Sie die Azure-App in Configuration Manager importiert haben, erneuern Sie den Schlüssel über das Azure-Portal. Notieren Sie den neuen geheimen Schlüssel und das Ablaufdatum. Fügen Sie diese Information im Assistent **Geheimen Schlüssel erneuern** hinzu.  
 
-> [!Note]  
+> [!NOTE]
 > Speichern Sie den geheimen Schlüssel, bevor Sie die Seite **Schlüssel** unter den Eigenschaften der Azure-Anwendung schließen. Diese Informationen werden entfernt, wenn Sie die Seite schließen.
-
 
 ## <a name="view-the-configuration-of-an-azure-service"></a>Anzeigen der Konfiguration eines Azure-Diensts
 
 Zeigen Sie die Eigenschaften eines Azure-Diensts an, den Sie zur Verwendung konfiguriert haben. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**, erweitern Sie den Eintrag **Clouddienste**, und wählen Sie **Azure-Dienste** aus. Wählen Sie den Dienst aus, den Sie anzeigen oder bearbeiten möchten, und klicken Sie anschließend auf **Eigenschaften**.
 
 Wenn Sie einen Dienst auswählen und anschließend im Menüband auf **Löschen** klicken, wird durch diese Aktion die Verbindung in Configuration Manager gelöscht. Die App in Azure AD wird dadurch nicht entfernt. Bitten Sie Ihren Azure-Administrator, die App zu löschen, wenn sie nicht mehr benötigt wird. Alternativ können Sie den Assistenten für Azure-Dienste ausführen, um die App zu importieren.<!--483440-->
-
 
 ## <a name="cloud-management-data-flow"></a>Datenfluss bei der Cloudverwaltung
 

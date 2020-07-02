@@ -1,80 +1,108 @@
 ---
 title: Konfigurieren von Microsoft Edge-Einstellungen
 titleSuffix: Configuration Manager
-description: Konfigurieren von Einstellungen für den Microsoft Edge-Webbrowser auf Windows 10-Clients
+description: Konfigurieren von Einstellungen für den Webbrowser Microsoft Edge Legacy auf Windows 10-Clients
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
-ms.topic: conceptual
+ms.date: 06/02/2020
+ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 4ed49ed3623b34bfb51fd66fafa858ae3951a5af
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 898d5240046655ca3d13037f74c92e730ab1993e
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906357"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506138"
 ---
-# <a name="configure-microsoft-edge-settings-in-configuration-manager"></a>Konfigurieren von Microsoft Edge-Einstellungen in Configuration Manager
+# <a name="configure-microsoft-edge-legacy-settings-in-configuration-manager"></a>Konfigurieren von Microsoft Edge Legacy-Einstellungen in Configuration Manager
+
+> [!IMPORTANT]
+> Wenn Sie Microsoft Edge ab Version 77 verwenden und versuchen, den Einstellungsbereich zu öffnen, geben Sie `edge://settings/profiles` in die Adressleiste des Browsers statt in die Suchfunktion ein. Weitere Informationen finden Sie unter [Kennenlernen von Microsoft Edge](https://support.microsoft.com/help/17171/microsoft-edge-get-to-know).
+>
+> Dieser Artikel richtet sich an IT-Experten, die Microsoft Edge Legacy-Einstellungen mit Microsoft Endpoint Configuration Manager verwalten.
 
 *Gilt für: Configuration Manager (Current Branch)*
 
 <!-- 1357310 -->
-Kunden, die den [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge)-Webbrowser auf Windows 10-Clients verwenden, erstellen ab der Version 1802 eine Richtlinie für Configuration Manager-Konformitätseinstellungen, um verschiedene Microsoft Edge-Einstellungen zu konfigurieren. 
+Kunden, die den Webbrowser [Microsoft Edge Legacy](https://docs.microsoft.com/microsoft-edge/deploy/) auf Windows 10-Clients nutzen, erstellen eine Configuration Manager-Konformitätsrichtlinie, um die Browsereinstellungen zu konfigurieren.
 
-Diese Richtlinie gilt nur für Clients unter Windows 10 ab Version 1703. <!--511552-->
+Diese Richtlinie gilt nur für Clients unter Windows 10 ab Version 1703 und Microsoft Edge Legacy ab Version 45. <!--511552-->
 
+Weitere Informationen zum Verwalten von Microsoft Edge ab Version 77 mit Configuration Manager finden Sie unter [Bereitstellen von Microsoft Edge, Version 77 oder höher](../../apps/deploy-use/deploy-edge.md). Weitere Informationen zum Konfigurieren von Richtlinien für Microsoft Edge ab Version 77 finden Sie unter [Microsoft Edge-Richtlinien](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies).
 
 ## <a name="policy-settings"></a>Richtlinieneinstellungen
+
 Diese Richtlinie umfasst derzeit die folgenden Einstellungen:
+
 - **Microsoft Edge-Browser als Standard** festlegen: Konfiguriert die Windows 10-Standard-App-Einstellung für Webbrowser auf Microsoft.
-- **Dropdownliste in Adressleiste zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [AllowAddressBarDropdown-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
-- **Das Synchronisieren von Favoriten zwischen Microsoft-Browsern zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [SyncFavoritesBetweenIEAndMicrosoftEdge-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
-- **Das Löschen von Browserdaten beim Beenden zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [ClearBrowsingDataOnExit-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
-- **DNT-Kopfzeilen zulassen:** Weitere Informationen finden Sie unter [AllowDoNotTrack-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
-- **AutoAusfüllen zulassen:** Weitere Informationen finden Sie unter [AllowAutofill-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
-- **Cookies zulassen:** Weitere Informationen finden Sie unter [AllowCookies-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
-- **Popupblocker zulassen:** Weitere Informationen finden Sie unter [AllowPopups-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
-- **Suchvorschläge in Adressleiste zulassen:** Weitere Informationen finden Sie unter [AllowSearchSuggestionsinAddressBar-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
-- **Senden von Intranetdatenverkehr an Internet Explorer zulassen:** Weitere Informationen finden Sie unter [SendIntranetTraffictoInternetExplorer-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
-- **Kennwort-Manager zulassen:** Weitere Informationen finden Sie unter [AllowPasswordManager-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
-- **Entwicklertools zulassen:** Weitere Informationen finden Sie unter [AllowDeveloperTools-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
-- **Erweiterungen zulassen:** Weitere Informationen finden Sie unter [AllowExtensions-Browserrichtlinie](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
+- **Dropdownliste in Adressleiste zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [AllowAddressBarDropdown-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
 
-### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>Konfigurieren von Windows Defender SmartScreen-Einstellungen für Microsoft Edge
+- **Das Synchronisieren von Favoriten zwischen Microsoft-Browsern zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [SyncFavoritesBetweenIEAndMicrosoftEdge-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+
+- **Das Löschen von Browserdaten beim Beenden zulassen:** Erfordert Windows 10, Version 1703 oder höher. Weitere Informationen finden Sie unter der [ClearBrowsingDataOnExit-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+
+- **DNT-Kopfzeilen zulassen:** Weitere Informationen finden Sie unter [AllowDoNotTrack-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+
+- **AutoAusfüllen zulassen:** Weitere Informationen finden Sie unter [AllowAutofill-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+
+- **Cookies zulassen:** Weitere Informationen finden Sie unter [AllowCookies-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+
+- **Popupblocker zulassen:** Weitere Informationen finden Sie unter [AllowPopups-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+
+- **Suchvorschläge in Adressleiste zulassen:** Weitere Informationen finden Sie unter [AllowSearchSuggestionsinAddressBar-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+
+- **Senden von Intranetdatenverkehr an Internet Explorer zulassen:** Weitere Informationen finden Sie unter [SendIntranetTraffictoInternetExplorer-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+
+- **Kennwort-Manager zulassen:** Weitere Informationen finden Sie unter [AllowPasswordManager-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+
+- **Entwicklertools zulassen:** Weitere Informationen finden Sie unter [AllowDeveloperTools-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+
+- **Erweiterungen zulassen:** Weitere Informationen finden Sie unter [AllowExtensions-Browserrichtlinie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+
+> [!TIP]
+> Weitere Informationen zum Konfigurieren dieser und anderer Einstellungen mithilfe von Gruppenrichtlinien finden Sie unter [Microsoft Edge Legacy-Gruppenrichtlinien](https://docs.microsoft.com/microsoft-edge/deploy/group-policies/).
+
+### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge-legacy"></a>Konfigurieren von Windows Defender SmartScreen-Einstellungen für Microsoft Edge Legacy
 <!--1353701-->
-Ab Version 1806 fügt diese Richtlinie drei Einstellungen für [Windows Defender-SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) hinzu. Die Richtlinie enthält nun die folgenden zusätzlichen Einstellungen auf der Seite **SmartScreen-Einstellungen**:
+Diese Richtlinie fügt drei Einstellungen für [Windows Defender-SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) hinzu. Die Richtlinie enthält nun die folgenden zusätzlichen Einstellungen auf der Seite **SmartScreen-Einstellungen**:
 
 - **SmartScreen zulassen:** Gibt an, ob Windows Defender SmartScreen zugelassen wird. Weitere Informationen finden Sie unter [AllowSmartScreen browser policy (Browserrichtlinie „AllowSmartScreen“)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+
 - **Benutzer können SmartScreen-Aufforderung für Websites außer Kraft setzen:** Gibt an, ob Benutzer die Windows Defender SmartScreen-Filterwarnungen zu potenziell schädlichen Websites außer Kraft setzen können. Weitere Informationen finden Sie unter [PreventSmartScreenPromptOverride browser policy (Browserrichtlinie „PreventSmartScreenPromptOverride“)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+
 - **Benutzer können SmartScreen-Aufforderung für Dateien außer Kraft setzen:** Gibt an, ob Benutzer die Windows Defender SmartScreen-Filterwarnungen zum Herunterladen nicht überprüfter Dateien außer Kraft setzen können. Weitere Informationen finden Sie unter [PreventSmartScreenPromptOverride browser policy (Browserrichtlinie „PreventSmartScreenPromptOverrideForFiles“)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
 
+## <a name="create-the-browser-profile"></a>Erstellen des Browserprofils
 
+1. Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Assets und Konformität**. Erweitern Sie die **Konformitätseinstellungen**, und klicken Sie auf den Knoten **Microsoft Edge-Profile**. Wählen Sie auf dem Menüband **Microsoft Edge-Profil erstellen** aus.
 
-## <a name="create-the-microsoft-edge-browser-profile"></a>Erstellen des Microsoft Edge-Browserprofils
+2. Geben Sie einen **Namen** für die Richtlinie und optional eine **Beschreibung** ein, und wählen Sie **Weiter** aus.
 
-1. Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Assets und Konformität**. Erweitern Sie die **Konformitätseinstellungen**, und klicken Sie auf den Knoten **Microsoft Edge-Profile**. Klicken Sie auf die Menübandoption **Microsoft Edge-Profil erstellen**.
-2. Geben Sie einen **Namen** für die Richtlinie ein, geben Sie optional eine **Beschreibung** ein, und klicken Sie auf **Weiter**.
-3. Ändern Sie auf der Seite **Allgemeine Einstellungen** den Wert für die Einstellungen, die in diese Richtlinie einbezogen werden sollen, zu **Konfiguriert**, und klicken Sie auf **Weiter**. Die Einstellung **Set Edge Browser as default** (Microsoft Edge als Standardbrowser festlegen) muss konfiguriert werden, damit Sie fortfahren können.
-4. Konfigurieren Sie in Version 1806 die Einstellung auf der Seite **SmartScreen-Einstellungen**, und klicken Sie auf **Weiter**. 
-5. Wählen Sie auf der Seite **Unterstützte Plattformen** die Betriebssystemversionen und -architekturen aus, für die diese Richtlinie gelten soll, und klicken Sie auf **Weiter**. 
+3. Ändern Sie auf der Seite **Allgemeine Einstellungen** den Wert für die Einstellungen, die in diese Richtlinie einbezogen werden sollen, in **Konfiguriert**. Um im Assistenten fortfahren zu können, muss die Einstellung mit **Microsoft Edge-Browser als Standard festlegen** konfiguriert werden.
+
+4. Konfigurieren Sie Einstellungen auf der Seite **SmartScreen-Einstellungen**.
+
+5. Wählen Sie auf der Seite **Unterstützte Plattformen** die Betriebssystemversionen und -architekturen aus, für die diese Richtlinie gelten soll.
+
 6. Schließen Sie den Assistenten ab.
-
-
 
 ## <a name="deploy-the-policy"></a>Bereitstellen der Richtlinie
 
-1. Wählen Sie Ihre Richtlinie aus, und klicken Sie auf die Menübandoption **Bereitstellen**.
-2. Klicken Sie auf **Durchsuchen**, um die Benutzer- oder Gerätesammlung auszuwählen, in der die Richtlinie bereitgestellt werden soll. 
-3. Wählen Sie nach Bedarf weitere Optionen aus.  
-     a. Generieren Sie Warnungen, wenn die Richtlinie nicht konform ist.  
-     b. Legen Sie den Zeitplan fest, nach dem der Client die Konformität des Geräts mit dieser Richtlinie auswertet. 
-4. Klicken Sie auf **OK**, um die Bereitstellung zu erstellen.
+1. Wählen Sie Ihre Richtlinie und dann auf dem Menüband **Bereitstellen** aus.
 
+2. Wählen Sie **Durchsuchen** aus, um die Benutzer- oder Gerätesammlung auszuwählen, für die die Richtlinie bereitgestellt werden soll.
 
+3. Wählen Sie nach Bedarf weitere Optionen aus:
+
+    1. Generieren Sie Warnungen, wenn die Richtlinie nicht konform ist.
+
+    2. Legen Sie den Zeitplan fest, nach dem der Client die Konformität des Geräts mit dieser Richtlinie auswertet.
+
+4. Wählen Sie **OK** aus, um die Bereitstellung zu erstellen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

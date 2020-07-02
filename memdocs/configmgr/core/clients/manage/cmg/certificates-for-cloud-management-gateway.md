@@ -5,17 +5,17 @@ description: Lernen Sie die unterschiedlichen digitalen Zertifikate kennen, die 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347201"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715610"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Zertifikate für das Cloudverwaltungsgateway
 
@@ -28,7 +28,8 @@ Zur Verwaltung von Clients im Internet mit dem Cloudverwaltungsgateway (cloud ma
   - [Von einem öffentlichen Anbieter ausgestellte Serverauthentifizierungszertifikate](#bkmk_serverauthpublic)  
   - [Über eine Unternehmens-PKI ausgestellte Serverauthentifizierungszertifikate](#bkmk_serverauthpki)  
 
-- [Clientauthentifizierungszertifikat](#bkmk_clientauth)  
+- [Clientauthentifizierungszertifikat](#bkmk_clientauth)
+  - [CMG-Verbindungspunkt](#bkmk_cmgcp)
   - [Vertrauenswürdige Clientstammzertifikate für CMG](#bkmk_clientroot)  
 
 - [Aktivieren des Verwaltungspunkts für HTTPS](#bkmk_mphttps)  
@@ -73,7 +74,7 @@ Zur Identifizierung eines Diensts in Azure ist für dieses Zertifikat ein auf gl
     > [!Important]  
     > Verwenden Sie diesen Vorgang nicht, um den Dienst im Portal zu erstellen, sondern nur, um die Verfügbarkeit des Namens zu überprüfen.
 
-Wenn Sie auch das CMG für Inhalte aktivieren, überprüfen Sie, ob der CMG-Dienstname auch ein eindeutiger Name eines Azure-Speicherkontos ist. Wenn der Name des CMG-Clouddiensts eindeutig ist, der Kontoname jedoch nicht, kann Configuration Manager den Dienst nicht in Azure bereitstellen. Wiederholen Sie den oben beschriebenen Prozess im Azure-Portal mit folgenden Änderungen:
+Wenn Sie das CMG auch für Inhalte aktivieren, überprüfen Sie, ob der CMG-Dienstname auch ein eindeutiger Name eines Azure-Speicherkontos ist. Wenn der Name des CMG-Clouddiensts eindeutig ist, der Kontoname jedoch nicht, kann Configuration Manager den Dienst nicht in Azure bereitstellen. Wiederholen Sie den oben beschriebenen Prozess im Azure-Portal mit folgenden Änderungen:
 
 - Suchen Sie nach **Speicherkonto**.
 - Testen Sie den gewünschten Namen im Feld **Speicherkontoname**.
@@ -90,7 +91,7 @@ Clients sind auf vertrauenswürdige CMG-Stammzertifikate angewiesen. Dieses Vert
 
   - Sie können auch Configuration Manager-Zertifikatprofile verwenden, um Zertifikate für Clients bereitzustellen. Weitere Informationen finden Sie unter [Einführung in Zertifikatprofile](../../../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
-  - Wenn Sie planen, [den Configuration Manager-Client über Intune zu installieren](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), können Sie auch die Intune-Zertifikatprofile verwenden, um Zertifikate für Clients bereitzustellen. Weitere Informationen finden Sie unter [Konfigurieren eines Zertifikatprofils für Ihre Geräte in Microsoft Intune](https://docs.microsoft.com/intune/certificates-configure).
+  - Wenn Sie planen, [den Configuration Manager-Client über Intune zu installieren](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), können Sie auch die Intune-Zertifikatprofile verwenden, um Zertifikate für Clients bereitzustellen. Weitere Informationen finden Sie unter [Konfigurieren eines Zertifikatprofils für Ihre Geräte in Microsoft Intune](../../../../../intune/protect/certificates-configure.md).
 
 ### <a name="server-authentication-certificate-issued-by-public-provider"></a><a name="bkmk_serverauthpublic"></a> Von einem öffentlichen Anbieter ausgestellte Serverauthentifizierungszertifikate
 
@@ -129,18 +130,35 @@ Erstellen Sie ein benutzerdefiniertes SSL-Zertifikat für das CMG, und gehen Sie
 
 ## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a> Clientauthentifizierungszertifikat
 
-*Dieses Zertifikat ist für internetbasierte Clients erforderlich, auf denen Windows 8.1 ausgeführt wird, sowie für Windows 10-Geräte, die nicht in Azure Active Directory (Azure AD) eingebunden sind. Außerdem wird es für den CMG-Verbindungspunkt benötigt. Nicht erforderlich ist es hingegen für Windows 10-Clients, die in Azure AD eingebunden sind.*
+Anforderungen an das Clientauthentifizierungszertifikat:
+
+- Dieses Zertifikat ist für internetbasierte Clients erforderlich, auf denen Windows 8.1 ausgeführt wird, sowie für Windows 10-Geräte, die nicht in Azure Active Directory (Azure AD) eingebunden sind.
+- Es kann auf dem CMG-Verbindungspunkt erforderlich sein. Weitere Informationen finden Sie unter [CMG-Verbindungspunkt](#bkmk_cmgcp).
+- Nicht erforderlich ist es hingegen für Windows 10-Clients, die in Azure AD eingebunden sind.
+- Wenn Ihr Standort eine Version ab 2002 nutzt, können Geräte ein vom Standort ausgestelltes Token verwenden. Weitere Informationen finden Sie unter [Tokenbasierte Authentifizierung für CMG](../../deploy/deploy-clients-cmg-token.md).
 
 Clients verwenden dieses Zertifikat, um sich bei dem CMG zu authentifizieren. Windows 10-Geräte, die in Hybrid-Azure AD oder in eine Clouddomäne eingebunden sind, benötigen dieses Zertifikat nicht, da sie Azure AD zur Authentifizierung verwenden.
 
 Stellen Sie dieses Zertifikat außerhalb des Configuration Manager-Kontexts bereit. Beispielsweise können Sie mit Active Directory-Zertifikatdienste und einer Gruppenrichtlinie Clientauthentifizierungszertifikate ausstellen. Weitere Informationen finden Sie unter [Bereitstellen des Clientzertifikats für Windows-Computer](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012).
 
-Zum sicheren Weiterleiten von Clientanforderungen benötigt der CMG-Verbindungspunkt ein Clientauthentifizierungszertifikat, das dem Serverauthentifizierungszertifikat im HTTPS-Verwaltungspunkt entspricht. Wenn Clients die Azure AD-Authentifizierung verwenden oder Sie den Verwaltungspunkt für erweitertes HTTP konfigurieren, ist dieses Zertifikat nicht erforderlich. Weitere Informationen finden Sie unter [Verwaltungspunkt für HTTPS aktivieren](#bkmk_mphttps).
-
 > [!NOTE]
 > Microsoft empfiehlt, Geräte zu Azure AD hinzuzufügen. Internetbasierte Geräte können Azure AD verwenden, um sich mit Configuration Manager zu authentifizieren. Außerdem werden sowohl Geräte- als auch Benutzerszenarios ermöglicht, unabhängig davon, ob das Gerät mit dem Internet oder dem internen Netzwerk verbunden ist. Weitere Informationen finden Sie unter [Installieren und Registrieren des Clients mithilfe einer Azure AD-Identität](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 >
-> Ab Version 2002 gilt Folgendes:<!--5686290--> Configuration Manager weitet seine Unterstützung auf internetbasierte Geräte aus, die nur selten eine Verbindung mit dem internen Netzwerk herstellen, die mit Azure Active Directory (Azure AD) nicht verknüpft werden können und die über keine Methode zum Installieren eines von der PKI ausgestellten Zertifikats verfügen. Weitere Informationen finden Sie unter [Tokenbasierte Authentifizierung für CMG](../../deploy/deploy-clients-cmg-token.md).
+> Ab Version 2002 gilt Folgendes:<!--5686290--> Configuration Manager weitet seine Unterstützung auf internetbasierte Geräte aus, die nur selten eine Verbindung mit dem internen Netzwerk herstellen, die Azure AD nicht beitreten können und die über keine Methode zum Installieren eines von der PKI ausgestellten Zertifikats verfügen. Weitere Informationen finden Sie unter [Tokenbasierte Authentifizierung für CMG](../../deploy/deploy-clients-cmg-token.md).
+
+### <a name="cmg-connection-point"></a><a name="bkmk_cmgcp"></a> CMG-Verbindungspunkt
+
+Um Clientanforderungen sicher weiterzuleiten, benötigt der CMG-Verbindungspunkt eine sichere Verbindung mit dem Verwaltungspunkt. Die Konfiguration der CMG-Verbindungspunkte hängt davon ab, wie Sie Ihre Geräte und Verwaltungspunkte konfigurieren.
+
+- Der Verwaltungspunkt verwendet HTTPS.
+
+  - Clients haben ein Clientauthentifizierungszertifikat: Der CMG-Verbindungspunkt benötigt ein Clientauthentifizierungszertifikat, das dem Serverauthentifizierungszertifikat des HTTPS-Verwaltungspunkts entspricht.
+
+  - Clients verwenden die Azure AD-Authentifizierung oder ein Configuration Manager-Token: Dieses Zertifikat ist nicht erforderlich.
+
+- Der Verwaltungspunkt ist für erweitertes HTTP konfiguriert: Dieses Zertifikat ist nicht erforderlich.
+
+Weitere Informationen finden Sie unter [Verwaltungspunkt für HTTPS aktivieren](#bkmk_mphttps).
 
 ### <a name="client-trusted-root-certificate-to-cmg"></a><a name="bkmk_clientroot"></a> Vertrauenswürdige Clientstammzertifikate für CMG
 
@@ -150,8 +168,8 @@ Dieses Zertifikat stellen Sie beim Erstellen des CMG in der Configuration Manage
 
 Das CMG ist auf vertrauenswürdige Clientauthentifizierungszertifikate angewiesen. Dieses Vertrauen kann durch die Bereitstellung einer Vertrauenskette für Stammzertifikate sichergestellt werden. Stellen Sie sicher, dass alle Zertifikate zur Vertrauenskette hinzugefügt werden. Wenn beispielsweise das Clientauthentifizierungszertifikat von einer Zwischenzertifizierungsstelle ausgestellt wird, fügen Sie sowohl das Zwischenzertifikat als auch das Stammzertifikat der Zertifizierungsstellen hinzu.
 
-> [!Note]  
-> Wenn Sie ein CMG erstellen, müssen Sie auf der Seite „Einstellungen“ kein vertrauenswürdiges Stammzertifikat mehr angeben. Dieses Zertifikat ist nicht erforderlich, wenn Sie Azure Active Directory (Azure AD) für die Clientauthentifizierung verwenden. Früher war es im Assistenten erforderlich. Wenn Sie PKI-Clientauthentifizierungszertifikate verwenden, müssen Sie weiterhin ein vertrauenswürdiges Stammzertifikat für das Cloudverwaltungsgateway hinzufügen.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
+> [!NOTE]  
+> Wenn Sie ein CMG erstellen, müssen Sie auf der Seite „Einstellungen“ kein vertrauenswürdiges Stammzertifikat mehr angeben. Dieses Zertifikat ist nicht erforderlich, wenn Sie Azure AD für die Clientauthentifizierung verwenden, war aber früher im Assistenten erforderlich. Wenn Sie PKI-Clientauthentifizierungszertifikate verwenden, müssen Sie weiterhin ein vertrauenswürdiges Stammzertifikat für das Cloudverwaltungsgateway hinzufügen.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 >
 > In Version 1902 und früher können Sie nur zwei vertrauenswürdige Stammzertifizierungsstellen und vier Zwischenzertifizierungsstellen (untergeordnete Zertifizierungsstellen) hinzufügen.
 
@@ -193,7 +211,7 @@ Stellen Sie dieses Zertifikat außerhalb des Configuration Manager-Kontexts bere
 
 Bei Verwendung der Standortoption **Für HTTP-Websitesysteme von Configuration Manager generierte Zertifikate verwenden** kann der Verwaltungspunkt HTTP sein. Weitere Informationen finden Sie unter [Enhanced HTTP (Erweitertes HTTP)](../../../plan-design/hierarchy/enhanced-http.md).
 
-> [!Tip]  
+> [!TIP]
 > Wenn Sie kein erweitertes HTTP verwenden und in Ihrer Umgebung mehrere Verwaltungspunkte vorhanden sind, müssen Sie sie nicht alle als HTTPS-fähig für CMG konfigurieren. Konfigurieren Sie die CMG-fähigen Verwaltungspunkte als **Nur Internet**. Ihre lokalen Clients versuchen dann nicht, Sie zu verwenden.<!-- SCCMDocs#1676 -->
 
 ### <a name="enhanced-http-certificate-for-management-points"></a>Erweitertes HTTP-Zertifikat für Verwaltungspunkte
@@ -240,14 +258,14 @@ Konfigurieren Sie einen lokalen Verwaltungspunkt mit einem der folgenden Clientv
 
 - *Arbeitsgruppe*: Das Gerät ist nicht in eine Domäne oder in Azure AD eingebunden, verfügt jedoch über ein [Clientauthentifizierungszertifikat](#bkmk_clientauth).
 - *In AD-Domäne eingebunden:* Sie binden das Gerät in eine lokale Active Directory-Domäne ein.
-- *In Azure AD eingebunden:* Dies wird auch als „in eine Clouddomäne eingebunden“ bezeichnet. Sie verknüpfen das Gerät mit einem Azure Active Directory-Mandanten. Weitere Informationen finden Sie unter [In Azure AD eingebundene Geräte](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
-- *Hybrid eingebunden:* Sie binden das Gerät in Ihre lokale Active Directory-Instanz ein und registrieren es in Azure Active Directory. Weitere Informationen finden Sie unter [In Azure AD eingebundene Hybridgeräte](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *In Azure AD eingebunden:* Dies wird auch als „in eine Clouddomäne eingebunden“ bezeichnet. Sie verknüpfen das Gerät mit einem Azure AD-Mandanten. Weitere Informationen finden Sie unter [In Azure AD eingebundene Geräte](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
+- *Hybrid eingebunden:* Sie binden das Gerät in Ihre lokale Active Directory-Instanz ein und registrieren es in Azure AD. Weitere Informationen finden Sie unter [In Azure AD eingebundene Hybridgeräte](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - *HTTP*: In den Verwaltungspunkteigenschaften legen Sie **HTTP** für die Clientverbindungen fest.
 - *HTTPS*: In den Verwaltungspunkteigenschaften legen Sie **HTTPS** für die Clientverbindungen fest.
-- *E-HTTP*: Bei den Standorteigenschaften auf der Registerkarte **Kommunikation mit Clientcomputern** legen Sie **HTTPS oder HTTP** als Standortsystemeinstellung fest und aktivieren die Option **Für HTTP-Websitesysteme von Configuration Manager generierte Zertifikate verwenden**. Sie konfigurieren den Verwaltungspunkt für HTTP. Der HTTP-Verwaltungspunkt ist für die HTTP- und HTTPS-Kommunikation (Tokenauthentifizierungsszenarios) bereit.
+- *E-HTTP*: Bei den Standorteigenschaften auf der Registerkarte **Kommunikationssicherheit** legen Sie **HTTPS oder HTTP** als Standortsystemeinstellung fest und aktivieren die Option **Für HTTP-Websitesysteme von Configuration Manager generierte Zertifikate verwenden**. Sie konfigurieren den Verwaltungspunkt für HTTP. Der HTTP-Verwaltungspunkt ist für die HTTP- und HTTPS-Kommunikation (Tokenauthentifizierungsszenarios) bereit.
 
     > [!Note]
-    > Ab Version 1906 heißt diese Registerkarte **Sichere Kommunikation**.<!-- SCCMDocs#1645 -->
+    > In Versionen bis 1902 heißt diese Registerkarte **Clientcomputerkommunikation**.<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Azure-Verwaltungszertifikat
 

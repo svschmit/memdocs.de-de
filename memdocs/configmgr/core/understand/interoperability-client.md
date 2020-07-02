@@ -10,12 +10,12 @@ ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61296321251be45cfa0449a3e4f21ba79a024753
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78e89307e66107b259d818a84fa4dbca878a843c
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706978"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590897"
 ---
 # <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>Verwenden der Configuration Manager-Clientsoftware für erweiterte Interoperabilität mit den zukünftigen Versionen eines Current Branch-Standorts
 
@@ -48,8 +48,10 @@ Denken Sie daran, den erweiterten Interoperabilitätsclient auf den mit Current 
 
 1. Fordern Sie eine unterstützte Version des EIC aus dem Ordner `\SMSSETUP\Client` des Updateinstallationsmediums von Configuration Manager an. Stellen Sie sicher, dass Sie den gesamten Inhalt des Ordners kopieren.  
 
-    > [!TIP]  
-    > Wenn Sie Configuration Manager-Medien im [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) suchen möchten, wechseln Sie zur Registerkarte **Downloads and Keys** (Downloads und Schlüssel), und suchen Sie nach `System Center Config`. Wählen Sie anschließend **System Center Config Mgr (Current Branch)** aus.
+<!--
+    > [!TIP]
+    > To find Configuration Manager media in the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), go to the **Downloads and Keys** tab, and search for **Microsoft Endpoint Configmgr (current branch)**.
+-->
 
 1. Installieren Sie den EIC manuell auf diesen Geräten. Weitere Informationen finden Sie unter [ Manuelles Installieren von Clients](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual).  
 

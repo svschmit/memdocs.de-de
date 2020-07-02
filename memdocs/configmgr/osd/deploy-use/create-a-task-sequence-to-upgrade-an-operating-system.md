@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430131"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383239"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Erstellen einer Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem in Configuration Manager
 
@@ -222,8 +222,10 @@ Ein solches Tool ist Windows [SetupDiag](https://docs.microsoft.com/windows/depl
 - Im Configuration Manager [erstellen Sie ein Paket](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) für das Tool.  
 
 - Fügen Sie dieser Gruppe Ihrer Tasksequenz den Schritt [Befehlszeile ausführen](../understand/task-sequence-steps.md#BKMK_RunCommandLine) hinzu. Verweisen Sie mit der Option **Paket** auf das Tool. Die folgende Zeichenfolge ist das Beispiel einer **Befehlszeile**:  
-    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`  
+    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
+> [!TIP]
+> Verwenden Sie stets die neueste Version von SetupDiag, um die neuesten Funktionen und Korrekturen bekannter Probleme zu erhalten. Weitere Informationen finden Sie unter [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
 
 ## <a name="additional-recommendations"></a>Weitere Empfehlungen
 

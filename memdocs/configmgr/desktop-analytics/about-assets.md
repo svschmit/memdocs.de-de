@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268911"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107309"
 ---
 # <a name="assets-in-desktop-analytics"></a>Objekte in Desktop Analytics
 
@@ -56,7 +56,7 @@ Konfigurieren Sie die **Wichtigkeit** von Apps, indem Sie eine der folgenden Kat
 
 Wenn die Einstellung **Details zu App-Versionen** deaktiviert ist, wird im Bereich „App-Details“ die Anzahl der App-Versionen und Sprachen angezeigt, die zusammengefasst wurden. Wenn Sie Änderungen an den App-Details speichern, gilt dies für alle Versionen. Legen Sie z. B. die **Wichtigkeit** oder **Besitzer** fest. In einigen Werten wird „Mehrere“ angezeigt. Das bedeutet, dass kein konsistenter Wert für alle Versionen vorliegt.
 
-### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" /> Entscheidungen zum automatischen Upgrade von System-und Store-Apps
+### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp"> </a> Entscheidungen zum automatischen Upgrade von System-und Store-Apps
 
 <!-- 3587232 -->
 Das Bestimmen von **Wichtigkeit** und **Upgradeentscheidung** ist unerlässlich für alle beachtenswerten Apps im Desktop Analytics-Workflow. Um den Aufwand hinsichtlich der Kommentierung dieser Apps zu mindern, werden bestimmte App-Typen automatisch als *Nicht wichtig* markiert. Außerdem wird die Upgrade-Entscheidung des Bereitstellungsplans für diese Apps als *Bereit* markiert. Die folgenden Apps sind kompatibel und sollten nach dem Upgrade von Windows weiterhin funktionieren:

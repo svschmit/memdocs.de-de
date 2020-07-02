@@ -10,12 +10,12 @@ ms.assetid: 370fc61f-2d8a-45b4-adc7-7b5d5ede2bf4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae606018baf159fe753645a380593506773c7a39
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35432fe7805c2a301eb8b101c194dad738f8ab6d
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703858"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84505906"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1906"></a>Diagnose- und Nutzungsdaten für Version 1906
 
@@ -316,7 +316,7 @@ Bei Version 1906 von Configuration Manager umfasst diese Ebene folgende Daten:
 
 - Windows Hello for Business-Richtlinie (erstellt, bereitgestellt)  
 
-- Anzahl der bereitgestellten Richtlinien für den Microsoft Edge-Browser  
+- Anzahl der bereitgestellten Browserrichtlinien für Microsoft Edge Legacy  
 
 - Anzahl der OneDrive-Richtlinien (erstellt, bereitgestellt)
 

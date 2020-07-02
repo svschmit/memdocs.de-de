@@ -10,12 +10,12 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 77b4af9d6f5c84cc2c7aaa62d151f9c89b7f474a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0d9feeacf77bbd54c9ac38c2c05ee1560eeacb80
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703838"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506314"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1902"></a>Diagnose- und Nutzungsdaten für Version 1902
 
@@ -314,7 +314,7 @@ Bei Version 1902 von Configuration Manager umfasst diese Ebene folgende Daten:
 
 - Windows Hello for Business-Richtlinie (erstellt, bereitgestellt)  
 
-- Anzahl der bereitgestellten Richtlinien für den Microsoft Edge-Browser  
+- Anzahl der bereitgestellten Browserrichtlinien für Microsoft Edge Legacy  
 
 - ***[Neu]*** Anzahl der OneDrive-Richtlinien (erstellt, bereitgestellt)
 

@@ -2,7 +2,7 @@
 title: Erforderliche Berechtigungen für den Internetzugriff
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie, welche Internetendpunkten zugelassen werden müssen, um die vollständige Funktionalität der Configuration Manager-Features zu gewährleisten.
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454969"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740766"
 ---
 # <a name="internet-access-requirements"></a>Erforderliche Berechtigungen für den Internetzugriff
 
@@ -77,7 +77,8 @@ Weitere Informationen zu dieser Funktion finden Sie unter [Verwalten von Windows
 
 Weitere Informationen zu dieser Funktion finden Sie unter [Konfigurieren von Azure-Diensten zur Verwendung mit dem Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
-- `management.azure.com`  
+- `management.azure.com` (öffentliche Azure-Cloud)
+- `management.usgovcloudapi.net` (Azure-Cloud für US-Behörden)
 
 ## <a name="co-management"></a>Co-Verwaltung
 
@@ -110,31 +111,66 @@ In diesem Abschnitt werden folgende Features behandelt:
 - Integration in Azure Active Directory (Azure AD)
 - Azure AD-basierte Ermittlung
 
-Für die Bereitstellung von CMG/CDP-Diensten benötigt der **Dienstverbindungspunkt** Zugriff auf Folgendes:
+Weitere Informationen zum CMG finden Sie unter [Planen von Cloud Management Gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
-- Abhängig von der Konfiguration können bestimmte Azure-Endpunkte in einzelnen Umgebungen unterschiedlich sein. Configuration Manager speichert diese Endpunkte in der Standortdatenbank. Fragen sie die Tabelle **AzureEnvironments** in SQL Server nach der Liste der Azure-Endpunkte ab.  
+In den folgenden Abschnitten sind die Endpunkte nach Rolle aufgelistet. Einige Endpunkte verweisen auf einen Dienst anhand von `<name>`. Dies ist der Clouddienstname des CMG oder CDP. Wenn Ihr CMG z. B. `GraniteFalls.CloudApp.Net` heißt, ist der tatsächliche Speicherendpunkt `GraniteFalls.blob.core.windows.net`.<!-- SCCMDocs#2288 -->
 
-Der **CMG-Verbindungspunkt** benötigt Zugriff auf die folgenden Dienstendpunkte:
+### <a name="service-connection-point"></a>Dienstverbindungspunkt
+
+Für die Bereitstellung von CMG-/CDP-Diensten benötigt der Dienstverbindungspunkt Zugriff auf Folgendes:
+
+- Abhängig von der Konfiguration können bestimmte Azure-Endpunkte in einzelnen Umgebungen unterschiedlich sein. Configuration Manager speichert diese Endpunkte in der Standortdatenbank. Fragen sie die Tabelle **AzureEnvironments** in SQL Server nach der Liste der Azure-Endpunkte ab.
+
+- [Azure-Dienste](#azure-services)
+
+- Für die Azure AD-Benutzerermittlung:
+
+  - Version 1902 und höher: Microsoft Graph-Endpunkt: `https://graph.microsoft.com/`
+
+  - Version 1810 und früher: Azure AD Graph-Endpunkt: `https://graph.windows.net/`  
+
+### <a name="cmg-connection-point"></a>CMG-Verbindungspunkt
+
+Der CMG-Verbindungspunkt benötigt Zugriff auf die folgenden Dienstendpunkte:
+
+- Clouddienstname (für CMG oder CDP):
+  - `<name>.cloudapp.net` (öffentliche Azure-Cloud)
+  - `<name>.usgovcloudapp.net` (Azure-Cloud für US-Behörden)
 
 - Dienstverwaltungsendpunkt: `https://management.core.windows.net/`  
 
-- Speicherendpunkt: `<name>.blob.core.windows.net` und `<name>.table.core.windows.net`
+- Speicherendpunkt (für inhaltsfähiges CMG oder CDP):
+  - `<name>.blob.core.windows.net` (öffentliche Azure-Cloud)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure-Cloud für US-Behörden)
+<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
-    Hierbei ist `<name>` der Clouddienstname Ihres CMG oder CDP. Wenn Ihr CMG z. B. `GraniteFalls.CloudApp.Net` lautet, ist `GraniteFalls.blob.core.windows.net` der erste Speicherendpunkt, der zugelassen werden muss.<!-- SCCMDocs#2288 -->
+Das CMG-Verbindungspunktstandortsystem unterstützt die Verwendung eines Web-Proxys. Weitere Informationen zum Konfigurieren dieser Rolle für einen Proxy finden Sie unter [Proxyserverunterstützung](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). Der CMG-Verbindungspunkt muss nur eine Verbindung mit den CMG-Dienstendpunkten herstellen. Zugriff auf andere Azure-Endpunkte ist nicht erforderlich.
 
-Für das Abrufen von Azure AD-Tokens über die **Configuration Manager-Konsole** und den **Client**:
+### <a name="configuration-manager-client"></a>Configuration Manager-Client
 
-- ActiveDirectoryEndpoint: `https://login.microsoftonline.com/`  
+- Clouddienstname (für CMG oder CDP):
+  - `<name>.cloudapp.net` (öffentliche Azure-Cloud)
+  - `<name>.usgovcloudapp.net` (Azure-Cloud für US-Behörden)
 
-Für die Azure AD-Benutzerermittlung benötigt der **Dienstverbindungspunkt** Zugriff auf Folgendes:
+- Speicherendpunkt (für inhaltsfähiges CMG oder CDP):
+  - `<name>.blob.core.windows.net` (öffentliche Azure-Cloud)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure-Cloud für US-Behörden)
 
-- Version 1810 und früher: Azure AD Graph-Endpunkt: `https://graph.windows.net/`  
+- Der Azure AD-Endpunkt für den Abruf von Azure AD-Token:
+  - `login.microsoftonline.com` (öffentliche Azure-Cloud)
+  - `login.microsoftonline.us` (Azure-Cloud für US-Behörden)
 
-- Version 1902 und höher: Microsoft Graph-Endpunkt: `https://graph.microsoft.com/`
+### <a name="configuration-manager-console"></a>Configuration Manager-Konsole
 
-Das CMG-Verbindungspunkt-Standortsystem unterstützt die Verwendung eines Webproxys. Weitere Informationen zum Konfigurieren dieser Rolle für einen Proxy finden Sie unter [Proxyserverunterstützung](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). Der CMG-Verbindungspunkt muss nur eine Verbindung mit den CMG-Dienstendpunkten herstellen. Zugriff auf andere Azure-Endpunkte ist nicht erforderlich.
+- Der Azure AD-Endpunkt für den Abruf von Azure AD-Token:
 
-Weitere Informationen zum CMG finden Sie unter [Planen von Cloud Management Gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md).
+  - (öffentliche Azure-Cloud)
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - (Azure-Cloud für US-Behörden)
+    - `login.microsoftonline.us`
 
 ## <a name="software-updates"></a><a name="bkmk_sum"></a> Softwareupdates
 
@@ -204,18 +240,23 @@ Computer mit Configuration Manager-Konsole erfordern für bestimmte Features Zug
 
 Weitere Informationen zu diesem Feature finden Sie unter [Produktfeedback](../../understand/find-help.md#product-feedback).
 
-### <a name="community-workspace-documentation-node"></a>Arbeitsbereich „Community“, Knoten „Dokumentation“
+### <a name="community-workspace"></a>Arbeitsbereich „Community“
+
+#### <a name="documentation-node"></a>Knoten „Dokumentation“
+
+Weitere Informationen zu diesem Konsolenknoten finden Sie unter [Verwenden der Configuration Manager-Konsole](../../servers/manage/admin-console.md).
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-Weitere Informationen zu diesem Konsolenknoten finden Sie unter [Verwenden der Configuration Manager-Konsole](../../servers/manage/admin-console.md).
+#### <a name="community-hub"></a>Community Hub
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+Weitere Informationen zu diesem Feature finden Sie unter [Community Hub](../../servers/manage/community-hub.md).
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>Arbeitsbereich „Überwachung“, Knoten „Standorthierarchie“
 

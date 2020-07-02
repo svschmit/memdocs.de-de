@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428586"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715695"
 ---
 # <a name="deploy-bitlocker-management"></a>Bereitstellen der BitLocker-Verwaltung
 
@@ -126,7 +126,7 @@ Wenn Sie mehr als eine Richtlinie erstellen, können Sie ihre relative Prioritä
 
 1. Wenn Sie möchten, dass die Gerätelaufwerke jederzeit potenziell verschlüsselt oder entschlüsselt werden können, aktivieren Sie die Option **Wiederherstellung außerhalb des Wartungsfensters zulassen**. Wenn die Sammlung über Wartungsfenster verfügt, wird diese BitLocker-Richtlinie dennoch korrigiert.
 
-1. Konfigurieren Sie für den Zeitplan die Option **Einfach** oder **Benutzerdefiniert**. Standardmäßig wertet der Client alle 12 Stunden seine Konformität mit dieser Richtlinie aus.
+1. Konfigurieren Sie für den Zeitplan die Option **Einfach** oder **Benutzerdefiniert**. Der Client beurteilt seine Konformität auf Grundlage der im Zeitplan festgelegten Einstellungen.
 
 1. Klicken Sie auf **OK**, um die Richtlinie bereitzustellen.
 
@@ -191,7 +191,7 @@ Wenn Sie zurzeit Microsoft BitLocker Administration and Monitoring (MBAM) verwen
 
 Wenn Laufwerke bereits mit der BitLocker-Laufwerkverschlüsselung geschützt sind, werden diese von Configuration Manager nicht noch einmal verschlüsselt. Wenn Sie eine BitLocker-Verwaltungsrichtlinie bereitstellen, die nicht dem aktuellen Schutz des Laufwerks entspricht, wird diese als nicht konform gemeldet. Das Gerät bleibt weiterhin geschützt.
 
-Angenommen, Sie haben ein Gerät mit MBAM ohne PIN-Schutz verschlüsselt, obwohl die Configuration Manager-Richtlinie eine PIN erfordert. Das Laufwerk ist nicht mit der Richtlinie konform, obwohl das Laufwerk verschlüsselt ist.
+Angenommen, Sie haben MBAM verwendet, um das Laufwerk mit dem Verschlüsselungsalgorithmus AES-XTS 128 zu verschlüsseln, aber die Configuration Manager-Richtlinie erfordert AES-XTS 256. Das Laufwerk ist nicht mit der Richtlinie konform, obwohl das Laufwerk verschlüsselt ist.
 
 Als Problemumgehung müssen Sie zuerst BitLocker auf dem Gerät deaktivieren. Anschließend stellen Sie eine neue Richtlinie mit den neuen Einstellungen bereit.
 
@@ -201,7 +201,7 @@ Als Problemumgehung müssen Sie zuerst BitLocker auf dem Gerät deaktivieren. An
 
 Der Configuration Manager-Clienthandler für BitLocker erkennt Co-Verwaltung. Wenn das Gerät der Co-Verwaltung unterliegt und Sie die [Endpoint Protection-Workload](../../../comanage/workloads.md#endpoint-protection) auf Intune umstellen, ignoriert der Configuration Manager-Client die BitLocker-Richtlinie des Geräts. Das Gerät bezieht seine Windows-Verschlüsselungsrichtlinie von Intune.
 
-Bei einem Wechsel der Quelle für die Verschlüsselungsverwaltung sollten Sie [erneute Verschlüsselung](#re-encryption) einplanen.
+Wenn Sie Autoritäten für die Verschlüsselungsverwaltung wechseln und sich auch der gewünschte Verschlüsselungsalgorithmus ändert, müssen Sie eine [Neuverschlüsselung](#re-encryption) einplanen.
 
 Weitere Informationen zur Verwaltung von BitLocker mit Intune finden Sie in den folgenden Artikeln:
 

@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 385a7222b33275951de294554a870d8e490a5ddc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702018"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353597"
 ---
 # <a name="task-sequence-steps"></a>Tasksequenzschritte
 
@@ -1869,6 +1869,12 @@ Aktivieren Sie diese Option, um ausführlichere Protokolldateiinformationen zu g
 
 Verwenden Sie diesen Schritt, um die angegebene Befehlszeile auszuführen.  
 
+Der Befehl, der ausgeführt wird, muss die folgenden Kriterien erfüllen:  
+
+- Es darf nicht mit dem Desktop interagieren. Der Befehl muss im Hintergrund oder in einem unbeaufsichtigten Modus ausgeführt werden.  
+
+- Es darf durch die Anwendung kein eigenständiger Computerneustart initiiert werden. Der Befehl muss einen Neustart über den Standardneustartcode 3010 anfordern. Dieses Verhalten stellt sicher, dass die Tasksequenz den Neustart ordnungsgemäß verarbeitet. Wenn der Befehl den Exitcode 3010 zurückgibt, startet die Tasksequenz-Engine den Computer neu. Nach dem Neustart wird die Tasksequenz automatisch fortgesetzt.
+
 Dieser Schritt kann in der Vollversion des Betriebssystems oder in Windows PE ausgeführt werden.
 
 Um diesen Schritt im Tasksequenz-Editor hinzuzufügen, wählen Sie **Hinzufügen**, **Allgemein** und dann **Befehlszeile ausführen** aus.
@@ -1976,6 +1982,12 @@ Fügen Sie andere Exitcodes aus dem Skript hinzu, die vom Schritt als „Erfolgr
 ## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a> PowerShell-Skript ausführen
 
 Verwenden Sie diesen Schritt, um das angegebene Windows PowerShell-Skript auszuführen.  
+
+Das Skript muss folgende Kriterien erfüllen:  
+
+- Es darf nicht mit dem Desktop interagieren. Das Skript muss im Hintergrund oder in einem unbeaufsichtigten Modus ausgeführt werden.  
+
+- Es darf durch die Anwendung kein eigenständiger Computerneustart initiiert werden. Das Skript muss einen Neustart über den Standardneustartcode 3010 anfordern. Dieses Verhalten stellt sicher, dass die Tasksequenz den Neustart ordnungsgemäß verarbeitet. Wenn das Skript den Exitcode 3010 zurückgibt, startet die Tasksequenz-Engine den Computer neu. Nach dem Neustart wird die Tasksequenz automatisch fortgesetzt.
 
 Dieser Schritt kann in der Vollversion des Betriebssystems oder in Windows PE ausgeführt werden. Um diesen Schritt in Windows PE auszuführen, aktivieren Sie PowerShell im Startimage. Aktivieren Sie die Windows PE-PowerShell-Komponente auf der Registerkarte **Optionale Komponenten** in den Eigenschaften des Startimages. Weitere Informationen dazu, wie ein Startimage geändert wird, finden Sie unter [Verwalten von Startimages](../get-started/manage-boot-images.md).  
 

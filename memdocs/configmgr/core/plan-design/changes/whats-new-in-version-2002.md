@@ -2,7 +2,7 @@
 title: Neuerungen in Version 2002
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 2002 des Current Branchs von Configuration Manager eingeführt wurden.
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126480"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721855"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Neuerungen in Version 2002 von Configuration Manager (Current Branch)
 
@@ -329,7 +329,7 @@ Weitere Informationen finden Sie unter [Synchronisieren von Office 365-Updates 
 <!-- 5229962 -->
 Configuration Manager hat die Unterstützung für das Onboarding von Geräten in Microsoft Defender ATP erweitert. Weitere Informationen finden Sie unter [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
 
-## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Durchführen des Onboardings für Konfigurations-Manager-Clients in Microsoft Defender ATP über das Microsoft Endpoint Manager Admin Center
+### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Durchführen des Onboardings für Konfigurations-Manager-Clients in Microsoft Defender ATP über das Microsoft Endpoint Manager Admin Center
 <!--5691658-->
 Sie können nun die Onboardingrichtlinien von Microsoft Defender ATP-Endpunkterkennung und -reaktion für verwaltete Konfigurations-Manager-Clients bereitstellen. Diese Clients benötigen keine Azure AD- oder MDM-Registrierung, und die Richtlinie ist auf ConfigMgr-Sammlungen anstatt auf Azure AD-Gruppen ausgerichtet.
 
@@ -386,6 +386,16 @@ Weitere Informationen finden Sie unter [Produktfeedback](../../understand/find-h
 <!--5891241-->
 
 Ähnlich wie bei Verbesserungen in vorherigen Releases, können Sie jetzt die Suchoption **Alle Unterordner** aus den Knoten **Konfigurationselemente** und **Konfigurationsbaselines** verwenden.
+
+### <a name="community-hub"></a>Community Hub
+
+<!--3555935, 3555936-->
+
+_Erstmals im Juni 2020 eingeführt_
+
+Die IT-Administratorcommunity hat im Laufe der Jahre einen großen Wissensschatz aufgebaut. Anstatt Elemente wie Skripts und Berichte von Grund auf neu zu erfinden, haben wir einen **Community Hub** für Configuration Manager aufgebaut, auf dem Sie sich untereinander austauschen können. Durch die Nutzung der Arbeit anderer können Sie Stunden an Arbeit sparen. Der Community Hub fördert Kreativität, indem er auf der Arbeit anderer aufbaut und andere auf Ihrer Arbeit aufbauen lässt. GitHub hat bereits branchenweite Prozesse und Tools für die gemeinsame Nutzung entwickelt. Jetzt nutzt der Community Hub diese Tools direkt in der Configuration Manager-Konsole als Grundlage für die Weiterentwicklung dieser neuen Community.
+
+Weitere Informationen finden Sie unter [Community Hub und GitHub](../../servers/manage/community-hub.md).
 
 ## <a name="tools"></a><a name="bkmk_tools"></a> Tools
 

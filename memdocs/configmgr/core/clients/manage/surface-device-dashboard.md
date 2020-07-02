@@ -5,17 +5,17 @@ description: Abrufen von Informationen zu Surface-Geräten mit dem Dashboard
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 06/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906289"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613941"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Dashboard für Surface-Geräte in Configuration Manager
 
@@ -59,7 +59,7 @@ Im Dashboard für Surface-Geräte werden drei Diagramme für Ihre Umgebung angez
 
 Weitere Informationen zu Surface-Geräten finden Sie auf der [Surface](https://www.microsoft.com/surface)-Website.
 
-Weitere Informationen zur Bereitstellung von Surface-Firmwareupdates in Configuration Manger finden Sie unter [Verwalten von Surface-Treiberupdates](https://support.microsoft.com/help/4098906).
+Weitere Informationen zur Bereitstellung von Surface-Firmwareupdates in Configuration Manger finden Sie unter [Verwalten von Surface-Treiberupdates](../../../sum/deploy-use/surface-drivers.md).
 
 
 

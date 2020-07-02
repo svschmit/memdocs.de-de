@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c596ba410adc979b92a000c28d815e89695a9b0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694348"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814904"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integrieren mit dem Power BI-Berichtsserver
 
@@ -43,6 +43,8 @@ Außerdem lassen sich Power BI Desktop-Berichtsdateien (.pbix) speichern und auf
     > - Verwenden Sie nur eine Version von [Power BI Desktop, die **für Power BI-Berichtsserver optimiert ist**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
 
 - Bei der Power BI-Integration wird die gleiche rollenbasierte Verwaltung für die Berichterstellung verwendet.
+    > [!NOTE]
+    > Power BI-Berichtsserver unterstützt keine RBAC-fähigen Berichte. Daher werden allen Betrachtern der Berichte unabhängig von der zugewiesenen Berechtigung die gleichen Ergebnisse angezeigt.
 
 ## <a name="configure-the-reporting-services-point"></a>Konfigurieren des Reporting Services-Punkts
 

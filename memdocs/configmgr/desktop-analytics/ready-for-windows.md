@@ -12,16 +12,34 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 75dd74e3c1019c9819b44a0ffa8936eeb9eee366
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268350"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353461"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Häufig gestellte Fragen zur Einstellung von „Ready for Modern Desktop“
 
 <!-- placeholder -->
+
+## <a name="ready-for-windows-adoption-status"></a>Status „Für Windows-Einführung bereit“
+
+Der Einführungsstatus basiert auf Informationen von kommerziellen Geräten, die Daten an Microsoft weitergeben. Der Status ist in Supporthinweise von Softwareanbietern integriert.
+
+Desktop Analytics gibt den Einführungsstatus für jede Version eines Objekts an, das auf kommerziellen Geräten gefunden wurde. Dieser Status enthält keine Daten von Endanwendergeräten oder Geräten, die keine Daten übermitteln. Der Status ist möglicherweise nicht repräsentativ für die Einführungsrate auf allen Windows 10-Geräten.
+
+Mögliche Kategorien:
+
+- **Umfassend eingeführt**: Diese App wurde auf mindestens 100.000 kommerziellen Windows 10-Geräten installiert.
+
+- **Eingeführt**: Diese App wurde auf mindestens 10.000 kommerziellen Windows 10-Geräten installiert.
+
+- **Unzureichende Daten**: Zu wenige kommerzielle Windows 10-Geräte teilen Informationen zu dieser App mit Microsoft, sodass die Einführung nicht kategorisiert werden kann.
+
+- **Entwickler kontaktieren**: Möglicherweise treten Kompatibilitätsprobleme mit dieser Version der App auf. Microsoft empfiehlt, den Softwareanbieter zu kontaktieren, um weitere Informationen einzuholen.
+
+- **Unbekannt**: Für diese Version der Anwendung sind keine Informationen verfügbar. Eventuell sind Informationen zu anderen Versionen der Anwendung vorhanden.
 
 ## <a name="general"></a>Allgemein
 

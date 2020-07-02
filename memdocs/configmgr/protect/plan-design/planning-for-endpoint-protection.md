@@ -9,12 +9,12 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 720b5060c913ff3157624c4b6060802af396d221
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590506"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Planen von Endpoint Protection in Configuration Manager
 
@@ -81,7 +81,7 @@ Mit Endpoint Protection in Configuration Manager können Sie Antischadsoftware-R
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
-Ab Version 1606 von Configuration Manager (Current Branch) kann Endpoint Protection Microsoft Defender Advanced Threat Protection (ATP) (früher als Windows Defender ATP bezeichnet) verwalten und überwachen. Microsoft Defender ATP ist ein Dienst, der Unternehmen dabei unterstützt, erweiterte Angriffe auf ihre Netzwerke zu entdecken, zu untersuchen, und darauf zu reagieren. Weitere Informationen finden Sie unter [Microsoft Defender Advanced Threat Protection](../deploy-use/windows-defender-advanced-threat-protection.md).
+Ab Version 1606 von Configuration Manager (Current Branch) kann Endpoint Protection Microsoft Defender Advanced Threat Protection (ATP) (früher als Windows Defender ATP bezeichnet) verwalten und überwachen. Microsoft Defender ATP ist ein Dienst, der Unternehmen dabei unterstützt, erweiterte Angriffe auf ihre Netzwerke zu entdecken, zu untersuchen, und darauf zu reagieren. Weitere Informationen finden Sie unter [Microsoft Defender Advanced Threat Protection](../deploy-use/defender-advanced-threat-protection.md).
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection-Workflow  
  Das folgende Diagramm bringt Ihnen den Workflow zur Implementierung von Endpoint Protection in Ihrer Configuration Manager-Hierarchie näher.  

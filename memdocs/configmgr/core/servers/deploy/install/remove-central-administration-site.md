@@ -2,7 +2,7 @@
 title: Entfernen des Standorts der zentralen Verwaltung (Central Administration Site, CAS)
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie, wie Sie den Standort der zentralen Verwaltung entfernen können, um Ihre Configuration Manager-Infrastruktur auf einen einzelnen, eigenständigen primären Standort zu vereinfachen.
-ms.date: 04/01/2020
+ms.date: 06/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6704075d707306f55a50a937185c9bdd28b18cc5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700618"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613974"
 ---
 # <a name="remove-the-central-administration-site"></a>Entfernen des Standorts der zentralen Verwaltung
 
@@ -143,7 +143,7 @@ Nachdem Sie den CAS entfernt haben, sollten Sie sich die folgenden Schritte anse
 
 - Wenn Sie Configuration Manager mit [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context) verbinden, müssen Sie die Verbindung zurücksetzen. Der erste Schritt für eine Problembehebung ist das [Erneuern des geheimen Schlüssels](../configure/azure-services-wizard.md#bkmk_renew). Wenn dies das Problem nicht behebt, stellen Sie die Verbindung neu her.<!-- 5584635 -->
 
-- Wenn Sie in der Version 2002 die Synchronisierung von Surface-Treibern aktivieren, müssen Sie dieses Feature neu konfigurieren, nachdem Sie den CAS entfernt haben. Weitere Informationen finden Sie im Abschnitt [Microsoft Surface-Treiber und Firmwareupdates einbeziehen](../../../../sum/get-started/configure-classifications-and-products.md#bkmk_Surface).<!-- 5728727 -->
+- Wenn Sie in der Version 2002 die Synchronisierung von Surface-Treibern aktivieren, müssen Sie dieses Feature neu konfigurieren, nachdem Sie den CAS entfernt haben. Weitere Informationen finden Sie im Abschnitt [Microsoft Surface-Treiber und Firmwareupdates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 
 - Wenn Sie Softwareupdates von Drittanbietern verwalten, ist Folgendes erforderlich:
 

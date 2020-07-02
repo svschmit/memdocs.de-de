@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f0a26d02770ff8460787ee9897bdc8f1218a2c12
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906338"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506161"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Erste Schritte mit Konformitätseinstellungen in Configuration Manager
 
@@ -103,11 +103,8 @@ Die Upgraderichtlinie für die Edition ermöglicht das automatische Upgrade von 
 
 Ausführlichere Informationen finden Sie unter [Aktualisieren von Windows-Geräten mit der Editionsupgraderichtlinie in System Center Configuration Manager](../deploy-use/upgrade-windows-version.md).
 
-
-
-## <a name="microsoft-edge-browser-profiles"></a>Microsoft Edge-Profile
+## <a name="microsoft-edge-legacy-browser-profiles"></a>Browserprofile für Microsoft Edge Legacy
 <!-- 1357310 -->
-Erstellen Sie als [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge)-Benutzer auf Windows 10-Clients ab Version 1802 eine Richtlinie für Configuration Manager-Konformitätseinstellungen, um verschiedene Microsoft Edge-Einstellungen zu konfigurieren. 
+Kunden, die den Webbrowser [Microsoft Edge Legacy](https://docs.microsoft.com/microsoft-edge/deploy/) auf Windows 10-Clients nutzen, erstellen eine Configuration Manager-Konformitätsrichtlinie, um die Browsereinstellungen zu konfigurieren.
 
-Weitere Informationen finden Sie unter [Create Microsoft Edge browser profile (Microsoft Edge-Profile)](../deploy-use/browser-profiles.md).
-
+Weitere Informationen finden Sie unter [Browserprofile für Microsoft Edge Legacy](../deploy-use/browser-profiles.md).

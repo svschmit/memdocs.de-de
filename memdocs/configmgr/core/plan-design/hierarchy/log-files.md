@@ -2,7 +2,7 @@
 title: Protokolldateireferenz
 titleSuffix: Configuration Manager
 description: Dies ist eine Referenz zu sämtlichen Protokolldateien für Configuration Manager-Client und -Server sowie abhängigen Komponenten.
-ms.date: 04/24/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166536"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715576"
 ---
 # <a name="log-file-reference"></a>Protokolldateireferenz
 
@@ -384,7 +384,9 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 
 |Protokollname|Beschreibung|Computer mit Protokolldatei|  
 |--------------|-----------------|----------------------------|  
-|CcmIsapi.log|Zeichnet Aktivitäten im Zusammenhang mit Client-Messaging auf dem Endpunkt auf.|Standortsystemserver|  
+|CcmIsapi.log|Zeichnet Aktivitäten im Zusammenhang mit Client-Messaging auf dem Endpunkt auf.|Standortsystemserver|
+|CCM_STS.log|Zeichnet Aktivitäten für Authentifizierungstoken auf, entweder für von Azure Active Directory oder von der Website ausgestellte Clienttoken.|Standortsystemserver|
+|ClientAuth.log|Zeichnet Signierungs- und Authentifizierungsaktivität auf.|Standortsystemserver|
 |MP_CliReg.log|Zeichnet die vom Verwaltungspunkt verarbeiteten Clientregistrierungsaktivitäten auf.|Standortsystemserver|  
 |MP_Ddr.log|Zeichnet die Konvertierung von XML DDR-Datensätzen von Clients auf und kopiert diese auf den Standortserver.|Standortsystemserver|  
 |MP_Framework.log|Zeichnet die Aktivitäten von Hauptverwaltungspunkt und Clientframeworkkomponenten auf.|Standortsystemserver|  
@@ -394,6 +396,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |MP_Location.log|Zeichnet Aktivitäten im Zusammenhang mit Suchanforderungen und Antworten von Clients auf.|Standortsystemserver|  
 |MP_OOBMgr.log|Zeichnet die Verwaltungspunktaktivitäten im Zusammenhang mit dem Empfangen eines OTP von einem Client auf.|Standortsystemserver|  
 |MP_Policy.log|Zeichnet die Richtlinienkommunikation auf.|Standortsystemserver|  
+|MP_RegistrationManager.log|Zeichnet Aktivitäten im Zusammenhang mit der Clientregistrierung auf, wie z. B. Validierung von Zertifikaten, Zertifikatsperrlisten und Token.|Standortsystemserver|
 |MP_Relay.log|Zeichnet das Übertragen von Dateien auf, die vom Client gesammelt werden.|Standortsystemserver|  
 |MP_Retry.log|Zeichnet die Wiederholungsprozesse der Hardwareinventur auf.|Standortsystemserver|  
 |MP_Sinv.log|Zeichnet Details zum Konvertieren von XML-Softwareinventurdatensätzen von Clients und zum Kopieren der Dateien auf den Standortserver auf.|Standortsystemserver|  
@@ -481,6 +484,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |SMSdpmon.log|Zeichnet Details zum geplanten Task für die Integritätsüberwachung des Verteilungspunkts auf, der auf einem Verteilungspunkt konfiguriert wurde.|Standortserver|  
 |SoftwareCatalogUpdateEndpoint.log|Zeichnet die Aktivitäten im Zusammenhang mit der Verwaltung der im Softwarecenter angezeigten URL für den Anwendungskatalog auf.|Client|  
 |SoftwareCenterSystemTasks.log|Zeichnet die Aktivitäten im Zusammenhang mit der Überprüfung der erforderlichen Komponenten für das Softwarecenter auf.|Client|  
+|TSDTHandler.log|Für den Bereitstellungstyp „Tasksequenz“. Protokolliert den Prozess von der App-Erzwingung (Installation oder Deinstallation) bis zum Start der Tasksequenz. Kann mit „AppEnforce.log“ und „smsts.log“ verwendet werden.|Client|<!-- MEMDocs#336 -->
 
 #### <a name="packages-and-programs"></a>Pakete und Programme
 

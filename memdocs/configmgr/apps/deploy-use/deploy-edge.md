@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2c3a542355dfa01e5f4f5be12f7b1bac10f30250
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689518"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776932"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge-Verwaltung
 
@@ -126,7 +126,7 @@ Aktivieren Sie die folgenden Eigenschaften in den unten angegebenen [Hardwareinv
 - **Standardbrowser (SMS_DefaultBrowser)**
    - Browserprogramm-ID
 
-- **SMS_BrowserUsage (SMS_BrowserUsage)**
+- **Browsernutzung (SMS_BrowserUsage)**
    - BrowserName
    - UsagePercentage
 

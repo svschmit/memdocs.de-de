@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268741"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795650"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Aktivieren der Datenfreigabe für Desktop Analytics
 
@@ -35,8 +35,8 @@ Die grundlegende Funktionalität von Desktop Analytics ist auf die [Diagnosedate
 
 - App-Nutzung
 - [Zusätzliche App-Erkenntnisse](compat-assessment.md#additional-insights)
-- Daten zum Bereitstellungsstatus
-- Systemüberwachungsdaten
+- [Daten zum Bereitstellungsstatus](deploy-prod.md#address-deployment-alerts)
+- [Systemüberwachungsdaten](health-status-monitoring.md)
 
 Microsoft empfiehlt, dass Sie die Diagnosedatenebene **Erweitert (begrenzt)** für Desktop Analytics aktivieren, um eine optimale Leistung des Diensts zu erzielen.
 

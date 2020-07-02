@@ -2,7 +2,7 @@
 title: Parameter und Eigenschaften für die Clientinstallation
 titleSuffix: Configuration Manager
 description: Dieser Abschnitt enthält Informationen zu den ccmsetup-Befehlszeilenparametern und -Befehlszeileneigenschaften für die Installation des Konfigurations-Manager-Clients.
-ms.date: 04/01/2020
+ms.date: 06/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455037"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383035"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informationen zu Parametern und Eigenschaften für die Clientinstallation in Configuration Manager
 
@@ -256,6 +256,28 @@ Beispiel: `CCMSetup.exe /ExcludeFeatures:ClientUI` installiert das Softwarecente
 
 > [!NOTE]  
 > `ClientUI` ist der einzige Wert, der für den Parameter **/ExcludeFeatures** unterstützt wird.
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+Dieser Parameter gibt an, ob ein Client beim Aktivieren von [**Automatisches Clientupgrade**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate) automatisch aktualisiert wird oder nicht.
+
+Unterstützte Werte:
+
+- `TRUE`: Der Client wird nicht automatisch aktualisiert.
+- `FALSE`: Der Client wird automatisch aktualisiert (Standard).
+
+Beispiel:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+Weitere Informationen finden unter [Client für erweiterte Interoperabilität](../../understand/interoperability-client.md).
+
+> [!NOTE]  
+> Bei Verwenden des Parameters **/AlwaysExcludeUpgrade** wird das automatische Upgrade weiterhin ausgeführt. Wenn CCMSetup jedoch zur Durchführung des Upgrades ausgeführt wird, stellt es fest, dass der Parameter **/AlwaysExcludeUpgrade** festgelegt wurde, und protokolliert die folgende Zeile in der Datei **ccmsetup.log**:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup wird dann sofort beendet, ohne das Upgrade durchzuführen.
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> Rückgabecodes von „CCMSetup.exe“
 

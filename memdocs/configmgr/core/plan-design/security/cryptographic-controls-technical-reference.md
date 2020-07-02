@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906564"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353444"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Technische Referenz für kryptografische Steuerelemente
 
@@ -70,7 +70,7 @@ Die Verwendung von Inhaltshashs wird nicht von allen Geräten unterstützt. Ausn
  Sie können für jedes Paket der Betriebssystembereitstellung die Verschlüsselung aktivieren, wenn das Paket über Multicast an Computer übertragen wird. Bei der Verschlüsselung wird der erweiterte Verschlüsselungsstandard (Advanced Encryption Standard, AES) verwendet. Wenn Sie die Verschlüsselung aktivieren, ist keine zusätzliche Konfiguration für das Zertifikat erforderlich. Der multicastfähige Verteilungspunkt generiert automatisch symmetrische Schlüssel zur Paketverschlüsselung. Jedes Paket erhält einen anderen Verschlüsselungsschlüssel. Der Schlüssel wird mithilfe von Windows-Standard-APIs auf dem multicastfähigen Verteilungspunkt gespeichert. Wenn vom Client eine Verbindung mit der Multicastsitzung hergestellt wird, erfolgt der Schlüsselaustausch über einen Kanal, der entweder mit dem Clientauthentifizierungszertifikat der PKI (wenn vom Client HTTPS verwendet wird) oder mit dem selbstsignierten Zertifikat (wenn vom Client HTTP verwendet wird) verschlüsselt ist. Der Client speichert den Schlüssel nur für die Dauer der Multicastsitzung im Arbeitsspeicher.  
 
 ### <a name="encryption-for-media-to-deploy-operating-systems"></a>Verschlüsselung von Medien zum Bereitstellen von Betriebssystemen  
- Wenn Sie Betriebssysteme über Medien bereitstellen und zum Schutz der Medien ein Kennwort angeben, werden die Umgebungsvariablen mithilfe des erweiterten Verschlüsselungsstandards (Advanced Encryption Standard, AES) verschlüsselt. Andere Daten auf den Medien, wie beispielsweise Pakete und Inhalt für Anwendungen, werden nicht verschlüsselt.  
+ Wenn Sie Betriebssysteme über Medien bereitstellen und zum Schutz der Medien ein Kennwort angeben, werden die Umgebungsvariablen mithilfe des erweiterten Verschlüsselungsstandards (Advanced Encryption Standard, AES) mit einem 128 Bit großen Schlüssel verschlüsselt. Andere Daten auf den Medien, wie beispielsweise Pakete und Inhalt für Anwendungen, werden nicht verschlüsselt.  
 
 ### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>Verschlüsselung für Inhalte, die auf cloudbasierten Verteilungspunkten gehostet werden  
  Ab System Center 2012 Configuration Manager SP1 werden bei Verwendung cloudbasierter Verschlüsselungspunkte die Inhalte, die Sie auf diese Verteilungspunkte hochladen, mithilfe des erweiterten Verschlüsselungsstandards (Advanced Encryption Standard, AES) unter Verwendung eines 256-Bit-Schlüssels verschlüsselt. Der Inhalt wird jeweils neu verschlüsselt, wenn Sie ihn aktualisieren. Wenn der Inhalt von Clients heruntergeladen wird, wird er verschlüsselt und ist per HTTPS-Verbindung geschützt.  

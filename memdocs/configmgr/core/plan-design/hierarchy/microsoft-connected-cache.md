@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455275"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814909"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Microsoft Connected Cache in Configuration Manager
 
@@ -37,7 +37,7 @@ Dieser Cache ist unabhängig vom Inhalt des Verteilungspunkts für Configuration
 
 ## <a name="how-it-works"></a>Funktionsweise
 
-Wenn Sie Clients für die Verwendung des Connected Cache-Servers konfigurieren, werden keine von der Microsoft Cloud verwalteten Inhalte mehr aus dem Internet angefordert. Clients fordern diese Inhalte vom Cache-Server an, der im Verteilungspunkt installiert ist. Vom lokalen Server werden diese Inhalte mit dem IIS-Feature für das Routing von Anwendungsanforderungen (ARR) zwischengespeichert. Anschließend kann der Cacheserver schnell auf künftige Anforderungen derselben Inhalte reagieren. Wenn der Connected Cache-Server nicht verfügbar ist oder die Inhalte noch nicht zwischengespeichert sind, laden Clients den Inhalt aus dem Internet herunter. Clients nutzen auch die Übermittlungsoptimierung. Laden Sie also Teile der Inhalte von Peers in Ihrem Netzwerk herunter.
+Wenn Sie Clients für die Verwendung des Connected Cache-Servers konfigurieren, werden keine von der Microsoft Cloud verwalteten Inhalte mehr aus dem Internet angefordert. Clients fordern diese Inhalte vom Cache-Server an, der im Verteilungspunkt installiert ist. Vom lokalen Server werden diese Inhalte mit dem IIS-Feature für das Routing von Anwendungsanforderungen (ARR) zwischengespeichert. Anschließend kann der Cacheserver schnell auf künftige Anforderungen derselben Inhalte reagieren. Wenn der Connected Cache-Server nicht verfügbar ist oder die Inhalte noch nicht zwischengespeichert sind, laden Clients den Inhalt aus dem Internet herunter. Clients verwenden die Übermittlungsoptimierung auch, um Teile des Inhalts von Peers in ihrem Netzwerk herunterzuladen.
 
 ![Diagramm der Funktionsweise von Connected Cache](media/3555764-microsoft-connected-cache.png)
 
