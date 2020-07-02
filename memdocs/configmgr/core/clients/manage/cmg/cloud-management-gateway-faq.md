@@ -5,17 +5,17 @@ description: In diesem Artikel finden Sie Antworten auf häufig gestellte Fragen
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/05/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: 2bd3824df18ecdf426720a99db8720ef4b678733
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd846b0155a0baddad76d6027ffbd239d7dbf26f
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694928"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721889"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Häufig gestellte Fragen zu Cloud Management Gateway
 
@@ -23,13 +23,11 @@ ms.locfileid: "81694928"
 
 In diesem Artikel finden Sie Antworten auf häufig gestellte Fragen zu Cloud Management Gateway (CMG). Weitere Informationen finden Sie unter [Planen von Cloud Management Gateway in Configuration Manager](plan-cloud-management-gateway.md).
 
-
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
 ### <a name="what-certificates-do-i-need"></a>Welche Zertifikate benötige ich?
 
 Weitere Informationen finden Sie unter [Zertifikate für Cloud Management Gateway](certificates-for-cloud-management-gateway.md).
-
 
 ### <a name="do-i-need-azure-expressroute"></a>Benötige ich Azure ExpressRoute?
 
@@ -41,30 +39,42 @@ Nein. Mit [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) k�
 
 Eine Wartung ist nicht erforderlich. Das CMG nutzt die PaaS-Hostingoption (Platform-as-a-Service) von Azure. Mit dem von Ihnen bereitgestellten Abonnement erstellt Configuration Manager die notwendigen virtuellen Computer (VMs), den Speicher und das Netzwerk. Azure sichert und aktualisiert die virtuellen Computer. Anders als bei Infrastructure-as-a-Service (IaaS) sind diese VMs kein Teil Ihrer lokalen Umgebung. Das CMG ist ein PaaS-Dienst, mit der die Configuration Manager-Umgebung mit der Cloud verbunden und dadurch erweitert wird. Weitere Informationen finden Sie unter [Schützen von PaaS-Bereitstellungen](/azure/security/security-paas-deployments).
 
-
 ### <a name="how-can-i-ensure-service-continuity-during-service-updates"></a>Wie kann ich die Dienstkontinuität während Dienstupdates sicherstellen?
 
 Durch die Skalierung von CMG auf zwei oder mehr Instanzen profitieren Sie automatisch von Updatedomänen in Azure. Weitere Informationen finden Sie unter [Gewusst wie: Aktualisieren eines Clouddiensts](/azure/cloud-services/cloud-services-update-azure-service).
-
 
 ### <a name="im-already-using-ibcm-if-i-add-cmg-how-do-clients-behave"></a>Ich verwende bereits IBCM. Wie ändert sich das Clientverhalten, wenn ich zusätzlich das CMG nutze?
 
 Wenn Sie bereits einen [IBCM-Dienst](../plan-internet-based-client-management.md) (internet-based client management, internetbasierte Clientverwaltung) bereitgestellt haben, können Sie zusätzlich auch das CMG bereitstellen. Clients empfangen für beide Dienste Richtlinien. Sobald die Clients mit dem Internet verbunden sind, wählen sie zufällig einen dieser internetbasierten Dienste aus und nutzen diesen.
 
-
-### <a name="do-the-user-accounts-have-to-be-in-the-same-azure-ad-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service"></a>Müssen sich die Benutzerkonten im gleichen Azure AD-Mandanten befinden wie der Mandant, der mit dem Abonnement verbunden ist, das den CMG-Clouddienst hostet?
+### <a name="do-the-user-accounts-have-to-be-in-the-same-azure-ad-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service"></a><a name="bkmk_tenant"></a> Müssen sich die Benutzerkonten im gleichen Azure AD-Mandanten befinden wie der Mandant, der mit dem Abonnement verbunden ist, das den CMG-Clouddienst hostet?
 <!--SCCMDocs-pr issue #2873-->
-Wenn Ihre Umgebung über mehr als ein Abonnement verfügt, können Sie CMG in jedem Abonnement bereitstellen, das Azure Cloud Services hosten kann. 
+Nein, Sie können CMG in jedem Abonnement bereitstellen, das Azure Cloud Services hosten kann.
+
+Zur Verdeutlichung der Begriffe:
+
+- Der _Mandant_ ist das Verzeichnis von Benutzerkonten und App-Registrierungen. Ein Mandant kann mehrere Abonnements haben.
+- Mit einem _Abonnement_ werden Abrechnung, Ressourcen und Dienste getrennt. Es ist einem einzelnen Mandanten zugeordnet.
 
 Diese Frage kommt in folgenden Szenarios häufig zur Sprache:  
 
-- Wenn Sie unterschiedliche Azure AD-Test- und Produktionsumgebungen haben, aber nur ein einzelnes Azure-Hostingabonnement.  
+- Wenn Sie unterschiedliche Azure AD-Test- und Produktionsumgebungen haben, aber nur ein einzelnes Azure-Hostingabonnement.
 
-- Die Verwendung von Azure hat sich mit der Zeit in unterschiedlichen Teams organisch entwickelt.  
+- Die Verwendung von Azure hat sich mit der Zeit in unterschiedlichen Teams organisch entwickelt.
 
 Wen Sie eine Resource Manager-Bereitstellung verwenden, integrieren Sie den Azure AD-Mandanten, der dem Abonnement zugeordnet ist. Über diese Verbindung kann Configuration Manager eine Authentifizierung bei Azure vornehmen, um CMG zu erstellen, bereitzustellen und zu verwalten.  
 
 Wenn Sie die Azure AD-Authentifizierung für die über CMG verwalteten Benutzer und Gerät nutzen, integrieren Sie diesen Azure AD-Mandanten. Weitere Informationen zu Azure-Diensten für die Cloudverwaltung finden Sie unter [Konfigurieren von Azure-Diensten zur Verwendung mit dem Configuration Manager](../../../servers/deploy/configure/azure-services-wizard.md). Wenn Sie jeden Azure AD-Mandanten integrieren, kann ein einzelnes CMG-Gateway die Azure AD-Authentifizierung für mehrere Mandanten unabhängig vom Hostingspeicherort bereitstellen.
+
+#### <a name="example-1-one-tenant-with-multiple-subscriptions"></a>Beispiel 1: Ein Mandant mit mehreren Abonnements
+
+Alle Benutzeridentitäten, Geräteregistrierungen und App-Registrierungen befinden sich im gleichen Mandanten. Sie können auswählen, welches Abonnement das CMG verwendet. Sie können mehrere CMG-Dienste von einer Site in separaten Abonnements bereitstellen. Die Site hat eine Eins-zu-eins-Beziehung mit dem Mandanten. Sie entscheiden, welche Abonnements aus verschiedenen Gründen wie Abrechnung oder logische Trennung verwendet werden sollen.
+
+#### <a name="example-2-multiple-tenants"></a>Beispiel 2: Mehrere Mandanten
+
+Das heißt, Ihre Umgebung verfügt über mehrere Azure AD-Instanzen. Wenn Sie Benutzer- und Geräteidentitäten in beiden Mandanten unterstützen müssen, müssen Sie die Site jedem Mandanten anfügen. Dieser Prozess erfordert ein administratives Konto von jedem Mandanten, um die App-Registrierungen in diesem Mandanten zu erstellen. Eine Site kann dann CMG-Dienste in mehreren Mandanten hosten. Sie können eine CMG-Instanz in einem beliebigen verfügbaren Abonnement in einem der beiden Mandanten erstellen. Geräte, die mit einer der Azure AD-Instanzen verknüpft oder hybrid verknüpft sind, können eine CMG-Instanz verwenden.
+
+Wenn sich die Benutzer- und Geräteidentitäten in einem Mandanten befinden, das CMG-Abonnement aber in einem anderen Mandanten, müssen Sie die Site beiden Mandanten anfügen. Technisch gesehen ist die Client-App für den zweiten Mandanten, der nur über den CMG-Dienst verfügt, nicht erforderlich. Die Client-App bietet nur Benutzer- und Geräteauthentifizierung für Clients, die den CMG-Dienst verwenden.<!-- SCCMDocs#1902 -->
 
 ### <a name="how-does-cmg-affect-my-clients-connected-via-vpn"></a>Wie wirkt sich CMG auf meine über VPN verbundenen Clients aus?
 
