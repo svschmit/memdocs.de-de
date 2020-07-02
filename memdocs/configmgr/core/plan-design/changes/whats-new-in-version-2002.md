@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590438"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Neuerungen in Version 2002 von Configuration Manager (Current Branch)
 
@@ -325,9 +325,9 @@ Weitere Informationen finden Sie unter [Synchronisieren von Office 365-Updates 
 ## <a name="protection"></a><a name="bkmk_protect"></a> Schutz
 
 ### <a name="expand-microsoft-defender-advanced-threat-protection-atp-onboarding"></a>Erweitern des Onboardings von Microsoft Defender Advanced Threat Protection (ATP)
-
+ 
 <!-- 5229962 -->
-Configuration Manager hat die Unterstützung für das Onboarding von Geräten in Microsoft Defender ATP erweitert. Weitere Informationen finden Sie unter [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+Configuration Manager hat die Unterstützung für das Onboarding von Geräten in Microsoft Defender ATP erweitert. Weitere Informationen finden Sie unter [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Durchführen des Onboardings für Konfigurations-Manager-Clients in Microsoft Defender ATP über das Microsoft Endpoint Manager Admin Center
 <!--5691658-->
