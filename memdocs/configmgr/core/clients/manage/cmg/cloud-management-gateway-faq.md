@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: bd846b0155a0baddad76d6027ffbd239d7dbf26f
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: ecc91168cc90af58c40903ea3d288eeaa82be7a0
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721889"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502237"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Häufig gestellte Fragen zu Cloud Management Gateway
 
@@ -87,6 +87,16 @@ Um vertraulichen Datenverkehr über ein CMG zu sichern, konfigurieren Sie entwed
 Wenn Sie sich für das Bereitstellen eines CMG entscheiden und PKI-Zertifikate für die HTTPS-Kommunikation auf dem für CMG aktivierten Verwaltungspunkt verwenden, wählen Sie unter den Verwaltungspunkteigenschaften die Option **Nur Internetclients zulassen** aus. Durch diese Einstellung wird sichergestellt, dass interne Clients weiterhin HTTP-Verwaltungspunkte in Ihrer Umgebung verwenden.
 
 Wenn Sie erweitertes HTTP verwenden, müssen Sie diese Einstellung nicht konfigurieren. Clients verwenden weiterhin HTTP bei der direkten Kommunikation mit dem für CMG aktivierten Verwaltungspunkt. Weitere Informationen finden Sie unter [Enhanced HTTP (Erweitertes HTTP)](../../../plan-design/hierarchy/enhanced-http.md).
+
+### <a name="what-are-the-differences-with-client-authentication-between-azure-ad-and-certificates"></a>Welche Unterschiede bestehen zwischen Azure AD und Zertifikaten in Bezug auf die Clientauthentifizierung?
+<!-- MEMDocs#277 -->
+Sie können Azure AD oder ein [Clientauthentifizierungszertifikat](certificates-for-cloud-management-gateway.md#bkmk_clientauth) verwenden, um Geräte beim CMG-Dienst zu authentifizieren.
+
+Wenn Sie herkömmliche Windows-Clients mit einer Identität verwalten, die der Active Directory-Domäne beigetreten ist, benötigen diese Clients PKI-Zertifikate zur Sicherung des Kommunikationskanals. Zu diesen Clients zählen u. a. Windows 8.1 und Windows 10. Sie können alle von CMG unterstützten Features verwenden, die Verteilung der Software selbst ist auf die Geräte beschränkt. Installieren Sie den Configuration Manager-Client, bevor das Gerät eine Verbindung mit dem Internet herstellt. Bei Version 2002 oder höher verwenden Sie die Tokenauthentifizierung.
+
+Sie können auch Windows 10-Clients mit moderner Identität verwalten, die einer hybriden oder reinen Azure AD-Clouddomäne beigetreten sind. Clients verwenden Azure AD eher für die Authentifizierung als für PKI-Zertifikate. Mit Azure AD ist die Einrichtung, Konfiguration und Verwaltung einfacher als mit komplexeren PKI-Systemen. Sie können dieselben Verwaltungsaktivitäten sowie die Softwareverteilung an die Benutzer ausführen. Außerdem stehen Ihnen weitere Methoden zum Installieren des Clients auf einem Remotegerät zur Verfügung.
+
+Microsoft empfiehlt, Geräte zu Azure AD hinzuzufügen. Internetbasierte Geräte können Azure AD verwenden, um sich mit Configuration Manager zu authentifizieren. Außerdem werden sowohl Geräte- als auch Benutzerszenarios ermöglicht, unabhängig davon, ob das Gerät mit dem Internet oder dem internen Netzwerk verbunden ist. Weitere Informationen finden Sie unter [Installieren und Registrieren des Clients mithilfe einer Azure AD-Identität](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
