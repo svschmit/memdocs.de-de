@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise umfasst Microsoft Intune. Erfahren Sie, wi
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/24/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223627"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353614"
 ---
 # <a name="device-management-overview"></a>Übersicht über die Geräteverwaltung
 
-Eine Hauptaufgabe eines jeden Administrators ist der Schutz und die Sicherung der Ressourcen und Daten eines Unternehmens. Diese Aufgabe ist die *Geräteverwaltung*. Benutzer verfügen über viele Geräte, auf denen sie persönliche Dateien öffnen und freigeben, Websites besuchen sowie Apps und Spiele installieren. Dieselben Benutzer sind zugleich Mitarbeiter und Schüler bzw. Studenten. Sie möchten auf ihren Geräten auf Arbeits-, Uni- und Schulressourcen wie E-Mail und OneNote zugreifen.
+Eine Hauptaufgabe eines jeden Administrators ist der Schutz und die Absicherung der Ressourcen und Daten auf Benutzergeräten seiner Organisation. Diese Aufgabe ist die **Geräteverwaltung**. Benutzer empfangen und senden E-Mails von persönlichen Konten, durchsuchen Websites zu Hause und in Restaurants und installieren Apps und Spiele. Diese Benutzer sind zugleich Mitarbeiter und Schüler bzw. Studenten. Auf ihren Geräten möchten sie schnell auf Arbeits-, Uni- und Schulressourcen wie E-Mail und OneNote zugreifen. Als Administrator ist es Ihr Ziel, diese Ressourcen zu schützen und gleichzeitig einen einfachen Zugriff für Benutzer auf ihren zahlreichen Geräten zu ermöglichen.
 
 Die Geräteverwaltung ermöglicht es Unternehmen, ihre Ressourcen und Daten auf unterschiedlichen Geräten zu schützen und zu sichern.
 

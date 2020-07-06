@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4441fdaf8c3fb8bfb6613805df9eca27cc3ebf0c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990382"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383205"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Verwenden von Zertifikaten zur Authentifizierung in Microsoft Intune
 
@@ -104,6 +104,11 @@ Sie müssen ein vertrauenswürdiges Zertifikatprofil erstellen und bereitstellen
 SCEP-Zertifikatprofile verweisen direkt auf ein vertrauenswürdiges Zertifikatprofil. PKCS-Zertifikatprofile verweisen nicht auf das Profil des vertrauenswürdigen Zertifikats, sondern direkt auf den Server, der Ihre Zertifizierungsstelle hostet. Über PKCS importierte Zertifikatprofile verweisen nicht direkt auf das Profil des vertrauenswürdigen Zertifikats, sie können es jedoch auf dem Gerät verwenden. Durch die Bereitstellung eines vertrauenswürdigen Zertifikatprofils auf Geräten wird sichergestellt, dass dieses Vertrauen aufgebaut wird. Wenn die Stammzertifizierungsstelle von einem Gerät nicht als vertrauenswürdig eingestuft wird, tritt bei der Richtlinie für das SCEP- oder PKCS-Zertifikatprofil ein Fehler auf.
 
 Erstellen Sie ein separates vertrauenswürdiges Zertifikatprofil für jede Geräteplattform, die Sie unterstützen möchten, genauso wie bei den SCEP-, PKCS- und über PKCS importierten Zertifikatprofilen.
+
+> [!IMPORTANT]
+> Vertrauenswürdige Stammprofile, die Sie für die Plattform *Windows 10 und höher* erstellen, werden im Microsoft Endpoint Manager Admin Center als Profile für die Plattform *Windows 8.1 und höher* angezeigt. 
+>
+> Dies ist ein bekanntes Problem bei der Anzeige der Plattform für vertrauenswürdige Zertifikatsprofile. Auch wenn das Profil die Plattform Windows 8.1 und höher anzeigt, ist es für Windows 10 und höher einsetzbar.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>So erstellen Sie ein vertrauenswürdiges Zertifikatprofil
 

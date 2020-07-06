@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b85299057f172fec224873607509aaaec60024
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977267"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383256"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Verwalten von Funktionen für die Zusammenarbeit mithilfe von Office für iOS und Android mit Microsoft Intune
 
@@ -108,7 +108,13 @@ Diese Einstellungen können in der App unabhängig vom Registrierungsstatus des 
 
 ### <a name="manage-file-transfers"></a>Verwalten von Dateiübertragungen
 
-Standardmäßig ermöglicht es Office Benutzern, Dateien mit Benutzern in der Nähe zu teilen und Dateien an Desktopsysteme zu übertragen.
+Standardmäßig wird Office für iOS und Android so aktiviert, dass Benutzer Inhalte mithilfe verschiedener Mechanismen gemeinsam nutzen können:
+
+- Wenn die Datei auf OneDrive oder in SharePoint gehostet wird, können Benutzer eine Freigabeanforderung direkt innerhalb der Datei veranlassen.
+- Benutzer können Dateien mit der Aktion **Dateien übertragen** an Desktopsysteme übertragen.
+- Benutzer können mit der Aktion **In der Nähe teilen** Dateien für mobile Geräte in unmittelbarer Nähe freigeben.
+
+Die Aktionen **Dateien übertragen** und **In der Nähe teilen** funktionieren nur mit Medien, lokalen Dateien und Dateien, die nicht durch eine App-Schutzrichtlinie geschützt sind. 
 
 |    Key    |    Wert    |
 |-------------------------------------------------------------------|-------------|

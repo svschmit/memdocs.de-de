@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 06/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9bf55564cabce9a060c15100ad974c59bf858b15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591118"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden importierter PKCS-Zertifikate mit Intune
 
@@ -271,6 +271,12 @@ Die folgenden Partner stellen unterstützte Methoden oder Tools bereit, die Sie 
 Wenn Sie PKI Platform von DigiCert nutzen, können Sie das **DigiCert-Importtool für Intune-S/MIME-Zertifikate** verwenden, um PFX-Zertifikate in Intune zu importieren. Wenn Sie dieses Tool verwenden, müssen Sie die Anweisungen im Abschnitt [Importieren von PFX-Zertifikaten in Intune](#import-pfx-certificates-to-intune) nicht mehr befolgen, die weiter oben in diesem Artikel erläutert werden.
 
 Weitere Informationen zum DigiCert-Importtool, einschließlich zur Beschaffung des Tools, finden Sie unter https://knowledge.digicert.com/tutorials/microsoft-intune.html in der DigiCert-Wissensdatenbank.
+
+### <a name="keytalk"></a>KeyTalk
+
+Bei Verwendung des KeyTalk-Diensts können Sie diesen Dienst für den Import von PFX-Zertifikaten in Intune konfigurieren. Nach Abschluss der Integration müssen Sie die Anweisungen im Abschnitt [Importieren von PFX-Zertifikaten in Intune](#import-pfx-certificates-to-intune) nicht mehr befolgen, die weiter oben in diesem Artikel erläutert werden.
+
+Weitere Informationen zur Integration von KeyTalk und Intune finden Sie in der KeyTalk-Wissensdatenbank unter https://keytalk.com/support.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

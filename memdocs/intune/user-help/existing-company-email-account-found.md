@@ -1,11 +1,11 @@
 ---
-title: Es wurde ein vorhandenes geschäftliches E-Mail-Konto gefunden | Microsoft-Dokumentation
-description: Beschreibt, wie Sie Updates auf Ihre Geräte anwenden, damit Sie wieder auf Ihre Geschäfts-, Schul- oder Uni-E-Mail zugreifen können.
+title: Vorhandenes geschäftliches E-Mail-Konto gefunden | Microsoft-Dokumentation
+description: Beschreibt, wie Sie Ihr Gerät so aktualisieren, dass Sie wieder auf Ihre Geschäfts-, Schul- oder Uni-E-Mail zugreifen können.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 06/29/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,29 +15,28 @@ ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: chrisgre
+ms.reviewer: samyada
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c6917c2ad2650ae093293ba172934661a4f9863f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 78beb08555a9c276bec79a65bb10bb9dad816926
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590982"
 ---
-# <a name="an-existing-company-email-account-was-found"></a>Es wurde ein vorhandenes geschäftliches E-Mail-Konto gefunden
+# <a name="an-existing-email-account-was-found"></a>Ein vorhandenes E-Mail-Konto wurde gefunden
 
-Möglicherweise hatten Sie mobilen Zugriff auf Ihr Geschäfts-, Schul- oder Unikonto, *bevor* Ihr Gerät verwaltet wurde. Wenn Ihr Gerät jetzt verwaltet wird, empfiehlt sich folgende Vorgehensweise:
+Wenn Sie Ihre geschäftliche E-Mail-Adresse auf Ihrem Gerät vor der Registrierung eingerichtet haben, kann Ihre Organisation verlangen, dass Sie sie entfernen. 
 
-* Trennen Sie die Verbindung mit dem vorhandenen geschäftlichen E-Mail-Konto von Ihrem Gerät.
-* Synchronisieren Sie die Geräteeinstellungen erneut aus der Unternehmensportal-App.  
+Auf diese Weise kann Ihre Organisation Ihnen ein E-Mail-Profil einrichten, das den Netzwerk- und Sicherheitsanforderungen Ihres Unternehmens entspricht. Nach dem Trennen müssen Sie nur noch Ihr Gerät synchronisieren und erhalten wieder Zugriff auf Ihre E-Mail. 
 
-So stellen Sie sicher, dass Ihr Gerät die Sicherheitsanforderungen Ihres Unternehmens erfüllt und Ihre E-Mails geschützt sind.
+Führen Sie die folgenden Schritte aus, um das vorhandene Konto zu trennen und Geräteeinstellungen zu aktualisieren. Wenn Sie diese Schritte nicht ausführen, kann es sein, dass der mobile Zugriff auf Ihr geschäftliches Konto verloren geht oder eingeschränkt wird.
 
-1. Wechseln Sie auf Ihrem Gerät zu den **Einstellungen**, und suchen Sie Ihre verbundenen Konten. Wählen Sie auf einem Gerät mit iOS 11 oder höher z.B. **Kennwort und Konten** aus.
+1. Wechseln Sie auf Ihrem Gerät zu den **Einstellungen**, und suchen Sie Ihre verbundenen Konten. Sie haben auf einem Gerät mit iOS 11 oder höher z. B. **Kennwort und Konten** ausgewählt.
  
-2. Wählen Sie Ihr geschäftliches E-Mail-Konto aus, und entfernen Sie es.
+2. Wählen und entfernen Sie das Konto, das Sie mit Ihrer geschäftlichen E-Mail-Adresse verknüpft haben. 
 
 3. Öffnen Sie die Unternehmensportal-App auf Ihrem Gerät.  
 
@@ -45,6 +44,8 @@ So stellen Sie sicher, dass Ihr Gerät die Sicherheitsanforderungen Ihres Untern
 
 5. Wählen Sie **Einstellungen überprüfen** aus. Innerhalb weniger Augenblicke synchronisiert Ihr Gerät die neuen E-Mail-Einstellungen.
 
-6. Melden Sie sich bei Ihrem Geschäfts-, Schul- oder Unikonto an.
+6. Melden Sie sich bei Ihrem E-Mail-Konto an. 
+
+## <a name="next-steps"></a>Nächste Schritte
 
 Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).

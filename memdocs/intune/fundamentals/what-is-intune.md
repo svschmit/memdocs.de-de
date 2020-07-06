@@ -5,7 +5,7 @@ keywords: Was ist Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 06/23/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,16 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538095"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332804"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune ist ein MDM- und MAM-Anbieter für Ihre Geräte
 
-Microsoft Intune ist ein cloudbasierter Dienst, der sich auf die Verwaltung mobiler Geräte (MDM, Mobile Device Management) und mobiler Anwendungen (MAM, Mobile Application Management) konzentriert. Intune ist in der [EMS-Suite (Enterprise Mobility + Security)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security) von Microsoft enthalten und ermöglicht Ihren Benutzern, produktiv zu sein, während die Daten ihrer Organisation geschützt bleiben. Sie wird in andere Dienste einschließlich Microsoft 365 und Azure Active Directory (Azure AD) integriert, um zu steuern, wer worauf Zugriff hat, und in Azure Information Protection für den Datenschutz. Wenn Sie EMS zusammen mit Microsoft 365 bereitstellen, können Ihre Mitarbeiter auf allen ihren Geräten produktiv arbeiten, während die Informationen Ihres Unternehmens geschützt bleiben.
+Microsoft Intune ist ein cloudbasierter Dienst, der sich auf die Verwaltung mobiler Geräte (MDM, Mobile Device Management) und mobiler Anwendungen (MAM, Mobile Application Management) konzentriert. Sie bestimmen, wie die Geräte Ihres Unternehmens, einschließlich Mobiltelefone, Tablets und Laptops, genutzt werden. Sie können auch bestimmte Richtlinien konfigurieren, um Anwendungen zu steuern. Beispielsweise können Sie verhindern, dass E-Mails an Personen außerhalb Ihrer Organisation gesendet werden. Intune ermöglicht den Beschäftigten in Ihrer Organisation auch, ihre persönlichen Geräte für Schule, Uni oder Arbeit zu nutzen. Auf persönlichen Geräten sorgt Intune dafür, dass Ihre Unternehmensdaten geschützt bleiben, da Unternehmensdaten von persönlichen Daten isoliert werden können.
+
+Intune ist Teil der [Enterprise Mobility + Security-Suite (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security) von Microsoft. Intune ist in Azure Active Directory (Azure AD) integriert, um zu steuern, wer auf was Zugriff hat. Zum Datenschutz besteht eine Integration in Azure Information Protection. Intune kann mit der Suite von Microsoft 365-Produkten verwendet werden. Beispielsweise können Sie Microsoft Teams, OneNote und andere Microsoft 365-Apps auf Geräten bereitstellen. Mit diesem Feature können die Beschäftigten in Ihrer Organisation auf all ihren Geräten produktiv arbeiten, während die Informationen Ihrer Organisation durch von Ihnen festgelegte Richtlinien geschützt sind.
 
 [![Bild mit der Intune-Architektur](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 

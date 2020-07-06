@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0739b27d5b2b6bb21809b2a9f109c894765ea7e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988566"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353495"
 ---
 # <a name="enroll-android-devices"></a>Registrieren von Android-Geräten
 
@@ -39,6 +39,8 @@ Als Intune-Administrator können Sie Android-Geräte auf folgende Weisen registr
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Um auf die Verwaltung von mobilen Geräten vorzubereiten, müssen Sie die MDM-Autorität (Mobile Device Management, Verwaltung mobiler Geräte) auf **Microsoft Intune** festlegen. Anweisungen finden Sie unter [Festlegen der MDM-Autorität](../fundamentals/mdm-authority-set.md). Sie legen dieses Element nur einmal fest, wenn Sie die Ersteinrichtung von Intune für die Verwaltung mobiler Geräte durchführen.
+
+Konsultieren Sie den folgenden Supportartikel von Google, um sicherzustellen, dass Android Enterprise in Ihrem Land oder Ihrer Region verfügbar ist: https://support.google.com/work/android/answer/6270910
 
 Für von Zebra Technologies hergestellte Geräte müssen Sie abhängig von den Funktionen des jeweiligen Geräts dem Unternehmensportal möglicherweise zusätzliche Berechtigungen gewähren. Ausführliche Informationen finden Sie im Artikel zur [Erweiterung der Mobilität auf Zebra-Geräten](../configuration/android-zebra-mx-overview.md).
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2694897e0a9e0ebf0744615e65d76f29416811d0
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990403"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332834"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden Ihrer PKCS-Zertifikate mit Intune
 
@@ -365,3 +365,5 @@ Der *PFX-Zertifikatconnector für Microsoft Intune* [unterstützt automatische U
 Das Profil ist nun erstellt, führt aber noch keine Aktionen durch. Die nächsten Schritte sind das [Zuweisen von Benutzer- und Geräteprofilen in Microsoft Intune](../configuration/device-profile-assign.md) und das [Überwachen von Geräteprofilen in Microsoft Intune](../configuration/device-profile-monitor.md).
 
 Lesen Sie auch die Artikel [Konfigurieren der Infrastruktur zur Unterstützung von SCEP in Intune](certificates-scep-configure.md) oder [Einrichten des Intune Certificate Connectors für den Symantec PKI-Manager-Webdienst](certificates-digicert-configure.md).
+
+[Problembehandlung bei PKCS-Zertifikatprofilen](../protect/troubleshoot-pkcs-certificate-profiles.md)
