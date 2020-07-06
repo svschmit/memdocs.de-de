@@ -1,7 +1,7 @@
 ---
 title: Verwalten von Microsoft Edge für iOS und Android mit Intune
 titleSuffix: ''
-description: Nutzen Sie die Intune-App-Schutz- und Konfigurationsrichtlinien mit Edge für iOS und Android, um sicherzustellen, dass der Zugriff auf Unternehmenswebsites stets mit entsprechenden Sicherheitsvorkehrungen erfolgt.
+description: Nutzen Sie die Intune-App-Schutz- und Konfigurationsrichtlinien mit Microsoft Edge für iOS und Android, um sicherzustellen, dass der Zugriff auf Unternehmenswebsites stets mit entsprechenden Sicherheitsvorkehrungen erfolgt.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -25,27 +25,27 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/17/2020
 ms.locfileid: "84973059"
 ---
-# <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Verwalten des Webzugriffs mithilfe von Edge für iOS und Android mit Microsoft Intune
+# <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Verwalten des Webzugriffs mithilfe von Microsoft Edge für iOS und Android mit Microsoft Intune
 
-Edge für iOS und Android ist so konzipiert, dass Benutzer im Web browsen können, und unterstützt mehrere Identitäten. Benutzer können sowohl Geschäftskonten als auch persönliche Konten zum Browsen hinzufügen. Es besteht eine vollständige Trennung beider Identitäten, wie sie auch in anderen mobilen Apps von Microsoft geboten wird.
+Microsoft Edge für iOS und Android ist so konzipiert, dass Benutzer im Web browsen können, und unterstützt mehrere Identitäten. Benutzer können sowohl Geschäftskonten als auch persönliche Konten zum Browsen hinzufügen. Es besteht eine vollständige Trennung beider Identitäten, wie sie auch in anderen mobilen Apps von Microsoft geboten wird.
 
-Edge für iOS wird ab iOS 12.0 unterstützt. Edge für Android wird ab Android 5 unterstützt.
-
-> [!NOTE]
-> Für Edge für iOS und Android gelten keine Einstellungen, die Benutzer für den nativen Browser auf ihren Geräten festlegen, da Edge für iOS und Android auf diese Einstellungen nicht zugreifen kann.
-
-Die vielfältigsten und umfangreichsten Schutzfunktionen für Office 365-Daten sind verfügbar, wenn Sie die Enterprise Mobility + Security-Suite abonnieren, die Microsoft Intune und Azure Active Directory Premium-Features wie bedingten Zugriff bietet. Zumindest sollten Sie eine Richtlinie für bedingten Zugriff bereitstellen, die nur die Konnektivität mit Edge für iOS und Android auf mobilen Geräten zulässt, sowie eine Intune-App-Schutzrichtlinie, die gewährleistet, dass die Browserumgebung geschützt ist.
+Microsoft Edge für iOS wird ab iOS 12.0 unterstützt. Microsoft Edge für Android wird ab Android 5 unterstützt.
 
 > [!NOTE]
-> Neue Webclips (angeheftete Web-Apps) auf iOS-Geräten werden in Edge für iOS und Android statt in Intune Managed Browser geöffnet, wenn das Öffnen in einem geschützten Browser erforderlich ist. Ältere iOS-Webclips müssen neu zugewiesen werden, um sicherzustellen, dass sie in Edge für iOS und Android statt in Managed Browser geöffnet werden.
+> Für Microsoft Edge für iOS und Android gelten keine Einstellungen, die Benutzer für den nativen Browser auf ihren Geräten festlegen, da Edge für iOS und Android auf diese Einstellungen nicht zugreifen kann.
+
+Die vielfältigsten und umfangreichsten Schutzfunktionen für Office 365-Daten sind verfügbar, wenn Sie die Enterprise Mobility + Security-Suite abonnieren, die Microsoft Intune und Azure Active Directory Premium-Features wie bedingten Zugriff bietet. Zumindest sollten Sie eine Richtlinie für bedingten Zugriff bereitstellen, die nur die Konnektivität mit Microsoft Edge für iOS und Android auf mobilen Geräten zulässt, sowie eine Intune-App-Schutzrichtlinie, die gewährleistet, dass die Browserumgebung geschützt ist.
+
+> [!NOTE]
+> Neue Webclips (angeheftete Web-Apps) auf iOS-Geräten werden in Microsoft Edge für iOS und Android statt in Intune Managed Browser geöffnet, wenn das Öffnen in einem geschützten Browser erforderlich ist. Ältere iOS-Webclips müssen neu zugewiesen werden, um sicherzustellen, dass sie in Microsoft Edge für iOS und Android statt in Managed Browser geöffnet werden.
 
 ## <a name="apply-conditional-access"></a>Aktivieren des bedingten Zugriff
-Organisationen können Richtlinien für bedingten Zugriff von Azure AD nutzen, um sicherzustellen, dass Benutzer nur mit Edge für iOS und Android auf Geschäfts-, Schul- oder Uni-Inhalte zugreifen können. Dazu benötigen Sie eine Richtlinie für bedingten Zugriff, die für alle potenziellen Benutzer gilt. Einzelheiten zur Erstellung dieser Richtlinie finden Sie unter [Erzwingen einer App-Schutzrichtlinie für den Cloud-App-Zugriff mit bedingtem Zugriff](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Organisationen können Richtlinien für bedingten Zugriff von Azure AD nutzen, um sicherzustellen, dass Benutzer nur mit Microsoft Edge für iOS und Android auf Geschäfts-, Schul- oder Uni-Inhalte zugreifen können. Dazu benötigen Sie eine Richtlinie für bedingten Zugriff, die für alle potenziellen Benutzer gilt. Einzelheiten zur Erstellung dieser Richtlinie finden Sie unter [Erzwingen einer App-Schutzrichtlinie für den Cloud-App-Zugriff mit bedingtem Zugriff](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Befolgen Sie die Anweisungen unter [Szenario 2: Browser-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien.](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies) So kann Edge für iOS und Android zugelassen werden, aber andere Webbrowser werden auf dem Mobilgerät daran gehindert, eine Verbindung mit Office 365-Endpunkten herzustellen.
+1. Befolgen Sie die Anweisungen unter [Szenario 2: Browser-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien.](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies) So kann Microsoft Edge für iOS und Android zugelassen werden, aber andere Webbrowser werden auf dem Mobilgerät daran gehindert, eine Verbindung mit Office 365-Endpunkten herzustellen.
 
    >[!NOTE]
-   > Diese Richtlinie stellt sicher, dass mobile Benutzer in Edge für iOS und Android auf alle Office 365-Endpunkte zugreifen können. Diese Richtlinie verhindert auch, dass Benutzer die Einstellung InPrivate für den Zugriff auf Office 365-Endpunkte nutzen können.
+   > Diese Richtlinie stellt sicher, dass mobile Benutzer in Microsoft Edge für iOS und Android auf alle Office 365-Endpunkte zugreifen können. Diese Richtlinie verhindert auch, dass Benutzer die Einstellung InPrivate für den Zugriff auf Office 365-Endpunkte nutzen können.
 
 Mit bedingtem Zugriff können Sie auch auf lokale Websites zugreifen, die Sie externen Benutzern über den [Microsoft Azure AD-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) zur Verfügung gestellt haben.
 
@@ -65,7 +65,7 @@ Unabhängig davon, ob das Gerät in einer UEM-Lösung (Unified Endpoint Manageme
 
 1. Sie umfassen alle mobilen Microsoft 365-Anwendungen wie Edge, Outlook, OneDrive, Office oder Teams. Damit wird sichergestellt, dass Benutzer in jeder Microsoft-App sicher auf Geschäfts-, Schul- oder Unidaten zugreifen und diese bearbeiten können.
 
-2. Sie werden allen Benutzern zugewiesen. Dadurch wird sichergestellt, dass alle Benutzer unabhängig davon, ob sie Edge für iOS oder Android nutzen, geschützt sind.
+2. Sie werden allen Benutzern zugewiesen. Dadurch wird sichergestellt, dass alle Benutzer unabhängig davon, ob sie Microsoft Edge für iOS oder Android nutzen, geschützt sind.
 
 3. Bestimmen Sie, welche Frameworkebene Ihre Anforderungen erfüllt. Die meisten Organisationen sollten die Einstellungen, die unter **Erweiterter Datenschutz für Unternehmen** (Ebene 2) festgelegt wurden, implementieren, da dadurch Datenschutz und Zugriffsanforderungskontrollen ermöglicht werden.
 
@@ -76,7 +76,7 @@ Weitere Informationen zu den verfügbaren Einstellungen finden Sie unter [Einste
 
 ## <a name="single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers"></a>Einmaliges Anmelden bei mit Azure AD verbundenen Web-Apps in richtliniengeschützten Browsern
 
-Edge für iOS und Android kann für alle Web-Apps (SaaS und lokal), die mit Azure AD verbunden sind, den Vorteil des einmaligen Anmeldens (Single Sign-On, SSO) nutzen. Dank SSO können Benutzer über Edge für iOS und Android auf mit Azure AD verbundene Web-Apps zugreifen, ohne ihre Anmeldeinformationen erneut eingeben zu müssen.
+Microsoft Edge für iOS und Android kann für alle Web-Apps (SaaS und lokal), die mit Azure AD verbunden sind, den Vorteil des einmaligen Anmeldens (Single Sign-On, SSO) nutzen. Dank SSO können Benutzer über Microsoft Edge für iOS und Android auf mit Azure AD verbundene Web-Apps zugreifen, ohne ihre Anmeldeinformationen erneut eingeben zu müssen.
 
 Für SSO muss Ihr Gerät entweder durch die Microsoft Authenticator-App für iOS-Geräte oder durch das Intune-Unternehmensportal unter Android registriert werden. Wenn Benutzer über eine dieser beiden Optionen verfügen, werden sie aufgefordert, ihr Gerät zu registrieren, sobald sie eine mit Azure AD verbundene Web-App in einem richtliniengeschützten Browser öffnen (dies gilt nur, wenn ihr Gerät bereits registriert wurde). Nachdem das Gerät mit dem von Intune verwalteten Benutzerkonto registriert wurde, ist bei diesem Konto das einmalige Anmelden für mit Azure AD verbundene Web-Apps aktiviert.
 
@@ -85,16 +85,16 @@ Für SSO muss Ihr Gerät entweder durch die Microsoft Authenticator-App für iOS
 
 ## <a name="utilize-app-configuration-to-manage-the-browsing-experience"></a>Verwalten der Browserumgebung mithilfe der App-Konfiguration
 
-Edge für iOS und Android unterstützt App-Einstellungen, die eine einheitliche Endpunktverwaltung ermöglichen, wie z. B. Microsoft Endpoint Manager. Administratoren können das Verhalten der App anpassen.
+Microsoft Edge für iOS und Android unterstützt App-Einstellungen, die eine einheitliche Endpunktverwaltung ermöglichen, wie z. B. Microsoft Endpoint Manager. Administratoren können das Verhalten der App anpassen.
 
-Die App-Konfiguration kann entweder über den Kanal „MDM (Mobile Device Management, Verwaltung mobiler Geräte)“ des Betriebssystems auf registrierten Geräten (Kanal [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) für iOS oder [Android in the Enterprise ](https://developer.android.com/work/managed-configurations) für Android) oder über den Kanal „Intune-App-Schutzrichtlinie“ bereitgestellt werden. Edge für iOS und Android unterstützt die folgenden Konfigurationsszenarien:
+Die App-Konfiguration kann entweder über den Kanal „MDM (Mobile Device Management, Verwaltung mobiler Geräte)“ des Betriebssystems auf registrierten Geräten (Kanal [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) für iOS oder [Android in the Enterprise ](https://developer.android.com/work/managed-configurations) für Android) oder über den Kanal „Intune-App-Schutzrichtlinie“ bereitgestellt werden. Microsoft Edge für iOS und Android unterstützt die folgenden Konfigurationsszenarien:
 
 - Nur Geschäfts-, Schul- oder Unikonten zulassen
 - Allgemeine App-Konfigurationseinstellungen
 - Datenschutzeinstellungen
 
 > [!IMPORTANT]
-> Für Konfigurationsszenarien, die eine Geräteregistrierung unter Android erfordern, müssen die Geräte in Android Enterprise registriert werden, und Edge für Android muss über den Managed Google Play Store bereitgestellt werden. Weitere Informationen finden Sie unter [Einrichten der Registrierung von Android Enterprise-Arbeitsprofilgeräten](../enrollment/android-work-profile-enroll.md) und [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Android Enterprise-Geräte](app-configuration-policies-use-android.md).
+> Für Konfigurationsszenarien, die eine Geräteregistrierung unter Android erfordern, müssen die Geräte in Android Enterprise registriert werden, und Microsoft Edge für Android muss über den Managed Google Play Store bereitgestellt werden. Weitere Informationen finden Sie unter [Einrichten der Registrierung von Android Enterprise-Arbeitsprofilgeräten](../enrollment/android-work-profile-enroll.md) und [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Android Enterprise-Geräte](app-configuration-policies-use-android.md).
 
 Für jedes Konfigurationsszenario werden die spezifischen Anforderungen hervorgehoben. Zum Beispiel, ob das Konfigurationsszenario die Registrierung von Geräten verlangt und somit mit jedem UEM-Anbieter funktioniert oder ob Intune-App-Schutzrichtlinien erforderlich sind.
 
@@ -103,7 +103,7 @@ Für jedes Konfigurationsszenario werden die spezifischen Anforderungen hervorge
 
 ## <a name="only-allow-work-or-school-accounts"></a>Nur Geschäfts-, Schul- oder Unikonten zulassen
 
-Die Einhaltung der Datensicherheits- und Compliancerichtlinien unserer größten und hoch regulierten Kunden ist eine tragende Säule des Werts von Microsoft 365. In einigen Unternehmen müssen alle Kommunikationsinformationen in der Unternehmensumgebung aufgezeichnet werden, und ebenso muss sichergestellt werden, dass die Geräte nur für die Unternehmenskommunikation verwendet werden. Um diese Anforderungen zu unterstützen, kann Edge für iOS und Android auf registrierten Geräten so konfiguriert werden, dass nur ein einziges Firmenkonto innerhalb der App bereitgestellt werden darf.
+Die Einhaltung der Datensicherheits- und Compliancerichtlinien unserer größten und hoch regulierten Kunden ist eine tragende Säule des Werts von Microsoft 365. In einigen Unternehmen müssen alle Kommunikationsinformationen in der Unternehmensumgebung aufgezeichnet werden, und ebenso muss sichergestellt werden, dass die Geräte nur für die Unternehmenskommunikation verwendet werden. Um diese Anforderungen zu unterstützen, kann Microsoft Edge für iOS und Android auf registrierten Geräten so konfiguriert werden, dass nur ein einziges Firmenkonto innerhalb der App bereitgestellt werden darf.
 
 Hier erfahren Sie mehr über das Konfigurieren der Einstellung des Modus für zulässige Organisationskonten:
 
@@ -114,12 +114,12 @@ Dieses Konfigurationsszenario funktioniert nur mit registrierten Geräten. Aller
 
 ## <a name="general-app-configuration-scenarios"></a>Allgemeine App-Konfigurationsszenarien
 
-Edge für iOS und Android bietet Administratoren die Möglichkeit, die Standardkonfiguration für verschiedene In-App-Einstellungen festzulegen. Diese Funktion wird derzeit nur angeboten, wenn Edge für iOS und Android eine Intune-App-Schutzrichtlinie auf das Geschäfts-, Schul- oder Unikonto angewendet hat, das bei der App angemeldet ist.
+Microsoft Edge für iOS und Android bietet Administratoren die Möglichkeit, die Standardkonfiguration für verschiedene In-App-Einstellungen festzulegen. Diese Funktion wird derzeit nur angeboten, wenn Microsoft Edge für iOS und Android eine Intune-App-Schutzrichtlinie auf das Geschäfts-, Schul- oder Unikonto angewendet hat, das bei der App angemeldet ist.
 
 > [!IMPORTANT]
-> Edge für Android unterstützt keine Chromium-Einstellungen, die in Managed Google Play verfügbar sind.
+> Microsoft Edge für Android unterstützt keine Chromium-Einstellungen, die in Managed Google Play verfügbar sind.
 
-Edge unterstützt die folgenden Konfigurationseinstellungen:
+Microsoft Edge unterstützt die folgenden Konfigurationseinstellungen:
 
 - Neue Registerkartenseite
 - Lesezeichen
@@ -130,18 +130,18 @@ Diese Einstellungen können in der App unabhängig vom Registrierungsstatus des 
 
 ### <a name="new-tab-page-experiences"></a>Neue Registerkartenseite
 
-Edge für iOS und Android bietet Organisationen mehrere Optionen zur Anpassung der neuen Registerkartenseite.
+Microsoft Edge für iOS und Android bietet Organisationen mehrere Optionen zur Anpassung der neuen Registerkartenseite.
 
 #### <a name="organization-logo-and-brand-color"></a>Organisationslogo und Markenfarbe
 
-Diese Einstellungen ermöglichen Ihnen, die neue Registerkartenseite für Edge für iOS und Android so anzupassen, dass Logo und Markenfarbe Ihrer Organisation als Seitenhintergrund angezeigt werden.
+Diese Einstellungen ermöglichen Ihnen, die neue Registerkartenseite für Microsoft Edge für iOS und Android so anzupassen, dass Logo und Markenfarbe Ihrer Organisation als Seitenhintergrund angezeigt werden.
 
 Um das Logo und die Farbe Ihrer Organisation hochzuladen, führen Sie zuerst die folgenden Schritte aus:
 1. Navigieren Sie in [Microsoft Endpoint Manager](https://endpoint.microsoft.com) zu **Mandantenverwaltung** -> **Anpassung** -> **Unternehmensbranding**.
 2. Um das Logo Ihrer Marke festzulegen, wählen Sie als Nächstes neben **In der Kopfzeile anzeigen** „Nur Organisationslogo“ aus. Es empfiehlt sich, transparente Hintergrundlogos zu verwenden.
-3. Um die Hintergrundfarbe Ihrer Marke festzulegen, wählen Sie eine **Designfarbe** aus. Edge für iOS und Android wendet einen helleren Farbton auf die neue Registerkartenseite an, was eine bessere Lesbarkeit der Seite gewährleistet.
+3. Um die Hintergrundfarbe Ihrer Marke festzulegen, wählen Sie eine **Designfarbe** aus. Microsoft Edge für iOS und Android wendet einen helleren Farbton auf die neue Registerkartenseite an, was eine bessere Lesbarkeit der Seite gewährleistet.
 
-Verwenden Sie nun die folgenden Schlüssel-Wert-Paare, um das Branding Ihrer Organisation in Edge für iOS und Android zu übernehmen:
+Verwenden Sie nun die folgenden Schlüssel-Wert-Paare, um das Branding Ihrer Organisation in Microsoft Edge für iOS und Android zu übernehmen:
 
 |    Key    |    Wert    |
 |--------------------------------------------------------------------|------------|
@@ -150,7 +150,7 @@ Verwenden Sie nun die folgenden Schlüssel-Wert-Paare, um das Branding Ihrer Org
 
 #### <a name="homepage-shortcut"></a>Verknüpfung zur Startseite
 
-Diese Einstellung ermöglicht Ihnen das Konfigurieren einer Verknüpfung zur Startseite für Edge für iOS und Android. Die von Ihnen konfigurierte Verknüpfung mit der Startseite wird als erstes Symbol unterhalb der Suchleiste angezeigt, sobald ein Benutzer eine neue Registerkarte in Edge für iOS und Android öffnet. Der Benutzer kann diese Verknüpfung in seinem verwalteten Kontext nicht bearbeiten oder löschen. Die Verknüpfung mit der Homepage zeigt zur besseren Erkennbarkeit den Namen Ihrer Organisation an. 
+Diese Einstellung ermöglicht Ihnen das Konfigurieren einer Verknüpfung zur Startseite für Microsoft Edge für iOS und Android. Die von Ihnen konfigurierte Verknüpfung mit der Startseite wird als erstes Symbol unterhalb der Suchleiste angezeigt, sobald ein Benutzer eine neue Registerkarte in Edge für iOS und Android öffnet. Der Benutzer kann diese Verknüpfung in seinem verwalteten Kontext nicht bearbeiten oder löschen. Die Verknüpfung mit der Homepage zeigt zur besseren Erkennbarkeit den Namen Ihrer Organisation an. 
 
 |    Key    |    Wert    |
 |-------------------------------------------------------------------|-------------|

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502594"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989614"
 ---
 # <a name="app-protection-policies-overview"></a>Übersicht über App-Schutzrichtlinien
 
@@ -219,7 +219,7 @@ Ein Beispiel für „Unternehmenskontext“: Ein Benutzer startet die OneDrive-A
 Outlook bietet eine kombinierte Ansicht für „persönliche“ und „geschäftliche“ E-Mails. In dieser Situation fordert die Outlook-App beim Start zur Eingabe der Intune-PIN auf.
 
   >[!NOTE]
-  > Obwohl Microsoft Edge im „Unternehmenskontext“ ausgeführt wird, können Benutzer OneDrive-Dateien aus dem „Unternehmenskontext“ absichtlich in einen unbekannten persönlichen Cloudspeicherort verschieben. Um dies zu vermeiden, finden Sie weitere Informationen unter [Verwalten eingeschränkter Websites](manage-microsoft-edge.md#manage-restricted-web-sites) und „Konfigurieren der Liste zulässiger/blockierter Websites für Edge“.
+  > Obwohl Microsoft Edge im „Unternehmenskontext“ ausgeführt wird, können Benutzer OneDrive-Dateien aus dem „Unternehmenskontext“ absichtlich in einen unbekannten persönlichen Cloudspeicherort verschieben. Um dies zu vermeiden, finden Sie weitere Informationen unter [Verwalten eingeschränkter Websites](manage-microsoft-edge.md#manage-restricted-web-sites) und „Konfigurieren der Liste zulässiger/blockierter Websites für Microsoft Edge“.
 
 Weitere Informationen zu mehreren Identitäten in Intune finden Sie unter [Durch Microsoft Intune geschützte Apps](apps-supported-intune-apps.md).
 
@@ -312,7 +312,7 @@ Wenn das selektive Zurücksetzen initiiert wird, während ein Benutzer die App v
 Der Intune-App-Schutz hängt davon ab, dass die Identität des Benutzers in der App und im [Intune SDK](../developer/app-sdk.md) konsistent ist. Die einzige Möglichkeit, dies zu garantieren, ist eine moderne Authentifizierung. Es gibt Szenarien, in denen Apps möglicherweise mit einer lokalen Konfiguration funktionieren. Dies ist aber weder konsistent noch garantiert.
 
 **Eine sichere Möglichkeit zum Öffnen von Weblinks in verwalteten Apps**<br>
-Ein IT-Administrator kann eine App-Schutzrichtlinie für [Microsoft Edge](manage-microsoft-edge.md) einrichten und bereitstellen, ein Webbrowser, der problemlos mit Intune verwaltet werden kann. Der IT-Administrator kann festlegen, dass alle Weblinks in über Intune verwaltete Apps mit der Managed Browser-App geöffnet werden müssen.
+Ein IT-Administrator kann eine App-Schutzrichtlinie für [Microsoft Edge](app-configuration-managed-browser.md) einrichten und bereitstellen, ein Webbrowser, der problemlos mit Intune verwaltet werden kann. Der IT-Administrator kann festlegen, dass alle Weblinks in über Intune verwaltete Apps mit der Managed Browser-App geöffnet werden müssen.
 
 ## <a name="app-protection-experience-for-ios-devices"></a>App-Schutzfunktionen für iOS-Geräte
 

@@ -107,7 +107,7 @@ Sie können die App-Konfigurationsrichtlinie mithilfe der folgenden drei Methode
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>iOS/iPadOS-Konfiguration auf nicht verwalteten Geräten
 
-Auf nicht verwalteten Geräten können Sie mit dem **Intune-Diagnoseprotokoll** die iOS-/iPadOS-Konfiguration in Bezug auf die Konfiguration verwalteter Apps überprüfen. Zusätzlich zu den unten angegebenen Schritten können Sie über Microsoft Edge auf Protokolle für verwaltete Apps zugreifen. Weitere Informationen finden Sie unter [Verwenden von Edge für iOS und Android für den Zugriff auf Protokolle von verwalteten Apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
+Auf nicht verwalteten Geräten können Sie mit dem **Intune-Diagnoseprotokoll** die iOS-/iPadOS-Konfiguration in Bezug auf die Konfiguration verwalteter Apps überprüfen. Zusätzlich zu den unten angegebenen Schritten können Sie über Microsoft Edge auf Protokolle für verwaltete Apps zugreifen. Weitere Informationen finden Sie unter [Verwenden von Microsoft Edge für iOS und Android für den Zugriff auf Protokolle von verwalteten Apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 1. Falls noch nicht auf dem Gerät installiert, laden Sie den **Microsoft Edge**-Browser aus dem App Store herunter und installieren ihn. Weitere Informationen finden Sie unter [Durch Microsoft Intune geschützte Apps](apps-supported-intune-apps.md).
 2. Starten Sie **Microsoft Edge**, und wählen Sie auf der Navigationsleiste **Info** > **Intune-Hilfe** aus.
