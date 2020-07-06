@@ -45,9 +45,9 @@ Unterstützte Plattformen und Profile:
   CSP: [AllowWindowsDefenderApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872350)
 
   - **Nicht konfiguriert** (*Standardeinstellung*)
-  - **Aktiviert für Edge**: Application Guard öffnet nicht genehmigte Websites in einem virtualisierten Hyper-V-Browsercontainer.
+  - **Aktiviert für Microsoft Edge**: Application Guard öffnet nicht genehmigte Websites in einem virtualisierten Hyper-V-Browsercontainer.
 
-  Wenn der Wert *Aktiviert für Edge* festgelegt wird, sind die folgenden Einstellungen verfügbar:
+  Wenn der Wert *Aktiviert für Microsoft Edge* festgelegt wird, sind die folgenden Einstellungen verfügbar:
   
   - **Verhalten der Zwischenablage**  
     CSP: [ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
