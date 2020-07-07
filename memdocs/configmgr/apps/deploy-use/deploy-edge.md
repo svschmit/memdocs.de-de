@@ -2,7 +2,7 @@
 title: Bereitstellen und Aktualisieren von Microsoft Edge, Version 77 und höher
 titleSuffix: Configuration Manager
 description: Bereitstellen und Aktualisieren von Microsoft Edge, Version 77 und höher mit Configuration Manager
-ms.date: 04/01/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
-ms.translationtype: HT
+ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776932"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914571"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge-Verwaltung
 
@@ -33,6 +32,8 @@ Für Clients, die auf eine Microsoft Edge-Bereitstellung abzielen:
 
 - Die PowerShell-[Ausführungsrichtlinie](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) kann nicht auf „Restricted“ festgelegt werden.
   - PowerShell wird ausgeführt, um die Installation durchzuführen.
+
+- Der Microsoft Edge-Installer und [CMPivot](../../core/servers/manage/cmpivot.md) werden mit dem **Codesignierungszertifikat von Microsoft** signiert. Wenn dieses Zertifikat nicht im Speicher **Vertrauenswürdige Herausgeber** aufgeführt ist, müssen Sie es hinzufügen. Andernfalls werden der Microsoft Edge-Installer und CMPivot nicht ausgeführt, wenn die PowerShell-Ausführungsrichtlinie auf **AllSigned** festgelegt ist. <!--7585106-->
 
 Das Gerät, auf dem die Configuration Manager-Konsole ausgeführt wird, benötigt Zugriff auf die folgenden Endpunkte:
 
@@ -135,6 +136,22 @@ Aktivieren Sie die folgenden Eigenschaften in den unten angegebenen [Hardwareinv
 Klicken Sie im Arbeitsbereich **Softwarebibliothek** auf **Microsoft Edge-Verwaltung**, um das Dashboard aufzurufen. Ändern Sie die Sammlung für die Graphdaten, indem Sie auf **Durchsuchen** klicken und eine andere Sammlung auswählen. Ihre fünf größten Sammlungen werden automatisch in der Dropdownliste angezeigt. Wenn Sie eine Sammlung auswählen, die nicht in der Liste enthalten ist, wird die neu ausgewählte Sammlung unten in der Dropdownliste angezeigt.
 
 [![Microsoft Edge-Verwaltungsdashboard](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
+## <a name="known-issues"></a>Bekannte Probleme
+
+### <a name="hardware-inventory-may-fail-to-process"></a>Die Hardwareinventur kann nicht verarbeitet werden
+<!--7535675-->
+Die Hardwareinventur für Geräte kann möglicherweise nicht verarbeitet werden. In der Datei „Dataldr.log“ sind möglicherweise Fehler wie der folgende aufgeführt:
+
+```text
+Begin transaction: Machine=<machine>
+*** [23000][2627][Microsoft][SQL Server Native Client 11.0][SQL Server]Violation of PRIMARY KEY constraint 'BROWSER_USAGE_HIST_PK'. Cannot insert duplicate key in object 'dbo.BROWSER_USAGE_HIST'. The duplicate key value is (XXXX, Y). : dbo.dBROWSER_USAGE_DATA
+ERROR - SQL Error in
+ERROR - is NOT retyrable.
+Rollback transaction: XXXX
+```
+
+**Lösung:** Sie können dieses Problem umgehen, indem Sie die Sammlung der Hardwareinventurklasse „Browsernutzung (SMS_BrowerUsage)“ deaktivieren. Diese Klasse wird derzeit nicht genutzt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -2,7 +2,7 @@
 title: Häufig gestellte Fragen zum Produkt und zur Lizenzierung
 titleSuffix: Configuration Manager
 description: Finden Sie Antworten auf häufige Produkt- und Lizenzfragen zu Configuration Manager.
-ms.date: 02/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63e53c502e67d2bfbfc5f8a706006c6ec14f8fcd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706838"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854421"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Häufig gestellte Fragen für die Configuration Manager-Verzweigungen und -Lizenzierungen
 
@@ -68,19 +67,54 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 > [!IMPORTANT]
 > Configuration Manager ist nicht im [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business)-Plan enthalten.
 
-### <a name="does-anything-change-with-the-rebrand-to-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> Ändert sich etwas mit der Umfirmierung zu Microsoft Endpoint Manager?
+### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> Was ändert sich durch die Lizenzierung für die Coverwaltung im Microsoft Endpoint Manager?
 
-Ja. Wenn Sie bereits für Configuration Manager lizenziert sind, sind Sie ab dem 1. Dezember 2019 auch automatisch für Intune lizenziert für die Registrierung von Windows-PCs in der [Co-Verwaltung](../../comanage/overview.md). Diese Änderung erleichtert Ihnen die Verwaltung von Windows-Geräten mit Microsoft Endpoint Manager.
+<!-- 7202432 -->
 
-Es ist jetzt eine neue Lizenz verfügbar, mit der Configuration Manager-Kunden mit Software Assurance Intune-PC-Verwaltungsrechte erhalten können, ohne eine zusätzliche Intune-Lizenz für die Co-Verwaltung erwerben zu müssen. Sie müssen nicht mehr einzelne Intune-Lizenzen kaufen und Ihren Benutzern zuweisen.
+Durch die Coverwaltungslizenz können Configuration Manager-Kunden mit Software Assurance Intune-PC-Verwaltungsrechte verwenden, ohne zusätzliche Intune-Lizenzen erwerben und Benutzern zuweisen zu müssen. Diese Lizenz erleichtert Ihnen die Verwaltung von Windows-Geräten mit dem Microsoft Endpoint Manager.
 
-- Geräte, die von Configuration Manager verwaltet und bei der Co-Verwaltung registriert werden, verfügen über fast die gleichen Rechte wie ein eigenständig verwalteter Intune-PC. Nach dem Zurücksetzen können sie jedoch nicht mithilfe von Autopilot nochmals bereitgestellt werden.
+- Geräte, die bereits von Configuration Manager verwaltet werden und die Sie bei Intune für die Coverwaltung registrieren, verfügen über fast die gleichen Rechte wie ein eigenständig verwalteter Intune-PC. Wenn Sie Windows auf diesem Gerät zurücksetzen, können Sie es nicht mit Windows Autopilot bereitstellen. Für Autopilot benötigen Sie die Vollversion einer Intune-Lizenz.
 
-- Windows 10-Geräte, die anderweitig bei Intune registriert sind, benötigen vollständige Intune-Lizenzen.
+- Wenn Sie ein Windows 10-Gerät auf andere Weise bei Intune registrieren, ist weiterhin die Vollversion einer Intune-Lizenz erforderlich. Sie können Autopilot beispielsweise zur Bereitstellung eines Geräts verwenden, oder ein Benutzer kann diesen Dienst nutzen, um sich manuell selbst zu registrieren.
 
-- Wenn Sie Intune für die Verwaltung von iOS-, Android- oder macOS-Geräten verwenden möchten, benötigen Sie das entsprechende Intune-Abonnement über die eigenständige Intune-Lizenz, Enterprise Mobility + Security (EMS) oder Microsoft 365.
+- Damit vorhandene von Configuration Manager verwaltete Geräte bei Intune für die Coverwaltung im großen Stil registriert werden können, verwendet die Coverwaltung ein Azure Active Directory-Feature (Azure AD) zur automatischen Registrierung für Windows 10. Für die automatische Registrierung wird eine Azure AD Premium-Lizenz (AADP1) verwendet, die unabhängig vom Microsoft Endpoint Manager angeboten wird. Damit die Coverwaltung in diesem Szenario funktioniert, müssen Sie jedem einzelnen Benutzer sowohl eine AADP1- als auch eine Intune-Lizenz zuweisen. Die Lizenzierung der Coverwaltung wurde zum 1. Dezember 2019 geändert. Sie müssen jetzt keine einzelnen Intune-Lizenzen für dieses Szenario mehr zuweisen. In anderen Registrierungsszenarios sind sie allerdings weiterhin erforderlich. Es wird weiterhin eine AADP1-Lizenz für die automatische Registrierung und die Coverwaltung benötigt.
+
+- Wenn Sie Intune für die Verwaltung von iOS-, Android- oder macOS-Geräten verwenden möchten, benötigen Sie ein entsprechendes Intune-Abonnement über eine eigenständige Intune-Lizenz, Enterprise Mobility + Security (EMS) oder Microsoft 365.
+
+- Wenn Sie nicht über einen Abonnementplan verfügen, der mit Intune in Zusammenhang steht, müssen Sie mindestens eine Intune-Lizenz erwerben, damit die Coverwaltung unterstützt wird. Mit dieser Lizenz kann der Administrator auf das Admin Center für den Microsoft Endpoint Manager zugreifen.
+
+- Wenn Sie das in Microsoft 365 integrierte Feature [Basic Mobility and Security](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0) verwenden, können Sie nicht die neue Coverwaltungslizenz für einen Benutzer verwenden, der ebenfalls über Geräte verfügt, die von „Basic Mobility and Security“ verwaltet werden. Damit Sie die Coverwaltungslizenz für das von Configuration Manager verwaltete Gerät des Benutzers verwenden können, gehen Sie wie folgt vor:
+
+  - Weisen Sie dem Benutzer die Vollversion einer Intune-Lizenz zu, und verwalten Sie seine Geräte über Intune.
+  - Heben Sie die Registrierung der Geräte über „Basic Mobility and Security“ auf.
 
 - Die Lizenzierung, die Sie zuvor für System Center Configuration Manager hatten, gilt weiterhin für Microsoft Endpoint Configuration Manager. Verwenden Sie bei der Installation eines neuen Standorts vorhandene Product Keys.
+
+|Komponente | Coverwaltungslizenz | Vollversion einer Intune-Lizenz |
+|---------|---------|---------|
+|Windows 10-Registrierung|Ja (nur für vorhandene von Configuration Manager verwaltete Geräte)|Ja|
+|iOS, Android, macOS-Registrierung|Nein|Ja|
+|Autopilot|Nein|Ja|
+|Verwaltung mobiler Anwendungen|Nein|Ja|
+|Bedingter Zugriff<br>(zusätzlich AADP1 erforderlich)|Ja|Ja|
+|Geräteprofile|Ja|Ja|
+|Softwareupdateverwaltung|Ja|Ja|
+|Inventarisierung|Ja|Ja|
+|App-Verwaltung|Ja|Ja|
+|Remoteunterstützung<br>(TeamViewer-Lizenz erforderlich)|Ja|Ja|
+|Desktop Analytics<br>(Windows-Abonnementlizenzen erforderlich)|Ja|N/V|
+|Mandantenanfügung|Ja|N/V|
+|Endpunktanalyse|Ja|Ja|
+
+Weitere Informationen finden Sie in den folgenden Artikeln:
+
+- [Voraussetzungen für die Coverwaltung](../../comanage/overview.md#prerequisites)
+- [Anforderungen für Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Voraussetzungen für Desktop Analytics](../../desktop-analytics/overview.md#prerequisites)
+- [Voraussetzungen für Mandantenanfügungsvorgänge](../../tenant-attach/device-sync-actions.md#prerequisites)
+- [Voraussetzungen für die Endpunktanalyselizenzierung](../../../analytics/overview.md#licensing-prerequisites)
+- [Verwenden des bedingten Zugriffs mit Intune](../../../intune/protect/conditional-access.md#use-conditional-access-with-intune)
+- [Voraussetzungen für TeamViewer](../../../intune/remote-actions/teamviewer-support.md#prerequisites)
 
 ### <a name="i-have-enterprise-mobility--security-and-it-expired-what-must-i-do-now"></a><a name="bkmk_ems-expires"></a> Ich habe Enterprise Mobility + Security, und es ist abgelaufen. Was muss ich nun tun?  
 

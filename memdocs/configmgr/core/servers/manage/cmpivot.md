@@ -2,7 +2,7 @@
 title: CMPivot für Echtzeitdaten
 titleSuffix: Configuration Manager
 description: Informationen zur Verwendung von CMPivot in Configuration Manager für die Abfrage von Clients in Echtzeit
-ms.date: 04/08/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcd441c7f35748f42adc8824c68ec703291a13e0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 7bf9d6018acb74ccd1a33b6101d5cceb119ca982
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914638"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot für Echtzeitdaten in Configuration Manager
 
@@ -46,6 +45,7 @@ Für die Verwendung von CMPivot sind die folgenden Komponenten erforderlich:
   - IPConfig
   - SMBConfig
 
+- Der [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md)-Installer und CMPivot werden mit dem **Codesignierungszertifikat von Microsoft** signiert. Wenn dieses Zertifikat nicht im Speicher **Vertrauenswürdige Herausgeber** aufgeführt ist, müssen Sie es hinzufügen. Andernfalls werden der Microsoft Edge-Installer und CMPivot nicht ausgeführt, wenn die PowerShell-Ausführungsrichtlinie auf **AllSigned** festgelegt ist. <!--7585106-->
 
 - Berechtigungen für CMPivot:
   - **Leseberechtigung** für **SMS-Skripts**-Objekte
@@ -56,6 +56,8 @@ Für die Verwendung von CMPivot sind die folgenden Komponenten erforderlich:
 
 >[!NOTE]
 > **Ausführen von Skripts** ist eine Obermenge der Berechtigung **Ausführen von CMPivot**.
+
+Der Edge-Installer und CMPivot werden mit dem **Codesignierungszertifikat von Microsoft** signiert. Wenn dieses Zertifikat nicht im Speicher **Vertrauenswürdige Herausgeber** aufgeführt ist, müssen Sie es hinzufügen. Andernfalls werden der Edge-Installer und CMPivot nicht ausgeführt, wenn die PowerShell-Ausführungsrichtlinie auf **AllSigned** festgelegt ist.
  
 ## <a name="limitations"></a>Einschränkungen
 
@@ -617,7 +619,7 @@ Die Optimierungen von CMPivot verringern die Netzwerk- und Server-CPU-Auslastung
    | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
    ```
 
-### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a> WinEvent(\<Protokollname>,[\<timespan>])
+### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a> WinEvent(\<logname>,[\<timespan>])
 
 Mit dieser Entität werden Ereignisse aus Ereignisprotokollen und Protokolldateien der Ereignisablaufverfolgung abgerufen. Die Entität ruft Daten aus Ereignisprotokollen ab, die von der Windows-Ereignisprotokolltechnologie generiert werden. Die Entität ruft auch Ereignisse in Protokolldateien ab, die von der Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) generiert werden. WinEvent berücksichtigt standardmäßig Ereignisse, die innerhalb der letzten 24 Stunden aufgetreten sind. Diese Standardeinstellung kann jedoch durch Einschließen eines timespan-Werts überschrieben werden.
 
@@ -627,7 +629,7 @@ WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
 | summarize count() by Device
 ```
 
-### <a name="filecontentfilename"></a><a name="bkmk_File"></a> FileContent(\<Dateiname>)
+### <a name="filecontentfilename"></a><a name="bkmk_File"></a> FileContent(\<filename>)
 
 FileContent wird verwendet, um den Inhalt einer Textdatei abzurufen.
 
@@ -637,7 +639,7 @@ FileContent('c:\\windows\\SMSCFG.ini')
 | project Device, SMSId= substring(Content,22)
 ```
 
-### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a> ProcessModule(\<Prozessname>)  
+### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a> ProcessModule(\<processname>)  
 
 Mit dieser Entität werden die von einem bestimmten Prozess geladenen Module (DLLs) enumeriert. ProcessModule ist sehr hilfreich beim Hunting nach Schadsoftware, die in sich in legitimen Prozessen verbirgt.  
 

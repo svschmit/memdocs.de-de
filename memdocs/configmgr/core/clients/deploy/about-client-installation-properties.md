@@ -10,12 +10,11 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
-ms.translationtype: HT
+ms.openlocfilehash: 388a051f899369aa6a7754f94b0a7727f943f0ec
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383035"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854404"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informationen zu Parametern und Eigenschaften für die Clientinstallation in Configuration Manager
 
@@ -601,7 +600,11 @@ Weitere Informationen finden Sie unter [Konfigurieren des Clientstatus](configur
 
 Ab Version 2002 können Sie diese Eigenschaft verwenden, um eine Tasksequenz auf einem Client zu starten, nachdem dieser sich erfolgreich beim Standort registriert hat.
 
+> [!NOTE]
+> Wenn von der Tasksequenz Softwareupdates oder Anwendungen installiert werden, benötigen Clients ein gültiges Clientauthentifizierungszertifikat. Die Tokenauthentifizierung allein funktioniert nicht. Weitere Informationen finden Sie in den [Versionshinweisen zur Bereitstellung des Betriebssystems](../../servers/deploy/install/release-notes.md#os-deployment).<!--7527072-->
+      
 Beispielsweise können Sie ein neues Windows 10-Gerät mit Windows Autopilot bereitstellen, es automatisch für Microsoft Intune registrieren und dann den Konfigurations-Manager-Client für die Co-Verwaltung installieren. Wenn Sie diese neue Option angeben, führt der neu bereitgestellte Client eine Tasksequenz aus. Dieser Prozess bietet zusätzliche Flexibilität beim Installieren von Anwendungen und Softwareupdates oder beim Konfigurieren von Einstellungen.
+
 
 Führen Sie den folgenden Vorgang aus:
 
@@ -617,6 +620,8 @@ Führen Sie den folgenden Vorgang aus:
       > Für diese Methode sind möglicherweise zusätzliche Voraussetzungen erforderlich. Beispielsweise die Registrierung des Standorts bei Azure Active Directory oder das Erstellen eines inhaltsfähigen Cloudverwaltungsgateways.
 
 Nachdem der Client installiert und ordnungsgemäß für den Standort registriert wurde, wird die Tasksequenz gestartet, auf die verwiesen wird. Wenn die Clientregistrierung fehlschlägt, wird die Tasksequenz nicht gestartet.
+
+
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 
