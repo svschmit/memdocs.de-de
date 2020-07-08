@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715644"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502254"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planen von Cloud Management Gateway in Configuration Manager
 
@@ -167,7 +167,7 @@ In vielen Organisationen gibt es getrennte Umgebungen für Produktion, Test, Ent
 
 Der Azure-Dienst von Configuration Manager für die **Cloudverwaltung** unterstützt mehrere Mandanten. Mehrere Configuration Manager-Standorte können eine Verbindung mit dem gleichen Mandanten herstellen. Ein einzelner Standort kann mehrere CMG-Dienste in unterschiedlichen Abonnements bereitstellen. Mehrere Standorte können CMG-Dienste im selben Abonnement bereitstellen. Configuration Manager bietet je nach Ihrer Umgebung und Ihren Geschäftsanforderungen Flexibilität.
 
-Weitere Informationen finden Sie in den Antworten auf die folgenden häufig gestellten Fragen: [Müssen sich die Benutzerkonten im gleichen Azure AD-Mandanten befinden wie der Mandant, der mit dem Abonnement verbunden ist, das den CMG-Clouddienst hostet?](cloud-management-gateway-faq.md#bkmk_tenant)
+Weitere Informationen finden Sie unter den folgenden FAQ: [Müssen sich die Benutzerkonten im gleichen Azure AD-Mandanten befinden wie der Mandant, der mit dem Abonnement verbunden ist, das den CMG-Clouddienst hostet?](cloud-management-gateway-faq.md#bkmk_tenant)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -227,15 +227,16 @@ Die folgende Tabelle enthält die CMG-Unterstützung für Configuration Manager-
 | Hardware- und Softwareinventur     | ![Unterstützt](media/green_check.png) |
 | Clientstatus und Benachrichtigungen     | ![Unterstützt](media/green_check.png) |
 | Skripts ausführen     | ![Unterstützt](media/green_check.png) |
+| CMPivot     | ![Unterstützt](media/green_check.png) |
 | Kompatibilitätseinstellungen     | ![Unterstützt](media/green_check.png) |
-| Clientinstallation<br>(mit Azure AD-Integration)     | ![Unterstützt](media/green_check.png) |
+| Clientinstallation<br>(mit [Azure AD-Integration](../../deploy/deploy-clients-cmg-azure.md)) | ![Unterstützt](media/green_check.png) |
+| Clientinstallation<br>(mit [Tokenauthentifizierung](../../deploy/deploy-clients-cmg-token.md)) | ![Unterstützt](media/green_check.png) (2002) |
 | Softwareverteilung (geräteorientiert)     | ![Unterstützt](media/green_check.png) |
 | Softwareverteilung (benutzerorientiert, erforderlich)<br>(mit Azure AD-Integration)     | ![Unterstützt](media/green_check.png) |
 | Softwareverteilung (benutzerorientiert, verfügbar)<br>([alle Anforderungen](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Unterstützt](media/green_check.png) |
-| Tasksequenz für direktes Windows 10-Upgrade      | ![Unterstützt](media/green_check.png) |
-| Tasksequenzen, die keine Startimages verwenden und mit einer Option bereitgestellt werden: **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen**      | ![Unterstützt](media/green_check.png) |
-| Tasksequenzen, die keine Startabbilder verwenden  | ![Unterstützt](media/green_check.png) (1910)|
-| CMPivot     | ![Unterstützt](media/green_check.png) |
+| [Tasksequenz für direktes Windows 10-Upgrade](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![Unterstützt](media/green_check.png) |
+| Tasksequenzen, die keine Startimages verwenden und mit einer Option bereitgestellt werden: **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen** | ![Unterstützt](media/green_check.png) |
+| Tasksequenzen, die keine Startimages verwenden und über [sämtliche Downloadoptionen](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) verfügbar sind | ![Unterstützt](media/green_check.png) (1910)|
 | Alle anderen Tasksequenzszenarios     | ![Nicht unterstützt](media/Red_X.png) |
 | Clientpush     | ![Nicht unterstützt](media/Red_X.png) |
 | Automatische Standortzuweisung     | ![Nicht unterstützt](media/Red_X.png) |

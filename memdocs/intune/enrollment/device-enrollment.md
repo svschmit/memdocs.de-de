@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d907aaac6c37cbe7cad71e850fbc44322c93841
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986394"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088461"
 ---
 # <a name="what-is-device-enrollment"></a>Was ist die Geräteregistrierung?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -45,6 +45,7 @@ Standardmäßig dürfen Geräte für alle Plattformen in Intune registriert werd
 |**[USB (direkt)](#usb-direct)**| Nein | Nein | Nein|[Weitere Informationen](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>macOS-Registrierungsmethoden
+
 | **Methode** |  **Zurücksetzen erforderlich** |  **Benutzeraffinität** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Nein| Ja | Nein | [Weitere Informationen](macos-enroll.md)|
@@ -54,7 +55,7 @@ Standardmäßig dürfen Geräte für alle Plattformen in Intune registriert werd
 ## <a name="windows-enrollment-methods"></a>Windows-Registrierungsmethoden
 
 | **Methode** | **Zurücksetzen erforderlich** | **Benutzeraffinität** | **Locked** | **Details**|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Nein | Ja | Nein | [Weitere Informationen](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Nein |Nein |Nein |[Weitere Informationen](device-enrollment-manager-enroll.md)|
 |**Automatische Registrierung** | Nein |Ja |Nein | [Weitere Informationen](windows-enroll.md#enable-windows-10-automatic-enrollment)|
@@ -77,7 +78,7 @@ Standardmäßig dürfen Geräte für alle Plattformen in Intune registriert werd
 |**Android-Geräteadministrator**|**(Vordeklarierte IMEI oder SN) Benutzerinitiiert über Unternehmensportal**| Nein | Ja | Nein | [Weitere Informationen](corporate-identifiers-add.md)|
 |**Android-Geräteadministrator mit Zebra Mobility-Erweiterungen**|**Benutzer- oder [DEM](#device-enrollment-manager)-initiiert über Unternehmensportal**| Nein | Ja, wenn benutzerinitiiert; Nein, wenn [DEM](#device-enrollment-manager)-initiiert | Nein | [Weitere Informationen](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise Dedicated**|**NFC, Token, QR-Code, Zero Touch**| Ja | Nein | Konfigurierbar über Richtlinie | [Weitere Informationen](android-kiosk-enroll.md)|
-|**Vollständig verwaltetes Android Enterprise**|**NFC, Token, QR-Code, Zero Touch**| Ja | „Ja“; „Nein“, wenn [DEM](device-enrollment.md#device-enrollment-manager) initiiert wurde. | Konfigurierbar über Richtlinie | [Weitere Informationen](android-dedicated-devices-fully-managed-enroll.md)|
+|**Vollständig verwaltetes Android Enterprise**|**NFC, Token, QR-Code, Zero Touch**| Ja | Ja | Konfigurierbar über Richtlinie | [Weitere Informationen](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device

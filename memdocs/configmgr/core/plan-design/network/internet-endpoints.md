@@ -2,7 +2,7 @@
 title: Erforderliche Berechtigungen für den Internetzugriff
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie, welche Internetendpunkten zugelassen werden müssen, um die vollständige Funktionalität der Configuration Manager-Features zu gewährleisten.
-ms.date: 06/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819949"
 ---
 # <a name="internet-access-requirements"></a>Erforderliche Berechtigungen für den Internetzugriff
 
@@ -230,6 +230,8 @@ Wenn Sie Configuration Manager zum Bereitstellen und Aktualisieren von Microsoft
 
 - `config.office.com` zum Erstellen benutzerdefinierter Konfigurationen für Bereitstellungen von Microsoft 365 Apps for Enterprise
 
+- `contentstorage.osi.office.net` zum Unterstützen der Bereitschaftsbewertung von Office-Add-Ins<!-- MEMDocs#410 -->
+
 ## <a name="configuration-manager-console"></a>Configuration Manager-Konsole
 
 Computer mit Configuration Manager-Konsole erfordern für bestimmte Features Zugriff auf die folgenden Internetendpunkte:
@@ -267,6 +269,14 @@ Wenn Sie die **geografische Ansicht** verwenden, lassen Sie den Zugriff auf folg
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
 Weitere Informationen zu den erforderlichen Endpunkten für den Desktop Analytics-Clouddienst finden Sie unter [Aktivieren der Datenfreigabe](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+## <a name="tenant-attach"></a>Mandantenanfügung
+
+Weitere Informationen zu den erforderlichen Endpunkten für Features zur Mandantenanfügung finden Sie unter [Aktivieren der Mandantenanfügung](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+
+## <a name="endpoint-analytics"></a>Endpunktanalyse
+
+Weitere Informationen zu den erforderlichen Endpunkten für die Endpunktanalyse finden Sie unter [Proxykonfiguration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
 
 ## <a name="microsoft-public-ip-addresses"></a>Öffentliche IP-Adressen von Microsoft
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791727"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088376"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Übersicht über Microsoft Endpoint Manager
 
@@ -43,7 +43,6 @@ Endpoint Manager umfasst die folgenden Dienste:
   Wenn Sie über eine lokale Infrastruktur verfügen, z. B. Exchange oder Active Directory, sind auch die folgenden Intune-Connectors verfügbar:
 
   - Der **Intune-Connector für Active Directory** fügt Ihrer lokalen Active Directory-Domäne Einträge für Computer hinzu, die sich mit Windows Autopilot registrieren. Weitere Informationen finden Sie unter [Bereitstellen von in Azure AD Hybrid eingebundenen Geräten mit Intune und Windows Autopilot](/mem/intune/enrollment/windows-autopilot-hybrid).
-  - Der **Intune Exchange Connector** ermöglicht (oder blockiert) den Gerätezugriff auf Ihre Exchange-Server, wenn die Geräte bei Intune registriert sind und Ihren Richtlinien entsprechen. Weitere Informationen finden Sie unter [Einrichten des lokalen Intune Exchange Connectors](/mem/intune/protect/exchange-connector-install).
   - Der **Intune Certificate Connector** verarbeitet Zertifikatsanforderungen von Geräten, die Zertifikate für die Authentifizierung und Verschlüsselung von E-Mail mit S/MIME verwenden. Weitere Informationen finden Sie unter [Verwenden von Zertifikaten für die Authentifizierung](/mem/intune/protect/certificates-configure).
 
   Als Teil von Endpoint Manager dient Intune zum Erstellen und Überprüfen von Konformität sowie zum Bereitstellen von Apps, Features und Einstellungen auf Ihren Geräten mithilfe der Cloud.

@@ -11,17 +11,21 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1c79db413f8e37424b84d98d51fb584d168e3819
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 96a014f4919480854b57bae82e982ce783f5f59b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590965"
 ---
 # <a name="updates-in-desktop-analytics"></a>Updates in Desktop Analytics
 
 Im Desktop Analytics-Portal können Sie den Status von Sicherheits-und Featureupdates verfolgen. Wählen Sie diese Knoten in der Gruppe „Überwachen“ des Hauptmenüs von Desktop Analytics aus. Über die Knoten erhalten Sie Einblicke in den Status dieser Updates in Ihrer Umgebung.
 
+<!--7362999-->
+
+> [!IMPORTANT]
+> Desktop Analytics zeigt den Status der Sicherheits- und Featureupdates für Geräte mit der kommerziellen ID an, die Ihrem Desktop Analytics-Arbeitsbereich zugeordnet sind. Dieses Verhalten tritt unabhängig davon auf, ob Sie die Geräte bei Configuration Manager registriert haben. Die Gesamtanzahl der Geräte auf diesen Kacheln stimmt möglicherweise nicht mit der Anzahl der registrierten Geräte in den [**verbundenen Diensten**](monitor-connection-health.md#commercial-id-configuration) überein.
 
 ## <a name="security-updates"></a>Sicherheitsupdates
 

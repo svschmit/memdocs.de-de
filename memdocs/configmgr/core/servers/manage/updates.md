@@ -2,7 +2,7 @@
 title: Updates und Wartung
 titleSuffix: Configuration Manager
 description: Hier finden Sie Informationen zu der konsoleninternen Dienstmethode „Updates und Wartung“, mit der Sie empfohlene Updates leicht finden und installieren können.
-ms.date: 04/15/2020
+ms.date: 06/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4f92d95b4e1cc814db72b45cfb92cb989b7767c8
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591016"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Updates und Wartung für Configuration Manager
 
@@ -73,11 +73,11 @@ Das **Verfügbarkeitsdatum** entspricht dem Freigabedatum für den [Early Update
 > [!Note]  
 > <sup>**Hinweis 1:** </sup> Die Baselinemedien sind als Teil der folgenden Releases im [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) enthalten:
 >
-> - System Center Configuration Manager (Current Branch)
-> - System Center 2016 Datacenter
-> - System Center 2016-Standard  
+> - Microsoft Endpoint Configuration Manager (Current Branch)
+> - System Center Datacenter
+> - System Center Standard  
 >
-> Suchen Sie in VLSC beispielsweise nach `System Center Config Mgr (current branch)`. Suchen Sie die Baselinemedien in der Liste der Dateien, und laden Sie dieses Release herunter.  
+> Suchen Sie in VLSC beispielsweise nach `Microsoft Endpoint Configmgr (current branch)`. Suchen Sie die Baselinemedien in der Liste der Dateien, und laden Sie dieses Release herunter.  
 
 #### <a name="historical-versions"></a>Vorgängerversionen
 

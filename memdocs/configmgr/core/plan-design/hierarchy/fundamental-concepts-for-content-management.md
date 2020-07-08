@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590455"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Grundlegende Konzepte für die Inhaltsverwaltung in Configuration Manager
 
@@ -147,7 +147,7 @@ Weitere Informationen finden Sie unter [Unterstützung für Windows BranchCache]
 <!-- 1324696 -->
 Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung über Ihr gesamtes Unternehmensnetzwerk und Remotebüros hinweg zu definieren und zu regulieren. [Windows-Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) ist eine cloudbasierte Peer-zu-Peer-Technologie zum gemeinsamen Nutzen von Inhalten auf Windows 10-Geräten. Konfigurieren Sie die Übermittlungsoptimierung so, dass bei der Freigabe von Inhalten für Peers Ihre Begrenzungsgruppen verwendet werden. Clienteinstellungen legen die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client fest. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich die Inhalte befinden. Weitere Informationen finden Sie unter den Clienteinstellungen für die [Übermittlungsoptimierung](../../clients/deploy/about-client-settings.md#delivery-optimization).
 
-Übermittlungsoptimierung ist die empfohlene Technologie zum Optimieren der Windows 10-Updatebereitstellung von Expressinstallationsdateien für Windows 10-Qualitätsupdates. Ab Configuration Manager Version 1910 ist der Internetzugriff auf den Clouddienst Übermittlungsoptimierung eine Anforderung für den Einsatz der Peer-zu-Peer-Funktionalität. Informationen zu den erforderlichen Internetendpunkten finden Sie unter [Häufig gestellte Fragen zur Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Die Optimierung kann für alle Windows-Updates verwendet werden. Weitere Informationen finden Sie unter [Optimieren der Bereitstellung von Updates für Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+Übermittlungsoptimierung ist die empfohlene Technologie zum Optimieren der Windows 10-Updatebereitstellung von Expressinstallationsdateien für Windows 10-Qualitätsupdates. Ab Configuration Manager 1910 ist der Internetzugriff auf den Clouddienst Übermittlungsoptimierung eine Anforderung für den Einsatz der Peer-zu-Peer-Funktionalität. Informationen zu den erforderlichen Internetendpunkten finden Sie unter [Häufig gestellte Fragen zur Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Die Optimierung kann für alle Windows-Updates verwendet werden. Weitere Informationen finden Sie unter [Optimieren der Bereitstellung von Updates für Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft Connected Cache

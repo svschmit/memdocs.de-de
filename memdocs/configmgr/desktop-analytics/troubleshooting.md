@@ -2,7 +2,7 @@
 title: Problembehandlung bei Desktop Analytics
 titleSuffix: Configuration Manager
 description: Dieser Artikel enthält technische Details zur Problembehandlung bei Desktop Analytics.
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
+ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85828974"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Problembehandlung bei Desktop Analytics
 
@@ -205,7 +205,7 @@ Es gibt zwei Arten von Daten im Desktop Analytics-Portal: **Administratordaten**
 
 - **Diagnosedaten** beziehen sich auf die Systemmetadaten, die von Clientgeräten zu Microsoft hochgeladen werden. Diese Daten bilden die Grundlage der Analysen von Desktop Analytics. Hierzu zählen Merkmale wie Gerätebestand, Sicherheitsstatus und Featureupdatestatus.
 
-Standardmäßig werden alle Daten im Desktop Analytics-Portal automatisch täglich aktualisiert. Diese Aktualisierung umfasst Änderungen der Diagnosedaten sowie alle Änderungen, die Sie an der Konfiguration vornehmen (Administratordaten). Sie werden täglich um 08:00 Uhr UTC in Ihrem Desktop Analytics-Portal angezeigt.
+Standardmäßig werden alle Daten im Desktop Analytics-Portal automatisch täglich aktualisiert. Diese Aktualisierung umfasst Änderungen der Diagnosedaten der letzten beiden Tage sowie alle Änderungen, die Sie an der Konfiguration vornehmen (Administratordaten). Sie werden täglich um 08:00 Uhr UTC in Ihrem Desktop Analytics-Portal angezeigt.
 
 Wenn Sie Administratordaten ändern, können Sie eine bedarfsgesteuerte Aktualisierung der Administratordaten in Ihrem Arbeitsbereich auslösen. Öffnen Sie auf einer beliebigen Seite im Desktop Analytics-Portal das Flyout zur Datenaktualität:
 
@@ -221,3 +221,39 @@ Wenn innerhalb des obigen Zeitfensters keine Aktualisierung von Änderungen erfo
 
 > [!IMPORTANT]
 > Die Desktop Analytics-Option **Aktuelle Daten anzeigen** ist veraltet. Diese Aktion wird in einer zukünftigen Version des Desktop Analytics-Diensts entfernt. Weitere Informationen finden Sie unter [Veraltete Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
+
+## <a name="service-notifications"></a>Dienstbenachrichtigungen
+
+<!-- 4982509 -->
+
+Im Desktop Analytics-Portal können Administratoren jetzt Benachrichtigungsbanner angezeigt werden. Über diese Benachrichtigungen informiert Microsoft die Benutzer über wichtige Ereignisse und Probleme. In den folgenden Abschnitten werden die Benachrichtigungen erläutert, die möglicherweise angezeigt werden.
+
+### <a name="see-whats-new-this-month-in-desktop-analytics"></a>Neuigkeiten zu Desktop Analytics in diesem Monat
+
+Diese informative Benachrichtigung macht Sie auf Änderungen am Dienst aufmerksam. Weitere Informationen finden Sie unter [Neues in Desktop Analytics](whats-new.md) (`https://aka.ms/danews`).
+
+### <a name="there-are-new-prerequisites-to-continue-using-desktop-analytics-review-the-new-requirements"></a>Es gelten neue Voraussetzungen. Sehen Sie sich die neuen Anforderungen an, um Desktop Analytics weiter zu verwenden.
+
+Diese informative Benachrichtigung macht Sie auf Änderungen an den Voraussetzungen aufmerksam, z. B. einen neuen Internetendpunkt oder ein Softwareupdate. Weitere Informationen finden Sie unter [Voraussetzungen](overview.md#prerequisites) (`https://aka.ms/daprereqs`).
+
+### <a name="were-investigating-an-issue-that-impacts-desktop-analytics"></a>Wir untersuchen zurzeit ein Problem, das sich auf Desktop Analytics auswirkt.
+
+Diese Warnmeldung weist darauf hin, dass Microsoft ein Problem gefunden hat, das sich auf den Desktop Analytics-Dienst auswirkt. Das Problem liegt in der Regel beim Generieren von Momentaufnahmen. Wenn diese Benachrichtigung angezeigt wird, untersucht Microsoft das Problem, um den Umfang und die Ursache zu ermitteln. Sie müssen sich nicht mit Microsoft-Support in Verbindung setzen. Weitere Informationen finden Sie unter [Datenfluss](privacy.md#data-flow).
+
+### <a name="were-investigating-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Wir untersuchen zurzeit ein Problem mit der Datenlatenz. Wenn Sie in den letzten 24 Stunden neue Geräte registriert oder Ressourcen geändert haben, werden diese möglicherweise nicht sofort angezeigt.
+
+Diese Warnmeldung weist darauf hin, dass Microsoft ein Problem gefunden hat, das sich auf den Desktop Analytics-Dienst auswirkt. Microsoft überwacht den Dienst fortlaufend, um sicherzustellen, dass alle Komponenten Momentaufnahmen zu den richtigen Zeitpunkten aktualisieren. Während dieser Überwachung konnte eine dieser Komponenten den Vorgang nicht erwartungsgemäß abschließen. Wenn diese Benachrichtigung angezeigt wird, untersucht Microsoft das Problem bereits. Sie müssen sich nicht mit Microsoft-Support in Verbindung setzen. Weitere Informationen finden Sie unter [Datenfluss](privacy.md#data-flow).
+
+Wenn Sie vor Kurzem [Geräte registriert](enroll-devices.md) oder [Ressourcen geändert](about-assets.md) haben, sollten Sie warten, bis Microsoft das Problem behoben hat. Sie müssen Ihre Aktionen nicht wiederholen.
+
+### <a name="weve-resolved-a-temporary-issue-with-data-latency-daily-refresh-of-portal-data-is-delayed"></a>Wir haben ein temporäres Problem mit der Datenlatenz behoben. Die tägliche Aktualisierung der Portaldaten verzögert sich.
+
+Diese Benachrichtigung informiert Sie darüber, dass ein Problem mit der Datenlatenz aufgetreten ist. Der Dienst verarbeitet weiterhin die Momentaufnahme, und die Aktualisierung der Daten wird verzögert. Weitere Informationen finden Sie unter [Datenlatenz](#data-latency).
+
+### <a name="weve-resolved-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Wir haben ein Problem mit der Datenlatenz behoben. Wenn Sie in den letzten 24 Stunden neue Geräte registriert oder Ressourcen geändert haben, werden diese möglicherweise nicht sofort angezeigt.
+
+Diese Benachrichtigung informiert Sie darüber, dass Microsoft ein zuvor gemeldetes Problem mit der Datenlatenz behoben hat. Möglicherweise werden veraltete Daten für die Momentaufnahme von morgen angezeigt. Wenn Sie innerhalb der letzten 24 Stunden [Geräte registriert](enroll-devices.md) oder Gerätekonfigurationen geändert haben, werden die Änderungen nicht sofort im Portal angezeigt. Sie können Desktop Analytics weiterhin verwenden, um [Ressourcen](about-assets.md) zu kategorisieren und [Bereitstellungspläne](about-deployment-plans.md) vorzubereiten. Für diese Aktionen können Daten aus der vorherigen Momentaufnahme verwendet werden.
+
+### <a name="weve-resolved-an-issue-with-desktop-analytics-daily-refresh-of-the-portal-data-is-on-track"></a>Wir haben ein Problem mit Desktop Analytics behoben. Die tägliche Aktualisierung der Portaldaten erfolgt wie erwartet.
+
+Diese Benachrichtigung informiert Sie darüber, dass Microsoft eine Momentaufnahmenkomponente identifiziert hat, die während der Verarbeitung beendet wurde. Microsoft hat die Komponente neu gestartet. Deshalb nimmt die Verarbeitung der Momentaufnahme etwas Zeit in Anspruch. Microsoft überwacht den Dienst fortlaufend, um sicherzustellen, dass alle Komponenten Momentaufnahmen zu den richtigen Zeitpunkten aktualisieren.

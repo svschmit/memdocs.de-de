@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b38b0c8f28645fa0aae66058b0c93bd8beffc470
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591033"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Verwalten von Tasksequenzen zum Automatisieren von Tasks
 
@@ -190,7 +190,8 @@ Wenn die Tasksequenz startet, wird in den meisten Fällen der aktuell aktivierte
 
 <!-- 5554928 -->
 
-Sie müssen eine neue Tasksequenzbereitstellung erstellen, um diese Hochleistungseinstellung zu aktivieren oder zu deaktivieren. Die neue Einstellung wird in vorhandenen Bereitstellungen zwar angezeigt, kann jedoch nicht darauf angewendet werden.<!-- SCCMDocs#2107 -->
+Wenn Sie Einstellungen in den Tasksequenzeigenschaften ändern, werden normalerweise alle vorhandenen Bereitstellungen aktualisiert. Wenn Sie diese Leistungseinstellung in den Tasksequenzeigenschaften ändern, wirkt sich das nicht auf vorhandene Bereitstellungen der Tasksequenz aus. Sie müssen eine neue Tasksequenzbereitstellung erstellen, um diese Hochleistungseinstellung zu aktivieren oder zu deaktivieren.
+<!-- MEMDocs#437, SCCMDocs#2107 -->
 
 ## <a name="distribute-referenced-content"></a><a name="BKMK_DistributeTS"></a> Verteilen von referenziertem Inhalt  
 

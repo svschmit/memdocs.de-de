@@ -10,12 +10,12 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b97f9bb6be00129e0b88dc3943af1de166a801d4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 91b938b5ab64616a35773406cd18b54de80b40e7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590414"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Windows Autopilot mit Co-Verwaltung
 
@@ -77,9 +77,9 @@ Mit Autopilot können Sie nun eine unbeaufsichtigte Betriebssystembereitstellung
 
 ## <a name="case-study"></a>Fallstudie
 
-Der deutsche Logistik- und Speditionsdienstleister DB Schenker steigert mit Autopilot die Produktivität der Mitarbeiter und entlastet seine IT-Teams bei der täglichen Arbeit im Support. Schenker hat die traditionelle Imageverwendung aufgegeben und durch Bereitstellung über die Cloud ersetzt. Das Unternehmen verwendet jetzt Azure AD-Einbindung und Intune, um neue Geräte schnell einzurichten und auszuführen. 
+Der deutsche Logistik- und Speditionsdienstleister DB Schenker steigert mit Autopilot die Produktivität der Mitarbeiter und entlastet seine IT-Teams bei der täglichen Arbeit im Support. DB Schenker hat die traditionelle Imageverwendung aufgegeben und durch Bereitstellungen über die Cloud ersetzt. Das Unternehmen verwendet jetzt Azure AD-Einbindung und Intune, um neue Geräte schnell einzurichten und auszuführen. 
 
-Mitarbeiter in Außenstellen müssen keine Zeit mehr damit verschwenden, an einen Ort mit IT-Diensten zu reisen. Stattdessen verwendet Schenker jetzt Windows Autopilot. Das Unternehmen versendet die Hardware für seine Mitarbeiter direkt vom Hersteller an die jeweilige lokale Außenstelle. Der Mitarbeiter verbindet das neue Gerät mit dem Internet und meldet sich mit seinen Azure AD-Anmeldeinformationen an. Das Gerät stellt dann eine Verbindung mit den Anwendungen und Diensten her, die die IT-Abteilung von Schenker dem individuellen Profil des Benutzers zuordnet.
+Mitarbeiter im Außendienst müssen keine Zeit mehr damit verschwenden, an einen Ort mit IT-Dienstleistungen zu reisen. Stattdessen verwendet DB Schenker jetzt Windows Autopilot. Das Unternehmen versendet die Hardware für seine Mitarbeiter direkt vom Hersteller an die jeweilige lokale Außenstelle. Der Mitarbeiter verbindet das neue Gerät mit dem Internet und meldet sich mit seinen Azure AD-Anmeldeinformationen an. Das Gerät stellt dann eine Verbindung mit den Anwendungen und Diensten her, die die IT-Abteilung von DB Schenker dem individuellen Profil des Benutzers zuordnet.
 
 Weitere Informationen finden Sie unter [Global logistics firm centralizes IT, unites employees with modern digital workplace](https://customers.microsoft.com/story/db-schenker-travel-transportation-windows-10) (Globales Logistikunternehmen zentralisiert IT, vereint Mitarbeiter mit modernem digitalen Arbeitsplatz).
 
