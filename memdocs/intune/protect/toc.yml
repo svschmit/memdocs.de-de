@@ -52,6 +52,8 @@
       items:
         - name: Konformitätsübersicht
           href: device-compliance-get-started.md
+        - name: Gerätecompliancepartner
+          href: device-compliance-partners.md
         - name: Erstellen einer Richtlinie
           href: create-compliance-policy.md
         - name: Standortbasierte Konformität
