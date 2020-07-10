@@ -2,20 +2,20 @@
 title: Anfügen von Mandanten in Microsoft Endpoint Manager
 titleSuffix: Configuration Manager
 description: Laden Sie Ihre Configuration Manager-Geräte in den clouddienst hoch, und nehmen Sie im Admin Center Aktionen vor.
-ms.date: 04/10/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795617"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210315"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Microsoft Endpoint Manager-Mandanten anfügen: Geräte Synchronisierung und Geräte Aktionen
 <!--3555758 live 3/4/2020-->
@@ -56,8 +56,9 @@ Wenn Sie derzeit die Co-Verwaltung aktiviert haben, bearbeiten Sie die Eigenscha
 1. Klicken Sie mit der rechten Maustaste auf die Co-Verwaltungseinstellungen und dann auf **Eigenschaften**.
 1. Klicken Sie in der Registerkarte **Configure upload** (Upload konfigurieren) auf **Upload to Microsoft Endpoint Manager admin center** (Upload ins Microsoft Endpoint Manager Admin Center). Klicken Sie auf **Übernehmen**.
    - Die Standardeinstellung für den Upload von Geräten ist **All my devices managed by Microsoft Endpoint Configuration Manager** (Alle von Microsoft Endpoint Configuration Manager verwalteten Geräte). Bei Bedarf können Sie den Upload auf eine einzelne Geräte Sammlung beschränken.
+1. Aktivieren Sie die Option zum **Aktivieren von Endpoint Analytics für Geräte, die in den Microsoft Endpoint Manager hochgeladen** werden, wenn Sie auch Einblicke erhalten möchten, um die Endbenutzer Funktionen in [EndPoint Analytics](../../analytics/overview.md)zu optimieren.
 
-   [![Konfigurations-Assistent für die Co-Verwaltung](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
+   [![Hochladen von Geräten in das Microsoft Endpoint Manager Admin Center](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. Melden Sie sich mit Ihrem *globalen Administratorkonto* an, wenn Sie dazu aufgefordert werden.
 1. Klicken Sie auf **Ja**, um die Meldung **AAD-Anwendung erstellen** zu akzeptieren. Durch diese Aktion wird ein Dienstprinzipal bereitgestellt und eine Azure AD-Anwendungsregistrierung erstellt, um das Synchronisieren zu vereinfachen.
 1. Klicken Sie auf **OK**, um die Eigenschaften für die Co-Verwaltung zu verlassen, sobald Sie alle Änderungen vorgenommen haben.
@@ -77,6 +78,7 @@ Wenn Sie die Co-Verwaltung nicht aktiviert haben, verwenden Sie den Assistenten 
    [![Konfigurations-Assistent für die Co-Verwaltung](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. Klicken Sie auf **Weiter** und dann auf **Ja**, um die Meldung **AAD-Anwendung erstellen** zu akzeptieren. Durch diese Aktion wird ein Dienstprinzipal bereitgestellt und eine Azure AD-Anwendungsregistrierung erstellt, um das Synchronisieren zu vereinfachen.
 1. Wählen Sie auf der Seite **Upload konfigurieren** die empfohlene Einstellung für den Geräte Upload für alle Geräte aus, die **von Microsoft Endpoint Configuration Manager verwaltet**werden. Bei Bedarf können Sie den Upload auf eine einzelne Geräte Sammlung beschränken.
+1. Aktivieren Sie die Option zum **Aktivieren von Endpoint Analytics für Geräte, die in den Microsoft Endpoint Manager hochgeladen** werden, wenn Sie auch Einblicke erhalten möchten, um die Endbenutzer Funktionen in [EndPoint Analytics](../../analytics/overview.md) zu optimieren.
 1. Klicken Sie auf **Zusammenfassung**, um Ihre Auswahl zu überprüfen, und klicken Sie dann auf **Weiter**.
 1. Klicken Sie auf **Schließen**, wenn der Assistent abgeschlossen ist.  
 
@@ -120,4 +122,4 @@ Verwenden Sie die folgenden Protokolle auf dem Dienst Verbindungspunkt:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Anfügen von Protokolldateien für den Mandanten finden Sie unter Problembehandlung beim [Anfügen](technical-reference.md)von Mandanten.
+Weitere Informationen zum Anfügen von Protokolldateien für den Mandanten finden Sie unter Problembehandlung beim [Anfügen](troubleshoot.md)von Mandanten.
