@@ -4,11 +4,17 @@
   items:
     - name: Aktivieren der Mandantenanfügung
       href: device-sync-actions.md
-    - name: Problembehandlung bei Geräteaktionen
-      href: technical-reference.md
+    - name: Clientdetails (Vorschau)
+      href: client-details.md
 - name: CMPivot für mit dem Mandanten verknüpfte Geräte (Vorschau)
   items:
     - name: CMPivot-Übersicht
       href: cmpivot-overview-attached.md
     - name: CMPivot-Beispielskripts
       href: cmpivot-samples-attached.md
+- name: Problembehandlung
+  items:
+    - name: Anfüge- und Geräteaktionen für Mandanten
+      href: troubleshoot.md
+    - name: Clientdetails (Vorschau)
+      href: troubleshoot-client-details.md

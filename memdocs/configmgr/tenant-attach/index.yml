@@ -11,12 +11,12 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 282a213e680231ad1d88323f8a4e34380e58672d
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.openlocfilehash: 41220354f28671ae62b6f2c788dbe21790c2fa77
+  ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81741356"
+  ms.lasthandoff: 07/09/2020
+  ms.locfileid: "86210247"
 landingContent:
 - title: Informationen zur Mandantenanfügung
   linkLists:
@@ -24,7 +24,11 @@ landingContent:
     links:
     - text: Aktivieren der Mandantenanfügung
       url: device-sync-actions.md
+    - text: Anzeigen von ConfigMgr-Clientdetails (Vorschau)
+      url: client-details.md
   - linkListType: reference
     links:
-    - text: Problembehandlung für die Mandantenanfügung
-      url: technical-reference.md
+    - text: Problembehandlung für Anfüge- und Geräteaktionen für Mandanten
+      url: troubleshoot.md
+    - text: Problembehandlung für ConfigMgr-Clientdetails (Vorschau)
+      url: troubleshoot-client-details.md
