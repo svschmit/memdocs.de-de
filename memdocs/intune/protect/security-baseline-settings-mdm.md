@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf43608bd6eb9132cef1b97198e724bcada81d30
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: afc823a906d76edfe8d3d635bcbfdbe845867266
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693358"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022295"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>MDM-Einstellungen für Sicherheitsbaselines in Intune  
 
@@ -1437,7 +1437,7 @@ Weitere Informationen finden Sie unter [Policy CSP – RemoteDesktopServices (Ri
   **Standardeinstellung:** Aktiviert
   
 - **Block drive redirection** (Laufwerkumleitung blockieren)  
-  Mit dieser Richtlinieneinstellung wird festgelegt, ob die Zuordnung von Clientlaufwerken während einer Remotedesktopdienst-Sitzung (Laufwerkumleitung) verhindert werden soll. Remotedesktopdienst-Hostserver ordnen Clientlaufwerke standardmäßig beim Herstellen der Verbindung automatisch zu. Zugeordnete Laufwerke werden in der Sitzungsordnerstruktur im Datei-Explorer oder unter Computer mit dem Format *\<Laufwerkbuchstabe>* auf *\<Computername>* angezeigt. Mit dieser Richtlinieneinstellung können Sie dieses Verhalten überschreiben. Wenn Sie diese Richtlinieneinstellung aktivieren, ist die Umleitung von Clientlaufwerken in Remotedesktopdienst-Sitzungen nicht zulässig, und die Zwischenablageumleitung beim Kopieren von Dateien ist auf Computern unter Windows Server 2003, Windows 8 und Windows XP nicht zulässig. Wenn Sie diese Richtlinieneinstellung deaktivieren, ist die Umleitung von Clientlaufwerken immer zulässig. Außerdem ist die Zwischenablageumleitung beim Kopieren von Dateien immer zulässig, wenn die Zwischenablageumleitung zulässig ist. Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, werden die Umleitung von Clientlaufwerken und die Zwischenablageumleitung beim Kopieren von Dateien nicht auf Gruppenrichtlinienebene festgelegt.  
+  Mit dieser Richtlinieneinstellung wird festgelegt, ob die Zuordnung von Clientlaufwerken während einer Remotedesktopdienst-Sitzung (Laufwerkumleitung) verhindert werden soll. Remotedesktopdienst-Hostserver ordnen Clientlaufwerke standardmäßig beim Herstellen der Verbindung automatisch zu. Zugeordnete Laufwerke werden in der Sitzungsordnerstruktur im Datei-Explorer oder auf dem Computer im Format *\<driveletter>* auf *\<computername>* angezeigt. Mit dieser Richtlinieneinstellung können Sie dieses Verhalten überschreiben. Wenn Sie diese Richtlinieneinstellung aktivieren, ist die Umleitung von Clientlaufwerken in Remotedesktopdienst-Sitzungen nicht zulässig, und die Zwischenablageumleitung beim Kopieren von Dateien ist auf Computern unter Windows Server 2003, Windows 8 und Windows XP nicht zulässig. Wenn Sie diese Richtlinieneinstellung deaktivieren, ist die Umleitung von Clientlaufwerken immer zulässig. Außerdem ist die Zwischenablageumleitung beim Kopieren von Dateien immer zulässig, wenn die Zwischenablageumleitung zulässig ist. Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, werden die Umleitung von Clientlaufwerken und die Zwischenablageumleitung beim Kopieren von Dateien nicht auf Gruppenrichtlinienebene festgelegt.  
   [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067197)  
   
   **Standardeinstellung:** Aktiviert
@@ -1521,10 +1521,10 @@ Weitere Informationen finden Sie unter [Policy CSP - Search (Richtlinien-Konfigu
   **Standardeinstellung:** Ja
   
 ## <a name="smart-screen"></a>SmartScreen  
-Weitere Informationen finden Sie unter [Policy CSP - SmartScreen (Richtlinien-Konfigurationsdienstanbieter: SmartScreen)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - SmartScreen (Richtlinien-Konfigurationsdienstanbieter: SmartScreen)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in Ihrer Windows-Dokumentation. 
 
 - **Ausführen nicht überprüfter Dateien blockieren**  
-  Hindern Sie Benutzer am Ausführen von nicht überprüften Dateien. 
+  Hindern Sie Benutzer am Ausführen von nicht überprüften Dateien.
   - *Nicht konfiguriert*: Mitarbeiter können SmartScreen-Warnungen ignorieren und schädliche Dateien ausführen. 
   - *Ja*: Mitarbeiter können SmartScreen-Warnungen nicht ignorieren und keine schädlichen Dateien ausführen.
 

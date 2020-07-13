@@ -15,14 +15,14 @@ ms.technology: ''
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c83859d56b23974e95299c76b0d65512da0a0e
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 2d300be679d54a5f565fb2c42f889a7dcd23894a
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455088"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088546"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Verwenden von Azure AD für den Zugriff auf die Intune-APIs in Microsoft Graph
 
@@ -81,6 +81,10 @@ So registrieren Sie eine App, um die Microsoft Graph-API zu verwenden:
     2. Werte für **Anwendungstyp** und **Umleitungs-URI**.
 
         Diese unterscheiden sich entsprechend Ihren Anforderungen. Wenn Sie beispielsweise eine Azure AD-[Authentifizierungsbibliothek](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) verwenden, legen Sie **Anwendungstyp** auf `Native` und **Umleitungs-URI** auf `urn:ietf:wg:oauth:2.0:oob` fest.
+
+        > [!NOTE]
+        > Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
@@ -343,6 +347,10 @@ Dieses Beispiel zeigt, wie Sie C# zum Abrufen einer Liste von Geräten verwenden
 
 3. Fügen Sie im Projektmappen-Explorer das NuGet-Paket mit der Microsoft ADAL dem Projekt hinzu.
 
+  > [!NOTE]
+  > Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
+
     1. Klicken Sie mit der rechten Maustaste auf den Projektmappen-Explorer.
     2. Wählen Sie **NuGet-Pakete verwalten** &gt; **Durchsuchen**.
     3. Wählen Sie `Microsoft.IdentityModel.Clients.ActiveDirectory` aus, und klicken Sie anschließend auf **Installieren**.
@@ -602,7 +610,7 @@ Ferner gilt Folgendes:
     string authority = "https://login.microsoftonline.com/common/";
     ```
 
-    auf
+    in
 
     ``` csharp
     string authority = "https://login.microsoftonline.com/northwind.onmicrosoft.com/";

@@ -5,7 +5,7 @@ description: Behandeln und lösen Sie häufig auftretende Probleme in Bezug auf 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 07/06/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55f51f94cf26aa2486ef390d5fbb668eaf013e10
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350628"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972129"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Lösen häufig auftretender Probleme mit dem Intune Exchange Connector
  
@@ -74,7 +74,7 @@ Lesen Sie die folgenden Abschnitte, um Probleme in Bezug auf die E-Mail-Benachri
    Sie können den AutoErmittlungsdienst auch im Internet unter https://testconnectivity.microsoft.com testen. Alternativ können Sie ihn mit dem Microsoft-Verbindungsuntersuchungstool von einer lokalen Domäne aus testen. Weitere Informationen finden Sie unter [Microsoft-Verbindungsuntersuchung](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
-### <a name="check-autodiscovery"></a>AutoErmittlung überprüfen
+### <a name="check-autodiscover"></a>Überprüfen der AutoErmittlung
 
 Führen Sie die folgenden Schritte aus, wenn bei der AutoErmittlung ein Fehler auftritt:
 

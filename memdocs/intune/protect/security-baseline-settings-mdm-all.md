@@ -5,7 +5,7 @@ description: Überprüfen Sie die Standardeinstellungen und die verfügbaren Ein
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 9cc2cf4531c2e2d7a2847ccdbce87c8b938a46d6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943908"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022227"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Einstellungen für Windows MDM-Sicherheitsbaselines in Intune
 
@@ -1851,7 +1851,7 @@ Weitere Informationen finden Sie unter [Policy CSP – RemoteDesktopServices (Ri
   **Standardeinstellung:** Aktiviert
 
 - **Laufwerkumleitung blockieren**:  
-  Mit dieser Richtlinieneinstellung wird festgelegt, ob die Zuordnung von Clientlaufwerken während einer Remotedesktopdienst-Sitzung (Laufwerkumleitung) verhindert werden soll. Remotedesktopdienst-Hostserver ordnen Clientlaufwerke standardmäßig beim Herstellen der Verbindung automatisch zu. Zugeordnete Laufwerke werden in der Sitzungsordnerstruktur im Datei-Explorer oder unter Computer mit dem Format *\<Laufwerkbuchstabe>* auf *\<Computername>* angezeigt. Mit dieser Richtlinieneinstellung können Sie dieses Verhalten überschreiben. Wenn Sie diese Richtlinieneinstellung aktivieren, ist die Umleitung von Clientlaufwerken in Remotedesktopdienst-Sitzungen nicht zulässig, und die Zwischenablageumleitung beim Kopieren von Dateien ist auf Computern unter Windows Server 2003, Windows 8 und Windows XP nicht zulässig. Wenn Sie diese Richtlinieneinstellung deaktivieren, ist die Umleitung von Clientlaufwerken immer zulässig. Außerdem ist die Zwischenablageumleitung beim Kopieren von Dateien immer zulässig, wenn die Zwischenablageumleitung zulässig ist. Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, werden die Umleitung von Clientlaufwerken und die Zwischenablageumleitung beim Kopieren von Dateien nicht auf Gruppenrichtlinienebene festgelegt.  
+  Mit dieser Richtlinieneinstellung wird festgelegt, ob die Zuordnung von Clientlaufwerken während einer Remotedesktopdienst-Sitzung (Laufwerkumleitung) verhindert werden soll. Remotedesktopdienst-Hostserver ordnen Clientlaufwerke standardmäßig beim Herstellen der Verbindung automatisch zu. Zugeordnete Laufwerke werden in der Sitzungsordnerstruktur im Datei-Explorer oder auf dem Computer im Format *\<driveletter>* auf *\<computername>* angezeigt. Mit dieser Richtlinieneinstellung können Sie dieses Verhalten überschreiben. Wenn Sie diese Richtlinieneinstellung aktivieren, ist die Umleitung von Clientlaufwerken in Remotedesktopdienst-Sitzungen nicht zulässig, und die Zwischenablageumleitung beim Kopieren von Dateien ist auf Computern unter Windows Server 2003, Windows 8 und Windows XP nicht zulässig. Wenn Sie diese Richtlinieneinstellung deaktivieren, ist die Umleitung von Clientlaufwerken immer zulässig. Außerdem ist die Zwischenablageumleitung beim Kopieren von Dateien immer zulässig, wenn die Zwischenablageumleitung zulässig ist. Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, werden die Umleitung von Clientlaufwerken und die Zwischenablageumleitung beim Kopieren von Dateien nicht auf Gruppenrichtlinienebene festgelegt.  
   [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067197)
 
   **Standardeinstellung:** Aktiviert
@@ -1968,7 +1968,7 @@ Weitere Informationen finden Sie unter [Policy CSP - SmartScreen (Richtlinien-Ko
   **Standardeinstellung:** Ja
 
 ::: zone-end
-::: zone pivot="mdm-may-201"
+::: zone pivot="mdm-may-2019"
 
 - **Windows SmartScreen aktivieren**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -1980,7 +1980,9 @@ Weitere Informationen finden Sie unter [Policy CSP - SmartScreen (Richtlinien-Ko
 - **Ignorieren von SmartScreen-Warnungen durch die Benutzer blockieren**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Wenn „Ja“ festgelegt ist, stellt SmartScreen keine Option bereit, mit der der Benutzer die Warnung ignorieren und die App ausführen kann. Die Warnung wird angezeigt, der Benutzer kann Sie jedoch umgehen. Wenn „Nicht konfiguriert“ festgelegt ist, wird die Einstellung auf den Standardwert von Windows zurückgesetzt, d. h., eine Außerkraftsetzung durch den Benutzer ist möglich. Diese Einstellung erfordert, dass die Einstellung „Enforce SmartScreen for apps and files“ (SmartScreen für Apps und Dateien erzwingen) aktiviert ist.
+  Wenn „Ja“ festgelegt wird, wird SmartScreen aktiviert und Benutzer können Warnungen für Dateien oder bösartige Apps nicht umgehen. Wenn „Nicht konfiguriert“ festgelegt wird, können Benutzer SmartScreen-Warnungen für Dateien ignorieren und schädliche Apps ausführen.  
+
+  Diese Einstellung erfordert, dass die Einstellung „Windows SmartScreen aktivieren“ auf „Ja“ festgelegt ist.
 
   **Standardeinstellung:** Ja
 

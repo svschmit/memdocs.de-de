@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 879cb5d1659b886a01e564574452bd9e5370664c
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126813"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022346"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune wird in China von 21Vianet betrieben  
 
@@ -50,7 +50,7 @@ Da die China-Dienste von einem Partner aus China betrieben werden, gibt es einig
 - In der Intune Unternehmensportal-App für Android erfolgt die Kommunikation mit dem Microsoft Intune-Dienst über Google Mobile Services. Da Google Play-Dienste in China nicht verfügbar sind, kann es bis zu 8 Stunden dauern, bis einige Aufgaben abgeschlossen sind. Weitere Informationen finden Sie in [diesem Artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
 - Zur Einhaltung der lokalen Bestimmungen und zur Bereitstellung verbesserter Funktionalität kann sich die Intune-Clientumgebung (Unternehmensportal-APP) in China unterscheiden.
 - Das Fencing ist nicht verfügbar.
-- Die Verfügbarkeit der mobilen Anwendungsverwaltung (Mobile Application Management, MAM) ist abhängig von den Apps, die in China verfügbar sind.
+- Die Verfügbarkeit der mobilen Anwendungsverwaltung (Mobile Application Management, MAM) ist abhängig von den Apps, die in der Volksrepublik China verfügbar sind.
 
 ## <a name="you-control-customer-data"></a>Sie haben die Kontrolle über die Kundendaten
 

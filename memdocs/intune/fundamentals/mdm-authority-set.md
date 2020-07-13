@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4209c461877786000e01dd03e4e0dea9f76a6e84
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 9b0fab472f9bef682666d743c8a53b1308f32b40
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270955"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022431"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Festlegen der Autorität für die Verwaltung mobiler Geräte
 
@@ -36,9 +36,9 @@ Die möglichen Konfigurationen sind Folgende:
 
 - **Co-Verwaltung in Intune:** Integration der Intune-Cloudlösung in Configuration Manager für Windows 10-Geräte. Sie konfigurieren Intune mithilfe der Configuration Manager-Konsole. [Konfigurieren der automatischen Registrierung von Geräten in Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune) 
 
-- **Verwaltung mobiler Geräte für Office 365:** Wenn für Office 365 MDM aktiviert ist, sehen sie, dass die MDM-Autorität auf „Office 365“ festgelegt ist. Wenn Sie Intune verwenden möchten, müssen Sie zuvor Intune-Lizenzen kaufen.
+- **Basic Mobility and Security for Office 365** (Einfache Mobilität und Sicherheit für Office 365): Wenn Sie diese Konfiguration aktiviert haben, wird die MDM-Autorität auf „Office 365“ festgelegt. Wenn Sie Intune verwenden möchten, müssen Sie zuvor Intune-Lizenzen kaufen.
 
-- **Office 365 MDM Coexistence** (MDM-Koexistenz für Office 365): Sie können Intune zu Ihrem Mandanten hinzufügen, wenn Sie bereits MDM für Office 365 verwenden, und Sie können die Verwaltungsautorität für alle Benutzer entweder auf Intune oder MDM für Office 365 festlegen, um zu bestimmen, welcher Dienst zum Verwalten ihrer bei MDM registrierten Geräte verwendet wird. Die Verwaltungsautorität jedes Benutzers wird basierend auf der dem Benutzer zugeordneten Lizenz definiert. Wenn der Benutzer nur eine Lizenz für Microsoft 365 Basic oder Standard verfügt, werden dessen Geräte von MDM für Office verwaltet. Wenn der Benutzer über eine Lizenz für Intune verfügt, werden die Geräte von Intune verwaltet. Wenn Sie einem Benutzer, der zuvor von MDM für Office verwaltet wurde, eine Lizenz für Intune hinzufügen, werden seine Geräte auf die Intune-Verwaltung umgestellt. Stellen Sie sicher, dass Intune-Konfigurationen den Benutzern zugewiesen sind, um MDM für Office zu ersetzen, bevor Sie Benutzer zu Intune verschieben, andernfalls verlieren ihre Geräte die MDM-Konfiguration für Office, und sie erhalten keinen Ersatz von Intune.
+- **Basic Mobility and Security for Office 365 Coexistence** (Einfache Mobilität und Sicherheit für Office 365-Koexistenz): Sie können Intune zu Ihrem Mandanten hinzufügen, wenn Sie die Konfiguration „Basic Mobility and Security for Office 365“ bereits verwenden, und Sie können die Verwaltungsautorität für alle Benutzer entweder auf Intune oder „Basic Mobility and Security for Office 365“ festlegen, um zu bestimmen, welcher Dienst zum Verwalten ihrer bei MDM registrierten Geräte verwendet wird. Die Verwaltungsautorität jedes Benutzers wird basierend auf der dem Benutzer zugeordneten Lizenz definiert. Wenn der Benutzer nur eine Lizenz für Microsoft 365 Basic oder Standard verfügt, werden dessen Geräte von „Basic Mobility and Security for Office 365“ verwaltet. Wenn der Benutzer über eine Lizenz für Intune verfügt, werden die Geräte von Intune verwaltet. Wenn Sie einem Benutzer, der zuvor von „Basic Mobility and Security for Office 365“ verwaltet wurde, eine Lizenz für Intune hinzufügen, werden seine Geräte auf die Intune-Verwaltung umgestellt. Stellen Sie sicher, dass den Benutzern Intune-Konfigurationen zugewiesen sind, um „Basic Mobility and Security for Office 365“ zu ersetzen, bevor Sie Benutzer zu Intune verschieben, andernfalls verlieren ihre Geräte die Konfiguration „Basic Mobility and Security for Office 365“, und sie erhalten keinen Ersatz von Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Festlegen der MDM-Autorität in Intune
 
@@ -77,7 +77,7 @@ Das MDM-Zertifikat wird automatisch erneuert, wenn mobile Geräte mit dem Intune
 
 ## <a name="remove-mdm-authority"></a>Entfernen der MDM-Autorität
 
-Die MDM-Autorität kann nicht in „Unbekannt“ geändert werden. Der Dienst verwendet die MDM-Autorität, um zu bestimmen, an welches Portal diese registrierten Geräte melden (Microsoft Intune oder Office 365 MDM).
+Die MDM-Autorität kann nicht in „Unbekannt“ geändert werden. Der Dienst verwendet die MDM-Autorität, um zu bestimmen, an welches Portal diese registrierten Geräte melden (Microsoft Intune oder Basic Mobility and Security for Office 365).
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>Was passiert nach der Umstellung der MDM-Autorität
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/15/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227a44436f4490c9b3e2188609a9714a0e842149
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206314"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088325"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Verwenden von Konformitätsrichtlinien zum Festlegen von Regeln für Geräte, die Sie mit Intune verwalten
 
@@ -31,7 +31,9 @@ Konformitätsrichtlinien in Intune:
 
 - Konformitätsrichtlinien definieren Regeln und Einstellungen, die Benutzer und Geräte erfüllen müssen, um als „konform“ zu gelten.
 - Schließen Sie Aktionen ein, die auf nicht konforme Geräte angewendet werden. Diese Aktionen bei Nichtkonformität können Benutzer an die Gründe der Nichtkonformität warnen und Daten auf nicht konformen Geräten schützen.
-- Sie können [in Kombination mit dem bedingten Zugriff](#integrate-with-conditional-access) verwendet werden, wodurch Benutzer und Geräte blockiert werden, die nicht den Regeln entsprechen.
+- Die Richtlinien können [mit dem bedingten Zugriff kombiniert werden](#integrate-with-conditional-access), um Benutzer und Geräte zu blockieren, die nicht den Regeln entsprechen und als nicht konform gekennzeichnet wurden.
+
+  Der bedingte Zugriff kann auch mit Konformitätszustandsdaten der Geräte verwendet werden, die Sie mithilfe der mobilen Geräteverwaltung von Drittanbieterpartnern verwalten. Zum Aktivieren dieser Funktion fügen Sie die Unterstützung des Partners sowohl zu Azure AD als auch zu Intune hinzu. Weitere Informationen finden Sie unter „Hinzufügen der Unterstützung für Gerätekonformitätspartner. 
 
 Die Konformitätsrichtlinien in Intune haben zwei Teile:
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 299b09c57f0cff44c465102d85628c8f2605adea
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332869"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088495"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatisches Registrieren von iOS-/iPadOS-Geräten mit der automatischen Geräteregistrierung von Apple
 
@@ -69,7 +69,7 @@ Die Unterstützung für nicht überwachte ADE-Geräte ist seit iOS/iPadOS 11 ve
 - Maximale Registrierungsprofile pro Token: 1,000  
 - Maximale Anzahl von Geräten mit automatischer Geräteregistrierung pro Profil: keine Beschränkung (innerhalb der maximalen Anzahl von Geräten pro Token)
 - Maximale Anzahl der Token für die automatische Geräteregistrierung pro Intune-Konto: 2,000
-- Maximale Anzahl von Geräten mit automatischer Geräteregistrierung pro Token: Der Grenzwert bei der ersten Synchronisierung ist 75.000 bis 80.000 Geräte. Intune wird weiterhin alle 12 Stunden mit ABM oder ASM synchronisiert, um jedes Mal weitere 80.000 Geräte hinzuzufügen. Bei einer manuellen Synchronisierung werden auch weitere 80.000 Geräte hinzugefügt. Synchronisierungen erfolgen weiterhin, und Geräte werden weiterhin in Batches von 75.000 bis 80.000 Geräten zwischen ABM/ASM und Intune synchronisiert. 
+- Maximale Anzahl von Geräten mit automatischer Geräteregistrierung pro Token: Der Grenzwert bei der ersten Synchronisierung ist 75.000 bis 80.000 Geräte. Intune wird weiterhin alle 12 Stunden mit ABM oder ASM synchronisiert, um mit jedem Mal mehr Geräte hinzuzufügen. Eine manuelle Synchronisierung (die alle 15 Minuten ausgelöst werden kann) fügt auch ein Gerätebatch zu Intune hinzu. Synchronisierungen erfolgen weiterhin, und Geräte werden weiterhin in großen Mengen zwischen ABM/ASM und Intune synchronisiert. 
 
 ## <a name="get-an-apple-ade-token"></a>Abrufen eines Apple-ADE-Tokens
 

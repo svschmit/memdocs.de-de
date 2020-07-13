@@ -5,7 +5,7 @@ description: Von Intune unterstützte Einstellungen für Sicherheitsbaselines zu
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429355"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022183"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -859,9 +859,9 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Ignorieren von SmartScreen-Warnungen durch die Benutzer blockieren**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-   Diese Einstellung erfordert, dass die Einstellung „Enforce SmartScreen for apps and files“ (SmartScreen für Apps und Dateien erzwingen) aktiviert ist.
-  - **Ja** (*Standardeinstellung*): SmartScreen bietet keine Option, mit der Benutzer die Warnung ignorieren und die App ausführen können. Die Warnung wird angezeigt, der Benutzer kann Sie jedoch umgehen.
-  - **Nicht konfiguriert**: Die Einstellung wird auf den Standardwert von Windows zurückgesetzt, d. h. das Überschreiben durch den Benutzer ist zulässig.
+   Diese Einstellung erfordert, dass die Einstellung „Windows SmartScreen aktivieren“ auf „Ja“ festgelegt ist.
+  - **Ja** (*Standardeinstellung*): Wenn „Ja“ festgelegt wird, wird SmartScreen aktiviert und Benutzer können Warnungen für Dateien oder bösartige Apps nicht umgehen.
+  - **Nicht konfiguriert:** Wenn „Nicht konfiguriert“ festgelegt wird, können Benutzer SmartScreen-Warnungen für Dateien ignorieren und schädliche Apps ausführen.
 
 - **Nur Apps aus Store zulassen**  
 

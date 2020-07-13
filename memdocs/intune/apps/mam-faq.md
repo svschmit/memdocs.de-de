@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 81ba50c9822ff5672fd52bab1d89f444aafdb402
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989984"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022329"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Häufig gestellte Fragen zu MAM und App-Schutz
 
@@ -79,7 +79,7 @@ Jede App, die in das [Intune App SDK](../developer/app-sdk.md) integriert oder v
 Das Intune SDK-Entwicklungsteam testet und unterstützt aktiv Apps, die mit den nativen Android-, iOS/iPadOS-Plattformen (Obj-C, Swift), Xamarin- und Xamarin.Forms-Plattformen erstellt wurden. Während einige Kunden das Intune SDK erfolgreich in andere Plattformen wie React Native und NativeScript integrieren konnten, bieten wir keine expliziten Anleitungen oder Plug-Ins für App-Entwickler, die andere als unsere unterstützten Plattformen verwenden.
 
 **Unterstützt das Intune App SDK die Microsoft-Authentifizierungsbibliothek (MSAL)?**<br></br>
-Intune App SDK kann für die Authentifizierung und bedingte Startszenarios entweder die Azure Active Directory-Authentifizierungsbibliothek oder die Microsoft-Authentifizierungsbibliothek verwenden. Es verwendet außerdem ADAL/MSAL zum Registrieren der Benutzeridentität beim MAM-Dienst für Verwaltungsszenarien ohne Geräteregistrierung.
+Das Intune App SDK kann die Microsoft-Authentifizierungsbibliothek für die Authentifizierung und für Szenarios mit bedingtem Start verwenden. Außerdem nutzt es MSAL zum Registrieren des Benutzeridentität mit dem Dienst für die mobile Anwendungsverwaltung für Verwaltungsszenarios ohne Geräteregistrierung.
 
 **Welche zusätzlichen Anforderungen gelten für die Verwendung der [mobilen Outlook-App](https://products.office.com/outlook)?**
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7f200e5cb5bb4aa0f29cbd3adc0f177bb14e5476
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431695"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022397"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Richtlinieneinstellungen zur Verringerung der Angriffsfläche für die Endpunktsicherheit in Intune
 
@@ -92,7 +92,7 @@ Unterstützte Plattformen und Profile:
 - **Application Guard: Drucken auf lokalen Druckern zulassen**  
 
   - **Nicht konfiguriert** (*Standardeinstellung*)
-  - **Ja**: Hiermit wird das Drucken auf lokalen Druckern zugelassen.
+  - **Ja:** Mit dieser Einstellung wird das Drucken auf lokalen Druckern zugelassen.
 
 - **Application Guard: Drucken auf Netzwerkdruckern zulassen**  
 
@@ -114,7 +114,7 @@ Unterstützte Plattformen und Profile:
   - **Nicht konfiguriert** (*Standardeinstellung*)
   - **Ja**: Hiermit können Sie eine Richtlinie für die Windows-Netzwerkisolation konfigurieren.  
   
-  Bei Festlegung auf *Konfigurieren* können Sie die folgenden Einstellungen festlegen.
+  Bei Festlegung auf *Ja* können Sie die folgenden Einstellungen konfigurieren.
 
   - **IP-Bereiche**  
     Erweitern Sie die Dropdownliste, wählen Sie **Hinzufügen** aus, und geben Sie eine *untere Adresse* und eine *obere Adresse* an.
@@ -186,9 +186,9 @@ Unterstützte Plattformen und Profile:
 - **Ignorieren von SmartScreen-Warnungen durch die Benutzer blockieren**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Diese Einstellung erfordert, dass die Einstellung „Enforce SmartScreen for apps and files“ (SmartScreen für Apps und Dateien erzwingen) aktiviert ist.
-  - **Nicht konfiguriert** (*Standard*): Die Einstellung wird auf den Standardwert von Windows zurückgesetzt, d. h. das Überschreiben durch den Benutzer ist zulässig.
-  - **Ja**: SmartScreen bietet keine Option, mit der Benutzer die Warnung ignorieren und die App ausführen können. Die Warnung wird angezeigt, der Benutzer kann sie jedoch nicht umgehen.
+  - **Nicht konfiguriert** (*Standardeinstellung*): Wenn „Nicht konfiguriert“ festgelegt wird, können Benutzer SmartScreen-Warnungen für Dateien ignorieren und schädliche Apps ausführen.
+  - **Ja:** Wenn „Ja“ festgelegt wird, wird SmartScreen aktiviert und Benutzer können Warnungen für Dateien oder bösartige Apps nicht umgehen.
+
 
 - **Windows SmartScreen aktivieren**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)

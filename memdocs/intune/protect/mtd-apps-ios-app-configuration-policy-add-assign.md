@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03dbdccd1626db5ad97bc230a3d6b9a82060ee2e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 4782c2a8f2c8791929ca4e585dab96031bf550fa
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590489"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914625"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Hinzufügen und Zuweisen von Mobile Threat Defense-Apps (MTD) mit Intune
 
@@ -136,24 +136,24 @@ Erstellen Sie die iOS-App-Konfigurationsrichtlinie wie im Artikel [zur Verwendun
 - **Android**
   - In den Anweisungen zur[Verwendung der Android-App-Konfigurationsrichtlinien von Microsoft Intune](../apps/app-configuration-policies-use-android.md) erfahren Sie, wie Sie bei Aufforderung die Android-App-Konfigurationsrichtlinie für Wandera gemäß den nachstehenden Informationen hinzufügen.
 
-1. Klicken Sie im **RADAR Wandera Portal** unter **Configuration settings** (Konfigurationseinstellungen) auf die Schaltfläche **Add+** (Hinzufügen+).
+1. Klicken Sie im **RADAR Wandera-Portal** unter **Configuration settings** (Konfigurationseinstellungen) auf die Schaltfläche **Add** (Hinzufügen).
 2. Wählen Sie in der Liste **Configuration Keys** (Konfigurationsschlüssel) **Activation Profile URL** (Aktivierungsprofil-URL) aus. Klicken Sie auf **OK**.
-3. Wählen Sie für **Activation Profile URL** (Aktivierungsprofil-URL) im Menü **Value type** (Werttyp) die Option **string** (Zeichenfolge) aus. Kopieren Sie dann die **Shareable Link URL** (Freigabelink-URL) aus dem gewünschten Aktivierungsprofil in RADAR, und fügen Sie sie ein.
-4. Definieren Sie in **Settings** (Einstellungen) **Configuration settings format > Use Configuration Designer** (Format der Konfigurationseinstellungen > Konfigurations-Designer verwenden), und führen Sie die folgenden Schritte aus.
+3. Wählen Sie für **Activation Profile URL** (Aktivierungsprofil-URL) im Menü **Value type** (Werttyp) die Option **string** (Zeichenfolge) aus. Kopieren Sie dann die **Shareable Link URL** (Freigabelink-URL) aus dem gewünschten Aktivierungsprofil in RADAR.
+4. Klicken Sie auf der **Benutzeroberfläche für die App-Konfiguration in der Intune-Verwaltungskonsole** auf **Einstellungen**, navigieren Sie zu **Format der Konfigurationseinstellungen > Konfigurations-Designer verwenden**, und fügen Sie dann die **Freigabelink-URL** ein.  
 
 > [!NOTE] 
-> Im Gegensatz zu iOS müssen Sie bei Android Enterprise-Apps für jedes Wandera-Aktivierungsprofil eine eindeutige Konfigurationsrichtlinie definieren. Wenn Sie nicht mehrere Wandera-Aktivierungsprofile benötigen, können Sie für alle Zielgeräte eine zentrale Android-App-Konfiguration verwenden. Wenn Sie in Wandera Aktivierungsprofile erstellen, müssen Sie unter der Konfiguration „Associated User (Zugeordnete Benutzer)“ die Option „Azure Active Directory“ auswählen, um sicherzustellen, dass Wandera in der Lage ist, das Gerät über UEM Connect mit Microsoft Endpoint Manager zu synchronisieren.
+> Im Gegensatz zu iOS müssen Sie bei Android Enterprise-Apps für jedes Wandera-Aktivierungsprofil eine eindeutige Konfigurationsrichtlinie definieren. Wenn Sie nicht mehrere Wandera-Aktivierungsprofile benötigen, können Sie für alle Zielgeräte eine zentrale Android-App-Konfiguration verwenden. Beim Erstellen von Aktivierungsprofilen in Wandera müssen Sie unter der Konfiguration „Associated User (Zugeordnete Benutzer)“ die Option „Azure Active Directory“ auswählen, um sicherzustellen, dass Wandera in der Lage ist, das Gerät über UEM Connect mit Intune zu synchronisieren.
 
 - **iOS**
   - In den Anweisungen zur[Verwendung der iOS-App-Konfigurationsrichtlinien von Microsoft Intune](../apps/app-configuration-policies-use-ios.md) erfahren Sie, wie Sie bei Aufforderung die iOS-App-Konfigurationsrichtlinie für Wandera gemäß den nachstehenden Informationen hinzufügen.
 
 1. Navigieren Sie im **RADAR Wandera Portal** zu **Devices > Activations** (Geräte > Aktivierungen), und wählen Sie ein beliebiges Aktivierungsprofil aus. Klicken Sie auf **Deployment Strategies > Managed Devices > Microsoft Intune** (Bereitstellungsstrategien > Verwaltete Geräte > Microsoft Intune), und suchen Sie die **iOS App Configuration settings** (iOS-App-Konfigurationseinstellungen).  
 2. Klappen Sie das Feld auf, um den XML-Code der iOS-App-Konfiguration anzuzeigen, und kopieren Sie ihn in die Zwischenablage Ihres Systems.  
-3. Definieren Sie in **Settings** (Einstellungen) **Configuration settings format > Enter XML data** (Format der Konfigurationseinstellungen > XML-Daten eingeben), und führen Sie die folgenden Schritte aus:
-4. Fügen Sie in Microsoft Endpoint Manager den XML-Code in das Textfeld „App-Konfiguration“ ein.
+3. Navigieren Sie über die **Benutzeroberfläche für die App-Konfiguration in der Intune-Verwaltungskonsole zu den Einstellungen** und dann zu **Format der Konfigurationseinstellungen > XML-Daten eingeben**. 
+4. Fügen Sie die XML-Daten in das Textfeld „App-Konfiguration“ ein.
 
 > [!NOTE]
-> Eine zentrale iOS-Konfigurationsrichtlinie kann für alle Geräte verwendet werden, auf denen Wandera bereitgestellt werden soll.  
+> Für alle mit Wandera bereitgestellten Geräte kann eine einzelne iOS-Konfigurationsrichtlinie verwendet werden.  
 
 ## <a name="assigning-mobile-threat-defense-apps-to-end-users-via-intune"></a>Zuweisen von Mobile Threat Defense-Apps für Endbenutzer über Intune
 

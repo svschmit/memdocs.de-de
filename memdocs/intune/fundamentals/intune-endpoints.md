@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 74152e28d1c78ea911b1f4e2cca31d6382283c19
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216500"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088478"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Netzwerkendpunkte für Microsoft Intune  
 
@@ -67,7 +67,6 @@ In den folgenden Tabellen sind die Ports und Dienste aufgeführt, auf die der In
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
@@ -130,8 +129,8 @@ Weitere Informationen finden Sie in den Apple-Artikeln [Von Apple-Softwareproduk
 
 Je nachdem, wie Sie Android-Geräte verwalten möchten, müssen Sie möglicherweise Google Android Enterprise-Ports öffnen und/oder Android-Pushbenachrichtigungen aktivieren. Weitere Informationen zu den unterstützten Verwaltungsmethoden für Android finden Sie in der [Dokumentation zur Android-Registrierung](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
 
-[!NOTE]
-Da Google Mobile Services in China nicht verfügbar ist, können von Intune verwaltete Geräte in China keine Features nutzen, die Google Mobile Services erfordern. Zu diesen Funktionen gehören: Google Play Protect-Funktionen wie der SafetyNet-Gerätenachweis, die Verwaltung von Apps über den Google Play Store und Android Enterprise-Funktionen (siehe diese [Google-Dokumentation](https://support.google.com/work/android/answer/6270910)). Darüber hinaus erfolgt die Kommunikation mit dem Microsoft Intune-Dienst in der Intune Unternehmensportal-App für Android über Google Mobile Services. Da Google Play-Dienste in China nicht verfügbar sind, kann es bis zu 8 Stunden dauern, bis einige Aufgaben abgeschlossen sind. Weitere Informationen finden Sie in [diesem Artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+> [!NOTE]
+> Da Google Mobile Services in China nicht verfügbar ist, können von Intune verwaltete Geräte in China keine Features nutzen, die Google Mobile Services erfordern. Zu diesen Funktionen gehören: Google Play Protect-Funktionen wie der SafetyNet-Gerätenachweis, die Verwaltung von Apps über den Google Play Store und Android Enterprise-Funktionen (siehe diese [Google-Dokumentation](https://support.google.com/work/android/answer/6270910)). Darüber hinaus erfolgt die Kommunikation mit dem Microsoft Intune-Dienst in der Intune Unternehmensportal-App für Android über Google Mobile Services. Da Google Play-Dienste in China nicht verfügbar sind, kann es bis zu 8 Stunden dauern, bis einige Aufgaben abgeschlossen sind. Weitere Informationen finden Sie in [diesem Artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -141,3 +140,6 @@ Google stellt Dokumentationen zu erforderlichen Netzwerkports und Zielhostnamen 
 
 Intune nutzt Google Firebase Cloud Messaging (FCM) für Pushbenachrichtigungen, um Geräteaktionen und Check-Ins auszulösen. Dies ist für Android-Geräteadministrator und Android Enterprise erforderlich. Informationen zu den FCM-Netzwerkanforderungen finden Sie unter [FCM-Ports und Ihre Firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
 
+## <a name="endpoint-analytics"></a>Endpunktanalyse
+
+Weitere Informationen zu den erforderlichen Endpunkten für die Endpunktanalyse finden Sie unter [Proxykonfiguration](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).

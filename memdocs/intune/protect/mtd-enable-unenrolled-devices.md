@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6c762aafbc1d82e7e51746806f8ba15cc5ad83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 933810cb079ac405d15a18a26efd07fb69a6e3f1
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984926"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972034"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Aktivieren des Mobile Threat Defense-Connector in Intune für nicht registrierte Geräte
 
@@ -33,8 +33,9 @@ Während des Mobile Threat Defense-Setups (MTD) haben Sie eine Richtlinie zum Kl
 > Dieser Artikel gilt für alle Mobile Threat Defense-Partner, die App-Schutzrichtlinien unterstützen:
 >
 > - Better Mobile (Android, iOS/iPadOS)
-> - Zimperium (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
+> - Wandera (Android, iOS/iPadOS)
+> - Zimperium (Android, iOS/iPadOS)
 
 ## <a name="classic-conditional-access-policies-for-mtd-apps"></a>Klassische Richtlinien für bedingten Zugriff für MTD-Apps
 
@@ -74,9 +75,9 @@ Sie können entscheiden, welche MTD-Optionen Sie aktivieren müssen, um die Anfo
 
 **Einstellungen für die App-Schutzrichtlinie**
 
-- **Verbinden von Android-Geräten der Version 4.4 und höher mit *\<MTD-Partnername>* zur Auswertung von App-Schutzrichtlinien**: Wenn Sie diese Option aktivieren, werten App-Schutzrichtlinien mit der Regel „Gerätebedrohungsstufe“ Geräte aus, die Daten von diesem Connector enthalten.
+- **Verbinden von Android-Geräten der Version 4.4 oder höher mit *\<MTD partner name>* für eine Auswertung der App-Schutzrichtlinien:** Wenn Sie diese Option aktivieren, werten App-Schutzrichtlinien mit der Regel „Gerätebedrohungsstufe“ Geräte aus, die Daten von diesem Connector enthalten.
 
-- **Verbinden von iOS-Geräten der Version 11 und höher mit *\<MTD-Partnername>* zur Auswertung von App-Schutzrichtlinien**: Wenn Sie diese Option aktivieren, werten App-Schutzrichtlinien mit der Regel „Gerätebedrohungsstufe“ Geräte aus, die Daten von diesem Connector enthalten.
+- **Verbinden von iOS-Geräten der Version 11 und höher mit *\<MTD partner name>* für eine Auswertung der App-Schutzrichtlinien:** Wenn Sie diese Option aktivieren, werten App-Schutzrichtlinien mit der Regel „Gerätebedrohungsstufe“ Geräte aus, die Daten von diesem Connector enthalten.
 
 **Allgemeine Einstellungen**
 

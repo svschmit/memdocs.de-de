@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c65235caa7e53dbe8dee4605803a6e58d6ab31a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344115"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088393"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Übersicht über den MDM-Lebenszyklus von Microsoft Intune (MDM = Mobile Device Management; mobile Geräteverwaltung)
 
-Alle von Ihnen verwalteten Geräte verfügen über einen *Lebenszyklus*. Intune kann Ihnen bei der Verwaltung dieses Lebenszyklus helfen: von der Registrierung über die Konfiguration und den Schutz bis hin zur Abkopplung des Geräts, wenn es nicht mehr benötigt wird.
+Alle von Ihnen verwalteten Geräte verfügen über einen *Lebenszyklus*. Intune kann Ihnen bei der Verwaltung dieses Lebenszyklus helfen: von der Registrierung über die Konfiguration und den Schutz bis hin zur Abkopplung des Geräts, wenn es nicht mehr benötigt wird. Beispiel: Ein iPad, das von Ihrem Unternehmen erworben wurde, muss zunächst mit Ihrem Microsoft Intune-Konto registriert werden, damit Ihr Unternehmen es verwalten kann. Anschließend muss es den Vorgaben des Unternehmens entsprechend konfiguriert werden, und dann müssen die von einem Benutzer auf dem Gerät gespeicherten Daten geschützt werden. Schließlich müssen alle vertraulichen Daten [abgekoppelt oder zurückgesetzt](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe) werden, wenn das iPad nicht mehr benötigt wird.
 
 ![Der Gerätelebenszyklus](./media/device-lifecycle/device-lifecycle.png "Der Intune-Gerätelebenszyklus")
 

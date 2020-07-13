@@ -1,5 +1,5 @@
 ---
-title: Installieren der Intune-Unternehmensportal-App auf dem chinesischen Festland | Microsoft-Dokumentation
+title: Installieren der Intune-Unternehmensportal-App in der Volksrepublik China | Microsoft-Dokumentation
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,16 +19,16 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 39aa0108d160aea74e1ac47b19877763a9ffefa5
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 58ba595b65ade57fee0ff3fe40242b27a2ff8ba4
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332784"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86021836"
 ---
-# <a name="install-company-portal-app-in-mainland-china"></a>Installieren der Unternehmensportal-App auf dem chinesischen Festland   
+# <a name="install-company-portal-app-in-peoples-republic-of-china"></a>Installieren der Unternehmensportal-App in der Volksrepublik China
 
-Installieren Sie die Intune-Unternehmensportal-App für den Zugriff auf Schul- oder Arbeitsressourcen von Ihrem Android-Gerät. Die App ist auf dem chinesischen Festland verfügbar und kann aus den folgenden App-Stores installiert werden: 
+Installieren Sie die Intune-Unternehmensportal-App für den Zugriff auf Schul- oder Arbeitsressourcen von Ihrem Android-Gerät. Die App wird in der Volksrepublik China über die folgenden App Stores zur Installation bereitgestellt: 
 
 
 * [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 

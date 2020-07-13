@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a90345bef46161911bcb1c1072b6ae4af41f16e
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864955"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022414"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Abrufen von Daten aus der Intune-Data Warehouse-API mit einem REST-Client
 
@@ -41,37 +41,28 @@ Aus den folgenden Schritten können Sie ersehen, wie Autorisierung und Zugriff a
 
 Erstellen Sie eine native App in Azure. Diese native App ist die Client-App. Der Client auf dem lokalen Computer verweist auf die Intune-Data Warehouse-API, wenn der lokale Client Anmeldeinformationen anfordert.
 
-1. Melden Sie sich für Ihren Mandanten beim Azure-Portal an. Klicken Sie auf **Azure Active Directory** > **App-Registrierungen**, um den Bereich **App-Registrierungen** zu öffnen.
-2. Wählen Sie **New app registration** (Neue App-Registrierung) aus.
-3. Geben Sie die App-Informationen ein.
+1. Melden Sie sich beim [Azure Active Directory Admin Center](https://aad.portal.azure.com/) an.
+2. Klicken Sie auf **Azure Active Directory** > **App-Registrierungen**, um den Bereich **App-Registrierungen** zu öffnen.
+3. Wählen Sie **New app registration** (Neue App-Registrierung) aus.
+4. Geben Sie die App-Informationen ein.
     1. Geben Sie unter **Name** einen Anzeigenamen wie „Intune-Data Warehouse-Client“ ein.
-    2. Wählen Sie für den **Anwendungstyp** die Option **Nativ** aus.
-    3. Geben Sie eine URL als **Anmelde-URL** ein. Die Anmelde-URL richtet sich nach dem jeweiligen Szenario. Wenn Sie jedoch planen, Postman zu verwenden, geben Sie `https://www.getpostman.com/oauth2/callback` ein. Sie verwenden bei der Authentifizierung in Azure AD den Schritt zum Rückruf der Client-Authentifizierung.
-4. Wählen Sie **Erstellen** aus.
-
-     ![Client-App für Intune Data Warehouse](./media/reports-proc-data-rest/reports-get_rest_data_client_overview.png)
-
-5. Notieren Sie sich die **Anwendungs-ID** dieser App. Sie benötigen sie im nächsten Abschnitt.
+    2. Wählen Sie für **Unterstützte Kontotypen** die Option **Nur Konten in diesem Organisationsverzeichnis (nur Microsoft – einzelner Mandant)** aus.
+    3. Geben Sie eine URL als **Umleitungs-URI** ein. Der Umleitungs-URI hängt vom spezifischen Szenario ab, wenn Sie jedoch Postman verwenden möchten, geben Sie `https://www.getpostman.com/oauth2/callback` ein. Sie verwenden bei der Authentifizierung in Azure AD den Schritt zum Rückruf der Client-Authentifizierung.
+5. Wählen Sie **Registrieren** aus.
+6. Notieren Sie sich die **Anwendungs-ID (Client)** dieser App. Sie benötigen sie im nächsten Abschnitt.
 
 ## <a name="grant-the-client-app-access-to-the-microsoft-intune-api"></a>Erteilen Sie der Client-App Zugriff auf die Microsoft Intune-API.
 
 Sie haben jetzt eine in Azure definierte App. Erteilen Sie Zugriff von der nativen App auf die Microsoft Intune-API.
 
-1. Wählen Sie die native App aus. Sie haben der App einen Namen wie **Intune-Data Warehouse-Client** gegeben.
-2. Klicken Sie im Bereich **Einstellungen** auf **Erforderliche Berechtigungen**.
-3. Klicken Sie im Bereich **Erforderliche Berechtigungen** auf **Hinzufügen**.
-4. Wählen Sie **Hiermit wählen Sie eine API aus** aus.
-5. Suchen Sie nach dem Namen der Web-App. Sie heißt **Microsoft Intune-API**.
-6. Wählen Sie die App in der Liste aus.
-7. Wählen Sie **Auswählen** aus.
-8. Aktivieren Sie das Kontrollkästchen **Delegierte Berechtigungen**, um **Get data warehouse information from Microsoft Intune** (Data Warehouse-Informationen aus Microsoft Intune abrufen) hinzuzufügen.
-
-    ![Zugriff aktivieren: Microsoft Intune-API](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
-
-9. Wählen Sie **Auswählen** aus.
-10. Wählen Sie **Fertig** aus.
-11. Klicken Sie optional auch im Bereich „Erforderliche Berechtigungen“ auf **Berechtigungen erteilen**. Dadurch wird der Zugriff auf alle Konten im aktuellen Verzeichnis gewährt. Außerdem wird so verhindert, dass das Zustimmungsdialogfeld für jeden Benutzer im Mandanten angezeigt wird. Weitere Informationen finden Sie unter [Integrieren von Anwendungen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
-12. Wählen Sie **Ja** aus.
+1. Melden Sie sich beim [Azure Active Directory Admin Center](https://aad.portal.azure.com/) an.
+2. Klicken Sie auf **Azure Active Directory** > **App-Registrierungen**, um den Bereich **App-Registrierungen** zu öffnen.
+3. Wählen Sie die App aus, der Sie den Zugriff gewähren müssen. Sie haben der App einen Namen wie **Intune-Data Warehouse-Client** gegeben.
+4. Klicken Sie auf **API-Berechtigungen** > **Berechtigung hinzufügen**.
+5. Suchen Sie die Intune-API, und wählen Sie sie aus. Sie heißt **Microsoft Intune-API**.
+6. Klicken Sie auf das Feld **Delegierte Berechtigungen**, und klicken Sie dann auf **Get data warehouse information from Microsoft Intune** (Data Warehouse-Informationen von Microsoft Intune abrufen).
+7. Klicken Sie auf **Berechtigungen hinzufügen**.
+8. Optional können Sie im Bereich „Konfigurierte Berechtigungen“ auf **Administratorzustimmung für Microsoft erteilen** klicken und dann **Ja** auswählen. Dadurch wird der Zugriff auf alle Konten im aktuellen Verzeichnis gewährt. Außerdem wird so verhindert, dass das Zustimmungsdialogfeld für jeden Benutzer im Mandanten angezeigt wird. Weitere Informationen finden Sie unter [Integrieren von Anwendungen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Abrufen von Daten aus der Microsoft Intune-API mit Postman
 
@@ -95,9 +86,9 @@ Sie benötigen die folgenden Informationen für einen REST-Aufruf mit Postman:
 
 Sie benötigen außerdem den Endpunkt. Um Ihren Data Warehouse-Endpunkt abzurufen, benötigen Sie die URL des benutzerdefinierten Feeds. Sie können den OData-Endpunkt aus dem Data Warehouse-Bereich abrufen.
 
-1. Melden Sie sich bei [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) an.
-3. Öffnen Sie den Bereich **Intune Data Warehouse**, indem Sie den Data Warehouse-Link unter **Weitere Aufgaben** auf der rechten Seite des Blatts **Microsoft Intune – Übersicht** auswählen.
-4. Kopieren Sie die URL des benutzerdefinierten Feeds unter **Berichterstellungsdienste von Drittanbietern verwenden**. Sie sollte etwa wie folgt aussehen: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
+3. Öffnen Sie den Bereich **Data Warehouse**, indem Sie auf **Berichte** > **Data Warehouse** klicken.
+4. Kopieren Sie die URL des benutzerdefinierten Feeds unter **OData-Feed für Berichterstellungsdienst**. Sie sollte etwa wie folgt aussehen: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 Der Endpunkt weist das folgende Format auf: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`.
 

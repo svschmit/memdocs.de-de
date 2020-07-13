@@ -18,18 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d70123eab1847dd1b2cd3eb7583d397d97543e1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d6e57f062a3440ea922684d7ad746060ac7788f3
+ms.sourcegitcommit: ba36a60b08bb85d592bfb8c4bbe6d02a47858b09
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986917"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052475"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Herstellen einer Verbindung zwischen Ihrem Intune-Konto und Ihrem verwalteten Google Play-Konto
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Sie müssen eine Verbindung zwischen Ihrem Intune-Mandantenkonto und Ihrem verwalteten Google Play-Konto herstellen, um [Android Enterprise-Arbeitsprofilgeräte](android-work-profile-enroll.md), [vollständig verwaltete Android Enterprise-Geräte](android-fully-managed-enroll.md) und [dedizierte Android Enterprise-Geräte](android-kiosk-enroll.md) zu unterstützen.  
+
+Konsultieren Sie den folgenden Supportartikel von Google, um sicherzustellen, dass Android Enterprise in Ihrem Land oder Ihrer Region verfügbar ist: https://support.google.com/work/android/answer/6270910
 
 Intune fügt bei der Verbindung mit Google Play automatisch vier gängige Android Enterprise-bezogene Apps zur Intune-Administratorkonsole hinzu, um Ihnen die Konfiguration und Nutzung der Android Enterprise-Verwaltung zu erleichtern. Die vier Android Enterprise-Apps sind wie folgt:
 

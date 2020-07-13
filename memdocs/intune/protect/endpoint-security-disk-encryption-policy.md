@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 3e01e54eb6e74c8139c266d677a6406554119273
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353631"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972068"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Einstellungen der Richtlinie für die Datenträgerverschlüsselung für Endpunktsicherheit in Intune
 
@@ -29,7 +29,7 @@ Die Datenträgerverschlüsselungsprofile für die Endpunktsicherheit konzentrier
 
 Obwohl Sie die gleichen Geräteeinstellungen mithilfe von *Endpoint Protection*-Profilen für die Gerätekonfiguration konfigurieren können, enthalten die Gerätekonfigurationsprofile zusätzliche Einstellungskategorien. Diese zusätzlichen Einstellungen stehen nicht im Zusammenhang mit der Datenträgerverschlüsselung und können die Konfiguration einer reinen Datenträgerverschlüsselung erschweren.
 
-Die Endpunktsicherheitsrichtlinien für die Datenträgerverschlüsselung finden Sie unter *Verwalten* im Knoten **Endpunktsicherheit** des [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Die Endpunktsicherheitsrichtlinien für die Datenträgerverschlüsselung finden Sie unter *Verwalten* im Knoten **Endpunktsicherheit** von [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## <a name="prerequisites-for-disk-encryption-policy"></a>Voraussetzungen für die Richtlinie zur Datenträgerverschlüsselung
 

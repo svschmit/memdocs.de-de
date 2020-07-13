@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 07/2/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 382bf47807634fa9a5d6abde768fe6ee9bed23d1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1655c7b18262d0515308a00c617f06d917d976de
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990946"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972177"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Wandera Mobile Threat Defense-Connector mit Intune  
 
@@ -32,9 +32,6 @@ Steuern Sie den Zugriff mobiler Geräte auf Unternehmensressourcen mithilfe des 
 
 Sie können Richtlinien für *bedingten Zugriff* basierend auf Risikobewertungen von Wandera konfigurieren, die über Intune-Gerätekonformitätsrichtlinien aktiviert werden. Richtlinien für die Risikobewertung können den Zugriff nicht konformer Geräte auf Unternehmensressourcen basierend auf den erkannten Bedrohungen gewähren oder verweigern.  
 
-> [!NOTE]
-> Dieser Mobile Threat Defense-Anbieter wird für nicht registrierte Geräte nicht unterstützt.
-
 ## <a name="how-do-intune-and-wandera-mobile-threat-defense-help-protect-your-company-resources"></a>In welcher Form unterstützen Intune und Wandera Mobile Threat Defense den Schutz Ihrer Unternehmensressourcen?  
 
 Die mobile App von Wandera lässt sich mithilfe von Microsoft Intune nahtlos installieren. Diese App erfasst Daten zum Dateisystem, Netzwerkstapel sowie Geräte- und Anwendungstelemetriedaten (sofern verfügbar). Diese Informationen werden mit dem Wandera-Clouddienst synchronisiert, um das Risiko des Geräts für mobile Bedrohungen zu bewerten. Diese Klassifizierungen der Risikostufen sind in der Wandera-Konsole RADAR nach Ihren Bedürfnissen konfigurierbar.
@@ -42,6 +39,14 @@ Die mobile App von Wandera lässt sich mithilfe von Microsoft Intune nahtlos ins
 Die Konformitätsrichtlinie in Intune enthält eine Regel für MTD, die auf der Risikobewertung von Wandera basiert. Wenn diese Regel aktiviert ist, bewertet Intune die Gerätekompatibilität mit der von Ihnen aktivierten Richtlinie.
 
 Für Geräte, die nicht konform sind, kann der Zugriff auf Ressourcen wie Office 365 blockiert werden. Benutzer auf blockierten Geräten erhalten Anleitungen von der Wandera-App, wie sie das Problem beheben und den Zugriff zurückzuerlangen können.
+
+Wandera aktualisiert Intune mit der neuesten Bedrohungsstufe der einzelnen Geräte (Sicher, Niedrig, Mittel oder Hoch), wenn sich diese ändert. Diese Bedrohungsstufe wird kontinuierlich von der Wandera-Sicherheitscloud neu berechnet und basiert auf dem Gerätestatus, der Netzwerkaktivität und zahlreichen Mobile Threat Intelligence-Feeds für verschiedene Bedrohungskategorien.
+
+Diese Kategorien und die zugehörigen Bedrohungsstufen können in der RADAR-Konsole von Wandera konfiguriert werden, sodass die Gesamtanzahl der berechneten Bedrohungsstufen für jedes Gerät gemäß der Sicherheitsanforderungen Ihrer Organisation angepasst werden kann. Es gibt zwei Arten von Intune-Richtlinien, die die Bedrohungsstufe nutzen können, um den Zugriff auf Unternehmensdaten zu verwalten:
+
+* Mithilfe von **Gerätekonformitätsrichtlinien** mit bedingtem Zugriff können Administratoren Richtlinien festlegen, um ein verwaltetes Gerät anhand der von Wandera gemeldeten Bedrohungsstufe automatisch als „nicht konform“ zu kennzeichnen. Dieses Konformitätsflag ermöglicht Richtlinien für bedingten Zugriff daher das Zulassen oder Blockieren des Zugriffs auf Anwendungen, die die moderne Authentifizierung nutzen.  Informationen zur Konfiguration finden Sie unter [Erstellen einer Mobile Threat Defense-App-Schutzrichtlinie (MTD) mit Intune](../protect/mtd-device-compliance-policy-create.md).
+
+* Mithilfe von **App-Schutzrichtlinien** mit bedingtem Start können Administratoren Richtlinien festlegen, die anhand der von Wandera gemeldeten Bedrohungsstufe auf der nativen Anwendungsebene erzwungen werden (z. B. Android- und iOS-/iPadOS-Apps wie Outlook, OneDrive usw.).  Diese Richtlinien können auch mit nicht verwalteten Geräten (MAM-WE) verwendet werden, um einheitliche Richtlinien für alle Geräteplattformen und Eigentumsmodi bereitzustellen. Informationen zur Konfiguration finden Sie unter [Erstellen einer Mobile Threat Defense-App-Schutzrichtlinie (MTD) mit Intune](../protect/mtd-app-protection-policy.md).
 
 ## <a name="supported-platforms"></a>Unterstützte Plattformen  
 
@@ -90,11 +95,11 @@ Erkennen Sie Bedrohungen Ihres Netzwerks, wie etwa Man-in-the-Middle-Angriffe, u
 
 *Zugriff erteilt nach der Behebung*:  
 
-![Zugriff erteilt nach der Behebung](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
+![Zugriff nach Beseitigung gewährt](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
 
-## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf der Bedrohung für das Netzwerk
+## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Steuern des Zugriffs auf SharePoint Online basierend auf Netzwerkbedrohungen
 
-Erkennen von Bedrohungen Ihres Netzwerks, wie etwa Man-in-the-Middle-Angriffen, und Verhindern der Synchronisierung von Unternehmensdateien auf der Grundlage des Geräterisikos.
+Erkennen Sie Bedrohungen für Ihr Netzwerk wie Man-in-the-Middle-Angriffe, und verhindern Sie die Synchronisierung von Unternehmensdateien basierend auf den Risiken für Geräte.
 
 *Blockieren von SharePoint Online bei Erkennung von Bedrohungen für das Netzwerk*:  
 
@@ -104,17 +109,15 @@ Erkennen von Bedrohungen Ihres Netzwerks, wie etwa Man-in-the-Middle-Angriffen, 
 
 ![Zugriff erteilt nach der Behebung für SharePoint – Beispiel](./media/wandera-mtd-connector/wandera-network-spo-unblocked.png)  
 
-<!-- 
-### Control access on unenrolled devices based on threats from malicious apps
+### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Steuern des Zugriffs auf nicht registrierte Geräte bei Bedrohungen durch Apps mit Schadsoftware
 
-When the Wandera Mobile Threat Defense solution considers a device to be infected:
+Wenn die Mobile Threat Defense-Lösung von Wandera ein Gerät für infiziert hält:
 
-![App protection policy blocks due to detected malware](./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png)
+![App-Schutzrichtlinie blockiert aufgrund erkannter Schadsoftware](./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png)
 
-Access is granted on remediation:
+Nach der Behebung wird der Zugriff wieder erteilt:
 
-![Access is granted on remediation for App protection policy](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
--->
+![Zugriff wird nach Behebung durch die App-Schutzrichtlinie wieder gewährt](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

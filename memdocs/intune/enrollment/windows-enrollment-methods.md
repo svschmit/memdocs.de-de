@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
-ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f1d4e483f02cf73b2c7afe949e4145692adccc9d
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085690"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088342"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Intune-Registrierungsmethoden für Windows-Geräte
 
@@ -36,7 +36,7 @@ Es gibt zwei Möglichkeiten, um Geräte in Intune zu registrieren:
 
 Benutzer können ihre Windows-Geräte mit einer dieser Methoden selbst registrieren:
 
-- [Bring Your Own Device (BYOD):](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device) Benutzer registrieren Ihre privaten Geräte, indem sie eine Verbindung mit einem **Work and School**-Konto (Arbeit und Schule) in den **Einstellungen** des Geräts herstellen. Durch diesen Prozess geschieht Folgendes:
+- [Bring Your Own Device (BYOD):](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device) Benutzer registrieren ihre persönlichen Geräte, indem sie die **Unternehmensportal-App** herunterladen und installieren. Dieser Prozess bewirkt Folgendes:
   - Das Gerät wird in Azure Active Directory registriert, um Zugriff auf Unternehmensressourcen wie E-Mails zu erhalten.
   - Das Gerät wird in Intune als privates Gerät (Bring Your Own Device, BYOD) registriert.
 Wenn ein Administrator die automatische Registrierung, die in Azure AD Premium-Abonnements verfügbar ist, konfiguriert hat, muss der Benutzer lediglich einmal seine Anmeldeinformationen eingeben. Andernfalls müssen sie sich separat über eine reine MDM-Registrierung registrieren und ihre Anmeldeinformationen erneut eingeben.  

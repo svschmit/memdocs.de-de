@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 8171eb3cf484c61e2b99046b36553a633d92044e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431461"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088529"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Verwalten von Geräten mithilfe der Endpunktsicherheit in Microsoft Intune
 
@@ -66,6 +66,8 @@ Bei der Anzeige von Geräten im Microsoft Endpoint Manager Admin Center sollten 
     Bei der Co-Verwaltung [wählen Sie verschiedene Workloads für die Co-Verwaltung](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) aus, um zu bestimmen, welche Aspekte von Configuration Manager oder Intune verwaltet werden. Diese Auswahl beeinflusst, welche Richtlinien auf das Gerät angewendet und wie Konformitätsdaten an das Admin Center gemeldet werden.
 
     Beispielsweise können Sie Intune zum Konfigurieren der Richtlinie für Antivirus, Firewall und Verschlüsselung verwenden. Diese Richtlinientypen sind Richtlinien für *Endpoint Protection*. Damit für ein Gerät mit Co-Verwaltung nicht die Configuration Manager-Richtlinien, sondern die Intune-Richtlinien verwendet werden, legen Sie den Schieberegler der Co-Verwaltung für Endpoint Protection entweder auf *Intune* oder *Intune-Pilot* fest. Wenn der Schieberegler auf Configuration Manager festgelegt ist, verwendet das Gerät stattdessen die Richtlinien und Einstellungen aus Configuration Manager.
+
+  - **Workspace ONE:** Diese Geräte werden vom Drittanbieterpartner für Gerätekonformität Workspace ONE verwaltet. Weitere Informationen finden Sie unter [Gerätekonformitätspartner](../protect/device-compliance-partners.md).
 
 - **Konformität**: Die Konformität wird anhand der Konformitätsrichtlinien bewertet, die dem Gerät zugewiesen sind. Die Quelle dieser Richtlinien sowie die in der Konsole angezeigten Informationen richten sich danach, wie das Gerät verwaltet wird: über Intune, Configuration Manager oder per Co-Verwaltung. Damit Geräte mit Co-Verwaltung Konformitätsdaten melden, legen Sie den Schieberegler der Co-Verwaltung für die Gerätekonformität entweder auf „Intune“ oder auf „Intune-Pilot“ fest.  
 

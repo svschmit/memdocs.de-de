@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 5b33be56975713c801d2ad3fdea17e6303687274
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776870"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946911"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Firewallrichtlinie für Endpunktsicherheit in Intune
 
@@ -56,7 +56,7 @@ Planen Sie Firewallrichtlinien, die mit nur einer Richtlinie auf ein Gerät ange
 
 - Diese Art von Richtlinienkonflikt gilt für das **Microsoft Defender Firewall**-Profil, das mit anderen Microsoft Defender Firewall-Profilen in Konflikt stehen kann, oder eine Firewallkonfiguration, die von einem anderen Richtlinientyp bereitgestellt wird, etwa von einer Gerätekonfiguration.
 
-  Microsoft *Defender Firewall-Profile* stehen nicht mit *Microsoft Defender Firewall-Regelprofilen* in Konflikt.
+  *Microsoft Defender Firewall-Profile* stehen nicht mit *Microsoft Defender Firewall-Regelprofilen* in Konflikt.
 
 Wenn Sie **Microsoft Defender Firewall-Regelprofile** verwenden, können Sie mehrere Regelprofile auf dasselbe Gerät anwenden. Wenn jedoch unterschiedliche Regeln für denselben Zweck mit unterschiedlichen Konfigurationen vorhanden sind, werden beide an das Gerät gesendet und verursachen einen Konflikt auf diesem Gerät.
 

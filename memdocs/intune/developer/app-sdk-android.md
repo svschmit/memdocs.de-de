@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 163a0d231192277f27c69d7bcf983e817393d526
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: a222a1f4adfd2f73731c40946169338989162e5e
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383120"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022363"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Entwicklerhandbuch zum Microsoft Intune App SDK für Android
 
@@ -79,7 +79,10 @@ Zusätzlich enthalten die **Microsoft.Intune.MAM.SDK.Support.XXX.jar**-Bibliothe
 
 Wenn [ProGuard](http://proguard.sourceforge.net/) (oder ein beliebiger anderer Komprimierungs- oder Obfuskationsmechanismus) als Buildschritt verwendet wird, verfügt das SDK über zusätzliche Konfigurationsregeln, die hinzugefügt werden müssen. Wenn Sie die AAR-Datei in Ihren Build einfügen, werden unsere Regeln automatisch in den ProGuard-Schritt integriert, und die erforderlichen Klassendateien werden beibehalten.
 
-Die Azure Active Directory Authentication Librarys (ADAL) weisen möglicherweise eigene ProGuard-Einschränkungen auf. Wenn Ihre App ADAL integriert, müssen Sie hinsichtlich dieser Einschränkungen der ADAL-Dokumentation folgen.
+Möglicherweise weist die [Microsoft-Authentifizierungsbibliothek (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) eigene ProGuard-Einschränkungen auf. Wenn Ihre App MSAL integriert, müssen Sie die MSAL-Dokumentation bezüglich dieser Einschränkungen befolgen.
+
+> [!NOTE]
+> Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ### <a name="policy-enforcement"></a>Richtlinienerzwingung
 Das Intune App SDK ist eine Android-Bibliothek, die es Ihrer App ermöglicht, die Erzwingung von Intune-Richtlinien zu unterstützen und daran teilzunehmen. 
@@ -92,7 +95,7 @@ Für Richtlinien, die automatisch durchgesetzt werden, erfordern Apps die Vererb
 ### <a name="build-tooling"></a>Erstellen von Tools
 Das SDK stellt Buildtools zur Verfügung (ein Plug-In für Gradle-Builds und ein Befehlszeilentool für Nicht-Gradle-Builds), die die gleichwertigen MAM-Ersetzungen automatisch durchführen. Diese Tools transformieren die durch die Java-Kompilierung erstellten Klassendateien und ändern nicht den ursprünglichen Quellcode.
 
-Die Tools führen nur [direkte Ersetzungen](#class-and-method-replacements) durch. Sie führen keine komplexeren SDK-Integrationen wie [Speichern-unter-Richtlinie](#enable-features-that-require-app-participation), [Mehrere Identitäten](#multi-identity-optional), [App-WE-Registrierung](#app-protection-policy-without-device-enrollment), [AndroidManifest-Änderungen](#manifest-replacements) oder [ADAL-Konfiguration](#configure-azure-active-directory-authentication-library-adal) durch, sodass diese abgeschlossen sein müssen, bevor Ihre App vollständig für Intune aktiviert ist. Lesen Sie den Rest dieser Dokumentation sorgfältig durch, um herauszufinden, welche Integrationspunkte für Ihre Anwendung relevant sind.
+Die Tools führen nur [direkte Ersetzungen](#class-and-method-replacements) durch. Sie führen keine komplexeren SDK-Integrationen wie [Speichern-unter-Richtlinie](#enable-features-that-require-app-participation), [Mehrere Identitäten](#multi-identity-optional), [App-WE-Registrierung](#app-protection-policy-without-device-enrollment) oder [AndroidManifest-Änderungen](#manifest-replacements) durch, sodass diese abgeschlossen sein müssen, bevor Ihre App vollständig für Intune aktiviert ist. Lesen Sie den Rest dieser Dokumentation sorgfältig durch, um herauszufinden, welche Integrationspunkte für Ihre Anwendung relevant sind.
 
 > [!NOTE]
 > Es ist in Ordnung, die Tools im Rahmen eines Projekts auszuführen, das bereits eine teilweise oder vollständige Quellintegration des MAM SDK durch manuelle Ersetzungen durchgeführt hat. Ihr Projekt muss das MAM SDK weiterhin als Abhängigkeit auflisten.
@@ -421,7 +424,10 @@ Das Intune App SDK erfordert drei [Android-Systemberechtigungen](https://develop
 
 Die Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) verlangt, dass diese Berechtigungen Brokerauthentifizierung ausführen. Wenn diese Berechtigungen der App nicht gewährt oder vom Benutzer widerrufen werden, werden Authentifizierungsflüsse deaktiviert, die den Broker (die Unternehmensportal-App) erfordern.
 
-## <a name="logging"></a>Logging
+> [!NOTE]
+> Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
+## <a name="logging"></a>Protokollierung
 
 Die Protokollierung sollte früh initialisiert werden, um die protokollierten Daten optimal nutzen zu können. `Application.onMAMCreate()` ist in der Regel der beste Ort zum Initialisieren der Protokollierung.
 
@@ -886,6 +892,9 @@ Sobald der Empfänger Ihrer App zurückgegeben wird, besteht kein Zugriff mehr a
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurieren der Authentifizierungsbibliothek von Azure Active Directory (Active Directory Authentication Library, ADAL)
 
+> [!NOTE]
+> Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 Lesen Sie zunächst die ADAL-Integrationsrichtlinien im [ADAL-Repository auf GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
 Das SDK ist für seine Szenarien, die die [Authentifizierung](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) und den bedingten Start betreffen, auf [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) angewiesen. Dazu müssen Apps mit [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) konfiguriert sein. Die Konfigurationswerte werden dem SDK über AndroidManifest-Metadaten übermittelt.
@@ -989,6 +998,9 @@ Die App kann das Intune App-SDK auch nach dem Status eines registrierten Benutze
 
 Die App muss einen Rückruf bereitstellen, um das geeignete Zugriffstoken aus der Azure Active Directory Authentication Library (ADAL) im Namen des SDKs zu erlangen. Es wird angenommen, dass die App für die Benutzerauthentifizierung und zum Abrufen eines eigenen Zugriffstokens bereits ADAL verwendet.
 
+> [!NOTE]
+> Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 Wenn ein Konto vollständig von der App entfernt wird, muss sie die Registrierung für das Konto aufheben, um anzuzeigen, dass die Richtlinie für diesen Benutzer nicht länger von der App angewendet werden soll. Wenn der Benutzer im MAM-Dienst registriert wurde, wird die Registrierung des Benutzers aufgehoben und die App zurückgesetzt.
 
 
@@ -1064,6 +1076,9 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 1. Die App muss die `MAMServiceAuthenticationCallback`-Schnittstelle implementieren, damit das SDK ein ADAL-Token für den angegebenen Benutzer und die Ressourcen-ID anfordern kann. Die Rückrufinstanz muss für `MAMEnrollmentManager` bereitgestellt werden, indem die zugehörige `registerAuthenticationCallback()`-Methode aufgerufen wird. Möglicherweise ist bereits zu einem frühen Zeitpunkt im Lebenszyklus der App ein Token für Registrierungsversuche oder Eincheckvorgänge zur Aktualisierung der App-Schutzrichtlinie erforderlich, daher ist der ideale Platz zum Registrieren des Rückrufs die `onMAMCreate()`-Methode der `MAMApplication`-Unterklasse der App.
 
+  > [!NOTE]
+  > Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 2. Die `acquireToken()`-Methode sollte das Zugriffstoken für die angeforderte Ressource-ID für den angegebenen Benutzer abrufen. Wenn sie das angeforderte Token nicht abrufen kann, muss NULL zurückgeben werden.
 
     > [!NOTE]
@@ -1099,6 +1114,9 @@ Result getRegisteredAccountStatus(String upn);
 2. Da die AAD-Authentifizierung erforderlich ist, ist der beste Zeitpunkt zum Registrieren des Benutzerkontos im Anschluss an die Anmeldung des Benutzers in der App und der erfolgreichen Authentifizierung mithilfe der ADAL. Die AAD-ID und die Mandanten-ID des Benutzers werden vom ADAL-Authentifizierungsaufruf als Teil des [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android)-Objekts zurückgegeben.
     * Die Mandanten-ID stammt aus der `AuthenticationResult.getTenantID()`-Methode.
     * Informationen zum Benutzer befinden sich in einem untergeordneten Objekt des Typs `UserInfo`, das aus `AuthenticationResult.getUserInfo()` stammt, und die AAD-Benutzer-ID wird durch den Aufruf von `UserInfo.getUserId()` aus diesem Objekt abgerufen.
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 3. Die App sollte `unregisterAccountForMAM()` aufrufen, um die Registrierung eines Kontos für die Intune-Verwaltung aufzuheben. Wenn das Konto erfolgreich registriert wurde und verwaltet wird, hebt das SDK die Registrierung des Kontos auf und setzt seine Daten zurück. Regelmäßige Registrierungsversuche für das Konto werden beendet. Das SDK stellt den Status der Anforderung zur Aufhebung der Registrierung asynchron über eine Benachrichtigung bereit.
 
@@ -1139,6 +1157,9 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 #### <a name="authentication"></a>Authentifizierung
 
 * Wenn die App `registerAccountForMAM()` aufruft, erhält Sie möglicherweise kurze Zeit später über ihre `MAMServiceAuthenticationCallback`-Schnittstelle einen Rückruf zu einem anderen Thread. Idealerweise hat die App vor der Registrierung des Kontos ihr eigenes Token von der ADAL abgerufen, um die Beschaffung des angeforderten Tokens zu beschleunigen. Wenn die App über den Rückruf ein gültiges Token zurückgibt, wird die Registrierung fortgesetzt, und die App erhält das endgültige Ergebnis über eine Benachrichtigung.
+
+> [!NOTE]
+> Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 * Wenn die App kein gültiges AAD-Token zurückgibt, wird `AUTHORIZATION_NEEDED` als endgültiges Ergebnis des Registrierungsversuchs zurückgegeben. Wenn die App dieses Ergebnis über eine Benachrichtigung erhält, sollte der Registrierungsprozess unbedingt durch die Beschaffung des Tokens für den Benutzer und der Ressource, die zuletzt von `acquireToken()` angefordert wurde und den Aufruf der `updateToken()`-Methode beschleunigt werden, um den Registrierungsprozess noch mal zu initiieren.
 
@@ -1204,6 +1225,9 @@ Die ADAL-Bibliothek verfügt über einen neuen Fehlercode, der die App darüber 
 
 > [!NOTE]
 > Für diesen neuen Fehlercode und weitere Unterstützung für die App-Steuerung für bedingten Zugriff mit Richtlinienerzwingung ist mindestens die Version 1.15.0 der ADAL-Bibliothek erforderlich.
+
+> [!NOTE]
+> Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ### <a name="mamcompliancemanager"></a>MAMComplianceManager
 
@@ -2067,6 +2091,9 @@ Im Folgenden wird erläutert, wie Sie eine Benutzeraufforderung beim Start der A
 Befolgen Sie die folgenden Schritte,um die Standardregistrierung zu aktivieren:
 
 1. Wenn Ihre App ADAL integriert oder Sie SSO aktivieren müssen, [konfigurieren Sie ADAL](#configure-azure-active-directory-authentication-library-adal) entsprechend der [zweiten hier aufgeführten häufig verwendeten ADAL-Konfiguration](#common-adal-configurations). Andernfalls können Sie diesen Schritt überspringen.
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
    
 2. Aktivieren Sie die Standardregistrierung, indem Sie den folgenden Wert unter dem `<application>`-Tag zum Manifest hinzufügen:
 
