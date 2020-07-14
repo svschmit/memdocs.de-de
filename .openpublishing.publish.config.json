@@ -19,7 +19,8 @@
     "dougeby@microsoft.com"
   ],
   "sync_notification_subscribers": [
-    "ceicnotifications@microsoft.com"
+    "ceicnotifications@microsoft.com",
+    "ryanki@microsoft.com"
   ],
   "branches_to_filter": [
     "live",
