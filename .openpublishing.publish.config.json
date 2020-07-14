@@ -20,7 +20,6 @@
   ],
   "sync_notification_subscribers": [
     "ceicnotifications@microsoft.com",
-    "ryanki@microsoft.com"
   ],
   "branches_to_filter": [
     "live",
