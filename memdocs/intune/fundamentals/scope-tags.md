@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: a229b9159c4c3613edc2d718db1fd0931f94cf9f
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721906"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240739"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Verwenden der rollenbasierten Zugriffssteuerung und Bereichsmarkierungen für verteilte IT
 
@@ -81,13 +81,11 @@ Bei der Arbeit mit Bereichsmarkierungen sollten Sie Folgendes beachten:
 - Sie können einem Intune-Objekttyp Bereichstags zuweisen, wenn der Mandant mehrere Versionen desselben Objekts akzeptiert (z. B. als Rollenzuweisung oder als Apps).
   Die folgenden Intune-Objekte sind Ausnahmen zu dieser Regel und unterstützen derzeit keine Bereichstags:
     - Windows ESP-Profile
-    - Registrierungseinschränkungen
     - Bezeichner von Unternehmensgeräten
     - Autopilotgeräte
     - Konformitätsstandorte von Geräten
     - Jamf-Geräte
 - VPP-Apps und E-Books, die dem VPP-Token zugeordnet sind, erben die Bereichstags, die dem VPP-Token zugewiesen sind.
-- Für das Programm zur Geräteregistrierung (Device Enrollment Program, DEP) registrierte Geräte und DEP-Profile, die dem DEP-Token zugeordnet sind, erben die Bereichstags, die dem entsprechenden DEP-Token zugewiesen sind.
 - Wenn ein Administrator ein Objekt in Intune erstellt, werden alle Bereichsmarkierungen, die diesem Administrator zugewiesen sind, automatisch dem neuen Objekt zugewiesen.
 - Die rollenbasierte Zugriffssteuerung von Intune gilt nicht für Azure Active Directory-Rollen. Intune-Dienstadministratoren und globale Administratoren verfügen unabhängig von ihren Bereichsmarkierungen über vollständigen Administratorzugriff auf Intune.
 - Wenn eine Rollenzuweisung über kein Bereichstag verfügt, werden dem IT-Administrator gemäß der Einstellungen für IT-Administratoren alle Objekte angezeigt. Administratoren ohne Bereichstags verfügen im Grunde über alle Bereichstags.

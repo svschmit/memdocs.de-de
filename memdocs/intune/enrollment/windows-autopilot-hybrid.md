@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: c26af63691fc4b198d308f39a7c1cc0d719933cb
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093493"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285299"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Bereitstellen von in Azure AD Hybrid eingebundenen Geräten mit Intune und Windows Autopilot
 Sie können in Azure AD Hybrid eingebundene Geräte mithilfe von Intune und Windows Autopilot einrichten. Führen Sie dazu die Schritte in diesen Artikel durch.
@@ -35,7 +35,7 @@ Konfigurieren Sie Ihre [Azure AD Hybrid-Geräte](https://docs.microsoft.com/azur
 Für die Registrierung müssen die Geräte über Folgendes verfügen:
 - Windows 10, Version 1809 oder höher, muss ausgeführt werden.
 - Internetzugriff gemäß den [dokumentierten Netzwerkanforderungen für Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements) muss vorhanden sein.
-- Die Geräte müssen auf einen Active Directory-Domänencontroller zugreifen können, daher ist eine Verbindung mit dem Netzwerk der Organisation erforderlich (dort werden die DNS-Einträge für die AD-Domäne und den AD-Domänencontroller aufgelöst, und über dieses Netzwerk erfolgt die Kommunikation mit dem Domänencontroller zur Authentifizierung des Benutzers. VPN-Verbindungen werden derzeit nicht unterstützt).
+- Die Geräte müssen auf einen Active Directory-Domänencontroller zugreifen können, daher ist eine Verbindung mit dem Netzwerk der Organisation erforderlich (dort werden die DNS-Einträge für die AD-Domäne und den AD-Domänencontroller aufgelöst, und über dieses Netzwerk erfolgt die Kommunikation mit dem Domänencontroller zur Authentifizierung des Benutzers.
 - Die Fähigkeit, den Domänencontroller der Domäne zu pingen, der Sie beitreten möchten.
 - Bei Verwendung eines Proxys müssen WPAD-Proxyeinstellungen aktiviert und konfiguriert sein.
 - Sie müssen eingerichtet worden sein.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165718"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239945"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App
 
@@ -110,9 +110,7 @@ Die folgende Tabelle enthält registrierungsspezifische Konfigurationsinformatio
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Verfügbar, mit Eingabeaufforderungen    |    Die Standardeinstellung mit Eingabeaufforderungen zur Registrierung bei allen möglichen Speicherorten.    |    Ja    |    Ja    |    Ja    |    Ja    |
 |    Verfügbar, keine Eingabeaufforderungen    |    Benutzer können sich über den Status in den Gerätedetails für ihr aktuelles Gerät oder über Apps registrieren, die eine Registrierung erfordern.    |    Nein    |    Nein    |    Ja    |    Ja    |
-|    Nicht verfügbar    |    Benutzer können sich nicht registrieren.    |    Nein    |    Nein    |    Nein    |    Nein<sup>(1)</sup>    |
-
-<sup>(1)</sup> **Bekanntes Problem:** Wenn Sie Apps so einrichten, dass zur Installation eine Registrierung erforderlich ist, und gleichzeitig die Geräteregistrierung auf „Nicht verfügbar“ festlegen, fordert die Unternehmensportal-App unter Android die Benutzer dennoch zur Registrierung auf. Dieses Verhalten wird in Kürze entfernt.
+|    Nicht verfügbar    |    Benutzer können sich nicht registrieren.    |    Nein    |    Nein    |    Nein    |    Nein    |
 
 ### <a name="privacy"></a>Datenschutz
 
@@ -221,7 +219,7 @@ Informationen zum Anpassen der verfügbaren Self-Service-Benutzeraktionen finden
 
 Einige Plattformen und Konfigurationen lassen keine Self-Service-Geräteaktionen zu. In der folgenden Tabelle finden Sie weitere Informationen zu Self-Service-Aktionen:
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Aktion | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Außerkraftsetzen | Verfügbar<sup>(1)</sup> | Verfügbar<sup>(9)</sup> | Verfügbar | Verfügbar<sup>(7)</sup> |
 | Zurücksetzen | Verfügbar | Verfügbar<sup>(5)</sup><sup>(9)</sup> | N/V | Verfügbar<sup>(7)</sup> |
