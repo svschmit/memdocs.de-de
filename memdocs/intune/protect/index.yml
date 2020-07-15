@@ -12,12 +12,13 @@ metadata:
   author: brenduns
   ms.author: brenduns
   ms.date: 08/20/2019
-  ms.openlocfilehash: be6460b9faa9dea44ea14c7198dbdfd8af539d46
-  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+  ms.custom: has-adal-ref
+  ms.openlocfilehash: 0574e886b9697d344d82f99d3527fbce9364d95c
+  ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81525670"
+  ms.lasthandoff: 07/14/2020
+  ms.locfileid: "86384875"
 landingContent:
 - title: Festlegen von Regeln für Geräte, um den Zugriff auf Ressourcen zuzulassen
   linkLists:
@@ -27,7 +28,7 @@ landingContent:
       url: device-compliance-get-started.md
   - linkListType: quickstart
     links:
-    - text: Erstellen einer Kompatibilitätsrichtlinie
+    - text: Erstellen einer Gerätekonformitätsrichtlinie
       url: quickstart-set-password-length-android.md
   - linkListType: tutorial
     links:
@@ -75,7 +76,7 @@ landingContent:
     links:
     - text: Microsoft Defender ATP
       url: advanced-threat-protection.md
-    - text: Mobile Threat Defense-Partner
+    - text: Partner von Mobile Threat Defense
       url: mtd-apps-ios-app-configuration-policy-add-assign.md
     - text: Sicherheitsbaselines
       url: security-baselines.md
