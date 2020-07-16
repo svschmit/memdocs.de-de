@@ -2,7 +2,7 @@
 title: Erforderliche Berechtigungen für den Internetzugriff
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie, welche Internetendpunkten zugelassen werden müssen, um die vollständige Funktionalität der Configuration Manager-Features zu gewährleisten.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,25 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819949"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137348"
 ---
 # <a name="internet-access-requirements"></a>Erforderliche Berechtigungen für den Internetzugriff
 
 Einige Configuration Manager-Features benötigen für die vollständige Funktionalität eine Internetverbindung. Wenn Ihre Organisation die Netzwerkkommunikation mit dem Internet über ein Firewall- oder Proxygerät einschränkt, stellen Sie sicher, dass diese Endpunkte zugelassen sind.
 
 <!-- SCCMDocs-pr #3403 -->
+
+Configuration Manager verwendet die folgenden Microsoft-URL-Weiterleitungsdienste im gesamten Produkt:
+
+- `https://aka.ms`
+- `https://go.microsoft.com`
+
+Auch wenn sie nicht explizit in den folgenden Abschnitten aufgeführt sind, sollten Sie diese Endpunkte immer zulassen.
 
 ## <a name="service-connection-point"></a><a name="bkmk_scp"></a> Dienstverbindungspunkt
 
@@ -277,6 +284,14 @@ Weitere Informationen zu den erforderlichen Endpunkten für Features zur Mandant
 ## <a name="endpoint-analytics"></a>Endpunktanalyse
 
 Weitere Informationen zu den erforderlichen Endpunkten für die Endpunktanalyse finden Sie unter [Proxykonfiguration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+## <a name="asset-intelligence"></a>Asset Intelligence
+
+<!-- memdocs#470 -->
+Wenn Sie [Asset Intelligence](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md) verwenden, sollten Sie zulassen, dass folgende Endpunkte mit dem Dienst synchronisiert werden dürfen:
+
+- `https://sc.microsoft.com`
+- `https://ssu2.manage.microsoft.com`
 
 ## <a name="microsoft-public-ip-addresses"></a>Öffentliche IP-Adressen von Microsoft
 

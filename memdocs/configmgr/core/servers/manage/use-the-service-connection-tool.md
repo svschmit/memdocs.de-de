@@ -2,7 +2,7 @@
 title: Dienstverbindungstool
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über das Dienstverbindungstool, mit dem Sie eine Verbindung mit dem Configuration Manager-Clouddienst herstellen können, um manuell Nutzungsinformationen hochzuladen.
-ms.date: 09/06/2017
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,180 +10,250 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e535653e0f31e186a6bdbde8da77750f2afdfdb0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690298"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946843"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Verwenden des Dienstverbindungstools für Configuration Manager
 
 *Gilt für: Configuration Manager (Current Branch)*
 
-Verwenden Sie das **Dienstverbindungstool**, wenn sich Ihr Dienstverbindungspunkt im Offline-Modus befindet, oder wenn Ihre Standortsystemserver von Configuration Manager nicht mit dem Internet verbunden sind. Mit diesem Tool ist Ihr Standort immer auf dem neuesten Stand was Configuration Manager-Updates angeht.  
+Verwenden Sie das **Dienstverbindungstool**, wenn sich der Dienstverbindungspunkt im Offlinemodus befindet. Ebenso können Sie es verwenden, wenn die Configuration Manager-Standortsystemserver nicht mit dem Internet verbunden sind. Mit diesem Tool ist Ihr Standort in Bezug auf Configuration Manager-Updates immer auf dem neuesten Stand.
 
-Wenn Sie dieses Tool ausführen, stellt es manuell eine Verbindung mit dem Configuration Manager-Clouddienst her, um Nutzungsinformationen für Ihre Hierarchie hochzuladen und Updates herunterzuladen. Das Hochladen der Nutzungsdaten ist erforderlich, damit der Clouddienst die richtigen Updates für Ihre Bereitstellung liefern kann.  
+Wenn Sie dieses Tool ausführen, stellt es eine Verbindung mit dem Configuration Manager-Clouddienst her, um Nutzungsinformationen für Ihre Hierarchie hochzuladen und Updates herunterzuladen. Die Nutzungsdaten müssen hochgeladen werden, damit der Clouddienst die richtigen Updates für Ihre Umgebung bereitstellen kann.
 
-## <a name="prerequisites-for-using-the-service-connection-tool"></a>Voraussetzungen für die Verwendung des Dienstverbindungstools
-Im Folgenden finden Sie Voraussetzungen und bekannte Probleme.
+## <a name="prerequisites"></a>Voraussetzungen
 
-**Voraussetzungen:**
+- Der Standort verfügt über einen Dienstverbindungspunkt, den Sie für die Einstellung **Offline, Verbindung bei Bedarf** konfigurieren.
 
-- Sie haben einen Dienstverbindungspunkt installiert und diesen auf **Offline, On-Demand-Verbindung**festgelegt.  
+- Führen Sie das Tool wie folgt über eine Eingabeaufforderung als Administrator aus. Es gibt keine Benutzeroberfläche.
 
-- Das Tool muss von einer Eingabeaufforderung aus ausgeführt werden.  
+- Sie führen das Tool über den Dienstverbindungspunkt und einen Computer aus, der eine Verbindung mit dem Internet herstellen kann. Jeder dieser Computer muss über ein x64-Bit-Betriebssystem und über die folgenden Komponenten verfügen:
 
-- Jeder Computer, auf dem das Tool ausgeführt wird (Dienstverbindungspunkt-Computer und mit dem Internet verbundener Computer), muss ein x64-System mit den folgenden installierten Komponenten sein:  
+  - **Visual C++ Redistributable** -Dateien für x86- und x64-Systeme. Standardmäßig installiert Configuration Manager die x64-Version auf dem Computer, der den Dienstverbindungspunkt hostet. Informationen zum Herunterladen dieser Komponente finden Sie unter [Visual C++ Redistributable Packages für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784).
 
-  - **Visual C++ Redistributable** -Dateien für x86- und x64-Systeme.   Standardmäßig installiert Configuration Manager die x64-Version auf dem Computer, der den Dienstverbindungspunkt hostet.  
+  - **.NET Framework 4.5.2** oder höher
 
-    Um eine Kopie der Visual C++-Dateien herunterzuladen, besuchen Sie die Seite für [Visual C++ Redistributable-Pakete für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) im Microsoft Download Center.  
+- Das Konto, das Sie verwenden, um das Tool auszuführen, benötigt die folgenden Berechtigungen:
 
-  - .NET Framework 4.5.2 oder höher.  
+  - **Lokaler Administrator** auf dem Computer, der den Dienstverbindungspunkt hostet.
 
-- Das Konto, das Sie zum Ausführen des Tools verwenden, muss über Folgendes verfügen:
-  - **lokale Administratorrechte** auf dem Computer, auf dem der Dienstverbindungspunkt (auf dem das Tool ausgeführt wird) gehostet ist.
-  - **Leseberechtigungen** für die Standortdatenbank.  
+  - **Leseberechtigungen** für die Standortdatenbank
 
+- Sie benötigen eine Methode zum Übertragen der Dateien zwischen dem Computer mit Internetzugriff und dem Dienstverbindungspunkt, zum Beispiel ein USB-Laufwerk mit genügend freiem Speicherplatz zum Speichern der Dateien und Updates.
 
+## <a name="overview"></a>Übersicht
 
-- Sie benötigen ein USB-Laufwerk mit genügend freiem Speicherplatz zum Speichern von Dateien und Updates, oder eine andere Methode zum Übertragen von Dateien zwischen dem Dienstverbindungspunkt-Computer und dem Computer mit Internetzugriff. (Bei diesem Szenario wird davon ausgegangen, dass Ihr Standort und die verwalteten Computer keine direkte Internetverbindung haben.)  
+1. **Vorbereiten:** Führen Sie das Tool auf dem Dienstverbindungspunkt aus. Dieses überträgt Ihre Nutzungsdaten in eine CAB-Datei an einem von Ihnen festgelegten Speicherort. Kopieren Sie die Datendatei auf den Computer mit einer Internetverbindung.
 
+2. **Verbinden:** Führen Sie das Tool auf dem Computer mit einer Internetverbindung aus. Die Nutzungsdaten werden hochgeladen, und anschließend werden die Configuration Manager-Updates heruntergeladen. Kopieren Sie die heruntergeladenen Updates auf den Dienstverbindungspunkt.
 
+    Sie können mehrere Datendateien gleichzeitig aus unterschiedlichen Hierarchien hochladen. Sie können auch einen Proxyserver und einen Benutzer für den Proxyserver angeben.
 
-## <a name="use-the-service-connection-tool"></a>Verwenden des Dienstverbindungstools  
+3. **Importieren:** Führen Sie das Tool auf dem Dienstverbindungspunkt aus. Die Updates werden importiert und Ihrem Standort hinzugefügt. Sie können diese Updates in der Configuration Manager-Konsole anzeigen und [installieren](install-in-console-updates.md).
 
- Sie finden das Dienstverbindungstool (**serviceconnectiontool.exe**) auf dem Configuration Manager-Installationsmedium im Ordner **%path%\smssetup\tools\ServiceConnectionTool**. Verwenden Sie immer das Dienstverbindungstool, das der Version von Configuration Manager entspricht, die Sie verwenden.
+### <a name="upload-multiple-data-files"></a>Hochladen mehrerer Datendateien
 
+- Fügen Sie alle exportierten Datendateien aus separaten Hierarchien in denselben Ordner ein. Benennen Sie jede Datei mit einem eindeutigen Namen. Falls erforderlich, können Sie sie manuell umbenennen.
 
- In diesem Verfahren werden in den Befehlszeilenbeispielen die folgenden Dateinamen und Ordnerpfade verwendet (die Verwendung dieser Pfade und Dateinamen ist nicht zwingend; stattdessen können Sie auch Alternativen verwenden, die auf Ihre Umgebung und die Voreinstellungen abgestimmt sind):  
+- Wenn Sie anschließend das Tool zum Hochladen der Daten für Microsoft ausführen, geben Sie den Ordner an, der die Datendateien enthält.
 
-- Der Pfad zu einem USB-Stick mit Daten, die zwischen den Servern übertragen werden:  **D:\USB\\**  
+- Wenn Sie das Tool ausführen, um Daten zu importieren, importiert dieses nur die Daten für diese Hierarchie.
 
-- Der Name der CAB-Datei, die die vom Standort exportierten Daten enthält: **UsageData.cab**  
+### <a name="specify-a-proxy-server"></a>Angeben eines Proxyservers
 
-- Der Name des leeren Ordners, in dem heruntergeladene Configuration Manager-Updates zur Übertragung zwischen Servern gespeichert werden: **UpdatePacks**  
+Wenn für den Computer mit einer Internetverbindung ein Proxyserver erforderlich ist, unterstützt das Tool eine Standardproxykonfiguration. Verwenden Sie die optionalen Parameter **-proxyserveruri** und **-proxyusername**. Weitere Informationen finden Sie unter [Befehlszeilenparameter](#bkmk_cmd).
 
-Schritte auf dem Computer, von dem der Dienstverbindungspunkt gehostet wird.  
+### <a name="specify-the-type-of-updates-to-download"></a>Angeben des Typs der herunterzuladenden Updates
 
-- Öffnen Sie eine Eingabeaufforderung mit Administratorrechten, und wechseln Sie anschließend in das Verzeichnis mit der Datei **serviceconnectiontool.exe**.  
+Das Tool unterstützt Optionen, um zu steuern, welche Dateien heruntergeladen werden. Standardmäßig lädt das Tool nur das letzte verfügbare Update herunter, das für die Version Ihres Standorts gilt. Hotfixes werden nicht heruntergeladen.
 
-  Sie finden dieses Tool standardmäßig auf dem Configuration Manager-Installationsmedium im Ordner **%path%\smssetup\tools\ServiceConnectionTool**. Damit das Dienstverbindungstool funktioniert, müssen alle Dateien aus diesem Ordner im selben Ordner abgelegt werden.  
+Sie können einen der folgenden Parameter verwenden, um zu ändern, welche Dateien heruntergeladen werden:
 
-Wenn Sie den folgenden Befehl ausführen, bereitet das Tool eine CAB-Datei vor, die Informationen zur Verwendung und zum Kopieren an einen Speicherort Ihrer Wahl enthält. Die Daten in der CAB-Datei basieren auf der Ebene der Diagnosenutzungsdaten, zu deren Sammlung Ihre Website konfiguriert ist. (Siehe [Diagnose- und Nutzungsdaten für Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).)  Führen Sie den folgenden Befehl zum Erstellen der CAB-Datei aus:  
+- **-downloadall:** Mit diesem Parameter werden unabhängig von der Standortversion alle Updates heruntergeladen, einschließlich Hotfixes.
+- **-downloadhotfix:** Mit diesem Parameter werden unabhängig von der Standortversion alle Hotfixes heruntergeladen.
+- **-downloadsiteversion:** Mit diesem Parameter werden Updates und Hotfixes höherer Versionen als die Standortversion heruntergeladen.
 
-- **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    > [!IMPORTANT]
+    > Aufgrund eines bekannten Problems in Configuration Manager 2002 funktioniert das Standardverhalten nicht wie erwartet. Verwenden Sie den Parameter **-downloadsiteversion**, um die erforderlichen Updates für Version 2002 herunterzuladen.<!-- 7594517 -->
 
-Sie müssen auch den Ordner ServiceConnectionTool mit seinem gesamten Inhalt auf das USB-Laufwerk kopieren, oder andernfalls auf dem Computer zur Verfügung stellen, den Sie für die Schritte 3 und 4 verwenden.  
+Weitere Informationen finden Sie unter [Befehlszeilenparameter](#bkmk_cmd).
 
-### <a name="overview"></a>Übersicht
-#### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>Zur Verwendung des Dienstverbindungstools müssen Sie drei Hauptschritte ausführen.  
+> [!TIP]
+> Das Tool bestimmt die Version Ihres Standorts aus der Datendatei. Wenn Sie die Version überprüfen möchten, können Sie in der CAB-Datei nach der Textdatei suchen, in deren Dateinamen die Standortversion enthalten ist.
 
-1.  **Vorbereiten:**  Dieser Schritt muss auf dem Computer ausgeführt werden, der den Dienstverbindungspunkt hostet. Wenn das Tool ausgeführt wird, werden Ihre Nutzungsdaten in einer CAB-Datei abgelegt und auf einem USB-Laufwerk (bzw. auf einem anderen angegebenen Umlagerungsort) gespeichert.  
+## <a name="use-the-tool"></a>Verwendung des Tools  
 
-2.  **Verbinden:** In diesem Schritt führen Sie das Tool auf einem Remotecomputer aus, der eine Verbindung mit dem Internet herstellt, um Daten hochzuladen und Updates herunterzuladen.  
+Das Dienstverbindungstool befindet sich auf dem Configuration Manager-Installationsmedium unter dem folgenden Pfad: `SMSSETUP\TOOLS\ServiceConnectionTool\ServiceConnectionTool.exe`. Verwenden Sie immer das Dienstverbindungstool, das der Version von Configuration Manager entspricht, die Sie verwenden. Damit das Dienstverbindungstool funktioniert, müssen sich alle Dateien im selben Ordner befinden.
 
-3.  **Importieren:** Dieser Schritt muss auf dem Computer ausgeführt werden, der den Dienstverbindungspunkt hostet. Wenn das Tool ausgeführt wird, werden die von Ihnen heruntergeladenen Updates importiert und Ihrem Standort hinzugefügt; anschließend können Sie sich diese Updates anzeigen lassen und aus der Configuration Manager-Konsole installieren.  
+Kopieren Sie den Ordner **ServiceConnectionTool** mit dem gesamten Inhalt auf einen Computer mit Internetverbindung.
 
-Ab Version 1606 können Sie mehrere CAB-Dateien gleichzeitig hochladen (jede aus einer anderen Hierarchie), wenn Sie eine Verbindung mit Microsoft herstellen und einen Proxyserver sowie einen Benutzer für den Proxyserver angeben.   
+In diesem Verfahren werden in den Befehlszeilenbeispielen die folgenden Dateinamen und Speicherorte für Ordner verwendet. Sie müssen diese Pfade und Dateinamen aber nicht verwenden. Sie können auch Alternativen verwenden, die Ihrer Umgebung und Ihren Anforderungen entsprechen.
 
-#### <a name="to-upload-multiple-cab-files"></a>Hochladen mehrerer CAB-Dateien
-- Speichern Sie jede CAB-Datei, die Sie aus separaten Hierarchien exportieren, im gleichen Ordner. Der Name jeder Datei muss eindeutig sein. Falls nötig, können Sie sie manuell umbenennen.
-- Wenn Sie anschließend den Befehl zum Hochladen der Daten zu Microsoft ausführen, geben Sie den Ordner an, der die CAB-Dateien enthält. (Vor dem Update 1606 war nur ein Hochladen von Daten aus einer einzelnen Hierarchie gleichzeitig möglich, und das Tool forderte die Angabe des Namens der CAB-Datei im Ordner.)
-- Wenn Sie später die Importaufgabe auf einem Dienstverbindungspunkt einer Hierarchie ausführen, importiert das Tool automatisch nur die Daten dieser Hierarchie.  
+- Der Pfad zu den Quelldateien aus den Configuration Manager-Installationsmedien auf dem Dienstverbindungspunkt: `C:\Source`
 
-#### <a name="to-specify-a-proxy-server"></a>Angeben eines Proxyservers
-Sie können die folgenden optionalen Parameter zum Angeben eines Proxyservers verwenden (Weitere Informationen zur Verwendung dieser Parameter sind im Abschnitt „Befehlszeilenparameter“ dieses Themas aufgeführt):
-- **-proxyserveruri [FQDN_of_proxy_server]** Mit diesem Parameter können Sie den Proxyserver angeben, der für diese Verbindung genutzt werden soll.
-- **proxyusername [Benutzername]**  Verwenden Sie diesen Parameter, wenn Sie einen Benutzer für den Proxyserver angeben müssen.
+- Der Pfad zu einem USB-Laufwerk, auf dem Sie die Daten speichern, die zwischen Computern übertragen werden sollen: `D:\USB\`
 
-#### <a name="specify-the-type-of-updates-to-download"></a>Angeben des Typs der herunterzuladenden Updates
-Ab Version 1706 ändert sich das Standardverhalten des Tools für Downloads, und das Tool unterstützt nun Optionen, mit denen Sie steuern können, welche Dateien Sie herunterladen.
-- Standardmäßig lädt das Tool nur das letzte verfügbare Update herunter, das für die Version Ihres Standorts gilt. Es lädt keine Hotfixes herunter.
+- Der Name der Datendatei, die Sie vom Standort exportieren: `UsageData.cab`
 
-Verwenden Sie zum Anpassen dieses Verhaltens einen der folgenden Parameter, um zu ändern, welche Dateien heruntergeladen werden. 
+- Der Name des leeren Ordners, in dem das Tool heruntergeladene Updates für Configuration Manager speichert: `UpdatePacks`
 
-> [!NOTE]
-> Die Version Ihres Standorts wird von den Daten in der CAB-Datei bestimmt, die beim Ausführen des Tools hochgeladen wird.
->
-> Sie können die Version überprüfen, indem Sie nach der Datei *SiteVersion.txt* in der CAB-Datei suchen.
+### <a name="prepare"></a>Vorbereiten
 
-- **-downloadall** Diese Option lädt unabhängig von der Version Ihres Standorts alles herunter, einschließlich Updates und Hotfixes.
-- **-downloadhotfix** Diese Option lädt unabhängig von der Version Ihres Standorts alle Hotfixes herunter.
-- **-downloadsiteversion** Diese Option lädt Updates und Hotfixes herunter, deren Version höher ist als die Ihres Standorts.
+1. Öffnen Sie auf dem Computer, auf dem der Dienstverbindungspunkt gehostet wird, eine Eingabeaufforderung als Administrator, und wechseln Sie zum Speicherort des Tools. Beispiel:
 
-Beispielbefehlszeile, die *-downloadsiteversion* verwendet:
-- **serviceconnectiontool.exe -connect *-downloadsiteversion* -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
+1. Führen Sie den folgenden Befehl aus, um die Datendatei vorzubereiten:
 
+    `ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
 
+    > [!NOTE]
+    > Wenn Sie Datendateien aus mehr als einer Hierarchie gleichzeitig hochladen, sollten Sie jeder Datendatei einen eindeutigen Namen geben. Falls erforderlich, können Sie Dateien später umbenennen.
 
-### <a name="to-use-the-service-connection-tool"></a>So verwenden Sie das Dienstverbindungstool  
+    Die Daten in der Datei basieren auf der Diagnoseebene und den Nutzungsdaten, die Sie für den Standort konfigurieren. Weitere Informationen finden Sie unter [Übersicht zu Diagnose- und Nutzungsdaten](../../plan-design/diagnostics/diagnostics-and-usage-data.md). Sie können das Tool verwenden, um die Daten in eine CSV-Datei zu exportieren und die Inhalte anzuzeigen. Weitere Informationen finden Sie unter [-export](#-export).
 
-1. Schritte auf dem Computer, von dem der Dienstverbindungspunkt gehostet wird.  
+1. Nachdem das Tool den Export der Nutzungsdaten abgeschlossen hat, kopieren Sie die Datendatei auf einen Computer mit Internetzugriff.
 
-   - Öffnen Sie eine Eingabeaufforderung mit Administratorrechten, und wechseln Sie anschließend in das Verzeichnis mit der Datei **serviceconnectiontool.exe**.   
+### <a name="connect"></a>Verbinden
 
-2. Führen Sie den folgenden Befehl aus, damit das Tool eine CAB-Datei vorbereitet, die Informationen zur Verwendung enthält, und um die Datei an einen Speicherort Ihrer Wahl zu kopieren.  
+1. Öffnen Sie auf dem Computer mit Internetzugriff eine Eingabeaufforderung als Administrator, und wechseln Sie zum Speicherort des Tools. Dieser Speicherort stellt eine Kopie des gesamten **ServiceConnectionTool**-Ordners dar. Beispiel:
 
-   - **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    `cd D:\USB\ServiceConnectionTool\`
 
-   Wenn Sie CAB-Dateien von mehr als einer Hierarchie gleichzeitig hochladen möchten, muss jede CAB-Datei im Ordner einen eindeutigen Namen haben. Sie können manuell Dateien umbenennen, die Sie dem Ordner hinzufügen.
+1. Führen Sie den folgenden Befehl aus, um die Datendatei hoch- und die Configuration Manager-Updates herunterzuladen:
 
-   Wenn Sie die Verwendungsinformationen anzeigen möchten, die gesammelt werden, damit Sie in den Configuration Manager-Clouddienst hochgeladen werden, führen Sie den folgenden Befehl aus, um die gleichen Daten als eine CSV-Datei zu exportieren, die Sie dann mithilfe einer Anwendung wie Excel anzeigen können:  
+    `ServiceConnectionTool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
 
-   - **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+    Weitere Beispiele finden Sie unter [Befehlszeilenparameter](#bkmk_cmd).
 
-3. Nachdem der Vorbereitungsschritt abgeschlossen wurde, verschieben Sie das USB-Laufwerk auf einen Computer mit Internetzugriff (bzw. übertragen die exportierten Daten auf andere Weise).  
+    > [!NOTE]  
+    > Wenn Sie diese Befehlszeile ausführen, wird möglicherweise der folgende Fehler angezeigt:
+    >
+    > **Unhandled Exception: System.UnauthorizedAccessException: Access to the path 'C:\Users\jqpublic\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' is denied.** (Ausnahmefehler: System.UnauthorizedAccessException: Der Zugriff auf den Pfad „C:\Users\jqpublic\AppData\Local\Temp\extractmanifestcab\95F8A562.sql“ wurde verweigert.)
+    >
+    > Sie können diesen Fehler gefahrlos ignorieren. Schließen Sie das Fehlerfenster, um den Vorgang fortzusetzen.
 
-4. Öffnen Sie auf dem Computer mit Internetzugriff eine Eingabeaufforderung mit Administratorrechten, und wechseln Sie in das Verzeichnis, in dem eine Kopie des Tools  **serviceconnectiontool.exe** und zusätzliche Dateien aus diesem Ordner gespeichert sind.  
+1. Nachdem das Tool die Updates heruntergeladen hat, kopieren Sie diese in den Dienstverbindungspunkt.
 
-5. Führen Sie den folgenden Befehl aus, um den Upload der Nutzungsinformationen und den Download der Configuration Manager-Updates zu starten:  
+### <a name="import"></a>Importieren
 
-   - **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+1. Öffnen Sie auf dem Computer, auf dem der Dienstverbindungspunkt gehostet wird, eine Eingabeaufforderung als Administrator, und wechseln Sie zum Speicherort des Tools. Beispiel:
 
-   Weitere Beispiele für diese Befehlszeile finden Sie im Abschnitt [Befehlszeilenoptionen](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) später in diesem Thema.
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
-   > [!NOTE]  
-   >  Wenn Sie in der Befehlszeile einen Befehl zur Verbindung mit dem Configuration Manager-Clouddienst ausführen, kann etwa folgende Fehlermeldung angezeigt werden:  
-   >   
-   > - Ausnahmefehler: System.UnauthorizedAccessException:  
-   >   
-   >      Der Zugriff auf den Pfad 'C:\  
-   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' wurde verweigert.  
-   >   
-   > Dieser Fehler kann ignoriert werden, und Sie können das Fehlerfenster schließen und fortfahren.  
+1. Führen Sie folgenden Befehl aus, um die Updates zu importieren:
 
-6. Nach dem Herunterladen der Configuration Manager-Updates verschieben Sie das USB-Laufwerk auf den Computer, von dem der Dienstverbindungspunkt gehostet wird (bzw. übertragen die exportierten Daten auf andere Weise).  
+    `ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
 
-7. Öffnen Sie auf dem Computer, von dem der Dienstverbindungspunkt gehostet wird, eine Eingabeaufforderung mit Administratorrechten, und wechseln Sie in das Verzeichnis, in dem eine Kopie des Tools **serviceconnectiontool.exe**vorhanden ist. Führen Sie anschließend den folgenden Befehl aus:  
+1. Schließen Sie nach Abschluss des Imports die Eingabeaufforderung. Es werden nur Updates für die entsprechende Hierarchie importiert.
 
-   - **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+1. Gehen Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**, und wählen Sie den Knoten **Updates und Wartung** aus. Importierte Updates können jetzt installiert werden. Weitere Informationen finden Sie unter [Installieren konsoleninterner Updates](install-in-console-updates.md).
 
-8. Nachdem der Import abgeschlossen wurde, können Sie die Eingabeaufforderung schließen. (Es werden nur Updates für die entsprechende Hierarchie importiert).  
+## <a name="log-files"></a>Protokolldateien
 
-9. Öffnen Sie die Configuration Manager-Konsole, und navigieren Sie zu **Verwaltung** > **Updates und Wartung** aus. Die importierten Updates stehen jetzt zur Installation bereit. (Vor Version 1702 befand sich „Updates und Wartung“ unter **Verwaltung** > **Clouddienste**.)
+- **ServiceConnectionTool.log:** Jedes Mal, wenn Sie das Dienstverbindungstool ausführen, schreibt es in diese Protokolldatei. Diese Protokolldatei wird immer unter demselben Pfad wie das Tool gespeichert. Diese Protokolldatei enthält einfache Details zur Toolverwendung, die auf den von Ihnen verwendeten Parametern basieren. Jedes Mal, wenn Sie das Tool ausführen, ersetzt dieses die vorhandene Protokolldatei.
 
-   Weitere Informationen zum Installieren von Updates finden Sie unter [Installieren konsoleninterner Updates für Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
+- **ConfigMgrSetup.log:** Während der [Verbindungsphase](#connect) schreibt das Tool in diese Protokolldatei im Stammverzeichnis des Systemlaufwerks. Diese Protokolldatei enthält ausführlichere Informationen, zum Beispiel, welche Dateien das Tool herunterlädt und ob die Hashüberprüfungen erfolgreich waren.
 
-## <a name="log-files"></a><a name="bkmk_cmd"></a> Protokolldateien
+## <a name="command-line-parameters"></a><a name="bkmk_cmd"></a> Befehlszeilenparameter
 
-**ServiceConnectionTool.log**
+In diesem Abschnitt werden alle verfügbaren Parameter für das Dienstverbindungstool in alphabetischer Reihenfolge aufgelistet.
 
-Immer wenn Sie das Dienstverbindungstool ausführen, wird eine Protokolldatei mit dem Namen **ServiceConnectionTool.log** am Speicherort des Tools generiert.  Diese Protokolldatei enthält einfache Details zur Ausführung des Tools basierend auf den verwendeten Befehlen.  Eine vorhandene Protokolldatei wird bei jeder Ausführung des Tools ersetzt.
+### <a name="-connect"></a>-connect
 
-**ConfigMgrSetup.log**
+Verwenden Sie diesen Parameter während der [Verbindungsphase](#connect) auf dem Computer mit Internetzugriff. Er stellt eine Verbindung mit dem Configuration Manager-Clouddienst her, um die Datendatei hoch- und Updates herunterzuladen.
 
-Beim Verwenden des Tools, um eine Verbindung herzustellen und Updates herunterzuladen, wird die Protokolldatei **ConfigMgrSetup.log** im Stammverzeichnis des Systemlaufwerks generiert.  Diese Protokolldatei enthält ausführlichere Informationen, z.B. welche Dateien heruntergeladen und extrahiert wurden und ob Hashüberprüfungen erfolgreich waren.
+Dafür sind die folgenden Parameter erforderlich:
 
-## <a name="command-line-options"></a><a name="bkmk_cmd"></a> Befehlszeilenoptionen  
-Um Hilfeinformationen für das Dienstverbindungspunkt-Tool anzuzeigen, öffnen Sie die Eingabeaufforderung mit dem Ordner, in dem das Tool enthalten ist, und führen Sie den folgenden Befehl aus:  **serviceconnectiontool.exe**.  
+- **-usagedatasrc:** der Speicherort der Datendatei, die hochgeladen werden soll
+- **-updatepackdest:** ein Pfad für die heruntergeladenen Updates
 
+Darüber hinaus können Sie auch die folgenden optionalen Parameter verwenden:
 
-|Befehlszeilenoptionen|Details|  
-|---------------------------|-------------|  
-|**-prepare -usagedatadest [Laufwerk:][Pfad][Dateiname.cab]**|Durch diesen Befehl werden die aktuellen Nutzungsdaten in einer CAB-Datei gespeichert.<br /><br /> Führen Sie diesen Befehl als **Lokaler Administrator** auf dem Server aus, von dem der Dienstverbindungspunkt gehostet wird.<br /><br /> Beispiel:   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
-|**-connect -usagedatasrc [Laufwerk:][Pfad] -updatepackdest [Laufwerk:][Pfad] -proxyserveruri [FQDN von Proxyserver] -proxyusername [Benutzername]** <br /> <br /> Wenn Sie eine Version von Configuration Manager vor 1606 verwenden, müssen Sie den Namen der CAB-Datei angeben, und Sie können nicht die Optionen für einen Proxyserver verwenden.  Die unterstützten Befehlsparameter sind: <br /> **-connect -usagedatasrc [Laufwerk:][Pfad][Dateiname] -updatepackdest [Laufwerk:][Pfad]** |Dieser Befehl stellt eine Verbindung zum Configuration Manager-Clouddienst her, um die CAB-Dateien mit Nutzungsdaten aus dem angegebenen Speicherort hoch- und die verfügbaren Updatepakete und Konsoleninhalt herunterzuladen. Die Optionen für die Proxyserver sind optional.<br /><br /> Führen Sie diesen Befehl als **lokaler Administrator** auf einem Computer aus, der eine Verbindung mit dem Internet herstellen kann.<br /><br /> Beispiel für das Herstellen einer Verbindung ohne Proxyserver: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> Beispiel für das Herstellen einer Verbindung unter Verwendung eines Proxyservers: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> Wenn Sie eine frühere Version als 1606 verwenden, müssen Sie den Dateinamen der CAB-Datei angeben und können keinen Proxyserver angeben. Verwenden Sie die folgende Beispielbefehlszeile: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
-|**-import -updatepacksrc [Laufwerk:][Pfad]**|Dieser Befehl importiert die Updatepakete und den Konsoleninhalt, die zuvor auf die Configuration Manager-Konsole heruntergeladen wurden.<br /><br /> Führen Sie diesen Befehl als **Lokaler Administrator** auf dem Server aus, von dem der Dienstverbindungspunkt gehostet wird.<br /><br /> Beispiel:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
-|**-export -dest [Laufwerk:][Pfad][Dateiname.csv]**|Dieser Befehl exportiert die Nutzungsdaten in eine CSV-Datei, die Sie anzeigen können.<br /><br /> Führen Sie diesen Befehl als **Lokaler Administrator** auf dem Server aus, von dem der Dienstverbindungspunkt gehostet wird.<br /><br /> Beispiel: **-export -dest D:\USB\usagedata.csv**|  
+- **-proxyserveruri:** der vollqualifizierter Domänenname des Proxyservers
+- **-proxyusername:** ein Benutzername für den Proxyserver
+- **-downloadall:** Mit diesem Parameter werden unabhängig von der Standortversion alle Elemente heruntergeladen, einschließlich Updates und Hotfixes.
+- **-downloadhotfix:** Mit diesem Parameter werden unabhängig von der Standortversion alle Hotfixes heruntergeladen.
+- **-downloadsiteversion:** Mit diesem Parameter werden Updates und Hotfixes höherer Versionen als die Standortversion heruntergeladen.
+
+#### <a name="example-of-connect-without-a-proxy-server"></a>Beispiel für „-connect“ ohne Proxyserver
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks`
+
+#### <a name="example-of-connect-with-a-proxy-server"></a>Beispiel für „-connect“ mit Proxyserver
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itproxy.contoso.com -proxyusername jqpublic`
+
+#### <a name="example-of-connect-to-download-only-site-version-applicable-updates"></a>Beispiel für „-connect“ zum Herunterladen von Updates, die nur für die jeweilige Standortversion gelten
+
+`ServiceConnectionTool.exe -connect -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
+
+### <a name="-dest"></a>-dest
+
+Dies ist ein erforderlicher Parameter für den **-export**-Parameter, um den Pfad und den Dateinamen der zu exportierenden CSV-Datei anzugeben. Weitere Informationen finden Sie unter [-export](#-export).
+
+### <a name="-downloadall"></a>-downloadall
+
+Dies ist ein optionaler Parameter für den **-connect**-Parameter, um unabhängig von der Standortversion sämtliche Elemente herunterzuladen, einschließlich Updates und Hotfixes. Weitere Informationen finden Sie unter [-connect](#connect).
+
+### <a name="-downloadhotfix"></a>-downloadhotfix
+
+Dies ist ein optionaler Parameter für den **-connect**-Parameter, um unabhängig von der Standortversion alle Hotfixes herunterzuladen. Weitere Informationen finden Sie unter [-connect](#-connect).
+
+### <a name="-downloadsiteversion"></a>-downloadsiteversion
+
+Dies ist ein optionaler Parameter für den **-connect**-Parameter, um nur Updates und Hotfixes höherer Versionen als die Standortversion herunterzuladen. Weitere Informationen finden Sie unter [-connect](#-connect).
+
+### <a name="-export"></a>-export
+
+Dieser Parameter wird während der [Vorbereitungsphase](#prepare) zum Exportieren von Nutzungsdaten in eine CSV-Datei verwendet. Führen Sie diesen als Administrator auf dem Dienstverbindungspunkt aus. Mit dieser Aktion können Sie den Inhalt der Nutzungsdaten vor dem Hochladen für Microsoft überprüfen. Zum Angeben des Speicherorts der CSV-Datei wird der **-dest**-Parameter benötigt.
+
+#### <a name="example-of-export"></a>Beispiel für „-export“
+
+`-export -dest D:\USB\usagedata.csv`
+
+### <a name="-import"></a>-import
+
+Dieser Parameter wird während der [Importphase](#import) auf dem Dienstverbindungspunkt zum Importieren von Updates auf den Standort verwendet. Zum Angeben des Speicherorts der heruntergeladenen Updates wird der **-updatepacksrc**-Parameter benötigt.
+
+#### <a name="example-of-import"></a>Beispiel für „-import“
+
+`ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
+
+### <a name="-prepare"></a>-prepare
+
+Dieser Parameter wird während der [Vorbereitungsphase](#prepare) auf dem Dienstverbindungspunkt zum Exportieren von Nutzungsdaten vom Standort verwendet. Zum Angeben des Speicherorts der exportierten Datendatei wird der **-usagedatadest**-Parameter benötigt.
+
+#### <a name="example-of-prepare"></a>Beispiel für „-prepare“
+
+`ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
+
+### <a name="-proxyserveruri"></a>-proxyserveruri
+
+Hierbei handelt es sich um einen optionalen Parameter für den **-connect**-Parameter, um den vollqualifizierten Domänennamen für Ihren Proxyserver anzugeben. Weitere Informationen finden Sie unter [-connect](#-connect).
+
+### <a name="-proxyusername"></a>-proxyusername
+
+Hierbei handelt es sich um einen **-connect**-Parameter, um den Benutzernamen für eine Authentifizierung beim Proxyserver anzugeben. Weitere Informationen finden Sie unter [-connect](#-connect).
+
+### <a name="-updatepackdest"></a>-updatepackdest
+
+Hierbei handelt es sich um einen erforderlichen Parameter für den **-connect**-Parameter, um einen Pfad für die heruntergeladenen Updates anzugeben. Weitere Informationen finden Sie unter [-connect](#-connect).
+
+### <a name="-updatepacksrc"></a>-updatepacksrc
+
+Hierbei handelt es sich um einen erforderlichen Parameter für den **-import**-Parameter, um einen Pfad für die heruntergeladenen Updates anzugeben. Weitere Informationen finden Sie unter [-import](#-import).
+
+### <a name="-usagedatadest"></a>-usagedatadest
+
+Hierbei handelt es sich um einen erforderlichen Parameter für den **-prepare**-Parameter, um einen Pfad und einen Dateinamen für die exportierte Datendatei anzugeben. Weitere Informationen finden Sie unter [-prepare](#-prepare).
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Installieren von konsoleninternen Updates](install-in-console-updates.md)
+
+[Anzeigen von Diagnose- und Verwendungsdaten](../../plan-design/diagnostics/view-diagnostics-and-usage-data.md)

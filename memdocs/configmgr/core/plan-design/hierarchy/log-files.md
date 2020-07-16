@@ -2,7 +2,7 @@
 title: Protokolldateireferenz
 titleSuffix: Configuration Manager
 description: Dies ist eine Referenz zu sämtlichen Protokolldateien für Configuration Manager-Client und -Server sowie abhängigen Komponenten.
-ms.date: 06/10/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715576"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210336"
 ---
 # <a name="log-file-reference"></a>Protokolldateireferenz
 
@@ -77,6 +77,8 @@ In den folgenden Abschnitten finden Sie Details zu den verschiedenen verfügbare
 
   - [Ermittlung](#BKMK_DiscoveryLog)  
 
+  - [Endpunktanalyse](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [Erweiterungen](#BKMK_Extensions)  
@@ -171,7 +173,10 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |SCClient_&lt;*Domäne*\>@&lt;*Benutzername*\>_2.log|Zeichnet die historischen Aktivitäten im Software Center für den angegebenen Benutzer auf dem Clientcomputer auf.|  
 |Scheduler.log|Zeichnet Aktivitäten geplanter Tasks für alle Clientvorgänge auf.|  
 |SCNotify_&lt;*Domäne*\>@&lt;*Benutzername*\>_1.log|Zeichnet die Aktivitäten im Zusammenhang mit Benutzerbenachrichtigungen über Software für den angegebenen Benutzer auf.|  
-|SCNotify_&lt;*Domäne*\>@&lt;*Benutzername*\>_1-&lt;*date_time*>.log|Zeichnet die historischen Informationen im Zusammenhang mit Benutzerbenachrichtigungen über Software für den angegebenen Benutzer auf.|  
+|SCNotify_&lt;*Domäne*\>@&lt;*Benutzername*\>_1-&lt;*date_time*>.log|Zeichnet die historischen Informationen im Zusammenhang mit Benutzerbenachrichtigungen über Software für den angegebenen Benutzer auf.|
+|SensorWmiProvider.log|Zeichnet die Aktivitäten des WMI-Anbieters für den Endpunktanalysesensor auf|
+|SensorEndpoint.log|Zeichnet die Ausführung von Endpunktanalyserichtlinien und das Hochladen von Clientdaten auf den Standortserver auf|
+|SensorManagedProvider.log|Zeichnet das Sammeln und Verarbeiten von Ereignissen und Informationen für die Endpunktanalyse auf|
 |setuppolicyevaluator.log|Zeichnet Aktivitäten im Zusammenhang mit Konfiguration und der Erstellung von Inventurrichtlinien in WMI auf.|  
 |SleepAgent_&lt;*Domäne*\>@SYSTEM_0.log|Die wichtigste Protokolldatei für Aktivierungsproxy.|  
 |smscliui.log|Zeichnet die Nutzung des Configuration Manager-Clients in der Systemsteuerung auf.|  
@@ -344,7 +349,8 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |srsrpsetup.log|Zeichnet Ergebnisse der Installation des Berichterstattungspunkts auf.|Standortsystemserver|  
 |statesys.log|Zeichnet die Verarbeitung von Systemzustandsmeldungen auf.|Standortserver|  
 |statmgr.log|Zeichnet Schreibvorgänge aller Statusmeldungen in die Datenbank auf.|Standortserver|  
-|swmproc.log|Zeichnet die Verarbeitung von Messungsdateien und -einstellungen auf.|Standortserver|  
+|swmproc.log|Zeichnet die Verarbeitung von Messungsdateien und -einstellungen auf.|Standortserver|
+|UXAnalyticsUploadWorker.log|Zeichnet Datenuploads in den Dienst für die Endpunktanalyse auf|Standortserver|   
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> Standortserverinstallation
 
@@ -427,6 +433,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |objreplmgr.log|Zeichnet die Verarbeitung von Richtlinien und Zuweisung auf.|Primärer Standortserver|  
 |policypv.log|Zeichnet die Richtliniengenerierung aller Richtlinien auf.|Standortserver|  
 |outgoingcontentmanager.log|Zeichnet Inhalte auf, die auf Microsoft Intune hochgeladen werden|Computer mit dem Dienstverbindungspunkt|  
+|ServiceConnectionTool.log|Zeichnet Details zur Verwendung des [Dienstverbindungstools](../../servers/manage/use-the-service-connection-tool.md), die auf den von Ihnen verwendeten Parametern basieren – bei jeder Ausführung des Tools wird die vorhandene Protokolldatei ersetzt.|Speicherort des Tools|
 |sitecomp.log|Zeichnet Details zur Installation des Dienstverbindungspunkts auf.|Standortserver|  
 |SmsAdminUI.log|Zeichnet die Aktivität der Configuration Manager-Konsole auf|Computer, auf dem die Configuration Manager-Konsole ausgeführt wird|  
 |SMS_CLOUDCONNECTION.log|Zeichnet Informationen zu Clouddiensten auf.|Computer mit dem Dienstverbindungspunkt|
@@ -643,6 +650,15 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |ddm.log|Zeichnet die Aktivitäten des Ermittlungsdaten-Managers auf.|Standortserver|  
 |InventoryAgent.log|Zeichnet Aktivitäten im Zusammenhang mit Hardwareinventur, Softwareinventur und Frequenzermittlung auf dem Client auf.|Client|  
 |netdisc.log|Zeichnet Aktionen im Zusammenhang mit der Netzwerkermittlung auf.|Standortserver|  
+
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a> Endpunktanalyse
+
+|Protokollname|Beschreibung|Computer mit Protokolldatei|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker.log|Zeichnet Datenuploads in den Dienst für die Endpunktanalyse auf|Standortserver|  
+|SensorWmiProvider.log|Zeichnet die Aktivitäten des WMI-Anbieters für den Endpunktanalysesensor auf|Client|  
+|SensorEndpoint.log|Zeichnet die Ausführung von Endpunktanalyserichtlinien und das Hochladen von Clientdaten auf den Standortserver auf|Client|
+|SensorManagedProvider.log|Zeichnet das Sammeln und Verarbeiten von Ereignissen und Informationen für die Endpunktanalyse auf|Client|
 
 ### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a> Endpoint Protection
 

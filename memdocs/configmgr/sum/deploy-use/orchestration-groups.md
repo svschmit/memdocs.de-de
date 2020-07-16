@@ -2,7 +2,7 @@
 title: Orchestrierungsgruppen
 titleSuffix: Configuration Manager
 description: Erstellen Sie Orchestrierungsgruppen, und stellen Sie Updates für diese bereit.
-ms.date: 04/28/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cddbebea-b418-4839-b0a8-7809486c8a4c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9a307df23900abb985535b2ab59a5ff172cafb7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5b42a0260b347fb12444e8611e7ec02be38cc387
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254910"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088410"
 ---
 # <a name="orchestration-groups-in-configuration-manager"></a>Orchestrierungsgruppen in Configuration Manager
 <!--3098816-->
@@ -89,7 +89,7 @@ Das Feature **Orchestrierungsgruppen** ist eine Weiterentwicklung des Features [
 
 1. Geben Sie auf der Seite **Skript vor Vorgang** ein PowerShell-Skript ein, das *vor* Ausführung der Bereitstellung auf jedem Gerät ausgeführt werden soll. Das Skript gibt den Wert `0` bei erfolgreicher Ausführung oder `3010` bei erfolgreicher Ausführung mit Neustart zurück.
 
-1. Geben Sie auf der Seite **Skript nach Vorgang** ein PowerShell-Skript ein, das *nach* Ausführung der Bereitstellung auf jedem Gerät ausgeführt werden soll. Das Verhalten dieses Skripts entspricht dem von PreScript.
+1. Geben Sie auf der Seite **Skript nach Vorgang** ein PowerShell-Skript ein, das *nach* Ausführung der Bereitstellung auf jedem Gerät ausgeführt werden soll. Bei Bedarf wird ein Neustart durchgeführt. Das Verhalten dieses Skripts entspricht dem von PreScript.
 
 1. Schließen Sie den Assistenten ab.
 
@@ -123,7 +123,8 @@ Klicken Sie auf eine Orchestrierungsgruppe und dann im Menüband oder per Rechts
        - Geben Sie ein PowerShell-Skript ein, das *vor* der Ausführung der Bereitstellung auf jedem Gerät ausgeführt wird. Das Skript gibt den Wert `0` bei erfolgreicher Ausführung oder `3010` bei erfolgreicher Ausführung mit Neustart zurück.
        
    - **Skript nach Vorgang:**
-      - Geben Sie ein PowerShell-Skript ein, das *nach* der Ausführung der Bereitstellung auf jedem Gerät ausgeführt wird. Das Skript gibt den Wert `0` bei erfolgreicher Ausführung oder `3010` bei erfolgreicher Ausführung mit Neustart zurück.
+      - Geben Sie ein PowerShell-Skript ein, das *nach* der Ausführung der Bereitstellung auf jedem Gerät ausgeführt wird. Bei Bedarf wird ein Neustart durchgeführt. Das Skript gibt den Wert `0` bei erfolgreicher Ausführung oder `3010` bei erfolgreicher Ausführung mit Neustart zurück.
+  
    > [!WARNING]
    > Stellen Sie sicher, dass Skripts, die vor bzw. nach dem Vorgang ausgeführt werden sollen, getestet werden, bevor Sie sie für Orchestrierungsgruppen verwenden. Für Skripts, die vor bzw. nach dem Vorgang ausgeführt werden sollen, tritt kein Timeout auf, und sie werden so lange ausgeführt, bis das Timeout für das Orchestrierungsgruppenmitglied erreicht wurde.
 

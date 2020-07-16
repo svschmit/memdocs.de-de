@@ -2,7 +2,7 @@
 title: Häufig gestellte Fragen zum Produkt und zur Lizenzierung
 titleSuffix: Configuration Manager
 description: Finden Sie Antworten auf häufige Produkt- und Lizenzfragen zu Configuration Manager.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: 1ce9024fa610c6af19eb40ccf0da662a3e99234f
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854421"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157823"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Häufig gestellte Fragen für die Configuration Manager-Verzweigungen und -Lizenzierungen
 
@@ -77,11 +78,11 @@ Durch die Coverwaltungslizenz können Configuration Manager-Kunden mit Software 
 
 - Wenn Sie ein Windows 10-Gerät auf andere Weise bei Intune registrieren, ist weiterhin die Vollversion einer Intune-Lizenz erforderlich. Sie können Autopilot beispielsweise zur Bereitstellung eines Geräts verwenden, oder ein Benutzer kann diesen Dienst nutzen, um sich manuell selbst zu registrieren.
 
-- Damit vorhandene von Configuration Manager verwaltete Geräte bei Intune für die Coverwaltung im großen Stil registriert werden können, verwendet die Coverwaltung ein Azure Active Directory-Feature (Azure AD) zur automatischen Registrierung für Windows 10. Für die automatische Registrierung wird eine Azure AD Premium-Lizenz (AADP1) verwendet, die unabhängig vom Microsoft Endpoint Manager angeboten wird. Damit die Coverwaltung in diesem Szenario funktioniert, müssen Sie jedem einzelnen Benutzer sowohl eine AADP1- als auch eine Intune-Lizenz zuweisen. Die Lizenzierung der Coverwaltung wurde zum 1. Dezember 2019 geändert. Sie müssen jetzt keine einzelnen Intune-Lizenzen für dieses Szenario mehr zuweisen. In anderen Registrierungsszenarios sind sie allerdings weiterhin erforderlich. Es wird weiterhin eine AADP1-Lizenz für die automatische Registrierung und die Coverwaltung benötigt.
+- Damit vorhandene von Configuration Manager verwaltete Geräte bei Intune für die Coverwaltung im großen Stil registriert werden können, verwendet die Coverwaltung ein Azure Active Directory-Feature (Azure AD) zur automatischen Registrierung für Windows 10. Für die automatische Registrierung bei der Co-Verwaltung sind Lizenzen für Azure AD Premium (AADP1) und Intune erforderlich. Seit dem 1. Dezember 2019 müssen Sie für dieses Szenario keine einzelnen Intune-Lizenzen mehr zuweisen. Der Microsoft Endpoint Manager enthält nun die Intune-Lizenzen für die Co-Verwaltung. Für dieses Szenario sind jedoch weiterhin separate AADP1-Lizenzen erforderlich. Für andere Registrierungsszenarios müssen Sie weiterhin Intune-Lizenzen zuweisen.
 
 - Wenn Sie Intune für die Verwaltung von iOS-, Android- oder macOS-Geräten verwenden möchten, benötigen Sie ein entsprechendes Intune-Abonnement über eine eigenständige Intune-Lizenz, Enterprise Mobility + Security (EMS) oder Microsoft 365.
 
-- Wenn Sie nicht über einen Abonnementplan verfügen, der mit Intune in Zusammenhang steht, müssen Sie mindestens eine Intune-Lizenz erwerben, damit die Coverwaltung unterstützt wird. Mit dieser Lizenz kann der Administrator auf das Admin Center für den Microsoft Endpoint Manager zugreifen.
+- Wenn Sie nicht über einen Abonnementplan verfügen, der mit Intune in Zusammenhang steht, müssen Sie mindestens eine Intune-Lizenz erwerben, damit die Coverwaltung unterstützt wird. Mit dieser Lizenz kann der Administrator den Abonnementplan aktivieren und auf das Admin Center für den Microsoft Endpoint Manager zugreifen.
 
 - Wenn Sie das in Microsoft 365 integrierte Feature [Basic Mobility and Security](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0) verwenden, können Sie nicht die neue Coverwaltungslizenz für einen Benutzer verwenden, der ebenfalls über Geräte verfügt, die von „Basic Mobility and Security“ verwaltet werden. Damit Sie die Coverwaltungslizenz für das von Configuration Manager verwaltete Gerät des Benutzers verwenden können, gehen Sie wie folgt vor:
 
