@@ -232,8 +232,6 @@
           href: plan-design/security/plan-for-security.md
         - name: Bewährte Sicherheitsmethoden und Datenschutzinformationen
           href: plan-design/security/security-best-practices-and-privacy-information.md
-        - name: Datenschutzbestimmungen – Configuration Manager-Cmdlet-Bibliothek
-          href: plan-design/security/privacy-statement-cmdlet-library.md
         - name: Zusätzliche Datenschutzinformationen
           href: plan-design/security/additional-privacy.md
         - name: Konfigurieren der Sicherheit
