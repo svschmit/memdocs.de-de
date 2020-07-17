@@ -2,7 +2,7 @@
 title: Endpoint Protection – von Kunden häufig gestellte Fragen
 titleSuffix: Configuration Manager
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zu Windows Defender und Endpoint Protection.
-ms.date: 12/09/2017
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0eafa09275220cdf07f837388aa6cb848fbd5e5a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906826"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240285"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection – von Kunden häufig gestellte Fragen
 
@@ -34,7 +34,6 @@ Diese häufig gestellten Fragen sind für Computerbenutzer vorgesehen, deren IT-
 -   [Woher kommen Viren, Spyware und andere potenziell unerwünschte Software?](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [Kann Schadsoftware ohne mein Wissen installiert werden?](#can-i-get-malicious-software-without-knowing-it)  
 -   [Warum sollten Lizenzvereinbarungen vor dem Installieren von Software gelesen werden?](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [Was ist der Unterschied zwischen Endpoint Protection und Windows Defender?](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
 -   [Warum erkennt Windows Defender keine Cookies?](#why-doesnt-windows-defender-detect-cookies)  
 -   [Wie kann ich Schadsoftware verhindern?](#how-can-i-prevent-malware)  
 -   [Was sind Viren- und Spywaredefinitionen?](#what-are-virus-and-spyware-definitions)  
@@ -132,9 +131,6 @@ Verwenden Sie die Option **Computer bereinigen** , wenn Sie auf schnelle und ein
 ##  <a name="why-is-it-important-to-review-license-agreements-before-installing-software"></a>Warum sollten Lizenzvereinbarungen vor dem Installieren von Software gelesen werden?  
  Beim Besuch einer Website stimmen Sie nicht automatisch zu, irgendetwas herunterzuladen, das die Website anbietet. Lesen Sie beim Herunterladen kostenloser Software, z. B. Dateifreigabeprogrammen oder Bildschirmschonern, die Lizenzbedingungen sorgfältig durch. Achten Sie auf Klauseln, die besagen, dass Sie mit Werbung oder Popups des Unternehmens einverstanden sind oder dass die Software bestimmte Informationen an den Softwareherausgeber zurücksendet.  
 
-##  <a name="whats-the-difference-between-endpoint-protection-and-windows-defender"></a>Was ist der Unterschied zwischen Endpoint Protection und Windows Defender?  
- Endpoint Protection ist eine Antischadsoftware, d. h. sie ist darauf ausgerichtet, verschiedenste Schadsoftware einschließlich Viren, Spyware und anderer möglicherweise unerwünschter Software zu erkennen und Ihren Computer vor solcher zu schützen. Bei Windows Defender, der automatisch mit dem Windows-Betriebssystem installiert wird, handelt es sich um eine Software zum Erkennen und Stoppen von Spyware.  
-
 ##  <a name="why-doesnt-windows-defender-detect-cookies"></a>Warum erkennt Windows Defender keine Cookies?  
  Cookies sind kleine Textdateien, die von Websites auf Ihrem PC abgelegt werden, um Information zu Ihrer Person und Ihren Vorlieben zu speichern. Websites nutzen Cookies, um Ihnen eine personalisierte Erfahrung zu bieten, und um Daten zur Websitenutzung zu sammeln. Windows Defender erkennt Cookies nicht, da sie nicht als Bedrohung Ihrer Privatsphäre oder der Sicherheit Ihres PCs angesehen werden. Die meisten Internetbrowserprogramme erlauben es Ihnen, Cookies zu blockieren.  
 
@@ -200,9 +196,8 @@ Verwenden Sie die Option **Computer bereinigen** , wenn Sie auf schnelle und ein
 
   Sie können auswählen, welche Software und welche Einstellungen von Windows Defender überwacht werden sollen. Es wird jedoch empfohlen, den Echtzeitschutz sowie alle Echtzeitschutzoptionen zu aktivieren. In der folgenden Tabelle werden die verfügbaren Optionen erläutert.  
 
-|||  
-|-|-|  
 |**Echtzeitschutzoption**|**Zweck**|  
+|-|-|  
 |Alle heruntergeladene Dateien überprüfen|Mit dieser Option werden heruntergeladene Dateien und Programme überwacht. Hierzu zählen auch Dateien und Programme, die automatisch mittels Windows Internet Explorer und Microsoft Outlook® Express heruntergeladen werden (beispielsweise ActiveX®-Steuerelemente und Softwareinstallationsprogramme). Diese Dateien können vom Browser selbst heruntergeladen, installiert oder ausgeführt werden. Schadsoftware wie Viren, Spyware oder andere potenziell unerwünschte Software kann in diesen Dateien enthalten sein und ohne Ihr Wissen installiert werden.<br /><br /> Bei Verwendung der Echtzeitschutzoption wird Ihr Computer ständig von Windows Defender überwacht, und es erfolgt eine Überprüfung auf bösartige Dateien oder Programme, die Sie möglicherweise heruntergeladen haben. Bei dieser Überwachungsoption muss die Browser- oder E-Mail-Nutzung durch Windows Defender nicht verlangsamt werden, um eine Überprüfung sämtlicher Dateien oder Programme vorzunehmen, die Sie möglicherweise herunterladen möchten.|  
 |Datei- und Programmaktivität auf Ihrem Computer überwachen|Mit dieser Option wird überwacht, wenn Dateien und Programme auf dem Computer ausgeführt werden. Sie werden dann über alle von ihnen ausgeführten bzw. daran vorgenommenen Aktionen benachrichtigt. Dies ist wichtig, da Schadsoftware Schwachstellen in Programmen ausnutzen kann, die Sie installiert haben, um ohne Ihr Wissen Schadsoftware oder unerwünschte Software auszuführen. So kann beispielsweise Spyware von selbst im Hintergrund ausgeführt werden, wenn Sie ein Programm starten, das Sie häufig verwenden. Mit Windows Defender werden Ihre Programme überwacht, und Sie werden benachrichtigt, sobald eine verdächtige Aktivität erfolgt.|  
 |Verhaltensüberwachung aktivieren|Diese Option dient zum Überwachen von Verhaltenssammlungen auf verdächtige Muster, die bei herkömmlichen Schutzmethoden zum Erkennen von Viren unter Umständen nicht erkannt werden.|  

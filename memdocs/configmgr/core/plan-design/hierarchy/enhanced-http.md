@@ -2,7 +2,7 @@
 title: Erweitertes HTTP
 titleSuffix: Configuration Manager
 description: Verwenden Sie moderne Authentifizierungsmethoden, um die Clientkommunikation ohne PKI-Zertifikate zu sichern.
-ms.date: 03/28/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb14830e99600da1b71c516a44d51a0090cdc673
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703568"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239758"
 ---
 # <a name="enhanced-http"></a>Erweitertes HTTP
 
@@ -93,8 +93,6 @@ Die folgenden Features von Configuration Manager unterstützen oder erfordern er
 - Ein für HTTP-Clientverbindungen konfigurierter Verteilungspunkt. Legen Sie diese Option auf der Registerkarte **Kommunikation** der Eigenschaften der Verteilungspunktrolle fest. Aktivieren Sie nicht die Option **Allow clients to connect anonymously** (Anonyme Verbindung von Clients zulassen).  
 
 - Integrieren Sie den Standort zur Cloudverwaltung in Azure AD.  
-
-    - Wenn diese Voraussetzung für Ihren Standort bereits erfüllt ist, müssen Sie die Azure AD-Anwendung aktualisieren. Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**, erweitern Sie **Clouddienste**, und wählen Sie **Azure Active Directory-Mandanten** aus. Wählen Sie den Azure AD-Mandanten und die Webanwendung im Bereich **Anwendungen** aus, und klicken Sie anschließend im Menüband auf **Update application setting** (Anwendungseinstellungen aktualisieren).  
 
 - *Nur[ für ](#bkmk_scenario3)Szenario 3*: Ein in Azure AD eingebundener Client, auf dem Windows 10, Version 1803 oder höher, ausgeführt wird. Der Client erfordert diese Konfiguration für die Azure AD-Geräteauthentifizierung.<!-- SCCMDocs issue 1126 -->
 

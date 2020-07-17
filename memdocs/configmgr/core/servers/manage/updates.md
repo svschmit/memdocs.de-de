@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4f92d95b4e1cc814db72b45cfb92cb989b7767c8
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 5eb1a5ef844a8dbf94cbde9d2c99986ce0634260
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591016"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422800"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Updates und Wartung für Configuration Manager
 
@@ -63,7 +63,7 @@ Die folgenden unterstützten Versionen von Configuration Manager sind derzeit al
 | [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1\. April 2020 | 1\. Oktober 2021 | Ja<sup>[Hinweis 1](#bkmk_note1)</sup> | Ja |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29. November 2019 | 29. Mai 2021 | Nein | Ja |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26. Juli 2019 | 26. Januar 2021 | Nein | Ja |
-| [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27. März 2019 | 27. September 2020 | Ja<sup>[Hinweis 1](#bkmk_note1)</sup> | Ja |
+| [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27. März 2019 | 27. September 2020 | Ja | Ja |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27. November 2018 | 1\. Dezember 2020 | Nein | Ja |
 
 Das **Verfügbarkeitsdatum** entspricht dem Freigabedatum für den [Early Update Ring](checklist-for-installing-update-2002.md#early-update-ring). Baselinemedien stehen im Volume License Service Center bereit, sobald das Update global verfügbar ist.
