@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/11/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973025"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239979"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Hinzufügen von App-Konfigurationsrichtlinien für verwaltete iOS-/iPadOS-Geräte
 
@@ -193,20 +193,33 @@ DEP-Registrierungen (Apple-Programm zur Geräteregistrierung) sind nicht kompati
 2. Klicken Sie auf **Apps** > **App-Konfigurationsrichtlinien**, um eine App-Konfigurationsrichtlinie für die Unternehmensportal-App zu erstellen.
 3. Erstellen Sie mithilfe der unten stehenden XML-Daten eine App-Konfigurationsrichtlinie. Weitere Informationen zum Erstellen einer App-Konfigurationsrichtlinie und zum Eingeben von XML-Daten finden Sie unter [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete iOS-/iPadOS-Geräte](app-configuration-policies-use-ios.md).
 
-    ``` xml
-    <dict>
-        <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
-        <dict>
-            <key>IntuneDeviceId</key>
-            <string>{{deviceid}}</string>
-            <key>UserId</key>
-            <string>{{userid}}</string>
-        </dict>
-    </dict>
-    ```
+    - **Verwenden Sie das Unternehmensportal auf einem über DEP registrierten Gerät mit Benutzeraffinität:**
 
-3. Stellen Sie das Unternehmensportal mit der App-Konfigurationsrichtlinie für die gewünschten Zielgruppen bereit. Stellen Sie sicher, dass die Richtlinie nur für Gerätegruppen bereitgestellt wird, die bereits mit DEP registriert sind.
-4. Fordern Sie die Benutzer bei der automatischen Installation auf, sich bei der Unternehmensportal-App anzumelden.
+        ``` xml
+        <dict>
+            <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
+            <dict>
+                <key>IntuneDeviceId</key>
+                <string>{{deviceid}}</string>
+                <key>UserId</key>
+                <string>{{userid}}</string>
+            </dict>
+        </dict>
+        ```
+    - **Verwenden Sie das Unternehmensportal auf einem über DEP registrierten Gerät ohne Benutzeraffinität:**
+
+        > [!NOTE]
+        > Der Benutzer, der sich beim Unternehmensportal anmeldet, wird als primärer Benutzer des Geräts festgelegt.
+
+        ``` xml
+        <dict>
+            <key>IntuneUDAUserlessDevice</key>
+            <string>{{SIGNEDDEVICEID}}</string>
+        </dict>
+        ```     
+
+4. Stellen Sie das Unternehmensportal mit der App-Konfigurationsrichtlinie für die gewünschten Zielgruppen bereit. Stellen Sie sicher, dass die Richtlinie nur für Gerätegruppen bereitgestellt wird, die bereits mit DEP registriert sind.
+5. Fordern Sie die Benutzer bei der automatischen Installation auf, sich bei der Unternehmensportal-App anzumelden.
 
 ## <a name="monitor-iosipados--app-configuration-status-per-device"></a>Überwachen des Konfigurationsstatus von iOS/iPadOS-Apps pro Gerät 
 Sobald eine Konfigurationsrichtlinie zugewiesen wurde, können Sie den Konfigurationsstatus von iOS-/iPadOS-Apps für jedes verwaltete Gerät überwachen. Klicken Sie im Azure-Portal unter **Microsoft Intune** auf **Geräte** > **Alle Geräte**. Wählen Sie aus der Liste der verwalteten Geräte ein Gerät aus, für das ein Bereich angezeigt werden soll. Wählen Sie im Gerätebereich **App-Konfiguration** aus.  

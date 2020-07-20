@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 07/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270890"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285282"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Problembehandlung bei der App-Installation
 
@@ -119,6 +119,9 @@ Zu den auf ARM64-Geräten unterstützten App-Typen zählen die folgenden:
 - Branchenspezifische mobile MSI-Apps
 - Win32-Apps mit der Anforderungsregel 32-Bit.
 - Klick-und-Los-Apps in Windows Office, wenn die 32-Bit-oder x86-Architektur ausgewählt ist.
+
+> [!NOTE]
+> Um ARM64-Geräte im Unternehmensportal besser erkennen zu können, sollten Sie erwägen, **ARM64** an die Namen Ihrer ARM64-Apps anzufügen. 
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Problembehandlung bei Apps aus dem Microsoft Store
 

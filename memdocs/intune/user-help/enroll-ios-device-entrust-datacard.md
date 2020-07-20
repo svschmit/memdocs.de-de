@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 07/08/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e24a03f3706256c1d18efb2eaebf520a4312edb1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: e849936e7e0686af3377fd4d10182d3a4eb84458
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881544"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137445"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>Einrichten eines iOS- oder iPadOS-Geräts beim Unternehmensportal und bei Entrust Datacard
 
@@ -62,7 +62,7 @@ Abgeleitete Anmeldeinformationen sind eine Implementierung der NIST-Richtlinien 
 
 
 ## <a name="enroll-device"></a>Registrieren eines Geräts  
-1. Öffnen Sie die Unternehmensportal-App für iOS/iPadOS auf Ihrem mobilen Gerät, und melden Sie sich mit Ihrem Geschäftskonto an.  
+1. Öffnen Sie die Unternehmensportal-App für iOS/iPadOS auf Ihrem mobilen Gerät, und wählen Sie die Option zum Anmelden von einem anderen Gerät aus.  
 
 2. Notieren Sie sich den Code auf dem Bildschirm.  
 

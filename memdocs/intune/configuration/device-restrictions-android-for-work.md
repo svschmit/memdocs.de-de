@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093709"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303469"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -89,7 +89,7 @@ Diese Einstellungen gelten für Android Enterprise-Registrierungstypen, bei dene
 
 ### <a name="device-experience"></a>Benutzeroberfläche des Geräts
 
-Verwenden Sie diese Einstellungen, um eine Kioskoberfläche auf Ihren dedizierten oder vollständig verwalteten Geräten zu konfigurieren. Sie können Geräte zum Ausführen einer oder mehrerer Apps konfigurieren. Im Kioskmodus eines Geräts stehen nur die Apps zur Verfügung, die Sie hinzufügen.
+Verwenden Sie diese Einstellungen, um eine Kioskoberfläche auf Ihren dedizierten Geräten zu konfigurieren oder den Startbildschirm auf vollständig verwalteten Geräten anzupassen. Sie können Geräte zum Ausführen einer oder mehrerer Apps konfigurieren. Im Kioskmodus eines Geräts stehen nur die Apps zur Verfügung, die Sie hinzufügen.
 
 **Registrierungsprofiltyp:** Wählen Sie einen Registrierungsprofiltyp aus, um mit dem Konfigurieren von Microsoft Launcher oder Microsoft Managed Home Screen auf Ihren Geräten zu beginnen. Folgende Optionen sind verfügbar:
 

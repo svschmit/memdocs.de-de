@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8c4d66638ffbeded5bf514bba1501e5797e38aac
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093936"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210381"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Automatisches Registrieren von macOS-Geräten mit Apple Business Manager oder Apple School Manager
 
@@ -62,10 +62,9 @@ Verwenden Sie das Apple-Portal, um ein Token zu erstellen. Sie verwenden das App
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Schritt 1: Laden Sie das Intune-Zertifikat mit öffentlichem Schlüssel herunter, das zum Erstellen des Tokens erforderlich ist.
 
-1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **macOS** > **macOS enrollment** (Geräte > macOS > macOS-Registrierung). 
-> **Enrollment Program Tokens** > **Add** (Registrierungsprogrammtoken > Hinzufügen).
+1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **macOS** > **macOS-Registrierung** > **Registrierungsprogrammtoken** > **Hinzufügen**.
 
-    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![Rufen Sie ein Registrierungsprogrammtoken ab.](./media/device-enrollment-program-enroll-macos/image01.png)
 
 2. Erteilen Sie Microsoft die Berechtigung, Benutzer- und Geräteinformationen an Apple zu senden, indem Sie auf **Ich stimme zu** klicken.
 
@@ -106,7 +105,7 @@ Navigieren Sie im Feld **Apple-Token** zur Zertifikatsdatei (PEM), und wählen S
 Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil für Geräte erstellen. Ein Geräteregistrierungsprofil definiert die Einstellungen, die während der Registrierung auf eine Gruppe von Geräten angewendet werden.
 
 1. Navigieren Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) zu **Geräte** > **macOS** > **macOS-Registrierung** > **Registrierungsprogrammtoken**.
-2. Wählen Sie ein Token aus, und wählen Sie dann **Profile** und **Profil erstellen** aus.
+2. Wählen Sie ein Token aus, klicken Sie auf **Profile**, und klicken Sie dann auf **Profil erstellen** > **macOS**.
 
     ![Screenshot „Profil erstellen“](./media/device-enrollment-program-enroll-macos/image04.png)
 
@@ -123,13 +122,11 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 
     - **Ohne Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die keinem einzelnen Benutzer zugeordnet sind. Verwenden Sie diese Option für Geräte, die Aufgaben ohne den Zugriff auf lokale Benutzerdaten ausführen. Apps wie die Unternehmensportal-App funktionieren nicht.
 
-6. Wenn Sie auf **Mit Benutzeraffinität registrieren** klicken, wählen Sie unter **Authentifizierungsmethode** entweder **Setup-Assistent (Legacy)** oder **Setup-Assistent mit moderner Authentifizierung** aus.
+6. Wählen Sie für **Registrierung gesperrt** aus, ob für Geräte mit diesem Profil die gesperrte Registrierung verwendet werden soll. Mit **Ja** werden die macOS-Einstellungen deaktiviert, mit denen das Verwaltungsprofil aus dem Menü **Einstellungen** oder über das **Terminal** entfernt werden kann. Nach der Geräteregistrierung können Sie diese Einstellung ändern, ohne das Gerät zurückzusetzen.
 
-7. Wählen Sie für **Registrierung gesperrt** aus, ob für Geräte mit diesem Profil die gesperrte Registrierung verwendet werden soll. Mit **Ja** werden die macOS-Einstellungen deaktiviert, mit denen das Verwaltungsprofil aus dem Menü **Einstellungen** oder über das **Terminal** entfernt werden kann. Nach der Geräteregistrierung können Sie diese Einstellung ändern, ohne das Gerät zurückzusetzen.
+7. Klicken Sie auf **Weiter**, um zur Seite **Setup-Assistent** zu wechseln.
 
-8. Klicken Sie auf **Weiter**, um zur Seite **Setup-Assistent** zu wechseln.
-
-9. Konfigurieren Sie auf der Seite **Setup-Assistent** die folgenden Profileinstellungen:
+8. Konfigurieren Sie auf der Seite **Setup-Assistent** die folgenden Profileinstellungen:
 
     ![Anpassung des Setup-Assistenten](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
@@ -163,9 +160,9 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
     | <strong>Bildschirmzeit</strong> | Aktivieren Sie den Bildschirm „Bildschirmzeit“. Für macOS 10.15 und höher sowie iOS/iPadOS 12.0 und höher |
     | <strong>Datenschutz</strong> | Lassen Sie den Benutzer auf den Bildschirm Privatsphäre zugreifen. Für macOS 10.13.4 und höher sowie iOS/iPadOS 11.3 und höher |
     
-10. Klicken Sie auf **Weiter**, um zur Seite **Überprüfen + erstellen** zu gelangen.
+9. Klicken Sie auf **Weiter**, um zur Seite **Überprüfen + erstellen** zu gelangen.
 
-11. Wählen Sie **Erstellen** aus, um das Profil zu speichern.
+10. Wählen Sie **Erstellen** aus, um das Profil zu speichern.
 
 ## <a name="sync-managed-devices"></a>Synchronisieren verwalteter Geräte
 

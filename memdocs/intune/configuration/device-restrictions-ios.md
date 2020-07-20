@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093668"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303435"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>iOS- und iPadOS-Geräteeinstellungen zum Zulassen oder Einschränken von Funktionen mit Intune
 
@@ -161,6 +161,10 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
   - **Gerätestandard**
   - **Numerisch**: Das Kennwort darf nur aus Zahlen bestehen, z. B. 123456789.
   - **Alphanumerisch**: Schließt Großbuchstaben, Kleinbuchstaben und Ziffern ein.
+
+  > [!NOTE]
+  > Die Auswahl von alphanumerischen Zeichen kann sich auf eine gekoppelte Apple Watch auswirken. Weitere Informationen finden Sie unter [Code-Einschränkungen für eine Apple Watch festlegen](https://support.apple.com/HT204953) (öffnet die Website von Apple).
+
 - **Anzahl nicht alphanumerischer Zeichen im Kennwort:** Geben Sie die Anzahl von Symbolzeichen wie `#` oder `@` an, die im Kennwort enthalten sein müssen (zwischen 1 und 4). Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
 - **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen). Geben Sie auf von Benutzern registrierten Geräten eine Länge von 4 bis 6 Zeichen an.
@@ -414,7 +418,7 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 - **Liste der eingeschränkten App-Typen:** Mit dieser Einstellung wird eine Liste der Apps erstellt, die Benutzer nicht installieren oder verwenden dürfen. Folgende Optionen sind verfügbar:
 
   - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem möglicherweise den Zugriff auf von Ihnen zugewiesene Apps und integrierte Apps erlauben.
-  - **Unzulässige Apps:** Listen Sie die (nicht von Intune verwalteten) Apps auf, die Benutzer nicht installieren und ausführen dürfen. Benutzer können unzulässige Apps nicht installieren. Wenn ein Benutzer eine App aus dieser Liste installiert, wird dies in Intune gemeldet.
+  - **Unzulässige Apps:** Listen Sie die (nicht von Intune verwalteten) Apps auf, die Benutzer nicht installieren und ausführen dürfen. Benutzer können unzulässige Apps nicht installieren. Wenn ein Benutzer eine App von dieser Liste installiert, wird das Gerät im Bericht **Geräte mit eingeschränkten Apps** aufgeführt ([Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Geräte** > **Überwachen** > **Geräte mit eingeschränkten Apps**). 
   - **Genehmigte Apps:** Listet die Apps auf, die Benutzer installieren dürfen. Um die Kompatibilität zu gewährleisten, dürfen Benutzer keine anderen Apps installieren. Apps, die von Intune verwaltet werden, sind automatisch zugelassen, einschließlich der Unternehmensportal-App. Benutzer werden nicht daran gehindert, eine App zu installieren, die nicht in der Liste zulässiger Apps enthalten ist. Wenn sie es jedoch tun, wird dies in Intune gemeldet.
 
 Um diesen Listen Apps hinzuzufügen, können Sie:
@@ -619,15 +623,17 @@ Apps können Sie wie folgt hinzufügen:
 
 Verwenden Sie diese Einstellungen, um iOS-/iPadOS-Geräte so zu konfigurieren, dass bestimmte Apps im autonomen Einzelanwendungsmodus ausgeführt werden. Wenn dieser Modus konfiguriert ist und Benutzer eine der konfigurierten Apps starten, wird das Gerät für diese App gesperrt. Benutzer können die App bzw. den Task erst dann wechseln, wenn sie die zulässige App schließen.
 
+Damit die ASAM-Konfiguration angewendet werden kann, müssen Benutzer diese App manuell öffnen. Diese Aufgabe gilt auch für die Unternehmensportal-App.
+
 - Sie können beispielsweise für eine Schul- oder Universitätsumgebung eine App hinzufügen, mit der Benutzer einen Test auf dem Gerät durchführen können. Alternativ können Sie auch das Gerät in der Unternehmensportal-App sperren, bis sich der Benutzer authentifiziert hat. Wenn Benutzer die App-Aktionen abschließen oder Sie diese Richtlinie entfernen, kehrt das Gerät in seinen normalen Zustand zurück.
 
 - Nicht alle Apps unterstützen den autonomen Einzelanwendungsmodus. In der Regel ist eine Bundle-ID oder ein Schlüssel-Wert-Paar erforderlich, die bzw. das von einer App-Konfigurationsrichtlinie bereitgestellt wird, um den autonomen Einzelanwendungsmodus für eine App zu aktivieren. Weitere Informationen finden Sie im Abschnitt über die [`autonomousSingleAppModePermittedAppIDs`-Einschränkung](https://developer.apple.com/documentation/devicemanagement/restrictions) in der MDM-Dokumentation von Apple. Weitere Informationen zu den erforderlichen spezifischen Einstellungen für die App, die Sie konfigurieren, finden Sie in der Dokumentation des jeweiligen Herstellers.
 
   Zum Beispiel soll Zoom zufolge zum Konfigurieren von Zoom Rooms im autonomen Einzelanwendungsmodus die Bundle-ID `us.zoom.zpcontroller` verwendet werden. In diesem Fall nehmen Sie auch eine Änderung im Zoom-Webportal vor. Weitere Informationen finden Sie im [Zoom Help Center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
-- Auf iOS/iPadOS-Geräten unterstützt die Unternehmensportal-App den autonomen Einzelanwendungsmodus (ASAM). Wenn die Unternehmensportal-App sich im autonomen Einzelanwendungsmodus befindet, wird das Gerät in der Unternehmensportal-App gesperrt, bis der Benutzer authentifiziert wurde. Wenn Benutzer sich bei der Unternehmensportal-App anmelden, können sie andere Apps und die Schaltfläche „Startbildschirm“ auf dem Gerät verwenden. Wenn sie sich von der Unternehmensportal-App abmelden, kehrt das Gerät in den Einzelanwendungsmodus zurück und sperrt die Unternehmensportal-App.
+- Auf iOS/iPadOS-Geräten unterstützt die Unternehmensportal-App den autonomen Einzelanwendungsmodus (ASAM). Wenn die Unternehmensportal-App sich in diesem Modus befinden, müssen Benutzer die Unternehmensportal-App manuell öffnen. Dann ist das Gerät in der Unternehmensportal-App gesperrt, bis sich der Benutzer authentifiziert hat. Wenn Benutzer sich bei der Unternehmensportal-App anmelden, können sie andere Apps und die Schaltfläche „Startbildschirm“ auf dem Gerät verwenden. Wenn sie sich von der Unternehmensportal-App abmelden, kehrt das Gerät in den Einzelanwendungsmodus zurück und sperrt die Unternehmensportal-App.
 
-  Geben Sie in diesen Einstellungen den Namen der Unternehmensportal-App (z. B. `Microsoft Intune Company Portal`) und die Paket-ID (`com.microsoft.CompanyPortal`) ein, um die Unternehmensportal-App in eine App zum An- und Abmelden umzuwandeln (aktivieren Sie den autonomen Einzelanwendungsmodus). Nachdem dieses Profil zugewiesen wurde, müssen Sie die Unternehmensportal-App öffnen, um die App zu sperren, damit Benutzer sich bei dieser an- und abmelden können.
+  Geben Sie in diesen Einstellungen den Namen der Unternehmensportal-App (z. B. `Microsoft Intune Company Portal`) und die Paket-ID (`com.microsoft.CompanyPortal`) ein, um die Unternehmensportal-App in eine App zum An- und Abmelden umzuwandeln (aktivieren Sie den autonomen Einzelanwendungsmodus). Nachdem dieses Profil zugewiesen wurde, müssen Sie die Unternehmensportal-App öffnen, um die App zu sperren, damit Benutzer sich bei dieser an- und abmelden können. Damit die ASAM-Konfiguration angewendet werden kann, müssen Benutzer die Unternehmensportal-App manuell öffnen.
   
   Wenn das Gerätekonfigurationsprofil entfernt wird und der Benutzer sich abmeldet, wird das Gerät nicht in der Unternehmensportal-App gesperrt.
 

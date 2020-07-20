@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/30/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: e6304c35d93d717be13a564b5bf5dd2bdc0f84d5
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591067"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303452"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Einstellungen für Windows 10-Geräte (und höher) zum Zulassen oder Einschränken von Features mit Intune
 
@@ -31,7 +31,7 @@ Diese Einstellungen werden erst einem Gerätekonfigurationsprofil in Intune hinz
 > [!Note]
 > Nicht alle Optionen sind in allen Windows-Editionen verfügbar. Die unterstützten Editionen finden Sie in unter [Konfigurationsdienstanbieter für Richtlinien](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (öffnet eine andere Microsoft-Website).
 >  
-> Die meisten konfigurierbaren Einstellungen in einem Windows 10-Geräteeinschränkungsprofil werden auf Geräteebene bereitgestellt. Für Benutzergruppen bereitgestellte Richtlinien treten sowohl für den Zielbenutzer als auch für alle anderen Benutzer in Kraft, die sich anschließend bei diesem Gerät anmelden und eine Intune-Lizenz haben.
+> Die meisten konfigurierbaren Einstellungen in einem Windows 10-Geräteeinschränkungsprofil werden mithilfe von Gerätegruppen auf Geräteebene bereitgestellt. Für Benutzergruppen bereitgestellte Richtlinien gelten für die Zielbenutzer sowie für Benutzer, die über eine Intune-Lizenz verfügen und sich an diesem Gerät anmelden.
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
@@ -1108,7 +1108,7 @@ Diese Einstellungen verwenden den [Defender-Richtlinien-CSP](https://docs.micros
   - **Aktivieren**: Microsoft Defender erkennt potenziell unerwünschte Anwendungen, und erkannte Elemente werden blockiert. Diese Elemente werden Im Verlauf zusammen mit anderen Bedrohungen angezeigt.
   - **Überwachung**: Microsoft Defender erkennt potenziell unerwünschte Anwendungen, führt jedoch keine Aktion aus. Sie können Informationen zu den Anwendungen überprüfen, gegen die Microsoft Defender Maßnahmen einleiten würde. Suchen Sie z. B. in der Ereignisanzeige nach durch Microsoft Defender erstellten Ereignissen.
 
-  Weitere Informationen zu potenziell unerwünschten Apps finden Sie unter [Erkennen und Blockieren möglicherweise unerwünschter Anwendungen](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
+  Weitere Informationen zu potenziell unerwünschten Apps finden Sie unter [Erkennen und Blockieren möglicherweise unerwünschter Anwendungen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
 
   [Defender/PUAProtection-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 

@@ -52,8 +52,6 @@
       items:
         - name: Konformitätsübersicht
           href: device-compliance-get-started.md
-        - name: Gerätecompliancepartner
-          href: device-compliance-partners.md
         - name: Erstellen einer Richtlinie
           href: create-compliance-policy.md
         - name: Standortbasierte Konformität
@@ -93,6 +91,8 @@
               href: endpoint-security-account-protection-policy.md
         - name: Microsoft Defender ATP
           href: advanced-threat-protection.md
+        - name: Migration von Firewallregeln
+          href: endpoint-security-firewall-rule-tool.md
         - name: Verschlüsseln von Datenträgern
           items:
             - name: Verwalten der BitLocker-Richtlinie
