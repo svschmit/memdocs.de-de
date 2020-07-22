@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e270afc0c2ef84af0f44c0b9fc767319bdf2d30b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78ed3fe234fb4ab236fe35b5e1778582f3eb731d
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990414"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461707"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Einrichten der Intune-Registrierung von vollständig verwalteten Android Enterprise-Geräten 
 
@@ -68,6 +68,6 @@ Wenn für diese Einstellung **Ja** ausgewählt ist, erhalten Sie ein Registrieru
 Sie können jetzt [Ihre vollständig verwalteten Geräte registrieren](android-dedicated-devices-fully-managed-enroll.md) (aber nicht bei Verwendung von DEM-Konten).
 
 ## <a name="next-steps"></a>Nächste Schritte
-- [Add Android Enterprise fully managed device configuration policies (Hinzufügen von Konfigurationsrichtlinien für vollständig verwaltete Android Enterprise-Geräte)](../configuration/device-restrictions-android-for-work.md#device-owner-only)
+- [Add Android Enterprise fully managed device configuration policies (Hinzufügen von Konfigurationsrichtlinien für vollständig verwaltete Android Enterprise-Geräte)](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Android-Geräte](../apps/app-configuration-policies-use-android.md)
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ab862efd37bfeffc392d1d18cbf1f8a2f3deb50e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990354"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565698"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Einrichten des Intune Certificate Connectors für die DigiCert-PKI-Plattform
 
@@ -51,30 +51,32 @@ Wenn Sie den Connector nur mit der DigiCert-Zertifizierungsstelle einsetzen möc
 
 1. Speichern Sie den folgenden Codeausschnitt in einer Datei namens **certreq.ini**, und aktualisieren Sie ihn nach Bedarf (z. B.: *Subject name in CN format* (Name des Antragstellers im CN-Format).
 
-        [Version] 
-        Signature="$Windows NT$" 
-        
-        [NewRequest] 
-        ;Change to your,country code, company name and common name 
-        Subject = "Subject Name in CN format"
-        
-        KeySpec = 1 
-        KeyLength = 2048 
-        Exportable = TRUE 
-        MachineKeySet = TRUE 
-        SMIME = False 
-        PrivateKeyArchive = FALSE 
-        UserProtected = FALSE 
-        UseExistingKeySet = FALSE 
-        ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
-        ProviderType = 12 
-        RequestType = PKCS10 
-        KeyUsage = 0xa0 
-        
-        [EnhancedKeyUsageExtension] 
-        OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
-        
-        ;----------------------------------------------- 
+   ```
+   [Version] 
+   Signature="$Windows NT$" 
+
+   [NewRequest] 
+   ;Change to your,country code, company name and common name 
+   Subject = "Subject Name in CN format"
+
+   KeySpec = 1 
+   KeyLength = 2048 
+   Exportable = TRUE 
+   MachineKeySet = TRUE 
+   SMIME = False 
+   PrivateKeyArchive = FALSE 
+   UserProtected = FALSE 
+   UseExistingKeySet = FALSE 
+   ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
+   ProviderType = 12 
+   RequestType = PKCS10 
+   KeyUsage = 0xa0 
+
+   [EnhancedKeyUsageExtension] 
+   OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
+
+   ;----------------------------------------------- 
+   ```
 
 2. Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und generieren Sie mit dem folgenden Befehl eine Zertifikatsignieranforderung (Certificate Signing Request, CSR):
 
@@ -82,13 +84,14 @@ Wenn Sie den Connector nur mit der DigiCert-Zertifizierungsstelle einsetzen möc
 
 3. Öffnen Sie die Datei „request.csr“ in Editor, und kopieren Sie den CSR-Inhalt im folgenden Format:
 
-        -----BEGIN NEW CERTIFICATE REQUEST-----
-        MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
-        …
-        …
-        fzpeAWo=
-        -----END NEW CERTIFICATE REQUEST-----
-
+   ``` 
+   -----BEGIN NEW CERTIFICATE REQUEST-----
+   MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
+   …
+   …
+   fzpeAWo=
+   -----END NEW CERTIFICATE REQUEST-----
+   ```
 
 4. Melden Sie sich bei der DigiCert-Zertifizierungsstelle an, und navigieren Sie in den Aufgaben zu **Get an RA Cert** (Registrierungsstellenzertifikat abrufen).
 
@@ -136,7 +139,7 @@ Wenn Sie den Connector nur mit der DigiCert-Zertifizierungsstelle einsetzen möc
 
    g. Kopieren Sie den Zertifikatfingerabdruck der Registrierungsstelle ohne Leerzeichen. Es folgt ein Beispiel des Fingerabdrucks:
 
-        RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"
+      `RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"`
 
     > [!NOTE]
     > Wenn Sie Hilfe beim Abrufen des Registrierungsstellenzertifikats von der DigiCert-Zertifizierungsstelle benötigen, wenden Sie sich an den [Kundensupport von DigiCert](mailto:enterprise-pkisupport@digicert.com).
@@ -196,8 +199,10 @@ Standardmäßig wird der Intune Certificate Connector in **%ProgramFiles%\Micros
 
    a. Ändern Sie den Wert des Schlüssels `RACertThumbprint` in den Wert des Zertifikatfingerabdrucks, den Sie im vorherigen Abschnitt kopiert haben. Beispiel:
 
-        <add key="RACertThumbprint"
-        value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
+      <add key="RACertThumbprint"
+      value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
 
    b. Speichern und schließen Sie die Datei.
 
@@ -272,7 +277,7 @@ Die Zertifikatprofil-OID ist einer Zertifikatprofilvorlage in der DigiCert-Zerti
 3. Wählen Sie das zu verwendende Zertifikatprofil aus.
 4. Kopieren Sie die Zertifikatprofil-OID. Sie sieht etwa folgendermaßen aus:
 
-       Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109 
+   `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109`
 
 > [!NOTE]
 > Wenn Sie beim Abruf der Zertifikatsprofile-OID Hilfe benötigen, wenden Sie sich an den [Kundensupport von DigiCert](mailto:enterprise-pkisupport@digicert.com).

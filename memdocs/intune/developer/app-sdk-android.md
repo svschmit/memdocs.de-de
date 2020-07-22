@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a222a1f4adfd2f73731c40946169338989162e5e
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022363"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437418"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Entwicklerhandbuch zum Microsoft Intune App SDK für Android
 
@@ -77,7 +77,7 @@ Zusätzlich enthalten die **Microsoft.Intune.MAM.SDK.Support.XXX.jar**-Bibliothe
 
 #### <a name="proguard"></a>ProGuard
 
-Wenn [ProGuard](http://proguard.sourceforge.net/) (oder ein beliebiger anderer Komprimierungs- oder Obfuskationsmechanismus) als Buildschritt verwendet wird, verfügt das SDK über zusätzliche Konfigurationsregeln, die hinzugefügt werden müssen. Wenn Sie die AAR-Datei in Ihren Build einfügen, werden unsere Regeln automatisch in den ProGuard-Schritt integriert, und die erforderlichen Klassendateien werden beibehalten.
+Wenn [ProGuard](https://www.guardsquare.com/en/products/proguard) (oder ein beliebiger anderer Komprimierungs- oder Obfuskationsmechanismus) als Buildschritt verwendet wird, verfügt das SDK über zusätzliche Konfigurationsregeln, die hinzugefügt werden müssen. Wenn Sie die AAR-Datei in Ihren Build einfügen, werden unsere Regeln automatisch in den ProGuard-Schritt integriert, und die erforderlichen Klassendateien werden beibehalten.
 
 Möglicherweise weist die [Microsoft-Authentifizierungsbibliothek (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) eigene ProGuard-Einschränkungen auf. Wenn Ihre App MSAL integriert, müssen Sie die MSAL-Dokumentation bezüglich dieser Einschränkungen befolgen.
 

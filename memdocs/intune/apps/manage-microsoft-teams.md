@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16ba955c1d40f0298c17bd9e5826a7674ddc9cab
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 4ebc719d65024f26d1661d311bfbf9077bcdcbe3
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977272"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410911"
 ---
 # <a name="manage-team-collaboration-access-by-using-teams-for-ios-and-android-with-microsoft-intune"></a>Verwalten der Zusammenarbeit mithilfe von Microsoft Teams für iOS und Android mit Microsoft Intune
 
@@ -89,9 +89,6 @@ Hier erfahren Sie mehr über das Konfigurieren der Einstellung des Modus für zu
 - [Einstellungen für iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 Dieses Konfigurationsszenario funktioniert nur mit registrierten Geräten. Allerdings werden beliebige UEM-Anbieter unterstützt. Wenn Sie Microsoft Endpoint Manager nicht nutzen, müssen Sie in Ihrer UEM-Dokumentation nachschlagen, wie Sie diese Konfigurationsschlüssel bereitstellen können.
-
-> [!IMPORTANT]
-> Der Modus für in der Organisation zugelassene Konten wird ab Ende Juni in Teams für iOS und Android unterstützt. In den obigen Artikeln finden Sie Informationen zur Mindestversion der App.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc44bb114d6ff9089a01da2d0b7db7aa7527f4b5
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b227148a6e16f7c9f8d62cb58eeb628afbd84123
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972146"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872017"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrieren von Wandera Mobile Threat Protection in Intune  
 
@@ -70,12 +70,10 @@ Für die Einrichtung der Integration zwischen Wandera und Intune wird keine Unte
 
    ![Akzeptieren von Berechtigungen](./media/wandera-mtd-connector-integration/permissions.png)
 
-10. Anschließend kehren Sie automatisch zur RADAR-Verwaltungskonsole zurück.  Wenn die Autorisierung erfolgreich war, wird ein grünes Häkchen neben der Schaltfläche „Gewähren“ angezeigt.
-11. Wiederholen Sie diesen Einwilligungsprozess für die restlichen aufgeführten Integrationen, indem Sie auf die entsprechenden Gewähren-Schaltflächen klicken, bis neben allen grüne Häkchen angezeigt werden.
+9. Anschließend kehren Sie automatisch zur RADAR-Verwaltungskonsole zurück.  Wenn die Autorisierung erfolgreich war, wird ein grünes Häkchen neben der Schaltfläche „Gewähren“ angezeigt.
+10. Wiederholen Sie diesen Einwilligungsprozess für die restlichen aufgeführten Integrationen, indem Sie auf die entsprechenden Gewähren-Schaltflächen klicken, bis neben allen grüne Häkchen angezeigt werden.
 
-    ![Synchronisierungsgruppe](./media/wandera-mtd-connector-integration/sync-group-name.png)
-
-12. Wechseln Sie zurück zur Intune-Konsole, und bearbeiten Sie den Wandera MTD-Connector. Legen Sie alle verfügbaren Optionen auf „Ein“ fest, und speichern Sie die Konfiguration.
+11. Wechseln Sie zurück zur Intune-Konsole, und bearbeiten Sie den Wandera MTD-Connector. Legen Sie alle verfügbaren Optionen auf „Ein“ fest, und speichern Sie die Konfiguration.
 
     ![Aktivieren von Wandera](./media/wandera-mtd-connector-integration/enable-wandera.png)
 

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99b17cc165fc8d24fdf1b0f48525f3b23d8cc9b7
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 01c8c0ffba349966c99e1cbd90dbdfc10a5c9782
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195632"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461163"
 ---
 # <a name="android-enterprise-fully-managed-security-configurations"></a>Vollständig verwaltete Android Enterprise-Sicherheitskonfigurationen
 
-Übernehmen Sie im Rahmen des [Frameworks für die Android Enterprise-Sicherheitskonfiguration](android-configuration-framework.md) die folgenden Einstellungen für vollständig verwaltete mobile Android Enterprise-Benutzer. Weitere Informationen zu den einzelnen Richtlinieneinstellungen finden Sie unter [Android Enterprise-Einstellungen, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen](../protect/compliance-policy-create-android-for-work.md#device-owner) und [Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune](../configuration/device-restrictions-android-for-work.md#device-owner-only).
+Übernehmen Sie im Rahmen des [Frameworks für die Android Enterprise-Sicherheitskonfiguration](android-configuration-framework.md) die folgenden Einstellungen für vollständig verwaltete mobile Android Enterprise-Benutzer. Weitere Informationen zu den einzelnen Richtlinieneinstellungen finden Sie unter [Android Enterprise-Einstellungen, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen](../protect/compliance-policy-create-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) und [Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile).
 
 Wenn Sie Ihre Einstellungen wählen, prüfen und kategorisieren Sie Nutzungsszenarien. Konfigurieren Sie anschließend Benutzer entsprechend der Anleitung für die gewählte Sicherheitsstufe. Sie können die vorgeschlagenen Einstellungen je nach den Bedürfnissen Ihrer Organisation festlegen. Achten Sie darauf, dass Ihr Sicherheitsteam die Bedrohungsumgebung, die Risikobereitschaft und die Auswirkungen auf die Nutzbarkeit beurteilt.
 

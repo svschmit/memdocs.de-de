@@ -5,7 +5,7 @@ description: Überprüfen Sie die Standardeinstellungen und die verfügbaren Ein
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/06/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc2cf4531c2e2d7a2847ccdbce87c8b938a46d6
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 0bfbb73772124ded12d520c6c5742d1576f50f82
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022227"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491302"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Einstellungen für Windows MDM-Sicherheitsbaselines in Intune
 
@@ -322,7 +322,7 @@ Weitere Informationen finden Sie unter [Policy CSP – DeviceInstallation (Richt
 
 - **Hardwaregeräteinstallation nach Gerätebezeichner**:  
   Mit dieser Richtlinieneinstellung können Sie eine Liste von Plug & Play-Hardware-IDs und kompatiblen IDs für Geräte angeben, deren Installation unter Windows verhindert wird. Diese Richtlinieneinstellung hat Vorrang gegenüber jeder anderen Richtlinieneinstellung, die die Installation eines Geräts ermöglicht. Wenn Sie diese Richtlinieneinstellung aktivieren, kann Windows ein Gerät nicht installieren, wenn die zugehörige Hardware-ID oder kompatible ID in der von Ihnen erstellten Liste enthalten ist. Wenn Sie diese Richtlinieneinstellung auf einem Remotedesktopserver aktivieren, wirkt sich dies auf die Umleitung der angegebenen Geräte von einem Remotedesktopclient an den Remotedesktopserver aus. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Geräte installiert und aktualisiert werden, sofern andere Richtlinieneinstellungen dies zulassen.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2066794)
+  [Erfahren Sie mehr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
 
   **Standardeinstellung:** Block hardware device installation (Hardwaregeräteinstallation blockieren)
 
@@ -340,7 +340,7 @@ Weitere Informationen finden Sie unter [Policy CSP – DeviceInstallation (Richt
 
 - **Hardwaregeräteinstallation nach Setupklassen**:  
   Mit dieser Richtlinieneinstellung können Sie eine Liste von GUIDs für Gerätesetupklassen angeben, die Gerätetreiber beschreiben, die unter Windows nicht installierbar sind. Diese Richtlinieneinstellung hat Vorrang gegenüber jeder anderen Richtlinieneinstellung, die die Installation eines Geräts ermöglicht. Wenn Sie diese Richtlinieneinstellung aktivieren, kann Windows Gerätetreiber nicht installieren oder aktualisieren, deren GUIDs für Gerätesetupklassen in der von Ihnen erstellten Liste enthalten sind. Wenn Sie diese Richtlinieneinstellung auf einem Remotedesktopserver aktivieren, wirkt sich dies auf die Umleitung der angegebenen Geräte von einem Remotedesktopclient an den Remotedesktopserver aus. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Geräte unter Windows installiert und aktualisiert werden, sofern andere Richtlinieneinstellungen dies zulassen.  
-  [Erfahren Sie mehr](https://go.microsoft.com/fwlink/?linkid=2067048)
+  [Erfahren Sie mehr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
 
   **Standardeinstellung:** Block hardware device installation (Hardwaregeräteinstallation blockieren)
 
