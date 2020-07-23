@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715236"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410866"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Einrichten des Cloudverwaltungsgateways für Configuration Manager
 
@@ -168,7 +168,7 @@ Wenn Sie [eine Begrenzungsgruppe erstellen oder konfigurieren](../../../servers/
 
 ## <a name="configure-clients-for-cmg"></a>Konfigurieren von Clients für das CMG
 
-Sobald das CMG und die Standortsystemrollen ausgeführt werden, empfangen die Clients bei der nächsten Anforderung des Speicherorts automatisch den Speicherort des CMG-Diensts. Clients müssen sich im Intranet befinden, um den Speicherort des CMG-Diensts empfangen zu können, sofern Sie nicht [Windows 10-Clients mithilfe von Azure AD für die Authentifizierung installieren und zuweisen](../../deploy/deploy-clients-cmg-azure.md). Der Abfragezyklus für Standortanfragen beträgt 24 Stunden. Wenn Sie nicht auf die normal geplante Standortanfragen warten möchten, können Sie sie erzwingen, indem Sie den SMS-Agent-Host-Dienst (ccmexec.exe) auf dem Computer neu starten.
+Sobald das CMG und die Standortsystemrollen ausgeführt werden, empfangen die Clients bei der nächsten Anforderung des Speicherorts automatisch den Speicherort des CMG-Diensts. Clients müssen sich im Intranet befinden, um den Speicherort des CMG-Diensts empfangen zu können, sofern Sie nicht [Windows 10-Clients mithilfe von Azure AD für die Authentifizierung installieren und zuweisen](../../deploy/deploy-clients-cmg-azure.md). Der Abfragezyklus für Standortanfragen beträgt 24 Stunden. Wenn Sie nicht auf die normal geplante Standortanforderung warten möchten, können Sie die Anforderung erzwingen. Starten Sie den SMS-Agent-Hostdienst (ccmexec.exe) auf dem Computer neu, um die Anforderung zu erzwingen.
 
 > [!NOTE]
 > Standardmäßig empfangen alle Clients die CMG-Richtlinie. Sie können dieses Verhalten mit der Clienteinstellung [Enable clients to use a cloud management gateway](../../deploy/about-client-settings.md#enable-clients-to-use-a-cloud-management-gateway) (Clients die Verwendung eines Cloud Management Gateway-Diensts ermöglichen) steuern.
@@ -246,6 +246,9 @@ Nach der Erstellung eines CMG können Sie einige der zugehörigen Einstellungen 
 #### <a name="settings"></a>Einstellung
 
 - **Zertifikatsdatei**: Ändern des Serverauthentifizierungszertifikats für das CMG. Diese Option ist nützlich, wenn das Zertifikat vor Ablauf aktualisiert wird.  
+
+  > [!NOTE]
+  > Wenn Sie das Serverauthentifizierungszertifikat für das CMG erneuern, wird bei dem FQDN, der für den allgemeinen Namen (CN) des Zertifikats angegeben ist, die Groß-/Kleinschreibung beachtet.  Wenn das derzeit verwendete Zertifikat z. B. über einen CN von `https://contoso-cmg.contoso.com` verfügt, erstellen Sie das neue Zertifikat mit dem gleichen CN in Kleinbuchstaben. Der Assistent akzeptiert kein Zertifikat mit dem CN `https://CONTOSO-CMG.CONTOSO.COM`.
 
 - **VM-Instanz**: Ändern der Anzahl der virtuellen Computer, die der Dienst in Azure verwendet. Mit dieser Einstellung können Sie den Dienst basierend auf Nutzung und Kostenüberlegungen dynamisch hoch- oder herunterskalieren.  
 

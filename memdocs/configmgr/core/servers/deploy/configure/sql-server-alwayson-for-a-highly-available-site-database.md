@@ -2,7 +2,7 @@
 title: SQL Server Always On
 titleSuffix: Configuration Manager
 description: Planen der Verwendung einer SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383154"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384841"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
@@ -247,6 +247,9 @@ Jedes Replikationsmitglied muss wie folgt konfiguriert sein:
 #### <a name="replica-member-location"></a>Speicherort der Replikationsmitglieder
 
 Alle Replikate in einer Verfügbarkeitsgruppe müssen lokal oder in Microsoft Azure gehostet werden. Eine Gruppe, die ein lokales Mitglied und ein Mitglied in Azure enthält, wird nicht unterstützt.
+
+> [!NOTE]
+> Wenn Sie einen virtuellen Azure-Computer für SQL Server verwenden, aktivieren Sie **Floating IP**. Weitere Informationen finden Sie unter [Konfigurieren eines Load Balancers für eine SQL Server-Always On-Verfügbarkeitsgruppe auf virtuellen Azure-Computern](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 Für das Setup von Configuration Manager muss eine Verbindung mit jedem Replikat hergestellt werden. Wenn Sie eine Verfügbarkeitsgruppe in Azure einrichten und die Gruppe sich hinter einem internen oder externen Lastenausgleich befindet, öffnen Sie die folgenden Standardports:
 

@@ -2,7 +2,7 @@
 title: Tool für die rollenbasierte Verwaltung
 titleSuffix: Configuration Manager
 description: Verwenden Sie das Tool für die rollenbasierte Verwaltung und Überwachung, um Sicherheitsrollen und -bereiche in Configuration Manager zu erstellen und zu überwachen.
-ms.date: 07/30/2018
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6372ff17-7f56-4d7b-a21b-87fb8bdd6d3a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ff940db21711aabb5d57a45b05d90d04415639bb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4cf9d4d3f9d1b2f439d2e87d41cc280e7af0805a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707558"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239707"
 ---
 # <a name="role-based-administration-and-auditing-tool"></a>Tool für die rollenbasierte Verwaltung und Überwachung
 
@@ -31,7 +31,7 @@ Das Tool für die rollenbasierte Verwaltung und Überwachung ist eines der [Conf
 
 ## <a name="requirements"></a>Anforderungen
 
-- Das Tool muss auf demselben Computer wie die Configuration Manager-Konsole ausgeführt werden.  
+- Das Tool muss auf demselben Computer wie der Configuration Manager-Standortserver ausgeführt werden. 
 
 - Sie verfügen über die Rolle **Hauptadministrator**, **Analyst mit Leseberechtigung** oder **Sicherheitsadministrator**.  
 

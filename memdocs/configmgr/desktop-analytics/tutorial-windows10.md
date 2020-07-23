@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b991c2ddd0ea121251eb19afbdb032844be8738d
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268197"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422841"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Bereitstellen von Windows 10 für den Pilotversuch
 
@@ -236,11 +236,11 @@ Erstellen Sie anhand dieses Verfahrens einen Bereitstellungsplan in Desktop Anal
 
     - **Name:** Ein eindeutiger Namen für den Bereitstellungsplan, z. B. `Windows 10 pilot`.  
 
-    - **Produkte und Versionen**: Wählen Sie das **Windows**-Produkt und die neueste verfügbare empfohlene Version aus. Beispiel: **Windows 10, Version 1809 (empfohlen)** .  
+    - **Produkte und Versionen**: Wählen Sie die bereitzustellende Windows 10-Version aus. Microsoft empfiehlt, Bereitstellungspläne zu erstellen, die die neueste Version verwenden.
 
     - **Gerätegruppen**: Wählen Sie auf der Registerkarte „Configuration Manager“ eine oder mehrere Gruppen aus, und wählen Sie anschließend **Als Zielgruppe festlegen** aus. Bei diesen Gruppen handelt es sich um Sammlungen, die von Configuration Manager synchronisiert werden.  
 
-    - **Bereitschaftsregeln**: Anhand dieser Regeln können Sie bestimmen, welche Geräte sich für ein Upgrade qualifizieren. Wählen Sie **Windows-Betriebssystem** aus, und konfigurieren Sie die folgenden Einstellungen:  
+    - **Bereitschaftsregeln**: Anhand dieser Regeln können Sie bestimmen, welche Geräte sich für ein Upgrade qualifizieren. Klicken Sie auf **Windows-Betriebssystem**, und konfigurieren Sie die folgenden Einstellungen:  
 
         - **Meine Computer rufen Treiber automatisch von Windows Update ab**: Der Standardwert für diese Einstellung ist **Aus**; dieser Wert wird für das Bereitstellen mit Configuration Manager empfohlen.  
 

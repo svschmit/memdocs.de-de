@@ -2,20 +2,20 @@
 title: Aktualisieren von Windows-Geräten auf eine neuere Version
 titleSuffix: Configuration Manager
 description: Verwenden Sie Configuration Manager, um Windows 10-Geräte automatisch auf eine andere Windows-Edition zu aktualisieren.
-ms.date: 09/03/2019
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 77ef255a820104ef2042a370b5056677fddb9d12
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
+ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692298"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390839"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Ausführen von Upgrades auf eine neue Edition für Windows-Geräte mit Configuration Manager
 
@@ -37,7 +37,7 @@ Bevor Sie beginnen, Geräte auf die neueste Version zu aktualisieren, benötigen
 
 - Für Desktopeditionen von Windows 10: einen gültigen Product Key für die neue Windows-Version auf allen Geräten, die das Ziel dieser Richtlinie sind. Dieser Product Key kann ein Mehrfachaktivierungsschüssel oder ein generischer Volumenlizenzschlüssel sein. Ein generischer Volumenlizenzschlüssel wird auch als Clientsetupschlüssel für den Schlüsselverwaltungsdienst (KMS) bezeichnet. Weitere Informationen finden Sie unter [Planen der Volumenaktivierung](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Eine Liste der KMS-Clientsetupschlüssel finden Sie im Windows Server-Aktivierungshandbuch in [Anhang A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys). <!--496871-->  
 
-- Für Windows 10 Mobile: eine XML-Lizenzdatei aus dem Microsoft Business Center. Diese Datei enthält die Lizenzierungsinformationen für die neue Windows-Version auf allen Geräten, die Ziel dieser Richtlinie sind.
+- Für Windows 10 Mobile: eine XML-Lizenzdatei aus dem Microsoft Business Center. Diese Datei enthält die Lizenzierungsinformationen für die neue Windows-Version auf allen Geräten, die Ziel dieser Richtlinie sind. Laden Sie die ISO-Datei für **Windows 10 Mobile Enterprise** einschließlich der Lizenzierungs-XML herunter.<!-- SCCMDocs#2033 -->
 
 - Zum Verwalten dieses Richtlinientyps muss Ihnen die Configuration Manager-Sicherheitsrolle **Hauptadministrator** zugewiesen sein.
 

@@ -2,7 +2,7 @@
 title: Erstellen von Anwendungen
 titleSuffix: Configuration Manager
 description: Erstellen Sie Anwendungen mit Bereitstellungstypen, Erkennungsmethoden und Anforderungen für die Installation von Software.
-ms.date: 04/01/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 33a95ae78fdc80c6c08b59cfe5ec5b2e88485a8f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074655"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240336"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Erstellen von Anwendungen in Configuration Manager
 
@@ -311,7 +311,7 @@ Mit dem folgenden Verfahren richten Sie eine Erkennungsmethode ein, durch die an
 
         - **Datei- oder Ordnername** (erforderlich): Geben Sie den Namen der zu suchenden Datei oder des zu suchenden Ordners im oben angegebenen Pfad an. Wenn diese Datei oder dieser Ordner auf dem Gerät erkannt wird, wird davon ausgegangen, dass die Anwendung auf dem Gerät installiert ist.  
 
-        - **Diese Datei/dieser Ordner ist einer 32-Bit-Anwendung auf 64-Bit-Systemen zugeordnet**: Diese Option ist standardmäßig ausgewählt. Der Client sucht zunächst an Speicherorten mit 32-Bit-Dateien nach der angegebenen Datei bzw. nach dem angegebenen Ordner. Wenn die Datei bzw. der Ordner nicht gefunden wird, sucht der Client an 64-Bit-Speicherorten.  
+        - **Diese Datei/dieser Ordner ist einer 32-Bit-Anwendung auf 64-Bit-Systemen zugeordnet**: Der Client sucht zunächst an Speicherorten mit 32-Bit-Dateien nach der angegebenen Datei bzw. nach dem angegebenen Ordner. Wenn die Datei bzw. der Ordner nicht gefunden wird, sucht der Client an 64-Bit-Speicherorten.  
 
     - **Registrierung:** Erkennt, ob ein angegebener Registrierungsschlüssel oder Registrierungswert auf einem Clientgerät vorhanden ist. Diese Erkennung zeigt an, dass die Anwendung installiert ist. Geben Sie die folgenden zusätzlichen Informationen an:  
 
@@ -540,7 +540,7 @@ Vor der Installation des Bereitstellungstyps überprüft Configuration Manager d
 
 3. Wählen Sie in der Dropdownliste **Bedingung** die Bedingung aus, anhand derer bewertet werden soll, ob der Benutzer bzw. das Gerät den Installationsanforderungen entspricht. Die Inhalte dieser Liste sind von der ausgewählten Kategorie abhängig.  
 
-4. Wählen Sie aus der Dropdownliste **Operator** den zu verwendenden Operator aus. Dieser Operator vergleicht die ausgewählte Bedingung mit dem angegebenen Wert. Er bewertet, ob der Benutzer bzw. das Gerät die Installationsanforderung erfüllt. Welche Operatoren verfügbar sind, ist von der ausgewählten Bedingung abhängig.  
+4. Wählen Sie aus der Dropdownliste **Operator** den zu verwendenden Operator aus. Dieser Operator vergleicht die ausgewählte Bedingung mit dem angegebenen Wert. Er bewertet, ob der Benutzer bzw. das Gerät die Installationsanforderung erfüllt. Welche Operatoren verfügbar sind, ist von der ausgewählten Bedingung abhängig. Wenn Sie den `One Of`-Operator verwenden, wird beim Feld „Werte“ sichergestellt, dass Sie pro Zeile einen Eintrag machen.
 
     > [!Note]  
     > Die verfügbaren Anforderungen variieren je nach Gerätetyp, die der Bereitstellungstyp verwendet.  

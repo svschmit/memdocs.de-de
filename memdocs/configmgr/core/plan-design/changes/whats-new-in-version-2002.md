@@ -2,7 +2,7 @@
 title: Neuerungen in Version 2002
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 2002 des Current Branchs von Configuration Manager eingeführt wurden.
-ms.date: 06/11/2020
+ms.date: 07/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 3c5107ffe26c72852cbc1dbaa15eb19a990c7939
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590438"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422843"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Neuerungen in Version 2002 von Configuration Manager (Current Branch)
 
@@ -432,10 +432,7 @@ Weitere Informationen zu Änderungen an der Verwaltungsdienst-Rest-API finden Si
 
 Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Zusammenfassung der Änderungen im Current Branch von Configuration Manager, Version 2002](https://support.microsoft.com/help/4556203).
 
-<!--
-The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
-
--->
+Folgender Updaterollup (4560496) ist ab dem 15. Juli 2020 in der Konsole verfügbar: [Updaterollup für Microsoft Endpoint Configuration Manager, Version 2002](https://support.microsoft.com/help/4560496).
 
 <!--
 ### Hotfixes

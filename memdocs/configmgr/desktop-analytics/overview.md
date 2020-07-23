@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195649"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411013"
 ---
 # <a name="what-is-desktop-analytics"></a>Was ist Desktop Analytics?
 
@@ -103,7 +103,7 @@ Zum Verwenden von Desktop Analytics müssen Sie sicherstellen, dass Ihre Umgebun
     - Auf den Geräten muss außerdem der Konfigurations-Manager-Client, Version 1902 mit Updaterollup (4500571) oder höher installiert sein. Weitere Informationen finden Sie unter [Aktualisieren von Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
     > [!Note]  
-    > Desktop Analytics unterstützt keine Upgrades von Windows 10 Long-Term Servicing Channel (LTSC). Weitere Informationen finden Sie unter [Übersicht über Windows-as-a-Service](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    > Desktop Analytics unterstützt keine Upgrades für oder von Windows 10 Long-Term Servicing Channel (LTSC). Weitere Informationen finden Sie unter [Übersicht über Windows-as-a-Service](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
     > Desktop Analytics ist auf die optimale Unterstützung von Szenarios mit direkten Upgrades ausgelegt. Wenn Sie umfassende Umstellungen vornehmen müssen, z. B. von einer 32-Bit-Architektur zu einer 64-Bit-Architektur, verwenden Sie ein Imagingszenario. Erkenntnisse von Desktop Analytics sind auch in diesen klassischen Szenarien der Betriebssystembereitstellungen hilfreich, Sie können jedoch die spezifischen Anleitungen zu direkten Upgrades ignorieren. Weitere Informationen hierzu finden Sie unter [Szenarios zur Bereitstellung von Unternehmensbetriebssystemen mit Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 

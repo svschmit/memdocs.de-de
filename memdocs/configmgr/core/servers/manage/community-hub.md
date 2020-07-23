@@ -2,7 +2,7 @@
 title: Community Hub und GitHub
 titleSuffix: Configuration Manager
 description: Aktivieren und Verwenden von Community Hub in Configuration Manager
-ms.date: 06/12/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e0ef065cce691ce6f0b251d70ea8c4bd08904071
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
+ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740791"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86236408"
 ---
 # <a name="community-hub-and-github"></a>Community Hub und GitHub
 <!--3555935, 3555936-->
@@ -23,16 +23,18 @@ ms.locfileid: "84740791"
 Die IT-Administratorcommunity hat im Laufe der Jahre einen großen Wissensschatz aufgebaut. Anstatt Elemente wie Skripts und Berichte von Grund auf neu zu erfinden, haben wir einen **Configuration Manager-Community Hub** aufgebaut, in dem sich IT-Administratoren austauschen können. Durch die Nutzung der Arbeit anderer können Sie Stunden an Arbeit sparen. Der Community Hub fördert Kreativität, indem er auf der Arbeit anderer aufbaut und andere auf Ihrer Arbeit aufbauen lässt. GitHub hat bereits branchenweite Prozesse und Tools für die gemeinsame Nutzung entwickelt. Jetzt nutzt der Community Hub diese Tools direkt in der Configuration Manager-Konsole als Grundlage für die Weiterentwicklung dieser neuen Community. Für das erste Release werden die Inhalte, die im Community-Hub verfügbar gemacht werden, nur von Microsoft hochgeladen. In Zukunft werden IT-Administratoren in der Lage sein, über ihr eigenes GitHub-Konto selbst Inhalte hochzuladen.
 
 > [!Note]  
-> Der Community Hub ist ein optionales cloudbasiertes Feature, das erstmals im Juni 2020 eingeführt wurde. Informationen dazu, wie Sie den Community Hub abonnieren, finden Sie unter [Optionale Features](install-in-console-updates.md#bkmk_options).
+> Der Community Hub ist ein optionales cloudbasiertes Feature. Es wurde erstmals im Juni 2020 eingeführt. Informationen dazu, wie Sie den Community Hub abonnieren, finden Sie unter [Optionale Features](install-in-console-updates.md#bkmk_options).
 
 ## <a name="about-community-hub"></a>Informationen zum Community Hub
 
-Der Community Hub unterstützt die folgenden Objekte:
+Der Community-Hub unterstützt die folgenden Objekte:
+
+- CMPivot-Abfragen
+- Applications
+- Tasksequenzen
+- Konfigurationselemente
 - PowerShell-Skripts
 - Berichte
-- Tasksequenzen
-- Applications
-- Konfigurationselemente  
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

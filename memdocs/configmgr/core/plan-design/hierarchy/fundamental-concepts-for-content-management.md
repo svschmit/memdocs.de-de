@@ -2,7 +2,7 @@
 title: Grundlagen der Inhaltsverwaltung
 titleSuffix: Configuration Manager
 description: Verwenden Sie Tools und Optionen in Configuration Manager, um den Inhalt zu verwalten, den Sie bereitstellen.
-ms.date: 12/17/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590455"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384943"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Grundlegende Konzepte für die Inhaltsverwaltung in Configuration Manager
 
@@ -85,7 +85,7 @@ In den folgenden Listen werden die Unterschiede zwischen der *binären differenz
 - Unterschiede auf *Blockebene*
 - Für Apps immer aktiviert
 - Optional bei Legacypaketen
-- Wenn eine Datei bereits am Verteilungspunkt vorhanden ist und eine Änderung stattfindet, repliziert der Standort mithilfe der BDR die Änderung auf Blockebene anstelle der gesamten Datei.
+- Wenn eine Datei bereits am Verteilungspunkt vorhanden ist und eine Änderung stattfindet, repliziert der Standort mithilfe der BDR die Änderung auf Blockebene anstelle der gesamten Datei. Dieses Verhalten gilt nur, wenn Sie das Objekt für die Verwendung der BDR aktivieren.<!-- SCCMDocs#2026 -->
 
 #### <a name="summary-of-delta-replication"></a>Zusammenfassung der Deltareplikation
 
@@ -220,7 +220,9 @@ Clients können auf Inhalte der folgenden Standorte zugreifen:
 
 ## <a name="content-source-priority"></a>Priorität von Inhaltsquellen
 
-Wenn ein Client auf Inhalte zugreifen muss, sendet er eine Inhaltsortsanforderung an den Verwaltungspunkt. Der Verwaltungspunkt gibt eine Liste von Quellspeicherorten zurück, die für den angeforderten Inhalt gültig sind. Diese Liste variiert je nach Szenario, verwendeten Technologien, Standortentwurf, Begrenzungsgruppen und Bereitstellungseinstellungen. Die folgende Liste enthält alle möglichen Quellspeicherorte, die ein Client verwenden kann, in der Reihenfolge, in der sie priorisiert werden:  
+Wenn ein Client auf Inhalte zugreifen muss, sendet er eine Inhaltsortsanforderung an den Verwaltungspunkt. Der Verwaltungspunkt gibt eine Liste von Quellspeicherorten zurück, die für den angeforderten Inhalt gültig sind. Diese Liste variiert je nach Szenario, verwendeten Technologien, Standortentwurf, Begrenzungsgruppen und Bereitstellungseinstellungen. Wenn beispielsweise eine Tasksequenz ausgeführt wird, wird nicht immer der vollständige Configuration Manager-Client ausgeführt, weshalb sich das Verhalten unterscheiden kann.<!-- SCCMDocs#1960 -->
+
+Die folgende Liste enthält alle möglichen Quellspeicherorte, die der Configuration Manager-Client verwenden kann, in der Reihenfolge, in der sie priorisiert werden:  
 
 1. Der Verteilungspunkt auf dem gleichen Computer wie der Client
 2. Eine Peerquelle im gleichen Subnetz des Netzwerks

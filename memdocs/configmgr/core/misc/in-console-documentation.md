@@ -2,7 +2,7 @@
 title: Konsoleninterne Dokumentation
 titleSuffix: Configuration Manager
 description: Dieser Artikel wird nur in der Configuration Manager-Konsole angezeigt.
-ms.date: 06/08/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0e38f35f49e827893be5e7763a52dd3b5a901bf7
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
+ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353529"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390873"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "85353529"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Dokumentation zu Microsoft Endpoint Configuration Manager
 
-*Letzte Aktualisierung: 8. Juni 2020*
+*Letzte Aktualisierung: 14. Juli 2020*
 
 Die Inhalte können Sie dabei unterstützen, Configuration Manager kennenzulernen und zu unterstützen.
 
@@ -42,9 +42,10 @@ Weitere Informationen finden Sie in den folgenden Artikeln:
 
 Eine zusammengestellte Liste mit wichtigen Artikeln.
 
-- [Anfügen von Mandanten in Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)
-- [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview)
-- [Co-Verwaltung für Windows 10-Geräte](https://docs.microsoft.com/mem/configmgr/comanage/overview)  
+- [Anfügen von Mandanten in Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/)
+- [Endpunktanalyse](https://docs.microsoft.com/mem/analytics/)
+- [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/)
+- [Co-Verwaltung für Windows 10-Geräte](https://docs.microsoft.com/mem/configmgr/comanage/)  
 - [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
 - [Plan für die BitLocker-Verwaltung](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
 - [Microsoft Edge-Verwaltung](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
@@ -55,22 +56,22 @@ Eine zusammengestellte Liste mit wichtigen Artikeln.
 
 ## <a name="trending"></a>Populär
 
-Die beliebtesten Artikel vom 1. Mai bis zum 31. Mai 2020.
+Die beliebtesten Artikel zwischen dem 1. und 30. Juni 2020.
 
 | Seitenaufrufe | Titel |
 |------------|-------|
-| 22624 | [Planen des Cloudverwaltungsgateways](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 18451 | [Neuerungen in Version 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
-| 17763 | [Protokolldateireferenz](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
-| 16718 | [Aktivieren von Transport Layer Security 1.2 (TLS) auf Clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 16004 | [Für Verbindungen verwendete Ports](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
-| 13965 | [Aktivieren von Transport Layer Security 1.2 (TLS): Übersicht](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 13398 | [Updates und Wartung](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
-| 13279 | [Co-Verwaltung für Windows 10-Geräte](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
-| 13260 | [Benutzerleitfaden des Softwarecenters](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
-| 12624 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 21317 | [Planen des Cloudverwaltungsgateways](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 19402 | [Protokolldateireferenz](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 18826 | [Aktivieren von Transport Layer Security 1.2 (TLS) auf Clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 16525 | [Aktivieren von Transport Layer Security 1.2 (TLS): Übersicht](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 16142 | [Für Verbindungen verwendete Ports](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 15834 | [Neuerungen in Version 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 13963 | [Was ist Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction) |
+| 13727 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 13603 | [Co-Verwaltung für Windows 10-Geräte](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 13049 | [Benutzerleitfaden des Softwarecenters](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
 
-Die [Configuration Manager-Hubseite](https://docs.microsoft.com/mem/configmgr/) wurde in diesem Zeitraum 34.986 Mal aufgerufen.
+Die [Configuration Manager-Hubseite](https://docs.microsoft.com/mem/configmgr/) wurde in diesem Zeitraum 36.220 Mal aufgerufen.
 
 ## <a name="recently-updated"></a>Kürzlich aktualisiert
 
@@ -78,16 +79,16 @@ Artikel mit einem zeitnahen und wichtigem Update.
 
 | Zuletzt überprüft | Titel |
 |---------------|-------|
-| 29.05.2020 | [Technical Preview 2005](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2005) |
-| 27.05.2020 | [Unterstützung für Windows 10](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-windows-10) |
-| 26.05.2020 | [CMPivot-Übersicht](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot-overview) |
-| 26.05.2020 | [Mandantenanfügung: Übersicht über CMPivot](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-overview-attached) |
-| 26.05.2020 | [Mandantenanfügung: CMPivot-Beispielskripts](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-samples-attached) |
-| 26.05.2020 | [Neuerungen in Version 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
-| 21.05.2020 | [Anmerkungen zu dieser Version](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
-| 14.05.2020 | [Empfohlene Hardware](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/recommended-hardware) |
-| 11.05.2020 | [Objekte in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/about-assets) |
-| 11.05.2020 | [Neues in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
+| 29.06.2020 | [Technical Preview 2006](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006) |
+| 25.06.2020 | [Installieren von Power BI-Beispielberichten](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-sample-reports) |
+| 24.06.2020 | [Unterstützte Versionen von SQL Server](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-sql-server-versions) |
+| 18.06.2020 | [Verwalten von Updates für den Surface-Treiber](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/surface-drivers) |
+| 17.06.2020 | [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection) |
+| 10.06.2020 | [Planen des Cloudverwaltungsgateways](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 10.06.2020 | [Benutzerleitfaden des Softwarecenters](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 10.06.2020 | [CMG-FAQ](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/cloud-management-gateway-faq) |
+| 5\.06.2020 | [Bewährte Methoden für Sammlungen](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/best-practices-for-collections) |
+| 05.06.2020 | [Sammlungsauswertungen](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/collection-evaluation) |
 
 ## <a name="troubleshooting-articles"></a>Artikel zur Problembehandlung
 

@@ -5,17 +5,17 @@ description: Erfahren Sie mehr über die automatische Bereitstellung von Softwar
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709433"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240030"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Automatisches Bereitstellen von Softwareupdates  
 
@@ -197,7 +197,7 @@ Sie können Softwareupdates mithilfe einer ADR automatisch genehmigen und bereit
 
         -  **Sendepriorität:** Geben Sie die Sendepriorität für das Bereitstellungspaket an. Configuration Manager verwendet diese Priorität beim Senden des Pakets an Verteilungspunkte. Bereitstellungspakete werden in der Reihenfolge ihrer Priorität gesendet: „Hoch“, „Mittel“ oder „Niedrig“. Pakete mit identischer Priorität werden in der Reihenfolge ihrer Erstellung gesendet. Wenn es keinen Rückstand gibt, wird das Paket unabhängig von seiner Priorität sofort verarbeitet.  
 
-        - **Binäre differenzielle Replikation aktivieren:** Aktivieren Sie diese Einstellung, um den Netzwerkdatenverkehr zwischen den Standorten zu minimieren. Die binäre differenzielle Replikation (BDR) aktualisiert nur die Inhalte, die sich im Paket geändert haben, anstatt den gesamten Paketinhalt zu aktualisieren. Weitere Informationen finden Sie unter [Binäre differenzielle Replikation](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
+        - **Binäre differenzielle Replikation aktivieren:** Aktivieren Sie diese Einstellung, um die binäre differenzielle Replikation für das Bereitstellungspaket zu verwenden. Weitere Informationen finden Sie unter [Binäre differenzielle Replikation](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
     - **Kein Bereitstellungspaket:** Ab Version 1806 werden Softwareupdates auf Geräten bereitgestellt, ohne dass Inhalte zuvor auf Verteilungspunkte heruntergeladen und dort bereitgestellt werden. Diese Einstellung ist beim Umgang mit extrem großen Updateinhalten nützlich. Sie verwenden sie ferner, wenn Clients stets Inhalte vom Microsoft Update-Clouddienst erhalten sollen. Clients können den Inhalt in diesem Szenario auch von Peers herunterladen, die bereits über den erforderlichen Inhalt verfügen. Der Configuration Manager-Client verwaltet weiterhin den Inhaltsdownload und kann deshalb das Feature „Peercache“ von Configuration Manager oder andere Technologien verwenden, z.B. die Übermittlungsoptimierung. Dieses Feature unterstützt alle Updatetypen, die von der Configuration Manager-Softwareupdateverwaltung unterstützt werden, einschließlich Windows- und Office-Updates.<!--1357933-->  
 

@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906745"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240761"
 ---
 # <a name="enable-third-party-updates"></a>Aktivieren von Updates von Drittanbietern 
 
@@ -35,6 +35,7 @@ Ab Version 1806 können Sie über den neue Knoten **Katalog mit Updates für Dri
     - Für die Katalogliste mit Partnern wird download.microsoft.com über den HTTPS-Port 443 benötigt. 
     -  Internetzugriff auf Drittanbieterkataloge und Updateinhaltsdateien. Möglicherweise benötigen Sie neben Port 443 noch weitere Ports.
     - Updates von Drittanbietern verwenden dieselben Proxyeinstellungen wie der SUP.
+- Bei Configuration Manager-Versionen vor Version 1910 kann die Sicherheitsrolle **Softwareupdate-Manager** keine Kataloge von Drittanbietern synchronisieren. Sie benötigen die Sicherheitsrolle **Hauptadministrator**, um die Kataloge zu synchronisieren.
 
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Zusätzliche Anforderungen, wenn der SUP sich nicht auf dem Standortserver auf oberster Ebene befindet 

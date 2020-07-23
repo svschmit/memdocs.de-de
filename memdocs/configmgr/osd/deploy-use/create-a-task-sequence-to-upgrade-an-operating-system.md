@@ -2,7 +2,7 @@
 title: Erstellen einer Upgradetasksequenz für ein Betriebssystem
 titleSuffix: Configuration Manager
 description: Automatisches Upgrade von Windows 7 oder höher auf Windows 10 mithilfe einer Tasksequenz
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 84e6ea21f2bb9627ae6b40c62f8f856fb426bdaf
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383239"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384891"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Erstellen einer Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem in Configuration Manager
 
@@ -253,13 +253,17 @@ Verwenden Sie die [Tasksequenzvariable](../understand/task-sequence-variables.md
 
     `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`
 
+    Dieser Befehl bewirkt, dass die Eingabeaufforderung mit dem angegebenen Exitcode ungleich 0 (Null) beendet wird, der von der Tasksequenz als Fehler betrachtet wird.
+
 1. Fügen Sie auf der Registerkarte **Optionen** die folgende Bedingung hinzu:
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-Dieser Rückgabecode ist die dezimale Entsprechung von MOSETUP_E_COMPAT_SCANONLY (0xC1900210), einer erfolgreichen Kompatibilitätsüberprüfung ohne Fehler. Wenn der Schritt *Upgradebewertung* erfolgreich ausgeführt wurde und diesen Code zurückgibt, überspringt die Tasksequenz diesen Schritt. Wenn der Bewertungsschritt einen anderen Rückgabecode zurückgibt, führt dieser Schritt in der Tasksequenz mit dem Rückgabecode aus der Windows Setup-Kompatibilitätsüberprüfung zu einem Fehler. Weitere Informationen zu **_SMSTSOSUpgradeActionReturnCode** finden Sie unter [Tasksequenzvariablen](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+    Diese Bedingung bedeutet, dass die Tasksequenz nur in diesem Schritt **Befehlszeile ausführen** ausgeführt wird, wenn der Rückgabecode keinen Erfolgscode darstellt.
 
-Weitere Informationen finden Sie unter [Betriebssystem aktualisieren](../understand/task-sequence-steps.md#BKMK_UpgradeOS).  
+Dieser Rückgabecode `3247440400` ist die dezimale Entsprechung von MOSETUP_E_COMPAT_SCANONLY (0xC1900210), einer erfolgreichen Kompatibilitätsüberprüfung ohne Fehler. Wenn der Schritt *Upgradebewertung* erfolgreich ausgeführt wurde und `3247440400` zurückgibt, überspringt die Tasksequenz diesen den Schritt **Befehlszeile ausführen** und fährt mit dem nächsten fort. Wenn der Bewertungsschritt einen anderen Rückgabecode zurückgibt, wird der Schritt **Befehlszeile ausführen** ausgeführt. Da der Befehl mit einem Rückgabecode ungleich 0 existiert, schlägt die Tasksequenz ebenfalls fehl. Das Tasksequenzprotokoll und die Statusmeldung enthalten den Rückgabecode aus der Kompatibilitätsüberprüfung für Windows Setup. Weitere Informationen zu **_SMSTSOSUpgradeActionReturnCode** finden Sie unter [Tasksequenzvariablen](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+
+Weitere Informationen finden Sie im Tasksequenzschritt [Betriebssystem aktualisieren](../understand/task-sequence-steps.md#BKMK_UpgradeOS).
 
 ### <a name="convert-from-bios-to-uefi"></a>Konvertieren von BIOS in UEFI
 
