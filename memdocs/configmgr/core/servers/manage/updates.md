@@ -2,7 +2,7 @@
 title: Updates und Wartung
 titleSuffix: Configuration Manager
 description: Hier finden Sie Informationen zu der konsoleninternen Dienstmethode „Updates und Wartung“, mit der Sie empfohlene Updates leicht finden und installieren können.
-ms.date: 06/30/2020
+ms.date: 07/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5eb1a5ef844a8dbf94cbde9d2c99986ce0634260
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: a177c51aad6bfd85adc0da8019646453eb969517
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422800"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871967"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Updates und Wartung für Configuration Manager
 
@@ -40,7 +40,7 @@ Nach dem Installieren einer Baselineversion sind zusätzliche Versionen von Conf
 
 - Sie installieren konsoleninternen Updates, um die Version Ihres Standorts der obersten Ebene zu aktualisieren.  
 
-- Updates, die Sie an einem Standort der zentralen Verwaltung installieren, werden automatisch an untergeordneten primären Standorten installiert. Steuern Sie diesen Zeitplan, indem Sie ein Wartungsfenster am primären Standort verwenden.  
+- Updates, die Sie an einem Standort der zentralen Verwaltung installieren, werden automatisch an untergeordneten primären Standorten installiert. Steuern Sie diesen Zeitplan über ein Servicezeitfenster am primären Standort. Weitere Informationen finden Sie im Artikel zu [Servicezeitfenstern](service-windows.md).  
 
 - Aktualisieren Sie sekundäre Standorte manuell, indem Sie in der Konsole ein Upgrade auf eine neue Version ausführen.  
 

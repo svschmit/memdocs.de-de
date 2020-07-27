@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: e7d80d2f528365e7759ce7ceb50639b0d474e329
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390873"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891461"
 ---
 <!-- 
 - Feature 1357546
@@ -108,8 +108,11 @@ Exemplarische Vorgehensweisen mit Anleitungen, die Ihnen bei der Problembehandlu
 
 ## <a name="new-and-updated-support-articles"></a>Neue und aktualisierte Supportartikel
 
-Supportartikel, die neu sind oder vom 16. Mai bis zum 22. Juni 2020 aktualisiert wurden.
+Supportartikel, die neu sind oder zwischen dem 16. Mai und dem 17. Juni 2020 aktualisiert wurden.
 
+- [KB 4560496: Updaterollup für Microsoft Endpoint Configuration Manager, Version 2002](https://support.microsoft.com/help/4560496)
+- [KB 4569513: Fehler "Nicht gefunden" beim Bearbeiten von Tabellen für Anwendungskatalog-Updates](https://support.microsoft.com/help/4569513)
+- [KB 4574419: Timeoutfehler im Microsoft Endpoint Configuration Manager Admin Center](https://support.microsoft.com/help/4574416)
 - [KB 4564442: Windows 10-Bereitstellungen schlagen mit dem Microsoft Deployment Toolkit auf Computern mit BIOS-artiger Firmware fehl](https://support.microsoft.com/help/4564442)
 - [KB 4563473: Updaterollup für Configuration Manager Version 2002: Probleme bei der Mandantenanfügung](https://support.microsoft.com/help/4563473)
 - [KB 4567007: PXE-Startfehler oder Tasksequenzverzögerungen nach Update auf Current Branch von Configuration Manager, Version 2002](https://support.microsoft.com/help/4567007)
