@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: c10738d20b793de2ba1adbca548290a517ca5d9e
+ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436804"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405918"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Vorbereiten von iOS-Apps für App-Schutzrichtlinien mit dem Intune App Wrapping Tool
 
@@ -225,7 +225,7 @@ Eine einfache Möglichkeit, das App Wrapping Tool auszuführen, besteht darin, a
 | ADAL-Client-ID |Zeichenfolge|empty| Identisch mit „-ac“|
 | ADAL-Antwort-URI |Zeichenfolge|empty| Identisch mit „-ar“|
 | Verbose Enabled |Boolesch|false| Identisch mit „-v“|
-| Remove Missing Entitlements |Boolesch|false| Identisch mit „-c“|
+| Remove Missing Entitlements |Boolesch|false| Identisch mit „-e“|
 | Verhindern des Standardbuildupdates |Boolesch|false| Entspricht der Verwendung von „-b“ ohne Argumente|
 | Build String Override |Zeichenfolge|empty| Die benutzerdefinierte CFBundleVersion der umschlossenen Ausgabe-App|
 | Include Citrix XenMobile App SDK (network-only variant) (Citrix XenMobile App SDK hinzufügen (reine Netzwerkvariante))|Boolesch|false| Identisch mit „-citrix“|

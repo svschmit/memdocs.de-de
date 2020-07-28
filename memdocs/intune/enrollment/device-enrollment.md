@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088461"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461877"
 ---
-# <a name="what-is-device-enrollment"></a>Was ist die Geräteregistrierung?
+# <a name="what-is-device-enrollment-in-intune"></a>Was ist die Geräteregistrierung in Intune?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune ermöglicht es Ihnen, die Geräte und Apps Ihrer Mitarbeiter sowie deren Zugriff auf Unternehmensdaten zu verwalten. Damit diese mobile Geräteverwaltung (Mobile Device Management, MDM) genutzt werden kann, müssen die Geräte zunächst beim Intune-Dienst registriert werden. Wenn ein Gerät registriert ist, wird ein MDM-Zertifikat für das Gerät ausgestellt. Dieses Zertifikat wird für die Kommunikation mit dem Intune-Dienst verwendet.
@@ -72,6 +72,8 @@ Standardmäßig dürfen Geräte für alle Plattformen in Intune registriert werd
 |**Android Enterprise-Arbeitsprofil**|**Benutzerinitiiert über Unternehmensportal**| Nein | Ja | Nein | [Weitere Informationen](android-work-profile-enroll.md)|
 
 
+&nbsp;
+
 | **Unternehmen** | **Registrierungsmethoden** | **Zurücksetzen erforderlich** | **Benutzeraffinität** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android-Geräteadministrator**|**[DEM](#device-enrollment-manager)-initiiert über Unternehmensportal**| Nein | Nein | Nein |[Weitere Informationen](device-enrollment-manager-enroll.md)|
@@ -79,7 +81,7 @@ Standardmäßig dürfen Geräte für alle Plattformen in Intune registriert werd
 |**Android-Geräteadministrator mit Zebra Mobility-Erweiterungen**|**Benutzer- oder [DEM](#device-enrollment-manager)-initiiert über Unternehmensportal**| Nein | Ja, wenn benutzerinitiiert; Nein, wenn [DEM](#device-enrollment-manager)-initiiert | Nein | [Weitere Informationen](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise Dedicated**|**NFC, Token, QR-Code, Zero Touch**| Ja | Nein | Konfigurierbar über Richtlinie | [Weitere Informationen](android-kiosk-enroll.md)|
 |**Vollständig verwaltetes Android Enterprise**|**NFC, Token, QR-Code, Zero Touch**| Ja | Ja | Konfigurierbar über Richtlinie | [Weitere Informationen](android-dedicated-devices-fully-managed-enroll.md)|
-
+|**Android Enterprise unternehmenseigen mit Arbeitsprofil** | **NFC, Token, QR-Code, Zero Touch** | Ja | Ja | Konfigurierbar über Richtlinie | [Weitere Informationen](android-corporate-owned-work-profile-enroll.md)|
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device
 Zu BYOD-Geräten (Bring Your Own Device) gehören Mobiltelefone, Tablets und PCs, die persönliches Eigentum der Benutzer sind. Benutzer installieren die Unternehmensportal-App und führen diese zur Registrierung ihrer Geräte aus. Dieses Programm ermöglicht Benutzern den Zugriff auf Unternehmensressourcen wie E-Mails.
@@ -87,7 +89,7 @@ Zu BYOD-Geräten (Bring Your Own Device) gehören Mobiltelefone, Tablets und PCs
 ## <a name="corporate-owned-device"></a>Unternehmenseigene Geräte
 [Unternehmenseigene Geräte (Corporate-Owned Devices, COD)](corporate-identifiers-add.md) umfassen Mobiltelefone, Tablets und PCs, die das Eigentum der Organisation sind und an die Mitarbeiter ausgegeben werden. Die Registrierung von COD-Geräten unterstützt Szenarios wie die automatische Registrierung, freigegebene Geräte oder Anforderungen für eine vorab autorisierte Registrierung. Eine Methode zum Registrieren von COD-Geräten besteht darin, dass ein Administrator oder Vorgesetzter den Geräteregistrierungs-Manager verwendet. iOS-/iPadOS-Geräte können direkt über die von Apple bereitgestellten ADE-Tools registriert werden. Geräte mit einer IMEI-Nummer können auch als unternehmenseigene Geräte identifiziert und gekennzeichnet werden.
 
-### <a name="device-enrollment-manager"></a>Geräteregistrierungsmanager
+### <a name="device-enrollment-manager"></a>Geräteregistrierungs-Manager
 Der Geräteregistrierungs-Manager (DEM) ist ein besonderes Benutzerkonto, das zum Registrieren und Verwalten mehrerer firmeneigener Geräte verwendet wird. Manager können das Unternehmensportal installieren und viele benutzerlose Geräte registrieren. Diese Gerätetypen eignen sich z.B. für POS- oder Hilfsprogramm-Apps, nicht aber für Benutzer, die Zugriff auf E-Mails oder Unternehmensressourcen benötigen. Erfahren Sie mehr über [DEM](device-enrollment-manager-enroll.md).
 
 ### <a name="apple-automated-device-enrollment"></a>Automatische Geräteregistrierung von Apple

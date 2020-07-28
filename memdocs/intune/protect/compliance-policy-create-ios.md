@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 536ad36120a8fb5dc4ad0d16b8f265e56260d461
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: e57cd425ca89fa875b89c73a9eba30cecb7516d7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729255"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871915"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>iOS-/iPadOS-Einstellungen, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen
 
@@ -149,7 +149,7 @@ Weitere Informationen zu E-Mail-Profilen finden Sie unter [Konfigurieren des Zug
   Sie können Apps einschränken, indem Sie ihre Bündel-IDs der Richtlinie hinzufügen. Wenn die App auf einem Gerät installiert wird, wird das Gerät als nicht konform gekennzeichnet.
 
   - **App-Name**: Geben Sie einen benutzerfreundlichen Namen ein, damit Sie die Bündel-ID einfacher identifizieren können.
-  - **App-Bündel-ID**: Geben Sie die eindeutige Bündel-ID ein, die vom App-Anbieter zugewiesen wurde. Informationen zum Ermitteln der Bündel-ID finden Sie unter [Ermitteln der Bündel-ID für eine iOS-/iPadOS-App](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (öffnet eine andere Microsoft-Website).  
+  - **App-Bündel-ID**: Geben Sie die eindeutige Bündel-ID ein, die vom App-Anbieter zugewiesen wurde. Die Bündel-ID finden Sie unter [Bundle IDs for native iOS and iPadOS apps](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) (Bündel-IDs für native iOS- und iPadOS-Apps) auf Support.apple.com, oder wenden Sie sich an den Softwareanbieter der App.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

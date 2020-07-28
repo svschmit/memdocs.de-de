@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e99922c920966f4f0bb1037b5fc74799cfca7c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988784"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461656"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>App-Konfigurationsrichtlinien für Microsoft Intune
 
@@ -75,15 +75,15 @@ Die Auswahl von **Verwaltete Apps** als **Geräteregistrierungstyp** bezieht sic
 
 ## <a name="android-app-configuration-policies"></a>Richtlinien zur Konfiguration von Android-Apps
 
-Für Konfigurationsrichtlinien von Android-Apps können Sie den Geräteregistrierungstyp auswählen, bevor Sie das Konfigurationsprofil für eine App erstellen. Sie können Zertifikatprofile berücksichtigen, die auf dem Registrierungstyp basieren (Arbeitsprofil oder Gerätebesitzer). Dieses Update bietet Folgendes:
+Für Konfigurationsrichtlinien von Android-Apps können Sie den Geräteregistrierungstyp auswählen, bevor Sie das Konfigurationsprofil für eine App erstellen. Sie können Zertifikatprofile berücksichtigen, die auf dem Registrierungstyp basieren (Arbeitsprofil, vollständig verwaltet, dediziert und unternehmenseigen mit einem Arbeitsprofil). Dieses Update bietet Folgendes:
 
-1. Wenn ein neues Profil erstellt und der Typ „Arbeitsprofil und Gerätebesitzerprofil“ ausgewählt wird, können Sie kein Zertifikatprofil mit der App-Konfigurationsrichtlinie zuordnen.
+1. Wenn ein neues Profil erstellt und **Alle Profiltypen** als Geräteregistrierungstyp ausgewählt wird, können Sie der App-Konfigurationsrichtlinie kein Zertifikatprofil zuordnen.
 2. Wenn ein neues Profil erstellt und der Typ „Arbeitsprofil und Gerätebesitzerprofil“ ausgewählt wird, können Arbeitsprofil-Zertifikatrichtlinien verwendet werden, die in der Gerätekonfiguration erstellt wurden.
-3. Wenn ein neues Profil erstellt und der Typ „Nur Gerätebesitzer“ ausgewählt wird, können Gerätebesitzer-Zertifikatrichtlinien verwendet werden, die in der Gerätekonfiguration erstellt wurden. 
+3. Wenn ein neues Profil erstellt und **Nur vollständig verwaltetes, dediziertes und unternehmenseigenes Arbeitsprofil** ausgewählt wird, können Zertifikatrichtlinien des Typs **Vollständig verwaltetes, dediziertes und unternehmenseigenes Arbeitsprofil** verwendet werden, die in der Gerätekonfiguration erstellt wurden. 
 4. Wenn Sie ein Gmail- oder Nine-Konfigurationsprofil auf einem dedizierten Android Enterprise-Gerät bereitstellen, das keinen Benutzer einschließt, tritt ein Fehler auf, da Intune den Benutzer nicht auflösen kann.
 
 > [!IMPORTANT]
-> Vorhandene Richtlinien, die vor dem Release dieses Features (April 2020 Release – 2004) erstellt wurden und denen keine Zertifikatprofile zugeordnet ist, verwenden standardmäßig den Geräteregistrierungstyp „Arbeitsprofil und Gerätebesitzerprofil“. Vorhandene Richtlinien, die vor dem Release dieses Features erstellt wurden und denen Zertifikatprofile zugeordnet sind, verwenden zudem standardmäßig den Geräteregistrierungstyp „Nur Arbeitsprofil“.
+> Vorhandene Richtlinien, die vor dem Release dieses Features (Release vom April 2020 – 2004) erstellt wurden und denen keine Zertifikatprofile zugeordnet sind, verwenden automatisch den Geräteregistrierungstyp **Alle Profiltypen**. Vorhandene Richtlinien, die vor dem Release dieses Features erstellt wurden und denen Zertifikatprofile zugeordnet sind, verwenden zudem standardmäßig den Geräteregistrierungstyp „Nur Arbeitsprofil“.
 > 
 > Vorhandene Richtlinien werden nicht wiederhergestellt, und es werden keine neuen Zertifikate ausgestellt.
 

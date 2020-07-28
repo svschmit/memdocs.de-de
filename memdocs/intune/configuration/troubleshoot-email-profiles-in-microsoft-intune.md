@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,24 +18,36 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d7e3b5b9a169baf336b0d4e7d8d66b06af38061
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79361418"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565715"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Häufig auftretende Probleme und Lösungen für E-Mail-Profile in Microsoft Intune
 
 Erfahren Sie mehr zu einigen häufig auftretenden Problemen mit E-Mail-Profilen und den entsprechenden Lösungen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="users-are-repeatedly-prompted-to-enter-their-password"></a>Benutzer werden wiederholt zur Kennworteingabe aufgefordert
 
-- E-Mail-Profile werden für den Benutzer bereitgestellt, der das Gerät registriert hat. Für die Konfiguration des E-Mail-Profils werden in Intune die Azure AD-Eigenschaften (Azure Active Directory) des E-Mail-Benutzerprofils bei der Anmeldung verwendet. Weitere Informationen hierzu finden Sie unter [Hinzufügen von E-Mail-Einstellungen für Geräte mit Intune](email-settings-configure.md).
-- Stellen Sie für Android Enterprise über den verwalteten Google Play Store Gmail oder Nine for Work bereit. Eine Anleitung hierzu finden Sie unter [Hinzufügen verwalteter Google Play-Apps](../apps/apps-add-android-for-work.md).
-- In Microsoft Outlook für iOS/iPadOS und Android werden E-Mail-Profile nicht unterstützt. Stellen Sie stattdessen eine Konfigurationsrichtlinie für Apps bereit. Weitere Informationen finden Sie unter [Microsoft Outlook-Konfigurationseinstellungen](../apps/app-configuration-policies-outlook.md).
-- E-Mail-Profile, deren Ziel Gerätegruppen (und nicht Benutzergruppen) sind, werden möglicherweise nicht an das Gerät übermittelt. Verfügt das Gerät über einen primären Benutzer, sollte die Geräteausrichtung funktionieren. Enthält das E-Mail-Profil Benutzerzertifikate, vergewissern Sie sich, dass als Ziel Benutzergruppen festgelegt sind.
-- Benutzer werden möglicherweise wiederholt zur Eingabe des Kennworts für das E-Mail-Profil aufgefordert. Überprüfen Sie in diesem Szenario alle Zertifikate, auf die im E-Mail-Profil verwiesen wird. Ist eines der Zertifikate nicht auf einen Benutzer ausgerichtet, versucht Intune, das E-Mail-Profil noch mal bereitzustellen.
+Benutzer werden wiederholt zur Eingabe des Kennworts für das E-Mail-Profil aufgefordert. Wenn für die Authentifizierung und Autorisierung der Benutzer Zertifikate verwendet werden, überprüfen Sie die Zuweisungen aller Zertifikatsprofile. In der Regel werden diese Zertifikatsprofile Benutzergruppen zugewiesen und nicht Gerätegruppen. Ist eines der Zertifikatsprofile nicht auf einen Benutzer ausgerichtet, versucht Intune, das E-Mail-Profil noch mal bereitzustellen.
+
+Wenn die E-Mail-Profilkette Benutzergruppen zugewiesen wird, müssen Sie darauf achten, dass Ihre Zertifikatsprofile auch Benutzergruppen zugewiesen werden.
+
+## <a name="profiles-deployed-to-device-groups-show-errors-and-latency"></a>Für Gerätegruppen bereitgestellte Profile zeigen Fehler und weisen eine hohe Wartezeit auf
+
+E-Mail-Profile werden in der Regel Benutzergruppen zugewiesen. Es gibt jedoch manche Fälle, in denen sie Gerätegruppen zugewiesen werden.
+
+- Zertifikatsbasierte E-Mail-Profile sollten beispielsweise nur Surface-Geräten zugewiesen werden, keinen Desktopgeräten. In diesem Szenario wären Gerätegruppen sinnvoll. Denken Sie jedoch daran, dass die Geräte als nicht konform angezeigt werden können, möglicherweise Fehler zurückgeben und Ihre E-Mail-Profile möglicherweise nicht sofort abrufen.
+
+  In diesem Beispiel erstellen Sie das E-Mail-Profil und weisen das Profil Gerätegruppen zu. Das Gerät wird neu gestartet, und es kommt zu einer Verzögerung, bevor sich ein Benutzer anmelden kann. Während dieser Verzögerung wird Ihr PKCS-Zertifikatsprofil bereitgestellt, das Benutzergruppen zugewiesen ist. Da noch keine Benutzer vorhanden sind, führt das PKCS-Zertifikatsprofil dazu, dass das Gerät als nicht konform gilt. Möglicherweise werden in der Ereignisanzeige Fehler auf dem Gerät angezeigt.
+
+  Damit das Gerät als konform gilt, muss sich ein Benutzer auf dem Gerät anmelden und eine Synchronisierung mit Intune durchführen, um die Richtlinien zu erhalten. Benutzer können manuell eine neue Synchronisierung durchführen oder auf die nächste reguläre warten.
+
+- Angenommen, Sie nutzen dynamische Gruppen. Wenn die dynamischen Gruppen in Azure AD nicht sofort aktualisiert werden, werden diese Geräte möglicherweise als nicht konform angezeigt.
+
+In diesen Szenarios entscheiden Sie, ob es wichtiger ist, Gerätegruppen zu verwenden oder alle Richtlinien als konform anzuzeigen.
 
 ## <a name="device-already-has-an-email-profile-installed"></a>Auf dem Gerät ist bereits ein E-Mail-Profil installiert
 
@@ -53,7 +65,7 @@ Samsung KNOX identifiziert das Profil nicht anhand des Hostnamens. Es wird empfo
 
 ## <a name="error-0x87d1fde8-for-knox-standard-device"></a>Fehler „0x87D1FDE8“ für KNOX Standard-Gerät
 
-**Problem:** Nach dem Erstellen und Bereitstellen eines Exchange Active Sync-E-Mail-Profils für Samsung KNOX Standard für verschiedene Android-Geräte werden der Fehler **0x87D1FDE8** oder ein **Fehler bei der Wiederherstellung** auf der Registerkarte „Eigenschaften“ > „Richtlinie“ des Geräts angezeigt.
+**Problem**: Nach dem Erstellen und Bereitstellen eines Exchange Active Sync-E-Mail-Profils für Samsung KNOX Standard für verschiedene Android-Geräte melden diese den Fehler **0x87D1FDE8**, oder es wird ein **Fehler bei der Wiederherstellung** auf der Registerkarte „Eigenschaften“ > „Richtlinie“ des Geräts angezeigt.
 
 Überprüfen Sie die Konfiguration Ihres EAS-Profils für Samsung KNOX und die Quellrichtlinie. Die Samsung-Option zum Synchronisieren von Notizen wird nicht mehr unterstützt, und diese Option sollte in Ihrem Profil nicht ausgewählt werden. Achten Sie darauf, dass Geräte genug Zeit hatten, um die Richtlinie zu verarbeiten (bis zu 24 Stunden).
 

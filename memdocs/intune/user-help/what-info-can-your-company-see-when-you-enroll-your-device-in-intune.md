@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: bc3ff7b10d3b0ae5779db26fae711bc335c8ec62
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107311"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461673"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Welche Informationen erhält meine Organisation, wenn ich mein Gerät registriere?
 
@@ -38,13 +38,14 @@ Ihre Organisation kann Ihre privaten Informationen nicht einsehen, wenn Sie ein 
 - Kennwörter
 - Ihre Bilder, einschließlich dem, was sich in der Fotos- und Kamera-App befindet
 - Dateien
+- Bei unternehmenseigenen Geräten mit einem Arbeitsprofil: die Anwendungen und Daten in Ihrem persönlichen Profil 
 
 **Folgendes kann von Ihrer Organisation eingesehen werden:**
 
 - Gerätemodell, z.B. Google Pixel
 - Gerätehersteller, z.B. Microsoft
 - Betriebssystem und Version, z.B. iOS 12.0.1
-- App-Bestand und App-Namen, z.B. „Microsoft Word“. Auf persönlichen Geräten kann Ihre Organisation nur sehen, welche verwalteten Apps installiert sind. Auf unternehmenseigenen Geräten kann Ihre Organisation alle installierten Apps sehen.
+- App-Bestand und App-Namen, z.B. „Microsoft Word“. Auf persönlichen Geräten kann Ihre Organisation nur sehen, welche verwalteten Apps installiert sind. Bei unternehmenseigenen und vollständig verwalteten Geräten sowie bei dedizierten Geräten kann Ihre Organisation alle installierten Apps anzeigen. Bei unternehmenseigenen Geräte mit einem Arbeitsprofil kann Ihre Organisation nur die in Ihrem Arbeitsprofil installierten Apps anzeigen.
 - Geräteeigentümer
 - Gerätename
 - Seriennummer des Geräts

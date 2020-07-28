@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3981f40650544cdfdbfd0208e127a3e0aaecb823
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086807"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462013"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Android Enterprise-Geräteeinstellungen zur VPN-Konfiguration in Intune
 
@@ -37,7 +37,7 @@ Weitere Informationen zu VPN-Profilen in Intune finden Sie unter [VPN-Profile](v
 
 [Erstellen Sie ein Gerätekonfigurationsprofil](vpn-settings-configure.md), und klicken Sie auf **Android Enterprise**.
 
-## <a name="device-owner-only"></a>Nur Gerätebesitzer
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Vollständig verwaltet, dediziert und unternehmenseigen mit einem Arbeitsprofil
 
 - **Verbindungsname**: Geben Sie einen Namen für diese Verbindung ein. Benutzern wird dieser Name angezeigt, wenn sie auf ihrem Gerät die verfügbaren VPN-Verbindungen durchsuchen. Geben Sie beispielsweise `Contoso VPN` ein.
 - **IP-Adresse oder FQDN:** Geben Sie die IP-Adresse oder den vollqualifizierten Domänennamen (FQDN) des VPN-Servers ein, mit dem Geräte eine Verbindung herstellen. Geben Sie beispielsweise **192.168.1.1** oder **vpn.contoso.com** ein.

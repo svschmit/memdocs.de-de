@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303469"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491251"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -31,9 +31,18 @@ In diesem Artikel werden die verschiedenen Einstellungen aufgeführt und beschri
 
 [Erstellen Sie eine Gerätekonfigurationsprofil.](device-restrictions-configure.md)
 
-## <a name="device-owner-only"></a>Nur Gerätebesitzer
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Vollständig verwaltet, dediziert und unternehmenseigen mit einem Arbeitsprofil
 
-Diese Einstellungen gelten für Android Enterprise-Registrierungstypen, bei denen das gesamte Gerät von Intune verwaltet wird, z. B. vollständig verwaltete Android Enterprise-Geräte oder dedizierte Android Enterprise-Geräte.
+Diese Einstellungen gelten für Android Enterprise-Registrierungstypen, bei denen das gesamte Gerät von Intune verwaltet wird, z. B. vollständig verwaltete Geräte, dedizierte Geräte und unternehmenseigene Android Enterprise-Arbeitsprofilgeräte.
+
+Einige Einstellungen werden nicht von allen Registrierungstypen unterstützt. Informationen dazu, welche Einstellungen von welchen Registrierungstypen unterstützt werden, finden Sie in der Benutzeroberfläche. Jede Einstellung befindet sich unter einer Überschrift, die angibt, von welchen Registrierungstypen diese Einstellung verwendet werden kann.
+
+![Überschriften von Einstellungen](./media/device-restrictions-android-for-work/setting-headers.png)
+
+Einige Einstellungen gelten nur auf Arbeitsprofilebene für unternehmenseigene Geräte mit einem Arbeitsprofil. Diese Einstellungen gelten für vollständig verwaltete und dedizierte Geräte weiterhin auf Geräteebene. Diese Einstellungen sind in der Benutzeroberfläche mit dem Deskriptor *(Arbeitsprofilebene)* gekennzeichnet.
+
+![Überschriften von Einstellungen](./media/device-restrictions-android-for-work/work-profile-level.png)
+
 
 ### <a name="general"></a>Allgemein
 
@@ -115,7 +124,9 @@ Verwenden Sie diese Einstellungen, um eine Kioskoberfläche auf Ihren dedizierte
       >
       > Die App **Managed Home Screen** muss zwar nicht im Konfigurationsprofil enthalten sein, allerdings muss sie als App hinzugefügt werden. Wenn die App **Managed Home Screen** hinzugefügt wird, werden alle anderen Apps, die Sie im Konfigurationsprofil hinzufügen, in **Managed Home Screen** als Symbole angezeigt.
       >
-      > Wenn Sie den Normalmodus (Kiosk mit mehreren Apps) verwenden, funktionieren Apps mit Wähltasten/Telefon-Apps möglicherweise nicht ordnungsgemäß. 
+      > Wenn Sie den Normalmodus (Kiosk mit mehreren Apps) verwenden, funktionieren Apps mit Wähltasten/Telefon-Apps möglicherweise nicht ordnungsgemäß.
+      >
+      > Weitere Informationen zum verwalteten Startbildschirm finden Sie unter [Einrichten des verwalteten Startbildschirms auf dedizierten Geräten im Kioskmodus mit mehreren Apps](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
       - **Hinzufügen**: Wählen Sie Ihre Apps aus der Liste aus.
 
@@ -123,6 +134,28 @@ Verwenden Sie diese Einstellungen, um eine Kioskoberfläche auf Ihren dedizierte
 
         Sie können auch andere [Android-Apps](../apps/apps-add-android-for-work.md) und [Web-Apps](../apps/web-app.md) hinzufügen, die von Ihrer Organisation für das Gerät erstellt wurden. Achten Sie darauf, [die App der Gerätegruppe zuzuweisen, die für Ihre dedizierten Geräte erstellt wurde](../apps/apps-deploy.md).
 
+      - **Ordnersymbol:** Wählen Sie die Farbe und die Form des Ordnersymbols aus, das auf dem verwalteten Startbildschirm angezeigt wird. Folgende Optionen sind verfügbar:
+        - Nicht konfiguriert 
+        - Dunkles Design: Rechteck
+        - Dunkles Design: Kreis
+        - Helles Design: Rechteck
+        - Helles Design: Kreis
+      - **Symbolgröße für Apps und Ordner:** Wählen Sie die Größe des Ordnersymbols aus, das auf dem verwalteten Startbildschirm angezeigt wird. Folgende Optionen sind verfügbar:
+        - Nicht konfiguriert 
+        - Sehr klein
+        - Klein
+        - Mittelwert
+        - Groß
+        - Sehr groß
+
+          Abhängig von der Bildschirmgröße kann die tatsächliche Symbolgröße abweichen.
+
+      - **Bildschirmausrichtung:** Wählen Sie die Ausrichtung des verwalteten Startbildschirms auf dem Gerät aus. Folgende Optionen sind verfügbar:
+        - Nicht konfiguriert
+        - Hochformat
+        - Querformat
+        - Automatisch drehen
+      - **App-Infobadges:** Bei Auswahl von **Aktivieren** wird die Anzahl der neuen und ungelesenen Benachrichtigungen für App-Symbole angezeigt. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
       - **Virtuelle Startschaltfläche:** Eine Softkey-Schaltfläche, die Benutzer auf den verwalteten Startbildschirm zurückleitet, damit Benutzer zwischen Apps wechseln können. Folgende Optionen sind verfügbar:
         - **Nicht konfiguriert** (Standardeinstellung): Es wird keine Startschaltfläche angezeigt. Benutzer müssen die Schaltfläche „Zurück“ verwenden, um zwischen Apps wechseln zu können.
         - **Nach oben wischen:** Eine Startschaltfläche wird angezeigt, wenn ein Benutzer auf dem Gerät nach oben wischt.
@@ -150,7 +183,31 @@ Verwenden Sie diese Einstellungen, um eine Kioskoberfläche auf Ihren dedizierte
         >
         > Moderne Displays haben höhere Pixeldichten und können entsprechende Bilder mit 2K-/4K-Auflösung anzeigen.
 
+      - **Verknüpfung mit Einstellungsmenü:** Bei Auswahl von **Deaktivieren** wird die Verknüpfung zu den verwalteten Einstellungen auf dem verwalteten Startbildschirm ausgeblendet. Benutzer können weiterhin nach unten wischen, um auf die Einstellungen zuzugreifen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Die Verknüpfung zu den verwalteten Einstellungen wird auf Geräten standardmäßig angezeigt. Benutzer können auch nach unten wischen, um auf diese Einstellungen zuzugreifen.
+
+      - **Schnellzugriff auf Debugmenü:** Mit dieser Einstellung wird gesteuert, wie Benutzer auf das Debugmenü zugreifen. Folgende Optionen sind verfügbar:
+
+        - **Aktivieren**: Benutzer können einfacher auf das Debugmenü zugreifen. Sie können insbesondere nach unten wischen oder die Verknüpfung zu den verwalteten Einstellungen verwenden. Wie immer können sie weiterhin 15 Mal auf die Schaltfläche „Zurück“ tippen.
+        - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Der einfache Zugriff auf das Debugmenü ist standardmäßig deaktiviert. Benutzer müssen 15 Mal auf die Schaltfläche „Zurück“ tippen, um das Debugmenü zu öffnen.
+
+        Über das Debugmenü können Benutzer folgende Aktionen durchführen:
+
+        - Anzeigen und Hochladen von Protokollen zum verwalteten Startbildschirm
+        - Öffnen der Android Device Policy Manager-App von Google
+        - Öffnen der [Microsoft Intune-App](https://play.google.com/store/apps/details?id=com.microsoft.intune)
+        - Verlassen des Kioskmodus
+
       - **WLAN-Konfiguration:** Wenn **Aktivieren** festgelegt wird, wird das WLAN-Steuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können das Gerät mit verschiedenen WLAN-Netzwerken verbinden. Durch Aktivieren dieses Features wird auch der Gerätestandort aktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das WLAN-Steuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer Verbindungen mit WLAN-Netzwerken herstellen, während Sie den verwalteten Startbildschirm verwenden.
+
+        - **WLAN-Zulassungsliste:** Erstellen Sie eine Liste gültiger WLAN-Netzwerknamen, auch bekannt als Service Set Identifier (SSID). Benutzer des verwalteten Startbildschirms können nur Verbindungen mit den SSIDs herstellen, die Sie eingeben.
+
+          Wenn kein Wert angegeben wird, ändert oder aktualisiert Intune diese Einstellung nicht. In der Standardeinstellung sind alle verfügbaren WLAN-Netzwerke zulässig.
+
+          **Importieren** Sie eine CSV-Datei, die eine Liste gültiger SSIDs enthält.
+
+          **Exportieren** Sie Ihre aktuelle Liste in eine CSV-Datei.
+
+        - **SSID**: Sie können auch die WLAN-Netzwerknamen (SSID) eingeben, mit denen Benutzer des verwalteten Startbildschirms eine Verbindung herstellen können. Geben Sie gültige SSIDs ein.
 
       - **Bluetooth-Konfiguration:** Wenn **Aktivieren** festgelegt wird, wird das Bluetooth-Steuerelement auf dem verwalteten Startbildschirm angezeigt und Benutzer können Geräte über Bluetooth koppeln. Durch Aktivieren dieses Features wird auch der Gerätestandort aktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Bluetooth-Steuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer Bluetooth konfigurieren und Geräte koppeln, während sie den verwalteten Startbildschirm verwenden.
 
@@ -158,17 +215,19 @@ Verwenden Sie diese Einstellungen, um eine Kioskoberfläche auf Ihren dedizierte
 
       - **Medienlautstärkeregler:** Wenn **Aktivieren** festgelegt wird, wird der Medienlautstärkeregler auf dem verwalteten Startbildschirm angezeigt und Benutzer können die Medienlautstärke des Geräts mithilfe eines Reglers anpassen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem das Medienlautstärkesteuerelement standardmäßig nicht auf dem verwalteten Startbildschirm an. Dieser Wert verhindert, dass Benutzer die Medienlautstärke auf dem Gerät anpassen können, während sie den verwalteten Startbildschirm verwenden, außer die Tasten ihrer Hardware unterstützen dies.
 
+      - **Schnellzugriff auf Geräteinformationen:** Bei Auswahl von **Aktivieren** können Benutzer durch Wischen nach unten die Geräteinformationen zum verwalteten Startbildschirm anzeigen, z. B. die Seriennummer, die Herstellungs- und Modellnummer und die SDK-Ebene. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. In der Standardeinstellung werden die Geräteinformationen möglicherweise nicht angezeigt.
+
       - **Bildschirmschonermodus:** **Aktivieren** zeigt einen Bildschirmschoner auf dem verwalteten Startbildschirm, wenn das Gerät gesperrt ist oder im Fall eines Timeouts. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise zeigt das Betriebssystem keinen Bildschirmschoner auf dem verwalteten Startbildschirm an.
 
         Wenn diese Einstellung aktiviert ist, konfigurieren Sie auch die folgende Einstellung:
 
-        - **Benutzerdefiniertes Hintergrundbild für Bildschirmschoner festlegen:** Geben Sie die URL zu einem benutzerdefinierten PNG-, JPG-, JPEG-, GIF-, MBP-, WebP- oder ICO-Bild an. Wenn Sie keine URL eingeben, wird das Standardbild des Geräts verwendet, wenn es ein Standardbild gibt. 
-        
+        - **Benutzerdefiniertes Hintergrundbild für Bildschirmschoner festlegen:** Geben Sie die URL zu einem benutzerdefinierten PNG-, JPG-, JPEG-, GIF-, MBP-, WebP- oder ICO-Bild an. Wenn Sie keine URL eingeben, wird das Standardbild des Geräts verwendet, wenn es ein Standardbild gibt.
+
           Geben Sie z. B. Folgendes ein:
 
           - `http://www.contoso.com/image.jpg`
           - `www.contoso.com/image.bmp`
-          - `https://www.contoso.com/image.webp`          
+          - `https://www.contoso.com/image.webp`
 
           > [!TIP]
           > Alle URLs zu Dateiressourcen, die in das Bitmap-Format umgewandelt werden können, werden unterstützt.
@@ -180,30 +239,27 @@ Verwenden Sie diese Einstellungen, um eine Kioskoberfläche auf Ihren dedizierte
 - **Vollständig verwaltet:** Mit dieser Einstellung wird die Microsoft Launcher-App auf vollständig verwalteten Geräten konfiguriert.
 
   - Über **Microsoft Launcher als Standardstartprogramm festlegen:** **Aktivieren** wird Microsoft Launcher als Standardstartprogramm auf dem Startbildschirm festgelegt. Wenn Sie Launcher als Standard festlegen, können Benutzer kein anderes Startprogramm verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig wird Microsoft Launcher nicht als Standardstartprogramm erzwungen.
+  - **Konfigurieren des benutzerdefinierten Hintergrundbilds:** Bei Auswahl von **Aktivieren** können Sie Ihr eigenes Bild als Hintergrundbild des Bildschirms verwenden und festlegen, ob Benutzer das Bild ändern können. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. In der Standardeinstellung werden die aktuellen Hintergrundbilder der Geräte beibehalten.
+    - **Eingeben der URL des Hintergrundbilds:** Geben Sie die URL des Hintergrundbilds ein. Dieses Bild wird auf dem Startbildschirm des Geräts angezeigt. Geben Sie beispielsweise `http://www.contoso.com/image.jpg` ein. 
+    - **Benutzern das Ändern des Hintergrundbilds erlauben:** Bei Auswahl von **Aktivieren** können Benutzer das Hintergrundbild ändern. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. In der Standardeinstellung werden Benutzer daran gehindert, den Hintergrund zu ändern.
+  - **Aktivieren des Startfeeds:** Bei Auswahl von **Aktivieren** wird der Startfeed mit Anzeige von Kalendern, Dokumenten und aktuellen Aktivitäten aktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. In der Standardeinstellung wird dieser Feed nicht angezeigt.
+    - **Benutzern das Aktivieren/Deaktivieren des Feeds erlauben:** Bei Auswahl von **Aktivieren** können Benutzer den Startfeed aktivieren bzw. deaktivieren. Bei Auswahl von **Aktivieren** wird diese Einstellung nur bei der erstmaligen Zuweisung des Profils erzwungen. Bei zukünftigen Profilzuweisungen wird diese Einstellung nicht erzwungen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. In der Standardeinstellung werden Benutzer daran gehindert, die Einstellungen des Startfeeds zu ändern.
+  - **Dockanzeige:** Das Dock ermöglicht Benutzern den schnellen Zugriff auf ihre Apps und Tools. Folgende Optionen sind verfügbar:
+    - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+    - **Anzeigen:** Das Dock wird auf Geräten angezeigt.
+    - **Ausblenden:** Das Dock wird ausgeblendet. Benutzer müssen nach oben wischen, um auf das Dock zuzugreifen.
+    - **Deaktiviert:** Das Dock wird auf Geräten nicht angezeigt, und Benutzer können es nicht anzeigen.
 
-<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+  - **Benutzern das Ändern der Dockanzeige erlauben:** Bei Auswahl von **Aktivieren** können Benutzer das Dock anzeigen bzw. ausblenden. Bei Auswahl von **Aktivieren** wird diese Einstellung nur bei der erstmaligen Zuweisung des Profils erzwungen. Bei zukünftigen Profilzuweisungen wird diese Einstellung nicht erzwungen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. In der Standardeinstellung können Benutzer die Gerätedockkonfiguration nicht ändern.
 
-  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
-    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
-    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
-  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
-    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
-  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Show**: The dock is shown on devices.
-    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
-    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+  - **Platzierung der Suchleiste:** Wählen Sie aus, wo die Suchleiste platziert werden soll. Folgende Optionen sind verfügbar:
+    - **Nicht konfiguriert** (Standardeinstellung): Diese Einstellung wird von Intune nicht geändert oder aktualisiert.
+    - **Oben:** Die Suchleiste wird oben auf den Geräten angezeigt.
+    - **Unten:** Die Suchleiste wird unten auf den Geräten angezeigt.
+    - **Ausblenden:** Die Suchleiste wird ausgeblendet.
 
-  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
-
-  - **Search bar replacement**: Choose where to put the search bar. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Top**: Search bar is shown at the top of devices.
-    - **Bottom**: Search bar is shown at the bottom of devices.
-    - **Hide**: Search bar is hidden.
-
+<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-
 End of comment -->
 
 ### <a name="password"></a>Kennwort
@@ -240,7 +296,7 @@ End of comment -->
 - **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Gerät zurückgesetzt wird (zwischen 4 und 11). Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 
   > [!NOTE]
-  > Geräte von Gerätebesitzern werden nicht aufgefordert, ein Kennwort festzulegen. Die Einstellungen werden erzwungen und das Kennwort muss manuell festgelegt werden. Durch die Durchsetzung dieser Richtlinie wird ein Fehler gemeldet, bis Sie das Kennwort festlegen, das Ihren Anforderungen entspricht.
+  > Auf vollständig verwalteten Geräten, dedizierten Geräten und unternehmenseigenen Arbeitsprofilgeräten wird keine Aufforderung zum Festlegen eines Kennworts angezeigt. Die Einstellungen werden erzwungen und das Kennwort muss manuell festgelegt werden. Durch die Durchsetzung dieser Richtlinie wird ein Fehler gemeldet, bis Sie das Kennwort festlegen, das Ihren Anforderungen entspricht.
 
 ### <a name="power-settings"></a>Energieeinstellungen
 
@@ -255,7 +311,7 @@ End of comment -->
 - **Kontoänderungen** (nur dedizierte Geräte) Wenn **Blockieren** festgelegt wird, können Benutzer Konten nicht bearbeiten. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem Benutzern standardmäßig das Anpassen von Benutzerkonten auf dem Gerät.
 
   > [!NOTE]
-  > Diese Einstellung gilt nicht für vollständig verwaltete Geräte von Gerätebesitzern. Wenn Sie diese Einstellung konfigurieren, wird die Einstellung ignoriert und hat keine Auswirkungen.
+  > Diese Einstellung gilt nicht für vollständig verwaltete Geräte, dedizierte Geräte und unternehmenseigene Arbeitsprofilgeräte. Wenn Sie diese Einstellung konfigurieren, wird die Einstellung ignoriert und hat keine Auswirkungen.
 
 - **Benutzer kann Anmeldeinformationen konfigurieren:** **Blockieren** verhindert, dass Benutzer Zertifikate konfigurieren, die Geräten zugewiesen sind, auch wenn es sich um Geräte handelt, die keinem Benutzerkonto zugewiesen sind. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise ermöglicht das Betriebssystem Benutzern standardmäßig das Konfigurieren oder Ändern ihrer Anmeldeinformationen, wenn sie im Schlüsselspeicher auf diese zugreifen.
 - **Persönliche Google-Konten:** **Blockieren** verhindert, dass Benutzer ihre privaten Google-Konten auf dem Gerät hinzufügen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Möglicherweise erlaubt das Betriebssystem Benutzern standardmäßig das Hinzufügen ihrer persönlichen Google-Konten.

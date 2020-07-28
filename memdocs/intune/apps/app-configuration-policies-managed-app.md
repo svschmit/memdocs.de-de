@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 07/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ed731cdb4efddaedbfcde47acce3fc24d344d80
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b493443a86d7cd1769ce6f66c77acc87063521f6
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988800"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461639"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Apps ohne Geräteregistrierung
 
@@ -39,11 +39,19 @@ Sie können App-Konfigurationsrichtlinien mit verwalteten Apps, die das Intune A
     - **Geräteregistrierungstyp**: „Verwaltete Apps“ ist ausgewählt.
 4. Wählen Sie über **Öffentliche Apps auswählen** oder **Benutzerdefinierte Apps auswählen** die App aus, die Sie konfigurieren möchten. Wählen Sie die App aus der Liste der Apps aus, die Sie genehmigt und mit Intune synchronisiert haben.
 5. Klicken Sie auf **Weiter**, um die Seite **Einstellungen** anzuzeigen.
-6. Geben Sie für jede von der App unterstützte Konfigurationseinstellung den **Namen** und den **Wert** ein. 
+6. Auf der Seite **Einstellungen** finden Sie Optionen, die auf der App basieren, die Sie konfigurieren:
 
-   Für das Intune App SDK aktivierte Apps unterstützen Konfigurationen in Schlüssel-Wert-Paaren. Weitere Informationen zu den unterstützten Schlüssel-Wert-Konfigurationen finden Sie in der Dokumentation zu den einzelnen Apps. Beachten Sie, dass Sie Tokens verwenden können, die dynamisch mit den von der Anwendung generierten Daten aufgefüllt werden. Weitere Informationen finden Sie unter [Konfigurationswerte für das Verwenden von Token](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). Informationen zu den Konfigurationsrichtlinieneinstellungen für die Outlook für iOS-/iPadOS-App finden Sie unter [Verwalten der Konfiguration der Outlook für iOS-/iPadOS-App mit Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
+    - **Allgemeine Konfigurationseinstellungen:** Geben Sie für jede von der App unterstützte allgemeine Konfigurationseinstellung den **Namen** und den **Wert** ein. 
+ 
+        Für das Intune App SDK aktivierte Apps unterstützen Konfigurationen in Schlüssel-Wert-Paaren. Weitere Informationen zu den unterstützten Schlüssel-Wert-Konfigurationen finden Sie in der Dokumentation zu den einzelnen Apps. Beachten Sie, dass Sie Tokens verwenden können, die dynamisch mit den von der Anwendung generierten Daten aufgefüllt werden. Klicken Sie zum Löschen einer allgemeinen Konfigurationseinstellung auf die Auslassungspunkte ( **...** ), und wählen Sie dann **Löschen** aus. Weitere Informationen finden Sie unter [Konfigurationswerte für das Verwenden von Token](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). 
 
-    Wählen Sie zum Löschen einer Konfiguration die Auslassungspunkte ( **...** ) und dann auf **Löschen** aus.  
+    - **Outlook-Konfigurationseinstellungen:** Outlook für iOS und Android bietet Administratoren die Möglichkeit, die Standardkonfiguration für mehrere In-App-Einstellungen anzupassen. Weitere Informationen finden Sie unter [Outlook für iOS und Android: allgemeine App-Konfigurationsszenarios](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios).
+   
+    - **S/MIME:** Secure Multipurpose Internet Mail Extensions (S/MIME) ist eine Spezifikation, die es Benutzern ermöglicht, digital signierte und verschlüsselte E-Mails zu senden und zu empfangen.
+        - **S/MIME aktivieren:** Mit dieser Option geben Sie an, ob S/MIME-Steuerelemente beim Verfassen einer E-Mail aktiviert werden. Standardwert: **Nicht konfiguriert**.
+        - **Benutzer das Ändern der Einstellung erlauben:** Mit dieser Option legen Sie fest, ob der Benutzer die Einstellung ändern darf. Hierzu muss S/MIME aktiviert sein. Standardwert: **Ja**.
+        
+    Informationen über Outlook-Einstellungen für App-Konfigurationsrichtlinien finden Sie unter [Bereitstellen von Outlook für iOS und Android: App-Konfigurationseinstellungen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 7. Klicken Sie auf **Weiter**, um die Seite **Zuweisungen** anzuzeigen.
 8. Klicken Sie auf **Wählen Sie die Gruppen aus, die eingeschlossen werden sollen**.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 0eae6837ff2ef1d8b2e47118a20d4aa4e6b0f22b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430096"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461282"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Einstellungen für die Microsoft Defender Antivirus-Richtlinie unter Windows 10 in Microsoft Intune
 
@@ -282,6 +282,18 @@ Erfahren Sie mehr
   CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Geben Sie ein Intervall zwischen 0 und 24 Stunden an, in dem nach Signaturen gesucht werden soll. Der Wert 0 führt dazu, dass nicht nach neuen Signaturen gesucht wird. Beim Wert 2 erfolgt alle zwei Stunden eine Suche usw.
+
+- **Dateifreigaben zum Herunterladen von Definitionsupdates definieren**  
+  CSP: [SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+
+  Verwalten Sie Orte, z. B. eine UNC-Dateifreigabe, als Quellort für das Herunterladen von Definitionsupdates. Wenn die Definitionsupdates erfolgreich aus einer angegebenen Quelle heruntergeladen wurden, wird mit den übrigen Quellen in der Liste keine Verbindung mehr hergestellt.
+
+  Sie können einzelne Orte **hinzufügen** oder eine Liste mit Orten als CSV-Datei **importieren**.
+
+- **Reihenfolge der Quellen zum Herunterladen von Definitionsupdates definieren**  
+  CSP: [SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+
+  Geben Sie die Reihenfolge an, in der eine Verbindung mit den von Ihnen angegebenen Quellorten hergestellt werden soll, um Definitionsupdates abzurufen. Wenn die Definitionsupdates erfolgreich aus einer angegebenen Quelle heruntergeladen wurden, wird mit den übrigen Quellen in der Liste keine Verbindung mehr hergestellt.
 
 ## <a name="user-experience"></a>Benutzerfreundlichkeit
 

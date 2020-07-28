@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879669"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462064"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Endpunkterkennungs- und -antwort-Richtlinie für die Endpunktsicherheit in Intune
 
@@ -32,9 +32,6 @@ Die Funktionen der Endpunkterkennung- und -antwort von Microsoft Defender ATP bi
 EDR-Richtlinien enthalten plattformspezifische Profile zum Verwalten der EDR-Einstellungen. Die Profile enthalten automatisch ein *Onboardingpaket* für Microsoft Defender ATP. Die Onboardingpakete bestimmen, wie Geräte konfiguriert werden, damit sie mit Microsoft Defender ATP funktionieren. Nach dem Onboarding eines Geräts können Sie mit der Verwendung von Bedrohungsdaten von diesem Gerät beginnen.
 
 Die EDR-Richtlinien werden für Gruppen von Geräten in Azure Active Directory (Azure AD) bereitgestellt, die Sie mit Intune verwalten, sowie für Sammlungen von lokalen Geräten, die Sie mit Configuration Manager verwalten, einschließlich Windows-Servern. Die EDR-Richtlinien für die verschiedenen Verwaltungspfade erfordern unterschiedliche Onboardingpakete. Daher erstellen Sie getrennte EDR-Richtlinien für die verschiedenen Arten der von Ihnen verwalteten Geräte.
-
-> [!TIP]
-> Die Unterstützung für Geräte, die Sie mit Configuration Manager verwalten, befindet sich in einem *öffentlichen Vorschauzustand*.
 
 Die Endpunktsicherheitsrichtlinien für EDR finden Sie unter *Verwalten* im Knoten **Endpunktsicherheit** des [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -74,10 +71,10 @@ Um die Verwendung von EDR-Richtlinien mit Configuration Manager-Geräten zu unte
 - Plattform: **Windows 10 und höher** – Intune stellt die Richtlinie für Geräte in ihren Azure AD-Gruppen bereit.
 - Profil: **Endpunkterkennung und -antwort (MDM)**
 
-**Configuration Manager** *(in der Vorschau)* – Folgendes wird für Geräte unterstützt, die Sie mit Configuration Manager verwalten:
+**Configuration Manager:** Folgendes wird für Geräte unterstützt, die Sie mit Configuration Manager verwalten:
 
 - Plattform: **Windows 10 und Windows Server** – Configuration Manager stellt die Richtlinie für Geräte in Ihren Configuration Manager-Sammlungen bereit.
-- Profil: **Endpunkterkennung und -antwort (ConfigMgr) (Vorschau)**
+- Profil: **Endpunkterkennung und -antwort (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>Einrichten von Configuration Manager zur Unterstützung der EDR-Richtlinie
 
@@ -223,7 +220,7 @@ Bevor Sie Richtlinien für Geräte bereitstellen können, die von Configuration 
 
    - Configuration Manager – Der Configuration Manager stellt die Richtlinie für Geräte in Ihren Configuration Manager-Sammlungen bereit. Wenn Sie die Richtlinie erstellen, wählen Sie Folgendes aus:
      - Plattform: **Windows 10 und Windows Server**:
-     - Profil: **Endpunkterkennung und -antwort (ConfigMgr) (Vorschau)**
+     - Profil: **Endpunkterkennung und -antwort (ConfigMgr)**
 
 4. Wählen Sie **Erstellen** aus.
 

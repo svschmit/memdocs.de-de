@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
-ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
+ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83853569"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410928"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Datenschutzframework mithilfe von App-Schutzrichtlinien 
 
@@ -148,8 +148,10 @@ Die in Stufe 2 erzwungenen Richtlinieneinstellungen umfassen alle für Stufe 1
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Datenübertragung |       Organisationsdaten sichern in…  |          Blockieren  |          iOS/iPadOS, Android  |                  |
 | Datenübertragung |       Organisationsdaten an andere Apps senden  |          Richtlinienverwaltete Apps  |          iOS/iPadOS, Android  |          <p>Unter iOS/iPadOS können Administratoren diesen Wert als „Richtlinienverwaltete Apps“, „Per Richtlinie verwaltete Apps mit Betriebssystemfreigabe“ oder „Per Richtlinie verwaltete Apps mit Filterung für ‚Öffnen in‘/‘Freigeben‘“ konfigurieren. </p><p>„Richtlinienverwaltete Apps mit Betriebssystemfreigabe“ ist eine verfügbare Konfiguration, wenn das Gerät auch für Intune registriert wurde. Diese Einstellung ermöglicht die Datenübertragung auf andere richtlinienverwaltete Apps, sowie Dateiübertragungen auf andere Apps, die von Intune verwaltet werden. </p><p>Bei „Per Richtlinie verwaltete Apps mit Filterung für ‚Öffnen in‘/‘Freigeben‘“ werden die „Öffnen in“-/„Freigeben“-Dialogfelder so gefiltert, dass nur richtlinienverwaltete Apps angezeigt werden. </p><p> Weitere Informationen finden Sie unter [Richtlinieneinstellungen für App-Schutz unter iOS](app-protection-policy-settings-ios.md).</p> |
+| Datenübertragung |       Wählen Sie die Apps aus, die ausgenommen werden sollen  |          Standard / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Datenübertragung |       Kopien von Organisationsdaten speichern  |          Blockieren  |          iOS/iPadOS, Android  |                  |
 | Datenübertragung |       Allow users to save copies to selected services (Benutzern das Speichern von Kopien in den ausgewählten Diensten ermöglichen)  |          OneDrive for Business, SharePoint Online |          iOS/iPadOS, Android  |                  |
+| Datenübertragung |       Telekommunikationsdaten übertragen an  |          Alle Apps |          iOS/iPadOS, Android  |                  |
 | Datenübertragung |       Ausschneiden, Kopieren und Einfügen zwischen Apps einschränken  |          Richtlinienverwaltete Apps mit Einfügen in  |          iOS/iPadOS, Android  |                  |
 | Datenübertragung |       Bildschirmaufnahme und Google Assistant  |          Blockieren  |          Android  |                  |
 | Funktionalität |       Übertragung von Webinhalten mit anderen Apps einschränken  |          Microsoft Edge  |          iOS/iPadOS, Android  |                  |
@@ -173,9 +175,12 @@ Die in Stufe 3 erzwungenen Richtlinieneinstellungen umfassen alle für Stufe 2
 
 | Einstellung | Beschreibung der Einstellung |             Wert  |             Plattform        | Hinweise |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Datenübertragung |       Telekommunikationsdaten übertragen an  |          Beliebige durch Richtlinien verwaltete Telefon-App |          Android  | Administratoren können diese Einstellung auch so konfigurieren, dass eine Telefon-App verwendet wird, die keine App-Schutzrichtlinien unterstützt, indem sie **eine bestimmte Telefon-App** auswählen und die Werte für **Dialer App Package ID** (Paket-ID der Telefon-App) und **Dialer App Name** (Name der Telefon-App) angeben.   |
+| Datenübertragung |       Telekommunikationsdaten übertragen an  |          Eine bestimmte Telefon-App |          iOS/iPadOS  |  |
+| Datenübertragung |       URL-Schema der Telefon-App  |          *durch_URL-Schema_der_Telefon-App_ersetzen* |          iOS/iPadOS  | Unter iOS/iPadOS muss dieser Wert durch das URL-Schema der verwendeten benutzerdefinierten Telefon-App ersetzt werden. Wenn das URL-Schema nicht bekannt ist, wenden Sie sich an den App-Entwickler, um weitere Informationen zu erhalten. Weitere Informationen zu URL-Schemas finden Sie unter [Definieren eines benutzerdefinierten URL-Schemas für Ihre App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
 | Datenübertragung |       Daten von anderen Apps empfangen  |          Richtlinienverwaltete Apps  |          iOS/iPadOS, Android         |  |
-| Datenübertragung |       Tastaturen von Drittanbietern  |          Blockieren  |          iOS/iPadOS        | Unter iOS werde hier alle Tastaturen von Drittanbietern blockiert und können nicht mit der App verwendet werden.  |
-| Datenübertragung |       Genehmigte Tastaturen  |          Erforderlich  |          Android        | Bei Android-Geräten müssen Tastaturen ausgewählt werden, damit sie auf Ihren bereitgestellten Android-Geräten verwendet werden können.  |
+| Datenübertragung |       Tastaturen von Drittanbietern  |          Blockieren  |          iOS/iPadOS        | Unter iOS/iPadOS werden hierdurch alle Tastaturen von Drittanbietern blockiert und können in der App nicht verwendet werden.  |
+| Datenübertragung |       Genehmigte Tastaturen  |          Erforderlich  |          Android        |  |
 | Datenübertragung |       Zu genehmigende Tastaturen auswählen  |          *add/remove keyboards* (Tastaturen hinzufügen/entfernen)  |          Android        | Bei Android-Geräten müssen Tastaturen ausgewählt werden, damit sie auf Ihren bereitgestellten Android-Geräten verwendet werden können.  |
 | Funktionalität |       Drucken der Organisationsdaten  |          Blockieren  |          iOS/iPadOS, Android         |  |
 

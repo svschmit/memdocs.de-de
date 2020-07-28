@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a1c47a157e4ee5bd4337d840515a340dcf1fd9c
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195717"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461418"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Neuerungen in Microsoft Intune (vorherige Monate)
 
@@ -801,7 +801,7 @@ Wir haben folgende Unterstützungsfeatures für vollständig verwaltete Android-
     - Verknüpfen von SCEP-Zertifikaten mit E-Mail-Profilen eines Gerätebesitzers zur Authentifizierung (über AppConfig)
 - System-Apps werden auf Android Enterprise-Geräten unterstützt. In Intune fügen Sie eine Android Enterprise-System-App über **Client-Apps** > **Apps** > **Hinzufügen** hinzu. Wählen Sie in der Liste **App-Typ** den Eintrag **Android Enterprise-System-App** aus. Weitere Informationen finden Sie unter [Hinzufügen von Android Enterprise-System-Apps zu Microsoft Intune](../apps/apps-ae-system.md). <!-- 4062195 -->
 - Unter **Gerätekonformität** > **Android Enterprise** > **Gerätebesitzer** können Sie eine Konformitätsrichtlinie erstellen, die die Nachweisstufe „Google SafetyNet“ festlegt.   <!-- 4631425 -->
-- Auf vollständig verwalteten Android Enterprise-Geräten werden Mobile Threat Defense-Anbieter unterstützt. Unter **Gerätekonformität** > **Android Enterprise** > **Gerätebesitzer** können Sie eine akzeptable Bedrohungsstufe auswählen. <!-- 4631440 --> Unter [Android Enterprise-Einstellungen, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen](../protect/compliance-policy-create-android-for-work.md#device-owner) werden die aktuellen Einstellungen aufgelistet.
+- Auf vollständig verwalteten Android Enterprise-Geräten werden Mobile Threat Defense-Anbieter unterstützt. Unter **Gerätekonformität** > **Android Enterprise** > **Gerätebesitzer** können Sie eine akzeptable Bedrohungsstufe auswählen. <!-- 4631440 --> Unter [Android Enterprise-Einstellungen, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen](../protect/compliance-policy-create-android-for-work.md) werden die aktuellen Einstellungen aufgelistet.
 - Auf vollständig verwalteten Android Enterprise-Geräten kann jetzt die Microsoft Launcher-App über App-Konfigurationsrichtlinien so konfiguriert werden, dass auf dem vollständig verwalteten Gerät standardisierte Endbenutzerfunktionen zugelassen werden. Die Microsoft Launcher-App kann zum Personalisieren von Android-Geräten verwendet werden. Wenn Sie die App in Verbindung mit einem Microsoft-Konto oder einem Geschäfts-, Schul- oder Unikonto verwenden, können Sie in Ihrem personalisierten Feed auf Ihre Kalender, Dokumente und aktuellen Aktivitäten zugreifen. <!-- 5334044 -->
 
 Wir freuen uns, mit diesem Update bekannt geben zu können, dass die Intune-Unterstützung für vollständig verwaltete Android Enterprise-Geräte jetzt allgemein verfügbar ist.
@@ -833,7 +833,7 @@ Verwenden Sie Intune Endpoint Protection-Einstellungen, um die [clientgesteuerte
 Diese Einstellung initiiert die clientgesteuerte Aktualisierung eines Wiederherstellungskennworts nach der Wiederherstellung eines Betriebssystemlaufwerks (durch Verwendung von bootmgr oder WinRE) sowie die Entsperrung eines Wiederherstellungskennworts auf einem festen Datenlaufwerk. Diese Einstellung aktualisiert das verwendete Wiederherstellungskennwort; nicht verwendete Kennwörter auf dem Volume bleiben unverändert. Weitere Informationen finden Sie in der Dokumentation des BitLocker-Konfigurationsdienstanbieters zu [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
 
 #### <a name="tamper-protection-for-windows-defender-antivirus---4705448----------"></a>Manipulationsschutz für Windows Defender Antivirus<!-- 4705448        -->
-Verwenden Sie Intune, um den *Manipulationsschutz* für Windows Defender Antivirus zu verwalten. Sie finden die [Einstellung für den Manipulationsschutz](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) in der Microsoft Defender Security Center-Gruppe, wenn Sie Gerätekonfigurationsprofile für Windows 10-Endpoint Protection verwenden. Legen Sie den Manipulationsschutz auf *Aktiviert* fest, um die Einschränkungen des Manipulationsschutzes zu aktivieren. Durch Festlegen von *Deaktiviert* deaktivieren Sie die Einschränkungen, und durch Festlegen von *Nicht konfiguriert* behalten Sie die aktuelle Konfiguration eines Geräts bei.  
+Verwenden Sie Intune, um den *Manipulationsschutz* für Windows Defender Antivirus zu verwalten. Sie finden die [Einstellung für den Manipulationsschutz](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) in der Microsoft Defender Security Center-Gruppe, wenn Sie Gerätekonfigurationsprofile für Windows 10-Endpoint Protection verwenden. Legen Sie den Manipulationsschutz auf **Aktiviert** fest, um die Einschränkungen des Manipulationsschutzes zu aktivieren. Durch Festlegen auf **Deaktiviert** deaktivieren Sie die Einschränkungen, und durch Festlegen auf **Nicht konfiguriert** behalten Sie die aktuelle Konfiguration eines Geräts bei.  
 
 Weitere Informationen zum Manipulationsschutz finden Sie unter [Verhindern von Änderungen an Sicherheitseinstellungen mit dem Manipulationsschutz](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) in der Windows-Dokumentation.
 
@@ -1603,7 +1603,7 @@ Die Bereitstellung dieses Features verzögert sich und ist in einem zukünftigen
 Als V1.0 in Version 1808 erstmals eingeführt wurde, gab es wichtige Unterschiede zur Beta-API. Diese Änderungen werden mit Version 1903 in der Betaversion der API berücksichtigt. Wenn Sie über wichtige Berichte verfügen, die die Betaversion der API nutzen, wird dringend empfohlen, dass Sie diese Berichte in V1.0 konvertieren, um Breaking Changes zu vermeiden. Weitere Informationen finden Sie im [Änderungsprotokoll für die Intune Data Warehouse-API](../developer/reports-changelog.md#1903-part-2).
 
 #### <a name="monitor-security-baseline-status-public-preview----3082047---"></a>Überwachen des Status der Sicherheitsbaseline (Public Preview) <!-- 3082047 --> 
-Der Überwachung von Sicherheitsbaselines wurde eine [Ansicht für einzelne Kategorien](../protect/security-baselines-monitor.md#per-category-view) hinzugefügt. (Sicherheitsbaselines befinden sich weiterhin in Preview). Die Ansicht für einzelne Kategorien zeigt jede Kategorie der Baseline mit dem Prozentsatz der Geräte an, die in jede Statusgruppe dieser Kategorie fallen. Sie können nun anzeigen, wie viele Geräte nicht mit den individuellen Kategorien übereinstimmen und falsch konfiguriert oder nicht anwendbar sind.
+Der Überwachung von Sicherheitsbaselines wurde eine [Ansicht für einzelne Kategorien](../protect/security-baselines-monitor.md) hinzugefügt. (Sicherheitsbaselines befinden sich weiterhin in Preview). Die Ansicht für einzelne Kategorien zeigt jede Kategorie der Baseline mit dem Prozentsatz der Geräte an, die in jede Statusgruppe dieser Kategorie fallen. Sie können nun anzeigen, wie viele Geräte nicht mit den individuellen Kategorien übereinstimmen und falsch konfiguriert oder nicht anwendbar sind.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>Rollenbasierte Zugriffssteuerung
@@ -1623,7 +1623,7 @@ Sie können nun Microsoft Visio Pro für Office 365 und den Microsoft Project On
 **Microsoft Visio Pro für Office 365** heißt jetzt **Microsoft Visio Online Plan 2**.  Weitere Informationen zu Microsoft Visio finden Sie unter [Visio Online Plan 2](https://products.office.com/visio/visio-online-plan-2). Weitere Informationen über Office 365-Apps für Windows 10-Geräte finden Sie unter [Zuweisen von Office 365-Apps zu Windows 10-Geräten mit Microsoft Intune](../apps/apps-add-office365.md).
 
 #### <a name="intune-app-protection-policy-app-character-limit-setting---3291302----"></a>Einstellung für die Zeichenbeschränkung für Intune-App-Schutzrichtlinien<!-- 3291302  -->
-Intune-Administratoren können eine Ausnahme für die Intune-App-Richtlinieneinstellung zum **Einschränken des Ausschneidens, Kopierens und Einfügens bei anderen Apps** festlegen.  Als Administrator können Sie die Anzahl von Zeichen festlegen, die aus einer verwalteten App ausgeschnitten oder kopiert werden können. Mit dieser Einstellungen kann die festgelegte Zeichenanzahl, unabhängig von der Einstellung für das Einschränken von Ausschneiden, Kopieren und Einfügen bei anderen Apps, mit einer beliebigen App geteilt werden. Beachten Sie, dass die Version der Intune-Unternehmensportal-App für Android Version 5.0.4364.0 oder höher erfordert. Weitere Informationen finden Sie unter [iOS-Datenschutz](../apps/app-protection-policy-settings-ios.md#data-protection), [Android-Datenschutz](../apps/app-protection-policy-settings-android.md#data-protection) und [Überprüfen der Schutzprotokolle für Client-Apps](../apps/app-protection-policy-settings-log.md#app-protection-policy-settings).
+Intune-Administratoren können eine Ausnahme für die Intune-App-Richtlinieneinstellung zum **Einschränken des Ausschneidens, Kopierens und Einfügens bei anderen Apps** festlegen.  Als Administrator können Sie die Anzahl von Zeichen festlegen, die aus einer verwalteten App ausgeschnitten oder kopiert werden können. Mit dieser Einstellungen kann die festgelegte Zeichenanzahl, unabhängig von der Einstellung für das Einschränken von Ausschneiden, Kopieren und Einfügen bei anderen Apps, mit einer beliebigen App geteilt werden. Beachten Sie, dass die Version der Intune-Unternehmensportal-App für Android Version 5.0.4364.0 oder höher erfordert. Weitere Informationen finden Sie unter [iOS-Datenschutz](../apps/app-protection-policy-settings-ios.md#data-protection), [Android-Datenschutz](../apps/app-protection-policy-settings-android.md#data-protection) und [Überprüfen der Schutzprotokolle für Client-Apps](../apps/app-protection-policy-settings-log.md).
 
 #### <a name="office-deployment-tool-odt-xml-for-office-proplus-deployment---3192477-----"></a>Office-Bereitstellungstool-XML für die Bereitstellung von Office ProPlus<!-- 3192477   -->
 Sie können das Office-Bereitstellungstool-XML bereitstellen, wenn Sie eine Instanz von Office ProPlus in der Intune-Verwaltungskonsole erstellen. Dadurch wird die Anpassbarkeit erweitert, wenn die vorhandenen Benutzeroberflächenoptionen von Intune nicht Ihre Anforderungen erfüllen. Weitere Informationen finden Sie unter [Zuweisen von Office 365-Apps zu Windows 10-Geräten mit Microsoft Intune](../apps/apps-add-office365.md) und [Konfigurationsoptionen für das Office-Bereitstellungstool](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
@@ -3897,7 +3897,7 @@ Sie können Unternehmenscloudressourcen, IP-Adressbereiche und interne Proxyserv
 #### <a name="two-additional-settings-for-windows-defender-antivirus---1338409---"></a>Zwei zusätzliche Einstellungen für Windows Defender Antivirus<!-- 1338409 -->  
 **Ebene der Dateiblockierung**
 
-| | |
+| Einstellung | Details |
 |---|---|
 | Nicht konfiguriert | **Nicht konfiguriert** verwendet die Standardblockierungsebene von Windows Defender Antivirus und bietet eine starke Erkennung ohne das Risiko zu erhöhen, zulässige Dateien zu erkennen. |
 | Hoch | **Hoch** wendet eine starke Erkennungsebene an.
@@ -3909,7 +3909,7 @@ Es wird empfohlen, die Ebene der Datenblockierung auf den Standardwert, **Nicht 
 
 **Timeouterweiterung für die Dateiüberprüfung durch die Cloud**  
 
-| | |
+| Einstellung | Detail |
 |--|--|
 | Anzahl von Sekunden (0–50) | Geben Sie den maximalen Zeitraum an, für den Windows Defender Antivirus eine Datei blockieren soll, während auf ein Ergebnis von der Cloud gewartet wird. Der Standardzeitraum beträgt 10 Sekunden. Jede zusätzliche Zeit, die hier angegeben wird (bis zu 50 Sekunden), wird zu diesen 10 Sekunden addiert. In den meisten Fällen nimmt der Scan wesentlich weniger als den Maximalwert in Anspruch. Das Erweitern des Zeitraums ermöglicht es der Cloud, verdächtige Dateien gründlich zu überprüfen. Es wird empfohlen, diese Einstellung zu aktivieren und mindestens 20 zusätzliche Sekunden anzugeben. |
 

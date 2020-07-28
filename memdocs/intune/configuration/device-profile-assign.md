@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989019"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565681"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Zuweisen von Benutzer- und Geräteprofilen in Microsoft Intune
 
@@ -85,11 +85,13 @@ Beispiel:
 
 - Auf manchen Windows-Geräten sollten Sie immer einige Einstellungen für Microsoft Edge steuern – unabhängig davon, wer das Gerät verwendet. Möglicherweise möchten Sie alle Downloads blockieren, sämtliche Cookies auf die aktuelle Browsersitzung einschränken und den Browserverlauf löschen. Dafür bietet es sich an, diese Windows-Geräte einer Gerätegruppe zuzuordnen. Erstellen Sie anschließend [in Intune eine administrative Vorlage](administrative-templates-windows.md), fügen Sie diese Geräteeinstellungen hinzu, und weisen Sie dieses Profil anschließend der Gerätegruppe zu.
 
-Fazit: Verwenden Sie Gerätegruppen immer dann, wenn es keine Rolle spielt, wer oder ob überhaupt jemand bei dem jeweiligen Gerät angemeldet ist. Damit sind Ihre Einstellungen immer auf dem Gerät gespeichert.
+Fazit: Verwenden Sie Gerätegruppen immer dann, wenn es keine Rolle spielt, wer bei dem jeweiligen Gerät angemeldet ist oder ob überhaupt jemand sich anmeldet. Damit sind Ihre Einstellungen immer auf dem Gerät gespeichert.
 
 ### <a name="user-groups"></a>Benutzergruppen
 
 Profileinstellungen, die auf Benutzergruppen angewendet werden, gelten immer für den jeweiligen Benutzer – auch wenn er mehrere Geräte verwendet. Es ist normal, dass Benutzer mehrere Geräte verwenden, z. B. ein Surface Pro für die Arbeit und ein iOS/iPadOS-Gerät für den Privatgebrauch. In der Regel greifen diese Benutzer dann auch über ihre verschiedenen Geräte auf ihre E-Mails und andere Unternehmensressourcen zu.
+
+Befolgen Sie die folgende allgemeine Regel: Wenn ein Feature zu einem Benutzer gehört, z. B. E-Mail oder Benutzerzertifikate, weisen Sie dieses Benutzergruppen zu.
 
 Beispiel:
 

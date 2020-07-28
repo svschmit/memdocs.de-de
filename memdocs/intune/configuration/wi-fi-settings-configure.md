@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca2a5ddd3d2b4c0aa93c7c955d0d688944ee8f95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 25b07dcbb76f6d4a8aae964d0123a880d179784e
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985498"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871932"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Hinzufügen und Verwenden von WLAN-Einstellungen auf Microsoft Intune-Geräten
 
@@ -68,7 +68,7 @@ WLAN-Profile unterstützen folgende Geräteplattformen:
 
       > [!TIP]
       >
-      > - Für **Android Enterprise**-Geräte, die als dedizierte Geräte (Kiosk) ausgeführt werden, wählen Sie **Nur Gerätebesitzer** > **WLAN** aus.
+      > - Klicken Sie für **Android Enterprise**-Geräte, die als dedizierte Geräte (Kiosk) ausgeführt werden, auf **Vollständig verwaltetes, dediziertes und unternehmenseigenes Arbeitsprofil** > **WLAN**.
       > - Für **Windows 8.1 und neuer** können Sie **WLAN (Import)** auswählen. Mit dieser Option können Sie WLAN-Einstellungen als XML-Datei importieren, die Sie zuvor von einem anderen Gerät exportiert haben.
 
 4. Wählen Sie **Erstellen** aus.
@@ -101,9 +101,8 @@ WLAN-Profile unterstützen folgende Geräteplattformen:
 > [!TIP]
 > Wenn Sie die zertifikatbasierte Authentifizierung für Ihr WLAN-Profil verwenden, stellen Sie das WLAN-Profil, das Zertifikatprofil und das vertrauenswürdige Stammprofil für die gleichen Gruppen bereit, um sicherzustellen, dass jedes Gerät die Rechtmäßigkeit Ihrer Zertifizierungsstelle erkennen kann.  Weitere Informationen finden Sie unter [Verwenden von Zertifikaten zur Authentifizierung in Microsoft Intune](../protect/certificates-configure.md).
 
-
 ## <a name="next-steps"></a>Nächste Schritte
 
-Das Profil ist nun erstellt. Die nächsten Schritte sind das [Zuweisen dieses Profils](device-profile-assign.md) und das [Überwachen seines Status](device-profile-monitor.md).
+Das Profil ist nun erstellt, führt aber möglicherweise keine Aktionen durch. Die nächsten Schritte sind das [Zuweisen dieses Profils](device-profile-assign.md) und das [Überwachen seines Status](device-profile-monitor.md).
 
 [Problembehandlung für WLAN-Profile in Intune](troubleshoot-wi-fi-profiles.md)

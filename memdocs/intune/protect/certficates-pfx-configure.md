@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 29cb970dd7148496f1a4f200ba32505e6f2c0e16
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332834"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461588"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden Ihrer PKCS-Zertifikate mit Intune
 
@@ -221,7 +221,7 @@ Jedes Gerät benötigt ein Zertifikat einer Stamm- oder Zwischenzertifizierungss
 3. Geben Sie die folgenden Eigenschaften ein:
    - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:
      - Android-Geräteadministrator
-     - Android Enterprise > Nur Gerätebesitzer
+     - Android Enterprise > Fully Managed, Dedicated, and Corporate-Owned Work Profile (Android Enterprise > Vollständig verwaltet, dediziert und unternehmenseigen mit einem Arbeitsprofil)
      - Android Enterprise > Nur Arbeitsprofil
      - iOS/iPadOS
      - macOS

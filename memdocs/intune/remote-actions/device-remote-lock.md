@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ac6a5d848a0d02b72a4f7275a6b6df47b2cd834
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 220a2ac92d46c1279d4498c8673e2ceef28c470f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107342"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462047"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Remotesperren von Geräten mit Intune
 
@@ -35,7 +35,9 @@ Die **Remotesperre** wird für folgende Plattformen unterstützt:
 
 - Android
 - Android Enterprise-Kioskgeräte
-- Android Enterprise-Arbeitsprofilgeräte
+- Android Enterprise-Geräte mit Arbeitsprofil
+- Vollständig verwaltete Android Enterprise-Geräte
+- Unternehmenseigene Android Enterprise-Geräte mit Arbeitsprofil
 - iOS
 - macOS
 - Windows 10 Mobile
@@ -45,7 +47,7 @@ Die **Remotesperre** wird für folgende Plattformen nicht unterstützt:
 - Windows 10 Desktop
 
 > [!NOTE]
-> Bei macOS-Geräten legen Sie eine Wiederherstellungs-PIN aus 6 Ziffern fest. Wenn das Gerät gesperrt ist, wird in der **Geräteübersicht** die PIN angezeigt, bis eine andere Geräteaktion gesendet wird. Stellen Sie sicher, dass Sie sich die PIN notieren, da sie nur 30 Tage nach dem Senden des Remotesperrbefehls verfügbar ist. Nach diesen 30 Tagen verfügt Intune nicht mehr über die PIN. Außerdem sollten Sie diesen Befehl für das gleiche Gerät erst dann erneut initiieren, wenn die ursprüngliche PIN zum erfolgreichen Entsperren des Geräts verwendet wurde. Sie sollten diesen Befehl senden, sich die PIN notieren und bis zum erfolgreichen Entsperren des macOS-Gerät diesen Befehl nicht erneut an dasselbe Gerät senden.  
+> Bei macOS-Geräten legen Sie eine Wiederherstellungs-PIN aus 6 Ziffern fest. Wenn das Gerät gesperrt ist, wird in der **Geräteübersicht** die PIN angezeigt, bis eine andere Geräteaktion gesendet wird. Stellen Sie sicher, dass Sie sich die PIN notieren, da sie nur 30 Tage nach dem Senden des Remotesperrbefehls verfügbar ist. Nach diesen 30 Tagen verfügt Intune nicht mehr über die PIN. Außerdem wird der Status in der Berichterstattung als fehlerhaft angezeigt, wenn Sie diesen Befehl für dasselbe Gerät noch mal initiieren, das Gerät jedoch nicht mit der ursprünglichen PIN erfolgreich entsperrt wurde. Sie sollten diesen Befehl nur einmal senden, sich die PIN notieren und bis zum erfolgreichen Entsperren des macOS-Geräts nicht versuchen, diesen Befehl noch mal an dasselbe Gerät zu senden.
 
 
 ## <a name="remote-lock-a-device"></a>Remotesperre für Gerät aktivieren

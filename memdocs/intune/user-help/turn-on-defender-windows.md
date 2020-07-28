@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/08/2017
+ms.date: 07/15/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f29cc024b34736a0a6d759179af70ceb51e12ea1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2169abf9955446d6299a64c7ce2ae03723faa792
+ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881119"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447975"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Aktivieren von Windows Defender zum Zugriff auf Unternehmensressourcen
 
@@ -41,12 +41,12 @@ Es gibt einige Einstellungen in Ihrem Windows Defender, die Sie möglicherweise 
 
 ## <a name="turn-on-real-time-protection"></a>Aktivieren von Echtzeitschutz
 
-Vergewissern Sie sich, dass der Echtzeitschutz aktiviert ist, indem Sie zu **Start** gehen und nach **Windows Defender Security Center** suchen. Wählen Sie **Einstellungen für Viren- & Bedrohungsschutz** aus, und überprüfen Sie, ob sowohl **Echtzeitschutz** als auch **Cloudbasierter Schutz** auf **Ein** festgelegt sind. Wenn diese Optionen nicht angezeigt werden, gehen Sie wie folgt vor, um sie zu aktivieren:
+Vergewissern Sie sich, dass der Echtzeitschutz aktiviert ist, indem Sie auf **Start** klicken und nach **Windows-Sicherheit** suchen. Wählen Sie **Einstellungen für Viren- & Bedrohungsschutz** aus, und überprüfen Sie, ob sowohl **Echtzeitschutz** als auch **Cloudbasierter Schutz** auf **Ein** festgelegt sind. Wenn diese Optionen nicht angezeigt werden, gehen Sie wie folgt vor, um sie zu aktivieren:
 
 1. Öffnen Sie im Menü **Start** die **Systemsteuerung**.
 2. Öffnen Sie **Verwaltung** > **Gruppenrichtlinie bearbeiten**. Dadurch wird der **Editor für lokale Gruppenrichtlinien** in einem neuen Fenster geöffnet.
-3. Öffnen Sie **Computerkonfiguration** > **Administrative Vorlagen** > **Windows-Komponenten** > **Windows Defender Security Center** > **Viren- & Bedrohungsschutz**.
-4. Öffnen Sie die Einstellung **Viren- und Bedrohungsschutzbereich**, und legen Sie sie auf **Deaktiviert** fest.
+3. Öffnen Sie **Computerkonfiguration** > **Administrative Vorlagen** > **Windows-Komponenten** > **Windows-Sicherheit** > **Viren- und Bedrohungsschutz**.
+4. Öffnen Sie die Einstellung **Hide the Virus and threat protection area** (Bereich für Viren- und Bedrohungsschutz ausblenden), und legen Sie sie auf **Deaktiviert** fest.
 
 ## <a name="update-your-antivirus-definitions"></a>Aktualisieren Sie Ihre Virusdefinitionen
 

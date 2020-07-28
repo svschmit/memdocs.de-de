@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: cdfec1d82d68e97544172c56cecc416846b4a0f6
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353569"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460483"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>Verwenden von FileVault-Verschlüsselung für macOS mit Intune
 
@@ -45,6 +45,8 @@ Weitere Informationen zum Verwalten von BitLocker für Windows 10 finden Sie un
 
 Sobald Sie eine Richtlinie für die Geräteverschlüsselung mit FileVault erstellt haben, wird die Richtlinie in zwei Phasen auf die Geräte angewendet. Zuerst wird das Gerät vorbereitet, damit Intune den Wiederherstellungsschlüssel abrufen und sichern kann. Dies wird als Schlüsselhinterlegung bezeichnet. Sobald dieser Vorgang abgeschlossen ist, kann die Datenträgerverschlüsselung beginnen.
 
+Zusätzlich zur Verwendung von Intune-Richtlinien zum Verschlüsseln eines Geräts mit FileVault können Sie Richtlinien auf einem verwalteten Gerät bereitstellen, um Intune zu ermöglichen, [die Verwaltung von FileVault zu übernehmen, wenn das Gerät vom Benutzer verschlüsselt wurde](#assume-management-of-filevault-on-previously-encrypted-devices). In diesem Szenario ist erforderlich, dass das Gerät die FileVault-Richtlinie von Intune empfängt. Anschließend muss der Benutzer seinen persönlichen Wiederherstellungsschlüssel in Intune hochladen.
+
 Damit FileVault auf einem Gerät funktioniert, ist eine vom Benutzer genehmigte Geräteregistrierung erforderlich. Der Benutzer muss das Verwaltungsprofil manuell anhand von Systemeinstellungen genehmigen, damit die Registrierung als vom Benutzer genehmigt angesehen wird.
 
 ## <a name="permissions-to-manage-filevault"></a>Berechtigungen zum Verwalten von FileVault
@@ -59,38 +61,6 @@ Im Folgenden sind die FileVault-Berechtigungen aufgelistet, die zur Kategorie de
 
 - **Rotate FileVault key** (FileVault-Schlüssel rotieren)
   - Helpdesk-Operator
-
-## <a name="create-endpoint-security-policy-for-filevault"></a>Erstellen einer Endpunktsicherheitsrichtlinie für FileVault
-
-1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
-
-2. Wählen Sie **Endpunktsicherheit** > **Datenträgerverschlüsselung** > **Richtlinie erstellen** aus.
-
-3. Geben Sie auf der Seite **Grundlagen** die folgenden Eigenschaften ein, und wählen Sie dann **Weiter** aus.
-   - **Plattform**: macOS
-   - **Profil**: FileVault
-
-   ![Auswählen des FileVault-Profils](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
-
-4. Auf der Seite **Konfigurationseinstellungen**:
-   1. Legen Sie *FileVault aktivieren* auf **Ja** fest.
-   2. Als *des Wiederherstellungsschlüsseltyp* wird nur **Persönlicher Wiederherstellungsschlüssel** unterstützt.
-   3. Konfigurieren Sie zusätzliche Einstellungen, um Ihre Anforderungen zu erfüllen.
-
-   Fügen Sie ggf. eine Meldung hinzu, um Benutzer zu informieren, wie sie den Wiederherstellungsschlüssel für ihr Gerät abrufen können. Diese Informationen können für Ihre Benutzer nützlich sein, wenn Sie die Einstellung für die Rotation persönlicher Wiederherstellungsschlüssel verwenden. Dadurch können regelmäßig automatisch neue Wiederherstellungsschlüssel für die Geräte generiert werden.
-
-   Beispiel: Melden Sie sich auf einem beliebigen Gerät bei der Intune-Unternehmensportal-Website an, um verlorene oder kürzlich rotierte Wiederherstellungsschlüssel abrufen. Navigieren Sie im Portal zu „Geräte“, wählen Sie das Gerät aus, für das FileVault aktiviert ist, und klicken Sie dann auf *Wiederherstellungsschlüssel abrufen*. Dann wird der aktuelle Wiederherstellungsschlüssel angezeigt.
-
-5. Wenn Sie fertig sind mit dem Konfigurieren der Einstellungen, klicken Sie auf **Weiter**.
-
-6. Klicken Sie auf der Seite **Bereich (Markierungen)** auf **Bereichstags auswählen**, um den Bereich „Markierungen auswählen“ zu öffnen, in dem Sie dem Profil Bereichstags zuweisen.
-
-   Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
-
-7. Wählen Sie auf der Seite **Zuweisungen** die Gruppen aus, die dieses Profil erhalten sollen. Weitere Informationen zum Zuweisen von Profilen finden Sie unter „Zuweisen von Benutzer- und Geräteprofilen“.
-Wählen Sie **Weiter** aus.
-
-8. Klicken Sie, wenn Sie fertig sind, auf der Seite **Bewerten + erstellen** auf **Erstellen**. Das neue Profil wird in der Liste angezeigt, wenn Sie den Richtlinientyp für das Profil auswählen, das Sie erstellt haben.
 
 ## <a name="create-device-configuration-policy-for-filevault"></a>Erstellen einer Gerätekonfigurationsrichtlinie für FileVault
 
@@ -121,7 +91,7 @@ Wählen Sie **Weiter** aus.
 
    - Wählen Sie für *Art des Wiederherstellungsschlüssels* die Option **Persönlicher Schlüssel** aus.
 
-   - Fügen Sie für *Beschreibung des Hinterlegungsstandorts für den persönlichen Wiederherstellungsschlüssel* eine Meldung hinzu, um Benutzer zu informieren, wie sie den Wiederherstellungsschlüssel für ihr Gerät abrufen können. Diese Informationen können für Ihre Benutzer nützlich sein, wenn Sie die Einstellung für die Rotation persönlicher Wiederherstellungsschlüssel verwenden. Dadurch können regelmäßig automatisch neue Wiederherstellungsschlüssel für die Geräte generiert werden.
+   - Fügen Sie für *Beschreibung des Hinterlegungsstandorts für den persönlichen Wiederherstellungsschlüssel* eine Meldung hinzu, um Benutzer zu informieren, [wie sie den Wiederherstellungsschlüssel für ihr Gerät abrufen können](#retrieve-a-personal-recovery-key). Diese Informationen können für Ihre Benutzer nützlich sein, wenn Sie die Einstellung für die Rotation persönlicher Wiederherstellungsschlüssel verwenden. Dadurch können regelmäßig automatisch neue Wiederherstellungsschlüssel für die Geräte generiert werden.
 
      Beispiel: Melden Sie sich auf einem beliebigen Gerät bei der Intune-Unternehmensportal-Website an, um verlorene oder kürzlich rotierte Wiederherstellungsschlüssel abrufen. Navigieren Sie im Portal zu *Geräte*, wählen Sie das Gerät aus, für das FileVault aktiviert ist, und klicken Sie dann auf *Wiederherstellungsschlüssel abrufen*. Dann wird der aktuelle Wiederherstellungsschlüssel angezeigt.
 
@@ -136,6 +106,38 @@ Wählen Sie **Weiter** aus.
 
 9. Klicken Sie, wenn Sie fertig sind, auf der Seite **Bewerten + erstellen** auf **Erstellen**. Das neue Profil wird in der Liste angezeigt, wenn Sie den Richtlinientyp für das Profil auswählen, das Sie erstellt haben.
 
+## <a name="create-endpoint-security-policy-for-filevault"></a>Erstellen einer Endpunktsicherheitsrichtlinie für FileVault
+
+1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
+
+2. Wählen Sie **Endpunktsicherheit** > **Datenträgerverschlüsselung** > **Richtlinie erstellen** aus.
+
+3. Geben Sie auf der Seite **Grundlagen** die folgenden Eigenschaften ein, und wählen Sie dann **Weiter** aus.
+   - **Plattform**: macOS
+   - **Profil**: FileVault
+
+   ![Auswählen des FileVault-Profils](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
+
+4. Auf der Seite **Konfigurationseinstellungen**:
+   1. Legen Sie *FileVault aktivieren* auf **Ja** fest.
+   2. Als *des Wiederherstellungsschlüsseltyp* wird nur **Persönlicher Wiederherstellungsschlüssel** unterstützt.
+   3. Konfigurieren Sie zusätzliche Einstellungen, um Ihre Anforderungen zu erfüllen.
+
+   Fügen Sie ggf. eine Meldung hinzu, um Benutzer zu informieren, [wie sie den Wiederherstellungsschlüssel für ihr Gerät abrufen können](#retrieve-a-personal-recovery-key). Diese Informationen können für Ihre Benutzer nützlich sein, wenn Sie die Einstellung für die Rotation persönlicher Wiederherstellungsschlüssel verwenden. Dadurch können regelmäßig automatisch neue Wiederherstellungsschlüssel für die Geräte generiert werden.
+
+   Beispiel: Melden Sie sich auf einem beliebigen Gerät bei der Intune-Unternehmensportal-Website an, um verlorene oder kürzlich rotierte Wiederherstellungsschlüssel abrufen. Navigieren Sie im Portal zu „Geräte“, wählen Sie das Gerät aus, für das FileVault aktiviert ist, und klicken Sie dann auf *Wiederherstellungsschlüssel abrufen*. Dann wird der aktuelle Wiederherstellungsschlüssel angezeigt.
+
+5. Wenn Sie fertig sind mit dem Konfigurieren der Einstellungen, klicken Sie auf **Weiter**.
+
+6. Klicken Sie auf der Seite **Bereich (Markierungen)** auf **Bereichstags auswählen**, um den Bereich „Markierungen auswählen“ zu öffnen, in dem Sie dem Profil Bereichstags zuweisen.
+
+   Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
+
+7. Wählen Sie auf der Seite **Zuweisungen** die Gruppen aus, die dieses Profil erhalten sollen. Weitere Informationen zum Zuweisen von Profilen finden Sie unter „Zuweisen von Benutzer- und Geräteprofilen“.
+Wählen Sie **Weiter** aus.
+
+8. Klicken Sie, wenn Sie fertig sind, auf der Seite **Bewerten + erstellen** auf **Erstellen**. Das neue Profil wird in der Liste angezeigt, wenn Sie den Richtlinientyp für das Profil auswählen, das Sie erstellt haben.
+
 ## <a name="manage-filevault"></a>Verwalten von FileVault
 
 Informationen zu Geräten, die die FileVault-Richtlinie erhalten, finden Sie unter [Überwachen der Datenträgerverschlüsselung](../protect/encryption-monitor.md).
@@ -144,17 +146,60 @@ Wenn Intune zum ersten Mal ein macOS-Gerät mithilfe von FileVault verschlüssel
 
 Bei verwalteten Geräten kann Intune eine Kopie des persönlichen Wiederherstellungsschlüssels hinterlegen. Durch die Hinterlegung von Schlüsseln können Intune-Administratoren die Schlüssel zum Schutz von Geräten rotieren, und die Benutzer können verlorene oder rotierte persönliche Wiederherstellungsschlüssel wiederherstellen.
 
-Nachdem Intune ein macOS-Gerät mit FileVault verschlüsselt hat:
+Intune hinterlegt einen Wiederherstellungsschlüssel, wenn die Intune-Richtlinie ein Gerät verschlüsselt oder nachdem ein Benutzer seinen Wiederherstellungsschlüssel für das Gerät hochgeladen hat, das er manuell verschlüsselt hat.
 
-- Administratoren können die FileVault-Wiederherstellungsschlüssel mithilfe des Intune-Verschlüsselungsberichts anzeigen und verwalten.
-- Benutzer können den persönlichen Wiederherstellungsschlüssel eines Geräts im Intune-Unternehmensportal des Geräts anzeigen. Wählen Sie im Intune-Unternehmensportal das verschlüsselte macOS-Gerät aus, und wählen Sie anschließend „Wiederherstellungsschlüssel abrufen“ als Remotegeräteaktion aus.
+Nachdem Intune den persönlichen Wiederherstellungsschlüssel hinterlegt hat:
+
+- können Administratoren die FileVault-Wiederherstellungsschlüssel für ein beliebiges verwaltetes macOS-Gerät mithilfe des Intune-Verschlüsselungsberichts verwalten und rotieren.
+- können Administratoren den persönlichen Wiederherstellungsschlüssel nur für verwaltete macOS-Geräte anzeigen, die als *unternehmenseigen* gekennzeichnet sind. Sie können nicht den Wiederherstellungsschlüssel für persönliche Geräte anzeigen.
+- können Benutzer [ihren persönlichen Wiederherstellungsschlüssel über einen unterstützten Ort anzeigen und abrufen](#retrieve-a-personal-recovery-key). Beispielsweise kann der Benutzer die Remotegeräteaktion *Wiederherstellungsschlüssel abrufen* über die Unternehmensportalwebsite verwenden.
+
+### <a name="assume-management-of-filevault-on-previously-encrypted-devices"></a>Übernehmen der Verwaltung von FileVault auf zuvor verschlüsselten Geräten
+
+Intune kann die FileVault-Datenträgerverschlüsselung auf macOS-Geräten verwalten, die mithilfe von Intune-Richtlinien verschlüsselt wurden. Intune kann ebenfalls die Verwaltung von FileVault auf Geräten übernehmen, die von Benutzern und nicht über die Intune-Richtlinie verschlüsselt wurden.
+
+#### <a name="prerequisites-to-assume-management-of-filevault"></a>Voraussetzungen zum Übernehmen der Verwaltung von FileVault
+
+Zum Übernehmen der Verwaltung von zuvor verschlüsselten Geräten müssen die folgenden Bedingungen erfüllt werden:
+
+1. **Eine FileVault-Richtlinie muss auf dem Gerät bereitgestellt werden**. Das zuvor verschlüsselte Geräte muss eine Richtlinie von Intune erhalten, die die FileVault-Datenträgerverschlüsselung aktiviert.
+
+   In diesem Szenario wird das Gerät durch die Richtlinie weder entschlüsselt noch erneut verschlüsselt. Stattdessen ermöglicht die Richtlinie Intune, die Verwaltung der FileVault-Verschlüsselung zu übernehmen, die bereits auf dem Gerät aktiviert ist.  Sie können entweder die Datenträgerverschlüsselungsrichtlinie für Endpunktsicherheit oder eine Gerätekonfigurationsrichtlinie für Endpunktsicherheit zum Verschlüsseln von Geräten mit FileVault verwenden.
+
+   Weitere Informationen finden Sie unter [Erstellen und Bereitstellen einer Richtlinie](#create-device-configuration-policy-for-filevault).
+
+2. **Benutzer müssen ihre persönlichen Wiederherstellungsschlüssel in Intune hochladen**.  Nachdem das Gerät die FileVault-Richtlinie empfangen hat, weisen Sie den Benutzer des Geräts an, der das Gerät verschlüsselt hat, seinen persönlichen Wiederherstellungsschlüssel in Intune hochzuladen. Wenn der Schlüssel erfolgreich eingegeben wird, übernimmt Intune die Verwaltung der FileVault-Verschlüsselung und ein neuer persönlicher Wiederherstellungsschlüssel wird für das Gerät und den Benutzer erstellt.
+
+   > [!IMPORTANT]
+   > Intune benachrichtigt Benutzer nicht darüber, dass sie ihre persönlichen Wiederherstellungsschlüssel zum Abschließen der Verschlüsselung hochladen müssen. Stattdessen müssen Sie Ihre üblichen IT-Kommunikationskanäle verwenden, um Benutzer zu benachrichtigen, die ihre macOS-Geräte zuvor mit FileVault verschlüsselt haben, dass sie ihre persönlichen Wiederherstellungsschlüssel in Intune hochladen müssen.  
+   >
+   > Geräte können basierend auf Ihrer Konformitätsrichtlinie am Zugriff auf Unternehmensressourcen gehindert werden, bis Intune erfolgreich die Verwaltung der FileVault-Verschlüsselung übernommen hat.
+
+#### <a name="upload-a-personal-recovery-key"></a>Hochladen eines persönlichen Wiederherstellungsschlüssels
+
+Damit Intune FileVault auf einem zuvor verschlüsselten Gerät verwalten kann, muss der Gerätebenutzer die Unternehmensportalwebsite verwenden, um seinen aktuellen persönlichen Wiederherstellungsschlüssel für das Gerät in Intune hochzuladen.  Anschließend rotiert Intune den Schlüssel, um einen neuen persönlichen Wiederherstellungsschlüssel zu erstellen, der dann von Intune für zukünftige Wiederherstellungen gespeichert wird.
+
+Auf der Unternehmensportalwebsite muss der Benutzer nach seine, verschlüsselten macOS-Gerät suchen und die Option **Wiederherstellungsschlüssel speichern** auswählen. Sobald der persönliche Wiederherstellungsschlüssel eingegeben wurde, versucht Intune, den Schlüssel zu rotieren, um einen neuen Schlüssel zu generieren. Die Rotation wird durchgeführt, um zu festzustellen, ob der richtige Schlüssel für das Gerät eingegeben wurde. Diese neue Schlüssel wird dann gespeichert und zur späteren Verwendung von Intune verwaltet, wenn der Benutzer sein Gerät wiederherstellen muss.
+
+Wenn die Schlüsselrotation fehlschlägt, hat das Gerät entweder die FileVault-Richtlinie nicht verarbeitet oder es wurde ein falscher Schlüssel für das Gerät eingegeben.
+
+Nach einer erfolgreichen Rotation kann der Benutzer [seinen neuen persönlichen Wiederherstellungsschlüssel über einen unterstützten Ort abrufen](#retrieve-a-personal-recovery-key).
+
+ Weitere Informationen finden Sie im Artikel zum [Hochladen des persönlichen Wiederherstellungsschlüssels](../user-help/store-recovery-key.md).
 
 > [!IMPORTANT]
-> Geräte, die von Benutzern anstelle von Intune verschlüsselt werden, können nicht von Intune verwaltet werden. Das bedeutet, dass Intune die persönlichen Wiederherstellungsschlüssel dieser Geräte nicht hinterlegen und die Rotation des Wiederherstellungsschlüssels nicht verwalten kann. Bevor Intune FileVault und die Wiederherstellungsschlüssel für das Gerät verwalten kann, muss der Benutzer sein Gerät entschlüsseln und dann von Intune wieder verschlüsseln lassen.
+> Für ein Gerät, das von einem Benutzer und nicht von Intune verschlüsselt wurde, kann Intune die FileVault-Verschlüsselung nicht verwalten, bis das Gerät eine FileVault-Richtlinie erhält und der Benutzer des Geräts erfolgreich seinen persönlichen Wiederherstellungsschlüssel hochgeladen hat.
 
-### <a name="retrieve-personal-recovery-key"></a>Abrufen persönlicher Wiederherstellungsschlüssel
+### <a name="retrieve-a-personal-recovery-key"></a>Abrufen eines persönlichen Wiederherstellungsschlüssels
 
-Für ein macOS-Gerät, das von Intune verschlüsselt wurde, können Endbenutzer ihren persönlichen Wiederherstellungsschlüssel (FileVault-Schlüssel) über die iOS-Unternehmensportal-App, die Android-Unternehmensportal-App oder die Android-Intune-App abrufen.
+Für macOS-Geräte mit der von Intune verwalteter FileVault-Verschlüsselung können Endbenutzer ihre persönlichen Wiederherstellungsschlüssel (FileVault-Schlüssel) mit einem beliebigen Gerät über folgende Orte abrufen:
+
+- Unternehmensportal-Website
+- Unternehmensportal-App für iOS/iPadOS
+- Android-Unternehmensportal-App
+- Intune-App
+
+Administratoren können persönliche Wiederherstellungsschlüssel für verschlüsselte macOS-Geräte anzeigen, die als *unternehmenseigene* Geräte gekennzeichnet sind. Sie können nicht den Wiederherstellungsschlüssel für persönliche Geräte anzeigen.
 
 Das Gerät mit dem persönlichen Wiederherstellungsschlüssel muss bei Intune registriert und über Intune mit FileVault verschlüsselt sein. Über die iOS-Unternehmensportal-App, die Android-Unternehmensportal-App, die Android-Intune-App oder die Unternehmensportal-Website können Benutzer den **FileVault**-Wiederherstellungsschlüssel anzeigen, den sie für den Zugriff auf ihre Mac-Geräte benötigen.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,32 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078242"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871982"
 ---
-# <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Häufige Fragen, Probleme und entsprechende Behebungen mit Geräterichtlinien und -profilen in Microsoft Intune
+# <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Antworten auf häufig gestellte Fragen zu Geräterichtlinien und Profilen in Microsoft Intune
 
 Erhalten Sie Antworten auf häufige Fragen zur Arbeit mit Geräteprofilen und -richtlinien in Intune. In diesem Artikel werden u. a. Check-In-Zeitintervalle und weitere Informationen aufgelistet.
-
-## <a name="why-doesnt-a-user-get-a-new-profile-when-changing-a-password-or-passphrase-on-an-existing-wi-fi-profile"></a>Warum erhält ein Benutzer kein neues Profil, wenn er ein Kennwort oder eine Passphrase für ein vorhandenes WLAN-Profil ändert?
-
-Sie erstellen ein WLAN-Unternehmensprofil, stellen das Profil für eine Gruppe bereit, ändern das Kennwort und speichern das Profil. Wenn sich das Profil ändert, erhalten einige Benutzer das neue Profil nicht.
-
-Sie können dieses Problem beheben, indem Sie einen WLAN-Gastzugang einrichten. Bei einem Ausfall des Unternehmens-WLANs können die Benutzer auf das Gast-WLAN zurückgreifen. Dazu muss die Einstellung zum automatischen Herstellen einer Verbindung aktiviert sein. Ferner muss das WLAN-Gastprofil allen Benutzer bereitgestellt werden.
-
-Einige weitere Empfehlungen:  
-
-- Wenn das WLAN-Netzwerk, mit dem Sie die Verbindung herstellen, ein Kennwort oder eine Passphrase verwendet, müssen Sie eine direkte Verbindung mit dem Router herstellen können. Sie können das mit einem iOS/iPadOS-Gerät testen.
-- Nachdem Sie erfolgreich eine Verbindung mit dem WLAN-Endpunkt (WLAN-Router) hergestellt haben, notieren Sie die verwendete SSID und die verwendete Anmeldeinformation (dieser Wert stellt das Kennwort oder die Passphrase dar).
-- Geben Sie die SSID und die Anmeldeinformation (Kennwort oder Passphrase) im Feld für den vorinstallierten Schlüssel ein. 
-- Führen Sie die Bereitstellung an eine Testgruppe mit eingeschränkter Benutzeranzahl aus, vorzugsweise nur das IT-Team. 
-- Synchronisieren Sie Ihr iOS/iPadOS-Gerät mit Intune. Registrieren Sie sich, wenn Sie noch nicht registriert sind. 
-- Probieren Sie, erneut eine Verbindung mit dem gleichen WLAN-Endpunkt (wie im ersten Schritt erwähnt) herzustellen.
-- Nehmen Sie das Rollout an größere Gruppen und zu gegebener Zeit an alle erwarteten Benutzer in Ihrer Organisation durch. 
 
 ## <a name="how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned"></a>Wie lange dauert es, bis Geräte Richtlinien, Profile oder Apps nach ihrer Zuweisung abrufen?
 

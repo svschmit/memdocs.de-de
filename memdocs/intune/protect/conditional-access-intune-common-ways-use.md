@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084947"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462166"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Welche gängigen Möglichkeiten gibt es für die Verwendung des bedingten Zugriffs in Intune?
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 
 Es gibt zwei Arten des bedingten Zugriffs in Intune: den gerätebasierten bedingten Zugriff und den App-basierten bedingten Zugriff. Sie müssen die entsprechenden Konformitätsrichtlinien konfigurieren, um die Konformität mit bedingtem Zugriff in Ihrer Organisation zu unterstützen. Der bedingte Zugriff wird häufig verwendet, um Aktionen wie die folgenden auszuführen: Zulassen oder Blockieren des Zugriffs auf Exchange, Steuern des Zugriffs auf das Netzwerk oder Integrieren in eine Mobile Threat Defense-Lösung.
  
@@ -113,34 +110,44 @@ Jedes Gerät, mit dem auf Exchange lokal zugegriffen wird, wird auf Konformität
 
 Wenn ein Gerät die festgelegten Bedingungen nicht erfüllt, erhält der Endbenutzer Anweisungen zum Registrieren des Geräts, um das Problem zu beheben, das die Konformität des Geräts verhindert.
 
-#### <a name="how-conditional-access-for-exchange-on-premises-works"></a>Funktionsweise des bedingten Zugriffs für Exchange lokal
+> [!NOTE]
+> Ab Juli 2020 wird der Exchange Connector nicht mehr unterstützt und durch die [hybride moderne Authentifizierung](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) für Exchange ersetzt. Für die Verwendung der HMA muss Intune nicht den Exchange Connector einrichten und verwenden. Durch diese Änderung wurde die Benutzeroberfläche zum Konfigurieren und Verwalten des Exchange Connector für Intune aus dem Admin Center des Microsoft Endpoint Manager entfernt, sofern Sie mit Ihrem Abonnement nicht bereits den Exchange Connector verwenden.
+>
+> Wenn Sie den Exchange Connector in Ihrer Umgebung eingerichtet haben, wird Ihr Intune-Mandant weiterhin für dessen Verwendung unterstützt, und Sie haben weiterhin Zugriff auf die Benutzeroberfläche, die dessen Konfiguration unterstützt. Weitere Informationen finden Sie unter [Einrichten des lokalen Intune Exchange Connector](../protect/exchange-connector-install.md). Sie können den Connector weiterhin verwenden oder die HMA konfigurieren und den Connector deinstallieren.
+>
+> Die hybride moderne Authentifizierung stellt Funktionen bereit, die bisher im Exchange Connector für Intune verfügbar waren: Zuordnen einer Geräteidentität zum entsprechenden Exchange-Datensatz:  Diese Zuordnung ist nun nicht mehr Teil einer von Ihnen in Intune vorgenommenen Konfiguration oder der Anforderung, dass der Intune Connector zum Verbinden von Intune und Exchange verwendet werden soll. Mit der HMA wurde die Anforderung der Verwendung der Intune-spezifischen Konfiguration (des Connectors) aufgehoben.
 
-Der bedingte Zugriff für Exchange lokal funktioniert anders als die Azure-Richtlinien für bedingten Zugriff. Sie installieren den Intune-Connector für Exchange lokal, um direkt mit dem Exchange-Server zu interagieren. Der Intune Exchange-Connector ruft alle EAS-Datensätze (Exchange Active Sync) ab, die auf dem Exchange-Server vorhanden sind, damit Intune diese Datensätze verwenden und den Intune-Gerätedatensätzen zuordnen kann. Bei diesen Datensätzen handelt es sich um Geräte, die bei Intune registriert sind und von Intune erkannt werden. Dieser Prozess erlaubt oder blockiert den E-Mail-Zugriff.
 
-Wenn ein EAS-Datensatz neu und Intune noch nicht bekannt ist, gibt Intune ein Cmdlet („command-let“ ausgesprochen) aus, das den Exchange-Server anweist, den Zugriff auf E-Mails zu blockieren. Im Folgenden finden Sie weitere Details zur Funktionsweise dieses Prozesses:
+<!-- Deprecated with change from the connector to Exchange hybrid modern authentication)
 
-![Flussdiagramm: Exchange lokal mit bedingtem Zugriff](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
+#### How conditional access for Exchange on-premises works
 
-1. Ein Benutzer versucht, auf Unternehmens-E-Mails zuzugreifen, die in Exchange lokal 2010 SP1 oder höher gehostet werden.
+Conditional access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
 
-2. Der E-Mail-Zugriff wird blockiert, wenn das Gerät nicht durch Intune verwaltet wird. Intune sendet eine Benachrichtigung zur Blockierung an den EAS-Client.
+If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (pronounced "command-let") that directs the Exchange server to block access to e-mail. Following are more details on how this process works:
 
-3. EAS empfängt die Benachrichtigung zur Blockierung, verschiebt das Gerät in die Quarantäne und sendet eine Quarantäne-E-Mail mit Schritten zur Behebung und entsprechenden Links, sodass Benutzer ihre Geräte registrieren können.
+![Exchange on-premises with CA flow-chart](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
 
-4. Der Prozess für den Arbeitsplatzbeitritt wird ausgeführt. Dies ist der erste Schritt, mit dem ein Gerät zur Verwaltung in Intune eingebunden wird.
+1. User tries to access corporate email, which is hosted on Exchange on-premises 2010 SP1 or later.
 
-5. Das Gerät wird in Intune registriert.
+2. If the device is not managed by Intune, access to email will be blocked. Intune sends a block notification to the EAS client.
 
-6. Intune ordnet den EAS-Datensatz einem Gerätedatensatz zu und speichert den Konformitätszustand des Geräts.
+3. EAS receives the block notification, moves the device to quarantine, and sends the quarantine email with remediation steps that contain links so the users can enroll their devices.
 
-7. Die EAS-Client-ID wird vom Azure AD Device Registration-Prozess registriert, der eine Beziehung zwischen dem Intune-Gerätedatensatz und der EAS-Client-ID erstellt.
+4. The Workplace join process happens, which is the first step to have the device managed by Intune.
 
-8. Der Azure AD Device Registration-Prozess speichert die Informationen zum Gerätezustand.
+5. The device gets enrolled into Intune.
 
-9. Wenn der Benutzer die Richtlinien für den bedingten Zugriff erfüllt, gibt Intune ein Cmdlet über den Intune Exchange Connector aus, mit dem das Postfach synchronisiert werden kann.
+6. Intune maps the EAS record to a device record, and saves the device compliance state.
 
-10. Der Exchange-Server sendet eine Benachrichtigung an den EAS-Client, damit der Benachrichtigung auf die E-Mails zugreifen kann.
+7. The EAS client ID gets registered by the Azure AD Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
 
+8. The Azure AD Device Registration saves the device state information.
+
+9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
+
+10. Exchange server sends the notification to EAS client so the user can access e-mail.
+-->
 
 #### <a name="whats-the-intune-role"></a>Was ist die Intune-Rolle?
 
@@ -158,7 +165,5 @@ Der Exchange-Server stellt die API und die Infrastruktur bereit, um Geräte in d
 [Konfigurieren des bedingten Zugriffs in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [Einrichten App-basierter Richtlinien für bedingten Zugriff](app-based-conditional-access-intune-create.md)
-
-[Installieren des lokalen Exchange Connectors für Intune](exchange-connector-install.md)
 
 [Erstellen einer Richtlinie für den bedingten Zugriff auf Exchange lokal](conditional-access-exchange-create.md)

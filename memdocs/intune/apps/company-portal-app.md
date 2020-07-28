@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239945"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461962"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App
 
@@ -158,6 +158,17 @@ Die folgenden Aktionen sind verfügbar:
 > [!NOTE]
 > Mit diesen Aktionen lassen sich Geräteaktionen in der App und auf der Website des Unternehmensportals einschränken. Damit werden jedoch keine Richtlinien zur Einschränkung von Geräten implementiert. Damit Benutzer ihre Geräte nicht über die Einstellungen auf die Werkseinstellungen zurücksetzen oder die mobile Geräteverwaltung entfernen, müssen Sie Richtlinien für Geräteeinschränkungen konfigurieren. 
 
+## <a name="opening-web-company-portal-applications"></a>Öffnen von Anwendungen des Webunternehmensportals
+Bei Anwendungen des Webunternehmensportals wird Endbenutzern, wenn sie die Unternehmensportalanwendung installiert haben, ein Dialogfeld mit der Frage angezeigt, wie die Anwendung außerhalb des Browsers geöffnet werden soll. Wenn die App nicht im Pfad des Unternehmensportals enthalten ist, öffnet das Unternehmensportal die Homepage. Andernfalls öffnet das Unternehmensportal die entsprechende App. 
+
+Nachdem der Benutzer das Unternehmensportal ausgewählt hat, wird er zur entsprechenden Seite in der Anwendung weitergeleitet, wenn der URI-Pfad einer der folgenden ist:
+
+- `/apps`: Das Webunternehmensportal öffnet die Seite „Apps“, auf der alle Apps aufgelistet sind.
+- `/apps/[appID]`: Das Webunternehmensportal öffnet die Seite „Details“ in der entsprechenden App.
+- *Der URI-Pfad lautet anders oder ist unerwartet:* Die Startseite des Webunternehmensportals wird angezeigt.
+
+Wenn der Benutzer die Unternehmensportal-App nicht installiert hat, wird der Benutzer zum Webunternehmensportal weitergeleitet.
+
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Vom Unternehmensportal abgeleitete Anmeldeinformationen für iOS/iPadOS-Geräte
 
 Intune unterstützt von Personal Identity Verification (PIV) und Common Access Card (CAC) abgeleitete Anmeldeinformationen in Partnerschaft mit den Anmeldeinformationsanbietern DISA Purebred, Entrust Datacard und Intercede. Endbenutzer durchlaufen nach der Registrierung ihres iOS/iPadOS-Geräts weitere Schritte, um ihre Identität in der Unternehmensportalanwendung zu bestätigen. Abgeleitete Anmeldeinformationen werden für Benutzer aktiviert, indem zuerst ein Anmeldeinformationsanbieter für Ihren Mandanten eingerichtet und dann ein Profil als Ziel verwendet wird, das abgeleitete Anmeldeinformationen für Benutzer oder Geräte verwendet.
@@ -227,7 +238,7 @@ Einige Plattformen und Konfigurationen lassen keine Self-Service-Geräteaktionen
 | Sync | Verfügbar | Verfügbar | Verfügbar | Verfügbar |
 | Remotesperre | Nur Windows Phone | Verfügbar | Verfügbar | Verfügbar |
 | Passcode zurücksetzen | Nur Windows Phone | Verfügbar<sup>(8)</sup> | N/V | Verfügbar<sup>(6)</sup> |
-| Schlüsselwiederherstellung | N/V | N/V | Verfügbar<sup>(2)</sup> | N/V |
+| Schlüsselwiederherstellung | Nicht verfügbar | Nicht verfügbar | Verfügbar<sup>(2)</sup> | N/V |
 
 <sup>(1)</sup> Die **Außerbetriebnahme** ist auf Windows-Geräten, die Azure AD beigetreten sind, immer blockiert.<br>
 <sup>(2)</sup> Die **Schlüsselwiederherstellung** für macOS ist nur über das Webportal verfügbar.<br>

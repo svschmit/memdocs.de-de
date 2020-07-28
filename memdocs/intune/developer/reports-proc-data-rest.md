@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 4f00ba5049401c07f5112061172dc3e7cda4f46c
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022414"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437360"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Abrufen von Daten aus der Intune-Data Warehouse-API mit einem REST-Client
 
@@ -63,22 +63,24 @@ Sie haben jetzt eine in Azure definierte App. Erteilen Sie Zugriff von der nativ
 6. Klicken Sie auf das Feld **Delegierte Berechtigungen**, und klicken Sie dann auf **Get data warehouse information from Microsoft Intune** (Data Warehouse-Informationen von Microsoft Intune abrufen).
 7. Klicken Sie auf **Berechtigungen hinzufügen**.
 8. Optional können Sie im Bereich „Konfigurierte Berechtigungen“ auf **Administratorzustimmung für Microsoft erteilen** klicken und dann **Ja** auswählen. Dadurch wird der Zugriff auf alle Konten im aktuellen Verzeichnis gewährt. Außerdem wird so verhindert, dass das Zustimmungsdialogfeld für jeden Benutzer im Mandanten angezeigt wird. Weitere Informationen finden Sie unter [Integrieren von Anwendungen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
+9. Klicken Sie auf **Certificates & secrets** >  **+ New client secret** (Zertifikate & Geheimnisse > + Neuer geheimer Clientschlüssel), und generieren Sie ein neues Geheimnis. Stellen Sie sicher, dass Sie dieses an einen sicheren Ort kopieren, da Sie später nicht mehr darauf zugreifen können.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Abrufen von Daten aus der Microsoft Intune-API mit Postman
 
-Sie können mit der Intune-Data Warehouse-API und einem generischen REST-Client wie Postman arbeiten. Postman kann einen Einblick in die Funktionen der API und das zugrunde liegende OData-Datenmodell sowie eine Problembehandlung für die Verbindung mit den API-Ressourcen durchführen. In diesem Abschnitt finden Sie Informationen zum Generieren eines Auth2.0-Tokens für den lokalen Client. Der Client benötigt das Token zum Authentifizieren bei Azure AD und den Zugriff auf die API-Ressourcen.
+Sie können mit der Intune-Data Warehouse-API und einem generischen REST-Client wie Postman arbeiten. Postman kann einen Einblick in die Features der API und das zugrunde liegende OData-Datenmodell geben sowie eine Problembehandlung für die Verbindung mit den API-Ressourcen durchführen. In diesem Abschnitt finden Sie Informationen zum Generieren eines Auth2.0-Tokens für den lokalen Client. Der Client benötigt das Token zum Authentifizieren bei Azure AD und den Zugriff auf die API-Ressourcen.
 
 ### <a name="information-you-will-need-to-make-the-call"></a>Informationen, die Sie für den Aufruf benötigen
 
 Sie benötigen die folgenden Informationen für einen REST-Aufruf mit Postman:
 
-| Attribut        | Beschreibung                                                                                                                                                                          | Beispiel                                                                                       |
+| Attribut        | BESCHREIBUNG                                                                                                                                                                          | Beispiel                                                                                       |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Rückruf-URL     | Legen Sie dies auf der Seite „Einstellungen“ Ihrer App als die Rückruf-URL fest.                                                                                                                              | https://www.getpostman.com/oauth2/callback                                                    |
 | Tokenname       | Eine Zeichenfolge, mit der die Anmeldeinformationen der Azure-App übergeben werden. Der Prozess generiert Ihr Token, sodass Sie die Data Warehouse-API aufrufen können.                          | Bearer                                                                                        |
 | Authentifizierungs-URL         | Dies ist die URL, die zum Authentifizieren verwendet wird. | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | Zugriffstoken-URL | Mit dieser URL wird das Token erteilt.                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | Client-ID        | Diese haben Sie erstellt und sich bei der Erstellung der nativen App in Azure notiert.                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
+| Geheimer Clientschlüssel        | Diese haben Sie erstellt und sich bei der Erstellung der nativen App in Azure notiert.                                                                                               | Ksml3dhDJs+jfK1f8Mwc8                                                          |
 | Bereich (Optional) | Leer                                                                                                                                                                               | Sie können das Feld leer lassen.                                                                     |
 | Gewährungstyp       | Das Token ist ein Autorisierungscode.                                                                                                                                                  | Autorisierungscode                                                                            |
 
@@ -122,14 +124,18 @@ Um ein neues Zugriffstoken für Postman abzurufen, müssen Sie die URL der Azure
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 
-11. Wählen Sie **Autorisierungscode** und „Request access token locally“ (Zugriffstoken lokal anfordern) aus.
+11. Fügen Sie den **geheimen Clientschlüssel** hinzu, den Sie in der in Azure erstellten nativen App generiert haben. Sie sollte etwa wie folgt aussehen:  
 
-12. Wählen Sie **Request Token** (Token anfordern) aus.
+     `Ksml3dhDJs+jfK1f8Mwc8 `
+
+12. Wählen Sie als Gewährungstyp **Authorization Code** (Autorisierungscode) aus.
+
+13. Wählen Sie **Request Token** (Token anfordern) aus.
 
     ![Informationen für das Zugriffstoken](./media/reports-proc-data-rest/reports-postman_getnewtoken.png)
 
-13. Geben Sie Ihre Anmeldeinformationen auf der Azure AD-Autorisierungsseite ein. Die Liste der Token in Postman enthält jetzt das Token mit dem Namen `Bearer`.
-14. Wählen Sie **Token verwenden** aus. Die Liste der Header enthält den neuen Schlüsselwert von „Authorization“ (Autorisierung) und den Wert `Bearer <your-authorization-token>`.
+14. Geben Sie Ihre Anmeldeinformationen auf der Azure AD-Autorisierungsseite ein. Die Liste der Token in Postman enthält jetzt das Token mit dem Namen `Bearer`.
+15. Wählen Sie **Token verwenden** aus. Die Liste der Header enthält den neuen Schlüsselwert von „Authorization“ (Autorisierung) und den Wert `Bearer <your-authorization-token>`.
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Senden des Aufrufs an den Endpunkt mit Postman
 

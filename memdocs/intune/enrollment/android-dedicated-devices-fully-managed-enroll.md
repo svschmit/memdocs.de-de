@@ -1,7 +1,7 @@
 ---
-title: Registrierung dedizierter Android Enterprise-Geräte oder vollständig verwalteter Geräte in Intune
+title: Registrieren von dedizierten oder vollständig verwalteten Android Enterprise-Geräten oder unternehmenseigenen Android Enterprise-Geräten mit einem Arbeitsprofil in Intune
 titleSuffix: Microsoft Intune
-description: Erfahren Sie, wie Sie dedizierte Android Enterprise-Geräte und vollständig verwaltete Geräte in Intune registrieren.
+description: In diesem Artikel erfahren Sie, wie Sie dedizierte oder vollständig verwaltete Android Enterprise-Geräte oder unternehmenseigene Android Enterprise-Geräte mit einem Arbeitsprofil in Intune registrieren.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93cd7c7e852e3d8d8fe576cec66ce7a7020f06b7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990217"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461724"
 ---
-# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Registrieren Ihrer dedizierten Android Enterprise-Geräte oder vollständig verwalteten Geräte
+# <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Registrieren eines dedizierten oder vollständig verwalteten Android Enterprise-Geräts oder eines unternehmenseigenen Android Enterprise-Geräts mit einem Arbeitsprofil
 
-Nachdem Sie Ihre [dedizierten Android Enterprise-Geräte](android-kiosk-enroll.md) oder [vollständig verwalteten](android-fully-managed-enroll.md) Geräte in Intune eingerichtet haben, können Sie sie registrieren. Die Intune-Registrierung für dedizierte Geräte und vollständig verwaltete Geräte beginnt mit dem Zurücksetzen auf die Werkseinstellungen. Wie Sie Ihre Android Enterprise-Geräte registrieren, hängt vom Betriebssystem ab.
+Nachdem Sie Ihre [dedizierten](android-kiosk-enroll.md), [vollständig verwalteten](android-fully-managed-enroll.md) oder [unternehmenseigenen Android Enterprise-Geräte mit einem Arbeitsprofil](android-corporate-owned-work-profile-enroll.md) in Intune eingerichtet haben, können Sie diese registrieren. Die Intune-Registrierung für dedizierte Geräte und vollständig verwaltete Geräte beginnt mit dem Zurücksetzen auf die Werkseinstellungen. Wie Sie Ihre Android Enterprise-Geräte registrieren, hängt vom Betriebssystem ab.
 
 | Registrierungsmethode | Mindestversion des Android-Betriebssystems für dedizierte und vollständig verwaltete Geräte |
 | ----- | ----- |

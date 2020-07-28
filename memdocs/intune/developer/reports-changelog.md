@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90d1ab0792e329616fce525cfe672c07219908b5
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: d6f460039aaff282476c3e8e3d074a332cde716f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165854"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461214"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Änderungsprotokoll für die Intune Data Warehouse-API
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Bleiben Sie auf dem neuesten Stand bezüglich Updates für Intune Data Warehouse.
+
+## <a name="2007"></a>2007 
+_Veröffentlicht im Juli 2020_
+
+### <a name="v10-changes"></a>Änderungen in Version 1.0
+
+In der folgenden Tabelle werden die Eigenschaften aufgeführt, die zur Entität [device](../developer/intune-data-warehouse-collections.md#devices) in Intune Data Warehouse hinzugefügt wurden.
+
+|    Sammlung                          |    Änderung     |    Beschreibung                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    hinzugefügt    |    Der eindeutige Netzwerkbezeichner dieses Geräts.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    hinzugefügt    |    Die auf dem Gerät installierte Version von Office 365.                                                                                                                                                                                                                                                                     |
+
+In der folgenden Tabelle sind die Eigenschaften aufgeführt, die zur Entität [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) in Intune Data Warehouse hinzugefügt wurden.
+
+|    Sammlung                          |    Änderung     |    Beschreibung                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    hinzugefügt    |    Der physische Speicher in Bytes.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes    |    hinzugefügt    |    Gesamte Speicherkapazität in Bytes.                                                                                                                                                                                                                                                                     |
 
 ## <a name="2004"></a>2004 
 _Veröffentlicht: April 2020_

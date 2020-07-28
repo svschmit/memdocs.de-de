@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 0242e7725afa23ed94400c79eae27118b7dbb8c5
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383205"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491183"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Verwenden von Zertifikaten zur Authentifizierung in Microsoft Intune
 
@@ -109,6 +109,9 @@ Erstellen Sie ein separates vertrauenswürdiges Zertifikatprofil für jede Gerä
 > Vertrauenswürdige Stammprofile, die Sie für die Plattform *Windows 10 und höher* erstellen, werden im Microsoft Endpoint Manager Admin Center als Profile für die Plattform *Windows 8.1 und höher* angezeigt. 
 >
 > Dies ist ein bekanntes Problem bei der Anzeige der Plattform für vertrauenswürdige Zertifikatsprofile. Auch wenn das Profil die Plattform Windows 8.1 und höher anzeigt, ist es für Windows 10 und höher einsetzbar.
+
+> [!NOTE]
+> Das Profil *Vertrauenswürdiges Zertifikat* in Intune kann nur für die Bereitstellung von Stammzertifikaten oder Zwischenzertifikaten verwendet werden. Der Zweck der Bereitstellung dieser Zertifikate ist das Erstellen einer Vertrauenskette. Die Verwendung des Profils „Vertrauenswürdiges Zertifikat“ für das Bereitstellen anderer Zertifikate als Stamm- oder Zwischenzertifikaten wird von Microsoft nicht unterstützt. Das Importieren von Zertifikaten, die nicht als Stamm- oder Zwischenzertifikate angesehen werden, wird beim Auswählen des Profils „Vertrauenswürdiges Zertifikat“ im Intune-Portal möglicherweise blockiert. Auch wenn Sie mit diesem Profiltyp ein Zertifikat importieren und bereitstellen können, bei dem es sich weder um ein Stammzertifikat noch um ein Zwischenzertifikat handelt, treten wahrscheinlich unerwartete Ergebnisse zwischen verschiedenen Plattformen wie iOS und Android auf.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>So erstellen Sie ein vertrauenswürdiges Zertifikatprofil
 

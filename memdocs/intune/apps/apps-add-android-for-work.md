@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b9cd6d0292c07b2f1a987efba6d1ad9f8d81d99
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989567"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461945"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Hinzufügen verwalteter Google Play-Apps zu Android Enterprise-Geräten mit Intune
 
-Verwaltetes Google Play ist der Enterprise App Store von Google und die einzige Quelle von Anwendungen für Android Enterprise. Mit Intune können Sie die App-Bereitstellung über verwaltetes Google Play für jedes Android Enterprise-Szenario (einschließlich Arbeitsprofil, dedizierte und vollständig verwaltete Anmeldungen) orchestrieren. Das Hinzufügen von verwalteten Google Play-Apps zu Intune unterscheidet sich vom Hinzufügen von Android-Apps zu Nicht-Android Enterprise-Geräten. Store-, branchenspezifische und Web-Apps werden in verwaltetem Google Play genehmigt oder hinzugefügt und dann so mit Intune synchronisiert, dass sie in der Liste „Client-Apps“ angezeigt werden. Sobald sie in der Liste „Client-Apps“ aufgeführt sind, können Sie die Zuweisung einer verwalteten Google Play-App wie bei jeder anderen App verwalten.
+Verwaltetes Google Play ist der Enterprise App Store von Google und die einzige Quelle von Anwendungen für Android Enterprise. Mit Intune können Sie die App-Bereitstellung über verwaltetes Google Play für jedes Android Enterprise-Szenario (einschließlich Arbeitsprofil, dedizierte, vollständig verwaltete und unternehmenseigene Registrierungen von Arbeitsprofilen) orchestrieren. Das Hinzufügen von verwalteten Google Play-Apps zu Intune unterscheidet sich vom Hinzufügen von Android-Apps zu Nicht-Android Enterprise-Geräten. Store-, branchenspezifische und Web-Apps werden in verwaltetem Google Play genehmigt oder hinzugefügt und dann so mit Intune synchronisiert, dass sie in der Liste „Client-Apps“ angezeigt werden. Sobald sie in der Liste „Client-Apps“ aufgeführt sind, können Sie die Zuweisung einer verwalteten Google Play-App wie bei jeder anderen App verwalten.
 
 Intune fügt bei der Verbindung Ihres Intune-Mandanten mit verwaltetem Google Play automatisch vier gängige auf Android Enterprise bezogene Apps zur Intune-Verwaltungskonsole hinzu, um Ihnen die Konfiguration und Nutzung der Android Enterprise-Verwaltung zu erleichtern. Es handelt sich um diese vier Apps:
 
@@ -179,7 +179,7 @@ Wenn Sie eine App aus dem Store genehmigt haben und diese nicht in der Workload 
 6. Wählen Sie im Microsoft Endpoint Manager Admin Center die Option **Apps** > **Alle Apps** aus.  
     Die neu verfügbare Managed Google Play-App wird angezeigt.
 
-## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Zuweisen einer verwalteten Google Play-App zu Android Enterprise-Arbeitsprofilgeräten
+## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>Zuweisen einer verwalteten Google Play-App zu Android Enterprise-Arbeitsprofilen und unternehmenseigenen Arbeitsprofilgeräten
 
 Wenn die App im Knoten **App-Lizenzen** des Workloadbereichs **Apps** angezeigt wird, können Sie sie [wie jede andere App zuweisen](/mem/intune/apps/apps-deploy), indem Sie die App Benutzergruppen zuweisen.
 
@@ -219,7 +219,7 @@ Für auf Android Enterprise-Arbeitsprofilgeräten bereitgestellte verwaltete Goo
 
 ## <a name="working-with-managed-google-play-closed-testing-tracks"></a>Arbeiten mit Managed Google Play-Tracks für geschlossene Tests
 
-Sie können eine Nicht-Produktionsversion einer Managed Google Play-App auf Geräte verteilen, die in einem Android Enterprise-Szenario registriert sind (**Android Enterprise-Arbeitsprofil**, **Vollständig verwaltet** und **Dediziert**), um Tests durchzuführen. In Intune wird außerdem angezeigt, ob eine App über einen veröffentlichten Präproduktionsbuild in einem Testtrack verfügt. Sie können diesen Track auch AAD-Benutzergruppen oder Gerätegruppen zuweisen. Der Workflow zum Zuweisen einer Produktionsversion zu einer Gruppe, die derzeit existiert, ist derselbe wie beim Zuweisen eines Nicht-Produktionskanals. Nach der Bereitstellung entspricht der Installationsstatus jedes Tracks der Versionsnummer des Tracks in Managed Google Play. Weitere Informationen finden Sie unter [Tracks für geschlossene Tests von Google Play für Pre-Release-Tests von Apps](https://support.google.com/googleplay/android-developer/answer/3131213).
+Sie können eine Nicht-Produktionsversion einer Managed Google Play-App auf Geräte verteilen, die in einem Android Enterprise-Szenario registriert sind (**Android Enterprise-Arbeitsprofil**, **Vollständig verwaltet**, **Dediziert** und **unternehmenseigenes Arbeitsprofil**), um Tests durchzuführen. In Intune wird außerdem angezeigt, ob eine App über einen veröffentlichten Präproduktionsbuild in einem Testtrack verfügt. Sie können diesen Track auch AAD-Benutzergruppen oder Gerätegruppen zuweisen. Der Workflow zum Zuweisen einer Produktionsversion zu einer Gruppe, die derzeit existiert, ist derselbe wie beim Zuweisen eines Nicht-Produktionskanals. Nach der Bereitstellung entspricht der Installationsstatus jedes Tracks der Versionsnummer des Tracks in Managed Google Play. Weitere Informationen finden Sie unter [Tracks für geschlossene Tests von Google Play für Pre-Release-Tests von Apps](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 ## <a name="delete-managed-google-play-apps"></a>Löschen von verwalteten Google Play-Apps
 Sie können verwaltete Google Play-Apps bei Bedarf aus Microsoft Intune löschen. Um eine verwaltete Google Play-App zu löschen, öffnen Sie Microsoft Intune im Azure-Portal und wählen **Apps** > **Alle Apps** aus. Klicken Sie in der App-Liste auf die Auslassungspunkte (...) rechts neben der verwalteten Google Play-App, und wählen Sie dann in der angezeigten Liste die Option **Löschen** aus. Wenn Sie eine verwaltete Google Play-App aus der App-Liste löschen, wird die Genehmigung für die Google Play-App automatisch aufgehoben.
