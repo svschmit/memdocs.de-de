@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd4ece62215d48f3481923e099feecc992d7aa6d
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093364"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262046"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Testleitfaden für Entwickler zum Microsoft Intune App SDK für Android
 
 Der Testleitfaden zum Microsoft Intune App SDK für Android wurde dazu entworfen, Sie beim Testen Ihrer mit Intune verwalteten Android-App zu unterstützen.
 
 ## <a name="demo-tenant-setup"></a>Einrichtung des Demomandanten
-Wenn Sie in Ihrem Unternehmen nicht bereits über einen Mandanten verfügen, können Sie einen Demomandanten mit oder ohne vorab generierten Daten erstellen. Sie müssen sich als [Microsoft-Partner](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) registrieren, um auf Microsoft CDX zuzugreifen. Gehen Sie folgendermaßen vor, um ein neues Konto zu erstellen:
+Wenn Sie in Ihrem Unternehmen nicht bereits über einen Mandanten verfügen, können Sie einen Demomandanten mit oder ohne vorab generierten Daten erstellen. Sie müssen sich als [Microsoft-Partner](https://partner.microsoft.com/business-opportunities/why-microsoft) registrieren, um auf Microsoft CDX zuzugreifen. Gehen Sie folgendermaßen vor, um ein neues Konto zu erstellen:
 1. Navigieren Sie zur [Website für die Erstellung eines Microsoft CDX-Mandanten](https://cdx.transform.microsoft.com/my-tenants/create-tenant), und erstellen Sie einen Microsoft 365 Enterprise-Mandanten.
 2. [Richten Sie Intune ein](../fundamentals/setup-steps.md), um die mobile Geräteverwaltung (MDM) zu aktivieren.
 3. [Erstellen Sie Benutzer](../fundamentals/users-add.md).

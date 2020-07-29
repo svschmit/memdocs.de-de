@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264106"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262777"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Verwenden benutzerdefinierter Einstellungen für Android-Geräte in Microsoft Intune
 
@@ -35,7 +35,7 @@ Mithilfe eines benutzerdefinierten Profils können Sie folgende Android-Einstell
 - [Erstellen eines WLAN-Profils über einen vorinstallierten Schlüssel](/intune/wi-fi-profile-shared-key)
 - [Erstellen eines Pro-App-VPN-Profils](/intune/android-pulse-secure-per-app-vpn)
 - [Zulassen und Blockieren von Apps für Samsung KNOX Standard-Geräte](/intune/samsung-knox-apps-allow-block)
-- [Konfigurieren des Webschutzes in Microsoft Defender Advanced Threat Protection für Android](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
+- [Konfigurieren des Webschutzes in Microsoft Defender Advanced Threat Protection für Android](../protect/advanced-threat-protection-manage-android.md)
 
 >[!IMPORTANT]
 > Nur die aufgeführten Einstellungen können in einem benutzerdefinierten Profil konfiguriert werden. Android-Geräte stellen keine vollständige Liste der OMA-URI-Einstellungen zur Verfügung, die Sie konfigurieren können. Wenn Sie weitere Einstellungen hinzufügen möchten, stimmen Sie auf der [Intune Uservoice-Website](https://microsoftintune.uservoice.com/forums/291681-ideas) für mehr Einstellungen.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72fb278070e2d5b8581fb1b2e263aa06c90b5df9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989763"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262590"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Verwenden von Intune zum Korrigieren von mit Microsoft Defender ATP identifizierten Sicherheitsrisiken
 
@@ -75,7 +75,7 @@ Ein Beispielworkflow:
 - Konfigurieren Sie eine Dienst-zu-Dienst-Verbindung mit Microsoft Defender ATP.
 - Stellen Sie eine Richtlinie für die Gerätekonfiguration mit dem Profiltyp **Microsoft Defender ATP (Windows 10 Desktop)** auf Geräten bereit, deren Risiken von ATP bewertet werden.
 
-  Informationen zum Einrichten von Intune für die Zusammenarbeit mit ATP finden Sie unter [Erzwingen der Konformität für Windows Defender ATM mit bedingtem Zugriff in Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).
+  Informationen zum Einrichten von Intune für die Zusammenarbeit mit ATP finden Sie unter [Erzwingen der Konformität für Windows Defender ATM mit bedingtem Zugriff in Intune](advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune).
 
 ## <a name="work-with-security-tasks"></a>Arbeiten mit Sicherheitsaufgaben
 
@@ -103,6 +103,7 @@ Ein Beispielworkflow:
 Nach erfolgreicher Korrektur kann die Bewertung des Gefahrenpotenzials durch Risiken in ATP sinken, basierend auf neuen Informationen von den korrigierten Geräten.
 
 ## <a name="next-steps"></a>Nächste Schritte
+
 Weitere Informationen zu Intune und [Microsoft Defender ATP](advanced-threat-protection.md).
 
 Lesen Sie Intune [Mobile Threat Defense](mobile-threat-defense.md).

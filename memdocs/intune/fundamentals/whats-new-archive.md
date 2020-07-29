@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 0c1029c4641d9ff07bf4254427cb08dfa583b5f8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461418"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262623"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Neuerungen in Microsoft Intune (vorherige Monate)
 
@@ -2562,7 +2562,7 @@ Auf der Seite [Willkommen bei Windows 10 im S Modus](https://www.microsoft.com/w
 Gilt für: den aktuellen [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/)-Build (während der Vorschauversion).
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Windows Defender ATP-Konfigurationspaket wird automatisch dem Konfigurationsprofil zugewiesen<!-- 2144658 -->
-Wenn Sie [Advanced Threat Protection verwenden und Geräte in Intune onboarden](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile), mussten Sie zuvor ein Konfigurationspaket herunterladen und es Ihrem Konfigurationsprofil hinzufügen. Mit diesem Update ruft Intune das Paket automatisch aus dem Windows Defender Security Center ab und fügt es Ihrem Profil hinzu.
+Wenn Sie [Advanced Threat Protection verwenden und Geräte in Intune onboarden](../protect/advanced-threat-protection-configure.md#onboard-devices), mussten Sie zuvor ein Konfigurationspaket herunterladen und es Ihrem Konfigurationsprofil hinzufügen. Mit diesem Update ruft Intune das Paket automatisch aus dem Windows Defender Security Center ab und fügt es Ihrem Profil hinzu.
 Gilt für Windows 10 und höher.
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>Benutzer müssen während der Geräteeinrichtung eine Verbindung herstellen<!--2311457-->
