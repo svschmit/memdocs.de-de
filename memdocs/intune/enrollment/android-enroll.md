@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: d8506661c49fa4f9c8481a3caa96883c91e6d8bb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353495"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461758"
 ---
 # <a name="enroll-android-devices"></a>Registrieren von Android-Geräten
 
@@ -33,7 +33,8 @@ Als Intune-Administrator können Sie Android-Geräte auf folgende Weisen registr
 - Android Enterprise bietet mehrere Registrierungsoptionen, die Benutzer mit den aktuellsten und sichersten Features versorgen:
     - [**Android Enterprise-Arbeitsprofil:** ](android-work-profile-enroll.md) Für persönliche Geräte mit Berechtigung für den Zugriff auf Unternehmensdaten. Administratoren können Arbeitskonten, -Apps und -daten verwalten. Auf dem Gerät gespeicherte persönliche Daten werden von den arbeitsbezogenen Daten getrennt, und Administratoren können weder auf persönliche Einstellungen noch auf persönliche Daten zugreifen. 
     - [**Dediziertes Android Enterprise:** ](android-kiosk-enroll.md) Für unternehmenseigene Geräte für einen einzigen Verwendungszweck, z. B. für die digitale Beschilderung, zum Drucken von Tickets oder für die Bestandsverwaltung. Administratoren beschränken die Verwendung eines Geräts auf eine begrenzte Anzahl von Apps und Weblinks. Außerdem wird verhindert, dass Benutzer andere Apps hinzufügen oder andere Aktionen auf dem Gerät ausführen können.
-    - [**Vollständig verwaltetes Android Enterprise:** ](android-fully-managed-enroll.md) Für unternehmenseigene Geräte für einzelne Benutzer, die ausschließlich für die Arbeit verwendet werden, und nicht für persönliche Zwecke. Administratoren können das gesamte Gerät verwalten und Richtlinienkontrollen durchsetzen, die für Arbeitsprofile nicht verfügbar sind. 
+    - [**Vollständig verwaltetes Android Enterprise:** ](android-fully-managed-enroll.md) Für unternehmenseigene Geräte für einzelne Benutzer, die ausschließlich für die Arbeit verwendet werden, und nicht für persönliche Zwecke. Administratoren können das gesamte Gerät verwalten und Richtlinienkontrollen durchsetzen, die für Arbeitsprofile nicht verfügbar sind.
+    - [**Android Enterprise unternehmenseigen mit Arbeitsprofil:** ](android-corporate-owned-work-profile-enroll.md) Dieses Profil ist für unternehmenseigene Einzelbenutzergeräte gedacht, die für die geschäftliche und private Benutzung vorgesehen sind.
 - [**Als Android-Geräteadministrator**](android-enroll-device-administrator.md), einschließlich auf Geräten nach dem Samsung Knox Standard- und [Zebra-Geräten](../configuration/android-zebra-mx-overview.md). 
 
 ## <a name="prerequisites"></a>Voraussetzungen

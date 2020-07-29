@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65b5c7c0b9cb8a587213d237854e69705b5a7f63
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086427"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461690"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Hinzufügen von WLAN-Einstellungen für dedizierte und vollständig verwaltete Android Enterprise-Geräte in Microsoft Intune
 
@@ -33,14 +33,14 @@ Dieser Artikel beschreibt diese Einstellungen. [Hinzufügen und Verwenden von WL
 
 [Erstellen Sie ein Geräteprofil.](wi-fi-settings-configure.md)
 
-## <a name="device-owner-only"></a>Nur Gerätebesitzer
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Vollständig verwaltet, dediziert und unternehmenseigen mit einem Arbeitsprofil
 
 Diese Option eignet sich für das Bereitstellen auf einem dedizierten oder vollständig verwalteten Android Enterprise-Gerät.  Für dedizierte und vollständig verwaltete Android Enterprise-Geräte wird derzeit die SCEP-Zertifikatbereitstellung unterstützt, jedoch nicht die Bereitstellung mit PKCS-Zertifikaten.
 
 ### <a name="basic"></a>Einfach
 
 - **WLAN-Typ**: Wählen Sie **Grundlegend** aus.
-- **Netzwerkname**: Geben Sie einen Namen für diese WLAN-Verbindung ein. Benutzern wird dieser Name angezeigt, wenn sie auf ihrem Gerät die verfügbaren WLAN-Verbindungen durchsuchen. Geben Sie z.B. **Contoso WiFi** ein.
+- **Netzwerkname**: Geben Sie einen Namen für diese WLAN-Verbindung ein. Endbenutzern wird dieser Name angezeigt, wenn sie auf ihrem Gerät die verfügbaren WLAN-Verbindungen durchsuchen. Geben Sie z.B. **Contoso WiFi** ein.
 - **SSID**: Geben Sie den **Service Set Identifier** ein. Dabei handelt es sich um den Namen des Drahtlosnetzwerks, mit dem Geräte eine Verbindung herstellen. Den Benutzern wird beim Auswählen der Verbindung jedoch nur der **Netzwerkname** angezeigt, den Sie konfiguriert haben.
 - **Ausgeblendetes Netzwerk**: Wählen Sie **Aktivieren** aus, um dieses Netzwerk in der Liste der verfügbaren Netzwerke auf dem Gerät auszublenden. Die SSID wird nicht übertragen. Wählen Sie **Deaktivieren** aus, um dieses Netzwerk in der Liste der verfügbaren Netzwerke auf dem Gerät anzuzeigen.
 - **WLAN-Typ**: Wählen Sie das Sicherheitsprotokoll zur Authentifizierung beim WLAN-Netzwerk aus. Folgende Optionen sind verfügbar:

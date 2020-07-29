@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b51ed6653dff5b7d0aeef40892e16e2826f30204
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79363329"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461248"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Problembehandlung von Android Enterprise-Geräten in Microsoft Intune
 
@@ -76,6 +76,8 @@ Samsung hat diese Einschränkung für Geräte mit Android 8.0 und höher eingef
 
 ### <a name="wipe-factory-reset-option-isnt-available-for-work-profile-enrolled-device"></a>Die Option „Zurücksetzen“ („Auf Werkseinstellungen zurücksetzen“) ist für Geräte mit Arbeitsprofilen nicht verfügbar.
 Dieses Verhalten ist normal. Bei Arbeitsprofilen verfügt der MDM-Anbieter nicht über die vollständige Kontrolle über das Gerät. Es steht nur die Option „Abkoppeln“ („Unternehmensdaten entfernen“) zur Verfügung, mit der das gesamte Arbeitsprofil und alle Inhalte entfernt werden.
+
+Das Zurücksetzen wird für [unternehmenseigene Android Enterprise-Geräte mit Arbeitsprofil](android-corporate-owned-work-profile-enroll.md) unterstützt.
 
 ### <a name="is-device-passcode-reset-supported"></a>Wird das Zurücksetzen des Gerätepasscodes unterstützt?
 Bei Arbeitsprofilgeräten können Sie den Arbeitsprofilpasscode nur auf Android 8.0 und höher zurücksetzen, wenn:

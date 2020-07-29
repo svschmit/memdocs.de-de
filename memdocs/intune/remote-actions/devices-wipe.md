@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c910b840d51a1db94702bc8e095255e557246bea
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988188"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491319"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Entfernen von Geräten durch Zurücksetzen, Abkoppeln oder manuelles Aufheben der Registrierung des Geräts
 
@@ -161,7 +161,7 @@ Wenn Sie Geräte aus dem Intune-Portal entfernen möchten, können Sie sie aus d
 2. Wählen Sie **Geräte** > **Alle Geräte** aus, wählen Sie die Geräte, aus die Sie löschen möchten, und wählen Sie **Löschen** aus.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Automatisches Löschen von Geräten mit Regeln zur Bereinigung
-Sie können Intune so konfigurieren, dass Geräte automatisch gelöscht werden, die inaktiv oder veraltet erscheinen oder vermeintlich nicht reagieren. Diese Bereinigungsregeln überwachen ständig Ihren Gerätebestand, damit Ihre Gerätedatensätze auf dem neuesten Stand bleiben. Geräte, die auf diese Weise gelöscht werden, werden aus der Intune-Verwaltung entfernt.
+Sie können Intune so konfigurieren, dass Geräte automatisch gelöscht werden, die inaktiv oder veraltet erscheinen oder vermeintlich nicht reagieren. Diese Bereinigungsregeln überwachen ständig Ihren Gerätebestand, damit Ihre Gerätedatensätze auf dem neuesten Stand bleiben. Geräte, die auf diese Weise gelöscht werden, werden aus der Intune-Verwaltung entfernt. Diese Einstellung betrifft alle von Intune verwalteten Geräte, nicht nur bestimmte.
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Wählen Sie **Geräte** > **Device cleanup rules** > **Yes** (Gerätebereinigungsregeln > Ja) aus.
 3. Geben Sie in das Feld **Geräte löschen, die sich nicht eingecheckt haben für (Tage)** eine Zahl zwischen 30 und 270 ein.

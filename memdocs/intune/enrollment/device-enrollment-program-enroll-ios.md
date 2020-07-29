@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a7943fb33cf670eedd600db083b77e981da9029
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240778"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891512"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatisches Registrieren von iOS-/iPadOS-Geräten mit der automatischen Geräteregistrierung von Apple
 
@@ -71,7 +71,7 @@ Die Unterstützung für nicht überwachte ADE-Geräte ist seit iOS/iPadOS 11 ve
 - Maximale Anzahl der Token für die automatische Geräteregistrierung pro Intune-Konto: 2,000
 - Maximale Anzahl von Geräten mit automatischer Geräteregistrierung pro Token: Der Grenzwert bei der ersten Synchronisierung ist 75.000 bis 80.000 Geräte. Intune wird weiterhin alle 12 Stunden mit ABM oder ASM synchronisiert, um mit jedem Mal mehr Geräte hinzuzufügen. Eine manuelle Synchronisierung (die alle 15 Minuten ausgelöst werden kann) fügt auch ein Gerätebatch zu Intune hinzu. Synchronisierungen erfolgen weiterhin, und Geräte werden weiterhin in großen Mengen zwischen ABM/ASM und Intune synchronisiert. 
 
-## <a name="get-an-apple-ade-token"></a>Abrufen eines Apple-ADE-Tokens
+## <a name="get-an-apple-automated-device-enrollment-token"></a>Abrufen eines Tokens für die automatische Geräteregistrierung von Apple
 
 Damit Sie iOS-/iPadOS-Geräte mit der automatischen Geräteregistrierung registrieren können, benötigen Sie eine ADE-Tokendatei (P7M) von Apple. Mit diesem Token kann Intune Informationen zu ADE-Geräten synchronisieren, die Ihrem Unternehmen gehören. Damit kann Intune außerdem Registrierungsprofile zu Apple hochladen und diesen Profilen Geräte zuweisen.
 
@@ -323,7 +323,7 @@ Sie haben die Verwaltung und Synchronisierung zwischen Apple und Intune aktivier
 
 Informationen finden Sie unter [Registrieren Ihres iOS-/iPadOS-Geräts in Intune mit dem Programm zur Geräteregistrierung](../user-help/enroll-your-device-dep-ios.md).
 
-## <a name="renew-an-ade-token"></a>Erneuern eines ADE-Tokens  
+## <a name="renew-an-automated-device-enrollment-token"></a>Erneuern eines Tokens für die automatische Geräteregistrierung  
 
 > [!NOTE]
 > Zusätzlich zur jährlichen Erneuerung Ihres ADE-Tokens müssen Sie das Token Ihres Registrierungsprogramms in Intune und Apple Business Manager erneuern, wenn das Kennwort der verwalteten Apple-ID für den Benutzer geändert wird, der das Token in Apple Business Manager eingerichtet hat, oder wenn dieser Benutzer Ihre Apple Business Manager-Organisation verlässt.
@@ -347,7 +347,7 @@ Informationen finden Sie unter [Registrieren Ihres iOS-/iPadOS-Geräts in Intune
 9. Klicken Sie auf **Token erneuern**. Es wird eine Bestätigung angezeigt, dass das Token erneuert wurde.   
     ![Screenshot der Bestätigung](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
-## <a name="delete-an-ade-token-from-intune"></a>Löschen eines ADE-Tokens aus Intune
+## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>Löschen eines Tokens für die automatische Geräteregistrierung aus Intune
 
 Sie können Token des Registrierungsprofils aus Intune löschen, solange Folgendes gilt:
 - Dem Token sind keine Geräte zugewiesen

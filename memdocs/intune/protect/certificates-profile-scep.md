@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 07/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531739"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891529"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Erstellen und Zuweisen eines SCEP-Zertifikatprofils in Intune
 
@@ -40,15 +40,15 @@ Nachdem Sie [Ihre Infrastruktur für die Unterstützung von SCEP-Zertifikaten (S
    - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus.
    - **Profil**: Wählen Sie das **SCEP-Zertifikat** aus.
 
-     Für die **Android Enterprise**-Plattform ist der *Profiltyp* in zwei Kategorien unterteilt: *Nur Gerätebesitzer* und *Nur Arbeitsprofil*. Stellen Sie sicher, dass Sie das richtige SCEP-Zertifikatprofil für die von Ihnen verwalteten Geräte auswählen.  
+     Für die Plattform **Android Enterprise** ist der *Profiltyp* in zwei Kategorien unterteilt: *Fully Managed, Dedicated, and Corporate-Owned Work Profile* (Vollständig verwaltet, dediziert und unternehmenseigen mit einem Arbeitsprofil) und *Nur Arbeitsprofil*. Stellen Sie sicher, dass Sie das richtige SCEP-Zertifikatprofil für die von Ihnen verwalteten Geräte auswählen.  
 
-     Bei SCEP-Zertifikatprofilen für das Profil *Nur Gerätebesitzer* gelten folgende Einschränkungen:
+     SCEP-Zertifikatprofile für das Profil *Fully Managed, Dedicated, and Corporate-Owned Work Profile* (Vollständig verwaltet, dediziert und unternehmenseigen mit einem Arbeitsprofil) weisen die folgenden Einschränkungen auf:
 
       1. Unter „Überwachung“ ist die Zertifikatberichterstellung für SCEP-Zertifikatprofile für Gerätebesitzer nicht verfügbar.
 
       2. Sie können Intune nicht verwenden, um Zertifikate zu widerrufen, die von SCEP-Zertifikatsprofilen für Gerätebesitzer bereitgestellt wurden. Sie können den Widerruf über einen externen Prozess oder direkt mit der Zertifizierungsstelle verwalten.
 
-      3. Für dedizierte Android Enterprise-Geräte werden SCEP-Zertifikatprofile nur für die WLAN-Netzwerkkonfiguration und -authentifizierung unterstützt.  SCEP-Zertifikatprofile auf dedizierten Android Enterprise-Geräten werden nicht für die VPN- oder die App-Authentifizierung unterstützt.
+      3. Für dedizierte Android Enterprise-Geräte werden SCEP-Zertifikatprofile nur für die WLAN-Netzwerkkonfiguration, VPNs und die Authentifizierung unterstützt. SCEP-Zertifikatprofile auf dedizierten Android Enterprise-Geräten werden nicht für die App-Authentifizierung unterstützt.
 
 4. Wählen Sie **Erstellen** aus.
 
@@ -71,6 +71,9 @@ Nachdem Sie [Ihre Infrastruktur für die Unterstützung von SCEP-Zertifikaten (S
 
        Benutzen Sie **Gerät** für Szenarios mit benutzerlosen Geräten (wie Kioske) oder Windows-Geräten. Auf Windows-Geräten wird das Zertifikat in den Zertifikatspeicher des lokalen Computers eingefügt.
 
+     > [!NOTE]
+     > Unter macOS werden Zertifikate, die Sie mit SCEP bereitstellen, immer in der Systemkeychain (Systemspeicher) des Geräts gespeichert.
+ 
    - **Format des Antragstellernamens**:
 
      Wählen Sie aus, auf welche Weise Intune den Antragstellernamen in der Zertifikatanforderung automatisch erstellen soll. Die Optionen für das Format des Antragstellernamens sind abhängig vom ausgewählten Zertifikattyp (**Benutzer** oder **Gerät**).
@@ -112,7 +115,7 @@ Nachdem Sie [Ihre Infrastruktur für die Unterstützung von SCEP-Zertifikaten (S
 
          Dieses Beispiel enthält das Format des Antragstellernamens, das die Variablen „CN“ und „E“ und Zeichenfolgen für die Werte „Organisationseinheit“, „Organisation“, „Standort“, „Bundesland/Kanton“ und „Land/Region“ verwendet. Die Funktion [CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beschreibt diese Funktion und die unterstützten Zeichenfolgen.
          
-         \* Für Profile vom Typ „Nur Android-Gerätebesitzer“ funktioniert die Einstellung **CN={{UserPrincipalName}}** nicht. Profile vom Typ „Nur Android-Gerätebesitzer“ können für Geräte ohne Benutzer verwendet werden, sodass dieses Profil nicht in der Lage ist, den Prinzipalnamen des Benutzers zu ermitteln. Wenn Sie diese Option für Geräte mit Benutzern wirklich benötigen, können Sie eine Problemumgehung wie die folgende verwenden: **CN={{UserName}}\@contoso.com** Es werden der Benutzername und die Domäne angegeben, die Sie manuell hinzugefügt haben, z. B. janedoe@contoso.com
+         \* Für Profile vom Typ „Fully Managed, Dedicated, and Corporate-Owned Work Profile“ (Vollständig verwaltet, dediziert und unternehmenseigen mit einem Arbeitsprofil) für Android funktioniert die Einstellung **CN={{UserPrincipalName}}** nicht. Solche Profile können für Geräte ohne Benutzer verwendet werden. Daher können sie den Benutzerprinzipalnamen des Benutzers nicht abrufen. Wenn Sie diese Option für Geräte mit Benutzern wirklich benötigen, können Sie eine Problemumgehung wie die folgende verwenden: **CN={{UserName}}\@contoso.com** Es werden der Benutzername und die Domäne angegeben, die Sie manuell hinzugefügt haben, z. B. janedoe@contoso.com
 
       - **Gerätzertifikattyp**
 

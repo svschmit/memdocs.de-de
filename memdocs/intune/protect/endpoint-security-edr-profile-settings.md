@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: dd53ec47435ba9dc416d2b152719b393d1647f90
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e26719bb9bf322e3e4bf11b39911e98788707629
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823995"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460415"
 ---
 # <a name="endpoint-detection-and-response-policy-settings-for-endpoint-security-in-intune"></a>Richtlinieneinstellungen für Endpunkterkennung und -antwort für Endpunktsicherheit in Intune
 
@@ -33,9 +33,7 @@ Unterstützte Plattformen und Profile:
   - Profil: **Endpunkterkennung und -antwort (MDM)**
 
 - **Windows 10 und Windows Server**: Verwenden Sie diese Plattform für Richtlinien, die Sie auf Geräten bereitstellen, die von Configuration Manager verwaltet werden.
-  - Profil: **Endpunkterkennung und -antwort (ConfigMgr) (Vorschau)**
-  
-  *Diese Plattform und dieses Profil befinden sich in der öffentlichen Vorschau*.
+  - Profil: **Endpunkterkennung und -antwort (ConfigMgr)**
 
 ## <a name="endpoint-detection-and-response-mdm"></a>Endpunkterkennung und -antwort (MDM)
 
@@ -70,7 +68,7 @@ Unterstützte Plattformen und Profile:
   - **Nicht konfiguriert** (*Standardeinstellung*)
   - **Ja**: Erhöht die Häufigkeit von Microsoft Defender Advanced Threat Protection-Telemetrieberichten.
 
-## <a name="endpoint-detection-and-response-configmgr-preview"></a>Endpunkterkennung und -antwort (ConfigMgr) (Vorschau)
+## <a name="endpoint-detection-and-response-configmgr"></a>Endpunkterkennung und -antwort (ConfigMgr)
 
 **Endpunkterkennung und -antwort**:
 

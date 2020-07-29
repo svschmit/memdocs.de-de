@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b70d1e8b64a9000d10e46a17b0d3cb6133088f5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 479dd1fede23c902d7be0f38ad0f16aa9f4917cf
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989129"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565516"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrieren von Jamf Pro in Intune zu Konformitätszwecken
 
@@ -102,7 +102,7 @@ So stellen Sie eine Verbindung zwischen Intune und Jamf Pro her:
 
 9. Wählen Sie auf der Seite **API-Berechtigungen anfordern** den Eintrag **Intune** aus, und wählen Sie dann **Anwendungsberechtigungen** aus. Aktivieren Sie nur das Kontrollkästchen für **update_device_attributes**, und speichern Sie die neue Berechtigung.
 
-10. Gewähren Sie dieser App als nächsten Schritt die Zustimmung des Administrators, indem Sie oben links auf der Seite **API-Berechtigungen** auf **Administratorzustimmung für _\<Ihr Mandant>_ erteilen** klicken. Möglicherweise müssen Sie Ihr Konto im neuen Fenster erneut authentifizieren und der Anwendung Zugriff gewähren, indem Sie die folgenden Anweisungen befolgen.  
+10. Erteilen Sie dieser App im nächsten Schritt die Administratoreinwilligung, indem Sie oben links auf der Seite **API-Berechtigungen** auf **Administratoreinwilligung für _\<your tenant>_ erteilen** klicken. Möglicherweise müssen Sie Ihr Konto im neuen Fenster erneut authentifizieren und der Anwendung Zugriff gewähren, indem Sie die folgenden Anweisungen befolgen.  
 
 11. Aktualisieren Sie die Seite, indem Sie oben auf der Seite auf die Schaltfläche **Aktualisieren** klicken. Vergewissern Sie sich, dass die Administratoreinwilligung für die Berechtigung **update_device_attributes** erteilt wurde. 
 
@@ -110,10 +110,10 @@ So stellen Sie eine Verbindung zwischen Intune und Jamf Pro her:
 
    ![Erfolgreiche Berechtigungen](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
-   Der Prozess der App-Registrierung in Azure AD ist abgeschlossen.
+Der Prozess der App-Registrierung in Azure AD ist abgeschlossen.
 
-    > [!NOTE]
-    > Wenn der geheime Clientschlüssel abläuft, müssen Sie in Azure einen neuen geheimen Clientschlüssel erstellen und dann die Daten für den bedingten Zugriff in Jamf Pro aktualisieren. In Azure kann sowohl das alte als auch das neue Geheimnis aktiv sein, um Dienstunterbrechungen zu verhindern.
+> [!NOTE]
+> Wenn der geheime Clientschlüssel abläuft, müssen Sie in Azure einen neuen geheimen Clientschlüssel erstellen und dann die Daten für den bedingten Zugriff in Jamf Pro aktualisieren. In Azure kann sowohl das alte als auch das neue Geheimnis aktiv sein, um Dienstunterbrechungen zu verhindern.
 
 ### <a name="enable-intune-to-integrate-with-jamf-pro"></a>Ermöglichen einer Integration von Intune in Jamf Pro
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989651"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460466"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Überwachen der Geräteverschlüsselung mit Intune
 
@@ -118,7 +118,7 @@ Wenn Sie im Verschlüsselungsbericht ein Gerät auswählen, zeigt Intune den Ber
 
   - Das Gerät ist bereits verschlüsselt. Der Gerätebenutzer muss das Gerät entschlüsseln, um weitere Schritte ausführen zu können.
 
-    *Zu berücksichtigen: Intune kann FileVault nicht auf einem Gerät einrichten, das bereits verschlüsselt ist. Stattdessen muss der Benutzer sein Gerät manuell entschlüsseln, bevor es über eine Gerätekonfigurationsrichtlinie und Intune verwaltet werden kann.*
+    *Zu berücksichtigen: Intune kann FileVault nicht auf einem Gerät einrichten, das bereits verschlüsselt ist. Nachdem ein Gerät jedoch eine Richtlinie zum Aktivieren von FileVault erhält, kann ein Benutzer seinen [persönlichen Wiederherstellungsschlüssel hochladen, um Intune zu aktivieren und dann die Verschlüsselung auf dem Gerät zu verwalten](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices). Alternativ (aber nicht empfohlen, da das Gerät dabei für eine Weile nicht verschlüsselt ist) kann der Benutzer sein Gerät vorher manuell entschlüsseln, damit es dann von der Intune-Richtlinie verschlüsselt werden kann.*
 
   - Für FileVault muss der Benutzer sein Verwaltungsprofil in macOS Catalina und höher genehmigen.
 
@@ -174,7 +174,7 @@ Dieser Bericht kann bei der Identifizierung von Problemen von Gerätegruppen ver
 Ausführliche Informationen zum Verwalten von Wiederherstellungsschlüsseln finden Sie in den folgenden Intune-Dokumentationen:
 
 macOS FileVault:
-- [Abrufen persönlicher Wiederherstellungsschlüssel](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Abrufen persönlicher Wiederherstellungsschlüssel](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
 - [Rotieren von Wiederherstellungsschlüsseln](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [Wiederherstellen von Wiederherstellungsschlüsseln](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 

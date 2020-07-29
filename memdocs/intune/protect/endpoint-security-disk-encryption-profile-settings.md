@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: db23ee1742934e8545c03c529d6a05c13cc59f1a
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633281"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462030"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Einstellungen der Datenträgerverschlüsselungsrichtlinie für Endpunktsicherheit in Intune
 
@@ -66,6 +66,11 @@ Unterstützte Plattformen und Profile:
     Mit dieser Option wird verhindert, dass die Aufforderung dem Benutzer bei der Abmeldung angezeigt wird, der die Aktivierung von FileVault anfordert. Wenn diese Option deaktiviert ist, wird die Eingabeaufforderung bei der Abmeldung deaktiviert, und der Benutzer wird stattdessen aufgefordert, wenn er sich anmeldet.
     - **Nicht konfiguriert** (*Standardeinstellung*)
     - **Ja**: Die Aufforderung zum Aktivieren von FileVault beim Abmelden wird deaktiviert.
+
+  - **Wiederherstellungsschlüssel ausblenden**  
+     Mit dieser Einstellung können Sie den persönlichen Wiederherstellungsschlüssel für den Benutzer des macOS-Geräts während der Verschlüsselung ausblenden. Sobald der Datenträger verschlüsselt ist, kann ein Benutzer ein beliebiges Gerät zum Anzeigen seines persönlichen Wiederherstellungsschlüssels über die Intune-Unternehmensportalwebsite oder die Unternehmensportal-App auf einer unterstützten Plattform verwenden.
+    - **Nicht konfiguriert** (*Standardeinstellung*)
+    - **Ja:** Mit dieser Option wird der persönliche Wiederherstellungsschlüssel während der Verschlüsselung ausgeblendet.
 
 ## <a name="bitlocker"></a>BitLocker
 

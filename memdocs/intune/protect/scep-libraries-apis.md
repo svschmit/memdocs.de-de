@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a915ffc908c985b38533a362f2a17ec561ddf6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351239"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565664"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Verwenden von APIs zum Hinzufügen von Drittanbieter-Zertifizierungsstellen für SCEP in Intune
 
@@ -78,17 +78,17 @@ Für die Integration der Bibliothek in Ihre Produkte müssen die folgenden Schri
 5. Schließen Sie die Bibliothek in das Projekt ein, in dem Ihr SCEP-Server erstellt wird
 6. Führen Sie auf dem SCEP-Server die folgenden Schritte aus:
 
-    - Ermöglichen Sie dem Administrator, [den Azure-Anwendungsbezeichner, den Azure-Anwendungsschlüssel und die Mandanten-ID](#onboard-scep-server-in-azure) (in diesem Artikel) zu konfigurieren, welche die Bibliothek für die Authentifizierung verwendet. Administratoren sollten den Azure-Anwendungsschlüssel aktualisieren können.
-    - Identifizieren Sie SCEP-Anforderungen, die ein in Intune generiertes SCEP-Kennwort enthalten
-    - Überprüfen Sie mithilfe der Bibliothek **Anforderungs-API überprüfen** die in Intune generierten SCEP-Kennwörter
-    - Informieren Sie Intune über die Benachrichtigungs-APIs der Bibliothek über Zertifikate, die für SCEP-Anforderungen ausgestellt wurden und über von Intune generierte SCEP-Kennwörter verfügen. Darüber hinaus sollten Sie Intune auch über Fehler benachrichtigen, die bei der Verarbeitung dieser SCEP-Anforderungen auftreten.
-    - Vergewissern Sie sich, dass der Server genügend Informationen protokolliert, um Administratoren bei der Behebung von Problemen unterstützen zu können
+   - Ermöglichen Sie dem Administrator, [den Azure-Anwendungsbezeichner, den Azure-Anwendungsschlüssel und die Mandanten-ID](#onboard-scep-server-in-azure) (in diesem Artikel) zu konfigurieren, welche die Bibliothek für die Authentifizierung verwendet. Administratoren sollten den Azure-Anwendungsschlüssel aktualisieren können.
+   - Identifizieren Sie SCEP-Anforderungen, die ein in Intune generiertes SCEP-Kennwort enthalten
+   - Überprüfen Sie mithilfe der Bibliothek **Anforderungs-API überprüfen** die in Intune generierten SCEP-Kennwörter
+   - Informieren Sie Intune über die Benachrichtigungs-APIs der Bibliothek über Zertifikate, die für SCEP-Anforderungen ausgestellt wurden und über von Intune generierte SCEP-Kennwörter verfügen. Darüber hinaus sollten Sie Intune auch über Fehler benachrichtigen, die bei der Verarbeitung dieser SCEP-Anforderungen auftreten.
+   - Vergewissern Sie sich, dass der Server genügend Informationen protokolliert, um Administratoren bei der Behebung von Problemen unterstützen zu können
 
 7. Führen Sie die [Integrationstests](#integration-testing) (in diesem Artikel) aus, und beheben Sie sämtliche Probleme
 8. Stellen Sie eine schriftliche Anleitung für den Kunden bereit, in dem Folgendes erläutert wird:
 
-    - Vorgehensweise beim Integrieren des SCEP-Servers in das Azure-Portal
-    - Vorgehensweise beim Abrufen des Azure-Anwendungsbezeichners und des Azure-Anwendungsschlüssels, die für die Konfiguration der Bibliothek erforderlich sind
+   - Vorgehensweise beim Integrieren des SCEP-Servers in das Azure-Portal
+   - Vorgehensweise beim Abrufen des Azure-Anwendungsbezeichners und des Azure-Anwendungsschlüssels, die für die Konfiguration der Bibliothek erforderlich sind
 
 ### <a name="onboard-scep-server-in-azure"></a>Integrieren des SCEP-Servers in Azure
 
@@ -108,38 +108,38 @@ Die `IntuneScepServiceClient`-Klasse enthält die Methoden, die der SCEP-Dienst 
 
 ##### <a name="intunescepserviceclient-constructor"></a>IntuneScepServiceClient-Konstruktor
 
-Signatur:
+**Signatur:**
 
 ```java
 IntuneScepServiceClient(
     Properties configProperties)
 ```
 
-Beschreibung:
+**Beschreibung:**
 
 Instanziiert und konfiguriert ein `IntuneScepServiceClient`-Objekt.
 
-Parameter:
+**Parameter**:
 
-    - configProperties: Das Eigenschaftenobjekt mit Informationen zur Clientkonfiguration
+- **configProperties:** Dieser Parameter bezeichnet das Eigenschaftenobjekt mit Informationen zur Clientkonfiguration.
 
 Die Konfiguration muss folgende Eigenschaften enthalten:
 
-    - AAD_APP_ID = „Der während des Integrationsprozesses abgerufene Azure-Anwendungsbezeichner“
-    - AAD_APP_KEY = „Der während des Integrationsprozesses abgerufene Azure-Anwendungsschlüssel“
-    - TENANT = „Die während des Integrationsprozesses abgerufene Mandanten-ID“
-    - PROVIDER_NAME_AND_VERSION = „Informationen zum Identifizieren Ihres Produkts und der zugehörigen Version“
-    
+- AAD_APP_ID = „Der während des Integrationsprozesses abgerufene Azure-Anwendungsbezeichner“
+- AAD_APP_KEY = „Der während des Integrationsprozesses abgerufene Azure-Anwendungsschlüssel“
+- TENANT = „Die während des Integrationsprozesses abgerufene Mandanten-ID“
+- PROVIDER_NAME_AND_VERSION = „Informationen zum Identifizieren Ihres Produkts und der zugehörigen Version“
+
 Wenn Ihre Lösung eher einen Proxy mit oder ohne Authentifizierung erfordert, können Sie die folgenden Eigenschaften hinzufügen:
 
-    - PROXY_HOST="The host the proxy is hosted on." (Der Host, auf dem der Proxy gehostet wird)
-    - PROXY_PORT="The port the proxy is listening on." (Der Port, auf den der Proxy hört)
-    - PROXY_USER="The username to use if proxy uses basic authentication." (Der zu verwendende Benutzername, wenn der Proxy Standardauthentifizierung verwendet)
-    - PROXY_PASS="The password to use if proxy uses basic authentication." (Das zu verwendende Kennwort, wenn der Proxy Standardauthentifizierung verwendet)
+- PROXY_HOST="The host the proxy is hosted on." (Der Host, auf dem der Proxy gehostet wird)
+- PROXY_PORT="The port the proxy is listening on." (Der Port, auf den der Proxy hört)
+- PROXY_USER="The username to use if proxy uses basic authentication." (Der zu verwendende Benutzername, wenn der Proxy Standardauthentifizierung verwendet)
+- PROXY_PASS="The password to use if proxy uses basic authentication." (Das zu verwendende Kennwort, wenn der Proxy Standardauthentifizierung verwendet)
 
-Löst aus:
+**Löst aus:**
 
-    - IllegalArgumentException: Wird ausgelöst, wenn der Konstruktor ohne ordnungsgemäßes Eigenschaftenobjekt ausgeführt wird.
+- **IllegalArgumentException:** Diese wird ausgelöst, wenn der Konstruktor ohne ordnungsgemäßes Eigenschaftenobjekt ausgeführt wird.
 
 > [!IMPORTANT]
 > Es wird empfohlen, eine Instanz dieser Klasse zu instanziieren und diese für die Verarbeitung mehrerer SCEP-Anforderungen zu verwenden. Auf diese Weise wird der Mehraufwand reduziert, da Authentifizierungstoken und Informationen zur Dienstidentifizierung zwischengespeichert werden.
@@ -149,7 +149,7 @@ Der Implementer des SCEP-Servers muss die Daten, die in die Konfigurationseigens
 
 ##### <a name="validaterequest-method"></a>ValidateRequest-Methode
 
-Signatur:
+**Signatur:**
 
 ```java
 void ValidateRequest(
@@ -157,32 +157,32 @@ void ValidateRequest(
     String certificateRequest)
 ```
 
-Beschreibung:
+**Beschreibung:**
 
 Überprüft eine SCEP-Zertifikatanforderung.
 
-Parameter:
+**Parameter**:
 
-    - transactionId: Die Transaktions-ID des SCEP
-    - certificateRequest: DER-codierte PKCS #10-Zertifikatanforderung mit Base64-Codierung als Zeichenfolge
+- **transactionId:** Dieser Parameter bezeichnet die Transaktions-ID des SCEP.
+- **certificateRequest:** Dieser Parameter bezeichnet die DER-codierte PKCS #10-Zertifikatanforderung mit Base64-Codierung als Zeichenfolge.
 
-Löst aus:
+**Löst aus:**
 
-    - IllegalArgumentException: Dieser Parameter wird ausgelöst, wenn er mit einem ungültigen Parameter aufgerufen wird
-    - IntuneScepServiceException: Wird ausgelöst, wenn festgestellt wird, dass die Zertifikatanforderung ungültig ist
-    - Exception: Wird ausgelöst, wenn ein unerwarteter Fehler auftritt
+- **IllegalArgumentException:** Diese wird beim Aufruf mit einem ungültigen Parameter ausgelöst.
+- **IntuneScepServiceException:** Diese wird ausgelöst, wenn festgestellt wird, dass die Zertifikatanforderung ungültig ist.
+- **Exception:** Diese wird ausgelöst, wenn ein unerwarteter Fehler auftritt.
 
 > [!IMPORTANT]
 > Von dieser Methode ausgelöste Ausnahmen sollten vom Server protokolliert werden. Beachten Sie, dass die `IntuneScepServiceException`-Eigenschaften detaillierte Informationen darüber aufweisen, weshalb die Überprüfung der Zertifikatanforderung fehlgeschlagen ist.
 
-**Sicherheitshinweise**  
+**Sicherheitshinweise:**
 
 - Wenn diese Methode eine Ausnahme auslöst, darf der SCEP-Server **kein** Zertifikat für den Client ausstellen.
 - Fehler bei der Überprüfung der SCEP-Zertifikatanforderung weisen möglicherweise auf ein Problem in der Intune-Infrastruktur hin. Alternativ könnten sie auch darauf hinweisen, dass ein Angreifer versucht, ein Zertifikat abzurufen.
 
 ##### <a name="sendsuccessnotification-method"></a>SendSuccessNotification-Methode
 
-Signatur:
+**Signatur:**
 
 ```java
 void SendSuccessNotification(
@@ -194,36 +194,36 @@ void SendSuccessNotification(
     String certIssuingAuthority)
 ```
 
-Beschreibung:
+**Beschreibung:**
 
 Benachrichtigt Intune darüber, dass ein Zertifikat als Teil der Verarbeitung einer SCEP-Anforderung erstellt wurde.
 
-Parameter:
+**Parameter**:
 
-    - transactionId: Die Transaktions-ID des SCEP
-    - certificateRequest: DER-codierte PKCS #10-Zertifikatanforderung mit Base64-Codierung als Zeichenfolge
-    - certThumprint: Ein SHA-1-Hash des Fingerabdrucks des bereitgestellten Zertifikats
-    - CertSerialNumber: Die Seriennummer des bereitgestellten Zertifikats
-    - CertExpirationDate: Das Ablaufdatum des bereitgestellten Zertifikats. Die DateTime-Zeichenfolge sollte als UTC-Webzeit (YYYY-MM-DDThh:mm:ss.sssTZD) formatiert werden (ISO 8601).
-    - certIssuingAuthority: Der Name der Stelle, die das Zertifikat ausgestellt hat
+- **transactionId:** Dieser Parameter bezeichnet die Transaktions-ID des SCEP.
+- **certificateRequest:** Dieser Parameter bezeichnet die DER-codierte PKCS #10-Zertifikatanforderung mit Base64-Codierung als Zeichenfolge.
+- **certThumprint:** Dieser Parameter bezeichnet einen SHA-1-Hash des Fingerabdrucks des bereitgestellten Zertifikats.
+- **certSerialNumber:** Dieser Parameter bezeichnet die Seriennummer des bereitgestellten Zertifikats.
+- **certExpirationDate:** Dieser Parameter bezeichnet das Ablaufdatum des bereitgestellten Zertifikats. Die DateTime-Zeichenfolge sollte als UTC-Webzeit (YYYY-MM-DDThh:mm:ss.sssTZD) formatiert werden (ISO 8601).
+- **certIssuingAuthority:** Dieser Parameter bezeichnet den Namen der Stelle, die das Zertifikat ausgestellt hat.
 
-Löst aus:
+**Löst aus:**
 
-    - IllegalArgumentException: Dieser Parameter wird ausgelöst, wenn er mit einem ungültigen Parameter aufgerufen wird
-    - IntuneScepServiceException: Wird ausgelöst, wenn festgestellt wird, dass die Zertifikatanforderung ungültig ist
-    - Exception: Wird ausgelöst, wenn ein unerwarteter Fehler auftritt
+- **IllegalArgumentException:** Diese wird beim Aufruf mit einem ungültigen Parameter ausgelöst.
+- **IntuneScepServiceException:** Diese wird ausgelöst, wenn festgestellt wird, dass die Zertifikatanforderung ungültig ist.
+- **Exception:** Diese wird ausgelöst, wenn ein unerwarteter Fehler auftritt.
 
 > [!IMPORTANT]
 > Von dieser Methode ausgelöste Ausnahmen sollten vom Server protokolliert werden. Beachten Sie, dass die `IntuneScepServiceException`-Eigenschaften detaillierte Informationen darüber aufweisen, weshalb die Überprüfung der Zertifikatanforderung fehlgeschlagen ist.
 
-**Sicherheitshinweise**
+**Sicherheitshinweise:**
 
 - Wenn diese Methode eine Ausnahme auslöst, darf der SCEP-Server **kein** Zertifikat für den Client ausstellen.
 - Fehler bei der Überprüfung der SCEP-Zertifikatanforderung weisen möglicherweise auf ein Problem in der Intune-Infrastruktur hin. Alternativ könnten sie auch darauf hinweisen, dass ein Angreifer versucht, ein Zertifikat abzurufen.
 
 ##### <a name="sendfailurenotification-method"></a>SendFailureNotification-Methode
 
-Signatur:
+**Signatur:**
 
 ```java
 void SendFailureNotification(
@@ -233,51 +233,51 @@ void SendFailureNotification(
     String errorDescription)
 ```
 
-Beschreibung:
+**Beschreibung:**
 
 Benachrichtigt Intune darüber, dass bei der Verarbeitung einer SCEP-Anforderung ein Fehler aufgetreten ist. Diese Methode sollte nicht bei Ausnahmen aufgerufen werden, die von den Methoden dieser Klasse ausgelöst werden.
 
-Parameter:
+**Parameter**:
 
-    - transactionId: Die Transaktions-ID des SCEP
-    - certificateRequest: DER-codierte PKCS #10-Zertifikatanforderung mit Base64-Codierung als Zeichenfolge
-    - hResult: Ein Win32-Fehlercode, der den aufgetretenen Fehler am besten beschreibt. Siehe [Win32-Fehlercodes](https://msdn.microsoft.com/library/cc231199.aspx)
-    - errorDescription: Eine Beschreibung des aufgetretenen Fehlers
+- **transactionId:** Dieser Parameter bezeichnet die Transaktions-ID des SCEP.
+- **certificateRequest:** Dieser Parameter bezeichnet die DER-codierte PKCS #10-Zertifikatanforderung mit Base64-Codierung als Zeichenfolge.
+- **hResult:** Dieser Parameter bezeichnet einen Win32-Fehlercode, der den aufgetretenen Fehler am besten beschreibt. Siehe [Win32-Fehlercodes](https://msdn.microsoft.com/library/cc231199.aspx)
+- **errorDescription:** Dieser Parameter bezeichnet eine Beschreibung des aufgetretenen Fehlers.
 
-Löst aus:
+**Löst aus:**
 
-    - IllegalArgumentException: Dieser Parameter wird ausgelöst, wenn er mit einem ungültigen Parameter aufgerufen wird
-    - IntuneScepServiceException: Wird ausgelöst, wenn festgestellt wird, dass die Zertifikatanforderung ungültig ist
-    - Exception: Wird ausgelöst, wenn ein unerwarteter Fehler auftritt
+- **IllegalArgumentException:** Diese wird beim Aufruf mit einem ungültigen Parameter ausgelöst.
+- **IntuneScepServiceException:** Diese wird ausgelöst, wenn festgestellt wird, dass die Zertifikatanforderung ungültig ist.
+- **Exception:** Diese wird ausgelöst, wenn ein unerwarteter Fehler auftritt.
 
 > [!IMPORTANT]
 > Von dieser Methode ausgelöste Ausnahmen sollten vom Server protokolliert werden. Beachten Sie, dass die `IntuneScepServiceException`-Eigenschaften detaillierte Informationen darüber aufweisen, weshalb die Überprüfung der Zertifikatanforderung fehlgeschlagen ist.
 
-**Sicherheitshinweise**
+**Sicherheitshinweise:**
 
 - Wenn diese Methode eine Ausnahme auslöst, darf der SCEP-Server **kein** Zertifikat für den Client ausstellen.
 - Fehler bei der Überprüfung der SCEP-Zertifikatanforderung weisen möglicherweise auf ein Problem in der Intune-Infrastruktur hin. Alternativ könnten sie auch darauf hinweisen, dass ein Angreifer versucht, ein Zertifikat abzurufen.
 
 ##### <a name="setsslsocketfactory-method"></a>SetSslSocketFactory-Methode
 
-Signatur:
+**Signatur:**
 
 ```java
 void SetSslSocketFactory(
     SSLSocketFactory factory)
 ```
 
-Beschreibung:
+**Beschreibung:**
 
 Mit dieser Methode können Sie den Client darüber informieren, dass dieser bei der Kommunikation mit Intune die angegebene SSL-Socket-Factory verwenden muss (anstelle des Standardwerts).
 
-Parameter:
+**Parameter**:
 
-    - factory: Die SSL-Socket-Factory, die der Client für HTTPS-Anforderungen verwenden sollte
+- **factory:** Dieser Parameter bezeichnet die SSL-Socket-Factory, die der Client für HTTPS-Anforderungen verwenden sollte.
 
-Löst aus:
+**Löst aus:**
 
-    - IllegalArgumentException: Dieser Parameter wird ausgelöst, wenn er mit einem ungültigen Parameter aufgerufen wird
+- **IllegalArgumentException:** Diese wird beim Aufruf mit einem ungültigen Parameter ausgelöst.
 
 > [!NOTE]
 > Die SSL-Socket-Factory muss ggf. festgelegt werden, bevor die anderen Methoden dieser Klasse ausgeführt werden.

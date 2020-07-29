@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b80527921172201dc86c5f3241e9978525afa083
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984825"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461537"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Zuweisen von Apps zu Gruppen mit Microsoft Intune
 
@@ -36,7 +36,7 @@ Nachdem Sie Microsoft Intune [eine App hinzugefügt](apps-add.md) haben, können
 
 In der folgenden Tabelle werden die verschiedenen Optionen für die Zuweisung von Apps zu Benutzern und Geräten erläutert:
 
-|   | Bei Intune registrierte Geräte | Nicht bei Intune registrierte Geräte |
+| Option  | Bei Intune registrierte Geräte | Nicht bei Intune registrierte Geräte |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | Zuweisen zu Benutzern | Ja | Ja |
 | Zuweisen zu Geräten | Ja | Nein |
@@ -71,7 +71,7 @@ In der folgenden Tabelle werden die verschiedenen Optionen für die Zuweisung vo
      > - Sie können die Vorgehensweise für verwaltete Apps konfigurieren, wenn die Geräte nicht mehr verwaltet werden. Wählen Sie hierzu unter **Deinstallieren beim Entfernen des Geräts** die gewünschte Einstellung aus. Weitere Informationen finden Sie im Abschnitt [Einstellung zum Deinstallieren von Apps für verwaltete iOS-Apps](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
      > - Wenn Sie ein iOS/iPadOS-VPN-Profil erstellt haben, das VPN-Einstellungen pro App enthält, können Sie dieses unter **VPN** auswählen. Wenn die App ausgeführt wird, wird die VPN-Verbindung geöffnet. Weitere Informationen finden Sie unter [Hinzufügen von VPN-Einstellungen auf iOS- und iPadOS-Geräten in Microsoft Intune](../configuration/vpn-settings-ios.md).
      >
-     > **Nur für Android-Apps**: Wenn Sie eine Android-App als **Verfügbar mit oder ohne Registrierung** bereitstellen, ist der Berichtsstatus nur auf registrierten Geräten verfügbar.
+     > **Nur für Android-Apps:** Wenn Sie eine Android-App als **Available with or without enrollment** (Mit und ohne Registrierung verfügbar) bereitstellen, ist der Berichtsstatus nur auf registrierten Geräten verfügbar.
      >
      > **Für registrierte Geräte verfügbar**: Die App wird nur als verfügbar angezeigt, wenn der im Unternehmensportal angemeldete Benutzer auch der primäre Benutzer ist, der das Gerät registriert hat, und die App auf dem Gerät ausgeführt werden kann.
 
@@ -122,7 +122,7 @@ Für Android-Geräte in einem Bereitstellungsszenario mit einer nicht registrier
 
 Schritte zum Zuweisen einer verwalteten Google Play-App zu nicht verwalteten Geräten:
 
-1. Verbinden Sie Ihren Intune-Mandanten mit verwaltetem Google Play. Wenn dies bereits geschehen ist, um das Android Enterprise-Arbeitsprofil, dedizierte oder vollständig verwaltete Geräte zu verwalten, müssen Sie diesen Vorgang nicht erneut ausführen.
+1. Verbinden Sie Ihren Intune-Mandanten mit verwaltetem Google Play. Wenn dies bereits geschehen ist, um das Android Enterprise-Arbeitsprofil, dedizierte Geräte, vollständig verwaltete Geräte oder unternehmenseigene Arbeitsprofilgeräte zu verwalten, müssen Sie diesen Vorgang nicht noch mal ausführen.
 2. Fügen Sie Apps aus verwaltetem Google Play Ihrer Intune-Konsole hinzu.
 3. Stellen Sie verwaltete Google Play-Apps als Ziel **Verfügbar mit oder ohne Registrierung** für die gewünschte Benutzergruppe bereit. Die App-Ziele **Erforderlich** und **Deinstallieren** werden für nicht registrierte Geräte nicht unterstützt.
 4. Weisen Sie der Benutzergruppe eine App-Schutzrichtlinie zu.

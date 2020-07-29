@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 390a80f6333229a99daec9627e3810c27ca6b580
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e646ce40acaa156910f516c475cd6b0885989941
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990847"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462189"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Einrichten des lokalen Intune Exchange Connectors
 
+> [!IMPORTANT]
+> Die Informationen in diesem Artikel gelten für Kunden, für die die Verwendung des Exchange Connectors unterstützt wird.
+>
+> Ab Juli 2020 wird der Exchange Connector nicht mehr unterstützt und durch die [hybride moderne Authentifizierung](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) für Exchange ersetzt.  Wenn Sie den Exchange Connector in Ihrer Umgebung eingerichtet haben, wird Ihr Intune-Mandant weiterhin für dessen Verwendung unterstützt, und Sie haben weiterhin Zugriff auf die Benutzeroberfläche, die dessen Konfiguration unterstützt. Sie können den Connector weiterhin verwenden oder die HMA konfigurieren und den Connector deinstallieren.
+>
+>Für die Verwendung der HMA muss Intune nicht den Exchange Connector einrichten und verwenden. Durch diese Änderung wurde die Benutzeroberfläche zum Konfigurieren und Verwalten des Exchange Connectors für Intune aus dem Admin Center des Microsoft Endpoint Managers entfernt, es sei denn, Sie verwenden mit Ihrem Abonnement bereits den Exchange Connector.
+
 Um den Zugriff auf Exchange zu schützen, nutzt Intune eine lokale Komponente, die als Microsoft Intune Exchange Connector bezeichnet wird. Dieser Connector wird auch an einigen Stellen der Intune-Konsole als *lokaler Connector für Exchange ActiveSync* bezeichnet.
+
+> [!IMPORTANT]
+> Ab Release Nr. 2007 (Juli) wird im Intune-Dienst die Unterstützung für das Feature „Connector für Exchange lokal“ eingestellt. Bestandskunden mit einem aktiven Connector können die aktuelle Funktionalität weiterhin nutzen. Neu- und Bestandskunden, die nicht über einen aktiven Connector verfügen, können keine neuen Connectors mehr erstellen oder Exchange ActiveSync-Geräte (EAS) über Intune verwalten. Für diese Mandanten empfiehlt Microsoft die [hybride moderne Authentifizierung (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) für Exchange, um den Zugriff auf Exchange lokal zu schützen. Die hybride moderne Authentifizierung ermöglicht sowohl Intune-App-Schutz-Richtlinien (auch MAM) als auch den bedingten Zugriff über Outlook Mobile für Exchange lokal.
 
 Die Informationen in diesem Artikel helfen Ihnen beim Installieren und Überwachen des Intune Exchange Connectors. Sie können den Connector mit Ihren [Richtlinien für den bedingten Zugriff](conditional-access-exchange-create.md) verwenden, um Zugriff auf Ihre lokalen Exchange-Postfächer zu gewähren oder zu verweigern.
 
@@ -46,13 +56,42 @@ Befolgen Sie diese allgemeinen Anweisungen zum Einrichten einer Verbindung, die 
 3. Überprüfen Sie die Exchange-Verbindung.
 4. Wiederholen Sie diese Schritte für jede weitere Exchange-Organisation, die Sie mit Intune verbinden möchten.
 
+## <a name="how-conditional-access-for-exchange-on-premises-works"></a>Funktionsweise des bedingten Zugriffs für Exchange lokal
+
+Der bedingte Zugriff für Exchange lokal funktioniert anders als die Azure-Richtlinien für bedingten Zugriff. Sie installieren den Intune-Connector für Exchange lokal, um direkt mit dem Exchange-Server zu interagieren. Der Intune Exchange-Connector ruft alle EAS-Datensätze (Exchange Active Sync) ab, die auf dem Exchange-Server vorhanden sind, damit Intune diese Datensätze verwenden und den Intune-Gerätedatensätzen zuordnen kann. Bei diesen Datensätzen handelt es sich um Geräte, die bei Intune registriert sind und von Intune erkannt werden. Dieser Prozess erlaubt oder blockiert den E-Mail-Zugriff.
+
+Wenn ein EAS-Datensatz neu und Intune noch nicht bekannt ist, gibt Intune ein Cmdlet („command-let“ ausgesprochen) aus, das den Exchange-Server anweist, den Zugriff auf E-Mails zu blockieren. Im Folgenden finden Sie weitere Details zur Funktionsweise dieses Prozesses:
+
+> [!div class="mx-imgBorder"]
+> ![Flussdiagramm: Exchange lokal mit bedingtem Zugriff](./media/exchange-connector-install/ca-intune-common-ways-1.png)
+
+1. Ein Benutzer versucht, auf Unternehmens-E-Mails zuzugreifen, die in Exchange lokal 2010 SP1 oder höher gehostet werden.
+
+2. Der E-Mail-Zugriff wird blockiert, wenn das Gerät nicht durch Intune verwaltet wird. Intune sendet eine Benachrichtigung zur Blockierung an den EAS-Client.
+
+3. EAS empfängt die Benachrichtigung zur Blockierung, verschiebt das Gerät in die Quarantäne und sendet eine Quarantäne-E-Mail mit Schritten zur Behebung und entsprechenden Links, sodass Benutzer ihre Geräte registrieren können.
+
+4. Der Prozess für den Arbeitsplatzbeitritt wird ausgeführt. Dies ist der erste Schritt, mit dem ein Gerät zur Verwaltung in Intune eingebunden wird.
+
+5. Das Gerät wird in Intune registriert.
+
+6. Intune ordnet den EAS-Datensatz einem Gerätedatensatz zu und speichert den Konformitätszustand des Geräts.
+
+7. Die EAS-Client-ID wird vom Azure AD Device Registration-Prozess registriert, der eine Beziehung zwischen dem Intune-Gerätedatensatz und der EAS-Client-ID erstellt.
+
+8. Der Azure AD Device Registration-Prozess speichert die Informationen zum Gerätezustand.
+
+9. Wenn der Benutzer die Richtlinien für den bedingten Zugriff erfüllt, gibt Intune ein Cmdlet über den Intune Exchange Connector aus, mit dem das Postfach synchronisiert werden kann.
+
+10. Der Exchange-Server sendet eine Benachrichtigung an den EAS-Client, damit der Benachrichtigung auf die E-Mails zugreifen kann.
+
 ## <a name="intune-exchange-connector-requirements"></a>Anforderungen an den Intune Exchange Connector
 
 Um eine Verbindung mit Exchange herzustellen, benötigen Sie ein Konto mit einer Intune-Lizenz, die der Connector verwenden kann. Das Konto geben Sie bei der Installation des Connectors an.  
 
 In der folgenden Tabelle finden Sie die Anforderungen an den Computer, auf dem Sie den Intune Exchange Connector installieren.  
 
-|  Anforderungen  |   Weitere Informationen     |
+|  Anforderung  |   Weitere Informationen     |
 |---------------|------------------------|
 |  Betriebssysteme        | Intune unterstützt den Intune Exchange Connector auf Computern, auf denen eine beliebige Edition von Windows Server 2008 SP2 (64 Bit), Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 oder Windows Server 2016 ausgeführt wird.<br /><br />Auf Server Core-Installationen wird der Connector nicht unterstützt.  |
 | Microsoft Exchange          | Für lokale Connectors sind Microsoft Exchange 2010 SP3 oder höher oder die veraltete Exchange Online Dedicated-Umgebung erforderlich. Wenn Sie herausfinden möchten, ob es sich bei Ihrer Exchange Online Dedicated-Umgebung um die *neue* oder die *ältere* Konfiguration handelt, wenden Sie sich an Ihren Kundenbetreuer. |

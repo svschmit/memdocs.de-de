@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990263"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565607"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Erstellen von VPN-Profilen zum Herstellen einer Verbindung mit VPN-Servern in Intune
 
@@ -49,16 +49,17 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
 - Check Point Capsule VPN
   - Android-Geräteadministrator
   - Android Enterprise-Arbeitsprofile
+  - Vollständig verwaltetes und unternehmenseigenes Android Enterprise-Arbeitsprofil: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
-  - Windows 10
+  - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Android-Geräteadministrator
   - Android Enterprise-Arbeitsprofile
-  - Android Enterprise-Gerätebesitzer (vollständig verwaltet)
+  - Vollständig verwaltetes und unternehmenseigenes Android Enterprise-Arbeitsprofil
   - iOS/iPadOS
   - macOS
 
@@ -67,8 +68,8 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
 
 - Citrix SSO
   - Android-Geräteadministrator
-  - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)
-  - Android Enterprise-Gerätebesitzer (vollständig verwaltet): Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
+  - Vollständig verwaltetes und unternehmenseigenes Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -81,10 +82,10 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
 - F5 Access
   - Android-Geräteadministrator
   - Android Enterprise-Arbeitsprofile
-  - Android Enterprise-Gerätebesitzer (vollständig verwaltet)
+  - Vollständig verwaltetes und unternehmenseigenes Android Enterprise-Arbeitsprofil
   - iOS/iPadOS
   - macOS
-  - Windows 10
+  - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
 
@@ -96,7 +97,8 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
   - Windows 10
 
 - Palo Alto Networks GlobalProtect
-  - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
+  - Vollständig verwaltetes und unternehmenseigenes Android Enterprise-Arbeitsprofil: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -106,23 +108,25 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
 - Pulse Secure
   - Android-Geräteadministrator
   - Android Enterprise-Arbeitsprofile
-  - Android Enterprise-Gerätebesitzer (vollständig verwaltet)
+  - Vollständig verwaltetes und unternehmenseigenes Android Enterprise-Arbeitsprofil
   - iOS/iPadOS
-  - Windows 10
+  - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Android-Geräteadministrator
   - Android Enterprise-Arbeitsprofile
+  - Vollständig verwaltetes und unternehmenseigenes Android Enterprise-Arbeitsprofil
   - iOS/iPadOS
   - macOS
-  - Windows 10
+  - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
 
 - Zscaler
-  - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
+  - Vollständig verwaltetes und unternehmenseigenes Android Enterprise-Arbeitsprofil: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
 > [!IMPORTANT]
@@ -136,8 +140,8 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
 
     - **Plattform**: Wählen Sie die Plattform Ihrer Geräte aus. Folgende Optionen sind verfügbar:
       - **Android-Geräteadministrator**
-      - **Android Enterprise** > **Nur Gerätebesitzer**
-      - **Android Enterprise** > **Nur Arbeitsprofil**
+      - **Android Enterprise** > **Vollständig verwaltetes, dediziertes und unternehmenseigenes Arbeitsprofil**
+      - **Android Enterprise** > **Arbeitsprofil**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 und höher**

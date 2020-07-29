@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746492"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491200"
 ---
 # <a name="set-enrollment-restrictions"></a>Festlegen von Registrierungseinschränkungen
 
@@ -164,7 +164,7 @@ Die folgenden persönlichen Registrierungsmethoden werden ebenso blockiert:
 
 ## <a name="blocking-personal-iosipados-devices"></a>Blockieren privater iOS-/iPadOS-Geräte
 Standardmäßig klassifiziert Intune iOS-/iPadOS-Geräte als privat. Um als unternehmenseigen klassifiziert zu werden, muss ein iOS-/iPadOS-Gerät eine der folgenden Bedingungen erfüllen:
-- Mit einer Seriennummer oder IMEI registriert.
+- [Registriert mit einer Seriennummer](corporate-identifiers-add.md)
 - Registriert mithilfe der automatisierten Geräteregistrierung (früher Programm zur Geräteregistrierung)
 
 

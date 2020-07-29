@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/01/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 038dfccd49b25546b5edddc785c7ee4c86bf83a3
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828991"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461181"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Verwenden abgeleiteter Anmeldeinformationen in Microsoft Intune
 
-*Dieser Artikel gilt für iOS/iPadOS und vollständig verwaltete Android Enterprise-Geräte, auf denen Version 7.0 und höher ausgeführt wird.*
+*Dieser Artikel gilt für iOS/iPadOS, vollständig verwaltete Android Enterprise-Geräte, auf denen Version 7.0 und höher ausgeführt wird, sowie für Windows-Geräte.*
 
 In einer Umgebung, in der Smartcards für die Authentifizierung oder Verschlüsselung und Signierung erforderlich sind, können Sie mit Intune jetzt mobile Geräte mit einem Zertifikat bereitstellen, das von der Smartcard eines Benutzers abgeleitet ist. Dieses Zertifikat wird als *abgeleitete Anmeldeinformation* bezeichnet. Intune [unterstützt mehrere Zertifikataussteller für abgeleitete Anmeldeinformationen](#supported-issuers). Sie können pro Mandant aber jeweils nur einen Zertifikataussteller verwenden.
 
@@ -37,16 +37,19 @@ Abgeleitete Anmeldeinformationen sind eine Implementierung der NIST-Richtlinien 
 - Der Intune-Administrator konfiguriert seinen Mandanten so, dass dieser mit einem unterstützten Zertifikataussteller für abgeleitete Anmeldeinformationen arbeitet. Sie müssen keine Intune-spezifischen Einstellungen im System des Zertifikatausstellers für abgeleitete Anmeldeinformationen konfigurieren.
 - Der Intune-Administrator gibt für die folgenden Objekte **Derived credentials** (Abgeleitete Anmeldeinformationen) als *Authentifizierungsmethode* an:
   
+  **Für vollständig verwaltete Android Enterprise-Geräte**:
+  - Allgemeine Profiltypen wie Wi-Fi und VPN
+  - App-Authentifizierung
+
   **Für iOS/iPadOS**:
   - Allgemeine Profiltypen wie WLAN, VPN und E-Mail (einschließlich der nativen iOS/iPadOS-E-Mail-App)
   - App-Authentifizierung
   - S/MIME-Signatur und -Verschlüsselung
 
-  **Für vollständig verwaltete Android Enterprise-Geräte**:
-  - Allgemeine Profiltypen wie Wi-Fi und VPN
-  - App-Authentifizierung
+  **Für Windows:**
+  - Allgemeine Profiltypen wie WLAN und VPN
   
-- Benutzer erhalten abgeleitete Anmeldeinformationen, indem sie ihre Smartcard auf einem Computer verwenden, um sich beim Zertifikataussteller der abgeleiteten Anmeldeinformationen zu authentifizieren. Der Zertifikataussteller gibt dann ein Zertifikat für das mobile Gerät zurück, das von der Smartcard abgeleitet ist.
+- Bei Android und iOS/iPadOS erhalten Benutzer abgeleitete Anmeldeinformationen, indem sie ihre Smartcard auf einem Computer verwenden, um sich beim Aussteller der abgeleiteten Anmeldeinformationen zu authentifizieren. Der Zertifikataussteller gibt dann ein Zertifikat für das mobile Gerät zurück, das von der Smartcard abgeleitet ist. Bei Windows installieren die Benutzer die App des Anbieters der abgeleiteten Anmeldeinformationen, die das Zertifikat zur späteren Verwendung auf dem Gerät installiert.
 - Nachdem das Gerät die abgeleitete Anmeldeinformation empfangen hat, wird diese für die Authentifizierung und für die S/MIME-Signatur und -Verschlüsselung verwendet, wenn Apps oder Ressourcenzugriffsprofile die abgeleitete Anmeldeinformation erfordern.
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -59,6 +62,8 @@ Intune unterstützt abgeleitete Anmeldeinformationen auf den folgenden Plattform
 
 - iOS/iPadOS
 - Android Enterprise – Vollständig verwaltete Geräte (Version 7.0 und höher)
+- Android Enterprise: unternehmenseigen mit Arbeitsprofil
+- Windows 10 und höher
 
 ### <a name="supported-issuers"></a>Unterstützte Zertifikataussteller
 
@@ -84,7 +89,9 @@ Planen Sie die Bereitstellung der Intune-Unternehmensportal-App auf Geräten, di
 
 ## <a name="plan-for-derived-credentials"></a>Planen abgeleiteter Anmeldeinformationen
 
-Beachten Sie die folgenden Überlegungen, bevor Sie einen Zertifikataussteller für abgeleitete Anmeldeinformationen einrichten.
+Beachten Sie die folgenden Überlegungen, bevor Sie einen Aussteller für abgeleitete Anmeldeinformationen für Android und iOS/iPadOS einrichten.
+
+Weitere Informationen zu Windows-Geräten finden Sie unter [Abgeleitete Anmeldeinformationen für Windows](#derived-credentials-for-windows) weiter unten in diesem Artikel.
 
 ### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) Überprüfen der Dokumentation zum ausgewählten Zertifikataussteller für abgeleitete Anmeldeinformationen
 
@@ -274,7 +281,7 @@ Verwenden Sie abgeleitete Anmeldeinformationen für die zertifikatbasierte Authe
    - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein guter Profilname ist beispielsweise **Abgeleitete Anmeldeinformationen für Android Enterprise-Geräteprofile**.
    - **Beschreibung:** Geben Sie eine Beschreibung ein, die einen Überblick über die Einstellung und andere wichtige Details bietet.
    - **Plattform**: Wählen Sie **Android Enterprise** aus.
-   - **Profiltyp**: Wählen Sie unter *Nur Gerätebesitzer* die Option **Abgeleitete Anmeldeinformation** aus.
+   - **Profiltyp**: Wählen Sie unter *Fully Managed, Dedicated, and Corporate-Owned Work Profile* (Vollständig verwaltet, dediziert und unternehmenseigen mit einem Arbeitsprofil) **Abgeleitete Anmeldeinformation** aus.
 
 4. Klicken Sie auf **OK**, um die Änderungen zu speichern.
 5. Klicken Sie anschließend auf **OK** > **Erstellen**, um das Intune-Profil zu erstellen. Das Profil wird erstellt und in der Liste **Gerätekonfiguration > Konfigurationsprofile** angezeigt.
@@ -282,9 +289,29 @@ Verwenden Sie abgeleitete Anmeldeinformationen für die zertifikatbasierte Authe
 
 Benutzer erhalten die App- oder E-Mail-Benachrichtigung abhängig von den Einstellungen, die Sie beim Einrichten des Zertifikatausstellers für abgeleitete Anmeldeinformationen angegeben haben. Die Benachrichtigung informiert den Benutzer darüber, dass das Unternehmensportal gestartet werden muss, damit die Richtlinien für abgeleitete Anmeldeinformationen verarbeitet werden können.
 
+## <a name="derived-credentials-for-windows"></a>Abgeleitete Anmeldeinformationen für Windows
+
+Abgeleitete Zertifikate können als Authentifizierungsmethode für WLAN- und VPN-Profile auf Windows-Geräten verwendet werden. Die auf Android- und iOS-/iPadOS-Geräten unterstützten Anbieter werden auch unter Windows unterstützt:
+
+- **DISA Purebred**
+- **Entrust Datacard**
+- **Intercede**
+
+Bei Windows durchlaufen Benutzer keinen Smartcardregistrierungsprozess, um ein Zertifikat zu erhalten, das als abgeleitete Anmeldeinformationen verwendet werden kann. Stattdessen muss der Benutzer die App für Windows installieren, die er vom Anbieter der abgeleiteten Anmeldeinformationen erhält. Nehmen Sie die folgenden Konfigurationen vor, um abgeleitete Anmeldeinformationen unter Windows zu verwenden:
+
+1. **Installieren Sie die App des Anbieters von abgeleiteten Anmeldeinformationen auf dem Windowsgerät.**
+
+   Wenn Sie die Windows-App eines Anbieters von abgeleiteten Anmeldeinformationen auf einem Windows-Gerät installieren, wird das abgeleitete Zertifikat zum Windows-Zertifikatspeicher dieses Geräts hinzugefügt. Nach dem Hinzufügen des Zertifikats auf dem Gerät kann dieses Zertifikat für eine Authentifizierungsmethode mit abgeleiteten Anmeldeinformationen verwendet werden.
+
+   Sobald Sie die App vom ausgewählten Anbieter erhalten haben, kann diese für Benutzer bereitgestellt oder direkt vom Benutzer des jeweiligen Geräts installiert werden.
+
+2. **Konfigurieren Sie WLAN- und VPN-Profile, um abgeleitete Anmeldeinformationen als Authentifizierungsmethode zu verwenden.**
+
+   Wenn Sie ein Windows-Profil für WLAN oder VPN konfigurieren, wählen Sie **Abgeleitete Anmeldeinformation** als *Authentifizierungsmethode* aus. Bei dieser Konfiguration verwendet das Profil das Zertifikat, das bei der Installation der Anbieter-App auf dem Gerät installiert wird.
+
 ## <a name="renew-a-derived-credential"></a>Erneuern abgeleiteter Anmeldeinformationen
 
-Abgeleitete Anmeldeinformationen können nicht erweitert oder erneuert werden. Stattdessen müssen Benutzer den Anforderungsworkflow für Anmeldeinformationen verwenden, um neue abgeleitete Anmeldeinformationen für ihr Gerät anzufordern.
+Für abgeleitete Anmeldeinformationen für Android- oder iOS-/iPadOS-Geräte ist keine Verlängerung oder Erneuerung möglich. Stattdessen müssen Benutzer den Anforderungsworkflow für Anmeldeinformationen verwenden, um neue abgeleitete Anmeldeinformationen für ihr Gerät anzufordern. Informationen in Bezug auf Windows-Geräte finden Sie in der Dokumentation für die App Ihres Anbieters von abgeleiteten Anmeldeinformationen.
 
 Wenn Sie eine oder mehrere Methoden für **Benachrichtigungstyp** konfigurieren, werden Benutzer automatisch von Intune benachrichtigt, wenn die aktuellen abgeleiteten Anmeldeinformationen 80 % ihrer Lebensspanne erreicht haben. Die Benachrichtigung weist Benutzer an, den Anforderungsprozess für Anmeldeinformationen zu durchlaufen, um neue abgeleitete Anmeldeinformationen zu erhalten.
 

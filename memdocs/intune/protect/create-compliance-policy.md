@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988813"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461435"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Erstellen einer Konformitätsrichtlinie in Microsoft Intune
 
@@ -75,7 +75,7 @@ Stellen Sie zum Verwenden von Konformitätsrichtlinien folgendes sicher:
    - *Windows 10 und höher*
 
     Für *Android Enterprise* können Sie auch einen **Richtlinientyp** auswählen:
-     - *Konformitätsrichtlinie für Android-Gerätebesitzer*
+     - *Android fully managed, dedicated, and corporate-owned work profile policy* (Richtlinie für vollständig verwaltete, dedizierte und unternehmenseigene Android-Geräte mit einem Arbeitsprofil)
      - *Konformitätsrichtlinie für Android-Arbeitsprofil*
 
     Wählen Sie dann **Erstellen** aus, um das Konfigurationsfenster **Richtlinie erstellen** zu öffnen.

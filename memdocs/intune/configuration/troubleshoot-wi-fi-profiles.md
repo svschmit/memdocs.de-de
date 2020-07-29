@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987848"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872051"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Behandeln von Problemen mit Gerätekonfigurationsprofilen in Microsoft Intune
 
@@ -177,7 +177,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 ## <a name="common-issues"></a>Häufige Probleme
 
-### <a name="issue-1-the-wi-fi-profile-isnt-deployed-to-the-device"></a>Problem 1: Das WLAN-Profil wird nicht auf dem Gerät bereitgestellt
+### <a name="the-wi-fi-profile-isnt-deployed-to-the-device"></a>Das WLAN-Profil wird nicht auf dem Gerät bereitgestellt
 
 - Vergewissern Sie sich, dass das WLAN-Profil der richtigen Gruppe zugewiesen wurde:
 
@@ -248,7 +248,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     Wenn ein Fehler im Protokoll angezeigt wird, kopieren Sie den Zeitstempel des Fehlers, und heben Sie die Filterung des Protokolls auf. Verwenden Sie dann die Option „suchen“ mit dem Zeitstempel, um zu sehen, was direkt vor dem Fehler passiert ist.
 
-### <a name="issue-2-the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>Problem 2: Das WLAN-Profil wird auf dem Gerät bereitgestellt, das Gerät kann aber keine Verbindung mit dem Netzwerk herstellen
+### <a name="the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>Das WLAN-Profil wird auf dem Gerät bereitgestellt, das Gerät kann aber keine Verbindung mit dem Netzwerk herstellen
 
 In der Regel wird dieses Problem durch etwas außerhalb von Intune verursacht. Die folgenden Aufgaben können Ihnen helfen, Konnektivitätsprobleme zu verstehen und zu beheben:
 
@@ -256,6 +256,22 @@ In der Regel wird dieses Problem durch etwas außerhalb von Intune verursacht. D
 
   Wenn Sie eine Verbindung herstellen können, sehen Sie sich die Zertifikateigenschaften in der manuellen Verbindung an. Aktualisieren Sie dann das Intune-WLAN-Profil mit denselben Zertifikateigenschaften.
 - Konnektivitätsfehler werden in der Regel im RADIUS-Serverprotokoll protokolliert. Beispielsweise sollte angezeigt werden, ob das Gerät versucht hat, eine Verbindung mit dem WLAN-Profil herzustellen.
+
+### <a name="users-dont-get-new-profile-after-changing-password-on-existing-profile"></a>Benutzer erhalten nach dem Ändern des Kennworts für ein vorhandenes Profil das neue Profil nicht
+
+Sie erstellen ein WLAN-Unternehmensprofil, stellen das Profil für eine Gruppe bereit, ändern das Kennwort und speichern das Profil. Wenn sich das Profil ändert, erhalten einige Benutzer das neue Profil nicht.
+
+Sie können dieses Problem beheben, indem Sie einen WLAN-Gastzugang einrichten. Bei einem Ausfall des Unternehmens-WLANs können die Benutzer auf das Gast-WLAN zurückgreifen. Dazu muss die Einstellung zum automatischen Herstellen einer Verbindung aktiviert sein. Ferner muss das WLAN-Gastprofil allen Benutzer bereitgestellt werden.
+
+Einige weitere Empfehlungen:  
+
+- Wenn das WLAN-Netzwerk, mit dem Sie die Verbindung herstellen, ein Kennwort oder eine Passphrase verwendet, müssen Sie eine direkte Verbindung mit dem Router herstellen können. Sie können das mit einem iOS/iPadOS-Gerät testen.
+- Nachdem Sie erfolgreich eine Verbindung mit dem WLAN-Endpunkt (WLAN-Router) hergestellt haben, notieren Sie die verwendete SSID und die verwendete Anmeldeinformation (dieser Wert stellt das Kennwort oder die Passphrase dar).
+- Geben Sie die SSID und die Anmeldeinformation (Kennwort oder Passphrase) im Feld für den vorinstallierten Schlüssel ein. 
+- Führen Sie die Bereitstellung an eine Testgruppe mit eingeschränkter Benutzeranzahl aus, vorzugsweise nur das IT-Team. 
+- Synchronisieren Sie Ihr iOS/iPadOS-Gerät mit Intune. Registrieren Sie sich, wenn Sie noch nicht registriert sind. 
+- Probieren Sie, erneut eine Verbindung mit dem gleichen WLAN-Endpunkt (wie im ersten Schritt erwähnt) herzustellen.
+- Nehmen Sie das Rollout an größere Gruppen und zu gegebener Zeit an alle erwarteten Benutzer in Ihrer Organisation durch. 
 
 ## <a name="need-more-help"></a>Benötigen Sie weitere Hilfe?
 

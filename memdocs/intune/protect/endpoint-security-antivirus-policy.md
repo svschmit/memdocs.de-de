@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b0d0bbeb174d8f90d47ea6242ce6bd4be2dcfac6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879655"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491166"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Antivirenrichtlinie für Endpunktsicherheit in Intune
 
@@ -40,8 +40,7 @@ Antivirenrichtlinien enthalten dieselben Einstellungen wie die Profile *Endpunkt
   - Damit Intune Antivireneinstellungen auf einem Gerät verwalten kann, muss Microsoft Defender ATP auf diesem Gerät installiert sein. Siehe: [Microsoft Defender ATP für macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (in der Dokumentation zu Microsoft Defender ATP)
 
 - **Windows 10 und höher**
-  - Damit Intune Antivireneinstellungen auf einem Gerät verwalten kann, muss Microsoft Defender ATP auf diesem Gerät installiert sein. Weitere Informationen finden Sie in [Microsoft Defender ATP für Windows](../protect/advanced-threat-protection.md) in der Intune-Dokumentation.
-  - Die Windows-Sicherheits-App ist auf allen Geräten installiert, auf denen Windows 10 ausgeführt wird, und es sind keine weiteren Voraussetzungen erforderlich.
+  - Es gelten keine zusätzlichen Voraussetzungen. 
 
 ## <a name="antivirus-profiles"></a>Antivirenprofile
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d533acfa60672bed3d6919116f11f43d525b6551
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a3a9ae0c697cb6cd60f0f9bddce50057bcfcd3a3
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988329"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462098"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurieren von Windows 10-Geräten in Intune mithilfe von Sicherheitsbaselines
 
@@ -75,12 +75,12 @@ Wenn Sie bereit sind, zu einer neueren Version einer von Ihnen verwendeten Basel
 Bei jeder neuen Versionsinstanz einer Baseline können Einstellungen hinzugefügt oder entfernt oder andere Änderungen vorgenommen werden. Wenn beispielsweise in neuen Versionen von Windows 10 neue Windows 10-Einstellungen verfügbar werden, erhält die MDM-Sicherheitsbaseline möglicherweise eine neue Versionsinstanz, die die neuesten Einstellungen enthält.
 
 Im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) wird unter **Endpunktsicherheit** > **Sicherheitsbaselines** eine Liste der verfügbaren Baselines angezeigt. Die Liste enthält:
-- den Namen der Baselinevorlage,
-- die Anzahl der Profile, die diesen Baselinetyp verwenden,
-- die Anzahl der verfügbaren separaten Instanzen (Versionen) des Baselinentyps,
-- ein Datum *Zuletzt veröffentlicht*, das angibt, wann die neueste Version der Baselinevorlage verfügbar wurde.
+- Den Namen der Baselinevorlage
+- Die Anzahl der Profile, die diesen Baselinetyp verwenden
+- Die Anzahl der verfügbaren separaten Instanzen (Versionen) des Baselinetyps
+- Ein Datum unter *Zuletzt veröffentlicht*, das angibt, seit wann die neueste Version der Baselinevorlage verfügbar ist
 
-Um weitere Informationen zu den von Ihnen verwendeten Baselineversionen anzuzeigen, wählen Sie eine Baseline aus, um deren Blatt *Übersicht* zu öffnen, und wählen Sie dann **Versionen** aus. Intune zeigt Details zu den Versionen dieser Baseline an, die von Ihren Profilen verwendet werden. Die Details umfassen die neueste und die aktuelle Baselineversion. Sie können auf eine einzelne Version klicken, um nähere Informationen über die Profile einzusehen, die diese Version verwenden.
+Wenn Sie weitere Informationen zu Ihren verwendeten Baselineversionen anzeigen möchten, wählen Sie eine Baseline wie die *MDM-Sicherheitsbaseline* aus, öffnen Sie den dazugehörigen Bereich *Profile*, und klicken Sie auf **Versionen**. Intune zeigt Details zu den Versionen dieser Baseline an, die von Ihren Profilen verwendet werden. Die Details umfassen die neueste und die aktuelle Baselineversion. Sie können auf eine einzelne Version klicken, um nähere Informationen über die Profile einzusehen, die diese Version verwenden.
 
 Sie können die [Version einer Baseline ändern](#change-the-baseline-version-for-a-profile), die mit einem bestimmten Profil verwendet wird. Wenn Sie die Version ändern, müssen Sie kein neues Baselineprofil erstellen, um die Vorteile aktualisierter Versionen nutzen zu können. Stattdessen können Sie ein Baselineprofil auswählen und die integrierte Option verwenden, um die Instanzversion für dieses Profil in eine neue Version zu ändern.
 

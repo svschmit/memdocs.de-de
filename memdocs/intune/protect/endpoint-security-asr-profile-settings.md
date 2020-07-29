@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/06/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 3ebca81f459f0e49345db08f992c288514a7331a
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022397"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461605"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Richtlinieneinstellungen zur Verringerung der Angriffsfläche für die Endpunktsicherheit in Intune
 
@@ -188,7 +188,6 @@ Unterstützte Plattformen und Profile:
 
   - **Nicht konfiguriert** (*Standardeinstellung*): Wenn „Nicht konfiguriert“ festgelegt wird, können Benutzer SmartScreen-Warnungen für Dateien ignorieren und schädliche Apps ausführen.
   - **Ja:** Wenn „Ja“ festgelegt wird, wird SmartScreen aktiviert und Benutzer können Warnungen für Dateien oder bösartige Apps nicht umgehen.
-
 
 - **Windows SmartScreen aktivieren**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -385,7 +384,65 @@ Unterstützte Plattformen und Profile:
 
   - **Nicht konfiguriert** (*Standard*): Die Einstellung wird auf den Standardwert des Clients zurückgesetzt, d. h. Wechseldatenträger werden überprüft. Der Benutzer kann diese Überprüfung jedoch deaktivieren.
   - **Ja**: Bei einer vollständigen Überprüfung werden Wechseldatenträger (z. B. USB-Speichersticks) überprüft.
-  
+
+- **Block direct memory access** (Direkten Speicherzugriff blockieren)  
+  CSP: [DataProtection/AllowDirectMemoryAccess](https://go.microsoft.com/fwlink/?linkid=2067031)
+
+  Die Richtlinieneinstellung wird nur erzwungen, wenn BitLocker oder die Geräteverschlüsselung aktiviert ist.
+
+  - **Nicht konfiguriert** (*Standardeinstellung*)
+  - **Ja:** Mit dieser Einstellung wird der direkte Speicherzugriff (DMA) für alle Hot-Plug-fähigen PCI-Downstreamports blockiert, bis sich ein Benutzer bei Windows anmeldet. Nachdem sich ein Benutzer angemeldet hat, werden die an die Hot-Plug-PCI-Ports angeschlossenen PCI-Geräte von Windows aufgezählt. Jedes Mal, wenn der Benutzer den Computer sperrt, wird DMA an Hot-Plug-PCI-Anschlüssen ohne untergeordnete Geräte blockiert, bis sich der Benutzer erneut anmeldet. Geräte, die vor dem Entsperren des Computers bereits aufgezählt wurden, sind weiterhin funktionsfähig, bis sie entfernt werden oder das System neu gestartet bzw. in den Ruhezustand versetzt wird.
+
+- **Aufzählung externer Geräte, die mit Kernel-DMA-Schutz nicht kompatibel sind**  
+  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+
+  Diese Richtlinie kann zusätzliche Sicherheit für externe DMA-fähige Geräte bieten. Sie ermöglicht eine bessere Kontrolle über die Aufzählung von externen DMA-fähigen Geräten, die mit DMA Remapping/Gerätespeicherisolation und Sandboxing nicht kompatibel sind.
+
+  Diese Richtlinie gilt nur, wenn der Kernel-DMA-Schutz unterstützt wird und durch die Systemfirmware aktiviert wurde. Kernel-DMA-Schutz ist ein Plattformfeature, das zum Zeitpunkt der Herstellung vom System unterstützt werden muss. Sie können auf der Zusammenfassungsseite der Datei „MSINFO32.exe“ über das Feld „Kernel DMA Protection“ (Kernel-DMA-Schutz) überprüfen, ob das System den Kernel-DMA-Schutz unterstützt.
+
+  - **Nicht konfiguriert** (*Standardeinstellung*)
+  - **Alle blockieren**
+  - **Alle zulassen**
+
+- **Bluetooth-Verbindungen blockieren**  
+  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+  - **Nicht konfiguriert** (*Standardeinstellung*)
+  - **Ja:** Mit dieser Einstellung werden beim Gerät ein- und ausgehende Bluetooth-Verbindungen blockiert.
+
+- **Bluetooth-Erkennbarkeit blockieren**  
+  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+  - **Nicht konfiguriert** (*Standardeinstellung*)
+  - **Ja:** Mit dieser Einstellung wird die Erkennung des Geräts durch andere Bluetooth-fähige Geräte verhindert.
+
+- **Bluetooth-Vorabkopplung blockieren**  
+  CSP: [Bluetooth/AllowPrepairing](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+
+  - **Nicht konfiguriert** (*Standardeinstellung*)
+  - **Ja:** Mit dieser Einstellung wird verhindert, dass bestimmte Bluetooth-Geräte automatisch mit dem Hostgerät gekoppelt werden.
+
+- **Bluetooth-Ankündigung blockieren**  
+  CSP: [Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+  - **Nicht konfiguriert** (*Standardeinstellung*)
+  - **Ja:** Mit dieser Einstellung wird verhindert, dass das Gerät Bluetooth-Ankündigungen sendet.  
+
+- **Bluetooth-Nahbereichsverbindungen blockieren**  
+  CSP: [Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) hindert Benutzer an der Verwendung der schnellen Kopplung und anderer Näherungsszenarios.
+
+  - **Nicht konfiguriert** (*Standardeinstellung*)
+  - **Ja:** Mit dieser Einstellung wird verhindert, dass der Benutzer eines Geräts die schnelle Kopplung und andere Näherungsszenarios nutzen kann.  
+
+  [Bluetooth/AllowPromptedProximalConnections-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+
+- **Zulässige Bluetooth-Dienste**  
+  CSP: [Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist)  
+  Weitere Informationen über die Liste der Dienste finden Sie im [Handbuch zur Verwendung von ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide).
+
+  - **Hinzufügen:** Mit dieser Option können Sie zulässige Bluetooth-Dienste und -Profile in Form von hexadezimalen Zeichenfolgen festlegen, z. B. `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
+  - **Importieren:** Mit dieser Option können Sie eine CSV-Datei importieren, die eine Liste der Bluetooth-Dienste und -Profile in Form von hexadezimalen Zeichenfolgen enthält, z. B. `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
+
 ## <a name="exploit-protection-profile"></a>Profil „Exploit-Schutz“
 
 ### <a name="exploit-protection"></a>Exploit-Schutz
