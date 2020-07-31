@@ -1,11 +1,11 @@
 ---
-title: 'Benutzerdefiniertes VPN-Profil pro App für Android in Microsoft Intune: Azure | Microsoft-Dokumentation'
-description: Erfahren Sie, wie Sie ein App-bezogenes VPN-Profil für Geräte des Android-Geräteadministrators erstellen, die von Microsoft Intune verwaltet werden.
+title: 'Benutzerdefiniertes Pro-App-VPN-Profil für den Android-Geräteadministrator in Microsoft Intune: Azure | Microsoft-Dokumentation'
+description: Verwenden Sie ein benutzerdefiniertes Pro-App-VPN-Profil für den Android-Geräteadministrator mit den VPN-Verbindungstypen Pulse Secure oder Citrix in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,25 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a351255fa0574e9b92d096b3895f9469ed9ced2a
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 3c8e09b6010f7fc846fd81281053eaaa722e5ef4
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137361"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262794"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Verwenden eines benutzerdefinierten Microsoft Intune-Profils zum Erstellen eines VPN-Profils pro App für Android-Geräte
 
 Sie können ein App-bezogenes VPN-Profil für Android 5.0-Geräte oder höher erstellen, die von Intune verwaltet werden. Erstellen Sie zunächst ein VPN-Profil, das den Pulse Secure- oder Citrix-Verbindungstyp verwendet. Erstellen Sie anschließend eine benutzerdefinierte Konfigurationsrichtlinie, die das VPN-Profil angegebenen Apps zuordnet.
 
-> [!NOTE]
-> Sie können die folgenden Schritte auch ausführen, um App-bezogenes VPN auf Android Enterprise-Geräten zu verwenden. Es wird jedoch empfohlen, eine [App-Konfigurationsrichtlinie](../apps/app-configuration-vpn-ae.md) für Ihre VPN-Client-App zu verwenden.
+Diese Funktion gilt für:
+
+- Android-Geräteadministrator
+
+Um ein Pro-App-VPN-Profil auf Android Enterprise-Geräten zu verwenden, richten Sie eine [App-Konfigurationsrichtlinie](../apps/app-configuration-vpn-ae.md) ein. App-Konfigurationsrichtlinien unterstützen mehr VPN-Client-Apps. Auf Android Enterprise-Geräten können Sie die Schritte in diesem Artikel ausführen. Dies wird jedoch nicht empfohlen, und es stehen nur Pulse Secure- und Citrix-VPN-Verbindungen zur Verfügung.
 
 Nachdem Sie die Richtlinie Ihrem Android-Gerät oder Ihren Benutzergruppen zugewiesen haben, sollten Benutzer den Pulse Secure- oder Citrix-VPN-Client starten. Der VPN-Client lässt dann lediglich Datenverkehr von den angegebenen Apps über die offene VPN-Verbindung zu.
 
 > [!NOTE]
 >
-> Es werden nur die Verbindungstypen „Pulse Secure“ und „Citrix“ für dieses Profil unterstützt.
+> Für den Android-Geräteadministrator werden nur die Verbindungstypen „Pulse Secure“ und „Citrix“ unterstützt. Verwenden Sie auf Android Enterprise-eine [App-Konfigurationsrichtlinie](../apps/app-configuration-vpn-ae.md).
 
 ## <a name="step-1-create-a-vpn-profile"></a>Schritt 1: Erstellen eines VPN-Profils
 
@@ -59,7 +62,7 @@ Nachdem Sie die Richtlinie Ihrem Android-Gerät oder Ihren Benutzergruppen zugew
 
     Notieren Sie den Wert für **Verbindungsname**, den Sie beim Erstellen des VPN-Profils eingeben. Dieser Name wird im nächsten Schritt benötigt. In diesem Beispiel lautet der Verbindungsname **MyAppVpnProfile**.
 
-8. Klicken Sie auf **Weiter**, und setzen Sie die Erstellung des Profils fort. Weitere Informationen finden Sie unter [Erstellen von VPN-Profilen](vpn-settings-configure.md#create-the-profile).
+8. Wählen Sie **Weiter** aus, und setzen Sie die Erstellung des Profils fort. Weitere Informationen finden Sie unter [Erstellen von VPN-Profilen](vpn-settings-configure.md#create-the-profile).
 
 ## <a name="step-2-create-a-custom-configuration-policy"></a>Schritt 2: Erstellen einer benutzerdefinierten Konfigurationsrichtlinie
 
@@ -80,10 +83,9 @@ Nachdem Sie die Richtlinie Ihrem Android-Gerät oder Ihren Benutzergruppen zugew
     - **Datentyp:** Geben Sie **Zeichenfolge** ein.
     - **Wert:** Geben Sie eine durch Semikolons getrennte Liste der Pakete ein, die dem Profil zugeordnet werden sollen. Wenn z. B. Excel und der Google-Browser Chrome die VPN-Verbindung verwenden sollen, geben Sie `com.microsoft.office.excel;com.android.chrome` ein.
 
-    > [!div class="mx-imgBorder"]
-    >![Beispiel für eine benutzerdefinierte Pro-App-VPN-Richtlinie für einen Android-Geräteadministrator](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    :::image type="content" source="./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png" alt-text="Benutzerdefinierte Pro-App-VPN-Richtlinie für den Android-Geräteadministrator in Microsoft Intune":::
 
-### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Festlegen, ob Ihre App-Liste eine Positivliste (Whitelist) oder eine Negativliste (Blacklist) sein soll (optional)
+### <a name="set-your-blocked-and-allowed-app-list-optional"></a>Festlegen der Listen mit gesperrten und zugelassenen Apps (optional)
 
 Sie können mithilfe des Werts *BLACKLIST* eine Liste von Apps angeben, die die VPN-Verbindung **nicht** verwenden können. Alle anderen Apps stellen über das VPN eine Verbindung her. Alternativ können Sie mithilfe des Werts **WHITELIST** eine Liste von Apps angeben, die die VPN-Verbindung verwenden *können*. Apps, die sich nicht auf der Liste befinden, stellen keine Verbindung über das VPN her.
 

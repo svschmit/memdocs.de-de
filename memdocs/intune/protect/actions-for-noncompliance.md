@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461860"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262675"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurieren von Aktionen für nicht konforme Geräte in Intune
 
@@ -147,8 +147,12 @@ Zum Senden einer E-Mail an Ihre Benutzer müssen Sie eine Benachrichtigungsvorla
 
 5. Überprüfen Sie Ihre Konfigurationen unter **Überprüfen und Erstellen**, um sicherzustellen, dass die Benachrichtigungsvorlage einsatzbereit ist. Wählen Sie **Erstellen** aus, um die Erstellung der Benachrichtigung abzuschließen.
 
-> [!NOTE]
-> Sie können auch eine bereits erstellte Benachrichtigungsvorlage auswählen und deren Informationen **bearbeiten**, um die Vorlage zu aktualisieren.
+### <a name="view-and-edit-notifications"></a>Anzeigen und Bearbeiten von Benachrichtigungen
+
+Erstellte Benachrichtigungen sind auf der Seite *Compliancerichtlinien* > *Benachrichtigungen* verfügbar. Auf dieser Seite können Sie eine Benachrichtigung auswählen, um die Konfiguration anzuzeigen und folgende Aktionen auszuführen:
+
+- Wählen Sie **Vorschau-E-Mail senden**, um eine Vorschau der Benachrichtigungs-E-Mail an das Konto zu senden, das Sie zum Anmelden bei Intune verwendet haben. 
+- Wählen Sie unter *Grundlagen* oder *Bereichstags* die Option **Bearbeiten** aus, um eine Änderung vorzunehmen.
 
 ## <a name="add-actions-for-noncompliance"></a>Hinzufügen von Aktionen bei Nichtkonformität
 

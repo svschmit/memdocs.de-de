@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461945"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262658"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Hinzufügen verwalteter Google Play-Apps zu Android Enterprise-Geräten mit Intune
 
@@ -122,6 +122,8 @@ Es gibt zwei Möglichkeiten, verwaltetem Google Play branchenspezifische Apps hi
 5. Wählen Sie im Google Play-Fenster **Private Apps** (neben dem *Sperrsymbol*) aus. 
 6. Klicken Sie in der unteren rechten Ecke auf die Schaltfläche **+** , um eine neue App hinzuzufügen.
 7. Fügen Sie den **Titel** der App hinzu, und klicken Sie auf **APK hochladen**, um das APK-App-Paket hinzuzufügen.
+   > [!NOTE]
+   > Der Paketname Ihrer App muss in Google Play (nicht nur innerhalb Ihres Unternehmenskontos oder Google Play Developer-Kontos) global eindeutig sein. Andernfalls wird die Fehlermeldung **Neue APK-Datei mit anderem Paketnamen hochladen** angezeigt.
 8. Klicken Sie auf **Erstellen**.
 9. Schließen Sie den Bereich „Verwaltetes Google Play“, wenn das Hinzufügen von Apps abgeschlossen ist.
 10. Klicken Sie im Bereich **App** auf **Synchronisieren**, um eine Synchronisierung mit dem verwalteten Google Play-Dienst durchzuführen. 

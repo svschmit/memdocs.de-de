@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7ba3c7397298ea25eecc1147319760892434720
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270989"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262573"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Verbinden mit dem Data Warehouse mit Power BI
 
@@ -52,6 +52,9 @@ Installieren Sie die neueste Version von [Power BI Desktop](https://aka.ms/intun
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>Laden der Daten und Berichte mit der Power BI-App „Intune-Konformität (Data Warehouse)“
 
 Die Power BI-App [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) enthält Informationen zu Ihrem Mandanten und verschiedene vordefinierte auf dem Datenmodell „Data Warehouse“ basierende Berichte.
+
+> [!NOTE]
+> Die Power BI-App „Intune Compliance Data Warehouse“ wird für Azure Government-Cloudumgebungen nicht unterstützt.
 
 1. Navigieren Sie zur Seite **AppSource** der App [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp), um den Installationsvorgang zu starten.
 2. Klicken Sie auf **Get It Now** (Jetzt herunterladen) und dann auf **Weiter**.

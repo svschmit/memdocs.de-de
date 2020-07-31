@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 07/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caec61f93b3b651c18d2c4fd81467d462de75fc1
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: b55c8cced4e559655018b36843e1599cc6e2d1bf
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491234"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262736"
 ---
 # <a name="in-development-for-microsoft-intune"></a>In der Entwicklung befindliche Features für Microsoft Intune
 
@@ -73,7 +73,61 @@ Das Unternehmensportal unterstützt jetzt Configuration Manager-Anwendungen. Die
 ## <a name="device-configuration"></a>Gerätekonfiguration
 
 ### <a name="set-device-compliance-state-from-third-party-mdm-partners---6361689-----"></a>Festlegen des Konformitätszustands von Geräten von MDM-Drittanbieterpartnern<!-- 6361689   -->
-Microsoft 365-Kunden mit MDM-Lösungen von Drittanbietern können Richtlinien für den bedingten Zugriff für Microsoft 365-Apps auf iOS und Android über die Integration mit dem Microsoft Intune-Gerätekonformitätsdienst erzwingen. MDM-Drittanbieter nutzenden Intune-Gerätekonformitätsdienst zum Senden von Gerätekonformitätsdaten an Intune. Intune wertet dann aus, ob das Gerät vertrauenswürdig ist, und legt die Attribute für den bedingten Zugriff in Azure AD fest.  Kunden müssen Azure AD-Richtlinien für den bedingten Zugriff über Microsoft Endpoint Manager Admin Center oder das Azure AD-Portal festlegen.  
+Microsoft 365-Kunden mit MDM-Lösungen von Drittanbietern können Richtlinien für den bedingten Zugriff für Microsoft 365-Apps auf iOS und Android über die Integration mit dem Microsoft Intune-Gerätekonformitätsdienst erzwingen. MDM-Drittanbieter nutzenden Intune-Gerätekonformitätsdienst zum Senden von Gerätekonformitätsdaten an Intune. Intune wertet dann aus, ob das Gerät vertrauenswürdig ist, und legt die Attribute für den bedingten Zugriff in Azure AD fest.  Kunden müssen Azure AD-Richtlinien für den bedingten Zugriff über Microsoft Endpoint Manager Admin Center oder das Azure AD-Portal festlegen.
+
+### <a name="create-pkcs-certificate-profiles-for-android-enterprise-fully-managed-devices-cobo---4839686---"></a>Erstellen von PKCS-Zertifikatprofilen für vollständig verwaltete Android Enterprise-Geräte (COBO)<!-- 4839686 -->
+Sie können PKCS-Zertifikatprofile erstellen, um Zertifikate für den Besitzer des Android Enterprise-Geräts und für Arbeitsprofilgeräte bereitzustellen (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **Android Enterprise > Nur Gerätebesitzer** oder **Android Enterprise > Nur Arbeitsprofil** als Plattform > **PKCS** als Profil).
+
+Bald können Sie PKCS-Zertifikatprofile für vollständig verwaltete Android Enterprise-Geräte erstellen. Der Intune-PFX-Zertifikatconnector ist erforderlich. Wenn Sie nicht SCEP verwenden, sondern nur PKCS, können Sie den NDES-Connector entfernen, nachdem Sie den neuen PFX-Connector installiert haben. Der neue PFX-Connector importiert PFX-Dateien und stellt PKCS-Zertifikate auf allen Plattformen bereit.
+
+Weitere Informationen zu PKCS-Zertifikaten finden Sie unter [Konfigurieren und Verwenden von PKCS-Zertifikaten mit Intune](../protect/certficates-pfx-configure.md).
+
+Gilt für:
+- Vollständig verwaltetes Android Enterprise (COBO)
+
+### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631---"></a>Verwenden von NetMotion als VPN-Verbindungstyp für iOS/iPadOS- und macOS-Geräte<!-- 1333631 -->
+Wenn Sie ein VPN-Profil erstellen, ist NetMotion als VPN-Verbindungstyp verfügbar (**Geräte** > **Gerätekonfiguration** > **Profil erstellen** > **iOS/iPadOS** oder **macOS** als Plattform > **VPN** als Profil > **NetMotion** als Verbindungstyp).
+
+Weitere Informationen zu VPN-Profilen in Intune finden Sie unter[Erstellen von VPN-Profilen zum Herstellen einer Verbindung mit VPN-Servern](../configuration/vpn-settings-configure.md).
+
+Gilt für:
+- iOS/iPadOS
+- macOS
+
+### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024---"></a>Weitere PEAP-Optionen (Protected Extensible Authentication Protocol) für Windows 10-WLAN-Profile<!-- 3805024 -->
+Auf Windows 10-Geräten können Sie WLAN-Profile erstellen, die EAP (Extensible Authentication Protocol, erweiterbares Authentifizierungsprotokoll) verwenden, um WLAN-Verbindungen zu authentifizieren (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **Windows 10 und höher** als Plattform > **WLAN** als Profil > **Enterprise**). Wenn Sie „Protected EAP (PEAP)“ auswählen, stehen neue Einstellungen zur Verfügung:
+
+- **Serverüberprüfung in PEAP-Phase 1 durchführen**: In Phase 1 der PEAP-Aushandlung überprüfen Geräte das Zertifikat und verifizieren den Server.
+  - **Benutzereingabeaufforderungen für Serverüberprüfung in PEAP-Phase 1 deaktivieren**: In Phase 1 der PEAP-Aushandlung werden keine Benutzereingabeaufforderungen zur Autorisierung von neuen PEAP-Servern für vertrauenswürdige Zertifizierungsstellen angezeigt.
+- **Kryptografische Bindung erforderlich**: Diese Einstellung verhindert Verbindungen mit PEAP-Servern, die während der PEAP-Aushandlung keine kryptografische Bindung verwenden.
+
+Informationen dazu, welche Einstellungen Sie derzeit konfigurieren können, finden Sie unter [Hinzufügen von WLAN-Einstellungen zu Geräten unter Windows 10 und höher](../configuration/wi-fi-settings-windows.md).
+
+Gilt für: 
+- Windows 10 und höher
+
+### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576---"></a>Konfigurieren des Microsoft Enterprise SSO-Plug-Ins für macOS<!-- 5627576 -->
+Das Microsoft Azure AD-Team hat eine App-Erweiterung zum Umleiten beim einmaligen Anmelden (Single Sign-On, SSO) entwickelt. Damit können Benutzer von macOS 10.15 und höher auf Microsoft-Apps, Organisations-Apps und Websites zugreifen, die das SSO-Feature von Apple unterstützen, und sich im gleichen Anmeldevorgang bei Azure AD authentifizieren. Mit dem Microsoft Enterprise SSO-Plug-In können Sie die SSO-Erweiterung mit dem neuen Microsoft Azure AD-App-Erweiterungstyp konfigurieren (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **macOS** als Plattform > **Gerätefeatures** als Profil > **App-Erweiterung für einmaliges Anmelden** > SSO-App-Erweiterung als Typ > **Microsoft Azure AD**).
+
+Um SSO mit dem Microsoft Azure AD-SSO-App-Erweiterungstyp zu aktivieren, müssen Benutzer die Unternehmensportal-App auf ihren macOS-Geräten installieren und sich bei der App anmelden. 
+
+Weitere Informationen zu macOS-SSO-App-Erweiterungen finden Sie unter [App-Erweiterung für einmaliges Anmelden](../configuration/device-features-configure.md#single-sign-on-app-extension).
+
+Gilt für:
+- macOS 10.15 und neuer
+
+### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991---"></a>Verwenden von SSO-App-Erweiterungen in weiteren iOS/iPadOS-Apps mit dem Microsoft Enterprise SSO-Plug-In<!-- 7369991 -->
+Das [Microsoft Enterprise SSO-Plug-In für Apple-Geräte](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) kann mit allen Apps verwendet werden, die SSO-App-Erweiterungen unterstützen. In Intune bedeutet dieses Feature, dass das Plug-In mit mobilen iOS/iPadOS-Apps funktioniert, die nicht die Microsoft Authentication Library (MSAL) für Apple-Geräte verwenden. Die Apps müssen die MSAL nicht verwenden, weil sie sich nicht bei Azure AD-Endpunkten authentifizieren müssen.
+
+Um Ihre iOS/iPadOS-Apps für die Verwendung von SSO mit dem Plug-In zu konfigurieren, fügen Sie die App-Bundle-IDs in einem iOS/iPadOS-Konfigurationsprofil hinzu (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **iOS/iPadOS** als Plattform > **Gerätefeatures** als Profil > **App-Erweiterung für einmaliges Anmelden** > **Microsoft Azure AD** als SSO-App-Erweiterungstyp > **App-Bundle-IDs**).
+
+Informationen zu den SSO-App-Erweiterungseinstellungen, die Sie konfigurieren können, finden Sie unter [App-Erweiterung für einmaliges Anmelden](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
+
+Gilt für:
+- iOS/iPadOS
+
+### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-show-descriptions---7414768---"></a>Verbesserungen an der Seite „Geräteeinstellungen aktualisieren“ in der Unternehmensportal-App für Android zur Anzeige von Beschreibungen<!-- 7414768 -->
+In der Unternehmensportal-App auf Android-Geräten werden auf der Seite **Geräteeinstellungen aktualisieren** die Einstellungen aufgelistet, die ein Benutzer aktualisieren muss, um die Konformität sicherzustellen. Wir haben die Benutzeroberfläche verbessert: Die aufgeführten Einstellungen sind jetzt standardmäßig aufgeklappt und zeigen die Beschreibung sowie die Schaltfläche **Auflösen** an (sofern zutreffend). Zuvor waren die Einstellungen standardmäßig zugeklappt. Dieses neue Standardverhalten reduziert die Anzahl von notwendigen Klicks, sodass Benutzer Probleme schneller beheben können.
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
@@ -108,6 +162,9 @@ Wenn ein Kunde heute das Reimaging für ein Gerät durchführt und es dann erneu
 ### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>Bereitstellen von Softwareupdates auf macOS-Geräten <!-- 3194876 -->
 Sie können Softwareupdates für Gruppen von macOS-Geräten bereitstellen. Dieses Feature umfasst kritische, Firmware-, Konfigurationsdatei- und andere Updates. Sie können Updates beim nächsten Einchecken des Geräts senden oder einen Wochenplan auswählen, um Updates innerhalb oder außerhalb der von Ihnen festgelegten Zeitfenster bereitzustellen. Dies ist hilfreich, wenn Sie Geräte außerhalb der üblichen Geschäftszeiten aktualisieren möchten oder wenn Ihr Helpdesk voll besetzt ist. Außerdem erhalten Sie einen detaillierten Bericht zu allen macOS-Geräten mit bereitgestellten Updates. Sie können den Bericht geräteweise detailliert untersuchen, um die Status bestimmter Updates einzusehen.
 
+### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322---"></a>Zugeordnete Lizenzen vor dem Löschen des Apple-VPP-Tokens widerrufen<!--6195322 -->
+In einem zukünftigen Update werden Sie folgendes Verhalten bemerken: Wenn Sie ein Apple-VPP-Token in Microsoft Endpoint Manager löschen, werden alle von Intune zugewiesenen Lizenzen, die diesem Token zugeordnet sind, vor dem Löschen automatisch widerrufen.
+
 <!-- ***********************************************-->
 <!--## Intune apps-->
  
@@ -119,10 +176,9 @@ Sie können Softwareupdates für Gruppen von macOS-Geräten bereitstellen. Diese
 Administratoren können die Vorlagenversion für den Power BI-Konformitätsbericht von Version V1.0 auf V2.0 aktualisieren. Version v2.0 umfasst ein verbessertes Design sowie Änderungen an Berechnungen und Daten, die als Bestandteil der Vorlage präsentiert werden. Weitere Informationen finden Sie unter [Verbinden mit dem Data Warehouse mit Power BI](../developer/reports-proc-get-a-link-powerbi.md).
 
 <!-- ***********************************************-->
-## <a name="role-based-access-control"></a>Rollenbasierte Zugriffssteuerung
-
-### <a name="scope-tag-support-for-customization-policies--6182440---"></a>Unterstützung von Bereichsmarkierungen für Anpassungsrichtlinien<!--6182440 -->
-Sie können Anpassungsrichtlinien Bereichsmarkierungen hinzufügen. Wechseln Sie dazu zu [Microsoft Endpoint Manager Administrations Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Mandantenverwaltung**> **Anpassung**, wo Sie Konfigurationsoptionen für **Bereichsmarkierungen** finden.
+<!--
+## Role-based access control
+-->
 
 <!-- ***********************************************-->
 ## <a name="security"></a>Sicherheit
@@ -135,6 +191,20 @@ Im Oktober 2019 wurde in der Intune-App-Schutzrichtlinie die Funktion zum Verwe
 - **Symantec Endpoint Security** unter Android, iOS und iPadOS
 
 Weitere Informationen finden zum Verwenden einer App-Schutzrichtlinie mit MTD-Partnern finden Sie unter [Erstellen einer Mobile Threat Defense-App-Schutzrichtlinie (MTD) mit Intune](../protect/mtd-app-protection-policy.md).
+
+### <a name="microsoft-defender-atp-creates-endpoint-manager-security-task-with-vulnerability-details---5568193----"></a>Microsoft Defender ATP erstellt Endpoint Manager-Sicherheitsaufgabe mit Details zu Sicherheitsrisiken<!-- 5568193  -->
+Im Abschnitt „Bedrohungs- und Sicherheitsrisikomanagement“ in Microsoft Defender ATP werden falsch konfigurierte Sicherheitseinstellungen auf Geräten ermittelt. Administratoren können diese Informationen zum Aktualisieren von anfälligen Geräten verwenden.
+
+In Kürze kann Microsoft Defender eine Endpoint Manager-Sicherheitsaufgabe (**Endpoint Manager** > **Endpunktsicherheit** > **Sicherheitsaufgaben**) mit den Details zum Sicherheitsrisiko erstellen und die betroffenen Geräte anzeigen. IT-Administratoren können die Sicherheitsaufgabe akzeptieren und die erforderliche Konfiguration bereitstellen. 
+
+Weitere Informationen zu Sicherheitsaufgaben finden Sie unter [Verwenden von Intune zum Korrigieren von mit Microsoft Defender ATP identifizierten Sicherheitsrisiken](../protect/atp-manage-vulnerabilities.md).
+
+### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119----"></a>Änderungen an Ausschlüssen der Antivirus-Richtlinie für Endpunktsicherheit<!--5583940, 6018119  -->
+Wir führen zwei Änderungen bei der Verwaltung der Microsoft Defender Antivirus-Ausschlusslisten ein, die Sie im Rahmen einer Antivirenrichtlinie für die Endpunktsicherheit konfigurieren. (**Endpunktsicherheit** > **Antivirus** > **Richtlinie erstellen** > **Windows 10 und höher**  als Plattform). Mit diesen beiden Änderungen lassen sich Konflikte zwischen Richtlinien vermeiden, und Konflikte bei vorhandenen Richtlinien in Bezug auf die Liste der Ausschlüsse werden aufgehoben:
+
+- Erstens haben wir einen neuen Profiltyp für Windows 10 und höher hinzugefügt: **Microsoft Defender Antivirus-Ausschlüsse**.  Dieser neue Profiltyp enthält nur die Einstellungen für die Angabe einer Liste von Defender-*Prozessen*, sowie von *Dateierweiterungen*, *Dateien* und *Ordnern*, die Microsoft Defender nicht überprüfen soll. So können Sie die Verwaltung Ihrer Ausschlusslisten vereinfachen, indem Sie sie von anderen Richtlinienkonfigurationen trennen.
+- Durch die zweite Änderung werden die von Ihnen in verschiedenen Profilen definierten Ausschlusslisten in eine einzelne Ausschlussliste für jedes Gerät oder jeden Benutzer zusammengeführt, basierend auf den jeweiligen Richtlinien, die für einen bestimmten Benutzer oder ein bestimmtes Gerät gelten. Wenn beispielsweise für einen Benutzer drei Richtlinien gelten, werden die Ausschlusslisten für diese drei Richtlinien in eine einzelne übergeordnete Gruppe von Microsoft Defender Antivirus-Ausschlüssen zusammengeführt, die dann auf den Benutzer angewendet werden. Dies betrifft die Ausschlusslisten des neu hinzugefügten Profiltyps sowie alle vorhandenen, in einem *Microsoft Defender Antivirus*-Profil konfigurierten Richtlinien.
+
 
 
 <!-- ***********************************************-->

@@ -149,7 +149,7 @@
               href: manage-microsoft-teams.md
             - name: Konfigurieren von Google Chrome für Android
               href: apps-configure-chrome-android.md
-            - name: Konfigurieren eines VPN für Android Enterprise
+            - name: VPN- und Pro-App-VPN unter Android Enterprise
               href: app-configuration-vpn-ae.md
         - name: Per Volumenlizenz erworbene Apps und Bücher
           items:

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/14/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461962"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365541"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App
 
@@ -178,9 +178,9 @@ Intune unterstützt von Personal Identity Verification (PIV) und Common Access C
 
 Weitere Informationen zu abgeleiteten Anmeldeinformationen für iOS/iPadOS-Geräte finden Sie unter [Verwenden abgeleiteter Anmeldeinformationen in Microsoft Intune](../protect/derived-credentials.md).
 
-## <a name="dark-mode-for-iosipados-company-portal"></a>Dunkler Modus für iOS/iPadOS-Unternehmensportal
+## <a name="dark-mode-for-the-company-portal"></a>Dunkler Modus für das Unternehmensportal
 
-Der dunkle Modus ist für das iOS/iPadOS-Unternehmensportal verfügbar. Benutzer können im Farbschema ihrer Wahl – basierend auf den Geräteeinstellungen – Apps herunterladen, ihre Geräte verwalten und IT-Support erhalten. Das iOS/iPadOS-Unternehmensportal passt sich automatisch den Einstellungen des Endbenutzergeräts für den hellen oder dunklen Modus an.
+Der dunkle Modus ist für das Unternehmensportal für iOS/iPadOS, macOS und Windows verfügbar. Benutzer können im Farbschema ihrer Wahl – basierend auf den Geräteeinstellungen – Apps herunterladen, ihre Geräte verwalten und IT-Support erhalten. Das Unternehmensportal für iOS/iPadOS, macOS und Windows passt sich automatisch den Einstellungen des Endbenutzergeräts für den hellen oder dunklen Modus an.
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Tastenkombinationen für die Windows-Unternehmensportal-App
 

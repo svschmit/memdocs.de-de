@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989669"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334622"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Verwalten der BitLocker-Richtlinie für Windows 10 in Intune
 
@@ -168,11 +168,11 @@ Geräte müssen die folgenden Voraussetzungen erfüllen, damit der BitLocker-Wie
 
 - Sie müssen Windows 10, Version 1909 oder höher ausführen.
 
-- Auf in Azure AD und Hybrid eingebundenen Geräten muss die Schlüsselrotation unterstützt werden:
+- In Azure AD und hybrid eingebundene Geräte müssen die Schlüsselrotation über eine BitLocker-Richtlinienkonfiguration unterstützen:
 
-  - **Rotation von clientgesteuerten Wiederherstellungskennwörtern**
-
-  Diese Einstellung finden Sie unter *Windows-Verschlüsselung* als Teil einer Gerätekonfigurationsrichtlinie für Windows 10 Endpoint Protection.
+  - **Vom Client gesteuerte Rotation des Wiederherstellungskennworts**, festgelegt auf *Rotation auf in Azure AD eingebundenen Geräten aktivieren* oder *Rotation auf in Azure AD und hybrid eingebundenen Geräten aktivieren*
+  - **BitLocker-Wiederherstellungsinformationen in Azure Active Directory speichern**, festgelegt auf *Aktiviert*
+  - **Vor dem Aktivieren von BitLocker Wiederherstellungsinformationen in Azure Active Directory speichern**, festgelegt auf *Erforderlich*
 
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>So drehen Sie den BitLocker-Wiederherstellungsschlüssel
 

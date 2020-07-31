@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29cb970dd7148496f1a4f200ba32505e6f2c0e16
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461588"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946642"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden Ihrer PKCS-Zertifikate mit Intune
 
@@ -59,7 +59,7 @@ Wenn Sie PKCS-Zertifikate mit Intune verwenden möchten, müssen Sie über folge
 - **Microsoft Intune Certificate Connector** (auch als *NDES-Certificate Connector* bezeichnet):  
   Navigieren Sie im Intune-Portal zu **Gerätekonfiguration** > **Certificate Connectors** > **Hinzufügen**, und führen Sie die *notwendigen Schritte aus, um den Connector für PKCS #12 zu installieren*. Verwenden Sie den Downloadlink im Portal zum Herunterladen des Installationsprogramms für den Certificate Connector (**NDESConnectorSetup.exe**).  
 
-  Intune unterstützt bis zu 100 Instanzen dieses Connectors pro Mandant. Jede Instanz des Connectors muss sich auf einem separaten Windows-Server befinden. Sie können eine Instanz dieses Connectors auf demselben Server wie eine Instanz des PFX-Zertifikatconnectors für Microsoft Intune installieren. Wenn Sie mehrere Connectors verwenden, unterstützt die Connectorinfrastruktur Hochverfügbarkeit und Lastenausgleich, da jede verfügbare Connectorinstanz ihre PKCS-Zertifikatanforderungen verarbeiten kann. 
+  Intune unterstützt bis zu 100 Instanzen dieses Connectors pro Mandant. Jede Instanz des Connectors muss sich auf einem separaten Windows-Server befinden. Sie können eine Instanz dieses Connectors auf demselben Server wie eine Instanz des PFX-Zertifikatconnectors für Microsoft Intune installieren. Wenn Sie mehrere Connectors verwenden, unterstützt die Connectorinfrastruktur Redundanz und Lastenausgleich, da jede verfügbare Connectorinstanz Ihre PKCS-Zertifikatanforderungen verarbeiten kann. 
 
   Dieser Connector verarbeitet PKCS-Zertifikatanforderungen, die für die Authentifizierung oder Signierung von E-Mails mit S/MIME verwendet werden.
 
@@ -68,9 +68,7 @@ Wenn Sie PKCS-Zertifikate mit Intune verwenden möchten, müssen Sie über folge
 - **PFX-Zertifikatconnector für Microsoft Intune:**  
   Wenn Sie die E-Mail-Verschlüsselung mit S/MIME einsetzen möchten, laden Sie im Intune-Portal den *PFX-Zertifikatconnector* herunter, der das Importieren von PFX-Zertifikaten unterstützt.  Navigieren Sie zu **Gerätekonfiguration** > **Certificate Connectors** > **Hinzufügen**, und führen Sie die *notwendigen Schritte aus, um den Connector für importierte PFX-Zertifikate zu installieren*. Verwenden Sie den Downloadlink im Portal zum Herunterladen des Installationsprogramms **PfxCertificateConnectorBootstrapper.exe**.
 
-  Jeder Intune-Mandant unterstützt eine einzelne Instanz dieses Connectors. Sie können diesen Connector auf demselben Server wie eine Instanz des Microsoft Intune Certificate Connectors installieren.
-
-  Der Connector verarbeitet Anforderungen für PFX-Dateien, die in Intune importiert werden, um E-Mails eines bestimmten Benutzers mit S/MIME zu verschlüsseln.  
+  Der Connector verarbeitet Anforderungen für PFX-Dateien, die in Intune importiert werden, um E-Mails eines bestimmten Benutzers mit S/MIME zu verschlüsseln. Sie können diesen Connector auf demselben Server wie eine Instanz des Microsoft Intune Certificate Connectors installieren. 
 
   Dieser Connector kann sich automatisch selbst installieren, sobald neue Versionen zur Verfügung stehen. Sie müssen Folgendes tun, um die Updatefunktion zu verwenden:
   - Installieren Sie den PFX-Zertifikatconnector für Microsoft Intune auf Ihrem Server.  
@@ -260,7 +258,7 @@ Jedes Gerät benötigt ein Zertifikat einer Stamm- oder Zwischenzertifizierungss
 
    Wählen Sie **Weiter** aus.
 
-10. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen das Profil zugewiesen werden soll. Planen Sie die Bereitstellung dieses Zertifikatprofils für die Gruppen, die auch das vertrauenswürdige Zertifikatprofil erhalten.Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](../configuration/device-profile-assign.md).
+10. Wählen Sie unter **Zuweisungen** die Benutzer oder Gruppen aus, denen das Profil zugewiesen werden soll. Planen Sie die Bereitstellung dieses Zertifikatprofils für die Gruppen, die auch das vertrauenswürdige Zertifikatprofil erhalten. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](../configuration/device-profile-assign.md).
 
     Wählen Sie **Weiter** aus.
 

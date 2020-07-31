@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531892"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262862"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrieren von Windows Hello for Business in Microsoft Intune  
 
@@ -32,13 +32,21 @@ Hello for Business ist eine alternative Anmeldemethode, die Active Directory ode
 
 Intune integriert Hello for Business auf zwei Arten:
 
-- **Mandantenweit:** Sie können unter *Geräteregistrierung* eine Intune-Richtlinie erstellen. Diese Richtlinie gilt für die gesamte Organisation (mandantenweit). Sie unterstützt die Windows-Willkommensseite von Windows Autopilot und wird angewendet, wenn ein Gerät registriert wird.
-- **Diskrete Gruppen:** Sie können Richtlinien zum Verwalten von Windows Hello for Business auf Geräten bereitstellen, die bei Intune registriert wurden. Die folgenden Richtlinientypen können zum Verwalten von Windows Hello verwendet werden: *Identity Protection*-Profile, die Sie unter *Gerätekonfiguration* erstellen können, verschiedene *Sicherheitsbaselines* und Endpunktsicherheitsprofile für *Kontoschutz*. Diese Profiltypen sind auf zugewiesene Benutzer oder Geräte ausgelegt und werden beim Check-In angewendet.
+- **Mandantenweit** (*dieser Artikel)* : Sie können unter *Geräteregistrierung* eine Intune-Richtlinie erstellen. Diese Richtlinie gilt für die gesamte Organisation (mandantenweit). Sie unterstützt die Windows-Willkommensseite von Windows Autopilot und wird angewendet, wenn ein Gerät registriert wird.
+- **Diskrete Gruppen:** Verwenden Sie für Geräte, die bereits in Intune registriert sind, das Gerätekonfigurationsprofil [**Identitätsschutz**](../protect/identity-protection-configure.md), um Geräte für Windows Hello for Business zu konfigurieren. Identitätsschutzprofile können für zugewiesene Benutzer oder Geräte gelten und werden beim Check-In angewendet.
 
-Nutzen Sie die Informationen in diesem Artikel, um eine Windows Hello for Business-Standardrichtlinie für Ihre gesamte Organisation zu erstellen. Informationen zum Erstellen eines Identity Protection-Profils für ausgewählte Benutzer und Gerätegruppen finden Sie unter [Configure an identity protection profile (Konfigurieren eines Identity Protection-Profils)](identity-protection-configure.md).  
+Darüber hinaus unterstützt Intune die folgenden Richtlinientypen zur Verwaltung einiger Einstellungen für Windows Hello for Business:
+
+- [**Sicherheitsbaselines**](../protect/security-baselines.md). Die folgenden Baselines enthalten Einstellungen für Windows Hello for Business:
+  - [Microsoft Defender Advanced Threat Protection-Baselineeinstellungen](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Einstellungen der MDM-Sicherheitsbaselines für Windows](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
+- [**Kontoschutz**](../protect/endpoint-security-account-protection-policy.md)-Richtlinie für Endpunktsicherheit. Sehen Sie sich die [Kontoschutzeinstellungen](../protect/endpoint-security-account-protection-profile-settings.md#account-protection) an.
+
+In den nächsten Abschnitten dieses Artikels wird die Erstellung einer Windows Hello for Business-Standardrichtlinie für Ihre gesamte Organisation beschrieben.
 
 > [!IMPORTANT]
 > Bei Desktop- und mobilen Versionen von Windows 10 vor dem Anniversary Update konnten Sie zwei unterschiedliche PINS für die Authentifizierung bei Ressourcen festlegen:
+>
 > - Die **Geräte-PIN** konnte zum Entsperren des Geräts und zur Verbindung mit Cloudressourcen verwendet werden.
 > - Die **Arbeits-PIN** wurde für den Zugang zu Azure AD-Ressourcen auf persönlichen Geräten von Benutzern (BYOD) verwendet.
 > 

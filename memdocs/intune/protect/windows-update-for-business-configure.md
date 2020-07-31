@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d246ea2811e0fb561bc623ae29d3fb5ef0de66f9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989378"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946659"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Verwalten von Windows 10-Softwareupdates in Intune
 
@@ -221,6 +221,8 @@ Die folgenden Voraussetzungen müssen erfüllt sein, um Windows 10-Featureupdat
   - Featureupdates für den Updatering müssen *ausgeführt werden*. Sie dürfen nicht angehalten werden.
 
 - Richtlinien für Windows 10-Featureupdates können bei Autopilot-Ausführung über die Windows-Willkommensseite (Out Of Box Experience, OOBE) nicht angewendet werden und gelten erst bei der ersten Windows Update-Überprüfung nach der Bereitstellung eines Geräts (in der Regel ein Tag).
+
+- Windows 10-Featureupdates bleiben zwar in der öffentlichen Vorschau, aber es gibt eine Einschränkung bei der Co-Verwaltung von Geräten in Configuration Manager und Intune: Richtlinien für Featureupdates treten möglicherweise nicht sofort in Kraft, sodass Geräte u. U. auf ein höheres Featureupdate aktualisiert werden als in Intune konfiguriert. Diese Einschränkung wird in einem zukünftigen Update von Configuration Manager entfernt.
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Erstellen und Zuweisen von Windows 10-Featureupdates
 

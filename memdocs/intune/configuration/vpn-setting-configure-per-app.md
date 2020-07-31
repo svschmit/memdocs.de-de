@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24663f8338f03fab53369689b4a61b5bd1bec63f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1d52e968b5e35490027c7887b597608e25476e24
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991218"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365456"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Einrichten eines Pro-App-VPN für iOS-Geräte in Intune
 
@@ -38,6 +38,9 @@ Informieren Sie sich in der Dokumentation Ihres VPN-Anbieters, um zu erfahren, o
 In diesem Artikel erfahren Sie, wie Sie ein Pro-App-VPN-Profil erstellen und dieses Profil Ihren Apps zuweisen. Anhand der folgenden Schritte können Sie Ihren Endbenutzern nahtlos Pro-App-VPNs zur Verfügung stellen. Bei den meisten VPNs, die ein Pro-App-VPN unterstützen, öffnen Benutzer eine App, und die Verbindung zum VPN wird automatisch hergestellt.
 
 Bei einigen VPNs ist auch eine Authentifizierung mit Anmeldeinformationen für ein Pro-App-VPN möglich. Das bedeutet, dass Benutzer einen Benutzernamen und ein Kennwort eingeben müssen, um eine Verbindung mit dem VPN herzustellen.
+
+> [!IMPORTANT]
+> Es gibt ein bekanntes Problem in iOS 13, das Pro-App-VPN-Profile daran hindert, in Benutzerregistrierungsumgebungen eine Verbindung herzustellen, wenn die zertifikatbasierte Authentifizierung verwendet wird. Apple plant, dies in einem zukünftigen Release von iOS zu beheben.
 
 > [!IMPORTANT]
 > Pro-App-VPN wird für IKEv2 VPN-Profile für iOS/iPadOS nicht unterstützt.

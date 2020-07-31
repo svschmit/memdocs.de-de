@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565607"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365422"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Erstellen von VPN-Profilen zum Herstellen einer Verbindung mit VPN-Servern in Intune
 
 Über virtuelle private Netzwerke (VPNs) erhalten Benutzer sicheren Remotezugriff auf Ihr Organisationsnetzwerk. Mithilfe eines VPN-Verbindungsprofils stellen Geräte eine Verbindung mit dem VPN-Server her. **VPN-Profile** in Microsoft Intune weisen VPN-Einstellungen zu Benutzern und Geräten in Ihrer Organisation zu. Verwenden Sie diese Einstellungen, damit Benutzer problemlos und sicher eine Verbindung mit Ihrem Organisationsnetzwerk herstellen können.
 
 Angenommen, Sie möchten z. B. alle iOS-/iPadOS-Geräte mit den Einstellungen konfigurieren, die zum Herstellen einer Verbindung mit einer Dateifreigabe im Organisationsnetzwerk erforderlich sind. Erstellen Sie zunächst ein VPN-Profil, das diese Einstellungen enthält. Weisen Sie dieses Profil anschließend allen Benutzern zu, die über iOS-/iPadOS-Geräte verfügen. Die Benutzer sehen die VPN-Verbindung in der Liste der verfügbaren Netzwerke und können mit geringem Aufwand eine Verbindung herstellen.
+
+> [!NOTE]
+> Die Benutzerregistrierung für iOS/iPadOS und macOS unterstützt nur ein [Pro-App-VPN](vpn-setting-configure-per-app.md).
 
 > [!NOTE]
 > Sie können [benutzerdefinierte Intune-Konfigurationsrichtlinien](custom-settings-configure.md) verwenden, um VPN-Profile für die folgenden Plattformen zu erstellen:
@@ -71,7 +74,7 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
   - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
   - Vollständig verwaltetes und unternehmenseigenes Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
-  - Windows 10
+  - Windows 10
 
 - Benutzerdefiniertes VPN
   - iOS/iPadOS
@@ -91,7 +94,7 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
 
 - IKEv2
   - iOS/iPadOS
-  - Windows 10
+  - Windows 10
 
 - L2TP
   - Windows 10
@@ -100,7 +103,7 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
   - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
   - Vollständig verwaltetes und unternehmenseigenes Android Enterprise-Arbeitsprofil: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
-  - Windows 10
+  - Windows 10
 
 - PPTP
   - Windows 10

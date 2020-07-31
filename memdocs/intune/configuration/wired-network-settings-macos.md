@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 07/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b11a29cdfd61382e68130479a1ab465bf354c6
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 1da738611dd5fe114054645170d2b49ef12f0523
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107419"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334605"
 ---
 # <a name="add-wired-network-settings-for-macos-devices-in-microsoft-intune"></a>Hinzufügen von Einstellungen für kabelgebundene Netzwerke für macOS-Geräte in Microsoft Intune
 
-Sie können ein Profil mit bestimmten Einstellungen für das kabelgebundene Netzwerk erstellen und dann auf Ihren macOS-Geräten bereitstellen. Microsoft Intune bietet viele Features, darunter die Authentifizierung bei Ihrem Netzwerk, das Hinzufügen eines PKCS- oder SCEP-Zertifikats u.v.m.
+Sie können ein Profil mit bestimmten Einstellungen für das kabelgebundene Netzwerk erstellen und dann auf Ihren macOS-Geräten bereitstellen. Microsoft Intune bietet eine Vielzahl von Features, einschließlich Authentifizierung bei Ihrem Netzwerk, Hinzufügen eines SCEP-Zertifikats und vieles mehr.
 
 In diesem Artikel werden die Einstellungen beschrieben, die Sie konfigurieren können.
 
@@ -63,8 +63,8 @@ In diesem Artikel werden die Einstellungen beschrieben, die Sie konfigurieren k�
 
     - **Serververtrauensstellung** – **Zertifikatservernamen:** Fügen Sie mindestens einen allgemeinen Namen **hinzu**, der in den von der vertrauenswürdigen Zertifizierungsstelle ausgestellten Zertifikaten verwendet wird. Wenn Sie diese Informationen eingeben, können Sie das Fenster für dynamische Vertrauensstellungen umgehen, das auf Benutzergeräten bei der Verbindungsherstellung mit diesem Netzwerk angezeigt wird.
     - **Stammzertifikat zur Servervalidierung:** Wählen Sie ein vorhandenes, vertrauenswürdiges Stammzertifikatprofil aus. Dieses Zertifikat wird dem Server bereitgestellt, wenn der Client eine Verbindung mit dem Netzwerk herstellt. Es dient der Authentifizierung der Verbindung.
-    - **Clientauthentifizierung** - **Zertifikate:** Wählen Sie das SCEP- oder PKCS-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
-    - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
+    - **Clientauthentifizierung** - **Zertifikate:** Wählen Sie das SCEP-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt ist. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt. PKCS-Zertifikate werden nicht unterstützt.
+    - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet wird. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
 
   - **EAP-TTLS**: Geben Sie außerdem Folgendes ein:
 
@@ -77,8 +77,8 @@ In diesem Artikel werden die Einstellungen beschrieben, die Sie konfigurieren k�
           - **Challenge Handshake Authentication-Protokoll (CHAP)**
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP, Version 2 (MS-CHAP v2)**
-      - **Zertifikate:** Wählen Sie das SCEP- oder PKCS-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
-      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
+      - **Zertifikate:** Wählen Sie das SCEP-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt ist. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt. PKCS-Zertifikate werden nicht unterstützt.
+      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet wird. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
 
   - **LEAP**
 
@@ -88,8 +88,8 @@ In diesem Artikel werden die Einstellungen beschrieben, die Sie konfigurieren k�
     - **Stammzertifikat zur Servervalidierung:** Wählen Sie ein vorhandenes, vertrauenswürdiges Stammzertifikatprofil aus. Dieses Zertifikat wird dem Server bereitgestellt, wenn der Client eine Verbindung mit dem Netzwerk herstellt. Es dient der Authentifizierung der Verbindung.
     - **Clientauthentifizierung:** Wählen Sie eine **Authentifizierungsmethode** aus. Folgende Optionen sind verfügbar:
       - **Benutzername und Kennwort**: Diese Option fordert den Benutzer zur Eingabe des Benutzernamens und Kennworts für die Authentifizierung der Verbindung auf.
-      - **Zertifikate:** Wählen Sie das SCEP- oder PKCS-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt wird. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt.
-      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
+      - **Zertifikate:** Wählen Sie das SCEP-Clientzertifikatprofil aus, das auch auf dem Gerät bereitgestellt ist. Dieses Zertifikat ist die Identität, die das Gerät dem Server zur Authentifizierung der Verbindung bereitstellt. PKCS-Zertifikate werden nicht unterstützt.
+      - **Identitätsschutz (äußere Identität)** : Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet wird. Dieser Text kann einen beliebigen Wert haben, z.B. `anonymous`. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
