@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384841"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438592"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
@@ -28,7 +28,7 @@ Configuration Manager unterstützt die Verwendung von Verfügbarkeitsgruppen:
 - An primären Standorten und am Standort der zentralen Verwaltung.
 - Lokal oder in Microsoft Azure.
 
-Wenn Sie Verfügbarkeitsgruppen in Microsoft Azure verwenden, können Sie die Verfügbarkeit Ihrer Standortdatenbank weiter steigern, indem Sie *Azure-Verfügbarkeitsgruppen* einsetzen. Weitere Informationen zu Azure-Verfügbarkeitsgruppen finden Sie unter [Verwalten der Verfügbarkeit von virtuellen Computern](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).
+Wenn Sie Verfügbarkeitsgruppen in Microsoft Azure verwenden, können Sie die Verfügbarkeit Ihrer Standortdatenbank weiter steigern, indem Sie *Azure-Verfügbarkeitsgruppen* einsetzen. Weitere Informationen zu Azure-Verfügbarkeitsgruppen finden Sie unter [Verwalten der Verfügbarkeit von virtuellen Computern](/azure/virtual-machines/windows/manage-availability).
 
 > [!Important]
 > Machen Sie sich mit der Konfiguration von SQL Server und SQL Server-Verfügbarkeitsgruppen vertraut, bevor Sie fortfahren. In den folgenden Informationen wird auf die SQL Server-Dokumentationsbibliothek und entsprechende Verfahren verwiesen.

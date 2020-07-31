@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c9d398d7fddab61014547fc0f8f64cd180e58ab6
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078497"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438577"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager in Azure – Häufig gestellte Fragen
 
@@ -84,7 +84,7 @@ Obwohl Configuration Manager nicht mit Azure Load Balancer getestet wurde, sollt
 
 ## <a name="performance"></a>Leistung
 ### <a name="what-factors-affect-performance-in-this-scenario"></a>Welche Faktoren beeinflussen die Leistung in diesem Szenario?
-[Azure-VM-Größe und -Typ](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs), Azure-VM-Datenträger (Storage Premium wird empfohlen, vor allem für SQL Server), Netzwerklatenz und Geschwindigkeit sind die wichtigsten Bereiche.
+[Azure-VM-Größe und -Typ](/azure/virtual-machines/sizes), Azure-VM-Datenträger (Storage Premium wird empfohlen, vor allem für SQL Server), Netzwerklatenz und Geschwindigkeit sind die wichtigsten Bereiche.
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>Erzählen Sie mir also mehr über virtuelle Azure-Computer, welche VM-Größe sollte ich verwenden?
 Im Allgemeinen muss Ihre Rechenleistung (CPU und Arbeitsspeicher) der [empfohlenen Hardware für Configuration Manager](../plan-design/configs/recommended-hardware.md) entsprechen. Es bestehen jedoch einige Unterschiede zwischen regulärer Computerhardware und Azure-VMs, besonders bei den Datenträgern, die von diesen VMs verwendet werden.  Welche VM-Größe Sie verwenden, hängt von der Größe Ihrer Umgebung ab. Im Folgenden finden Sie jedoch einige Empfehlungen:
@@ -157,7 +157,7 @@ Das ist schwer zu sagen, da jede Umgebung anders ist. Am besten ermitteln Sie di
 **Grundlagen:** https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure-VM-Computertypen:**
-- Größe von Azure-Computern: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+- Größe von Azure-Computern: https://docs.microsoft.com/azure/virtual-machines/sizes  
 - VM-Preise: https://azure.microsoft.com/pricing/details/virtual-machines/  
 - Speicherpreise: https://azure.microsoft.com/pricing/details/storage/
 
@@ -169,7 +169,7 @@ Das ist schwer zu sagen, da jede Umgebung anders ist. Am besten ermitteln Sie di
 
 **Verfügbarkeit:**
 - Azure IaaS-Betriebszeit-SLAs: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
-- Erklärungen zu Verfügbarkeitsgruppen: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- Erklärungen zu Verfügbarkeitsgruppen: https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability
 
 **Konnektivität:**
 - ExpressRoute im Vergleich zu Azure-VPN: https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
