@@ -2,7 +2,7 @@
 title: Bereitstellungspläne in Desktop Analytics
 titleSuffix: Configuration Manager
 description: In diesem Artikel werden Bereitstellungspläne in Desktop Analytics erläutert.
-ms.date: 05/11/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
+ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268486"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400714"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Bereitstellungspläne in Desktop Analytics
 
@@ -47,6 +47,8 @@ Im Rahmen des Bereitstellungsplans führen Sie die folgenden Aktionen aus:
 Standardmäßig aktualisiert Desktop Analytics die Daten des Bereitstellungsplans täglich. Das Verarbeiten von Änderungen, die Sie in einem Bereitstellungsplan vornehmen (z. B. das Zuweisen der Wichtigkeit zu einer App oder das Auswählen eines in den Pilotversuch einzuschließenden Geräts) dauert bis zu 24 Stunden. Fordern Sie die bedarfsgesteuerte Datenaktualisierung an, um die Verarbeitung zu beschleunigen. Weitere Informationen finden Sie unter [Desktop Analytics – Häufig gestellte Fragen](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 Wählen Sie nach dem Herstellen der Verbinden von Desktop Analytics mit Configuration Manager ihre Sammlungen in den Bereitstellungsplänen aus. Mit dieser Integration können Sie Windows in einer Sammlung bereitstellen, die auf den Desktop Analytics-Daten basiert.
+
+Bereitstellungspläne unterstützen die drei neuesten Windows 10-Versionen. Desktop Analytics fügt Unterstützung für eine neue Windows 10-Version innerhalb von 45 Tagen nach der Verfügbarkeit hinzu. Zu diesem Zeitpunkt löscht der Dienst auch die älteste Version. Sie können keine Bereitstellungspläne verwenden, die auf älteste Versionen abzielen. Wenn Sie keine fortlaufende Bereitstellungspläne besitzen, die die älteste unterstützte Version in Desktop Analytics anzielen, vervollständigen Sie die Bereitstellung innerhalb von 45 Tagen, nachdem eine neue Windows 10-Version verfügbar ist.
 
 ## <a name="readiness-rules"></a>Bereitschaftsregeln
 

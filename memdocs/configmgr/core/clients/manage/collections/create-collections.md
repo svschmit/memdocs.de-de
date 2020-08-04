@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: def7a40091f6c9a45e67f5e4de7d7dca94b3cba2
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422823"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438599"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Erstellen von Sammlungen in Configuration Manager
 
@@ -234,6 +234,7 @@ Die Azure AD-Synchronisierung erfolgt alle fünf Minuten. Dies ist ein unidirekt
 - Integration in Azure AD für die [Cloudverwaltung](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Azure Active Directory-Benutzerermittlung](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 - Einen für HTTPS oder den [erweiterten HTTP](../../../plan-design/hierarchy/enhanced-http.md) aktivierten Verwaltungspunkt
+- Zugriff auf die Sammlung **Alle Systeme**
 
 ### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>Erstellen einer Gruppe und Festlegen des Besitzers in Azure AD
 
@@ -255,7 +256,7 @@ Die Azure AD-Synchronisierung erfolgt alle fünf Minuten. Dies ist ein unidirekt
 
 1. Gehen Sie in der Configuration Manager-Konsole zu **Bestand und Kompatibilität** > **Übersicht** > **Gerätesammlungen**.
 1. Klicken Sie mit der rechten Maustaste auf die zu synchronisierende Sammlung, und klicken Sie dann auf **Eigenschaften**. 
-1. Klicken Sie auf der Registerkarte **Synchronisieren von AAD-Gruppen** auf **Hinzufügen**.
+1. Klicken Sie auf der Registerkarte **Cloudsynchronisierung** auf **Hinzufügen**.
 1. Wählen Sie im Dropdownmenü den **Mandanten** aus, in dem Sie Ihre Azure AD-Gruppe erstellt haben.
 1. Geben Sie im Feld **Name beginnt mit** Ihre Suchkriterien ein, und klicken Sie dann auf **Suchen**.
   - Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie die Identität, die Sie als Besitzer für die Azure AD-Gruppe angegeben haben.

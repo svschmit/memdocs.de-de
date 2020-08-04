@@ -2,7 +2,7 @@
 title: Community Hub und GitHub
 titleSuffix: Configuration Manager
 description: Aktivieren und Verwenden von Community Hub in Configuration Manager
-ms.date: 07/10/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236408"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262080"
 ---
 # <a name="community-hub-and-github"></a>Community Hub und GitHub
 <!--3555935, 3555936-->
@@ -44,10 +44,7 @@ Der Community-Hub unterstützt die folgenden Objekte:
       - Windows Server wird nicht unterstützt, weshalb die Configuration Manager-Konsole auf einem vom Standortserver getrennten Gerät mit Windows 10 installiert werden muss.
    - Das angemeldete Benutzerkonto darf nicht das integrierte Administratorkonto sein.
 
-- Zum Herunterladen von Berichten müssen Sie die Option **Für HTTP-Websitesysteme von Configuration Manager generierte Zertifikate verwenden** am Standort aktivieren, in den Sie importieren. Weitere Informationen finden Sie unter [Erweitertes HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
-   1. Klicken Sie auf **Verwaltung** > **Standortkonfiguration** > **Standorte**.
-   1. Wählen Sie den Standort aus, und klicken Sie im Menüband auf **Eigenschaften**.
-   1. Wählen Sie auf der Registerkarte **Kommunikationssicherheit** die Option **Für HTTP-Websitesysteme von Configuration Manager generierte Zertifikate verwenden** aus.
+- Der [Verwaltungsdienst](../../../develop/adminservice/set-up.md) in Configuration Manager muss eingerichtet und funktionsfähig sein.
 
 - Wenn Ihre Organisation die Netzwerkkommunikation mit dem Internet über ein Firewall- oder Proxygerät einschränkt, müssen Sie der Configuration Manager-Konsole Zugriff auf Endpunkte im Internet gestatten. Weitere Informationen finden Sie unter [Internetzugriffsanforderungen](../../plan-design/network/internet-endpoints.md#community-hub).
 

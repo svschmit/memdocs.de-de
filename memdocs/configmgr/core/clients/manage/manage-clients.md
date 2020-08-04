@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: b6d1ee82e116a6d4375e37ccca84c8b35707f8e1
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270819"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334588"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Verwalten von Clients in Configuration Manager
 
@@ -249,22 +249,24 @@ Der Standardspeicherort für den Configuration Manager-Clientcache ist `%windir%
 
 ### <a name="about-the-client-cache"></a>Informationen zum Clientcache  
 
-Der Configuration Manager-Client lädt den Inhalt für erforderliche Software unmittelbar nach Erhalt der Bereitstellung herunter, führt ihn jedoch erst zum geplanten Bereitstellungszeitpunkt aus. Zum geplanten Zeitpunkt überprüft der Configuration Manager-Client, ob der Inhalt im Cache verfügbar ist. Wenn Inhalte im Cache enthalten sind und in der richtigen Version vorliegen, werden diese Cacheinhalte verwendet. Wenn die erforderliche Version des Inhalts geändert wird oder der Client den Inhalt löscht, um Speicherplatz für ein anderes Paket freizugeben, lädt der Client den Inhalt erneut in den Cache herunter.  
+Der Configuration Manager-Client lädt den Inhalt für erforderliche Software unmittelbar nach dem Zeitpunkt der Verfügbarkeit der Bereitstellung herunter, führt ihn jedoch erst zum geplanten Bereitstellungszeitpunkt aus. Zum geplanten Zeitpunkt überprüft der Configuration Manager-Client, ob der Inhalt im Cache verfügbar ist. Wenn Inhalte im Cache enthalten sind und in der richtigen Version vorliegen, werden diese Cacheinhalte verwendet. Wenn die erforderliche Version des Inhalts geändert wird oder der Client den Inhalt löscht, um Speicherplatz für ein anderes Paket freizugeben, lädt der Client den Inhalt erneut in den Cache herunter.  
 
 Wenn versucht wird, Inhalte für ein Programm oder eine Anwendung herunterzuladen, deren Größe die Cachegröße überschreitet, tritt bei der Bereitstellung wegen unzureichender Cachegröße ein Fehler auf. Der Client generiert die Statusmeldung 10050 für unzureichende Cachegröße. Das spätere Erhöhen der Cachegröße führt zu folgendem Ergebnis:  
 
 - Erforderliches Programm: Der Client versucht nicht automatisch noch mal, den Inhalt herunterzuladen. Stellen Sie das Paket und das Programm erneut für den Client bereit.  
 - Erforderliche Anwendung: Der Client versucht beim Herunterladen der Clientrichtlinie erneut automatisch, die Inhalte herunterzuladen.  
 
-Wenn der Client versucht, ein Paket herunterzuladen, das die Cachegröße unterschreitet, der Cache jedoch voll ist, werden alle *erforderlichen* Bereitstellungen wiederholt versucht, bis:
+Wenn der Client versucht, Inhalte herunterzuladen, die die Cachegröße unterschreiten, der Cache jedoch voll ist, werden alle *erforderlichen* Bereitstellungen wiederholt versucht, bis:
 
 - der Cachespeicher verfügbar ist.
 - ein Timeout für den Download auftritt.
 - die Anzahl der Wiederholungen den Grenzwert erreicht.
 
-Wenn Sie die Cachegröße später erhöhen, wird vom Client im nächsten Wiederholungsintervall noch mal versucht, das Paket herunterzuladen. Der Client startet alle vier Stunden einen neuen Versuch, die Inhalte herunterzuladen, bis 18 Versuche ausgeführt wurden.  
+Wenn Sie die Cachegröße später erhöhen, wird vom Client im nächsten Wiederholungsintervall noch mal versucht, die Inhalte herunterzuladen. Der Client startet alle vier Stunden einen neuen Versuch, die Inhalte herunterzuladen, bis 18 Versuche ausgeführt wurden.  
 
-Inhalte im Cache werden nicht automatisch gelöscht. Sie werden mindestens einen Tag lang im Cache beibehalten, nachdem sie vom Client verwendet wurden. Wenn Sie die Paketeigenschaften so konfigurieren, dass Inhalte dauerhaft im Clientcache gespeichert werden, werden sie nicht automatisch vom Client gelöscht. Wenn der Cachespeicher von Paketen verwendet wird, die innerhalb der letzten 24 Stunden heruntergeladen wurden, und der Client neue Pakete herunterladen muss, können Sie entweder den Cachespeicher erhöhen oder die Option zum Löschen von gespeicherten Cacheinhalten verwenden.  
+Inhalte im Cache werden nicht automatisch gelöscht. Sie werden mindestens einen Tag lang im Cache beibehalten, nachdem sie vom Client verwendet wurden. Wenn Sie die Inhalte so konfigurieren, dass diese dauerhaft im Clientcache gespeichert werden, werden sie nicht automatisch vom Client gelöscht. Wenn der Cachespeicher von Inhalten verwendet wird, die innerhalb der letzten 24 Stunden heruntergeladen wurden, und der Client neue Inhalte herunterladen muss, können Sie entweder den Cachespeicher erhöhen oder die Option zum Löschen von gespeicherten Cacheinhalten auswählen.
+
+Nur für Anwendungen: Wenn die Inhalte für eine zugehörige Bereitstellung derzeit im Cache vorhanden sind, lädt der Client nur neue oder geänderte Dateien herunter. Zugehörige Bereitstellungen umfassen solche für ältere Revisionen desselben Bereitstellungstyps und von abgelösten Anwendungen.
 
 Gehen Sie wie folgt vor, um den Clientcache während der manuellen Clientinstallation oder nach der Installation des Clients zu konfigurieren.  
 

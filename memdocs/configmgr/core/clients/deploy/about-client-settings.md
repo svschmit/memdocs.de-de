@@ -2,7 +2,7 @@
 title: Clienteinstellungen
 titleSuffix: Configuration Manager
 description: Informationen zu Standardeinstellungen und benutzerdefinierten Einstellungen zur Steuerung von Clientverhalten
-ms.date: 04/21/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347167"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365507"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informationen zu Clienteinstellungen in Configuration Manager
 
@@ -328,6 +328,11 @@ Wenn Clients erforderliche Softwareupdates zum Stichtag der Bereitstellung ohne 
 Wenn Sie den Benutzern mehr Zeit zum Installieren erforderlicher Anwendungs- oder Softwareupdatebereitstellungen nach der Frist gewähren möchten, legen Sie einen Wert für diese Option fest. Diese Toleranzperiode gilt für einen Computer, der für einen längeren Zeitraum ausgeschaltet ist, und für den der Benutzer viele Anwendungs- oder Updatebereitstellungen installieren muss. Diese Einstellung kann sehr nützlich sein, damit beispielsweise ein Benutzer, der aus dem Urlaub zurückkehrt, nicht lange warten muss, während der Client überfällige Anwendungsbereitstellungen installiert.
 
 Legen Sie eine Karenzzeit von 0 bis 120 Stunden fest. Verwenden Sie diese Einstellung mit der Bereitstellungseigenschaft **Erzwingung für diese Bereitstellung basierend auf den Benutzereinstellungen innerhalb der Karenzzeit verzögern, die in den Clienteinstellungen definiert ist**. Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+
+
+### <a name="enable-endpoint-analytics-data-collection"></a>Aktivieren der Datensammlung für die Endpunktanalyse
+
+Aktiviert die lokale Datensammlung auf dem Client für den Upload in die Endpunktanalyse. Legen Sie die Einstellung auf **Yes** (Ja) fest, um Geräte für die lokale Datensammlung zu konfigurieren. Legen Sie die Einstellung auf **No** (Nein) fest, um die lokale Datensammlung zu deaktivieren. Weitere Informationen finden Sie unter [Registrieren von Configuration Manager-Geräten für die Endpunktanalyse](../../../../analytics/enroll-configmgr.md).
 
 ## <a name="computer-restart"></a>Computerneustart
 

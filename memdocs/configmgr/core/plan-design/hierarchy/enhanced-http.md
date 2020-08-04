@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239758"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262097"
 ---
 # <a name="enhanced-http"></a>Erweitertes HTTP
 
@@ -53,10 +53,10 @@ Die folgenden Szenarios profitieren von diesen Verbesserungen:
 ### <a name="scenario-1-client-to-management-point"></a><a name="bkmk_scenario1"></a> Szenario 1: Client zu Verwaltungspunkt
 
 <!--1356889-->
-[In Azure Active Directory (Azure AD) eingebundene Geräte](/azure/active-directory/devices/concept-azure-ad-join) können mit einem Verwaltungspunkt kommunizieren, der für HTTP konfiguriert ist. Der Standortserver generiert ein Zertifikat für den Verwaltungspunkt, sodass er über einen sicheren Kanal kommunizieren kann.
+[Mit Azure Active Directory (Azure AD) verknüpfte Geräte](/azure/active-directory/devices/concept-azure-ad-join) sowie Geräte mit einem von [Configuration Manager ausgestellten Token](../../clients/deploy/deploy-clients-cmg-token.md) können mit einem für HTTP konfigurierten Verwaltungspunkt kommunizieren, wenn Sie erweitertes HTTP für die Website aktivieren. Mit aktiviertem erweitertem HTTP generiert der Standortserver ein Zertifikat für den Verwaltungspunkt, sodass er über einen sicheren Kanal kommunizieren kann.
 
 > [!Note]  
-> Dieses Verhalten stellt eine Änderung gegenüber der aktuellen Version 1802 von Configuration Manager dar, die einen HTTPS-fähigen Verwaltungspunkt für in Azure AD eingebundene Clients erfordert, die über ein Cloud Management Gateway kommunizieren. Weitere Informationen finden Sie unter [Verwaltungspunkt für HTTPS aktivieren](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
+> Für dieses Szenario ist die Verwendung eines HTTPS-fähigen Verwaltungspunkts nicht erforderlich, wird aber als Alternative zum erweiterten HTTP unterstützt. Weitere Informationen zur Verwendung eines HTTPS-fähigen Verwaltungspunkts finden Sie unter [Aktivieren des Verwaltungspunkts für HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
 ### <a name="scenario-2-client-to-distribution-point"></a><a name="bkmk_scenario2"></a> Szenario 2: Client zu Verteilungspunkt
 

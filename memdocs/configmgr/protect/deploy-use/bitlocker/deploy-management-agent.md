@@ -2,7 +2,7 @@
 title: Bereitstellen der BitLocker-Verwaltung
 titleSuffix: Configuration Manager
 description: In diesem Artikel erfahren Sie, wie Sie den BitLocker-Verwaltungs-Agent für Konfigurations-Manager-Clients und den Wiederherstellungsdienst für Verwaltungspunkte bereitstellen.
-ms.date: 04/01/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715695"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262828"
 ---
 # <a name="deploy-bitlocker-management"></a>Bereitstellen der BitLocker-Verwaltung
 
@@ -179,7 +179,13 @@ Wenn Sie zurzeit Microsoft BitLocker Administration and Monitoring (MBAM) verwen
 
 - Die Einstellungen für die BitLocker-Verwaltung sind vollständig mit den MBAM-Gruppenrichtlinieneinstellungen kompatibel. Wenn Geräte sowohl Gruppenrichtlinieneinstellungen als auch Configuration Manager-Richtlinien erhalten, sollten Sie diese so konfigurieren, dass sie übereinstimmen.
 
+  > [!NOTE]
+  > Wenn eine Gruppenrichtlinieneinstellung für eigenständiges MBAM vorhanden ist, wird die entsprechende Einstellung von Configuration Manager überschrieben. Eigenständiges MBAM verwendet die Domänengruppenrichtlinien, während Configuration Manager lokale Richtlinien für die BitLocker-Verwaltung festlegt. Domänenrichtlinien überschrieben die lokalen BitLocker-Verwaltungsrichtlinien von Configuration Manager. Wenn die eigenständige MBAM-Domänengruppenrichtlinie nicht mit der Configuration Manager-Richtlinie übereinstimmt, schlägt die BitLocker-Verwaltung von Configuration Manager fehl. Wenn eine Domänengruppenrichtlinie beispielsweise den eigenständigen MBAM-Server für Schlüsselwiederherstellungsdienste festlegt, kann die BitLocker-Verwaltung von Configuration Manager nicht dieselbe Einstellung für den Verwaltungspunkt festlegen. Dieses Verhalten führt dazu, dass Clients die Wiederherstellungsschlüssel nicht an den Schlüsselwiederherstellungsdienst der Configuration Manager-BitLocker-Verwaltung auf dem Verwaltungspunkt melden können.
+
 - Configuration Manager implementiert nicht alle MBAM-Gruppenrichtlinieneinstellungen. Wenn Sie zusätzliche Einstellungen der Gruppenrichtlinie konfigurieren, werden diese vom BitLocker-Verwaltungs-Agent auf Konfigurations-Manager-Clients berücksichtigt.
+
+  > [!IMPORTANT]
+  > Legen Sie keine Gruppenrichtlinie für eine Einstellung fest, die bereits von der Configuration Manager-BitLocker-Verwaltung angegeben wurde. Legen Sie nur Gruppenrichtlinien für Einstellungen fest, die derzeit nicht in der Configuration Manager-BitLocker-Verwaltung existieren. Die Configuration Manager-Version 2002 verfügt über Featureparität mit eigenständigem MBAM. Mit der Configuration Manager-Version 2002 und höher sollte es in den meisten Fällen keinen Grund geben, Domänengruppenrichtlinien für die Konfiguration von BitLocker-Richtlinien festzulegen. Vermeiden Sie die Verwendung von Gruppenrichtlinien für BitLocker, um Konflikte und Probleme zu verhindern. Konfigurieren Sie alle Einstellungen über die BitLocker-Verwaltungsrichtlinien von Configuration Manager.
 
 ### <a name="tpm-password-hash"></a>TPM-Kennworthash
 
