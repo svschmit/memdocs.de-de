@@ -56,10 +56,6 @@
           href: windows-bulk-enroll.md
         - name: Seite zum Registrierungsstatus
           href: windows-enrollment-status.md
-        - name: Windows Autopilot Deployment-Programm
-          href: enrollment-autopilot.md
-        - name: Azure AD Hybrid mit Autopilot
-          href: windows-autopilot-hybrid.md
         - name: Konfigurieren von Proxys für den Intune-AD-Connector
           href: autopilot-hybrid-connector-proxy.md
     - name: Einrichten der Android-Registrierung
