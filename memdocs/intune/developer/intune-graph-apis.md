@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d300be679d54a5f565fb2c42f889a7dcd23894a
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 7acbd455ef720dd0ab17cce40eae8060c7a68c87
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088546"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438646"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Verwenden von Azure AD für den Zugriff auf die Intune-APIs in Microsoft Graph
 
@@ -351,11 +351,11 @@ Dieses Beispiel zeigt, wie Sie C# zum Abrufen einer Liste von Geräten verwenden
   > Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 
-    1. Klicken Sie mit der rechten Maustaste auf den Projektmappen-Explorer.
-    2. Wählen Sie **NuGet-Pakete verwalten** &gt; **Durchsuchen**.
-    3. Wählen Sie `Microsoft.IdentityModel.Clients.ActiveDirectory` aus, und klicken Sie anschließend auf **Installieren**.
+   1. Klicken Sie mit der rechten Maustaste auf den Projektmappen-Explorer.
+   2. Wählen Sie **NuGet-Pakete verwalten** &gt; **Durchsuchen**.
+   3. Wählen Sie `Microsoft.IdentityModel.Clients.ActiveDirectory` aus, und klicken Sie anschließend auf **Installieren**.
 
-    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. Fügen Sie am Anfang der Datei **Program.cs** die folgenden Anweisungen ein:
 
@@ -447,7 +447,7 @@ namespace IntuneGraphExample
 
 ### <a name="authenticate-azure-ad-powershell"></a>Authentifizieren von Azure AD (PowerShell)
 
-Das folgende PowerShell-Skript verwendet das AzureAD-PowerShell-Modul zur Authentifizierung.  Weitere Informationen finden Sie unter [Azure Active Directory PowerShell, Version 2](https://docs.microsoft.com/powershell/azure/install-adv2?view=azureadps-2.0) und [Intune PowerShell-Beispiele](https://github.com/microsoftgraph/powershell-intune-samples).
+Das folgende PowerShell-Skript verwendet das AzureAD-PowerShell-Modul zur Authentifizierung.  Weitere Informationen finden Sie unter [Azure Active Directory PowerShell, Version 2](/powershell/azure/active-directory/install-adv2) und [Intune PowerShell-Beispiele](https://github.com/microsoftgraph/powershell-intune-samples).
 
 In diesem Beispiel aktualisieren Sie den Wert von `$clientID` so, dass er einer gültigen Anwendungs-ID entspricht.
 
