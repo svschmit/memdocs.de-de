@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0db9c917bef2a28451ef3b74310f826f97f0dba9
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: ce002acf118fb39712f8195247f556b01faa830f
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756668"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865520"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>Registrieren von Windows-Geräten in InTune mithilfe von Windows Autopilot
 
@@ -84,9 +84,9 @@ Sie können Windows Autopilot-Geräte durch Importieren einer CSV-Datei mit ihre
 3. Wenn Sie **Zugewiesen** als **Mitgliedschaftstyp** im vorherigen Schritt ausgewählt haben, wählen Sie anschließend auf dem Blatt **Gruppe** die Option **Mitglieder**, und fügen Sie Autopilot-Geräte zur Gruppe hinzu.
     Autopilot-Geräte, die noch nicht registriert sind, sind Geräte, deren Name der Seriennummer des Geräts entspricht.
 4. Wenn Sie oben **Dynamisches Geräte** als **Mitgliedschaftstyp** ausgewählt haben,wählen Sie anschließend auf dem Blatt **Gruppe** die Option **Dynamische Gerätemitglieder**, und geben Sie einen der folgenden Codes in das Feld **Erweiterte Regel** ein. Nur Autopilot-Geräte werden von diesen Regeln erfasst, da sie auf Attribute abzielen, die nur Autopilot-Geräte aufweisen. Das Erstellen einer Gruppe, die auf Nicht-Autopilot-Attributen basiert, garantiert nicht, dass die in der Gruppe enthaltenen Geräte tatsächlich bei Autopilot registriert sind.
-    - Wenn Sie eine Gruppe mit all Ihren Autopilot-Geräten erstellen möchten, geben Sie ein: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-    - Das Intune-Feld „Gruppentag“ wird dem Attribut „OrderID“ auf Azure AD-Geräten zugeordnet. Wenn Sie eine Gruppe erstellen möchten, die all Ihre Autopilot-Geräte mit einem bestimmten Gruppentag (der OrderID der Azure AD-Geräte) enthält, müssen Sie Folgendes eingeben: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
-    - Wenn Sie eine Gruppe mit all Ihren Autopilot-Geräten mit einer bestimmten Bestellungs-ID erstellen möchten, geben Sie `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")` ein.
+    - Wenn Sie eine Gruppe mit all Ihren Autopilot-Geräten erstellen möchten, geben Sie ein: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
+    - Das Intune-Feld „Gruppentag“ wird dem Attribut „OrderID“ auf Azure AD-Geräten zugeordnet. Wenn Sie eine Gruppe erstellen möchten, die all Ihre Autopilot-Geräte mit einem bestimmten Gruppentag (der OrderID der Azure AD-Geräte) enthält, müssen Sie Folgendes eingeben: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`
+    - Wenn Sie eine Gruppe mit all Ihren Autopilot-Geräten mit einer bestimmten Bestellungs-ID erstellen möchten, geben Sie `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))` ein.
     
     Wählen Sie nach dem Hinzufügen des Codes im Feld **Erweiterte Regel** die Option **Speichern**.
 5. Wählen Sie **Erstellen** aus.  
