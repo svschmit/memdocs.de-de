@@ -19,16 +19,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e031acf6964c2e43bb355db85dd5e365db1a08ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326900"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546842"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Tutorial: Registrieren von Windows-Geräten in Intune mithilfe von Autopilot
 
-Windows Autopilot vereinfacht das Registrieren von Geräten. Mit Microsoft Intune und Autopilot können Sie Ihren Endbenutzern neue Geräte geben, ohne die benutzerdefinierten Betriebssystemimages erstellen, verwalten und auf diese anwenden zu müssen.
+[Windows Autopilot](../../autopilot/index.yml) vereinfacht das Registrieren von Geräten. Mit Microsoft Intune und Autopilot können Sie Ihren Endbenutzern neue Geräte geben, ohne die benutzerdefinierten Betriebssystemimages erstellen, verwalten und auf diese anwenden zu müssen.
 
 In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]
@@ -127,6 +127,6 @@ Wenn Sie die Autopilot-Geräte nicht mehr verwenden möchten, können Sie sie l�
 Informieren Sie sich auch über die anderen Optionen, die für Windows Autopilot verfügbar sind.
 
 > [!div class="nextstepaction"]
-> [Ausführlicher Artikel zur Autopilot-Registrierung](enrollment-autopilot.md)
+> [Ausführlicher Artikel zur Autopilot-Registrierung](../../autopilot/enrollment-autopilot.md)
 
 

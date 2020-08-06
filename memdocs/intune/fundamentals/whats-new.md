@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262879"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546808"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Neuerungen in Microsoft Intune
 
@@ -54,6 +54,14 @@ In diesem Artikel werden die Neuheiten im [Microsoft Endpoint Manager Admin Cent
 ### Role-based access control
 ### Scripts
 
+<!-- ########################## -->
+## <a name="week-of-july-27-2020"></a>Woche ab 27. Juli 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>Überwachung und Problembehandlung
+
+#### <a name="power-bi-compliance-report-template-v20---636958---"></a>Vorlage V2.0 für Power BI-Konformitätsbericht<!-- 636958 -->
+Mit Power BI-Vorlagen-Apps können Power BI-Partner mit wenig oder ohne Programmieraufwand Power BI-Apps entwickeln und diese für Power BI-Kunden bereitstellen. Administratoren können die Version der Power BI-Vorlage für Complianceberichte von 1.0 auf 2.0 aktualisieren. Version 2.0 bietet ein verbessertes Design sowie Änderungen an Berechnungen und Daten, die in der Vorlage vorhanden sind. Weitere Informationen finden Sie unter [Herstellen einer Verbindung zwischen einem Data Warehouse und Power BI](../developer/reports-proc-get-a-link-powerbi.md) und [Aktualisieren einer Vorlagen-App](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Lesen Sie zudem den Blogbeitrag [Ankündigung: Neue Version des Power BI-Complianceberichts mit Intune Data Warehouse](https://aka.ms/new_compliance_report).
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>Woche vom 13. Juli 2020 (Dienstrelease 2007)
@@ -67,8 +75,8 @@ Endbenutzer können nun entscheiden, ob die in der [Webversion des Microsoft Int
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Unterstützung für den Connector für Microsoft Exchange lokal<!-- 7138486  -->
 Ab Release Nr. 2007 (Juli) wird im Intune-Dienst die Unterstützung für den Connector für Exchange lokal eingestellt. Bestandskunden mit einem aktiven Connector können die aktuelle Funktionalität weiterhin nutzen. Neu- und Bestandskunden, die nicht über einen aktiven Connector verfügen, können keine neuen Connectors mehr erstellen oder Exchange ActiveSync-Geräte (EAS) über Intune verwalten. Diesen Kunden empfiehlt Microsoft die [hybride moderne Authentifizierung (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) für Exchange, um den Zugriff auf Exchange lokal zu schützen. Die hybride moderne Authentifizierung ermöglicht sowohl Intune-App-Schutz-Richtlinien (auch MAM) als auch den bedingten Zugriff über Outlook Mobile für Exchange lokal.
 
-#### <a name="smime-for-outlook-on-ios-and-android-enterprise-devices-managed-without-enrollment---6517155----"></a>Verwaltung von S/MIME für Outlook auf iOS- und Android Enterprise-Geräten ohne Registrierung<!-- 6517155  -->
-Sie können nun S/MIME für Outlook auf iOS- und Android Enterprise-Geräten aktivieren, indem Sie App-Konfigurationsrichtlinien für Geräte einrichten, die ohne Registrierung verwaltet werden. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) nacheinander **Apps** > **App-Konfigurationsrichtlinien** > **Hinzufügen** > **Verwaltete Anwendungen** aus. Darüber hinaus können Sie wählen, ob Sie Benutzern erlauben möchten, diese Einstellung in Outlook festzulegen oder nicht. Allgemeine Informationen zu S/MIME finden Sie unter [S/MIME-Übersicht zum Signieren und Verschlüsseln von E-Mails in Intune](../protect/certificates-s-mime-encryption-sign.md). Weitere Informationen zu den Outlook-Konfigurationseinstellungen finden Sie unter [Microsoft Outlook-Konfigurationseinstellungen](../apps/app-configuration-policies-outlook.md) und [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Apps ohne Geräteregistrierung](../apps/app-configuration-policies-managed-app.md). Informationen zu S/MIME, die speziell für Microsoft Exchange gelten, finden Sie unter [S/MIME-Szenarios](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) und [Konfigurationsschlüssel – S/MIME-Einstellungen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings).
+#### <a name="smime-for-outlook-on-ios-and-android-devices-without-enrollment---6517155---"></a>Verwaltung von S/MIME für Outlook auf iOS- und Android-Geräten ohne Registrierung<!-- 6517155 -->
+Sie können nun S/MIME für Outlook auf iOS- und Android-Geräten aktivieren, indem Sie App-Konfigurationsrichtlinien für verwaltete Apps einrichten. Dies ermöglicht die Richtlinienbereitstellung unabhängig vom Status der Geräteregistrierung. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) nacheinander **Apps** > **App-Konfigurationsrichtlinien** > **Hinzufügen** > **Verwaltete Anwendungen** aus. Darüber hinaus können Sie wählen, ob Sie Benutzern erlauben möchten, diese Einstellung in Outlook festzulegen oder nicht. Das Gerät muss jedoch registriert sein, damit S/MIME-Zertifikate für Outlook unter iOS und Android automatisch bereitgestellt werden. Allgemeine Informationen zu S/MIME finden Sie unter [S/MIME-Übersicht zum Signieren und Verschlüsseln von E-Mails in Intune](https://docs.microsoft.com/mem/intune/protect/certificates-s-mime-encryption-sign). Weitere Informationen zu den Outlook-Konfigurationseinstellungen finden Sie unter [Microsoft Outlook-Konfigurationseinstellungen](../apps/app-configuration-policies-outlook.md) und [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Apps ohne Geräteregistrierung](../apps/app-configuration-policies-managed-app.md). Informationen zu S/MIME für Outlook unter iOS und Android finden Sie unter [S/MIME-Szenarios](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) und [Konfigurationsschlüssel – S/MIME-Einstellungen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Gerätekonfiguration

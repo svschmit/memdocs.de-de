@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461537"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443816"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Zuweisen von Apps zu Gruppen mit Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "86461537"
 Nachdem Sie Microsoft Intune [eine App hinzugefügt](apps-add.md) haben, können Sie diese Benutzern und Geräten zuweisen. Beachten Sie: Sie können eine App einem Gerät unabhängig davon zuweisen, ob das Gerät von Intune verwaltet wird.
 
 > [!NOTE]
-> Die Absicht „Verfügbare Bereitstellung“ wird nur für Benutzergruppen unterstützt, nicht für Gerätegruppen.
+> Die Bereitstellungsabsicht **Verfügbar** wird nur für **Gerätegruppen** mit vollständig verwalteten Android Enterprise-Geräten (COBO) und unternehmenseigenen, persönlich aktivierten Android Enterprise-Geräten (COPE) unterstützt.
 
 In der folgenden Tabelle werden die verschiedenen Optionen für die Zuweisung von Apps zu Benutzern und Geräten erläutert:
 

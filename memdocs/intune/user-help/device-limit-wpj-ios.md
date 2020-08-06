@@ -1,5 +1,5 @@
 ---
-title: Grenzwert für Geräteregistrierungen wurde erreicht | Microsoft-Dokumentation
+title: Erreichtes Limit für registrierte iOS-Geräte
 titlesuffix: Intune Company Portal
 description: ''
 keywords: ''
@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7920450185bbc3d198777893a303f4fdec1cd5f7
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9e808ced9ad2d4f8ce8aded4fe572fea8d55884f
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880498"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546398"
 ---
-# <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>Der Grenzwert für Geräteregistrierungen wurde erreicht
+# <a name="the-limit-of-ios-devices-you-can-register-has-been-reached"></a>Erreichtes Limit für iOS-Geräteregistrierungen
 
 Jedes Unternehmen legt einen Grenzwert für die Anzahl von Geräten fest, die von einzelnen Benutzern verwendet werden können, um auf Unternehmensressourcen zuzugreifen. Dadurch bleibt die Sicherheit von Unternehmensdaten gewahrt, und es wird gewährleistet, dass alle Benutzer autorisiert sind, über bestimmte Geräte und von bestimmten Standorten aus auf die Daten zuzugreifen. Sie haben drei Möglichkeiten, wenn die Benachrichtigung **Couldn't register your device** (Ihr Gerät konnte nicht registriert werden.) angezeigt wird, weil der Gerätegrenzwert erreicht wurde:
 

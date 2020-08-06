@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9796df0da4974b860348bf52ef06db202219136
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491115"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473677"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifizieren von Geräten als unternehmenseigen
 
@@ -52,7 +52,10 @@ Dieses Feature wird für folgende Plattformen unterstützt:
 | Windows | Unterstützt (Windows Phone) | Nicht unterstützt |
 | iOS/macOS | Nicht unterstützt (siehe „Wichtig“ weiter unten)  | Unterstützt |
 | Vom Geräteadministrator verwaltetes Android-Betriebssystem, Version 10 | Nicht unterstützt | Nicht unterstützt |
-| Andere Android-Version | Nicht unterstützt | Unterstützt |
+| Android Enterprise-Arbeitsprofil | Nicht unterstützt | Unterstützt |
+| Vollständig verwaltetes Android Enterprise | Nicht unterstützt | Unterstützt |
+| Dedizierte Android Enterprise-Geräte | Nicht unterstützt | Nicht unterstützt |
+| Unternehmenseigenes Android Enterprise-Arbeitsprofil | Nicht unterstützt | Unterstützt |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -63,11 +66,6 @@ Dieses Feature wird für folgende Plattformen unterstützt:
 Erstellen Sie dazu eine Liste mit zwei Spalten, die durch Trennzeichen getrennt ist (CSV) und keinen Header enthält. Fügen Sie die 14-stellige IMEI- oder Seriennummer in der linken Spalte und die Details in der rechten Spalte hinzu. Nur ein Typ von ID, IMEI- oder Seriennummer kann in eine CSV-Datei importiert werden. Details sind auf 128 Zeichen beschränkt und nur für administrative Zwecke bestimmt. Details werden nicht auf dem Gerät angezeigt. Die aktuelle Begrenzung beträgt 5.000 Zeilen pro CSV-Datei.
 
 **Eine CSV-Datei mit Seriennummern hochladen**: Erstellen Sie eine durch Trennzeichen getrennte Liste (.csv) mit zwei Spalten ohne Header, und beschränken Sie die Liste auf 5.000 Geräte oder 5 MB pro CSV-Datei.
-
-|||
-|-|-|
-|&lt;ID #1&gt;|&lt;Details zu Gerät 1&gt;|
-|&lt;ID #2&gt;|&lt;Details zu Gerät 2&gt;|
 
 Diese CSV-Datei wird bei der Anzeige in einem Text-Editor folgendermaßen angezeigt:
 

@@ -1,5 +1,5 @@
 ---
-title: Senden von Protokollen an den Support Ihres Unternehmens für Windows 10-Geräte | Microsoft-Dokumentation
+title: Senden von Protokollen mithilfe der Unternehmensportal-App für Windows
 description: Fehler- und Protokolldetails zur Unterstützung des Unternehmenssupports bei der Behebung von App-Problemen
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b2adca8ed11148e80967c231f79f33b18bb3b113
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1212dae09da7f4420913d18adc404db266f70c45
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881980"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546741"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>E-Mails zu Problemen an den Support Ihres Unternehmens über das Unternehmensportal für Windows
 

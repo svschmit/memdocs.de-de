@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7f382c604d4cddef487871e47ad004389669982
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8bbeb0c3db963e858230ce9a45f45f976bbfbbef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984296"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443878"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Einschließen und Ausschließen von App-Zuweisungen in Microsoft Intune
 
@@ -88,7 +88,12 @@ So weisen Sie eine App Gruppen mithilfe der Ein- und Ausschlusszuweisung zu:
 
 Wenn Sie Gruppenzuweisungen vornehmen, können Gruppen, die bereits zugewiesen wurden, nicht geändert werden. Wenn Sie eine derzeit deaktivierte Gruppe auswählen möchten, entfernen Sie zuerst die App aus der „Zugewiesen“-Liste der App.
 
-Um Zuweisungen zu bearbeiten, wählen Sie in der App-**Zuweisungen**-Liste die Zeile mit der jeweiligen Zuweisung aus, die Sie ändern möchten. Sie können eine Zuweisung auch entfernen, indem Sie die Auslassungspunkte ( **...** ) am Ende einer Zeile und dann **Entfernen** auswählen. Um die Ansicht der Liste **Zuweisungen** zu ändern, gruppieren Sie nach **Zuweisungstyp** oder **Eingeschlossen/Ausgeschlossen**.
+Um Zuweisungen zu bearbeiten, wählen Sie in der App-**Zuweisungen**-Liste die Zeile mit der jeweiligen Zuweisung aus, die Sie ändern möchten. Sie können eine Zuweisung auch entfernen, indem Sie die Auslassungspunkte ( **...** ) am Ende einer Zeile und dann **Entfernen** auswählen. 
+
+> [!NOTE]
+> Durch das Entfernen einer Gruppenzuweisung wird die zugehörige App nicht entfernt. Die App bleibt auf dem Gerät installiert.  
+
+Um die Ansicht der Liste **Zuweisungen** zu ändern, gruppieren Sie nach **Zuweisungstyp** oder **Eingeschlossen/Ausgeschlossen**.
 
 ![Intune-App-Zuweisungen – Abschluss](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 

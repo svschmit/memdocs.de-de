@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8405ef9c8d83583fe2ceb5da668ccfd79d23a39a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b91751e9879d06b40bdd9518926759da2331115f
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334092"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758260"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Problembehandlung der Verwaltung von mobilen Geräten
 
@@ -102,7 +102,7 @@ Dialog/Fehlermeldung | Ursache | Wartung |
 -- | --- | --- |
 **App nicht eingerichtet**: Diese App wurde für Sie nicht zur Verwendung eingerichtet. Wenden Sie sich an Ihren IT-Administrator, um Unterstützung zu erhalten. | Fehler bei der Ermittlung der erforderlichen App-Schutzrichtlinie für die App. |Stellen Sie sicher, dass eine Android-App-Schutzrichtlinie für die Sicherheitsgruppe des Benutzers bereitgestellt und diese App als Ziel festgelegt wurde.
 **Fehler beim Starten der App**: Beim Starten Ihrer App ist ein Problem aufgetreten. Versuchen Sie, die App oder die Intune-Unternehmensportal-App zu aktualisieren. Wenn Sie Hilfe benötigen, wenden Sie sich an Ihren IT-Administrator. | Intune hat eine gültige App-Schutzrichtlinie für die App gefunden, aber die App stürzt während der Initialisierung von MAM ab. | Stellen Sie sicher, dass die App-Version auf dem neuesten Stand ist. <br><br> Stellen Sie sicher, dass die Intune-Unternehmensportal-App auf dem Gerät installiert und auf dem neuesten Stand ist. <br><br> Wenn der Fehler weiterhin auftritt, verwenden Sie die Unternehmensportal-App, um Protokolle an Intune zu senden, oder erstellen Sie ein [Supportticket](../fundamentals/get-support.md#create-an-online-support-ticket).
-**Keine Apps gefunden**: Auf diesem Gerät gibt es keine Apps, die von Ihrer Organisation zum Öffnen dieser Inhalte zugelassen werden. Wenden Sie sich an Ihren IT-Administrator, um Unterstützung zu erhalten. | Der Benutzer hat versucht, Geschäfts-, Schul- oder Unidaten mit einer anderen App zu öffnen, aber Intune kann keine anderen verwalteten Apps finden, die zum Öffnen der Daten zulässig sind. | Vergewissern Sie sich, dass eine Android-App-Schutzrichtlinie für die Sicherheit des Benutzers bereitgestellt wird und als Ziel mindestens eine andere MAM-fähige App festgelegt ist, die die betreffenden Daten öffnen kann.
+**Keine Apps gefunden**: Auf diesem Gerät gibt es keine Apps, die von Ihrer Organisation zum Öffnen dieser Inhalte zugelassen werden. Wenden Sie sich an Ihren IT-Administrator, um Unterstützung zu erhalten. | Der Benutzer hat versucht, Geschäfts-, Schul- oder Unidaten mit einer anderen App zu öffnen, aber Intune kann keine anderen verwalteten Apps finden, die zum Öffnen der Daten zulässig sind. | Vergewissern Sie sich, dass eine Android-App-Schutzrichtlinie für die Sicherheitsgruppe des Benutzers bereitgestellt wird und als Ziel mindestens eine andere MAM-fähige App festgelegt ist, die die betreffenden Daten öffnen kann.
 **Fehler bei der Anmeldung**: Versuchen Sie erneut, sich anzumelden. Wenn das Problem weiterhin besteht, wenden Sie sich an Ihren IT-Administrator, um Hilfe zu erhalten. | Fehler bei der Authentifizierung des Kontos, mit dem der Benutzer versucht hat, sich anzumelden. | Vergewissern Sie sich, dass sich der Benutzer mit dem bereits beim Intune MAM-Dienst registrierten Geschäfts-, Schul- oder Unikonto anmeldet (dem ersten Geschäfts-, Schul- oder Unikonto, das erfolgreich bei dieser App registriert wurde). <br><br> Löschen Sie die Daten der App. <br><br> Stellen Sie sicher, dass die App-Version auf dem neuesten Stand ist. <br><br> Stellen Sie sicher, dass die Version des Unternehmensportals auf dem neuesten Stand ist.
 **Internetverbindung erforderlich**: Sie benötigen eine Internetverbindung, um zu überprüfen, ob Sie diese App verwenden dürfen. | Das Gerät ist nicht mit dem Internet verbunden. | Verbinden Sie das Gerät mit einem WLAN oder Datennetzwerk.
 **Gerät nicht kompatibel**: Sie können diese App nicht verwenden, da bei Ihrem Gerät die Nutzungsbeschränkungen entfernt wurden. Wenden Sie sich an Ihren IT-Administrator, um Unterstützung zu erhalten. | Intune hat festgestellt, dass der Benutzer ein Gerät verwendet, bei dem die Nutzungsbeschränkungen entfernt wurden. | Setzen Sie das Gerät auf die Werkseinstellungen zurück.

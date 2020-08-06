@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262573"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443850"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Verbinden mit dem Data Warehouse mit Power BI
 
@@ -40,6 +40,9 @@ Mit der Power BI-App „Konformität“ können Sie interaktive, dynamisch gener
 - Protokolle zum Gerätebestand
 
 Es werden auch Trends für die Registrierung, die Konformität, das Gerätekonfigurierungsprofil und Softwareupdates hervorgehoben. Beispieldiagramme und Berichte wenden benutzerfreundliche Filter auf den Zeichenbereich an. Um erweiterte Filter zu verwenden, sehen Sie sich den Bereich **Filter** in Power BI Desktop an.
+
+> [!NOTE]
+> Mit Power BI-Vorlagen-Apps können Power BI-Partner mit wenig oder ohne Programmieraufwand Power BI-Apps entwickeln und diese für Power BI-Kunden bereitstellen. Sie können beispielsweise die in Version 2.0 verfügbare Power BI-Vorlage für Complianceberichte verwenden. Version 2.0 bietet ein verbessertes Design sowie Änderungen an Berechnungen und Daten, die in der Vorlage vorhanden sind. Weitere Informationen finden Sie unter [Aktualisieren einer Vorlagen-App](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [Intune Compliance (Data Warehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) und [Was sind Power BI-Vorlagen-Apps?](https://docs.microsoft.com/power-bi/service-template-apps-overview).
 
 Die folgenden Schritte zeigen, wie Sie die Power BI-Datei herunterladen und wie Sie den OData-Link mit Power BI verwenden.
 

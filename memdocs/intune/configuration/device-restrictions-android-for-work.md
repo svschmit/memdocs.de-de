@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: c23044b912b7f0edf2852477aad80dd9be66cf54
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491251"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526065"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -440,7 +440,7 @@ Diese Einstellung gelten für Android Enterprise-Registrierungstypen, bei denen 
 
   Benutzer können keinen Zeitwert auf Geräten festlegen, der über dem im Profil konfigurierten Zeitwert liegt. Benutzer können einen niedrigeren Zeitwert festlegen. Wenn das Profil beispielsweise auf `15` Minuten festgelegt wird, können Benutzer einen Wert von 5 Minuten festlegen. Benutzer können den Wert jedoch nicht auf 30 Minuten festlegen.
 
-- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Gerät zurückgesetzt wird (zwischen 4 und 11). Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie mit einem Wert zwischen 4 und 11 an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Arbeitsprofil auf dem Gerät zurückgesetzt wird. Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 
 - **Kennwortablauf (Tage):** Geben Sie die Anzahl der Tage (von **1**-**365**) ein, nach der Benutzerkennwörter geändert werden müssen.
 - **Erforderlicher Kennworttyp:** Geben Sie den erforderlichen Grad der Kennwortkomplexität ein, und bestimmen Sie, ob biometrische Geräte zulässig sind. Folgende Optionen sind verfügbar:
@@ -468,7 +468,7 @@ Diese Kennworteinstellungen gelten für persönliche Profile auf Geräten, die e
 
   Benutzer können keinen Zeitwert auf Geräten festlegen, der über dem im Profil konfigurierten Zeitwert liegt. Benutzer können einen niedrigeren Zeitwert festlegen. Wenn das Profil beispielsweise auf `15` Minuten festgelegt wird, können Benutzer einen Wert von 5 Minuten festlegen. Benutzer können den Wert jedoch nicht auf 30 Minuten festlegen.
 
-- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Gerät zurückgesetzt wird (zwischen 4 und 11). Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie mit einem Wert zwischen 4 und 11 an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Arbeitsprofil auf dem Gerät zurückgesetzt wird. Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 - **Kennwortablauf (Tage):** Geben Sie die Anzahl der Tage ein, bis das Gerätekennwort geändert werden muss (von 1 bis 365). Geben Sie beispielsweise `90` an, damit das Kennwort nach 90 Tagen abläuft. Wenn das Kennwort abläuft, werden Benutzer aufgefordert, ein neues Kennwort zu erstellen. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 - **Erforderlicher Kennworttyp:** Geben Sie den erforderlichen Grad der Kennwortkomplexität ein, und bestimmen Sie, ob biometrische Geräte zulässig sind. Folgende Optionen sind verfügbar:
   - **Gerätestandard**

@@ -1,5 +1,5 @@
 ---
-title: Auf Ihrem Gerät ist ein Zertifikat nicht vorhanden | Microsoft-Dokumentation
+title: Installieren fehlender erforderlicher Zertifikate
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1cd3309ebe05d48fd2b28988ffc09702901c470a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 162a5c2ff02a762578fb6f52b60b6ff404862329
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881060"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546707"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Installieren des fehlenden Zertifikats, das Ihre Organisation vorschreibt  
 
@@ -44,7 +44,7 @@ Führen Sie die folgenden Schritte durch, um den Browserzugriff zu aktivieren. N
 
 1. Tippen Sie in der Unternehmensportal-App in der rechten Ecke auf das Menü.  
 2. Wählen Sie **Einstellungen** aus.  
-3. Wählen Sie neben **Browser Zugriff aktivieren** die Option **aktivieren aus**.  
+3. Klicken Sie neben **Browserzugriff aktivieren** auf **Aktivieren**.  
 4. Tippen Sie auf dem Bildschirm „Geräteadministrator“ auf **AKTIVIEREN**. 
 
 ## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Ermitteln und Herunterladen des fehlenden Zertifikats über eine Websuche
