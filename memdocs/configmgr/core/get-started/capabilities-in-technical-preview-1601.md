@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905822"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526031"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funktionen in der Technical Preview 1601 für Configuration Manager
 
@@ -130,8 +130,8 @@ Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs �
 
 ### <a name="icons-for-client-status"></a>Symbole für den Clientstatus  
 
-|||  
-|-|-|  
+| Symbol | Beschreibung |
+| ---- | ----------- |
 |![Symbol für den Onlinestatus des Clients](media/online-status-icon.png)|Client ist online.|  
 |![Symbol für den Offlinestatus des Clients](media/offline-status-icon.png)|Client ist offline.|  
 |![Symbol für den unbekannten Status des Clients](media/unknown-status-icon.png)|Clientstatus ist unbekannt.|  

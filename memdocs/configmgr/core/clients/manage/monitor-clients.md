@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1f31ac96f29fc302e601b8da071b1486f4e7df90
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696748"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525912"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Überwachen von Clients in Configuration Manager
 
@@ -53,8 +53,8 @@ Configuration Manager stellt die folgenden Informationstypen als Clientstatus be
 
     Die Symbole am Anfang jeder Zeile geben den Onlinestatus des Geräts an:  
 
-    |||  
-    |-|-|  
+    | Symbol | Beschreibung |
+    | ---- | ----------- |  
     |![Symbol für den Onlinestatus des Clients](../../../core/clients/manage/media/online-status-icon.png)|Gerät ist online.|  
     |![Symbol für den Offlinestatus des Clients](../../../core/clients/manage/media/offline-status-icon.png)|Gerät ist offline.|  
     |![Symbol für den unbekannten Status des Clients](../../../core/clients/manage/media/unknown-status-icon.png)|Onlinestatus ist unbekannt.|  
@@ -183,29 +183,29 @@ Die Clientprüfung führt die folgenden Prüfungen und Wiederherstellungsmaßnah
 |Überprüfen Sie, ob die Clientprüfung vor Kurzem ausgeführt wurde|Führen Sie die Clientprüfung aus|Es wird überprüft, ob die Clientprüfung mindestens einmal innerhalb der letzten drei Tage ausgeführt wurde.|  
 |Überprüfen Sie, ob die erforderlichen Clientkomponenten installiert sind|Installieren Sie die erforderlichen Clientkomponenten|Es wird überprüft, ob die erforderlichen Clientkomponenten installiert sind. Es wird die Datei ccmsetup.xml im Installationsordner des Clients ausgelesen, um die erforderlichen Komponenten herauszufinden.|  
 |WMI-Repository-Integritätstest|Installieren Sie den Configuration Manager-Client erneut.|Überprüft, ob Configuration Manager-Clienteinträge in WMI vorhanden sind|  
-|Überprüfen Sie, ob der Clientdienst ausgeführt wird|Starten Sie den Clientdienst (SMS-Agent-Host)|keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Clientdienst ausgeführt wird|Starten Sie den Clientdienst (SMS-Agent-Host)|Keine zusätzlichen Informationen|  
 |WMI-Ereignissenkentest.|Starten Sie den Clientdienst neu|Überprüfen Sie, ob die Configuration Manager-bezogene WMI-Ereignissenke verloren gegangen ist|  
-|Überprüfen Sie, ob der WMI-Dienst (Windows-Verwaltungsinstrumentation) vorhanden ist|Keine Behebung|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Client ordnungsgemäß installiert wurde|Installieren Sie den Client erneut|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Antischadsoftware-Dienststarttyp auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine weiteren Informationen|  
-|Stellen Sie sicher, dass der Antischadsoftwaredienst ausgeführt wird.|Starten Sie den Antischadsoftwaredienst|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Dienststarttyp für Windows Update auf Automatisch oder Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Starttyp des Clientdienstes (SMS-Agent-Host) auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der WMI-Dienst (Windows-Verwaltungsinstrumentation) ausgeführt wird.|Starten Sie den Dienst Windows-Verwaltungsinstrumentation (WMI)|Keine weiteren Informationen|  
-|Überprüfen Sie die Integrität der Microsoft SQL CE-Datenbank|Installieren Sie den Configuration Manager-Client erneut.|Keine weiteren Informationen|  
-|WMI-Integritätstest der Microsoft Policy Platform|Reparieren der Microsoft Policy Platform|Keine weiteren Informationen|  
-|Stellen Sie sicher, dass der Microsoft Policy Platform-Dienst vorhanden ist|Reparieren der Microsoft Policy Platform|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Dienststarttyp der Microsoft Policy Platform auf Manuell eingestellt ist.|Setzen Sie den Dienststarttyp zurück auf Manuell|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der intelligente Hintergrundübertragungsdienst (BITS) vorhanden ist|Keine Behebung|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Starttyp für den intelligenten Hintergrundübertragungsdienst auf Automatisch oder Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Starttyp für den Netzwerkinspektionsdienst auf Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Manuell, falls er installiert ist|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Dienststarttyp für Windows-Verwaltungsinstrumentation (WMI) auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Dienststarttyp für Windows Update auf Windows 8-Geräten auf Automatisch oder Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Manuell|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Clientdienst (SMS-Agent-Host) vorhanden ist.|Keine Behebung|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Dienststarttyp für die Remotesteuerung in Configuration Manager auf Automatisch oder Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Dienst „Remotesteuerung in Configuration Manager“ ausgeführt wird|Starten Sie den Remotesteuerungsdienst|Keine weiteren Informationen|  
-|Überprüfen Sie, ob der Aktivierungsproxydienst (ConfigMgr-Aktivierungsproxy) ausgeführt wird|Starten Sie den ConfigMgr-Aktivierungsproxydienst|Diese Clientprüfung wird nur durchgeführt, wenn die Clienteinstellung unter **Energieverwaltung**: **Aktivierungsproxy zulassen** auf unterstützten Clientbetriebssystemen auf **Ja** eingestellt ist.|  
-|Überprüfen Sie, ob der Starttyp für den Aktivierungsproxydienst (ConfigMgr-Aktivierungsproxy) auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp für den ConfigMgr-Aktivierungsproxy zurück auf Automatisch|Diese Clientprüfung wird nur durchgeführt, wenn die Clienteinstellung unter **Energieverwaltung**: **Aktivierungsproxy zulassen** auf unterstützten Clientbetriebssystemen auf **Ja** eingestellt ist.|  
+|Überprüfen Sie, ob der WMI-Dienst (Windows-Verwaltungsinstrumentation) vorhanden ist|Keine Behebung|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Client ordnungsgemäß installiert wurde|Installieren Sie den Client erneut|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Antischadsoftware-Dienststarttyp auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine zusätzlichen Informationen|  
+|Stellen Sie sicher, dass der Antischadsoftwaredienst ausgeführt wird.|Starten Sie den Antischadsoftwaredienst|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Dienststarttyp für Windows Update auf Automatisch oder Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Starttyp des Clientdienstes (SMS-Agent-Host) auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der WMI-Dienst (Windows-Verwaltungsinstrumentation) ausgeführt wird.|Starten Sie den Dienst Windows-Verwaltungsinstrumentation (WMI)|Keine zusätzlichen Informationen|  
+|Überprüfen Sie die Integrität der Microsoft SQL CE-Datenbank|Installieren Sie den Configuration Manager-Client erneut.|Keine zusätzlichen Informationen|  
+|WMI-Integritätstest der Microsoft Policy Platform|Reparieren der Microsoft Policy Platform|Keine zusätzlichen Informationen|  
+|Stellen Sie sicher, dass der Microsoft Policy Platform-Dienst vorhanden ist|Reparieren der Microsoft Policy Platform|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Dienststarttyp der Microsoft Policy Platform auf Manuell eingestellt ist.|Setzen Sie den Dienststarttyp zurück auf Manuell|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der intelligente Hintergrundübertragungsdienst (BITS) vorhanden ist|Keine Behebung|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Starttyp für den intelligenten Hintergrundübertragungsdienst auf Automatisch oder Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Starttyp für den Netzwerkinspektionsdienst auf Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Manuell, falls er installiert ist|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Dienststarttyp für Windows-Verwaltungsinstrumentation (WMI) auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Dienststarttyp für Windows Update auf Windows 8-Geräten auf Automatisch oder Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Manuell|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Clientdienst (SMS-Agent-Host) vorhanden ist.|Keine Behebung|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Dienststarttyp für die Remotesteuerung in Configuration Manager auf Automatisch oder Manuell eingestellt ist|Setzen Sie den Dienststarttyp zurück auf Automatisch|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Dienst „Remotesteuerung in Configuration Manager“ ausgeführt wird|Starten Sie den Remotesteuerungsdienst|Keine zusätzlichen Informationen|  
+|Überprüfen Sie, ob der Aktivierungsproxydienst (ConfigMgr-Aktivierungsproxy) ausgeführt wird|Starten Sie den ConfigMgr-Aktivierungsproxydienst|Diese Clientprüfung wird nur vorgenommen, wenn die Clienteinstellung unter **Energieverwaltung**: **Aktivierungsproxy zulassen** auf unterstützten Clientbetriebssystemen auf **Ja** festgelegt ist.|  
+|Überprüfen Sie, ob der Starttyp für den Aktivierungsproxydienst (ConfigMgr-Aktivierungsproxy) auf Automatisch eingestellt ist|Setzen Sie den Dienststarttyp für den ConfigMgr-Aktivierungsproxy zurück auf Automatisch|Diese Clientprüfung wird nur vorgenommen, wenn die Clienteinstellung unter **Energieverwaltung**: **Aktivierungsproxy zulassen** auf unterstützten Clientbetriebssystemen auf **Ja** festgelegt ist.|  
 
 
 <!-- 

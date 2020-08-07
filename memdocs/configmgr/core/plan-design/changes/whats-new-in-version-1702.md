@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427939"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912293"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Neuerungen in Version 1702 von Configuration Manager
 
@@ -271,9 +271,8 @@ Ab 1702 unterstützt die hybride Verwaltung mobiler Geräte mit Microsoft Intune
 
 Sie können jetzt sowohl Geräten als auch Benutzern lizenzierte Apps bereitstellen. Je nachdem, inwieweit die App Gerätelizenzierungen unterstützt, wird eine entsprechende Lizenz wie folgt beansprucht:
 
-|||||
-|-|-|-|-|
-|Configuration Manager-Version|Unterstützt die App Gerätelizenzierung?|Typ der Bereitstellungssammlung|Beanspruchte Lizenz|
+| Configuration Manager-Version | Unterstützt die App Gerätelizenzierung? | Typ der Bereitstellungssammlung | Beanspruchte Lizenz |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |Früher als 1702|Ja|Benutzer|Benutzerlizenz|
 |Früher als 1702|Nein|Benutzer|Benutzerlizenz|
 |Früher als 1702|Ja|Gerät|Benutzerlizenz|

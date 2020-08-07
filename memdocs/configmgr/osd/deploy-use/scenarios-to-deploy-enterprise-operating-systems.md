@@ -2,7 +2,7 @@
 title: Szenarien für die Bereitstellung von Unternehmensbetriebssystemen
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über Szenarios zur Bereitstellung von Unternehmensbetriebssystemen mit Configuration Manager.
-ms.date: 02/22/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07e8623928cbfe0bcd562d3d6efdf3a9ceee85ae
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8304ba7384eba2fc7bfa41d4caf5a256380931c5
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708388"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546636"
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-configuration-manager"></a>Szenarios zur Bereitstellung von Unternehmensbetriebssystemen mit Configuration Manager
 
@@ -28,13 +28,11 @@ Dieses Szenario aktualisiert das BS auf Computern, auf denen derzeit Windows 7, 
 
 Weitere Informationen finden Sie unter [Aktualisieren von Windows auf die neueste Version](upgrade-windows-to-the-latest-version.md).
 
-
 #### <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot für vorhandene Geräte
 <!--3607717, fka 1358333-->
 Ab Version 1810 ist Windows Autopilot für vorhandene Geräte mit Windows 10, Version 1809 oder höher verfügbar. Mit dieser Funktion können Sie ein Reimaging für ein Windows 7-Gerät für den benutzergesteuerten Windows Autopilot-Modus mit einer einzigen Configuration Manager-Tasksequenz durchführen und das Gerät bereitstellen.
 
-Weitere Informationen finden Sie unter [Windows Autopilot für vorhandene Geräte](windows-autopilot-for-existing-devices.md).
-
+Weitere Informationen finden Sie unter [Windows Autopilot für vorhandene Geräte](../../../autopilot/existing-devices.md).
 
 #### <a name="refresh-an-existing-computer-with-a-new-version-of-windows"></a>Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows
 In diesem Szenario wird ein vorhandener Computer partitioniert und formatiert (zurückgesetzt), und ein neues BS wird auf dem Computer installiert. Sie können Einstellungen und Benutzerdaten nach der Installation des BS migrieren.  

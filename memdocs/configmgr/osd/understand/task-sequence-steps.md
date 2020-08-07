@@ -2,7 +2,7 @@
 title: Tasksequenzschritte
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über die Schritte, die Sie einer Configuration Manager-Tasksequenz hinzufügen können.
-ms.date: 04/01/2020
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353597"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546619"
 ---
 # <a name="task-sequence-steps"></a>Tasksequenzschritte
 
@@ -1599,7 +1599,7 @@ Wählen Sie diese Option aus, damit Sysprep das Produktaktivierungsflag nicht zu
 <!--SCCMDocs-pr issue 2695-->
 Diese Option weist Sysprep an, den Computer herunterzufahren (anstelle des standardmäßigen Neustartverhaltens).
 
-Die Tasksequenz [Windows Autopilot für vorhandene Geräte](../deploy-use/windows-autopilot-for-existing-devices.md) verwendet diesen Schritt mit dieser Option.
+Die Tasksequenz [Windows Autopilot für vorhandene Geräte](../../../autopilot/existing-devices.md) verwendet diesen Schritt mit dieser Option.
 
 - Wenn Sie möchten, dass die Tasksequenz das Gerät aktualisiert und dann sofort OOBE für Autopilot startet, lassen Sie diese Option deaktiviert.  
 

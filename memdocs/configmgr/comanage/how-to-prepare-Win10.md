@@ -5,17 +5,17 @@ description: Erfahren Sie, wie sie internetbasierte Windows 10-Geräte für die 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d58faa57fa1459bbc8d821d117d20b3f404dc8e0
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776887"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546415"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Vorbereiten von internetbasierten Geräten für die Co-Verwaltung
 
@@ -25,7 +25,7 @@ Dieser Artikel konzentriert sich auf den zweiten Pfad zur Co-Verwaltung für neu
 
 Für neue Windows 10-Geräte können Sie den Autopilot-Dienst verwenden, um die Windows-Willkommensseite (OOBE) zu konfigurieren. Dieser Prozess umfasst die Einbindung des Geräts in Azure AD und die Registrierung des Geräts in Intune.  
 
-Weitere Informationen finden Sie unter [Übersicht über Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot).
+Weitere Informationen finden Sie unter [Übersicht über Windows Autopilot](../../autopilot/windows-autopilot.md).
 
 Um Ihre Geräte so zu konfigurieren, dass sie automatisch in Intune registriert werden, wenn sie in Azure AD eingebunden werden, lesen Sie  [Registrieren von Windows-Geräten für Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
 
@@ -46,9 +46,9 @@ Weitere Informationen finden Sie unter [Hinzufügen von Geräten in Intune](http
 ### <a name="autopilot-for-existing-devices"></a>Autopilot für vorhandene Geräte
 <!--1358333-->
 
-[Windows Autopilot für vorhandene Geräte](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) ist in Windows 10, Version 1809 oder höher, verfügbar. Mit dieser Funktion können Sie ein Reimaging für ein Windows 7-Gerät für den [benutzergesteuerten Windows Autopilot-Modus](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) mit einer einzigen, nativen Configuration Manager-Tasksequenz durchführen und das Gerät bereitstellen.
+[Windows Autopilot für vorhandene Geräte](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) ist in Windows 10, Version 1809 oder höher, verfügbar. Mit dieser Funktion können Sie ein Reimaging für ein Windows 7-Gerät für den [benutzergesteuerten Windows Autopilot-Modus](../../autopilot/user-driven.md) mit einer einzigen, nativen Configuration Manager-Tasksequenz durchführen und das Gerät bereitstellen.
 
-Weitere Informationen finden Sie unter [Windows Autopilot für vorhandene Geräte: Tasksequenz](../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+Weitere Informationen finden Sie unter [Windows Autopilot für vorhandene Geräte: Tasksequenz](../../autopilot/existing-devices.md).
 
 ## <a name="install-the-configuration-manager-client"></a>Installieren des Configuration Manager-Clients
 

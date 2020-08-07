@@ -10,12 +10,12 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e989de5acab778374c233862d0ab4d7077899d28
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: f686547e4698f1941a64f5b0346ba2d723248c31
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428590"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912518"
 ---
 # <a name="reference-for-maintenance-tasks-in-configuration-manager"></a>Referenz für Wartungstasks im Configuration Manager
 
@@ -31,8 +31,8 @@ Weitere Informationen finden Sie unter [Benutzerdefinierte Wartungstasks einrich
 
 Erstellen Sie mit diesem Task eine Sicherung Ihrer wichtigen Informationen, um einen Standort und die Configuration Manager-Datenbank wiederherzustellen. Weitere Informationen finden Sie unter [Sichern eines Configuration Manager-Standorts](backup-and-recovery.md).  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Nicht aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -41,8 +41,8 @@ Erstellen Sie mit diesem Task eine Sicherung Ihrer wichtigen Informationen, um e
 
 Verwenden Sie diesen Task, um die Konsistenz zwischen Softwaretiteln in der Softwareinventur und im Asset Intelligence-Katalog zu gewährleisten. Weitere Informationen finden Sie unter [Einführung in Asset Intelligence in Configuration Manager](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |Primärer Standort|Nicht verfügbar|
 |Sekundärer Standort|Nicht verfügbar|
@@ -54,8 +54,8 @@ Verwenden Sie diesen Task, um die Konsistenz zwischen Softwaretiteln in der Soft
 
 Verwenden Sie diesen Task, um das Installationsflag für Clients zu entfernen, die während des **Clientneuermittlungs-Zeitraums** keinen von der Frequenzermittlung erstellten Datensatz übermitteln. Durch das Installationsflag wird die automatische Clientpushinstallation auf einen Computer verhindert, auf dem ein aktiver Configuration Manager-Client vorhanden ist.  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Nicht aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -64,8 +64,8 @@ Verwenden Sie diesen Task, um das Installationsflag für Clients zu entfernen, d
 
 Verwenden Sie diesen Task, um veraltete Anwendungsanforderungen aus der Datenbank zu löschen. Weitere Informationen finden Sie unter [Create and deploy an application with System Center Configuration Manager (Erstellen und Bereitstellen einer Anwendung mit System Center Configuration Manager)](../../../apps/get-started/create-and-deploy-an-application.md).  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -74,8 +74,8 @@ Verwenden Sie diesen Task, um veraltete Anwendungsanforderungen aus der Datenban
 
 Verwenden Sie diesen Task, um Anwendungsrevisionen zu löschen, die nicht mehr referenziert werden. Weitere Informationen finden Sie unter [Überarbeiten und Ablösen von Anwendungen in System Center Configuration Manager](../../../apps/deploy-use/revise-and-supersede-applications.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -84,8 +84,8 @@ Verwenden Sie diesen Task, um Anwendungsrevisionen zu löschen, die nicht mehr r
 
 Verwenden Sie diesen Task, um Verlaufsdaten über die von Clients verwendete Downloadquelle zu löschen. Dieser Standort verwendet Downloadquelleninformationen zum Auffüllen des [Dashboards „Clientdatenquellen“](../deploy/configure/monitor-content-you-have-distributed.md#client-data-sources-dashboard).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -98,8 +98,8 @@ Verwenden Sie diesen Task, um alle veralteten Daten für Clientvorgänge aus der
 - Endpoint Protection wie Anforderungen zum Ausführen von Überprüfungen oder Herunterladen aktualisierter Definitionen, die ein Administrator für Clients übermittelt hat.
 - Skripts ausführen, Statusergebnisse
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -108,8 +108,8 @@ Verwenden Sie diesen Task, um alle veralteten Daten für Clientvorgänge aus der
 <!-- not listed in dogfood for either primary or CAS, was it renamed? -->
 Verwenden Sie diesen Task zum Löschen veralteter Verlaufsdaten über den Onlinestatus von Clients, die von der Clientbenachrichtigung erfasst wurden. Er löscht Informationen über Clients, deren Status älter als der angegebene Zeitraum ist. Weitere Informationen finden Sie unter [Überwachen von Clients in Configuration Manager](../../clients/manage/monitor-clients.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -124,8 +124,8 @@ Verwenden Sie diesen Task, um alle veralteten Daten über den Datenverkehr aus d
 - Anzahl der Anforderungen mit Fehlern
 - Maximale Anzahl gleichzeitiger Anforderungen
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -134,8 +134,8 @@ Verwenden Sie diesen Task, um alle veralteten Daten über den Datenverkehr aus d
 
 Verwenden Sie diesen Task, um veraltete Informationen über Clients in CMPivot-Abfragen aus der Standortdatenbank zu löschen. Weitere Informationen finden Sie unter [CMPivot for real-time data (CMPivot für Echtzeitdaten)](cmpivot.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -144,8 +144,8 @@ Verwenden Sie diesen Task, um veraltete Informationen über Clients in CMPivot-A
 
 Verwenden Sie diesen Task, um veraltete Informationen zu gesammelten Dateien aus der Datenbank zu löschen. Mit diesem Task werden darüber hinaus die gesammelten Dateien aus der Ordnerstruktur des Standortservers auf dem ausgewählten Standort gelöscht. Standardmäßig werden die fünf neuesten Kopien der gesammelten Dateien auf dem Standortserver im Verzeichnis **Inboxes\sinv.box\FileCol** gespeichert. Weitere Informationen finden Sie unter [Einführung in die Softwareinventur](../../clients/manage/inventory/introduction-to-software-inventory.md).  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -154,8 +154,8 @@ Verwenden Sie diesen Task, um veraltete Informationen zu gesammelten Dateien aus
 
 Verwenden Sie diesen Task, um veraltete Computerzuordnungsdaten für die Bereitstellung von Betriebssystemen aus der Datenbank zu löschen. Diese Informationen werden verwendet, wenn der Benutzerstatus während einer Tasksequenz wiederhergestellt wird. Weitere Informationen finden Sie unter [Verwalten des Benutzerstatus](../../../osd/get-started/manage-user-state.md).  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -164,8 +164,8 @@ Verwenden Sie diesen Task, um veraltete Computerzuordnungsdaten für die Bereits
 
 Mit diesem Task werden Daten über Konsolenverbindungen mit dem Standort aus der Standortdatenbank gelöscht.<!-- SCCMDocs#528 -->
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -174,8 +174,8 @@ Mit diesem Task werden Daten über Konsolenverbindungen mit dem Standort aus der
 
 Verwenden Sie diesen Task, um veraltete Daten aus der Datenbank zu löschen, die mithilfe von Extraktionsansichten erstellt wurden. Er löscht alte Datenänderungsinformationen, die von externen Systemen zum Extrahieren von Daten aus der Datenbank verwendet werden.<!--SCCMDocs#1590--><!--By default, Extraction Views are disabled. You only enable them by using the Configuration Manager SDK. Unless Extraction Views are enabled, there is no data for this task to delete.-->
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -184,8 +184,8 @@ Verwenden Sie diesen Task, um veraltete Daten aus der Datenbank zu löschen, die
 
 Verwenden Sie diesen Task, um veraltete Daten zu Zurücksetzungsaktionen für mobile Geräte aus der Datenbank zu löschen. Weitere Informationen finden Sie unter [Schützen von Daten durch Remotezurücksetzen, Sperren oder Zurücksetzen der Kennung](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -200,8 +200,8 @@ Verwenden Sie diesen Task, um veraltete Ermittlungsdaten aus der Datenbank zu l�
 
 Über diesen Task werden außerdem veraltete Geräte mit „Außer Betrieb“ markiert. Bei Ausführung dieses Tasks an einem Standort werden mit diesem Standort verknüpfte Daten gelöscht. Die Änderungen werden anschließend an andere Standort repliziert. Weitere Informationen finden Sie unter [Run discovery (Ausführen der Ermittlung)](../deploy/configure/run-discovery.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -210,8 +210,8 @@ Verwenden Sie diesen Task, um veraltete Ermittlungsdaten aus der Datenbank zu l�
 
 Verwenden Sie diesen Task, um veraltete Daten für Verteilungspunkte aus der Datenbank zu löschen, deren Aufbewahrungsdauer überschritten ist.  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -222,8 +222,8 @@ Löschen Sie mit diesem Task veraltete Daten zu mobilen Geräten aus der Datenba
 
 Dieser Task gilt für Geräte, die bei der [lokalen MDM](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) von Configuration Manager registriert sind. Weitere Informationen zu diesen Geräten finden Sie unter [Unterstützte Betriebssysteme für Clients und Geräte](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Nicht aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -232,8 +232,8 @@ Dieser Task gilt für Geräte, die bei der [lokalen MDM](../../../mdm/understand
 
 Verwenden Sie diesen Task, um veraltete Statusinformationen für Endpoint Protection (EP) aus der Datenbank zu löschen. Weitere Informationen finden Sie unter [How to monitor Endpoint Protection Status (Überwachen des Endpoint Protection-Status)](../../../protect/deploy-use/monitor-endpoint-protection.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -245,8 +245,8 @@ Verwenden Sie diesen Task, um veraltete Statusinformationen für Endpoint Protec
 
 Verwenden Sie diesen Task, um veraltete Daten über mobile Geräte zu löschen, die vom Exchange Server-Connector verwaltet werden. Der Standort löscht diese Daten gemäß der Einstellung **Anzahl der Tage der Inaktivität, nach der mobile Geräte ignoriert werden** auf der Registerkarte **Ermittlung** der Eigenschaften für den Exchange Server-Connector. Weitere Informationen finden Sie unter [Verwalten von Mobilgeräten mit System Center Configuration Manager und Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -255,8 +255,8 @@ Verwenden Sie diesen Task, um veraltete Daten über mobile Geräte zu löschen, 
 
 Verwenden Sie diesen Task, um Inventurdaten aus der Datenbank zu löschen, deren Aufbewahrungsdauer überschritten ist. Weitere Informationen finden Sie unter [Anzeigen der Hardwareinventur mit dem Ressourcen-Explorer](../../clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -268,8 +268,8 @@ Verwenden Sie diesen Task, um veraltete für die Problembehandlung verwendete Pr
 > [!IMPORTANT]  
 > Standardmäßig wird dieser Task an jedem Standort täglich ausgeführt. An einem Standort der zentralen Verwaltung und primären Standorten werden mit dem Task Daten gelöscht, die älter als 30 Tage sind. Stellen Sie beim Verwenden von SQL Server Express an einem sekundären Standort sicher, dass dieser Task täglich ausgeführt wird und Daten gelöscht werden, die seit sieben Tagen inaktiv sind.  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |**Sekundärer Standort**|Aktiviert|
@@ -278,8 +278,8 @@ Verwenden Sie diesen Task, um veraltete für die Problembehandlung verwendete Pr
 
 Verwenden Sie diesen Task, um veraltete Softwaremessungsdaten aus der Datenbank zu löschen, deren Aufbewahrungsdauer überschritten ist. Weitere Informationen finden Sie unter [Softwaremessung](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -288,8 +288,8 @@ Verwenden Sie diesen Task, um veraltete Softwaremessungsdaten aus der Datenbank 
 
 Verwenden Sie diesen Task, um veraltete Zusammenfassungsdaten für die Softwaremessung aus der Datenbank zu löschen, deren Aufbewahrungsdauer überschritten ist. Weitere Informationen finden Sie unter [Softwaremessung](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -298,8 +298,8 @@ Verwenden Sie diesen Task, um veraltete Zusammenfassungsdaten für die Softwarem
 
 Dieser Task löscht einen veralteten Clientanwesenheitsverlauf.
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -308,8 +308,8 @@ Dieser Task löscht einen veralteten Clientanwesenheitsverlauf.
 
 Verwenden Sie diesen Task, um Informationen zu Clientbenachrichtigungstasks aus der Standortdatenbank zu löschen. Dieser Task gilt für Daten, die für einen angegebenen Zeitraum nicht aktualisiert wurden. Weitere Informationen finden Sie im Artikel zu [Clientbenachrichtigungen](../../clients/manage/client-notification.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -318,8 +318,8 @@ Verwenden Sie diesen Task, um Informationen zu Clientbenachrichtigungstasks aus 
 
 Verwenden Sie diesen Task am Standort auf oberster Ebene der Hierarchie, um veraltete Daten zu Kennungsrückstellungen für Windows Phone-Geräte zu löschen. Daten zum Zurücksetzen der Kennung sind verschlüsselt, enthalten allerdings die PIN für Geräte. Standardmäßig ist dieser Task aktiviert und löscht Daten, die älter als 1 Tag sind.  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -328,8 +328,8 @@ Verwenden Sie diesen Task am Standort auf oberster Ebene der Hierarchie, um vera
 
 Verwenden Sie diesen Task, um veraltete Daten zur Datenbankreplikation zwischen Configuration Manager-Standorten aus der Datenbank zu löschen. Wenn Sie die Konfiguration dieses Wartungstasks ändern, wirkt sich die Konfiguration auf jeden entsprechenden Standort in der Hierarchie aus. Weitere Informationen finden Sie unter [Überwachen der Datenbankreplikation](monitor-replication.md).  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |**Sekundärer Standort**|Aktiviert|
@@ -338,8 +338,8 @@ Verwenden Sie diesen Task, um veraltete Daten zur Datenbankreplikation zwischen 
 
 Verwenden Sie diesen Task zum Löschen von Informationen über veraltete Zusammenfassungsdaten für die Replikation aus der Standortdatenbank, wenn die Daten innerhalb eines angegebenen Zeitraums nicht aktualisiert wurden. Weitere Informationen finden Sie unter [Überwachen der Datenbankreplikation](monitor-replication.md).  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |**Sekundärer Standort**|Aktiviert|
@@ -348,8 +348,8 @@ Verwenden Sie diesen Task zum Löschen von Informationen über veraltete Zusamme
 
 Verwenden Sie diesen Task, um veraltete über Statusfilterregeln konfigurierte Statusmeldungsdaten aus der Datenbank zu löschen. Weitere Informationen hierzu finden Sie unter [Überwachen des Systemstatus für Configuration Manager](use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -358,8 +358,8 @@ Verwenden Sie diesen Task, um veraltete über Statusfilterregeln konfigurierte S
 
 Verwenden Sie diesen Task, um veraltete Endpoint Protection-Bedrohungsdaten aus der Datenbank zu löschen, deren Aufbewahrungsdauer überschritten ist. Weitere Informationen finden Sie unter [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -368,8 +368,8 @@ Verwenden Sie diesen Task, um veraltete Endpoint Protection-Bedrohungsdaten aus 
 
 Verwenden Sie diesen Task zum Löschen von Informationen über unbekannte Computer aus der Standortdatenbank, wenn die Daten innerhalb eines angegebenen Zeitraums nicht aktualisiert wurden. Weitere Informationen finden Sie unter [Prepare for unknown computer deployments (Vorbereiten auf Bereitstellungen für unbekannte Computer)](../../../osd/get-started/prepare-for-unknown-computer-deployments.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -378,8 +378,8 @@ Verwenden Sie diesen Task zum Löschen von Informationen über unbekannte Comput
 
 Verwenden Sie diesen Task, um veraltete Daten zur Affinität zwischen Benutzer und Gerät aus der Datenbank zu löschen. Weitere Informationen finden Sie unter [Verknüpfen von Benutzern und Geräten mit Affinität zwischen Benutzer und Gerät](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -388,8 +388,8 @@ Verwenden Sie diesen Task, um veraltete Daten zur Affinität zwischen Benutzer u
 
 Verwenden Sie diesen Task, um von der Systemermittlung generierte doppelte Datensätze aus der Standortdatenbank zu löschen.<!-- SCCMDocs#1339 -->
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |Primärer Standort|Nicht verfügbar|
 |Sekundärer Standort|Nicht verfügbar|
@@ -398,8 +398,8 @@ Verwenden Sie diesen Task, um von der Systemermittlung generierte doppelte Daten
 
 Verwenden Sie diesen Task, um alte Massenregistrierungszertifikate und dazugehörige Profile zu löschen, nachdem das Registrierungszertifikat abgelaufen ist. Weitere Informationen finden Sie unter [Erstellen von Zertifikatprofilen](../../../protect/deploy-use/create-certificate-profiles.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -413,8 +413,8 @@ Dieser Task kann nur für Ressourcen ausgeführt werden, bei denen es sich um Co
 > [!IMPORTANT]  
 > Wenn Sie diesen Task aktivieren, legen Sie als Ausführungsintervall einen höheren Wert fest als beim Zeitplan für die **Frequenzermittlung**. Mit dieser Konfiguration können aktive Clients einen Frequenzermittlungsdatensatz senden, um Ihre Clientdatensätze als aktiv zu kennzeichnen, sodass sie von diesem Task nicht gelöscht werden.  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Nicht aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -423,8 +423,8 @@ Dieser Task kann nur für Ressourcen ausgeführt werden, bei denen es sich um Co
 
 Verwenden Sie diesen Task, um abgelaufene Warnungen aus der Datenbank zu löschen, deren Aufbewahrungsdauer überschritten ist. Weitere Informationen finden Sie unter [Verwenden von Benachrichtigungen und Statussystem](use-alerts-and-the-status-system.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -436,8 +436,8 @@ Verwenden Sie diesen Task, um veraltete Clientdatensätze aus der Datenbank zu l
 > [!IMPORTANT]  
 > Wenn Sie diesen Task aktivieren, legen Sie als Ausführungsintervall einen höheren Wert fest als beim Zeitplan für die Frequenzermittlung. Mit dieser Konfiguration kann der Client einen Frequenzermittlungsdatensatz senden, um den Status „Veraltet“ ordnungsgemäß festzulegen.  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Nicht aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -446,8 +446,8 @@ Verwenden Sie diesen Task, um veraltete Clientdatensätze aus der Datenbank zu l
 
 Verwenden Sie diesen Task, um Daten zu Active Directory-Standorten, Subnetzen und Domänen zu löschen. Es werden Daten entfernt, die der Standort in den letzten 30 Tagen nicht mit der Active Directory-Gesamtstrukturermittlung ermittelt hat. Dieser Task entfernt zwar die Ermittlungsdaten, jedoch werden Grenzen, die Sie mithilfe dieser Ermittlungsdaten erstellen, nicht beeinträchtigt. Weitere Informationen finden Sie unter [Run discovery (Ausführen der Ermittlung)](../deploy/configure/run-discovery.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -456,8 +456,8 @@ Verwenden Sie diesen Task, um Daten zu Active Directory-Standorten, Subnetzen un
 
 Verwenden Sie diesen Task, um in regelmäßigen Abständen die Tabelle zu löschen, die Statusinformationen zur Clientbereitstellung enthält. Dieser Task bereinigt Datensätze, die veralteten oder außer Betrieb genommenen Geräten zugeordnet sind.  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -466,8 +466,8 @@ Verwenden Sie diesen Task, um in regelmäßigen Abständen die Tabelle zu lösch
 
 Sie konfigurieren die Auswertung der Sammlungsmitgliedschaft als Standortkomponente. Weitere Informationen finden Sie unter [Standortkomponenten](../deploy/configure/site-components.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -476,8 +476,8 @@ Sie konfigurieren die Auswertung der Sammlungsmitgliedschaft als Standortkompone
 
 Verwenden Sie diesen Task, um die Integrität der primären Schlüssel der Configuration Manager-Datenbank zu überwachen. Ein Primärschlüssel ist eine Spalte, die eine Zeile eindeutig identifiziert, oder eine Kombination von Spalten. Mit dem Schlüssel wird die Zeile von jeder anderen Zeile in einer Microsoft SQL Server-Datenbanktabelle unterschieden.
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Aktiviert|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -492,8 +492,8 @@ Zur Verbesserung der Leistung werden die Configuration Manager-Datenbankindizes 
 - Löscht Indizes für Spalten, die zu weniger als 50 Prozent eindeutig sind.
 - Erstellt alle vorhandenen Indizes neu, die die Kriterien der Dateneindeutigkeit erfüllen.
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |**Standort der zentralen Verwaltung**|Nicht aktiviert|
 |**Primärer Standort**|Nicht aktiviert|
 |**Sekundärer Standort**|Nicht aktiviert|
@@ -504,8 +504,8 @@ Verwenden Sie diesen Task, um die Softwaremessungsdaten für die Dateinutzung au
 
 Um Softwaremessungsdaten zusammenzufassen und die Speicherplatznutzung in der Datenbank zu verringern, verwenden Sie diesen Task in Kombination mit dem Task **Softwaremessungsdaten der monatlichen Nutzung zusammenfassen**. Weitere Informationen finden Sie unter [Softwaremessung](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -514,8 +514,8 @@ Um Softwaremessungsdaten zusammenzufassen und die Speicherplatznutzung in der Da
 
 Verwenden Sie diesen Task, um die Daten aus mithilfe der Hardwareinventur gesammelten Asset Intelligence-Softwareinformationen zusammenzufassen, um mehrere Datensätze zu einem allgemeinen Datensatz zusammenzuführen. Mithilfe der Datenzusammenfassung kann die Datenmenge in der Configuration Manager-Datenbank komprimiert werden. Weitere Informationen finden Sie unter [Konfigurieren von Asset Intelligence-Wartungstasks](../../clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_ConfigureMaintenanceTasks).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -526,8 +526,8 @@ Verwenden Sie diesen Task, um die Softwaremessungsdaten für die monatliche Nutz
 
 Um Softwaremessungsdaten zusammenzufassen und die Speicherplatznutzung in der Datenbank zu verringern, verwenden Sie diesen Task in Kombination mit dem Task **Softwaremessungsdaten der Dateinutzung zusammenfassen**. Weitere Informationen finden Sie unter [Softwaremessung](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -538,8 +538,8 @@ Verwenden Sie diesen Task, um Configuration Manager die Zuordnung von Richtlinie
 
 Diese Zuordnungen werden zur schnellen Bezugnahme in einer Tabelle gespeichert. Wenn sich die Mitgliedschaft von Sammlungen ändert, aktualisiert der Standort diese gespeicherten Zuordnungen entsprechend dieser Änderungen. Es ist jedoch möglich, dass diese Zuordnungen ihre Synchronität verlieren. Wenn z. B. der Standort eine Benachrichtigungsdatei nicht ordnungsgemäß verarbeiten kann, wird diese Änderung ggf. nicht als Änderung an den Zuordnungen wiedergegeben. Dieser Task aktualisiert diese Zuordnung basierend auf der aktuellen Mitgliedschaft in der Sammlung.  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|
@@ -548,8 +548,8 @@ Diese Zuordnungen werden zur schnellen Bezugnahme in einer Tabelle gespeichert. 
 
 Verwenden Sie diesen Task, um den Datenbankcache der Anwendungskatalog-Website mit den aktuellen Anwendungsinformationen zu synchronisieren. Wenn Sie die Konfiguration dieses Wartungstasks ändern, wirkt sich dies auf alle primären Standorte der Hierarchie aus.  
 
-|||
-|---------|---------|
+| Standorttyp | Status |
+| --------- | ------ |
 |Standort der zentralen Verwaltung|Nicht verfügbar|
 |**Primärer Standort**|Aktiviert|
 |Sekundärer Standort|Nicht verfügbar|

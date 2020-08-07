@@ -2,7 +2,7 @@
 title: Neuerungen in Version 1810
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 1810 des Current Branchs von Configuration Manager eingeführt wurden.
-ms.date: 04/23/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f08b7449b4232d55c4be6227d23965231aa7a273
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906247"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546449"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Neuerungen in Version 1810 von Configuration Manager (Current Branch)
 
@@ -237,7 +237,7 @@ Weitere Informationen finden Sie unter [Erstellen von Anwendungen](../../../apps
 <!--3607717, fka 1358333-->
 [Windows Autopilot für vorhandene Geräte](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) ist nun mit Windows 10-Version 1809 oder höher verfügbar. Mit dieser neuen Funktion können Sie ein Reimaging für ein Windows 7-Gerät für den [benutzergesteuerten Windows Autopilot-Modus](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) mit einer einzigen, nativen Configuration Manager-Tasksequenz durchführen und das Gerät bereitstellen.
 
-Weitere Informationen finden Sie unter [Windows Autopilot für vorhandene Geräte](../../../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+Weitere Informationen finden Sie unter [Windows Autopilot für vorhandene Geräte](../../../../autopilot/existing-devices.md).
 
 
 ### <a name="specify-the-drive-for-offline-os-image-servicing"></a>Angeben des Laufwerks für die Offlinewartung von Betriebssystemimages
