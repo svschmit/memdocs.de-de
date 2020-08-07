@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 08/07/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf8754adfb16e6d166a3ad1ad1b5fdde11e207ab
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: ed3a554ee374df1513a07fa2365e147f34d787f0
+ms.sourcegitcommit: 5291e1946eddbb97670f8e02beb5beef82b22f38
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756530"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87953526"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Bereitstellen von in Azure AD Hybrid eingebundenen Geräten mit Intune und Windows Autopilot
 Sie können in Azure AD Hybrid eingebundene Geräte mithilfe von Intune und Windows Autopilot einrichten. Führen Sie dazu die Schritte in diesen Artikel durch.
@@ -40,7 +40,6 @@ Für die Registrierung müssen die Geräte über Folgendes verfügen:
 - Bei Verwendung eines Proxys müssen WPAD-Proxyeinstellungen aktiviert und konfiguriert sein.
 - Sie müssen eingerichtet worden sein.
 - Verwenden Sie einen Autorisierungstyp, der von Azure Active Directory grundsätzlich unterstützt wird.
-
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Einrichten der automatischen Registrierung von Windows 10
 
@@ -98,6 +97,9 @@ Die Organisationseinheit, der die Berechtigung zum Erstellen von Computern gewä
 ## <a name="install-the-intune-connector"></a>Installieren des Intune-Connectors
 
 Der Intune-Connector für Azure AD muss auf einem Computer mit Windows Server 2016 oder höher installiert werden. Der Computer muss zudem über Internetzugriff und eine Active Directory-Instanz verfügen. Für höhere Skalierbarkeit und Verfügbarkeit können Sie mehrere Connectors in der Umgebung installieren. Es wird empfohlen, den Connector auf einem Server zu installieren, auf dem keine anderen Intune-Connectors ausgeführt werden.  Beachten Sie, dass jeder Connector in der Lage sein muss, Computerobjekte in einer beliebigen Domäne zu erstellen, die Sie unterstützen möchten.
+
+> [!NOTE]
+> Wenn Ihre Organisation über mehrere Domänen verfügt und Sie mehrere InTune-Connectors installieren, müssen Sie ein Dienst Konto verwenden, das Computer Objekte in allen Domänen erstellen kann. Dies gilt auch, wenn Sie beabsichtigen, Hybrid Azure AD Join nur für eine bestimmte Domäne zu implementieren. Wenn es sich hierbei um nicht vertrauenswürdige Domänen handelt, müssen Sie die Connectors aus Domänen deinstallieren, in denen Sie nicht Windows Autopilot verwenden möchten. Andernfalls müssen alle Connectors in der Lage sein, Computer Objekte in allen Domänen zu erstellen, wenn mehrere Connectors über mehrere Domänen verfügen.
 
 Der Intune-Connector benötigt die [gleichen Endpunkte wie Intune](../intune/fundamentals/intune-endpoints.md).
 
