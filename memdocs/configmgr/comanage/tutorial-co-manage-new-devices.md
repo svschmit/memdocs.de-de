@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428615"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815462"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutorial: Aktivieren der Co-Verwaltung für neue internetbasierte Geräte
 
@@ -96,7 +96,7 @@ Informationen zu diesem Zertifikat:
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Identifizieren eines eindeutigen Namens für Ihr Cloud Management Gateway in Azure
 
-Wenn Sie das CMG-Serverauthentifizierungszertifikat anfordern, geben Sie an, was ein eindeutiger Name sein muss, um Ihren *Clouddienst (klassisch)* in Azure zu identifizieren. Standardmäßig verwendet die öffentliche Azure-Cloud *cloudapp.net*, und das CMG wird in der Domäne „cloudapp.net“ als *\<Ihr eindeutiger DNS-Name>.cloudapp.net* gehostet.  
+Wenn Sie das CMG-Serverauthentifizierungszertifikat anfordern, geben Sie an, was ein eindeutiger Name sein muss, um Ihren *Clouddienst (klassisch)* in Azure zu identifizieren. Standardmäßig verwendet die öffentliche Azure-Cloud *cloudapp.net*, und das CMG wird in der Domäne „cloudapp.net“ als *\<YourUniqueDnsName>.cloudapp.net* gehostet.  
 
 > [!TIP]  
 > In diesem Tutorial verwendet das **CMG-Serverauthentifizierungszertifikat** einen FQDN, der mit *contoso.com* endet.  Nach dem Erstellen des CMG konfigurieren wir einen kanonischen Namenseintrag (CNAME) im öffentlichen DNS unserer Organisation. Hierdurch wird für das CMG ein Alias erstellt, der dem Namen zugeordnet wird, den wir im öffentlichen Zertifikat verwenden.  
@@ -125,7 +125,9 @@ Fordern Sie Version 2 des Schlüsselanbietertyps an, wenn Sie eine Zertifikatsig
 > [!TIP]  
 > Wenn wir das CMG bereitstellen, installieren wir zur gleichen Zeit auch einen Cloudverteilungspunkt (Cloud Distribution Point, CDP). Wenn Sie ein CMG bereitstellen, ist standardmäßig die Option **Verwendung dieses Diensts als Cloudverteilungspunkt und zum Verarbeiten von Inhalt aus Azure Storage zulassen** ausgewählt. Wenn Sie den CDP zusammen mit dem CMG auf dem Server platzieren, sind keine separaten Zertifikate und Konfigurationen zur Unterstützung des CDP notwendig. Obwohl der CDP nicht notwendig ist, um die Co-Verwaltung zu verwenden, ist er in den meisten Umgebungen hilfreich.  
 >
-> Wenn Sie zusätzliche Cloudverteilungspunkte für die Co-Verwaltung verwenden möchten, müssen Sie separate Zertifikate für jeden zusätzlichen Server anfordern. Verwenden Sie zum Anfordern eines öffentlichen Zertifikats für den CDP die gleichen Details wie für die Zertifikatsignieranforderung für das Cloudverwaltungsgateway. Sie müssen nur den allgemeinen Namen ändern, damit er für jede CDP eindeutig ist.  
+> Wenn Sie zusätzliche, separate CDPs verwenden, müssen Sie für jeden weiteren CDP separate Anforderungen anfordern. Verwenden Sie zum Anfordern eines öffentlichen Zertifikats für ein CDP die gleichen Details wie für die Zertifikatsignieranforderung für das Cloudverwaltungsgateway. Sie müssen nur den allgemeinen Namen ändern, damit er für jeden CDP eindeutig ist.
+>
+> Die Verwendung eines zusätzlichen, separaten CDP ist veraltet und wird nicht mehr empfohlen. Weitere Informationen finden Sie unter [Veraltete Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
 
 #### <a name="details-for-the-cloud-management-gateway-csr"></a>Details für den Cloud Management Gateway-CSR
 
@@ -395,7 +397,7 @@ Beispiel: *C:\Programme\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*.
 
    - **Herausgeber**: Microsoft  
 
-   - **Befehlszeilenargumente**:  *\<Geben Sie die **CCMSETUPCMD**-Befehlszeile an. Sie können die Befehlszeile verwenden, die Sie auf der Seite* Aktivierung *des Assistenten für die Konfiguration der Co-Verwaltung gespeichert haben. Diese Befehlszeile enthält die Namen Ihres Clouddiensts und weitere Werte, mit denen Geräte die Configuration Manager-Clientsoftware installieren können.>*  
+   - **Befehlszeilenargumente**: *\<Specify the **CCMSETUPCMD** command line. You can use the command line you saved from the* Enablement *page of the Co-management Configuration Wizard. This command line includes the names of your cloud service and additional values that enable devices to install the Configuration Manager client software.>*  
 
      Die Befehlszeilenstruktur sollte diesem Beispiel entsprechen und nur die Parameter CCMSETUPCMD und SMSSiteCode verwenden:  
 
@@ -414,7 +416,7 @@ Im folgenden Verfahren wird die App für die Installation des Configuration Mana
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com) an. Klicken Sie auf **Anwendungen** > **Alle Apps**, und wählen Sie **ConfigMgr Client Setup Bootstrap** aus. Dabei handelt es sich um die App, die Sie erstellt haben, um den Configuration Manager-Client bereitzustellen.  
 
-2. Klicken Sie auf **Eigenschaften**, dann bei **Zuweisungen** auf **Bearbeiten**. Klicken Sie bei den Zuweisungen des Typs **Erforderlich** auf **Gruppe hinzufügen**, um die Azure Active Directory-Gruppen (AD) festzulegen, die Benutzer und Geräte enthalten, die Sie in die Co-Verwaltung einbeziehen möchten.  
+2. Wählen Sie **Eigenschaften**, dann bei **Zuweisungen** die Option **Bearbeiten** aus. Klicken Sie bei den Zuweisungen des Typs **Erforderlich** auf **Gruppe hinzufügen**, um die Azure Active Directory-Gruppen (AD) festzulegen, die Benutzer und Geräte enthalten, die Sie in die Co-Verwaltung einbeziehen möchten.  
 
 3. Klicken Sie auf **Überprüfen und speichern**, und **speichern** Sie die Konfiguration.
 Die App wird jetzt von Benutzern und Geräten benötigt, denen Sie sie zugewiesen haben. Nachdem die App den Configuration Manager-Client auf einem Gerät installiert hat, wird es mit der Co-Verwaltung verwaltet.

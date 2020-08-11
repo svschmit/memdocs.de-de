@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ba72e9accb7cbc5a7dc1149c6c9d947cb3e0692b
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262828"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526082"
 ---
 # <a name="deploy-bitlocker-management"></a>Bereitstellen der BitLocker-Verwaltung
 
@@ -131,6 +131,10 @@ Wenn Sie mehr als eine Richtlinie erstellen, können Sie ihre relative Prioritä
 1. Klicken Sie auf **OK**, um die Richtlinie bereitzustellen.
 
 Sie können mehrere Bereitstellungen mit derselben Richtlinie erstellen. Wenn Sie weitere Informationen zu den einzelnen Bereitstellungen aufrufen möchten, wählen Sie die Richtlinie im Knoten **BitLocker-Verwaltung** aus, und wechseln Sie dann im Detailbereich zur Registerkarte **Bereitstellungen**.
+
+> [!IMPORTANT]
+> Vom MBAM-Client werden keine BitLocker-Laufwerkverschlüsselungsaktionen gestartet, solange eine Verbindung über das Remotedesktopprotokoll aktiv ist. Alle Remotekonsolenverbindungen müssen geschlossen und ein Benutzer muss bei einer physischen Konsolensitzung angemeldet sein, bevor die BitLocker-Laufwerkverschlüsselung beginnt.
+
 
 ## <a name="monitor"></a>Überwachen
 

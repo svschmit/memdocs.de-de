@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438599"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865488"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Erstellen von Sammlungen in Configuration Manager
 
@@ -171,9 +171,8 @@ Geben Sie im Dialogfeld **Eigenschaften für Abfrageregel** die folgenden Inform
 
 - **Abfrageanweisung bearbeiten**: Öffnet das Dialogfeld **Eigenschaften der Abfrageanweisung**, in dem Sie eine Abfrage erstellen können, die als Regel für die Sammlung verwendet werden soll. Weitere Informationen zu Abfragen finden Sie unter [Einführung in Abfragen in System Center Configuration Manager](../../../servers/manage/introduction-to-queries.md).  
 
-        
-        > [!TIP]  
-        > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results. 
+    > [!TIP]  
+    > Auf der Registerkarte „Allgemein“ kann das Aktivieren des Kontrollkästchens **Doppelte Zeilen unterdrücken (eindeutige Auswahl)** zu weniger zurückgegebenen Zeilen und möglicherweise schnelleren Ergebnissen führen.
 
 ### <a name="device-category-rule"></a><a name="bkmk-category"></a> Gerätekategorieregel
 

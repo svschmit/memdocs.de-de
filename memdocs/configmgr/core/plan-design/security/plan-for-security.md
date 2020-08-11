@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53a30f376bd288e8d50d88ea8f33af37f3cd599e
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: b15b3017dd49c75f4281a3c0bfd1c8a695ab8bae
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110150"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525997"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planen der Sicherheit in Configuration Manager
 
@@ -160,9 +160,11 @@ In vielen Fällen sind Standardkonfiguration und Standardverhalten ausreichend. 
 
 3.  Das Zertifikat ist gültig. Es ist nicht gesperrt und nicht abgelaufen. Die Gültigkeitsüberprüfung stellt ebenfalls sicher, dass auf den privaten Schlüssel zugegriffen werden kann.  
 
-4.  Zum Zertifikat gehört eine Clientauthentifizierungsfunktion, oder das Zertifikat wurde auf den Computernamen ausgestellt.  
+4.  Das Zertifikat verfügt über die Möglichkeit der Clientauthentifizierung.
 
-5.  Das Zertifikat weist die längste Gültigkeitsdauer auf.  
+5.  Das Antragstellername des Zertifikats enthält den Namen des lokalen Computers als Substring.  
+
+6.  Das Zertifikat weist die längste Gültigkeitsdauer auf.  
 
 Konfigurieren Sie Clients mithilfe der folgenden Mechanismen dafür, die Liste der Zertifikataussteller zu verwenden:  
 
@@ -208,7 +210,10 @@ In der folgenden Tabelle sind die Attributwerte aufgeführt, die von Configurati
 |2.5.4.12|T oder Title|Titel|  
 |2.5.4.42|G oder GN oder GivenName|Vorname|  
 |2.5.4.43|I oder Initials|Initialen|  
-|2.5.29.17|(kein Wert)|Alternativer Antragstellername|  
+|2.5.29.17|(kein Wert)|Alternativer Antragstellername| 
+
+  > [!NOTE]
+  > Wenn Sie eine der oben genannten alternativen Zertifikatsauswahlmethoden konfigurieren, muss der Antragstellername des Zertifikats nicht den lokalen Computernamen enthalten.
 
 Falls nach der Anwendung der Auswahlkriterien mehrere geeignete Zertifikate gefunden werden, können Sie die Standardkonfiguration außer Kraft setzen, laut der das Zertifikat mit der längsten Gültigkeitsdauer ausgewählt wird, und stattdessen festlegen, dass kein Zertifikat ausgewählt werden soll. In diesem Fall kann die Kommunikation des Clients mit IIS-Standortsystemen nicht über ein PKI-Zertifikat erfolgen. Vom Client wird eine Fehlermeldung an den ihm zugewiesenen Fallbackstatuspunkt gesendet, um Sie über den Fehler bei der Zertifikatauswahl zu informieren und Ihnen die Gelegenheit zu geben, die Zertifikatauswahlkriterien zu ändern oder zu optimieren. Das Verhalten des Clients richtet sich dann danach, ob die fehlerhafte Verbindung über HTTPS oder HTTP hergestellt wurde:  
 
