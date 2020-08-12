@@ -14,12 +14,18 @@
           href: understand/find-help.md
         - name: Verwenden der Dokumentation
           href: understand/use-docs.md
-        - name: Verwendung der Konsole
-          href: servers/manage/admin-console.md
         - name: Barrierefreiheitsfunktionen
           href: understand/accessibility-features.md
         - name: Benutzerleitfaden für Softwarecenter
           href: understand/software-center.md
+    - name: Verwendung der Konsole
+      items:
+        - name: Verwendung der Konsole
+          href: servers/manage/admin-console.md
+        - name: Konsolenbenachrichtigungen
+          href: servers/manage/admin-console-notifications.md
+        - name: Konsolenänderungen und -tipps
+          href: servers/manage/admin-console-tips.md
     - name: Grundlagen
       items:
         - name: Configuration Manager – Grundlagen
@@ -76,6 +82,8 @@
           href: plan-design/changes/features-and-capabilities.md
         - name: Neuigkeiten zu inkrementellen Versionen
           href: plan-design/changes/whats-new-incremental-versions.md
+        - name: "Neuerungen in Version\_2006"
+          href: plan-design/changes/whats-new-in-version-2006.md
         - name: Neuerungen in Version 2002
           href: plan-design/changes/whats-new-in-version-2002.md
         - name: Neuerungen in Version 1910
@@ -84,8 +92,6 @@
           href: plan-design/changes/whats-new-in-version-1906.md
         - name: Neuigkeiten in Version 1902
           href: plan-design/changes/whats-new-in-version-1902.md
-        - name: Neuerungen in Version 1810
-          href: plan-design/changes/whats-new-in-version-1810.md
         - name: Änderungen im Vergleich zu Configuration Manager 2012
           href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
         - name: Entfernt und veraltet
@@ -212,6 +218,8 @@
           items:
             - name: Übersicht über die Ebenen
               href: plan-design/diagnostics/levels-overview.md
+            - name: "Daten für Version\_2006"
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
             - name: Daten für Version 2002
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
             - name: Daten für Version 1910
@@ -220,8 +228,6 @@
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
             - name: Daten für Version 1902
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
-            - name: Daten für Version 1810
-              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
         - name: Häufig gestellte Fragen (FAQ)
           href: plan-design/diagnostics/frequently-asked-questions.md
     - name: Sicherheit und Datenschutz für Configuration Manager
@@ -470,6 +476,8 @@
           href: servers/manage/cmpivot-overview.md
         - name: Verwenden von CMPivot
           href: servers/manage/cmpivot.md
+        - name: Änderungen für CMPivot
+          href: servers/manage/cmpivot-changes.md
         - name: Problembehandlung für CMPivot
           href: servers/manage/cmpivot-tsg.md
     - name: Wartungstasks
@@ -512,6 +520,8 @@
           href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
         - name: Verwenden des Hotfixinstallationsprogramms
           href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: "Prüfliste für die Installation von Update\_2006"
+          href: servers/manage/checklist-for-installing-update-2006.md
         - name: "Prüfliste für die Installation von Update\_2002"
           href: servers/manage/checklist-for-installing-update-2002.md
         - name: Prüfliste für die Installation von Update 1910
@@ -520,8 +530,6 @@
           href: servers/manage/checklist-for-installing-update-1906.md
         - name: Prüfliste für die Installation von Update 1902
           href: servers/manage/checklist-for-installing-update-1902.md
-        - name: Prüfliste für die Installation von Update 1810
-          href: servers/manage/checklist-for-installing-update-1810.md
         - name: Unterstützung für Current Branch-Versionen
           href: servers/manage/current-branch-versions-supported.md
     - name: Sicherung und Wiederherstellung

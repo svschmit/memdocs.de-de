@@ -32,7 +32,7 @@
       items:
         - name: Synchronisieren von Softwareupdates bei einem getrennten Softwareupdatepunkt
           href: get-started/synchronize-software-updates-disconnected.md
-        - name: "Synchronisieren von Office\_365-Updates bei einem getrennten Softwareupdatepunkt"
+        - name: "Synchronisieren von Microsoft\_365-Apps-Updates bei einem getrennten Softwareupdatepunkt"
           href: get-started/synchronize-office-updates-disconnected.md
 - name: Bereitstellen und Verwenden
   items:
@@ -62,7 +62,7 @@
       href: deploy-use/service-a-server-group.md
     - name: Office 365-Clientverwaltungsdashboard
       href: deploy-use/office-365-dashboard.md
-    - name: Verwalten von Office 365 ProPlus-Updates
+    - name: "Verwalten von Microsoft\_365-Apps-Updates"
       href: deploy-use/manage-office-365-proplus-updates.md
     - name: Optimieren der Bereitstellung von Updates für Windows 10
       href: deploy-use/optimize-windows-10-update-delivery.md
