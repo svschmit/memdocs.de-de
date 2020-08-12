@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89f6c1d4498151eed87cf90ae24d0cc7a846d3f7
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 2c6152b4380abacde6dd6e8e014ebe91aa258edb
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262556"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912577"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Verwalten von iOS- und macOS-Apps, die über das Apple Volume Purchase Program mit Microsoft Intune erworben wurden
 
@@ -46,8 +46,8 @@ Standorttoken werden auch als VPP-Token (Volume Purchase Program) bezeichnet. Di
 ## <a name="how-are-purchased-apps-licensed"></a>Wie werden erworbene Apps lizenziert?
 Erworbene Apps können mit zwei Arten von Lizenzen, die Apple für iOS/iPadOS- und macOS-Geräte anbietet, Gruppen zugeordnet werden.
 
-|  | Gerätelizenzierung | Benutzerlizenzierung |
-|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Aktion | Gerätelizenzierung | Benutzerlizenzierung |
+|------- | -----------------| ---------------|
 | App Store-Anmeldung | Nicht erforderlich. | Endbenutzer müssen eine eindeutige Apple ID verwenden, wenn sie zur Anmeldung beim App Store aufgefordert werden. |
 | Gerätekonfiguration, die den Zugriff auf den App Store blockiert | Apps können über das Unternehmensportal installiert und aktualisiert werden. | Die Einladung zur Teilnahme am Apple VPP erfordert Zugriff auf den App Store. Wenn Sie eine Richtlinie zum Deaktivieren des App Store festgelegt haben, funktioniert die Benutzerlizenzierung für VPP-Apps nicht. |
 | Automatisches App-Update | Entsprechend der Konfiguration durch den Intune-Administrator in den Einstellungen von Apple VPP-Token konfiguriert.<p>Wenn der Zuweisungstyp für registrierte Geräte verfügbar ist, können verfügbare App-Updates auch über das Unternehmensportal installiert werden, indem die Aktion **Aktualisieren** auf der Seite zu den App-Details ausgewählt wird. | Gemäß der Konfiguration durch den Endbenutzer in persönlichen App Store-Einstellungen. Kann nicht vom Intune-Administrator verwaltet werden. |
@@ -157,8 +157,8 @@ Der Benutzer erhält Aufforderungen zur VPP-App-Installation im Zusammenhang mit
 
 Sie können alle zugeordneten iOS/iPadOS- oder macOS-App-Lizenzen des Volume Purchase Program basierend auf einem angegebenen Gerät, einem angegebenen Benutzer oder einer angegebenen App widerrufen.  Es gibt jedoch einige Unterschiede zwischen den Plattformen iOS/iPadOS und macOS. 
 
-|  | iOS/iPadOS | macOS |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Aktion | iOS/iPadOS | macOS |
+|------- | ---------- | ----- |
 | Entfernen der App-Zuweisung | Wenn Sie eine App entfernen, die einem Benutzer zugewiesen war, gibt Intune die Benutzer- oder Gerätelizenz frei und deinstalliert die App auf dem Gerät. | Wenn Sie eine App entfernen, die einem Benutzer zugewiesen war, fordert Intune die Benutzer- oder Gerätelizenz zurück. Die App wird nicht vom Gerät deinstalliert. |
 | Widerrufen einer App-Lizenz | Durch Widerrufen einer App-Lizenz wird diese vom Benutzer oder Gerät zurückgefordert. Sie müssen die Zuweisung in **Deinstallieren** ändern, um die App vom Gerät zu entfernen. | Durch Widerrufen einer App-Lizenz wird diese vom Benutzer oder Gerät zurückgefordert. Die macOS-App mit der widerrufenen Lizenz kann auf dem Gerät weiter genutzt werden. Sie kann jedoch erst dann wieder aktualisiert werden, wenn dem Gerät oder dem Benutzer wieder eine Lizenz zugewiesen wurde. Laut Apple werden solche Apps nach einem Übergangszeitraum von 30 Tagen entfernt. Apple bietet allerdings keine Möglichkeit, mit der Intune die App mit einer Zuweisungsaktion zum Deinstallieren entfernen könnte. |
 

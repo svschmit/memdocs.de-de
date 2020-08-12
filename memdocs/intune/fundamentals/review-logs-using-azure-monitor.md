@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 010bbd18c09424ed2434dc19405851bb5c254591
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990776"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912526"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Senden von Daten an den Speicher, an Event Hubs oder Log Analytics in Intune (Vorschauversion)
 
@@ -139,21 +139,21 @@ Die folgenden Tabellen zeigen eine Kostenschätzung in Abhängigkeit von der Gr�
 
 **Überwachungsprotokoll mit 100.000 Benutzern**
 
-| | |
-|---|---|
+| Category | Wert |
+| -------- | ----- |
 |Ereignisse pro Tag| 1,5 Millionen|
 |Geschätzte Datenvolumen pro Monat| 90 GB|
-|Geschätzte Kosten pro Monat (USD)| 1,93 US-Dollar|
-|Geschätzte Kosten pro Jahr (USD)| 23,12 US-Dollar|
+|Geschätzte Kosten pro Monat (USD)| 1,93 $|
+|Geschätzte Kosten pro Jahr (USD)| 23,12 $|
 
 **Überwachungsprotokoll mit 1.000 Benutzern**
 
-| | |
-|---|---|
+| Category | Wert |
+| -------- | ----- |
 |Ereignisse pro Tag| 15.000|
 |Geschätzte Datenvolumen pro Monat| 900 MB|
-|Geschätzte Kosten pro Monat (USD)| 0,02 US-Dollar|
-|Geschätzte Kosten pro Jahr (USD)| 0,24 US-Dollar|
+|Geschätzte Kosten pro Monat (USD)| 0,02 $|
+|Geschätzte Kosten pro Jahr (USD)| 0,24 $|
 
 ### <a name="event-hub-messages-for-activity-logs"></a>Event Hub-Nachrichten für Aktivitätsprotokolle
 
@@ -161,33 +161,33 @@ Ereignisse werden typischerweise in Fünf-Minuten-Intervallen zusammengefasst un
 
 Beispielsweise treten bei einem großen Mandanten mit mehr als 100.000 Benutzern typischerweise etwa 18 Ereignisse pro Sekunde auf. Dies entspricht 5.400 Ereignissen alle fünf Minuten (300 Sekunden x 18 Ereignisse). Überwachungsprotokolle haben eine Größe von ungefähr 2 KB pro Ereignis. Dies entspricht 10,8 MB an Daten. So werden 43 Nachrichten in diesem Fünf-Minuten-Intervall an den Event Hub gesendet.
 
-Die folgende Tabelle enthält geschätzte monatliche Kosten für einen einfachen Event Hub in den USA, abhängig vom Volumen der Ereignisdaten. Um eine Schätzung für das Datenvolumen zu erhalten, das Sie für Ihre Protokolle erwarten, verwenden Sie den [Event Hub-Preisrechner](https://azure.microsoft.com/pricing/details/event-hubs/).
+Die folgende Tabelle enthält die ungefähren monatlichen Kosten für einen einfachen Event Hub in „USA, Westen“ in Abhängigkeit der Ereignisdatenmenge. Um eine Schätzung für das Datenvolumen zu erhalten, das Sie für Ihre Protokolle erwarten, verwenden Sie den [Event Hub-Preisrechner](https://azure.microsoft.com/pricing/details/event-hubs/).
 
 **Überwachungsprotokoll mit 100.000 Benutzern**
 
-| | |
-|---|---|
+| Category | Wert |
+| -------- | ----- |
 |Ereignisse pro Sekunde| 18|
 |Ereignisse pro Fünf-Minuten-Intervall| 5\.400|
-|Volume pro Intervall| 10,8 MB|
+|Menge pro Intervall| 10,8 MB|
 |Nachrichten pro Intervall| 43|
 |Nachrichten pro Monat| 371.520|
-|Geschätzte Kosten pro Monat (USD)| 10,83 US-Dollar|
+|Geschätzte Kosten pro Monat (USD)| 10,83 $|
 
 **Überwachungsprotokoll mit 1.000 Benutzern**
 
-| | |
-|---|---|
+| Category | Wert |
+| -------- | ----- |
 |Ereignisse pro Sekunde|0,1 |
 |Ereignisse pro Fünf-Minuten-Intervall| 52|
-|Volume pro Intervall|104 KB |
+|Menge pro Intervall|104 KB |
 |Nachrichten pro Intervall|1 |
 |Nachrichten pro Monat|8\.640 |
-|Geschätzte Kosten pro Monat (USD)|10,80 US-Dollar |
+|Geschätzte Kosten pro Monat (USD)|10,80 $ |
 
-### <a name="log-analytics-cost-considerations"></a>Kostenüberlegungen zu Log Analytics
+### <a name="log-analytics-cost-considerations"></a>Log Analytics-Kostenbetrachtung
 
-Informationen zu den Kosten im Zusammenhang mit der Verwaltung des Log Analytics-Arbeitsbereichs finden Sie unter [Verwalten von Kosten durch Steuern des Datenvolumens und Vermerkdauer in Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage).
+Informationen zum Prüfen von Kosten im Zusammenhang mit dem Log Analytics-Arbeitsbereich finden Sie unter [Verwalten der Kosten durch Steuerung der Datenmenge und -aufbewahrung in Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage).
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
@@ -215,7 +215,7 @@ Die Speicherkosten hängen von der Größe Ihrer Protokolle und dem gewählten A
 
 ### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>Wie viel kostet das Streamen meiner Daten zu einem Event Hub?
 
-Die Streamingkosten richten sich nach der Anzahl der eingegangenen Nachrichten pro Minute. Einzelheiten zur Kostenberechnung und Kalkulation auf Basis der Anzahl der Nachrichten finden Sie unter [Event Hub-Nachrichten für Aktivitätsprotokolle](#event-hub-messages-for-activity-logs) (in diesem Artikel).
+Die Streamingkosten richten sich nach der Anzahl von Nachrichten, die Sie pro Minute empfangen. Einzelheiten zur Kostenberechnung und Kalkulation auf Basis der Anzahl der Nachrichten finden Sie unter [Event Hub-Nachrichten für Aktivitätsprotokolle](#event-hub-messages-for-activity-logs) (in diesem Artikel).
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Wie integriere ich Intune-Überwachungsprotokolle in mein SIEM-System?
 
@@ -223,18 +223,18 @@ Verwenden Sie Azure Monitor mit Event Hubs zum Streamen von Protokollen an Ihr S
 
 ### <a name="what-siem-tools-are-currently-supported"></a>Welche SIEM-Tools werden derzeit unterstützt?
 
-Derzeit wird Azure Monitor von [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar und [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (öffnet eine neue Website) unterstützt. Weitere Informationen zur Funktionsweise von Connectors finden Sie unter [Streamen von Azure-Überwachungsdaten an einen Event Hub für die Nutzung durch ein externes Tool](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
+Derzeit wird Azure Monitor von [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar und [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (öffnet eine neue Website) unterstützt. Weitere Informationen zur Funktionsweise von Connectors finden Sie unter [Streamen von Azure-Überwachungsdaten an einen Event Hub für die Verwendung durch ein externes Tool](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Kann ich auf die Daten von einem Event Hub auch ohne ein externes SIEM-Tool zugreifen?
 
-Ja. Um von Ihrer benutzerdefinierten Anwendung aus auf die Protokolle zuzugreifen, können Sie die [Event Hubs-API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) verwenden.
+Ja. Sie können die [Event Hubs-API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) nutzen, um über Ihre benutzerdefinierte Anwendung auf die Protokolle zuzugreifen.
 
 ### <a name="what-data-is-stored"></a>Welche Daten werden gespeichert?
 
-Intune speichert keine Daten, die über die Pipeline gesendet wurden. Intune leitet Daten im Auftrag des Mandanten an die Azure Monitor-Pipeline. Weitere Informationen finden Sie in der [Übersicht zu Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview).
+Intune speichert keine Daten, die über die Pipeline gesendet wurden. Intune leitet Daten im Auftrag des Mandanten an die Azure Monitor-Pipeline. Weitere Informationen finden Sie unter [Übersicht über Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 * [Archivieren von Aktivitätsprotokollen in einem Speicherkonto](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
-* [Weiterleiten von Aktivitätsprotokollen an einen Event Hub](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [Integrieren von Aktivitätsprotokollen in Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [Weiterleiten von Aktivitätsprotokollen an Event Hub](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
+* [Integrieren von Aktivitätsprotokollen mit Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

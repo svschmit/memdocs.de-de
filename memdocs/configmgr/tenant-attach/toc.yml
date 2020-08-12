@@ -6,6 +6,8 @@
       href: device-sync-actions.md
     - name: Clientdetails (Vorschau)
       href: client-details.md
+    - name: Installieren von Anwendungen (Vorschau)
+      href: applications.md
 - name: CMPivot für mit dem Mandanten verknüpfte Geräte (Vorschau)
   items:
     - name: CMPivot-Übersicht
@@ -18,3 +20,5 @@
       href: troubleshoot.md
     - name: Clientdetails (Vorschau)
       href: troubleshoot-client-details.md
+    - name: Anwendungsinstallation (Vorschau)
+      href: troubleshoot-applications.md

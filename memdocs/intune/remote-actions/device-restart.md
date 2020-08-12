@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45317cc9c43f4f25f0adc043ce784a7b3dc4b9fd
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d68f09c6163ff613e5e4387a0e2d09a5eeea56c4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461775"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051688"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Remoteneustart von Geräten mit Intune
 
@@ -33,7 +33,6 @@ Die Geräteaktion **Neu starten** führt dazu, dass das von Ihnen gewählte Ger�
 ## <a name="supported-platforms"></a>Unterstützte Plattformen
 
 - Windows – unter Windows 8.1 und höher unterstützt
-- Windows Phone – Unterstützt auf Windows Phone 8.1 und später
 - Dedizierte Android Enterprise-Geräte: unterstützt unter Android 7.0 und höher
 - Vollständig verwaltete Android Enterprise-Geräte: unterstützt unter Android 6.0 und höher
 - Unternehmenseigene Android Enterprise-Geräte mit Arbeitsprofil: unterstützt unter Android 8.0 und höher

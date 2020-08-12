@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1bd1b5da0a45ce4291eba765742405e1e4ba43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 080b7237eb95ba729e4152e646ff8de7466309a0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077887"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912280"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Verwalten von Lizenzverträgen für Windows-PC-Software in Microsoft Intune
 
@@ -178,10 +178,8 @@ Die Listenansicht **Alle Verträge** wird angezeigt.
 ## <a name="manage-license-agreements"></a>Verwalten von Lizenzverträgen
 Softwarelizenzverträge können zu Lizenzgruppen hinzugefügt werden. Sie können Lizenzgruppen verwenden, um Ihre Lizenzverträge in Einheiten zu organisieren, die für Ihre Organisation logisch sind. Darüber hinaus können Sie Lizenzverträge löschen, die Sie zuvor erstellt haben.
 
-
-|                            |                                                                                                                                                                                                                                                                                                                                                                          |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|            Aufgabe            |                                                                                                                                                                                 Details                                                                                                                                                                                  |
+| Aufgabe | Details |
+| ---- | ------- |
 |   Erstellen einer Lizenzgruppe   |                                                            Wählen Sie auf der Seite <strong>Übersicht</strong> des Arbeitsbereichs <strong>Lizenzen</strong> im Menü <strong>Aufgaben</strong> die Option <strong>Lizenzgruppe erstellen</strong> aus. <strong>Hinweis:</strong> Sie können insgesamt bis zu 500 Lizenzgruppen erstellen.                                                             |
 |   Umbenennen einer Lizenzgruppe   |                                                                                                      Wählen Sie im Arbeitsbereich <strong>Lizenzen</strong> eine Lizenzgruppe aus, und klicken Sie anschließend im Menü <strong>Aufgaben</strong> auf die Option <strong>Lizenzgruppe bearbeiten</strong>.                                                                                                       |
 |   Löschen einer Lizenzgruppe   |                                 Wählen Sie im Arbeitsbereich <strong>Lizenzen</strong> eine Lizenzgruppe aus, und klicken Sie anschließend im Menü <strong>Aufgaben</strong> auf die Option <strong>Lizenzgruppe löschen</strong>. <strong>Tipp:</strong> Alle Lizenzen in der Gruppe mit zu löschenden Lizenzen werden in die Lizenzgruppe <strong>Nicht zugewiesene Verträge</strong> verschoben.                                 |

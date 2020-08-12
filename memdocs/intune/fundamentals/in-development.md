@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/24/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e76816768090a624247db7a84da8c6bdffb800bc
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 0b7f1a4280b409ec4a12c6371fd2e6cba8a571ca
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443836"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048020"
 ---
 # <a name="in-development-for-microsoft-intune"></a>In der Entwicklung befindliche Features für Microsoft Intune
 
@@ -125,9 +125,6 @@ Informationen zu den SSO-App-Erweiterungseinstellungen, die Sie konfigurieren k�
 
 Gilt für:
 - iOS/iPadOS
-
-### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-show-descriptions---7414768---"></a>Verbesserungen an der Seite „Geräteeinstellungen aktualisieren“ in der Unternehmensportal-App für Android zur Anzeige von Beschreibungen<!-- 7414768 -->
-In der Unternehmensportal-App auf Android-Geräten werden auf der Seite **Geräteeinstellungen aktualisieren** die Einstellungen aufgelistet, die ein Benutzer aktualisieren muss, um die Konformität sicherzustellen. Wir haben die Benutzeroberfläche verbessert: Die aufgeführten Einstellungen sind jetzt standardmäßig aufgeklappt und zeigen die Beschreibung sowie die Schaltfläche **Auflösen** an (sofern zutreffend). Zuvor waren die Einstellungen standardmäßig zugeklappt. Dieses neue Standardverhalten reduziert die Anzahl von notwendigen Klicks, sodass Benutzer Probleme schneller beheben können.
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->

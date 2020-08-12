@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093458"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051579"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Einrichten der Seite zum Registrierungsstatus
  
@@ -31,7 +31,7 @@ ms.locfileid: "85093458"
  
 Auf der Seite zum Registrierungsstatus wird der Bereitstellungsfortschritt angezeigt, wenn ein neues Gerät registriert wurde oder neue Benutzer sich beim Gerät anmelden.  Dies gibt IT-Administratoren die Möglichkeit, den Zugriff auf das Gerät zu verhindern (blockieren), bis es vollständig bereitgestellt wurde, und dabei gleichzeitig die Benutzer über die verbleibenden Tasks im Bereitstellungsprozess zu informieren.
 
-Die Seite zum Registrierungsstatus kann in jedem [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/)-Bereitstellungsszenario verwendet werden und auch unabhängig von Windows Autopilot als Teil der standardmäßigen Windows-Willkommensseite für Azure AD Join sowie für alle neuen Benutzer, die sich zum ersten Mal beim Gerät anmelden.
+Die Seite zum Registrierungsstatus kann in jedem [Windows Autopilot](../../autopilot/index.yml)-Bereitstellungsszenario verwendet werden und auch unabhängig von Windows Autopilot als Teil der standardmäßigen Windows-Willkommensseite für Azure AD Join sowie für alle neuen Benutzer, die sich zum ersten Mal beim Gerät anmelden.
 
 Sie können mehrere Profile für die Seite zum Registrierungsstatus mit verschiedenen Konfigurationen für die folgenden Aspekte erstellen:
 
