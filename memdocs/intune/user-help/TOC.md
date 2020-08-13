@@ -135,7 +135,6 @@
 #### [Erste Schritte mit der Windows-Registrierung](windows-enrollment-company-portal.md)
 #### [Registrieren von Windows 10-Geräten](enroll-windows-10-device.md)
 #### [Registrieren von Windows 8.1- oder Windows RT 8.1-Geräten](enroll-your-w81-or-rt81-windows.md)
-#### [Registrieren von Windows Phone 8.1-Geräten](enroll-your-wp81-windows.md)
 ### [Verschlüsseln Ihres Geräts](encrypt-your-device-windows.md)
 ### [Festlegen oder Ändern des Gerätekennworts](set-or-change-your-password-windows.md)
 ### [Entfernen Ihres Geräts aus Intune](unenroll-your-device-from-intune-windows.md)
