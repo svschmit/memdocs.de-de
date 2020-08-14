@@ -1,21 +1,21 @@
 ---
-title: 'Anpassen von Startabbildern (Startimages) '
+title: Anpassen von Startabbildern (Startimages)
 titleSuffix: Configuration Manager
 description: Hier lernen Sie mehrere Möglichkeiten kennen, Configuration Manager oder das Befehlszeilenwerkzeug der Imageverwaltung für die Bereitstellung (Deployment Image Servicing and Management, DISM) zu verwenden, um ein Startimage anzupassen.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc679ec7e73e9d43902ad70e09fb2a01c95eed65
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b16ba822cb538b62fac06ee550dd17cfa8f077be
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906882"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124560"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Anpassen von Startimages mit Configuration Manager
 

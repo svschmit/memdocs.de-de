@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 295940337f191b791d8c7a86de4003466213df6b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702338"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128949"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Neuigkeiten in Version 1806 des Current Branch von Configuration Manager
 
@@ -296,7 +296,7 @@ Weitere Informationen finden Sie unter [Erstellen von Windows-Anwendungen](../..
 <!--1358149-->
 Das Office-Anpassungstool ist jetzt in das Office 365-Installer in der Configuration Manager-Konsole integriert. Beim Erstellen einer Bereitstellung für Office 365 können Sie die neuesten Verwaltungseinstellungen von Office dynamisch konfigurieren. Microsoft aktualisiert das Office-Anpassungstool, wenn neue Builds von Office 365 veröffentlicht werden. Mit dieser Integration können Sie neue Verwaltungseinstellungen in Office 365 verwenden, sobald diese verfügbar sind. 
 
-Weitere Informationen finden Sie unter [Bereitstellen von Office 365-Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+Weitere Informationen finden Sie unter [Bereitstellen von Office 365-Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Unterstützung für neue Windows-App-Paketformate
@@ -546,7 +546,7 @@ In den folgenden Bereichen des Arbeitsbereichs **Überwachung** wird jetzt das K
 
 Klicken Sie mit der rechten Maustaste auf den Bestand, und klicken Sie auf **Kopieren**. Durch diese Aktion werden die ausgewählten Bestände als durch Trennzeichen getrennte Liste kopiert, die die vollständigen Details enthält. Die Tastenkombination **STRG** + **C** kann in diesen Ansichten auch verwendet werden. 
 
-Weitere Informationen finden Sie unter [Verbesserungen der Konsole in Version 1806](../../servers/manage/admin-console.md#copy-details-in-monitoring-views).
+Weitere Informationen finden Sie unter [Verbesserungen der Konsole in Version 1806](../../servers/manage/admin-console-tips.md#copy-details-in-monitoring-views).
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Verbesserungen am Surface-Dashboard
@@ -568,7 +568,7 @@ Weitere Informationen finden Sie unter [Surface-Dashboard](../../clients/manage/
 <!--1358202-->
 Auf dem Knoten **Geräte** des Arbeitsbereichs **Bestand und Konformität** wird die Spalte **Derzeit angemeldeter Benutzer** angezeigt. Darüber hinaus wird eine sammlungsspezifische Geräteliste angezeigt. Dieser Wert ist so aktuell wie die [Clientstatus](../../clients/manage/monitor-clients.md#bkmk_indStatus). Wenn sich der Benutzer abmeldet, löscht der Client diesen Wert. Wenn kein Benutzer angemeldet ist, ist der Wert leer. 
 
-Weitere Informationen finden Sie unter [Verbesserungen der Konsole in Version 1806](../../servers/manage/admin-console.md#view-users-for-a-device).
+Weitere Informationen finden Sie unter [Verbesserungen der Konsole in Version 1806](../../servers/manage/admin-console-tips.md#view-users-for-a-device).
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>Übermitteln von Feedback über die Configuration Manager-Konsole  
@@ -576,7 +576,7 @@ Weitere Informationen finden Sie unter [Verbesserungen der Konsole in Version 18
 
 Senden Sie ein Lächeln! Sie können dem Configuration Manager-Team jetzt direkt Ihre Erfahrungen mitteilen. Das Senden von Feedback über die Configuration Manager-Konsole ist ein Kinderspiel. Wir möchten Ihr gesamtes Feedback hören: Lob, Probleme und Vorschläge. Klicken Sie in der Configuration Manager-Konsole auf die Schaltfläche „Lächeln“ in der oberen rechten Ecke des Menübands. Dieses Feedback erreicht direkt das Microsoft-Produktteam für Configuration Manager. Obwohl der Feedback-Hub von Windows 10 weiterhin unterstützt wird, sollten Sie vom konsoleninternen Feedback-Mechanismus Gebrauch machen.  
 
-Weitere Informationen finden Sie unter [Verbesserungen der Konsole in Version 1806](../../servers/manage/admin-console.md#send-feedback) und unter [Produktfeedback](../../understand/find-help.md#BKMK_1806Feedback).
+Weitere Informationen finden Sie unter [Verbesserungen der Konsole in Version 1806](../../servers/manage/admin-console-tips.md#send-feedback) und unter [Produktfeedback](../../understand/find-help.md#BKMK_1806Feedback).
 
 
 
