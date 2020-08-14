@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268078"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127340"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Tutorial: Aktivieren der Co-Verwaltung für vorhandene Konfigurations-Manager-Clients
 
@@ -169,13 +169,9 @@ Wenn Azure AD Hybrid eingerichtet und der Configuration Manager-Client konfiguri
 
 ### <a name="enable-co-management-starting-in-version-1906"></a>Aktivieren von Co-Verwaltung ab Version 1906
 
-Befolgen Sie zum Aktivieren von Co-Verwaltung ab Configuration Manager, Version 1906 die unten stehenden Anweisungen:
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### <a name="enable-co-management-in-version-1902-and-earlier"></a>Aktivieren von Co-Verwaltung in Version 1902 und früher
-
-Befolgen Sie zum Aktivieren von Co-Verwaltung für Configuration Manager, Version 1902 und früher die unten stehenden Anweisungen:
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 

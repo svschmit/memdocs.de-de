@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905189"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126789"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funktionen in der Technical Preview 1806 für Configuration Manager
 
@@ -240,7 +240,7 @@ Das Office-Anpassungstool ist jetzt in das Office 365-Installer in der Configura
  Versuchen Sie, die Aufgaben fertig zu stellen. Senden Sie uns anschließend Ihr [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback), und lassen Sie uns wissen, wie es gelaufen ist.
 
 1. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Softwarebibliothek**, und klicken Sie auf den Knoten **Office 365-Clientverwaltung**.
-2. Klicken Sie im Dashboard auf die Kachel **Office 365-Installationsprogramm**, um den Office 365-Installations-Assistenten zu starten. Weitere Informationen finden Sie unter [Bereitstellen von Office 365-Apps](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+2. Klicken Sie im Dashboard auf die Kachel **Office 365-Installationsprogramm**, um den Office 365-Installations-Assistenten zu starten. Weitere Informationen finden Sie unter [Bereitstellen von Office 365-Apps](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. Klicken Sie auf der Seite **Office-Einstellung** auf **Go To Office Web Page** (Zur Office-Webseite wechseln). Verwenden Sie das Office-Onlineanpassungstool, um Einstellungen für diese Bereitstellung anzugeben. 
 4. Klicken Sie in der oberen rechten Ecke auf **Senden**, wenn Sie fertig sind. Beenden Sie den Office 365-Installations-Assistenten.
 

@@ -2,7 +2,7 @@
 title: Konfigurieren von Wake-On-LAN
 titleSuffix: Configuration Manager
 description: Wählen Sie Wake-On-LAN-Einstellungen in Configuration Manager aus.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 512d942d79d11178f010c4f0adb41a25ee432743
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694118"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127034"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>Konfigurieren von Wake-On-LAN in Configuration Manager
 
@@ -28,7 +28,7 @@ Legen Sie Wake-On-LAN-Einstellungen für Configuration Manager fest, wenn Sie Co
 Ab Configuration Manager 1810 gibt es eine neue Möglichkeit, Computer aus dem Energiesparmodus zu reaktivieren. Mithilfe der Configuration Manager-Konsole können Sie Clients reaktivieren, auch wenn sich der Client nicht im selben Subnetz wie der Standortserver befindet. Wenn Sie Wartungen durchführen oder Geräte abfragen müssen, sind Sie nicht durch Remoteclients eingeschränkt, die sich im Ruhezustand befinden. Der Standortserver verwendet den Clientbenachrichtigungskanal, um andere Clients zu identifizieren, die im gleichen Remotesubnetz aktiv sind. Diese Clients werden dann verwendet, um eine Wake-On-LAN-Anforderung (Magic Packet) zu senden. Durch die Verwendung des Clientbenachrichtigungskanals wird MAC-Flapping vermieden, das dazu führen könnte, dass der Port vom Router heruntergefahren wird. Die neue Version von Wake-On-LAN kann gleichzeitig mit der [älteren Version](#bkmk_wol-previous) aktiviert werden.
 
 ### <a name="limitations"></a>Einschränkungen
-
+<!--7323898, 7363492-->
 - Es muss mindestens ein Client im Zielsubnetz aktiv sein.
 - Die folgenden Netzwerktechnologien werden von diesem Feature nicht unterstützt:
    - IPv6
@@ -38,12 +38,6 @@ Ab Configuration Manager 1810 gibt es eine neue Möglichkeit, Computer aus dem 
 - Computer werden nur reaktiviert, wenn Sie sie durch die Clientbenachrichtigung **Reaktivieren** benachrichtigen.
     - Für die Reaktivierung an einem Stichtag wird die ältere Version von Wake-On-LAN verwendet.
     -  Wenn die ältere Version nicht aktiviert ist, erfolgt keine Reaktivierung von Clients für Bereitstellungen, die mit den Einstellungen **Wake-On-LAN verwenden, um Clients für erforderliche Bereitstellungen zu aktivieren** oder **Aktivierungspakete senden** erstellt wurden.  
-
-> [!IMPORTANT]
-> Es wird empfohlen, die Wake-On-LAN-Funktion nur auf einer begrenzten Anzahl von Geräten gleichzeitig (100) zu verwenden.
->
-> Wenn Sie die Wake-On-LAN-Funktion zum Reaktivieren von Computern über die Configuration Manager-Verwaltungskonsole verwenden, werden die Reaktivierungsanforderungen in eine interne Warteschlange gestellt, die gemeinsam mit anderen Funktionen für Echtzeitaktionen genutzt wird. Beispiele für diese anderen Funktionen sind die Ausführung von Skripts, cmpivot und andere Clientbenachrichtigungen über schnelle Kanäle. Je nach Leistung Ihrer Standortsysteme können die Reaktivierungsaktionen einen längeren Zeitraum in Anspruch nehmen und die jeweils andere Echtzeitaktion verzögern. Es wird empfohlen, nicht mehr als 100 Computer gleichzeitig zu reaktivieren. Wenn es in diesem Bereich zu einem Rückstand kommt, der zu Verzögerungen führen kann, können Sie im Verzeichnis „...\inboxes\objmgr.box“ prüfen, ob eine große Anzahl von Dateien mit der Erweiterung „.opa“ vorhanden ist.
-
 
 ### <a name="security-role-permissions"></a>Berechtigungen für Sicherheitsrollen
 
@@ -85,7 +79,7 @@ Ab Configuration Manager-Version 1902 können Sie den Wake-On-LAN-Port angeben.
 
 Wenn Sie beide Versionen von Wake-On-LAN aktiviert haben, können Sie die Clientbenachrichtigung **Reaktivieren** verwenden und zum Stichtag reaktivieren. Die Clientbenachrichtigung funktioniert etwas anders als herkömmliches Wake-On-LAN. Eine kurze Erklärung der Funktionsweise der Clientbenachrichtigung finden Sie im Abschnitt [Wake-On-LAN ab Version 1810](#bkmk_wol-1810). Die neue Clienteinstellung **Netzwerkreaktivierung zulassen** ändert die NIC-Eigenschaften, um Wake-On-LAN zu ermöglichen. Sie müssen sie nicht mehr manuell ändern, wenn Ihrer Umgebung neue Computer hinzugefügt werden. Alle weiteren Funktionen von Wake-On-LAN wurden nicht geändert.
 
-Ab Version 1902 berücksichtigt die Clientbenachrichtigung **Reaktivieren** Ihre vorhandene Einstellung für **Wake-On-LAN-Portnummer (UDP)** .
+Ab Version 1902 berücksichtigt die Clientbenachrichtigung **Reaktivieren** Ihre vorhandene Einstellung für **Wake-On-LAN-Portnummer (UDP)**.
 
 
 ## <a name="wake-on-lan-for-version-1806-and-earlier"></a><a name="bkmk_wol-previous"></a> Wake-On-LAN für Versionen bis 1806
@@ -119,7 +113,7 @@ Ein Computer, der die Clienteinstellungen des Aktivierungsproxys erhält, wird s
 2. Klicken Sie auf **Clientstandardeinstellungen**, und klicken Sie auf **Eigenschaften**.
 3. Wählen Sie **Energieverwaltung** aus, und wählen Sie dann für **Aktivierungsproxy zulassen**, **Ja** aus.
 4. Überprüfen und konfigurieren Sie ggf. weitere Einstellungen für den Aktivierungsproxy. Weitere Informationen zu diesen Einstellungen finden Sie unter [Energieverwaltung](../../../core/clients/deploy/about-client-settings.md#power-management).
-5. Klicken Sie auf **OK**, um das Dialogfeld zu schließen, und klicken Sie dann erneut auf **OK**, um das Dialogfeld Clientstandardeinstellungen zu schließen.
+5. Klicken Sie auf **OK** , um das Dialogfeld zu schließen, und klicken Sie dann erneut auf **OK** , um das Dialogfeld Clientstandardeinstellungen zu schließen.
 
 Sie können die folgenden Wake-On-LAN-Berichte zum Überwachen der Installation und Konfiguration des Aktivierungsproxys verwenden:
 

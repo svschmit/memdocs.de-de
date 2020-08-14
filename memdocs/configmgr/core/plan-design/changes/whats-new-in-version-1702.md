@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912293"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129068"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Neuerungen in Version 1702 von Configuration Manager
 
@@ -121,7 +121,7 @@ Verwenden Sie das [Inhaltsbibliothek-Bereinigungstool](../hierarchy/content-libr
 Sie können den OMS-Connector zum Verbinden von OMS-Protokollanalysen in der Microsoft Azure Government-Cloud verwenden. Dazu müssen Sie vor der Installation des OMS-Connectors eine Konfigurationsdatei ändern, damit der Connector mit der Government-Cloud arbeiten kann. Weitere Informationen finden Sie unter [Verwenden des OMS-Connectors mit der Azure Government-Cloud](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Softwareupdatepunkte werden Begrenzungsgruppen hinzugefügt
-Ab Version 1702 verwenden Client Begrenzungsgruppen, um einen neuen Softwareupdatepunkt zu finden, und um ein Fallback durchzuführen und einen neuen Softwareupdatepunkt zu finden, wenn auf ihren aktuellen nicht mehr zugriffen werden kann. Sie können verschiedenen Begrenzungsgruppen einzelne Softwareupdatepunkte hinzufügen, um zu steuern, welchen Server ein Client finden kann. Weitere Informationen finden Sie im Thema [Configuring Boundary Groups (Konfigurieren von Begrenzungsgruppen)](../../servers/deploy/configure/boundary-groups.md) unter [Software Update Points (Softwareupdatepunkte)](../../servers/deploy/configure/boundary-groups.md#software-update-points).
+Ab Version 1702 verwenden Client Begrenzungsgruppen, um einen neuen Softwareupdatepunkt zu finden, und um ein Fallback durchzuführen und einen neuen Softwareupdatepunkt zu finden, wenn auf ihren aktuellen nicht mehr zugriffen werden kann. Sie können verschiedenen Begrenzungsgruppen einzelne Softwareupdatepunkte hinzufügen, um zu steuern, welchen Server ein Client finden kann. Weitere Informationen finden Sie im Thema [Configuring Boundary Groups (Konfigurieren von Begrenzungsgruppen)](../../servers/deploy/configure/boundary-groups.md) unter [Software Update Points (Softwareupdatepunkte)](../../servers/deploy/configure/boundary-groups.md#bkmk_sup).
 
 
 <!-- ## Migration  -->
@@ -221,7 +221,7 @@ Wenn Sie die Windows ADK-Version upgraden und dann Updates und Wartung zum Insta
 ## <a name="software-updates"></a>Softwareupdates
 
 ### <a name="deploy-office-365-apps-to-clients"></a>Bereitstellen von Office 365-Apps für Clients
-In diesem Release können Sie ab Version 1702 vom Office 365-Clientverwaltungsdashboard aus den Office 365-Installer starten, mit dem Sie Office 365-Installationseinstellungen konfigurieren, Dateien aus Office Content Delivery Networks (CDNs) herunterladen und die Dateien als Anwendung in Configuration Manager bereitstellen können. Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+In diesem Release können Sie ab Version 1702 vom Office 365-Clientverwaltungsdashboard aus den Office 365-Installer starten, mit dem Sie Office 365-Installationseinstellungen konfigurieren, Dateien aus Office Content Delivery Networks (CDNs) herunterladen und die Dateien als Anwendung in Configuration Manager bereitstellen können. Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
 
 > [!IMPORTANT]
 > Die Office 365-App, die Sie mithilfe des Assistenten für Office 365-Anwendungen in Configuration Manager erstellen und bereitstellen, wird nicht automatisch von Configuration Manager verwaltet. Dies geschieht erst nach Aktivierung der Client-Agent-Einstellungen der Softwareupdates **Verwaltung des Office 365-Client-Agents aktivieren**. Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen](../../clients/deploy/about-client-settings.md).

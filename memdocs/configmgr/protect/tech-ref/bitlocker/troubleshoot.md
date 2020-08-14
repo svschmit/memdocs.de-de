@@ -5,17 +5,17 @@ description: Erfahren Sie, wie Sie Probleme mit der BitLocker-Verwaltung in Conf
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 134c5b50-edeb-4d60-aaca-944d26deb9ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ed8e464e0ab7c17e87e3de2bf72aa0dfb0acd071
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0158738f77a0070835bec2385dd85c42dfd763fd
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708608"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127813"
 ---
 # <a name="troubleshoot-bitlocker"></a>Problembehandlung für BitLocker
 
@@ -37,7 +37,7 @@ Parser Error Message: Could not load file or assembly 'System.Web.Mvc, Version=4
 
 Um dieses Problem zu beheben, stellen Sie sicher, dass Sie die [Voraussetzung](../../plan-design/bitlocker-management.md#prerequisites) für **Microsoft ASP.NET MVC 4.0** auf dem Webserver installiert haben.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 Weitere Informationen zur Verwendung von BitLocker-Ereignisprotokollen finden Sie unter [BitLocker-Ereignisprotokolle](about-event-logs.md).
 

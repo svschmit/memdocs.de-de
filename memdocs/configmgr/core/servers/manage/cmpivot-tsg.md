@@ -10,12 +10,12 @@ ms.assetid: 36385bea-f05e-4300-947f-cb3927b3bac5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 69178f9ac1c1acb1ee2a2931c88a55a0784435b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6bddf46df63eac70a536faaee04a2ac7243e534a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708018"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128272"
 ---
 # <a name="troubleshoot-cmpivot"></a>Problembehandlung für CMPivot
 
@@ -27,7 +27,7 @@ Gelegentlich ist für CMPivot eine Problembehandlung erforderlich. Wenn beispiel
 
 In Configuration Manager, Version 1902 und höher, können Sie CMPivot über den Standort der zentralen Verwaltung (Central Administration Site, CAS) in einer Hierarchie ausführen. Die Kommunikation mit dem Client wird nach wie vor vom primären Standort abgewickelt.
 
-Wenn Sie CMPivot über den CAS ausführen, wird zur Kommunikation mit dem primären Standort der Hochgeschwindigkeits-Abonnementkanal für Meldungen verwendet. CMPivot verwendet keine standardmäßige SQL-Replikation zwischen Standorten. Wenn Ihre SQL Server-Instanz oder Ihr SQL-Anbieter remote arbeiten oder Sie SQL Always On verwenden, liegt für CMPivot ein „Double-Hop-Szenario“ vor. Informationen zum Definieren der eingeschränkten Delegierung für ein solches Double-Hop-Szenario finden Sie unter [CMPivot ab Version 1902](cmpivot.md#bkmk_cmpivot1902).
+Wenn Sie CMPivot über den CAS ausführen, wird zur Kommunikation mit dem primären Standort der Hochgeschwindigkeits-Abonnementkanal für Meldungen verwendet. CMPivot verwendet keine standardmäßige SQL-Replikation zwischen Standorten. Wenn Ihre SQL Server-Instanz oder Ihr SQL-Anbieter remote arbeiten oder Sie SQL Always On verwenden, liegt für CMPivot ein „Double-Hop-Szenario“ vor. Informationen zum Definieren der eingeschränkten Delegierung für ein solches Double-Hop-Szenario finden Sie unter [CMPivot ab Version 1902](cmpivot-changes.md#bkmk_cmpivot1902).
 
 >[!IMPORTANT]
 > Aktivieren Sie bei der Problembehandlung für CMPivot die ausführliche Protokollierung in Ihren Verwaltungspunkten (MPs) und der SMS_MESSAGE_PROCESSING_ENGINE des Standortservers, um weitere Informationen zu erhalten. Wenn die Clientausgabe zudem größer als 80 KB ist, aktivieren Sie die ausführliche Protokollierung im MP und in der SMS_STATE_SYSTEM-Komponenten des Standortservers. Weitere Informationen zum Aktivieren der ausführlichen Protokollierung finden Sie unter [Protokollierungsoptionen für den Standortserver](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-site).
@@ -45,7 +45,7 @@ Suchen Sie in `smsprov.log` nach folgenden Zeilen:
   <pre><code lang="Log">Type parameter is 135.
   Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>. </code></pre>
 
- `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` ist die Skript-GUID für CMPivot. Sie finden diese GUID auch unter [Überwachungsstatusmeldungen für CMPivot](cmpivot.md#cmpivot-audit-status-messages).
+ `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` ist die Skript-GUID für CMPivot. Sie finden diese GUID auch unter [Überwachungsstatusmeldungen für CMPivot](cmpivot-changes.md#cmpivot-audit-status-messages).
 
 Suchen Sie als Nächstes die ID im CMPivot-Fenster. Diese ID ist die `ClientOperationID`.
 

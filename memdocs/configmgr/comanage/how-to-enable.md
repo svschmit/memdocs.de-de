@@ -2,7 +2,7 @@
 title: Aktivieren der Co-Verwaltung
 titleSuffix: Configuration Manager
 description: Aktivieren Sie die Co-Verwaltung in Configuration Manager, um sofort einen Mehrwert zu erzielen.
-ms.date: 07/26/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 8fac7ac5-96a3-4ec1-85cb-623b26bf5b1c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 949b1f23d6ec816db4a801f7f14b9b6468737576
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 9c411d5102180ebf067e1319d39d2494eae50a95
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776989"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127374"
 ---
 # <a name="how-to-enable-co-management-in-configuration-manager"></a>Aktivieren der Co-Verwaltung in Configuration Manager
 
@@ -25,13 +25,9 @@ Stellen Sie sicher, dass die Voraussetzungen für Co-Verwaltung geschaffen wurde
 
 ## <a name="enable-co-management-starting-in-version-1906"></a>Aktivieren von Co-Verwaltung ab Version 1906
 
-Befolgen Sie zum Aktivieren von Co-Verwaltung ab Configuration Manager, Version 1906 die unten stehenden Anweisungen:
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ## <a name="enable-co-management-in-version-1902-and-earlier"></a>Aktivieren von Co-Verwaltung in Version 1902 und früher
-
-Befolgen Sie zum Aktivieren von Co-Verwaltung für Configuration Manager, Version 1902 und früher die unten stehenden Anweisungen:
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 

@@ -5,17 +5,17 @@ description: In diesem Artikel erhalten Sie Informationen zu allen in Configurat
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce6a9c566fec22e69c0a4a7fde01b911330ec1d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708618"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127882"
 ---
 # <a name="bitlocker-settings-reference"></a>Referenz zu BitLocker-Einstellungen
 
@@ -25,7 +25,7 @@ ms.locfileid: "81708618"
 
 Die BitLocker-Verwaltungsrichtlinien in Configuration Manager umfassen die folgenden Richtliniengruppen:
 
-- Setup
+- Einrichten
 - Betriebssystemlaufwerk
 - Festplattenlaufwerk
 - Wechseldatenträger
@@ -36,7 +36,7 @@ In den folgenden Abschnitten werden Konfigurationen für die Einstellungen in de
 > [!NOTE]
 > Diese Einstellungen beziehen sich auf Version 2002 von Configuration Manager. In Version 1910 sind nicht alle hier beschriebenen Einstellungen enthalten.
 
-## <a name="setup"></a>Setup
+## <a name="setup"></a>Einrichten
 
 Mit den Einstellungen auf dieser Seite können Sie globale BitLocker-Verschlüsselungsoptionen konfigurieren.
 
@@ -54,11 +54,11 @@ Aktivieren Sie für Windows 8.1-Geräte die Option **Verschlüsselungsmethode u
 - AES, 128 Bit, mit Diffusor
 - AES, 256 Bit, mit Diffusor
 - AES, 128 Bit (Standard)
-- AES, 256 Bit
+- AES 256-Bit
 
 #### <a name="windows-10-devices"></a>Windows 10-Geräte
 
-Aktivieren Sie für Windows 10-Geräte die Option für die **Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk (Windows 10)** . Wählen Sie anschließend jeweils eine der folgenden Verschlüsselungsmethoden für Betriebssystemlaufwerke, Festplattenlaufwerke und Wechseldatenträger aus:
+Aktivieren Sie für Windows 10-Geräte die Option für die **Verschlüsselungsmethode und die Verschlüsselungsstärke für Laufwerke (Windows 10)** . Wählen Sie anschließend jeweils eine der folgenden Verschlüsselungsmethoden für Betriebssystemlaufwerke, Festplattenlaufwerke und Wechseldatenträger aus:
 
 - AES-CBC 128 Bit
 - AES-CBC 256 Bit
@@ -66,7 +66,7 @@ Aktivieren Sie für Windows 10-Geräte die Option für die **Verschlüsselungsm
 - XTS-AES, 256 Bit
 
 > [!TIP]
-> BitLocker verwendet als Verschlüsselungsalgorithmus Advanced Encryption Standard (AES) mit konfigurierbaren Schlüssellängen von 128 oder 256 Bits. Auf Windows 10-Geräten unterstützt AES die Verschlüsselung im CBC- (Cipher Block Chaining) oder XTS-Modus (Ciphertext Stealing).
+> In BitLocker wird der erweiterte Verschlüsselungsstandard (Advanced Encryption Standard, AES) als Verschlüsselungsalgorithmus mit konfigurierbaren Schlüssellängen von 128 oder 256 Bit verwendet. Auf Windows 10-Geräten unterstützt AES die Verschlüsselung im CBC- (Cipher Block Chaining) oder XTS-Modus (Ciphertext Stealing).
 >
 > Wenn Sie auf einem Gerät, auf dem nicht Windows 10 ausgeführt wird, einen Wechseldatenträger verwenden möchten, wählen Sie dafür AES-CBC aus.
 
@@ -84,7 +84,7 @@ Aktivieren Sie für Windows 10-Geräte die Option für die **Verschlüsselungsm
 
 *Empfohlene Konfiguration*: **Nicht konfiguriert**
 
-Konfigurieren Sie diese Richtlinie, um die Leistung beim Neustart zu verbessern, ohne dabei geheime BitLocker-Informationen im Arbeitsspeicher beim Neustart zu überschreiben.
+Konfigurieren Sie diese Richtlinie, um die Leistung beim Neustart zu erhöhen, indem geheime BitLocker-Informationen im Arbeitsspeicher beim Neustart nicht überschrieben werden.
 
 Wird diese Richtlinie nicht konfiguriert, entfernt BitLocker beim Neustart des Computers die Geheimnisse aus dem Arbeitsspeicher.
 
@@ -92,7 +92,7 @@ Wird diese Richtlinie nicht konfiguriert, entfernt BitLocker beim Neustart des C
 
 *Empfohlene Konfiguration*: **Nicht konfiguriert**
 
-Konfigurieren Sie diese Richtlinie, um BitLocker-Schutz mit Smartcard-Zertifikat zu verwenden. Geben Sie anschließend das Zertifikat **Objektbezeichner** an.
+Konfigurieren Sie diese Richtlinie, um den BitLocker-Schutz mit Smartcard-Zertifikat zu verwenden. Geben Sie anschließend das Zertifikat **Objektbezeichner** an.
 
 Wird diese Richtlinie nicht konfiguriert, verwendet BitLocker den Standardobjektbezeichner `1.3.6.1.4.1.311.67.1.1`, um ein Zertifikat anzugeben.
 
@@ -110,7 +110,7 @@ Sind für Ihre Organisation höhere Sicherheitsmaßnahmen erforderlich, konfigur
 
 Mit den Einstellungen auf dieser Seite werden die Verschlüsselungseinstellungen für das Laufwerk konfiguriert, auf dem Windows installiert ist.
 
-### <a name="operating-system-drive-encryption-settings"></a>Verschlüsselungseinstellungen für das Betriebssystemlaufwerk
+### <a name="operating-system-drive-encryption-settings"></a>Einstellungen für die Verschlüsselung des Betriebssystemlaufwerks
 
 *Empfohlene Konfiguration*: **Enabled**
 
@@ -167,7 +167,7 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, können Benutzer ein Kennwort 
 
 - Damit die festgelegten Einstellungen für die Komplexitätsanforderungen wirksam werden, aktivieren Sie auch die Gruppenrichtlinieneinstellung **Kennwort muss Komplexitätsanforderungen erfüllen** unter **Computerkonfiguration** > **Windows-Einstellungen** > **Sicherheitseinstellungen** > **Kontorichtlinien** > **Kennwortrichtlinie**.
 
-- Diese Einstellungen werden beim Aktivieren von BitLocker erzwungen, nicht beim Entsperren eines Volumes. Mit BitLocker können Sie ein Laufwerk mit jeder auf dem Laufwerk verfügbaren Schutzvorrichtung entsperren.
+- Diese Einstellungen werden beim Aktivieren von BitLocker erzwungen, nicht beim Entsperren eines Volumes. Mit BitLocker können Sie ein Laufwerk mit einer der auf dem Laufwerk verfügbaren Schutzvorrichtungen entschlüsseln.
 
 - Wenn Sie eine Gruppenrichtlinie verwenden, um FIPS-konforme Algorithmen für Verschlüsselung, Hashing und Signatur zu aktivieren, sind Kennwörter als BitLocker-Schutzvorrichtung nicht zulässig.
 
@@ -274,7 +274,7 @@ Wird die Richtlinie nicht konfiguriert, unterstützt BitLocker Kennwörter gemä
 
 - Damit die festgelegten Einstellungen für die Komplexitätsanforderungen wirksam werden, aktivieren Sie auch die Gruppenrichtlinieneinstellung **Kennwort muss Komplexitätsanforderungen erfüllen** unter **Computerkonfiguration** > **Windows-Einstellungen** > **Sicherheitseinstellungen** > **Kontorichtlinien** > **Kennwortrichtlinie**.
 
-- Diese Einstellungen werden beim Aktivieren von BitLocker erzwungen, nicht beim Entsperren eines Volumes. Mit BitLocker können Sie ein Laufwerk mit jeder auf dem Laufwerk verfügbaren Schutzvorrichtung entsperren.
+- Diese Einstellungen werden beim Aktivieren von BitLocker erzwungen, nicht beim Entsperren eines Volumes. Mit BitLocker können Sie ein Laufwerk mit einer der auf dem Laufwerk verfügbaren Schutzvorrichtungen entschlüsseln.
 
 - Wenn Sie eine Gruppenrichtlinie verwenden, um FIPS-konforme Algorithmen für Verschlüsselung, Hashing und Signatur zu aktivieren, sind Kennwörter als BitLocker-Schutzvorrichtung nicht zulässig.
 
@@ -302,7 +302,7 @@ Mit den Einstellungen auf dieser Seite wird die Verschlüsselung für Wechseldat
 
 Mit dieser Einstellung können Sie die Verwendung von BitLocker auf Wechseldatenträgern steuern.
 
-- **Benutzer können BitLocker-Schutz auf Wechseldatenträger anwenden**: Benutzer können den BitLocker-Schutz für einen Wechseldatenträger aktivieren.
+- **Benutzer können BitLocker-Schutz auf Wechseldatenträger anwenden:** Benutzer können den BitLocker-Schutz für einen Wechseldatenträger aktivieren.
 
 - **Benutzer können BitLocker-Schutz auf Wechseldatenträgern anhalten und entschlüsseln**: Benutzer können die BitLocker-Laufwerkverschlüsselung für einen Wechseldatenträger entfernen oder temporär anhalten.
 
@@ -320,7 +320,7 @@ Wird diese Einstellung aktiviert,
 
 Wenn Sie diese Einstellung deaktivieren, können Benutzer BitLocker auf Wechseldatenträgern nicht verwenden.
 
-### <a name="deny-write-access-to-removable-drives-not-protected-by-bitlocker"></a>Schreibzugriff auf Wechseldatenträger verweigern, die nicht durch BitLocker geschützt sind
+### <a name="deny-write-access-to-removable-drives-not-protected-by-bitlocker"></a>Verweigern des Schreibzugriffs auf Wechseldatenträger, die nicht von BitLocker geschützt werden
 
 *Empfohlene Konfiguration*: **Nicht konfiguriert**
 
@@ -365,7 +365,7 @@ Wird die Richtlinie nicht konfiguriert, unterstützt BitLocker Kennwörter gemä
 
 - Damit die festgelegten Einstellungen für die Komplexitätsanforderungen wirksam werden, aktivieren Sie auch die Gruppenrichtlinieneinstellung **Kennwort muss Komplexitätsanforderungen erfüllen** unter **Computerkonfiguration** > **Windows-Einstellungen** > **Sicherheitseinstellungen** > **Kontorichtlinien** > **Kennwortrichtlinie**.
 
-- Diese Einstellungen werden beim Aktivieren von BitLocker erzwungen, nicht beim Entsperren eines Volumes. Mit BitLocker können Sie ein Laufwerk mit jeder auf dem Laufwerk verfügbaren Schutzvorrichtung entsperren.
+- Diese Einstellungen werden beim Aktivieren von BitLocker erzwungen, nicht beim Entsperren eines Volumes. Mit BitLocker können Sie ein Laufwerk mit einer der auf dem Laufwerk verfügbaren Schutzvorrichtungen entschlüsseln.
 
 - Wenn Sie eine Gruppenrichtlinie verwenden, um FIPS-konforme Algorithmen für Verschlüsselung, Hashing und Signatur zu aktivieren, sind Kennwörter als BitLocker-Schutzvorrichtung nicht zulässig.
 

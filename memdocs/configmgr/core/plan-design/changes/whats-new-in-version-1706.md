@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904697"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129017"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Neuerungen in Version 1706 von Configuration Manager
 
@@ -78,7 +78,7 @@ Diese Version bietet Verbesserungen dahingehend, wie Softwareupdatepunkte mit Be
 - Unabhängig von der Konfiguration des Ausweichens versucht ein Client, den letzten Softwareupdatepunkt zu erreichen, den er 120 Minuten verwendet hat. Sollte dieser Server in diesen 120 Minuten nicht erreicht werden, überprüft der Client seinen Pool verfügbarer Softwareupdatepunkte auf einen neuen.
 - Nachdem der Client seinen ursprünglichen Server zwei Stunden nicht erreicht hat, wechselt er beim Kontaktieren eines neuen Softwareupdatepunkts zu einem kürzeren Zyklus. Wenn also ein Client keine Verbindung mit einem neuen Server herstellen kann, wählt er rasch den nächsten Server in seinem Pool verfügbarer Server aus und versucht, diesen zu kontaktieren.
 
-Weitere Informationen finden Sie im Thema zu Begrenzungsgruppen unter [Softwareupdatepunkte](../../servers/deploy/configure/boundary-groups.md#software-update-points) für den Current Branch.
+Weitere Informationen finden Sie im Thema zu Begrenzungsgruppen unter [Softwareupdatepunkte](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) für den Current Branch.
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Azure AD-Integration mit Configuration Manager
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
@@ -228,7 +228,7 @@ Sie können jetzt Zurückstellungsrichtlinien für Funktions- oder Qualitätsupd
 Weitere Informationen finden Sie unter [Integration mit Windows Update für Unternehmen in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Verbesserte Benutzerbenachrichtigungen zu Office 365-Updates
-Verbesserungen sind erfolgt, um die Office-Klick-und-Los-Benutzerumgebung zu nutzen, wenn ein Client ein Office 365-Update installiert. Dazu gehören Popup- und In-App-Benachrichtigungen sowie ein Countdown. Weitere Informationen finden Sie unter [Verhalten bei Neustart und Client-Benachrichtigungen für Office 365-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates).
+Verbesserungen sind erfolgt, um die Office-Klick-und-Los-Benutzerumgebung zu nutzen, wenn ein Client ein Office 365-Update installiert. Dazu gehören Popup- und In-App-Benachrichtigungen sowie ein Countdown. Weitere Informationen finden Sie unter [Verhalten bei Neustart und Client-Benachrichtigungen für Office 365-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## <a name="reporting"></a>Berichterstellung
 

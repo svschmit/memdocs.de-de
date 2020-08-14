@@ -2,7 +2,7 @@
 title: Veraltete Features
 titleSuffix: Configuration Manager
 description: Hier finden Sie Informationen zu den Features, die von Configuration Manager nicht mehr unterstützt werden.
-ms.date: 05/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905065"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129051"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Entfernte und veraltete Features für Configuration Manager
 
@@ -31,7 +31,6 @@ Die folgenden Features sind veraltet. Sie können sie derzeit noch verwenden, ab
 
 |Komponente|Erste Ankündigung als veraltetes Feature|Nicht mehr &nbsp;unterstützt ab|
 |-----------|---|--------------|
-| Desktop Analytics-Option **Aktuelle Daten anzeigen** für die Geräteregistrierung und Sicherheitsupdates.<!-- 7080949 --> Weitere Informationen finden Sie unter [Datenlatenz](../../../../desktop-analytics/troubleshooting.md#data-latency).|Mai 2020|Juli 2020|
 |Die Implementierung für die Freigabe von Inhalten aus Azure hat sich geändert. Verwenden Sie ein inhaltsfähiges Cloud-Management-Gateway. Zukünftig können Sie keinen herkömmlichen Cloudverteilungspunkt mehr erstellen.|Februar 2019|Noch festzulegen<sup>[Hinweis 1](#bkmk_note1)</sup>|
 |Klassische Dienstbereitstellung in Azure für Cloud Management Gateway und den Cloudverteilungspunkt. Weitere Informationen finden Sie unter [Planen des Cloudverwaltungsgateways](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|November 2018|Noch festzulegen<sup>[Hinweis 1](#bkmk_note1)</sup>|
 
@@ -45,6 +44,7 @@ Die folgenden Features werden nicht mehr unterstützt. Teilweise sind sie auch n
 
 |Komponente|Erste Ankündigung als veraltetes Feature|Nicht mehr &nbsp;unterstützt ab|  
 |-----------|---|--------------|  
+| Desktop Analytics-Option **Aktuelle Daten anzeigen** für die Geräteregistrierung und Sicherheitsupdates.<!-- 7080949 --> Weitere Informationen finden Sie unter [Datenlatenz](../../../../desktop-analytics/troubleshooting.md#data-latency).|Mai 2020|Juli 2020|
 | Integration von Windows Analytics und Upgradebereitschaft. Weitere Informationen finden Sie unter [KB 4521815: Windows Analytics-Deaktivierung am 31. Januar 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | 14. Oktober 2019 | 31. Januar 2020 |
 | Bewertung des Integritätsnachweises für Geräte für Konformitätsrichtlinien für bedingten Zugriff <!--1235616 aka 3608202--> Weitere Informationen finden Sie unter [Hybride Verwaltung mobiler Geräte](../../../../mdm/understand/what-happened-to-hybrid.md).| 3\. Juli 2019 | Version 1910 |
 | Die Configuration Manager-Unternehmensportal-App | 21.Mai 2019 | Version 1910 |

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078786"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126755"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Funktionen in der Technical Preview 1706 für Configuration Manager
 
@@ -72,7 +72,7 @@ Diese Version bietet Verbesserungen dahingehend, wie Softwareupdatepunkte mit Be
   - Dieser Zyklus wird so lange fortgesetzt, bis der Client eine Verbindung mit einem Softwareupdatepunkt hergestellt hat, der verwendet werden kann.
   - Bis der Client einen Softwareupdatepunkt gefunden hat, werden dem Pool verfügbarer Server zusätzliche Server hinzugefügt, sobald die Ausweichzeit für jede benachbarte Begrenzungsgruppe erreicht ist.
 
-Weitere Informationen finden Sie im Thema zu Begrenzungsgruppen unter [Softwareupdatepunkte](../servers/deploy/configure/boundary-groups.md#software-update-points) für den Current Branch.
+Weitere Informationen finden Sie im Thema zu Begrenzungsgruppen unter [Softwareupdatepunkte](../servers/deploy/configure/boundary-groups.md#bkmk_sup) für den Current Branch.
 
 
 ## <a name="site-server-role-high-availability"></a>Hohe Verfügbarkeit der Standortserverrolle
