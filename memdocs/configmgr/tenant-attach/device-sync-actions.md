@@ -10,14 +10,14 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 784a287176066ce34c3499ecdc91a450e2d6160c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127544"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251863"
 ---
-# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Microsoft Endpoint Manager-Mandanten anfügen: Geräte Synchronisierung und Geräte Aktionen
+# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Microsoft Endpoint Manager-Mandanten anfügen: Geräte Synchronisierung und Geräte Aktionen
 <!--3555758 live 3/4/2020-->
 *Gilt für: Configuration Manager (Current Branch)*
 
@@ -34,13 +34,13 @@ Ab Configuration Manager Version 2002 können Sie Ihre Configuration Manager Ger
    - Wurde mit [Azure Active Directory Benutzer](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) Ermittlung und [Active Directory Benutzer](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)Ermittlung ermittelt.
       - Dies bedeutet, dass das Benutzerkonto in Azure AD ein synchroniziertes Benutzerobjekt sein muss.
    - Die Berechtigung **Configuration Manager Aktion initiieren** unter **Remote Tasks** im Microsoft Endpoint Manager Admin Center.
-
+- Wenn der Standort der zentralen Verwaltung über einen [Remote Anbieter](../core/plan-design/hierarchy/plan-for-the-sms-provider.md)verfügt, befolgen Sie die Anweisungen für die Zertifizierungsstelle mit [einem Remote Anbieter](../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) Szenario im cmpivot-Artikel. <!--7796824-->
 
 ## <a name="internet-endpoints"></a>Internet Endpunkte
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a>Aktivieren des Geräte Uploads, wenn die Co-Verwaltung bereits aktiviert ist
+## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> Aktivieren des Geräte Uploads, wenn die Co-Verwaltung bereits aktiviert ist
 
 Wenn Sie derzeit die Co-Verwaltung aktiviert haben, verwenden Sie die Eigenschaften der Co-Verwaltung, um den Geräte Upload zu aktivieren. Wenn die Co-Verwaltung nicht bereits aktiviert ist, verwenden Sie stattdessen [den Assistenten zum **Konfigurieren der Co-Verwaltung** ](#bkmk_config) , um den Geräte Upload zu aktivieren.
 
@@ -58,7 +58,7 @@ Wenn die Co-Verwaltung bereits aktiviert ist, bearbeiten Sie die Eigenschaften d
 1. Wählen Sie **OK** aus, um die Eigenschaften der Co-Verwaltung zu beenden, nachdem Sie die Änderungen vorgenommen haben.
 
 
-## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a>Aktivieren des Geräte Uploads, wenn die Co-Verwaltung nicht aktiviert ist
+## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a> Aktivieren des Geräte Uploads, wenn die Co-Verwaltung nicht aktiviert ist
 
 Wenn Sie die Co-Verwaltung nicht aktiviert haben, verwenden Sie den Assistenten zum **Konfigurieren der Co-Verwaltung** , um das Hochladen von Geräten zu aktivieren. Sie können Ihre Geräte hochladen, ohne die automatische Registrierung für die Co-Verwaltung zu aktivieren oder Workloads zu InTune zu wechseln. Alle von Configuration Manager verwalteten Geräte mit **Ja** in der Spalte **Client** werden hochgeladen. Bei Bedarf können Sie den Upload auf eine einzelne Geräte Sammlung beschränken. Wenn die Co-Verwaltung in Ihrer Umgebung bereits aktiviert ist, bearbeiten Sie die [Eigenschaften der Co-Verwaltung](#bkmk_edit) , um stattdessen den Geräte Upload zu aktivieren.
 
@@ -82,7 +82,7 @@ Wenn die Co-Verwaltung nicht aktiviert ist, verwenden Sie die nachfolgenden Anwe
 
 ## <a name="perform-device-actions"></a>Ausführen von Geräte Aktionen
 
-1. Navigieren Sie in einem Browser zu.`endpoint.microsoft.com`
+1. Navigieren Sie in einem Browser zu. `endpoint.microsoft.com`
 1. Wählen Sie **Geräte** und dann **alle Geräte** aus, um die hochgeladenen Geräte anzuzeigen. **ConfigMgr** wird in der Spalte **verwaltet von** für hochgeladene Geräte angezeigt.
    [![Alle Geräte im Microsoft Endpoint Manager Admin Center](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Wählen Sie ein Gerät aus, um seine **Übersichts** Seite zu laden.
@@ -93,7 +93,7 @@ Wenn die Co-Verwaltung nicht aktiviert ist, verwenden Sie die nachfolgenden Anwe
 
    [![Geräte Übersicht im Microsoft Endpoint Manager Admin Center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a>Importieren einer zuvor erstellten Azure AD Anwendung (optional)
+## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a> Importieren einer zuvor erstellten Azure AD Anwendung (optional)
 <!--6479246-->
 *(Eingeführt in Version 2006)*
 

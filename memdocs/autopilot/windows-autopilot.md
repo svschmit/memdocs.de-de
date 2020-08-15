@@ -14,22 +14,27 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 171070e1560796763f3c3851afe239237098f756
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: da15ea9ceae46c9c54858a6be0f724c5d67d22ce
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756491"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252173"
 ---
 # <a name="overview-of-windows-autopilot"></a>Übersicht über Windows Autopilot
 
 **Zielgruppe**
 
--   Windows 10
+-  Windows 10
 
 Bei Windows Autopilot handelt es sich um eine Sammlung von Technologien, die zum Einrichten und vorkonfigurieren neuer Geräte verwendet werden, um Sie für den produktiven Einsatz vorzubereiten. Sie können Windows Autopilot auch zum Zurücksetzen, wieder verwenden und Wiederherstellen von Geräten verwenden. Diese Lösung ermöglicht es einer IT-Abteilung, das oben genannte zu erreichen, ohne dass eine Infrastruktur verwaltet werden muss, die einfach und einfach zu verwalten ist.
 
-Windows Autopilot ist so konzipiert, dass alle Teile des Lebenszyklus von Windows-Geräten für IT-und Endbenutzer von der anfänglichen Bereitstellung bis zum Ende der Lebensdauer vereinfacht werden. Mithilfe von cloudbasierten Diensten können IT-Administratoren die Gesamtkosten für die Bereitstellung, Verwaltung und Außerbetriebnahme von Geräten verringern, indem Sie die Zeit verkürzen, die für diese Prozesse aufgewendet werden muss, sowie die Menge der Infrastruktur, die Sie verwalten müssen, und gleichzeitig die Benutzerfreundlichkeit für alle Arten von Endbenutzern sicherstellen. Sehen Sie sich das folgende Video und Diagramm an:
+Windows Autopilot vereinfacht den Lebenszyklus von Windows-Geräten für IT-und Endbenutzer von der ersten Bereitstellung bis zum Ende der Lebensdauer. Mit cloudbasierten Diensten, Windows Autopilot:
+- verringert die Zeit, die für die Bereitstellung, Verwaltung und Außerbetriebnahme von Geräten benötigt wird.
+- verringert die Infrastruktur, die zum Warten der Geräte erforderlich ist.
+- maximiert die Benutzerfreundlichkeit für alle Arten von Endbenutzern.
+
+Sehen Sie sich das folgende Video und Diagramm an:
 
 &nbsp;
 
@@ -37,12 +42,21 @@ Windows Autopilot ist so konzipiert, dass alle Teile des Lebenszyklus von Window
 
 ![Übersicht über den Prozess](images/image1.png)
 
-Wenn Sie neue Windows-Geräte anfänglich bereitstellen, nutzt Windows Autopilot die OEM-optimierte Version von Windows 10, die auf dem Gerät vorinstalliert ist. so werden Organisationen daran gewöhnt, benutzerdefinierte Images und Treiber für jedes verwendete Gerätemodell zu verwalten. Anstatt das Gerät neu zu erstellen, können Sie Ihre vorhandene Windows 10-Installation in den Status "geschäftlich bereit" umwandeln, Einstellungen und Richtlinien anwenden, Apps installieren und sogar die verwendete Edition von Windows 10 (z. b. von Windows 10 pro zu Windows 10 Enterprise) ändern, um erweiterte Funktionen zu unterstützen.
+Bei der anfänglichen Bereitstellung neuer Windows-Geräte verwendet Windows Autopilot die OEM-optimierte Version von Windows 10. Diese Version ist auf dem Gerät vorinstalliert, sodass Sie keine benutzerdefinierten Images und Treiber für jedes Gerätemodell verwalten müssen. Anstatt das Gerät neu zu erstellen, kann die vorhandene Windows 10-Installation in einen "Business-Ready"-Zustand transformiert werden, in dem Folgendes möglich ist:
+- Anwenden von Einstellungen und Richtlinien
+- Installieren von apps
+- Ändern Sie die verwendete Edition von Windows 10 (z. b. von Windows 10 pro zu Windows 10 Enterprise), um erweiterte Funktionen zu unterstützen.
 
-Nach der Bereitstellung können Windows 10-Geräte mithilfe von Tools wie Microsoft InTune, Windows Update for Business, Microsoft Endpoint Configuration Manager und anderen ähnlichen Tools verwaltet werden. Windows Autopilot kann auch verwendet werden, um ein Gerät zu verwenden, indem Windows Autopilot Reset verwendet wird, um schnell ein Gerät für einen neuen Benutzer vorzubereiten, oder in Break/Fix-Szenarien, damit ein Gerät schnell wieder in einen Zustand versetzt wird, der für den Betrieb bereit ist.
+Nach der Bereitstellung können Sie Windows 10-Geräte wie folgt verwalten:
+- Microsoft Intune
+- Windows Update for Business
+- Microsoft Endpoint Configuration Manager
+- oder andere ähnliche Tools.
+
+Mit Windows Autopilot können Sie schnell ein Gerät für einen neuen Benutzer mit Windows Autopilot Reset vorbereiten. Sie können auch in Break/Fix-Szenarien zurücksetzen verwenden, um ein Gerät schnell wieder in den Status "bereit" zu bringen.
 
 Windows Autopilot ermöglicht Folgendes:
-* Automatisches Hinzufügen von Geräten zu Azure Active Directory (Azure AD) oder Active Directory (über Azure AD Hybrid Join).  Weitere Informationen zu den Unterschieden zwischen diesen beiden joinoptionen finden Sie unter Einführung in die [Geräteverwaltung in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) .
+* Automatisches Hinzufügen von Geräten zu Azure Active Directory (Azure AD) oder Active Directory (über Azure AD Hybrid Join). Weitere Informationen zu den Unterschieden zwischen diesen beiden joinoptionen finden Sie unter Einführung in die [Geräteverwaltung in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
 * Automatisches Registrieren von Geräten bei MDM-Diensten, wie z. b. Microsoft InTune ([*erfordert ein Azure AD Premium Abonnement für die Konfiguration*](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Windows-10-Azure-AD-and-Microsoft-Intune-Automatic-MDM/ba-p/244067)).
 * Beschränken Sie die Erstellung des Administrator Kontos.
 * Erstellen und automatisches Zuweisen von Geräten zu Konfigurations Gruppen basierend auf dem Profil eines Geräts.
@@ -50,15 +64,15 @@ Windows Autopilot ermöglicht Folgendes:
 
 ## <a name="benefits-of-windows-autopilot"></a>Vorteile von Windows Autopilot
 
-Normalerweise haben IT-Experten viel Zeit damit verbracht, Images zu entwickeln und anzupassen, die später auf Geräten bereitgestellt werden. Windows Autopilot führt einen neuen Ansatz ein.
+In der Vergangenheit haben IT-Experten beträchtliche Zeit damit verbracht, Images zu entwickeln und anzupassen, die später auf Geräten bereitgestellt werden. Windows Autopilot führt einen neuen Ansatz ein.
 
 Aus Sicht des Benutzers werden nur einige einfache Vorgänge benötigt, damit das Gerät einsatzbereit ist.
 
 Aus der Perspektive von IT-Experten besteht die einzige vom Endbenutzer benötigte Interaktion darin, eine Verbindung mit einem Netzwerk herzustellen und deren Anmelde Informationen zu überprüfen. Alles, was darüber hinausgeht, ist automatisiert.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
-Eine [unterstützte Version](https://docs.microsoft.com/windows/release-information/) des halbjährlichen Kanals von Windows 10 ist erforderlich, um Windows Autopilot zu verwenden. Windows 10 Enterprise LTSC 2019 wird ebenfalls unterstützt. Ausführliche Informationen zu Software-, Konfigurations-, Netzwerk-und Lizenzierungsanforderungen finden Sie unter [Windows Autopilot Requirements](windows-autopilot-requirements.md) .
+Eine [unterstützte Version](https://docs.microsoft.com/windows/release-information/) des halbjährlichen Kanals von Windows 10 ist erforderlich, um Windows Autopilot zu verwenden. Windows 10 Enterprise LTSC 2019 wird ebenfalls unterstützt. Weitere Informationen finden Sie unter [Windows Autopilot Software](software-requirements.md), [Networking](networking-requirements.md), [Configuration](configuration-requirements.md)und [Licensing](licensing-requirements.md) Requirements.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
