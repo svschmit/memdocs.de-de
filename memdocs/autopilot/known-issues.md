@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 9e620892adc8a6db4ba76f8058bcb6105dba5a18
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 5e0177097d1ff08ceeca6f6692f943856c40e6de
+ms.sourcegitcommit: 69a6829ace9fc1999e58e5f31348521b638ef0ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756638"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239497"
 ---
 # <a name="windows-autopilot---known-issues"></a>Windows Autopilot-bekannte Probleme
 
@@ -59,7 +59,7 @@ Dies liegt daran, dass Windows 10, Version 1903 und 1909, die AutopilotConfigura
 - Das Feature Windows Autopilot für vorhandene Geräte unterdrückt die Seite "Aktivitäten" während des OOBE-Features nicht ordnungsgemäß.  (Aus diesem Grund wird diese zusätzliche Seite während OOBE angezeigt).
 - Der TPM-Nachweis Status wird nicht durch die systatp-/generalize gelöscht, was zu einem TPM-Nachweis Fehler während eines späteren OOBE-Flusses führt.  (Dies ist kein besonders häufiges Problem, aber Sie können es beim Testen ausführen, wenn Sie systrep ausführen/generalize und dann einen Neustart durchführen oder das Gerät neu starten, um durch einen Autopilot-weißen Handschuh oder ein selbst Bereitstellungs Szenario zurückzukehren.
 - Der TPM-Nachweis schlägt möglicherweise fehl, wenn das Gerät über ein gültiges AIK-Zertifikat, aber kein EK-Zertifikat verfügt.  (Dies bezieht sich auf das vorherige Element).
-- Wenn der TPM-Nachweis während des Windows Autopilot-White-Glove-Prozesses fehlschlägt, scheint die Landing Page nicht mehr zu reagieren.  (Im Grunde ist die Startseite des weißen handtrehs, bei der Sie auf "Bereitstellen" klicken, um den weißen Hand Schuh Prozess zu starten, Fehler nicht ordnungsgemäß.)
+- Wenn der TPM-Nachweis während des Windows Autopilot-White-Glove-Prozesses fehlschlägt, reagiert die Landing Page anscheinend nicht mehr.  (Im Grunde ist die Startseite des weißen handtrehs, bei der Sie auf "Bereitstellen" klicken, um den weißen Hand Schuh Prozess zu starten, Fehler nicht ordnungsgemäß.)
 - Der TPM-Nachweis schlägt bei neueren Version von Infineon-TPMs (Firmwareversion > 7,69) fehl.  (Vor dieser Behebung wurde nur eine bestimmte Liste der Firmwareversionen akzeptiert.)
 - Geräte Benennungs Vorlagen können den Computernamen bei 14 Zeichen anstelle von 15 abschneiden.
 - Zugewiesene Zugriffsrichtlinien verursachen einen Neustart, der die Konfiguration von Kiosk Geräten mit einer einzelnen App beeinträchtigen kann.
