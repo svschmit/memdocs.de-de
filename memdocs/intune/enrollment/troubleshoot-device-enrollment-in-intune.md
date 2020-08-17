@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093505"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865821"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Behandlung von Problemen bei der Geräteregistrierung in Microsoft Intune
 
@@ -67,7 +67,7 @@ Diese Probleme können auf allen Geräteplattformen auftreten.
 
 2. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf die Option **Benutzer** > **Alle Benutzer**, wählen Sie den Benutzer aus, und klicken Sie dann auf **Geräte**. Überprüfen Sie die Anzahl der Geräte.
 
-3. Wenn die Anzahl der registrierten Geräte des Benutzers bereits das Gerätelimit erreicht hat, kann er keine weiteren Geräte registrieren, bis eine der folgenden Aktionen durchgeführt wird:
+3. Wenn die Anzahl der registrierten Geräte des Benutzers bereits das Gerätelimit erreicht hat, können keine weiteren Geräte registriert werden, bis eine der folgenden Aktionen durchgeführt wird:
     - [Vorhandene Geräte werden entfernt](../remote-actions/devices-wipe.md) oder
     - Sie erhöhen das Gerätelimit, indem Sie die [Geräteeinschränkungen anpassen](enrollment-restrictions-set.md).
 
@@ -225,7 +225,7 @@ Um das Problem zu beheben, importieren Sie die Zertifikate wie folgt in die pers
 4. Klicken Sie auf die Schaltfläche **Zertifizierungspfad**, um die übergeordneten Zertifikate des Zertifikats anzuzeigen.
 5. Wählen Sie in jedem übergeordneten Zertifikat die Option **Zertifikat anzeigen** aus.
 6. Klicken Sie auf **Details** > **In Datei kopieren**.
-7. Führen Sie die Anweisungen des Assistenten aus, um den öffentlichen Schlüssel des übergeordneten Zertifikats an den gewünschten Speicherort zu exportieren oder zu speichern.
+7. Führen Sie die Anweisungen des Assistenten aus, um den öffentlichen Schlüssel des übergeordneten Zertifikats an den gewünschten Speicherort zu exportieren oder dort zu speichern.
 8. Klicken Sie mit der rechten Maustaste auf **Zertifikate** > **Alle Aufgaben** > **Importieren**.
 9. Befolgen Sie die Anweisungen des Assistenten, um das übergeordnete Zertifikat bzw. die übergeordneten Zertifikate in das Verzeichnis **Lokale Computer\Eigene Zertifikate\Zertifikate** zu importieren.
 10. Starten Sie die AD FS-Server neu.
@@ -290,7 +290,9 @@ Sobald die Geräte registriert sind, ist ihr Integritätsstatus gut, und sie erh
 
 Für die Registrierung von ADE-Geräten mit Benutzeraffinität muss das Anfordern von Benutzertoken für den Endpunkt „WS-Trust 1.3 Username/Mixed“ aktiviert sein. Dieser Endpunkt wird von Active Directory standardmäßig aktiviert. Eine Liste der aktivierten Endpunkte erhalten Sie mithilfe des PowerShell-Cmdlets „Get-AdfsEndpoint“ und der Suche nach dem Endpunkt Trust/13/UsernameMixed. Beispiel:
 
-      Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```
 
 Weitere Informationen finden Sie in der [Get-AdfsEndpoint-Dokumentation](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
@@ -422,7 +424,7 @@ Das Kontozertifikat des vorherigen Kontos ist immer noch auf dem Computer vorhan
 |--------------|--------------------|----------------------------------------|
 |0x80CF0437 |Die Uhr des Clientcomputers ist nicht auf die richtige Uhrzeit eingestellt.|Stellen Sie sicher, dass die Uhr und die Zeitzone des Clientcomputers richtig eingestellt sind.|
 |0x80240438, 0x80CF0438, 0x80CF402C|Verbindung mit dem Intune-Dienst ist nicht möglich. Überprüfen Sie die Proxy-Einstellungen des Clients.|Stellen Sie sicher, dass Intune die Proxykonfiguration auf dem Clientcomputer unterstützt. Stellen Sie sicher, dass der Clientcomputer über Internetzugriff verfügt.|
-|0x80240438, 0x80CF0438|Proxyeinstellungen in Internet Explorer und im lokalen System sind nicht konfiguriert.|Verbindung mit dem Intune-Dienst ist nicht möglich. Überprüfen Sie die Clientproxyeinstellungen. Stellen Sie sicher, dass Intune die Proxykonfiguration auf dem Clientcomputer unterstützt. Stellen Sie sicher, dass der Clientcomputer über Internetzugriff verfügt.|
+|0x80240438, 0x80CF0438|Proxyeinstellungen in Internet Explorer und im lokalen System sind nicht konfiguriert.|Verbindung mit dem Intune-Dienst ist nicht möglich. Überprüfen Sie die Proxy-Einstellungen des Clients. Stellen Sie sicher, dass Intune die Proxykonfiguration auf dem Clientcomputer unterstützt. Stellen Sie sicher, dass der Clientcomputer über Internetzugriff verfügt.|
 |0x80043001, 0x80CF3001, 0x80043004, 0x80CF3004|Das Registrierungspaket ist nicht mehr aktuell.|Laden Sie das aktuellste Clientsoftwarepaket vom Arbeitsbereich „Verwaltung“ herunter, und installieren Sie es.|
 |0x80043002, 0x80CF3002|Das Konto befindet sich im Wartungsmodus.|Wenn sich das Konto im Wartungsmodus befindet, können Sie keine neuen Clientcomputer registrieren. Melden Sie sich zum Anzeigen Ihrer Kontoeinstellungen bei Ihrem Konto an.|
 |0x80043003, 0x80CF3003|Das Konto wurde gelöscht.|Prüfen Sie, ob Ihr Konto und Ihr Abonnement für Intune noch aktiv sind. Melden Sie sich zum Anzeigen Ihrer Kontoeinstellungen bei Ihrem Konto an.|

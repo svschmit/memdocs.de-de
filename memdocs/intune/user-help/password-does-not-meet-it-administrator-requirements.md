@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aed17d518213f875e15f2261ec1a18640357203a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880936"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88047972"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>Gerätekennwortanforderungen für registrierte Geräte
 
@@ -89,13 +89,15 @@ Wenden Sie sich an Ihren IT-Support, um zusätzliche Hilfe zu erhalten oder um d
 | Das Kennwort ist abgelaufen. | Legen Sie ein neues Kennwort fest. Ihre Organisation verlangt, dass Sie Ihr Kennwort nach einer bestimmten Anzahl von Tagen ändern. |
 | Das Kennwort wurde erst kürzlich verwendet. | Wählen Sie ein Kennwort aus, das Sie zuvor noch nicht verwendet haben. Ihre Organisation verlangt, dass eine bestimmte Zeitspanne verstrichen ist, bevor Sie ein Kennwort wiederverwenden. |
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="update-password-passcode-pin"></a>Aktualisieren des Kennworts, des Passcodes und der PIN
 
-In den folgenden Artikeln finden Sie Informationen zum Erstellen oder Ändern des Kennworts, des Passcodes oder der PIN für das Gerät.  
+In den folgenden Artikeln finden Sie Informationen zum Ändern des Kennworts, des Passcodes oder der PIN für Ihr Gerät. Die neuesten Anleitungen finden Sie in der Hilfedokumentation des Geräteherstellers. 
 
 - [Machen Sie Ihr Gerät mit dem richtigen Kennwort sicherer](set-or-change-your-password-windows.md)  
 - [Festlegen des Passcodes für ein iOS-Gerät](set-or-change-your-passcode-ios.md)  
 - [Festlegen der PIN oder des Kennworts für ein Android-Gerät](set-your-pin-or-password-android.md)  
+
+## <a name="next-steps"></a>Nächste Schritte
 
 Benötigen Sie weitere Unterstützung? Kontaktieren Sie Ihre Supportabteilung. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

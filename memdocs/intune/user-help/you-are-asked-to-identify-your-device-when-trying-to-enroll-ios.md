@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 567942ca0e859c26d8cae11b5f0ba93bfa45524a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: bc8ef369ae5072447fdd52a4fc7a3df45cfebfca
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881353"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866263"
 ---
-# <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Identifizierung Ihres Geräts beim Versuch der Registrierung
+# <a name="youre-asked-to-identify-your-ios-device-during-enrollment"></a>Sie werden bei der Registrierung aufgefordert, Ihr iOS-Gerät zu identifizieren.
 
 Wenn Sie versuchen, Ihr iOS-Gerät bei Intune zu registrieren, und Sie einen Bildschirm sehen, der Sie auffordert, Ihr Gerät zu identifizieren, wurde mindestens eines Ihrer Geräte bereits registriert und Ihrem Konto mithilfe einer anderen Methode als der Unternehmensportal-App zugewiesen. Damit die Unternehmensportal-App ordnungsgemäß funktioniert, müssen Sie feststellen, ob das Gerät, das Sie verwenden, bereits bei Intune registriert wurde.
 

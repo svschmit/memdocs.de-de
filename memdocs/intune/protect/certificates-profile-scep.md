@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/21/2020
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891529"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048088"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Erstellen und Zuweisen eines SCEP-Zertifikatprofils in Intune
 
@@ -315,6 +315,8 @@ Beachten Sie jedoch Folgendes, bevor Sie fortfahren:
 
 > [!NOTE]
 > - Wenn auf iOS/iPadOS-Geräten ein SCEP-Zertifikatprofil oder ein PKCS-Zertifikatsprofil einem zusätzlichen Profil (z.B. einem WLAN- oder VPN-Profil) zugeordnet ist, erhält das Gerät ein Zertifikat für jedes der zusätzlichen Profile. Dadurch werden für das iOS/iPadOS-Gerät mehrere Zertifikate über die SCEP- oder PKCS-Zertifikatanforderung bereitgestellt. 
+> 
+>   Über das SCEP bereitgestellte Zertifikate sind eindeutig. Bei über PKCS bereitgestellten Zertifikaten handelt es sich um dasselbe Zertifikat. Sie scheinen nur unterschiedlich, da jede Profilinstanz im Verwaltungsprofil durch eine separate Zeile dargestellt wird.
 > - Auf iOS 13 und macOS 10.15 gibt es einige [zusätzliche Sicherheitsanforderungen, die von Apple dokumentiert sind](https://support.apple.com/HT210176) und berücksichtigt werden müssen.  
 
 

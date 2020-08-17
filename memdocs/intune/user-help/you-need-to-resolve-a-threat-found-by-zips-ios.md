@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 41c80ee092e61f016c02e66690cf7f3601f89618
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f72415900067793d41b0e6086cf3ee0c78e9ee85
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882541"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865651"
 ---
-# <a name="resolve-a-threat-found-by-zimperium-zips"></a>Auflösen einer von Zimperium zIPS erkannten Bedrohung
+# <a name="resolve-a-threat-found-by-zimperium-zips-on-ios"></a>Beseitigen einer von Zimperium zIPS erkannten Bedrohung unter iOS
 
 Zimperium zIPS ist ein Mobile Threat Defender-Dienst, der potenzielle Bedrohungen auf Ihren iOS-Geräten identifiziert. Diese Bedrohungen werden in der Unternehmensportal-App als ungelöste Probleme angezeigt, die auf fehlende Konformität hinweisen. Wenn Ihr Gerät als nicht konform identifiziert wurde, können Sie folgende Aktionen möglicherweise nicht ausführen:
 

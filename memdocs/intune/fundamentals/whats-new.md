@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546808"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051627"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Neuerungen in Microsoft Intune
 
@@ -55,6 +55,15 @@ In diesem Artikel werden die Neuheiten im [Microsoft Endpoint Manager Admin Cent
 ### Scripts
 
 <!-- ########################## -->
+## <a name="week-of-august-10-2020"></a>Woche vom 10. August 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Geräteverwaltung
+
+#### <a name="tenant-attach-install-an-application-from-the-admin-center----in7220536-cm6024389--"></a>Mandantenanfügung: Installieren einer Anwendung über das Admin Center <!-- IN7220536 CM6024389-->
+Sie können ab sofort über das Microsoft Endpoint Manager Admin Center eine Anwendungsinstallation in Echtzeit für ein Gerät mit Mandantenanfügung einleiten. Weitere Informationen finden Sie unter [Anfügen von Mandanten: Installieren einer Anwendung über das Admin Center](../../configmgr/tenant-attach/applications.md).
+
+<!-- ########################## -->
 ## <a name="week-of-july-27-2020"></a>Woche ab 27. Juli 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -68,9 +77,6 @@ Mit Power BI-Vorlagen-Apps können Power BI-Partner mit wenig oder ohne Programm
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>App-Verwaltung
-
-#### <a name="win32-app-installation-notifications-and-the-company-portal---7485945----"></a>Win32-App-Installationsbenachrichtigungen und das Unternehmensportal<!-- 7485945  -->
-Endbenutzer können nun entscheiden, ob die in der [Webversion des Microsoft Intune-Unternehmensportals](https://portal.manage.microsoft.com/) angezeigten Anwendungen über die Unternehmensportal-App oder die Unternehmensportalwebsite geöffnet werden sollen. Diese Option steht nur zur Verfügung, wenn der Endbenutzer die Unternehmensportal-App installiert hat und eine Webunternehmensportal-Anwendung außerhalb eines Browsers startet. 
 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Unterstützung für den Connector für Microsoft Exchange lokal<!-- 7138486  -->
 Ab Release Nr. 2007 (Juli) wird im Intune-Dienst die Unterstützung für den Connector für Exchange lokal eingestellt. Bestandskunden mit einem aktiven Connector können die aktuelle Funktionalität weiterhin nutzen. Neu- und Bestandskunden, die nicht über einen aktiven Connector verfügen, können keine neuen Connectors mehr erstellen oder Exchange ActiveSync-Geräte (EAS) über Intune verwalten. Diesen Kunden empfiehlt Microsoft die [hybride moderne Authentifizierung (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) für Exchange, um den Zugriff auf Exchange lokal zu schützen. Die hybride moderne Authentifizierung ermöglicht sowohl Intune-App-Schutz-Richtlinien (auch MAM) als auch den bedingten Zugriff über Outlook Mobile für Exchange lokal.

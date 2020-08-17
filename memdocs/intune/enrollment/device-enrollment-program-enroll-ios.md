@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891512"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051671"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatisches Registrieren von iOS-/iPadOS-Geräten mit der automatischen Geräteregistrierung von Apple
 
@@ -328,23 +328,28 @@ Informationen finden Sie unter [Registrieren Ihres iOS-/iPadOS-Geräts in Intune
 > [!NOTE]
 > Zusätzlich zur jährlichen Erneuerung Ihres ADE-Tokens müssen Sie das Token Ihres Registrierungsprogramms in Intune und Apple Business Manager erneuern, wenn das Kennwort der verwalteten Apple-ID für den Benutzer geändert wird, der das Token in Apple Business Manager eingerichtet hat, oder wenn dieser Benutzer Ihre Apple Business Manager-Organisation verlässt.
 
-1. Navigieren Sie zu business.apple.com.  
-2. Wählen Sie unter **Server verwalten** Ihren MDM-Server aus, der der Tokendatei zugeordnet ist, die Sie erneuern möchten.
-3. Klicken Sie auf **Neues Token generieren**.
+1. Navigieren Sie zu business.apple.com.
+2. Klicken Sie auf **Einstellungen** (unten links).
+3. Wählen Sie unter  **MDM Servers** (MDM-Server) Ihren MDM-Server aus, der dem ADE/DEP-Token zugeordnet ist, das Sie erneuern möchten.
+4. Klicken Sie auf **Download token** (Token herunterladen).
 
     ![Screenshot von „Neues Token generieren“](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
-4. Klicken Sie auf **Ihr Servertoken**.  
-5. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Token für Registrierungsprogramm), und wählen Sie ein Token aus.
+5. Klicken Sie in der Eingabeaufforderung auf „Download server token“ (Servertoken herunterladen).
+> [!NOTE]
+> Klicken Sie nicht auf **Download server token** (Servertoken herunterladen), wenn Sie das Token nicht (wie in der Eingabeaufforderung erwähnt) erneuern möchten, da sonst das aktuell von Intune verwendete Token (oder eine andere MDM-Lösung) ungültig wird. Wenn Sie das Token bereits heruntergeladen haben, stellen Sie sicher, dass Sie mit den nächsten Schritten fortfahren, bis das Token erneuert wird.
+
+6. Klicken Sie nach dem Herunterladen des Tokens im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Token für Registrierungsprogramm), und wählen Sie ein Token aus.
     ![Screenshot der Registrierungsprogrammtoken.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. Wählen Sie **Token erneuern** aus, und geben Sie die Apple-ID ein, die zum Erstellen des ursprünglichen Tokens verwendet wurde.  
+7. Klicken Sie auf **Token erneuern**, und geben Sie die Apple-ID ein, die zum Erstellen des ursprünglichen Tokens verwendet wurde (falls nicht automatisch ausgefüllt).  
     ![Screenshot von „Token erneuern“](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. Klicken Sie auf **Weiter**, um zur Seite **Bereichstags** zu gelangen, und weisen Sie bei Bedarf Bereichstags zu.
+8. Laden Sie das neu heruntergeladene Token hoch.
 
-8. Klicken Sie auf **Weiter**, und laden Sie das soeben heruntergeladene Token hoch.  
-9. Klicken Sie auf **Token erneuern**. Es wird eine Bestätigung angezeigt, dass das Token erneuert wurde.   
+9. Klicken Sie auf **Weiter**, um zur Seite **Bereichstags** zu gelangen, und weisen Sie bei Bedarf Bereichstags zu.
+
+10. Klicken Sie auf **Token erneuern**. Es wird eine Bestätigung angezeigt, dass das Token erneuert wurde.   
     ![Screenshot der Bestätigung](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
 ## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>Löschen eines Tokens für die automatische Geräteregistrierung aus Intune

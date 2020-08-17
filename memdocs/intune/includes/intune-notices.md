@@ -4,27 +4,24 @@ description: Datei einfügen
 author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/30/2020
+ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
-ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
+ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87507620"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051626"
 ---
 Diese Hinweise enthalten wichtige Informationen, die Ihnen bei der Vorbereitung auf künftige Änderungen und Features im Zusammenhang mit Intune helfen können.
 
-### <a name="microsoft-intune-support-for-windows-10-mobile-ending--3544938--"></a>Ende des Microsoft Intune-Supports für Windows 10 Mobile<!--3544938-->
-Der grundlegende Microsoft-Support für Windows 10 Mobile endet im Dezember 2019. Wie in diesem Supporthinweis erwähnt, erlischt für Benutzer von Windows 10 Mobile der Anspruch auf neue Sicherheitsupdates, nicht sicherheitsrelevante Hotfixes, kostenlose Supportoptionen oder Onlineupdates für technische Inhalte von Microsoft. Auf Grundlage der umfassenden Mobile-Betriebssystemunterstützung stellt Microsoft Intune die Unterstützung sowohl für das Unternehmensportal für die Windows 10 Mobile-App als auch für das Windows 10 Mobile-Betriebssystem am 10. August 2020 ein.
+### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Die Microsoft Intune-Unterstützung für Geräte mit Windows Phone 8.1 und Windows 10 Mobile wird eingestellt<!-- 3544938, 3544909 -->
+Der Microsoft-Mainstream-Support für Windows Phone 8.1 wurde im Juli 2017 eingestellt, der erweiterte Support im Juni 2019. Die Unternehmensportal-App für Windows Phone 8.1 befindet sich seit Oktober 2017 im Unterstützungsmodus. Außerdem wird am 20. Februar 2020 die Microsoft Intune-Unterstützung für Windows Phone 8.1 eingestellt. 
 
-#### <a name="how-does-this-affect-me"></a>Wie wirkt sich das auf mich aus?
-Wenn Sie in Ihrer Organisation Windows 10 Mobile-Geräte im Einsatz haben, können Sie bis zum 10. August 2020 neue Geräte registrieren, Richtlinien und Apps hinzufügen oder entfernen oder beliebige Verwaltungseinstellungen aktualisieren. Nach dem 10. August sind keine neue Registrierungen mehr möglich, und die Windows 10 Mobile-Verwaltung wird schließlich aus der Intune-Benutzeroberfläche entfernt. Geräte werden nicht mehr in den Intune-Dienst eingecheckt, und Geräte- und Richtliniendaten werden gelöscht.  
+Der grundlegende Microsoft-Support für Windows 10 Mobile endet im Dezember 2019. Wie in diesem Supporthinweis erwähnt, erlischt für Benutzer von Windows 10 Mobile der Anspruch auf neue Sicherheitsupdates, nicht sicherheitsrelevante Hotfixes, kostenlose Supportoptionen oder Onlineupdates für technische Inhalte von Microsoft. Auf Grundlage der umfassenden Mobile-Betriebssystemunterstützung stellt Microsoft Intune die Unterstützung sowohl für das Unternehmensportal für die Windows 10 Mobile-App als auch für das Windows 10 Mobile-Betriebssystem am 10. August 2020 ein.
 
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Was muss ich als Vorbereitung auf diese Veränderung tun?
-Sie können Ihre Intune-Berichterstellung überprüfen, um zu sehen, welche Geräte oder Benutzer möglicherweise betroffen sind. Wechseln Sie zu **Geräte** > **Alle Geräte**, und filtern Sie nach „Betriebssystem“. Sie können weitere Spalten hinzufügen, um besser bestimmen zu können, welche Benutzer in Ihrer Organisation Geräte mit Windows 10 Mobile verwenden. Fordern Sie Ihre Endbenutzer auf, ihre Geräte zu aktualisieren oder die Geräte nicht mehr für den Unternehmenszugang zu verwenden.
-
+Ab dem 10. August treten bei Registrierungen von Windows Phone 8.1- und Windows 10 Mobile-Geräten Fehler auf, und Windows Mobile-Profiltypen werden aus der Intune-Benutzeroberfläche entfernt. Bereits registrierte Geräte werden nicht mehr in den Intune-Dienst eingecheckt, und Geräte- und Richtliniendaten werden gelöscht.
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Ende der Unterstützung für die Legacy-PC-Verwaltung
 

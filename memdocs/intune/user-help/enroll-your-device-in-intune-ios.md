@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a8d48235141c0b5ad07fbdce4d24e894f8103e6f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882411"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048037"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Einrichten des iOS-Gerätezugriffs auf Unternehmensressourcen  
 
@@ -35,12 +35,12 @@ Sobald Ihr Gerät registriert ist, gilt es als *verwaltet*. Ihre Organisation ka
 > [!NOTE]
 > Die von unserem Dienst gesammelten Daten werden keinesfalls an Dritte verkauft.  
 
-Um auf Ihrem Gerät auf Ihre Geschäfts-, Schul- oder Uniressourcen zugreifen zu können, müssen Sie Ihr Gerät entsprechend der von Ihrer Organisation bevorzugten Einstellungen konfigurieren. In diesem Artikel wird beschrieben, wie Sie mithilfe des Unternehmensportals Ihr Gerät registrieren und die Einstellungsanforderungen Ihrer Organisation erfüllen können.  
+Um auf Ihrem Gerät auf Ihre Geschäfts-, Schul- oder Uniressourcen zugreifen zu können, müssen Sie Ihr Gerät entsprechend der von Ihrer Organisation bevorzugten Einstellungen konfigurieren. In diesem Artikel wird beschrieben, wie Sie mithilfe des Unternehmensportals Ihr Gerät registrieren und Ihre Zugriffsanforderungen erfüllen.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
-> Wenn Sie versucht haben, in der E-Mail-App auf Unternehmens-E-Mails zuzugreifen und aufgefordert wurden, Ihr Gerät verwalten zu lassen, sind Sie hier richtig. Befolgen Sie die untenstehenden Anweisungen, um über Ihr iOS-Gerät den Zugriff auf Ihre E-Mails und andere Unternehmensressourcen zu ermöglichen.  
+> Wenn Sie versucht haben, in der E-Mail-App auf Ihre geschäftlichen E-Mails zuzugreifen und aufgefordert wurden, Ihr Gerät verwalten zu lassen, sind Sie hier richtig. Befolgen Sie die folgenden Anweisungen, um den Zugriff auf Ihre E-Mails und andere Arbeitsressourcen auf Ihrem iOS-Gerät zurückzuerlangen.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Vorteile der Unternehmensportal-App  
@@ -56,13 +56,17 @@ Wenn Ihre Organisation nach der Registrierung eine neue Sicherheitsanforderung, 
 
 Weitere Informationen zur Registrierung finden Sie unter [Was geschieht, wenn ich die Unternehmensportal-App installiere und mein Gerät registriere?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
+## <a name="prerequisties"></a>Voraussetzungen  
+
+* Navigieren Sie zum App Store, um die [Intune-Unternehmensportal-App](install-and-sign-in-to-the-intune-company-portal-app-ios.md) auf Ihr Gerät herunterzuladen und zu installieren. 
+* Eine stabile WLAN-Verbindung, bis alle Schritte abgeschlossen sind
+* Zugriff auf den Safari-Webbrowser auf Ihrem Gerät
+
 ## <a name="enroll-your-ios-device"></a>Registrieren Ihres iOS-Geräts  
 
-Navigieren Sie zum App Store, um die [Intune-Unternehmensportal-App](install-and-sign-in-to-the-intune-company-portal-app-ios.md) auf Ihr Gerät herunterzuladen und zu installieren. Außerdem müssen Sie während der Registrierung über eine WLAN-Verbindung verfügen und Zugriff auf Safari haben. 
+Eine Unterbrechung von mehr als einigen Minuten während der Registrierung kann dazu führen, dass die Unternehmensportal-App das Setup schließt oder beendet. Wenn dies geschieht, öffnen Sie die App wieder, und versuchen Sie es noch einmal.  
 
-Eine Unterbrechung von mehr als einigen Minuten während der Registrierung kann dazu führen, dass die App das Setup schließt oder beendet. Öffnen Sie in diesem Fall die Unternehmensportal-App, und wiederholen Sie den Vorgang.  
-
-1. Öffnen Sie das Unternehmensportal, und melden Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto an.  
+1. Öffnen Sie die Unternehmensportal-App, und melden Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto an.  
 
 2. Wenn Sie gefragt werden, ob Sie Benachrichtigungen vom Unternehmensportal empfangen möchten, tippen Sie auf **Zulassen.** Das Unternehmensportal informiert Sie anhand von Benachrichtigungen, wenn z.B. Ihre Geräteeinstellungen aktualisiert werden müssen.  
 

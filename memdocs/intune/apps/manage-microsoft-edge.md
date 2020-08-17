@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35ee8b225abe48aa4b8b0ca78b9e5b137d0721f6
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758362"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912550"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Verwalten des Webzugriffs mithilfe von Microsoft Edge für iOS und Android mit Microsoft Intune
 
@@ -114,7 +114,7 @@ Dieses Konfigurationsszenario funktioniert nur mit registrierten Geräten. Aller
 
 ## <a name="general-app-configuration-scenarios"></a>Allgemeine App-Konfigurationsszenarien
 
-Microsoft Edge für iOS und Android bietet Administratoren die Möglichkeit, die Standardkonfiguration für verschiedene In-App-Einstellungen festzulegen. Diese Funktion wird derzeit nur angeboten, wenn Microsoft Edge für iOS und Android eine Intune-App-Schutzrichtlinie auf das Geschäfts-, Schul- oder Unikonto angewendet hat, das bei der App angemeldet ist.
+Microsoft Edge für iOS und Android bietet Administratoren die Möglichkeit, die Standardkonfiguration für verschiedene In-App-Einstellungen festzulegen. Diese Funktion wird derzeit nur angeboten, wenn Microsoft Edge für iOS und Android eine Richtlinie für den Intune-App-Schutz auf das Geschäfts-, Schul- oder Unikonto angewendet hat, das bei der App angemeldet ist, und die App-Einstellungen über eine App Configuration-Richtlinie für verwaltete Apps ausgeliefert werden.
 
 > [!IMPORTANT]
 > Microsoft Edge für Android unterstützt keine Chromium-Einstellungen, die in Managed Google Play verfügbar sind.
@@ -246,12 +246,12 @@ Microsoft Edge für Android kann mit den folgenden Einstellungen als Kiosk-App a
 |    Key    |    Wert    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **TRUE**: aktiviert den Kioskmodus für Microsoft Edge für Android<br>**FALSE** (Standard): deaktiviert den Kioskmodus    |
-|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **TRUE**: zeigt die Adressleiste im Kioskmodus an<br> **FALSE** (Standard): blendet die Adressleiste im Kioskmodus aus    |
-|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **TRUE**: zeigt die untere Aktionsleiste im Kioskmodus an<br> **FALSE** (Standard): blendet die untere Leiste im Kioskmodus aus    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **TRUE**: zeigt die Adressleiste im Kioskmodus an<br> **false** (Standard): blendet die Adressleiste aus, wenn der Kioskmodus aktiviert ist    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **TRUE**: zeigt die untere Aktionsleiste im Kioskmodus an<br> **false** (Standard): blendet die untere Leiste aus, wenn der Kioskmodus aktiviert ist    |
 
 ## <a name="data-protection-app-configuration-scenarios"></a>App-Konfigurationsszenarien für Datenschutz
 
-Microsoft Edge für iOS und Android unterstützt App-Konfigurationsrichtlinien für die folgenden Datenschutzeinstellungen, sofern die App von Microsoft Endpoint Manager mit einer Intune-App-Schutzrichtlinie verwaltet wird, die für das bei der App angemeldete Geschäfts-, Schul- oder Unikonto gilt:
+Wenn die App vom Microsoft Endpoint Manager mit einer Richtlinie für den Intune-App-Schutz verwaltet wird, die für das bei der App angemeldete Geschäfts-, Schul- oder Unikonto gilt, und die Richtlinieneinstellungen über eine App Configuration-Richtlinie für verwaltete Apps ausgeliefert werden, unterstützt Microsoft Edge für iOS und Android App-Konfigurationsrichtlinien für die folgenden Datenschutzeinstellungen:
 
 - Verwalten der Kontosynchronisierung
 - Verwalten eingeschränkter Websites

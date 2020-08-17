@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7ce384a835bbc4b8d990bbd3ebf93b812647aa1d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9ef18bc6554f5db364eaf320c66da12e7a5ffe7d
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882237"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866161"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Beheben einer von SandBlast Mobile Protect erkannten Bedrohung
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-ios"></a>Beheben einer von SandBlast Mobile Protect erkannten Bedrohung unter iOS
 
 SandBlast Mobile Protect ist ein Mobile Threat Defender-Dienst, der potenzielle Bedrohungen auf Ihren iOS-Geräten identifiziert und analysiert. Anschließend wird ein Bericht über die Bedrohungen erstellt, sodass Sie sich diese in der Unternehmensportal-App ansehen können. Bedrohungen werden in der App als ungelöste Probleme angezeigt, die auf fehlende Konformität hinweisen. Solange diese Bedrohungen vorhanden sind, können Sie folgende Aktionen möglicherweise nicht ausführen:   
 

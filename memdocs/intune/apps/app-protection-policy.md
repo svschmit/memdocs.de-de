@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 08/06/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502594"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997981"
 ---
 # <a name="app-protection-policies-overview"></a>Übersicht über App-Schutzrichtlinien
 
@@ -323,6 +323,11 @@ Zweck dieses Verfahrens ist es, die Daten Ihrer Organisation innerhalb der App u
   
 ### <a name="ios-share-extension"></a>iOS-Freigabeerweiterung
 Mithilfe der iOS/iPadOS-Freigabeerweiterung können Geschäfts-, Schul- oder Unidaten in nicht verwalteten Apps geöffnet werden, auch wenn die Datenübertragungsrichtlinie auf **Nur verwaltete Apps** oder **Keine Apps** festgelegt ist. Die Intune-App-Schutzrichtlinie kann die iOS/iPadOS-Freigabeerweiterung nicht steuern, ohne das Gerät zu verwalten. Daher _**verschlüsselt Intune „unternehmenseigene“ Daten, bevor diese außerhalb der App freigegeben werden**_. Sie können dieses Verschlüsselungsverhalten überprüfen, indem Sie versuchen, eine „unternehmenseigene“ Datei außerhalb der verwalteten App zu öffnen. Die Datei sollte verschlüsselt sein und außerhalb der verwalteten App nicht geöffnet werden können.
+
+### <a name="universal-links-support"></a>Unterstützung für universelle Links
+Standardmäßig wird der Zugriff auf nicht autorisierte Anwendungsinhalte durch Intune-App-Schutz-Richtlinien verhindert. Für iOS/iPadOS gibt es Funktionen zum Öffnen bestimmter Inhalte oder Anwendungen mit [universellen Links](https://developer.apple.com/ios/universal-links/). 
+
+Benutzer können die universellen Links einer App deaktivieren, indem sie in Safari zu diesen Links navigieren und auf **In neuer Registerkarte öffnen** oder **Öffnen** klicken. Es ist wichtig, die universellen Links erneut zu aktivieren, um universelle Links mit Intune-App-Schutz-Richtlinien zu verwenden. Der Endbenutzer muss in Safari zu **Öffnen in** <***App-Name***> navigieren, nachdem er lange auf einen entsprechenden Link geklickt hat. Dadurch wird jede zusätzliche geschützte App aufgefordert, alle universellen Links an die geschützte Anwendung auf dem Gerät weiterzuleiten.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Mehrere Zugriffseinstellungen des Intune-App-Schutzes für die gleiche Gruppe von Apps und Benutzern
 Intune-App-Schutzrichtlinien für den Zugriff werden in einer bestimmten Reihenfolge auf Endbenutzergeräten angewendet, wenn die Benutzer versuchen, über ihr Unternehmenskonto auf eine App zuzugreifen. In der Regel hat ein Zurücksetzungsvorgang Vorrang vor einem Block. Verwerfbare Warnungen werden erst als letztes berücksichtigt. Im Anschluss an die Einstellung, die dem Benutzer den Zugriff verweigert, wird z. B. eine Einstellung der mindestens erforderlichen iOS/iPadOS-Version angewendet, die den Benutzer auffordert, ein Update des iOS/iPadOS-Betriebssystems auszuführen (wenn dies auf den Benutzer/die App zutrifft). In diesem Szenario konfiguriert der IT-Administrator die Einstellung für die mindestens erforderliche iOS-Version auf Version 11.0.0.0 und die mindestens erforderliche iOS-Version, die nur für Warnungen gilt, auf 11.1.0.0. Gleichzeitig versucht das Gerät, auf dem noch die iOS-Version 10 installiert ist, auf die App zuzugreifen. In Folge dessen wird der Endbenutzer basierend auf restriktiveren Einstellungen für die mindestens erforderliche iOS-Version blockiert und erhält keinen Zugriff.

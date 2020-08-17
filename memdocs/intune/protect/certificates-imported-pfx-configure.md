@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d09f3a2e734709f769aebcd4e8aab4fec774d4fc
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 630d270202f1064c9e80e7cb87df3929138ee54a
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461826"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048105"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden importierter PKCS-Zertifikate mit Intune
 
@@ -56,7 +56,8 @@ Wenn Sie importierte PKCS-Zertifikate mit Intune verwenden möchten, müssen Sie
 
 - **PFX-Zertifikatconnector für Microsoft Intune:**
 
-  Jeder Intune-Mandant unterstützt eine einzelne Instanz dieses Connectors. Sie können diesen Connector auf demselben Server wie eine Instanz des Microsoft Intune Certificate Connectors installieren.
+  Jeder Intune-Mandant unterstützt mehrere Instanzen dieses Connectors. Stellen Sie sicher, dass jeder Connector Zugriff auf den privaten Schlüssel hat, mit dem die Kennwörter der hochgeladenen PFX-Dateien verschlüsselt werden.
+  Sie können diesen Connector auf demselben Server wie eine Instanz des Microsoft Intune Certificate Connectors installieren.
 
   Der Connector verarbeitet Anforderungen für PFX-Dateien, die in Intune importiert werden, um E-Mails eines bestimmten Benutzers mit S/MIME zu verschlüsseln.
 

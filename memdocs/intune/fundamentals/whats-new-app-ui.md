@@ -1,12 +1,12 @@
 ---
-title: Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune
+title: Aktualisierungen für die Benutzeroberfläche für Endbenutzer-Apps in Intune | Microsoft-Dokumentation
 titleSuffix: Microsoft Intune
 description: Erfahren Sie, was sich an der Benutzeroberfläche für Apps geändert hat, die auf Endbenutzergeräten mit Microsoft Intune verwendet werden können.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740871"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048156"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune
 
@@ -34,6 +34,13 @@ Lernen Sie die neuesten Updates für die Microsoft Intune-Apps kennen. Wir verbe
 
 Wenn Sie ein Mitarbeiter oder Kursteilnehmer sind, sollten Sie sich die Screenshots und Links zur Hilfedokumentation für das Unternehmensportal ansehen. Weitere Informationen zur Benutzung der Unternehmensportal-App finden Sie in der [Benutzerhilfe-Dokumentation für das Unternehmensportal](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+## <a name="week-of-august-10-2020"></a>Woche vom 10. August 2020
+
+### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions---7414768---"></a>Verbesserungen an der Seite „Geräteeinstellungen aktualisieren“ in der Unternehmensportal-App für Android zur Anzeige von Beschreibungen<!-- 7414768 -->
+
+In der Unternehmensportal-App auf Android-Geräten werden auf der Seite **Geräteeinstellungen aktualisieren** die Einstellungen aufgelistet, die aktualisiert werden müssen, um die Konformität sicherzustellen. Benutzer können das Problem erweitern, um weitere Informationen sowie die Schaltfläche **Lösen** anzuzeigen.
+
+Diese Benutzeroberfläche wurde verbessert. Die aufgeführten Einstellungen sind jetzt von vornherein aufgeklappt und zeigen die Beschreibung sowie die Schaltfläche **Lösen** an (sofern verfügbar). Zuvor waren die Probleme standardmäßig zugeklappt. Dieses neue Standardverhalten reduziert die Anzahl von notwendigen Klicks, sodass Benutzer Probleme schneller beheben können.
 
 ## <a name="week-of-june-8-2020"></a>Woche vom 8. Juni 2020 
 
