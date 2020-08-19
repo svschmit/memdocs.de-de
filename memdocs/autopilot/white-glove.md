@@ -13,12 +13,12 @@ ms.audience: itpro
 author: greg-lindsay
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: ac0b8d5262e774902dc79dace5c94e49002e2569
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b86c59b2ef38ea54dd2d7bc0d0d237aeafc30b02
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252003"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559552"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Windows Autopilot für White-Glove-Bereitstellung
 
@@ -34,9 +34,7 @@ Bei **Windows Autopilot für die Bereitstellung eines weißen**handlerprozesses 
 
  ![OEM](images/wg02.png)
 
-Bei White-Glove-bereit Stellungen wird Microsoft InTune in Windows 10, Version 1903 und höher, verwendet. Solche bereit Stellungen bauen auf vorhandenen Windows Autopilot [-benutzergesteuerten Szenarios](user-driven.md) auf und unterstützen Szenarios im benutzergesteuerten Modus für beides:
-- Azure Active Directory beitreten
--  Azure Active Directory beitreten
+Bei White-Glove-bereit Stellungen wird Microsoft InTune in Windows 10, Version 1903 und höher, verwendet. Solche bereit Stellungen bauen auf vorhandenen Windows Autopilot [-benutzergesteuerten Szenarios](user-driven.md) auf und unterstützen Szenarios im benutzergesteuerten Modus sowohl für Azure Active Directory verbundene als auch für hybride Azure Active Directory verbundene Geräte.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
