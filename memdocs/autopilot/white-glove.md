@@ -13,12 +13,12 @@ ms.audience: itpro
 author: greg-lindsay
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b86c59b2ef38ea54dd2d7bc0d0d237aeafc30b02
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: df7b4bc3cbac23024dc8d108a91defebbf6dde38
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559552"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614691"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Windows Autopilot für White-Glove-Bereitstellung
 
@@ -59,7 +59,7 @@ Stellen Sie sicher, dass Sie bereits vorhandene Windows Autopilot-benutzergesteu
 
 Wenn diese Szenarien nicht vollständig ausgeführt werden können, ist die Bereitstellung von Windows Autopilot für weiß Handschuhe ebenfalls nicht erfolgreich, da Sie zusätzlich zu diesen Szenarien aufbaut.
 
-Bevor Sie den weißen Hand Schuh Prozess in der Bereitstellung-Dienst Einrichtung starten, müssen Sie eine zusätzliche Autopilot-Profileinstellung mithilfe Ihres rintune-Kontos konfigurieren:
+Bevor Sie den weißen Hand Schuh Prozess in der Bereitstellung-Dienst Einrichtung starten, müssen Sie eine zusätzliche Autopilot-Profileinstellung mithilfe Ihres InTune-Kontos konfigurieren:
 
  ![weißen Handschuh zulassen](images/allow-white-glove-oobe.png)
 
