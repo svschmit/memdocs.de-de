@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9c1431105bdba9731bda4599e310889bfbf86a2c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461435"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252253"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Erstellen einer Konformitätsrichtlinie in Microsoft Intune
 
@@ -53,7 +53,6 @@ Stellen Sie zum Verwenden von Konformitätsrichtlinien folgendes sicher:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Registrieren Sie Geräte in Intune (nur dann können Sie den Konformitätsstatus ermitteln).
 
@@ -70,7 +69,6 @@ Stellen Sie zum Verwenden von Konformitätsrichtlinien folgendes sicher:
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
-   - *Windows Phone 8.1*
    - *Windows 8.1 und höher*
    - *Windows 10 und höher*
 
@@ -89,7 +87,7 @@ Stellen Sie zum Verwenden von Konformitätsrichtlinien folgendes sicher:
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
-   - [Windows Phone 8.1, Windows 8.1 und höher](compliance-policy-create-windows-8-1.md)
+   - [Windows 8.1 und höher](compliance-policy-create-windows-8-1.md)
    - [Windows 10 und höher](compliance-policy-create-windows.md)  
 
 6. Auf der Registerkarte **Standorte** können Sie die Konformität basierend auf dem Standort des Geräts erzwingen. Sie können vorhandene Standorte auswählen. Wenn noch kein Standort verfügbar ist, finden Sie weitere Informationen unter [Verwenden von Standorten (Netzwerkfence)](use-network-locations.md).

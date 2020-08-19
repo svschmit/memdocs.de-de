@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: bd1cb0445ceb4c9434b93949973125422aa1df19
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093290"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146421"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Erstellen eines Geräteprofils in Microsoft Intune
 
@@ -52,7 +52,6 @@ Wählen Sie Ihre Plattform aus, wenn Sie ein Profil erstellen (**Konfigurationsp
 - **macOS**
 - **Windows 10 und höher**
 - **Windows 8.1 und höher**
-- **Windows Phone 8.1**
 
 Wählen Sie dann den Profiltyp aus. Die konfigurierbaren Einstellungen variieren je nach ausgewählter Plattform. In den folgenden Artikeln werden die Einstellungen für die verschiedenen Profiltypen beschrieben:
 

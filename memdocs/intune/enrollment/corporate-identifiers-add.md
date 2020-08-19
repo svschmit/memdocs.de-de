@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
-ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
+ms.openlocfilehash: 3e999cb66c42bd0e04c76cb13689122df187f2f6
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87473677"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252723"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifizieren von Geräten als unternehmenseigen
 
@@ -49,7 +49,7 @@ Dieses Feature wird für folgende Plattformen unterstützt:
 
 | Plattform | IMEI-Nummern | Seriennummern |
 |---|---|---|
-| Windows | Unterstützt (Windows Phone) | Nicht unterstützt |
+| Windows | Nicht unterstützt | Nicht unterstützt |
 | iOS/macOS | Nicht unterstützt (siehe „Wichtig“ weiter unten)  | Unterstützt |
 | Vom Geräteadministrator verwaltetes Android-Betriebssystem, Version 10 | Nicht unterstützt | Nicht unterstützt |
 | Android Enterprise-Arbeitsprofil | Nicht unterstützt | Unterstützt |

@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/11/2020
-ms.topic: how-to
+ms.date: 08/12/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: ccbd923ba1110f99c57b499115a41a03ec3317c1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428626"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252808"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Hinzufügen von Apps zu Microsoft Intune 
 
@@ -54,7 +54,6 @@ Die folgende Tabelle führt die verschiedenen App-Typen auf und erläutert, wie 
 | Android Store-Apps  | Store-App  | Wählen Sie **Android** als **App-Typ** aus, und geben Sie die Google Play Store-URL für die App ein. |
 | Android Enterprise-Apps  | Store-App  | Wählen Sie **Android** als **App-Typ** aus, und geben Sie die URL für die App im verwalteten Google Play Store ein. <sup>1</sup> |
 | iOS/iPadOS Store-Apps  | Store-App  | Wählen Sie **iOS** als **App-Typ** aus, suchen Sie nach der App, und wählen Sie die App in Intune aus. |
-| Windows Phone 8.1 Store-Apps  | Store-App  | Wählen Sie **Windows Phone 8.1** als **App-Typ** aus, und geben Sie die Microsoft Store-URL für die App ein. |
 | Microsoft Store-Apps  | Store-App  | Wählen Sie **Windows** als **App-Typ** aus, und geben Sie die Microsoft Store-URL für die App ein. |
 | Verwaltete Google Play-Apps | Store-App  | Wählen Sie **Verwaltetes Google Play** als **App-Typ** aus, suchen Sie nach der App, und wählen Sie die App in Intune aus. |
 | Office 365-Apps für Windows 10  | Store-App (Office 365) | Wählen Sie **Windows 10** unter **Microsoft 365-Apps** als **App-Typ** aus, und wählen Sie dann die Office 365-App aus, die Sie installieren möchten.  |
@@ -63,7 +62,6 @@ Die folgende Tabelle führt die verschiedenen App-Typen auf und erläutert, wie 
 | Microsoft Edge, Version 77 und höher, für macOS | Store-App | Wählen Sie **macOS** unter **Microsoft Edge, Version 77 und höher** als **App-Typ** aus. |
 | Branchenspezifische Android-Apps | LOB-App | Wählen Sie **Branchenspezifische App** als **App-Typ** aus, wählen Sie **App-Paketdatei** aus, und geben Sie dann eine Android-Installationsdatei mit der Erweiterung **APK** an.  |
 | Branchenspezifische iOS/iPadOS-Apps | LOB-App | Wählen Sie **Branchenspezifische App** als **App-Typ** aus, klicken Sie auf **App-Paketdatei**, und geben Sie dann eine iOS/iPadOS-Installationsdatei mit der Erweiterung **IPA** ein.  |
-| Branchenspezifische Windows Phone-Apps | LOB-App | Wählen Sie **Branchenspezifische App** als **App-Typ** aus, wählen Sie die **App-Paketdatei** aus, und geben Sie dann eine Windows Phone-Installationsdatei mit der Erweiterung **XAP** an.  |
 | Branchenspezifische Windows-Apps | LOB-App | Wählen Sie **Branchenspezifische App** als App-Typ und die **App-Paketdatei** aus, und geben Sie dann eine Windows-Installationsdatei mit der Erweiterung **.msi**, **.appx**, **.appxbundle**, **.msix** oder **.msixbundle** an. |
 | Integrierte iOS-/iPadOS-App  | Integrierte App | Wählen Sie **Integrierte App** als **App-Typ** aus, und wählen Sie dann aus der Liste der bereitgestellten Apps die gewünschte integrierte App aus.  |
 | Integrierte Android-App  | Integrierte App | Wählen Sie **Integrierte App** als **App-Typ** aus, und wählen Sie dann aus der Liste der bereitgestellten Apps die gewünschte integrierte App aus.  |
@@ -221,8 +219,6 @@ Wie Sie Apps für jede Plattform in Intune hinzufügen, erfahren Sie unter:
 - [iOS-Branchen-Apps](lob-apps-ios.md)
 - [Branchenspezifische macOS-Apps](lob-apps-macos.md)
 - [Web-Apps (für alle Plattformen)](web-app.md)
-- [Windows Phone 8.1 Store-Apps](store-apps-windows-phone-8-1.md)
-- [Branchenspezifische Windows Phone-Apps](lob-apps-windows-phone.md)
 - [Microsoft Store-Apps](store-apps-windows.md)
 - [Branchenspezifische Windows-Apps](lob-apps-windows.md)
 - [Office 365 apps for Windows 10 (Office 365-Apps für Windows 10)](apps-add-office365.md)

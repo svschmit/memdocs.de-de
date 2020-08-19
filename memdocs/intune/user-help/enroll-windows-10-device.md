@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cffdadab0518fbc6a52d0f2bf60752c165fd1c3e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881498"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179586"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrieren von Windows 10-Geräten mit dem Intune-Unternehmensportal
 
@@ -37,7 +37,7 @@ Windows 10 wird von verschiedenen Gerätetypen unterstützt (einschließlich Des
 ## <a name="enroll-windows-10-version-1607-and-later-device"></a>Registrieren von Windows 10-Geräten (Version 1607 und höher) 
 In diesen Schritten wird beschrieben, wie Sie ein Windows 10-Gerät (Version 1607 und höher) registrieren.  
 
-1. Öffnen Sie das **Startmenü**. Wenn Sie ein mobiles Windows 10-Gerät verwenden, rufen Sie die Liste **Alle Apps** auf.
+1. Öffnen Sie das **Startmenü**. 
 
 2. Öffnen Sie die App **Einstellungen**. Wenn die App in der Liste Ihrer Apps noch nicht verfügbar ist, navigieren Sie zur Suchleiste und geben „Einstellungen“ ein.
 
@@ -72,7 +72,7 @@ Können Sie immer noch nicht auf Ihre Geschäfts-, Schul- oder Uni-E-Mails, -Dat
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Registrieren von Windows 10-Geräten (Version 1511 und früher)  
 In diesen Schritten wird beschrieben, wie Sie ein Windows 10-Gerät (Version 1511 und früher) registrieren.  
 
-1. Öffnen Sie das **Startmenü**. Wenn Sie ein mobiles Windows 10-Gerät verwenden, rufen Sie die Liste **Alle Apps** auf.
+1. Öffnen Sie das **Startmenü**. 
 
 2. Öffnen Sie die App **Einstellungen**. Wenn die App in der Liste Ihrer Apps noch nicht verfügbar ist, navigieren Sie zur Suchleiste und geben „Einstellungen“ ein.
 

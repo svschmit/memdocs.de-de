@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 649b9417f349509e4d1630d0cfecfe8e5b6b1430
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365422"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146489"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Erstellen von VPN-Profilen zum Herstellen einer Verbindung mit VPN-Servern in Intune
 
@@ -37,9 +37,7 @@ Angenommen, Sie möchten z. B. alle iOS-/iPadOS-Geräte mit den Einstellungen k
 >
 > * Android 4 und höher
 > * Registrierte Geräte unter Windows 8.1 und höher
-> * Windows Phone 8.1 und höher
 > * Registrierte Geräte unter Windows 10 Desktop
-> * Windows 10 Mobile
 > * Windows Holographic for Business
 
 ## <a name="vpn-connection-types"></a>VPN-Verbindungstypen
@@ -57,7 +55,6 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Android-Geräteadministrator
@@ -90,7 +87,6 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -115,7 +111,6 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Android-Geräteadministrator
@@ -125,7 +120,6 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Zscaler
   - Android Enterprise-Arbeitsprofile: Verwenden von [App-Konfigurationsrichtlinien](../apps/app-configuration-vpn-ae.md)
@@ -149,7 +143,6 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
       - **macOS**
       - **Windows 10 und höher**
       - **Windows 8.1 und höher**
-      - **Windows Phone 8.1**
     - **Profil**: Wählen Sie **VPN** aus.
 
 4. Wählen Sie **Erstellen** aus.
@@ -167,7 +160,6 @@ Sie können VPN-Profile mit den folgenden Verbindungstypen erstellen:
     - [macOS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md) (einschließlich Windows Holographic for Business)
     - [Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. Wählen Sie **Weiter** aus.
 9. Weisen Sie in **Bereichstags** (optional) ein Tag zu, um das Profil nach bestimmten IT-Gruppen wie `US-NC IT Team` oder `JohnGlenn_ITDepartment` zu filtern. Weitere Informationen zu Bereichstags finden Sie unter [Verwenden der RBAC und von Bereichstags für verteilte IT](../fundamentals/scope-tags.md).

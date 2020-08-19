@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/08/2018
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: dd1a5f5e20e810cfc393417d9a2bb98a2e080fec
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 481113dc64418b1579dbf9b478cd3ebd85b6cb72
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882098"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179323"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Verwenden Ihres Windows-Geräts mit dem Intune-Unternehmensportal
 
@@ -40,9 +40,8 @@ Ausführliche Schritte und Screenshots finden Sie unter [Anmelden beim Unternehm
 Das Unternehmensportal unterstützt derzeit Geräte, die unter folgenden Windows-Versionen ausgeführt werden:
 
 * Windows 10 (Home, Pro, Education, S Modus und Enterprise-Versionen)
-* Windows Phone 8.1 und höher
 * Windows 8.1 RT
-* Windows 8,1
+* Windows 8.1
 
 Auch einige andere Versionen von Windows, z.B. [Windows 10 Holographic](https://www.microsoft.com/hololens), werden vom Unternehmensportal unterstützt. Diese Versionen werden jedoch in diesem Artikel nicht behandelt, weil sie nur für sehr spezifische Zwecke konzipiert sind.
 
@@ -65,9 +64,9 @@ Auch einige andere Versionen von Windows, z.B. [Windows 10 Holographic](https://
 * [Auflösen von Einschränkungen eines Zugriffspunkts](resolve-access-point-restrictions.md)
 * [Die Registrierung meines Windows 10-Geräts funktioniert nicht](troubleshoot-your-windows-10-device-windows.md)
 * [Meine Windows-Version wird nicht unterstützt](your-windows-version-isnt-yet-supported.md)
-* [Aktualisieren meines Windows-Geräts](you-need-to-update-your-windows-device.md)
+* [Aktualisieren Ihres Windows-Geräts](you-need-to-update-your-windows-device.md)
 * [Senden von Protokollen an die bzw. von der Unternehmensportal-App](send-logs-to-your-it-admin-cp-windows.md)
-* [Senden von Protokollen von der Einstellungs-App](send-logs-to-your-it-admin-settings-windows.md)
+* [Senden von Protokollen über die Geräteeinstellungen-App](send-logs-to-your-it-admin-settings-windows.md)
 * [Installieren von Office 365 auf meinem Windows 10-Gerät](install-office-windows.md)
 * [Mein Gerät muss verschlüsselt werden](you-need-to-enable-windows-encryption.md)
 * [Mein Gerät benötigt Antischadsoftware](your-device-needs-antimalware-software.md)

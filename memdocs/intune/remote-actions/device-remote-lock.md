@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 220a2ac92d46c1279d4498c8673e2ceef28c470f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 4e558c885098b8b396ca0e6304bd18ef36e3c28b
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462047"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252236"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Remotesperren von Geräten mit Intune
 
@@ -40,8 +40,6 @@ Die **Remotesperre** wird für folgende Plattformen unterstützt:
 - Unternehmenseigene Android Enterprise-Geräte mit Arbeitsprofil
 - iOS
 - macOS
-- Windows 10 Mobile
-- Windows Phone 8.1 und höher
 
 Die **Remotesperre** wird für folgende Plattformen nicht unterstützt:
 - Windows 10 Desktop
