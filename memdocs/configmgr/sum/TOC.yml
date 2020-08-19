@@ -48,12 +48,12 @@
         - name: Automatisches Bereitstellen von Softwareupdates
           href: deploy-use/automatically-deploy-software-updates.md
         - name: Erstellen einer stufenweisen Bereitstellung
-          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
     - name: Überwachen von Softwareupdates
       href: deploy-use/monitor-software-updates.md
       items:
         - name: Verwalten und Überwachen von stufenweisen Bereitstellungen
-          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
     - name: Wartung für Softwareupdates
       href: deploy-use/software-updates-maintenance.md
     - name: Orchestrierungsgruppen

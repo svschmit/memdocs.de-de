@@ -121,7 +121,7 @@
     - name: 'Bereitstellen von WLAN-, VPN-, E-Mail- und Zertifikatprofilen'
       href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
     - name: Einstellungen zu Geschäftsbedingungen
-      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/mem/configmgr/protect/toc.json&bc=/mem/configmgr/protect/breadcrumb/toc.json
     - name: Überwachen von Schutzaktivitäten
       items:
         - name: 'Überwachen von WLAN-, E-Mail- und VPN-Profilen'

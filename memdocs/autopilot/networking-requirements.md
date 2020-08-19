@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 24566a248017caa29fb286c59161fd1ea2ad9e3c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 18031ff51e8086d29f706110946adeacb63d908e
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253337"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88590904"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Netzwerk Anforderungen für Windows Autopilot
 
@@ -65,7 +65,7 @@ Wenn nicht auf den Bereitstellungs Optimierungs Dienst zugegriffen werden kann, 
 Wenn keine Diagnosedaten gesendet werden können, wird der Autopilot-Prozess trotzdem fortgesetzt. Dienste, die von Diagnosedaten abhängen, wie z. b. Windows Analytics, funktionieren jedoch nicht.
 <tr><td><b>Netzwerkverbindungs-Statusanzeige (NCSI)<b><td>Windows muss erkennen können, dass das Gerät auf das Internet zugreifen kann. Weitere Informationen finden Sie unter <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator">Network Connection Status Indicator (NCSI)</a>.
 
-<a href="http://www.msftconnecttest.com">www.msftconnecttest.com</a> muss über DNS aufgelöst werden können und über HTTP zugänglich sein.
+<code>www.msftconnecttest.com</code> muss über DNS aufgelöst werden können und über HTTP zugänglich sein.
 <tr><td><b>Windows-Notification Services (WNS)<b><td>Dieser Dienst wird verwendet, um Windows das Empfangen von Benachrichtigungen von apps und Diensten zu ermöglichen. Weitere Informationen finden Sie unter <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>.<br>
 
 Wenn die WNS-Dienste nicht verfügbar sind, wird der Autopilot-Prozess trotzdem ohne Benachrichtigungen fortgesetzt.
@@ -76,9 +76,11 @@ Wenn kein Zugriff auf die Microsoft Store möglich ist, wird der Autopilot-Proze
 <tr><td><b>Office 365<b><td>Im Rahmen der InTune-Gerätekonfiguration ist möglicherweise die Installation von Microsoft 365-Apps für Unternehmen erforderlich. Weitere Informationen finden Sie unter <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">URLs und IP-Adressbereiche von Office 365</a>. Dieser Artikel enthält alle Office-Dienste, DNS-Namen und IP-Adressen. Außerdem sind Azure AD und andere Dienste enthalten, die sich mit den oben aufgeführten Diensten überlappen können.
 <tr><td><b>Zertifikat Sperr Listen (CRLs)<b><td>Einige dieser Dienste müssen auch Zertifikat Sperr Listen (CRLs) für Zertifikate überprüfen, die in den Diensten verwendet werden.Eine vollständige Liste finden Sie unter <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">URLs und IP-Adressbereiche für Office 365</a> und <a href="https://aka.ms/o365chains">Office 365-Zertifikat Ketten</a>.
 <tr><td><b>Azure AD-Hybrideinbindung<b><td>Das Gerät kann Hybrid Azure AD verknüpft sein. Der Computer sollte sich im Unternehmensnetzwerk befinden, damit Hybrid Azure AD beitreten funktioniert. Details finden Sie im <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">benutzergesteuerten Windows Autopilot-Modus</a> .
-<tr><td><b>Autopilot-selbstbereitstellungs Modus und Autopilot-White-Glove<b><td>Firmware-TPM-Geräte, die nur von Intel, AMD oder Qualcomm bereitgestellt werden, enthalten nicht alle benötigten Zertifikate zur Startzeit und müssen in der Lage sein, Sie bei der ersten Verwendung vom Hersteller abzurufen. Geräte mit diskreten TPM-Chips (einschließlich Geräten von einem beliebigen anderen Hersteller) werden mit diesen Zertifikaten vorinstalliert. Weitere Informationen finden Sie unter <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM-Empfehlungen</a>. Stellen Sie für jeden firmwaretpm-Anbieter sicher, dass auf diese URLs zugegriffen werden kann, damit Zertifikate erfolgreich angefordert werden können: 
+<tr><td><b>Autopilot-selbstbereitstellungs Modus und Autopilot-White-Glove<b><td>Firmware-TPM-Geräte, die nur von Intel, AMD oder Qualcomm bereitgestellt werden, enthalten nicht alle benötigten Zertifikate zur Startzeit und müssen in der Lage sein, Sie bei der ersten Verwendung vom Hersteller abzurufen. Geräte mit diskreten TPM-Chips (einschließlich Geräten von einem beliebigen anderen Hersteller) werden mit diesen Zertifikaten vorinstalliert. Weitere Informationen finden Sie unter <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM-Empfehlungen</a>. Stellen Sie für jeden firmwaretpm-Anbieter sicher, dass auf diese URLs zugegriffen werden kann, damit Zertifikate erfolgreich angefordert werden können:
 
- <br>Intel- https://ekop.intel.com/ekcertservice <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1 <br>AMD https://ftpm.amd.com/pki/aia
+ <br>Intel <code>https://ekop.intel.com/ekcertservice</code>
+ <br>SOCS <code>https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1</code>
+ <br>AMD <code>https://ftpm.amd.com/pki/aia</code>
 
 </table>
 

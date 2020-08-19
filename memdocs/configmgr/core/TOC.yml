@@ -750,7 +750,7 @@
         - name: Verwalten von Linux- und UNIX-Clients
           href: clients/manage/manage-clients-for-linux-and-unix-servers.md
         - name: Synchronisieren von Daten mit Azure Monitor
-          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context'
         - name: Warten von Macintosh-Clients
           href: clients/manage/maintain-mac-clients.md
         - name: Surface-Gerätedashboard

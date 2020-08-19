@@ -42,7 +42,7 @@
         - name: Bereitstellen von Anwendungen
           href: deploy-use/deploy-applications.md
         - name: Erstellen einer stufenweisen Bereitstellung
-          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
         - name: Genehmigen von Anwendungen
           href: deploy-use/app-approval.md
         - name: Installieren von Anwendungen auf einem Gerät
@@ -62,7 +62,7 @@
         - name: Überwachen von Anwendungen in der Konsole
           href: deploy-use/monitor-applications-from-the-console.md
         - name: Verwalten und Überwachen von stufenweisen Bereitstellungen
-          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
         - name: Überwachen der App-Verwendung mit der Softwaremessung
           href: deploy-use/monitor-app-usage-with-software-metering.md
     - name: Verwalten von Anwendungen
