@@ -302,8 +302,6 @@
           href: compliance-policy-create-windows.md
         - name: 'Konformitätsrichtlinieneinstellungen: Windows 8.1'
           href: compliance-policy-create-windows-8-1.md
-        - name: 'Konformitätsrichtlinieneinstellungen: Windows Phone 8.1'
-          href: compliance-policy-create-windows-8-1.md
     - name: Einstellungen der Endpunktsicherheitsrichtlinie
       items:
         - name: Antivirus-Richtlinieneinstellungen

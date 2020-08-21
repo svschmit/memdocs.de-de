@@ -10,12 +10,12 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2e74f969016d79254ceb8e8323b6e3914969ecc7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1a55efa6b23aa489ea65b3296e33847163a5c4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689268"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695238"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-configuration-manager"></a>Verknüpfen von Benutzern und Geräten mit Affinität zwischen Benutzer und Gerät in Configuration Manager
 
@@ -162,4 +162,4 @@ Wenn Sie die Clienteinstellung **Affinität zwischen Benutzer und Gerät automat
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sie können auch Microsoft Intune verwenden, um die primäre Verwendung eines registrierten Geräts zu ermitteln. Weitere Informationen finden Sie unter [Suchen des primären Benutzers eines Intune-Geräts](https://docs.microsoft.com/intune/find-primary-user) in der Intune-Dokumentation.
+Sie können auch Microsoft Intune verwenden, um die primäre Verwendung eines registrierten Geräts zu ermitteln. Weitere Informationen finden Sie unter [Suchen des primären Benutzers eines Intune-Geräts](/intune/find-primary-user) in der Intune-Dokumentation.

@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: df0b632ccf7939bdc897d4a456f0e6cacc7a1760
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: ff364dc248519d0027ce96fe43f4f3f6cf373e68
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525947"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692739"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>PKI-Zertifikatanforderungen für Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "87525947"
 
 Die für Configuration Manager erforderlichen PKI-Zertifikate (Public Key-Infrastruktur) sind in den folgenden Tabellen aufgeführt. Für diese Informationen wird ein grundlegendes Verständnis von PKI-Zertifikaten vorausgesetzt. Weitere Informationen finden Sie unter [Beispiel für die schrittweise Bereitstellung der PKI-Zertifikate für Configuration Manager: Windows Server 2008-Zertifizierungsstelle](example-deployment-of-pki-certificates.md).
 
-Weitere Informationen zu Active Directory-Zertifikatdiensten finden Sie unter [Übersicht über die Active Directory-Zertifikatdienste](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
+Weitere Informationen zu Active Directory-Zertifikatdiensten finden Sie unter [Übersicht über die Active Directory-Zertifikatdienste](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
 
 Informationen zur Verwendung von CNG-Zertifikaten (Cryptography API: Next Generation) mit Configuration Manager finden Sie unter [CNG-Zertifikate: Übersicht](cng-certificates-overview.md).
 

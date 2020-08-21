@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a1e19025af82c9beeed8c227871df94b4674791
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427713"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692705"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Installieren eines Cloudverteilungspunkts für Configuration Manager
 
@@ -91,7 +91,7 @@ Wenn Sie einen Cloudverteilungspunkt für die Verwendung von Windows-BranchCache
 
 - Wenn der Standortserver über eine lokale Standortsystemrolle für den Verteilungspunkt verfügt, konfigurieren Sie die Option in den Eigenschaften dieser Rolle, um **BranchCache zu aktivieren und zu konfigurieren**. Weitere Informationen finden Sie unter [Konfigurieren eines Verteilungspunkts](install-and-configure-distribution-points.md#bkmk_config-general).
 
-- Wenn der Standortserver nicht über eine Verteilungspunktrolle verfügt, installieren Sie das BranchCache-Feature in Windows. Weitere Informationen finden Sie unter [Installieren des BranchCache-Features](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
+- Wenn der Standortserver nicht über eine Verteilungspunktrolle verfügt, installieren Sie das BranchCache-Feature in Windows. Weitere Informationen finden Sie unter [Installieren des BranchCache-Features](/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
 
 Wenn Sie Inhalte bereits an einen Cloudverteilungspunkt verteilt haben und dann das BranchCache-Feature aktivieren möchten, müssen Sie das Feature vorher installieren. Verteilen Sie den Inhalt anschließend an den Cloudverteilungspunkt.
 
@@ -234,7 +234,7 @@ Konfigurieren Sie Schwellenwerte für die Menge an Daten, die Sie auf einem Vert
 Geben Sie bei der Installation für jeden Cloudverteilungspunkt Schwellenwerte an, oder verwenden Sie die Registerkarte **Warnungen** in den Eigenschaften des Cloudverteilungspunkts.  
 
 > [!NOTE]  
-> Warnungen für einen Cloudverteilungspunkt hängen von den Nutzungsstatistiken aus Azure ab. Es kann bis zu 24 Stunden dauern, bis sie verfügbar sind. Weitere Informationen zu Storage Analytics für Azure finden Sie unter [Storage Analytics](https://docs.microsoft.com/rest/api/storageservices/storage-analytics).  
+> Warnungen für einen Cloudverteilungspunkt hängen von den Nutzungsstatistiken aus Azure ab. Es kann bis zu 24 Stunden dauern, bis sie verfügbar sind. Weitere Informationen zu Storage Analytics für Azure finden Sie unter [Storage Analytics](/rest/api/storageservices/storage-analytics).  
 
 Der primäre Standort, der den Cloudverteilungspunkt überwacht, lädt stündlich Transaktionsdaten von Azure herunter. Diese Transaktionsdaten werden in der Datei `CloudDP-<ServiceName>.log` auf dem Standortserver gespeichert. Configuration Manager wertet dann diese Informationen anhand der Speicher- und Übertragungskontingente für die einzelnen Cloudverteilungspunkte aus. Wenn die Datenübertragung das für Warnungen oder kritische Warnungen angegebene Volumen erreicht oder überschreitet, generiert Configuration Manager die entsprechende Warnung.  
 
@@ -345,7 +345,7 @@ Select-AzureSubscription $azureSubscriptionName
 Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
 ```
 
-Hierbei handelt es sich um eine **diagnostics.wadcfgx**-Beispieldatei, auf die in der Variablen **public_config** im obigen PowerShell-Skript verwiesen wird. Weitere Informationen finden Sie unter [Konfigurationsschema der Azure-Diagnoseerweiterung](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
+Hierbei handelt es sich um eine **diagnostics.wadcfgx**-Beispieldatei, auf die in der Variablen **public_config** im obigen PowerShell-Skript verwiesen wird. Weitere Informationen finden Sie unter [Konfigurationsschema der Azure-Diagnoseerweiterung](/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>

@@ -10,12 +10,12 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: f9f4e1ffe8b28efda0f59e6a252f39c95e2b7749
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1434d7802eb1ed68cb0a575778bdae1e5e99c9ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240115"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694745"
 ---
 # <a name="remote-connection-profiles-in-configuration-manager"></a>Remoteverbindungsprofile in Configuration Manager
 
@@ -35,7 +35,7 @@ Configuration Manager erstellt eine Sicherheitsgruppe auf Clients: **Remote PC C
 
 ### <a name="external-dependencies"></a>Externe Abhängigkeiten  
 
-- Wenn Sie Benutzern das Herstellen einer Verbindung über das Internet ermöglichen möchten, installieren und konfigurieren Sie einen Remotedesktop-Gatewayserver. Weitere Informationen zum Installieren und Konfigurieren eines Remotedesktop-Gatewayservers finden Sie unter [Remotedesktopdienste – ortsunabhängiger Zugriff](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere).
+- Wenn Sie Benutzern das Herstellen einer Verbindung über das Internet ermöglichen möchten, installieren und konfigurieren Sie einen Remotedesktop-Gatewayserver. Weitere Informationen zum Installieren und Konfigurieren eines Remotedesktop-Gatewayservers finden Sie unter [Remotedesktopdienste – ortsunabhängiger Zugriff](/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere).
 
 - Wenn auf Clients eine hostbasierte Firewall ausgeführt wird, muss die Ausführung von „mstsc.exe“ zugelassen sein. Beim Konfigurieren eines Remoteverbindungsprofils müssen Sie die Einstellung **Windows-Firewallausnahme für Verbindungen in Windows-Domänen und privaten Netzwerken zulassen** aktivieren. Mit dieser Einstellung kann Configuration Manager die Windows-Firewall automatisch konfigurieren.
 
@@ -83,7 +83,7 @@ Wenn ein Benutzer eine Remoteverbindung zu einem Arbeitscomputer herstellt, wird
         - Abgesehen von den Punkten (`.`) zwischen Segmenten und einem Doppelpunkt (`:`) vor dem Port sind die einzigen Sonderzeichen Bindestriche (`–`) und Unterstriche (`_`).
         - Configuration Manager unterstützt nicht die Verwendung von internationalisierten Domänennamen für diesen Wert.
 
-    - **Verbindungen nur von Computern zulassen, auf denen Remotedesktop mit Authentifizierung auf Netzwerkebene ausgeführt wird**: Diese Einstellung ist standardmäßig aktiviert und bietet eine zusätzliche Sicherheitsebene für die Verbindung. Weitere Informationen finden Sie unter [Sollte ich Remotedesktop aktivieren?](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication)
+    - **Verbindungen nur von Computern zulassen, auf denen Remotedesktop mit Authentifizierung auf Netzwerkebene ausgeführt wird**: Diese Einstellung ist standardmäßig aktiviert und bietet eine zusätzliche Sicherheitsebene für die Verbindung. Weitere Informationen finden Sie unter [Sollte ich Remotedesktop aktivieren?](/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication)
 
     - Aktivieren Sie die folgenden Verbindungseinstellungen:
 
@@ -162,4 +162,4 @@ Configuration Manager enthält integrierte Berichte, mit deren Hilfe Sie Informa
 > [!IMPORTANT]  
 > Verwenden Sie ein Platzhalterzeichen (`%`), wenn Sie in den Berichten zu Konformitätseinstellungen die Parameter **Gerätefilter** und **Benutzerfilter** eingestellt haben.  
 
-Weitere Informationen zum Konfigurieren der Berichterstellung in Configuration Manager finden Sie unter [Einführung in die Berichterstellung](../../core/servers/manage/introduction-to-reporting.md).  
+Weitere Informationen zum Konfigurieren der Berichterstellung in Configuration Manager finden Sie unter [Einführung in die Berichterstellung](../../core/servers/manage/introduction-to-reporting.md).

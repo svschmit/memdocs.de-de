@@ -10,12 +10,12 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: ea1965d6cae90808156957be1c9634e4c1631aa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406689"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694524"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Erstellen eines Configuration Manager-Labs in Azure
 
@@ -66,7 +66,7 @@ Für diesen Vorgang benötigen Sie ein Azure-Abonnement, mit dem Sie folgende Ob
 
         - **Administratorbenutzername**: Der Name eines Benutzers mit Administratorrechten auf den VMs. Verwenden Sie diesen Benutzernamen für die Anmeldung bei den VMs.  
 
-        - **Administratorkennwort**: Das Kennwort muss den Komplexitätsanforderungen von Azure entsprechen. Weitere Informationen finden Sie unter [adminPassword](https://docs.microsoft.com/rest/api/compute/virtualmachines/createorupdate#osprofile).  
+        - **Administratorkennwort**: Das Kennwort muss den Komplexitätsanforderungen von Azure entsprechen. Weitere Informationen finden Sie unter [adminPassword](/rest/api/compute/virtualmachines/createorupdate#osprofile).  
 
     > [!Important]  
     > Die folgenden Einstellungen müssen für Azure festgelegt werden. Verwenden Sie die Standardwerte. Ändern Sie diese Werte nicht.  
@@ -86,7 +86,7 @@ Azure überprüft die Einstellungen und beginnt dann mit der Bereitstellung. Üb
 
 Stellen Sie eine Verbindung mit dem `<prefix>PS1`-Server her, und rufen Sie die Datei `%windir%\TEMP\ProvisionScript\PS1.json` auf, um den Status der Konfigurationsskripts anzuzeigen. Der Vorgang ist abgeschlossen, wenn alle Schritte als abgeschlossen angezeigt werden.
 
-Zum Herstellen einer Verbindung mit den VMs müssen Sie zunächst im Azure-Portal die öffentlichen IP-Adressen für die einzelnen VMs abrufen. Beim Herstellen einer Verbindung mit der VM lautet der Domänenname `contoso.com`. Verwenden Sie die Anmeldeinformationen, die Sie in der Bereitstellungsvorlage angegeben haben. Weitere Informationen finden Sie unter [Gewusst wie: Herstellen einer Verbindung mit einem virtuellen Azure-Computer unter Windows](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon).
+Zum Herstellen einer Verbindung mit den VMs müssen Sie zunächst im Azure-Portal die öffentlichen IP-Adressen für die einzelnen VMs abrufen. Beim Herstellen einer Verbindung mit der VM lautet der Domänenname `contoso.com`. Verwenden Sie die Anmeldeinformationen, die Sie in der Bereitstellungsvorlage angegeben haben. Weitere Informationen finden Sie unter [Gewusst wie: Herstellen einer Verbindung mit einem virtuellen Azure-Computer unter Windows](/azure/virtual-machines/windows/connect-logon).
 
 
 

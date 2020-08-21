@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126789"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694422"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funktionen in der Technical Preview 1806 für Configuration Manager
 
@@ -81,10 +81,10 @@ SCUP unterstützt weiterhin andere Kataloge und Szenarios. Die Liste von Katalog
 
     > [!Tip]  
     > Der Softwareupdatepunkt erfordert HTTPS, da dies eine Voraussetzung für die WSUS-APIs ist, die zum Verarbeiten der Signaturzertifikate verwendet werden. Clients müssen jedoch nicht HTTPS-fähig sein. Weitere Informationen zum Aktivieren von HTTPS für WSUS finden Sie in den folgenden Artikeln:  
-    > - [2.5 Secure WSUS with the Secure Sockets Layer Protocol (2.5 Schützen von WSUS mit dem Secure Sockets Layer-Protokoll)](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [Blogbeitrag zur Unterstützung von WSUS](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
+    > - [2.5 Secure WSUS with the Secure Sockets Layer Protocol (2.5 Schützen von WSUS mit dem Secure Sockets Layer-Protokoll)](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [Blogbeitrag zur Unterstützung von WSUS](/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Auf dem Softwareupdatepunkt (im Ordner „WSUSContent“) muss ausreichend Speicherplatz zur Verfügung stehen, um die Binärdateien des Quellinhalts für Updates der Drittanbietersoftware zu speichern. Der erforderliche Speicher variiert je nach Anbieter, Updatetypen und spezifischen Updates, die Sie für die Bereitstellung veröffentlichen. Wenn Sie den Ordner „WSUSContent“ auf ein anderes Laufwerk mit genügend freiem Speicherplatz verschieben müssen, finden Sie Informationen dazu unter [How to change the location where WSUS stores updates locally (Vorgehensweise: Ändern des Speicherorts für lokale WSUS-Updates)](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
+- Auf dem Softwareupdatepunkt (im Ordner „WSUSContent“) muss ausreichend Speicherplatz zur Verfügung stehen, um die Binärdateien des Quellinhalts für Updates der Drittanbietersoftware zu speichern. Der erforderliche Speicher variiert je nach Anbieter, Updatetypen und spezifischen Updates, die Sie für die Bereitstellung veröffentlichen. Wenn Sie den Ordner „WSUSContent“ auf ein anderes Laufwerk mit genügend freiem Speicherplatz verschieben müssen, finden Sie Informationen dazu unter [How to change the location where WSUS stores updates locally (Vorgehensweise: Ändern des Speicherorts für lokale WSUS-Updates)](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Aktivieren und Bereitstellen der Clienteinstellung [Softwareupdates von Drittanbietern aktivieren](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) in der Gruppe **Softwareupdates**.  
 
@@ -354,4 +354,4 @@ In [Configuration Manager Version 1710](../plan-design/changes/whats-new-in-vers
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen zur Installation oder dem Update der Technical Preview finden Sie unter [Technical Preview für Configuration Manager](technical-preview.md).    
+Weitere Informationen zur Installation oder dem Update der Technical Preview finden Sie unter [Technical Preview für Configuration Manager](technical-preview.md).

@@ -10,12 +10,12 @@ ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 381f9d190b1d73bbbab6142fd9587e881d0870ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2a73fff7fd2eb5d630d6047a7da6f131188f06c5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708598"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693487"
 ---
 # <a name="protect-data-and-site-infrastructure"></a>Schützen der Daten und Standortinfrastruktur
 
@@ -33,7 +33,7 @@ Sie möchten, dass Ihre Benutzer sicher auf die Ressourcen Ihrer Organisation zu
   - Microsoft Defender Application Control
 
   > [!TIP]
-  > Stellen Sie die [**Endpoint Protection**-Workload](../../comanage/workloads.md#endpoint-protection) auf Intune um, damit Sie Endpoint Protection auf gemeinsam verwalteten Windows 10-Geräten mit dem Clouddienst von Microsoft Endpoint Manager verwalten können. Weitere Informationen finden Sie unter [Endpoint Protection für Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+  > Stellen Sie die [**Endpoint Protection**-Workload](../../comanage/workloads.md#endpoint-protection) auf Intune um, damit Sie Endpoint Protection auf gemeinsam verwalteten Windows 10-Geräten mit dem Clouddienst von Microsoft Endpoint Manager verwalten können. Weitere Informationen finden Sie unter [Endpoint Protection für Microsoft Intune](/intune/endpoint-protection-windows-10).
 
 - Schützen Sie Daten, die auf lokalen Windows-Clients mit BitLocker-Laufwerkverschlüsselung (BitLocker Drive Encryption, BDE) gespeichert sind. Configuration Manager bietet eine vollständige BitLocker-Lebenszyklusverwaltung, die die Verwendung von Microsoft BitLocker-Verwaltung und -Überwachung (Microsoft BitLocker Administration and Monitoring, MBAM) ersetzen kann. Weitere Informationen finden Sie unter [Planen der BitLocker-Verwaltung](../plan-design/bitlocker-management.md).
 
@@ -43,4 +43,4 @@ Sie möchten, dass Ihre Benutzer sicher auf die Ressourcen Ihrer Organisation zu
 
 - WLAN-Profile stellen eine Reihe von Tools und Ressourcen bereit, die Sie bei der Verwaltung von Einstellungen für drahtlose Netzwerke auf Geräten in Ihrer Organisation unterstützen. Durch Bereitstellen dieser Einstellungen erleichtern Sie den Endbenutzern das Herstellen einer Verbindung mit Drahtlosnetzwerken. Weitere Informationen finden Sie unter [Erstellen von WLAN-Profilen](../deploy-use/create-wifi-profiles.md).  
 
-- Stellen Sie Geräten die Zertifikate bereit, die Benutzer zum Herstellen einer Verbindung mit Ressourcen benötigen. Weitere Informationen finden Sie unter [Zertifikatprofile](../deploy-use/introduction-to-certificate-profiles.md).  
+- Stellen Sie Geräten die Zertifikate bereit, die Benutzer zum Herstellen einer Verbindung mit Ressourcen benötigen. Weitere Informationen finden Sie unter [Zertifikatprofile](../deploy-use/introduction-to-certificate-profiles.md).

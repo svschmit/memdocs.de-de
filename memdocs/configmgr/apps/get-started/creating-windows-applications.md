@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270853"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695187"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Erstellen von Windows-Anwendungen in Configuration Manager
 
@@ -58,7 +58,7 @@ Aktivieren Sie die Option **Diese Anwendung für alle Benutzer auf dem Gerät be
 
 Configuration Manager unterstützt die Bereitstellung von App-Paketen (.msix) und App Bundles (.msixbundle) für Windows 10. Diese Formate werden von Windows 10, Version 1809 oder höher, unterstützt.
 
-- Eine Übersicht über MSIX finden Sie unter [A closer look at MSIX (MSIX von Nahem betrachtet)](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).  
+- Eine Übersicht über MSIX finden Sie unter [A closer look at MSIX (MSIX von Nahem betrachtet)](/archive/blogs/sgern/a-closer-look-at-msix).  
 
 - Informationen zum Erstellen einer neuen MSIX-App finden Sie unter [MSIX support introduced in Insider Build 17682 (Einführung der MSIX-Unterstützung in Insider Build 17682)](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
 
@@ -79,7 +79,7 @@ Konvertieren Sie Ihre vorhandenen Windows Installer-Anwendungen (MSI) in das MSI
 
   - [MSIX-Paketerstellungstool](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) aus dem Microsoft Store  
 
-  - Den [Treiber für das MSIX-Paketerstellungstool](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
+  - Den [Treiber für das MSIX-Paketerstellungstool](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 Installieren Sie keine anderen Apps oder Dienste auf diesem Gerät. Dies ist Ihr Referenzsystem.
 
@@ -104,8 +104,8 @@ Wenn der Prozess fehlschlägt, verweist die Zusammenfassungsseite auf die Protok
 
 Um diese MSIX-App zu nutzen, müssen Sie sie zunächst digital signieren, damit Clients ihr vertrauen. Weitere Informationen zu diesem Prozess finden Sie in den folgenden Artikeln:
 
-- [MSIX – MSIX-Paketerstellungstool – Signieren des MSIX-Pakets](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
-- [Signieren eines App-Pakets mit SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
+- [MSIX – MSIX-Paketerstellungstool – Signieren des MSIX-Pakets](/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
+- [Signieren eines App-Pakets mit SignTool](/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 Nachdem Sie die App signiert haben, erstellen Sie in Configuration Manager einen neuen Bereitstellungstyp für die Anwendung. Weitere Informationen finden Sie unter [Bereitstellungstypen für die Anwendung erstellen](../deploy-use/create-applications.md#bkmk_create-dt) in diesem Thema.
 
@@ -182,4 +182,4 @@ Wenn Sie diesen Bereitstellungstyp verwenden, sollten Sie die folgenden Punkte b
 
 - Computerspezifische MSI-Pakete werden für alle Benutzer des Geräts installiert.  
 
-- Configuration Manager unterstützt App-Updates. Die MSI-Produktcodes aller Versionen müssen identisch sein.  
+- Configuration Manager unterstützt App-Updates. Die MSI-Produktcodes aller Versionen müssen identisch sein.

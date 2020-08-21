@@ -10,11 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: f9e1809447f8d8ea8f6e0382575b71bfdec71fac
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854438"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695051"
 ---
 # <a name="what-is-co-management"></a>Was ist Co-Verwaltung?
 
@@ -101,15 +102,15 @@ Die Aktivierung von Co-Verwaltung selbst erfordert nicht, dass Sie Azure AD an I
 
 - Windows 10-Geräte müssen mit Azure AD verbunden sein. Sie können einem der folgenden Typen angehören:  
 
-  - [In Hybrid-Azure AD eingebunden](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), wenn das Gerät mit Ihrer lokalen Active Directory-Instanz verknüpft und für Azure Active Directory registriert ist.
+  - [In Hybrid-Azure AD eingebunden](/azure/active-directory/devices/concept-azure-ad-join-hybrid), wenn das Gerät mit Ihrer lokalen Active Directory-Instanz verknüpft und für Azure Active Directory registriert ist.
 
-  - [In Azure AD eingebunden](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) (ausschließlich). (Dieser Typ wird manchmal auch als „in die Clouddomäne eingebunden“ bezeichnet.)<!--SCCMDocs issue 605-->  
+  - [In Azure AD eingebunden](/azure/active-directory/devices/azureadjoin-plan) (ausschließlich). (Dieser Typ wird manchmal auch als „in die Clouddomäne eingebunden“ bezeichnet.)<!--SCCMDocs issue 605-->  
 
 ### <a name="intune"></a>Intune
 
-- [Einrichten von Intune](https://docs.microsoft.com/intune/setup-steps)  
+- [Einrichten von Intune](/intune/setup-steps)  
 
-- [Aktivieren der automatischen Registrierung von Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Aktivieren der automatischen Registrierung von Windows 10](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -128,7 +129,7 @@ Upgrade der Geräte auf Windows 10, Version 1709 oder höher. Weitere Informatio
 | Importieren von Apps in Configuration Manager | **Hauptadministrator** für Configuration Manager<br>Keine weiteren Azure-Rollen erforderlich |
 | Aktivieren der Co-Verwaltung in Configuration Manager | Azure AD-Benutzer<br>**Hauptadministrator** für Configuration Manager mit **allen** Bereichsberechtigungen.<!--SCCMDoc issue 626--> |
 
-Weitere Informationen über Azure-Rollen finden Sie unter [Grundlegendes zu verschiedenen Rollen](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+Weitere Informationen über Azure-Rollen finden Sie unter [Grundlegendes zu verschiedenen Rollen](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 Weitere Informationen zu Configuration Manager-Rollen finden Sie unter [Grundlagen der rollenbasierten Verwaltung](../core/understand/fundamentals-of-role-based-administration.md).
 
@@ -166,4 +167,4 @@ Weitere Informationen finden Sie unter [Überwachen der Co-Verwaltung](how-to-mo
 
 - [Weitere Informationen zur unmittelbaren Wertschöpfung und zu den ersten Schritten mit der Co-Verwaltung](quickstarts.md)  
 
-- [Tutorial: Aktivieren der Co-Verwaltung für vorhandene Configuration Manager-Clients](tutorial-co-manage-clients.md)  
+- [Tutorial: Aktivieren der Co-Verwaltung für vorhandene Configuration Manager-Clients](tutorial-co-manage-clients.md)

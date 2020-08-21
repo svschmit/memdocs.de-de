@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802054"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695340"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Genehmigen von Anwendungen in Configuration Manager
 
@@ -49,7 +49,7 @@ Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie di
 
 Ab Version 1906: Wenn Sie eine App-Anforderung in der Konsole genehmigen und dann ablehnen, können Sie sie erneut genehmigen. Die App wird auf dem Client erneut installiert, nachdem Sie sie genehmigt haben.  <!-- 4224910 -->
 
-Diesen Genehmigungsprozess können Sie mit dem PowerShell-Cmdlet [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) automatisieren. Ab Version 1902 enthält dieses Cmdlet den Parameter **InstallActionBehavior**. Verwenden Sie diesen Parameter, um festzulegen, ob die Anwendung sofort oder außerhalb der Geschäftszeiten installiert werden soll.<!-- SCCMDocs-pr issue #3418 -->
+Diesen Genehmigungsprozess können Sie mit dem PowerShell-Cmdlet [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) automatisieren. Ab Version 1902 enthält dieses Cmdlet den Parameter **InstallActionBehavior**. Verwenden Sie diesen Parameter, um festzulegen, ob die Anwendung sofort oder außerhalb der Geschäftszeiten installiert werden soll.<!-- SCCMDocs-pr issue #3418 -->
 
 Ab Version 1906 können Sie erkennen, welche Bereitstellungen eine Genehmigung erfordern. Wählen Sie eine App im Knoten **Anwendungen** aus. Wechseln Sie im Detailbereich zur Registerkarte **Bereitstellungen**. Es wird standardmäßig eine neue Spalte angezeigt: **Genehmigung erforderlich**.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: 0e9f1551f75c1cb8499c5eab846588ee6ddc1d80
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400714"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693385"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Bereitstellungspläne in Desktop Analytics
 
@@ -70,7 +70,7 @@ Während im Bereich [Objekte](about-assets.md) auch Geräte und Apps angezeigt w
 
 Die Windows-Upgradeentscheidung **Gerät ersetzen** kann einen der folgenden Gründe haben:
 
-- Eine erforderliche Windows 10-Prozessorprüfung wurde nicht bestanden. Weitere Informationen finden Sie unter [Mindesthardwareanforderungen](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
+- Eine erforderliche Windows 10-Prozessorprüfung wurde nicht bestanden. Weitere Informationen finden Sie unter [Mindesthardwareanforderungen](/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
 - Ein BIOS-Block ist vorhanden.
 - Der Arbeitsspeicher ist unzureichend.
 - Der Treiber einer für den Start erforderlichen Komponente im System wurde blockiert.
@@ -132,4 +132,4 @@ Nachdem Sie einen Bereitstellungsplan erstellt haben, stellen Sie die Produkte m
 
 - [Informationen zu Sicherheits- und Featureupdates](about-updates.md)  
 
-- [Erstellen eines Bereitstellungsplans](create-deployment-plans.md)  
+- [Erstellen eines Bereitstellungsplans](create-deployment-plans.md)

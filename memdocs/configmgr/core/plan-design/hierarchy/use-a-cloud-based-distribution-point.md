@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b488e0953648b42baa59dc347b0bc942bac291fe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987719"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692569"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Verwenden eines Cloudverteilungspunkts in Configuration Manager
 
@@ -89,7 +89,7 @@ Die Bereitstellung und der Betrieb des Cloudverteilungspunkts umfassen folgende 
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!--1322209-->
-Ab Version 1806 erstellen Sie einen Cloudverteilungspunkt mit einer **Azure Resource Manager-Bereitstellung**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) ist eine moderne Plattform zum Verwalten aller Lösungsressourcen als eine einzige Entität, die als [Ressourcengruppe](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) bezeichnet wird. Beim Bereitstellen eines Cloudverteilungspunkts mit Azure Resource Manager verwendet der Standort Azure Active Directory (Azure AD), um die erforderlichen Cloudressourcen zu authentifizieren und zu erstellen. Für diese modernisierte Bereitstellung ist kein klassisches Azure-Verwaltungszertifikat erforderlich.  
+Ab Version 1806 erstellen Sie einen Cloudverteilungspunkt mit einer **Azure Resource Manager-Bereitstellung**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) ist eine moderne Plattform zum Verwalten aller Lösungsressourcen als eine einzige Entität, die als [Ressourcengruppe](/azure/azure-resource-manager/resource-group-overview#resource-groups) bezeichnet wird. Beim Bereitstellen eines Cloudverteilungspunkts mit Azure Resource Manager verwendet der Standort Azure Active Directory (Azure AD), um die erforderlichen Cloudressourcen zu authentifizieren und zu erstellen. Für diese modernisierte Bereitstellung ist kein klassisches Azure-Verwaltungszertifikat erforderlich.  
 
 > [!Note]  
 > Dieses Feature aktiviert nicht die Unterstützung für Azure-Clouddienstanbieter (Cloud Service Providers, CSP). Die Bereitstellung von Cloudverteilungspunkten mit Azure Resource Manager unterstützt weiterhin den klassischen Clouddienst, der von CSP nicht unterstützt wird. Weitere Informationen finden Sie unter [verfügbare Azure-Dienste in Azure-CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
@@ -244,9 +244,9 @@ Ein Cloudverteilungspunkt verwendet folgende Azure-Komponenten, durch die Gebüh
 
 - Cloudverteilungspunkte verwenden je nach Bereitstellungsmodell den folgenden Standardblobspeicher:  
 
-    - Eine Azure Resource Manager-Bereitstellung verwendet lokal redundanten Speicher (LRS) von Azure. Diese Änderung reduziert die Kosten für das Speicherkonto. Die klassische Bereitstellung verwendet keine zusätzlichen Features des GRS. Weitere Informationen finden Sie unter [Lokal redundanter Speicher (LRS)](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+    - Eine Azure Resource Manager-Bereitstellung verwendet lokal redundanten Speicher (LRS) von Azure. Diese Änderung reduziert die Kosten für das Speicherkonto. Die klassische Bereitstellung verwendet keine zusätzlichen Features des GRS. Weitere Informationen finden Sie unter [Lokal redundanter Speicher (LRS)](/azure/storage/common/storage-redundancy-lrs).  
 
-    - Klassische Bereitstellungen mit Configuration Manager, Version 1810 oder früher, verwenden georedundanten Speicher (GRS) von Azure. Weitere Informationen finden Sie unter [Georedundanter Speicher (GRS)](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).  
+    - Klassische Bereitstellungen mit Configuration Manager, Version 1810 oder früher, verwenden georedundanten Speicher (GRS) von Azure. Weitere Informationen finden Sie unter [Georedundanter Speicher (GRS)](/azure/storage/common/storage-redundancy-grs).  
 
 #### <a name="other-costs"></a>Sonstige Kosten
 
@@ -375,11 +375,11 @@ Wenn Ihre Organisation ExpressRoute verwendet, isolieren Sie das Azure-Abonnemen
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>Muss ich virtuelle Azure-Computer warten?
 
-Eine Wartung ist nicht erforderlich. Der Entwurf des Cloudverteilungspunkts verwendet die Azure-Plattform als Dienst (PaaS). Mit dem von Ihnen bereitgestellten Abonnement erstellt Configuration Manager die notwendigen VMs, den Speicher und das Netzwerk. Azure sichert und aktualisiert die virtuellen Computer. Anders als bei Infrastructure-as-a-Service (IaaS) sind diese VMs kein Teil Ihrer lokalen Umgebung. Der Cloudverteilungspunkt ist ein PaaS-Dienst, mit dem die Configuration Manager-Umgebung mit der Cloud verbunden und dadurch erweitert wird. Weitere Informationen finden Sie unter [Sicherheitsvorteile eines PaaS-Clouddienstmodells](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
+Eine Wartung ist nicht erforderlich. Der Entwurf des Cloudverteilungspunkts verwendet die Azure-Plattform als Dienst (PaaS). Mit dem von Ihnen bereitgestellten Abonnement erstellt Configuration Manager die notwendigen VMs, den Speicher und das Netzwerk. Azure sichert und aktualisiert die virtuellen Computer. Anders als bei Infrastructure-as-a-Service (IaaS) sind diese VMs kein Teil Ihrer lokalen Umgebung. Der Cloudverteilungspunkt ist ein PaaS-Dienst, mit dem die Configuration Manager-Umgebung mit der Cloud verbunden und dadurch erweitert wird. Weitere Informationen finden Sie unter [Sicherheitsvorteile eines PaaS-Clouddienstmodells](/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
 
 ### <a name="does-the-cloud-distribution-point-use-azure-cdn"></a>Verwendet der Cloudverteilungspunkt Azure CDN?
 
-Azure Content Delivery Network (CDN) ist eine weltweite Lösung für die schnelle Lieferung von Inhalt mit hoher Bandbreite, indem der Inhalt an strategisch platzierten physischen Knoten auf der ganzen Welt zwischengespeichert wird. Weitere Informationen finden Sie unter [Was ist ein Content Delivery Network?](https://docs.microsoft.com/azure/cdn/cdn-overview).
+Azure Content Delivery Network (CDN) ist eine weltweite Lösung für die schnelle Lieferung von Inhalt mit hoher Bandbreite, indem der Inhalt an strategisch platzierten physischen Knoten auf der ganzen Welt zwischengespeichert wird. Weitere Informationen finden Sie unter [Was ist ein Content Delivery Network?](/azure/cdn/cdn-overview).
 
 Der Cloudverteilungspunkt von Configuration Manager unterstützt Azure CDN derzeit nicht.
 

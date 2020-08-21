@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 9209a1a948c43a21f097ba836a6761b53ddc9530
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526014"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692960"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funktionen in der Technical Preview 1703 für Configuration Manager
 
@@ -82,7 +82,7 @@ Mit Technical Preview 1703 wird nur Windows Store for Business (WSfB) mit diesem
 
 - Verwenden Sie die Informationen in diesem Preview-Thema, um die Konfigurationsschritte im Abschnitt [Einrichten der Synchronisierung](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup) des Current Branch-Themas [Verwalten von Apps aus dem Windows Store für Unternehmen und Bildungseinrichtungen mit Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) zu ersetzen.
 
-- Weitere Informationen zu Web-Apps, finden Sie unter [Authentifizierung und Autorisierung in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), und [Web-Apps – Übersicht](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
+- Weitere Informationen zu Web-Apps, finden Sie unter [Authentifizierung und Autorisierung in Azure App Service](/azure/app-service/app-service-authentication-overview), und [Web-Apps – Übersicht](/azure/app-service-web/app-service-web-overview).
 
 ### <a name="prerequisites-and-planning"></a>Erforderliche Komponenten und Planung
 Wenn Sie eine Verbindung zwischen Configuration Manager und dem Windows Store für Unternehmen herstellen, müssen Sie einen Ordner angeben, in dem App-Inhalte, die aus dem Store synchronisiert werden, gespeichert werden. Um sicherzustellen, dass es sich um einen sicheren Ordner handelt, und dass der Inhalt auf Geräten bereitgestellt werden kann, müssen Sie sichergehen, dass die folgenden Berechtigungen vorhanden sind:

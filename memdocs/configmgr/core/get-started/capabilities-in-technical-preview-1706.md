@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8c3624f9fc903395b36846170ff3552f32db59dd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126755"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692943"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Funktionen in der Technical Preview 1706 für Configuration Manager
 
@@ -104,7 +104,7 @@ Um einen Standortserver im passiven Modus zu installieren, verwenden Sie den **A
 
 - Für den Computer, auf dem der Standortserver im passiven Modus ausgeführt wird, gilt Folgendes:
 
-    - Muss die [Voraussetzungen für die Installation eines primären Standorts](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site) erfüllen.
+    - Muss die [Voraussetzungen für die Installation eines primären Standorts](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site) erfüllen.
 
     - Wird mit Quelldateien installiert, deren Version der des Standortservers im aktiven Modus entsprechen.
 
@@ -261,7 +261,7 @@ Die Voraussetzungen für eine Verbindung mit der Upgradebereitschaft unterscheid
 
 **Voraussetzungen**
 - Um der Configuration Manager-Umgebung eine Verbindung hinzuzufügen, müssen Sie zunächst einen [Dienstverbindungspunkt](../servers/deploy/configure/about-the-service-connection-point.md) in einem [Onlinemodus](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes) konfigurieren. Wenn Sie Ihrer Umgebung eine Verbindung hinzufügen, wird auch der Microsoft Monitoring Agent auf dem Computer installiert, auf dem die Standortsystemrolle ausgeführt wird.
-- Registrieren Sie Configuration Manager als „Webanwendung und/oder Web-API”-Verwaltungstool, und rufen Sie die [Client-ID dieser Registrierung](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/) ab.
+- Registrieren Sie Configuration Manager als „Webanwendung und/oder Web-API”-Verwaltungstool, und rufen Sie die [Client-ID dieser Registrierung](/azure/active-directory/develop/quickstart-register-app) ab.
 - Erstellen Sie für das registrierte Verwaltungstool in Azure Active Directory einen Clientschlüssel.
 - Geben Sie im Azure-Portal die registrierte Web-App mit Zugriffsberechtigung für die OMS an.
 

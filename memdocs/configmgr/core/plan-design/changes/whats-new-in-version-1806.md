@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128949"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692637"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Neuigkeiten in Version 1806 des Current Branch von Configuration Manager
 
@@ -280,9 +280,9 @@ Erstellen einer stufenweisen Bereitstellung für eine Anwendung. Mithilfe von Be
 
 Weitere Informationen finden Sie in den folgenden Artikeln:  
 
-- [Erstellen einer Bereitstellung in Phasen](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Erstellen einer Bereitstellung in Phasen](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [Verwalten und Überwachen von Bereitstellungen in Phasen](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Verwalten und Überwachen von Bereitstellungen in Phasen](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>Bereitstellen von Windows-App-Paketen für alle Benutzer auf einem Gerät
@@ -308,7 +308,7 @@ Weitere Informationen finden Sie unter [Erstellen von Windows-Anwendungen](../..
 
 ### <a name="uninstall-application-on-approval-revocation"></a>Deinstallieren von Anwendungen bei Widerruf von Genehmigungen
 <!--1357891-->
-Dieses Verhalten hat sich geändert, wenn Sie die Genehmigung für eine Anwendung widerrufen. Wenn Sie die Anforderung der Anwendung ablehnen, deinstalliert der Client nun die Anwendung vom Gerät des Benutzers. Dieses Verhalten erfordert, dass Sie das [optionale Feature](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Anwendungsanforderungen für Benutzer pro Gerät genehmigen** aktivieren. 
+Dieses Verhalten hat sich geändert, wenn Sie die Genehmigung für eine Anwendung widerrufen. Wenn Sie die Anforderung der Anwendung ablehnen, deinstalliert der Client nun die Anwendung vom Gerät des Benutzers. Dieses Verhalten erfordert, dass Sie das [optionale Feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Anwendungsanforderungen für Benutzer pro Gerät genehmigen** aktivieren. 
 
 Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
@@ -348,7 +348,7 @@ Weitere Informationen finden Sie unter [Einstellungen für Phasen](../../../osd/
 
 ### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>Verbesserungen an der Tasksequenz für direktes Windows 10-Upgrade
 <!--1358500-->
-Die Standardvorlage der Tasksequenz für das direkte Windows 10-Upgrade enthält jetzt eine zusätzliche neue Gruppe mit empfohlenen Aktionen, die zusätzlich durchgeführt werden, falls bei dem Upgradevorgang ein Fehler auftritt. Diese Aktionen erleichtern die Problembehandlung. Ein solches Tool ist Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). Mit diesem eigenständigen Diagnosetool können Sie Details zur Ursache des erfolglosen Versuchs eines Windows 10-Upgrades abrufen. 
+Die Standardvorlage der Tasksequenz für das direkte Windows 10-Upgrade enthält jetzt eine zusätzliche neue Gruppe mit empfohlenen Aktionen, die zusätzlich durchgeführt werden, falls bei dem Upgradevorgang ein Fehler auftritt. Diese Aktionen erleichtern die Problembehandlung. Ein solches Tool ist Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). Mit diesem eigenständigen Diagnosetool können Sie Details zur Ursache des erfolglosen Versuchs eines Windows 10-Upgrades abrufen. 
 
 Weitere Informationen finden Sie unter [Erstellen einer Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure).
 
@@ -584,7 +584,7 @@ Weitere Informationen finden Sie unter [Verbesserungen der Konsole in Version 18
 
 Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Summary of changes in Configuration Manager current branch, version 1806 (Zusammenfassung der Änderungen in der Current Branch-Version 1806 von Configuration Manager)](https://support.microsoft.com/help/4459701).
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie unter [PowerShell 1806 Release Notes (Versionshinweise zu PowerShell 1806)](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie unter [PowerShell 1806 Release Notes (Versionshinweise zu PowerShell 1806)](/powershell/sccm/1806_release_notes?view=sccm-ps).
 
 Folgender Updaterollup (4462978) ist ab dem 24. Oktober 2018 in der Konsole verfügbar: [Update rollup for Configuration Manager current branch, version 1806 (Updaterollup für die Current Branch-Version 1806 von Configuration Manager)](https://support.microsoft.com/help/4462978).
 

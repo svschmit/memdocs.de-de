@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4ddae3e4c4cf31cb05376bfa437d722f16652fad
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705138"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692977"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Funktionen in der Technical Preview 1707 für Configuration Manager
 
@@ -85,7 +85,7 @@ Zum Erstellen und Bereitstellen von Windows Defender Application Guard-Richtlini
 3. Klicken Sie auf der Registerkarte **Start** in der Gruppe **Erstellen** auf **Windows Defender Application Guard-Richtlinie erstellen**.
 4. Unter Verwendung des Blogbeitrags als Referenz können Sie die verfügbaren Einstellungen zum Testen der Funktion durchsuchen und konfigurieren.
 5. In dieser Version haben wir dem Assistenten die neue Seite **Netzwerkdefinition** hinzugefügt. Geben Sie auf dieser Seite die Unternehmensidentität an, und definieren Sie die Grenze Ihres Unternehmensnetzwerks.<br>PCs unter Windows 10 speichern nur eine Netzwerkisolationsliste auf dem Client. In dieser Version können Sie zwei unterschiedliche Arten von Netzwerkisolationslisten erstellen (eine von Windows Information Protection und eine von Windows Defender Application Guard) und diese dem Client bereitstellen. Wenn Sie beide Richtlinien bereitstellen, müssen diese Netzwerkisolationlisten übereinstimmen. Wenn Sie Listen bereitstellen, die nicht mit dem gleichen Client übereinstimmen, schlägt die Bereitstellung fehl.
-Weitere Informationen über das Angeben von Netzwerkdefinition finden Sie in der [Dokumentation zu Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+Weitere Informationen über das Angeben von Netzwerkdefinition finden Sie in der [Dokumentation zu Windows Information Protection](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. Wenn Sie fertig sind, schließen Sie den Assistenten ab, und stellen Sie die Richtlinie auf einem oder mehreren Windows 10-Geräten bereit.
 

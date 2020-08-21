@@ -10,18 +10,18 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
-ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
+ms.openlocfilehash: cc10f262e4639ffdd8513bece662116f5ed39516
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86212290"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695370"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge-Verwaltung
 
 *Gilt für: Configuration Manager (Current Branch)*
 
-Die brandneue Version von Microsoft Edge ist einsatzbereit. Ab Configuration Manager, Version 1910, können Sie jetzt [Microsoft Edge, Version 77 und höher](https://docs.microsoft.com/deployedge/), für Ihre Benutzer bereitstellen. Zum Installieren des ausgewählten Microsoft Edge-Builds wird ein PowerShell-Skript verwendet. Das Skript deaktiviert auch automatische Updates für Microsoft Edge, sodass diese mit Configuration Manager verwaltet werden können.
+Die brandneue Version von Microsoft Edge ist einsatzbereit. Ab Configuration Manager, Version 1910, können Sie jetzt [Microsoft Edge, Version 77 und höher](/deployedge/), für Ihre Benutzer bereitstellen. Zum Installieren des ausgewählten Microsoft Edge-Builds wird ein PowerShell-Skript verwendet. Das Skript deaktiviert auch automatische Updates für Microsoft Edge, sodass diese mit Configuration Manager verwaltet werden können.
 
 ## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a> Microsoft Edge bereitstellen
 <!--4561024-->
@@ -31,7 +31,7 @@ Administratoren können den Betakanal (Beta Channel), den Entwicklerkanal (Dev C
 
 Für Clients, die auf eine Microsoft Edge-Bereitstellung abzielen:
 
-- Die PowerShell-[Ausführungsrichtlinie](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) kann nicht auf „Restricted“ festgelegt werden.
+- Die PowerShell-[Ausführungsrichtlinie](/powershell/module/microsoft.powershell.core/about/about_execution_policies) kann nicht auf „Restricted“ festgelegt werden.
   - PowerShell wird ausgeführt, um die Installation durchzuführen.
 
 - Der Microsoft Edge-Installer und [CMPivot](../../core/servers/manage/cmpivot.md) werden mit dem **Codesignierungszertifikat von Microsoft** signiert. Wenn dieses Zertifikat nicht im Speicher **Vertrauenswürdige Herausgeber** aufgeführt ist, müssen Sie es hinzufügen. Andernfalls werden der Microsoft Edge-Installer und CMPivot nicht ausgeführt, wenn die PowerShell-Ausführungsrichtlinie auf **AllSigned** festgelegt ist. <!--7585106-->
@@ -47,7 +47,7 @@ Das Gerät, auf dem die Configuration Manager-Konsole ausgeführt wird, benötig
 
 #### <a name="configuration-manager-version-1910"></a>Configuration Manager Version 1910
 
-In Version 1910 schaltet das Installationsskript bei Bereitstellung von Microsoft Edge automatische Updates für Microsoft Edge aus, sodass diese mit Configuration Manager verwaltet werden können. Sie können dieses Verhalten mit dem Tool „Gruppenrichtlinie“ ändern. Weitere Informationen finden Sie unter [Planen Ihrer Bereitstellung von Microsoft Edge](https://docs.microsoft.com/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) und [Microsoft Edge – Update-Richtlinien](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies).
+In Version 1910 schaltet das Installationsskript bei Bereitstellung von Microsoft Edge automatische Updates für Microsoft Edge aus, sodass diese mit Configuration Manager verwaltet werden können. Sie können dieses Verhalten mit dem Tool „Gruppenrichtlinie“ ändern. Weitere Informationen finden Sie unter [Planen Ihrer Bereitstellung von Microsoft Edge](/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) und [Microsoft Edge – Update-Richtlinien](/DeployEdge/microsoft-edge-update-policies).
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager, Version 2002 und höher
 <!--4561024-->

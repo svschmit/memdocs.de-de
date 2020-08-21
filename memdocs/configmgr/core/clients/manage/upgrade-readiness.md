@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.openlocfilehash: 18d8b66a7b9f5ad889645cbc8e48ebcbfe6550a9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6d9bd7aabb36895160ba8aa740c28155105e196a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696318"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693402"
 ---
 # <a name="integrate-upgrade-readiness-with-configuration-manager"></a>Integrieren der Upgradebereitschaft in Configuration Manager
 
@@ -60,15 +60,15 @@ Wenn Ihre Geräte nicht weiterhin Diagnosedaten senden sollen:
 Legen Sie diese Werte mithilfe einer der folgenden Methoden fest:
 
 - Gruppenrichtlinie, in **Computerkonfiguration** > **Administrative Vorlagen** > **Windows-Komponenten** > **Datensammlung und Vorabversionen**
-- Verwaltung mobiler Geräte (MDM), z. B. mit [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
+- Verwaltung mobiler Geräte (MDM), z. B. mit [Microsoft Intune](/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
-Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 > [!NOTE]  
 > Wenn Sie diese Änderungen anwenden, senden Geräte ab sofort keine Diagnosedaten mehr. Es kann 24 bis 48 Stunden dauern, bis Microsoft die Verarbeitung von Erkenntnissen für Ihren Arbeitsbereich einstellt. Microsoft löscht diese Daten spätestens nach 30 Tagen aus seinen Clouddiensten.
 
 <!--
-Upgrade Readiness is a part of [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness). It allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager console. Then use this data to create collections, and target devices for upgrade or remediation.
+Upgrade Readiness is a part of [Windows Analytics](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness). It allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager console. Then use this data to create collections, and target devices for upgrade or remediation.
 
 
 
@@ -82,14 +82,14 @@ Upgrade Readiness relies on Windows Analytics data. In order for Upgrade Readine
 
 - For clients running Windows 7 or 8.1:  
 
-    - Install the updates as described in [Get started with Upgrade Readiness](https://docs.microsoft.com/windows/deployment/upgrade/upgrade-readiness-get-started)  
+    - Install the updates as described in [Get started with Upgrade Readiness](/windows/deployment/upgrade/upgrade-readiness-get-started)  
 
     - Enable Windows Analytics client settings  
 
 Configure these settings using Configuration Manager client settings. For more information, see [Use Windows Analytics](monitor-windows-analytics.md).
 
 > [!NOTE]  
-> Deploying the correct prerequisite updates and configuring client settings should be sufficient in most environments. If you encounter issues with Upgrade Readiness not receiving data from devices in your environment, then some of these issues may be addressed by using the [Upgrade Readiness deployment script](https://docs.microsoft.com/windows/deployment/upgrade/upgrade-readiness-deployment-script). 
+> Deploying the correct prerequisite updates and configuring client settings should be sufficient in most environments. If you encounter issues with Upgrade Readiness not receiving data from devices in your environment, then some of these issues may be addressed by using the [Upgrade Readiness deployment script](/windows/deployment/upgrade/upgrade-readiness-deployment-script). 
 
 
 
@@ -108,7 +108,7 @@ The Azure services wizard uses this app registration to allow Configuration Mana
 > 
 > This process is the same as when providing Configuration Manager with permissions to Log Analytics. These steps must be completed before the app registration is imported into Configuration Manager with the *Azure services wizard*.
 > 
-> For more information, see [Connect Configuration Manager to Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm).
+> For more information, see [Connect Configuration Manager to Log Analytics](/azure/log-analytics/log-analytics-sccm).
 
 
 ### Use the Azure Wizard to create the connection
@@ -152,4 +152,4 @@ After you've integrated Upgrade Readiness with Configuration Manager, you can vi
 
 - [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md)  
 - [Create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)  
-- [Create phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md)  
+- [Create phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md)

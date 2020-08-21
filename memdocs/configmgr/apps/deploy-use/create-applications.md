@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 42dc0f65e9e3765de35e6db7f5272aeeaab63fa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240336"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695289"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Erstellen von Anwendungen in Configuration Manager
 
@@ -688,7 +688,7 @@ Gehen Sie wie folgt vor, um eine Anwendung in Configuration Manager zu importier
 Die neue Anwendung wird im Knoten **Anwendungen** angezeigt.  
 
 > [!TIP]  
-> Das Windows PowerShell-Cmdlet **Import-CMApplication** hat die gleiche Funktion wie dieses Verfahren. Weitere Informationen finden Sie unter [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
+> Das Windows PowerShell-Cmdlet **Import-CMApplication** hat die gleiche Funktion wie dieses Verfahren. Weitere Informationen finden Sie unter [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
 
 Weitere Informationen zum Exportieren von Anwendungen finden Sie unter [Verwaltungsaufgaben für Anwendungen](management-tasks-applications.md).
 

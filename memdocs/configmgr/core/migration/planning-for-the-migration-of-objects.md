@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 996cff4b8b333a59b774afb979bbdd89aae536a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905128"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692892"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Planen der Migration von Configuration Manager-Objekten zu Configuration Manager (Current Branch)
 
@@ -123,7 +123,7 @@ Die folgenden Betriebssystem-Bereitstellungsobjekte können von einer unterstüt
 Es können Konfigurationselemente und Konfigurationsbasislinien migriert werden.  
 
 > [!NOTE]  
->  Die Migration nicht interpretierter Konfigurationselemente aus Configuration Manager 2007-Quellhierarchien wird nicht unterstützt. Sie können solche Konfigurationselemente nicht in die Zielhierarchie migrieren oder importieren. Weitere Informationen zu nicht interpretierten Konfigurationselementen finden Sie im Abschnitt „Nicht interpretierte Konfigurationselemente“ des Themas [Informationen zu Konfigurationselementen in der Verwaltung gewünschter Konfigurationen](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) in der Configuration Manager 2007-Dokumentationsbibliothek.  
+>  Die Migration nicht interpretierter Konfigurationselemente aus Configuration Manager 2007-Quellhierarchien wird nicht unterstützt. Sie können solche Konfigurationselemente nicht in die Zielhierarchie migrieren oder importieren. Weitere Informationen zu nicht interpretierten Konfigurationselementen finden Sie im Abschnitt „Nicht interpretierte Konfigurationselemente“ des Themas [Informationen zu Konfigurationselementen in der Verwaltung gewünschter Konfigurationen](/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) in der Configuration Manager 2007-Dokumentationsbibliothek.  
 
 Sie können Configuration Manager 2007-Konfigurationspakete importieren. Beim Importvorgang wird das Konfigurationspaket automatisch so konvertiert, dass es mit Configuration Manager (Current Branch) kompatibel ist.  
 
@@ -160,4 +160,4 @@ Weitere Informationen zur Berichterstellung finden Sie unter [Einführung in die
 ##  <a name="plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a> Planen der Migration von Anpassungen von Softwaremessungsregeln  
  Softwaremessungsregeln wurden zwischen Configuration Manager 2007 und Configuration Manager (Current Branch) nicht wesentlich verändert. Sie können Softwaremessungsregeln von einer unterstützten Quellhierarchie zu einer Zielhierarchie migrieren.  
 
- Standardmäßig werden zu einer Zielhierarchie migrierte Softwaremessungsregeln keinem bestimmten Standort in der Zielhierarchie zugewiesen, sondern auf alle Clients in der Hierarchie angewendet. Zum Anwenden einer Softwaremessungsregel auf Clients an einem bestimmten Standort muss die Messungsregel nach der Migration bearbeitet werden.  
+ Standardmäßig werden zu einer Zielhierarchie migrierte Softwaremessungsregeln keinem bestimmten Standort in der Zielhierarchie zugewiesen, sondern auf alle Clients in der Hierarchie angewendet. Zum Anwenden einer Softwaremessungsregel auf Clients an einem bestimmten Standort muss die Messungsregel nach der Migration bearbeitet werden.

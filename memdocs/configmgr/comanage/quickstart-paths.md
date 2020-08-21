@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: a685e10ecdb2f6fac8d5634fd932facf52fddcb0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746458"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694949"
 ---
 # <a name="paths-to-co-management"></a>Pfade zur Co-Verwaltung
 
@@ -34,10 +34,10 @@ Wenn Sie diesen Pfad einschlagen, können Sie Ihre vorhandenen, durch Configurat
 
 Gehen Sie für die Einrichtung wie folgt vor:
 - Hybrid-Azure AD
-    - Eine der folgenden [Optionen für Azure AD-Hybrididentität](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin):  
-       - [Kennworthashsynchronisierung](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) mit [nahtlosem einmaligen Anmelden (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [Pass-Through-Authentifizierung](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) mit [nahtlosem einmaligen Anmelden (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [Einmaliges Anmelden (SSO) im Verbund (mit Active Directory-Verbunddienste [AD FS])](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
+    - Eine der folgenden [Optionen für Azure AD-Hybrididentität](/azure/active-directory/hybrid/plan-connect-user-signin):  
+       - [Kennworthashsynchronisierung](/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) mit [nahtlosem einmaligen Anmelden (SSO)](/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Pass-Through-Authentifizierung](/azure/active-directory/hybrid/how-to-connect-pta) mit [nahtlosem einmaligen Anmelden (SSO)](/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Einmaliges Anmelden (SSO) im Verbund (mit Active Directory-Verbunddienste [AD FS])](/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Azure AD Premium-Lizenz
     - Konfigurieren der Hybrid-Azure AD-Einbindung (wählen Sie eine Option aus):
@@ -61,4 +61,3 @@ Gehen Sie für die Einrichtung wie folgt vor:
 4. [Verwenden von Intune zum Bereitstellen des Configuration Manager-Clients](how-to-prepare-Win10.md)  
 
 Ein Tutorial zu diesem Pfad finden Sie unter [Tutorial: Aktivieren der Co-Verwaltung für neue internetbasierte Geräte](tutorial-co-manage-new-devices.md).
-

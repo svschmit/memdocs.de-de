@@ -10,12 +10,12 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: 920f3c9aabcdec1242a6f5e5fc8e6b65c5cc0b53
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390839"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694609"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Ausführen von Upgrades auf eine neue Edition für Windows-Geräte mit Configuration Manager
 
@@ -35,7 +35,7 @@ Auf den Geräten muss die Configuration Manager-Clientsoftware ausgeführt werde
 
 Bevor Sie beginnen, Geräte auf die neueste Version zu aktualisieren, benötigen Sie Folgendes:  
 
-- Für Desktopeditionen von Windows 10: einen gültigen Product Key für die neue Windows-Version auf allen Geräten, die das Ziel dieser Richtlinie sind. Dieser Product Key kann ein Mehrfachaktivierungsschüssel oder ein generischer Volumenlizenzschlüssel sein. Ein generischer Volumenlizenzschlüssel wird auch als Clientsetupschlüssel für den Schlüsselverwaltungsdienst (KMS) bezeichnet. Weitere Informationen finden Sie unter [Planen der Volumenaktivierung](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Eine Liste der KMS-Clientsetupschlüssel finden Sie im Windows Server-Aktivierungshandbuch in [Anhang A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys). <!--496871-->  
+- Für Desktopeditionen von Windows 10: einen gültigen Product Key für die neue Windows-Version auf allen Geräten, die das Ziel dieser Richtlinie sind. Dieser Product Key kann ein Mehrfachaktivierungsschüssel oder ein generischer Volumenlizenzschlüssel sein. Ein generischer Volumenlizenzschlüssel wird auch als Clientsetupschlüssel für den Schlüsselverwaltungsdienst (KMS) bezeichnet. Weitere Informationen finden Sie unter [Planen der Volumenaktivierung](/windows/deployment/volume-activation/plan-for-volume-activation-client). Eine Liste der KMS-Clientsetupschlüssel finden Sie im Windows Server-Aktivierungshandbuch in [Anhang A](/windows-server/get-started/kmsclientkeys). <!--496871-->  
 
 - Für Windows 10 Mobile: eine XML-Lizenzdatei aus dem Microsoft Business Center. Diese Datei enthält die Lizenzierungsinformationen für die neue Windows-Version auf allen Geräten, die Ziel dieser Richtlinie sind. Laden Sie die ISO-Datei für **Windows 10 Mobile Enterprise** einschließlich der Lizenzierungs-XML herunter.<!-- SCCMDocs#2033 -->
 
@@ -89,16 +89,16 @@ Bevor Sie beginnen, Geräte auf die neueste Version zu aktualisieren, benötigen
 
 Diese Fehler bedeuten nicht, dass die Bereitstellung gescheitert ist. Vergewissern Sie sich am Zielgerät, dass das Upgrade erfolgreich ausgeführt wurde.
 
-Sobald der Client die gewünschte Richtlinie ausgewertet hat, wird das Upgrade innerhalb von zwei Stunden angewendet. [Einige Versionen von Windows](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades) müssen zu diesem Zeitpunkt möglicherweise neu gestartet werden. Stellen Sie sicher, dass Sie jeden Benutzer informieren, dem Sie die Richtlinie bereitstellen, oder planen Sie die Ausführung der Richtlinie außerhalb der Arbeitsstunden der Benutzer.
+Sobald der Client die gewünschte Richtlinie ausgewertet hat, wird das Upgrade innerhalb von zwei Stunden angewendet. [Einige Versionen von Windows](/windows/deployment/upgrade/windows-10-edition-upgrades) müssen zu diesem Zeitpunkt möglicherweise neu gestartet werden. Stellen Sie sicher, dass Sie jeden Benutzer informieren, dem Sie die Richtlinie bereitstellen, oder planen Sie die Ausführung der Richtlinie außerhalb der Arbeitsstunden der Benutzer.
 
-Wenn der folgende Fehler in der Datei **DcmWmiProvider.log** auf dem Client auftritt, überprüfen Sie, ob Sie den richtigen Schlüssel für Ihr Aktivierungsszenario verwenden. Weitere Informationen finden Sie im Abschnitt [Bevor Sie beginnen](#before-you-start). Wenn Sie einen Schlüsselverwaltungsdienst (Key Management Service, KMS) für die Aktivierung nutzen, stellen Sie sicher, dass Sie einen [KMS-Clientsetupschlüssel](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) verwenden.  <!-- 496871 -->
+Wenn der folgende Fehler in der Datei **DcmWmiProvider.log** auf dem Client auftritt, überprüfen Sie, ob Sie den richtigen Schlüssel für Ihr Aktivierungsszenario verwenden. Weitere Informationen finden Sie im Abschnitt [Bevor Sie beginnen](#before-you-start). Wenn Sie einen Schlüsselverwaltungsdienst (Key Management Service, KMS) für die Aktivierung nutzen, stellen Sie sicher, dass Sie einen [KMS-Clientsetupschlüssel](/windows-server/get-started/kmsclientkeys) verwenden.  <!-- 496871 -->
 
 `Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`
 
 ## <a name="see-also"></a>Weitere Informationen:
 
-- [Planen der Volumenaktivierung](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)
+- [Planen der Volumenaktivierung](/windows/deployment/volume-activation/plan-for-volume-activation-client)
 
-- [Windows 10-Editionsupgrade](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades)
+- [Windows 10-Editionsupgrade](/windows/deployment/upgrade/windows-10-edition-upgrades)
 
-- [Upgraden von Windows 10-Editionen oder Verlassen des S-Modus auf Geräten mit Microsoft Intune](https://docs.microsoft.com/intune/edition-upgrade-configure-windows-10)
+- [Upgraden von Windows 10-Editionen oder Verlassen des S-Modus auf Geräten mit Microsoft Intune](/intune/edition-upgrade-configure-windows-10)

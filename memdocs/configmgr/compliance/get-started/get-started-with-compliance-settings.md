@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d8ae26c5e9cbf9f3a45d3584341e79de8ab3402
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: d5e042980a1fa6fb8a92abcff6d3938874cf6b38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240710"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694592"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Erste Schritte mit Konformitätseinstellungen in Configuration Manager
 
@@ -105,6 +105,6 @@ Ausführlichere Informationen finden Sie unter [Aktualisieren von Windows-Gerät
 
 ## <a name="microsoft-edge-legacy-browser-profiles"></a>Browserprofile für Microsoft Edge Legacy
 <!-- 1357310 -->
-Kunden, die den Webbrowser [Microsoft Edge Legacy](https://docs.microsoft.com/microsoft-edge/deploy/) auf Windows 10-Clients nutzen, erstellen eine Configuration Manager-Konformitätsrichtlinie, um die Browsereinstellungen zu konfigurieren.
+Kunden, die den Webbrowser [Microsoft Edge Legacy](/microsoft-edge/deploy/) auf Windows 10-Clients nutzen, erstellen eine Configuration Manager-Konformitätsrichtlinie, um die Browsereinstellungen zu konfigurieren.
 
 Weitere Informationen finden Sie unter [Browserprofile für Microsoft Edge Legacy](../deploy-use/browser-profiles.md).

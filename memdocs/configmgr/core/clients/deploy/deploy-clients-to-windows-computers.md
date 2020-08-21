@@ -10,12 +10,12 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07c5488b0ea28f37f7f8a07b532c67fb64aad810
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2eea75f39430f1cc38ff994280425ca918eaa432
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694008"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694558"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Bereitstellen von Clients auf Windows-Computern in Configuration Manager
 
@@ -63,7 +63,7 @@ Clientprotokolldateien bieten ausführlichere Informationen zur Problembehebung.
     > [!NOTE]  
     > Bei Verwendung von Clientpush zum Installieren des Konfigurations-Manager-Clients stellt der Standortserver eine Remoteverbindung mit dem Client her. Ab Version 1806 kann der Standort die gegenseitige Kerberos-Authentifizierung erfordern, indem vor dem Herstellen der Verbindung kein Fallback auf NTLM zugelassen wird. Diese Verbesserung sichert die Kommunikation zwischen dem Server und dem Client.  
     >
-    > Je nach Ihren Sicherheitsrichtlinien kann Ihre Umgebung möglicherweise bereits Kerberos anstelle der älteren NTLM-Authentifizierung bevorzugen oder erfordern. Weitere Informationen zu den Sicherheitsaspekten dieser Authentifizierungsprotokolle finden Sie im Artikel zur [Windows-Sicherheitsrichtlinieneinstellung zum Beschränken von NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
+    > Je nach Ihren Sicherheitsrichtlinien kann Ihre Umgebung möglicherweise bereits Kerberos anstelle der älteren NTLM-Authentifizierung bevorzugen oder erfordern. Weitere Informationen zu den Sicherheitsaspekten dieser Authentifizierungsprotokolle finden Sie im Artikel zur [Windows-Sicherheitsrichtlinieneinstellung zum Beschränken von NTLM](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
     >
     > Um dieses Feature verwenden zu können, müssen Clients sich in einer vertrauenswürdigen Active Directory-Gesamtstruktur befinden. Kerberos unter Windows hängt zur gegenseitigen Authentifizierung von Active Directory ab.  
 
@@ -326,7 +326,7 @@ Nachdem Sie den Configuration Manager-Client installiert haben, wird die Registr
     > [!NOTE]  
     > Eine beispielhafte Befehlszeile für die Verwendung mit einem modernen Windows 10-Client mit Azure AD-Authentifizierung finden Sie unter [Vorbereiten internetbasierter Geräte für die Co-Verwaltung](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).  
 
-3. [Weisen Sie die App zu](https://docs.microsoft.com/mem/intune/apps/apps-deploy), und zwar einer Gruppe der registrierten Windows-Computer.  
+3. [Weisen Sie die App zu](../../../../intune/apps/apps-deploy.md), und zwar einer Gruppe der registrierten Windows-Computer.  
 
 ## <a name="os-image-installation"></a><a name="BKMK_ClientImage"></a> Installation mit Betriebssystemimage
 
@@ -543,4 +543,4 @@ Eine administrative Vorlage für Gruppenrichtlinien mit dem Namen `ConfigMgrInst
 
 4. Geben Sie in das Feld **CCMSetup** die erforderlichen CCMSetup-Befehlszeileneigenschaften ein. Eine Liste aller CCMSetup-Befehlszeileneigenschaften mit Verwendungsbeispielen finden Sie unter [Informationen zu Parametern und Eigenschaften für die Clientinstallation](about-client-installation-properties.md).  
 
-5. Weisen Sie den Computern das GPO zu, auf denen Sie die Configuration Manager-Clientinstallationseigenschaften bereitstellen möchten.  
+5. Weisen Sie den Computern das GPO zu, auf denen Sie die Configuration Manager-Clientinstallationseigenschaften bereitstellen möchten.

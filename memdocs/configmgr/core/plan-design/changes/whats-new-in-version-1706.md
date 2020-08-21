@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129017"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692824"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Neuerungen in Version 1706 von Configuration Manager
 
@@ -213,7 +213,7 @@ Sie können Configuration Manager jetzt zum Verwalten von Microsoft Surface-Trei
 
 #### <a name="prerequisites"></a>Voraussetzungen
 - Auf allen Softwareupdatepunkten muss Windows Server 2016 ausgeführt werden.    
-- Dies ist ein Vorabfeature, das Sie zuerst aktivieren müssen, um es zu benutzen. Weitere Informationen finden Sie unter [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
+- Dies ist ein Vorabfeature, das Sie zuerst aktivieren müssen, um es zu benutzen. Weitere Informationen finden Sie unter [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Verwenden von Vorabfeatures aus Updates).
 
 #### <a name="to-manage-surface-driver-updates"></a>So verwalten Sie Surface-Treiberupdates
 

@@ -10,12 +10,12 @@ ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3ee640a70eea9f2e8470e852409911d28e542bc2
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: b1bc72a3691e4a6f47c29a5a91ef11c92f0f7e7c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663371"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693283"
 ---
 # <a name="best-practices-for-collections-in-configuration-manager"></a>Bewährte Methoden für Sammlungen in Configuration Manager
 
@@ -96,7 +96,7 @@ Ausschließen:
 
 ## <a name="use-ceviewer-to-monitor-collection-evaluation"></a>Verwenden von CEViewer zum Überwachen der Sammlungsauswertung
 
-Mit dem [Collection Evaluation Viewer (CEViewer)](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer) können Sie überwachen, wie viele Sammlungen ausgewertet werden und wie lange das Aktualisieren der einzelnen Sammlungen dauert. Der CEViewer befindet sich auf dem Standortserver im *CD.Latest*-Ordner.
+Mit dem [Collection Evaluation Viewer (CEViewer)](../../../support/ceviewer.md) können Sie überwachen, wie viele Sammlungen ausgewertet werden und wie lange das Aktualisieren der einzelnen Sammlungen dauert. Der CEViewer befindet sich auf dem Standortserver im *CD.Latest*-Ordner.
 
 Sie können die folgende Abfrage verwenden, um eine ähnliche Überprüfung mit SQL manuell durchzuführen:
 
@@ -111,5 +111,3 @@ FROM (
 WHERE ([t2].[IncrementalEvaluationStartTime] IS NOT NULL) AND ([t2].[LastIncrementalRefreshTime] IS NOT NULL) and (refreshtype='4' or refreshtype='6')
 ORDER BY [t2].[value] DESC
 ```
-
-

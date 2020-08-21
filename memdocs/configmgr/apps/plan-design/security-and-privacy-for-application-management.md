@@ -10,12 +10,12 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f7085b7ee6f0f723c9bcf9d10cb85b03f990a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3ceb036180d002956eb0f62348ad317dfce6e7e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689068"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695136"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>Sicherheit und Datenschutz für die Anwendungsverwaltung in Configuration Manager
 
@@ -182,7 +182,7 @@ Wenn Sie die Standortsystemrolle des Anwendungskatalog-Websitepunkts installiere
 
 Wenn Sie die Einstellung **Allow Silverlight applications to run in elevated trust mode** (Ausführen von Silverlight-Anwendungen im Modus mit höherer Vertrauensstellung zulassen) auf **Nein** festlegen, wird das Microsoft-Signaturzertifikat nicht von den Clients entfernt.  
 
-Weitere Informationen zu vertrauenswürdigen Anwendungen in Silverlight finden Sie unter [Trusted Applications ](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)) (Vertrauenswürdige Anwendungen).  
+Weitere Informationen zu vertrauenswürdigen Anwendungen in Silverlight finden Sie unter [Trusted Applications ](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)) (Vertrauenswürdige Anwendungen).  
 
 
 ## <a name="privacy-information-for-application-management"></a>Datenschutzinformationen zur Anwendungsverwaltung  
@@ -239,4 +239,4 @@ Die folgenden Funktionen unterstützen eine effiziente Softwarebereitstellung:
 
 - Mithilfe des Anwendungskatalogs kann der Configuration Manager-Administrator beliebige Anwendungen, Programme und Skripts zur Ausführung durch die Benutzer veröffentlichen. Welche Typen von Programmen oder Skripts im Katalog veröffentlicht und welche Informationen übertragen werden, kann von Configuration Manager nicht gesteuert werden.  
 
-- Von Configuration Manager werden möglicherweise Informationen zwischen Clients und den Standortsystemrollen für den Anwendungskatalog übertragen. Anhand der Informationen können unter Umständen die Computer und die Anmeldekonten identifiziert werden. Zwischen Clients und Servern übertragene Daten werden nur dann verschlüsselt, wenn eine Clientverbindung über HTTPS aufgrund der Konfiguration dieser Standortsystemrollen erforderlich ist.  
+- Von Configuration Manager werden möglicherweise Informationen zwischen Clients und den Standortsystemrollen für den Anwendungskatalog übertragen. Anhand der Informationen können unter Umständen die Computer und die Anmeldekonten identifiziert werden. Zwischen Clients und Servern übertragene Daten werden nur dann verschlüsselt, wenn eine Clientverbindung über HTTPS aufgrund der Konfiguration dieser Standortsystemrollen erforderlich ist.

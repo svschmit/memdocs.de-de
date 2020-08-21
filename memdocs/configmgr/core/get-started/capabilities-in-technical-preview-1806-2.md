@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 062ae289ff53952d670592be6ff0027a91a627d4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905217"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694405"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Funktionen in der Technical Preview 1806.2 für Configuration Manager
 
@@ -147,7 +147,7 @@ Wenn Sie eine stufenweise Bereitstellung erstellen und eine Phase manuell konfig
 <!--1357427-->
 Configuration Manager unterstützt jetzt die Bereitstellung der neuen Formate für Windows 10-App-Pakete (.msix) und App-Bundles (.msixbundle). Die neuesten Builds von [Windows Insider Preview](https://insider.windows.com/) unterstützen derzeit diese neuen Formate.
 
-Eine Übersicht über MSIX finden Sie unter [A closer look at MSIX (MSIX von Nahem betrachtet)](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).
+Eine Übersicht über MSIX finden Sie unter [A closer look at MSIX (MSIX von Nahem betrachtet)](/archive/blogs/sgern/a-closer-look-at-msix).
 
 Informationen zum Erstellen einer neuen MSIX-App finden Sie unter [MSIX support introduced in Insider Build 17682 (Einführung der MSIX-Unterstützung in Insider Build 17682)](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 
@@ -168,7 +168,7 @@ Versuchen Sie, die Aufgaben fertig zu stellen. Senden Sie uns anschließend Ihr 
 <!--1358204-->
 Bei Verwendung der [Clientpushmethode](../clients/deploy/plan/client-installation-methods.md#client-push-installation) zum Installieren des Configuration Manager-Clients stellt der Standortserver eine Remoteverbindung mit dem Client her, um die Installation zu starten. Ab diesem Release kann der Standort gegenseitige Kerberos-Authentifizierung erfordern, indem vor dem Herstellen der Verbindung kein Fallback auf NTLM zugelassen wird. Diese Verbesserung sichert die Kommunikation zwischen dem Server und dem Client. 
 
-Je nach Ihren Sicherheitsrichtlinien kann Ihre Umgebung möglicherweise bereits Kerberos gegenüber älteren NTLM-Authentifizierungen bevorzugen oder erfordern. Weitere Informationen zu den Sicherheitsüberlegungen dieser Authentifizierungsprotokolle finden Sie unter den [Sicherheitserwägungen](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
+Je nach Ihren Sicherheitsrichtlinien kann Ihre Umgebung möglicherweise bereits Kerberos gegenüber älteren NTLM-Authentifizierungen bevorzugen oder erfordern. Weitere Informationen zu den Sicherheitsüberlegungen dieser Authentifizierungsprotokolle finden Sie unter den [Sicherheitserwägungen](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
 
 
 ### <a name="prerequisite"></a>Voraussetzung
@@ -218,7 +218,7 @@ Weitere Informationen finden Sie in den folgenden Artikeln:
 
 - [Co-Verwaltung für Windows 10-Geräte](../../comanage/overview.md)  
 
-- [Was ist Microsoft Intune-App-Verwaltung?](https://docs.microsoft.com/intune/app-management)  
+- [Was ist Microsoft Intune-App-Verwaltung?](/intune/app-management)  
 
 
 
@@ -319,7 +319,7 @@ Dieses Release umfasst die folgenden Verbesserungen:
 
     - Bereitstellen eines [Cloudverteilungspunkts mit Azure Resource Manager](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  
 
-- Kunden verwenden Windows AutoPilot für die Bereitstellung von Windows 10 auf mit dem lokalen Netzwerk verbundenen Geräten, die in Azure Active Directory eingebunden sind. Zum Installieren oder Aktualisieren des Configuration Manager-Clients auf diesen Geräten benötigen Sie jetzt keinen Cloudverteilungspunkt oder lokalen Verteilungspunkt mehr, der so konfiguriert ist, dass **Clients anonym eine Verbindung herstellen können**. Aktivieren Sie stattdessen die Standortoption zum **Verwenden durch den Configuration Manager generierter Zertifikate für HTTP-Standortsysteme**, die einem in eine Clouddomäne eingebundenen Client die Kommunikation mit einem lokalen HTTP-fähigen Verteilungspunkt ermöglicht. Weitere Informationen zu dieser Einstellung finden Sie unter [Verbesserte sichere Clientkommunikation](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
+- Kunden verwenden Windows AutoPilot für die Bereitstellung von Windows 10 auf mit dem lokalen Netzwerk verbundenen Geräten, die in Azure Active Directory eingebunden sind. Zum Installieren oder Aktualisieren des Configuration Manager-Clients auf diesen Geräten benötigen Sie jetzt keinen Cloudverteilungspunkt oder lokalen Verteilungspunkt mehr, der so konfiguriert ist, dass **Clients anonym eine Verbindung herstellen können**. Aktivieren Sie stattdessen die Standortoption zum **Verwenden durch den Configuration Manager generierter Zertifikate für HTTP-Standortsysteme**, die einem in eine Clouddomäne eingebundenen Client die Kommunikation mit einem lokalen HTTP-fähigen Verteilungspunkt ermöglicht. Weitere Informationen zu dieser Einstellung finden Sie unter [Verbesserte sichere Clientkommunikation](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
 
 
 
@@ -338,4 +338,4 @@ Der Bericht enthält die folgenden Teile:
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen zur Installation oder dem Update der Technical Preview finden Sie unter [Technical Preview für Configuration Manager](technical-preview.md).    
+Weitere Informationen zur Installation oder dem Update der Technical Preview finden Sie unter [Technical Preview für Configuration Manager](technical-preview.md).

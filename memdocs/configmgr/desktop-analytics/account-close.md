@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b8d22d7f011fb87dc1105fd8447d2e93adc80c6e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268469"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693368"
 ---
 # <a name="how-to-close-your-account"></a>Schließen Ihres Kontos
 
@@ -114,9 +114,9 @@ Wenn Ihre Geräte nicht weiterhin Diagnosedaten senden sollen:
 Legen Sie diese Werte mithilfe einer der folgenden Methoden fest:
 
 - Gruppenrichtlinie, in **Computerkonfiguration** > **Administrative Vorlagen** > **Windows-Komponenten** > **Datensammlung und Vorabversionen**
-- Verwaltung mobiler Geräte (MDM), z. B. mit [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
+- Verwaltung mobiler Geräte (MDM), z. B. mit [Microsoft Intune](/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
-Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 > [!NOTE]  
 > Wenn Sie diese Änderungen anwenden, senden Geräte ab sofort keine Diagnosedaten mehr. Es kann 24 bis 48 Stunden dauern, bis Microsoft die Verarbeitung von Erkenntnissen für Ihren Arbeitsbereich einstellt. Microsoft löscht diese Daten spätestens nach 30 Tagen aus seinen Clouddiensten.

@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129051"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694253"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Entfernte und veraltete Features für Configuration Manager
 
@@ -80,7 +80,7 @@ Mit Configuration Manager wurde der native Support für AMT-basierte Computer in
 
 Configuration Manager hat die Unterstützung für den Netzwerkzugriffsschutz eingestellt. Das Feature wurde in Windows Server 2012 R2 als veraltet markiert und aus Windows 10 entfernt.  
 
-Alternativen für den Netzwerkzugriffsschutz finden Sie im Abschnitt *Veraltete Funktionalität* unter [Netzwerkrichtlinien- und Zugriffsdienste: Übersicht](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)).
+Alternativen für den Netzwerkzugriffsschutz finden Sie im Abschnitt *Veraltete Funktionalität* unter [Netzwerkrichtlinien- und Zugriffsdienste: Übersicht](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)).
 
 ## <a name="see-also"></a>Weitere Informationen:
 

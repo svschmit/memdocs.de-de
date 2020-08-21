@@ -10,12 +10,12 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd238319ba064f57911eee58e1299e17a2ce5b60
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: db59ad55c52f8d937b23704af310dc8879fe8a6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694598"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692875"
 ---
 # <a name="evaluate-configuration-manager-by-building-your-own-lab-environment"></a>Bewerten von Configuration Manager durch Erstellen Ihrer eigenen Laborumgebung
 
@@ -48,7 +48,7 @@ Clientcomputer werden in Hyper-V installiert. Die Laborumgebung selbst kann auch
  Wenn Sie diese Laborumgebung einrichten, verfügen Sie über eine funktionierende Umgebung, in der Sie arbeiten können. Diese Umgebung wird jedoch nicht hinsichtlich Faktoren wie Systemleistung, Verwaltung von Festplattenspeicherplatz und SQL Server-Speicher optimiert.  
 
 ##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a> Empfohlene Literatur vor dem Erstellen der Laborumgebung  
- In der [Dokumentation zu Configuration Manager](https://docs.microsoft.com/sccm/) steht Ihnen eine Fülle von Inhalten zur Verfügung. Es wird empfohlen, dass Sie vor dem Erstellen der Laborumgebung folgende Themen aus dieser Bibliothek lesen:  
+ In der [Dokumentation zu Configuration Manager](/sccm/) steht Ihnen eine Fülle von Inhalten zur Verfügung. Es wird empfohlen, dass Sie vor dem Erstellen der Laborumgebung folgende Themen aus dieser Bibliothek lesen:  
 
 -   Erfahren Sie mehr über wichtige Konzepte der Configuration Manager-Konsole, Endbenutzerportale und Beispielszenarios in der [Einführung in Configuration Manager](../../core/understand/introduction.md).  
 
@@ -60,4 +60,4 @@ Clientcomputer werden in Hyper-V installiert. Die Laborumgebung selbst kann auch
 
 -   Erfahren Sie etwas über Content Management unter [Konzepte für Content Management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
--   [Erfahren Sie, wie Clients Standortressourcen und -dienste für Configuration Manager suchen](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md), um tägliche Vorgänge in der gesamten Bereitstellung erfolgreich zu unterstützen.  
+-   [Erfahren Sie, wie Clients Standortressourcen und -dienste für Configuration Manager suchen](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md), um tägliche Vorgänge in der gesamten Bereitstellung erfolgreich zu unterstützen.

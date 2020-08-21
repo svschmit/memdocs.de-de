@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905198"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694371"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funktionen in der Technical Preview-Version 1807 für Configuration Manager 
 
@@ -73,7 +73,7 @@ Um weitere Details zu einem verfügbaren Element anzuzeigen, klicken Sie im Hub 
 
 Der Arbeitsbereich **Community** enthält auch die folgenden Knoten:
 
-- **Dokumentation:** Dieser Knoten enthält die [Dokumentationsbibliothek](https://docs.microsoft.com/sccm/) von Configuration Manager.  
+- **Dokumentation:** Dieser Knoten enthält die [Dokumentationsbibliothek](/sccm/) von Configuration Manager.  
 
 - **Feedback:** Dieser Knoten verweist auf die [UserVoice-Website](https://configurationmanager.uservoice.com/) von Configuration Manager.  
 
@@ -82,7 +82,7 @@ Der Arbeitsbereich **Community** enthält auch die folgenden Knoten:
 
 - Die Configuration Manager-Konsole muss unter einem Clientbetriebssystem ausgeführt werden.  
 
-    - Alternative Option, die jedoch nicht empfohlen wird: Deaktivieren Sie auf einem Serverbetriebssystem die [verstärkte Sicherheitskonfiguration für Internet Explorer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
+    - Alternative Option, die jedoch nicht empfohlen wird: Deaktivieren Sie auf einem Serverbetriebssystem die [verstärkte Sicherheitskonfiguration für Internet Explorer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - Der Computer mit der Konsole benötigt Internetzugriff und -konnektivität mit den folgenden Standorten:  
     - `https://aka.ms`  
@@ -121,7 +121,7 @@ Bei der Offlinewartung speichert Configuration Manager temporäre Dateien im Ord
 ## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a> Synchronisierungsaktivität gemeinsam verwalteter Geräte aus Intune
 <!--1358565-->
 
-Zeigen Sie in der Configuration Manager-Konsole an, ob ein gemeinsam verwaltetes Gerät in Microsoft Intune aktiv ist. Dieser Zustand basiert auf Daten aus [Intune Data Warehouse](https://docs.microsoft.com/intune/reports-nav-create-intune-reports). Das Dashboard **Clientstatus** in der Configuration Manager-Konsole zeigt **Inaktive Clients mit Intune** an. Diese neue Kategorie ist für gemeinsam verwaltete Geräte bestimmt, die bei Configuration Manager inaktiv sind, aber in der letzten Woche mit dem Intune-Dienst synchronisiert wurden.
+Zeigen Sie in der Configuration Manager-Konsole an, ob ein gemeinsam verwaltetes Gerät in Microsoft Intune aktiv ist. Dieser Zustand basiert auf Daten aus [Intune Data Warehouse](/intune/reports-nav-create-intune-reports). Das Dashboard **Clientstatus** in der Configuration Manager-Konsole zeigt **Inaktive Clients mit Intune** an. Diese neue Kategorie ist für gemeinsam verwaltete Geräte bestimmt, die bei Configuration Manager inaktiv sind, aber in der letzten Woche mit dem Intune-Dienst synchronisiert wurden.
 
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!

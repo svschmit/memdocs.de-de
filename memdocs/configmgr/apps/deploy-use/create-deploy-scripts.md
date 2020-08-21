@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: db3a673d99efc40bd6fa0da7930c66c648136e03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605183"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695357"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Erstellen und Ausführen von PowerShell-Skripts über die Configuration Manager-Konsole
 
@@ -205,7 +205,7 @@ Der Abschnitt „Überprüfung“ des Dialogfelds **Skriptparametereigenschaften
 
 Ein regulärer Ausdruck stellt eine kompakte Programmiermethode dar, um eine Zeichenfolge anhand einer codierten Überprüfung zu überprüfen. Sie können z.B. im Feld *FirstName* nach einem fehlenden Großbuchstaben suchen, indem Sie `[^A-Z]` in das Feld *RegEx* eingeben.
 
-Die Verarbeitung regulärer Ausdrücke für dieses Dialogfeld wird vom .NET Framework unterstützt. Hinweise zur Verwendung von regulären Ausdrücken finden Sie unter [Reguläre Ausdrücke von .NET](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions) und [Sprachreferenz zu regulären Ausdrücken](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference).
+Die Verarbeitung regulärer Ausdrücke für dieses Dialogfeld wird vom .NET Framework unterstützt. Hinweise zur Verwendung von regulären Ausdrücken finden Sie unter [Reguläre Ausdrücke von .NET](/dotnet/standard/base-types/regular-expressions) und [Sprachreferenz zu regulären Ausdrücken](/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 
 ## <a name="script-examples"></a>Beispiele für Skripts
@@ -294,7 +294,7 @@ Nachdem Sie mit der Anwendung eines Skripts auf eine Sammlung von Geräten begon
 
 ## <a name="script-output"></a>Skriptausgabe
 
-Clients geben die Skriptausgabe mithilfe der JSON-Formatierung zurück, indem sie die Ergebnisse des Skripts über die Pipeline an das Cmdlet [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) übergeben. Das JSON-Format gibt stets eine lesbare Skriptausgabe zurück. Bei Skripts, die keine Objekte als Ausgabe zurückgeben, konvertiert das Cmdlet „ConvertTo-Json“ die Ausgabe in eine einfache Zeichenfolge, die der Client statt JSON zurückgibt.  
+Clients geben die Skriptausgabe mithilfe der JSON-Formatierung zurück, indem sie die Ergebnisse des Skripts über die Pipeline an das Cmdlet [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) übergeben. Das JSON-Format gibt stets eine lesbare Skriptausgabe zurück. Bei Skripts, die keine Objekte als Ausgabe zurückgeben, konvertiert das Cmdlet „ConvertTo-Json“ die Ausgabe in eine einfache Zeichenfolge, die der Client statt JSON zurückgibt.  
 
 - Skripts mit unbekanntem Ergebnis oder einem Client, der offline war, werden nicht in den Diagrammen oder Datasets angezeigt. <!--507179-->
 - Vermeiden Sie die Rückgabe einer umfassenden Skriptausgabe, da diese auf 4 KB beschränkt wird. <!--508488-->
@@ -302,7 +302,7 @@ Clients geben die Skriptausgabe mithilfe der JSON-Formatierung zurück, indem si
 
    ![Konvertieren eines Enumerationsobjekts in einen Zeichenfolgenwert](./media/run-scripts/enum-tostring-JSON.png)
 
-Sie können die ausführliche Skriptausgabe im nicht formatierten Format oder im strukturierten JSON-Format anzeigen. Diese Formatierung vereinfacht das Lesen und Analysieren der Ausgabe. Wenn das Skript gültigen Text im JSON-Format zurückgibt oder die Ausgabe mithilfe des PowerShell-Cmdlets [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) in JSON konvertiert werden kann, zeigen Sie die ausführliche Ausgabe entweder als **JSON-Ausgabe** oder als **unformatierte Ausgabe** an. Andernfalls ist die einzige Option **Skriptausgabe**.
+Sie können die ausführliche Skriptausgabe im nicht formatierten Format oder im strukturierten JSON-Format anzeigen. Diese Formatierung vereinfacht das Lesen und Analysieren der Ausgabe. Wenn das Skript gültigen Text im JSON-Format zurückgibt oder die Ausgabe mithilfe des PowerShell-Cmdlets [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) in JSON konvertiert werden kann, zeigen Sie die ausführliche Ausgabe entweder als **JSON-Ausgabe** oder als **unformatierte Ausgabe** an. Andernfalls ist die einzige Option **Skriptausgabe**.
 
 ### <a name="example-script-output-is-convertible-to-valid-json"></a>Beispiel: Die Skriptausgabe kann in ein gültiges JSON-Format konvertiert werden.
 

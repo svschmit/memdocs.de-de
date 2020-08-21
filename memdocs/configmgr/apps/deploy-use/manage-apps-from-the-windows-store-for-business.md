@@ -10,16 +10,16 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: a8125f55215fd597d9611723e1d36629850bff44
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643215"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695221"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>Verwalten von Apps aus dem Microsoft Store für Unternehmen und Bildungseinrichtungen mit Configuration Manager
 
-Im [Microsoft Store für Unternehmen und Bildungseinrichtungen](https://docs.microsoft.com/microsoft-store/) können Sie für Ihre Organisation nach Windows-Apps suchen und diese erwerben. Nachdem Sie den Store mit Configuration Manager verbunden haben, synchronisieren Sie die Liste mit den erworbenen Apps. Anschließend können Sie sich diese Apps in der Configuration Manager-Konsole anzeigen lassen und sie so wie jede andere App bereitstellen.
+Im [Microsoft Store für Unternehmen und Bildungseinrichtungen](/microsoft-store/) können Sie für Ihre Organisation nach Windows-Apps suchen und diese erwerben. Nachdem Sie den Store mit Configuration Manager verbunden haben, synchronisieren Sie die Liste mit den erworbenen Apps. Anschließend können Sie sich diese Apps in der Configuration Manager-Konsole anzeigen lassen und sie so wie jede andere App bereitstellen.
 
 ## <a name="online-and-offline-apps"></a><a name="bkmk_apps"></a> Online- und Offline-Apps
 
@@ -29,7 +29,7 @@ Der Microsoft Store für Unternehmen und Bildungseinrichtungen unterstützt zwei
 
 - **Offline**: Dieser Typ ermöglicht das Zwischenspeichern von Apps und Lizenzen für die direkte Bereitstellung in Ihrem lokalen Netzwerk. Die Geräte müssen nicht mit dem Store verbunden sein oder über eine Internetverbindung verfügen.
 
-Weitere Informationen finden Sie unter [Microsoft Store für Unternehmen und Bildungseinrichtungen – Übersicht](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview).
+Weitere Informationen finden Sie unter [Microsoft Store für Unternehmen und Bildungseinrichtungen – Übersicht](/microsoft-store/microsoft-store-for-business-overview).
 
 ### <a name="summary-of-capabilities"></a>Zusammenfassung der Funktionen
 
@@ -64,7 +64,7 @@ Vor der Bereitstellung von Apps aus dem Microsoft Store für Unternehmen und Bil
 
 - Wenn das lokale Administratorkonto auf dem Gerät angemeldet wird, kann über dieses nicht auf Apps aus dem Microsoft Store für Unternehmen und Bildungseinrichtungen zugegriffen werden.  
 
-- Geräte benötigen eine aktive Internetverbindung zum Microsoft Store für Unternehmen und Bildungseinrichtungen. Weitere Informationen einschließlich Hinweisen zur Proxykonfiguration finden Sie unter [Voraussetzungen](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business).  
+- Geräte benötigen eine aktive Internetverbindung zum Microsoft Store für Unternehmen und Bildungseinrichtungen. Weitere Informationen einschließlich Hinweisen zur Proxykonfiguration finden Sie unter [Voraussetzungen](/microsoft-store/prerequisites-microsoft-store-for-business).  
 
 ### <a name="notes-for-devices-running-earlier-versions-of-windows-10"></a>Hinweise zu Geräten, auf denen frühere Versionen von Windows 10 ausgeführt werden
 
@@ -110,17 +110,17 @@ Wenn Sie die Liste für Apps aus dem Microsoft Store für Unternehmen und Bildun
 
 Verbinden Sie Ihren Configuration Manager-Standort mit Azure AD und dem Microsoft Store für Unternehmen und Bildungseinrichtungen. Weitere Informationen und Details hierzu finden Sie unter [Konfigurieren von Azure-Diensten](../../core/servers/deploy/configure/azure-services-wizard.md). Stellen Sie eine Verbindung mit dem **Microsoft Store für Unternehmen**-Dienst her.
 
-Stellen Sie sicher, dass der Dienstverbindungspunkt und die Zielgeräte auf den Clouddienst zugreifen können. Weitere Informationen finden Sie unter [Voraussetzungen für Microsoft Store für Unternehmen und Bildungseinrichtungen – Proxykonfiguration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+Stellen Sie sicher, dass der Dienstverbindungspunkt und die Zielgeräte auf den Clouddienst zugreifen können. Weitere Informationen finden Sie unter [Voraussetzungen für Microsoft Store für Unternehmen und Bildungseinrichtungen – Proxykonfiguration](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ### <a name="supplemental-information-and-configuration"></a><a name="bkmk_config"></a> Weitere Informationen und Konfigurationen
 
 Konfigurieren Sie auf der Seite **App** des Assistenten für Azure-Dienste zunächst die **Azure-Umgebung** und die **Web-App**. Lesen Sie anschließend unten auf der Seite den Abschnitt **Weitere Informationen**. Dort werden die folgenden zusätzlichen Aktionen für das Microsoft Store für Unternehmen und Bildungseinrichtungen-Portal beschrieben:  
 
-- Konfigurieren von Configuration Manager als Speicherverwaltungstool. Weitere Informationen finden Sie unter [Configure management provider (Konfigurieren eines Verwaltungsanbieters)](https://docs.microsoft.com/microsoft-store/configure-mdm-provider-microsoft-store-for-business).  
+- Konfigurieren von Configuration Manager als Speicherverwaltungstool. Weitere Informationen finden Sie unter [Configure management provider (Konfigurieren eines Verwaltungsanbieters)](/microsoft-store/configure-mdm-provider-microsoft-store-for-business).  
 
-- Aktivieren von offline lizenzierten Apps. Weitere Informationen finden Sie unter [Verteilen von Offline-Apps](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).  
+- Aktivieren von offline lizenzierten Apps. Weitere Informationen finden Sie unter [Verteilen von Offline-Apps](/microsoft-store/distribute-offline-apps).  
 
-- Erwerben mindestens einer App. Weitere Informationen finden Sie unter [Suchen und Erwerben von Apps](https://docs.microsoft.com/microsoft-store/find-and-acquire-apps-overview).  
+- Erwerben mindestens einer App. Weitere Informationen finden Sie unter [Suchen und Erwerben von Apps](/microsoft-store/find-and-acquire-apps-overview).  
 
 Geben Sie auf der Seite **Konfigurationen** des Assistenten für Azure-Dienste die folgenden Informationen an:  
 
@@ -161,7 +161,7 @@ Sie können sich für jede verwaltete Store-App die folgenden App-Informationen 
 
 Nach der Bereitstellung von Online-Apps werden alle App-Updates direkt über den Microsoft Store bereitgestellt. Configuration Manager überprüft nicht, ob unterschiedliche Versionen von Online-Apps konform sind. Stattdessen wird nur überprüft, ob die App-Installation von Windows erkannt wurde.  
 
-Bei der Bereitstellung von Offline-Apps mit dem Konfigurations-Manager-Client auf Windows 10-Geräten müssen Sie sicherstellen, dass Benutzer nicht über die Berechtigung verfügen, Anwendungen zu aktualisieren, die nicht Teil der Configuration Manager-Bereitstellungen sind. Die Steuerung der Updates von Offline-Apps ist in Umgebungen mit mehreren Benutzern (z.B. Kursräumen) besonders wichtig. [Gruppenrichtlinien](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy) sind eine Möglichkeit zum Deaktivieren von Microsoft Store.
+Bei der Bereitstellung von Offline-Apps mit dem Konfigurations-Manager-Client auf Windows 10-Geräten müssen Sie sicherstellen, dass Benutzer nicht über die Berechtigung verfügen, Anwendungen zu aktualisieren, die nicht Teil der Configuration Manager-Bereitstellungen sind. Die Steuerung der Updates von Offline-Apps ist in Umgebungen mit mehreren Benutzern (z.B. Kursräumen) besonders wichtig. [Gruppenrichtlinien](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy) sind eine Möglichkeit zum Deaktivieren von Microsoft Store.
 
 Wenn der Administrator von Microsoft Store für Unternehmen und Bildungseinrichtungen eine Offline-App erwirbt, sollten Sie diese nicht über den Store für Benutzer veröffentlichen. Durch diese Konfiguration wird sichergestellt, dass Benutzer die App nicht installieren oder online aktualisieren können. Die Benutzer erhalten ausschließlich über Configuration Manager Offlineupdates für die App.
 

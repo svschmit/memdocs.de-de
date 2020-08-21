@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 01b6587d1d223675fdc240c20913e21854d55821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f24768521cd179c3a6403aff057de48ae46e7e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701118"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695510"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Onlinedokumentation für Configuration Manager
 
@@ -26,7 +26,7 @@ Willkommen bei der Configuration Manager-Dokumentationsbibliothek! Suchen Sie di
 
 ### <a name="online-documentation"></a>Onlinedokumentation
 
-Sie können die Onlinedokumentation zu Configuration Manager, Current Branch unter [docs.microsoft.com/configmgr](https://docs.microsoft.com/configmgr) einsehen:  
+Sie können die Onlinedokumentation zu Configuration Manager, Current Branch unter [docs.microsoft.com/configmgr](/configmgr) einsehen:  
 
 - [Einführung in Configuration Manager](../understand/introduction.md)  
 
@@ -76,33 +76,33 @@ Für die folgenden Versionen:
 
 Siehe Onlinedokumentation unter folgenden Links:  
 
-- [Erste Schritte mit System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
+- [Erste Schritte mit System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
 
-- [Standortverwaltung für System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
+- [Standortverwaltung für System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
 
-- [Migrieren von Hierarchien in System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
+- [Migrieren von Hierarchien in System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
 
-- [Bereitstellen von Clients für System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
+- [Bereitstellen von Clients für System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
 
-- [Bereitstellen von Software und Betriebssystemen in System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
+- [Bereitstellen von Software und Betriebssystemen in System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
 
-- [Bestand und Kompatibilität in System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
+- [Bestand und Kompatibilität in System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
 
-- [Sicherheit und Datenschutz für System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
+- [Sicherheit und Datenschutz für System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
 
-- [Szenarios und Lösungen mithilfe von System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
+- [Szenarios und Lösungen mithilfe von System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
 
 ### <a name="release-notes-and-technical-publications"></a>Versionshinweise und technische Publikationen
 
 Die Versionshinweise und technischen Publikationen ergänzen die Configuration Manager-Handbücher. Die Anmerkungen zu dieser Version enthalten Informationen, die nicht in der Produktdokumentation erwähnt werden und für die erfolgreiche Installation von Configuration Manager erforderlich sind. Technische Artikel bieten zusätzliche Informationen zur Unterstützung von Configuration Manager.  
 
-- [Anmerkungen zu dieser Version von System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
+- [Anmerkungen zu dieser Version von System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
 
-- [Technische Dokumentation zu System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
+- [Technische Dokumentation zu System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
 
 ### <a name="accessibility"></a>Zugänglichkeit
 
-Informationen über die Features, Produkte und Dienste, die die Barrierefreiheit in Configuration Manager gewährleisten, finden Sie unter [Barrierefreiheitsfunktionen von Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\)).
+Informationen über die Features, Produkte und Dienste, die die Barrierefreiheit in Configuration Manager gewährleisten, finden Sie unter [Barrierefreiheitsfunktionen von Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\)).
 
 ### <a name="downloadable-documentation"></a>Dokumentation zum Herunterladen
 

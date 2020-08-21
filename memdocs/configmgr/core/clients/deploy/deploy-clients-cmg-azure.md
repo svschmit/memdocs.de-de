@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39d6bf22cb24492a0f4e3f59313184ce522b5d09
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: e15f8511464b6d8b8486bb874a256df1c375e31b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455003"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694575"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Installieren und Zuweisen von Configuration Manager-Windows 10-Clients über das Internet mit Authentifizierung über Azure AD
 
@@ -40,7 +40,7 @@ Die Einrichtung von Azure AD kann für einige Kunden einfacher sein als die Einr
 
   - Beim angemeldeten Benutzer muss es sich um eine Azure AD-Identität handeln.
 
-  - Wenn der Benutzer eine Verbundidentität oder eine synchronisierte Identität ist, müssen Sie in Configuration Manager sowohl die [Active Directory-Benutzerermittlung](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) als auch die [Azure AD-Benutzerermittlung](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc) konfigurieren. Weitere Informationen zu Hybrididentitäten finden Sie unter [Definieren einer Strategie zur Hybrididentitätsübernahme](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
+  - Wenn der Benutzer eine Verbundidentität oder eine synchronisierte Identität ist, müssen Sie in Configuration Manager sowohl die [Active Directory-Benutzerermittlung](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) als auch die [Azure AD-Benutzerermittlung](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc) konfigurieren. Weitere Informationen zu Hybrididentitäten finden Sie unter [Definieren einer Strategie zur Hybrididentitätsübernahme](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 - Zusätzlich zu den [erforderlichen Komponenten](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq) für die Standortsystemrolle des Verwaltungspunkts müssen Sie auch **ASP.NET 4.5** auf diesem Server installieren. Bei der Aktivierung von ASP.NET 4.5 werden weitere Optionen automatisch ausgewählt, die Sie ebenfalls verwenden müssen.  
 
@@ -70,13 +70,13 @@ Mit diesen Clienteinstellungen können Sie Windows 10-Geräte als hybrid eingeb
     - **Automatische Registrierung neuer, in die Domäne eingebundener Windows 10-Geräte bei Azure Active Directory**: Legen Sie diese Option auf **Ja** oder **Nein** fest. Der Standardwert für diese Einstellung ist **Ja**. Dieses Verhalten ist auch die Standardeinstellung in Version 1709 von Windows 10.
 
         > [!TIP]
-        > Hybrid eingebundene Geräte werden in eine lokale Active Directory-Domäne eingebunden und in Azure AD registriert. Weitere Informationen finden Sie unter [In Azure AD eingebundene Hybridgeräte](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
+        > Hybrid eingebundene Geräte werden in eine lokale Active Directory-Domäne eingebunden und in Azure AD registriert. Weitere Informationen finden Sie unter [In Azure AD eingebundene Hybridgeräte](/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
 
     - **Ermöglichen Sie Clients die Verwendung eines Cloudverwaltungsgateways**: Legen Sie **Ja** (Standardeinstellung) oder **Nein** fest.  
 
 2. Stellen Sie die Clienteinstellungen in der gewünschten Sammlung von Geräten bereit. Stellen Sie diese Einstellungen nicht für Benutzersammlungen bereit.
 
-Um zu bestätigen, dass das Gerät hybrid eingebunden wurde, führen Sie an der Eingabeaufforderung `dsregcmd.exe /status` aus. Wenn das Gerät in Azure AD oder hybrid eingebunden ist, wird im Feld **AzureAdjoined** in den Ergebnissen **JA** angezeigt. Weitere Informationen finden Sie unter [dsregcmd-Befehl – Gerätestatus](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
+Um zu bestätigen, dass das Gerät hybrid eingebunden wurde, führen Sie an der Eingabeaufforderung `dsregcmd.exe /status` aus. Wenn das Gerät in Azure AD oder hybrid eingebunden ist, wird im Feld **AzureAdjoined** in den Ergebnissen **JA** angezeigt. Weitere Informationen finden Sie unter [dsregcmd-Befehl – Gerätestatus](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
 ## <a name="install-and-register-the-client-using-azure-ad-identity"></a>Installieren und Registrieren des Clients mithilfe einer Azure AD-Identität
 

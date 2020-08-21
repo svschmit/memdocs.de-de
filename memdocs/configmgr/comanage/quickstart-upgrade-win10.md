@@ -10,16 +10,16 @@ ms.assetid: 561eb5b6-f90c-485a-91c2-e45bb0ce7877
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e11a6130fb9f7d86b7d3377cc4120d4e61c43d2d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d41a0806a33ac627eceaafab54c73c31ea013365
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691198"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694830"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>Upgrade auf Windows 10 für Co-Verwaltung
 
-Während sie darauf hinarbeiten, Ihr Unternehmen in die Co-Verwaltung zu integrieren, stellt die aktuelle Windows-Version für einige Kunden eine erhebliche Hürde dar. Für Co-Verwaltung ist [Windows 10, Version 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) oder höher erforderlich. Sobald Sie Windows aktualisieren und die automatische Registrierung konfigurieren, werden Ihre Clients automatisch für die Co-Verwaltung angemeldet.
+Während sie darauf hinarbeiten, Ihr Unternehmen in die Co-Verwaltung zu integrieren, stellt die aktuelle Windows-Version für einige Kunden eine erhebliche Hürde dar. Für Co-Verwaltung ist [Windows 10, Version 1709](/windows/whats-new/whats-new-windows-10-version-1709) oder höher erforderlich. Sobald Sie Windows aktualisieren und die automatische Registrierung konfigurieren, werden Ihre Clients automatisch für die Co-Verwaltung angemeldet.
 
 Im folgenden Video erläutern und zeigen Senior Program Manager Rob York und Product Marketing Manager Locky Ainley das Upgrade auf Windows 10 für Co-Verwaltung:
 
@@ -31,7 +31,7 @@ Im folgenden Video erläutern und zeigen Senior Program Manager Rob York und Pro
 
 Neben anderen Plattformverbesserungen unterstützt Windows 10, Version 1709 oder höher, die automatische Registrierung. Dieses Verhalten bewirkt, dass sich ein Gerät automatisch bei Intune registriert, wenn es in Azure Active Directory (Azure AD) eingebunden wird. 
 
-Weitere Informationen finden Sie unter [Aktivieren der automatischen Windows 10-Registrierung](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment).
+Weitere Informationen finden Sie unter [Aktivieren der automatischen Windows 10-Registrierung](/intune/windows-enroll#enable-windows-10-automatic-enrollment).
 
 
 ## <a name="how-to-do-it"></a>Vorgehensweise
@@ -61,5 +61,4 @@ Ein großer europäischen Softwarehersteller setzt erfolgreich eine Gruppe mit f
 
 Wenn Sie Unterstützung bei Ihrem Windows 10-Upgrade zu irgendeinem Zeitpunkt des Vorgangs benötigen, navigieren Sie zu [Microsoft FastTrack](https://Microsoft.com/FastTrack/), melden Sie sich an, und fordern Sie Unterstützung an. 
 
-Weitere Informationen finden Sie unter [Abrufen von Hilfe aus FastTrack](quickstart-fasttrack.md). 
-
+Weitere Informationen finden Sie unter [Abrufen von Hilfe aus FastTrack](quickstart-fasttrack.md).

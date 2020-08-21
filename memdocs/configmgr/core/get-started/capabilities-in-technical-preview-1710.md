@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e408bbe7ea88d70c5a9d02368c2d820584cae2b8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905326"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694439"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Funktionen in der Technical Preview 1710 für Configuration Manager
 
@@ -97,17 +97,17 @@ Dieses Release enthält mehr Unterstützung für Windows Defender Exploit Guard.
 
 Konformitätsinformationen für die Bereitstellung der Exploit Guard-Richtlinie sind in der Configuration Manager-Konsole verfügbar.
 
-Weitere Informationen zu Exploit Guard sowie bestimmten Komponenten und Regeln finden Sie in der Windows-Dokumentationsbibliothek unter [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
+Weitere Informationen zu Exploit Guard sowie bestimmten Komponenten und Regeln finden Sie in der Windows-Dokumentationsbibliothek unter [Windows Defender Exploit Guard](/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
 
 ### <a name="prerequisites"></a>Voraussetzungen
 Auf verwalteten Geräten muss das Windows 10 1709 Fall Creators Update oder höher ausgeführt werden, und sie müssen je nach konfigurierten Komponenten und Regeln die folgenden Anforderungen erfüllen:
 
 |Exploit Guard-Komponente |Zusätzliche Voraussetzungen|
 |------------------------|------------------------|
-| Verringerung der Angriffsfläche  | Auf den Geräten muss der [Echtzeitschutz von Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) aktiviert sein.  |
-| Überwachter Ordnerzugriff  | Auf den Geräten muss der [Echtzeitschutz von Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) aktiviert sein.   |
+| Verringerung der Angriffsfläche  | Auf den Geräten muss der [Echtzeitschutz von Windows Defender AV]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) aktiviert sein.  |
+| Überwachter Ordnerzugriff  | Auf den Geräten muss der [Echtzeitschutz von Windows Defender AV]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) aktiviert sein.   |
 | Exploit-Schutz  | Keine  |
-| Netzwerkschutz  |  Auf den Geräten muss der [Echtzeitschutz von Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) aktiviert sein.  |
+| Netzwerkschutz  |  Auf den Geräten muss der [Echtzeitschutz von Windows Defender AV]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) aktiviert sein.  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Erstellen einer Exploit Guard-Richtlinie  <!--1355468 -->
 1. Wechseln Sie in der Configuration Manager-Konsole zu **Assets und Konformität** > **Endpoint Protection**, und klicken Sie dann auf **Windows Defender Exploit Guard**.
@@ -125,7 +125,7 @@ Nach der Erstellung der Exploit Guard-Richtlinien stellen Sie sie mithilfe des A
 
 ## <a name="limited-support-for-cng-certificates"></a>Eingeschränkte Unterstützung für CNG-Zertifikate
 <!-- 1356191 -->
-Ab diesem Release können Sie Zertifikatvorlagen des Typs [Cryptography API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) für die folgenden Szenarios verwenden:
+Ab diesem Release können Sie Zertifikatvorlagen des Typs [Cryptography API: Next Generation (CNG)](/windows/win32/seccng/cng-features) für die folgenden Szenarios verwenden:
 
 - Clientregistrierung und Kommunikation mit einem HTTPS-Verwaltungspunkt   
 - Softwareverteilung und Anwendungsbereitstellung mit einem HTTPS-Verteilungspunkt   
@@ -210,7 +210,7 @@ So erstellen Sie eine Richtlinie und durchsuchen die verfügbaren Einstellungen
     > [!NOTE]
     > PCs unter Windows 10 speichern nur eine Netzwerkisolationsliste auf dem Client. In dieser Version können Sie zwei unterschiedliche Arten von Netzwerkisolationslisten erstellen (eine von Windows Information Protection und eine von Windows Defender Application Guard) und diese dem Client bereitstellen. Wenn Sie beide Richtlinien bereitstellen, müssen diese Netzwerkisolationlisten übereinstimmen. Wenn Sie Listen bereitstellen, die nicht mit dem gleichen Client übereinstimmen, schlägt die Bereitstellung fehl.
 
-    Weitere Informationen über das Angeben von Netzwerkdefinition finden Sie in der Dokumentation zu Windows Information Protection – [Schützen von Unternehmensdaten mit Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+    Weitere Informationen über das Angeben von Netzwerkdefinition finden Sie in der Dokumentation zu Windows Information Protection – [Schützen von Unternehmensdaten mit Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
 
 6. Wenn Sie fertig sind, schließen Sie den Assistenten ab, und stellen Sie die Richtlinie auf einem oder mehreren Windows 10-Geräten bereit.
 
@@ -219,4 +219,4 @@ So erstellen Sie eine Richtlinie und durchsuchen die verfügbaren Einstellungen
 Weitere Informationen zu Windows Defender Application Guard finden Sie in [diesem Blogbeitrag](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). Darüber hinaus finden Sie in [diesem Blogbeitrag](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903) weitere Informationen zum eigenständigen Modus von Windows Defender Application Guard.
 
 ## <a name="next-steps"></a>Nächste Schritte
-Informationen zur Installation oder zum Update des Technical Preview-Branch finden Sie unter [Technical Preview für Configuration Manager](technical-preview.md).    
+Informationen zur Installation oder zum Update des Technical Preview-Branch finden Sie unter [Technical Preview für Configuration Manager](technical-preview.md).

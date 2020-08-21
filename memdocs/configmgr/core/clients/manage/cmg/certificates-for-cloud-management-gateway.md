@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: a2e032e2aecfd53dc3a92cfb9c40798b4dcd1db9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715610"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692773"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Zertifikate für das Cloudverwaltungsgateway
 
@@ -258,8 +258,8 @@ Konfigurieren Sie einen lokalen Verwaltungspunkt mit einem der folgenden Clientv
 
 - *Arbeitsgruppe*: Das Gerät ist nicht in eine Domäne oder in Azure AD eingebunden, verfügt jedoch über ein [Clientauthentifizierungszertifikat](#bkmk_clientauth).
 - *In AD-Domäne eingebunden:* Sie binden das Gerät in eine lokale Active Directory-Domäne ein.
-- *In Azure AD eingebunden:* Dies wird auch als „in eine Clouddomäne eingebunden“ bezeichnet. Sie verknüpfen das Gerät mit einem Azure AD-Mandanten. Weitere Informationen finden Sie unter [In Azure AD eingebundene Geräte](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
-- *Hybrid eingebunden:* Sie binden das Gerät in Ihre lokale Active Directory-Instanz ein und registrieren es in Azure AD. Weitere Informationen finden Sie unter [In Azure AD eingebundene Hybridgeräte](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *In Azure AD eingebunden:* Dies wird auch als „in eine Clouddomäne eingebunden“ bezeichnet. Sie verknüpfen das Gerät mit einem Azure AD-Mandanten. Weitere Informationen finden Sie unter [In Azure AD eingebundene Geräte](/azure/active-directory/devices/concept-azure-ad-join).
+- *Hybrid eingebunden:* Sie binden das Gerät in Ihre lokale Active Directory-Instanz ein und registrieren es in Azure AD. Weitere Informationen finden Sie unter [In Azure AD eingebundene Hybridgeräte](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - *HTTP*: In den Verwaltungspunkteigenschaften legen Sie **HTTP** für die Clientverbindungen fest.
 - *HTTPS*: In den Verwaltungspunkteigenschaften legen Sie **HTTPS** für die Clientverbindungen fest.
 - *E-HTTP*: Bei den Standorteigenschaften auf der Registerkarte **Kommunikationssicherheit** legen Sie **HTTPS oder HTTP** als Standortsystemeinstellung fest und aktivieren die Option **Für HTTP-Websitesysteme von Configuration Manager generierte Zertifikate verwenden**. Sie konfigurieren den Verwaltungspunkt für HTTP. Der HTTP-Verwaltungspunkt ist für die HTTP- und HTTPS-Kommunikation (Tokenauthentifizierungsszenarios) bereit.
@@ -282,9 +282,9 @@ Zur Erstellung des CMG in Azure muss sich der Configuration Manager-Dienstverbin
 
 Weitere Informationen und Anweisungen zum Hochladen eines Verwaltungszertifikats finden Sie unter den folgenden Artikeln in der Azure-Dokumentation:
 
-- [Cloud services and management certificates (Clouddienste und Verwaltungszertifikate)](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
+- [Cloud services and management certificates (Clouddienste und Verwaltungszertifikate)](/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
 
-- [Upload an Azure Service Management Certificate (Hochladen eines Verwaltungszertifikats für Azure-Dienste)](https://docs.microsoft.com/azure/azure-api-management-certs)  
+- [Upload an Azure Service Management Certificate (Hochladen eines Verwaltungszertifikats für Azure-Dienste)](/azure/azure-api-management-certs)  
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass Sie die Abonnement-ID kopieren, die dem Verwaltungszertifikat zugeordnet ist. Diese verwenden Sie zur Erstellung des CMG in der Configuration Manager-Konsole.
@@ -295,4 +295,4 @@ Weitere Informationen und Anweisungen zum Hochladen eines Verwaltungszertifikats
 
 - [Frequently asked questions about the cloud management gateway (Häufig gestellte Fragen zu Cloud Management Gateway)](cloud-management-gateway-faq.md)  
 
-- [Sicherheit und Datenschutz für Cloud Management Gateway](security-and-privacy-for-cloud-management-gateway.md)  
+- [Sicherheit und Datenschutz für Cloud Management Gateway](security-and-privacy-for-cloud-management-gateway.md)

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bedb515c8446e13189fb84644bc0ce7563cc1574
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3cb491ff3bfb10935566c33e321542435d2e0af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078769"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692909"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-configuration-manager"></a>Funktionen in der Technical Preview 1709 für Configuration Manager
 
@@ -113,22 +113,22 @@ Nach der Aktivierung der Co-Verwaltung verwaltet Configuration Manager weiterhin
 Konformitätsrichtlinien definieren die Regeln und Einstellungen, die ein Gerät erfüllen muss, damit es als mit bedingten Zugriffsrichtlinien konform eingestuft wird. Konformitätsrichtlinien ermöglichen Ihnen auch, Konformitätsprobleme bei Geräten unabhängig von bedingten Zugriffsrechten zu überwachen und zu beheben.
 
 #### <a name="windows-update-for-business-policies"></a>Windows Update for Business-Richtlinien
-Mit Windows Update for Business-Richtlinien können Sie Zurückstellungsrichtlinien für Funktionsupdates unter Windows 10 oder für Qualitätsupdates für Windows 10-Geräte konfigurieren, die direkt von Windows Update for Business verwaltet werden. Weitere Informationen finden Sie unter [Konfigurieren von Windows Update for Business-Zurückstellungsrichtlinien](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
+Mit Windows Update for Business-Richtlinien können Sie Zurückstellungsrichtlinien für Funktionsupdates unter Windows 10 oder für Qualitätsupdates für Windows 10-Geräte konfigurieren, die direkt von Windows Update for Business verwaltet werden. Weitere Informationen finden Sie unter [Konfigurieren von Windows Update for Business-Zurückstellungsrichtlinien](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Remoteaktionen, die in Intune in Azure für co-verwaltete Geräte verfügbar sind
 Wenn ein Windows 10-Gerät für die Co-Verwaltung aktiviert ist, stehen Ihnen die folgenden Remoteaktionen aus Intune in Azure zur Verfügung:  
-- [Zurücksetzen auf Werkseinstellungen](https://docs.microsoft.com/intune/devices-wipe#wipe)
-- [Selektives Zurücksetzen](https://docs.microsoft.com/intune/apps-selective-wipe)
-- [Geräte löschen](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
-- [Geräte neu starten](https://docs.microsoft.com/intune/device-restart)
-- [Sauber starten](https://docs.microsoft.com/intune/device-fresh-start)
+- [Zurücksetzen auf Werkseinstellungen](/intune/devices-wipe#wipe)
+- [Selektives Zurücksetzen](/intune/apps-selective-wipe)
+- [Geräte löschen](/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
+- [Geräte neu starten](/intune/device-restart)
+- [Sauber starten](/intune/device-fresh-start)
 
 ### <a name="prepare-intune-for-co-management"></a>Vorbereiten von Intune für die Co-Verwaltung
 Bevor Sie Workloads von Configuration Manager zu Intune verschieben, erstellen Sie die erforderlichen Profile und Richtlinien in Intune, um sicherzustellen, dass Ihre Geräte weiterhin geschützt werden.
 Sie können Objekte in Intune auf der Grundlage der Objekte erstellen, die in Configuration Manager vorhanden sind. Wenn Ihre aktuelle Strategie aber auf einer veralteten oder herkömmlichen Verwaltung aufbaut, sollten Sie möglicherweise einen Moment innehalten und überdenken, welche Richtlinien und Profile Sie für die moderne Verwaltung benötigen. Verwenden Sie die folgenden Ressourcen, um die Richtlinien und Profile zu erstellen.    
-<!-- - [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  -->
-- [Windows Update for Business-Richtlinien](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
-- [Gerätekonfigurationsprofile](https://docs.microsoft.com/intune/device-profile-create)  
+<!-- - [Device compliance policies](/intune/compliance-policy-create-windows)  -->
+- [Windows Update for Business-Richtlinien](/intune/windows-update-for-business-configure)  
+- [Gerätekonfigurationsprofile](/intune/device-profile-create)  
 
 ### <a name="architectural-overview-for-co-management"></a>Architekturübersicht für die Co-Verwaltung
 Die folgende Abbildung bietet eine Architekturübersicht über die Co-Verwaltung und ihre Rolle in der vorhandenen Configuration Manager- und Intune-Infrastruktur.
@@ -185,17 +185,17 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 
 #### <a name="new-windows-10-devices"></a>Neue Windows 10-Geräte
 Auf neuen Windows 10-Geräten können Sie mit dem Dienst „AutoPilot“ den Eindruck beim ersten Ausführen konfigurieren, der die Einbindung des Geräts in AD und Azure AD sowie die Registrierung bei Intune umfasst. Erstellen Sie anschließend eine App in Intune, um den Configuration Manager-Client bereitzustellen.  
-1. Aktivieren Sie AutoPilot für die neuen Windows 10-Geräte. Weitere Informationen finden Sie unter [Übersicht über Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).  
-2. Konfigurieren Sie die automatische Registrierung in Azure AD für Ihre Geräte, damit sie automatisch in Intune registriert werden. Weitere Informationen finden Sie unter  [Windows-Geräte registrieren](https://docs.microsoft.com/intune/windows-enroll).
-3. Erstellen Sie eine App in Intune mit dem Configuration Manager-Clientpaket, und stellen Sie die App für Windows 10-Geräte bereit, die Sie co-verwalten möchten. Verwenden Sie die [Befehlszeile, um den Configuration Manager-Client zu installieren](#command-line-to-install-configuration-manager-client), während Sie die Schritte zum [Installieren von Clients über das Internet mithilfe von Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure) ausführen.   
+1. Aktivieren Sie AutoPilot für die neuen Windows 10-Geräte. Weitere Informationen finden Sie unter [Übersicht über Windows AutoPilot](/windows/deployment/windows-10-auto-pilot).  
+2. Konfigurieren Sie die automatische Registrierung in Azure AD für Ihre Geräte, damit sie automatisch in Intune registriert werden. Weitere Informationen finden Sie unter  [Windows-Geräte registrieren](/intune/windows-enroll).
+3. Erstellen Sie eine App in Intune mit dem Configuration Manager-Clientpaket, und stellen Sie die App für Windows 10-Geräte bereit, die Sie co-verwalten möchten. Verwenden Sie die [Befehlszeile, um den Configuration Manager-Client zu installieren](#command-line-to-install-configuration-manager-client), während Sie die Schritte zum [Installieren von Clients über das Internet mithilfe von Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure) ausführen.   
 
 #### <a name="windows-10-devices-not-enrolled-in-intune-or-a-configuration-manager-client"></a>Nicht in Intune oder einem Configuration Manager-Client registrierte Windows 10-Geräte
 Windows 10-Geräte, die nicht in Intune registriert sind oder den Configuration Manager-Client haben, können Sie automatisch bei Intune registrieren. Erstellen Sie anschließend eine App in Intune, um den Configuration Manager-Client bereitzustellen.
-1. Konfigurieren Sie die automatische Registrierung in Azure AD für Ihre Geräte, damit sie automatisch in Intune registriert werden. Weitere Informationen finden Sie unter  [Windows-Geräte registrieren](https://docs.microsoft.com/intune/windows-enroll).  
-2. Erstellen Sie eine App in Intune mit dem Configuration Manager-Clientpaket, und stellen Sie die App für Windows 10-Geräte bereit, die Sie co-verwalten möchten. Verwenden Sie die [Befehlszeile, um den Configuration Manager-Client zu installieren](#command-line-to-install-configuration-manager-client), während Sie die Schritte zum [Installieren von Clients über das Internet mithilfe von Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure) ausführen.
+1. Konfigurieren Sie die automatische Registrierung in Azure AD für Ihre Geräte, damit sie automatisch in Intune registriert werden. Weitere Informationen finden Sie unter  [Windows-Geräte registrieren](/intune/windows-enroll).  
+2. Erstellen Sie eine App in Intune mit dem Configuration Manager-Clientpaket, und stellen Sie die App für Windows 10-Geräte bereit, die Sie co-verwalten möchten. Verwenden Sie die [Befehlszeile, um den Configuration Manager-Client zu installieren](#command-line-to-install-configuration-manager-client), während Sie die Schritte zum [Installieren von Clients über das Internet mithilfe von Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure) ausführen.
 
 #### <a name="windows-10-devices-enrolled-in-intune"></a>Bei Intune registrierte Windows 10-Geräte
-Erstellen Sie für Windows 10-Geräte, die bereits bei Intune registriert sind, eine App in Intune, um den Configuration Manager-Client bereitzustellen. Verwenden Sie die [Befehlszeile, um den Configuration Manager-Client zu installieren](#command-line-to-install-configuration-manager-client), während Sie die Schritte zum [Installieren von Clients über das Internet mithilfe von Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure) ausführen.  
+Erstellen Sie für Windows 10-Geräte, die bereits bei Intune registriert sind, eine App in Intune, um den Configuration Manager-Client bereitzustellen. Verwenden Sie die [Befehlszeile, um den Configuration Manager-Client zu installieren](#command-line-to-install-configuration-manager-client), während Sie die Schritte zum [Installieren von Clients über das Internet mithilfe von Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure) ausführen.  
 
 ### <a name="switch-configuration-manager-workloads-to-intune"></a>Verschieben von Configuration Manager-Workloads zu Intune
 Im vorherigen Abschnitt haben Sie Windows 10-Geräte für die Co-Verwaltung vorbereitet. Diese Geräte sind nun in AD und Azure AD eingebunden, bei Intune registriert und haben den Configuration Manager-Client. Wahrscheinlich sind aber noch nicht alle Ihrer Windows 10-Geräte, die in AD eingebunden und mit dem Configuration Manager-Client versehen sind, auch in Azure AD eingebunden oder bei Intune registriert. Das folgende Verfahren enthält eine Anleitung für die Aktivierung der Co-Verwaltung und die Vorbereitung Ihrer restlichen Windows 10-Geräte (Configuration Manager-Clients ohne Intune-Registrierung) für die Co-Verwaltung. Außerdem können Sie damit beginnen, bestimmte Configuration Manager-Workloads zu Intune zu verschieben.
@@ -219,4 +219,4 @@ Select the co-management object, and then on the Home tab, click **Properties**.
 After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
 
 ## <a name="see-also"></a>Weitere Informationen:
-Weitere Informationen zur Installation oder dem Update der Technical Preview finden Sie unter [Technical Preview für Configuration Manager](technical-preview.md). 
+Weitere Informationen zur Installation oder dem Update der Technical Preview finden Sie unter [Technical Preview für Configuration Manager](technical-preview.md).

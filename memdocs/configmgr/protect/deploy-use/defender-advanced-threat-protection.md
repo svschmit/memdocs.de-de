@@ -10,20 +10,20 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cbf7dd3e35db8d2020e96e2511017e43863f724e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 5feaf05a6829d902b1d8dcbe57722dfce410de6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85613461"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693538"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
 *Gilt für: Configuration Manager (Current Branch)*
 
-Endpoint Protection kann Ihnen dabei helfen, [Microsoft Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), ehemals Windows Defender ATP, zu verwalten und zu überwachen. Microsoft Defender ATP unterstützt Unternehmen dabei, komplexe Angriffe auf ihre Netzwerke zu entdecken, zu untersuchen, und darauf zu reagieren. Configuration Manager-Richtlinien können Sie beim Onboarding und der Überwachung von Windows 10-Clients unterstützen.
+Endpoint Protection kann Ihnen dabei helfen, [Microsoft Defender Advanced Threat Protection (ATP)](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), ehemals Windows Defender ATP, zu verwalten und zu überwachen. Microsoft Defender ATP unterstützt Unternehmen dabei, komplexe Angriffe auf ihre Netzwerke zu entdecken, zu untersuchen, und darauf zu reagieren. Configuration Manager-Richtlinien können Sie beim Onboarding und der Überwachung von Windows 10-Clients unterstützen.
 
-Microsoft Defender ATP ist ein Dienst im [Microsoft Defender Security Center](https://securitycenter.windows.com). Durch Hinzufügen und Bereitstellen einer Client-Onboardingkonfigurationsdatei kann Configuration Manager den Bereitstellungsstatus und die Microsoft Defender ATP-Agent-Integrität überwachen. Microsoft Defender ATP wird auf PCs unterstützt, auf denen der Konfigurations-Manager-Client ausgeführt wird oder die [von Microsoft Intune verwaltet](https://docs.microsoft.com/intune/protect/advanced-threat-protection) werden.
+Microsoft Defender ATP ist ein Dienst im [Microsoft Defender Security Center](https://securitycenter.windows.com). Durch Hinzufügen und Bereitstellen einer Client-Onboardingkonfigurationsdatei kann Configuration Manager den Bereitstellungsstatus und die Microsoft Defender ATP-Agent-Integrität überwachen. Microsoft Defender ATP wird auf PCs unterstützt, auf denen der Konfigurations-Manager-Client ausgeführt wird oder die [von Microsoft Intune verwaltet](/intune/protect/advanced-threat-protection) werden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -220,6 +220,6 @@ Klicken Sie auf **Bereitstellen**, um die Microsoft Defender ATP-Richtlinie für
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 
-- [Beheben von Onboardingproblemen mit Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
+- [Beheben von Onboardingproblemen mit Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

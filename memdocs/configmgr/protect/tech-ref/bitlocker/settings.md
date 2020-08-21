@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127882"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693521"
 ---
 # <a name="bitlocker-settings-reference"></a>Referenz zu BitLocker-Einstellungen
 
@@ -119,7 +119,7 @@ Wenn Sie diese Einstellung aktivieren, muss der Benutzer das Betriebssystemlaufw
 > [!NOTE]
 > Wenn das Laufwerk bereits verschlüsselt ist und Sie diese Einstellung deaktivieren, entschlüsselt BitLocker das Laufwerk.  
 
-Verwenden Sie bei Geräten ohne [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node) die Option **BitLocker ohne kompatibles TPM zulassen (Kennwort erforderlich)** . Mit dieser Einstellung kann BitLocker das Betriebssystemlaufwerk auch dann verschlüsseln, wenn das Gerät über kein TPM verfügt. Wenn Sie diese Option zulassen, wird der Benutzer von Windows aufgefordert, ein BitLocker-Kennwort anzugeben.
+Verwenden Sie bei Geräten ohne [Trusted Platform Module (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-top-node) die Option **BitLocker ohne kompatibles TPM zulassen (Kennwort erforderlich)** . Mit dieser Einstellung kann BitLocker das Betriebssystemlaufwerk auch dann verschlüsseln, wenn das Gerät über kein TPM verfügt. Wenn Sie diese Option zulassen, wird der Benutzer von Windows aufgefordert, ein BitLocker-Kennwort anzugeben.
 
 Auf Geräten mit kompatiblem TPM können zwei Typen von Authentifizierungsmethoden beim Systemstart verwendet werden, um verschlüsselte Daten zusätzlich zu schützen. Beim Starten des Computers kann nur das TPM zur Authentifizierung verwendet werden, oder es kann zusätzlich die Eingabe einer persönlichen Identifikationsnummer (PIN) angefordert werden. Konfigurieren Sie die folgenden Einstellungen:
 

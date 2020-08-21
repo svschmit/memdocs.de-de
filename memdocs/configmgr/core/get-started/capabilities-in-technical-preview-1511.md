@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905847"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694507"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funktionen in der Technical Preview 1511 für Configuration Manager
 
@@ -34,7 +34,7 @@ Für Computer, die über WUfB verbunden sind, kann Configuration Manager keine M
 
 -   Windows 10 Desktop Pro oder Windows 10 Enterprise Edition, Version 1511 oder höher  
 
--   Computer, die über [Windows Update für Unternehmen](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb)verwaltet werden sollen.  
+-   Computer, die über [Windows Update für Unternehmen](/windows/deployment/update/waas-manage-updates-wufb)verwaltet werden sollen.  
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!  
  Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Feedbackinformationen oben in diesem Thema, um uns Ihre Erfahrungen mitzuteilen:  
@@ -67,7 +67,7 @@ Wenn Microsoft ein neues Office 365-Desktopclientupdate in Windows Server Update
 
 4. Sie können die Kompatibilität für Office 365-Updates mithilfe der Überwachung und Berichte in der Konsole überprüfen.  
 
-   Detaillierte Anweisungen finden Sie unter [Verwalten von Updates für Office 365 ProPlus mit dem Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Detaillierte Anweisungen finden Sie unter [Verwalten von Updates für Office 365 ProPlus mit dem Microsoft Endpoint Configuration Manager](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Unterstützung für SQL Server AlwaysOn für hoch verfügbare Datenbanken  
  Configuration Manager unterstützt jetzt die Verwendung einer SQL Server Always On-Verfügbarkeitsgruppe zum Hosten der Standortdatenbank.  Wenn Sie einen neuen Standort installieren, können Sie das Setup anweisen, anstatt einer normalen Instanz von SQL Server die Verfügbarkeitsgruppe zu verwenden.  
@@ -110,7 +110,7 @@ Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Fee
  Verwenden Sie die folgenden Verfahren, um zuerst die Verfügbarkeitsgruppe zu erstellen und zu konfigurieren, und installieren Sie dann einen neuen Configuration Manager-Standort, der die Verfügbarkeitsgruppe verwendet.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>So erstellen Sie eine SQL Server AlwaysOn-Verfügbarkeitsgruppe  
-Das Verfahren zum [Erstellen einer SQL Server-Verfügbarkeitsgruppe](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) wird in der SQL Server-Dokumentationsbibliothek beschrieben.  Wenn Sie eine Verfügbarkeitsgruppe erstellen, vergewissern Sie sich, dass die folgenden Anforderungen für die Verwendung mit Configuration Manager erfüllt sind:  
+Das Verfahren zum [Erstellen einer SQL Server-Verfügbarkeitsgruppe](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) wird in der SQL Server-Dokumentationsbibliothek beschrieben.  Wenn Sie eine Verfügbarkeitsgruppe erstellen, vergewissern Sie sich, dass die folgenden Anforderungen für die Verwendung mit Configuration Manager erfüllt sind:  
 
 -   Maximal drei Mitglieder:  
 
@@ -202,4 +202,4 @@ Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Fee
 
 1.  [Stellen Sie Softwareupdates](../../sum/deploy-use/deploy-software-updates.md) für die Serverclustersammlung bereit.  
 
-2.  [Überwachen Sie die Softwareupdatebereitstellung](../../sum/deploy-use/monitor-software-updates.md).  
+2.  [Überwachen Sie die Softwareupdatebereitstellung](../../sum/deploy-use/monitor-software-updates.md).

@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e53c61052b8ee1b217a5268e8877dc4f4415f477
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823978"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692620"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Konfigurieren der Berichterstattung in Configuration Manager
 
@@ -39,7 +39,7 @@ SQL Server Reporting Services ist eine serverbasierte Berichterstattungsplattfo
 
 Wenn Sie einen Bericht ausführen, stellt die Reporting Services-Komponente eine Verbindung mit der Configuration Manager-Standortdatenbank her, um Daten abzurufen.  
 
-Die Installation des Reporting Services-Punkts an einem Configuration Manager-Standort ist erst möglich, nachdem Sie SQL Server Reporting Services auf dem Zielstandortsystem installiert und konfiguriert haben. Weitere Informationen finden Sie unter [Installieren von SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).  
+Die Installation des Reporting Services-Punkts an einem Configuration Manager-Standort ist erst möglich, nachdem Sie SQL Server Reporting Services auf dem Zielstandortsystem installiert und konfiguriert haben. Weitere Informationen finden Sie unter [Installieren von SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services).  
 
 ### <a name="verify-sql-server-reporting-services-installation"></a>Überprüfen einer Installation von SQL Server Reporting Services
 
@@ -241,7 +241,7 @@ Sehen Sie die Protokolldatei ab dem Zeitpunkt der erfolgreichen Installation des
 Es gibt zahlreiche Möglichkeiten, Berichte in SQL Server Reporting Services zu erstellen. Beim Erstellen oder Bearbeiten von Berichten in der Configuration Manager-Konsole wird der Berichts-Generator von Configuration Manager als Erstellungsumgebung geöffnet. Unabhängig von der Erstellungsmethode für Configuration Manager-Berichte benötigen Sie ein selbstsigniertes Zertifikat für die Serverauthentifizierung beim Standortdatenbankserver.
 
 > [!NOTE]  
-> Weitere Informationen zum Erstellen von Berichten mit SQL Server Reporting Services finden Sie unter [Erstellungsumgebung des Berichts-Generators (SSRS)](https://docs.microsoft.com/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
+> Weitere Informationen zum Erstellen von Berichten mit SQL Server Reporting Services finden Sie unter [Erstellungsumgebung des Berichts-Generators (SSRS)](/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
 
 Von Configuration Manager wird das Zertifikat automatisch auf dem Standortserver und ggf. SMS-Anbieterrollen installiert. Sie können Berichte mithilfe der Configuration Manager-Konsole erstellen oder bearbeiten, wenn Sie sie auf einem dieser Server ausführen.
 

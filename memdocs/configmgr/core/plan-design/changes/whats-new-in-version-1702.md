@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129068"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692790"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Neuerungen in Version 1702 von Configuration Manager
 
@@ -118,7 +118,7 @@ Verwenden Sie das [Inhaltsbibliothek-Bereinigungstool](../hierarchy/content-libr
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>Verwenden des OMS-Connectors mit der Azure Government-Cloud
-Sie können den OMS-Connector zum Verbinden von OMS-Protokollanalysen in der Microsoft Azure Government-Cloud verwenden. Dazu müssen Sie vor der Installation des OMS-Connectors eine Konfigurationsdatei ändern, damit der Connector mit der Government-Cloud arbeiten kann. Weitere Informationen finden Sie unter [Verwenden des OMS-Connectors mit der Azure Government-Cloud](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
+Sie können den OMS-Connector zum Verbinden von OMS-Protokollanalysen in der Microsoft Azure Government-Cloud verwenden. Dazu müssen Sie vor der Installation des OMS-Connectors eine Konfigurationsdatei ändern, damit der Connector mit der Government-Cloud arbeiten kann. Weitere Informationen finden Sie unter [Verwenden des OMS-Connectors mit der Azure Government-Cloud](/azure/azure-monitor/platform/collect-sccm).
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Softwareupdatepunkte werden Begrenzungsgruppen hinzugefügt
 Ab Version 1702 verwenden Client Begrenzungsgruppen, um einen neuen Softwareupdatepunkt zu finden, und um ein Fallback durchzuführen und einen neuen Softwareupdatepunkt zu finden, wenn auf ihren aktuellen nicht mehr zugriffen werden kann. Sie können verschiedenen Begrenzungsgruppen einzelne Softwareupdatepunkte hinzufügen, um zu steuern, welchen Server ein Client finden kann. Weitere Informationen finden Sie im Thema [Configuring Boundary Groups (Konfigurieren von Begrenzungsgruppen)](../../servers/deploy/configure/boundary-groups.md) unter [Software Update Points (Softwareupdatepunkte)](../../servers/deploy/configure/boundary-groups.md#bkmk_sup).

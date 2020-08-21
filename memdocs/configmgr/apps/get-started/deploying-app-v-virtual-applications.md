@@ -10,12 +10,12 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df6f550b21523e365055f6a4cdafadca7603c4bf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 63db181bd145ea2fa14f206e94c521b65f7e7354
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906365"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695153"
 ---
 # <a name="deploy-app-v-virtual-applications-with-configuration-manager"></a>Bereitstellen von virtuellen App-V-Anwendungen mit Configuration Manager
 
@@ -31,7 +31,7 @@ Die Verwaltung von virtuellen Anwendungen mithilfe von Configuration Manager bie
 
 -   Betriebssystembereitstellung, Software- und Hardwareinventur, Softwaremessung und Asset Intelligence zur Unterstützung virtueller Anwendungen  
 
-Weitere Informationen zum Erstellen und Sequenzieren von Anwendungen mit Microsoft Application Virtualization (App-V) finden Sie in der [Dokumentation zu Application Virtualization 4](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v4/).  
+Weitere Informationen zum Erstellen und Sequenzieren von Anwendungen mit Microsoft Application Virtualization (App-V) finden Sie in der [Dokumentation zu Application Virtualization 4](/microsoft-desktop-optimization-pack/appv-v4/).  
 
 Zusätzlich zu den anderen Configuration Manager-Anforderungen und -Verfahren zum Erstellen einer Anwendung müssen beim Erstellen und Bereitstellen von virtuellen Anwendungen die folgenden Aspekte berücksichtigt werden:
 
@@ -65,9 +65,9 @@ Zusätzlich zu den anderen Configuration Manager-Anforderungen und -Verfahren zu
 
 Weitere Informationen zu App-V in Windows 10 finden Sie in den folgenden Themen:
 
-- [Neuheiten in App-V](https://docs.microsoft.com/windows/application-management/app-v/appv-about-appv)
-- [Erste Schritte mit App-V für Windows 10](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started)
-- [Upgrade auf App-V für Windows 10 aus einer vorhandenen Installation](https://docs.microsoft.com/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
+- [Neuheiten in App-V](/windows/application-management/app-v/appv-about-appv)
+- [Erste Schritte mit App-V für Windows 10](/windows/application-management/app-v/appv-getting-started)
+- [Upgrade auf App-V für Windows 10 aus einer vorhandenen Installation](/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
 
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>Schritte zur Verwaltung virtueller App-V-Anwendungen  
  Führen Sie zum Verwalten von virtuellen App-V-Anwendungen folgende Schritte aus:  
@@ -147,7 +147,7 @@ Damit diese Funktion in Configuration Manager verwendet werden kann, müssen bei
 Weitere Informationen zu Dynamic Suite Composition in App-V finden Sie in der App-V-Dokumentation.  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>Konvertieren von App-V-Anwendungen von Version 4.6 in Version 5  
-Das Format des Anwendungspakets wurde zwischen App-V 4.6 und App-V 5 geändert. Anwendungen, die mit App-V 4.6 sequenziert wurden, werden nicht mehr unterstützt. App-V 5 verfügt jedoch über ein Paketkonvertierungstool, mit dem Anwendungen umgewandelt werden können. Weitere Informationen finden Sie unter [Konvertieren eines in einer früheren Version von App-V erstellten Pakets](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
+Das Format des Anwendungspakets wurde zwischen App-V 4.6 und App-V 5 geändert. Anwendungen, die mit App-V 4.6 sequenziert wurden, werden nicht mehr unterstützt. App-V 5 verfügt jedoch über ein Paketkonvertierungstool, mit dem Anwendungen umgewandelt werden können. Weitere Informationen finden Sie unter [Konvertieren eines in einer früheren Version von App-V erstellten Pakets](/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
 
 Gehen Sie wie folgt vor, um App-V 4.6-Anwendungen in App-V 5-Anwendungen zu konvertieren:  
 
@@ -178,7 +178,7 @@ In der Bereitstellungskonfigurationsdatei sind Einstellungen enthalten, die für
 
 Wenn Sie virtuelle App-V 5-Anwendungen mit Configuration Manager bereitstellen möchten, müssen alle drei Dateien im selben Ordner vorliegen, wenn Sie den Bereitstellungstyp für App-V 5 erstellen. Wenn in einem Ordner mehrere Dateien vorhanden sind, werden von Configuration Manager die jüngsten ausgewählt.  
 
-Weitere Informationen finden Sie unter [Informationen zur dynamischen Konfiguration in App-V 5.0](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration).  
+Weitere Informationen finden Sie unter [Informationen zur dynamischen Konfiguration in App-V 5.0](/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration).  
 
 ##  <a name="app-v-local-interaction"></a>Lokale Interaktion bei App-V  
 In einigen Anwendungsbereitstellungsszenarios werden Anwendungen lokal auf Clientcomputern installiert und andere Anwendungen als virtuelle Anwendungen für denselben Clientcomputer bereitgestellt. Standardmäßig können die lokal installierten Anwendungen nicht direkt mit virtuellen Anwendungen kommunizieren und diese auch nicht „erkennen“. Dieses Verhalten ist beabsichtigt und Teil der Anwendungsisolation von App-V. Die lokale Interaktion ist eine Funktion des App-V-Clients, die Sie für jede Anwendung aktivieren können, damit lokal installierte Anwendungen, die auf einem Clientcomputer ausgeführt werden, mit virtuellen Anwendungen kommunizieren und diese erkennen können. Die lokale Interaktion wird vollständig von Configuration Manager und App-V unterstützt.  
@@ -186,7 +186,7 @@ In einigen Anwendungsbereitstellungsszenarios werden Anwendungen lokal auf Clien
 Weitere Informationen zur lokalen Interaktion bei App-V finden Sie in der App-V-Dokumentation.  
 
 ##  <a name="app-v-5-shared-content-store"></a>SCS-Modus (Shared Content Store) von App-V 5  
-Configuration Manager unterstützt die SCS-Funktion (Shared Content Store) in App-V 5. Weitere Informationen finden Sie unter [Planen des App-V 5.0-Sequencer und der Clientbereitstellung](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
+Configuration Manager unterstützt die SCS-Funktion (Shared Content Store) in App-V 5. Weitere Informationen finden Sie unter [Planen des App-V 5.0-Sequencer und der Clientbereitstellung](/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
 
 ##  <a name="monitoring-virtual-applications"></a>Überwachen virtueller Anwendungen  
 
@@ -206,4 +206,4 @@ Mithilfe der folgenden Berichte können Sie App-V in der Configuration Manager-U
 ### <a name="log-files"></a>Protokolldateien  
 Von Configuration Manager werden Informationen zu Bereitstellungen virtueller Anwendungen in Protokolldateien aufgezeichnet. Informationen über die Protokolldateien, die von virtuellen Anwendungen und von der Configuration Manager-Anwendungsverwaltung verwendet werden, finden Sie unter [Protokolldateien](../../core/plan-design/hierarchy/log-files.md).  
 
-Unter Windows 8.1 finden Sie die Protokolle für den App-V-Client unter C:\ProgramData\Microsoft\Application Virtualization Client.  
+Unter Windows 8.1 finden Sie die Protokolle für den App-V-Client unter C:\ProgramData\Microsoft\Application Virtualization Client.

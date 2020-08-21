@@ -10,12 +10,12 @@ ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c243897a4c52eff04263325b998c4b23d6b3dde4
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 5f0993f6120735f8a614801f9ac14c29870ffefe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166586"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692586"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Verwenden eines Pullverteilungspunkts mit Configuration Manager
 
@@ -151,7 +151,7 @@ Beim Konfigurieren des Pullverteilungspunkts müssen Sie mindestens einen Quellv
 > 1. Legen Sie auf dem Quellverteilungspunkt den folgenden Registrierungswert fest: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`.
 > 1. Starten Sie den Server des Quellverteilungspunkts neu.
 >
-> Anschließend sollte der Pullverteilungspunkt mit dem Herunterladen von Inhalt aus der Quelle beginnen. Weitere Informationen zu diesem Registrierungsschlüssel finden Sie unter [Übersicht über TLS-SSL (Schannel SSP)](https://docs.microsoft.com/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
+> Anschließend sollte der Pullverteilungspunkt mit dem Herunterladen von Inhalt aus der Quelle beginnen. Weitere Informationen zu diesem Registrierungsschlüssel finden Sie unter [Übersicht über TLS-SSL (Schannel SSP)](/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
 
 ## <a name="see-also"></a>Weitere Informationen:  
 

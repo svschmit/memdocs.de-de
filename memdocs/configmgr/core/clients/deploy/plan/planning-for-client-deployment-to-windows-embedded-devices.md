@@ -10,12 +10,12 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: c3f069225ec1af364a8580559ac4019e1bdd5f0f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906643"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693351"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>Planen der Clientbereitstellung für Windows Embedded-Geräte in Configuration Manager
 
@@ -46,11 +46,11 @@ ms.locfileid: "82906643"
 
  Die Verwaltung der folgenden Schreibfilter wird von Configuration Manager unterstützt:  
 
-- Dateibasierter Schreibfilter (File-Based Write Filter, FBWF) – Weitere Informationen finden Sie unter [File-Based Write Filter (Dateibasierter Schreibfilter)](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5)).  
+- Dateibasierter Schreibfilter (File-Based Write Filter, FBWF) – Weitere Informationen finden Sie unter [File-Based Write Filter (Dateibasierter Schreibfilter)](/previous-versions/windows/embedded/aa940926(v=winembedded.5)).  
 
-- Erweiterter Schreibfilter RAM (Enhanced Write Filter, EWF) – Weitere Informationen finden Sie unter [Enhanced Write Filter (Erweiterter Schreibfilter)](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5)).  
+- Erweiterter Schreibfilter RAM (Enhanced Write Filter, EWF) – Weitere Informationen finden Sie unter [Enhanced Write Filter (Erweiterter Schreibfilter)](/previous-versions/windows/embedded/ms912906(v=winembedded.5)).  
 
-- Vereinheitlichter Schreibfilter (Unified Write Filter, UWF) – Weitere Informationen finden Sie unter [Vereinheitlichter Schreibfilter (Unified Write Filter, UWF)](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter).  
+- Vereinheitlichter Schreibfilter (Unified Write Filter, UWF) – Weitere Informationen finden Sie unter [Vereinheitlichter Schreibfilter (Unified Write Filter, UWF)](/windows-hardware/customize/enterprise/unified-write-filter).  
 
   Schreibfiltervorgänge werden von Configuration Manager nicht unterstützt, wenn das Windows Embedded-Gerät sich im Modus „Erweiterter Schreibfilter – Registrierungsoverlay“ befindet.  
 
