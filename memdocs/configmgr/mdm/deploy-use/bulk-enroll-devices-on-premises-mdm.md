@@ -10,12 +10,12 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfe2d395187f8af86e2d09156a45f7398a5bc670
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 474d59ec22d1edaf8e662298e90555e6772d302b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724614"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698795"
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mdm-in-configuration-manager"></a>Massen Registrierung von Geräten mit lokalem MDM in Configuration Manager
 
@@ -88,11 +88,11 @@ Das Registrierungs Profil ermöglicht Ihnen, Einstellungen anzugeben, die für d
 
 1. Schließen Sie den Assistenten ab.
 
-## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a>Erstellen eines Registrierungs Pakets
+## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a> Erstellen eines Registrierungs Pakets
 
 Das Registrierungspaket (ppkg) ist die Datei, die Sie für die Massen Registrierung von Geräten für die lokale Verwaltung mobiler Geräte (MDM) verwenden. Erstellen Sie diese Datei mit Configuration Manager. Obwohl Sie mit Windows-ICD ähnliche Typen von Paketen erstellen können, können nur Pakete, die Sie in Configuration Manager erstellen, zum Registrieren von Geräten für die lokale Verwaltung mobiler Geräte verwendet werden. Ein Paket, das Sie mit Windows-ICD erstellen, kann nur den für die Registrierung erforderlichen Benutzer Prinzipal Namen (User Principal Name, UPN) bereitstellen. der tatsächliche Registrierungsvorgang kann nicht gestartet werden.
 
-Zum Erstellen des Registrierungspakets muss das Windows Assessment and Deployment Toolkit (ADK) für Windows 10 verwendet werden. Installieren Sie auf dem Computer, auf dem die Configuration Manager-Konsole ausgeführt wird, die neueste Version von Windows ADK. Wählen Sie das Feature **Imaging and Configuration Designer (ICD)** und alle Abhängigkeiten aus. (Diese Version muss nicht mit der Version identisch sein, die von der Configuration Manager Site für die Betriebssystem Bereitstellung verwendet wird.) Weitere Informationen finden Sie unter [herunterladen des Windows ADK für Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install).
+Zum Erstellen des Registrierungspakets muss das Windows Assessment and Deployment Toolkit (ADK) für Windows 10 verwendet werden. Installieren Sie auf dem Computer, auf dem die Configuration Manager-Konsole ausgeführt wird, die neueste Version von Windows ADK. Wählen Sie das Feature **Imaging and Configuration Designer (ICD)** und alle Abhängigkeiten aus. (Diese Version muss nicht mit der Version identisch sein, die von der Configuration Manager Site für die Betriebssystem Bereitstellung verwendet wird.) Weitere Informationen finden Sie unter [herunterladen des Windows ADK für Windows 10](/windows-hardware/get-started/adk-install).
 
 1. Wechseln Sie in der Configuration Manager Konsole zum Arbeitsbereich bestand **und** Kompatibilität, erweitern Sie **alle unternehmenseigenen Geräte**, erweitern Sie **Windows**, und wählen Sie dann den Knoten Registrierungs **profile** aus.
 
@@ -116,7 +116,7 @@ Configuration Manager nachverfolgt gültige Registrierungs Pakete. Erweitern Sie
 > [!TIP]
 > Wenn Sie ein Registrierungspaket aus der Configuration Manager Konsole entfernen, können Sie es nicht zum Registrieren von Geräten verwenden. Verwenden Sie diese Methode, um Registrierungs Pakete zu verwalten, die nicht von anderen für die Massen Registrierung verwendet werden sollen.
 
-## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a>Massen Registrierung eines Geräts
+## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a> Massen Registrierung eines Geräts
 
 Sie können ein Paket verwenden, um Geräte vor oder nach dem Out-of-Box-Erfahrungsprozess (OOBE) des Geräts zu registrieren. Das Registrierungspaket kann auch als Teil eines OEM-Bereitstellungs Pakets (Original Equipment Manufacturer) enthalten sein.
 
@@ -144,7 +144,7 @@ Um das Paket für die Massen Registrierung verwenden zu können, müssen Sie es 
 
 Der Registrierungsvorgang wird gestartet.
 
-## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a>Überprüfen der Registrierung
+## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a> Überprüfen der Registrierung
 
 ### <a name="verify-bulk-enrollment-on-the-device"></a>Überprüfen der Massen Registrierung auf dem Gerät
 

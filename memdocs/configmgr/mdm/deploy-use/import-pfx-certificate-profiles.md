@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3304d480f0650191a784a9152ae464e81c2207a1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906411"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700496"
 ---
 # <a name="import-pfx-certificate-profiles"></a>Importieren von PFX-Zertifikatprofilen
 
@@ -28,9 +28,9 @@ Configuration Manager unterstützt verschiedene Arten von Zertifikat speichern f
 Verwenden Sie Configuration Manager, um Zertifikat Anmelde Informationen zu importieren und dann PFX-Dateien auf Geräten bereitzustellen. Sie können diese Dateien verwenden, um benutzerspezifische Zertifikate zur Unterstützung von verschlüsseltem Datenaustausch zu generieren.
 
 > [!TIP]  
-> Eine schrittweise exemplarische Vorgehensweise für diesen Prozess finden Sie im Blogbeitrag Erstellen und Bereitstellen von [PFX-Zertifikat Profilen in Configuration Manager](https://docs.microsoft.com/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager).  
+> Eine schrittweise exemplarische Vorgehensweise für diesen Prozess finden Sie im Blogbeitrag Erstellen und Bereitstellen von [PFX-Zertifikat Profilen in Configuration Manager](/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager).  
 
-## <a name="create-a-profile"></a>Erstellen eines Profils
+## <a name="create-a-profile"></a>Ein Profil erstellen
 
 1. Wechseln Sie in der Configuration Manager Konsole zum Arbeitsbereich bestand **und** Kompatibilität, erweitern **Sie Konformitäts Einstellungen**, erweitern Sie **Zugriff auf Unternehmensressourcen**, und wählen Sie dann **Zertifikat profile**aus.
 
@@ -70,9 +70,9 @@ Weisen Sie die Ziel Benutzer als primäre Benutzer auf den Windows 10-Geräten z
 
 Verwenden Sie zum Importieren eines PFX-Zertifikats die folgenden Configuration Manager PowerShell-Cmdlets, um ein PFX-Erstellungs Skript bereitzustellen:
 
-- [Get-cmclientcertifi-epfx](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [Import-cmclientcertifialisiepfx](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [Remove-cmclientcertifialisiepfx](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [Get-cmclientcertifi-epfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
+- [Import-cmclientcertifialisiepfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
+- [Remove-cmclientcertifialisiepfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
 
 ### <a name="example-script"></a>Beispielskript
 

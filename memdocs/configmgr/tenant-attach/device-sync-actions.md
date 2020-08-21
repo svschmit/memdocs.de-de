@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251863"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700404"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Microsoft Endpoint Manager-Mandanten anfügen: Geräte Synchronisierung und Geräte Aktionen
 <!--3555758 live 3/4/2020-->
@@ -27,7 +27,7 @@ Ab Configuration Manager Version 2002 können Sie Ihre Configuration Manager Ger
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Ein Konto, das ein *globaler Administrator* für die Anmeldung ist, wenn diese Änderung angewendet wird. Weitere Informationen finden Sie unter [Azure Active Directory Administrator Rollen (Azure AD)](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
+- Ein Konto, das ein *globaler Administrator* für die Anmeldung ist, wenn diese Änderung angewendet wird. Weitere Informationen finden Sie unter [Azure Active Directory Administrator Rollen (Azure AD)](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - Das Onboarding erstellt eine Drittanbieter-APP und einen ersten Dienst Prinzipal in Ihrem Azure AD Mandanten.
 - Eine Azure Public Cloud-Umgebung.
 - Die Benutzerkonten, die Geräte Aktionen auslösen, müssen die folgenden Voraussetzungen erfüllen:
@@ -118,13 +118,13 @@ Die Verwendung einer zuvor erstellten Anwendung während des onboardings zum Anf
    - Cmcollectiondata. Write
 
 - Microsoft Graph Berechtigungen:
-   - Berechtigung "Directory. Read. alle [Anwendungen](https://docs.microsoft.com/graph/permissions-reference#application-permissions) "
-   - Berechtigung "Directory. Read. alle [Delegierten Verzeichnisse](https://docs.microsoft.com/graph/permissions-reference#directory-permissions) "
+   - Berechtigung "Directory. Read. alle [Anwendungen](/graph/permissions-reference#application-permissions) "
+   - Berechtigung "Directory. Read. alle [Delegierten Verzeichnisse](/graph/permissions-reference#directory-permissions) "
 
-- Stellen Sie sicher, dass die **Administrator Zustimmung für** den Mandanten für die Azure AD Anwendung aktiviert ist. Weitere Informationen finden Sie unter [erteilen der Administrator Zustimmung in App-Registrierungen](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
+- Stellen Sie sicher, dass die **Administrator Zustimmung für** den Mandanten für die Azure AD Anwendung aktiviert ist. Weitere Informationen finden Sie unter [erteilen der Administrator Zustimmung in App-Registrierungen](/azure/active-directory/manage-apps/grant-admin-consent).
 
 - Die importierte Anwendung muss wie folgt konfiguriert werden:
-   - Wird **nur für Konten in diesem Organisations Verzeichnis**registriert. Weitere Informationen finden Sie unter [Ändern der Benutzer, die auf Ihre Anwendung zugreifen können](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
+   - Wird **nur für Konten in diesem Organisations Verzeichnis**registriert. Weitere Informationen finden Sie unter [Ändern der Benutzer, die auf Ihre Anwendung zugreifen können](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
    -  Hat einen gültigen Anwendungs-ID-URI und geheimen Schlüssel
 
 

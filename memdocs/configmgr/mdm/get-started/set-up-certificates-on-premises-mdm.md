@@ -10,12 +10,12 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc63a21970bb522407c86d027690b83894b3cb99
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 4ac8d416e05b97b824ae236c2b1a2ff958b946b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724664"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700026"
 ---
 # <a name="set-up-certificates-for-trusted-communications-with-on-premises-mdm"></a>Einrichten von Zertifikaten für vertrauenswürdige Kommunikation mit lokalem MDM
 
@@ -34,9 +34,9 @@ Für Massen registrierte Geräte können Sie das Zertifikat in das Registrierung
 Wenn Sie eine bekannte öffentliche Zertifizierungsstelle wie VeriSign oder GoDaddy zum Ausstellen der Server Zertifikate verwenden, können Sie das vertrauenswürdige Stamm Zertifikat auf jedem Gerät nicht manuell installieren. Die meisten Geräte Vertrauen diesen öffentlichen Behörden nativ. Diese Methode ist eine nützliche Alternative für Benutzer registrierte Geräte, anstatt das Zertifikat auf andere Weise zu installieren.
 
 > [!IMPORTANT]  
-> Es gibt viele Methoden zum Einrichten der Zertifikate für die vertrauenswürdige Kommunikation zwischen Geräten und den Standortsystem Servern für lokale MDM. Die Informationen in diesem Artikel sind ein Beispiel für eine Möglichkeit. Diese Methode erfordert Active Directory Zertifikat Dienste mit einer Zertifizierungsstelle und der Rolle "Zertifizierungsstellen-Webregistrierung". Weitere Informationen finden Sie unter [Active Directory Certificate Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
+> Es gibt viele Methoden zum Einrichten der Zertifikate für die vertrauenswürdige Kommunikation zwischen Geräten und den Standortsystem Servern für lokale MDM. Die Informationen in diesem Artikel sind ein Beispiel für eine Möglichkeit. Diese Methode erfordert Active Directory Zertifikat Dienste mit einer Zertifizierungsstelle und der Rolle "Zertifizierungsstellen-Webregistrierung". Weitere Informationen finden Sie unter [Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
 
-## <a name="publish-the-crl"></a><a name="bkmk_configCa"></a>Veröffentlichen der CRL
+## <a name="publish-the-crl"></a><a name="bkmk_configCa"></a> Veröffentlichen der CRL
 
 Standardmäßig verwendet die Active Directory Zertifizierungsstelle LDAP-basierte Zertifikat Sperr Listen (CRLs). Sie ermöglicht Verbindungen mit der CRL für in die Domäne eingebundenen Geräten. Fügen Sie eine HTTP-basierte CRL hinzu, um zuzulassen, dass nicht in die Domäne eingebundenen Geräten von der Zertifizierungsstelle ausgegebene Zertifikate vertraut werden.
 
@@ -60,7 +60,7 @@ Standardmäßig verwendet die Active Directory Zertifizierungsstelle LDAP-basier
 
 1. Wählen Sie im Fenster "CRL veröffentlichen" **nur Delta**Sperr Liste aus, und klicken Sie dann auf **OK** , um das Fenster zu schließen.
 
-## <a name="create-the-certificate-template"></a><a name="bkmk_certTempl"></a>Erstellen der Zertifikat Vorlage
+## <a name="create-the-certificate-template"></a><a name="bkmk_certTempl"></a> Erstellen der Zertifikat Vorlage
 
 Die Zertifizierungsstelle verwendet die Webserver-Zertifikat Vorlage zum Ausstellen von Zertifikaten für die Server, auf denen die Standortsystem Rollen gehostet werden. Diese Server sind SSL-Endpunkte für die vertrauenswürdige Kommunikation zwischen den Standortsystem Rollen und registrierten Geräten.
 
@@ -85,7 +85,7 @@ Die Zertifizierungsstelle verwendet die Webserver-Zertifikat Vorlage zum Ausstel
 
     1. Entfernen Sie die Berechtigung **Anmelden** aus den Sicherheitsgruppen **Domänen-Admins** und Organisations- **Admins** .
 
-    1. Wählen Sie **Hinzufügen**aus, und geben Sie den Namen der Sicherheitsgruppe ein. Beispielsweise **ConfigMgr-MDM-Server**. Wählen Sie **OK** aus, um das Fenster zu schließen.
+    1. Wählen Sie **Hinzufügen**aus, und geben Sie den Namen der Sicherheitsgruppe ein. Beispielsweise **ConfigMgr-MDM-Server**. Klicken Sie auf **OK**, um das Fenster zu schließen.
 
     1. Wählen Sie die Berechtigung **registrieren** für diese Gruppe aus. Entfernen Sie die Berechtigung **Lesen** nicht.
 
@@ -95,11 +95,11 @@ Die Zertifizierungsstelle verwendet die Webserver-Zertifikat Vorlage zum Ausstel
 
 1. Wählen Sie im Fenster **Zertifikat Vorlagen aktivieren** die neue Vorlage aus. Beispiel: **ConfigMgr-MDM-Webserver**. Wählen Sie dann **OK** aus, um das Fenster zu speichern und zu schließen.
 
-## <a name="request-the-certificate"></a><a name="bkmk_requestCert"></a>Anfordern des Zertifikats
+## <a name="request-the-certificate"></a><a name="bkmk_requestCert"></a> Anfordern des Zertifikats
 
 In diesem Verfahren wird beschrieben, wie Sie das Webserver Zertifikat für IIS anfordern. Führen Sie diesen Vorgang für jeden Standortsystem Server aus, der eine der Rollen für die lokale Verwaltung mobiler Geräte (MDM) hostet.
 
-1. Öffnen Sie auf dem Standortsystem Server, auf dem eine der Rollen gehostet wird, eine Eingabeaufforderung als Administrator. Geben `mmc` Sie ein, um eine leere Microsoft Management Console zu öffnen.
+1. Öffnen Sie auf dem Standortsystem Server, auf dem eine der Rollen gehostet wird, eine Eingabeaufforderung als Administrator. Geben Sie `mmc` ein, um eine leere Microsoft Management Console zu öffnen.
 
 1. Wechseln Sie im Konsolenfenster zum Menü **Datei** , und klicken Sie auf **Snap-in hinzufügen/entfernen**.
 
@@ -121,7 +121,7 @@ In diesem Verfahren wird beschrieben, wie Sie das Webserver Zertifikat für IIS 
 
 Jeder Server benötigt ein eindeutiges Webserver Zertifikat. Wiederholen Sie diesen Vorgang für jeden Server, auf dem eine der erforderlichen Standortsystem Rollen gehostet wird. Wenn ein Server alle Standortsystemrollen hostet, müssen Sie nur ein Webserverzertifikat anfordern.
 
-## <a name="bind-the-certificate"></a><a name="bkmk_bindCert"></a>Binden des Zertifikats
+## <a name="bind-the-certificate"></a><a name="bkmk_bindCert"></a> Binden des Zertifikats
 
 Der nächste Schritt besteht darin, das neue Zertifikat an den Webserver zu binden. Befolgen Sie diesen Vorgang für jeden Server, der die Standortsystem Rollen "anmeldungspunkt" und "anmeldungsproxy- *Punkt* " *enrollment point* Wenn ein Server alle Standortsystem Rollen hostet, müssen Sie diesen Vorgang nur einmal ausführen.
 
@@ -138,7 +138,7 @@ Der nächste Schritt besteht darin, das neue Zertifikat an den Webserver zu bind
 
 1. Wählen Sie in der IIS-Manager-Konsole in der Liste der Verbindungen den Webserver aus. Wählen Sie im Bereich Aktion auf der rechten Seite **neu starten**aus. Durch diese Aktion wird der Webserver Dienst neu gestartet.
 
-## <a name="export-the-trusted-root-certificate"></a><a name="bkmk_exportCert"></a>Exportieren des vertrauenswürdigen Stamm Zertifikats
+## <a name="export-the-trusted-root-certificate"></a><a name="bkmk_exportCert"></a> Exportieren des vertrauenswürdigen Stamm Zertifikats
 
 Active Directory Zertifikat Dienste installiert automatisch das erforderliche Zertifikat von der Zertifizierungsstelle auf allen in die Domäne eingebundenen Geräten. Um das Zertifikat zu erhalten, das für die Kommunikation mit den Standortsystem Rollen für nicht in die Domäne eingebundene Geräte erforderlich ist, exportieren Sie es aus dem Zertifikat, das an den Webserver gebunden ist.
 

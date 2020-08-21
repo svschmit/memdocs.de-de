@@ -11,12 +11,12 @@ ms.assetid: e179e30a-a1fc-461e-8087-ff3a55803450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3d854e4b70a59a364b8611947feea89d4678e7e6
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: e0db550369ca2d81f42a25e68960b5f8f27be168
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724844"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700479"
 ---
 # <a name="install-and-configure-the-exchange-connector"></a>Installieren und Konfigurieren von Exchange Connector
 
@@ -76,10 +76,10 @@ Diese Cmdlets sind in folgenden Exchange Server-Verwaltungsrollen enthalten:
 - Organisationsverwaltung nur anzeigen
 - Server Management
 
-Weitere Informationen finden Sie Untergrund Legendes zu [Verwaltungs Rollen Gruppen](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help) in der Dokumentation zu Exchange Server 2013.
+Weitere Informationen finden Sie Untergrund Legendes zu [Verwaltungs Rollen Gruppen](/exchange/understanding-management-role-groups-exchange-2013-help) in der Dokumentation zu Exchange Server 2013.
 
 > [!TIP]  
-> Wenn Sie versuchen, den Exchange Server-Connector ohne die erforderlichen Cmdlets zu installieren oder zu verwenden, wird in der Datei "easdisc. log" auf dem Standort Server Computer der `Invoking cmdlet <cmdlet> failed`folgende Fehler angezeigt:.
+> Wenn Sie versuchen, den Exchange Server-Connector ohne die erforderlichen Cmdlets zu installieren oder zu verwenden, wird in der Datei "easdisc. log" auf dem Standort Server Computer der folgende Fehler angezeigt: `Invoking cmdlet <cmdlet> failed` .
 
 ## <a name="install-the-connector"></a>Installieren des Connectors
 
@@ -91,7 +91,7 @@ Weitere Informationen finden Sie Untergrund Legendes zu [Verwaltungs Rollen Grup
 
     - Lokaler **Exchange-Server**: Geben Sie für jede Active Directory Site einen einzelnen Server oder ein Client Zugriffs Server-Array an.
 
-        Wenn der Server oder das Array offline sind, wird von Configuration Manager versucht, einen Clientzugriffsserver für die Verwendung zu ermitteln. Gelingt dies nicht, dann wird von Configuration Manager nachfolgend ein Postfachserver zur Herstellung einer Verbindung mit einem Clientzugriffsserver verwendet. Wenn der Verbindungsversuch wiederholt wird, werden die folgenden Warnungen in der Datei "easdisc. log" auf dem Standort Server `Failed to open runspace for site <site_name>`Computer protokolliert:.
+        Wenn der Server oder das Array offline sind, wird von Configuration Manager versucht, einen Clientzugriffsserver für die Verwendung zu ermitteln. Gelingt dies nicht, dann wird von Configuration Manager nachfolgend ein Postfachserver zur Herstellung einer Verbindung mit einem Clientzugriffsserver verwendet. Wenn der Verbindungsversuch wiederholt wird, werden die folgenden Warnungen in der Datei "easdisc. log" auf dem Standort Server Computer protokolliert: `Failed to open runspace for site <site_name>` .
 
     - **Gehosteter Exchange-Server**: Geben Sie die Server Adresse Ihrer Exchange Online-Umgebung an.
 
@@ -106,7 +106,7 @@ Weitere Informationen finden Sie Untergrund Legendes zu [Verwaltungs Rollen Grup
     - **Allgemein**
     - **Kennwort**
     - **E-Mail Verwaltung**
-    - **Sicherheit**
+    - **Security**
     - **Anwendung**
 
     Weitere Informationen finden Sie unter [Exchange Connector-Einstellungen](manage-mobile-devices-with-exchange-activesync.md#policies).
@@ -123,14 +123,14 @@ Weitere Informationen finden Sie Untergrund Legendes zu [Verwaltungs Rollen Grup
 
     Bei der Installation kann ein Fehler auftreten, wenn der angegebene Client Zugriffs Server offline ist. Wenn Configuration Manager den Connector nicht erfolgreich installieren kann, versucht Configuration Manager, die Installation alle 60 Minuten zu wiederholen. Der Vorgang wird so lange wiederholt, bis die Installation erfolgreich war, oder Sie entfernen den Exchange Server-Connector.
 
-- Überprüfen Sie auf dem Standort Server Computer die **Datei sitecomp. log** auf den `Component SMS_EXCHANGE_CONNECTOR flagged for installation`folgenden Eintrag:. Anschließend wird die erfolgreiche Installation mit folgendem Text protokolliert: `STATMSG: ID=1015`.
+- Überprüfen Sie auf dem Standort Server Computer die **Datei sitecomp. log** auf den folgenden Eintrag: `Component SMS_EXCHANGE_CONNECTOR flagged for installation` . Anschließend wird die erfolgreiche Installation mit folgendem Text protokolliert: `STATMSG: ID=1015` .
 
 Überwachen Sie nach Abschluss der Installation die mobilen Geräte, die vom Connector gefunden und verwaltet werden. Anzeigen der Sammlungen mobiler Geräte und Verwenden der Berichte für mobile Geräte.
 
 > [!NOTE]  
 > Configuration Manager generiert Namen für die gefundenen mobilen Geräte. Dabei wird das Format *Benutzername*_*Gerätetyp*verwendet. Beispielsweise **jdoe_WindowsPhone**. Wenn ein Benutzer über mehrere mobile Geräte mit dem gleichen Gerätetyp verfügt, wird in der Configuration Manager-Konsole und in Berichten der gleiche Name für diese mobilen Geräte angezeigt.  
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Von Konfigurations Clients und Standort Systemen verwendete Ports](../../core/plan-design/hierarchy/ports.md#BKMK_PortsExchangeConnectorHosted)
 - [Proxyserverunterstützung](../../core/plan-design/network/proxy-server-support.md#site-system-roles-that-use-a-proxy)
