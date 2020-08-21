@@ -10,12 +10,12 @@ ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5690e4fe003939d00dee1185e6f6551813c346e5
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 60139e3e26195f2feb8b5533c1d26e3e8fb8c3d0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724694"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693742"
 ---
 # <a name="plan-for-on-premises-mdm-in-configuration-manager"></a>Planen der lokalen Verwaltung mobiler Geräte (MDM) in Configuration Manager
 
@@ -29,7 +29,7 @@ Wenn Sie planen, die lokale Verwaltung mobiler Geräte (Mobile Device Management
 - Geräteregistrierung
 
 > [!IMPORTANT]
-> Während der Standort oder jedes mobile Gerät keine Verbindung mit Microsoft InTune herstellt, benötigt Ihre Organisation weiterhin InTune-Lizenzen, um dieses Feature zu verwenden. Weitere Informationen finden Sie unter [Microsoft InTune-Lizenzierung](https://docs.microsoft.com/intune/fundamentals/licenses).
+> Während der Standort oder jedes mobile Gerät keine Verbindung mit Microsoft InTune herstellt, benötigt Ihre Organisation weiterhin InTune-Lizenzen, um dieses Feature zu verwenden. Weitere Informationen finden Sie unter [Microsoft InTune-Lizenzierung](/intune/fundamentals/licenses).
 
 Berücksichtigen Sie die folgenden Anforderungen, bevor Sie die Configuration Manager-Infrastruktur für die lokale Verwaltung mobiler Geräte (MDM) vorbereiten.
 
@@ -37,7 +37,7 @@ Berücksichtigen Sie die folgenden Anforderungen, bevor Sie die Configuration Ma
 
 Der Current Branch von Configuration Manager unterstützt die Registrierung bei der lokalen Verwaltung mobiler Geräte für Windows 10-Geräte. Diese Gerätetypen umfassen hauptsächlich Laptops, IOT und Surface Hub. Weitere Informationen und die Liste der spezifischen Editionen finden Sie [unter Unterstützte Betriebssystemversionen für Clients und Geräte](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 
-## <a name="site-system-roles"></a><a name="bkmk_roles"></a> Standortsystemrollen
+## <a name="site-system-roles"></a><a name="bkmk_roles"></a> Standortsystemrolle
 
 Lokale MDM erfordert mindestens eine der folgenden Standortsystem Rollen:
 
@@ -56,7 +56,7 @@ Abhängig von den Anforderungen Ihrer Organisation können Sie diese Rollen auf 
 
 Weitere allgemeine Informationen finden Sie unter [Planen für Standortsystem Server und-Rollen](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).
 
-## <a name="trusted-communications"></a><a name="bkmk_trustedComs"></a>Vertrauenswürdige Kommunikation
+## <a name="trusted-communications"></a><a name="bkmk_trustedComs"></a> Vertrauenswürdige Kommunikation
 
 Lokale MDM erfordert, dass Sie Standortsystem Rollen für die HTTPS-Kommunikation aktivieren. Abhängig von Ihren Anforderungen können Sie die Zertifizierungsstelle (ca) Ihrer Organisation verwenden, um die vertrauenswürdigen Verbindungen zwischen Servern und Geräten herzustellen. Sie können auch eine öffentlich verfügbare Zertifizierungsstelle als vertrauenswürdige Zertifizierungsstelle verwenden. In jedem Fall müssen Sie die folgenden Zertifikate konfigurieren:
 
@@ -66,7 +66,7 @@ Lokale MDM erfordert, dass Sie Standortsystem Rollen für die HTTPS-Kommunikatio
 
 Weitere Informationen finden Sie unter [Einrichten von Zertifikaten für vertrauenswürdige Verbindungen in der](../get-started/set-up-certificates-on-premises-mdm.md)lokalen Verwaltung mobiler Geräte (MDM).
 
-## <a name="device-enrollment"></a><a name="bkmk_enrollment"></a>Geräteregistrierung
+## <a name="device-enrollment"></a><a name="bkmk_enrollment"></a> Geräteregistrierung
 
 So aktivieren Sie die Geräteregistrierung für die lokale Verwaltung mobiler Geräte:
 

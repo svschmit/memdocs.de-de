@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 26846066aa713d40fdacfe75810d43cafd1c3f04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506248"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693674"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Erstellen von Konfigurationselementen für Windows-Geräte mit lokalem MDM in Configuration Manager
 
@@ -27,7 +27,7 @@ Weitere allgemeine Informationen zu Konformitäts Einstellungen in Configuration
 
 - [Erste Schritte mit Konformitätseinstellungen](../../compliance/get-started/get-started-with-compliance-settings.md)
 
-- [Planen und Konfigurieren von Konformitätseinstellungen](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)
+- [Planen und Konfigurieren von Konformitäts Einstellungen](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)
 
 ## <a name="create-a-configuration-item"></a>Erstellen eines Konfigurations Elements
 
@@ -58,7 +58,7 @@ Weitere allgemeine Informationen zu Konformitäts Einstellungen in Configuration
 
     - **Keiner**: Für Geräte, bei denen bei dieser Konformitätsregel ein Fehler auftritt, wird kein Fehlerschweregrad für Configuration Manager-Berichte gemeldet.
 
-    - **Informationen**
+    - **Information**
 
     - **Warning**
 
@@ -75,7 +75,7 @@ Weitere allgemeine Informationen zu Konformitäts Einstellungen in Configuration
 
 Sie können das neue Konfigurationselement im Arbeitsbereich **Bestand und Kompatibilität** im Knoten **Konfigurationselemente** anzeigen.
 
-## <a name="settings-reference"></a><a name="bkmk_setref"></a>Einstellungs Referenz  
+## <a name="settings-reference"></a><a name="bkmk_setref"></a> Einstellungs Referenz  
 
 In den folgenden Abschnitten werden die in den einzelnen Gruppen verfügbaren spezifischen Einstellungen ausführlich beschrieben. Konfigurieren Sie diese Einstellungen auf der Seite **Geräteeinstellungen** des **Assistenten zum Erstellen von Konfigurations** Elementen für **Windows 8.1-und Windows 10-** Geräte, die *ohne* den Configuration Manager-Client verwaltet werden.
 
@@ -242,8 +242,8 @@ Diese Einstellungen gelten nur für Geräte, auf denen Windows 10 und höher aus
         - **WPA2**
         - **WPA2-PSK**
     - **Datenverschlüsselung**: Wählen Sie die Verschlüsselungsmethode aus, die von dieser Verbindung verwendet wird. Die verfügbaren Werte ändern sich je nach ausgewählter **Authentifizierungs** Methode:
-        - **Deaktiviert**
-        - **WEP**
+        - **Disabled**
+        - **Datenverschlüsselung**
         - **TKIP**
         - **AES**
     - **Schlüssel Index**: Wenn Sie die **Datenverschlüsselung** auf **WEP**festlegen, wählen Sie einen Schlüssel Index von **1** bis **4**aus.
@@ -277,7 +277,7 @@ Wählen Sie **importieren**aus, und geben Sie dann die folgenden Werte an:
   - **Benutzer nicht authentifiziert**
   - **Vertrauenswürdiger Bereitstellungsserver**
 
-### <a name="system-security"></a>System
+### <a name="system-security"></a>Systemsicherheit
 
 - **Benutzerkontensteuerung**: Konfigurieren Sie das Verhalten der Windows-Benutzerkontensteuerung auf dem Gerät.
 - **Netzwerk Firewall**: erfordert die Aktivierung der integrierten Firewall durch Windows. (Windows 8.1)
@@ -325,7 +325,7 @@ Diese Einstellungen gelten nur für Geräte, auf denen Windows 10 Team ausgefüh
 
 ### <a name="windows-information-protection"></a>Windows Information Protection  
 
-Weitere Informationen zum Konfigurieren des Unternehmens Datenschutzes mit Configuration Manager finden [Sie Unterschützen von Unternehmensdaten mit Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Weitere Informationen zum Konfigurieren des Unternehmens Datenschutzes mit Configuration Manager finden [Sie Unterschützen von Unternehmensdaten mit Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 ### <a name="microsoft-edge-legacy"></a>Microsoft Edge-Legacy
 
@@ -374,8 +374,8 @@ Diese Einstellungen gelten nur für Geräte, auf denen Windows 10 und höher aus
 - **Cloud-Schutz zulassen**: Defender verwendet die Microsoft-Cloud, um Informationen über Malware Aktivitäten zu erhalten, und ermöglicht Features wie blockieren im ersten Blick.
 - **Benutzer zur Eingabe von Beispielen auffordern**: Wählen Sie das Verhalten für Defender aus, wenn Dateien möglicherweise weiter analysiert werden müssen. Defender kann z. b. automatisch Dateien an Microsoft senden, um zu ermitteln, ob Sie schädlich sind.
 - **Erkennung potenziell unerwünschter Anwendungen**: schützt das Gerät vor der Ausführung von Software, die von Defender als potenziell unerwünscht eingestuft wird. Sie können vor der Ausführung dieser Anwendungen schützen oder den Überwachungsmodus verwenden, um zu melden, wenn ein Benutzer eine potenziell unerwünschte Anwendung installiert.
-- **Datei-und Ordner Ausschlüsse**: Fügen Sie der Ausschlussliste eine oder mehrere Dateien und Ordner hinzu. Zum Beispiel: `C:\Path` oder `%ProgramFiles%\Path\filename.exe`. Defender enthält diese Dateien und Ordner nicht in Echt Zeit Überprüfungen oder geplante Überprüfungen.
-- **Datei Erweiterungs Ausschlüsse**: Fügen Sie der Ausschlussliste eine oder mehrere Dateierweiterungen hinzu. Zum Beispiel: `java` oder `exe`. Defender enthält keine Dateien mit diesen Erweiterungen in Echt Zeit Überprüfungen oder geplanten Überprüfungen.
+- **Datei-und Ordner Ausschlüsse**: Fügen Sie der Ausschlussliste eine oder mehrere Dateien und Ordner hinzu.  Zum Beispiel: `C:\Path` oder `%ProgramFiles%\Path\filename.exe`. Defender enthält diese Dateien und Ordner nicht in Echt Zeit Überprüfungen oder geplante Überprüfungen.
+- **Datei Erweiterungs Ausschlüsse**: Fügen Sie der Ausschlussliste eine oder mehrere Dateierweiterungen hinzu.  Zum Beispiel: `java` oder `exe`. Defender enthält keine Dateien mit diesen Erweiterungen in Echt Zeit Überprüfungen oder geplanten Überprüfungen.
 - **Prozess Ausschlüsse**: Fügen Sie der Ausschlussliste bestimmte Prozesse hinzu. Beispiel: `C:\path\myproc.exe`. Dieser Ausschlusstyp unterstützt nur die folgenden Erweiterungen: `exe` , `com` oder `scr` . Defender schließt diese Prozesse nicht in Echt Zeit Überprüfungen oder geplante Scans ein.
 
 ### <a name="additional-settings"></a>Zusätzliche Einstellungen
