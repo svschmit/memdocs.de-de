@@ -2,7 +2,7 @@
 title: Neuerungen in Version 2006
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 2006 des Current Branchs von Configuration Manager eingeführt wurden.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f624a207b5e9afded9b86312d1608a35005355f6
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179340"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700281"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Neuerungen in Version 2006 von Configuration Manager (Current Branch)
 
@@ -27,11 +27,8 @@ Das Update 2006 für Configuration Manager (Current Branch) ist als konsolenint
 
 Wenn Sie die neuen Configuration Manager-Features nach der Aktualisierung des Standorts vollständig nutzen möchten, müssen Sie auch Clients auf die neueste Version aktualisieren. Beim Update des Standorts und der Konsole werden neue Features in der Configuration Manager-Konsole angezeigt. Das vollständige Szenario ist allerdings erst einsatzbereit, wenn auch die Clientversion aktualisiert wird.
 
-<!-- commenting this for now as it doesn't work 7422960
 > [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
- -->
+> Um bei einer Aktualisierung dieser Seite benachrichtigt zu werden, kopieren Sie die folgende URL, und fügen Sie sie in Ihren RSS-Feedreader ein: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Anfügen von Mandanten in Microsoft Endpoint Manager
 
@@ -92,6 +89,14 @@ Intranetclients können jetzt auf einen CMG-Softwareupdatepunkt zugreifen, wenn 
 
 ## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Cloudgestützte Verwaltung
 
+### <a name="use-the-company-portal-app-on-co-managed-devices"></a> Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten
+
+<!--CMADO-3601237,INADO-4297660-->
+
+Das Unternehmensportal ist jetzt das plattformübergreifende App-Portal für Microsoft Endpoint Manager. Indem Sie gemeinsam verwaltete Geräte so konfigurieren, dass sie auch das Unternehmensportal nutzen, können Sie auf allen Geräten eine einheitliche Benutzererfahrung bieten.
+
+Weitere Informationen finden Sie unter [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](../../../comanage/company-portal.md).
+
 ### <a name="use-microsoft-azure-china-21vianet-for-co-management"></a>Verwenden von Microsoft Azure China 21ViaNet für die Co-Verwaltung
 <!--7133238-->
 Sie können jetzt die Azure China-Cloud als Ihre Azure-Umgebung auswählen, wenn die Co-Verwaltung aktiviert wird. Weitere Informationen finden Sie unter [Aktivieren der Co-Verwaltung](../../../comanage/how-to-enable.md).
@@ -121,7 +126,7 @@ Zur besseren Abstimmung mit den Desktop Analytics-Anforderungen für Windows-Dia
 |---------|---------|
 | Erforderlich | Basic |
 | Optional (begrenzt) | Erweitert (begrenzt) |
-| – | Erweitert |
+| Nicht zutreffend | Verbessert |
 | Optional | Vollständig |
 
 Wenn Sie zuvor Geräte auf der Ebene **Erweitert** konfiguriert haben, werden diese bei einem Upgrade auf Version 2006 auf **Optional (begrenzt)** zurückgesetzt. Dadurch werden weniger Daten an Microsoft gesendet. Diese Änderung sollte keine Auswirkungen auf die in Desktop Analytics angezeigten Informationen haben.
@@ -324,7 +329,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell Version 2006](https://docs.microsoft.com/powershell/sccm/2006-release-notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell Version 2006](/powershell/sccm/2006-release-notes?view=sccm-ps).
 
 Weitere Informationen zu Änderungen an der Verwaltungsdienst-Rest-API finden Sie in den[Versionshinweisen zum Verwaltungsdienst](../../../develop/adminservice/release-notes.md#bkmk_2006).
 

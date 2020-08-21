@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 433896e55b7701009e2870af8b0015fb15c1eda3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7013ae10de753cbcb664771bd30dc51b259aa390
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123935"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697550"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Verwenden von Tasksequenzvariablen in Configuration Manager
 
@@ -167,7 +167,7 @@ Ihre Umgebung enthält Benutzer in mehreren Ländern oder Regionen, daher sollte
     (Get-Culture).TwoLetterISOLanguageName
     ```
 
-    Weitere Informationen zum Cmdlet finden Sie unter [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture). Weitere Informationen zu den zweibuchstabigen ISO-Sprachnamen finden Sie in der [Liste der ISO-639-1-Codes](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
+    Weitere Informationen zum Cmdlet finden Sie unter [Get-Culture](/powershell/module/microsoft.powershell.utility/get-culture). Weitere Informationen zu den zweibuchstabigen ISO-Sprachnamen finden Sie in der [Liste der ISO-639-1-Codes](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 1. Für die Option **Ausgabe an Tasksequenzvariable** legen Sie `CurrentOSLanguage` fest.
 

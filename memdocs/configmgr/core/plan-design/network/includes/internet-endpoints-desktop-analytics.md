@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
 ms.date: 08/11/2020
-ms.openlocfilehash: ca735cde1da5d563b9a7772fdaa55834e307312e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2ae953f6fb01f42c8140407c551ddeb3a9f39c70
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125945"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692677"
 ---
 ### <a name="server-connectivity-endpoints"></a>Serverkonnektivitäts-Endpunkte
 
@@ -42,15 +42,15 @@ Clientgeräte müssen mit den folgenden Endpunkten kommunizieren:
 |-------|-----------|-----------|
 | 1 | `https://settings-win.data.microsoft.com` | Ermöglicht dem Kompatibilitätsupdate das Senden von Daten an Microsoft. |
 | 2 | `http://adl.windows.com` | Ermöglicht dem Kompatibilitätsupdate das Empfangen der neuesten Kompatibilitätsdaten von Microsoft. |
-| 3 | `https://watson.telemetry.microsoft.com` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1803 oder früher. |
-| 4 | `https://umwatsonc.events.data.microsoft.com` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich für Berichte über die Geräteintegrität in Windows 10, Version 1809 oder höher. |
-| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 9 | `https://weus2watcab01.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 10 | `https://weus2watcab02.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 11 | `https://kmwatsonc.events.data.microsoft.com` | [OCA (Online Crash Analysis)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Erforderlich für Berichte über die Geräteintegrität in Windows 10, Version 1809 oder höher. |
-| 12 | `https://oca.telemetry.microsoft.com`  | [OCA (Online Crash Analysis)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1803 oder früher. |
-| 13 | `https://login.live.com` | Erforderlich zum Bereitstellen einer zuverlässigeren Geräteidentität für Desktop Analytics. <br> <br>Verwenden Sie Richtlinieneinstellungen, anstatt diesen Endpunkt zu blockieren, um den Zugriff auf Endbenutzer-Microsoft-Konten zu deaktivieren. Weitere Informationen finden Sie unter [Das Microsoft-Konto im Unternehmen](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
+| 3 | `https://watson.telemetry.microsoft.com` | [Windows-Fehlerberichterstattung (WER)](/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1803 oder früher. |
+| 4 | `https://umwatsonc.events.data.microsoft.com` | [Windows-Fehlerberichterstattung (WER)](/windows/win32/wer/windows-error-reporting). Erforderlich für Berichte über die Geräteintegrität in Windows 10, Version 1809 oder höher. |
+| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
+| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
+| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
+| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
+| 9 | `https://weus2watcab01.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
+| 10 | `https://weus2watcab02.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
+| 11 | `https://kmwatsonc.events.data.microsoft.com` | [OCA (Online Crash Analysis)](/windows/win32/dxtecharts/crash-dump-analysis). Erforderlich für Berichte über die Geräteintegrität in Windows 10, Version 1809 oder höher. |
+| 12 | `https://oca.telemetry.microsoft.com`  | [OCA (Online Crash Analysis)](/windows/win32/dxtecharts/crash-dump-analysis). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1803 oder früher. |
+| 13 | `https://login.live.com` | Erforderlich zum Bereitstellen einer zuverlässigeren Geräteidentität für Desktop Analytics. <br> <br>Verwenden Sie Richtlinieneinstellungen, anstatt diesen Endpunkt zu blockieren, um den Zugriff auf Endbenutzer-Microsoft-Konten zu deaktivieren. Weitere Informationen finden Sie unter [Das Microsoft-Konto im Unternehmen](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
 | 14 | `https://v20.events.data.microsoft.com` | Endpunkt für Benutzererfahrung im verbundenen Modus und Diagnosekomponenten. |

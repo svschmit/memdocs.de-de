@@ -10,12 +10,12 @@ ms.assetid: 2162d67d-31a9-45b2-bb9e-835f3ac6e6fe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7f46c283bd533d67387ab0abac35e7625438addc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a0a434f013da48d660efa78f5e2cdca6ced0826d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129571"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700717"
 ---
 # <a name="configuration-manager-console-changes-and-tips"></a>Änderungen an der Configuration Manager-Konsole und Tipps zu ihrer Nutzung
 
@@ -186,7 +186,7 @@ Erweitern Sie im Arbeitsbereich **Softwarebibliothek** die Option **Anwendungsve
 1. Über diese Aktion gelangen Sie unter **Geräte** zu einem temporären Knoten, unter dem die Geräte angezeigt werden, für die das Update erforderlich ist. Außerdem können Sie Aktionen für den Knoten ausführen, z. B. können Sie eine neue Sammlung aus der Liste erstellen.
 
 > [!NOTE]
-> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
 
 ### <a name="maximize-the-browse-registry-window"></a>Maximieren des Fensters zum Durchsuchen der Registrierung
 
