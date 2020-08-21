@@ -10,12 +10,12 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 92bf86225cf869622fd4b496fd3e8e852b651a70
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aae6db43a03f524773cad4c26ff11817da02a323
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694358"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699669"
 ---
 # <a name="modify-your-configuration-manager-infrastructure"></a>Ändern der Configuration Manager-Infrastruktur
 
@@ -195,11 +195,11 @@ Sie können das Konto auswählen, mit dem SQL-Dienste für die Standortdatenbank
 
 - Wenn die Dienste mit einem lokalen Domänenbenutzerkonto ausgeführt werden, registrieren Sie den SPN manuell. Das SPN ermöglicht es SQL-Clients und anderen Standortsystemen, sich mit Kerberos zu authentifizieren. Ohne Kerberos-Authentifizierung kann die Kommunikation mit der Datenbank fehlschlagen.
 
-Weitere Informationen über SPNs und Kerberos-Verbindungen finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](https://docs.microsoft.com/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
+Weitere Informationen über SPNs und Kerberos-Verbindungen finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
 
 Registrieren Sie einen SPN für das SQL Server-Dienstkonto des Standortdatenbankservers mithilfe des Tools **Setspn**. Führen Sie Setspn als Domänenadministrator auf einem Computer aus, der sich in derselben Domäne wie die SQL Server-Instanz befindet.
 
-Die folgenden Prozeduren sind Beispiele, wie der SPN für das SQL Server-Dienstkonto verwaltet werden kann. Weitere Informationen zu Setspn finden Sie in der Übersicht zu [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\)).
+Die folgenden Prozeduren sind Beispiele, wie der SPN für das SQL Server-Dienstkonto verwaltet werden kann. Weitere Informationen zu Setspn finden Sie in der Übersicht zu [Setspn](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\)).
 
 ### <a name="manually-create-a-domain-user-spn-for-the-sql-server-service-account"></a>Manuelles Erstellen eines Domänenbenutzer-SPN für das SQL Server-Dienstkonto
 

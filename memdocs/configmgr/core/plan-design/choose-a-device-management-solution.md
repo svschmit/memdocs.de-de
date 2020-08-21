@@ -10,12 +10,12 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d36e29f0f915c0f2a35070c667525853e5981564
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 877345e64045530193a4cdd735cdd399235b90c7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702268"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700264"
 ---
 # <a name="choose-a-device-management-solution"></a>Wählen einer Geräteverwaltungslösung
 
@@ -44,11 +44,11 @@ Mit der folgenden Tabelle können Sie diese Verwaltungstechnologien miteinander 
 
 Weitere Informationen finden Sie in den folgenden Artikeln:
 
-- [Was ist Azure Stack?](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
-- [Was ist das Windows Admin Center?](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
-- [Was ist Virtual Machine Manager?](https://docs.microsoft.com/system-center/vmm/overview)
-- [Azure-Verwaltungsprodukte](https://docs.microsoft.com/azure/)
-- [Was ist Windows Virtual Desktop?](https://docs.microsoft.com/azure/virtual-desktop/overview)
+- [Was ist Azure Stack?](/azure-stack/operator/azure-stack-overview)
+- [Was ist das Windows Admin Center?](/windows-server/manage/windows-admin-center/understand/what-is)
+- [Was ist Virtual Machine Manager?](/system-center/vmm/overview)
+- [Azure-Verwaltungsprodukte](/azure/)
+- [Was ist Windows Virtual Desktop?](/azure/virtual-desktop/overview)
 
 Weitere Informationen zu Lösungen mit Configuration Manager und Intune finden Sie im nächsten Abschnitt.
 
@@ -108,9 +108,9 @@ Weitere Informationen finden Sie unter [Verwalten von Mobilgeräten mit System C
 Eine vollständige Liste der unterstützten Plattformen finden Sie in den folgenden Artikeln:
 
 - [Unterstützte Betriebssysteme für Clients und Geräte für Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md)
-- [Von Intune unterstützte Konfigurationen](https://docs.microsoft.com/intune/supported-devices-browsers)
+- [Von Intune unterstützte Konfigurationen](/intune/supported-devices-browsers)
 
-Für die Verwaltung von mobilen Android-, iOS- und Windows 10-Geräten wird die Verwendung von Intune empfohlen. Weitere Informationen finden Sie unter [Was ist Microsoft Intune?](https://docs.microsoft.com/intune/what-is-intune).
+Für die Verwaltung von mobilen Android-, iOS- und Windows 10-Geräten wird die Verwendung von Intune empfohlen. Weitere Informationen finden Sie unter [Was ist Microsoft Intune?](/intune/what-is-intune).
 
 ### <a name="compare-solutions-by-management-functionality"></a><a name="bkmk_comp2"></a>Vergleich der Lösungen anhand der Verwaltungsfunktion  
 

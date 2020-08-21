@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 033c5de1a85ce2fa8b11fe7a187fcc4d5c023931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704298"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699482"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Upgraden der lokalen Infrastruktur, die Configuration Manager unterstützt
 
@@ -52,9 +52,9 @@ Verwenden Sie für das Upgrade eines Servers die Upgradeverfahren, die von dem B
 
 - [Windows Server Upgrade Center](https://aka.ms/upgradecenter)  
 
-- [Upgrade and conversion options for Windows Server 2016 (Upgrade- und Konvertierungsoptionen für Windows Server 2016)](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
+- [Upgrade and conversion options for Windows Server 2016 (Upgrade- und Konvertierungsoptionen für Windows Server 2016)](/windows-server/get-started/supported-upgrade-paths)  
 
-- [Upgrade Options for Windows Server 2012 R2 (Upgradeoptionen für Windows Server 2012 R2)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
+- [Upgrade Options for Windows Server 2012 R2 (Upgradeoptionen für Windows Server 2012 R2)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
 
 ### <a name="upgrade-to-windows-server-2016-or-2019"></a><a name="bkmk_2016-2019"></a> Upgrade auf Windows Server 2016 oder 2019
 
@@ -140,7 +140,7 @@ Wenn Sie Windows Server 2008 R2 oder Windows Server 2012 auf Windows Server 2012
 
 - Auf Windows Server 2012: Entfernen Sie die WSUS-Rolle vom Server, sofern sie installiert ist. Sie können die SUSDB beibehalten und erneut anfügen, sobald WSUS neu installiert wurde.  
 
-- Auf Windows Server 2008 R2: Vor dem Upgrade auf Windows Server 2012 R2 müssen Sie WSUS 3.2 vom Server deinstallieren. Sie können die SUSDB beibehalten und erneut anfügen, sobald WSUS neu installiert wurde. Weitere Informationen finden Sie in der [Übersicht zu Windows Server Update Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
+- Auf Windows Server 2008 R2: Vor dem Upgrade auf Windows Server 2012 R2 müssen Sie WSUS 3.2 vom Server deinstallieren. Sie können die SUSDB beibehalten und erneut anfügen, sobald WSUS neu installiert wurde. Weitere Informationen finden Sie in der [Übersicht zu Windows Server Update Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
 - Wenn Sie das Betriebssystem des Standortservers aktualisieren, stellen Sie sicher, dass die [dateibasierte Replikation](../../plan-design/hierarchy/file-based-replication.md) für den Standort fehlerfrei ist. Überprüfen Sie alle Postfächer sowohl für sendende als auch für empfangende Standorte auf einen Rückstand. Wenn eine Vielzahl an blockierten oder ausstehenden Replikationsaufträgen vorhanden ist, warten Sie, bis sie abgebaut wurden.<!-- SCCMDocs#1792 -->
     - Überprüfen Sie für den sendenden Standort **sender.log**.
@@ -242,15 +242,15 @@ Führen Sie die folgende SQL-Abfrage auf dem Standortdatenbankserver aus, um den
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-Weitere Informationen zu SQL-CE-Kompatibilitätsgraden und deren Festlegung finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+Weitere Informationen zu SQL-CE-Kompatibilitätsgraden und deren Festlegung finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
 
 Weitere Informationen zum Upgrade von SQL Server finden Sie in den folgenden SQL Server-Artikeln:  
 
-- [Upgrade auf SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
+- [Upgrade auf SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [Upgrade auf SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [Upgrade auf SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
 
-- [Upgrade auf SQL Server 2014](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [Upgrade auf SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>So führen Sie ein SQL Server-Upgrade auf dem Standortdatenbankserver aus  
 
@@ -261,4 +261,4 @@ Weitere Informationen zum Upgrade von SQL Server finden Sie in den folgenden SQL
 3. Starten Sie die Configuration Manager-Dienste neu.  
 
 > [!NOTE]  
-> Wenn Sie die SQL Server-Edition des Standorts der zentralen Verwaltung von Standard in eine Datenbank oder Enterprise ändern, ändert sich die Datenbankpartition nicht. Diese Datenbankpartition schränkt die Anzahl der Clients ein, die von der Datenbank unterstützt werden.  
+> Wenn Sie die SQL Server-Edition des Standorts der zentralen Verwaltung von Standard in eine Datenbank oder Enterprise ändern, ändert sich die Datenbankpartition nicht. Diese Datenbankpartition schränkt die Anzahl der Clients ein, die von der Datenbank unterstützt werden.

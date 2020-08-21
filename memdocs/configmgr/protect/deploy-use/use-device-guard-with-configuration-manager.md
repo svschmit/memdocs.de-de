@@ -10,12 +10,12 @@ ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f9aff29d2773c4994272317d5fcd486b83cba8d7
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 0dcd519a7703b5de94f779dc5dbe48aa0d34a3bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210178"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700462"
 ---
 # <a name="windows-defender-application-control-management-with-configuration-manager"></a>Verwalten der Windows Defender-Anwendungssteuerung mit Configuration Manager
 
@@ -26,7 +26,7 @@ Die Windows Defender-Anwendungssteuerung dient zum Schutz von PCs vor Schadsoftw
 
 Windows Defender-Anwendungssteuerung ist eine softwarebasierte Sicherheitsstufe, bei der auf einem PC nur die in einer expliziten Liste enthaltene Software ausgeführt werden darf. Für sich genommen weist die Anwendungssteuerung keine Hardware- oder Firmwareanforderungen auf. Mit Configuration Manager bereitgestellte Anwendungssteuerungsrichtlinien aktivieren eine Richtlinie auf PCs in gezielten Sammlungen, die die in diesem Artikel aufgeführten Mindestanforderungen an die Windows-Version und SKU erfüllen. Optional kann hypervisorbasierter Schutz der durch Configuration Manager bereitgestellten Anwendungssteuerungsrichtlinien über die Gruppenrichtlinie auf geeigneter Hardware aktiviert werden.
 
-Weitere Informationen zur Windows Defender-Anwendungssteuerung finden Sie im [Bereitstellungshandbuch für Windows Defender-Anwendungssteuerung](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
+Weitere Informationen zur Windows Defender-Anwendungssteuerung finden Sie im [Bereitstellungshandbuch für Windows Defender-Anwendungssteuerung](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
 
    > [!NOTE]
    > - Ab Windows 10, Version 1709, werden konfigurierbare Codeintegritätsrichtlinien als Windows Defender-Anwendungssteuerung bezeichnet.
@@ -131,7 +131,7 @@ Informationen dazu, welche Software blockiert oder überwacht wird, finden Sie i
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph
 
-You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
+You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
 
 1. Open the **Create Windows Defender Application Policy** wizard.
 2. On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
@@ -153,6 +153,3 @@ In diesem Fall kann die Software möglicherweise weiterhin ausgeführt werden, a
 ## <a name="next-steps"></a>Nächste Schritte
 
  [Verwalten von Firewalleinstellungen und Richtlinien für Antischadsoftware](endpoint-antimalware-firewall.md)
-
-
-

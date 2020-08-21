@@ -9,12 +9,12 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e32956d2ca9385c22e9073cfa2665e1f61b3ebd3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8325102e9a818191eae5061b7adf60dbbb7269b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078633"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700700"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Verwenden des Setup-Assistenten zum Installieren von Configuration Manager-Standorten
 
@@ -37,7 +37,7 @@ Installieren Sie einen sekundären Standort aus der Configuration Manager-Konsol
 >   - [Microsoft Endpoint Configuration Manager – macOS-Client (64-Bit)](https://www.microsoft.com/download/details.aspx?id=100850)
 >   - [Clients für UNIX und Linux](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**Versionshinweise**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
-> - [**Dokumentation lesen**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - [**Dokumentation lesen**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Unterstützung bei der Installation anfordern**: [TechNet-Foren: Configuration Manager (Current Branch) – Bereitstellung von Standorten und Clients](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Configuration Manager-Community**: [System Center-Community: Teilnahme](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
 > - [**Configuration Manager-Startseite**](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
@@ -418,4 +418,4 @@ Installieren Sie mithilfe der Configuration Manager-Konsole einen sekundären St
 2. Wählen Sie den sekundären Standort aus, den Sie installieren, und dann **Installationsstatus anzeigen** im Menüband.  
 
     > [!TIP]  
-    > Wenn Sie mehrere sekundäre Standorte gleichzeitig installieren, wird die Voraussetzungsprüfung immer nur für jeweils einen Standort ausgeführt. Die Prüfung eines Standorts muss abgeschlossen sein, damit der nächste geprüft werden kann.  
+    > Wenn Sie mehrere sekundäre Standorte gleichzeitig installieren, wird die Voraussetzungsprüfung immer nur für jeweils einen Standort ausgeführt. Die Prüfung eines Standorts muss abgeschlossen sein, damit der nächste geprüft werden kann.

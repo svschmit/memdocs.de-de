@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 262234edbd6fac6973653ca6cac62853fde23b2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268996"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700111"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Informationen dazu, wie Clients Standortressourcen und -dienste für Configuration Manager suchen
 
@@ -62,7 +62,7 @@ Ein Client wählt einen Verwaltungspunkt für die Kommunikation basierend auf se
 
 Sie können bevorzugte Verwaltungspunkte verwenden. Bevorzugte Verwaltungspunkte sind Verwaltungspunkte vom zugewiesenen Standort eines Clients, die einer Begrenzungsgruppe zugeordnet sind, die vom Client verwendet wird, um Standortsystemserver zu finden. Die Zuordnung eines bevorzugten Verwaltungspunkts zu einer Begrenzungsgruppe als Standortsystemserver ist ähnlich der Zuordnung von Verteilungspunkten oder Zustandsmigrationspunkten zu einer Begrenzungsgruppe. Wenn Sie bevorzugte Verwaltungspunkte für die Hierarchie aktivieren, versucht ein Client einen bevorzugten Verwaltungspunkt zu verwenden, wenn er einen Verwaltungspunkt von seinem zugewiesenen Standort verwendet, bevor andere Verwaltungspunkte des zugewiesenen Standorts verwendet werden.  
 
-Sie können auch die Informationen im Blog zur [Affinität mit einem Verwaltungspunkt](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) befolgen, um die Affinität mit einem Verwaltungspunkt zu konfigurieren. Die Verwaltungspunktsaffinität überschreibt das Standardverhalten für zugewiesene Verwaltungspunkte und ermöglicht dem Client, einen oder mehrere bestimmte Verwaltungspunkte zu verwenden.  
+Sie können auch die Informationen im Blog zur [Affinität mit einem Verwaltungspunkt](/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) befolgen, um die Affinität mit einem Verwaltungspunkt zu konfigurieren. Die Verwaltungspunktsaffinität überschreibt das Standardverhalten für zugewiesene Verwaltungspunkte und ermöglicht dem Client, einen oder mehrere bestimmte Verwaltungspunkte zu verwenden.  
 
 Jedes Mal, wenn ein Client einen Verwaltungspunkt kontaktieren muss, überprüft er die Verwaltungspunktliste, die lokal in WMI (Windows Management Instrumentation) gespeichert ist. Der Client erstellt bei der Installation eine erste Verwaltungspunktliste. Der Client aktualisiert dann die Liste regelmäßig mit Details zu jedem Verwaltungspunkt in der Hierarchie.  
 
@@ -244,4 +244,4 @@ Falls andere Dienstidentifizierungsmechanismen erfolglos bleiben, kann durch Üb
 
 Standardmäßig veröffentlicht ein primärer Standort in WINS den ersten Verwaltungspunkt am Standort, der für HTTP konfiguriert ist, und den ersten Verwaltungspunkt, der für HTTPS konfiguriert ist.  
 
-Wenn Sie nicht wünschen, dass ein HTTP-Verwaltungspunkt in WINS gefunden wird, konfigurieren Sie für Clients die Client.msi-Eigenschaft **SMSDIRECTORYLOOKUP=NOWINS**mit CCMSetup.exe.  
+Wenn Sie nicht wünschen, dass ein HTTP-Verwaltungspunkt in WINS gefunden wird, konfigurieren Sie für Clients die Client.msi-Eigenschaft **SMSDIRECTORYLOOKUP=NOWINS**mit CCMSetup.exe.

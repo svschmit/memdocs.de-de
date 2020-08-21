@@ -10,12 +10,12 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 35269e7c727031a9cd66072985f3d9ec362978cf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3598c95d1431915431d96b16c10c7c913741fe3d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706318"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699992"
 ---
 # <a name="introduction-to-certificate-profiles-in-configuration-manager"></a>Einführung in Zertifikatprofile in Configuration Manager
 
@@ -59,11 +59,11 @@ Es gibt drei Arten von Zertifikatprofilen:
 
 ## <a name="requirements"></a>Anforderungen
 
-Um Zertifikatprofile bereitzustellen, die SCEP verwenden, installieren Sie den Zertifikatregistrierungspunkt auf einem Standortsystemserver. Installieren Sie ebenso ein Richtlinienmodul für den Registrierungsdienst für Netzwerkgeräte, das Configuration Manager-Richtlinienmodul, auf einem Server, der Windows Server 2012 R2 oder höher ausführt. Dieser Server erfordert die Rolle „Active Directory-Zertifikatdienste“. Er erfordert auch ein funktionierendes NDES, das für die Geräte, die die Zertifikate benötigen, zugänglich ist. Wenn sich Ihre Geräte für Zertifikate aus dem Internet anmelden müssen, dann muss Ihr NDES-Server aus dem Internet zugänglich sein. Zur sicheren Aktivierung des Datenverkehrs zum NDES-Server aus dem Internet können Sie z. B. [Azure-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy) verwenden.
+Um Zertifikatprofile bereitzustellen, die SCEP verwenden, installieren Sie den Zertifikatregistrierungspunkt auf einem Standortsystemserver. Installieren Sie ebenso ein Richtlinienmodul für den Registrierungsdienst für Netzwerkgeräte, das Configuration Manager-Richtlinienmodul, auf einem Server, der Windows Server 2012 R2 oder höher ausführt. Dieser Server erfordert die Rolle „Active Directory-Zertifikatdienste“. Er erfordert auch ein funktionierendes NDES, das für die Geräte, die die Zertifikate benötigen, zugänglich ist. Wenn sich Ihre Geräte für Zertifikate aus dem Internet anmelden müssen, dann muss Ihr NDES-Server aus dem Internet zugänglich sein. Zur sicheren Aktivierung des Datenverkehrs zum NDES-Server aus dem Internet können Sie z. B. [Azure-Anwendungsproxy](/azure/active-directory/manage-apps/application-proxy) verwenden.
 
 PFX-Zertifikate erfordern auch einen Zertifikatregistrierungspunkt. Geben Sie auch die Zertifizierungsstelle (Certificate Authority – CA) für das Zertifikat und die notwendigen Anmeldeinformationen an. Sie können entweder Microsoft oder Entrust als Zertifizierungsstelle angeben.  
 
-Weitere Informationen zur Unterstützung von Richtlinienmodulen durch das SCEP, damit Configuration Manager Zertifikate bereitstellen kann, finden Sie unter [Verwenden eines Richtlinienmoduls mit dem Simple Certificate Enrollment-Protokoll](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\)).
+Weitere Informationen zur Unterstützung von Richtlinienmodulen durch das SCEP, damit Configuration Manager Zertifikate bereitstellen kann, finden Sie unter [Verwenden eines Richtlinienmoduls mit dem Simple Certificate Enrollment-Protokoll](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\)).
 
 Configuration Manager unterstützt die anforderungs-, gerätetyp- und betriebssystemabhängige Bereitstellung von Zertifikaten für unterschiedliche Zertifikatspeicher. Folgende Geräte und Betriebssysteme werden unterstützt:  
 

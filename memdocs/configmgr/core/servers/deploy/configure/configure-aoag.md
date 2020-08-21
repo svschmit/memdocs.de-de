@@ -10,12 +10,12 @@ ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 12753b3800b3b304bd13c992b57d22bf9e1bfad8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2e85b36d0caeb6ceb99f56220e271774dc0db0f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704798"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699244"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Konfigurieren von SQL Server AlwaysOn-Verfügbarkeitsgruppen für Configuration Manager
 
@@ -45,7 +45,7 @@ Verwenden Sie das folgende Verfahren zum Erstellen einer Verfügbarkeitsgruppe, 
     ALTER DATABASE [CM_xxx] SET RECOVERY FULL;
     ```
 
-    Verfügbarkeitsgruppen unterstützen nur das Sicherungsmodell VOLLSTÄNDIG. Weitere Informationen finden Sie unter [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
+    Verfügbarkeitsgruppen unterstützen nur das Sicherungsmodell VOLLSTÄNDIG. Weitere Informationen finden Sie unter [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 3. Verwenden Sie SQL Server, um eine vollständige Sicherung Ihrer Standortdatenbank zu erstellen. Wählen Sie eine der folgenden Optionen aus:
 
@@ -55,13 +55,13 @@ Verwenden Sie das folgende Verfahren zum Erstellen einer Verfügbarkeitsgruppe, 
 
     Weitere Informationen finden Sie in den folgenden Artikeln der SQL Server-Dokumentation:
 
-    - [Erstellen einer vollständigen Datenbanksicherung](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
-    - [Wiederherstellen einer Datenbanksicherung mit SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
+    - [Erstellen einer vollständigen Datenbanksicherung](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
+    - [Wiederherstellen einer Datenbanksicherung mit SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
 
     > [!NOTE]  
     > Wenn Sie beabsichtigen, von einer Verfügbarkeitsgruppe zu einer eigenständigen Version auf einem vorhandenen Replikat zu wechseln, entfernen Sie zuerst die Datenbank aus der Verfügbarkeitsgruppe.
 
-4. Verwenden Sie auf dem Server, auf dem das anfängliche primäre Replikat der Gruppe gehostet wird, den [Assistenten für neue Verfügbarkeitsgruppen](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) zum Erstellen der Verfügbarkeitsgruppe. Gehen Sie im Assistenten so vor:
+4. Verwenden Sie auf dem Server, auf dem das anfängliche primäre Replikat der Gruppe gehostet wird, den [Assistenten für neue Verfügbarkeitsgruppen](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) zum Erstellen der Verfügbarkeitsgruppe. Gehen Sie im Assistenten so vor:
 
     - Wählen Sie auf der Seite **Datenbank auswählen** die Datenbank für Ihren Configuration Manager-Standort aus.  
 
@@ -82,7 +82,7 @@ Verwenden Sie das folgende Verfahren zum Erstellen einer Verfügbarkeitsgruppe, 
 
     2. Führen Sie das [Überprüfungsskript](sql-server-alwayson-for-a-highly-available-site-database.md#prerequisites) aus, um sicherzustellen, dass die Standortdatenbank auf jedem Replikat ordnungsgemäß konfiguriert ist.
 
-    3. Wenn auf sekundären Replikaten Konfigurationen festgelegt werden müssen, führen Sie manuell ein Failover des primären Replikats auf das sekundäre Replikat aus, bevor Sie fortfahren. Sie können nur die Datenbank eines primären Replikats konfigurieren. Weitere Informationen finden Sie unter [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) in der SQL Server-Dokumentation.
+    3. Wenn auf sekundären Replikaten Konfigurationen festgelegt werden müssen, führen Sie manuell ein Failover des primären Replikats auf das sekundäre Replikat aus, bevor Sie fortfahren. Sie können nur die Datenbank eines primären Replikats konfigurieren. Weitere Informationen finden Sie unter [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) in der SQL Server-Dokumentation.
 
 6. Wenn alle Replikate die Anforderungen erfüllen, kann die Verfügbarkeitsgruppe mit Configuration Manager verwendet werden.
 
@@ -121,7 +121,7 @@ Ab Version 1906 führen Sie das Configuration Manager-Setup aus, um ein neues sy
 
 1. Fügen Sie ein sekundäres Replikat mit SQL Server-Prozeduren hinzu.
 
-    1. [Hinzufügen eines sekundären Replikats zu einer Always On-Verfügbarkeitsgruppe](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
+    1. [Hinzufügen eines sekundären Replikats zu einer Always On-Verfügbarkeitsgruppe](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
     1. Betrachten Sie den Status in SQL Server Management Studio. Warten Sie, bis die vollständige Integrität der Verfügbarkeitsgruppe wieder erreicht wurde.
 
@@ -137,7 +137,7 @@ Weitere Informationen zum manuellen Ausführen dieses Vorgangs in Version 1902 o
 
 Ab Version 1906 können Sie ein Replikationsmitglied mithilfe von Configuration Manager-Setup entfernen. Verwenden Sie denselben Vorgang wie zum [Hinzufügen eines neuen synchronen Replikationsmitglieds](#bkmk_sync-add).
 
-Weitere Informationen zum manuellen Ausführen dieses Vorgangs in Version 1902 oder früher finden Sie unter [Remove a secondary replica from an availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server) (Entfernen eines sekundären Replikats aus einer Verfügbarkeitsgruppe).  
+Weitere Informationen zum manuellen Ausführen dieses Vorgangs in Version 1902 oder früher finden Sie unter [Remove a secondary replica from an availability group](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server) (Entfernen eines sekundären Replikats aus einer Verfügbarkeitsgruppe).  
 
 
 ## <a name="asynchronous-replicas"></a><a name="bkmk_async"></a> Asynchrone Replikate
@@ -146,7 +146,7 @@ Sie können ein asynchrones Replikat in der mit Configuration Manager verwendete
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Konfigurieren eines Replikats mit asynchronem Commit
 
-Weitere Informationen finden Sie unter [Add a secondary replica to an availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server) (Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe).
+Weitere Informationen finden Sie unter [Add a secondary replica to an availability group](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server) (Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Wiederherstellen Ihres Standorts mithilfe des asynchronen Replikats
 
@@ -163,14 +163,14 @@ Führen Sie das folgende Verfahren aus, wenn Sie Ihre Standortdatenbank nicht me
 
 1. Beenden Sie den Configuration Manager-Standort mithilfe des folgenden Befehls: `preinst.exe /stopsite`. Weitere Informationen finden Sie unter [Hierarchiewartungstool](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
-2. Verwenden Sie SQL Server, um eine vollständige Sicherung Ihrer Standortdatenbank anhand des primären Replikats zu erstellen. Weitere Informationen finden Sie unter [Erstellen einer vollständigen Datenbanksicherung](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
+2. Verwenden Sie SQL Server, um eine vollständige Sicherung Ihrer Standortdatenbank anhand des primären Replikats zu erstellen. Weitere Informationen finden Sie unter [Erstellen einer vollständigen Datenbanksicherung](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 
-3. Verwenden Sie SQL Server, um die Sicherung der Standortdatenbank auf dem Server wiederherzustellen, der die Standortdatenbank hostet. Weitere Informationen finden Sie unter [Wiederherstellen einer Datenbanksicherung mit SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
+3. Verwenden Sie SQL Server, um die Sicherung der Standortdatenbank auf dem Server wiederherzustellen, der die Standortdatenbank hostet. Weitere Informationen finden Sie unter [Wiederherstellen einer Datenbanksicherung mit SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
 
     > [!Note]  
     > Wenn der Server mit dem primären Replikat für die Verfügbarkeitsgruppe die einzelne Instanz der Standortdatenbank hostet, überspringen Sie diesen Schritt.
 
-4. Ändern Sie auf dem Server, auf dem die Standortdatenbank gehostet wird, das Sicherungsmodell für die Standortdatenbank von **VOLLSTÄNDIG** in **EINFACH**. Weitere Informationen finden Sie unter [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
+4. Ändern Sie auf dem Server, auf dem die Standortdatenbank gehostet wird, das Sicherungsmodell für die Standortdatenbank von **VOLLSTÄNDIG** in **EINFACH**. Weitere Informationen finden Sie unter [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 5. Führen Sie das **Configuration Manager-Setup** über `\BIN\X64\setup.exe` im Installationsordner des Configuration Manager-Standorts aus.
 
@@ -188,4 +188,4 @@ Führen Sie das folgende Verfahren aus, wenn Sie Ihre Standortdatenbank nicht me
 
 9. Nachdem Sie die Informationen zum neuen Speicherort der Datenbank bereitgestellt haben, schließen Sie das Setup mit der üblichen Vorgehensweise und den normalen Konfigurationen ab. Nach Abschluss des Setups wird der Standort neu gestartet und beginnt mit der Nutzung des neuen Speicherorts der Datenbank.
 
-10. Zur Bereinigung der Server, die Mitglied der Verfügbarkeitsgruppe waren, befolgen Sie die Anleitung unter [Entfernen einer Verfügbarkeitsgruppe](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server).
+10. Zur Bereinigung der Server, die Mitglied der Verfügbarkeitsgruppe waren, befolgen Sie die Anleitung unter [Entfernen einer Verfügbarkeitsgruppe](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server).

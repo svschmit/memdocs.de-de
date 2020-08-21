@@ -10,12 +10,12 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 102d07f29b9addd1f2c37dd741db09e972cd5802
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 30b57de75e637aa083070832783647b8ad35b4a7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701658"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700530"
 ---
 # <a name="install-site-system-roles-for-configuration-manager"></a>Installieren von Standortsystemrollen für Configuration Manager
 
@@ -56,7 +56,7 @@ Configuration Manager verwendet das **Standortsystem-Installationskonto** zum In
 1. Schließen Sie den Assistenten ab. Möglicherweise werden für bestimmte Rollen weitere Seiten angezeigt. Weitere Informationen finden Sie unter [Konfigurationsoptionen für Standortsystemrollen](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
-> Das Windows PowerShell-Cmdlet **New-CMSiteSystemServer** erfüllt dieselbe Funktion wie dieses Verfahren. Weitere Informationen finden Sie unter [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
+> Das Windows PowerShell-Cmdlet **New-CMSiteSystemServer** erfüllt dieselbe Funktion wie dieses Verfahren. Weitere Informationen finden Sie unter [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
 
 ## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a> Installieren von Rollen auf einem neuen Standortsystemserver
 
@@ -76,7 +76,7 @@ Configuration Manager verwendet das **Standortsystem-Installationskonto** zum In
 1. Schließen Sie den Assistenten ab. Möglicherweise werden für bestimmte Rollen weitere Seiten angezeigt. Weitere Informationen finden Sie unter [Konfigurationsoptionen für Standortsystemrollen](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
-> Das Windows PowerShell-Cmdlet **New-CMSiteSystemServer** erfüllt dieselbe Funktion wie dieses Verfahren. Weitere Informationen finden Sie unter [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
+> Das Windows PowerShell-Cmdlet **New-CMSiteSystemServer** erfüllt dieselbe Funktion wie dieses Verfahren. Weitere Informationen finden Sie unter [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

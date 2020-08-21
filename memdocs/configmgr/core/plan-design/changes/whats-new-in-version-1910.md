@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128915"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700298"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Neuerungen in Version 1910 von Configuration Manager (Current Branch)
 
@@ -42,10 +42,10 @@ Microsoft Endpoint Manager ist eine integrierte Lösung für die Verwaltung all 
 
 Die folgenden Microsoft-Verwaltungslösungen sind nun unter dem Namen Microsoft Endpoint Manager vereint:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Weitere Features in der [Verwaltungskonsole für die Geräteverwaltung](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Weitere Informationen finden Sie in den folgenden Beiträgen von Brad Anderson, Microsoft Corporate Vice President für Microsoft 365:
@@ -346,7 +346,7 @@ Dieses Release umfasst folgende Verbesserungen bei der Suche in der Configuratio
 
 ## <a name="other-updates"></a>Weitere Updates
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1910](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1910](/powershell/sccm/1910-release-notes?view=sccm-ps).
 
 Weitere Informationen zu Änderungen an der Verwaltungsdienst-Rest-API finden Sie in den[Versionshinweisen zum Verwaltungsdienst](../../../develop/adminservice/release-notes.md#bkmk_1910).
 

@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814904"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699584"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integrieren mit dem Power BI-Berichtsserver
 
@@ -23,13 +23,13 @@ ms.locfileid: "84814904"
 
 <!--3721603-->
 
-Sie können den [Power BI-Berichtsserver](https://docs.microsoft.com/power-bi/report-server/get-started) ab Version 2002 mit der Configuration Manager-Berichterstellung integrieren. So lässt sich die Visualisierung modernisieren und die Leistung verbessern. Durch die Integration werden Power BI-Berichte in der Konsole unterstützt. Dieses Feature ähnelt dem bereits für SQL Server Reporting Services verfügbaren Angebot.
+Sie können den [Power BI-Berichtsserver](/power-bi/report-server/get-started) ab Version 2002 mit der Configuration Manager-Berichterstellung integrieren. So lässt sich die Visualisierung modernisieren und die Leistung verbessern. Durch die Integration werden Power BI-Berichte in der Konsole unterstützt. Dieses Feature ähnelt dem bereits für SQL Server Reporting Services verfügbaren Angebot.
 
 Außerdem lassen sich Power BI Desktop-Berichtsdateien (.pbix) speichern und auf dem Power BI-Berichtsserver bereitstellen. Dieser Prozess ist bei allen SQL Server Reporting Services-Berichtsdateien (.rdl) ähnlich. Sie können die Berichte auch über die Configuration Manager-Konsole direkt im Browser starten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Lizenz für einen Power BI-Berichtsserver (weitere Informationen unter [Lizenzieren von Power BI-Berichtsserver](https://docs.microsoft.com/power-bi/report-server/get-started#licensing-power-bi-report-server))
+- Lizenz für einen Power BI-Berichtsserver (weitere Informationen unter [Lizenzieren von Power BI-Berichtsserver](/power-bi/report-server/get-started#licensing-power-bi-report-server))
 
 - Laden Sie die Version des [Microsoft Power BI-Berichtsservers vom September 2019](https://www.microsoft.com/download/details.aspx?id=57270) oder höher herunter.
 
@@ -40,7 +40,7 @@ Außerdem lassen sich Power BI Desktop-Berichtsdateien (.pbix) speichern und auf
 
     > [!IMPORTANT]
     > - Verwenden Sie nur Power BI Desktop-Versionen aus dem [Microsoft Download Center](https://www.microsoft.com/download/), keine Versionen aus dem Microsoft Store.
-    > - Verwenden Sie nur eine Version von [Power BI Desktop, die **für Power BI-Berichtsserver optimiert ist**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
+    > - Verwenden Sie nur eine Version von [Power BI Desktop, die **für Power BI-Berichtsserver optimiert ist**](/power-bi/report-server/install-powerbi-desktop).
 
 - Bei der Power BI-Integration wird die gleiche rollenbasierte Verwaltung für die Berichterstellung verwendet.
     > [!NOTE]
@@ -54,7 +54,7 @@ Der Ablauf dieses Vorgangs hängt davon ab, ob diese Rolle bereits am Standort v
 
 Führen Sie diesen Prozess nur dann aus, wenn Sie bereits über einen Reporting Services-Punkt am Standort verfügen. Führen Sie alle Schritte dieses Vorgangs auf demselben Server aus:
 
-1. Sichern Sie im **Konfigurations-Manager für Reporting Services** die **Verschlüsselungsschlüssel**. Weitere Informationen finden Sie unter [SSRS-Verschlüsselungsschlüssel – Sichern und Wiederherstellen von Verschlüsselungsschlüsseln](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
+1. Sichern Sie im **Konfigurations-Manager für Reporting Services** die **Verschlüsselungsschlüssel**. Weitere Informationen finden Sie unter [SSRS-Verschlüsselungsschlüssel – Sichern und Wiederherstellen von Verschlüsselungsschlüsseln](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
 
     > [!WARNING]
     > Wenn Sie diesen Schritt überspringen, können Sie nicht mehr auf die benutzerdefinierten Berichte in SQL Server Reporting Services zugreifen.

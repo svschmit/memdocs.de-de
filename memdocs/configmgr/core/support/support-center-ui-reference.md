@@ -10,12 +10,12 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 43bb35243b4f7e7b1e45b66319efd4ec21e92542
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79d483f95c12c1da1e34ca556836a1f42bbffbef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701338"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699448"
 ---
 # <a name="support-center-user-interface-reference"></a>Referenz zur Benutzeroberfläche des Supportcenters
 
@@ -585,16 +585,16 @@ Die Registerkarte **Konfiguration** des Supportcenteranzeigetools enthält die f
 Diese Ansicht zeigt die gleichen Informationen an, die auf der Registerkarte **Client** im Supportcenter angezeigt werden.
 
 #### <a name="operating-system"></a>Betriebssystem
-Details zum Betriebssystem des Clients. Hierfür wird die Klasse [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) verwendet.
+Details zum Betriebssystem des Clients. Hierfür wird die Klasse [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) verwendet.
 
 #### <a name="computer"></a>Computer
-Details zum Clientcomputer. Hierfür wird die Klasse [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) verwendet.
+Details zum Clientcomputer. Hierfür wird die Klasse [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) verwendet.
 
 #### <a name="services"></a>Dienste
-Details zu den Diensten, die auf dem Clientcomputer ausgeführt werden. Hierfür wird die Klasse [Win32_Service](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-service) verwendet.
+Details zu den Diensten, die auf dem Clientcomputer ausgeführt werden. Hierfür wird die Klasse [Win32_Service](/windows/desktop/CIMWin32Prov/win32-service) verwendet.
 
 #### <a name="network-adapters"></a>Netzwerkadapter
-Details zu den Netzwerkadaptern, die auf dem Clientcomputer installiert sind. Hierfür wird die Klasse [Win32_NetworkAdapterConfiguration](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) verwendet.
+Details zu den Netzwerkadaptern, die auf dem Clientcomputer installiert sind. Hierfür wird die Klasse [Win32_NetworkAdapterConfiguration](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) verwendet.
 
 
 ### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a> Registerkarte „Protokolle“

@@ -10,12 +10,12 @@ ms.assetid: 1c975c5e-efd1-4d47-a315-39ccb32633dc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 00f07e20c24ea9bb7d06b18f300e0206696c5e20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d5f0c9127cc5c5819368eb0454d7bc63546ccc1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707938"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699499"
 ---
 # <a name="extend-and-migrate-on-premises-site-to-microsoft-azure"></a>Erweitern und Migrieren eines lokalen Standorts zu Microsoft Azure
 
@@ -68,7 +68,7 @@ Microsoft.KeyVault/vaults/deploy/action <br>
 Microsoft.KeyVault/vaults/read <br>
 
 
-Weitere Informationen zu den Berechtigungen und Rollenzuweisungen finden Sie unter [Hinzufügen oder Entfernen von Rollenzuweisungen mithilfe von Azure RBAC und dem Azure-Portal](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal).
+Weitere Informationen zu den Berechtigungen und Rollenzuweisungen finden Sie unter [Hinzufügen oder Entfernen von Rollenzuweisungen mithilfe von Azure RBAC und dem Azure-Portal](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="run-the-tool"></a>Ausführen des Tools
 
@@ -105,15 +105,15 @@ Weitere Informationen zu den Berechtigungen und Rollenzuweisungen finden Sie unt
     |**Subnetz**|Wählen Sie das zu verwendende Subnetz aus. Wenn Sie ein neues Subnetz erstellen müssen, verwenden Sie dafür das [Azure-Portal](https://portal.azure.com).|
     |**Computername**|Geben Sie den Namen der VM des passiven Standortservers in Azure ein. Es handelt sich um denselben Namen, der auch im [Azure-Portal](https://portal.azure.com) angezeigt wird.|
     |**Benutzername des lokalen Administrators**|Geben Sie den Namen des lokalen Administratorbenutzers ein, der die Azure-VM erstellt, bevor dieser der Domäne beitritt.|
-    |**Kennwort des lokalen Administrators**|Das Kennwort des lokalen Administratorbenutzers. Um das Kennwort während der Azure-Bereitstellung zu schützen, speichern Sie es als Geheimnis in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Verwenden Sie dieses dann hier als Referenz. Erstellen Sie bei Bedarf im [Azure-Portal](https://portal.azure.com) ein neues Kennwort.|
+    |**Kennwort des lokalen Administrators**|Das Kennwort des lokalen Administratorbenutzers. Um das Kennwort während der Azure-Bereitstellung zu schützen, speichern Sie es als Geheimnis in [Azure Key Vault](/azure/key-vault/key-vault-overview). Verwenden Sie dieses dann hier als Referenz. Erstellen Sie bei Bedarf im [Azure-Portal](https://portal.azure.com) ein neues Kennwort.|
     |**Vollqualifizierter Domänenname**|Der vollqualifizierte Domänenname (Fully Qualified Domain Name, FQDN) für die Active Directory-Domäne, der der Server beitreten soll. Standardmäßig ruft das Tool diesen Wert von Ihrem aktuellen Computer ab.|
     |**Domänenbenutzername**|Der Name des Domänenbenutzers, der der Domäne beitreten darf. Standardmäßig verwendet das Tool den Namen des aktuell angemeldeten Benutzers.|
-    |**Domänenkennwort**|Das Kennwort des Domänenbenutzers, der der Domäne beitritt. Das Tool überprüft dies, nachdem Sie auf **Start** geklickt haben. Um das Kennwort während der Azure-Bereitstellung zu schützen, speichern Sie es als Geheimnis in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Verwenden Sie dieses dann hier als Referenz. Erstellen Sie bei Bedarf im [Azure-Portal](https://portal.azure.com) ein neues Kennwort.|
+    |**Domänenkennwort**|Das Kennwort des Domänenbenutzers, der der Domäne beitritt. Das Tool überprüft dies, nachdem Sie auf **Start** geklickt haben. Um das Kennwort während der Azure-Bereitstellung zu schützen, speichern Sie es als Geheimnis in [Azure Key Vault](/azure/key-vault/key-vault-overview). Verwenden Sie dieses dann hier als Referenz. Erstellen Sie bei Bedarf im [Azure-Portal](https://portal.azure.com) ein neues Kennwort.|
     |**DNS-IP der Domäne**|Wird zum Einbinden der Domäne verwendet. Standardmäßig verwendet das Tool den aktuellen DNS-Wert Ihres aktuellen Computers.|
     |**Typ**|Schreibgeschützt. Als Typ wird *Passiver Standortserver* angezeigt.|
 
     > [!IMPORTANT]
-    > Standardmäßig ist die Option **Vorhandene Windows Server-Lizenz verwenden** für die virtuellen Computer auf **Nein** festgelegt. Wenn Sie Ihre lokalen Windows Server-Lizenzen mit Software Assurance nutzen möchten, konfigurieren Sie diese Einstellung im [Azure-Portal](https://portal.azure.com), nachdem die virtuellen Computer bereitgestellt wurden. Weitere Informationen finden Sie unter [Azure-Hybridvorteil für Windows Server](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit).
+    > Standardmäßig ist die Option **Vorhandene Windows Server-Lizenz verwenden** für die virtuellen Computer auf **Nein** festgelegt. Wenn Sie Ihre lokalen Windows Server-Lizenzen mit Software Assurance nutzen möchten, konfigurieren Sie diese Einstellung im [Azure-Portal](https://portal.azure.com), nachdem die virtuellen Computer bereitgestellt wurden. Weitere Informationen finden Sie unter [Azure-Hybridvorteil für Windows Server](/windows-server/get-started/azure-hybrid-benefit).
 
 1. Um mit der Bereitstellung der Azure-VM zu beginnen, klicken Sie auf **Start**. Zum Überwachen des Bereitstellungsstatus wechseln Sie im Tool zur Registerkarte **Bereitstellungen in Azure**. Um den neuesten Status abzurufen, klicken Sie auf **Bereitstellungsstatus aktualisieren**.
 

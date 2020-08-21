@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a0d7f561a324d20f503b8fee3e8a869774c70d89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128966"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699839"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Neuerungen in Version 1810 von Configuration Manager (Current Branch)
 
@@ -236,7 +236,7 @@ Weitere Informationen finden Sie unter [Erstellen von Anwendungen](../../../apps
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Tasksequenzunterstützung für Windows Autopilot für vorhandene Geräte
 
 <!--3607717, fka 1358333-->
-[Windows Autopilot für vorhandene Geräte](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) ist nun mit Windows 10-Version 1809 oder höher verfügbar. Mit dieser neuen Funktion können Sie ein Reimaging für ein Windows 7-Gerät für den [benutzergesteuerten Windows Autopilot-Modus](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) mit einer einzigen, nativen Configuration Manager-Tasksequenz durchführen und das Gerät bereitstellen.
+[Windows Autopilot für vorhandene Geräte](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) ist nun mit Windows 10-Version 1809 oder höher verfügbar. Mit dieser neuen Funktion können Sie ein Reimaging für ein Windows 7-Gerät für den [benutzergesteuerten Windows Autopilot-Modus](/windows/deployment/windows-autopilot/user-driven) mit einer einzigen, nativen Configuration Manager-Tasksequenz durchführen und das Gerät bereitstellen.
 
 Weitere Informationen finden Sie unter [Windows Autopilot für vorhandene Geräte](../../../../autopilot/existing-devices.md).
 
@@ -287,7 +287,7 @@ Weitere Informationen finden Sie unter [Tasksequenzvariablen](../../../osd/under
 <!--1358146-->
 Erstellen Sie stufenweise Bereitstellungen für Softwareupdates. Mithilfe von Bereitstellungen in Phasen können Sie einen koordinierten, sequenzierten Softwarerollout basierend auf anpassbaren Kriterien und Gruppen orchestrieren.
 
-Weitere Informationen finden Sie unter [Erstellen von stufenweisen Bereitstellungen mit Configuration Manager](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Weitere Informationen finden Sie unter [Erstellen von stufenweisen Bereitstellungen mit Configuration Manager](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
 
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>Verbesserung der Wartungsfenster für Softwareupdates
@@ -427,7 +427,7 @@ Für die lokale MDM ist es nicht mehr erforderlich, bei neuen Bereitstellungen e
 
 Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Zusammenfassung der Änderungen im aktuellen Current Branch von System Center Configuration Manager-Version 1810](https://support.microsoft.com/help/4482169).
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1810](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1810](/powershell/sccm/1810-release-notes?view=sccm-ps).
 
 Folgender Updaterollup (4488598) ist ab dem 25. März 2019 in der Konsole verfügbar: [Update rollup 2 for Configuration Manager current branch, version 1810 (Updaterollup 2 für die Current Branch-Version 1810 von Configuration Manager)](https://support.microsoft.com/help/4488598). Dadurch wird das vorherige Updaterollup, KB 4486457, ersetzt.
 

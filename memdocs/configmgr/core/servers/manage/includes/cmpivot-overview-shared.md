@@ -4,18 +4,18 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/13/2020
-ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 8e95fce122a3e153f2aa391dcd5e40439f8e5820
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381044"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88703491"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
 ## <a name="queries"></a>Abfragen
 
-Abfragen können verwendet werden, um nach Begriffen zu suchen, Trends zu ermitteln, Muster zu analysieren und basierend auf Ihren Daten viele weitere Erkenntnisse zu gewinnen. CMPivot verwendet eine Teilmenge des [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query)-Datenflussmodells für die tabellarische Ausdrucksanweisung. Die typische Struktur einer tabellarischen Ausdrucksanweisung ist eine Zusammenstellung aus Cliententitäten und tabellarischen Datenoperatoren (z. B. Filter und Projektionen). Die Zusammenstellung wird durch ein Pipe-Zeichen (|) dargestellt, wodurch die Anweisung eine sehr regelmäßige Form erhält, die den Fluss der tabellarischen Daten von links nach rechts visuell darstellt. Jeder Operator akzeptiert einen tabellarischen Datensatz „aus der Pipe“ und weitere Eingaben (einschließlich anderer tabellarischer Datensätze) aus dem Textkörper des Operators und sendet dann wie folgt ein tabellarisches Dataset an den nächsten Operator: `entity | operator1 | operator2 | ...`
+Abfragen können verwendet werden, um nach Begriffen zu suchen, Trends zu ermitteln, Muster zu analysieren und basierend auf Ihren Daten viele weitere Erkenntnisse zu gewinnen. CMPivot verwendet eine Teilmenge des [Azure Log Analytics](/azure/kusto/query)-Datenflussmodells für die tabellarische Ausdrucksanweisung. Die typische Struktur einer tabellarischen Ausdrucksanweisung ist eine Zusammenstellung aus Cliententitäten und tabellarischen Datenoperatoren (z. B. Filter und Projektionen). Die Zusammenstellung wird durch ein Pipe-Zeichen (|) dargestellt, wodurch die Anweisung eine sehr regelmäßige Form erhält, die den Fluss der tabellarischen Daten von links nach rechts visuell darstellt. Jeder Operator akzeptiert einen tabellarischen Datensatz „aus der Pipe“ und weitere Eingaben (einschließlich anderer tabellarischer Datensätze) aus dem Textkörper des Operators und sendet dann wie folgt ein tabellarisches Dataset an den nächsten Operator: `entity | operator1 | operator2 | ...`
 
 Im folgenden Beispiel ist die Entität `CCMRecentlyUsedApplications` (ein Verweis auf die zuletzt verwendeten Anwendungen), und der Operator lautet „where“ (zum Filtern von Datensätzen anhand der Eingabe und einiger datensatzbezogener Prädikate):
 

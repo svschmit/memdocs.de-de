@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 81371828078264e185dc0a1883dd383257949ef4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904070"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700094"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Schemaerweiterungen für Configuration Manager
 
@@ -25,7 +25,7 @@ Sie können das Active Directory-Schema so erweitern, dass es Configuration Mana
 
 -   Es ist ratsam, das Active Directory-Schema zu erweitern, aber es ist nicht erforderlich.  
 
-Bevor Sie [das Active Directory-Schema erweitern](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), sollten Sie mit Active Directory-Domänendienste vertraut sein und wissen, wie ein [Ändern des Active Directory-Schemas](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10))vorgenommen wird.  
+Bevor Sie [das Active Directory-Schema erweitern](/sccm/core/plan-design/network/extend-the-active-directory-schema), sollten Sie mit Active Directory-Domänendienste vertraut sein und wissen, wie ein [Ändern des Active Directory-Schemas](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10))vorgenommen wird.  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Überlegungen zum Erweitern des Active Directory-Schemas für Configuration Manager  
 
@@ -142,4 +142,4 @@ Wenn Sie das Schema für Configuration Manager erweitern, werden dem Schema die 
 > - Attribut: cn=MS-SMS-Site-Boundaries  
 >   -   Klasse: cn=MS-SMS-Server-Locator-Point  
 
-Sie können sicherstellen, dass die vorangehenden Listen aktuell sind, indem Sie die Datei **ConfigMgr_ad_schema.LDF** aus dem Ordner **\SMSSETUP\BIN\x64** der Configuration Manager-Installationsmedien anzeigen.  
+Sie können sicherstellen, dass die vorangehenden Listen aktuell sind, indem Sie die Datei **ConfigMgr_ad_schema.LDF** aus dem Ordner **\SMSSETUP\BIN\x64** der Configuration Manager-Installationsmedien anzeigen.

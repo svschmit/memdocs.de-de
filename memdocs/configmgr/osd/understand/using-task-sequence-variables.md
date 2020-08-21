@@ -2,7 +2,7 @@
 title: Verwenden von Tasksequenzvariablen
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie Variablen in einer Configuration Manager-Tasksequenz verwenden.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 433896e55b7701009e2870af8b0015fb15c1eda3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022261"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123935"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Verwenden von Tasksequenzvariablen in Configuration Manager
 
@@ -78,7 +78,7 @@ Wenn Sie einen Namen für eine neue Tasksequenzvariable angeben, beachten Sie Fo
 
 - Namen dürfen nicht mit einem Leerzeichen beginnen oder enden. Sie dürfen generell kein Leerzeichen enthalten. Die Tasksequenz ignoriert Leerzeichen am Anfang oder Ende des Namens.  
 
-Sie können beliebig viele Tasksequenzvariable erstellen. Die Anzahl der Variablen wird jedoch durch die Größe der Tasksequenzumgebung beschränkt. Die Beschränkung der Gesamtgröße für die Tasksequenzumgebung beträgt 32 MB.  
+Sie können beliebig viele Tasksequenzvariable erstellen. Die Anzahl der Variablen wird jedoch durch die Größe der Tasksequenzumgebung beschränkt. Die Beschränkung der Gesamtgröße für die Tasksequenzumgebung beträgt 8 KB. Weitere Informationen finden Sie unter [Reduzieren der Größe einer Tasksequenzrichtlinie](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a> Schreibgeschützte Variablen
 
@@ -190,10 +190,10 @@ Sie können benutzerdefinierte Tasksequenzvariablen für Geräte und Sammlungen 
 
 Beispiel: Das Gerät „XYZ“ ist ein Mitglied der Sammlung „ABC“. Sie weisen MyVariable der Sammlung „ABC“ mit dem Wert „1“ zu. Darüber hinaus weisen Sie MyVariable dem Gerät „XYZ“ mit dem Wert „2“ zu. Die Variable, die „XYZ“ zugewiesen ist, hat eine höhere Priorität als die Variable, die der Sammlung „ABC“ zugewiesen ist. Wenn eine Tasksequenz mit dieser Variable auf „XYZ“ ausgeführt wird, weist MyVariable den Wert „2“ auf.
 
-Sie können gerätespezifische und sammlungsspezifische Variablen ausblenden, damit sie in der Configuration Manager-Konsole nicht sichtbar sind. Bei Verwendung der Option **Diesen Wert nicht in der Configuration Manager-Konsole anzeigen** wird der Wert der Variable in der Konsole nicht angezeigt. Die Variable kann allerdings weiterhin von der Tasksequenz während der Ausführung verwendet werden. Wenn diese Variablen nicht mehr ausgeblendet sein sollen, löschen Sie diese zuerst. Definieren Sie dann erneut die Variablen, und lassen Sie die Option zum Ausblenden dieser Variablen dieses Mal deaktiviert.  
+Sie können gerätespezifische und sammlungsspezifische Variablen ausblenden, damit sie in der Configuration Manager-Konsole nicht sichtbar sind. Bei Verwendung der Option **Diesen Wert nicht in der Configuration Manager-Konsole anzeigen** wird der Wert der Variable in der Konsole nicht angezeigt. In der Protokolldatei (**smsts.log**) oder im Debugger der Tasksequenz wird der Wert der Variablen auch nicht gezeigt. Die Variable kann allerdings weiterhin von der Tasksequenz während der Ausführung verwendet werden. Wenn diese Variablen nicht mehr ausgeblendet sein sollen, löschen Sie diese zuerst. Definieren Sie dann erneut die Variablen, und lassen Sie die Option zum Ausblenden dieser Variablen dieses Mal deaktiviert.  
 
 > [!WARNING]  
-> Die Einstellung **Diesen Wert nicht in der Configuration Manager-Konsole anzeigen** ist nur für die Configuration Manager-Konsole gültig. Die Werte für die Variablen werden weiterhin in der Tasksequenz-Protokolldatei (**smsts.log**) angezeigt.
+> Wenn Sie Variablen in die Befehlszeile des Schritts **Befehlszeile ausführen** einfügen, enthält die Protokolldatei der Tasksequenz die vollständige Befehlszeile einschließlich der Variablenwerte. Wenn Sie verhindern möchten, dass möglicherweise vertrauliche Daten in der Protokolldatei angezeigt werden, müssen Sie die Tasksequenzvariable **OSDDoNotLogCommand** auf `TRUE` festlegen.
 
 Sie können gerätespezifische Variablen an einem primären Standort oder an einem Standort der zentralen Verwaltung verwalten. Configuration Manager unterstützt je Gerät maximal 1.000 zugewiesene Variablen.  
 

@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 21bb81e9851ab80d7807df337a67005e5b6b292a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815411"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699652"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Vorgänge und Wartungstasks für die Berichterstattung in Configuration Manager
 
@@ -33,7 +33,7 @@ Configuration Manager speichert die Berichte in den SQL Server Reporting Service
 Wenn Sie einen Bericht ausführen, werden Titel, Beschreibung und Kategorie des Berichts in der Sprache des lokalen Betriebssystems angezeigt. Weitere Informationen finden Sie unter [Sprachen für Berichte](configuring-reporting.md#-languages-for-reports).
 
 > [!NOTE]  
-> Der Berichts-Manager ist ein webbasiertes Zugriffs- und Verwaltungstool für Berichte. Sie können damit eine einzelne Berichtsserverinstanz über eine HTTPS-Verbindung verwalten. Verwenden Sie den Berichts-Manager für operative Aufgaben: Zeigen Sie Berichte an, ändern Sie Berichtseigenschaften, und verwalten Sie zugeordnete Berichtsabonnements. In diesem Artikel werden die Schritte zum Anzeigen von Berichten und Ändern von Berichtseigenschaften im Berichts-Manager beschrieben. Unter [Was ist der Berichts-Manager?](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server) finden Sie weitere Informationen zu anderen Optionen im Berichts-Manager.
+> Der Berichts-Manager ist ein webbasiertes Zugriffs- und Verwaltungstool für Berichte. Sie können damit eine einzelne Berichtsserverinstanz über eine HTTPS-Verbindung verwalten. Verwenden Sie den Berichts-Manager für operative Aufgaben: Zeigen Sie Berichte an, ändern Sie Berichtseigenschaften, und verwalten Sie zugeordnete Berichtsabonnements. In diesem Artikel werden die Schritte zum Anzeigen von Berichten und Ändern von Berichtseigenschaften im Berichts-Manager beschrieben. Unter [Was ist der Berichts-Manager?](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server) finden Sie weitere Informationen zu anderen Optionen im Berichts-Manager.
 
 Verwenden Sie die folgenden Verfahren, um Configuration Manager-Berichten auszuführen.
 
@@ -261,7 +261,7 @@ Gehen Sie wie folgt vor, um ein Berichtsabonnement zur Übermittlung eines Beric
 Wenn Sie ein Berichtsabonnement zum Übermitteln eines Berichts per E-Mail erstellen, senden die Reporting Services eine E-Mail an die von Ihnen konfigurierten Empfänger. In dieser E-Mail ist der Bericht als Anlage enthalten. Der Berichtsserver überprüft E-Mail-Adressen nicht und ruft auch keine E-Mail-Adressen von einem E-Mail-Server ab. Sie können Berichte per E-Mail an alle gültigen E-Mail-Konten innerhalb oder außerhalb Ihrer Organisation senden.
 
 > [!NOTE]
-> Wenn Sie die **E-Mail**-Abonnementoption aktivieren möchten, müssen Sie die E-Mail-Einstellungen in den Reporting Services konfigurieren. Weitere Informationen finden Sie unter [E-Mail-Übermittlung in Reporting Services](https://docs.microsoft.com/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
+> Wenn Sie die **E-Mail**-Abonnementoption aktivieren möchten, müssen Sie die E-Mail-Einstellungen in den Reporting Services konfigurieren. Weitere Informationen finden Sie unter [E-Mail-Übermittlung in Reporting Services](/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
 
 Sie können eine oder beide der folgenden E-Mail-Übermittlungsoptionen auswählen:
 

@@ -10,12 +10,12 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d9d7cea7e5653b338a3eb4adb01d9fded99035e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1334603bcf60ea3eb8c3d18b73d511570cdc5d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704058"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699737"
 ---
 # <a name="how-to-enable-tls-12"></a>Aktivieren von TLS 1.2
 
@@ -86,7 +86,7 @@ Es gibt im Grunde genommen fünf Bereiche, für die Configuration Manager Versch
 
 ### <a name="what-determines-which-encryption-protocol-is-used"></a>Wodurch wird bestimmt, welches Verschlüsselungsprotokoll verwendet wird?
 
-HTTPS wird immer die höchste Protokollversion aushandeln, die vom Client und dem Server in einer verschlüsselten Konversation unterstützt wird. Beim Herstellen einer Verbindung sendet der Client eine Nachricht an den Server mit dem höchsten verfügbaren Protokoll. Wenn der Server die gleiche Version unterstützt, sendet dieser eine Nachricht mit dieser Version. Diese ausgehandelte Version ist die, die für die Verbindung verwendet wird. Wenn der Server die vom Client vorgelegte Version nicht unterstützt, gibt die Servermeldung die höchste Version an, die der Server verwenden kann. Weitere Informationen zum TLS-Handshake-Protokoll finden Sie unter [Einrichten einer sicheren Sitzung mithilfe von TLS](https://docs.microsoft.com/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls).
+HTTPS wird immer die höchste Protokollversion aushandeln, die vom Client und dem Server in einer verschlüsselten Konversation unterstützt wird. Beim Herstellen einer Verbindung sendet der Client eine Nachricht an den Server mit dem höchsten verfügbaren Protokoll. Wenn der Server die gleiche Version unterstützt, sendet dieser eine Nachricht mit dieser Version. Diese ausgehandelte Version ist die, die für die Verbindung verwendet wird. Wenn der Server die vom Client vorgelegte Version nicht unterstützt, gibt die Servermeldung die höchste Version an, die der Server verwenden kann. Weitere Informationen zum TLS-Handshake-Protokoll finden Sie unter [Einrichten einer sicheren Sitzung mithilfe von TLS](/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls).
 
 ### <a name="what-determines-which-protocol-version-the-client-and-server-can-use"></a>Was bestimmt die Protokollversion, die vom Client und vom Server verwendet werden kann?
 
@@ -103,7 +103,7 @@ Im Allgemeinen können die folgenden Elemente bestimmen, welche Protokollversion
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - [Technische Referenz für kryptografische Steuerelemente](cryptographic-controls-technical-reference.md)
-- [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
+- [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244: TLS 1.2 support for Microsoft SQL Server (KB 3135244: TLS 1.2-Unterstützung für Microsoft SQL Server)](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
 
 ## <a name="next-steps"></a>Nächste Schritte

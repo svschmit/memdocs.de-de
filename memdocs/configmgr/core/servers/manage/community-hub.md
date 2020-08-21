@@ -2,7 +2,7 @@
 title: Community Hub und GitHub
 titleSuffix: Configuration Manager
 description: Aktivieren und Verwenden von Community Hub in Configuration Manager
-ms.date: 07/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ae0abdd4a159759037768c8f27d5643bdf612f6e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262080"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128170"
 ---
 # <a name="community-hub-and-github"></a>Community Hub und GitHub
 <!--3555935, 3555936-->
@@ -66,6 +66,37 @@ Der Community-Hub unterstützt die folgenden Objekte:
 
 [![Alle Elemente, die vom Community-Hub heruntergeladen werden](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+
+## <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a> Direkte Links zu Elementen im Community Hub
+<!--4224406-->
+*(In Version 2006 eingeführt)* Über einen direkten Link können Sie in der Configuration Manager-Konsole einfach zu Elementen im Knoten „Community Hub“ navigieren und auf sie verweisen. Zweck dieses Features ist es, die Zusammenarbeit zu erleichtern und die Möglichkeit zu schaffen, Links zu Community Hub-Elementen mit Ihren Kollegen zu teilen. Diese Deep Links gelten derzeit nur für Elemente im Knoten „Community Hub“ der Konsole.
+
+### <a name="prerequisites-for-direct-links"></a>Voraussetzungen für direkte Links
+
+- Configuration Manager-Konsole ab Version 2006
+- Wenn Sie einem Community Hub-Link folgen, können Sie nicht das lokale integrierte Administratorkonto verwenden.
+
+### <a name="sharing-and-opening-direct-links"></a>Freigeben und Öffnen direkter Links
+
+So geben Sie ein Element frei
+1. Wechseln Sie im Hub zum Element, und wählen Sie **Freigeben** aus.
+1. Fügen Sie den kopierten Link ein, und geben Sie ihn für andere frei.
+
+So öffnen Sie einen freigegebenen Link
+1. Klicken Sie auf einem Computer, auf dem die Configuration Manager-Konsole installiert ist, auf den Link.
+   - Über diesen Link können Sie beispielsweise das Skript [Configure Edge Auto Update](https://communityhub.microsoft.com/item/7200) teilen (`https://communityhub.microsoft.com/item/7200`).
+1. Wählen Sie nach Aufforderung **Community Hub starten** aus.
+1. Die Konsole wird direkt mit dem Skript im Community Hub geöffnet.
+
+## <a name="known-issues"></a><a name="bkmk_known"></a> Bekannte Probleme
+
+### <a name="unable-to-access-community-hub-node-when-running-console-as-a-different-user"></a>Beim Ausführen der Konsole als anderer Benutzer kann nicht auf den Knoten „Community Hub“ zugegriffen werden
+<!--7826897-->
+Wenn Sie als Benutzer mit geringeren Rechten angemeldet sind und **Ausführen als** ein anderer Benutzer wählen, um die Configuration Manager-Konsole zu öffnen, können Sie möglicherweise nicht auf den Knoten **Community Hub** zugreifen.
+
+### <a name="downloaded-reports-dont-get-removed-from-your-downloads-page"></a>Heruntergeladene Berichte werden nicht von der Seite „Downloads“ entfernt
+<!--7851305-->
+Wenn Sie einen heruntergeladenen Bericht vom Knoten **Überwachung** > **Berichte** löschen, wird der Bericht nicht von der Seite **Community Hub** > **Ihre Downloads** gelöscht, und es ist nicht möglich, den Bericht erneut herunterzuladen. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 

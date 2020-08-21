@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: 9e71baef06349a00d49bc7fdc799d078c29939d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301434"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699516"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Wiederherstellen eines Configuration Manager-Standorts
 
@@ -181,7 +181,7 @@ Verwenden Sie diese Option, wenn Sie die Configuration Manager-Standortdatenbank
     Nachdem Sie die Standortdatenbank mithilfe einer Methode außerhalb von Configuration Manager wiederhergestellt haben, führen Sie Setup aus und wählen Sie diese Option aus, um die Wiederherstellung der Standortdatenbank abzuschließen.  
 
     > [!NOTE]  
-    > Wenn Sie DPM verwenden, um die Standortdatenbank zu sichern, dann verwenden Sie DPM-Prozeduren, um die Standortdatenbank an einem angegebenen Ort wiederherzustellen, bevor Sie den Wiederherstellungsprozess in Configuration Manager fortsetzen. Weitere Informationen zu DPM finden Sie in der Dokumentationsbibliothek zu [Data Protection Manager](https://docs.microsoft.com/system-center/dpm).  
+    > Wenn Sie DPM verwenden, um die Standortdatenbank zu sichern, dann verwenden Sie DPM-Prozeduren, um die Standortdatenbank an einem angegebenen Ort wiederherzustellen, bevor Sie den Wiederherstellungsprozess in Configuration Manager fortsetzen. Weitere Informationen zu DPM finden Sie in der Dokumentationsbibliothek zu [Data Protection Manager](/system-center/dpm).  
 
 - Wenn Sie in einer Hierarchie die Datenbank eines primären Standorts wiederherstellen, ruft der Wiederherstellungsprozess vom CAS etwaige Änderungen ab, die nach der letzten Sicherung an der Standortdatenbank vorgenommen wurden. Wenn Sie den CAS wiederherstellen, ruft der Wiederherstellungsprozess diese Änderungen von einem primären Referenzstandort ab. Wenn Sie die Standortdatenbank für einen eigenständigen primären Standort wiederherstellen, gehen die Standortänderungen seit der letzten Sicherung verloren.  
 
@@ -193,7 +193,7 @@ Verwenden Sie diese Option, wenn es auf dem Configuration Manager-Standortdatenb
 
 Configuration Manager ermöglicht die Änderungsnachverfolgung für die Standortdatenbank in SQL Server. Bei der Änderungsnachverfolgung können von Configuration Manager Informationen über die Änderungen abgefragt werden, die seit einem früheren Zeitpunkt an den Datenbanktabellen vorgenommen wurden. Mit der Beibehaltungsdauer wird angegeben, wie lange Informationen zur Änderungsnachverfolgung beibehalten werden. Für die Standortdatenbank ist standardmäßig eine Beibehaltungsdauer von fünf Tagen konfiguriert. Beim Wiederherstellen einer Standortdatenbank richtet sich der Wiederherstellungsprozess danach, ob die Sicherung innerhalb oder außerhalb der Beibehaltungsdauer liegt. Wenn beispielsweise Ihr Server von SQL Server ausfällt und die letzte Sicherung vor sieben Tagen erstellt wurde, liegt die Sicherung außerhalb der Beibehaltungsdauer.
 
-Weitere Informationen zur SQL Server-Änderungsnachverfolgung finden Sie in den folgenden Blogbeiträgen des SQL Server-Teams: [Change Tracking Cleanup – part 1 (Cleanup für die Änderungsnachverfolgung – Teil 1)](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) und [Change Tracking Cleanup – part 2 (Cleanup für die Änderungsnachverfolgung – Teil 2)](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
+Weitere Informationen zur SQL Server-Änderungsnachverfolgung finden Sie in den folgenden Blogbeiträgen des SQL Server-Teams: [Change Tracking Cleanup – part 1 (Cleanup für die Änderungsnachverfolgung – Teil 1)](/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) und [Change Tracking Cleanup – part 2 (Cleanup für die Änderungsnachverfolgung – Teil 2)](/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Erneute Initialisierung von Standortdaten oder globalen Daten
 
@@ -378,7 +378,7 @@ Nach der Wiederherstellung eines Standorts müssen Sie alle [Out-of-Band-Hotfixe
 
 ### <a name="recover-custom-reports"></a>Wiederherstellen benutzerdefinierter Berichte
 
-Einige Kunden erstellen benutzerdefinierter Berichte in SQL Server Reporting Services. Wenn bei dieser Komponente ein Fehler auftritt, stellen Sie die Berichte aus einer Sicherung des Berichtsservers wieder her. Weitere Informationen zum Wiederherstellen Ihrer benutzerdefinierten Berichte in Reporting Services finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).
+Einige Kunden erstellen benutzerdefinierter Berichte in SQL Server Reporting Services. Wenn bei dieser Komponente ein Fehler auftritt, stellen Sie die Berichte aus einer Sicherung des Berichtsservers wieder her. Weitere Informationen zum Wiederherstellen Ihrer benutzerdefinierten Berichte in Reporting Services finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).
 
 ### <a name="recover-content-files"></a>Wiederherstellen von Inhaltsdateien
 
@@ -410,7 +410,7 @@ Geben Sie in den Eigenschaften des Zustandsmigrationspunkts die Ordner an, in de
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>Generieren der Zertifikate für Verteilungspunkte
 
-Nach der Wiederherstellung eines Standorts ist in der Datei **distmgr.log** möglicherweise der folgende Eintrag für einen oder mehrere Verteilungspunkte enthalten: `Failed to decrypt cert PFX data`. Dieser Eintrag gibt an, dass die Zertifikatdaten des Verteilungspunkts nicht vom Standort entschlüsselt werden können. Generieren oder importieren Sie das Zertifikat für die betroffenen Verteilungspunkte erneut, um das Problem zu beheben. Verwenden Sie dazu das PowerShell-Cmdlet [Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint).
+Nach der Wiederherstellung eines Standorts ist in der Datei **distmgr.log** möglicherweise der folgende Eintrag für einen oder mehrere Verteilungspunkte enthalten: `Failed to decrypt cert PFX data`. Dieser Eintrag gibt an, dass die Zertifikatdaten des Verteilungspunkts nicht vom Standort entschlüsselt werden können. Generieren oder importieren Sie das Zertifikat für die betroffenen Verteilungspunkte erneut, um das Problem zu beheben. Verwenden Sie dazu das PowerShell-Cmdlet [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint).
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Aktualisieren von Zertifikaten, die für cloudbasierte Verteilungspunkte verwendet werden
 

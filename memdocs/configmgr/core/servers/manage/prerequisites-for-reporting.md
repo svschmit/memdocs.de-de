@@ -10,12 +10,12 @@ ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e08833a5ef560a0f958fe68b4ade0d4717dffc73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0b082ae578052a92c0afacd3d1f62fdb2e21bd6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703518"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699533"
 ---
 # <a name="prerequisites-for-reporting-in-configuration-manager"></a>Voraussetzungen für die Berichterstattung in Configuration Manager
 
@@ -31,7 +31,7 @@ Für die Berichterstattung in Configuration Manager Reporting gelten die folgend
 
 Installieren und konfigurieren Sie zuerst SQL Server Reporting Services, damit die Berichterstellung in Configuration Manager verwendet werden kann.
 
-Weitere Informationen zum Planen und Bereitstellen von Reporting Services finden Sie unter [SQL Server Reporting Services installieren](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).
+Weitere Informationen zum Planen und Bereitstellen von Reporting Services finden Sie unter [SQL Server Reporting Services installieren](/sql/reporting-services/install-windows/install-reporting-services).
 
 Installieren Sie die Reporting Services-Datenbank entweder auf der Standardinstanz oder auf einer benannten Instanz einer 64-Bit-SQL Server-Installation. Installieren Sie die SQL Server-Instanz auf dem gleichen Computer wie der Standortsystemserver, oder konfigurieren Sie sie auf einem Remotecomputer.
 

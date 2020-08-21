@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8c5cc09b7c2723a5dbdd1030cb0053ae75b1ff22
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906132"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699465"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>Verwenden des Hotfixinstallationsprogramms zum Installieren von Updates für Configuration Manager
 
@@ -207,7 +207,7 @@ Der Katalog für System Center Updates Publisher heißt **SCUPCatalog.cab** und 
 > [!IMPORTANT]  
 > Da die Datei SCUPCatalog.cab über die Pfade erstellt wird, die sich konkret auf den Standortserver beziehen, auf dem das Updatepaket installiert ist, kann diese nicht für andere Standortserver verwendet werden.  
 
-Nachdem der Assistent beendet wurde, können Sie den Katalog in Updates Publisher importieren und dann Configuration Manager-Softwareupdates zur Bereitstellung der Updates verwenden. Informationen zu Updates Publisher finden Sie unter [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+Nachdem der Assistent beendet wurde, können Sie den Katalog in Updates Publisher importieren und dann Configuration Manager-Softwareupdates zur Bereitstellung der Updates verwenden. Informationen zu Updates Publisher finden Sie unter [Updates Publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 Gehen Sie wie folgt vor, um die Datei „SCUPCatalog.cab“ in Updates Publisher zu importieren und die Updates zu veröffentlichen.  
 
@@ -261,4 +261,4 @@ Sie können spezifische Updates auf geeigneten Clients bereitstellen. Folgende I
 > [!NOTE]  
 > Zur Aktualisierung einer Standortdatenbank stellen Sie das Update auf dem Standortserver für diesen Standort bereit.  
 
-Informationen zum Erstellen von Sammlungen finden Sie unter [Erstellen von Sammlungen](../../../core/clients/manage/collections/create-collections.md).  
+Informationen zum Erstellen von Sammlungen finden Sie unter [Erstellen von Sammlungen](../../../core/clients/manage/collections/create-collections.md).

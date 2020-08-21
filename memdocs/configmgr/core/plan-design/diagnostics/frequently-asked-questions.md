@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60634ed8e275ff8496a08969054aa912a81b9d07
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb14f909238e86a7aa4a87493b17a218a21f0909
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688478"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700196"
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data"></a>Häufig gestellte Fragen zu Diagnose- und Verwendungsdaten
 
@@ -74,8 +74,8 @@ Ja, wenn Sie diese Dienste mit Configuration Manager integrieren. Im Rahmen der 
 Die folgenden Clouddienste sind beispielsweise Teil von Microsoft Endpoint Manager:
 
 - [Desktop Analytics – Datenschutz](../../../desktop-analytics/privacy.md)
-- [Datenschutz und personenbezogene Daten in Intune](https://docs.microsoft.com/intune/protect/privacy-personal-data)
-- [Anforderungen für Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Datenschutz und personenbezogene Daten in Intune](/intune/protect/privacy-personal-data)
+- [Anforderungen für Windows Autopilot](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 
 ## <a name="does-configuration-manager-collect-any-personal-data"></a><a name="bkmk_personal"></a> Sammelt Configuration Manager personenbezogene Daten?
 

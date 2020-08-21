@@ -2,63 +2,65 @@
 title: Verwenden von PXE für die Betriebssystembereitstellung über das Netzwerk
 titleSuffix: Configuration Manager
 description: Verwenden Sie mit PXE initiierte Betriebssystembereitstellungen, um das Betriebssystem eines Computers zu aktualisieren oder eine neue Version von Windows auf einem neuen Computer zu installieren.
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11045ff31dc3832ac97d62f491561b3cf989813c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7d2d467a053689edad1dcf62fa9bb140d5f259d9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079347"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124617"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Verwenden von PXE zum Bereitstellen von Windows über das Netzwerk mit Configuration Manager
 
 *Gilt für: Configuration Manager (Current Branch)*
 
-Bei einer mithilfe von PXE (Pre-Boot eXecution Environment) ausgelösten Betriebssystembereitstellung in Configuration Manager werden Betriebssysteme von Clients über das Netzwerk angefordert und bereitgestellt. In diesem Bereitstellungsszenario senden Sie das Betriebssystemimage und die Startimages an einen PXE-fähigen Verteilungspunkt.
+Bei einer mithilfe von PXE (Pre-Boot eXecution Environment) ausgelösten Betriebssystembereitstellung in Configuration Manager werden Betriebssysteme von Clients über das Netzwerk angefordert und bereitgestellt. Bei dieser Bereitstellungsmethode senden Sie das Betriebssystemimage und die Startimages an einen PXE-fähigen Verteilungspunkt.
 
-> [!NOTE]  
+> [!NOTE]
 > Wenn Sie eine Betriebssystembereitstellung nur für x64-BIOS-Computer erstellen, müssen das x64-Startimage und das x86-Startimage auf dem Verteilungspunkt verfügbar sein.
 
 Sie können über PXE initiierte Bereitstellungen in den folgenden Szenarios verwenden:
 
-- [Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
-- [Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Installieren einer neuen Version von Windows auf einem neuen Computer (Bare-Metal)](install-new-windows-version-new-computer-bare-metal.md)
 
 Führen Sie die Schritte in einem der Szenarios für die Betriebssystembereitstellung aus, und bereiten Sie dann die von PXE ausgelösten Bereitstellungen anhand der Abschnitte in diesem Artikel vor.
 
 > [!WARNING]
-> Wenn Sie PXE-Bereitstellungen verwenden und Gerätehardware mit dem Netzwerkadapter als erstes Startgerät konfigurieren, können diese Geräte automatisch und ohne Benutzerinteraktion eine Tasksequenz für die Betriebssystembereitstellung starten. Diese Konfiguration wird nicht durch die Bereitstellungsüberprüfung verwaltet. Während diese Konfiguration möglicherweise den Prozess vereinfachen und die Benutzerinteraktion reduzieren kann, erhöht sie das Risiko, dass für das Gerät versehentlich ein Reimaging durchgeführt wird.
+> Wenn Sie PXE-Bereitstellungen verwenden und Gerätehardware mit dem Netzwerkadapter als erstes Startgerät konfigurieren, können diese Geräte automatisch und ohne Benutzerinteraktion eine Tasksequenz für die Betriebssystembereitstellung starten. Diese Konfiguration wird nicht durch die [Bereitstellungsüberprüfung](../../core/servers/manage/settings-to-manage-high-risk-deployments.md) verwaltet. Während diese Konfiguration möglicherweise den Prozess vereinfachen und die Benutzerinteraktion reduzieren kann, erhöht sie das Risiko, dass für das Gerät versehentlich ein Reimaging durchgeführt wird.
 
-## <a name="configure-at-least-one-distribution-point-to-accept-pxe-requests"></a><a name="BKMK_Configure"></a> Konfigurieren mindestens eines Verteilungspunkts zum Akzeptieren von PXE-Anforderungen
+Ab Version 2006 können auf PXE basierende Tasksequenzen cloudbasierte Inhalte herunterladen. Der PXE-fähige Verteilungspunkt erfordert weiterhin das Startimage. Das Gerät benötigt eine Intranetverbindung mit dem Verwaltungspunkt. Es kann dann zusätzliche Inhalte von einem inhaltsfähigen Cloudverwaltungsgateway (Cloud Management Gateway, CMG) oder einem Cloudverteilungspunkt abrufen.<!--6209223--> Weitere Informationen finden Sie unter [Unterstützung für cloudbasierten Inhalt](use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content).
 
-Zum Bereitstellen von Betriebssystemen für Configuration Manager-Clients, die PXE-Startanforderungen ausführen, müssen Sie mindestens einen Verteilungspunkt so konfigurieren, dass er PXE-Anforderungen akzeptiert. Sobald der Verteilungspunkt konfiguriert ist, reagiert er auf PXE-Startanforderungen und ermittelt die geeigneten Bereitstellungsaktionen. Weitere Informationen finden Sie unter [Installieren oder Modifizieren eines Verteilungspunkts](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
+## <a name="configure-distribution-points-for-pxe"></a><a name="BKMK_Configure"></a> Konfigurieren von Verteilungspunkten für PXE
 
-> [!NOTE]  
-> Wenn Sie einen einzelnen PXE-fähigen Verteilungspunkt so konfigurieren, dass dieser mehrere Subnetze unterstützt, werden keine DHCP-Optionen unterstützt. Konfigurieren Sie IP-Hilfsprogramme auf den Routern, um zuzulassen, dass PXE-Anforderungen an Ihren PXE-fähigen Verteilungspunkt weitergeleitet werden.
->
-> In Version 1810 wird die Verwendung des PXE-Antwortdiensts ohne WDS auf Servern, auf denen auch ein DHCP-Server ausgeführt wird, nicht unterstützt.
->
-> Ab der Version 1902 gilt: Wenn Sie einen PXE-Antwortdienst auf einem Verteilungspunkt ohne Windows-Bereitstellungsdienst aktivieren, kann er sich nun auf dem gleichen Server befinden wie der DHCP-Dienst.<!--3734270, SCCMDocs-pr #3416--> Fügen Sie die folgenden Einstellungen hinzu, um diese Konfiguration zu unterstützen:  
->
-> - Setzen Sie den DWord-Wert **DoNotListenOnDhcpPort** auf `1` im folgenden Registrierungsschlüssel: `HKLM\Software\Microsoft\SMS\DP`.
-> - Legen Sie die DHCP-Option 60 auf `PXEClient` fest.  
-> - Starten Sie die Dienste „SCCMPXE“ und „DHCP“ auf dem Server neu.  
+Zum Bereitstellen von Betriebssystemen für Konfigurations-Manager-Clients, die PXE-Startanforderungen senden, müssen Sie mindestens einen Verteilungspunkt so konfigurieren, dass er PXE-Anforderungen akzeptiert. Anschließend reagiert der Verteilungspunkt auf PXE-Startanforderungen und ermittelt die geeignete Bereitstellungsaktion. Weitere Informationen finden Sie unter [Installieren oder Modifizieren eines Verteilungspunkts](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
+
+> [!NOTE]
+> Wenn Sie einen einzelnen PXE-fähigen Verteilungspunkt so konfigurieren, dass dieser mehrere Subnetze unterstützt, werden keine DHCP-Optionen unterstützt. Damit das Netzwerk PXE-Anforderungen von Clients an PXE-fähige Verteilungspunkte weiterleiten kann, konfigurieren Sie auf den Routern IP-Hilfsprogramme.
+
+In Version 1810 wird die Verwendung des PXE-Antwortdiensts ohne WDS auf Servern, auf denen auch ein DHCP-Server ausgeführt wird, nicht unterstützt.
+
+Ab der Version 1902 gilt: Wenn Sie einen PXE-Antwortdienst auf einem Verteilungspunkt ohne Windows-Bereitstellungsdienst aktivieren, kann er sich nun auf dem gleichen Server befinden wie der DHCP-Dienst.<!--3734270, SCCMDocs-pr #3416--> Fügen Sie die folgenden Einstellungen hinzu, um diese Konfiguration zu unterstützen:
+
+- Setzen Sie den DWord-Wert **DoNotListenOnDhcpPort** auf `1` im folgenden Registrierungsschlüssel: `HKLM\Software\Microsoft\SMS\DP`.
+- Legen Sie die DHCP-Option 60 auf `PXEClient` fest.
+- Starten Sie die Dienste „SCCMPXE“ und „DHCP“ auf dem Server neu.
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>Vorbereiten eines PXE-fähigen Startabbilds
 
-Um PXE zum Bereitstellen eines Betriebssystems zu verwenden, muss sowohl ein PXE-fähiges x86-Startimage als auch ein PXE-fähiges x64-Startimage an mindestens einen PXE-fähigen Verteilungspunkt verteilt sein. Verwenden Sie die Informationen zum Aktivieren von PXE in einem Startimage, verteilen Sie das Startimage an Verteilungspunkte:
+Um PXE zum Bereitstellen eines Betriebssystems zu verwenden, verteilen ein PXE-fähiges x86- und x64-Startimage an mindestens einen PXE-fähigen Verteilungspunkt.
 
 - Um PXE für ein Startabbild zu aktivieren, wählen Sie in den Startabbildeinstellungen auf der Registerkarte **Datenquelle** die Option **Dieses Startabbild über den PXE-fähigen Verteilungspunkt bereitstellen** aus.
 
-- Wenn Sie die Eigenschaften für das Startabbild ändern, aktualisieren Sie das Startabbild, und verteilen Sie es erneut an Verteilungspunkte. Weitere Informationen finden Sie unter [Distribute content (Verteilen von Inhalt)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
+- Wenn Sie die Eigenschaften des Startimages ändern, aktualisieren Sie das Startimage, und verteilen Sie es erneut an Verteilungspunkte. Weitere Informationen finden Sie unter [Distribute content (Verteilen von Inhalt)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
 ## <a name="manage-duplicate-hardware-identifiers"></a>Verwalten von in Konflikt stehenden Datensätzen bei Configuration Manager-Clients
 
@@ -66,7 +68,7 @@ Configuration Manager erkennt möglicherweise mehrere Computer als ein einziges 
 
 ## <a name="create-an-exclusion-list-for-pxe-deployments"></a><a name="BKMK_PXEExclusionList"></a> Erstellen einer Ausschlussliste für PXE-Bereitstellungen
 
-> [!Note]  
+> [!NOTE]
 > Unter bestimmten Bedingungen ist der Prozess zum [Verwalten von in Konflikt stehenden Datensätzen bei Configuration Manager-Clients](../../core/clients/manage/manage-clients.md#manage-duplicate-hardware-identifiers) ggf. einfacher.<!-- SCCMDocs issue 802 -->
 >
 > Das jeweilige Verhalten kann in manchen Szenarien zu abweichenden Ergebnissen führen. Die Ausschlussliste startet niemals einen Client mit der aufgeführten MAC-Adresse.
@@ -75,22 +77,18 @@ Configuration Manager erkennt möglicherweise mehrere Computer als ein einziges 
 
 Wenn Sie Betriebssysteme mit PXE bereitstellen, können Sie für jeden Verteilungspunkt eine Ausschlussliste erstellen. Fügen Sie der Ausschlussliste die MAC-Adressen der Computer hinzu, die vom Verteilungspunkt ignoriert werden sollen. Aufgeführte Computer empfangen nicht die Bereitstellungstasksequenzen, die Configuration Manager für die PXE-Bereitstellung verwendet.
 
-### <a name="process-to-create-the-exclusion-list"></a>Prozess zum Erstellen der Ausschlussliste
+1. Erstellen Sie auf dem PXE-fähigen Verteilungspunkt eine Textdatei. Nennen Sie die Datei beispielsweise **pxeExceptions.txt**.
 
-1. Erstellen Sie eine Textdatei auf dem Verteilungspunkt, der für PXE aktiviert ist. Geben Sie dieser Textdatei beispielsweise den Namen **pxeExceptions.txt**.  
+1. Bearbeiten Sie die Datei in einem Text-Editor wie Editor. Fügen Sie die MAC-Adressen der Computer hinzu, die der PXE-fähige Verteilungspunkt ignorieren soll. Trennen Sie die MAC-Adresswerte mit Kommas, und geben Sie jede Adresse in einer eigenen Zeile ein. Beispiel: `01:23:45:67:89:ab`
 
-2. Verwenden Sie einen Standardtexteditor wie Editor, und fügen Sie die MAC-Adressen der Computer hinzu, die vom PXE-fähigen Verteilungspunkt ignoriert werden sollen. Trennen Sie die MAC-Adresswerte mit Kommas, und geben Sie jede Adresse in einer eigenen Zeile ein. Beispiel: `01:23:45:67:89:ab`  
+1. Speichern Sie die Textdatei auf dem PXE-fähigen Verteilungspunkt. Sie können sie an einem beliebigen Speicherort auf dem Server speichern.
 
-3. Speichern Sie die Textdatei auf dem PXE-fähigen Verteilungspunkt-Standortsystemserver. Die Textdatei kann auf dem Server an einem beliebigen Speicherort gespeichert werden.  
+1. Bearbeiten Sie auf dem PXE-fähigen Verteilungspunkt die Registrierung. Navigieren Sie zum folgenden Registrierungspfad: `HKLM\Software\Microsoft\SMS\DP`. Erstellen Sie den Zeichenfolgenwert **MACIgnoreListFile**. Fügen Sie auf dem PXE-fähigen Verteilungspunkt den vollständigen Pfad zur Textdatei hinzu.
 
-4. Bearbeiten Sie die Registrierung des PXE-fähigen Verteilungspunkts so, dass der Registrierungsschlüssel **MACIgnoreListFile** erstellt wird. Fügen Sie den Zeichenfolgenwert des vollständigen Pfads der Textdatei dem PXE-fähigen Standortsystemserver mit dem Verteilungspunkt hinzu. Verwenden Sie den folgenden Registrierungspfad:  
+    > [!WARNING]
+    > Durch unsachgemäße Verwendung des Registrierungs-Editors können schwerwiegende Fehler auftreten, die möglicherweise eine Neuinstallation von Windows erforderlich machen. Microsoft kann nicht garantieren, dass Probleme, die aufgrund unsachgemäßer Verwendung des Registrierungs-Editors entstehen, behoben werden können. Die Verwendung des Registrierungs-Editors erfolgt auf Ihr eigenes Risiko.
 
-    `HKLM\Software\Microsoft\SMS\DP`  
-
-    > [!WARNING]  
-    > Durch unsachgemäße Verwendung des Registrierungs-Editors können schwerwiegende Fehler auftreten, die möglicherweise eine Neuinstallation von Windows erforderlich machen. Microsoft kann nicht garantieren, dass Probleme, die aufgrund unsachgemäßer Verwendung des Registrierungs-Editors entstehen, behoben werden können. Die Verwendung des Registrierungs-Editors erfolgt auf Ihr eigenes Risiko.  
-
-5. Starten Sie den WDS-Dienst oder den PXE-Antwortdienst neu, nachdem Sie die Registrierungsänderung vorgenommen haben. Der Server muss nicht neu gestartet werden.<!--512129-->  
+1. Starten Sie nach dieser Registrierungsänderung den WDS-Dienst oder PXE-Antwortdienst neu. Der Server muss nicht neu gestartet werden.<!--512129-->
 
 ## <a name="ramdisk-tftp-block-size-and-window-size"></a><a name="BKMK_RamDiskTFTP"></a> RamDisk-TFTP-Blockgröße und Fenstergröße
 
@@ -107,7 +105,8 @@ Um eine PXE-initiierte Betriebssystembereitstellung zu verwenden, müssen Sie di
 - Nur Medien und PXE (ausgeblendet)
 
 ## <a name="option-82-during-pxe-dhcp-handshake"></a>Option 82 während des PXE DHCP-Handshakes
-Ab Version 1906 wird während des PXE DHCP-Handshakes die Option 82 für den PXE-Antwortdienst ohne WDS unterstützt. Wenn Option 82 benötigt wird, achten Sie darauf, den PXE-Antwortdienst ohne WDS zu verwenden. Die Option 82 wird mit WDS nicht unterstützt.
+
+Ab Version 1906 unterstützt Configuration Manager während des Handshakes zwischen PXE und DHCP die Option 82 für den PXE-Antwortdienst ohne WDS. Wenn Option 82 benötigt wird, achten Sie darauf, den PXE-Antwortdienst ohne WDS zu verwenden. Option 82 wird von Configuration Manager nicht mit WDS unterstützt.
 
 ## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> Bereitstellen der Tasksequenz
 
@@ -119,8 +118,8 @@ Stellen Sie das Betriebssystem in einer Zielauflistung bereit. Weitere Informati
 
 Sie können eine erforderliche PXE-Bereitstellung erneut bereitstellen, indem Sie den Status der letzten PXE-Bereitstellung löschen, die einer Configuration Manager-Sammlung oder einem Computer zugewiesen ist. Weitere Informationen zur Aktion **Erforderliche PXE-Bereitstellungen löschen** finden Sie unter [Verwalten von Clients](../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode) oder [Verwalten von Sammlungen](../../core/clients/manage/collections/manage-collections.md#bkmk_device). Mit dieser Aktion wird der Status der Bereitstellung zurückgesetzt, und die letzten erforderlichen Bereitstellungen werden erneut installiert.
 
-> [!IMPORTANT]  
-> Das PXE-Protokoll ist nicht sicher. Stellen Sie sicher, dass sich der PXE-Server und der PXE-Client in einem physisch sicheren Netzwerk (z.B. in einem Rechenzentrum) befinden, um unbefugten Zugriff auf den Standort zu verhindern.
+> [!IMPORTANT]
+> Das PXE-Protokoll ist nicht sicher. Stellen Sie sicher, dass sich PXE-Server und PXE-Client in einem physisch sicheren Netzwerk (z. B. in einem Rechenzentrum) befinden, um unbefugten Zugriff auf den Standort zu verhindern.
 
 ## <a name="how-the-boot-image-is-selected-for-pxe"></a>Auswählen des Startimages für PXE
 
@@ -140,3 +139,7 @@ In der folgenden Liste finden Sie Informationen dazu, wie ein Startimage für Cl
     Sollten mehrere Startimages gefunden werden, wird die Tasksequenz mit der *höchsten* oder neuesten Bereitstellungs-ID verwendet. In einer Hierarchie mit mehreren Standorten hat der Standort mit dem *höheren* Buchstaben Vorrang. Beispiel: Wenn beide Standorte ansonsten identisch sind, wird anstelle der Bereitstellung des Standorts AAA vom Vortag eine Bereitstellung des Standorts ZZZ verwendet, die ein Jahr alt ist.<!-- SCCMDocs issue 877 -->  
 
 4. Wenn kein Startimage mit derselben Architektur gefunden wird, sucht Configuration Manager nach einem Startimage, das mit der Architektur des Clients kompatibel ist. Hierfür wird die Liste der Tasksequenzen in Schritt 2 verwendet. Ein 64-Bit-BIOS/MBR-Client ist beispielsweise mit 32-Bit- und 64-Bit-Startimages kompatibel. Ein 32-Bit-BIOS/MBR-Client ist nur mit 32-Bit-Startimages kompatibel. UEFI-Clients sind nur mit entsprechender Architektur kompatibel. Ein 64-Bit-UEFI-Client ist nur mit 64-Bit-Startimages kompatibel, und ein 32-Bit-UEFI-Client ist nur mit 32-Bit-Startimages kompatibel.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Benutzererfahrungen bei der Betriebssystembereitstellung](../understand/user-experience.md#pxe)

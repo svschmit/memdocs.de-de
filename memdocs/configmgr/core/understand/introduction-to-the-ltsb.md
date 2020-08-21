@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1370c1bf80283ff30ad54378ad58ecd9a5d24d47
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906101"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699363"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Einführung in Long-Term Servicing Branch von Configuration Manager
 
@@ -26,7 +26,7 @@ Der Long-Term Servicing Branch von Configuration Manager ist ein eindeutiger Bra
 Basierend auf der Configuration Manager-Version 1606 weist der Long-Term Servicing Branch im Vergleich zum Current Branch von Configuration Manager eine eingeschränkte Funktionalität auf.
 
 > [!TIP]   
-> Der Long-Term Servicing Branch von Configuration Manager bezieht sich nicht auf den Long-Term Servicing Channel (LTSC) der System Center-Suite. Weitere Informationen finden Sie unter [Übersicht über Releaseoptionen von System Center](https://docs.microsoft.com/system-center/ltsc-and-sac-overview).
+> Der Long-Term Servicing Branch von Configuration Manager bezieht sich nicht auf den Long-Term Servicing Channel (LTSC) der System Center-Suite. Weitere Informationen finden Sie unter [Übersicht über Releaseoptionen von System Center](/system-center/ltsc-and-sac-overview).
 
 ## <a name="features-that-arent-available"></a>Nicht verfügbare Features
 
@@ -53,7 +53,7 @@ Cloudintegrationen sowie alle Features, die im Current Branch von Configuration 
 
 ## <a name="find-ltsb-documentation"></a>Suchen der Long-Term Servicing Branch-Dokumentation
 
-Der Long-Term Servicing Branch basiert auf der Current Branch-Version 1606. Verwenden Sie die [Dokumentation zu Current Branch](https://docs.microsoft.com/mem/configmgr/), die Warnungen und Einschränkungen speziell zum Long-Term Servicing Branch enthält. Diese Warnungen und Einschränkungen werden in folgenden Artikeln behandelt:
+Der Long-Term Servicing Branch basiert auf der Current Branch-Version 1606. Verwenden Sie die [Dokumentation zu Current Branch](../../index.yml), die Warnungen und Einschränkungen speziell zum Long-Term Servicing Branch enthält. Diese Warnungen und Einschränkungen werden in folgenden Artikeln behandelt:
 
 - [Installieren und Upgraden mit dem Baselinemedium von Version 1606 für System Center Configuration Manager](install-the-ltsb.md)
 - [Upgrade von Long-Term Servicing Branch auf Current Branch](convert-to-current-branch.md)

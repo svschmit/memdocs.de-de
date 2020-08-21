@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b75ebe7e768080a1239e817c514b634cdcf64179
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 2495c0d7b5b19b5d6f7741d3b28b6a9a0e213fc3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587163"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700145"
 ---
 # <a name="ports-used-in-configuration-manager"></a>In Configuration Manager verwendete Ports
 
@@ -759,7 +759,7 @@ Wenn ein SQL Server-Computer Datenbanken von mehreren Standorten hostet, muss je
 
 Wenn Sie eine hostbasierte Firewall auf dem SQL Server-Computer aktivieren, konfigurieren Sie sie so, dass sie die richtigen Ports zulässt. Konfigurieren Sie auch Netzwerkfirewalls zwischen Computern, die mit dem SQL Server-Computer kommunizieren.  
 
-Ein Beispiel zum Konfigurieren von SQL Server für die Verwendung eines bestimmten Ports finden Sie unter [Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
+Ein Beispiel zum Konfigurieren von SQL Server für die Verwendung eines bestimmten Ports finden Sie unter [Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
 ### <a name="discovery-and-publishing"></a><a name="bkmk_discovery"> </a> Ermittlung und Veröffentlichung
 

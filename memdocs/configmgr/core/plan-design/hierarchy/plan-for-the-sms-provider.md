@@ -10,12 +10,12 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b01ea9b089da3cfcfc3e8d23e7ad25d27ab2fec7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c83d0da07474c8b078ee226d249b73f00562e0f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692758"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700162"
 ---
 # <a name="plan-for-the-sms-provider"></a>Planen des SMS-Anbieters
 
@@ -165,7 +165,7 @@ Die folgenden Ebenen sind verfügbar:
 
 - **Zertifikatauthentifizierung:** Hiermit ist einer Authentifizierung mit einem gültigen Zertifikat erforderlich, das von einer vertrauenswürdigen PKI-Zertifizierungsstelle ausgestellt wurde. Sie konfigurieren dieses Zertifikat nicht im Configuration Manager. Configuration Manager fordert, dass sich der Administrator über ein PKI-Zertifikat bei Windows anmeldet.  
 
-- **Windows Hello for Business-Authentifizierung:** Hiermit ist eine Authentifizierung mit starker zweistufiger Authentifizierung erforderlich, die an ein Gerät gebunden ist und biometrische Daten oder eine PIN verwendet. Weitere Informationen finden Sie unter [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
+- **Windows Hello for Business-Authentifizierung:** Hiermit ist eine Authentifizierung mit starker zweistufiger Authentifizierung erforderlich, die an ein Gerät gebunden ist und biometrische Daten oder eine PIN verwendet. Weitere Informationen finden Sie unter [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
 
 ### <a name="exclusions"></a>Ausschlüsse
 

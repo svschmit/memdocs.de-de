@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fa5ebf25de0f695661b18c4379c080dad42cf08
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0cdb14d282cbfa93655d6678b12b5f0837a225aa
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128493"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699278"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planen der Sicherheit in Configuration Manager
 
@@ -404,7 +404,7 @@ Configuration Manager ist in Azure Active Directory (Azure AD) integriert, damit
 
 - [Desktop Analytics](../../../desktop-analytics/overview.md)  
 
-- [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - [Community Hub](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)  
 
@@ -416,7 +416,7 @@ Configuration Manager ist in Azure Active Directory (Azure AD) integriert, damit
 Weitere Informationen zum Verbinden Ihres Standorts mit Azure AD finden Sie unter [Konfigurieren von Azure-Diensten](../../servers/deploy/configure/azure-services-wizard.md).
 
 
-Weitere Informationen zu Azure AD finden Sie in der [Dokumentation zu Azure Active Directory](https://docs.microsoft.com/azure/active-directory/).
+Weitere Informationen zu Azure AD finden Sie in der [Dokumentation zu Azure Active Directory](/azure/active-directory/).
 
 
 
@@ -448,5 +448,4 @@ Weitere Informationen finden Sie unter [Planen des SMS-Anbieters](../hierarchy/p
 
 - [Technische Referenz für kryptografische Steuerelemente](cryptographic-controls-technical-reference.md)  
 
-- [PKI-Zertifikatanforderungen](../network/pki-certificate-requirements.md)  
-
+- [PKI-Zertifikatanforderungen](../network/pki-certificate-requirements.md)

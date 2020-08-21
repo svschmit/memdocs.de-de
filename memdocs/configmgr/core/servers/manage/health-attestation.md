@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4d57be201274c347e5dcd492734b2141c64d579b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904016"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700009"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Integritätsnachweis für Configuration Manager
 
 *Gilt für: Configuration Manager (Current Branch)*
 
-Administratoren können den Status des [Windows 10-Nachweises zur Geräteintegrität](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) in der Configuration Manager-Konsole anzeigen.  Mit dem Nachweis der Geräteintegrität kann der Administrator sicherstellen, dass Clientcomputer über die folgenden aktivierten vertrauenswürdigen BIOS-, TPM- und Startsoftwarekonfigurationen verfügen:  
+Administratoren können den Status des [Windows 10-Nachweises zur Geräteintegrität](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) in der Configuration Manager-Konsole anzeigen.  Mit dem Nachweis der Geräteintegrität kann der Administrator sicherstellen, dass Clientcomputer über die folgenden aktivierten vertrauenswürdigen BIOS-, TPM- und Startsoftwarekonfigurationen verfügen:  
 
 -   Antischadsoftware-Frühstart – Antischadsoftware-Frühstart (Early Launch Anti-Malware, ELAM) schützt Ihren Computer beim Starten und bevor Drittanbietertreiber initialisiert werden. [Informationen zum Aktivieren von ELAM](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker – Mit der Windows-BitLocker-Laufwerkverschlüsselungs-Software können Sie alle Daten verschlüsseln, die auf dem Windows-Betriebssystemvolume gespeichert sind.  [How to turn on BitLocker (Informationen zum Aktivieren von BitLocker)](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   Sicherer Start – Sicherer Start ist ein Sicherheitsstandard, der von Mitgliedern der PC-Industrie entwickelt wurde, um sicherzustellen, dass Ihr PC nur mit Software startet, die der PC-Hersteller als vertrauenswürdig eingestuft hat. [Weitere Informationen zu Sicherer Start](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
--   Codeintegrität – Codeintegrität ist ein Feature, das die Sicherheit des Betriebssystems verbessert, indem es die Integrität einer Treiber- oder Systemdatei jedes Mal überprüft, wenn sie in den Arbeitsspeicher geladen wird. [Erfahren Sie mehr über Codeintegrität](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
+-   Sicherer Start – Sicherer Start ist ein Sicherheitsstandard, der von Mitgliedern der PC-Industrie entwickelt wurde, um sicherzustellen, dass Ihr PC nur mit Software startet, die der PC-Hersteller als vertrauenswürdig eingestuft hat. [Weitere Informationen zu Sicherer Start](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   Codeintegrität – Codeintegrität ist ein Feature, das die Sicherheit des Betriebssystems verbessert, indem es die Integrität einer Treiber- oder Systemdatei jedes Mal überprüft, wenn sie in den Arbeitsspeicher geladen wird. [Erfahren Sie mehr über Codeintegrität](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 Diese Funktion ist für PCs und lokale Ressourcen verfügbar, die von Configuration Manager verwaltet werden sowie für mobile Geräte, die von Microsoft Intune verwaltet werden. Administratoren können angeben, ob die Berichterstellung über die Cloud oder über die lokale Infrastruktur durchgeführt wird. Die lokale Überwachung des Nachweises der Geräteintegrität ermöglicht dem Administrator die Überwachung des Client-PCs ohne Internetzugriff.
 
@@ -34,7 +34,7 @@ Diese Funktion ist für PCs und lokale Ressourcen verfügbar, die von Configurat
 
  **Anforderungen:**  
 
--   Clientgeräte unter Windows 10 Version 1607 oder Windows Server 2016 Version 1607 mit [Nachweis der Geräteintegrität aktiviert](https://docs.microsoft.com/windows-server/security/device-health-attestation)
+-   Clientgeräte unter Windows 10 Version 1607 oder Windows Server 2016 Version 1607 mit [Nachweis der Geräteintegrität aktiviert](/windows-server/security/device-health-attestation)
 -   TPM 1.2- oder TPM 2-fähige Geräte
 -   Bei der Verwendung der Cloudverwaltung erfolgt die Kommunikation zwischen dem Configuration Manager-Client-Agent und dem Verwaltungspunkt mit *has.spserv.microsoft.com* (Port 443) Integritätsnachweisdienst (Cloud-Verwaltung). Wenn sich der Client lokal befindet, muss er fähig sein, mit dem Verwaltungspunkt mit aktiviertem Nachweis der Geräteintegrität zu kommunizieren.
 

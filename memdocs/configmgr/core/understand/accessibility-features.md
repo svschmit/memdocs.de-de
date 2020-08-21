@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: a6e406d55524caca71bf75b087c9fd78a470c939
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556029"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699380"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Barrierefreiheitsfunktionen in Configuration Manager
 
@@ -28,7 +28,7 @@ Configuration Manager enthält Funktionen, durch die es für jeden zugänglich g
 > [!Note]  
 > Um die Barrierefreiheitsfunktionen der Configuration Manager-Konsole zu verbessern, aktualisieren Sie ab Version 1902 .NET auf dem Computer, auf dem die Konsole ausgeführt wird, auf Version 4.7 oder höher. <!-- SCCMDocs-pr issue #3228 -->  
 > 
-> Weitere Informationen zu den in .NET 4.7.1 und 4.7.2 vorgenommenen Barrierefreiheitsänderungen finden Sie unter [Neuerungen bei der Barrierefreiheit in .NET Framework](https://docs.microsoft.com/dotnet/framework/whats-new/whats-new-in-accessibility).  
+> Weitere Informationen zu den in .NET 4.7.1 und 4.7.2 vorgenommenen Barrierefreiheitsänderungen finden Sie unter [Neuerungen bei der Barrierefreiheit in .NET Framework](/dotnet/framework/whats-new/whats-new-in-accessibility).  
 
 
 
@@ -98,5 +98,4 @@ Weitere Informationen zu den Grundlagen der Navigation in den Configuration Mana
 - [Benutzerleitfaden des Softwarecenters](software-center.md)
 
 > [!NOTE]  
-> Die in diesem Artikel enthaltenen Informationen gelten ggf. nur für Benutzer, die Microsoft-Produkte in den USA lizenzieren lassen. Wenn Sie dieses Produkt außerhalb der USA erworben haben, enthält das Softwarepaket eine Karte mit zusätzlichen Informationen, der die Kontaktinformationen für den Microsoft-Support zu entnehmen sind. Diese Informationen finden Sie auch auf der [Microsoft-Website zur Barrierefreiheit](https://www.microsoft.com/accessibility/). Setzen Sie sich mit der Niederlassung in Ihrer Nähe in Verbindung, um herauszufinden, ob die in diesem Abschnitt aufgeführten Produkte und Dienste in Ihrem Land bzw. Ihrer Region verfügbar sind. Informationen über Eingabehilfen sind in anderen Sprachen verfügbar, darunter auf Japanisch und Französisch.  
-
+> Die in diesem Artikel enthaltenen Informationen gelten ggf. nur für Benutzer, die Microsoft-Produkte in den USA lizenzieren lassen. Wenn Sie dieses Produkt außerhalb der USA erworben haben, enthält das Softwarepaket eine Karte mit zusätzlichen Informationen, der die Kontaktinformationen für den Microsoft-Support zu entnehmen sind. Diese Informationen finden Sie auch auf der [Microsoft-Website zur Barrierefreiheit](https://www.microsoft.com/accessibility/). Setzen Sie sich mit der Niederlassung in Ihrer Nähe in Verbindung, um herauszufinden, ob die in diesem Abschnitt aufgeführten Produkte und Dienste in Ihrem Land bzw. Ihrer Region verfügbar sind. Informationen über Eingabehilfen sind in anderen Sprachen verfügbar, darunter auf Japanisch und Französisch.

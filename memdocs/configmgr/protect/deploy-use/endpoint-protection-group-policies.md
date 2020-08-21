@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c43ca9e1007c62835015a8c26a478af7da34ebb
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: d028dc6149ae1fee2d61634b96ccf450fc8f4b24
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87819992"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700598"
 ---
 # <a name="use-group-policy-settings-to-manage-endpoint-protection-in-previous-versions-of-windows"></a>Verwenden Sie Gruppenrichtlinieneinstellungen, um Endpoint Protection in früheren Windows-Versionen zu verwalten.
 
@@ -42,7 +42,7 @@ Sie können Endpoint Protection in solchen Geräten mithilfe von Gruppenrichtlin
     - [Lokales Gerät](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> Informationen zur Verwendung von Gruppenrichtlinieneinstellungen für die Verwaltung von Microsoft Defender Antivirus in Windows 10, Windows Server 2019 und Windows Server 2016 finden Sie unter [Verwenden von Gruppenrichtlinieneinstellungen zum Konfigurieren und Verwalten von Microsoft Defender Antivirus](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
+> Informationen zur Verwendung von Gruppenrichtlinieneinstellungen für die Verwaltung von Microsoft Defender Antivirus in Windows 10, Windows Server 2019 und Windows Server 2016 finden Sie unter [Verwenden von Gruppenrichtlinieneinstellungen zum Konfigurieren und Verwalten von Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
 
 ## <a name="copy-endpoint-protection-policy-definitions"></a>Kopieren von Endpoint Protection-Richtliniendefinitionen
 
@@ -75,7 +75,7 @@ Wenn Sie einen [zentralen Speicher für administrative Vorlagen für Gruppenrich
     
     Dabei steht **DC** für den Namen Ihres Domänencontrollers und **contoso.com** für Ihre Domäne.
 
-3. Öffnen Sie die [Gruppenrichtlinien-Verwaltungskonsole](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), und erstellen Sie ein neues Gruppenrichtlinienobjekt (GPO) in Ihrer Domäne, z. B. **Endpoint Protection**.
+3. Öffnen Sie die [Gruppenrichtlinien-Verwaltungskonsole](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), und erstellen Sie ein neues Gruppenrichtlinienobjekt (GPO) in Ihrer Domäne, z. B. **Endpoint Protection**.
 4. Klicken Sie mit der rechten Maustaste auf das Gruppenrichtlinienobjekt für Endpoint Protection, und klicken Sie dann auf **Bearbeiten**.
 5. Wechseln Sie im Editor für die Verwaltung von Gruppenrichtlinien zu **Computerkonfiguration** > **Richtlinien** > **Verwaltungsvorlagen: Richtliniendefinitionen** > **Windows-Komponenten** > **Endpoint Protection**.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 3cb8d07c9bcc31353e16f01de9e60857d47d49e4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906762"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700421"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Einführung in Softwareupdates in Configuration Manager
 
@@ -275,7 +275,7 @@ Ein Beispielszenario für die Bereitstellung von Softwareupdates in Ihrer Umgebu
  Weitere Informationen dazu, wie Configuration Manager Embedded-Geräte verwaltet, die Schreibfilter verwenden, finden Sie unter [Planning for client deployment to Windows Embedded devices (Planen der Clientbereitstellung auf Windows Embedded-Geräten)](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 ##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Erweitern von Softwareupdates in Configuration Manager  
- Mit System Center Updates Publisher können Sie Softwareupdates verwalten, die nicht über Microsoft Update verfügbar sind. Nachdem Sie die Softwareupdates auf dem Updateserver veröffentlicht und in Configuration Manager synchronisiert haben, können Sie sie für Configuration Manager-Clients bereitstellen. Weitere Informationen zu Updates Publisher finden Sie unter [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+ Mit System Center Updates Publisher können Sie Softwareupdates verwalten, die nicht über Microsoft Update verfügbar sind. Nachdem Sie die Softwareupdates auf dem Updateserver veröffentlicht und in Configuration Manager synchronisiert haben, können Sie sie für Configuration Manager-Clients bereitstellen. Weitere Informationen zu Updates Publisher finden Sie unter [Updates Publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Planen von Softwareupdates](../plan-design/plan-for-software-updates.md)

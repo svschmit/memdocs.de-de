@@ -10,12 +10,12 @@ ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c3be302ecefad36d7be8617a4cc9354db1b685
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 99e02c190e02a5e017fe2c3f41682ad1624b6051
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906073"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699346"
 ---
 # <a name="what-is-configuration-manager"></a>Was ist Configuration Manager?
 
@@ -29,10 +29,10 @@ Microsoft Endpoint Manager ist eine integrierte Lösung für die Verwaltung all 
 
 Die folgenden Microsoft-Verwaltungslösungen sind nun unter dem Namen **Microsoft Endpoint Manager** vereint:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Weitere Features in der [Verwaltungskonsole für die Geräteverwaltung](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Weitere Informationen finden Sie unter [Microsoft Endpoint Configuration Manager FAQ](microsoft-endpoint-manager-faq.md).
@@ -110,4 +110,4 @@ Wenn Sie mit den grundlegenden Konzepten vertraut sind, finden Sie in der Dokume
 - [Features und Funktionen von Configuration Manager](../plan-design/changes/features-and-capabilities.md)  
 - [Wählen einer Geräteverwaltungslösung](../plan-design/choose-a-device-management-solution.md)  
 - [Bewerten von Configuration Manager durch Erstellen Ihrer eigenen Laborumgebung](../get-started/set-up-your-lab.md)
-- [Suchen nach Hilfe für die Verwendung von Configuration Manager](find-help.md)  
+- [Suchen nach Hilfe für die Verwendung von Configuration Manager](find-help.md)

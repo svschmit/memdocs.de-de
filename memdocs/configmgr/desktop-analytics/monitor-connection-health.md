@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: ecd8b83224cbcbfe367a3b1db160d680952a4407
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746560"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700836"
 ---
 # <a name="monitor-connection-health"></a>Überwachen der Verbindungsintegrität
 
@@ -334,7 +334,7 @@ Weitere Informationen finden Sie in der Datei „M365AHandler.log“ auf dem Cli
 <!--1004-->
 Wenn diese Überprüfung nicht erfolgreich ist, hat ein Benutzer Windows-Diagnosedaten auf niedrigerer Ebene auf dem Gerät ausgewählt. Ursache kann auch ein Gruppenrichtlinienobjekt sein, das einen Konflikt verursacht. Weitere Informationen finden Sie unter [Windows-Einstellungen](enroll-devices.md#windows-settings).
 
-Je nach Ihren Geschäftsanforderungen können Sie die Benutzerauswahl über Gruppenrichtlinien deaktivieren. Verwenden Sie die Einstellung, um die **Benutzeroberfläche für die Festlegung der Telemetrieaktivierung zu konfigurieren**. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
+Je nach Ihren Geschäftsanforderungen können Sie die Benutzerauswahl über Gruppenrichtlinien deaktivieren. Verwenden Sie die Einstellung, um die **Benutzeroberfläche für die Festlegung der Telemetrieaktivierung zu konfigurieren**. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
 ### <a name="check-user-proxy"></a>Benutzerproxy überprüfen
 
@@ -455,7 +455,7 @@ Desktop Analytics verwendet den Microsoft-Konto-Dienst, um eine zuverlässigere 
 
 Stellen Sie sicher, dass der Dienst **Anmelde-Assistent für Microsoft-Konten** nicht deaktiviert ist. Der Starttyp sollte **Manuell (Start durch Auslöser)** lauten.
 
-Verwenden Sie Richtlinieneinstellungen, anstatt diesen Endpunkt zu blockieren, um den Zugriff auf Endbenutzer-Microsoft-Konten zu deaktivieren. Weitere Informationen finden Sie unter [Das Microsoft-Konto im Unternehmen](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
+Verwenden Sie Richtlinieneinstellungen, anstatt diesen Endpunkt zu blockieren, um den Zugriff auf Endbenutzer-Microsoft-Konten zu deaktivieren. Weitere Informationen finden Sie unter [Das Microsoft-Konto im Unternehmen](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
 ### <a name="windows-diagnostic-data-opt-in"></a>Einwilligung für Windows-Diagnosedaten
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 59f3d1a8a7b217a794440e2f75e0bb09e28634a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411013"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700792"
 ---
 # <a name="what-is-desktop-analytics"></a>Was ist Desktop Analytics?
 
@@ -69,22 +69,22 @@ Zum Verwenden von Desktop Analytics müssen Sie sicherstellen, dass Ihre Umgebun
 
 ### <a name="technical"></a>Technisch
 
-- Sie benötigen ein aktives Azure-Abonnement mit den Berechtigungen eines [globalen Administrators](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions). [Microsoft-Konten](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) werden nicht unterstützt.  
+- Sie benötigen ein aktives Azure-Abonnement mit den Berechtigungen eines [globalen Administrators](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions). [Microsoft-Konten](/windows/security/identity-protection/access-control/microsoft-accounts) werden nicht unterstützt.  
 
     > [!IMPORTANT]
-    > Desktop Analytics ist ein Windows-Dienst, der global in Azure gehostet wird und Windows-Diagnosedaten nutzt. Desktop Analytics ist ein globaler Azure-Dienst, der zwar für US Government-Kunden verfügbar ist, jedoch nicht die Anforderungen der [US Government Community Compliance (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) erfüllt. Eine Liste der Complianceangebote für Microsoft-Produkte und -Dienste finden Sie im [Microsoft Trust Center](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Desktop Analytics ist nicht für GCC High-Kunden oder US Department of Defense-Kunden verfügbar. Die Nutzung von Azure Government-Abonnements zum Hosten von Desktop Analytics-Arbeitsbereichen wird nicht unterstützt.
+    > Desktop Analytics ist ein Windows-Dienst, der global in Azure gehostet wird und Windows-Diagnosedaten nutzt. Desktop Analytics ist ein globaler Azure-Dienst, der zwar für US Government-Kunden verfügbar ist, jedoch nicht die Anforderungen der [US Government Community Compliance (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) erfüllt. Eine Liste der Complianceangebote für Microsoft-Produkte und -Dienste finden Sie im [Microsoft Trust Center](/microsoft-365/compliance/offering-home?view=o365-worldwide). Desktop Analytics ist nicht für GCC High-Kunden oder US Department of Defense-Kunden verfügbar. Die Nutzung von Azure Government-Abonnements zum Hosten von Desktop Analytics-Arbeitsbereichen wird nicht unterstützt.
 
     - Berechtigungen als **Arbeitsbereichsbesitzer** zum **Einrichten Ihres Arbeitsbereichs** sowie die folgenden Rollen:  
 
-      - Rolle [**Desktop Analytics-Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions).
+      - Rolle [**Desktop Analytics-Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions).
 
-      - [**Log Analytics-Mitwirkender**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) und [**Benutzerzugriffsadministrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) für die Ressourcengruppe, um einen vorhandenen Arbeitsbereich zu verwenden oder einen neuen Arbeitsbereich in einer vorhandenen Ressourcengruppe zu erstellen.
+      - [**Log Analytics-Mitwirkender**](/azure/role-based-access-control/built-in-roles#log-analytics-contributor) und [**Benutzerzugriffsadministrator**](/azure/role-based-access-control/built-in-roles#user-access-administrator) für die Ressourcengruppe, um einen vorhandenen Arbeitsbereich zu verwenden oder einen neuen Arbeitsbereich in einer vorhandenen Ressourcengruppe zu erstellen.
 
-      - Berechtigungen [**Besitzer**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) oder [**Mitwirkender**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) und [**Benutzerzugriffsadministrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) für das Abonnement, um einen Arbeitsbereich in einer neuen Ressourcengruppe zu erstellen.  
+      - Berechtigungen [**Besitzer**](/azure/role-based-access-control/built-in-roles#owner) oder [**Mitwirkender**](/azure/role-based-access-control/built-in-roles#contributor) und [**Benutzerzugriffsadministrator**](/azure/role-based-access-control/built-in-roles#user-access-administrator) für das Abonnement, um einen Arbeitsbereich in einer neuen Ressourcengruppe zu erstellen.  
 
     - Um nach dem Onboarding auf das Portal zuzugreifen, benötigen Sie Folgendes:
 
-      - Die Rolle [**Desktop Analytics-Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) sowie die Berechtigung [**Besitzer**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) oder [**Mitwirkender**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) im erstellten Log Analytics-Arbeitsbereich.
+      - Die Rolle [**Desktop Analytics-Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) sowie die Berechtigung [**Besitzer**](/azure/role-based-access-control/built-in-roles#owner) oder [**Mitwirkender**](/azure/role-based-access-control/built-in-roles#contributor) im erstellten Log Analytics-Arbeitsbereich.
 
 - Configuration Manager, Version 1902 mit Updaterollup (4500571) oder höher. Weitere Informationen finden Sie unter [Aktualisieren von Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
@@ -103,7 +103,7 @@ Zum Verwenden von Desktop Analytics müssen Sie sicherstellen, dass Ihre Umgebun
     - Auf den Geräten muss außerdem der Konfigurations-Manager-Client, Version 1902 mit Updaterollup (4500571) oder höher installiert sein. Weitere Informationen finden Sie unter [Aktualisieren von Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
     > [!Note]  
-    > Desktop Analytics unterstützt keine Upgrades für oder von Windows 10 Long-Term Servicing Channel (LTSC). Weitere Informationen finden Sie unter [Übersicht über Windows-as-a-Service](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    > Desktop Analytics unterstützt keine Upgrades für oder von Windows 10 Long-Term Servicing Channel (LTSC). Weitere Informationen finden Sie unter [Übersicht über Windows-as-a-Service](/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
     > Desktop Analytics ist auf die optimale Unterstützung von Szenarios mit direkten Upgrades ausgelegt. Wenn Sie umfassende Umstellungen vornehmen müssen, z. B. von einer 32-Bit-Architektur zu einer 64-Bit-Architektur, verwenden Sie ein Imagingszenario. Erkenntnisse von Desktop Analytics sind auch in diesen klassischen Szenarien der Betriebssystembereitstellungen hilfreich, Sie können jedoch die spezifischen Anleitungen zu direkten Upgrades ignorieren. Weitere Informationen hierzu finden Sie unter [Szenarios zur Bereitstellung von Unternehmensbetriebssystemen mit Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 
@@ -139,7 +139,7 @@ Zum Verwenden von Desktop Analytics müssen Sie sicherstellen, dass Ihre Umgebun
   - Windows Virtual Desktop Access E3 oder E5  
 
 > [!NOTE]
-> Über die Kosten dieser Lizenzabonnements hinaus fallen keine zusätzlichen Kosten für die Verwendung von Desktop Analytics in Azure Log Analytics an. Für die Datentypen, die von Desktop Analytics erfasst werden, fallen keine Gebühren für die Log Analytics-Datenerfassung und -aufbewahrung an. Aus diesem Grund gibt es für diese Daten auch keine Tageslimits für die Datenerfassung mit Log Analytics. Weitere Informationen finden Sie unter [Verwalten von Nutzung und Kosten mit Azure Monitor-Protokollen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
+> Über die Kosten dieser Lizenzabonnements hinaus fallen keine zusätzlichen Kosten für die Verwendung von Desktop Analytics in Azure Log Analytics an. Für die Datentypen, die von Desktop Analytics erfasst werden, fallen keine Gebühren für die Log Analytics-Datenerfassung und -aufbewahrung an. Aus diesem Grund gibt es für diese Daten auch keine Tageslimits für die Datenerfassung mit Log Analytics. Weitere Informationen finden Sie unter [Verwalten von Nutzung und Kosten mit Azure Monitor-Protokollen](/azure/azure-monitor/platform/manage-cost-storage).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -10,12 +10,12 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e8e65571a3902661176ca3840690c159faef416
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4f9266668a488b6331857bf860d874a48161fcd0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688588"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700213"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>Unterstützung für Windows-Features und -Netzwerke in Configuration Manager
 
@@ -49,11 +49,11 @@ Fügen Sie das Feature **Windows BranchCache** dem Standortsystemserver hinzu, d
 - Die Clients, die BranchCache unterstützen können, müssen für den BranchCache-Modus „Verteilter Cache“ konfiguriert werden.  
 - Die Betriebssystemeinstellung für BITS-Clienteinstellungen muss zur Unterstützung von BranchCache aktiviert sein.  
 
-Weitere Informationen finden Sie in der Windows-Dokumentation unter [Konfigurieren von Clients für BranchCache](https://docs.microsoft.com/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache).
+Weitere Informationen finden Sie in der Windows-Dokumentation unter [Konfigurieren von Clients für BranchCache](/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache).
 
 Alle von Configuration Manager unterstützten Windows-Versionen unterstützen BranchCache standardmäßig.
 
-Weitere Informationen zu BranchCache finden Sie in der Dokumentation zu Windows Server unter [BranchCache für Windows](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache).  
+Weitere Informationen zu BranchCache finden Sie in der Dokumentation zu Windows Server unter [BranchCache für Windows](/windows-server/networking/branchcache/branchcache).  
 
 ## <a name="computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> Computer in Arbeitsgruppen  
 
@@ -75,7 +75,7 @@ Weitere Informationen finden Sie in den folgenden Beiträgen:
 
 - [Configuration Manager distribution points and Windows Server 2012 data deduplication](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-distribution-points-and-windows-server/ba-p/273385) (Configuration Manager-Verteilungspunkte und Windows Server 2012-Datendeduplizierung) im Configuration Manager-Teamblog
 
-- [Übersicht über die Datendeduplizierung](https://docs.microsoft.com/windows-server/storage/data-deduplication/overview) in der Windows Server-Dokumentation
+- [Übersicht über die Datendeduplizierung](/windows-server/storage/data-deduplication/overview) in der Windows Server-Dokumentation
 
 ## <a name="directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
 
@@ -129,4 +129,4 @@ Für Standortserverrollen ist NTFS erforderlich, damit Configuration Manager Ver
 
      Darüber hinaus wird der Cache eines Konfigurations-Manager-Clients auf einem SIS-fähigen Volume nicht unterstützt.  
 
-- **Laufwerke mit Wechseldatenträger:** Die Installation von Configuration Manager-Standortsystemen oder Konfigurations-Manager-Clients auf einem Laufwerk mit Wechseldatenträger wird von Configuration Manager nicht unterstützt.  
+- **Laufwerke mit Wechseldatenträger:** Die Installation von Configuration Manager-Standortsystemen oder Konfigurations-Manager-Clients auf einem Laufwerk mit Wechseldatenträger wird von Configuration Manager nicht unterstützt.

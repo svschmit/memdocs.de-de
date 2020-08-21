@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906572"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699788"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Weitere Informationen zum Datenschutz für Configuration Manager
 
@@ -47,7 +47,7 @@ Weitere Informationen zu den Ebenen der Datensammlung finden Sie unter [Diagnose
 
 Der Log Analytics-Connector synchronisiert Daten, z.B. Sammlungen, aus Configuration Manager mit dem Azure-Clouddienst. Die Azure-Abonnement-ID und der geheime Schlüssel werden in der Configuration Manager-Datenbank gespeichert, wenn ein Administrator die Funktion konfiguriert. Sowohl der geheime Azure Active Directory-Clientschlüssel als auch der gemeinsam verwendete Schlüssel des Azure-Arbeitsbereichs werden in der lokalen Configuration Manager-Datenbank gespeichert. Für alle Kommunikationsvorgänge zwischen Configuration Manager und Azure wird HTTPS verwendet. Außer zufälligen Diagnose- und Nutzungsdaten erhält Microsoft keine weiteren Informationen zu gesammelten Daten. 
 
-Weitere Informationen zu den von Log Analytics erfassten Daten finden Sie unter [Log Analytics-Datensicherheit](https://docs.microsoft.com/azure/log-analytics/log-analytics-data-security).
+Weitere Informationen zu den von Log Analytics erfassten Daten finden Sie unter [Log Analytics-Datensicherheit](/azure/log-analytics/log-analytics-data-security).
 
 
 

@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1c54648f1f98ad5fef8efd16d2abe53f204a38f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906008"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700666"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Welcher Branch von Configuration Manager soll verwendet werden?
 
@@ -85,7 +85,7 @@ LTSB basiert auf Version 1606. Mit diesem Branch erhalten Sie keine konsoleninte
 Verwenden Sie die [Baselinemedien](../servers/manage/updates.md#bkmk_Baselines) von Version 1606, die in System Center 2016 enthalten sind, um LTSB als neuen Standort oder als Upgrade eines unterstützten System Center Configuration Manager 2012-Standorts zu installieren. Mit den Baselinemedien können Sie einen neuen Standort installieren, an dem Long-Term Servicing Branch oder Version 1606 von Current Branch ausgeführt wird.
 
 > [!TIP]  
-> Weitere Informationen zu System Center 2016 finden Sie in der [Dokumentation zu System Center 2016](https://docs.microsoft.com/system-center/index). In dieser Dokumentation wird auch beschrieben, wie Sie System Center 2016 erhalten, eine Lösung, für die Sie einen Microsoft-Lizenzvertrag oder entsprechende Rechte benötigen.  
+> Weitere Informationen zu System Center 2016 finden Sie in der [Dokumentation zu System Center 2016](/system-center/index). In dieser Dokumentation wird auch beschrieben, wie Sie System Center 2016 erhalten, eine Lösung, für die Sie einen Microsoft-Lizenzvertrag oder entsprechende Rechte benötigen.  
 >  
 > Wenn Sie Configuration Manager Version 1606 in Volume Licensing Service Center (VLSC) suchen möchten, wechseln Sie zur Registerkarte **Downloads and Keys** (Downloads und Schlüssel) von [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), suchen Sie nach `System Center 2016`, und wählen Sie **System Center 2016 Datacenter** oder **System Center 2016 Standard** aus.  
 >  

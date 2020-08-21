@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d766a172f934e27398ec2633ef0ec23ba4ade5e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906477"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700683"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Sichern eines Configuration Manager-Standorts
 
@@ -47,7 +47,7 @@ Die Abschnitte in diesem Artikel können Ihnen beim Sichern Ihrer Standorte helf
 ####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>Verwenden von Data Protection Manager zur Sicherung der Standortdatenbank
 Sie können Ihre Configuration Manager-Standortdatenbank mit System Center Data Protection Manager (DPM) sichern.
 
-Erstellen Sie in DPM eine neue Schutzgruppe für den Standortdatenbankcomputer. Auf der Seite **Gruppenmitglieder auswählen** des Assistenten zum Erstellen neuer Schutzgruppen wählen Sie den SMS-Writer-Dienst aus der Datenquellenliste aus. Anschließend wählen Sie die Standortdatenbank als geeignetes Mitglied aus. Weitere Informationen zur Verwendung von DPM finden Sie in der [Data Protection Manager-Dokumentationsbibliothek](https://docs.microsoft.com/system-center/dpm).  
+Erstellen Sie in DPM eine neue Schutzgruppe für den Standortdatenbankcomputer. Auf der Seite **Gruppenmitglieder auswählen** des Assistenten zum Erstellen neuer Schutzgruppen wählen Sie den SMS-Writer-Dienst aus der Datenquellenliste aus. Anschließend wählen Sie die Standortdatenbank als geeignetes Mitglied aus. Weitere Informationen zur Verwendung von DPM finden Sie in der [Data Protection Manager-Dokumentationsbibliothek](/system-center/dpm).  
 
 > [!IMPORTANT]  
 >  Configuration Manager unterstützt nicht die DPM-Sicherung für einen SQL Server-Cluster, der eine benannte Instanz verwendet. Die Lösung unterstützt die DPM-Sicherung auf einem SQL Server-Cluster, der die Standardinstanz von SQL Server verwendet.  
@@ -144,7 +144,7 @@ Mithilfe der Datei „AfterBackup.bat“ können Sie die Sicherungsmomentaufnahm
 Wenn die Datei „AfterBackup.bat“ nicht vorhanden ist, wird sie vom Sicherungstask übersprungen. Dies hat keine Auswirkungen auf den Sicherungsvorgang. Prüfen Sie im Arbeitsbereich **Überwachung** im Knoten **Komponentenstatus** die Statusmeldungen für **SMS_SITE_BACKUP**. Daran erkennen Sie, ob der Sicherungstask dieses Skript erfolgreich ausgeführt hat. Wenn der Task die Befehlsdatei „AfterBackup.bat“ erfolgreich startet, wird Ihnen die Nachrichten-ID **5040** angezeigt.  
 
 > [!TIP]  
->  Zur Archivierung der Sicherungsdateien für den Standortserver mithilfe der Datei „AfterBackup.bat“ müssen Sie in der Batchdatei ein Kopierbefehlstool verwenden. [Robocopy](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy) in Windows Server ist beispielsweise ein solches Tool. Erstellen Sie die Datei „AfterBackup.bat“ beispielsweise mit dem folgenden Befehl: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
+>  Zur Archivierung der Sicherungsdateien für den Standortserver mithilfe der Datei „AfterBackup.bat“ müssen Sie in der Batchdatei ein Kopierbefehlstool verwenden. [Robocopy](/windows-server/administration/windows-commands/robocopy) in Windows Server ist beispielsweise ein solches Tool. Erstellen Sie die Datei „AfterBackup.bat“ beispielsweise mit dem folgenden Befehl: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
 
 Die Datei „AfterBackup.bat“ ist zwar zum Archivieren von Sicherungsmomentaufnahmen vorgesehen, Sie können aber auch die Datei „AfterBackup.bat“ erstellen, um am Ende jedes Sicherungsvorgangs zusätzliche Tasks auszuführen.  
 
@@ -165,7 +165,7 @@ Wenn Sie vordefinierte oder erstellte benutzerdefinierte Berichte in SQL Server 
 > [!IMPORTANT]  
 >  Wenn Configuration Manager auf eine neuere Version aktualisiert wird, werden die vordefinierten Berichte möglicherweise von neuen Berichten überschrieben. Wenn Sie einen vordefinierten Bericht ändern, sollten Sie sicherstellen, dass der Bericht gesichert wurde, und ihn anschließend in Reporting Services wiederherstellen.  
 
-Weitere Informationen zum Sichern benutzerdefinierter Berichte in Reporting Services finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).  
+Weitere Informationen zum Sichern benutzerdefinierter Berichte in Reporting Services finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).  
 
 ### <a name="back-up-content-files"></a>Sichern von Inhaltsdateien  
 Die Inhaltsbibliothek in Configuration Manager ist der Ort, an dem alle Inhaltsdateien für sämtliche Softwarebereitstellungen gespeichert werden. Sie befindet sich auf dem Standortserver und an jedem Verteilungspunkt. Der Wartungstask „Standortserver sichern“ führt keine Sicherung der Inhaltsbibliothek oder der Paketquelldateien aus. Beim Ausfall eines Standortservers werden die Informationen zur Inhaltsbibliothek in der Standortdatenbank wiederhergestellt. Sie müssen jedoch die Inhaltsbibliothek sowie die Paketquelldateien wiederherstellen.  
@@ -231,9 +231,9 @@ Die Writer-ID für den SMS-Writer lautet **03ba67dd-dc6d-4729-a038-251f7018463b*
 Der SMS-Writer-Dienst muss unter dem lokalen Systemkonto ausgeführt werden.  
 
 ### <a name="volume-shadow-copy-service"></a>Volumeschattenkopie-Dienst  
-Der Volumeschattenkopie-Dienst (Volume Shadow Copy Service, VSS) ist ein Satz COM APIs, mit denen ein Framework implementiert wird. Dank dieses Frameworks können Volumesicherungen ausgeführt werden, während von Anwendungen auf einem System weiterhin auf die Volumes geschrieben wird. Mit dem VSS wird eine konsistente Schnittstelle bereitgestellt, mit der Benutzeranwendungen, die zum Ausführen eines Updates für Daten auf einem Datenträger dienen (SMS-Writer-Dienst), und Benutzeranwendungen, die zur Anwendungssicherung verwendet werden (Sicherungs-Manager-Dienst), koordiniert werden können. Weitere Informationen finden Sie unter [Volumeschattenkopie-Dienst](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service).  
+Der Volumeschattenkopie-Dienst (Volume Shadow Copy Service, VSS) ist ein Satz COM APIs, mit denen ein Framework implementiert wird. Dank dieses Frameworks können Volumesicherungen ausgeführt werden, während von Anwendungen auf einem System weiterhin auf die Volumes geschrieben wird. Mit dem VSS wird eine konsistente Schnittstelle bereitgestellt, mit der Benutzeranwendungen, die zum Ausführen eines Updates für Daten auf einem Datenträger dienen (SMS-Writer-Dienst), und Benutzeranwendungen, die zur Anwendungssicherung verwendet werden (Sicherungs-Manager-Dienst), koordiniert werden können. Weitere Informationen finden Sie unter [Volumeschattenkopie-Dienst](/windows-server/storage/file-server/volume-shadow-copy-service).  
 
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Üben Sie nach der Erstellung einer Sicherung die [Standortwiederherstellung](recover-sites.md) mit dieser Sicherung. Mit dieser Methode können Sie sich mit dem Wiederherstellungsprozess vertraut machen, bevor Sie diesen verwenden müssen. Zudem dient sie zur Bestätigung, dass die Sicherung für die beabsichtigten Zwecke erfolgreich war.  
+Üben Sie nach der Erstellung einer Sicherung die [Standortwiederherstellung](recover-sites.md) mit dieser Sicherung. Mit dieser Methode können Sie sich mit dem Wiederherstellungsprozess vertraut machen, bevor Sie diesen verwenden müssen. Zudem dient sie zur Bestätigung, dass die Sicherung für die beabsichtigten Zwecke erfolgreich war.

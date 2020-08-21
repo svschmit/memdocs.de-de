@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a90f3260782f08fdf8f7424a95e09b34e38e97d3
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: facfb2be1972933524c7ad632537fc8306939c1c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268146"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700751"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Einrichten von Desktop Analytics
 
@@ -39,7 +39,7 @@ Melden Sie sich mit diesem Verfahren bei Desktop Analytics an, und konfigurieren
 
         Wenn Sie diese Option nicht auswählen, fügt Desktop Analytics dennoch Benutzer als Mitglieder der Sicherheitsgruppe hinzu. Ein **globaler Administrator** muss für die Benutzer die Rolle **Desktop Analytics-Administrator** manuell zuweisen.
 
-        Weitere Informationen zum Zuweisen von Berechtigungen der Administratorrolle in Azure Active Directory und den **Desktop Analytics-Administratoren** zugewiesenen Berechtigungen finden Sie unter [Berechtigungen der Administratorrolle in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        Weitere Informationen zum Zuweisen von Berechtigungen der Administratorrolle in Azure Active Directory und den **Desktop Analytics-Administratoren** zugewiesenen Berechtigungen finden Sie unter [Berechtigungen der Administratorrolle in Azure Active Directory](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Desktop Analytics konfiguriert die Sicherheitsgruppe **Arbeitsbereichsbesitzer** in Azure Active Directory vorab für das Erstellen und Verwalten von Arbeitsbereichen und Bereitstellungsplänen.
 
@@ -82,4 +82,4 @@ Im Azure-Portal wird die **Startseite** von Desktop Analytics angezeigt.
 
 Fahren Sie mit dem nächsten Artikel fort. Dort erfahren Sie, wie Sie Configuration Manager mit Desktop Analytics verbinden.
 > [!div class="nextstepaction"]  
-> [Herstellen einer Verbindung mit Configuration Manager](connect-configmgr.md)  
+> [Herstellen einer Verbindung mit Configuration Manager](connect-configmgr.md)
