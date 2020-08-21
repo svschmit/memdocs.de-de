@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127653"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699805"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integrieren mit Windows Update for Business
 
@@ -24,7 +24,7 @@ ms.locfileid: "88127653"
 Mit Windows Update for Business (WUfB) können Sie Windows 10-Geräte in Ihrer Organisation hinsichtlich der neuesten Schutzmaßnahmen und Windows-Features auf dem neuesten Stand halten, wenn diese Geräte eine direkte Verbindung mit dem Windows Update-Dienst herstellen. Configuration Manager kann zwischen Windows 10-Computern unterscheiden, die WUfB und WSUS zum Abrufen von Softwareupdates verwenden.  
 
 > [!WARNING]
-> Wenn Sie die Co-Verwaltung für Ihre Geräte nutzen und die [Windows Update-Richtlinien](../../comanage/workloads.md#windows-update-policies) in Intune verschoben haben, erhalten Ihre Geräte die [Windows Update for Business-Richtlinien von Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+> Wenn Sie die Co-Verwaltung für Ihre Geräte nutzen und die [Windows Update-Richtlinien](../../comanage/workloads.md#windows-update-policies) in Intune verschoben haben, erhalten Ihre Geräte die [Windows Update for Business-Richtlinien von Intune](/intune/windows-update-for-business-configure).
 > - Ist der Configuration Manager-Client noch auf dem gemeinsam verwalteten Gerät installiert, werden Einstellungen für kumulative Updates und Featureupdates von Intune verwaltet. Sind Patches von Drittanbietern in den [**Clienteinstellungen**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) aktiviert, werden sie weiterhin von Configuration Manager verwaltet.  
 
  Einige Configuration Manager-Features sind nicht mehr verfügbar, wenn Configuration Manager-Clients so konfiguriert sind, dass sie Updates von Windows Update empfangen, was Windows Update for Business (WUfB) oder Windows Insider einbezieht:  
@@ -52,7 +52,7 @@ Mit den folgenden Schritten ermitteln Sie Clients, die zum Abrufen von Windows 1
 
 - Clients, die Windows 10 Desktop Pro oder Windows 10 Enterprise Edition Version 1511 oder höher ausführen
 
-- [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) wird bereitgestellt und die Clients verwenden WUfB zum Abrufen von Windows 10-Updates und -Upgrades.  
+- [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) wird bereitgestellt und die Clients verwenden WUfB zum Abrufen von Windows 10-Updates und -Upgrades.  
 
 ### <a name="to-identify-clients-that-use-wufb"></a>So identifizieren Sie Clients, die WUfB verwenden  
 
@@ -74,7 +74,7 @@ Ab Version 1706 des Configuration Manager können Sie Zurückstellungsrichtlinie
 
 > [!NOTE]
 > Ab Configuration Manager Version 1802 können Sie Rückstellungsrichtlinien für Windows-Insider festlegen. <!--507201-->  
-Weitere Informationen zum Windows-Insider-Programm finden Sie unter [Erste Schritte mit dem Windows-Insider-Programm für Unternehmen](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business).
+Weitere Informationen zum Windows-Insider-Programm finden Sie unter [Erste Schritte mit dem Windows-Insider-Programm für Unternehmen](/windows/deployment/update/waas-windows-insider-for-business).
 
 ### <a name="prerequisites-for-deferral-policies"></a>Voraussetzungen für Zurückstellungsrichtlinien
 

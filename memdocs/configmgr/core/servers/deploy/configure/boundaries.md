@@ -10,12 +10,12 @@ ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 41c0d08c5f445cd6d643542cfaa646bc2d89de76
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 13312c20edbda290daaa0d51908adeb7ab4a6860
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128425"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700060"
 ---
 # <a name="define-network-locations-as-boundaries-for-configuration-manager"></a>Definieren von Netzwerkpfaden als Begrenzungsgruppen für Configuration Manager
 
@@ -43,7 +43,7 @@ Wenn ein Gerät sich nicht in der von Ihnen erwarteten Grenze befindet, liegt di
 
 ### <a name="ip-subnet"></a>IP-Subnetz
 
-Der Typ „IP-Subnetz“ erfordert eine **Subnetz-ID**. Beispiel: `169.254.0.0`. Wenn Sie die Werte für **Netzwerk** (Standardgateway) und **Subnetzmaske** angeben, berechnet Configuration Manager die **Subnetz-ID** automatisch. Wenn Sie die Grenze speichern, speichert Configuration Manager nur den Wert der Subnetz-ID.
+Der Typ „IP-Subnetz“ erfordert eine **Subnetz-ID**. Beispielsweise `169.254.0.0`. Wenn Sie die Werte für **Netzwerk** (Standardgateway) und **Subnetzmaske** angeben, berechnet Configuration Manager die **Subnetz-ID** automatisch. Wenn Sie die Grenze speichern, speichert Configuration Manager nur den Wert der Subnetz-ID.
 
 > [!NOTE]
 > Configuration Manager unterstützt die direkte Eingabe eines Supernetzes als Grenze nicht. Verwenden Sie stattdessen den Grenztyp IP-Adressbereich.
@@ -59,11 +59,11 @@ Active Directory-Standortgrenzen funktionieren nicht für reine Azure Active Di
 > [!TIP]
 > Verwenden Sie den folgenden Windows-Befehl, um den aktuellen Active Directory-Standort eines Geräts anzuzeigen: `nltest /dsgetsite`.
 >
-> Um zu ermitteln, ob ein Client in die Clouddomäne eingebunden ist, führen Sie den folgenden Windows-Befehl aus: `dsregcmd /status`. Weitere Informationen finden Sie unter [dsregcmd-Befehl – Gerätestatus](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
+> Um zu ermitteln, ob ein Client in die Clouddomäne eingebunden ist, führen Sie den folgenden Windows-Befehl aus: `dsregcmd /status`. Weitere Informationen finden Sie unter [dsregcmd-Befehl – Gerätestatus](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
 ### <a name="ipv6-prefix"></a>IPv6-Präfix
 
-Für den Grenztyp **IPv6-Präfix** geben Sie ein **Präfix** an. Beispiel: `2001:1111:2222:3333`.
+Für den Grenztyp **IPv6-Präfix** geben Sie ein **Präfix** an. Beispielsweise `2001:1111:2222:3333`.
 
 ### <a name="ip-address-range"></a>IP-Adressbereich
 

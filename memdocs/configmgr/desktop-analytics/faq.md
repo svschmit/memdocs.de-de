@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24369f2c2f21208f188cf5c0c2ef3a28db83c04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125864"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700819"
 ---
 # <a name="desktop-analytics-faq"></a>Desktop Analytics – FAQ
 
@@ -73,7 +73,7 @@ Ja. Weitere Informationen finden Sie unter [Konvertieren von BIOS zu UEFI währe
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Kann ich Desktop Analytics mit Windows 10-LTSC verwenden?
 
-Desktop Analytics unterstützt keine Windows 10 Long-Term Servicing Channel-Geräte (LTSC). Weitere Informationen finden Sie unter [Übersicht über Windows-as-a-Service](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+Desktop Analytics unterstützt keine Windows 10 Long-Term Servicing Channel-Geräte (LTSC). Weitere Informationen finden Sie unter [Übersicht über Windows-as-a-Service](/windows/deployment/update/waas-overview#long-term-servicing-channel).
 
 ### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>Kann ich die Zeit verkürzen, die für das Aktualisieren von Daten in meinem Desktop Analytics-Portal benötigt wird?
 
@@ -106,7 +106,7 @@ Windows-Diagnosedaten von ihren Computern werden verschlüsselt und an von Micro
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>Kann ich Updatekonformität zusammen mit Desktop Analytics verwenden?
 
-Ja. Wenn Sie derzeit [Updatekonformität](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) im Azure-Portal verwenden, können Sie dies auch weiterhin und nach dem Januar 2020 tun.
+Ja. Wenn Sie derzeit [Updatekonformität](/windows/deployment/update/update-compliance-get-started) im Azure-Portal verwenden, können Sie dies auch weiterhin und nach dem Januar 2020 tun.
 
 Weitere Informationen finden Sie unter [KB 4521815: Windows Analytics-Deaktivierung am 31. Januar 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 

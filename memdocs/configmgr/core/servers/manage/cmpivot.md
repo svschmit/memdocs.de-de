@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e2a90e8c481fba834cbd1b6b1f5233572e4b17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128329"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700581"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot für Echtzeitdaten in Configuration Manager
 
@@ -90,7 +90,7 @@ Die folgenden Berechtigungen sind für CMPivot erforderlich:
 
      - Klicken Sie auf eine der **Entitäten**, um sie der Abfragezeichenfolge hinzuzufügen.  
 
-     - Die Links für **Tabellenoperatoren**, **Aggregationsfunktionen** und **Skalarfunktionen** öffnen die Sprachreferenzdokumentation im Webbrowser. CMPivot verwendet die [Kusto-Abfragesprache (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
+     - Die Links für **Tabellenoperatoren**, **Aggregationsfunktionen** und **Skalarfunktionen** öffnen die Sprachreferenzdokumentation im Webbrowser. CMPivot verwendet die [Kusto-Abfragesprache (KQL)](/azure/kusto/query/).  
 
 3. Lassen Sie das CMPivot-Fenster geöffnet, um die Ergebnisse der Clients anzuzeigen. Wenn Sie das CMPivot-Fenster schließen, wird die Sitzung beendet.
    - Wenn die Abfrage gesendet wurde, senden Clients weiterhin eine Statusmeldung an den Server.  
@@ -123,7 +123,7 @@ Das CMPivot-Fenster enthält die folgenden Elemente:
 
 5. Im Abfragebereich können Sie eine Abfrage erstellen oder eingeben, die auf Clients in der Sammlung ausgeführt werden soll.  
 
-    - CMPivot verwendet einen Teil der [Kusto-Abfragesprache (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
+    - CMPivot verwendet einen Teil der [Kusto-Abfragesprache (KQL)](/azure/kusto/query/).  
 
     - Im Abfragebereich können Sie Inhalte ausschneiden, kopieren oder einfügen.  
     <!-- markdownlint-disable MD038 -->
@@ -272,5 +272,3 @@ Weitere Informationen finden sie unter [Protokolldateien](../../plan-design/hier
 - [Änderungen an CMPivot](cmpivot-changes.md)
 - [Problembehandlung für CMPivot](cmpivot-tsg.md)
 - [Erstellen und Ausführen von PowerShell-Skripts](../../../apps/deploy-use/create-deploy-scripts.md)
-
-

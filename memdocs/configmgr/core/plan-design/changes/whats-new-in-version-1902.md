@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128932"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700366"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Neuerungen in Version 1902 von Configuration Manager (Current Branch)
 
@@ -349,9 +349,9 @@ Weitere Informationen finden Sie unter [About client settings (Informationen zu 
 <!--3556021-->
 Verwenden Sie Configuration Manager, um bekannte Windows-Ordner in OneDrive for Business zu verschieben. Zu diesen Ordnern gehören Desktop, Dokumente und Bilder. Stellen Sie diese Einstellungen für Windows 7-Clients bereit, bevor Sie eine Tasksequenz bereitstellen, um so Ihre Windows 10-Upgrades zu vereinfachen.
 
-Weitere Informationen zu diesem Feature von OneDrive for Business finden Sie unter [Umleiten und Verschieben von bekannten Windows-Ordnern in OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
+Weitere Informationen zu diesem Feature von OneDrive for Business finden Sie unter [Umleiten und Verschieben von bekannten Windows-Ordnern in OneDrive](/onedrive/redirect-known-folders).
 
-Zuerst müssen Sie die [ID Ihres Office 365-Mandanten ermitteln](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Stellen Sie dann die Clientversion 18.111.0603.0004 oder höher für die OneDrive-Synchronisierung bereit. Weitere Informationen finden Sie unter [Bereitstellen von OneDrive-Apps mit Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+Zuerst müssen Sie die [ID Ihres Office 365-Mandanten ermitteln](/onedrive/find-your-office-365-tenant-id). Stellen Sie dann die Clientversion 18.111.0603.0004 oder höher für die OneDrive-Synchronisierung bereit. Weitere Informationen finden Sie unter [Bereitstellen von OneDrive-Apps mit Configuration Manager](/onedrive/deploy-on-windows).  
 
 Wenn Sie ein OneDrive for Business-Profil erstellen und bereitstellen möchten, wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Assets und Konformität**. Erweitern Sie die **Konformitätseinstellungen**, und wählen Sie den Knoten **OneDrive for Business-Profile** aus.  
 
@@ -479,7 +479,7 @@ Bei der Installation oder dem Update eines Standortservers werden diese Installa
 
 Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Zusammenfassung der Änderungen im Current Branch von Configuration Manager, Version 1902](https://support.microsoft.com/help/4498910).
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1902](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1902](/powershell/sccm/1902-release-notes?view=sccm-ps).
 
 Folgender Updaterollup (4500571) ist ab dem 17. Juni 2019 in der Konsole verfügbar: [Updaterollup für den aktuellen Branch von Configuration Manager Version 1902](https://support.microsoft.com/help/4500571).
 

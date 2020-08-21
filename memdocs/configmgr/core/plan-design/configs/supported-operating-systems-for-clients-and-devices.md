@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e573a2887bd527daac9a05fec2e83ef39fbfc4e1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128847"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700315"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Unterstützte Betriebssystemversionen für Clients und Geräte für Configuration Manager
 
@@ -44,7 +44,7 @@ Verwenden Sie den Client, der bei Configuration Manager enthalten ist, um die fo
 #### <a name="windows-virtual-desktop"></a>Windows Virtual Desktop
 
 <!--3556025-->
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) ist ein Desktop- und App-Virtualisierungsdienst, der auf Microsoft Azure ausgeführt wird. Verwenden Sie ab Version 1906 Configuration Manager zum Verwalten dieser unter Windows ausgeführten virtuellen Geräte in Azure.
+[Windows Virtual Desktop](/azure/virtual-desktop/) ist ein Desktop- und App-Virtualisierungsdienst, der auf Microsoft Azure ausgeführt wird. Verwenden Sie ab Version 1906 Configuration Manager zum Verwalten dieser unter Windows ausgeführten virtuellen Geräte in Azure.
 
 Ähnlich wie bei einem Terminalserver ermöglichen einige diese virtuellen Geräte mehrere gleichzeitige aktive Benutzersitzungen. Um bei der Clientleistung zu helfen, deaktiviert Configuration Manager jetzt Benutzerrichtlinien auf jedem Gerät, dass mehrere Benutzersitzungen zulässt. Auch wenn Sie Benutzerrichtlinien aktivieren, deaktiviert der Client sie standardmäßig auf diesen Geräten, zu denen Windows 10 Enterprise mit mehreren Benutzersitzungen und Terminalserver zählen.
 
@@ -106,7 +106,7 @@ Configuration Manager testet und unterstützt Windows Server Datacenter-Editione
 
 #### <a name="note-2"></a><a name="bkmk_note2"></a> Hinweis 2
 
-Um die [Clientpushinstallation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation) zu unterstützen, fügen Sie den Dateiserverdienst der Serverrolle „Datei- und Speicherdienste“ hinzu. Weitere Informationen zum Installieren von Windows-Features auf einer Server Core-Instanz finden Sie unter [Installieren von Rollen, Rollendiensten und Features mithilfe von Windows PowerShell-Cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).  
+Um die [Clientpushinstallation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation) zu unterstützen, fügen Sie den Dateiserverdienst der Serverrolle „Datei- und Speicherdienste“ hinzu. Weitere Informationen zum Installieren von Windows-Features auf einer Server Core-Instanz finden Sie unter [Installieren von Rollen, Rollendiensten und Features mithilfe von Windows PowerShell-Cmdlets](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).  
 
 #### <a name="note-3"></a><a name="bkmk_note3"></a> Hinweis 3
 
@@ -135,7 +135,7 @@ Verwalten Sie Windows Embedded-Geräte durch die Installation des Configuration 
 - **Windows 10 Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Diese Version unterstützt LTSC (Long-Term Servicing Channel). Weitere Informationen finden Sie unter [Übersicht über Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Diese Version unterstützt LTSC (Long-Term Servicing Channel). Weitere Informationen finden Sie unter [Übersicht über Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows Embedded 8.1 Industry** (x86, x64)
 
@@ -335,7 +335,7 @@ Configuration Manager verfügt über integrierte Funktionen zum Verwalten von lo
 - **Windows 10 Pro Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Diese Version unterstützt LTSC (Long-Term Servicing Channel). Weitere Informationen finden Sie unter [Übersicht über Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Diese Version unterstützt LTSC (Long-Term Servicing Channel). Weitere Informationen finden Sie unter [Übersicht über Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows 10 IoT Mobile Enterprise**  
 

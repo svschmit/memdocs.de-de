@@ -10,12 +10,12 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4739703436d7feec7c4c899e60b33d38ce28babf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 49e0f5e1dff466e62cdba0def917dd34510e48ee
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125728"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696768"
 ---
 # <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> Synchronisieren von Updates für Microsoft 365-Apps über einen nicht verbundenen Softwareupdatepunkt
 
@@ -24,7 +24,7 @@ ms.locfileid: "88125728"
 Ab Version 2002 von Configuration Manager können Sie ein Tool verwenden, um Updates für Microsoft 365-Apps von einem mit dem Internet verbundenen WSUS-Server in eine nicht verbundene Configuration Manager-Umgebung zu importieren. Bisher konnten Sie beim Exportieren und Importieren von Metadaten für Softwareupdates in nicht verbundenen Umgebungen keine Updates für Microsoft 365-Apps bereitstellen. Für Updates für Microsoft 365-Apps sind zusätzliche Metadaten erforderlich, die über eine Office-API und das Office-CDN heruntergeladen werden, was in nicht verbundenen Umgebungen nicht möglich ist.
 
 > [!Note]
-> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -51,7 +51,7 @@ Ab Version 2002 von Configuration Manager können Sie ein Tool verwenden, um Up
 1. Wenn die Synchronisierung abgeschlossen ist, lehnen Sie alle Updates für Microsoft 365-Apps ab, die Sie nicht mit Configuration Manager bereitstellen möchten. Sie müssen Updates für Microsoft 365-Apps nicht genehmigen, damit diese heruntergeladen werden.  
    - Die Ablehnung von nicht gewünschten Updates für Microsoft 365-Apps in WSUS verhindert nicht, dass diese während eines WsusUtil.exe-Exports exportiert werden. Es wird aber verhindert, dass das OfflineUpdateExporter-Tool die Inhalte für die Updates herunterlädt.
    - Das OfflineUpdateExporter-Tool führt den Download von Updates für Microsoft 365-Apps für Sie aus. Für andere Produkte muss der Download weiterhin genehmigt werden, wenn Sie Updates für diese Produkte exportieren.
-    - Erstellen Sie eine [neue Updateansicht in WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus), um nicht benötigte Updates für Microsoft 365-Apps in WSUS einfach anzeigen und ablehnen zu können.
+    - Erstellen Sie eine [neue Updateansicht in WSUS](/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus), um nicht benötigte Updates für Microsoft 365-Apps in WSUS einfach anzeigen und ablehnen zu können.
 1. Wenn Sie andere Produktupdates zum Download und Export genehmigen, warten Sie, bis die Inhalt heruntergeladen wurden, bevor Sie den WsusUtil.exe-Export ausführen und die Inhalte des WSUSContent-Ordners kopieren. Weitere Informationen finden Sie unter [Synchronisieren von Softwareupdates bei einem getrennten Softwareupdatepunkt](synchronize-software-updates-disconnected.md).
 
 ## <a name="exporting-the-microsoft-365-apps-updates"></a>Exportieren der Updates für Microsoft 365-Apps

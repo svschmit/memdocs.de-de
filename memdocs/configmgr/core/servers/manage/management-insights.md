@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3d65c83d0a9fd009fa21a3b9e623145f87cc9498
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: de3c75982e19e6183260a2a5f99f65b9c785d27f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128114"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700513"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Verwaltungseinblicke in Configuration Manager
 
@@ -131,7 +131,7 @@ Dadurch werden Sie bei der Integration mit vielen Clouddiensten unterstützt, di
 
 - **Cloud Management Gateway aktivieren**: Das Cloudverwaltungsgateway (Cloud Management Gateway, CMG) bietet eine einfache Möglichkeit zum Verwalten von Configuration Manager-Clients über das Internet. Durch die Bereitstellung des CMG als Clouddienst in Microsoft Azure können Sie weiterhin Clients verwalten und bedienen, die sich im Internet bewegen. Mit CMG benötigen Sie keine zusätzliche lokale Infrastruktur, die für das Internet verfügbar gemacht wird. Weitere Informationen finden Sie unter [Planen des Cloudverwaltungsgateways](../../clients/manage/cmg/plan-cloud-management-gateway.md).<!-- 451B9B3A-D86A-4EF1-ACC3-FE6A207886BA -->
 
-- **Geräte für Hybrid-Azure AD-Einbindung aktivieren**: In Azure AD eingebundene Geräte ermöglichen Benutzern, sich mit ihren Domänenanmeldeinformationen anzumelden, und stellen sicher, dass die Geräte die Sicherheits- und Konformitätsstandards der Organisation erfüllen. Weitere Informationen finden Sie unter [Überlegungen zum Entwurf der Azure Active Directory-Hybrid-Identität](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
+- **Geräte für Hybrid-Azure AD-Einbindung aktivieren**: In Azure AD eingebundene Geräte ermöglichen Benutzern, sich mit ihren Domänenanmeldeinformationen anzumelden, und stellen sicher, dass die Geräte die Sicherheits- und Konformitätsstandards der Organisation erfüllen. Weitere Informationen finden Sie unter [Überlegungen zum Entwurf der Azure Active Directory-Hybrid-Identität](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
 
 - **Sites that don't have proper HTTPS configuration** (Standorte ohne richtige HTTPS-Konfiguration): Ab Version 2002 listet dieser Einblick Standorte in Ihrer Hierarchie auf, die nicht ordnungsgemäß für HTTPS konfiguriert sind. Diese Konfiguration verhindert, dass der Standort [Sammlungsmitgliedschaftsergebnisse mit Azure AD-Gruppen synchronisiert](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync). Sie führt möglicherweise dazu, dass Azure AD Sync nicht alle Geräte hochlädt. Die Verwaltung dieser Clients funktioniert möglicherweise nicht richtig.<!--6268489--> Konfigurieren Sie [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md) (Erweitertes HTTP), oder aktivieren Sie mindestens einen Verwaltungspunkt für HTTPS. Wenn Sie den Standort bereits für die HTTPS-Kommunikation konfiguriert haben, wird dieser Einblick nicht angezeigt.<!-- 73884047-3395-430E-B971-F853806D4349 -->
 
@@ -162,7 +162,7 @@ Einblicke, die die Verwaltung vereinfachen, indem sie Sammlungen bereinigen und 
 
 <!--3607758-->
 
-Ab Version 2002 wird diese Gruppe von Microsoft Premier Field Engineering bereitgestellt. Diese Einblicke sind eine Stichprobe aus einer ganzen Reihe von Überprüfungen, die von Microsoft Premier im [Diensthub](https://docs.microsoft.com/services-hub/health/getting_started_with_on_demand_assessments) bereitgestellt werden.
+Ab Version 2002 wird diese Gruppe von Microsoft Premier Field Engineering bereitgestellt. Diese Einblicke sind eine Stichprobe aus einer ganzen Reihe von Überprüfungen, die von Microsoft Premier im [Diensthub](/services-hub/health/getting_started_with_on_demand_assessments) bereitgestellt werden.
 
 - **Active Directory-Sicherheitsgruppenermittlung für eine zu häufige Ausführung konfiguriert:** Sie müssen normalerweise nicht konfigurieren, dass die Active Directory-Sicherheitsgruppenermittlung öfter als alle drei Stunden ausgeführt wird. Eine häufigere Konfiguration kann zu Leistungseinbußen bei Active Directory, dem Netzwerk und Configuration Manager führen. Aktivieren Sie die inkrementelle Installation anstatt einen vollständigen Synchronisierungszeitplan zu verwenden. Weitere Informationen finden Sie unter [Active Directory-Gruppenermittlung](../deploy/configure/about-discovery-methods.md#bkmk_aboutGroup).<!-- 4E739B65-AEC9-4B1D-8B36-AC6AC4A72022 -->
 
@@ -182,7 +182,7 @@ Ab Version 2002 wird diese Gruppe von Microsoft Premier Field Engineering berei
 
 - **Alle Standorte auf dieselbe Version aktualisieren:** Verwenden Sie in einer Hierarchie dieselbe Version von Configuration Manager. Durch diese Konfiguration wird sichergestellt, dass alle Standorte über die gleiche Funktionalität verfügen. Standorte mit unterschiedlichen Versionen in derselben Hierarchie führen zu Interoperabilitätsszenarios. Spätere Versionen von Configuration Manager enthalten neue Features und können bekannte Probleme lösen. Weitere Informationen finden Sie unter [Interoperabilität zwischen verschiedenen Versionen](../../plan-design/hierarchy/interoperability-between-different-versions.md).<!-- 88C630A5-6D6B-4DDB-95D7-78E12107970D -->
 
-Weitere Informationen zu diesen Einblicken finden Sie unter [Schritte zur Bereinigung für Einblicke für die Configuration Manager-Verwaltung](https://docs.microsoft.com/services-hub/health/remediation-steps-configmgr).
+Weitere Informationen zu diesen Einblicken finden Sie unter [Schritte zur Bereinigung für Einblicke für die Configuration Manager-Verwaltung](/services-hub/health/remediation-steps-configmgr).
 
 > [!TIP]
 > Wenn Sie bereits Kunde von Microsoft Unified oder Microsoft Premier sind, melden Sie sich am [Diensthub](https://serviceshub.microsoft.com/assessments/) für weitere bedarfsgesteuerte Bewertungen an.

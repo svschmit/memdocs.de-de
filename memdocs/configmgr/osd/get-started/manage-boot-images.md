@@ -10,18 +10,18 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124540"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697635"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Verwalten von Startimages mit Configuration Manager
 
 *Gilt für: Configuration Manager (Current Branch)*
 
-Ein Startimage in Configuration Manager ist ein [Windows PE-Image](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE), das während einer BS-Bereitstellung verwendet wird. Mithilfe von Startimages wird ein Computer in WinPE gestartet. Dieses minimale BS enthält begrenzte Komponenten und Dienste. Configuration Manager verwendet WinPE zur Vorbereitung des Zielcomputers für die Windows-Installation.
+Ein Startimage in Configuration Manager ist ein [Windows PE-Image](/windows-hardware/manufacture/desktop/winpe-intro) (WinPE), das während einer BS-Bereitstellung verwendet wird. Mithilfe von Startimages wird ein Computer in WinPE gestartet. Dieses minimale BS enthält begrenzte Komponenten und Dienste. Configuration Manager verwendet WinPE zur Vorbereitung des Zielcomputers für die Windows-Installation.
 
 ## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a> Standardstartimages
 
@@ -94,7 +94,7 @@ Verwenden Sie beispielsweise die Configuration Manager-Konsole, um Startimages, 
 
 - [Anpassen von Startimages](customize-boot-images.md)
 - [Unterstützung für Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
-- [DISM-unterstützte Plattformen](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
+- [DISM-unterstützte Plattformen](/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
 <a name="bkmk_note1"></a>
 
@@ -206,11 +206,11 @@ Wählen Sie auf der Registerkarte **Anpassung** die folgenden Einstellungen aus:
 - **Standardtastaturlayout in WinPE festlegen:** <!--4910348-->Ab Version 1910 können Sie das Standardtastaturlayout für ein Startimage konfigurieren. Wenn Sie eine andere Sprache als „en-us“ auswählen, schließt Configuration Manager „en-us“ weiterhin in die verfügbaren Eingabegebietsschemas ein. Auf dem Gerät entspricht das anfängliche Tastaturlayout dem ausgewählten Gebietsschema, aber der Benutzer kann das Gerät bei Bedarf auf „en-us“ umstellen.
 
 > [!Tip]
-> Verwenden Sie das PowerShell-Cmdlet [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps), um diese Einstellungen über ein Skript zu konfigurieren.
+> Verwenden Sie das PowerShell-Cmdlet [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps), um diese Einstellungen über ein Skript zu konfigurieren.
 
 #### <a name="optional-components"></a>Optionale Komponenten
 
-Geben Sie auf der Registerkarte **Optionale Komponenten** die Komponenten an, die Windows PE zur Verwendung mit Configuration Manager hinzugefügt werden. Weitere Informationen zu den verfügbaren optionalen Komponenten finden Sie unter [WinPE: Hinzufügen von Paketen (Referenz zu optionalen Komponenten)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
+Geben Sie auf der Registerkarte **Optionale Komponenten** die Komponenten an, die Windows PE zur Verwendung mit Configuration Manager hinzugefügt werden. Weitere Informationen zu den verfügbaren optionalen Komponenten finden Sie unter [WinPE: Hinzufügen von Paketen (Referenz zu optionalen Komponenten)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
 
 Die folgenden Komponenten werden vom Configuration Manager benötigt und Startimages immer hinzugefügt:
 
@@ -303,4 +303,4 @@ Verwenden Sie das folgende Verfahren zum Festlegen der WinPE-Sprache für BS-Ber
 
 1. Überprüfen Sie vor dem Aktualisieren des Startimages, ob sich die richtige Tasksequenz-Ressourcendatei („tsres.dll“) im entsprechenden Sprachordner auf dem Standortserver befindet. Die Ressourcendatei für Englisch befindet sich z.B. am folgenden Speicherort: `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
-2. Legen Sie als Teil des Prestart-Befehls die Umgebungsvariable **SMSTSLanguageFolder** auf die gewünschte Sprach-ID fest. Die Sprach-ID muss im Dezimalformat angegeben werden (nicht im Hexadezimalformat). Wenn Sie die Sprach-ID auf Englisch festlegen möchten, geben Sie z.B. den Dezimalwert **1033** an, und nicht den Hexadezimalwert 00000409 für den Ordnernamen.  
+2. Legen Sie als Teil des Prestart-Befehls die Umgebungsvariable **SMSTSLanguageFolder** auf die gewünschte Sprach-ID fest. Die Sprach-ID muss im Dezimalformat angegeben werden (nicht im Hexadezimalformat). Wenn Sie die Sprach-ID auf Englisch festlegen möchten, geben Sie z.B. den Dezimalwert **1033** an, und nicht den Hexadezimalwert 00000409 für den Ordnernamen.

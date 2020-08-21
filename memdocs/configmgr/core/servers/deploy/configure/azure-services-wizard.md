@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7cb0a2c71a3ea326348b87d6b34e3109a8ef9f20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128476"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700128"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Konfigurieren von Azure-Diensten zur Verwendung mit dem Configuration Manager
 
@@ -39,10 +39,10 @@ Konfigurieren Sie die folgenden Azure-Dienste mithilfe dieses Assistenten:
 
   - [E-Mail-Benachrichtigungen zur Genehmigung von Anwendungen](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Log Analytics-Connector**: [Herstellen einer Verbindung mit Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Synchronisieren Sie die erfassten Daten mit Log Analytics.  
+- **Log Analytics-Connector**: [Herstellen einer Verbindung mit Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm). Synchronisieren Sie die erfassten Daten mit Log Analytics.  
 
     > [!Note]  
-    > Dieser Artikel beschreibt den *Log Analytics-Connector*, der früher *OMS-Connector* hieß. Die Funktionsweise ist identisch. Weitere Informationen finden Sie unter [Azure-Verwaltung – Überwachung](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics).  
+    > Dieser Artikel beschreibt den *Log Analytics-Connector*, der früher *OMS-Connector* hieß. Die Funktionsweise ist identisch. Weitere Informationen finden Sie unter [Azure-Verwaltung – Überwachung](/azure/azure-monitor/terminology#log-analytics).  
 
 - **Microsoft Store für Unternehmen**: Herstellen einer Verbindung mit dem [Microsoft Store für Unternehmen](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Hier erhalten Sie Store-Apps für Ihre Organisation, die Sie mit Configuration Manager bereitstellen können.  
 
@@ -78,10 +78,10 @@ Weitere Informationen zu den erforderlichen App-Berechtigungen und Konfiguration
 
 Weitere Informationen zu Azure-Apps finden Sie in den folgenden Artikeln:
 
-- [Authentifizierung und Autorisierung in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)
-- [Web-App-Übersicht](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)
+- [Authentifizierung und Autorisierung in Azure App Service](/azure/app-service/app-service-authentication-overview)
+- [Web-App-Übersicht](/azure/app-service-web/app-service-web-overview)
 - [Grundlagen der Anwendungsregistrierung in Azure AD](/azure/active-directory/develop/authentication-scenarios)  
-- [Registrieren Sie Ihrer Anwendung bei Ihrem Azure Active Directory-Mandanten](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
+- [Registrieren Sie Ihrer Anwendung bei Ihrem Azure Active Directory-Mandanten](/azure/active-directory/active-directory-app-registration)
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
@@ -93,7 +93,7 @@ Nachdem Sie entschieden haben, mit welchem Dienst Sie sich verbinden möchten, s
 
 Bei einigen Diensten müssen die Azure AD-Apps über bestimmte Berechtigungen verfügen. Überprüfen Sie die Informationen für die einzelnen Dienste, um alle erforderlichen Berechtigungen zu bestimmen. Bevor Sie eine Web-App importieren können, muss diese z.B. zunächst von einem Administrator im [Azure-Portal](https://portal.azure.com) erstellt werden.
 
-Erteilen Sie beim Konfigurieren des Log Analytics-Connectors Ihrer neu registrierten Web-App die Berechtigung *Mitwirkender* für die Ressourcengruppe, die den relevanten Arbeitsbereich enthält. Mit dieser Berechtigung kann Configuration Manager auf diesen Arbeitsbereich zugreifen. Suchen Sie beim Zuweisen der Berechtigung im Bereich **Benutzer hinzufügen** im Azure-Portal nach dem Namen der App-Registrierung. Dieser Vorgang ist identisch mit der [Configuration Manager-Bereitstellung mit Berechtigungen für Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Ein Azure-Administrator muss diese Berechtigungen zuweisen, bevor Sie die App in Configuration Manager importieren können.
+Erteilen Sie beim Konfigurieren des Log Analytics-Connectors Ihrer neu registrierten Web-App die Berechtigung *Mitwirkender* für die Ressourcengruppe, die den relevanten Arbeitsbereich enthält. Mit dieser Berechtigung kann Configuration Manager auf diesen Arbeitsbereich zugreifen. Suchen Sie beim Zuweisen der Berechtigung im Bereich **Benutzer hinzufügen** im Azure-Portal nach dem Namen der App-Registrierung. Dieser Vorgang ist identisch mit der [Configuration Manager-Bereitstellung mit Berechtigungen für Log Analytics](/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Ein Azure-Administrator muss diese Berechtigungen zuweisen, bevor Sie die App in Configuration Manager importieren können.
 
 ## <a name="start-the-azure-services-wizard"></a>Starten des Assistenten für Azure-Dienste
 
@@ -174,7 +174,7 @@ Klicken Sie auf **Anmelden**, um sich bei Azure als Administrator zu authentifiz
 Klicken Sie auf **OK**, um die Web-App in Azure AD zu erstellen und das Dialogfeld „Serveranwendung erstellen“ zu schließen. Diese Aktion kehrt zum Dialogfeld [Server-App](#server-app-dialog) zurück.
 
 > [!NOTE]
-> Wenn Sie eine Richtlinie für den bedingten Azure AD-Zugriff definiert haben, die für **alle Cloud-Apps** gilt, müssen Sie die erstellte Serveranwendung aus dieser Richtlinie ausschließen. Weitere Informationen zum Ausschließen bestimmter Apps finden Sie in der [Dokumentation zum bedingten Zugriff mit Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> Wenn Sie eine Richtlinie für den bedingten Azure AD-Zugriff definiert haben, die für **alle Cloud-Apps** gilt, müssen Sie die erstellte Serveranwendung aus dieser Richtlinie ausschließen. Weitere Informationen zum Ausschließen bestimmter Apps finden Sie in der [Dokumentation zum bedingten Zugriff mit Azure AD](/azure/active-directory/conditional-access/).
 
 ### <a name="native-client-app"></a>Native Client-App
 
@@ -222,7 +222,7 @@ Nach der Angabe der Web-Apps und nativen Apps auf der Seite „Apps“ fährt de
 
 - Dienst **Cloud Management**, Seite **Discovery**: [Configure Azure AD User Discovery (Konfigurieren der Azure AD-Benutzerermittlung)](configure-discovery-methods.md#azureaadisc)  
 
-- Dienst **Log Analytics-Connector**, Seite **Konfiguration**: [Konfigurieren der Verbindung mit Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- Dienst **Log Analytics-Connector**, Seite **Konfiguration**: [Konfigurieren der Verbindung mit Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - Dienst **Microsoft Store für Unternehmen**, Seite **Konfigurationen**: [Konfigurieren der Synchronisierung mit Microsoft Store für Unternehmen](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 2ee472b89f45e744e43915e51e98f11841208b73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d00edbfc30a87660adc65758dc9fbcb9113197f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125798"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700649"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Gruppenrichtlinieneinstellungen für Desktop Analytics
 
@@ -37,10 +37,10 @@ Configuration Manager legt Windows-Richtlinien in einem oder beiden der folgende
 | Richtlinie | Pfad | Gilt für | Wert |
 |--------|------|------------|-------|
 | **CommercialId** | Lokal | Alle Windows-Versionen | Damit ein Gerät in Desktop Analytics aufgeführt wird, müssen Sie es mit der kommerziellen ID Ihrer Organisation konfigurieren. |
-| **AllowTelemetry**  | GPO | Windows 10 | Legen Sie für Diagnosedaten den Wert `1` für die Ebene **Einfach**, `2` für **Erweitert** oder `3` für **Vollständig (optional)** fest. Für Desktop Analytics sind mindestens grundlegende Diagnosedaten erforderlich. Microsoft empfiehlt, für Desktop Analytics die Ebene **Optional (begrenzt)** (Erweitert [begrenzt]) zu verwenden. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, Version 1803 und höher | Diese Einstellung gilt nur, wenn die Einstellung für AllowTelemetry gleich `2` ist. Sie begrenzt die an Microsoft gesendeten erweiterten Diagnosedatenereignisse auf die Ereignisse, die von Desktop Analytics benötigt werden. Weitere Informationen finden Sie unter [Erweiterte Windows 10-Diagnosedatenereignisse und Felder, die von Windows Analytics verwendet werden](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
+| **AllowTelemetry**  | GPO | Windows 10 | Legen Sie für Diagnosedaten den Wert `1` für die Ebene **Einfach**, `2` für **Erweitert** oder `3` für **Vollständig (optional)** fest. Für Desktop Analytics sind mindestens grundlegende Diagnosedaten erforderlich. Microsoft empfiehlt, für Desktop Analytics die Ebene **Optional (begrenzt)** (Erweitert [begrenzt]) zu verwenden. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, Version 1803 und höher | Diese Einstellung gilt nur, wenn die Einstellung für AllowTelemetry gleich `2` ist. Sie begrenzt die an Microsoft gesendeten erweiterten Diagnosedatenereignisse auf die Ereignisse, die von Desktop Analytics benötigt werden. Weitere Informationen finden Sie unter [Erweiterte Windows 10-Diagnosedatenereignisse und Felder, die von Windows Analytics verwendet werden](/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10, Version 1803 und höher | Aktivieren Sie für Geräte das Senden des Gerätenamens. Der Gerätename wird standardmäßig nicht an Microsoft gesendet. Wenn Sie den Gerätenamen nicht senden, wird dieser in Desktop Analytics als „Unbekannt“ angezeigt. Weitere Informationen finden Sie unter [Gerätename](enroll-devices.md#device-name). |
-| **CommercialDataOptIn** | Lokal | Windows 8.1 und früher | Für Desktop Analytics ist ein Wert von `1` erforderlich. Weitere Informationen finden Sie unter [Commercial Data Opt-in in Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)) (Aktivierung von kommerziellen Daten). |
+| **CommercialDataOptIn** | Lokal | Windows 8.1 und früher | Für Desktop Analytics ist ein Wert von `1` erforderlich. Weitere Informationen finden Sie unter [Commercial Data Opt-in in Windows 7](/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)) (Aktivierung von kommerziellen Daten). |
 | **RequestAllAppraiserVersions** | Beide | Windows 8.1 und früher | Desktop Analytics benötigt einen Wert von `1`, damit die Datensammlung ordnungsgemäß funktioniert. |
 | **DisableEnterpriseAuthProxy** | GPO | Alle Windows-Versionen | Wenn Ihre Umgebung einen benutzerauthentifizierten Proxy mit integrierter Windows-Authentifizierung für den Internetzugriff erfordert, benötigt Desktop Analytics einen Wert von `0`, damit die Datensammlung ordnungsgemäß funktioniert. Weitere Informationen finden Sie unter [Proxyserverauthentifizierung](enable-data-sharing.md#proxy-server-authentication). |
 
@@ -103,6 +103,6 @@ Diese Gruppenrichtlinieneinstellungen sind für Configuration Manager oder Deskt
 | Anzeigename | Registrierungswert | Auswirkung auf Geräte, die für Desktop Analytics registriert sind |
 |--------------|----------------|-------------------------------------------------|
 | **Änderungsbenachrichtigungen für die Telemetrieaktivierung konfigurieren** | DisableTelemetryOptInChangeNotification | Ab Windows 10, Version 1803, benachrichtigt Windows die Benutzer, wenn sich die Diagnosedatenebene ändert. Verwenden Sie diese Richtlinie, um Benachrichtigungen zu deaktivieren. |
-| **Benutzeroberfläche für die Festlegung der Telemetrieaktivierung konfigurieren** | DisableTelemetryOptInSettingsUx | Beim Konfigurieren der Diagnosedatenebene legen Sie die Obergrenze für das Gerät fest. Ab Windows 10, Version 1803, können Benutzer eine niedrigere Ebene festlegen. Verwenden Sie diese Richtlinie, um zu verhindern, dass Benutzer die Diagnoseebene ändern. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management). |
+| **Benutzeroberfläche für die Festlegung der Telemetrieaktivierung konfigurieren** | DisableTelemetryOptInSettingsUx | Beim Konfigurieren der Diagnosedatenebene legen Sie die Obergrenze für das Gerät fest. Ab Windows 10, Version 1803, können Benutzer eine niedrigere Ebene festlegen. Verwenden Sie diese Richtlinie, um zu verhindern, dass Benutzer die Diagnoseebene ändern. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management). |
 | **Löschen von Diagnosedaten deaktivieren** | DisableDeviceDelete | Ab Windows 10, Version 1809, können Benutzer Diagnosedaten von der Einstellungsseite für **Diagnose und Feedback** löschen. Verwenden Sie diese Richtlinie, um das Löschen von Diagnosedaten zu verhindern, die Microsoft von dem Gerät erfasst. |
 | **Diagnosedaten-Viewer deaktivieren** | DisableDiagnosticDataViewer | Ab Windows 10, Version 1809, können Benutzer den Diagnosedaten-Viewer über die Einstellungsseite für **Diagnose und Feedback** aktivieren und öffnen. Verwenden Sie diese Richtlinie, um den Diagnosedaten-Viewer in den Windows-Einstellungen zu deaktivieren und zu verhindern, dass er Diagnosedaten anzeigt, die Microsoft von dem Gerät erfasst.|

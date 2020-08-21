@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a5800b40b581f2a65c4adcea0d229977ae61f774
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129136"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693334"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Einrichten des Cloudverwaltungsgateways für Configuration Manager
 
@@ -40,7 +40,7 @@ Verwenden Sie die folgende Prüfliste, um sicherzustellen, dass Sie über die er
 
   - Integration in [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) für die **Cloudverwaltung**. Die Azure Active Directory-Benutzerermittlung ist nicht erforderlich. Zum Integrieren des Standorts in Azure AD, damit das CMG mithilfe von Azure Resource Manager bereitgestellt werden kann, benötigen Sie einen **globalen Administrator**.
 
-  - Die Ressourcenanbieter **Microsoft.ClassicCompute** & **Microsoft.Storage** müssen im Azure-Abonnement registriert werden. Weitere Informationen finden Sie unter [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+  - Die Ressourcenanbieter **Microsoft.ClassicCompute** & **Microsoft.Storage** müssen im Azure-Abonnement registriert werden. Weitere Informationen finden Sie unter [Azure Resource Manager](/azure/azure-resource-manager/resource-manager-supported-services).
 
   - Ein **Abonnementbesitzer** muss sich anmelden, um das CMG bereitzustellen.
 
@@ -207,7 +207,7 @@ Um den Configuration Manager-Client auf Systemen zu installieren, die derzeit ni
 
 Verwenden Sie für die Optionen 1 und 2 den Parameter **/mp**, um beim Ausführen von **ccmsetup.exe** die URL des CMG anzugeben. Weitere Informationen finden Sie unter [Informationen zu Parametern und Eigenschaften für die Clientinstallation ](../../deploy/about-client-installation-properties.md#mp).
 
-Für Option 3 können Sie ab der Configuration Manager-Version 2002 den Client auf Systemen installieren, die nicht mit Ihrem Intranet verbunden sind, indem Sie ein Massenregistrierungstoken verwenden. Weitere Informationen zu dieser Methode finden Sie unter [Erstellen eines Massenregistrierungstokens](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+Für Option 3 können Sie ab der Configuration Manager-Version 2002 den Client auf Systemen installieren, die nicht mit Ihrem Intranet verbunden sind, indem Sie ein Massenregistrierungstoken verwenden. Weitere Informationen zu dieser Methode finden Sie unter [Erstellen eines Massenregistrierungstokens](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token).
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>Konfigurieren von externen Clients für CMG
 

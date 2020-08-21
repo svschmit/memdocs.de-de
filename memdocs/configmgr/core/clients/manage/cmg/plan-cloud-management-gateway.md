@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d5b9a65b768d02d02084d778fd36255341a808b2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126932"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692841"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planen von Cloud Management Gateway in Configuration Manager
 
@@ -105,10 +105,10 @@ Die Bereitstellung und der Betrieb des CMG umfassen folgende Komponenten:
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!-- 1324735 -->
-Erstellen Sie das CMG unter Verwendung einer **Azure Resource Manager-Bereitstellung**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) ist eine moderne Plattform zum Verwalten aller Lösungsressourcen als eine einzige Entität, die als [Ressourcengruppe](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) bezeichnet wird. Beim Bereitstellen eines Cloudverwaltungsgateways mit Azure Resource Manager verwendet der Standort Azure Active Directory (Azure AD), um die erforderlichen Cloudressourcen zu authentifizieren und zu erstellen. Für diese modernisierte Bereitstellung ist kein klassisches Azure-Verwaltungszertifikat erforderlich.  
+Erstellen Sie das CMG unter Verwendung einer **Azure Resource Manager-Bereitstellung**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) ist eine moderne Plattform zum Verwalten aller Lösungsressourcen als eine einzige Entität, die als [Ressourcengruppe](/azure/azure-resource-manager/resource-group-overview#resource-groups) bezeichnet wird. Beim Bereitstellen eines Cloudverwaltungsgateways mit Azure Resource Manager verwendet der Standort Azure Active Directory (Azure AD), um die erforderlichen Cloudressourcen zu authentifizieren und zu erstellen. Für diese modernisierte Bereitstellung ist kein klassisches Azure-Verwaltungszertifikat erforderlich.  
 
 > [!NOTE]
-> Mit dieser Funktion wird nicht die Unterstützung für Azure-Clouddienstanbieter (Cloud Service Providers, CSP) aktiviert. Die CMG-Bereitstellung mit Azure Resource Manager unterstützt weiterhin den klassischen Clouddienst, der von CSP nicht unterstützt wird. Weitere Informationen finden Sie unter [verfügbare Azure-Dienste in Azure-CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).
+> Mit dieser Funktion wird nicht die Unterstützung für Azure-Clouddienstanbieter (Cloud Service Providers, CSP) aktiviert. Die CMG-Bereitstellung mit Azure Resource Manager unterstützt weiterhin den klassischen Clouddienst, der von CSP nicht unterstützt wird. Weitere Informationen finden Sie unter [verfügbare Azure-Dienste in Azure-CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).
 
 Ab Configuration Manager Version 1902 ist Azure Resource Manager der einzige Mechanismus zur Bereitstellung neuer Instanzen des Cloudverwaltungsgateways. Vorhandene Bereitstellungen funktionieren weiterhin.<!-- 3605704 -->
 
@@ -216,7 +216,7 @@ Weitere Informationen finden Sie unter den folgenden FAQ: [Müssen sich die Benu
 
 - Softwareupdatepunkte, die ein Netzwerklastenausgleichsmodul verwenden, können nicht mit dem CMG ausgeführt werden. <!--505311-->  
 
-- CMG-Bereitstellungen mit dem Azure Resource Model aktivieren keine Unterstützung für Azure Cloud-Dienstanbieter. Die CMG-Bereitstellung mit Azure Resource Manager unterstützt weiterhin den klassischen Clouddienst, der von CSP nicht unterstützt wird. Weitere Informationen finden Sie unter [Im Azure Cloud Solution Provider (CSP)-Programm verfügbare Azure-Dienste](https://docs.microsoft.com/partner-center/azure-plan-available).
+- CMG-Bereitstellungen mit dem Azure Resource Model aktivieren keine Unterstützung für Azure Cloud-Dienstanbieter. Die CMG-Bereitstellung mit Azure Resource Manager unterstützt weiterhin den klassischen Clouddienst, der von CSP nicht unterstützt wird. Weitere Informationen finden Sie unter [Im Azure Cloud Solution Provider (CSP)-Programm verfügbare Azure-Dienste](/partner-center/azure-plan-available).
 
 ### <a name="support-for-configuration-manager-features"></a>Unterstützung für Configuration Manager-Features
 
@@ -268,7 +268,7 @@ In Version 2002 und früher benötigen in die Domäne eingebundene Geräte Zugr
 
 - Aktualisieren Sie den Standort und die Clients auf Version 2006.
 
-- Verwenden Sie die Co-Verwaltung, und wechseln Sie mit der [Endpoint Protection-Workload](../../../../comanage/workloads.md#endpoint-protection) zu Intune. Dann verwalten Sie [Microsoft Defender Antivirus](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) von der Cloud aus.
+- Verwenden Sie die Co-Verwaltung, und wechseln Sie mit der [Endpoint Protection-Workload](../../../../comanage/workloads.md#endpoint-protection) zu Intune. Dann verwalten Sie [Microsoft Defender Antivirus](../../../../../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) von der Cloud aus.
 
 - Verwenden Sie [Konfigurationselemente](../../../../compliance/deploy-use/create-configuration-items.md) anstelle des nativen Features der [Antischadsoftwarerichtlinien](../../../../protect/deploy-use/endpoint-antimalware-policies.md) zum Anwenden der Endpoint Protection-Richtlinie.
 
@@ -325,7 +325,7 @@ Das CMG verwendet folgende Azure-Komponenten, durch die Gebühren für das Azure
 
 - Ein CMG kann auch als Cloudverteilungspunkt dienen, um Inhalte für Clients bereitzustellen. Diese Funktion reduziert die erforderlichen Zertifikate und Kosten für Azure-VMs. Weitere Informationen finden Sie unter [Ändern eines CMG](setup-cloud-management-gateway.md#modify-a-cmg).<!--1358651-->  
 
-- CMG verwendet den lokal redundanten Azure-Speicher (LRS). Weitere Informationen finden Sie unter [Lokal redundanter Speicher (LRS)](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+- CMG verwendet den lokal redundanten Azure-Speicher (LRS). Weitere Informationen finden Sie unter [Lokal redundanter Speicher (LRS)](/azure/storage/common/storage-redundancy-lrs).  
 
 ### <a name="other-costs"></a>Sonstige Kosten
 

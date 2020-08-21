@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f22a28c173c980bdf598a5afc8a969a86ec96cc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128085"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699771"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Installieren konsoleninterner Updates für Configuration Manager
 
@@ -411,7 +411,7 @@ Die folgenden Features sind in der neuesten Version von Configuration Manager op
 - [Surface-Treiberupdates](../../../sum/get-started/configure-classifications-and-products.md) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
 - [Cloudverwaltungsgateway](../../clients/manage/cmg/plan-cloud-management-gateway.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
 - [Erstellen von PFX-Dateien](../../../protect/deploy-use/introduction-to-certificate-profiles.md) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
-- [Azure Log Analytics-Connector](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
+- [Azure Log Analytics-Connector](/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
 - [Windows Defender Exploit Guard-Richtlinie](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
 - [VPN für Windows 10](../../../protect/deploy-use/vpn-profiles.md) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
 - [Warten einer clusterfähigen Sammlung (Servergruppen)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
@@ -436,4 +436,4 @@ Wenn Sie nach einer erfolgreichen Synchronisierung mit dem Microsoft-Clouddienst
 
     Wenn Sie Ihrer Meinung nach über alle erforderlichen Konfigurationen und Voraussetzungen für ein fehlendes Update verfügen, überprüfen Sie, ob sich Ihr Dienstverbindungspunkt im Onlinemodus befindet. Verwenden Sie anschließend unter dem Knoten **Updates und Wartung** die Option **Suchen nach Updates**, um die Prüfung zu erzwingen. Wenn sich Ihr Dienstverbindungspunkt im Offlinemodus befindet, verwenden Sie das Dienstverbindungstool, um eine manuelle Synchronisierung mit dem Clouddienst auszuführen.  
 
-- Ihr Konto verfügt nicht über die richtigen rollenbasierten Administratorberechtigungen zum Anzeigen von Updates in der Configuration Manager-Konsole. Weitere Informationen finden Sie unter [Berechtigungen zum Verwalten von Updates](#assign-permissions-to-view-and-manage-updates-and-features).  
+- Ihr Konto verfügt nicht über die richtigen rollenbasierten Administratorberechtigungen zum Anzeigen von Updates in der Configuration Manager-Konsole. Weitere Informationen finden Sie unter [Berechtigungen zum Verwalten von Updates](#assign-permissions-to-view-and-manage-updates-and-features).

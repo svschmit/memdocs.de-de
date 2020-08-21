@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128898"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700564"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Neuerungen in Version 2002 von Configuration Manager (Current Branch)
 
@@ -426,7 +426,7 @@ Ab dieser Version sind die folgenden Features keine [Vorabfeatures](../../server
 - [Eigenständige Verwendung von CMPivot](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Client-Apps für gemeinsam verwaltete Geräte](../../../comanage/workloads.md#client-apps) (zuvor bekannt als *Mobile Apps für gemeinsam verwaltete Geräte*)<!-- 1357892/3600959 -->
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell Version 2002](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell Version 2002](/powershell/sccm/2002-release-notes?view=sccm-ps).
 
 Weitere Informationen zu Änderungen an der Verwaltungsdienst-Rest-API finden Sie in den[Versionshinweisen zum Verwaltungsdienst](../../../develop/adminservice/release-notes.md#bkmk_2002).
 

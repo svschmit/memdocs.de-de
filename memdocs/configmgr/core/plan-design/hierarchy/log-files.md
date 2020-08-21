@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126425"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700547"
 ---
 # <a name="log-file-reference"></a>Protokolldateireferenz
 
@@ -784,7 +784,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |MP_ClientIDManager.log|Dieses Protokoll zeichnet Antworten des Verwaltungspunkts auf Client-ID-Anforderungen auf, die durch Tasksequenzen über PXE oder über Startmedien gestartet wurden.|Standortsystemserver|  
 |MP_DriverManager.log|Zeichnet Antworten des Verwaltungspunkts auf Aktionsanforderungen über die Tasksequenz „Treiber automatisch anwenden“ auf.|Standortsystemserver|  
 |OfflineServicingMgr.log|Zeichnet Details zur Planung von Offlinewartungsmaßnahmen und zum Anwenden von Updates auf WIM-Dateien des Betriebssystems auf.|Standortsystemserver|  
-|Setupact.log|Zeichnet Details zu Windows-Sysprep- und -Setup-Protokollen auf. Weitere Informationen finden Sie in den [Protokolldateien](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Client|  
+|Setupact.log|Zeichnet Details zu Windows-Sysprep- und -Setup-Protokollen auf. Weitere Informationen finden Sie in den [Protokolldateien](/windows/deployment/upgrade/log-files).|Client|  
 |Setupapi.log|Zeichnet Details zu Windows-Sysprep- und -Setup-Protokollen auf.|Client|  
 |Setuperr.log|Zeichnet Details zu Windows-Sysprep- und -Setup-Protokollen auf.|Client|  
 |smpisapi.log|Zeichnet Details zum Erfassen und Wiederherstellen des Clientzustands sowie Schwellenwertinformationen auf.|Client|  
@@ -894,7 +894,7 @@ Für die Wartung werden die gleiche Infrastruktur und der gleiche Prozess wie f�
 |„DISM.log“|Zeichnet alle Aktionen mithilfe von DISM auf. Bei Bedarf verweist „DISM.log“ auf „CBS.log“ für weitere Informationen.|Client|
 |setupact.log|Primäre Protokolldatei für die meisten Fehler, die während der Installation von Windows auftreten. Die Protokolldatei befindet sich im Ordner % windir%\$Windows.~BT\sources\panther.|Client|
 
-Weitere Informationen finden Sie unter [Online Servicing-Related Log Files (Protokolldateien zur Onlinewartung)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
+Weitere Informationen finden Sie unter [Online Servicing-Related Log Files (Protokolldateien zur Onlinewartung)](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
 ### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a> Windows Update-Agent
 
@@ -904,7 +904,7 @@ In der folgenden Tabelle werden die Protokolldateien aufgelistet, die Informatio
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Zeichnet Details dazu auf, wann der Windows Update-Agent eine Verbindung mit dem WSUS-Server herstellt und die Softwareupdates für die Konformitätsbewertung abruft und ob Updates für die Agent-Komponenten vorhanden sind.|Client|  
 
-Weitere Informationen erhalten Sie in den [Windows Update-Protokolldateien](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+Weitere Informationen erhalten Sie in den [Windows Update-Protokolldateien](/windows/deployment/update/windows-update-logs).
 
 ### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a> WSUS-Server
 

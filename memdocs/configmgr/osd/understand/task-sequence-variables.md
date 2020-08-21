@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124140"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697346"
 ---
 # <a name="task-sequence-variables"></a>Tasksequenzvariablen
 
@@ -803,7 +803,7 @@ Gibt zusätzliche Optionen an, die beim Anwenden eines Treiberpakets der DISM-Be
 
 Um diese Variable zu verwenden, aktivieren Sie in Schritt **Treiberpaket anwenden** die Einstellung **Treiberpaket über ausgeführten DISM mit rekursiver Option installieren**.
 
-Weitere Informationen finden Sie unter [Windows 10-DISM-Befehlszeilenoptionen](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
+Weitere Informationen finden Sie unter [Windows 10-DISM-Befehlszeilenoptionen](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
 
 ### <a name="osdjoinaccount"></a><a name="OSDJoinAccount"></a> OSDJoinAccount
 

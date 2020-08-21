@@ -10,12 +10,12 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7d774d620916f3d735a3545db5fe1e41988731d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 4d2977fc34e9c398e9e266cbc9b223ea74a1dd18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126680"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700230"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Unterstützung für Virtualisierungsumgebungen mit Configuration Manager
 
@@ -37,7 +37,7 @@ Verwenden Sie z. B. Microsoft Hyper-V Server 2016, um eine VM zu hosten, auf de
 <a name="bkmk_note1"></a>
 
 > [!NOTE]
-> Configuration Manager unterstützt keine [geschachtelte Virtualisierung](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), die in Windows Server 2016 neu eingeführt wurde.
+> Configuration Manager unterstützt keine [geschachtelte Virtualisierung](/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), die in Windows Server 2016 neu eingeführt wurde.
 
 ### <a name="virtualization-environment-support"></a>Unterstützung von Virtualisierungsumgebungen
 
@@ -70,7 +70,7 @@ Weitere Informationen finden Sie unter [Configuration Manager in Azure](../../un
 
 ## <a name="windows-virtual-desktop"></a>Windows Virtual Desktop
 
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) ist ein Desktop- und App-Virtualisierungsdienst, der auf Microsoft Azure ausgeführt wird. Verwenden Sie ab Version 1906 Configuration Manager zum Verwalten dieser unter Windows ausgeführten virtuellen Geräte in Azure. Weitere Informationen finden Sie unter [Unterstützte Betriebssysteme für Clients und Geräte](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+[Windows Virtual Desktop](/azure/virtual-desktop/) ist ein Desktop- und App-Virtualisierungsdienst, der auf Microsoft Azure ausgeführt wird. Verwenden Sie ab Version 1906 Configuration Manager zum Verwalten dieser unter Windows ausgeführten virtuellen Geräte in Azure. Weitere Informationen finden Sie unter [Unterstützte Betriebssysteme für Clients und Geräte](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

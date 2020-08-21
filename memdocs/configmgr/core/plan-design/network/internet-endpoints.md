@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: fbb5d524551f5ff2c0a04b62b0f494046eee7a45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126454"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692678"
 ---
 # <a name="internet-access-requirements"></a>Erforderliche Berechtigungen für den Internetzugriff
 
@@ -89,11 +89,11 @@ Weitere Informationen zu dieser Funktion finden Sie unter [Konfigurieren von Azu
 
 ## <a name="co-management"></a>Co-Verwaltung
 
-Wenn Sie Windows 10-Geräte in Microsoft Intune für die Co-Verwaltung registrieren, stellen Sie sicher, dass diese Geräte auf die von Intune benötigten Endpunkte zugreifen können. Weitere Informationen finden Sie unter [Netzwerkendpunkte für Microsoft Intune](https://docs.microsoft.com/intune/intune-endpoints).
+Wenn Sie Windows 10-Geräte in Microsoft Intune für die Co-Verwaltung registrieren, stellen Sie sicher, dass diese Geräte auf die von Intune benötigten Endpunkte zugreifen können. Weitere Informationen finden Sie unter [Netzwerkendpunkte für Microsoft Intune](/intune/intune-endpoints).
 
 ## <a name="microsoft-store-for-business"></a>Microsoft Store für Unternehmen
 
-Wenn Sie Configuration Manager in den [Microsoft Store für Unternehmen](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) integrieren, stellen Sie sicher, dass der Dienstverbindungspunkt und die entsprechenden Geräte auf den Clouddienst zugreifen können. Weitere Informationen finden Sie unter [Proxykonfiguration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+Wenn Sie Configuration Manager in den [Microsoft Store für Unternehmen](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) integrieren, stellen Sie sicher, dass der Dienstverbindungspunkt und die entsprechenden Geräte auf den Clouddienst zugreifen können. Weitere Informationen finden Sie unter [Proxykonfiguration](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ## <a name="delivery-optimization"></a>Übermittlungsoptimierung
 
@@ -103,7 +103,7 @@ Verteilungspunkte, die Microsoft Connected Cache unterstützen, benötigen auch 
 
 Weitere Informationen finden Sie in den folgenden Artikeln:
 
-- [Häufig gestellte Fragen zur Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Häufig gestellte Fragen zur Übermittlungsoptimierung](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
 - [Grundlegende Konzepte für die Inhaltsverwaltung in Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
 - [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
@@ -225,7 +225,7 @@ In den folgenden Fällen müssen Sie möglicherweise Endpunkte zu einer Firewall
 ## <a name="manage-microsoft-365-apps"></a>Verwalten von Microsoft 365-Apps
 
 > [!NOTE]
-> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
 
 Wenn Sie Configuration Manager zum Bereitstellen und Aktualisieren von Microsoft 365 Apps for Enterprise verwenden, lassen Sie die folgenden Endpunkte zu:
 

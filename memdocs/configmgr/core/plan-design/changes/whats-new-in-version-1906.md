@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128983"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698713"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Neuerungen in Version 1906 von Configuration Manager (Current Branch)
 
@@ -87,7 +87,7 @@ Weitere Informationen finden Sie unter [Einblicke für die Verwaltung](../../ser
 
 - Hinzufügen eines neuen synchronen Replikats aus dem Setup<!--3127336-->: Sie können nun einer vorhandenen SQL AlwaysOn-Verfügbarkeitsgruppe einen neuen sekundären Replikatknoten hinzufügen. Verwenden Sie anstelle eines manuellen Prozesses das Configuration Manager-Setup, um diese Änderung vorzunehmen. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server AlwaysOn-Verfügbarkeitsgruppen](../../servers/deploy/configure/configure-aoag.md#bkmk_sync).
 
-- Multisubnetz-Failover<!-- SCCMDocs-pr#3734 -->: Sie können nun das [Schlüsselwort der MultiSubnetFailover-Verbindungszeichenfolge](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server aktivieren. Außerdem müssen Sie den Standortserver manuell konfigurieren. Weitere Informationen finden Sie unter der [MultiSubnetFailover](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover)-Voraussetzung.
+- Multisubnetz-Failover<!-- SCCMDocs-pr#3734 -->: Sie können nun das [Schlüsselwort der MultiSubnetFailover-Verbindungszeichenfolge](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server aktivieren. Außerdem müssen Sie den Standortserver manuell konfigurieren. Weitere Informationen finden Sie unter der [MultiSubnetFailover](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover)-Voraussetzung.
 
 - Unterstützung für verteilte Ansichten<!-- SCCMDocs-pr#3792 -->: Die Standortdatenbank kann in einer SQL Server AlwaysOn-Verfügbarkeitsgruppe gehostet werden, und Sie können Datenbankreplikationslinks für die Verwendung von [verteilten Ansichten](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep) aktivieren.
 
@@ -198,7 +198,7 @@ Weitere Informationen finden Sie unter [Übermittlungsoptimierung durch netzwerk
 ### <a name="support-for-windows-virtual-desktop"></a>Unterstützung für Windows Virtual Desktop
 
 <!--3556025-->
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) ist eine Previewfunktion von Microsoft Azure und Microsoft 365. Sie können diese unter Windows ausgeführten virtuellen Geräte jetzt mit Configuration Manager in Azure verwalten.
+[Windows Virtual Desktop](/azure/virtual-desktop/) ist eine Previewfunktion von Microsoft Azure und Microsoft 365. Sie können diese unter Windows ausgeführten virtuellen Geräte jetzt mit Configuration Manager in Azure verwalten.
 
 Ähnlich wie bei einem Terminalserver ermöglichen diese virtuellen Geräte mehrere gleichzeitige aktive Benutzersitzungen. Um bei der Clientleistung zu helfen, deaktiviert Configuration Manager jetzt Benutzerrichtlinien auf jedem Gerät, dass mehrere Benutzersitzungen zulässt. Auch wenn Sie Benutzerrichtlinien aktivieren, deaktiviert der Client sie standardmäßig auf diesen Geräten, zu denen Windows Virtual Desktop- und Terminalserver zählen.
 
@@ -622,7 +622,7 @@ Ab dieser Version sind die folgenden Features keine Vorabfeatures mehr:
 
 Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Zusammenfassung der Änderungen im Current Branch von Configuration Manager, Version 1906](https://support.microsoft.com/help/4514258).
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1906](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1906](/powershell/sccm/1906-release-notes?view=sccm-ps).
 
 Folgender Updaterollup (4517869) ist ab 1. Oktober 2019 in der Konsole verfügbar: [Updaterollup für den aktuellen Branch von Configuration Manager, Version 1906](https://support.microsoft.com/help/4517869).
 

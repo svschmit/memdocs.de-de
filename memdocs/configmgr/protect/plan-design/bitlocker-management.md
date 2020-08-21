@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129296"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699958"
 ---
 # <a name="plan-for-bitlocker-management"></a>Plan für die BitLocker-Verwaltung
 
@@ -28,7 +28,7 @@ Ab Version 1910 können Sie die BitLocker-Laufwerkverschlüsselung (BitLocker D
 > [!NOTE]
 > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-Weitere Informationen finden Sie unter [BitLocker (Übersicht)](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview).
+Weitere Informationen finden Sie unter [BitLocker (Übersicht)](/windows/security/information-protection/bitlocker/bitlocker-overview).
 
 > [!TIP]
 > Stellen Sie die [**Endpoint Protection**-Workload](../../comanage/workloads.md#endpoint-protection) auf Intune um, damit Sie die Verschlüsselung auf gemeinsam verwalteten Windows 10-Geräten mit dem Clouddienst „Microsoft Endpoint Manager“ verwalten können. Weitere Informationen zur Verwendung von Intune finden Sie unter [Windows-Verschlüsselung](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -94,7 +94,7 @@ Ermöglichen Sie es Benutzern, ein mit BitLocker verschlüsseltes Gerät mit ein
     > [!NOTE]
     > Installieren Sie das Self-Service-Portal und die Verwaltungs- und Überwachungswebsite nur mit einer Datenbank für den primären Standort. Installieren Sie diese Websites in einer Hierarchie für jeden primären Standort.
 
-- Installieren Sie auf dem Webserver, auf dem das Self-Service-Portal gehostet wird, [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) und das Feature „.NET Framework 3.5“, ehe Sie den Installationsvorgang starten. Andere erforderliche Windows-Serverrollen und -Features werden während des Portalinstallationsprozesses automatisch installiert.
+- Installieren Sie auf dem Webserver, auf dem das Self-Service-Portal gehostet wird, [Microsoft ASP.NET MVC 4.0](/aspnet/mvc/mvc4) und das Feature „.NET Framework 3.5“, ehe Sie den Installationsvorgang starten. Andere erforderliche Windows-Serverrollen und -Features werden während des Portalinstallationsprozesses automatisch installiert.
 
 - Das Benutzerkonto zur Ausführung des Portalinstallationsskripts benötigt auf dem Standortdatenbankserver **sysadmin**-Rechte für SQL. Während des Setupvorgangs legt das Skript die Anmeldung, den Benutzer und die SQL-Rollenberechtigungen für das Computerkonto des Webservers fest. Sie können dieses Benutzerkonto aus der Rolle „sysadmin“ entfernen, nachdem Sie das Setup für das Self-Service-Portal und die Verwaltungs- und Überwachungswebsite abgeschlossen haben.
 

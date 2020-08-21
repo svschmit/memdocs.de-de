@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: efc2cc22dc4edeacc00e521233eda383314b0b92
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127017"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693436"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informationen zu Parametern und Eigenschaften für die Clientinstallation in Configuration Manager
 
@@ -323,7 +323,7 @@ Mit den folgenden Eigenschaften können Sie das Installationsverhalten von „cl
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
-Gibt den Clientanwendungsbezeichner von Azure Active Directory (Azure AD) an. Sie erstellen oder importieren die Clientanwendung, wenn Sie [Azure-Dienste für die Cloudverwaltung konfigurieren](../../servers/deploy/configure/azure-services-wizard.md). Ein Azure-Administrator kann den Wert für diese Eigenschaft vom Azure-Portal abrufen. Weitere Informationen finden Sie unter [Abrufen der Anwendungs-ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). Bei der Eigenschaft **AADCLIENTAPPID** ist diese Anwendungs-ID für den Anwendungstyp **Nativ** bestimmt.
+Gibt den Clientanwendungsbezeichner von Azure Active Directory (Azure AD) an. Sie erstellen oder importieren die Clientanwendung, wenn Sie [Azure-Dienste für die Cloudverwaltung konfigurieren](../../servers/deploy/configure/azure-services-wizard.md). Ein Azure-Administrator kann den Wert für diese Eigenschaft vom Azure-Portal abrufen. Weitere Informationen finden Sie unter [Abrufen der Anwendungs-ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). Bei der Eigenschaft **AADCLIENTAPPID** ist diese Anwendungs-ID für den Anwendungstyp **Nativ** bestimmt.
 
 Beispiel: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -344,7 +344,7 @@ Gibt die ID des Azure AD-Mandanten an. Dieser Mandant wird bei der [Konfiguratio
 - Suchen Sie im Abschnitt „Gerätestatus“ nach dem Wert **TenantId**. Beispiel: `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
   > [!Note]
-  > Ein Azure-Administrator kann diesen Wert auch im Azure-Portal abrufen. Weitere Informationen finden Sie unter [Abrufen der Mandanten-ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+  > Ein Azure-Administrator kann diesen Wert auch im Azure-Portal abrufen. Weitere Informationen finden Sie unter [Abrufen der Mandanten-ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 
 Beispiel: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -793,4 +793,4 @@ Configuration Manager unterstützt die folgenden Attributwerte für die PKI-Zert
 |2.5.4.12|T oder Title|Titel|  
 |2.5.4.42|G oder GN oder GivenName|Vorname|  
 |2.5.4.43|I oder Initials|Initialen|  
-|2.5.29.17|(kein Wert)|Alternativer Antragstellername|  
+|2.5.29.17|(kein Wert)|Alternativer Antragstellername|

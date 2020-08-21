@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123590"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696717"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Planen von Softwareupdates in Configuration Manager
 
@@ -220,7 +220,7 @@ Dieser Abschnitt enthält Informationen zu den Schritten, die für die erfolgrei
 
 Installieren Sie die Softwareupdatepunkt-Rolle auf einem Standortsystem, das die Mindestanforderungen für WSUS erfüllt und den unterstützten Konfigurationen für Configuration Manager-Standortsysteme entspricht.  
 
--   Weitere Informationen zu den Mindestanforderungen für die WSUS-Serverrolle in Windows Server finden Sie unter [Review considerations and system requirements (Zu berücksichtigende Überlegungen und Systemanforderungen)](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
+-   Weitere Informationen zu den Mindestanforderungen für die WSUS-Serverrolle in Windows Server finden Sie unter [Review considerations and system requirements (Zu berücksichtigende Überlegungen und Systemanforderungen)](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
 
 -   Weitere Informationen zu den unterstützten Konfigurationen für Configuration Manager-Standortsysteme finden Sie unter [Anforderungen an Standorte und Standortsysteme](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
@@ -235,7 +235,7 @@ Wenn Sie WSUS auf Windows Server 2012 oder höher verwenden, müssen Sie zusätz
 
 -   Fügen Sie das Konto **NT AUTHORITY\SYSTEM** als Benutzer für die WSUS-Datenbank (SUSDB) hinzu. Konfigurieren Sie mindestens die WebService-Datenbankrollenmitgliedschaft.  
   
-Weitere Informationen zum Installieren von WSUS unter Windows Server finden Sie unter [Install the WSUS Server Role (Installieren der WSUS-Serverrolle)](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
+Weitere Informationen zum Installieren von WSUS unter Windows Server finden Sie unter [Install the WSUS Server Role (Installieren der WSUS-Serverrolle)](/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
 
 Wenn Sie an einem primären Standort mehrere Softwareupdatepunkte installieren, sollten Sie für jeden Softwareupdatepunkt einer Active Directory-Gesamtstruktur die gleiche WSUS-Datenbank verwenden. Die Freigabe derselben Datenbank verbessert die Leistung, wenn Clients zu einem neuen Softwareupdatepunkt wechseln. Weitere Informationen finden Sie unter [Verwenden einer freigegebenen WSUS-Datenbank für Softwareupdatepunkte](software-updates-best-practices.md#bkmk_shared-susdb).  
 

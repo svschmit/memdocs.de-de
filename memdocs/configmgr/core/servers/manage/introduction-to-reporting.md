@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128068"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699703"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Einführung in die Berichterstellung in Configuration Manager
 
@@ -39,7 +39,7 @@ Configuration Manager verwendet die SQL Server Reporting Services als Hauptberic
 
 - Exportieren Berichte in verschiedenen häufig genutzten Formaten.  
 
-Weitere Informationen finden Sie unter [Was sind die SQL Server Reporting Services (SSRS)?](https://docs.microsoft.com/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15).
+Weitere Informationen finden Sie unter [Was sind die SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15).
 
 ## <a name="power-bi-report-server"></a>Power BI-Berichtsserver
 
@@ -47,7 +47,7 @@ Weitere Informationen finden Sie unter [Was sind die SQL Server Reporting Servic
 
 Sie können den Power BI-Berichtsserver ab der Version 2002 mit der Configuration Manager-Berichterstellung integrieren. So lässt sich die Visualisierung modernisieren und die Leistung verbessern. Durch die Integration werden Power BI-Berichte in der Konsole unterstützt. Dieses Feature ähnelt dem bereits für SQL Server Reporting Services verfügbaren Angebot. Weitere Informationen hierzu finden Sie unter [Integration mit dem Power BI-Berichtsserver](powerbi-report-server.md).
 
-Beim Power BI-Berichtsserver handelt es sich um einen lokalen Berichtsserver mit einem Webportal,in dem Sie Berichte anzeigen und verwalten können. Er beinhaltet Tools für die Erstellung von Power BI-Berichten, paginierten Berichten, Mobilgeräteberichten und KPIs. Weitere Informationen finden Sie unter [Was ist der Power BI-Berichtsserver?](https://docs.microsoft.com/power-bi/report-server/get-started).
+Beim Power BI-Berichtsserver handelt es sich um einen lokalen Berichtsserver mit einem Webportal,in dem Sie Berichte anzeigen und verwalten können. Er beinhaltet Tools für die Erstellung von Power BI-Berichten, paginierten Berichten, Mobilgeräteberichten und KPIs. Weitere Informationen finden Sie unter [Was ist der Power BI-Berichtsserver?](/power-bi/report-server/get-started).
 
 ## <a name="reporting-services-point"></a>Reporting Services-Punkt
 

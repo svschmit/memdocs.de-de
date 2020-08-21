@@ -10,22 +10,22 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca7d81ba112c9eb79fb8bcfff96fb213b87b44c3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127170"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694813"
 ---
 # <a name="onedrive-for-business-profiles"></a>OneDrive for Business-Profile
 
-Ab der Configuration Manager-Version 1902 können Sie OneDrive for Business-Profile erstellen, um bekannte Windows-Ordner nach OneDrive for Business zu verschieben. Zu diesen Ordnern gehören Desktop, Dokumente und Bilder. In jedem Profil können Sie Einstellungen zum Verschieben der bekannten Windows-Ordner angeben. Weitere Informationen zu OneDrive for Business finden Sie unter [Umleiten und Verschieben von bekannten Windows-Ordnern nach OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders). <!--3556021-->
+Ab der Configuration Manager-Version 1902 können Sie OneDrive for Business-Profile erstellen, um bekannte Windows-Ordner nach OneDrive for Business zu verschieben. Zu diesen Ordnern gehören Desktop, Dokumente und Bilder. In jedem Profil können Sie Einstellungen zum Verschieben der bekannten Windows-Ordner angeben. Weitere Informationen zu OneDrive for Business finden Sie unter [Umleiten und Verschieben von bekannten Windows-Ordnern nach OneDrive](/onedrive/redirect-known-folders). <!--3556021-->
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- [Suchen Ihrer Microsoft 365-Mandanten-ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Suchen Ihrer Microsoft 365-Mandanten-ID](/onedrive/find-your-office-365-tenant-id)  
 
-- Stellen Sie die Clientversion 18.111.0603.0004 oder höher für die OneDrive-Synchronisierung bereit. Weitere Informationen finden Sie unter [Bereitstellen von OneDrive-Apps mit Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+- Stellen Sie die Clientversion 18.111.0603.0004 oder höher für die OneDrive-Synchronisierung bereit. Weitere Informationen finden Sie unter [Bereitstellen von OneDrive-Apps mit Configuration Manager](/onedrive/deploy-on-windows).  
 
 ## <a name="move-windows-known-folders-to-onedrive"></a><a name="bkmk_odfb"></a> Verschieben von bekannten Windows-Ordnern nach OneDrive
 <!--3556021-->

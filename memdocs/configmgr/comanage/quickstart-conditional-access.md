@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f5b9addd35dd3e9252c1b988de4bb006e9a5bc0d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127272"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694966"
 ---
 # <a name="conditional-access-with-co-management"></a>Bedingter Zugriff mit Co-Verwaltung
 
@@ -108,12 +108,11 @@ Der bedingte Zugriff ist einfach zu verwenden, wenn Sie die [Co-Verwaltung](how-
 
 Weitere Informationen zum bedingten Zugriff finden in den folgenden Artikeln: 
 
-- [Bedingter Zugriff in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
+- [Bedingter Zugriff in Azure Active Directory](/azure/active-directory/conditional-access/overview)  
 
-- [Intune-Gerätekonformitätsrichtlinien](https://docs.microsoft.com/intune/device-compliance)  
+- [Intune-Gerätekonformitätsrichtlinien](/intune/device-compliance)  
 
-- [App-basierter bedingter Zugriff mit Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [App-basierter bedingter Zugriff mit Intune](/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> Die Features für den bedingten Zugriff sind sofort für Geräte mit Azure AD-Hybrideinbindung verfügbar. Zu diesen Funktionen gehören mehrstufige Authentifizierung und Azure AD Hybrid Join-Zugriffssteuerung. Dieses Verhalten ist darauf zurückzuführen, dass sie auf Azure AD-Eigenschaften basieren. Um die konfigurationsbasierte Auswertung von Intune und Configuration Manager zu nutzen, aktivieren Sie die Co-Verwaltung. Diese Konfiguration ermöglicht Ihnen die Zugriffssteuerung für konforme Geräte direkt aus Intune heraus. Außerdem steht Ihnen die Funktion zur Auswertung der Compliancerichtlinien von Intune zur Verfügung.  
-
+> Die Features für den bedingten Zugriff sind sofort für Geräte mit Azure AD-Hybrideinbindung verfügbar. Zu diesen Funktionen gehören mehrstufige Authentifizierung und Azure AD Hybrid Join-Zugriffssteuerung. Dieses Verhalten ist darauf zurückzuführen, dass sie auf Azure AD-Eigenschaften basieren. Um die konfigurationsbasierte Auswertung von Intune und Configuration Manager zu nutzen, aktivieren Sie die Co-Verwaltung. Diese Konfiguration ermöglicht Ihnen die Zugriffssteuerung für konforme Geräte direkt aus Intune heraus. Außerdem steht Ihnen die Funktion zur Auswertung der Compliancerichtlinien von Intune zur Verfügung.

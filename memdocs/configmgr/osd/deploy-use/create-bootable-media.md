@@ -10,12 +10,12 @@ ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e18c5e9e029900e10cebfb8e7bcdee29fd928ba
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a3ec1476a9b5374eb91d147e2b22fd0f669d6251
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125405"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698043"
 ---
 # <a name="create-bootable-media"></a>Erstellen startbarer Medien
 
@@ -120,7 +120,7 @@ Legen Sie für die vom Assistenten zum Erstellen von Tasksequenzmedien erstellte
 
     - **Stagingordner**<!--1359388-->: Der Medienerstellungsprozess kann viel temporären Speicherplatz auf dem Laufwerk erfordern. Dieser ähnelt standardmäßig dem folgenden Pfad: `%UserProfile%\AppData\Local\Temp`. Sie können diesen Wert in ein anderes Laufwerk und einen anderen Pfad ändern, um bei der Speicherung der temporären Dateien flexibler zu sein.
 
-    - **Medienbezeichnung**<!--1359388-->: Fügen Sie Tasksequenzmedien eine Bezeichnung hinzu. Damit können Sie die Medien besser identifizieren, nachdem Sie sie erstellt haben. Standardwert: `Configuration Manager`. Dieses Textfeld wird an den folgenden Stellen angezeigt:
+    - **Medienbezeichnung**<!--1359388-->: Fügen Sie Tasksequenzmedien eine Bezeichnung hinzu. Damit können Sie die Medien besser identifizieren, nachdem Sie sie erstellt haben. Der Standardwert ist `Configuration Manager`. Dieses Textfeld wird an den folgenden Stellen angezeigt:
 
         - Wenn Sie eine ISO-Datei einlegen oder verbinden, zeigt Windows diese Bezeichnung als Namen des eingelegten Laufwerks an.
 
@@ -128,7 +128,7 @@ Legen Sie für die vom Assistenten zum Erstellen von Tasksequenzmedien erstellte
 
         - Configuration Manager schreibt eine Textdatei namens `MediaLabel.txt` in das Stammverzeichnis der Medien. Die Datei enthält standardmäßig eine einzelne Textzeile: `label=Configuration Manager`. Wenn Sie die Bezeichnung für Medien anpassen, enthält diese Zeile Ihre benutzerdefinierte Bezeichnung und nicht den Standardwert.
 
-    - **Datei "autorun.inf" auf Medium einschließen**<!-- 4090666 -->: Configuration Manager fügt ab Version 1906 die Datei „autorun.inf“ nicht standardmäßig hinzu. Diese Datei wird in der Regel von Antischadsoftwareprodukten blockiert. Weitere Informationen zum Feature „AutoAusführen“ finden Sie unter [Creating an AutoRun-enabled CD-ROM Application (Erstellen einer CD-ROM-Anwendung, in der das Feature „AutoAusführen“ verwendet werden kann)](https://docs.microsoft.com/windows/desktop/shell/autoplay). Wählen Sie diese Option aus, um die Datei einzuschließen, sollte dies für Ihr Szenario weiterhin erforderlich sein.
+    - **Datei "autorun.inf" auf Medium einschließen**<!-- 4090666 -->: Configuration Manager fügt ab Version 1906 die Datei „autorun.inf“ nicht standardmäßig hinzu. Diese Datei wird in der Regel von Antischadsoftwareprodukten blockiert. Weitere Informationen zum Feature „AutoAusführen“ finden Sie unter [Creating an AutoRun-enabled CD-ROM Application (Erstellen einer CD-ROM-Anwendung, in der das Feature „AutoAusführen“ verwendet werden kann)](/windows/desktop/shell/autoplay). Wählen Sie diese Option aus, um die Datei einzuschließen, sollte dies für Ihr Szenario weiterhin erforderlich sein.
 
 1. Geben Sie auf der Seite **Sicherheit** folgende Optionen an:
 
@@ -200,4 +200,4 @@ Sie können startbare Medien auf einem entfernbaren USB-Speicherstick erstellen,
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Verwenden startbarer Medien zum Bereitstellen von Windows über das Netzwerk](use-bootable-media-to-deploy-windows-over-the-network.md)  
+[Verwenden startbarer Medien zum Bereitstellen von Windows über das Netzwerk](use-bootable-media-to-deploy-windows-over-the-network.md)

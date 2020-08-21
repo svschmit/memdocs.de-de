@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: d2a7f5ec31359cdd1a69bad3204d5119f8998e92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 907c8d63d68ee4f34b9d22be24f32ffb1878b715
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129170"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696173"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>Verwalten von Microsoft 365 Apps mit Configuration Manager
 
 *Gilt für: Configuration Manager (Current Branch)*
 
 > [!Note]
-> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
 
 Mit dem Configuration Manager können Sie Microsoft 365 Apps auf folgende Weise verwalten:
 
@@ -40,7 +40,7 @@ Mit dem Configuration Manager können Sie Microsoft 365 Apps auf folgende Weis
 Über das [Office 365-Clientverwaltungsdashboard](office-365-dashboard.md) können Sie Microsoft 365 Apps-Clientinformationen überprüfen und einige dieser Microsoft 365 Apps-Verwaltungsaktionen starten.
 
 ## <a name="deploy-microsoft-365-apps"></a><a name="bkmk_deploy"></a> Bereitstellen von Microsoft 365 Apps
-Starten Sie den Microsoft 365 Apps-Installer zur Erstinstallation der Microsoft 365 Apps aus dem Office 365-Clientverwaltungsdashboard. Mit dem Assistenten können Sie die Microsoft 365 Apps-Installationseinstellungen konfigurieren, Dateien aus Office Content Delivery Networks (CDNs) herunterladen und eine Skriptanwendung für die Dateien erstellen und bereitstellen. Bis Microsoft 365 Apps auf Clients installiert sind und der [Task für automatische Updates von Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/overview-update-process-microsoft-365-apps) ausgeführt wird, sind Updates für Microsoft 365 Apps nicht anwendbar. Zu Testzwecken können Sie das Update manuell ausführen.
+Starten Sie den Microsoft 365 Apps-Installer zur Erstinstallation der Microsoft 365 Apps aus dem Office 365-Clientverwaltungsdashboard. Mit dem Assistenten können Sie die Microsoft 365 Apps-Installationseinstellungen konfigurieren, Dateien aus Office Content Delivery Networks (CDNs) herunterladen und eine Skriptanwendung für die Dateien erstellen und bereitstellen. Bis Microsoft 365 Apps auf Clients installiert sind und der [Task für automatische Updates von Microsoft 365 Apps](/deployoffice/overview-update-process-microsoft-365-apps) ausgeführt wird, sind Updates für Microsoft 365 Apps nicht anwendbar. Zu Testzwecken können Sie das Update manuell ausführen.
 
 Bei früheren Versionen von Configuration Manager müssen Sie beim ersten Installieren von Microsoft 365 Apps auf Clients folgende Schritte ausführen:
 - Herunterladen des Office-Bereitstellungstools (Office Deployment Tool, ODT)
@@ -76,7 +76,7 @@ Ab Configuration Manager 1806 wird das Office-Anpassungstool in den Installer in
 
     Wenn Sie über eine vorhandene Konfigurationsdatei verfügen, geben Sie den Speicherort für die Datei an, und fahren Sie mit Schritt 7 fort. Der Speicherort muss im folgenden Format angegeben werden: &#92;&#92;*Server*&#92;*Freigabe*&#92;*Dateiname*.XML.
     > [!IMPORTANT]    
-    > Die XML-Konfigurationsdatei darf nur [von Office 2016 unterstützte Sprachen](https://docs.microsoft.com/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016) enthalten.
+    > Die XML-Konfigurationsdatei darf nur [von Office 2016 unterstützte Sprachen](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016) enthalten.
 
 5. Wählen Sie auf der Seite **Clientprodukte** die von Ihnen verwendete Microsoft 365 Apps-Suite aus. Wählen Sie die Anwendungen aus, die Sie hinzufügen möchten. Wählen Sie sämtliche zusätzlichen Produkte aus, die hinzugefügt werden sollen, und klicken Sie dann auf **Weiter**.
 6. Wählen Sie auf der Seite **Clienteinstellungen** die einzuschließenden Einstellungen aus, und klicken Sie anschließend auf **Weiter**.
@@ -126,7 +126,7 @@ Befolgen Sie die folgenden Schritte, um Microsoft 365 Apps-Updates mit Configu
 
 > [!NOTE]  
 >
-> Wenn Microsoft 365 Apps vor kurzem installiert wurden, ist es je nach Installationsmethode möglich, dass der Updatekanal noch nicht festgelegt wurde. In diesem Fall werden die bereitgestellten Updates als nicht anwendbar erkannt. Bei der Installation von Microsoft 365 Apps wird ein [Task für geplante, automatische Updates](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) erstellt. In diesem Fall muss der Task mindestens einmal ausgeführt werden, damit der Updatekanal festgelegt wird und die Updates als anwendbar ermittelt werden.
+> Wenn Microsoft 365 Apps vor kurzem installiert wurden, ist es je nach Installationsmethode möglich, dass der Updatekanal noch nicht festgelegt wurde. In diesem Fall werden die bereitgestellten Updates als nicht anwendbar erkannt. Bei der Installation von Microsoft 365 Apps wird ein [Task für geplante, automatische Updates](/deployoffice/overview-of-the-update-process-for-office-365-proplus) erstellt. In diesem Fall muss der Task mindestens einmal ausgeführt werden, damit der Updatekanal festgelegt wird und die Updates als anwendbar ermittelt werden.
 >
 > Wenn Microsoft 365 Apps vor kurzem installiert wurden und Updates nicht erkannt werden, können Sie den Task für automatische Office-Updates für Testzwecke manuell starten, und starten Sie dann den [Auswertungszyklus für Softwareupdatebereitstellung](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) auf dem Client. Anweisungen dazu, wie Sie dies in einer Tasksequenz durchführen, finden Sie unter [Aktualisieren von Microsoft 365 Apps in einer Tasksequenz](manage-office-365-proplus-updates.md#bkmk_ts).
 
@@ -151,7 +151,7 @@ Wenn Sie ein Update für einen Microsoft 365 Apps-Client bereitstellen, unters
 >- Wenn der Benutzer ein Microsoft 365 Apps-Update vor Ablauf der Frist installiert, überprüft Configuration Manager, ob das Update nach Ablauf der Frist installiert wird. Wenn das Update nicht auf dem Gerät erkannt wird, wird das Update installiert. 
 >- Die In-App-Benachrichtigungsleiste wird in einer App, die vor dem Herunterladen des Updates ausgeführt wird, nicht angezeigt. Nach dem Herunterladen des Updates wird die In-App-Benachrichtigung nur für neu geöffnete Anwendungen angezeigt.
 >- Bei Microsoft 365 Apps-Updates, die im Rahmen eines Wartungsfensters oder außerhalb der Geschäftszeiten ausgelöst werden, kann es vorkommen, dass das Schließen ausgeführter Office-Apps erzwungen wird, um das Update ohne Benachrichtigungen zu installieren. 
->- Weitere Informationen finden Sie unter [Benachrichtigungen über Endbenutzerupdates für Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/end-user-update-notifications-microsoft-365-apps).
+>- Weitere Informationen finden Sie unter [Benachrichtigungen über Endbenutzerupdates für Microsoft 365 Apps](/deployoffice/end-user-update-notifications-microsoft-365-apps).
 
 
 ## <a name="add-languages-for-microsoft-365-apps-update-downloads"></a><a name="bkmk_o365_lang"></a> Hinzufügen von Sprachen für Downloads von Microsoft 365 Apps-Updates
@@ -243,12 +243,12 @@ Bei Updatepaketen, die ab dem 9. Juni veröffentlicht werden, beginnt der Titel
 |Aktueller Kanal (Vorschau)|Monatlicher Kanal (gezielt)|
 |Betakanal|Insider|
 
-Weitere Informationen zum Bearbeiten von ADRs finden Sie unter [Automatisches Bereitstellen von Softwareupdates](automatically-deploy-software-updates.md). Weitere Informationen zur Namensänderung finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+Weitere Informationen zum Bearbeiten von ADRs finden Sie unter [Automatisches Bereitstellen von Softwareupdates](automatically-deploy-software-updates.md). Weitere Informationen zur Namensänderung finden Sie unter [Namensänderung für Office 365 ProPlus](/deployoffice/name-change).
 
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>Ändern des Updatekanals nach dem Aktivieren des Erhalts von Updates für Microsoft 365 Apps über Configuration Manager
 
-Nach der Bereitstellung von Microsoft 365 Apps können Sie den Updatekanal per Gruppenrichtlinie oder mit dem Office-Bereitstellungstool (ODT) ändern. Beispielsweise können Sie ein Gerät aus „Halbjährlicher Kanal“ in „Halbjährlicher Kanal (gezielt)“ verschieben. Beim Wechseln des Kanals wird Office automatisch aktualisiert, ohne dass die Vollversion neu installiert oder heruntergeladen werden muss. Weitere Informationen finden Sie unter [Ändern des Microsoft 365 Apps-Updatekanals für Geräte in Ihrer Organisation](https://docs.microsoft.com//deployoffice/change-update-channels).
+Nach der Bereitstellung von Microsoft 365 Apps können Sie den Updatekanal per Gruppenrichtlinie oder mit dem Office-Bereitstellungstool (ODT) ändern. Beispielsweise können Sie ein Gerät aus „Halbjährlicher Kanal“ in „Halbjährlicher Kanal (gezielt)“ verschieben. Beim Wechseln des Kanals wird Office automatisch aktualisiert, ohne dass die Vollversion neu installiert oder heruntergeladen werden muss. Weitere Informationen finden Sie unter [Ändern des Microsoft 365 Apps-Updatekanals für Geräte in Ihrer Organisation](//deployoffice/change-update-channels).
 
 
 ## <a name="next-steps"></a>Nächste Schritte

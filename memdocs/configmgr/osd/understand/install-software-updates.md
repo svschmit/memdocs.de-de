@@ -10,12 +10,12 @@ ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c5fdc15ba05786c25361c394bc0aa8dc305d666
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 73acd43ef9d7924682de9df66487c5a04297e640
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124252"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697499"
 ---
 # <a name="install-software-updates"></a>Softwareupdates installieren
 
@@ -107,7 +107,7 @@ Weitere Informationen finden Sie unter [Anwenden von Softwareupdates auf ein Ima
 - Es werden nur CBS-basierte Updates unterstützt. Microsoft 365 Apps-Updates können nicht angewendet werden.
 
 > [!Tip]  
-> Sie können die Auswahl von Softwareupdates mithilfe von PowerShell automatisieren. Verwenden Sie das Cmdlet [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps), um eine Liste der Updates abzurufen. Verwenden Sie anschließend das Cmdlet [New-CMOperatingSystemImageUpdateSchedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps), um den Zeitplan für die Offlinewartung zu erstellen. Das folgende Beispiel zeigt eine Methode zum Automatisieren dieser Aktion:
+> Sie können die Auswahl von Softwareupdates mithilfe von PowerShell automatisieren. Verwenden Sie das Cmdlet [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps), um eine Liste der Updates abzurufen. Verwenden Sie anschließend das Cmdlet [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps), um den Zeitplan für die Offlinewartung zu erstellen. Das folgende Beispiel zeigt eine Methode zum Automatisieren dieser Aktion:
 >
 > ```PowerShell
 > # Get the OS image

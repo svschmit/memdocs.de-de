@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aaba31a8a017f75338cf4d6dee3c2f2d80d7e377
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129000"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698519"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Neuerungen in Version 1802 von Configuration Manager
 
@@ -267,7 +267,7 @@ Es gibt jetzt einen neuen Bericht, der die Anzahl von Clients anzeigt, auf denen
 
 ### <a name="report-on-windows-autopilot-device-information"></a>Melden von Windows Autopilot-Geräteinformationen
 <!-- 1351442 -->
-Windows Autopilot ist eine moderne Lösung für das Onboarding und Konfigurieren neuer Windows 10-Geräte. Weitere Informationen finden Sie unter [Übersicht über Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Eine Methode, vorhandene Geräte bei Windows Autopilot zu registrieren, ist das Hochladen von Geräteinformationen in den Microsoft Store für Unternehmen und Bildungseinrichtungen. Zu diesen Informationen gehört die Seriennummer des Geräts, der Windows-Produktbezeichner und eine Hardwarebezeichner. In Configuration Manager können Sie diese Geräteinformationen mit dem neuen Bericht, **Windows Autopilot-Geräteinformationen**, im Berichtsknoten **Hardware – Allgemein** erfassen und melden. Weitere Informationen zur Vorbereitung für die Co-Verwaltung finden Sie unter [Vorbereiten internetbasierter Geräte für die Co-Verwaltung](../../../comanage/how-to-prepare-Win10.md#windows-autopilot).
+Windows Autopilot ist eine moderne Lösung für das Onboarding und Konfigurieren neuer Windows 10-Geräte. Weitere Informationen finden Sie unter [Übersicht über Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot). Eine Methode, vorhandene Geräte bei Windows Autopilot zu registrieren, ist das Hochladen von Geräteinformationen in den Microsoft Store für Unternehmen und Bildungseinrichtungen. Zu diesen Informationen gehört die Seriennummer des Geräts, der Windows-Produktbezeichner und eine Hardwarebezeichner. In Configuration Manager können Sie diese Geräteinformationen mit dem neuen Bericht, **Windows Autopilot-Geräteinformationen**, im Berichtsknoten **Hardware – Allgemein** erfassen und melden. Weitere Informationen zur Vorbereitung für die Co-Verwaltung finden Sie unter [Vorbereiten internetbasierter Geräte für die Co-Verwaltung](../../../comanage/how-to-prepare-Win10.md#windows-autopilot).
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>Bericht „Windows 10-Wartungsdetails für eine bestimmte Sammlung“
 <!--1357653-->
@@ -287,7 +287,7 @@ Der Bericht **Windows 10-Wartungsdetails für eine bestimmte Sammlung** zeigt al
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Verbesserungen an Configuration Manager-Richtlinien für Windows Defender Exploit Guard
 <!-- 1356220 -->
-In Configuration Manager für [Windows Defender Exploit Guard](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) wurden zusätzliche Richtlinieneinstellungen für die Komponenten für die [Verringerung der Angriffsfläche](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) und den [überwachten Ordnerzugriff](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction) hinzugefügt.
+In Configuration Manager für [Windows Defender Exploit Guard](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) wurden zusätzliche Richtlinieneinstellungen für die Komponenten für die [Verringerung der Angriffsfläche](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) und den [überwachten Ordnerzugriff](/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction) hinzugefügt.
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Neue Einstellungen für die Hostinteraktion für Windows Defender Application Guard
 <!-- 1356256 -->

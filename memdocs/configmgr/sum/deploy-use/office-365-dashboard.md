@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: ce3947c8ca3c562869fdfed2ddba4d9b160902be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bae995b0704e2b2774d5f002cbf907777a3edcf0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129373"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697040"
 ---
 # <a name="office-365-client-management-dashboard"></a>Office 365-Clientverwaltungsdashboard
 
 *Gilt für: Configuration Manager (Current Branch)*
 
 > [!Note]
-> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
 
 Ab der Configuration Manager-Version 1802 können Sie Informationen zu Microsoft 365-Apps-Clients auf dem Office 365-Clientverwaltungsdashboard überprüfen. Im Office 365-Clientverwaltungsdashboard wird eine Liste von relevanten Geräten angezeigt, wenn Diagrammabschnitte ausgewählt werden. <!--1357281 -->
 
@@ -59,7 +59,7 @@ Der Standortserver der obersten Ebene benötigt Zugriff auf den folgenden Endpun
 
 Ab Version 1910 müssen Sie die Datensammlung für Microsoft 365-Apps aktivieren, damit das **Office 365 ProPlus-Pilot- und -Integritätsdashboard** mit Daten aufgefüllt wird. Die Daten werden in der Configuration Manager-Standortdatenbank gespeichert und nicht an Microsoft gesendet.
 
-Sie unterscheiden sich von den Diagnosedaten, die unter [Diagnosedaten, die von Microsoft 365-Apps an Microsoft gesendet werden](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft) beschrieben werden.
+Sie unterscheiden sich von den Diagnosedaten, die unter [Diagnosedaten, die von Microsoft 365-Apps an Microsoft gesendet werden](/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft) beschrieben werden.
 
 Sie können die Datensammlung entweder mithilfe einer Gruppenrichtlinie oder durch Bearbeiten der Registrierung aktivieren.
 
@@ -67,7 +67,7 @@ Sie können die Datensammlung entweder mithilfe einer Gruppenrichtlinie oder dur
 
 1. Laden Sie die neuesten [Verwaltungsvorlagendateien aus dem Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49030) herunter.
 2. Aktivieren Sie die Richtlinieneinstellung **Telemetrie-Datensammlung aktivieren** unter `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard`.
-    - Alternativ können Sie die Richtlinieneinstellung mit dem [Office-Clouddienst für Richtlinien](https://docs.microsoft.com/DeployOffice/overview-office-cloud-policy-service) anwenden.
+    - Alternativ können Sie die Richtlinieneinstellung mit dem [Office-Clouddienst für Richtlinien](/DeployOffice/overview-office-cloud-policy-service) anwenden.
     - Die Richtlinieneinstellung wird auch vom Office-Telemetriedashboard verwendet, das Sie für diese Datensammlung nicht bereitstellen müssen.
 
 #### <a name="enable-data-collection-from-the-registry"></a>Aktivieren der Datensammlung über die Registrierung
@@ -105,7 +105,7 @@ Wählen Sie einen Zustand aus, um eine Geräteliste zu durchlaufen. Dieser Berei
 
 - Aktivieren Sie die Hardwareinventur in den Clienteinstellungen. Weitere Informationen finden Sie im Abschnitt [Voraussetzungen](#prerequisites).  
 
-- Das Gerät benötigt Konnektivität mit dem Office Content Delivery Network (CDN), um eine Add-In-Bereitschaftsdatei herunterzuladen. Weitere Informationen finden Sie unter [Netzwerke für die Inhaltsübermittlung](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Wenn das Gerät diese Datei nicht herunterladen kann, lautet der Add-In-Status *Überprüfung erforderlich*.  
+- Das Gerät benötigt Konnektivität mit dem Office Content Delivery Network (CDN), um eine Add-In-Bereitschaftsdatei herunterzuladen. Weitere Informationen finden Sie unter [Netzwerke für die Inhaltsübermittlung](/office365/enterprise/content-delivery-networks). Wenn das Gerät diese Datei nicht herunterladen kann, lautet der Add-In-Status *Überprüfung erforderlich*.  
 
     > [!Note]  
     > Für dieses Feature werden keine Daten an Microsoft gesendet.  

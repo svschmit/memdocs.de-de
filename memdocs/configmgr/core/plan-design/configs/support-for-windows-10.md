@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a30fc55fb4129b8ea3493b76fd6871a2a62f881
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e35a66c05a09455b3f2aded3d81daa2ccd5eff0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126738"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700247"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Unterstützung für Windows 10 in Configuration Manager  
 
@@ -91,7 +91,7 @@ Ab Version 2002 gilt Folgendes:<!--5954175--> Die Plattformversion **Alle Windo
 
 Ab Configuration Manager, Version 1906, können Sie Builds für das [Windows-Insider-Programm](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) aktualisieren und verwalten. Wir bieten unseren Kunden diese Funktion als zusätzliche Leistung an. Der Support funktioniert allerdings nach dem Best-Effort-Prinzip. Configuration Manager gibt möglicherweise keinen Hotfix für diese Funktion aus, wenn die Funktionalität nicht mehr gegeben ist.  
 
-Feedback zu Windows-Insider können Sie gerne über den [Feedback-Hub](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback) übermitteln.
+Feedback zu Windows-Insider können Sie gerne über den [Feedback-Hub](/windows-insider/at-work-pro/wip-4-biz-feedback) übermitteln.
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 
@@ -99,7 +99,7 @@ Beim Bereitstellen von Betriebssystemen mit Configuration Manager ist das Window
 
 - [Anforderungen an die Infrastruktur für die Betriebssystembereitstellung](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
-- [Windows ADK für Windows 10 herunterladen](https://docs.microsoft.com/windows-hardware/get-started/adk-install)
+- [Windows ADK für Windows 10 herunterladen](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
     > Ab Version 1809 von Windows 10 ist der Installer für Windows PE separat. Es wurden keine anderweitigen Änderungen an der Funktionsweise vorgenommen.
@@ -118,7 +118,7 @@ Die folgende Tabelle listet die Versionen des Windows 10 ADK auf, die Sie mit ve
 
 |Key|
 |--|
-| ![Unterstützt](media/green_check.png) = **Unterstützt** <br/> In dieser Tabelle wird nur dargestellt, welche Versionen von Configuration Manager welche Versionen des Windows ADK unterstützen. Microsoft empfiehlt die Verwendung des Windows ADK, das der Windows-Version entspricht, die Sie bereitstellen. Verwenden Sie die neueste Windows ADK-Version, wenn Sie die neueste Version von Windows 10 bereitstellen. Die neueste Windows ADK-Version unterstützt möglicherweise die Bereitstellung von älteren Betriebssystemversionen, z. B. Windows 8.1.<!-- SCCMDocs issue 1229 --> Weitere Informationen zur Unterstützung für die Windows ADK-Komponente finden Sie unter [Unterstützte DISM-Plattformen](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) und [USMT-Anforderungen](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![Unterstützt](media/green_check.png) = **Unterstützt** <br/> In dieser Tabelle wird nur dargestellt, welche Versionen von Configuration Manager welche Versionen des Windows ADK unterstützen. Microsoft empfiehlt die Verwendung des Windows ADK, das der Windows-Version entspricht, die Sie bereitstellen. Verwenden Sie die neueste Windows ADK-Version, wenn Sie die neueste Version von Windows 10 bereitstellen. Die neueste Windows ADK-Version unterstützt möglicherweise die Bereitstellung von älteren Betriebssystemversionen, z. B. Windows 8.1.<!-- SCCMDocs issue 1229 --> Weitere Informationen zur Unterstützung für die Windows ADK-Komponente finden Sie unter [Unterstützte DISM-Plattformen](/windows-hardware/manufacture/desktop/dism-supported-platforms) und [USMT-Anforderungen](/windows/deployment/usmt/usmt-requirements#bkmk-1). |
 | ![Abwärtskompatibel](media/blue_compat.png)  = **Backward compatible** <br/> Diese Kombination wurde nicht getestet, sollte jedoch funktionieren. Alle bekannten Probleme und Einschränkungen werden dokumentiert. |
 | ![Nicht unterstützt](media/Red_X.png) = **Not supported** |
 

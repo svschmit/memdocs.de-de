@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dbd782c97d11f8077c18796c87c7880eb26f3f3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129153"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697261"
 ---
 # <a name="set-up-bitlocker-portals"></a>Einrichten von BitLocker-Portalen
 
@@ -70,7 +70,7 @@ Greifen Sie nach der Installation über die folgenden URLs auf die Portale zu:
 - Website „Administration and Monitoring“ (Verwaltung und Überwachung): `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
-> Microsoft empfiehlt die Verwendung von HTTPS, dies ist jedoch nicht obligatorisch. Weitere Informationen finden Sie unter [Festlegen von SSL in IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
+> Microsoft empfiehlt die Verwendung von HTTPS, dies ist jedoch nicht obligatorisch. Weitere Informationen finden Sie unter [Festlegen von SSL in IIS](/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## <a name="script-usage"></a>Verwendung eines Skripts
 

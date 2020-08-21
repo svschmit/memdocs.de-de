@@ -10,12 +10,12 @@ ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2c74f1ac74b120fac2dabcd5f84f288b41368324
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129187"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697295"
 ---
 # <a name="encrypt-recovery-data"></a>Verschlüsseln von Wiederherstellungsdaten
 
@@ -203,9 +203,9 @@ Wenn das Zertifikat gültig ist, gibt das Skript den Wert `1` zurück.
 
 Weitere Informationen zu diesen SQL-Befehlen finden Sie in den folgenden Artikeln:
 
-- [Verschlüsselungsschlüssel für SQL Server und Datenbank](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
-- [Erstellen eines Zertifikats](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)
-- [Sichern eines Zertifikats](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)
-- [Erstellen eines Hauptschlüssels](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)
-- [Sichern des Hauptschlüssels](https://docs.microsoft.com/sql/t-sql/statements/backup-master-key-transact-sql)
-- [Erteilen von Zertifikatberechtigungen](https://docs.microsoft.com/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+- [Verschlüsselungsschlüssel für SQL Server und Datenbank](/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
+- [Erstellen eines Zertifikats](/sql/t-sql/statements/create-certificate-transact-sql)
+- [Sichern eines Zertifikats](/sql/t-sql/statements/backup-certificate-transact-sql)
+- [Erstellen eines Hauptschlüssels](/sql/t-sql/statements/create-master-key-transact-sql)
+- [Sichern des Hauptschlüssels](/sql/t-sql/statements/backup-master-key-transact-sql)
+- [Erteilen von Zertifikatberechtigungen](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)

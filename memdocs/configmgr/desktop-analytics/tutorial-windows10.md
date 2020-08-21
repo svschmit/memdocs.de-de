@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5c5337433b0d64ec1f6bf1efae97bd2391031f2e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125745"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694267"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Bereitstellen von Windows 10 für den Pilotversuch
 
@@ -32,7 +32,7 @@ In diesem Tutorial wird Folgendes vermittelt:
 
 Wenn Sie über kein Azure-Abonnement verfügen, erstellen Sie zuerst ein [kostenloses Konto](https://azure.microsoft.com/free). Bei ordnungsgemäßer Konfiguration entstehen bei der Verwendung von Desktop Analytics keinerlei auf Azure bezogene Kosten.
 
-Desktop Analytics verwendet einen *Log Analytics-Arbeitsbereich* in Ihrem Azure-Abonnement. Ein Arbeitsbereich ist im Wesentlichen ein Container, der Kontoinformationen und einfache Konfigurationsinformationen für das Konto enthält. Weitere Informationen finden Sie unter [Verwalten von Arbeitsbereichen](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
+Desktop Analytics verwendet einen *Log Analytics-Arbeitsbereich* in Ihrem Azure-Abonnement. Ein Arbeitsbereich ist im Wesentlichen ein Container, der Kontoinformationen und einfache Konfigurationsinformationen für das Konto enthält. Weitere Informationen finden Sie unter [Verwalten von Arbeitsbereichen](/azure/log-analytics/log-analytics-manage-access?toc=%2fazure%2fazure-monitor%2ftoc.json).
 
 
 
@@ -102,7 +102,7 @@ Melden Sie sich mit diesem Verfahren bei Desktop Analytics an, und konfigurieren
 
         Wenn Sie diese Option nicht auswählen, fügt Desktop Analytics dennoch Benutzer als Mitglieder der Sicherheitsgruppe hinzu. Ein **globaler Administrator** muss für die Benutzer die Rolle **Desktop Analytics-Administrator** manuell zuweisen.  
 
-        Weitere Informationen zum Zuweisen von Berechtigungen der Administratorrolle in Azure Active Directory und den **Desktop Analytics-Administratoren** zugewiesenen Berechtigungen finden Sie unter [Berechtigungen der Administratorrolle in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        Weitere Informationen zum Zuweisen von Berechtigungen der Administratorrolle in Azure Active Directory und den **Desktop Analytics-Administratoren** zugewiesenen Berechtigungen finden Sie unter [Berechtigungen der Administratorrolle in Azure Active Directory](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Desktop Analytics konfiguriert die Sicherheitsgruppe **Arbeitsbereichsbesitzer** in Azure Active Directory vorab für das Erstellen und Verwalten von Arbeitsbereichen und Bereitstellungsplänen. 
 
@@ -339,7 +339,7 @@ Verteilen Sie das Betriebssystemupgradepaket als Nächstes an die Verteilungspun
     - **Product Key:** Geben Sie den Windows-Product Key für das zu installierende Betriebssystem an. Geben Sie codierte Volumenlizenzschlüssel oder Standard-Product Keys an. Wenn Sie einen Standard-Product Key verwenden, trennen Sie jede Gruppe von fünf Zeichen durch einen Bindestrich („-“). Beispiel: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. Wenn das Upgrade für eine Volumenlizenzedition vorgesehen ist, ist der Product Key möglicherweise nicht erforderlich.  
 
         > [!Note]  
-        > Dieser Product Key kann ein Mehrfachaktivierungsschüssel oder ein generischer Volumenlizenzschlüssel sein. Ein generischer Volumenlizenzschlüssel wird auch als Clientsetupschlüssel für den Schlüsselverwaltungsdienst (KMS) bezeichnet. Weitere Informationen finden Sie unter [Planen der Volumenaktivierung](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Eine Liste der KMS-Clientsetupschlüssel finden Sie im Windows Server-Aktivierungshandbuch in [Anhang A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).
+        > Dieser Product Key kann ein Mehrfachaktivierungsschüssel oder ein generischer Volumenlizenzschlüssel sein. Ein generischer Volumenlizenzschlüssel wird auch als Clientsetupschlüssel für den Schlüsselverwaltungsdienst (KMS) bezeichnet. Weitere Informationen finden Sie unter [Planen der Volumenaktivierung](/windows/deployment/volume-activation/plan-for-volume-activation-client). Eine Liste der KMS-Clientsetupschlüssel finden Sie im Windows Server-Aktivierungshandbuch in [Anhang A](/windows-server/get-started/kmsclientkeys).
 
 6. Wählen Sie auf der Seite **Updates einschließen** die Option **Weiter** aus, sodass keine Softwareupdates installiert werden.  
 

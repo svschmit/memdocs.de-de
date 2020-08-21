@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 999d8441e8c97f0a4b7ad4a92c8175300dcc4ead
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125946"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696445"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Aktivieren der Datenfreigabe für Desktop Analytics
 
@@ -31,7 +31,7 @@ Wenn Sie Configuration Manager in Desktop Analytics integrieren, verwenden Sie d
 > [!IMPORTANT]
 > In den meisten Fällen konfigurieren Sie diese Einstellungen ausschließlich mit Configuration Manager. Wenden Sie diese Einstellungen nicht gleichzeitig in Domänen-Gruppenrichtlinienobjekten an. Weitere Informationen finden Sie unter [Konfliktauflösung](enroll-devices.md#conflict-resolution).
 
-Die grundlegende Funktionalität von Desktop Analytics ist auf die [Diagnosedatenebene](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels) **Erforderlich** festgelegt. Wenn Sie in Configuration Manager nicht die Ebene **Optional (begrenzt)** konfigurieren, stehen die folgenden Features in Desktop Analytics nicht zur Verfügung:
+Die grundlegende Funktionalität von Desktop Analytics ist auf die [Diagnosedatenebene](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels) **Erforderlich** festgelegt. Wenn Sie in Configuration Manager nicht die Ebene **Optional (begrenzt)** konfigurieren, stehen die folgenden Features in Desktop Analytics nicht zur Verfügung:
 
 - App-Nutzung
 - [Zusätzliche App-Erkenntnisse](compat-assessment.md#additional-insights)
@@ -53,12 +53,12 @@ Microsoft empfiehlt die Aktivierung der Diagnosedatenebene **Optional (begrenzt)
 > |---------|---------|
 > | Erforderlich | Basic |
 > | Optional (begrenzt) | Erweitert (begrenzt) |
-> | – | Verbessert |
+> | Nicht zutreffend | Verbessert |
 > | Optional | Vollständig |
 >
 > Wenn Sie zuvor Geräte auf der Ebene **Erweitert** konfiguriert haben, werden diese bei einem Upgrade auf Version 2006 auf **Optional (begrenzt)** zurückgesetzt. Dadurch senden diese Geräte weniger Daten an Microsoft. Diese Änderung sollte keine Auswirkungen auf die in Desktop Analytics angezeigten Informationen haben.
 
-Weitere Informationen zu Diagnosedaten, die mit der Einstellung **Optional (begrenzt)** an Microsoft übermittelt werden, finden Sie unter [Windows 10-Diagnosedatenereignisse und -felder, die über die Richtlinie zum Einschränken erweiterter Diagnosedaten erfasst werden](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
+Weitere Informationen zu Diagnosedaten, die mit der Einstellung **Optional (begrenzt)** an Microsoft übermittelt werden, finden Sie unter [Windows 10-Diagnosedatenereignisse und -felder, die über die Richtlinie zum Einschränken erweiterter Diagnosedaten erfasst werden](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
 > [!IMPORTANT]
 > Microsoft ist bestrebt, Ihnen Tools und Ressourcen zur Verfügung zu stellen, mit denen Sie die Kontrolle über Ihre Privatsphäre erlangen. Daher werden von Desktop Analytics zwar Windows 8.1-Geräte unterstützt, Microsoft erfasst jedoch keine Windows-Diagnosedaten von Windows 8.1-Geräten, die sich in europäischen Ländern (EWR und Schweiz) befinden.
@@ -67,9 +67,9 @@ Weitere Informationen finden Sie unter [Desktop Analytics – Datenschutz](priva
 
 Auch anhand der folgenden Artikel können Sie ein besseres Verständnis der Windows-Diagnosedatenebenen erlangen:
 
-- [Windows und die DSGVO: Informationen für IT-Administratoren und Entscheidungsträger](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows und die DSGVO: Informationen für IT-Administratoren und Entscheidungsträger](/windows/privacy/gdpr-it-guidance)  
 
-- [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
 > [!NOTE]
 > Clients, die für das Senden von Diagnosedaten auf der Ebene **Optional (begrenzt)** konfiguriert sind, senden bei der anfänglichen vollständigen Überprüfung ca. 2 MB Daten an die Microsoft-Cloud. Das tägliche Delta schwankt zwischen 250 und 400 KB.
@@ -111,7 +111,7 @@ Konfigurieren Sie die Geräte so, dass der Kontext des angemeldeten Benutzers f�
 - Stellen Sie sicher, dass die Benutzer über die Proxyberechtigung für den Zugriff auf die Diagnosedaten-Endpunkte verfügen. Für diese Option müssen die Geräte über Konsolenbenutzer mit Proxyberechtigungen verfügen; daher können Sie diese Methode nicht auf monitorlosen Geräten verwenden.
 
 > [!IMPORTANT]
-> Die Benutzerproxyauthentifizierung ist inkompatibel mit der Verwendung von Microsoft Defender Advanced Threat Protection. Dieses Verhalten ist darauf zurückzuführen, dass bei dieser Authentifizierung der Registrierungsschlüssel **DisableEnterpriseAuthProxy** auf `0` festgelegt ist, während er für Microsoft Defender ATP auf `1` festgelegt sein muss. Weitere Informationen finden Sie unter [Konfigurieren von Computerproxy- und Internetverbindungseinstellungen in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> Die Benutzerproxyauthentifizierung ist inkompatibel mit der Verwendung von Microsoft Defender Advanced Threat Protection. Dieses Verhalten ist darauf zurückzuführen, dass bei dieser Authentifizierung der Registrierungsschlüssel **DisableEnterpriseAuthProxy** auf `0` festgelegt ist, während er für Microsoft Defender ATP auf `1` festgelegt sein muss. Weitere Informationen finden Sie unter [Konfigurieren von Computerproxy- und Internetverbindungseinstellungen in Microsoft Defender ATP](/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 ### <a name="device-proxy-authentication"></a>Geräteproxyauthentifizierung
 
@@ -137,4 +137,4 @@ Dies ist der Ansatz mit der höchsten Komplexität, da er die folgenden Konfigur
 
   - Geroutete Verbindung, oder Verwendung von Netzwerkadressübersetzung (Network Address Translation, NAT)
 
-- Konfigurieren Sie Proxyserver so, dass den Computerkonten in Active Directory der Zugriff auf die Diagnosedaten-Endpunkte ermöglicht wird. Für diese Konfiguration müssen Proxyserver die integrierte Windows-Authentifizierung unterstützen.  
+- Konfigurieren Sie Proxyserver so, dass den Computerkonten in Active Directory der Zugriff auf die Diagnosedaten-Endpunkte ermöglicht wird. Für diese Konfiguration müssen Proxyserver die integrierte Windows-Authentifizierung unterstützen.

@@ -10,12 +10,12 @@ ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1fcae4d520b1e81d0ef3470cd12ee68488b4f589
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1c5ef6d4a17623428f299ff9df676dcba49e7f0c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125525"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698152"
 ---
 # <a name="create-a-task-sequence-for-non-os-deployments"></a>Erstellen einer Tasksequenz für Nicht-Betriebssystembereitstellungen
 
@@ -32,7 +32,7 @@ Mithilfe von Tasksequenzen in Configuration Manager können Sie verschiedene Art
 
 - [Konfiguration von Einstellungen](../../compliance/understand/ensure-device-compliance.md)
 
-Darüber hinaus stehen noch weitere Microsoft System Center-Automatisierungstechnologien wie [Orchestrator](https://docs.microsoft.com/system-center/orchestrator/) und [Service Management Automation](https://docs.microsoft.com/system-center/sma/) zur Verfügung.  
+Darüber hinaus stehen noch weitere Microsoft System Center-Automatisierungstechnologien wie [Orchestrator](/system-center/orchestrator/) und [Service Management Automation](/system-center/sma/) zur Verfügung.  
 
 Die Stärke von Tasksequenzen liegt in ihrer Flexibilität und Verwendung. Sie eignen sich zum Konfigurieren von Clienteinstellungen, zum Verteilen von Software, zum Aktualisieren von Treibern, zum Bearbeiten von Benutzerzuständen sowie für andere Aufgaben (unabhängig von der Betriebssystembereitstellung). Sie können eine benutzerdefinierte Tasksequenz erstellen, der Sie beliebig viele Tasks hinzufügen können. In Configuration Manager wird die Verwendung benutzerdefinierter Tasksequenzen für betriebssystemfremde Bereitstellungen unterstützt. Sollte eine Tasksequenz jedoch ungewollte oder inkonsistente Ergebnisse liefern, versuchen Sie, den Vorgang zu vereinfachen:
 

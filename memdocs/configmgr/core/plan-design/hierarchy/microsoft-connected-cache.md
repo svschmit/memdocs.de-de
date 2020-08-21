@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0103ba8923698a31b86e7d34119caaeb54d54c90
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128527"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699329"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Microsoft Connected Cache in Configuration Manager
 
@@ -61,7 +61,7 @@ Wenn Sie Clients für die Verwendung des Connected Cache-Servers konfigurieren, 
 
   - Die Standardwebsite ist an Port 80 aktiviert.
 
-  - Das ARR-Feature ([Routing von Anwendungsanforderungen](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview)) von IIS darf nicht vorinstalliert sein. Connected Cache installiert ARR und konfiguriert die zugehörigen Einstellungen. Microsoft kann nicht garantieren, dass die ARR-Konfiguration von Connected Cache nicht mit anderen Anwendungen auf dem Server in Konflikt steht, die dieses Feature ebenfalls verwenden.
+  - Das ARR-Feature ([Routing von Anwendungsanforderungen](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview)) von IIS darf nicht vorinstalliert sein. Connected Cache installiert ARR und konfiguriert die zugehörigen Einstellungen. Microsoft kann nicht garantieren, dass die ARR-Konfiguration von Connected Cache nicht mit anderen Anwendungen auf dem Server in Konflikt steht, die dieses Feature ebenfalls verwenden.
 
   - Der Verteilungspunkt benötigt Zugriff auf die Microsoft-Cloud über das Internet. Die genauen URLs können je nach cloudfähigem Inhalt variieren. Stellen Sie sicher, dass auch die Endpunkte für die Übermittlungsoptimierung zugelassen werden. Weitere Informationen finden Sie unter [Internetzugriffsanforderungen](../network/internet-endpoints.md).
 
@@ -136,7 +136,7 @@ Wenn Clients von der Cloud verwalteten Inhalt herunterladen, verwenden sie die �
   - Client-Apps: Microsoft Store-Apps und Updates
   - Endpoint Protection: Definitionsupdates für Windows Defender
 
-Überprüfen Sie dieses Verhalten unter Windows 10, Version 1809 oder höher mithilfe des Windows PowerShell-Cmdlets **Get-DeliveryOptimizationStatus**. Überprüfen Sie anschließend in der Ausgabe des Cmdlets den Wert **BytesFromCacheServer**. Weitere Informationen finden Sie unter [Monitor Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization) (Überwachen der Übermittlungsoptimierung).
+Überprüfen Sie dieses Verhalten unter Windows 10, Version 1809 oder höher mithilfe des Windows PowerShell-Cmdlets **Get-DeliveryOptimizationStatus**. Überprüfen Sie anschließend in der Ausgabe des Cmdlets den Wert **BytesFromCacheServer**. Weitere Informationen finden Sie unter [Monitor Delivery Optimization](/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization) (Überwachen der Übermittlungsoptimierung).
 
 Wenn der Cacheserver einen HTTP-Fehler zurückgibt, greift der Übermittlungsoptimierungsclient auf die ursprüngliche Cloudquelle zurück.
 
@@ -184,7 +184,7 @@ Wenn Sie ab Version 1910 Connected Cache auf Ihren Configuration Manager-Vertei
 
 - Diese Funktion unterstützt nur den Intune-Win32-App-Typ.
 
-  - Zu diesem Zweck müssen Sie in Intune eine neue App erstellen und zuweisen (bereitstellen). (Apps, die vor der Intune-Version 1811 erstellt wurden, funktionieren nicht.) Weitere Informationen finden Sie unter [Intune Win32-App-Verwaltung](https://docs.microsoft.com/intune/apps/apps-win32-app-management).
+  - Zu diesem Zweck müssen Sie in Intune eine neue App erstellen und zuweisen (bereitstellen). (Apps, die vor der Intune-Version 1811 erstellt wurden, funktionieren nicht.) Weitere Informationen finden Sie unter [Intune Win32-App-Verwaltung](/intune/apps/apps-win32-app-management).
 
   - Die App muss mindestens 100 MB groß sein.
   

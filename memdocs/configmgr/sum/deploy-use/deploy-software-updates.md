@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 2adf22fd9c17863d7c29e2a29d2125d22f2d944f
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a6e27e2d03983fdf627016d0e3b41aaa378afe29
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127670"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693470"
 ---
 # <a name="deploy-software-updates"></a>Bereitstellen von Softwareupdates  
 
@@ -69,7 +69,7 @@ Der allgemeine Workflow für die manuelle Bereitstellung von Softwareupdates umf
 Weitere Informationen und ausführliche Anleitungen finden Sie unter [Manuelles Bereitstellen von Softwareupdates](manually-deploy-software-updates.md).
 
 > [!Note]
-> - Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
+> - Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
 > - Wenn Sie Microsoft 365 Apps-Clientupdates manuell bereitstellen möchten, können Sie diese im Arbeitsbereich **Softwarebibliothek** unter **Office 365-Clientverwaltung** unter dem Knoten **Office 365-Updates** abrufen. 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Automatisches Bereitstellen von Softwareupdates
@@ -115,5 +115,5 @@ Weitere Informationen und ausführliche Anleitungen finden Sie unter [Automatisc
 <!--1358146-->
 Erstellen Sie ab Version 1810 stufenweise Bereitstellungen für Softwareupdates. Mithilfe von Bereitstellungen in Phasen können Sie einen koordinierten, sequenzierten Softwarerollout basierend auf anpassbaren Kriterien und Gruppen orchestrieren.
 
-Weitere Informationen finden Sie unter [Erstellen von stufenweisen Bereitstellungen mit Configuration Manager](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Weitere Informationen finden Sie unter [Erstellen von stufenweisen Bereitstellungen mit Configuration Manager](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 

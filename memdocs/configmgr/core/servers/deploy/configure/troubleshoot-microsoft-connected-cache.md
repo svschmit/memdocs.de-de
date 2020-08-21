@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24ed0aa963373fc0933a2c34b7b036d77cc9a2b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126357"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699210"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Problembehandlung für Microsoft Connected Cache in Configuration Manager
 
@@ -228,7 +228,7 @@ Der für jeden Cacheserver der Übermittlungsoptimierung erforderliche Speicherp
 
 Der Cacheserver der Übermittlungsoptimierung sollte nicht viel Systemarbeitsspeicher oder Prozessorzeit beanspruchen. Wenn Sie nach der Installation des Cacheservers der Übermittlungsoptimierung einen erheblichen Prozess- oder Arbeitsspeicherressourcenverbrauch feststellen, analysieren Sie die IIS- und ARR-Protokolldateien.
 
-Wenn die IIS- und ARR-Protokolldateien zu viel Speicherplatz auf dem Server beanspruchen, gibt es mehrere Methoden, die Sie zum Verwalten der Protokolldateien anwenden können. Weitere Informationen finden Sie unter [IIS-Protokolldateienspeicher verwalten](https://docs.microsoft.com/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
+Wenn die IIS- und ARR-Protokolldateien zu viel Speicherplatz auf dem Server beanspruchen, gibt es mehrere Methoden, die Sie zum Verwalten der Protokolldateien anwenden können. Weitere Informationen finden Sie unter [IIS-Protokolldateienspeicher verwalten](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
 
 ## <a name="see-also"></a>Weitere Informationen:
 
