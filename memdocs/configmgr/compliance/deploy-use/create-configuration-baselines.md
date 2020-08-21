@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 01355230d0dc8969555740cc25a08e0b8d2967d0
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 4c96a7636902bd313f8e8868917b45d8fa49e1f7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240472"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127136"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Erstellen von Konfigurationsbaselines in Configuration Manager
 
@@ -84,7 +84,7 @@ Gehen Sie wie folgt vor, um mithilfe des Dialogfelds **Konfigurationsbaseline er
 <!--3608345-->
 *(Eingeführt in Version 1910)*
 
-Ab Version 1910 können Sie die Auswertung benutzerdefinierter Konfigurationsbaselines als Regel für die Konformitätsrichtlinienbewertung hinzufügen. Wenn Sie eine Konfigurationsbaseline bearbeiten oder erstellen, können Sie die Option **Diese Baseline als Teil der Konformitätsrichtlinienbewertung auswerten** auswählen. Beim Hinzufügen oder Bearbeiten einer Konformitätsrichtlinienregel ist eine Bedingung mit dem Namen **Konfigurierte Baselines in Konformitätsrichtlinienauswertung einbeziehen** verfügbar. Bei gemeinsam verwalteten Geräten und wenn Sie Intune so konfigurieren, dass die Ergebnisse der Konformitätsbewertung von Configuration Manager als Teil des Gesamtkonformitätsstatus übernommen werden, werden diese Informationen an Azure AD gesendet. Sie können diese dann für den bedingten Zugriff auf Ihre Office 365-Ressourcen verwenden. Weitere Informationen finden Sie unter [Bedingter Zugriff mit Co-Verwaltung](../../comanage/quickstart-conditional-access.md).
+Ab Version 1910 können Sie die Auswertung benutzerdefinierter Konfigurationsbaselines als Regel für die Konformitätsrichtlinienbewertung hinzufügen. Wenn Sie eine Konfigurationsbaseline bearbeiten oder erstellen, können Sie die Option **Diese Baseline als Teil der Konformitätsrichtlinienbewertung auswerten** auswählen. Beim Hinzufügen oder Bearbeiten einer Konformitätsrichtlinienregel ist eine Bedingung mit dem Namen **Konfigurierte Baselines in Konformitätsrichtlinienauswertung einbeziehen** verfügbar. Bei gemeinsam verwalteten Geräten und wenn Sie Intune so konfigurieren, dass die Ergebnisse der Konformitätsbewertung von Configuration Manager als Teil des Gesamtkonformitätsstatus übernommen werden, werden diese Informationen an Azure AD gesendet. Sie können diese dann für den bedingten Zugriff auf Ihre Microsoft 365 Apps-Ressourcen verwenden. Weitere Informationen finden Sie unter [Bedingter Zugriff mit Co-Verwaltung](../../comanage/quickstart-conditional-access.md).
 
 Gehen Sie wie folgt vor, um benutzerdefinierte Konfigurationsbaselines in die Konformitätsrichtlinienauswertung einzubeziehen:
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904651"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129000"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Neuerungen in Version 1802 von Configuration Manager
 
@@ -236,7 +236,7 @@ Falls ein Benutzer oder Techniker mehrere Anwendungen auf einem Gerät installie
 
 ### <a name="use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices"></a>Verwenden des Softwarecenters zum Durchsuchen und Installieren von Anwendungen, die für Benutzer verfügbar sein sollen, auf in Azure AD eingebundenen Geräten
 <!-- 1322613 -->
-Wenn Sie Anwendungen als für Benutzer verfügbar bereitstellen, können diese die Anwendungen über das Softwarecenter auf Azure Active Directory-Geräten durchsuchen und installieren. Weitere Informationen finden Sie unter [Deploy user-available applications on Azure AD-joined devices (Bereitstellen von für Benutzer verfügbare Anwendungen auf in Azure AD eingebundenen Geräten)](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).
+Wenn Sie Anwendungen als für Benutzer verfügbar bereitstellen, können diese die Anwendungen über das Softwarecenter auf Azure Active Directory-Geräten durchsuchen und installieren. Weitere Informationen finden Sie unter [Bereitstellen von für Benutzer verfügbaren Anwendungen](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 ### <a name="hide-installed-applications-in-software-center"></a>Installierte Anwendungen im Softwarecenter ausblenden
 <!--1357592-->

@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95b8bf41d74e7011eed40116f4fe34e2c356d67e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6c702916f73d1fbc842966161a6958a61d24044a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707058"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126068"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Grundlagen der Sicherheit für Configuration Manager
 
@@ -82,7 +82,7 @@ Die letzte Sicherheitsebene basiert auf Berechtigungen für Objekte in der Stand
 
  Ein Administrator kann Administratoren und Gruppenberechtigungen *Sicherheitsrollen* zuweisen. Die Berechtigungen sind mit verschiedenen Configuration Manager-Objekttypen verbunden, z.B. zum Erstellen oder Ändern von Clienteinstellungen. 
 
- Mithilfe von *Sicherheitsbereichen* werden bestimmte Instanzen von Objekten gruppiert, für deren Verwaltung ein Administrator verantwortlich ist, z.B. eine Anwendung zum Installieren von Microsoft Office. 
+ In *Sicherheitsbereichen* werden bestimmte Instanzen von Objekten gruppiert, für deren Verwaltung ein Administrator verantwortlich ist, z. B. eine Anwendung zum Installieren von Microsoft 365-Apps. 
 
  Durch die Kombination aus Sicherheitsrollen, Sicherheitsbereichen und Sammlungen wird definiert, welche Objekte ein Administrator anzeigen und verwalten kann. Von Configuration Manager werden einige Standardsicherheitsrollen für häufige Verwaltungsaufgaben installiert. Erstellen Sie Ihre eigenen Sicherheitsrollen zur Unterstützung Ihrer spezifischen Geschäftsanforderungen.  
 

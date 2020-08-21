@@ -2,20 +2,20 @@
 title: Bereitstellen einer Tasksequenz
 titleSuffix: Configuration Manager
 description: Verwenden Sie diese Informationen, um eine Tasksequenz auf Computern in einer Sammlung bereitzustellen.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fea9088a11310aedc95d2fdbeacdb98650eef361
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455164"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125201"
 ---
 # <a name="deploy-a-task-sequence"></a>Bereitstellen einer Tasksequenz
 
@@ -146,9 +146,21 @@ Mithilfe der folgenden Vorgehensweise können Sie eine Tasksequenz auf Computern
 
     - **Schreibfilterverarbeitung für Windows Embedded-Geräte**: Diese Einstellung steuert das Installationsverhalten auf Windows Embedded-Geräten, auf denen ein Schreibfilter aktiviert ist. Wählen Sie diese Option aus, um Änderungen am Installationsstichtag oder während eines Wartungsfensters vorzunehmen. Die Auswahl dieser Option erfordert auch einen Neustart. Die Änderungen werden auf dem Gerät beibehalten. Andernfalls wird die Anwendung auf der temporären Überlagerung installiert und später übergeben. Stellen Sie beim Bereitstellen einer Tasksequenz auf einem Windows Embedded-Gerät sicher, dass das Gerät Mitglied einer Sammlung ist, für die ein Wartungsfenster konfiguriert ist.  
 
-    - **Ausführung der Tasksequenz für internetbasierten Client zulassen**: Geben Sie an, ob die Tasksequenz auf einem internetbasierten Client ausgeführt werden darf. Vorgänge, die ein Startmedium erfordern, z. B. die Installation eines Betriebssystems, werden mit dieser Einstellung nicht unterstützt. Verwenden Sie diese Option nur für generische Softwareinstallationen oder skriptbasierte Tasksequenzen, mit denen Vorgänge im Standardbetriebssystem ausgeführt werden.  
+    - **Ausführung der Tasksequenz für internetbasierten Client zulassen**: Geben Sie an, ob die Tasksequenz auf einem internetbasierten Client ausgeführt werden darf.
 
-        - Diese Einstellung wird für Bereitstellungen von Tasksequenzen für ein direktes Upgrade von Windows 10 auf internetbasierten Clients über das Cloudverwaltungsgateway unterstützt. Weitere Informationen finden Sie unter [Bereitstellen eines direkten Upgrades für Windows 10 über das CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
+        Diese Einstellung wird für Bereitstellungen von Tasksequenzen für ein direktes Upgrade von Windows 10 auf internetbasierten Clients über das Cloudverwaltungsgateway (Cloud Management Gateway, CMG) unterstützt. Weitere Informationen finden Sie unter [Bereitstellen eines direkten Upgrades für Windows 10 über das CMG](#deploy-windows-10-in-place-upgrade-via-cmg).
+
+        Ab Version 2006 können Sie eine Tasksequenz mit einem Startimage auf einem Gerät bereitstellen, das über das CMG kommuniziert. Der Benutzer muss die Tasksequenz in Software Center starten.<!--6997525-->
+
+        > [!NOTE]
+        > Wenn ein in Azure Active Directory (Azure AD) eingebundener Client eine Tasksequenz für die Bereitstellung eines Betriebssystems ausführt, wird der Client im neuen Betriebssystem nicht automatisch in Azure AD eingebunden. Auch wenn der Client nicht in Azure AD eingebunden ist, wird er dennoch verwaltet.
+        >
+        > Wenn Sie eine Tasksequenz zum Bereitstellen eines Betriebssystems auf einem internetbasierten Client ausführen, der entweder in Azure AD eingebunden ist oder die tokenbasierte Authentifizierung verwendet, müssen Sie die Eigenschaft **CCMHOSTNAME** im Schritt [Windows und ConfigMgr einrichten](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) angeben.
+
+        In Version 2002 und früher werden Vorgänge, die ein Startmedium erfordern, mit dieser Einstellung nicht unterstützt. Verwenden Sie diese Option nur für generische Softwareinstallationen oder skriptbasierte Tasksequenzen, mit denen Vorgänge im Standardbetriebssystem ausgeführt werden.
+
+        > [!NOTE]
+        > Starten Sie für alle internetbasierten Tasksequenzszenarios die Tasksequenz aus dem Softwarecenter. Windows PE, PXE oder Tasksequenzmedien werden in diesen Szenarios nicht unterstützt.
 
 8. Geben Sie auf der Seite **Warnungen** die für diese Tasksequenzbereitstellung gewünschten Warnungseinstellungen an.  
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8bfd535c93cb9f1dcfc42705f3cce61874dfe226
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709318"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127653"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integrieren mit Windows Update for Business
 
@@ -38,7 +38,7 @@ Mit Windows Update for Business (WUfB) können Sie Windows 10-Geräte in Ihrer O
 
 - Die allgemeine Endpoint Protection-Berichterstellung für Defender, die auf dem Status der Updatekonformität basiert, zeigt aufgrund der fehlenden Überprüfungsdaten keine exakten Ergebnisse an.  
 
-- Configuration Manager kann keine Microsoft-Updates für Office, Internet Explorer und Visual Studio auf Clients bereitstellen, die zum Abrufen von Updates mit WUfB verbunden sind.  
+- Configuration Manager kann keine Microsoft-Updates beispielsweise für Microsoft 365-Apps, Internet Explorer und Visual Studio auf Clients bereitstellen, die zum Abrufen von Updates mit WUfB verbunden sind.  
 
 - Configuration Manager kann weiterhin in WSUS veröffentlichte und über Configuration Manager verwaltete Updates von Drittanbietern für Clients bereitstellen, die für den Empfang von Updates mit WUfB verbunden sind. Wenn Updates von Drittanbietern nicht auf Clients installiert werden sollen, die mit WUfB verbunden sind, deaktivieren Sie die Clienteinstellung [Softwareupdates auf Clients aktivieren](../../core/clients/deploy/about-client-settings.md#software-updates).
 

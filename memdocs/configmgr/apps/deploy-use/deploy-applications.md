@@ -2,20 +2,20 @@
 title: Bereitstellen von Anwendungen
 titleSuffix: Configuration Manager
 description: Erstellen oder Simulieren der Bereitstellung einer Anwendung für ein Gerät oder eine Benutzersammlung
-ms.date: 07/26/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a7bbf395a5de98459043609986e51647362e7a0b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6c2fcd583e860273e2fbfc9fcda1e08053336345
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075335"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127513"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Bereitstellen von Anwendungen mit Configuration Manager
 
@@ -29,20 +29,18 @@ Ab Version 1906 können Sie eine Gruppe von Anwendungen erstellen, die Sie als e
 
 Sie können eine Anwendungsbereitstellung auch simulieren. Diese Simulation testet die Anwendbarkeit einer Bereitstellung ohne eine Installation oder Deinstallation der Anwendung. Bei einer simulierten Bereitstellung werden die Erkennungsmethode, Anforderungen und Abhängigkeiten für einen Bereitstellungstyp ausgewertet. Anschließend wird ein Bericht mit den Ergebnissen im Arbeitsbereich **Überwachung** unter dem Knoten **Bereitstellungen** ausgegeben. Weitere Informationen finden Sie unter [Simulate application deployments (Simulieren von Anwendungsbereitstellungen)](simulate-application-deployments.md).
 
-> [!Note]
+> [!NOTE]
 > Sie können nur die Bereitstellung erforderlicher Anwendungen simulieren, jedoch nicht die Bereitstellung von Paketen oder Softwareupdates.
 >
 > MDM-registrierte Geräte unterstützen keine simulierten Bereitstellungen, Einstellungen für Benutzerfreundlichkeit oder Zeitplanung.
-
-
 
 ## <a name="deploy-an-application"></a><a name="bkmk_deploy"></a> Bereitstellen einer Anwendung
 
 1. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Softwarebibliothek**, erweitern Sie **Anwendungsverwaltung**, und wählen Sie den Knoten **Anwendungen** oder **Anwendungsgruppen** aus.
 
-2. Wählen Sie aus der Liste eine Anwendung oder eine Anwendungsgruppe aus, die Sie bereitstellen möchten. Klicken Sie im Menüband auf **Bereitstellen**.  
+1. Wählen Sie aus der Liste eine Anwendung oder eine Anwendungsgruppe aus, die Sie bereitstellen möchten. Klicken Sie im Menüband auf **Bereitstellen**.  
 
-> [!Note]  
+> [!NOTE]
 > Bei der Anzeige der Eigenschaften einer vorhandenen Bereitstellung entsprechen die folgenden Abschnitte den jeweiligen Registerkarten im Fenster mit den Eigenschaften der Bereitstellung:  
 >
 > - [Allgemein](#bkmk_deploy-general)
@@ -52,33 +50,30 @@ Sie können eine Anwendungsbereitstellung auch simulieren. Diese Simulation test
 > - [Benutzerfreundlichkeit](#bkmk_deploy-ux)
 > - [Warnungen](#bkmk_deploy-alerts)
 
-
 ### <a name="deployment-general-information"></a><a name="bkmk_deploy-general"></a> Allgemeine Informationen zur **Bereitstellung**
 
 Geben Sie im Assistenten zum Bereitstellen von Software auf der Seite **Allgemein** die folgenden Informationen an:  
 
-- **Software**: Dieser Wert zeigt die Anwendung an, die bereitgestellt werden soll. Klicken Sie auf **Durchsuchen**, um eine andere Anwendung auszuwählen.  
+- **Software**: Dieser Wert zeigt die Anwendung an, die bereitgestellt werden soll. Wählen Sie **Durchsuchen** aus, um eine andere Anwendung auszuwählen.  
 
-- **Sammlung**: Klicken Sie auf **Durchsuchen**, um die Sammlung auszuwählen, in der Sie die Anwendung bereitstellen möchten.  
+- **Sammlung:** Wählen Sie **Durchsuchen** aus, um die Zielsammlung für diese Anwendungsbereitstellung auszuwählen.
 
 - **Standard-Verteilungspunktgruppen verwenden, die dieser Sammlung zugeordnet sind**: Speichern Sie den Anwendungsinhalt in der Standard-Verteilungspunktgruppe der Sammlung. Wenn die ausgewählte Sammlung keiner Verteilungspunktgruppe zugeordnet ist, ist diese Option ausgegraut.  
 
 - **Inhalt automatisch für Abhängigkeiten bereitstellen**: Wenn Bereitstellungstypen in der Anwendung Abhängigkeiten enthalten, sendet der Standort den Inhalt der abhängigen Anwendung auch an Verteilungspunkte.  
 
-    >[!Note]  
-    > Wenn Sie die abhängige Anwendung aktualisieren, nachdem die primäre Anwendung bereitgestellt wurde, verteilt der Standort nicht automatisch neue Inhalte für die Abhängigkeit.  
+    >[!NOTE]
+    > Wenn Sie die abhängige Anwendung aktualisieren, nachdem die primäre Anwendung bereitgestellt wurde, verteilt der Standort nicht automatisch neue Inhalte für die Abhängigkeit.
 
-- **Kommentare (optional)** : Geben Sie bei Bedarf eine Beschreibung für diese Bereitstellung ein.  
-
+- **Kommentare (optional)** : Geben Sie bei Bedarf eine Beschreibung für diese Bereitstellung ein.
 
 ### <a name="deployment-content-options"></a><a name="bkmk_deploy-content"></a> Optionen für den **Inhalt** der Bereitstellung
 
-Klicken Sie auf der **Inhaltsseite** auf **Hinzufügen**, um den Inhalt für diese Anwendung an einen Verteilungspunkt oder eine Verteilungspunktgruppe zu verteilen.
+Wählen Sie auf der **Inhaltsseite** die Option **Hinzufügen** aus, um den Inhalt für diese Anwendung an einen Verteilungspunkt oder eine Verteilungspunktgruppe zu verteilen.
 
 Wenn Sie auf der Seite „Allgemein“ die Option **Use default distribution points associated to this collection** (Dieser Sammlung zugeordnete Standardverteilungspunkte verwenden) ausgewählt haben, wird diese Option automatisch aufgefüllt. Nur ein Mitglied der Sicherheitsrolle **Anwendungsadministrator** kann dies ändern.
 
 Wenn der Anwendungsinhalt bereits verteilt ist, erscheint dieses Mitglied hier.
-
 
 ### <a name="deployment-settings"></a><a name="bkmk_deploy-settings"></a> **Bereitstellungseinstellungen**
 
@@ -110,11 +105,10 @@ Geben Sie auf der Seite **Bereitstellungseinstellungen** die folgenden Informati
 
 - **Automatisch ein Upgrade aller abgelösten Versionen dieser Anwendung ausführen**: Der Client aktualisiert jede abgelöste Version der Anwendung auf die neuere Anwendung.
 
-    > [!Note]  
+    > [!NOTE]
     > Diese Option funktioniert auch ohne Administratorgenehmigung. Wenn ein Administrator die ersetzte Version bereits genehmigt hat, muss die ersetzende Version nicht auch noch genehmigt werden. Die Genehmigung gilt nur für neue Anforderungen, nicht für ersetzende Upgrades.<!--515824-->  
     >
     > Wenn der Installationszweck **Verfügbar** lautet, können Sie diese Option aktivieren oder deaktivieren. <!--1351266-->
-
 
 #### <a name="approval-settings"></a><a name="bkmk_approval"></a> Genehmigungseinstellungen
 
@@ -126,14 +120,11 @@ Das Verhalten bei der Anwendungsgenehmigung hängt davon ab, ob Sie die empfohle
 
 Weitere Informationen finden Sie im Artikel zum [Genehmigen von Anwendungen](app-approval.md).
 
-
 #### <a name="deployment-properties-deployment-settings"></a>Bereitstellungseigenschaften **Bereitstellungseinstellungen**
 
 Wenn Sie die Eigenschaften einer Bereitstellung anzeigen, werden die folgenden Optionen auf der Registerkarte **Bereitstellungseinstellungen** angezeigt, sofern von der Technologie des Bereitstellungstyps unterstützt:
 
 **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** (Alle ausgeführten Dateien, die Sie auf der Registerkarte „Installationsverhalten“ im Dialogfeld zu den Bereitstellungstypeigenschaften angegeben haben, werden automatisch beendet). Weitere Informationen finden Sie unter [So prüfen Sie auf ausgeführte ausführbare Dateien, bevor Sie eine Anwendung installieren](#bkmk_exe-check).
-
-
 
 ### <a name="deployment-scheduling-settings"></a><a name="bkmk_deploy-sched"></a> Einstellungen für die **Zeitplanung** der Bereitstellung
 
@@ -147,7 +138,6 @@ Angenommen, Sie müssen eine neue branchenspezifische Anwendung bereitstellen. A
 
 Wenn die bereitgestellte Anwendung eine andere Anwendung ablöst, legen Sie den Installationsstichtag fest, an dem bei Benutzern die neue Anwendung installiert wird. Legen Sie den **Installationsstichtag** fest, um für Benutzer mit der abgelösten Anwendung ein Upgrade auszuführen.
 
-
 #### <a name="delay-enforcement-with-a-grace-period"></a>Verzögerung der Erzwingung mit Karenzzeit
 
 Sie sollten Benutzern mehr Zeit für die Installation erforderlicher Anwendungen *über die von Ihnen konfigurierten Fristen hinaus* gewähren. Dieses Verhalten ist in der Regel erforderlich, wenn ein Computer für lange Zeit ausgeschaltet ist und viele Anwendungen installiert werden müssen. Dieser Fall kann eintreten, wenn ein Benutzer beispielsweise aus dem Urlaub zurückkehrt und lange warten muss, während der Client überfällige Bereitstellungen installiert. Definieren Sie eine Toleranzperiode, um dieses Problem zu beheben.
@@ -158,11 +148,11 @@ Sie sollten Benutzern mehr Zeit für die Installation erforderlicher Anwendungen
 
 Nach Ablauf der Frist installiert der Client die Anwendung im ersten nicht geschäftlichen Fenster, das der Benutzer in der Karenzzeit konfiguriert hat. Der Benutzer kann jedoch weiterhin das Softwarecenter öffnen und die Anwendung zu einem beliebigen Zeitpunkt installieren. Nach Ablauf der Toleranzperiode wird die Erzwingung auf normales Verhalten für überfällige Bereitstellungen zurückgesetzt.
 
-![Diagramm zur Toleranzperiode](media/grace-period.svg)
+:::image type="content" source="media/grace-period.svg" alt-text="Diagramm zur Toleranzperiode":::
 
 <!-- SCCMDocs issue #1599 -->
 
-> [!Note]  
+> [!NOTE]
 > Diese Funktion wird meist für das Szenario verwendet, dass ein Gerät lange ausgeschaltet war, weil der Benutzer nicht im Büro war. Technisch gesehen beginnt die Toleranzperiode, wenn der Client nach dem Bereitstellungsstichtag eine Richtlinie erhält. Das gleiche Verhalten tritt auf, wenn Sie den Configuration Manager-Clientdienst (CcmExec) stoppen und ihn zu einem späteren Zeitpunkt, nach dem Bereitstellungsstichtag, neu starten.
 
 ### <a name="deployment-user-experience-settings"></a><a name="bkmk_deploy-ux"></a> Einstellungen für die **Benutzerfreundlichkeit** der Bereitstellung
@@ -171,24 +161,22 @@ Geben Sie auf der Seite **Benutzerfreundlichkeit** an, wie Benutzer mit der Anwe
 
 - **Benutzerbenachrichtigungen**: Geben Sie an, ob die Benachrichtigung im Softwarecenter zum konfigurierten Zeitpunkt der Verfügbarkeit angezeigt werden soll. Mit dieser Einstellung wird auch gesteuert, ob Benutzer auf den Clientcomputern benachrichtigt werden sollen. Für verfügbare Bereitstellungen können Sie die Option **In Softwarecenter und allen Benachrichtigungen ausblenden** nicht auswählen.  
 
-    - **Wenn Softwareänderungen erforderlich sind, dem Benutzer ein Dialogfeld anstelle einer Popupbenachrichtigung anzeigen**<!--3555947-->: Wählen Sie ab Version 1902 diese Option aus, um die Benutzeroberfläche deutlicher zu gestalten. Dies gilt nur für erforderliche Bereitstellungen. Weitere Informationen finden Sie unter [Planen für Software Center](../plan-design/plan-for-software-center.md#bkmk_impact).
+  - **Wenn Softwareänderungen erforderlich sind, dem Benutzer ein Dialogfeld anstelle einer Popupbenachrichtigung anzeigen**<!--3555947-->: Wählen Sie ab Version 1902 diese Option aus, um die Benutzeroberfläche deutlicher zu gestalten. Dies gilt nur für erforderliche Bereitstellungen. Weitere Informationen finden Sie unter [Planen für Software Center](../plan-design/plan-for-software-center.md#bkmk_impact).
 
 - **Softwareinstallation** und **Systemneustart**: Konfigurieren Sie diese Einstellungen nur für erforderliche Bereitstellungen. Sie geben das jeweilige Verhalten an, wenn die Bereitstellung den Ablauf der Frist außerhalb von definierten Wartungsfenstern erreicht. Weitere Informationen zu Wartungsfenstern finden Sie unter [Verwenden von Wartungsfenstern](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 - **Schreibfilterverarbeitung für Windows Embedded-Geräte**: Diese Einstellung steuert das Installationsverhalten auf Windows Embedded-Geräten, auf denen ein Schreibfilter aktiviert ist. Wählen Sie diese Option aus, um Änderungen am Installationsstichtag oder während eines Wartungsfensters vorzunehmen. Die Auswahl dieser Option erfordert auch einen Neustart. Die Änderungen werden auf dem Gerät beibehalten. Andernfalls wird die Anwendung auf der temporären Überlagerung installiert und später übergeben.  
 
-    - Stellen Sie beim Bereitstellen eines Softwareupdates auf einem Windows Embedded-Gerät sicher, dass das Gerät Mitglied einer Sammlung ist, für die ein Wartungsfenster konfiguriert wurde. Weitere Informationen zu Wartungsfenstern und Windows Embedded-Geräten finden Sie unter [Create Windows Embedded applications (Erstellen von Windows Embedded-Geräten)](../get-started/creating-windows-embedded-applications.md).  
-
+  - Stellen Sie beim Bereitstellen eines Softwareupdates auf einem Windows Embedded-Gerät sicher, dass das Gerät Mitglied einer Sammlung ist, für die ein Wartungsfenster konfiguriert wurde. Weitere Informationen zu Wartungsfenstern und Windows Embedded-Geräten finden Sie unter [Create Windows Embedded applications (Erstellen von Windows Embedded-Geräten)](../get-started/creating-windows-embedded-applications.md).  
 
 ### <a name="deployment-alerts"></a><a name="bkmk_deploy-alerts"></a>**Bereitstellungswarnungen**
 
-Konfigurieren Sie auf der Seite **Warnungen**, wie Configuration Manager Warnungen für diese Bereitstellung generiert. Wenn Sie auch System Center Operations Manager verwenden, konfigurieren Sie diese Warnungen ebenso. Sie können nur einige Warnungen für erforderliche Bereitstellungen konfigurieren. 
-
+Konfigurieren Sie auf der Seite **Warnungen**, wie Configuration Manager Warnungen für diese Bereitstellung generiert. Wenn Sie auch System Center Operations Manager verwenden, konfigurieren Sie diese Warnungen ebenso. Sie können nur einige Warnungen für erforderliche Bereitstellungen konfigurieren.
 
 ## <a name="create-a-phased-deployment"></a><a name="bkmk_phased"></a> Erstellen einer Bereitstellung in Phasen
 
 <!--1358147-->
-Erstellen Sie ab Version 1806 eine stufenweise Bereitstellung für eine Anwendung. Mithilfe von Bereitstellungen in Phasen können Sie einen koordinierten, sequenzierten Softwarerollout basierend auf anpassbaren Kriterien und Gruppen orchestrieren. Sie können die Anwendung beispielsweise für eine Pilotsammlung bereitstellen, und anschließend wird der Rollout basierend auf Erfolgskriterien automatisch fortgesetzt.
+Mithilfe von Bereitstellungen in Phasen können Sie einen koordinierten, sequenzierten Softwarerollout basierend auf anpassbaren Kriterien und Gruppen orchestrieren. Sie können die Anwendung beispielsweise für eine Pilotsammlung bereitstellen, und anschließend wird der Rollout basierend auf Erfolgskriterien automatisch fortgesetzt.
 
 Weitere Informationen finden Sie in den folgenden Artikeln:  
 
@@ -196,21 +184,17 @@ Weitere Informationen finden Sie in den folgenden Artikeln:
 
 - [Verwalten und Überwachen von Bereitstellungen in Phasen](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
-
-
 ## <a name="delete-a-deployment"></a><a name="bkmk_delete"></a> Bereitstellung löschen
 
 1. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Softwarebibliothek**, erweitern Sie **Anwendungsverwaltung**, und wählen Sie den Knoten **Anwendungen** oder **Anwendungsgruppen** aus.  
 
-2. Wählen Sie die Anwendung oder Anwendungsgruppe aus, die die Bereitstellung enthält, die Sie löschen möchten.  
+1. Wählen Sie die Anwendung oder Anwendungsgruppe aus, die die Bereitstellung enthält, die Sie löschen möchten.  
 
-3. Wechseln Sie im Detailbereich zur Registerkarte **Bereitstellungen**, und wählen Sie die Bereitstellung aus.  
+1. Wechseln Sie im Detailbereich zur Registerkarte **Bereitstellungen**, und wählen Sie die Bereitstellung aus.  
 
-4. Klicken Sie auf dem Menüband auf der Registerkarte **Bereitstellung** in der Gruppe **Bereitstellung** dann auf **Löschen**.  
+1. Wählen Sie auf dem Menüband auf der Registerkarte **Bereitstellung** in der Gruppe **Bereitstellung** die Option **Löschen** aus.  
 
-Wenn Sie eine Anwendungsbereitstellung löschen, werden bereits vom Client installierte Instanzen der Anwendung nicht entfernt. Stellen Sie die Anwendungen mit **Deinstallieren** auf Computern bereit, um diese Anwendungen zu entfernen. Wenn Sie eine Anwendungsbereitstellung löschen oder eine Ressource aus der Sammlung entfernen, in der Sie die Bereitstellung vornehmen, wird diese im Softwarecenter nicht mehr angezeigt.
-
-
+Wenn Sie eine Anwendungsbereitstellung löschen, werden bereits vom Client installierte Instanzen der Anwendung nicht entfernt. Stellen Sie die Anwendungen mit **Deinstallieren** auf Computern bereit, um diese Anwendungen zu entfernen. Wenn Sie eine Anwendungsbereitstellung löschen, ist die Anwendung nicht mehr im Software Center sichtbar. Das gleiche Verhalten tritt auf, wenn Sie eine Ressource aus der Zielsammlung für die Bereitstellung entfernen.
 
 ## <a name="user-notifications-for-required-deployments"></a><a name="bkmk_notify"></a> Benutzerbenachrichtigungen für erforderliche Bereitstellungen
 
@@ -220,7 +204,7 @@ Wenn Benutzer die erforderliche Software erhalten und die Einstellung **Snooze a
 
 - **Feste Zeit**: Gibt an, dass die Benachrichtigung nach der ausgewählten Zeit erneut angezeigt wird. Wenn Sie z.B. 30 Minuten auswählen, wird die Benachrichtigung in 30 Minuten erneut angezeigt.  
 
-![Gruppe „Computer-Agent“ in Clientstandardeinstellungen](media/ComputerAgentSettings.png)
+:::image type="content" source="media/ComputerAgentSettings.png" alt-text="Gruppe „Computer-Agent“ in Clientstandardeinstellungen":::
 
 Die maximale Erinnerungszeit basiert immer auf den Benachrichtigungswerten, die in den Clienteinstellungen zu jedem Zeitpunkt der Bereitstellung konfiguriert sind. Beispiel:  
 
@@ -232,27 +216,25 @@ Die maximale Erinnerungszeit basiert immer auf den Benachrichtigungswerten, die 
 
 - Wenn der Bereitstellungsstichtag näher rückt, werden im Dialogfeld weniger Optionen angezeigt. Diese Optionen stimmen mit den entsprechenden Clienteinstellungen für jede Komponente der Bereitstellungszeit überein.  
 
-Bei Bereitstellungen mit hohem Risiko, z.B. einer Tasksequenz, die ein Betriebssystem bereitstellen, fällt die Benachrichtigung des Benutzers deutlicher aus. Immer wenn Sie benachrichtigt werden, dass eine wichtige Softwarewartung erforderlich ist, wird anstatt einer vorübergehenden Benachrichtigung in der Taskleiste ein Dialogfeld wie das folgende angezeigt:
+Bei Bereitstellungen mit hohem Risiko, z. B. einer Tasksequenz, die ein Betriebssystem bereitstellen, fällt die Benachrichtigung des Benutzers deutlicher aus. Immer wenn Sie benachrichtigt werden, dass eine wichtige Softwarewartung erforderlich ist, wird anstatt einer vorübergehenden Benachrichtigung in der Taskleiste ein Dialogfeld wie das folgende angezeigt:
 
-![Erforderlicher Softwaredialog, der Sie über wichtige Softwarewartung benachrichtigt](media/client-toast-notification.png)
-
-
+:::image type="content" source="media/client-toast-notification.png" alt-text="Erforderlicher Softwaredialog, der Sie über wichtige Softwarewartung benachrichtigt":::
 
 ## <a name="check-for-running-executable-files"></a><a name="bkmk_exe-check"></a> Überprüfen auf ausführbare Dateien, die ausgeführt werden
 
 Konfigurieren Sie eine Bereitstellung, um zu überprüfen, ob bestimmte ausführbare Dateien auf dem Client ausgeführt werden. Verwenden Sie diese Option, um Prozesse zu suchen, die womöglich die Installation der Anwendung stören. Wenn eine dieser ausführbaren Dateien auf dem Client ausgeführt wird, blockiert diese die Installation des Bereitstellungstyps. Der Benutzer muss die ausgeführte ausführbare Datei schließen, bevor der Client den Bereitstellungstyp installieren kann. Für Bereitstellungen mit dem Zweck „Erforderlich“ kann der Client die ausgeführte ausführbare Datei automatisch schließen.
 
-1. Öffnen Sie das Dialogfeld **Eigenschaften** für den Bereitstellungstyp.  
+1. Öffnen Sie die **Eigenschaften** für den Bereitstellungstyp.
 
-2. Wechseln Sie zur Registerkarte **Installationsverhalten**, und klicken Sie auf **Hinzufügen**.  
+1. Wechseln Sie zur Registerkarte **Installationsverhalten**, und wählen Sie **Hinzufügen** aus.
 
-3. Geben Sie im Dialogfeld **Ausführbare Datei hinzufügen** den Namen der ausführbaren Zieldatei ein. Geben Sie optional einen Anzeigenamen für die Anwendung ein, damit Sie sie leichter identifizieren können.  
+1. Geben Sie im Fenster **Ausführbare Datei hinzufügen** den Namen der ausführbaren Zieldatei ein. Geben Sie optional einen Anzeigenamen für die Anwendung ein, damit Sie sie leichter identifizieren können.
 
-4. Klicken Sie auf **OK** und im nächsten Schritt noch einmal auf **OK**, um das Fenster für die Bereitstellungstypeigenschaften zu schließen.  
+1. Wählen Sie **OK** aus, um zu speichern und das Fenster der Eigenschaften des Bereitstellungstyps zu schließen.
 
-5. Wenn Sie die Anwendung bereitstellen, wählen Sie die Option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** (Alle ausgeführten Dateien, die Sie in der Registerkarte „Installationsverhalten“ im Dialogfeld zu den Bereitstellungstypeigenschaften angegeben haben, werden automatisch beendet) aus. Diese Option befindet sich auf der Registerkarte **Bereitstellungseinstellungen** der Bereitstellungseigenschaften.  
+1. Wenn Sie die Anwendung bereitstellen, wählen Sie die Option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** (Alle ausgeführten Dateien, die Sie in der Registerkarte „Installationsverhalten“ im Dialogfeld zu den Bereitstellungstypeigenschaften angegeben haben, werden automatisch beendet) aus. Diese Option befindet sich auf der Registerkarte **Bereitstellungseinstellungen** der Bereitstellungseigenschaften.  
 
-> [!Note]
+> [!NOTE]
 > Eine Anwendung kann von der Tasksequenz nicht installiert werden, wenn Sie sie so konfiguriert haben, dass eine Prüfung auf laufende ausführbare Dateien erfolgt, und Sie sie in den Tasksequenzschritt [Anwendung installieren](../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication) aufgenommen haben. Wenn Sie diesen Tasksequenzschritt nicht so konfigurieren, dass er auch bei einem Fehler fortgesetzt wird, schlägt die gesamte Tasksequenz fehl.
 
 ### <a name="client-behaviors-and-user-notifications"></a>Clientverhalten und Benutzerbenachrichtigungen
@@ -263,30 +245,30 @@ Nachdem Clients die Bereitstellung empfangen haben, wird folgendes Verhalten ang
 
 - Wenn Sie die Anwendung als **Erforderlich** bereitgestellt haben und die Option **Ausgeführte ausführbare Dateien automatisch schließen, die im Eigenschaftendialogfeld des Bereitstellungstyps auf der Registerkarte „Installationsverhalten“ angegeben wurden** ausgewählt ist, wird vom Client eine Benachrichtigung angezeigt. Der Benutzer wird so informiert, dass die angegebenen ausführbaren Dateien automatisch geschlossen werden, sobald der Stichtag der Anwendungsinstallation erreicht ist.  
 
-    - Planen Sie diese Dialogfelder in der Gruppe **Computer-Agent** in den Clienteinstellungen. Weitere Informationen finden Sie unter [Computer-Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
+  - Planen Sie diese Dialogfelder in der Gruppe **Computer-Agent** in den Clienteinstellungen. Weitere Informationen finden Sie unter [Computer-Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
-    - Wenn Sie nicht möchten, dass der Benutzer diese Meldungen sieht, wählen Sie auf der Registerkarte **User Experience** (Benutzerfreundlichkeit) der Bereitstellungseigenschaften **In Softwarecenter und allen Benachrichtigungen ausblenden** aus. Weitere Informationen finden Sie unter [Deployment User Experience settings (Einstellungen für die Benutzerfreundlichkeit der Bereitstellung)](#bkmk_deploy-ux).  
+  - Wenn Sie nicht möchten, dass der Benutzer diese Meldungen sieht, wählen Sie auf der Registerkarte **User Experience** (Benutzerfreundlichkeit) der Bereitstellungseigenschaften **In Softwarecenter und allen Benachrichtigungen ausblenden** aus. Weitere Informationen finden Sie unter [Deployment User Experience settings (Einstellungen für die Benutzerfreundlichkeit der Bereitstellung)](#bkmk_deploy-ux).  
 
 - Wenn Sie die Anwendung als **Erforderlich** bereitgestellt haben, und die Option **Ausgeführte ausführbare Dateien automatisch schließen, die im Eigenschaftendialogfeld des Bereitstellungstyps auf der Registerkarte „Installationsverhalten“ angegeben wurden** nicht ausgewählt ist, schlägt die Installation der App fehl, wenn mindestens eine der angegebenen Anwendungen ausgeführt wird.  
 
+## <a name="deploy-user-available-applications"></a>Bereitstellen von für Benutzer verfügbaren Anwendungen
 
+Wenn Sie Anwendungen als **Verfügbar** in Benutzersammlungen bereitstellen, können Benutzer das Softwarecenter durchsuchen und die benötigten Apps installieren. Für lokale in die Domäne eingebundene Clients verwendet das Softwarecenter die Domänenanmeldeinformationen des Benutzers, um die Liste der verfügbaren Anwendungen vom Verwaltungspunkt abzurufen.
 
-## <a name="deploy-user-available-applications-on-azure-ad-joined-devices"></a>Bereitstellen von für Benutzer verfügbare Anwendungen auf in Azure AD eingebundenen Geräten
+Es gibt zusätzliche Anforderungen für Clients, die internetbasiert, in Azure Active Directory (Azure AD) eingebunden oder beides sind.
 
+### <a name="azure-ad-joined-devices"></a>In Azure AD eingebundene Geräte
 <!-- 1322613 -->
-Wenn Sie Anwendungen als für Benutzer verfügbar bereitstellen, können diese die Anwendungen über das Softwarecenter auf Azure Active Directory-Geräten durchsuchen und installieren.  
 
-### <a name="prerequisites"></a>Voraussetzungen
+Wenn Sie Anwendungen als für Benutzer verfügbar bereitstellen, können diese die Anwendungen über das Softwarecenter durchsuchen und auf Azure AD-Geräten installieren. Konfigurieren Sie die folgenden Voraussetzungen, um dieses Szenario zu aktivieren:
 
 - Aktivieren Sie HTTPS auf dem Verwaltungspunkt.  
 
 - Integrieren Sie den Standort in [Azure AD](../../core/servers/deploy/configure/azure-services-wizard.md) für die **Cloudverwaltung**.  
 
-    - Konfigurieren Sie die [Azure AD-Benutzerermittlung](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).  
+  - Konfigurieren Sie die [Azure AD-Benutzerermittlung](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).  
 
 - Stellen Sie über Azure AD eine Anwendung als für eine Benutzersammlung verfügbar bereit.  
-
-- Verteilen Sie Anwendungsinhalte an einen [Cloudverteilungspunkt](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md).  
 
 - Aktivieren Sie die Clienteinstellung **Neues Softwarecenter verwenden** in der Gruppe [Computer-Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
@@ -294,17 +276,20 @@ Wenn Sie Anwendungen als für Benutzer verfügbar bereitstellen, können diese d
 
 - Zur Unterstützung internetbasierter Clients:  
 
-    - [Cloudverwaltungsgateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+  - [Cloudverwaltungsgateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) (Cloud Management Gateway, CMG)
 
-    - Aktivieren Sie die Clienteinstellung: **Benutzerrichtlinienanforderungen von Internetclients aktivieren** in der Gruppe [Clientrichtlinie](../../core/clients/deploy/about-client-settings.md#client-policy).  
+  - Verteilen Sie Anwendungsinhalte an ein inhaltsfähiges CMG oder einen [Cloudverteilungspunkt](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md).  
+
+  - Aktivieren Sie die Clienteinstellung: **Benutzerrichtlinienanforderungen von Internetclients aktivieren** in der Gruppe [Clientrichtlinie](../../core/clients/deploy/about-client-settings.md#client-policy).  
 
 - So unterstützen Sie Clients im Intranet:  
 
-    - Fügen Sie den Cloudverteilungspunkt zu einer Begrenzungsgruppe hinzu, die von den Clients verwendet wird.  
+  - Fügen Sie das inhaltsfähige CMG oder den Cloudverteilungspunkt einer Begrenzungsgruppe hinzu, die von den Clients verwendet wird.  
 
-    - Clients müssen den vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) des HTTPS-fähigen Verwaltungspunkts auflösen.  
+  - Clients müssen den vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) des HTTPS-fähigen Verwaltungspunkts auflösen.  
 
-
+  > [!NOTE]
+  > Für einen Client, der als im Intranet befindlich erkannt wurde, aber über das Cloudverwaltungsgateway (Cloud Management Gateway, CMG) in Configuration Manager Version 2002 und früher kommuniziert, verwendet das Softwarecenter die Windows-Authentifizierung. Beim Versuch, die Liste der für Benutzer verfügbaren Apps über das CMG abzurufen, trat ein Fehler auf. Ab Version 2006 wird Azure AD-Identität (Azure Active Directory) für Geräte verwendet, die mit Azure AD verknüpft sind. Diese Geräte können mit der Cloud verbunden oder hybrid eingebunden sein.<!--6935376-->
 
 ## <a name="next-steps"></a>Nächste Schritte
 

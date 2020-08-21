@@ -2,7 +2,7 @@
 title: Ebenen von Nutzungsdaten zu Diagnosezwecken
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie mehr über die Ebenen der Diagnose- und Nutzungsdaten, die Configuration Manager sammelt.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 3c46bdb2-5bda-47c8-b5f4-9365a4b3521c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9de63280786d620229c7d408f09ef2fe583e231d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0d27e4a2f82de75cde853f3ce95c98ea8a12c465
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703798"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126504"
 ---
 # <a name="levels-of-diagnostic-usage-data"></a>Ebenen von Nutzungsdaten zu Diagnosezwecken
 
@@ -63,11 +63,11 @@ Zum Ändern der Datensammlungsebene benötigen Sie Berechtigungen zum **Ändern*
 
 In den folgenden Artikeln werden die spezifischen Daten beschrieben, die Configuration Manager auf jeder Ebene mit jeder unterstützten Version sammelt:
 
+- [Diagnose- und Nutzungsdaten für Version 2006](levels-of-diagnostic-usage-data-collection-2006.md)
 - [Diagnose- und Nutzungsdaten für Version 2002](levels-of-diagnostic-usage-data-collection-2002.md)
 - [Diagnose- und Nutzungsdaten für Version 1910](levels-of-diagnostic-usage-data-collection-1910.md)
-- [Diagnose- und Nutzungsdaten für Version 1906](levels-of-diagnostic-usage-data-collection-1906.md)
-- [Diagnose- und Nutzungsdaten für Version 1902](levels-of-diagnostic-usage-data-collection-1902.md)
-- [Diagnose- und Nutzungsdaten für Version 1810](levels-of-diagnostic-usage-data-collection-1810.md)
+- [Diagnose- und Nutzungsdaten für Version 1906](levels-of-diagnostic-usage-data-collection-1906.md)
+- [Diagnose- und Nutzungsdaten für Version 1902](levels-of-diagnostic-usage-data-collection-1902.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

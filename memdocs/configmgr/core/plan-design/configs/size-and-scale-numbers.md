@@ -2,7 +2,7 @@
 title: Anpassen und Skalieren
 titleSuffix: Configuration Manager
 description: Ermitteln Sie die Anzahl der Standortsystemrollen und Standorte, die für die Unterstützung von Geräten in Ihrer Umgebung notwendig sind.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0d8057d61ebaaa8a545d21b31331faec1c04884e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715627"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126697"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Size and scale numbers for Configuration Manager (Größe und Skalierung von Zahlen für Configuration Manager)
 
@@ -184,6 +184,8 @@ Begrenzen Sie die Anzahl der Sicherheitsbereiche für automatische Bereitstellun
 Jede Instanz des SMS-Anbieters unterstützt gleichzeitige Verbindungen von mehreren Anforderungen. Diese Verbindungen unterliegen nur zwei Einschränkungen. Dabei handelt es sich um die Anzahl der Serververbindungen sowie um die zur Bearbeitung der Verbindungsanforderungen erforderlichen Ressourcen, die unter Windows bzw. auf dem Server verfügbar sind.
 
 Weitere Informationen finden Sie unter [Planen des SMS-Anbieters](../hierarchy/plan-for-the-sms-provider.md).
+
+Der Verwaltungsdienst ist eine REST-API auf jeder Instanz des SMS-Anbieters. Sie unterstützt bis zu 5.000 Anforderungen pro Sekunde und 200 Anforderungen pro Client-IP-Adresse.
 
 ## <a name="client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a> Anzahl der Clients für Standorte und Hierarchien
 

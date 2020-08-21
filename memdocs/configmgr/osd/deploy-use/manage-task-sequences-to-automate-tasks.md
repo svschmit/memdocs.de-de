@@ -2,20 +2,20 @@
 title: Verwalten von Tasksequenzen
 titleSuffix: Configuration Manager
 description: Sie können Tasksequenzen erstellen, bearbeiten, bereitstellen, importieren und exportieren, um sie zu verwalten und Tasks in Ihrer Umgebung zu automatisieren.
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 609f5d010018fa23dd4a533b2f1079f07d8c2283
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591033"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125064"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Verwalten von Tasksequenzen zum Automatisieren von Tasks
 
@@ -40,6 +40,30 @@ Erstellen Sie Tasksequenzen mithilfe des Tasksequenzerstellungs-Assistenten. Mit
 ## <a name="edit"></a><a name="BKMK_ModifyTaskSequence"></a> Bearbeiten  
 
 Ändern Sie eine Tasksequenz, indem Sie ihr Schritte oder Gruppen hinzufügen bzw. diese aus ihr entfernen oder die Reihenfolge der Schritte ändern. Weitere Informationen finden Sie unter [Verwenden des Tasksequenz-Editors](../understand/task-sequence-editor.md).
+
+## <a name="reduce-the-size-of-task-sequence-policy"></a><a name="bkmk_policysize"></a> Reduzieren der Größe einer Tasksequenzrichtlinie
+
+<!--6982275-->
+Wenn die Größe der Tasksequenzrichtlinie 32 MB überschreitet, kann die große Richtlinie vom Client nicht verarbeitet werden. Der Client kann dann die Tasksequenzbereitstellung nicht ausführen.
+
+Die Größe der in der Standortdatenbank gespeicherten Tasksequenz ist geringer. Sie kann aber nach wie vor zu groß sein und so Probleme verursachen. Wenn der Client die gesamte Tasksequenzrichtlinie verarbeitet, kann eine erweiterte Größe über 32 MB zu Problemen führen.
+
+Ab Version 2006 können Sie die Tasksequenzrichtlinie mit [Verwaltungseinblicken](../../core/servers/manage/management-insights.md#operating-system-deployment) auf eine Größe von 32 MB auf Clients überprüfen.
+
+Mithilfe der folgenden Aktionen können Sie die Gesamtgröße der Richtlinie für eine Tasksequenzbereitstellung verringern:
+
+- Trennen Sie funktionale Segmente in untergeordnete Tasksequenzen, und verwenden Sie den Schritt [Tasksequenz ausführen](../understand/task-sequence-steps.md#child-task-sequence). Jede Tasksequenz weist einen separaten Grenzwert von 32 MB für die Richtliniengröße auf.
+
+    > [!NOTE]
+    > Das Verringern der Gesamtzahl von Schritten und Gruppen in einer Tasksequenz wirkt sich nur minimal auf die Richtliniengröße aus. Jeder Schritt bedeutet in der Regel ein paar KB in der Richtlinie. Das Verschieben von Gruppen von Schritten in eine untergeordnete Tasksequenz ist wirkungsvoller.
+
+- Verringern Sie die Anzahl von Softwareupdates in Bereitstellungen für dieselbe Sammlung wie die Tasksequenz.
+
+- Anstatt ein Skript im Schritt [PowerShell-Skript ausführen](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) einzugeben, verweisen Sie über ein Paket darauf.
+
+- Die Größe der Tasksequenzumgebung ist bei der Ausführung auf 8 KB beschränkt. Überprüfen Sie die Verwendung von benutzerdefinierten Tasksequenzvariablen, die ebenfalls zur Richtliniengröße beitragen können.
+
+- Als letzte Möglichkeit teilen Sie eine komplexe, dynamische Tasksequenz in separate Tasksequenzen mit unterschiedlichen Bereitstellungen für verschiedene Sammlungen auf.
 
 ## <a name="software-center-properties"></a><a name="bkmk_prop-general"></a> Eigenschaften des Softwarecenters
 

@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3843dd4ab4fe5a9aecaae8e6f207c3d037fc1950
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700048"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129422"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Für Softwareupdates verwendete Symbole in Configuration Manager
 
@@ -59,7 +59,7 @@ Synchronisierte Softwareupdates werden in der Configuration Manager-Konsole ange
 
 - Steigerung der Effizienz seines Softwareupdatedateipakets, das von Clients installiert wird, sofern das Softwareupdate zur Installation genehmigt ist. Beispielsweise könnte das abgelöste Softwareupdate Dateien enthalten, die für die Korrektur oder die vom neuen Softwareupdate unterstützten Betriebssysteme nicht mehr relevant sind. Diese Dateien sind dann im Dateipaket des abgelösten Softwareupdates nicht enthalten.  
 
-- Ausführung eines Updates für neuere Produktversionen, das heißt, das Update gilt nicht mehr für ältere Versionen oder Konfigurationen eines Produkts. Softwareupdates können außerdem durch andere Softwareupdates abgelöst werden, wenn zur Erweiterung der Sprachunterstützung entsprechende Änderungen vorgenommen wurden. Beispielsweise wäre es möglich, dass in einer späteren Revision eines Produktupdates für Microsoft Office ein älteres Betriebssystem nicht mehr unterstützt, dafür aber in der Erstversion des Softwareupdates die Sprachunterstützung erweitert wird.  
+- Ausführung eines Updates für neuere Produktversionen, das heißt, das Update gilt nicht mehr für ältere Versionen oder Konfigurationen eines Produkts. Softwareupdates können außerdem durch andere Softwareupdates abgelöst werden, wenn zur Erweiterung der Sprachunterstützung entsprechende Änderungen vorgenommen wurden. Beispielsweise wäre es möglich, dass in einer späteren Version eines Produktupdates für Microsoft 365-Apps ein älteres Betriebssystem nicht mehr unterstützt, dafür aber in der Erstversion des Softwareupdates die Sprachunterstützung erweitert wird.  
 
   Auf der Registerkarte „Ablösungsregeln“ in den Eigenschaften der jeweiligen „Softwareupdatepunkt-Komponente“ können Sie angeben, wie abgelöste Softwareupdates verwaltet werden sollen. Weitere Informationen finden Sie unter [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 

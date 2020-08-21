@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410866"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129136"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Einrichten des Cloudverwaltungsgateways für Configuration Manager
 
@@ -141,7 +141,7 @@ Bei dem CMG-Verbindungspunkt handelt es sich um die Standortsystemrolle für die
 
 Verwenden Sie **CMGService.log** und **SMS_Cloud_ProxyConnector.log** für die Problembehandlung der CMG-Dienstintegrität. Weitere Informationen finden Sie in den [Protokolldateien](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a>Konfigurieren von Rollen mit Clientkontakt für den CMG-Datenverkehr
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a> Konfigurieren von Rollen mit Clientkontakt für den CMG-Datenverkehr
 
 Konfigurieren Sie die Verwaltungspunkt- und Softwareupdatepunkt-Standortsysteme, um CMG-Datenverkehr zu akzeptieren. Führen Sie diese Prozedur für alle Verwaltungspunkte und Softwareupdatepunkte am primären Standort durch, die Dienste für internetbasierte Clients bereitstellen.  
 
@@ -158,7 +158,7 @@ Konfigurieren Sie die Verwaltungspunkt- und Softwareupdatepunkt-Standortsysteme,
 Wiederholen Sie diese Schritte ggf. für weitere Verwaltungspunkte und für Softwareupdatepunkte.
 
 ## <a name="configure-boundary-groups"></a>Konfigurieren von Begrenzungsgruppen
-
+ 
 <!--3640932-->
 Ab Version 1902 können Sie einer Begrenzungsgruppe ein CMG zuordnen. Mit dieser Konfiguration können Clients für die Clientkommunikation entsprechend der Begrenzungsgruppenbeziehungen den Standardwert für das CMG verwenden oder Fallbacks dafür zulassen.
 

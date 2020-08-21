@@ -5,17 +5,17 @@ description: Ein Plan für die Softwareupdatepunkt-Infrastruktur ist wichtig, be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: dca6f3e4bf67ac4c947f785016d781e538ee0a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708748"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123590"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Planen von Softwareupdates in Configuration Manager
 
@@ -71,7 +71,7 @@ Der Client wählt nach dem Zufallsprinzip einen Softwareupdatepunkt aus der List
 ###  <a name="software-update-point-switching"></a><a name="BKMK_SUPSwitching"></a> Wechseln des Softwareupdatepunkts  
 
 > [!NOTE]  
-> Clients verwenden Begrenzungsgruppen zur Auswahl neuer Softwareupdatepunkte. Wenn nicht mehr auf ihren aktuellen Softwareupdatepunkt zugegriffen werden kann, nutzen sie auch Begrenzungsgruppen für das Fallback und das Suchen eines neuen Softwareupdatepunkts. Fügen Sie individuelle Softwareupdatepunkte zu verschiedenen Begrenzungsgruppen hinzu, um zu steuern, welche Server ein Client finden kann. Weitere Informationen finden Sie unter [Softwareupdatepunkte](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
+> Clients verwenden Begrenzungsgruppen zur Auswahl neuer Softwareupdatepunkte. Wenn nicht mehr auf ihren aktuellen Softwareupdatepunkt zugegriffen werden kann, nutzen sie auch Begrenzungsgruppen für das Fallback und das Suchen eines neuen Softwareupdatepunkts. Fügen Sie individuelle Softwareupdatepunkte zu verschiedenen Begrenzungsgruppen hinzu, um zu steuern, welche Server ein Client finden kann. Weitere Informationen finden Sie unter [Softwareupdatepunkte](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 Wenn es an einem Standort mehrere Softwareupdatepunkte gibt und einer davon fehlerhaft oder nicht mehr verfügbar ist, wird von Clients eine Verbindung zu einem anderen Softwareupdatepunkt hergestellt. Die Clients suchen weiterhin mit diesem neuen Server nach den aktuellsten Softwareupdates. Die ursprüngliche Zuweisung eines Clients zu einem Softwareupdatepunkt bleibt so lange bestehen, bis bei der Überprüfung auf Softwareupdates ein Fehler auftritt.  
 
@@ -111,7 +111,7 @@ Führen Sie für Konfigurations-Manager-Clients einen Wechsel zu einem neuen Sof
 > [!IMPORTANT]    
 > Wenn Sie die Geräte wechseln, um einen neuen Server zu verwenden, verwenden die Geräte einen Fallback, um den neuen Server zu finden. Clients wechseln während des Prüfzyklus des nächsten Softwareupdates zum neuen Softwareupdatepunkt.<!-- SCCMDocs#1537 -->
 >
-> Deshalb sollten Sie vor diesem Wechsel die Konfigurationen Ihrer Begrenzungsgruppen überprüfen, um sicherzustellen, dass sich Ihre Softwareupdatepunkte in den korrekten Begrenzungsgruppen befinden. Weitere Informationen finden Sie unter [Softwareupdatepunkte](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
+> Deshalb sollten Sie vor diesem Wechsel die Konfigurationen Ihrer Begrenzungsgruppen überprüfen, um sicherzustellen, dass sich Ihre Softwareupdatepunkte in den korrekten Begrenzungsgruppen befinden. Weitere Informationen finden Sie unter [Softwareupdatepunkte](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 >
 > Der Wechsel zu einem neuen Softwareupdatepunkt generiert zusätzlichen Netzwerkdatenverkehr. Die Menge des Datenverkehrs hängt von Ihren WSUS-Konfigurationseinstellungen ab, beispielsweise den synchronisierten Klassifizierungen und Produkten oder der Verwendung einer freigegebenen WSUS-Datenbank. Wenn Sie den Wechsel für mehrere Geräte durchführen möchten, sollten Sie diesen in ein Wartungsfenster legen. Diese Vorgehensweise reduziert die Auswirkungen auf Ihr Netzwerk, wenn Clients Überprüfungen mit dem neuen Softwareupdatepunkt durchführen.  
 
@@ -151,7 +151,7 @@ Wenn Sie Geräte verwalten müssen, die aus Ihrem Netzwerk ins Internet wechseln
 #### <a name="cloud-management-gateway"></a>Cloudverwaltungsgateway
 Erstellen Sie in Microsoft Azure ein Cloud Management Gateway, und aktivieren Sie mindestens einen lokalen Softwareupdatepunkt, um Datenverkehr von internetbasierten Clients zuzulassen. Wenn Clients ins Internet wechseln, erfolgt weiterhin die Prüfung mit Ihren Softwareupdatepunkten. Alle internetbasierten Clients erhalten stets Inhalte des Microsoft Update-Clouddienstes. 
 
-Weitere Informationen finden Sie unter [Planen von Cloud Management Gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).  
+Weitere Informationen finden Sie unter [Planen von Cloud Management Gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) und [Konfigurieren von Begrenzungsgruppen](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 #### <a name="internet-based-client-management"></a>Internetbasierte Clientverwaltung
 Platzieren Sie einen Softwareupdatepunkt in einem Netzwerk mit Internetverbindung, und lassen Sie für ihn Datenverkehr von internetbasierten Clients zu. Wenn Clients ins Internet wechseln, wechseln sie für die Überprüfung zu diesem Softwareupdatepunkt. Alle internetbasierten Clients erhalten stets Inhalte des Microsoft Update-Clouddienstes.
@@ -372,7 +372,7 @@ Mit einem Softwareupdate, das ein anderes Softwareupdate ablöst, werden in der 
 
 -   Steigerung der Effizienz des abgelösten Updatedateipakets, das auf Clients installiert wird, sofern die Installation des Updates genehmigt wird. Ein abgelöstes Update kann beispielsweise Dateien enthalten, die für die von dem neuen Update unterstützten Fixes oder Betriebssysteme nicht mehr relevant sind. Solche Dateien sind in dem ablösenden Dateipaket des Updates nicht enthalten.  
 
--   Ausführung eines Updates für neuere Produktversionen. Anders ausgedrückt: Es werden Versionen aktualisiert, die für ältere Versionen oder Konfigurationen eines Produkts nicht mehr gültig sind. Updates können außerdem durch andere Updates abgelöst werden, wenn zur Erweiterung der Sprachunterstützung entsprechende Änderungen vorgenommen wurden. Beispielsweise wäre es möglich, dass in einer späteren Version eines Produktupdates für Microsoft Office ein älteres Betriebssystem nicht mehr unterstützt, dafür aber in der Erstversion des Updates die Sprachunterstützung erweitert wird.  
+-   Ausführung eines Updates für neuere Produktversionen. Anders ausgedrückt: Es werden Versionen aktualisiert, die für ältere Versionen oder Konfigurationen eines Produkts nicht mehr gültig sind. Updates können außerdem durch andere Updates abgelöst werden, wenn zur Erweiterung der Sprachunterstützung entsprechende Änderungen vorgenommen wurden. Beispielsweise wäre es möglich, dass in einer späteren Version eines Produktupdates für Microsoft 365-Apps ein älteres Betriebssystem nicht mehr unterstützt, dafür aber in der Erstversion des Updates die Sprachunterstützung erweitert wird.  
 
 Geben Sie in den Eigenschaften des Softwareupdatepunkts an, dass abgelöste Softwareupdates sofort ablaufen. Diese Einstellung verhindert, dass sie in neue Bereitstellungen eingeschlossen werden. Außerdem werden so auch die vorhandenen Bereitstellungen gekennzeichnet, um anzugeben, dass sie mindestens ein abgelaufenes Softwareupdate enthalten. Geben Sie alternativ einen Zeitraum an, bis zu dem die abgelösten Softwareupdates ablaufen. Mit dieser Aktion können Sie die Updates weiterhin bereitstellen. 
 
@@ -461,7 +461,8 @@ Bei einem ausstehenden Neustart für ein Configuration Manager-Softwareupdate si
 
 ## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a> Auswerten von Softwareupdates nach einem Wartungsstapelupdate
 <!--4639943-->
-Ab Version 2002 erkennt Configuration Manager, ob ein Wartungsstapelupdate (Servicing Stack Update, SSU) Teil einer Installation für mehrere Updates ist. Wenn ein SSU erkannt wird, wird es zuerst installiert. Nach der Installation des SSU wird ein Auswertungszyklus für Softwareupdates ausgeführt, um die verbleibenden Updates zu installieren. Mit dieser Änderung kann nach dem Wartungsstapelupdate ein abhängiges kumulatives Update installiert werden. Das Gerät muss zwischen den Installationen nicht neu gestartet werden, und Sie müssen kein zusätzliches Wartungsfenster erstellen. SSUs werden nur bei nicht vom Benutzer initiierten Installationen zuerst installiert. Wenn ein Benutzer beispielsweise eine Installation von mehreren Updates aus dem Software Center initiiert, wird das SSU möglicherweise nicht zuerst installiert.
+Ab Version 2002 erkennt Configuration Manager, ob ein Wartungsstapelupdate (Servicing Stack Update, SSU) Teil einer Installation für mehrere Updates ist. Wenn ein SSU erkannt wird, wird es zuerst installiert. Nach der Installation des SSU wird ein Auswertungszyklus für Softwareupdates ausgeführt, um die verbleibenden Updates zu installieren. Mit dieser Änderung kann nach dem Wartungsstapelupdate ein abhängiges kumulatives Update installiert werden. Das Gerät muss zwischen den Installationen nicht neu gestartet werden, und Sie müssen kein zusätzliches Wartungsfenster erstellen. SSUs werden nur bei nicht vom Benutzer initiierten Installationen zuerst installiert. Wenn ein Benutzer beispielsweise eine Installation von mehreren Updates aus dem Software Center initiiert, wird das SSU möglicherweise nicht zuerst installiert. Bei der Verwendung der Configuration Manager-Version 2002 können SSUs für Windows Server-Betriebssysteme nicht zuerst installiert werden. <!--7813007-->Diese Funktionalität wurde in Configuration Manager-Version 2006 für Windows Server-Betriebssysteme hinzugefügt.
+
 
 
 ## <a name="next-steps"></a>Nächste Schritte

@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764049"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127272"
 ---
 # <a name="conditional-access-with-co-management"></a>Bedingter Zugriff mit Co-Verwaltung
 
@@ -81,7 +81,7 @@ Weitere Beispiele:
 
 - Nestlé nutzt den app-basierten bedingten Zugriff für über 150.000 Mitarbeiter.  
 
-- Das Automatisierungssoftwareunternehmen Cadence, das nun sicherstellen kann, dass „nur noch verwaltete Geräte Zugriff auf Office 365-Apps wie Teams und das Intranet des Unternehmens haben“. Es kann seinen Mitarbeitern auch „einen sichereren Zugriff auf andere cloudbasierte Apps wie Workday und Salesforce“ bieten. Weitere Informationen zu den Erfahrungen, die Cadence mit Intune gemacht hat, finden Sie unter [Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365) (Cadence erhöht das Geschäftstempo mit Tools für die mobile Zusammenarbeit in Microsoft 365).
+- Das Automatisierungssoftwareunternehmen Cadence, das nun sicherstellen kann, dass „nur noch verwaltete Geräte Zugriff auf Microsoft 365 Apps wie Teams und das Intranet des Unternehmens haben“. Es kann seinen Mitarbeitern auch „einen sichereren Zugriff auf andere cloudbasierte Apps wie Workday und Salesforce“ bieten. Weitere Informationen zu den Erfahrungen, die Cadence mit Intune gemacht hat, finden Sie unter [Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365) (Cadence erhöht das Geschäftstempo mit Tools für die mobile Zusammenarbeit in Microsoft 365).
 
 Intune ist auch vollständig in Partner wie Cisco ISE, Aruba Clear Pass und Citrix NetScaler integriert. Mit diesen Partnern können Sie Zugriffssteuerungen auf der Grundlage der Intune-Anmeldung und des Compliancestatus der Geräte auf diesen anderen Plattformen verwalten.
 

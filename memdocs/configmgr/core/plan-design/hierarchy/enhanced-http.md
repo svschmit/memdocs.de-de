@@ -2,7 +2,7 @@
 title: Erweitertes HTTP
 titleSuffix: Configuration Manager
 description: Verwenden Sie moderne Authentifizierungsmethoden, um die Clientkommunikation ohne PKI-Zertifikate zu sichern.
-ms.date: 07/10/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 5d28e0ccef767770092d03898489104ae6f8c674
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262097"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997907"
 ---
 # <a name="enhanced-http"></a>Erweitertes HTTP
 
@@ -118,6 +118,11 @@ Sie können diese Zertifikate in der Configuration Manager-Konsole anzeigen. Wec
 
 Weitere Informationen zur Kommunikation zwischen dem Client und dem Verwaltungs- und Verteilungspunkt mit dieser Konfiguration finden Sie unter [Communications from clients to site systems and services (Kommunikation zwischen Clients und Standortsystemen und -diensten)](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
+## <a name="validate-the-certificate"></a>Überprüfen des Zertifikats
+
+Wenn Sie „Erweitertes HTTP“ aktivieren, generiert der Standortserver ein selbstsigniertes Zertifikat mit dem Namen **SMS Role SSL Certificate** (SSL-Zertifikat für SMS-Rolle). Dieses Zertifikat wird vom Stammzertifikat für die **SMS-Ausstellung** ausgestellt. Der Verwaltungspunkt fügt dieses Zertifikat der IIS-Standardwebsite hinzu, die an Port 443 gebunden ist.
+
+Überprüfen Sie **mpcontrol.log**, um den Status der Konfiguration anzuzeigen.
 
 ## <a name="see-also"></a>Weitere Informationen:
 

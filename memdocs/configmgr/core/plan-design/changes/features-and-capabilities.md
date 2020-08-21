@@ -10,12 +10,12 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5cdd0a9497f07d80813aca5dc169c4d61944e85d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 74b150b5a2157104b6a380489202fd309224a3bb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706398"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129034"
 ---
 # <a name="features-and-capabilities-of-configuration-manager"></a>Features und Funktionen von Configuration Manager
 
@@ -49,7 +49,7 @@ Verwenden Sie CMPivot, um eine sofortige Abfrage von Onlinegeräten durchzuführ
 
 ## <a name="application-management"></a>Anwendungsverwaltung
 
-Diese Funktion unterstützt Sie bei der Erstellung, Verwaltung, Bereitstellung und Überwachung von Anwendungen auf mehreren verschiedenen Geräten, die Sie verwalten. Stellen Sie Office 365 über die Configuration Manager-Konsole bereit, aktualisieren und verwalten Sie Office 365 auch darüber. Darüber hinaus ist Configuration Manager in den Microsoft Store für Unternehmen und Bildungseinrichtungen integriert, um cloudbasierte Anwendungen bereitzustellen. Weitere Informationen finden Sie unter [Einführung in die Anwendungsverwaltung](../../../apps/understand/introduction-to-application-management.md).
+Diese Funktion unterstützt Sie bei der Erstellung, Verwaltung, Bereitstellung und Überwachung von Anwendungen auf mehreren verschiedenen Geräten, die Sie verwalten. Verwenden Sie die Configuration Manager-Konsole zum Bereitstellen, Aktualisieren und Verwalten von Microsoft 365-Apps. Darüber hinaus ist Configuration Manager in den Microsoft Store für Unternehmen und Bildungseinrichtungen integriert, um cloudbasierte Anwendungen bereitzustellen. Weitere Informationen finden Sie unter [Einführung in die Anwendungsverwaltung](../../../apps/understand/introduction-to-application-management.md).
 
 ## <a name="os-deployment"></a>Bereitstellung des Betriebssystems
 

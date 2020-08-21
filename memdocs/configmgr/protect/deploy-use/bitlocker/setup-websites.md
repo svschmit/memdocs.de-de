@@ -2,20 +2,20 @@
 title: Einrichten von BitLocker-Portalen
 titleSuffix: Configuration Manager
 description: Installieren der BitLocker-Verwaltungskomponenten für das Self-Service-Portal und die Verwaltungs- und Überwachungswebsite
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 5dbd782c97d11f8077c18796c87c7880eb26f3f3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715678"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129153"
 ---
 # <a name="set-up-bitlocker-portals"></a>Einrichten von BitLocker-Portalen
 
@@ -31,9 +31,46 @@ Um die folgenden BitLocker-Verwaltungskomponenten in Configuration Manager verwe
 Sie können die Portale auf einem vorhandenen Standortserver oder Standortsystemserver mit installiertem IIS installieren oder einen eigenständigen Webserver als Host für die Portale verwenden.
 
 > [!NOTE]
-> Installieren Sie das Self-Service-Portal und die Verwaltungs- und Überwachungswebsite nur mit einer Datenbank für den primären Standort. Installieren Sie diese Websites in einer Hierarchie für jeden primären Standort.
+> Ab Version 2006 können Sie das BitLocker-Self-Service-Portal und die Verwaltungs- und Überwachungswebsite am zentralen Verwaltungsstandort installieren.<!-- 5925693 -->
+>
+> In Version 2002 und früheren Versionen können Sie nur das Self-Service-Portal und die Verwaltungs- und Überwachungswebsite mit einer Datenbank für den primären Standort installieren. Installieren Sie diese Websites in einer Hierarchie für jeden primären Standort.
 
 Bevor Sie beginnen, überprüfen Sie die [Voraussetzungen](../../plan-design/bitlocker-management.md#prerequisites) für diese Komponenten.
+
+## <a name="run-the-script"></a>Ausführen des Skripts
+
+Führen Sie auf dem Zielwebserver die folgenden Aktionen aus:
+
+> [!NOTE]
+> Abhängig von Ihrem Siteentwurf müssen Sie das Skript möglicherweise mehrmals ausführen. Führen Sie beispielsweise das Skript auf dem Verwaltungspunkt aus, um die Verwaltungs- und Überwachungswebsite zu installieren. Führen Sie es dann erneut auf einem eigenständigen Webserver aus, um das Self-Service-Portal zu installieren.
+
+1. Kopieren Sie die folgenden Dateien aus `SMSSETUP\BIN\X64` im Configuration Manager-Installationsordner auf dem Standortserver in einen lokalen Ordner auf dem Zielserver:
+
+    - `MBAMWebSite.cab`
+    - `MBAMWebSiteInstaller.ps1`
+
+1. Führen Sie PowerShell als Administrator aus, und führen Sie dann das Skript so wie in der folgenden Befehlszeile angegeben aus:
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
+    ```
+
+    Beispiel:
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
+    ```
+
+    > [!IMPORTANT]
+    > Diese Beispielbefehlszeile verwendet alle möglichen Parameter, um ihre Verwendung anzuzeigen. Verwenden Sie sie Ihren Anforderungen gemäß in Ihrer Umgebung.
+
+Greifen Sie nach der Installation über die folgenden URLs auf die Portale zu:
+
+- Self-Service-Portal: `https://webserver.contoso.com/SelfService`
+- Website „Administration and Monitoring“ (Verwaltung und Überwachung): `https://webserver.contoso.com/HelpDesk`
+
+> [!NOTE]
+> Microsoft empfiehlt die Verwendung von HTTPS, dies ist jedoch nicht obligatorisch. Weitere Informationen finden Sie unter [Festlegen von SSL in IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## <a name="script-usage"></a>Verwendung eines Skripts
 
@@ -71,42 +108,6 @@ Dieser Prozess verwendet das PowerShell-Skript „MBAMWebSiteInstaller.ps1“, u
 - `-InstallDirectory`: Der Pfad, in dem das Skript die Webanwendungsdateien installiert. Dieser Pfad ist standardmäßig `C:\inetpub`. Erstellen Sie das benutzerdefinierte Verzeichnis, bevor Sie diesen Parameter verwenden.
 
 - `-Uninstall`: Deinstalliert die Helpdesk- und Self-Service-Webportalsites für die BitLocker-Verwaltung auf einem Webserver, auf dem sie zuvor installiert waren.
-
-
-## <a name="run-the-script"></a>Ausführen des Skripts
-
-Führen Sie auf dem Zielwebserver die folgenden Aktionen aus:
-
-> [!NOTE]
-> Abhängig von Ihrem Siteentwurf müssen Sie das Skript möglicherweise mehrmals ausführen. Führen Sie beispielsweise das Skript auf dem Verwaltungspunkt aus, um die Verwaltungs- und Überwachungswebsite zu installieren. Führen Sie es dann erneut auf einem eigenständigen Webserver aus, um das Self-Service-Portal zu installieren.
-
-1. Kopieren Sie die folgenden Dateien aus `SMSSETUP\BIN\X64` im Configuration Manager-Installationsordner auf dem Standortserver in einen lokalen Ordner auf dem Zielserver:
-
-    - `MBAMWebSite.cab`
-    - `MBAMWebSiteInstaller.ps1`
-
-1. Führen Sie PowerShell als Administrator aus, und führen Sie dann das Skript so wie in der folgenden Befehlszeile angegeben aus:
-
-    ``` PowerShell
-    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
-    ```
-
-    Beispiel:
-
-    ``` PowerShell
-    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
-    ```
-
-    > [!IMPORTANT]
-    > Diese Beispielbefehlszeile verwendet alle möglichen Parameter, um ihre Verwendung anzuzeigen. Verwenden Sie sie Ihren Anforderungen gemäß in Ihrer Umgebung.
-
-Greifen Sie nach der Installation über die folgenden URLs auf die Portale zu:
-
-- Self-Service-Portal: `https://webserver.contoso.com/SelfService`
-- Website „Administration and Monitoring“ (Verwaltung und Überwachung): `https://webserver.contoso.com/HelpDesk`
-
-> [!NOTE]
-> Microsoft empfiehlt die Verwendung von HTTPS, dies ist jedoch nicht obligatorisch. Weitere Informationen finden Sie unter [Festlegen von SSL in IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## <a name="verify"></a>Überprüfen
 

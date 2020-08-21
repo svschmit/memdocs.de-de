@@ -2,7 +2,7 @@
 title: Planen für Software Center
 titleSuffix: Configuration Manager
 description: Legen Sie fest, wie Sie Software Center konfigurieren und mit den Markeninformationen Ihrer Organisation versehen möchten, damit Benutzer mit Configuration Manager interagieren können.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15da90b12504fdaf7a4dd0a36704391eead877cd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5b32fc2de3c945ff2292f119a10d84d982d08677
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689028"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127357"
 ---
 # <a name="plan-for-software-center"></a>Planen für Software Center
 
@@ -27,64 +27,35 @@ Weitere Informationen zu allen Funktionen finden Sie im [Benutzerleitfaden für 
 
 ## <a name="configure-software-center"></a><a name="bkmk_userex"></a> Konfigurieren des Softwarecenters  
 
-Aktualisieren Sie Ihren Configuration Manager-Standort und die Clients auf Version 1906 oder höher, um von den neuesten Verbesserungen zu profitieren.
+Aktualisieren Sie Ihren Configuration Manager-Standort und die Clients auf Version 1906 oder höher, um von den neuesten Verbesserungen im Softwarecenter zu profitieren.
 
-Hier erhalten Sie einen Überblick über die Verbesserungen am Softwarecenter:
-
-> [!Important]  
+> [!IMPORTANT]
 > Diese schrittweise erfolgenden Verbesserungen am Softwarecenter und am Verwaltungspunkt zielen darauf ab, die Anwendungskatalogrollen auslaufen zu lassen.
 >
 > - Die Silverlight-Benutzeroberfläche wird ab Current Branch-Version 1806 nicht unterstützt.
 > - Ab Version 1906 verwenden aktualisierte Clients automatisch den Verwaltungspunkt für Anwendungsbereitstellungen, die Benutzern zur Verfügung stehen. Zudem können Sie keine neuen Anwendungskatalogrollen installieren.
-> - Die Unterstützung für die Anwendungskatalogrollen endet mit Version 1910.  
+> - Die Unterstützung für die Anwendungskatalogrollen endet mit Version 1910.
 
-### <a name="starting-in-version-1802"></a>Ab Version 1802
+- Die Clienteinstellung **Neues Softwarecenter verwenden** in der Gruppe **Computer-Agent** ist standardmäßig aktiviert. Die vorherige Version des Softwarecenters wird nicht mehr unterstützt. Weitere Informationen finden Sie unter [Entfernte und veraltete Features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
-- Die Clienteinstellung **Neues Softwarecenter verwenden** in der Gruppe **Computer-Agent** ist standardmäßig aktiviert. Die vorherige Version des Softwarecenters wird nicht mehr unterstützt. Weitere Informationen finden Sie unter [Entfernte und veraltete Features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).  
+- Die Sichtbarkeit des Anwendungskatalog-Websitelinks auf der Softwarecenter-Registerkarte **Installationsstatus** kann angegeben werden. Weitere Informationen finden Sie in den Clienteinstellungen des [Softwarecenters](../../core/clients/deploy/about-client-settings.md#software-center).
 
-- Benutzer können auf Geräten, die in Azure Active Directory eingebunden sind, nach verfügbaren Anwendungen suchen und diese darauf installieren. Weitere Informationen finden Sie unter [Deploy user-available applications on Azure AD-joined devices (Bereitstellen von für Benutzer verfügbare Anwendungen auf in Azure AD eingebundenen Geräten)](../deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- Ab Version 1906 können Sie dem Softwarecenter bis zu fünf benutzerdefinierte Registerkarten hinzufügen. Weitere Informationen finden Sie unter [Softwarecenter-Clienteinstellungen](../../core/clients/deploy/about-client-settings.md#software-center). <!--4063773-->
 
-### <a name="starting-in-version-1806"></a>Ab Version 1806
+- Benutzer können die Affinität zwischen Benutzer und Gerät im Softwarecenter konfigurieren. Weitere Informationen finden Sie unter [Verknüpfen von Benutzern und Geräten mit Affinität zwischen Benutzer und Gerät](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-- Die Sichtbarkeit des Anwendungskatalog-Websitelinks auf der Softwarecenter-Registerkarte **Installationsstatus** kann angegeben werden. Weitere Informationen finden Sie in den Clienteinstellungen des [Softwarecenters](../../core/clients/deploy/about-client-settings.md#software-center).  
-
-- Es werden keine Anwendungskatalogrollen mehr benötigt, um für Benutzer verfügbare Anwendungen im Softwarecenter anzuzeigen. Diese Änderung hilft dabei, die erforderliche Serverinfrastruktur zu reduzieren, um Anwendungen schneller für Benutzer bereitzustellen. Softwarecenter verlässt sich nun auf den Verwaltungspunkt, um diese Informationen abzurufen, weshalb größere Umgebungen besser skaliert werden, da sie [Begrenzungsgruppen](../../core/servers/deploy/configure/boundary-groups.md#management-points) zugewiesen werden.<!--1358309-->  
-
-    > [!Note]  
-    > Wenn Sie derzeit den Anwendungskatalog verwenden und Configuration Manager auf die Version 1806 aktualisieren, wird das Produkt weiterhin funktionieren. Die Rollen „Anwendungspunkt-Websitepunkt“ und „Anwendungspunkt-Webdienstpunkt“ sind *nicht mehr erforderlich*, werden allerdings weiterhin *unterstützt*. Die **Silverlight-Benutzeroberfläche** für den Anwendungskatalog-*Websitepunkt* wird nicht mehr unterstützt. Weitere Informationen finden Sie unter [Entfernte und veraltete Features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
-    >
-    > Starten Sie die Planung zum baldigen Entfernen von Anwendungskatalogrollen aus Ihrer Infrastruktur. Nutzen Sie die Vorteile der Verbesserungen am Softwarecenter, um den Verwaltungspunkt zu verwenden und Ihre Configuration Manager-Umgebung zu vereinfachen.  
-
-### <a name="starting-in-version-1902"></a>Ab Version 1902
-
-- Konfigurieren Sie die Affinität zwischen Benutzer und Gerät. Weitere Informationen finden Sie unter [Verknüpfen von Benutzern und Geräten mit Affinität zwischen Benutzer und Gerät](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
-
-### <a name="starting-in-version-1906"></a>Ab Version 1906
-
-- Das Softwarecenter kommuniziert nun mit einem verfügbaren Verwaltungspunkt für Benutzer-Apps. Der Anwendungskatalog wird nicht mehr verwendet. Dadurch können Sie den Anwendungskatalog leichter aus dem Standort entfernen.
-
-- Zuvor wurde der erste Verwaltungspunkt aus der Liste mit den verfügbaren Servern verwendet. Ab diesem Release wird der gleiche Verwaltungspunkt genutzt, den auch der Client verwendet. Dadurch kann das Softwarecenter den gleichen Verwaltungspunkt des zugewiesenen primären Standorts verwenden wie der Client.
-
-- Der Verwaltungspunkt verfügt über Softwarecenterendpunkte, um diese neuen Funktionen zu unterstützen. Die Integrität dieser Endpunkte wird nun alle fünf Minuten überprüft. Er meldet alle Probleme mittels Statusmeldungen für die Standortkomponente SMS_MP_CONTROL_MANAGER.
-
-- Sie können der Website keine neuen Anwendungskatalogrollen hinzufügen. Vorhandene Rollen funktionieren weiterhin. Nur vorhandene Clients verwenden den Anwendungskatalog für Bereitstellungen, die für Benutzer verfügbar sind. Aktualisierte Clients verwenden automatisch den Verwaltungspunkt für alle Bereitstellungen.
-
-- Sie können dem Softwarecenter bis zu fünf benutzerdefinierte Registerkarten hinzufügen. Weitere Informationen finden Sie unter [Softwarecenter-Clienteinstellungen](../../core/clients/deploy/about-client-settings.md#software-center). <!--4063773-->
-
-### <a name="summary-of-infrastructure-requirements-per-version"></a>Zusammenfassung der Infrastrukturanforderungen pro Version
-
-Die folgende Tabelle bietet eine Übersicht über die Anforderungen für das Softwarecenter je nach Configuration Manager-Version:
-
-| Gerätetyp | Standortversion | Infrastruktur |
-|-----------------|--------------|----------------|
-| In Azure AD eingebundenes Gerät<br>(oder „in die Clouddomäne eingebundenes Gerät“) | 1802 oder 1806 | Verwaltungspunkt für alle App-Bereitstellungen |
-| [Hybrid in Azure AD eingebundenes](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)Gerät im Internet | 1802 oder 1806 | Cloud Management Gateway und Verwaltungspunkt für alle App-Bereitstellungen |
-| Lokales, in die Active Directory-Domäne eingebundenes Gerät | 1802 | Anwendungskatalog, der für verfügbare Apps über das Softwarecenter erforderlich ist |
-| Lokales, in die Active Directory-Domäne eingebundenes Gerät | 1806 | Verwaltungspunkt für alle App-Bereitstellungen |
-
-> [!Important]  
+> [!IMPORTANT]
 > Wenn Sie neue Configuration Manager-Features nutzen möchten, müssen Sie zunächst die Clients auf die neueste Version aktualisieren. Beim Update des Standorts und der Konsole werden neue Features in der Configuration Manager-Konsole angezeigt. Das vollständige Szenario ist allerdings erst einsatzbereit, wenn auch die Clientversion aktualisiert wird.
 
+### <a name="software-center-and-user-available-applications"></a>Softwarecenter und für Benutzer verfügbare Anwendungen
+
+- Es werden keine Anwendungskatalogrollen benötigt, um für Benutzer verfügbare Anwendungen im Softwarecenter anzuzeigen. Dieses Verhalten hilft Ihnen, die erforderliche Serverinfrastruktur zu reduzieren, um Anwendungen schneller für Benutzer bereitzustellen. Das Softwarecenter verlässt sich auf den Verwaltungspunkt, um diese Informationen abzurufen. Dadurch können größere Umgebungen besser skaliert werden, indem sie [Begrenzungsgruppen](../../core/servers/deploy/configure/boundary-groups.md#management-points) zugewiesen werden.<!--1358309-->
+
+- Benutzer können auf Geräten, die in Azure Active Directory eingebunden sind, nach verfügbaren Anwendungen suchen und diese darauf installieren. Ab Version 2006 können sie für Benutzer verfügbare Apps auf internetbasierten, in die Domäne eingebundenen Geräten erhalten. Weitere Informationen finden Sie unter [Bereitstellen von für Benutzer verfügbaren Anwendungen](../deploy-use/deploy-applications.md#deploy-user-available-applications).
+
+- Ab Version 1906 kommuniziert das Softwarecenter mit einem Verwaltungspunkt für Apps, die Benutzern als verfügbar angezeigt werden sollen. Der Anwendungskatalog wird nicht mehr verwendet. Dadurch können Sie den Anwendungskatalog leichter aus dem Standort entfernen.
+
+- Zuvor wurde der erste Verwaltungspunkt aus der Liste mit den verfügbaren Servern verwendet. Ab Version 1906 wird der gleiche Verwaltungspunkt genutzt, den auch der Client verwendet. Dadurch kann das Softwarecenter den gleichen Verwaltungspunkt des zugewiesenen primären Standorts verwenden wie der Client.
 
 ## <a name="replace-toast-notifications-with-dialog-window"></a><a name="bkmk_impact"></a> Ersetzen von Popupbenachrichtigungen durch ein Dialogfeld
 
@@ -132,7 +103,7 @@ Jetzt wird das folgende Dialogfenster angezeigt:
 > [!IMPORTANT]
 > In Configuration Manager 1902 ersetzt das Dialogfeld unter bestimmten Umständen keine Popupbenachrichtigungen. Installieren Sie zur Behebung dieses Problems das [Updaterollup für Configuration Manager Version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
-## <a name="branding-software-center"></a>Branding im Softwarecenter
+## <a name="brand-software-center"></a>Marken-Softwarecenter
 
 Ändern Sie das Erscheinungsbild des Softwarecenters, um die Brandinganforderungen Ihres Unternehmens zu erfüllen. Mit dieser Konfiguration lässt sich das Vertrauen der Benutzer in das Softwarecenter verbessern.
 
@@ -156,7 +127,7 @@ Configuration Manager verwendet ein benutzerdefiniertes Branding für Softwarece
 
 #### <a name="application-catalog-branding-priorities"></a>Brandingprioritäten im Anwendungskatalog
 
-> [!Important]
+> [!IMPORTANT]
 > Die Silverlight-Benutzeroberfläche für den Anwendungskatalog wird ab Current Branch-Version 1806 nicht unterstützt. Ab Version 1906 verwenden aktualisierte Clients automatisch den Verwaltungspunkt für Anwendungsbereitstellungen, die Benutzern zur Verfügung stehen. Zudem können Sie keine neuen Anwendungskatalogrollen installieren. Die Unterstützung für die Anwendungskatalogrollen endet mit Version 1910.  
 
 Wenn Sie den Anwendungskatalog verwenden, gilt für das Branding Folgendes:  
@@ -167,8 +138,7 @@ Wenn Sie den Anwendungskatalog verwenden, gilt für das Branding Folgendes:
 
 3. Clienteinstellung **Organisationsname** in der Gruppe **Computer-Agent**. Weitere Informationen finden Sie unter [About client settings (Informationen zu Clienteinstellungen)](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
-
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Benutzerleitfaden des Softwarecenters](../../core/understand/software-center.md)
 - [Planen und Konfigurieren der Anwendungsverwaltung](plan-for-and-configure-application-management.md)

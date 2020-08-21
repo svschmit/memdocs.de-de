@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c7bb6d01a35ce42002207d57d27fc41c37646d15
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7015ab4c180ed56b00149ffbff99c9e5a8112e95
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268860"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126000"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Herstellen einer Verbindung von Configuration Manager mit Desktop Analytics
 
@@ -84,8 +84,11 @@ Führen Sie dieses Verfahren aus, um Configuration Manager mit Desktop Analytics
 
     - **Kommerzielle ID**: Dieser Wert wird automatisch mit der ID Ihrer Organisation aufgefüllt. Wenn dies nicht der Fall ist, vergewissern Sie sich vor dem Fortfahren, dass der Proxyserver so konfiguriert ist, dass alle erforderlichen [Endpunkte](enable-data-sharing.md#endpoints) zulässig sind. Sie können Ihre kommerzielle ID auch manuell aus dem [Desktop Analytics-Portal](monitor-connection-health.md#bkmk_ViewCommercialID) abrufen.
 
-    - **Windows 10-Diagnosedatenebene**: Wählen Sie mindestens **Einfach** aus. Siehe [Diagnosedatenebenen](enable-data-sharing.md#diagnostic-data-levels).
-  
+    - **Windows 10-Diagnosedatenebene**: Wählen Sie mindestens **Erforderlich** aus. Weitere Informationen finden Sie unter [Diagnosedatenebenen](enable-data-sharing.md#diagnostic-data-levels).
+
+        > [!TIP]
+        > In Configuration Manager Version 2002 und früher wurde dieser Wert mit **Basic** bezeichnet.<!-- 7363467 -->
+
     - **Gerätenamen in Diagnosedaten zulassen**: Wählen Sie **Aktivieren** aus.
 
         > [!NOTE]

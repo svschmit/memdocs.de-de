@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879088"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128983"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Neuerungen in Version 1906 von Configuration Manager (Current Branch)
 
@@ -149,7 +149,7 @@ Weitere Informationen finden Sie unter [Protokollsammler](../../../desktop-analy
 
 Für CMPivot verfügen Sie nun über zusätzliche arithmetische Operatoren, Aggregatoren und die Möglichkeit, Abfrageverknüpfungen hinzuzufügen, wie etwa Registrierung und Datei gemeinsam zu verwenden.
 
-Weitere Informationen finden Sie unter [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1906).
+Weitere Informationen finden Sie unter [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1906).
 
 ### <a name="cmpivot-standalone"></a>Eigenständige Verwendung von CMPivot
 
@@ -171,7 +171,7 @@ Die folgenden Berechtigungen wurden der in Configuration Manager integrierten Ro
 - Ausführen von CMPivot für eine Sammlung
 - Lesen des Inventarberichts
 
-Weitere Informationen finden Sie unter [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot_secadmin1906).
+Weitere Informationen finden Sie unter [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906).
 
 
 ## <a name="content-management"></a><a name="bkmk_content"></a> Content Management
@@ -505,7 +505,7 @@ Der Link **Erforderliche anzeigen** ist an folgenden Stellen verfügbar:
    - **Softwarebibliothek** > **Windows 10-Wartung** > **Alle Windows 10-Updates**
    - **Softwarebibliothek** > **Office 365-Clientverwaltung** > **Office 365-Updates**
 
-Weitere Informationen finden Sie unter [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates) (Verwalten von Softwareupdates), [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates) (Verwalten von Windows-as-a-Service) und [Verwalten von Office 365 ProPlus-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates).
+Weitere Informationen finden Sie unter [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates) (Verwalten von Softwareupdates), [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates) (Verwalten von Windows-as-a-Service) und [Verwalten von Office 365 ProPlus-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a> Office-Verwaltung
@@ -538,7 +538,7 @@ Weitere Informationen finden Sie unter [Erstellen und Bereitstellen einer Window
 
 Sie können nun Sicherheitsbereiche für Ordner festlegen. Wenn Sie Zugriff auf ein Objekt im Ordner, aber keinen Zugriff auf den Ordner haben, können Sie das Objekt nicht anzeigen. Ebenso wird das Objekt nicht angezeigt, wenn Sie Zugriff auf einen Ordner, jedoch nicht auf ein darin enthaltenes Objekt haben. Klicken Sie mit der rechten Maustaste auf einen Ordner, klicken Sie auf **Sicherheitsbereiche festlegen**, und wählen Sie anschließend die anzuwendenden Sicherheitsbereiche aus.
 
-Weitere Informationen finden Sie unter [Using the Configuration Manager console](../../servers/manage/admin-console.md#tips) (Verwenden der Configuration Manager-Konsole) und [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder) (Konfigurieren der rollenbasierten Verwaltung).
+Weitere Informationen finden Sie unter [Tipps für die Configuration Manager-Konsole](../../servers/manage/admin-console-tips.md) und [Konfigurieren der rollenbasierten Verwaltung](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
 
 ### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>Hinzufügen der SMBIOS GUID-Spalte zu den Knoten „Geräte“ und „Gerätesammlungen“
 

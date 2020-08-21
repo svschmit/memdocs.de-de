@@ -4,15 +4,17 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
-ms.date: 08/23/2019
-ms.openlocfilehash: d8eaaa403bd1dd97214b4eff82be79d5c2a6566e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.date: 08/11/2020
+ms.openlocfilehash: 4c669bbbd9f996ae820f695925ba63cd6a92da2a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690398"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127302"
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article-->
+Befolgen Sie zum Aktivieren von Co-Verwaltung für Configuration Manager, Version 1902 und früher die unten stehenden Anweisungen:
+
 1. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**, erweitern Sie den Eintrag **Cloud Services**, und wählen Sie den Knoten **Co-Verwaltung** aus. Klicken Sie im Menüband auf **Co-Verwaltung konfigurieren**, um den **Konfigurations-Assistenten für die Co-Verwaltung** zu öffnen.
 
 2. Wählen Sie auf der Seite **Abonnement** des Assistenten die Option **Anmelden** aus. Melden Sie sich bei Ihrem Intune-Mandanten an, und wählen Sie **Weiter** aus.  
@@ -21,8 +23,7 @@ ms.locfileid: "81690398"
 
     Diese Aktion aktiviert die automatische Clientregistrierung in Intune für vorhandene Configuration Manager-Clients. Wenn Sie **Pilot** auswählen, werden nur die Konfigurations-Manager-Clients aus der Pilotsammlung automatisch bei Intune registriert. Mit dieser Option können Sie für einen Teil der Clients die Co-Verwaltung aktivieren, um diese zu testen und einen Rollout in Phasen vorzunehmen. 
 
-    > [!Note]  
-    > Ab Version 1806 wird die automatische Registrierung nicht sofort für alle Clients ausgeführt. Dadurch kann die Registrierung besser in großen Umgebungen skaliert werden. Configuration Manager führt die Registrierungen basierend auf der Anzahl der Clients zufällig aus. Wenn Ihre Umgebung z.B. über 100.000 Clients verfügt, wird die Registrierung auf mehrere Tage ausgedehnt, wenn Sie diese Einstellung aktivieren.<!--1358003-->  
+    Automatische Registrierung wird nicht sofort für alle Clients ausgeführt. Dadurch kann die Registrierung besser in großen Umgebungen skaliert werden. Configuration Manager führt die Registrierungen basierend auf der Anzahl der Clients zufällig aus. Wenn Ihre Umgebung z.B. über 100.000 Clients verfügt, wird die Registrierung auf mehrere Tage ausgedehnt, wenn Sie diese Einstellung aktivieren.<!--1358003-->  
 
 4. Kopieren und speichern Sie für internetbasierte Geräte, die bereits in Intune registriert sind, die Befehlszeile auf der Seite **Aktivierung**. Sie können diese Befehlszeile zum Installieren des Configuration Manager-Clients als App in Intune verwenden. Wenn Sie diese Befehlszeile jetzt nicht speichern, können Sie die Konfiguration der Co-Verwaltung zu einem beliebigen Zeitpunkt überprüfen, um diese Befehlszeile abzurufen.
 

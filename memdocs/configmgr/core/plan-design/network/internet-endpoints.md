@@ -2,20 +2,20 @@
 title: Erforderliche Berechtigungen für den Internetzugriff
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie, welche Internetendpunkten zugelassen werden müssen, um die vollständige Funktionalität der Configuration Manager-Features zu gewährleisten.
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137348"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126454"
 ---
 # <a name="internet-access-requirements"></a>Erforderliche Berechtigungen für den Internetzugriff
 
@@ -201,8 +201,6 @@ Lassen Sie den Zugriff auf die folgenden Endpunkte durch den aktiven Softwareupd
 
 - `http://*.download.windowsupdate.com`  
 
-- `http://test.stats.update.microsoft.com`  
-
 - `http://ntservicepack.microsoft.com`  
 
 Weitere Informationen zu Softwareupdates finden Sie unter [Planen von Softwareupdates](../../../sum/plan-design/plan-for-software-updates.md).
@@ -224,7 +222,7 @@ In den folgenden Fällen müssen Sie möglicherweise Endpunkte zu einer Firewall
 
 - `https://<FQDN for software update point on parent site>`  
 
-## <a name="manage-office-365"></a>Verwalten von Office 365
+## <a name="manage-microsoft-365-apps"></a>Verwalten von Microsoft 365-Apps
 
 > [!NOTE]
 > Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
@@ -275,15 +273,21 @@ Wenn Sie die **geografische Ansicht** verwenden, lassen Sie den Zugriff auf folg
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
-Weitere Informationen zu den erforderlichen Endpunkten für den Desktop Analytics-Clouddienst finden Sie unter [Aktivieren der Datenfreigabe](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+Weitere Informationen finden Sie unter [Aktivieren der Datenfreigabe](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="tenant-attach"></a>Mandantenanfügung
 
-Weitere Informationen zu den erforderlichen Endpunkten für Features zur Mandantenanfügung finden Sie unter [Aktivieren der Mandantenanfügung](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+Weitere Informationen finden Sie unter [Aktivieren der Mandantenanfügung](../../../tenant-attach/device-sync-actions.md).
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## <a name="endpoint-analytics"></a>Endpunktanalyse
 
-Weitere Informationen zu den erforderlichen Endpunkten für die Endpunktanalyse finden Sie unter [Proxykonfiguration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+Weitere Informationen finden Sie unter [Proxykonfiguration für die Endpunktanalyse](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## <a name="asset-intelligence"></a>Asset Intelligence
 

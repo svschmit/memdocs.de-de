@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83267789"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129313"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimieren der Bereitstellung von Updates für Windows 10 mit Configuration Manager
 
@@ -70,7 +70,7 @@ Um die Übermittlungsoptimierung für alle Windows Update-Installationsdateien z
 > [!IMPORTANT]
 > - Die Übermittlungsoptimierung muss aktiviert sein (Standard) und darf nicht umgangen werden. Weitere Informationen finden Sie in der [Referenz zur Windows-Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Überprüfen Sie die [Clienteinstellungen für die Übermittlungsoptimierung](../../core/clients/deploy/about-client-settings.md#delivery-optimization), wenn Sie für Deltainhalte die [Clienteinstellungen für Softwareupdates](../../core/clients/deploy/about-client-settings.md#software-updates) ändern.
-> - Die Übermittlungsoptimierung kann nicht für Office 365-Clientupdates verwendet werden, wenn Office COM aktiviert ist. Office COM wird von Configuration Manager verwendet, um Updates für Office 365-Clients zu verwalten. Sie können die Registrierung von Office COM aufheben, um die Verwendung der Übermittlungsoptimierung für Office 365-Updates zuzulassen. Wenn Office COM deaktiviert ist, werden Softwareupdates für Office 365 von der standardmäßigen geplanten Aufgabe „Automatische Office-Updates 2.0“ verwaltet. Das bedeutet, dass Configuration Manager den Installationsprozess für Office 365-Updates weder vorschreibt noch überwacht. Configuration Manager sammelt weiterhin Informationen aus dem Hardwarebestand, um das Dashboard für die Office 365-Clientverwaltung in der Konsole aufzufüllen. Informationen zum Aufheben der Registrierung von Office COM finden Sie unter [Aktivieren von Office 365-Clients für den Erhalt von Updates vom Office CDN anstatt von Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
+> - Die Übermittlungsoptimierung kann für Microsoft 365-Apps-Clientupdates verwendet werden, wenn Office COM aktiviert ist. Office COM wird von Configuration Manager verwendet, um Updates für Microsoft 365-Apps-Clients zu verwalten. Sie können die Registrierung von Office COM aufheben, um die Verwendung der Übermittlungsoptimierung für Microsoft 365-Apps-Updates zuzulassen. Wenn Office COM deaktiviert ist, werden Softwareupdates für Microsoft 365-Apps VOM standardmäßigen geplanten Task „Automatische Office-Updates 2.0“ verwaltet. Das bedeutet, dass Configuration Manager den Installationsprozess für Microsoft 365-Apps-Updates weder vorschreibt noch überwacht. Configuration Manager sammelt weiterhin Informationen aus dem Hardwarebestand, um das Dashboard für die Office 365-Clientverwaltung in der Konsole aufzufüllen. Informationen zum Aufheben der Registrierung von Office COM finden Sie unter [Aktivieren von Office 365-Clients für den Erhalt von Updates vom Office CDN anstatt von Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 > - Bei der Verwendung eines CMG zum Speichern von Inhalten werden die Inhalte für Updates für Drittanbietersoftware nicht auf Clients heruntergeladen, wenn die [Clienteinstellung](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) **Clients das Herunterladen von Deltainhalten ermöglichen (falls verfügbar)** aktiviert ist. <!--6598587-->
 
 
@@ -98,8 +98,8 @@ Die Auswahl der richtigen Peercachingtechnologie für Expressinstallationsdateie
 |---------|---------|---------|---------|
 | Über Subnetze hinweg unterstützt | Ja | Ja | Nein |
 | Bandbreiteneinschränkung | Ja (nativ) | Ja (über BITS) | Ja (über BITS) |
-| Unterstützung von Teilinhalt | Ja, für alle unterstützten Inhaltstypen, die in der nächsten Zeile dieser Spalte aufgeführt sind. | Nur für Office 365 und Expressupdates | Ja, für alle unterstützten Inhaltstypen, die in der nächsten Zeile dieser Spalte aufgeführt sind. |
-| Unterstützte Inhaltstypen | **Über ConfigMgr:** </br> Express-Updates </br> Alle Windows-Updates (ab Version 1910). Dies schließt keine Office-Updates ein.</br> </br> **Über Microsoft Cloud:**</br> – Windows- und Sicherheitsupdates</br> – Treiber</br> – Windows Store-Apps</br> – Apps aus Microsoft Store für Unternehmen | Alle Configuration Manager-Inhaltstypen einschließlich der in [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) heruntergeladenen Images | Alle Configuration Manager-Inhaltstypen mit Ausnahme von Images |
+| Unterstützung von Teilinhalt | Ja, für alle unterstützten Inhaltstypen, die in der nächsten Zeile dieser Spalte aufgeführt sind. | Nur für Microsoft 365-Apps- und Express-Updates | Ja, für alle unterstützten Inhaltstypen, die in der nächsten Zeile dieser Spalte aufgeführt sind. |
+| Unterstützte Inhaltstypen | **Über ConfigMgr:** </br> Express-Updates </br> Alle Windows-Updates (ab Version 1910). Microsoft 365-Apps-Updates sind nicht eingeschlossen.</br> </br> **Über Microsoft Cloud:**</br> – Windows- und Sicherheitsupdates</br> – Treiber</br> – Windows Store-Apps</br> – Apps aus Microsoft Store für Unternehmen | Alle Configuration Manager-Inhaltstypen einschließlich der in [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) heruntergeladenen Images | Alle Configuration Manager-Inhaltstypen mit Ausnahme von Images |
 | Steuerung der Cachegröße auf dem Datenträger | Ja | Ja | Ja |
 | Ermittlung einer Peerquelle | Automatisch | Manuell (Client-Agent-Einstellung) | Automatisch |
 | Peerermittlung | Über Übermittlungsoptimierung-Clouddienst (erfordert Internetzugriff) | Über einen Verwaltungspunkt (basierend auf Clientbegrenzungsgruppen) | Multicast |

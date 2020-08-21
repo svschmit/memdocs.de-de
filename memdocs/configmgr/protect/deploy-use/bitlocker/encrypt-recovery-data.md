@@ -2,20 +2,20 @@
 title: Verschlüsseln von Wiederherstellungsdaten
 titleSuffix: Configuration Manager
 description: Verschlüsseln Sie BitLocker-Wiederherstellungsschlüssel, Wiederherstellungspakete und TPM-Kennworthashes über das Netzwerk und in der Configuration Manager-Datenbank.
-ms.date: 04/15/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79f50cf4b0d241df2fc8d12dc46c833af278bd5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709348"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129187"
 ---
 # <a name="encrypt-recovery-data"></a>Verschlüsseln von Wiederherstellungsdaten
 
@@ -36,7 +36,7 @@ Weil diese Informationen sehr empfindlich sind, müssen Sie sie in den folgenden
     > [!NOTE]
     > Das erweiterte HTTP-Protokoll wird derzeit nicht unterstützt.
 
-- Sie sollten diese Daten auch verschlüsseln, wenn sie in der Standortdatenbank gespeichert werden. Sie können die SQL Server-Verschlüsselung auf Zellenebene mit einem eigenen Zertifikat verwenden.
+- Sie sollten diese Daten auch verschlüsseln, wenn sie in der Standortdatenbank gespeichert werden. Wenn Sie ein SQL-Zertifikat erstellen, verschlüsselt Configuration Manager Ihre Daten in SQL.
 
     Wenn Sie kein Verschlüsselungszertifikat für die BitLocker-Verwaltung erstellen möchten, können Sie angeben, dass die Wiederherstellungsdaten als Nur-Text gespeichert werden sollen. Aktivieren Sie dazu beim Erstellen der BitLocker-Verwaltungsrichtlinie die Option **Allow recovery information to be stored in plain text** (Zulassen, dass Wiederherstellungsinformationen als Nur-Text gespeichert werden).
 
@@ -77,7 +77,7 @@ Verwenden Sie für den Client **BitLockerManagementHandler.log**, um bei dieser 
 
 ### <a name="sql-encryption-certificate"></a>SQL-Verschlüsselungszertifikat
 
-Verwenden Sie dieses Zertifikat, um SQL Server-Verschlüsselung der BitLocker-Wiederherstellungsdaten auf Zellenebene zu aktivieren. Sie können beim Erstellen und Bereitstellen des Verschlüsselungszertifikats für die BitLocker-Verwaltung einen eigenen Prozess verwenden, vorausgesetzt die folgenden Anforderungen sind erfüllt:
+Verwenden Sie dieses SQL-Zertifikat für Configuration Manager, um BitLocker-Wiederherstellungsdaten in der Standortdatenbank zu verschlüsseln. Sie können beim Erstellen und Bereitstellen des Verschlüsselungszertifikats für die BitLocker-Verwaltung einen eigenen Prozess verwenden, vorausgesetzt die folgenden Anforderungen sind erfüllt:
 
 - Der Name des Verschlüsselungszertifikats für die BitLocker-Verwaltung muss `BitLockerManagement_CERT` lauten.
 

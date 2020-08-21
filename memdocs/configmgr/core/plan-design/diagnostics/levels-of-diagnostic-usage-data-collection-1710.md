@@ -5,18 +5,18 @@ description: Erfahren Sie mehr über die Ebenen der Diagnose- und Nutzungsdaten,
 ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8fce5391-8e75-4f99-813a-76f8842be5bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fcc3d2e34c9387e158b3b35cd104c9fc43136ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 925595b0e810f89bed6d79de1e0cd89450e45e9a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697038"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128745"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für Configuration Manager Version 1710
 
@@ -445,7 +445,7 @@ Bei Version 1710 von Configuration Manager umfasst diese Ebene folgende Daten:
 
     - Statistiken zur Anzahl und Ausführung von Skripts
 
-    - Anzahl der Wake-On-LAN-Standorte (WOL)
+    - Anzahl von Standorten mit Wake-On-LAN (WOL)
 
     - Berichte von Nutzungs- und Leistungsstatistiken  
 

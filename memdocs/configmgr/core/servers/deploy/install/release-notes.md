@@ -2,20 +2,20 @@
 title: Anmerkungen zu dieser Version
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Knowledge Base-Artikel des Microsoft-Supports beschrieben wurden.
-ms.date: 05/21/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823961"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126290"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Anmerkungen zu dieser Version für Configuration Manager
 
@@ -29,10 +29,10 @@ Dieser Artikel enthält Versionshinweise zum aktuellen Configuration Manager-Bra
 
 Informationen zu den neuen, in den verschiedenen Versionen eingeführten Features finden Sie in den folgenden Artikeln:
 
+- [Neuerungen in Version 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [Neuerungen in Version 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [Neuerungen in Version 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Neuerungen in Version 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
-- [Neuerungen in Version 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 Informationen zu den neuen Features in Desktop Analytics finden Sie unter [Neues in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
@@ -121,24 +121,15 @@ Es gibt zwei Fälle, in denen Tasksequenzen nicht auf einem Gerät ausgeführt w
 
 - Sie konfigurieren den Standort für Erweitertes HTTP, und der Verwaltungspunkt ist HTTP.<!-- 6358851 -->
 
-    Konfigurieren Sie den Verwaltungspunkt für HTTPS, um dieses Problem zu umgehen.
+    Um dieses Problem zu umgehen, aktualisieren Sie auf Version 2006. Alternativ dazu können Sie auch den Verwaltungspunkt für HTTPS konfigurieren.
 
 - Sie haben den Client mit einem Massenregistrierungstoken für die Authentifizierung installiert und registriert.<!-- 6377921 -->
 
-    Sie können dieses Problem umgehen, indem Sie eine der folgenden Authentifizierungsmethoden verwenden:
+    Um dieses Problem zu umgehen, aktualisieren Sie auf Version 2006. Alternativ dazu können Sie auch eine der folgenden Authentifizierungsmethoden verwenden:
 
   - Vorabregistrierung des Geräts im internen Netzwerk
   - Konfigurieren des Geräts mit einem Clientauthentifizierungszertifikat
   - Verknüpfen des Geräts mit Azure AD
-
-### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>Nach dem Höherstufen des passiven Standortservers verwenden die Standard-Startimagepakete noch immer die Paketquelle auf dem vorherigen aktiven Server.
-
-<!--3453224, SCCMDocs-pr issue 3097-->
-*Gilt für: Configuration Manager, Version 1810*
-
-Wenn Sie einen Standortserver im passiven Modus verwenden (Server B) und diesen in den aktiven Modus höherstufen, verweist der Inhaltsspeicherort für die Standardstartimages weiterhin auf den zuvor aktiven Server (Server A). Tritt auf Server A ein Hardwarefehler auf, können Sie die Standardstartimages nicht aktualisieren oder ändern.
-
-Hierfür gibt es momentan keine Problemumgehung.
 
 ## <a name="software-updates"></a>Softwareupdates
 
@@ -171,7 +162,7 @@ Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Sicherheit
 ### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> Ein erweitertes Sicherheitsupdate für Windows 7 bewirkt, dass für sie **Registrierung nicht möglich** angezeigt wird.
 
 <!-- 7283186 -->
-_Gilt für: Configuration Manager, Version 1902, 1906, 1910 und 2002_
+_Gilt für: Configuration Manager, Version 2002 und früher_
 
 Im erweiterten Sicherheitsupdate (Extended Security Update, ESU) für Windows 7 vom April 2020 wurde die mindestens erforderliche Version von „diagtrack.dll“ von 10586 in 10240 geändert. Diese Änderung bewirkt, dass für Windows 7-Geräte **Registrierung nicht möglich** auf dem Desktop Analytics-Dashboard **Verbindungsintegrität** angezeigt wird. Wenn Sie einen Drilldown zur Geräteansicht für diesen Status ausführen, wird in der Eigenschaft **DiagTrack-Dienstkonfiguration** der folgende Status angezeigt: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 

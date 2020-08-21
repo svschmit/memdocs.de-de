@@ -5,18 +5,18 @@ description: Erfahren Sie mehr über die Ebenen der Diagnose- und Nutzungsdaten,
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 03d2a443987a927c10cd32688f58ce7783b6e679
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 48c03b26ae04d4e4bc256a146ad48206b4de1d9d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697098"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126663"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für Configuration Manager Version 1602
 
@@ -85,7 +85,7 @@ Version 1602 von Configuration Manager sammelt drei Arten von Diagnose- und Nut
 - ***[Neu]*** Verwenden der Netzwerkermittlung (aktiviert oder deaktiviert)
 - ***[Neu]*** Verwaltungskonsole:
 
-  -  Statistiken zu den Konsolenverbindungen (Betriebssystemversion, Sprache, SKU und Architektur, Systemspeicher, Anzahl der logischen Prozessoren, Connect-Website-ID, installierte .NET-Versionen und Konsolensprachpakete)
+  -  Statistiken zu Konsolenverbindungen (Betriebssystemversion, Sprache, SKU und Architektur, Systemarbeitsspeicher, Anzahl der logischen Prozessoren, Verbindungsstandort-ID, installierte .NET-Versionen und Sprachpakete für die Konsole)
 
 ##  <a name="level-2---enhanced"></a><a name="bkmk_level2"></a> Ebene 2: Erweitert
 Die Ebene „Erweitert“ ist die Standardeinstellung nach dem Setup. Diese Ebene enthält die auf der Ebene „Basis“ erfassten Daten und featurespezifische Daten (Häufigkeit und Dauer der Verwendung), Configuration Manager-Clienteinstellungen (Name der Komponente, Status und bestimmte Einstellungen wie Abrufintervalle) sowie grundlegende Informationen zu Softwareupdates.

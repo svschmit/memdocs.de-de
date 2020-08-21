@@ -2,7 +2,7 @@
 title: Verwenden von Grenzen und Begrenzungsgruppen
 titleSuffix: Configuration Manager
 description: Verwenden Sie die Standortgrenzen und Begrenzungsgruppen zum Definieren von Netzwerkadressen und zugänglichen Standortsystemen für Geräte, die Sie verwalten.
-ms.date: 06/18/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b1a6bb6ff9fdffad65db884fe8c3b68d3fc3263
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 385dc1b2f542c964b52515e755a9202ee951bc5c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690898"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126374"
 ---
 # <a name="define-site-boundaries-and-boundary-groups"></a>Definieren von Grenzen und Begrenzungsgruppen für Standorte
 
@@ -29,6 +29,7 @@ Eine Hierarchie kann eine beliebige Anzahl von Begrenzungsgruppen enthalten. Jed
 - Active Directory-Standortname  
 - IPv6-Präfix  
 - IP-Adressbereich  
+- VPN (ab Version 2006)
 
 Clients im Intranet bewerten ihre aktuelle Adresse im Netzwerk und bestimmen anhand dieser Informationen Begrenzungsgruppen, zu denen sie gehören.  
 
@@ -43,7 +44,7 @@ Clients, die sich im Internet befinden oder als reine Internetclients konfigurie
 Ab Version 1902 können Sie einer Begrenzungsgruppe ein Cloudverwaltungsgateway (Cloud Management Gateway, CMG) zuordnen. Weitere Informationen finden Sie im Artikel „Planen von Cloud Management Gateway in Configuration Manager“ unter [Hierarchieentwurf](../../../clients/manage/cmg/plan-cloud-management-gateway.md#hierarchy-design).<!--3640932-->
 
 
-## <a name="recommendations"></a><a name="BKMK_BoundaryBestPractices"></a>Empfehlungen
+## <a name="recommendations"></a><a name="BKMK_BoundaryBestPractices"></a> Empfehlungen
 
 ### <a name="use-a-mix-of-the-fewest-boundaries-that-meet-your-needs"></a>Verwenden einer Kombination aus einer möglichst geringen Anzahl von Grenzen, die Ihren Anforderungen entsprechen
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422841"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125745"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Bereitstellen von Windows 10 für den Pilotversuch
 
@@ -56,7 +56,7 @@ Bevor Sie dieses Tutorial durcharbeiten, vergewissern Sie sich, dass die folgend
 
     - Konfigurations-Manager-Client, Version 1902 mit Updaterollup (4500571) oder höher  
 
-- Unternehmensgenehmigung, die Windows-Diagnosedatenebene auf den Pilotgeräten auf **Erweitert (begrenzt)** festzulegen  
+- Unternehmensgenehmigung, die Windows-Diagnosedatenebene auf den Pilotgeräten auf **Optional (begrenzt)** festzulegen  
 
     Weitere Informationen finden Sie unter [Desktop Analytics – Datenschutz](privacy.md).
 
@@ -193,7 +193,7 @@ Installieren Sie das Updaterollup (4500571) von Configuration Manager, Version 1
 
     - **Kommerzielle ID**: Dieser Wert wird automatisch mit der ID Ihrer Organisation aufgefüllt.  
 
-    - **Windows 10-Diagnosedatenebene**: Wählen Sie mindestens **Erweitert (begrenzt)** aus.  
+    - **Windows 10-Diagnosedatenebene**: Wählen Sie mindestens **Optional (begrenzt)** aus.  
 
     - **Gerätenamen in Diagnosedaten zulassen**: Wählen Sie **Aktivieren** aus.  
   

@@ -2,7 +2,7 @@
 title: Aktivieren der Datenfreigabe
 titleSuffix: Configuration Manager
 description: Dieser Artikel ist ein allgemeiner Leitfaden zum Teilen von Diagnosedaten mit Desktop Analytics.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795650"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125946"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Aktivieren der Datenfreigabe für Desktop Analytics
 
@@ -24,32 +24,43 @@ Zum Registrieren von Geräten bei Desktop Analytics müssen sie Diagnosedaten an
 
 ## <a name="diagnostic-data-levels"></a>Diagnosedatenebenen
 
-![Diagramm der Diagnosedatenebenen für Desktop Analytics](media/diagnostic-data-levels.png)
+:::image type="content" source="media/diagnostic-data-levels.png" alt-text="Diagramm der Diagnosedatenebenen für Desktop Analytics":::
 
 Wenn Sie Configuration Manager in Desktop Analytics integrieren, verwenden Sie den Dienst auch zum Verwalten der Diagnosedatenebene auf Geräten. Verwenden Sie Configuration Manager, um eine optimale Leistung zu erzielen.
 
-> [!Important]  
+> [!IMPORTANT]
 > In den meisten Fällen konfigurieren Sie diese Einstellungen ausschließlich mit Configuration Manager. Wenden Sie diese Einstellungen nicht gleichzeitig in Domänen-Gruppenrichtlinienobjekten an. Weitere Informationen finden Sie unter [Konfliktauflösung](enroll-devices.md#conflict-resolution).
 
-Die grundlegende Funktionalität von Desktop Analytics ist auf die [Diagnosedatenebene](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels) **Einfach** festgelegt. Wenn Sie in Configuration Manager nicht die Ebene **Erweitert (begrenzt)** konfigurieren, stehen die folgenden Features in Desktop Analytics nicht zur Verfügung:
+Die grundlegende Funktionalität von Desktop Analytics ist auf die [Diagnosedatenebene](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels) **Erforderlich** festgelegt. Wenn Sie in Configuration Manager nicht die Ebene **Optional (begrenzt)** konfigurieren, stehen die folgenden Features in Desktop Analytics nicht zur Verfügung:
 
 - App-Nutzung
 - [Zusätzliche App-Erkenntnisse](compat-assessment.md#additional-insights)
 - [Daten zum Bereitstellungsstatus](deploy-prod.md#address-deployment-alerts)
 - [Systemüberwachungsdaten](health-status-monitoring.md)
 
-Microsoft empfiehlt, dass Sie die Diagnosedatenebene **Erweitert (begrenzt)** für Desktop Analytics aktivieren, um eine optimale Leistung des Diensts zu erzielen.
+Microsoft empfiehlt die Aktivierung der Diagnosedatenebene **Optional (begrenzt)** für Desktop Analytics, damit Sie optimal von diesem Dienst profitieren.
 
-> [!Tip]
-> Die Einstellung **Erweitert (begrenzt)** in Configuration Manager entspricht der Richtlinieneinstellung **Hiermit werden die erweiterten Diagnosedaten auf das für Windows Analytics erforderliche Mindestmaß eingeschränkt**, die auf Geräten unter Windows 10, Version 1709 und höher verfügbar ist.
+> [!TIP]
+> Die Einstellung **Optional (begrenzt)** in Configuration Manager entspricht der Richtlinieneinstellung **Erweiterte Diagnosedaten auf das für Windows Analytics erforderliche Mindestmaß beschränken**, die auf Geräten unter Windows 10, Version 1709 und höher, verfügbar ist.
 >
-> Auf Geräten unter Windows 10, Version 1703 und früher, Windows 8.1 und Windows 7 ist diese Richtlinieneinstellung nicht vorhanden. Wenn Sie die Einstellung **Erweitert (begrenzt)** in Configuration Manager konfigurieren, erfolgt ein Fallback der betreffenden Geräte auf die Ebene **Einfach**.
+> Auf Geräten unter Windows 10, Version 1703 und früher, Windows 8.1 und Windows 7 ist diese Richtlinieneinstellung nicht vorhanden. Wenn Sie die Einstellung **Optional (begrenzt)** in Configuration Manager konfigurieren, erfolgt ein Fallback der betreffenden Geräte auf die Ebene **Erforderlich**.
 >
-> Diese Richtlinieneinstellung ist auf Geräten unter Windows 10, Version 1709 vorhanden. Wenn Sie jedoch die Einstellung **Erweitert (begrenzt)** in Configuration Manager konfigurieren, erfolgt auch für diese Geräte ein Fallback auf die Ebene **Einfach**.
+> Diese Richtlinieneinstellung ist auf Geräten unter Windows 10, Version 1709 vorhanden. Wenn Sie jedoch die Einstellung **Optional (begrenzt)** in Configuration Manager konfigurieren, erfolgt auch für diese Geräte ein Fallback auf die Ebene **Erforderlich**.
+>
+> In Configuration Manager, Version 2002 und früher, hatten die Einstellungen andere Namen:<!-- 7363467 -->
+>
+> | Version 2006 und höher | Version 2002 und früher |
+> |---------|---------|
+> | Erforderlich | Basic |
+> | Optional (begrenzt) | Erweitert (begrenzt) |
+> | – | Verbessert |
+> | Optional | Vollständig |
+>
+> Wenn Sie zuvor Geräte auf der Ebene **Erweitert** konfiguriert haben, werden diese bei einem Upgrade auf Version 2006 auf **Optional (begrenzt)** zurückgesetzt. Dadurch senden diese Geräte weniger Daten an Microsoft. Diese Änderung sollte keine Auswirkungen auf die in Desktop Analytics angezeigten Informationen haben.
 
-Weitere Informationen zu Diagnosedaten, die mit der Einstellung **Erweitert (begrenzt)** mit Windows geteilt werden, finden Sie unter [Erweiterte Windows 10-Diagnosedatenereignisse und Felder, die von Windows Analytics verwendet werden](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
+Weitere Informationen zu Diagnosedaten, die mit der Einstellung **Optional (begrenzt)** an Microsoft übermittelt werden, finden Sie unter [Windows 10-Diagnosedatenereignisse und -felder, die über die Richtlinie zum Einschränken erweiterter Diagnosedaten erfasst werden](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
-> [!Important]
+> [!IMPORTANT]
 > Microsoft ist bestrebt, Ihnen Tools und Ressourcen zur Verfügung zu stellen, mit denen Sie die Kontrolle über Ihre Privatsphäre erlangen. Daher werden von Desktop Analytics zwar Windows 8.1-Geräte unterstützt, Microsoft erfasst jedoch keine Windows-Diagnosedaten von Windows 8.1-Geräten, die sich in europäischen Ländern (EWR und Schweiz) befinden.
 
 Weitere Informationen finden Sie unter [Desktop Analytics – Datenschutz](privacy.md).
@@ -60,8 +71,8 @@ Auch anhand der folgenden Artikel können Sie ein besseres Verständnis der Wind
 
 - [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-> [!Note]  
-> Clients, für deren Diagnosedaten die Einstellung „Erweitert (begrenzt)“ festgelegt ist, senden bei der anfänglichen vollständigen Überprüfung ca. 2 MB Daten an die Microsoft-Cloud. Das tägliche Delta schwankt zwischen 250 und 400 KB.
+> [!NOTE]
+> Clients, die für das Senden von Diagnosedaten auf der Ebene **Optional (begrenzt)** konfiguriert sind, senden bei der anfänglichen vollständigen Überprüfung ca. 2 MB Daten an die Microsoft-Cloud. Das tägliche Delta schwankt zwischen 250 und 400 KB.
 >
 > Die tägliche Delta-Überprüfung erfolgt um 03:00 Uhr (Ortszeit des Geräts). Einige Ereignisse werden bei erster Verfügbarkeit im Verlauf des Tages gesendet. Diese Zeiten können nicht konfiguriert werden.
 >
@@ -71,7 +82,7 @@ Auch anhand der folgenden Artikel können Sie ein besseres Verständnis der Wind
 
 Konfigurieren Sie zum Aktivieren der Datenfreigabe den Proxyserver so, dass die folgenden Internetendpunkte zulässig sind.
 
-> [!Important]  
+> [!IMPORTANT]
 > Aus Gründen des Datenschutzes und der Datenintegrität führt Windows bei der Kommunikation mit den Diagnosedatenendpunkten eine Prüfung auf ein Microsoft SSL-Zertifikat (Anheften von Zertifikaten) aus. SSL-Abfangen und -Untersuchung sind somit nicht möglich. Um Desktop Analytics nutzen zu können, müssen Sie diese Endpunkte aus der SSL-Untersuchung ausschließen.<!-- BUG 4647542 -->
 
 Seit Version 2002 gilt Folgendes: Wenn die Verbindung des Configuration Manager-Standorts mit den erforderlichen Endpunkten für einen Clouddienst nicht hergestellt werden kann, wird eine kritische Statusmeldung mit der ID 11488 ausgegeben. Wenn keine Verbindung mit dem Dienst hergestellt werden kann, wird der Status der Komponente „SMS_SERVICE_CONNECTOR“ in „kritisch“ geändert. Zeigen Sie detaillierte Statusinformationen im Knoten [Komponentenstatus](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) in der Configuration Manager-Konsole an.<!-- 5566763 -->
@@ -79,47 +90,7 @@ Seit Version 2002 gilt Folgendes: Wenn die Verbindung des Configuration Manager-
 > [!NOTE]
 > Weitere Informationen zum IP-Adressbereich von Microsoft finden Sie unter [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602) (Öffentlicher IP-Adressraum von Microsoft). Diese Adressen werden regelmäßig aktualisiert. Es gibt keine dienstspezifische Granularität, alle IP-Adressen in diesen Bereichen können verwendet werden.
 
-### <a name="server-connectivity-endpoints"></a>Serverkonnektivitäts-Endpunkte
-
-Der Dienstverbindungspunkt muss mit den folgenden Endpunkten kommunizieren:
-
-| Endpunkt  | Funktion  |
-|-----------|-----------|
-| `https://aka.ms` | Zum Suchen des Diensts |
-| `https://graph.windows.net` | Wird beim Anfügen Ihrer Hierarchie an Desktop Analytics (für Configuration Manager-Serverrolle) zum automatischen Abrufen von Einstellungen wie CommercialId verwendet. Weitere Informationen finden Sie unter [Konfigurieren des Proxys für einen Standortsystemserver](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Wird zum Synchronisieren der Mitgliedschaften von Gerätesammlungen, von Bereitschaftsplänen und des Bereitschaftsstatus von Geräten mit Desktop Analytics verwendet (nur für Configuration Manager-Serverrolle). Weitere Informationen finden Sie unter [Konfigurieren des Proxys für einen Standortsystemserver](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-
-### <a name="user-experience-and-diagnostic-component-endpoints"></a>Endpunkte für Benutzerfreundlichkeit und Diagnosekomponenten
-
-Clientgeräte müssen mit den folgenden Endpunkten kommunizieren:
-
-| Endpunkt  | Funktion  |
-|-----------|-----------|
-| `https://v10c.events.data.microsoft.com` | Endpunkt für Benutzererfahrung im verbundenen Modus und Diagnosekomponenten. Wird von Geräten unter Windows 10, Version 1809 oder höher oder Version 1803 mit einer Installation des kumulativen Updates 2018-09 oder höher verwendet. |
-| `https://v10.events.data.microsoft.com` | Endpunkt für Benutzererfahrung im verbundenen Modus und Diagnosekomponenten. Wird von Geräten unter Windows 10, Version 1803 _ohne_ Installation des kumulativen Updates 2018-09 verwendet. |
-| `https://v10.vortex-win.data.microsoft.com` | Endpunkt für Benutzererfahrung im verbundenen Modus und Diagnosekomponenten. Wird von Geräten unter Windows 10, Version 1709 oder früher verwendet. |
-| `https://vortex-win.data.microsoft.com` | Endpunkt für Benutzererfahrung im verbundenen Modus und Diagnosekomponenten. Wird von Geräten unter Windows 7 und Windows 8.1 verwendet. |
-
-### <a name="client-connectivity-endpoints"></a>Clientkonnektivitäts-Endpunkte
-
-Clientgeräte müssen mit den folgenden Endpunkten kommunizieren:
-
-| Index | Endpunkt  | Funktion  |
-|-------|-----------|-----------|
-| 1 | `https://settings-win.data.microsoft.com` | Ermöglicht dem Kompatibilitätsupdate das Senden von Daten an Microsoft. |
-| 2 | `http://adl.windows.com` | Ermöglicht dem Kompatibilitätsupdate das Empfangen der neuesten Kompatibilitätsdaten von Microsoft. |
-| 3 | `https://watson.telemetry.microsoft.com` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1803 oder früher. |
-| 4 | `https://umwatsonc.events.data.microsoft.com` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich für Berichte über die Geräteintegrität in Windows 10, Version 1809 oder höher. |
-| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 9 | `https://weus2watcab01.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 10 | `https://weus2watcab02.blob.core.windows.net` | [Windows-Fehlerberichterstattung (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1809 oder später. |
-| 11 | `https://kmwatsonc.events.data.microsoft.com` | [OCA (Online Crash Analysis)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Erforderlich für Berichte über die Geräteintegrität in Windows 10, Version 1809 oder höher. |
-| 12 | `https://oca.telemetry.microsoft.com`  | [OCA (Online Crash Analysis)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Erforderlich zum Überwachen der Bereitstellungsintegrität in Windows 10, Version 1803 oder früher. |
-| 13 | `https://login.live.com` | Erforderlich zum Bereitstellen einer zuverlässigeren Geräteidentität für Desktop Analytics. <br> <br>Verwenden Sie Richtlinieneinstellungen, anstatt diesen Endpunkt zu blockieren, um den Zugriff auf Endbenutzer-Microsoft-Konten zu deaktivieren. Weitere Informationen finden Sie unter [Das Microsoft-Konto im Unternehmen](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
-| 14 | `https://v20.events.data.microsoft.com` | Endpunkt für Benutzererfahrung im verbundenen Modus und Diagnosekomponenten. |
+[!INCLUDE [Internet endpoints for Desktop Analytics](../core/plan-design/network/includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="proxy-server-authentication"></a>Proxyserverauthentifizierung
 

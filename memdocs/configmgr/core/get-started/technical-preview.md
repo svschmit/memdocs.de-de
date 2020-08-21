@@ -2,7 +2,7 @@
 title: Technical Preview-Releases
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über den Technical Preview-Branch, mit dem Sie neue Funktionen und Fähigkeiten in Configuration Manager testen können.
-ms.date: 07/14/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384824"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129119"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview für Configuration Manager
 
@@ -94,7 +94,6 @@ Microsoft unterstützt bis zu drei aufeinander folgende Technical Preview-Versio
 Installieren Sie Baselineversionen bis zu ein Jahr nach deren Veröffentlichung. Verwenden Sie die neueste Baselineversion, wenn Sie einen neuen Technical Preview-Standort installieren. Die folgenden Technical Preview-Branchversionen für Configuration Manager werden als konsoleninterne Updates und als neue Baselineversionen zur Verfügung gestellt:
 
 - **Technical Preview, Version 2007**
-- **Technical Preview, Version 2002**
 
 Laden Sie eine Baselineversion über das [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) herunter.
 
@@ -121,13 +120,15 @@ bullet format:
 
 Nachfolgend sind die Features der neusten Technical Preview-Versionen für Configuration Manager dargestellt:
 
-### <a name="technical-preview-version-2007"></a>Technical Preview, Version 2007
+### <a name="technical-preview-version-2008"></a>Technical Preview, Version 2008
 
-- [Mandantenanfügung: Anzeigen des Hardwarebestands in Microsoft Endpoint Manager Admin Center](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
-- [Verbesserungen am Dashboard „Clientdatenquellen“](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
-- [Verwendung der Schriftart mit fester Breite in einigen Konsolenbereichen](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
-- [Verwalten der Größe von Tasksequenzrichtlinien](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
-- [Verbesserungen an der Gerätezeitachse im Admin Center](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
+- [Sammlungsabfrage – Vorschau](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [Analysieren von SetupDiag-Fehlern für Featureupdates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Überwachen der Szenariointegrität](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Ansicht der Sammlungsauswertung](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [Anzeigen der Größe einer Tasksequenz in der Konsole](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Task „Veraltete gesammelte Dateien löschen“](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Importieren von Objekten in den aktuellen Ordner](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 > [!NOTE]
 > Features, die in einer Vorgängerversion der Technical Preview verfügbar waren, bleiben auch in späteren Versionen enthalten. Ebenso bleiben Features, die Current Branch von Configuration Manager hinzugefügt wurden, in weiteren Branches der Technical Preview enthalten.
@@ -140,68 +141,18 @@ Each month, add features from the list above to a new H3 section at the top of t
 When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
 -->
 
-Im Folgenden werden die Features der Vorgängerversionen des Technical Preview-Branchs für Configuration Manager seit Current Branch, Version 2002 dargestellt:
+Die folgenden Features wurden in früheren Versionen des Technical Preview-Branchs für Configuration Manager seit der Current Branch-Version 2006 veröffentlicht:
 
 > [!TIP]
 > Sobald ein neues Current Branch-Release verfügbar ist, werden die in dieser Version verfügbaren Features im aktuellen Artikel mit *Neuerungen* aufgeführt. Weitere Informationen finden Sie unter den [Neuigkeiten zu inkrementellen Versionen](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
-### <a name="technical-preview-version-2006"></a>Technical Preview, Version 2006
+### <a name="technical-preview-version-2007"></a>Technical Preview, Version 2007
 
-- [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [Verbesserungen an verfügbaren Apps über CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [Intranetclients können einen CMG-Softwareupdatepunkt verwenden](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [Verbesserungen an Tasksequenzen über CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [Management Insights zur Optimierung für Remoteworker](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [Verbesserungen am VPN-Begrenzungstyp](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [Mandantenanfügung: Verbesserungen an Configuration Manager-Aktionen im Microsoft Endpoint Manager Admin Center](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [CMG-Unterstützung für Endpoint Protection-Richtlinien](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [Zuvor erstellte Azure AD-Anwendung beim Onboarding in die Mandantenanfügung importieren](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [Verbesserungen des Clientupgrades bei einer getakteten Verbindung](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [Verbesserungen beim Verwalten von Geräteneustarts](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [Verbesserte Unterstützung für Windows Virtual Desktop](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [Direkte Links zu Elementen im Community Hub von Configuration Manager](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
-
-### <a name="technical-preview-version-2005"></a>Technical Preview, Version 2005
-
-- [Mandantenanfügung: Gerätezeitachse im Admin Center](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
-- [Mandantenanfügung: Installieren einer Anwendung über das Admin Center](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
-- [Mandantenanfügung: CMPivot aus dem Admin Center](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
-- [Mandantenanfügung: „Skripts ausführen“ über das Admin Center](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
-- [VPN-Begrenzungstyp](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
-- [Azure AD-Authentifizierung im Softwarecenter](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
-- [Clientinstallation und -upgrade bei einer getakteten Verbindung](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
-- [Unterstützung von Tasksequenzmedien für cloudbasierten Inhalt](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
-- [Verbesserungen an Cloudverwaltungsgateway-Cmdlets](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
-- [Community Hub und GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
-- [Microsoft 365-Apps für Unternehmen](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
-- [Melden von Setup- und Upgradefehlern bei Microsoft](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
-- [Benachrichtigung über den Ablauf des geheimen Schlüssels der Azure AD-App](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
-- [Verbesserungen bei BitLocker-Tasksequenzschritten](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
-- [Verbesserungen des Inhaltsbibliothek-Bereinigungstools](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
-- [Entfernen der Eingabeaufforderung beim direkten Windows 10-Upgrade](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-### <a name="technical-preview-version-2004"></a>Technical Preview, Version 2004
-
-- [Anfügen von Mandanten in Microsoft Endpoint Manager: ConfigMgr-Clientdetails](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [Benachrichtigungen von Microsoft](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [Kopieren von Ermittlungsdaten aus der Konsole](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [Verbesserungen an CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [Unterstützung für PowerShell-Version 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [Verbesserung des Tasksequenzschritts „Datenträger formatieren und partitionieren“](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [Regeln für Verwaltungserkenntnisse für die Betriebssystembereitstellung](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [PowerShell-Cmdlets für Tasksequenz-Bereitstellungstypen](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
-
-### <a name="technical-preview-version-2003"></a>Technical Preview, Version 2003
-
-- [Durchführen des Onboardings für Konfigurations-Manager-Clients in Microsoft Defender ATP über die Microsoft Endpoint Manager-Konsole](2020/technical-preview-2003.md#bkmk_atp) <!--5691658-->
-- [Nachverfolgen von Konfigurationselementwartungen](2020/technical-preview-2003.md#bkmk_track) <!--4261411 in 2002-->
-- [Anzeigen von Begrenzungsgruppen für Geräte](2020/technical-preview-2003.md#bkmk_boundary) <!--6521835 in 2002-->
-- [Neuer Feedback-Assistent](2020/technical-preview-2003.md#bkmk_feedback) <!--3180826-->
-- [Verbesserungen am Microsoft Edge-Verwaltungsdashboard](2020/technical-preview-2003.md#bkmk_edge) <!--5907383-->
-- [Verbesserungen an CMPivot](2020/technical-preview-2003.md#bkmk_cmpivot) <!--6518631-->
-- [Abfragen des an Microsoft gesendeten Feedbacks](2020/technical-preview-2003.md#bkmk_smile) <!--6488450-->
-- [Neue SDK-Methode für den Tasksequenzstatus](2020/technical-preview-2003.md#bkmk_tsapi) <!--6448458-->
-- [Verbesserungen bei der Bereitstellung von Betriebssystemen](2020/technical-preview-2003.md#bkmk_osd) <!--6452769-->
+- [Mandantenanfügung: Anzeigen des Hardwarebestands in Microsoft Endpoint Manager Admin Center](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [Verbesserungen am Dashboard „Clientdatenquellen“](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [Verwendung der Schriftart mit fester Breite in einigen Konsolenbereichen](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Verwalten der Größe von Tasksequenzrichtlinien](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Verbesserungen an der Gerätezeitachse im Admin Center](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 ## <a name="features-in-previous-technical-previews"></a>Features in älteren Technical Preview-Versionen
 
@@ -215,16 +166,25 @@ Nachfolgend sind die folgenden Features der Vorgängerversionen des Technical Pr
 
 | Komponente        | Technical Preview-Version |
 |----------------|---------------------------|
+| Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten <!--3601237--> | [Technical Preview 2006](2020/technical-preview-2006.md#bkmk_portal) |
+| Verbesserungen an verfügbaren Apps über CMG <!--7033501--> | [Technical Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
+| Mandantenanfügung: Verbesserungen an Configuration Manager-Aktionen im Microsoft Endpoint Manager Admin Center <!--7518897--> | [Technical Preview 2006](2020/technical-preview-2006.md#bkmk_apps) |
+| Mandantenanfügung: Gerätezeitachse im Admin Center <!--7141381--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
+| Mandantenanfügung: Installieren einer Anwendung über das Admin Center <!--6024389--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_apps) |
+| Mandantenanfügung: CMPivot aus dem Admin Center <!--6024392--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
+| Mandantenanfügung: „Skripts ausführen“ über das Admin Center <!--6234688--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
+| Verbesserungen an Cloudverwaltungsgateway-Cmdlets <!--6978300--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
+| Melden von Setup- und Upgradefehlern bei Microsoft <!--5622909--> | [Technical Preview 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |
+| Verbesserungen des Inhaltsbibliothek-Bereinigungstools <!--6887878--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_content) |
+| Kopieren von Ermittlungsdaten aus der Konsole <!--6890051--> | [Technical Preview 2004](2020/technical-preview-2004.md#bkmk_copydisco) |
+| Unterstützung für PowerShell-Version 7 <!--6023299--> | [Technical Preview 2004](2020/technical-preview-2004.md#bkmk_pwsh7) |
+| Neuer Feedback-Assistent <!--3180826--> | [Technical Preview 2003](2020/technical-preview-2003.md#bkmk_feedback) |
+| Abfragen des an Microsoft gesendeten Feedbacks <!--6488450--> | [Technical Preview 2003](2020/technical-preview-2003.md#bkmk_smile) |
 | Anfügen von Dateien an Feedback <!--3556011--> | [Tech Preview 1910](2019/technical-preview-1910.md#attach-files-to-feedback) |
 | Verbesserungen an multicastfähigen Verteilungspunkten <!--3785535--> | [Tech Preview 1908.2](2019/technical-preview-1908-2.md#bkmk_multicast) |
 | Vorlagen für eine Bereitstellung in Phasen <!--4961086--> | [Tech Preview 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
 | Remotesteuerung an beliebigem Ort mit Cloud Management Gateway <!--4575930--> | [Tech Preview 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) |
-| Verbesserungen am Community Hub <!--3555935--> | [Tech Preview 1906](2019/technical-preview-1906.md#bkmk_hub) |
-| Verbesserungen am Community Hub <!--4224401--> | [Technical Preview 1905](2019/technical-preview-1905.md#bkmk_hub) |
-| Community Hub und GitHub <!--3555935--> | [Tech Preview 1904](2019/technical-preview-1904.md#community-hub-and-github) |
 | Kostenschätzung für Clouddienste <!--3555774--> | [Tech Preview 1903](2019/technical-preview-1903.md#bkmk_cmg) |
-| Bericht über den Community Hub herunterladen <!--3555936--> | [Technical Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) |
-| Community Hub <!--3556020, fka 1357766--> | [Technical Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) |
 | Clientbasierter PXE-Antwortdienst <!--3556018, fka 1357148--> | [Technical Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | PXE-Netzwerkstartunterstützung für IPv6 <!--3601254, fka 1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
 | Verwenden von Azure Active Directory <!--3607315, fka 1322145--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |

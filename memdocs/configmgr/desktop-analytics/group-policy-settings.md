@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 4536adad3114b944baa6c75ac4e246ecddf4a2d2
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 2ee472b89f45e744e43915e51e98f11841208b73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153438"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125798"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Gruppenrichtlinieneinstellungen für Desktop Analytics
 
@@ -37,7 +37,7 @@ Configuration Manager legt Windows-Richtlinien in einem oder beiden der folgende
 | Richtlinie | Pfad | Gilt für | Wert |
 |--------|------|------------|-------|
 | **CommercialId** | Lokal | Alle Windows-Versionen | Damit ein Gerät in Desktop Analytics aufgeführt wird, müssen Sie es mit der kommerziellen ID Ihrer Organisation konfigurieren. |
-| **AllowTelemetry**  | GPO | Windows 10 | Legen Sie `1` für Diagnosedaten der Ebene **Einfach**, `2` für **Erweitert** oder `3` für **Vollständig** fest. Für Desktop Analytics sind mindestens grundlegende Diagnosedaten erforderlich. Microsoft empfiehlt, dass Sie für Desktop Analytics die Ebene „Erweitert (begrenzt)“ verwenden. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **AllowTelemetry**  | GPO | Windows 10 | Legen Sie für Diagnosedaten den Wert `1` für die Ebene **Einfach**, `2` für **Erweitert** oder `3` für **Vollständig (optional)** fest. Für Desktop Analytics sind mindestens grundlegende Diagnosedaten erforderlich. Microsoft empfiehlt, für Desktop Analytics die Ebene **Optional (begrenzt)** (Erweitert [begrenzt]) zu verwenden. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Diagnosedaten in Ihrer Organisation](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
 | **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, Version 1803 und höher | Diese Einstellung gilt nur, wenn die Einstellung für AllowTelemetry gleich `2` ist. Sie begrenzt die an Microsoft gesendeten erweiterten Diagnosedatenereignisse auf die Ereignisse, die von Desktop Analytics benötigt werden. Weitere Informationen finden Sie unter [Erweiterte Windows 10-Diagnosedatenereignisse und Felder, die von Windows Analytics verwendet werden](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10, Version 1803 und höher | Aktivieren Sie für Geräte das Senden des Gerätenamens. Der Gerätename wird standardmäßig nicht an Microsoft gesendet. Wenn Sie den Gerätenamen nicht senden, wird dieser in Desktop Analytics als „Unbekannt“ angezeigt. Weitere Informationen finden Sie unter [Gerätename](enroll-devices.md#device-name). |
 | **CommercialDataOptIn** | Lokal | Windows 8.1 und früher | Für Desktop Analytics ist ein Wert von `1` erforderlich. Weitere Informationen finden Sie unter [Commercial Data Opt-in in Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)) (Aktivierung von kommerziellen Daten). |
@@ -62,7 +62,7 @@ Wenn Sie das Onboardingskript für die Upgradebereitschaft auf einem Gerät ausg
 
 Im Allgemeinen verwenden Sie Configuration Manager-Sammlungen, um Desktop Analytics-Einstellungen und -Registrierung zu steuern. Verwenden Sie direkte Mitgliedschaften oder Abfragen, um Geräte in die Sammlung einzuschließen oder aus der Sammlung auszuschließen. Weitere Informationen finden Sie unter [Erstellen von Sammlungen](../core/clients/manage/collections/create-collections.md).
 
-Configuration Manager konfiguriert die Einstellungen für kommerzielle ID und Diagnosedaten für Ihre Zielsammlung. Wenn Sie unterschiedliche Diagnosedateneinstellungen für verschiedene Gerätegruppen konfigurieren müssen, verwenden Sie die Gruppenrichtlinieneinstellungen, um die Configuration Manager-Einstellungen außer Kraft zu setzen. Sie müssen z. B. die Stufe **Erweitert (begrenzt)** für einige Geräte und **Einfach** für andere festlegen. Einige Geräte weisen möglicherweise unterschiedliche Einstellungen für die [Proxyserverauthentifizierung](enable-data-sharing.md#proxy-server-authentication) auf.
+Configuration Manager konfiguriert die Einstellungen für kommerzielle ID und Diagnosedaten für Ihre Zielsammlung. Wenn Sie unterschiedliche Diagnosedateneinstellungen für verschiedene Gerätegruppen konfigurieren müssen, verwenden Sie die Gruppenrichtlinieneinstellungen, um die Configuration Manager-Einstellungen außer Kraft zu setzen. Sie müssen z. B. für einige Geräte die Ebene **Optional (begrenzt)** und für andere die Ebene **Erforderlich** festlegen. Einige Geräte weisen möglicherweise unterschiedliche Einstellungen für die [Proxyserverauthentifizierung](enable-data-sharing.md#proxy-server-authentication) auf.
 
 Die relevanten Gruppenrichtlinieneinstellungen befinden sich in folgendem Pfad: **Computerkonfiguration** > **Administrative Vorlagen** > **Windows-Komponenten** > **Datensammlung und Vorabversionen**.
 

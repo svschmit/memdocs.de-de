@@ -2,83 +2,145 @@
 title: Definieren von Grenzen
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie, wie Sie Netzwerkadressen in Ihrem Internet festlegen können. Diese können Geräte umfassen, die Sie verwalten möchten
-ms.date: 03/27/2017
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f53088843e0bf42a93c1d959255c7885b07dfe35
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 41c0d08c5f445cd6d643542cfaa646bc2d89de76
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704848"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128425"
 ---
 # <a name="define-network-locations-as-boundaries-for-configuration-manager"></a>Definieren von Netzwerkpfaden als Begrenzungsgruppen für Configuration Manager
 
 *Gilt für: Configuration Manager (Current Branch)*
 
-Grenzen von Configuration Manager sind Netzwerkpfade in Ihrem Netzwerk, die Geräte enthalten können, die Sie verwalten möchten. Die Grenze, auf der sich ein Gerät befindet, entspricht dem Standort von Active Directory oder der IP-Adresse des Netzwerks, die vom Konfigurations-Manager-Client erkannt wird, der auf dem Gerät installiert ist.
-- Sie können einzelne Grenzen manuell erstellen. In Configuration Manager wird allerdings die direkte Eingabe eines Supernetzes als Grenze nicht unterstützt. Verwenden Sie stattdessen den Grenztyp IP-Adressbereich.
-- Sie können die Methode [Active Directory-Gesamtstrukturermittlung](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest) für die automatische Erkennung und Erstellung von Grenzen für jeden erkannten IP-Subnetz- und Active Directory-Standort konfigurieren. Wenn von der Active Directory-Gesamtstrukturermittlung ein Supernetz identifiziert wird, das einem Active Directory-Standort zugewiesen ist, konvertiert Configuration Manager das Supernetz in eine Grenze vom Typ IP-Adressbereich.  
+Grenzen von Configuration Manager sind Netzwerkpfade in Ihrem Netzwerk, die Geräte enthalten können, die Sie verwalten möchten. Sie können verschiedene Arten von Grenzen erstellen, z. B. einen Active Directory-Standort oder eine IP-Netzwerkadresse. Wenn der Configuration Manager-Client eine ähnliche Netzwerkadresse identifiziert, ist dieses Gerät Teil der Grenze.
 
-Es ist nicht ungewöhnlich, dass ein Client eine IP-Adresse verwendet, die dem Configuration Manager-Administrator unbekannt ist. Wenn der Netzwerkpfad des Geräts zweifelhaft ist, prüfen Sie, was das Gerät als seinen Pfad angibt, indem Sie den Befehl **IPCONFIG** auf dem Gerät aufrufen.  
+Configuration Manager unterstützt die folgenden Arten von Grenzen:
 
-Wenn Sie eine Grenze erstellen, erhält sie automatisch einen Namen, der auf dem Typ und Bereich der Grenze basiert. Dieser Name kann nicht geändert werden. Stattdessen können Sie beim Konfigurieren der Grenze eine Beschreibung angeben, anhand derer Sie die Grenze in der Configuration Manager-Konsole identifizieren können.  
+- IP-Subnetz
+- Active Directory-Standort
+- IPv6-Präfix
+- IP-Adressbereich
+- VPN (ab Version 2006)
 
-Jede Grenze kann von jedem Standort in Ihrer Hierarchie verwendet werden. Sie können die Eigenschaften einer vorhandenen Grenze zu folgenden Zwecken ändern:  
-- Hinzufügen der Grenze zu einer oder mehreren Begrenzungsgruppen  
-- Ändern des Typs oder des Bereichs der Grenze  
-- Anzeigen der Registerkarte **Standortsysteme** für die Grenze, um festzustellen, welche Standortsystemserver (Verteilungspunkte, Zustandsmigrationspunkte und Verwaltungspunkte) der Grenze zugeordnet sind.  
+Sie können manuell individuelle Grenzen erstellen oder die [Active Directory-Gesamtstrukturermittlung](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest) verwenden. Diese Ermittlungsmethode sucht und erstellt automatisch Grenzen für IP-Subnetze und Active Directory-Standorte. Wenn die Active Directory-Gesamtstrukturermittlung ein Supernetz für einen Active Directory-Standort identifiziert, konvertiert Configuration Manager das Supernetz in eine Grenze vom Typ „IP-Adressbereich“.
 
-## <a name="to-create-a-boundary"></a>So erstellen Sie eine Grenze  
+Wenn ein Gerät sich nicht in der von Ihnen erwarteten Grenze befindet, liegt dies möglicherweise daran, dass Sie die Netzwerkadresse des Geräts nicht als Grenze definiert haben. Wenn Sie Zweifel in Bezug auf die Netzwerkadresse eines Geräts haben, führen Sie auf dem Gerät die folgenden Windows-Befehle aus, um die Adresse zu bestätigen:
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf**Verwaltung** > **Hierarchiekonfiguration** > **Grenzen**.  
+- IP-Adresse: `ipconfig`
+- Active Directory-Standort: `nltest /dsgetsite`
+- VPN: `ipconfig /all`
 
-2.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** auf **Erstellen Boundary.**  
+## <a name="boundary-types"></a>Grenztypen
 
-3.  Auf der Registerkarte **Allgemein** des Dialogfelds **Grenze erstellen** können Sie eine Beschreibung angeben, um die Grenze anhand eines Anzeigenamens oder einer Referenz zu identifizieren.  
+### <a name="ip-subnet"></a>IP-Subnetz
 
-4.  Wählen Sie einen **Typ** für diese Grenze aus:  
+Der Typ „IP-Subnetz“ erfordert eine **Subnetz-ID**. Beispiel: `169.254.0.0`. Wenn Sie die Werte für **Netzwerk** (Standardgateway) und **Subnetzmaske** angeben, berechnet Configuration Manager die **Subnetz-ID** automatisch. Wenn Sie die Grenze speichern, speichert Configuration Manager nur den Wert der Subnetz-ID.
 
-    - Bei Auswahl von **IP-Subnetz**müssen Sie eine **Subnetz-ID** für diese Grenze angeben.  
-      > [!TIP]  
-      > Sie können **Netzwerk** und **Subnetzmaske** angeben, um die **Subnetz-ID** automatisch zuordnen zu lassen. Wenn Sie die Grenze speichern, wird nur der Wert für die Subnetz-ID gespeichert.  
+> [!NOTE]
+> Configuration Manager unterstützt die direkte Eingabe eines Supernetzes als Grenze nicht. Verwenden Sie stattdessen den Grenztyp IP-Adressbereich.
 
-    - Bei Auswahl von **Active Directory-Standort**müssen Sie in der lokalen Gesamtstruktur des Standortservers einen Active Directory-Standort angeben oder durch Klicken auf **Durchsuchen** auswählen.  
-        
-      - Wenn Sie einen Active Directory-Standort für eine Grenze angeben, umfasst die Grenze alle IP-Subnetze, die Mitglieder dieses Active Directory-Standorts sind. Wenn die Konfiguration des Active Directory-Standorts in Active Directory geändert wird, werden auch die in dieser Grenze enthaltenen Netzwerkorte geändert.  
+### <a name="active-directory-site"></a>Active Directory-Standort
 
-      - Active Directory-Standortgrenzen funktionieren nicht bei reinen Azure AD-Clients. Wenn sie lokal wandern, liegen sie nicht innerhalb einer Begrenzung, wenn sie nur mithilfe von AD-Standorten definiert werden.
+Für den Grenztyp **Active Directory-Standort** geben Sie den Standortnamen an. Sie können den Namen eingeben oder in der lokalen Gesamtstruktur des Standortservers nach einem Namen suchen.
 
-    - Bei Auswahl von **IPv6-Präfix**müssen Sie ein **Präfix** im IPv6-Präfixformat angeben.  
+Wenn Sie einen Active Directory-Standort als Grenze angeben, umfasst die Grenze alle IP-Subnetze, die Mitglieder dieses Active Directory-Standorts sind. Wenn die Konfiguration des Active Directory-Standorts in Active Directory geändert wird, werden auch die in dieser Grenze enthaltenen Netzwerkorte geändert.  
 
-    - Bei Auswahl von **IP-Adressbereich**müssen Sie eine **IP-Startadresse** und eine **IP-Endadresse** angeben, die einen Teil eines IP-Subnetzes oder mehrere IP-Subnetze abdeckt.    
+Active Directory-Standortgrenzen funktionieren nicht für reine Azure Active Directory-Geräte, die auch als in die Clouddomäne eingebundene Geräte bezeichnet werden. Wenn diese Geräte in der lokalen Umgebung den Standort wechseln und Sie nur Grenzen vom Typ „Active Directory-Standort“ erstellen, befinden sich diese Geräte in keiner Grenze.
 
-5.  Klicken Sie auf **OK** , um die neue Grenze zu speichern.  
+> [!TIP]
+> Verwenden Sie den folgenden Windows-Befehl, um den aktuellen Active Directory-Standort eines Geräts anzuzeigen: `nltest /dsgetsite`.
+>
+> Um zu ermitteln, ob ein Client in die Clouddomäne eingebunden ist, führen Sie den folgenden Windows-Befehl aus: `dsregcmd /status`. Weitere Informationen finden Sie unter [dsregcmd-Befehl – Gerätestatus](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
-## <a name="to-configure-a-boundary"></a>So konfigurieren Sie eine Grenze  
+### <a name="ipv6-prefix"></a>IPv6-Präfix
 
-1.  Klicken Sie in der Configuration Manager-Konsole auf**Verwaltung** > **Hierarchiekonfiguration** > **Grenzen**.  
+Für den Grenztyp **IPv6-Präfix** geben Sie ein **Präfix** an. Beispiel: `2001:1111:2222:3333`.
 
-2.  Wählen Sie die Grenze aus, die Sie ändern möchten.  
+### <a name="ip-address-range"></a>IP-Adressbereich
 
-3.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Eigenschaften** auf **Eigenschaften**.  
+Beim Grenztyp **IP-Adressbereich** geben Sie die **IP-Startadresse** und die **IP-Endadresse** für den Bereich an. Der Bereich kann einen Teil eines IP-Subnetzes oder mehrere IP-Subnetze umfassen. Verwenden Sie den Grenztyp „IP-Adressbereich“, um ein Supernetz zu unterstützen.
 
-4.  Wählen Sie im Dialogfeld **Eigenschaften** für die Grenze die Registerkarte **Allgemein** aus, um die **Beschreibung** oder den **Typ** der Grenze zu bearbeiten. Sie können darüber hinaus den Bereich einer Grenze ändern, indem Sie die Netzwerkorte für die Grenze bearbeiten. Sie können beispielsweise für eine Active Directory-Standortgrenze einen neuen Active Directory-Standortnamen angeben.  
+Sie können diesen Typ auch zum Definieren einer Grenze für eine einzelne IP-Adresse verwenden. In diesem Fall legen Sie die IP-Startadresse und die IP-Endadresse auf denselben Wert fest. Diese Konfiguration kann für einmalige Geräte oder Testumgebungen nützlich sein.
 
-5.  Wählen Sie die Registerkarte **Standortsysteme** aus, um die Standortsysteme anzuzeigen, die dieser Grenze zugeordnet sind. Diese Konfiguration kann nicht über die Eigenschaften einer Grenze geändert werden.  
+### <a name="vpn"></a>VPN
 
-    > [!TIP]  
-    > Ein Standortsystemserver wird nur dann als Standortsystem für eine Grenze aufgelistet, wenn der Standortsystemserver als solcher mindestens einer Begrenzungsgruppe zugeordnet ist, in der diese Grenze enthalten ist. Dies wird auf der Registerkarte **Referenzen** einer Begrenzungsgruppe konfiguriert.  
+<!--7020519-->
 
-6.  Wählen Sie die Registerkarte **Begrenzungsgruppen** aus, um die Begrenzungsgruppenmitgliedschaft für diese Grenze zu ändern:  
+Ab Version 2006 können Sie einen Grenztyp für VPNs erstellen, um die Verwaltung von Remoteclients zu vereinfachen. Wenn ein Client eine Standortanforderung sendet, enthält diese zusätzliche Informationen zur Netzwerkkonfiguration des Clients. Basierend auf diesen Informationen bestimmt der Server, ob sich der Client in einem VPN befindet. Verbinden Sie das Gerät mit dem VPN, damit Configuration Manager den Client in der Grenze zuordnen kann.
 
-    - Wenn Sie Begrenzungsgruppen diese Grenze hinzufügen möchten, klicken Sie auf **Hinzufügen**, aktivieren Sie das Kontrollkästchen für die betreffende(n) Begrenzungsgruppe(n), und klicken Sie dann auf **OK**.  
+Sie können VPN-Grenzen auf unterschiedliche Weise konfigurieren:
 
-    - Wenn Sie diese Grenze aus einer Begrenzungsgruppe entfernen möchten, wählen Sie die Begrenzungsgruppe aus, und klicken Sie auf **Entfernen**.  
+- **VPN automatisch ermitteln**: Configuration Manager erkennt jede VPN-Lösung, die das Point-to-Point-Tunneling-Protokoll (PPTP) verwendet. Wenn Ihr VPN nicht erkannt wird, verwenden Sie eine der anderen Optionen. Der Begrenzungswert in der Konsolenliste ist `Auto:On`.
 
-7.  Klicken Sie auf **OK** , um die Eigenschaften der Grenze zu schließen und die Konfiguration zu speichern.  
+- **Verbindungsname:** Geben Sie den Namen der VPN-Verbindung auf dem Gerät an. Dies ist unter Windows der Name des Netzwerkadapters für die VPN-Verbindung. Configuration Manager gleicht die ersten 250 Zeichen der Zeichenfolge ab, unterstützt jedoch keine Platzhalterzeichen oder Teilzeichenfolgen. Der Begrenzungswert in der Konsolenliste ist `Name:<name>`, wobei `<name>` der von Ihnen angegebene Verbindungsname ist.
+
+  Angenommen, Sie führen den Befehl `ipconfig` auf dem Gerät aus, und einer der Abschnitte beginnt mit: `PPP adapter ContosoVPN:`. Verwenden Sie die Zeichenfolge `ContosoVPN` als **Verbindungsnamen**. Er wird in der Liste als `Name:CONTOSOVPN` angezeigt.
+
+- **Verbindungsbeschreibung**: Geben Sie die Beschreibung der VPN-Verbindung an. Configuration Manager gleicht die ersten 243 Zeichen der Zeichenfolge ab, unterstützt jedoch keine Platzhalterzeichen oder Teilzeichenfolgen. Der Begrenzungswert in der Konsolenliste ist `Description:<description>`, wobei `<description>` die von Ihnen angegebene Verbindungsbeschreibung ist.
+
+  Angenommen, Sie führen den Befehl `ipconfig /all` auf dem Gerät aus, und einer der Abschnitte enthält die folgende Zeile: `Description . . . . . . . . . . . : ContosoMainVPN`. Verwenden Sie die Zeichenfolge `ContosoMainVPN` als **Verbindungsbeschreibung**. Sie wird in der Liste als `Description:CONTOSOMAINVPN` angezeigt.
+
+> [!IMPORTANT]
+> Wenn Sie dieses Feature nach der Aktualisierung des Standorts voll nutzen möchten, müssen Sie auch Clients auf die neueste Version aktualisieren. Wenn Sie den Standort und die Konsole aktualisieren, wird die neue Funktionalität in der Configuration Manager-Konsole angezeigt. Das gesamte Szenario funktioniert erst, wenn auch die Clientversion aktuell ist.
+>
+> Wenn Sie diese VPN-Begrenzung während einer Betriebssystembereitstellung verwenden möchten, müssen Sie auch das Startimage aktualisieren, sodass es die neuesten Clientbinärdateien enthält.
+
+## <a name="create-a-boundary"></a>Erstellen einer Grenze
+
+1. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**, erweitern Sie die Option **Hierarchiekonfiguration**, und klicken Sie auf den Knoten **Grenzen**.
+
+1. Wählen Sie im Menüband auf der Registerkarte **Start** in der Gruppe **Erstellen** die Option **Grenze erstellen** aus.
+
+1. Geben Sie auf der Registerkarte **Allgemein** des Fensters **Grenze erstellen** die folgenden Informationen an:
+
+    - **Beschreibung:** Identifizieren Sie die Grenze anhand eines Anzeigenamens oder Verweises.
+
+        > [!NOTE]
+        > Configuration Manager benennt die Grenze automatisch basierend auf Typ und Gültigkeitsbereich. Sie können den Namen nicht ändern.
+
+    - **Typ:** Wählen Sie den Typ der zu erstellenden Grenze aus. Geben Sie dann weitere Informationen an, die für den Typ erforderlich sind. Weitere Informationen finden Sie unter [Grenztypen](#boundary-types).
+
+1. Wechseln Sie zur Registerkarte **Begrenzungsgruppen**. Wenn im Standort bereits Begrenzungsgruppen vorhanden sind, können Sie die neue Grenze sofort zu einer oder mehreren Gruppen hinzufügen.
+
+1. Klicken Sie auf **OK**, um die neue Grenze zu speichern.
+
+## <a name="configure-a-boundary"></a>Konfigurieren einer Grenze
+
+> [!TIP]
+> Wenn Sie eine Grenze erstellen, weist Configuration Manager ihr automatisch einen Namen zu, der auf dem Typ und Gültigkeitsbereich der Grenze basiert. Sie können diesen Namen nicht ändern. Geben Sie eine Beschreibung ein, anhand derer Sie die Grenze in der Configuration Manager-Konsole identifizieren können.
+
+1. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**, erweitern Sie die Option **Hierarchiekonfiguration**, und klicken Sie auf den Knoten **Grenzen**.
+
+1. Wählen Sie die Grenze aus, die Sie ändern möchten. Klicken Sie auf dem Menüband auf der Registerkarte **Start** in der Gruppe **Eigenschaften** auf **Eigenschaften**.
+
+1. Im Fenster **Eigenschaften** für die Grenze auf der Registerkarte **Allgemein** können Sie die folgenden Einstellungen konfigurieren:
+
+    - Bearbeiten Sie die **Beschreibung**.
+    - Ändern Sie den **Typ** der Grenze.
+    - Ändern Sie den Gültigkeitsbereich einer Grenze durch Bearbeiten der Netzwerkadressen. Sie können beispielsweise für eine Active Directory-Standortgrenze einen neuen Active Directory-Standortnamen angeben.
+
+1. Wechseln Sie zur Registerkarte **Standortsysteme**, um die Standortsysteme anzuzeigen, die dieser Grenze zugeordnet sind. Sie können diese Konfiguration nicht über die Eigenschaften einer Grenze ändern.
+
+    > [!TIP]
+    > Damit ein Server als Standortsystem für eine Grenze aufgeführt werden kann, ordnen Sie den Server als Standortsystemserver für mindestens eine Begrenzungsgruppe zu, in der diese Grenze enthalten ist. Diese Konfiguration erfolgt auf der Registerkarte **Referenzen** einer Begrenzungsgruppe. Weitere Informationen finden Sie unter [Konfigurieren der Standortzuweisung und Auswählen von Standortsystemservern](boundary-group-procedures.md#bkmk_references).
+
+1. Um die Begrenzungsgruppenmitgliedschaft für diese Grenze zu ändern, wählen Sie die Registerkarte **Begrenzungsgruppen** aus:
+
+    - Klicken Sie zum Hinzufügen der Grenze zu einer oder mehreren Begrenzungsgruppen auf **Hinzufügen**. Wählen Sie mindestens eine Begrenzungsgruppe aus, und klicken Sie auf **OK**.
+
+    - Wenn Sie diese Grenze aus einer Begrenzungsgruppe entfernen möchten, wählen Sie die Begrenzungsgruppe aus, und klicken Sie auf **Entfernen**.
+
+1. Klicken Sie auf **OK**, um die Eigenschaften der Grenze zu schließen und die Konfiguration zu speichern.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Jede Grenze kann von jedem Standort in Ihrer Hierarchie verwendet werden. Fügen Sie eine Grenze nach dem Erstellen zu mindestens einer [Begrenzungsgruppe](boundary-groups.md) hinzu.

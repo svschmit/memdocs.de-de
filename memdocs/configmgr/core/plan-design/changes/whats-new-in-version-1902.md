@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4972f6e8689ad44dbd1a19adcde104cd5f59038c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702398"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128932"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Neuerungen in Version 1902 von Configuration Manager (Current Branch)
 
@@ -121,7 +121,7 @@ Weitere Informationen finden Sie im Artikel „Planen von Cloud Management Gatew
 <!--3610960-->
 Configuration Manager unterstützt ab sofort das Ausführen von CMPivot über den Standort der zentralen Verwaltung in einer Hierarchie. Die Kommunikation mit dem Client wird nach wie vor vom primären Standort abgewickelt. Beim Ausführen von CMPivot über den Standort der zentralen Verwaltung kommuniziert der Client mit dem primären Standort über den Hochgeschwindigkeitskanal des Nachrichtenabonnements. Diese Kommunikation ist nicht von der standardmäßigen SQL-Replikation zwischen Standorten abhängig.
 
-Weitere Informationen finden Sie unter [CMPivot for real-time data (CMPivot für Echtzeitdaten)](../../servers/manage/cmpivot.md#bkmk_cmpivot1902).
+Weitere Informationen finden Sie unter [CMPivot for real-time data (CMPivot für Echtzeitdaten)](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1902).
 
 ### <a name="edit-or-copy-powershell-scripts"></a>Bearbeiten oder Kopieren von PowerShell-Skripts
 
@@ -413,7 +413,7 @@ Basierend auf Kundenfeedback von der Midwest Management Summit (MMS) Desert Edit
 - Sortierung von Ansichten nach ganzzahligen Werten im Knoten **Bereitstellungen** des Arbeitsbereichs **Überwachung**
 - Verschieben der Warnung wegen einer großen Anzahl von Ergebnissen
 
-Weitere Informationen finden Sie unter [Verwenden der Configuration Manager-Konsole](../../servers/manage/admin-console.md#tips).
+Weitere Informationen finden Sie unter [Tipps für die Configuration Manager-Konsole](../../servers/manage/admin-console-tips.md).
 
 ### <a name="configuration-manager-console-notifications"></a>Configuration Manager-Konsolenbenachrichtigungen
 
@@ -425,7 +425,7 @@ Damit Sie besser informiert bleiben und die entsprechenden Maßnahmen ergreifen 
 
 Diese Benachrichtigung wird als Leiste am oberen Rand des Konsolenfensters unter dem Menüband dargestellt. Es ersetzt die vorherige Oberfläche, wenn Configuration Manager-Updates verfügbar sind. Diese Benachrichtigungen in der Konsole enthalten wichtige Informationen, beeinträchtigen aber nicht Ihre Arbeit in der Konsole. Sie können kritische Benachrichtigungen nicht verwerfen. Die Konsole zeigt alle Benachrichtigungen in einem neuen Benachrichtigungsbereich der Titelleiste an.
 
-Weitere Informationen finden Sie unter [Verwenden der Configuration Manager-Konsole](../../servers/manage/admin-console.md).
+Weitere Informationen finden Sie unter [Configuration Manager-Konsolenbenachrichtigungen](../../servers/manage/admin-console-notifications.md).
 
 ### <a name="confirmation-of-console-feedback"></a>Bestätigung des Konsolenfeedbacks
 
@@ -453,7 +453,7 @@ Weitere Informationen finden Sie unter [Verwenden der Configuration Manager-Kons
 <!--3600878-->
 Sie können jetzt in einer Geräteansicht der Configuration Manager-Konsole nach einer MAC-Adresse suchen. Diese Eigenschaft ist für Administratoren bei der Betriebssystembereitstellung hilfreich, wenn sie Probleme mit PXE-basierten Bereitstellungen beheben. Fügen Sie zur Ansicht einer Liste von Geräten die Spalte **MAC-Adresse** hinzu. Verwenden Sie das Suchfeld, um die Suchkriterien für die **MAC-Adresse** hinzuzufügen.
 
-Weitere Informationen finden Sie unter [Verwenden der Configuration Manager-Konsole](../../servers/manage/admin-console.md#tips).
+Weitere Informationen finden Sie unter [Tipps für die Configuration Manager-Konsole](../../servers/manage/admin-console-tips.md).
 
 ### <a name="use-net-47-for-improved-console-accessibility"></a>Verwenden von .NET 4.7 für verbesserte Barrierefreiheit der Konsole
 

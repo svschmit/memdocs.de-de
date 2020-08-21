@@ -2,7 +2,7 @@
 title: Unterstützte Clients und Geräte
 titleSuffix: Configuration Manager
 description: Erfahren Sie, welche Betriebssystemversionen Configuration Manager für Clients und Geräte unterstützt.
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904532"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128847"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Unterstützte Betriebssystemversionen für Clients und Geräte für Configuration Manager
 
@@ -58,6 +58,16 @@ Wenn Sie in diesem Szenario eine Benutzerrichtlinie benötigen und mögliche Aus
 
 > [!Note]  
 > Sie können die Co-Verwaltung nicht mit einem Client verwenden, auf dem Windows 10 Enterprise mit mehreren Benutzersitzungen ausgeführt wird. <!-- SCCMDocs-pr#3950 -->
+
+Ab Version 2006 ist die Plattform **Windows 10 Enterprise Multi-Session** in der Liste unterstützter Betriebssystemversionen für Objekte mit Anforderungsregeln oder Anwendungslisten verfügbar.<!--6527576-->
+
+> [!NOTE]
+> Wenn Sie zuvor die **Windows 10**-Plattform auf der obersten Ebene ausgewählt haben, wurden dadurch automatisch alle untergeordneten Plattformen ausgewählt. Diese neue Plattform wird nicht automatisch ausgewählt. Wenn Sie **Alle Windows 10 Enterprise Multi-Session** hinzufügen möchten, wählen Sie die Plattform manuell in der Liste aus.
+
+Weitere Informationen finden Sie in den folgenden Artikeln:
+
+- [Unterstützung für Virtualisierungsumgebungen](support-for-virtualization-environments.md)
+- [Verwalten von Configuration Manager-Clients in einer virtuellen Desktopinfrastruktur (Virtual Desktop Infrastructure, VDI)](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ### <a name="supported-server-os-versions"></a>Unterstützte Server-Betriebssystemversionen
 
@@ -151,8 +161,8 @@ Verwalten Sie Windows CE-Geräte mit dem Configuration Manager-Legacyclient für
 
 - Windows CE 7.0 (ARM- und x86-Prozessoren)  
 
-    > [!Note]
-    > Support für Windows CE 7.0 in Configuration Manager wurde eingestellt. Weitere Informationen finden Sie unter [Entfernte und veraltete Elemente für Configuration Manager-Clients](../changes/deprecated/removed-and-deprecated-client.md).
+    > [!IMPORTANT]
+    > In Version 2006 von Configuration Manager wird der Support für Windows CE 7.0 als Client eingestellt. Die Einstellung wurde mit [Version 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated) angekündigt.
 
 #### <a name="supported-languages-include"></a>Unterstützte Sprachen
 
@@ -335,9 +345,8 @@ Configuration Manager verfügt über integrierte Funktionen zum Verwalten von lo
 
 - **Windows 10 Mobile Enterprise**  
 
-    > [!Note]
-    > Support für Windows 10 Mobile und Windows 10 Mobile Enterprise in Configuration Manager wird eingestellt. Weitere Informationen finden Sie unter [Entfernte und veraltete Elemente für Configuration Manager-Clients](../changes/deprecated/removed-and-deprecated-client.md).
-
+    > [!IMPORTANT]
+    > In Version 2006 von Configuration Manager wird der Support für Windows 10 Mobile und Windows 10 Mobile Enterprise als Client eingestellt. Die Einstellung wurde mit [Version 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated) angekündigt.
 
 ## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a> Exchange Server-Connector  
 

@@ -2,7 +2,7 @@
 title: Protokolldateireferenz
 titleSuffix: Configuration Manager
 description: Dies ist eine Referenz zu sämtlichen Protokolldateien für Configuration Manager-Client und -Server sowie abhängigen Komponenten.
-ms.date: 07/09/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210336"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126425"
 ---
 # <a name="log-file-reference"></a>Protokolldateireferenz
 
@@ -331,6 +331,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |sitestat.log|Zeichnet den Verfügbarkeits- und Speicherplatzüberwachungsprozess aller Standortsysteme auf.|Standortserver|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| Hierbei handelt es sich um die Protokolldatei für die Azure Active Directory-Ermittlung (Azure AD) von Benutzern und Benutzergruppen. In Version 1910 und früher umfasste es zudem die Synchronisierung der Sammlungsmitgliedschaftsergebnisse in Azure AD.| Standortserver|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Protokolldatei für die Komponente, die Apps aus Microsoft Store für Unternehmen synchronisiert.|Standortserver|
+|SMS_DataEngine.log|Protokolldatei für Erkenntnisse in Bezug auf die Verwaltung.|Standortserver|
 |SMS_ISVUPDATES_SYNCAGENT.log| Protokolldatei für die Synchronisierung von Softwareupdates von Drittanbietern| Softwareupdatepunkt der obersten Ebene der Configuration Manager-Hierarchie|
 |SMS_OrchestrationGroup.log| Protokolldatei für Orchestrierungsgruppen|Standortserver|
 |SMS_PhasedDeployment.log| Protokolldatei für stufenweise Bereitstellungen|Standort der obersten Ebene in der Configuration Manager-Hierarchie|
@@ -350,7 +351,7 @@ In der folgenden Tabelle werden die Protokolldateien auf dem Configuration Manag
 |statesys.log|Zeichnet die Verarbeitung von Systemzustandsmeldungen auf.|Standortserver|  
 |statmgr.log|Zeichnet Schreibvorgänge aller Statusmeldungen in die Datenbank auf.|Standortserver|  
 |swmproc.log|Zeichnet die Verarbeitung von Messungsdateien und -einstellungen auf.|Standortserver|
-|UXAnalyticsUploadWorker.log|Zeichnet Datenuploads in den Dienst für die Endpunktanalyse auf|Standortserver|   
+|UXAnalyticsUploadWorker.log|Zeichnet Datenuploads in den Dienst für die Endpunktanalyse auf|Standortserver|
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> Standortserverinstallation
 

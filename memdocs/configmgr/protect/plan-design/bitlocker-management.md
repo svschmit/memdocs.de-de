@@ -2,7 +2,7 @@
 title: Plan für die BitLocker-Verwaltung
 titleSuffix: Configuration Manager
 description: Planung der Verwaltung der BitLocker-Laufwerkverschlüsselung mit Configuration Manager
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531467"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129296"
 ---
 # <a name="plan-for-bitlocker-management"></a>Plan für die BitLocker-Verwaltung
 
@@ -25,7 +25,7 @@ ms.locfileid: "84531467"
 
 Ab Version 1910 können Sie die BitLocker-Laufwerkverschlüsselung (BitLocker Drive Encryption, BDE) von Configuration Manager für lokale Windows-Clients verwalten, die Active Directory beigetreten sind. Azure Active Directory beigetretene oder Arbeitsgruppenclients werden nicht unterstützt. Configuration Manager bietet eine vollständige Lebenszyklusverwaltung für BitLocker, die die Microsoft BitLocker-Verwaltung und -Überwachung (Microsoft BitLocker Administration and Monitoring, MBAM) ersetzen kann.
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
 Weitere Informationen finden Sie unter [BitLocker (Übersicht)](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview).
@@ -81,6 +81,8 @@ Ermöglichen Sie es Benutzern, ein mit BitLocker verschlüsseltes Gerät mit ein
   - Konfigurieren des Verwaltungspunkts für HTTPS. Diese Option gilt nur für die Versionen 1910 und 2002 von Configuration Manager.
 
   Weitere Informationen finden Sie unter [Verschlüsseln von Wiederherstellungsdaten](../deploy-use/bitlocker/encrypt-recovery-data.md).
+
+- Der BitLocker-Wiederherstellungsdienst wird zwar auf einem Verwaltungspunkt installiert, der ein Datenbankreplikat verwendet, aber Clients können keine Wiederherstellungsschlüssel hinterlegen. BitLocker verschlüsselt das Laufwerk nicht. Um den Wiederherstellungsdienst zu verwenden, benötigen Sie mindestens einen Verwaltungspunkt, der sich nicht in einer Replikatkonfiguration befindet. Deaktivieren Sie den BitLocker-Wiederherstellungsdienst auf einem Verwaltungspunkt mit einem Datenbankreplikat.<!-- 7813149 -->
 
 - Wenn Sie BitLocker-Verwaltungsberichte verwenden möchten, installieren Sie die Standortsystemrolle „Reporting Services-Punkt“. Weitere Informationen finden Sie unter [Konfigurieren der Berichterstellung](../../core/servers/manage/configuring-reporting.md).
 

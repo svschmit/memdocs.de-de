@@ -2,7 +2,7 @@
 title: Konsoleninterne Updates
 titleSuffix: Configuration Manager
 description: Installieren von Configuration Manager-Updates über die Microsoft-Cloud
-ms.date: 06/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a0d7f36c921f782c0baad740d8e643f54cee0309
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637668"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128085"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Installieren konsoleninterner Updates für Configuration Manager
 
@@ -96,13 +96,13 @@ Sehen Sie sich die folgenden Schritte an, bevor Sie ein Update in der Configurat
 
 Überprüfen Sie die zutreffende Updatecheckliste mit vor dem Update durchzuführenden Schritten:
 
+- [Prüfliste für die Installation von Update 2006](checklist-for-installing-update-2006.md)
+
 - [Prüfliste für die Installation von Update 2002](checklist-for-installing-update-2002.md)
 
 - [Prüfliste für die Installation von Update 1910](checklist-for-installing-update-1910.md)  
 
 - [Prüfliste für die Installation von Update 1906](checklist-for-installing-update-1906.md)  
-
-- [Prüfliste für die Installation von Update 1902](checklist-for-installing-update-1902.md)
 
 ### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a> Schritt 2: Ausführen der Voraussetzungsprüfung vor der Installation eines Updates  
 
@@ -362,13 +362,13 @@ Navigieren Sie zum Arbeitsbereich **Überwachung**, und wählen Sie den Knoten *
 
 Überprüfen Sie nach dem Update an einem Standort die Checkliste, die für die entsprechende aktualisierte Version gilt:  
 
+- [Prüfliste nach dem Update für Version 2006](checklist-for-installing-update-2006.md#post-update-checklist)
+
 - [Prüfliste nach dem Update für Version 2002](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [Prüfliste nach dem Update für Version 1910](checklist-for-installing-update-1910.md#post-update-checklist)  
 
 - [Post-update checklist for version 1906 (Checkliste nach dem Update für Version 1906)](checklist-for-installing-update-1906.md#post-update-checklist)  
-
-- [Post-update checklist for version 1902 (Checkliste nach dem Update für Version 1902)](checklist-for-installing-update-1902.md#post-update-checklist)  
 
 ## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a> Aktivieren optionaler Features von Updates  
 
@@ -378,7 +378,7 @@ Um verfügbare Features und deren Status anzuzeigen, wechseln Sie in der Konsole
 
 Wenn ein Feature nicht optional ist, wird es automatisch installiert. Es wird nicht im Knoten **Features** angezeigt.  
 
-> [!Important]  
+> [!IMPORTANT]
 > In einer Hierarchie mit mehreren Standorten können Sie nur optionale Features oder Features der Vorabversion vom Standort der zentralen Verwaltung aus aktivieren. Dieses Verhalten stellt sicher, dass keine Konflikte in der Hierarchie auftreten. <!--507197-->  
 
 Wenn Sie ein neues Features oder ein Feature der Vorabversion aktivieren, muss der Hierarchie-Manager von Configuration Manager (HMAN) die Änderung verarbeiten, bevor Sie das Feature nutzen können. Die Verarbeitung der Änderungen erfolgt oft sofort. Je nach Verarbeitungszyklus des HMAN kann es bis zu 30 Minuten dauern, bis die Verarbeitung abgeschlossen ist. Starten Sie die Konsole nach Abschluss der Änderungen neu, damit Sie das Feature verwenden können.
@@ -391,19 +391,20 @@ Die folgenden Features sind in der neuesten Version von Configuration Manager op
 
 <!--Note to include in target articles
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
 
 -->
 
 - [Community Hub](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
+- [Orchestrierungsgruppen](../../../sum/deploy-use/orchestration-groups.md)<!--3098816, 290B66D8-C735-4895-B59A-DD732D84A697-->
+- [Tasksequenz-Bereitstellungstyp](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!-- 3555953, CB0CDFFB-9C6F-4B18-8954-A43A387302A2-->
 - [BitLocker-Verwaltung](../../../protect/plan-design/bitlocker-management.md) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
 - [Synchronisieren der Sammlungsmitgliedschaftsergebnisse mit Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
 - [Azure Active Directory-Benutzergruppenermittlung](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
 - [Anwendungsgruppen](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [Debugger für Tasksequenzen](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
 - [Paketkonvertierungs-Manager](../../../apps/pcm/package-conversion-manager.md) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [Client-Apps für gemeinsam verwaltete Geräte](../../../comanage/workloads.md#client-apps) (zuvor bekannt als *Mobile Apps für gemeinsam verwaltete Geräte*) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
 - [Updates für Drittanbietersoftware](../../../sum/deploy-use/third-party-software-updates.md)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [Genehmigen von Anwendungsanforderungen für Benutzer pro Gerät](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
 - [Erstellen und Ausführen von Skripts](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
@@ -416,7 +417,7 @@ Die folgenden Features sind in der neuesten Version von Configuration Manager op
 - [Warten einer clusterfähigen Sammlung (Servergruppen)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows Hello for Business](../../../protect/deploy-use/windows-hello-for-business-settings.md) (zuvor bekannt als *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
-> [!Tip]  
+> [!TIP]
 > Weitere Informationen zu Features, die Zustimmung für die Aktivierung erfordern, finden Sie in den [Features der Vorabversion](pre-release-features.md).  
 >
 > Weitere Informationen zu Features, die nur im Technical Preview-Branch verfügbar sind, finden Sie unter [Technical Preview](../../get-started/technical-preview.md).

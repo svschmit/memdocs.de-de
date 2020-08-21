@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 00accfc5150226830b68beb194fa168c08148b84
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 2adf22fd9c17863d7c29e2a29d2125d22f2d944f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110422"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127670"
 ---
 # <a name="deploy-software-updates"></a>Bereitstellen von Softwareupdates  
 
@@ -70,7 +70,7 @@ Weitere Informationen und ausführliche Anleitungen finden Sie unter [Manuelles 
 
 > [!Note]
 > - Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
-> - Wenn Sie Office 365-Clientupdates manuell bereitstellen möchten, können Sie diese im Arbeitsbereich **Softwarebibliothek** unter **Office 365-Clientverwaltung** unter dem Knoten **Office 365-Updates** abrufen. 
+> - Wenn Sie Microsoft 365 Apps-Clientupdates manuell bereitstellen möchten, können Sie diese im Arbeitsbereich **Softwarebibliothek** unter **Office 365-Clientverwaltung** unter dem Knoten **Office 365-Updates** abrufen. 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Automatisches Bereitstellen von Softwareupdates
 

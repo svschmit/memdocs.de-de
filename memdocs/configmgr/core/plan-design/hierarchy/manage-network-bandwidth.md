@@ -10,12 +10,12 @@ ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8ee7d00f3b5c98528d9999b83b07aa393b72e36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df3188e827623db8faa0b27be2fe282031e9fa50
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704158"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126391"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>Verwalten von Netzwerkbandbreite für Inhalte
 Um Ihnen die Verwaltung der Netzwerkbandbreite zu erleichtern, die für den Inhaltsverwaltungsvorgang von Configuration Manager verwendet wird, können Sie die integrierten Steuerelemente für Zeitplanung und Drosselung verwenden. Sie können auch vorab bereitgestellte Inhalte nutzen. In den folgenden Abschnitten werden diese Optionen detaillierter beschrieben.
@@ -61,7 +61,7 @@ Optional können Sie den Verteilungspunkt als **vorab bereitgestellt** konfiguri
 
     -   **Inhalt automatisch herunterladen, wenn Pakete Verteilungspunkten zugeordnet sind**: Verwenden Sie diese Option, wenn Sie kleinere Pakete haben und die Zeitplanungs- und Drosselungseinstellungen für die Inhaltsverteilung eine ausreichende Steuerung bieten.  
 
-    -   **Nur Inhaltsänderungen auf den Verteilungspunkt herunterladen**: Verwenden Sie diese Option, wenn Sie damit rechnen, dass zukünftige Aktualisierungen des Paketinhalts im Allgemeinen kleiner sind als das Anfangspaket. Beispielsweise könnten Sie eine Anwendung wie Microsoft Office vorab bereitstellen, da die Größe des Anfangspakets mehr als 700 MB beträgt, sodass das Paket nicht über das Netzwerk gesendet werden kann. Die Inhaltsupdates bei diesem Paket könnten jedoch kleiner als 10 MB und damit über das Netzwerk verteilbar sein. Ein weiteres Beispiel wären Treiberpakete, bei denen das Anfangspaket groß ist, inkrementelle Treiberergänzungen zum Paket jedoch klein sind.  
+    -   **Nur Inhaltsänderungen auf den Verteilungspunkt herunterladen**: Verwenden Sie diese Option, wenn Sie damit rechnen, dass zukünftige Aktualisierungen des Paketinhalts im Allgemeinen kleiner sind als das Anfangspaket. Beispielsweise könnten Sie Anwendungen wie Microsoft 365-Apps vorab bereitstellen, da das Anfangspaket über 700 MB groß ist und daher nicht über das Netzwerk gesendet werden kann. Die Inhaltsupdates bei diesem Paket könnten jedoch kleiner als 10 MB und damit über das Netzwerk verteilbar sein. Ein weiteres Beispiel wären Treiberpakete, bei denen das Anfangspaket groß ist, inkrementelle Treiberergänzungen zum Paket jedoch klein sind.  
 
     -   **Den Inhalt dieses Pakets manuell an den Verteilungspunkt kopieren**: Verwenden Sie diese Option, wenn Sie große Pakete mit Inhalt wie einem Betriebssystem haben, die sie niemals über das Netzwerk an den Verteilungspunkt verteilen möchten. Wenn Sie diese Option auswählen, müssen Sie den Inhalt am Verteilungspunkt vorab bereitstellen.  
 

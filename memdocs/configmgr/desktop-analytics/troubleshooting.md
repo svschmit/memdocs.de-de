@@ -2,7 +2,7 @@
 title: Problembehandlung bei Desktop Analytics
 titleSuffix: Configuration Manager
 description: Dieser Artikel enthält technische Details zur Problembehandlung bei Desktop Analytics.
-ms.date: 07/01/2020
+ms.date: 08/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: e83e8d5d967b4cd3bbcb817c149cd40284bb5f9c
+ms.sourcegitcommit: 66c58078a32af3872d98f7c62af4f8047ee81b50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828974"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089944"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Problembehandlung bei Desktop Analytics
 
@@ -73,6 +73,9 @@ Desktop Analytics fügt Ihrer Azure AD-Instanz die folgenden Anwendungen hinzu:
 Wenn Sie diese Apps nach Abschluss des Setups bereitstellen müssen, wechseln Sie zum Bereich **Verbundene Dienste**. Wählen Sie **Benutzer- und Apps-Zugriff konfigurieren** aus, und stellen Sie die Apps bereit.  
 
 - **Azure AD-App für Configuration Manager**. Wenn Sie nach Abschluss des Setups Apps bereitstellen oder Verbindungsprobleme beheben müssen, sehen Sie den Abschnitt [Erstellen und Importieren von Apps für Configuration Manager](#create-and-import-app-for-configuration-manager) ein. Diese App erfordert die Berechtigungen **Write CM Collection Data** (CM-Sammlungsdaten schreiben) und **Read CM Collection Data** (CM-Sammlungsdaten lesen) für die **Configuration Manager-Dienst**-API.  
+
+    > [!NOTE]
+    > Desktop Analytics unterstützt mehrere Configuration Manager-Hierarchien, deren Berichte und Meldungen an einen einzigen Azure AD-Mandanten gesendet werden.<!-- 4814075 --> Wenn Sie in Ihrer Umgebung über mehrere Hierarchien verfügen, die mit derselben kommerziellen ID konfiguriert sind, verwenden Sie [verschiedene Apps](connect-configmgr.md#bkmk_connect) für jede Hierarchie, um den Azure AD-Mandanten und die Desktop Analytics-Instanz gemeinsam zu nutzen.
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>Erstellen und Importieren von Apps für Configuration Manager
 

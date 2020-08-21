@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5b2fcaeb9cb5bd4ce3e41aed8e1bafcc7f76bbb4
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262114"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128898"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Neuerungen in Version 2002 von Configuration Manager (Current Branch)
 
@@ -147,7 +147,7 @@ Weitere Informationen finden Sie unter [Überwachen der Verbindungsintegrität](
 
 Das Navigieren zu CMPivot-Entitäten wurde vereinfacht. Sie können jetzt CMPivot-Entitäten suchen. Außerdem wurden neue Symbole hinzugefügt, um die Entitäten und Entitätsobjekttypen leicht unterscheiden zu können.
 
-Weitere Informationen finden Sie unter [CMPivot](../../servers/manage/cmpivot.md#bkmk_2002).
+Weitere Informationen finden Sie unter [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2002).
 
 ## <a name="content-management"></a><a name="bkmk_content"></a> Content Management
 
@@ -391,9 +391,9 @@ Weitere Informationen finden Sie unter [Produktfeedback](../../understand/find-h
 
 <!--3555935, 3555936-->
 
-_Erstmals im Juni 2020 eingeführt_
+*(Erstmals im Juni 2020 eingeführt)*
 
-Die IT-Administratorcommunity hat im Laufe der Jahre einen großen Wissensschatz aufgebaut. Anstatt Elemente wie Skripts und Berichte von Grund auf neu zu erfinden, haben wir einen **Community Hub** für Configuration Manager aufgebaut, auf dem Sie sich untereinander austauschen können. Durch die Nutzung der Arbeit anderer können Sie Stunden an Arbeit sparen. Der Community Hub fördert Kreativität, indem er auf der Arbeit anderer aufbaut und andere auf Ihrer Arbeit aufbauen lässt. GitHub hat bereits branchenweite Prozesse und Tools für die gemeinsame Nutzung entwickelt. Jetzt nutzt der Community Hub diese Tools direkt in der Configuration Manager-Konsole als Grundlage für die Weiterentwicklung dieser neuen Community.
+Die IT-Administratorcommunity hat im Laufe der Jahre einen großen Wissensschatz aufgebaut. Anstatt Elemente wie Skripts und Berichte von Grund auf neu zu erfinden, haben wir einen **Community Hub** für Configuration Manager aufgebaut, auf dem Sie sich untereinander austauschen können. Durch die Nutzung der Arbeit anderer können Sie Stunden an Arbeit sparen. Der Community Hub fördert Kreativität, indem er auf der Arbeit anderer aufbaut und andere auf Ihrer Arbeit aufbauen lässt. GitHub hat bereits branchenweite Prozesse und Tools für die gemeinsame Nutzung entwickelt. Jetzt nutzt der Community Hub diese Tools direkt in der Configuration Manager-Konsole als Grundlage für die Weiterentwicklung dieser neuen Community. Für das erste Release werden die Inhalte, die im Community-Hub verfügbar gemacht werden, nur von Microsoft hochgeladen.
 
 Weitere Informationen finden Sie unter [Community Hub und GitHub](../../servers/manage/community-hub.md).
 
@@ -442,6 +442,7 @@ Folgende zusätzliche Hotfixes wurden veröffentlicht, um bestimmte Probleme zu 
 |---------|---------|---------|---------|
 | [4575339](https://support.microsoft.com/help/4575339) | Gerät werden zweimal im Admin Center von Microsoft Endpoint Configuration Manager angezeigt. | 23. Juli 2020 | Nein |
 | [4575774](https://support.microsoft.com/help/4575774) | Das Cmdlet „New-CMTSStepPrestartCheck“ gibt in Configuration Manager Version 2002 einen Fehler aus. | 24. Juli 2020 | Nein |
+| [4576782](https://support.microsoft.com/help/4576782) | Timeout für Anwendungsblatt im Microsoft Endpoint Manager Admin Center | 11. August 2020 | Nein |
 
 <!--
 > [!NOTE]

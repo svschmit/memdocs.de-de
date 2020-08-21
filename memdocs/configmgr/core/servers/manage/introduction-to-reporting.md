@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1aae76845d18d8191b6f773df5491d3a144940c1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694548"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128068"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Einführung in die Berichterstellung in Configuration Manager
 
@@ -124,7 +124,7 @@ Für auf den Reporting Services basierende Berichte verwendet Configuration Mana
 
  Bei der Installation von Report Builder wird Unterstützung für mehr als 20 Sprachen hinzugefügt. Wenn Sie den Berichts-Generator ausführen, zeigt er Daten in der Sprache an, die der des Betriebssystems des lokalen Computers entspricht. Wenn der Berichts-Generator die Sprache nicht unterstützt, zeigt er die Daten in Englisch an. Von Report Builder wird der gesamte Funktionsumfang der SQL Server Reporting Services unterstützt, darunter die folgenden Funktionen:
 
-- Intuitive Umgebung zum Erstellen von Berichten, die Microsoft Office ähnlich ist  
+- Intuitive Umgebung zum Erstellen von Berichten, die Microsoft 365 Apps ähnelt.  
 
 - Flexibles Berichtslayout der Berichtsdefinitionssprache (RDL) von SQL Server  
 

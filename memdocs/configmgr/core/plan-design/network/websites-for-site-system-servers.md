@@ -10,12 +10,12 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 344ba7f6a6b0ee7683c3ac7661338f01be601a10
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8091ecf4abc113d41f053c1152152262131a4bb
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701448"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146081"
 ---
 # <a name="websites-for-site-system-servers-in-configuration-manager"></a>Websites für Standortsystemserver in Configuration Manager
 
@@ -83,7 +83,7 @@ Weitere Aspekte:
 -   Die TCP/IP-Ports, die Sie in IIS für die benutzerdefinierte Website einrichten, müssen mit den Clientanforderungsports für den Standort übereinstimmen.  
 
 ## <a name="switch-between-default-and-custom-websites"></a>Wechseln zwischen Standard- und benutzerdefinierten Websites  
-Obwohl Sie das Kontrollkästchen zur Verwendung benutzerdefinierter Websites bei einem primären Standort jederzeit aktivieren bzw. deaktivieren können (Sie finden es auf der Seite „Eigenschaften“ auf der Registerkarte „Allgemein“), sollten Sie sorgfältig planen, bevor Sie diese Änderung vornehmen. Wenn diese Konfiguration geändert wird, müssen alle betreffenden Standortsystemrollen am primären Standort und an untergeordneten sekundären Standorten deinstalliert und erneut installiert werden:  
+Sie können das Kontrollkästchen zur Verwendung benutzerdefinierter Websites in einem primären Standort jederzeit aktivieren bzw. deaktivieren (Sie finden es auf der Seite „Eigenschaften“ der Registerkarte „Ports“). Allerdings sollten Sie diese Änderung sorgfältig planen. Wenn diese Konfiguration geändert wird, müssen alle betreffenden Standortsystemrollen am primären Standort und an untergeordneten sekundären Standorten deinstalliert und erneut installiert werden:  
 
 Die folgenden Rollen werden **automatisch neu installiert**:  
 

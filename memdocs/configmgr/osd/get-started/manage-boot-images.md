@@ -5,17 +5,17 @@ description: Erfahren Sie, wie Sie in Configuration Manager die Windows PE-Start
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912380"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124540"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Verwalten von Startimages mit Configuration Manager
 
@@ -80,11 +80,15 @@ Wenn ein Startimage auf einer anderen Version des an einem Standort installierte
 
 Bei einer Standortinstallation fügt Configuration Manager automatisch Startimages hinzu, die auf einer WinPE-Version aus der unterstützten Version von Windows ADK basieren. Abhängig von der Configuration Manager-Version können Sie Startimages hinzufügen, die auf einer anderen WinPE-Version aus der unterstützten Version von Windows ADK basieren. Es tritt ein Fehler auf, wenn Sie versuchen, ein Startimage hinzuzufügen, das eine nicht unterstützte Version von WinPE enthält. Die folgende Liste enthält die derzeit unterstützten Windows ADK- und Windows PE-Versionen:
 
-| Windows-Typ | Unterstützte Versionen |
-|--------------|--------------------|
-| Windows ADK-Version | Windows ADK für Windows 10 |
-| Windows PE-Versionen für Startimages, die über die Configuration Manager-Konsole angepasst werden können | Windows PE 10 |
-| Unterstützte Windows PE-Versionen für Startimages, die *nicht* über die Configuration Manager-Konsole angepasst werden können | – Windows PE 3.1<sup>[Hinweis 1](#bkmk_note1)</sup> <br> – Windows PE 5 |
+- Windows ADK-Version: Windows ADK für Windows 10
+
+- Windows PE-Versionen für Startimages, die über die Configuration Manager-Konsole angepasst werden können: Windows PE 10
+
+- Unterstützte Windows PE-Versionen für Startimages, die *nicht* über die Configuration Manager-Konsole angepasst werden können
+
+  - Windows PE 3.1<sup>[Hinweis 1](#bkmk_note1)</sup>
+
+  - Windows PE 5
 
 Verwenden Sie beispielsweise die Configuration Manager-Konsole, um Startimages, die auf Windows PE 10 basieren, aus dem Windows ADK für Windows 10 anzupassen. Passen Sie ein Startimage, das auf Windows PE 5 basiert, mithilfe der Version von DISM von einem anderen Computer aus dem Windows ADK für Windows 8 an. Fügen Sie anschließend das benutzerdefinierte Startimage zur Configuration Manager-Konsole hinzu. Weitere Informationen finden Sie in den folgenden Artikeln:
 

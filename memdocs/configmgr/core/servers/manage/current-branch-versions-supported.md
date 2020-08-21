@@ -2,7 +2,7 @@
 title: Current Branch-Versionen
 titleSuffix: Configuration Manager
 description: Überprüfen Sie den Versionsverlauf von Configuration Manager, und erfahren Sie mehr über die Phasen des angebotenen Diensts.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 429e8159058e9126d578f9d33769ffc32eb73def
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 28920512fa2f9353ea5dbb038b140293b0e8c5e8
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692688"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126159"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Unterstützung für die Current Branch-Versionen von Configuration Manager
 
@@ -27,11 +27,11 @@ Microsoft plant mehrere jährliche Updatereleases für die Current Branch-Versio
 
 - Wartungsphase mit **(nur) Sicherheitsupdates**: Nach der Veröffentlichung der neuesten Current Branch-Version beschränkt sich der Support für ältere Versionen über den verbleibenden Zeitraum des einmonatigen Produktlebenszyklus (siehe Abbildung 1) auf Sicherheitsupdates.  
 
-[ ![Zeitachsengrafik für die Wartung und den Support von Configuration Manager](media/servicing_support_timeline.png) ](media/servicing_support_timeline.png#lightbox)
+:::image type="content" source="media/servicing_support_timeline.png" alt-text="Zeitachse für Wartung und Support von Configuration Manager" lightbox="media/servicing_support_timeline.png":::
 
 Abbildung 1: Beispiel für die Überschneidung von Versionszyklen für die Current Branch-Wartungsunterstützung. Dieses Beispiel dient zur Veranschaulichung des Zyklus und enthält keine tatsächlichen oder erwarteten Veröffentlichungstermine.
 
-> [!NOTE]  
+> [!NOTE]
 > Die neueste Current Branch-Version befindet sich immer in der Wartungsphase für **Sicherheits- und kritische Updates**. Dieser Supporthinweis bedeutet, dass bei einem Codefehler, der ein kritisches Update erfordert, die neueste Current Branch-Version installiert sein muss, damit Sie eine Problembehebung erhalten. Bei allen anderen unterstützten Current Branch-Versionen haben Sie lediglich Anspruch auf Sicherheitsupdates.
 >
 > Nach Ablauf des 18-monatigen Lebenszyklus der aktuellen Current Branch-Version endet jeglicher Support.

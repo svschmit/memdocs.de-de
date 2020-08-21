@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429807"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125864"
 ---
 # <a name="desktop-analytics-faq"></a>Desktop Analytics – FAQ
 
@@ -126,7 +126,7 @@ Ja, die folgenden Windows Analytics-Features wurden entweder eingestellt oder si
 #### <a name="upgrade-readiness"></a>Upgradebereitschaft
 
 - Internet Explorer-Site-Discovery-Daten
-- Erkenntnisse von Office-Add-Ins (nun [in Configuration Manager verfügbar](#bkmk_office))
+- Erkenntnisse von Add-Ins für Microsoft 365-Apps (jetzt [in Configuration Manager verfügbar](#bkmk_office))
 - Erkenntnisse aus Feedback-Hub
 
 #### <a name="update-compliance"></a>Updatekonformität
@@ -151,9 +151,9 @@ Ja, die folgenden Windows Analytics-Features wurden entweder eingestellt oder si
 
 ## <a name="other"></a>Andere
 
-### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a> Kann ich Desktop Analytics für meine Office 365 ProPlus-Upgrades verwenden?
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a> Kann ich Desktop Analytics für meine Upgrades für Microsoft 365-Apps verwenden?
 
-Nein, der Schwerpunkt von Desktop Analytics liegt auf Windows. Microsoft hat Desktop Analytics in enger Zusammenarbeit mit vielen Kunden entwickelt. Das Kundenfeedback hat dazu beigetragen, dass Desktop Analytics ihre Möglichkeiten zur zuverlässigen Verwaltung von Windows-Bereitstellungen verbessert. Kunden haben uns zudem darauf hingewiesen, dass die [Office 365 ProPlus-Bereitschaft](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) enger in Office-Verwaltungstools in Configuration Manager und Intune integriert werden sollte. Microsoft unternimmt weiter Anstrengungen in diesen Bereichen, konzentriert sich aber in Desktop Analytics auf Windows-Szenarios.
+Nein, der Schwerpunkt von Desktop Analytics liegt auf Windows. Microsoft hat Desktop Analytics in enger Zusammenarbeit mit vielen Kunden entwickelt. Das Kundenfeedback hat dazu beigetragen, dass Desktop Analytics ihre Möglichkeiten zur zuverlässigen Verwaltung von Windows-Bereitstellungen verbessert. Kunden haben uns zudem darauf hingewiesen, dass die [Bereitschaft für Microsoft 365-Apps](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) enger in Verwaltungstools für Microsoft 365-Apps in Configuration Manager und Intune integriert werden sollte. Microsoft unternimmt weiter Anstrengungen in diesen Bereichen, konzentriert sich aber in Desktop Analytics auf Windows-Szenarios.
 
 ### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>Wie kann ich Feedback zu Desktop Analytics übermitteln?
 

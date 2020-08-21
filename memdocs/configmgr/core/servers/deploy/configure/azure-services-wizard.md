@@ -2,20 +2,20 @@
 title: Konfigurieren von Azure-Diensten
 titleSuffix: Configuration Manager
 description: Verbinden Sie Ihre Configuration Manager-Umgebung mit Azure-Diensten für die Cloudverwaltung, Microsoft Store für Unternehmen und Log Analytics.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6ca5307de5c7df54c3cf7924bc91b0175b1bfa39
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715321"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128476"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Konfigurieren von Azure-Diensten zur Verwendung mit dem Configuration Manager
 
@@ -229,6 +229,17 @@ Nach der Angabe der Web-Apps und nativen Apps auf der Seite „Apps“ fährt de
 Schließlich können Sie den Assistenten für Azure-Dienste über die Seiten „Zusammenfassung“, „Status“ und „Abschluss“ abschließen. Sie haben die Konfiguration eines Azure-Diensts in Configuration Manager abgeschlossen. Anhand dieser Anleitung können Sie auch weitere Azure-Dienste konfigurieren.
 
 ## <a name="renew-secret-key"></a><a name="bkmk_renew"></a> Geheimen Schlüssel erneuern
+
+Sie müssen den geheimen Schlüssel der Azure AD-App vor Ablauf der Gültigkeitsdauer erneuern. Wenn Sie den Schlüssel ablaufen lassen, kann Configuration Manager sich nicht bei Azure AD authentifizieren, was dazu führt, dass Ihre verbundenen Azure-Dienste nicht mehr funktionieren.
+
+Ab Version 2006 zeigt die Configuration Manager-Konsole Benachrichtigungen für die folgenden Umstände an:<!--6386392-->
+
+- Mindestens ein geheimer Azure AD-Schlüssel für die App läuft bald ab
+- Mindestens ein geheimer Azure AD-Schlüssel für die App ist abgelaufen
+
+Um beide Probleme zu beheben, erneuern Sie den geheimen Schlüssel.
+
+Weitere Informationen zur Interaktion mit diesen Benachrichtigungen finden Sie unter [Configuration Manager-Konsolenbenachrichtigungen](../../manage/admin-console-notifications.md).
 
 ### <a name="renew-key-for-created-app"></a>Schlüssel für erstellte App erneuern
 

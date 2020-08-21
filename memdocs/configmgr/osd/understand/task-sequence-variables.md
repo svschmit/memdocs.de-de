@@ -2,20 +2,20 @@
 title: 'Tasksequenzvariablen: Referenz'
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über die Variablen zum Steuern und Anpassen einer Configuration Manager-Tasksequenz.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429813"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124140"
 ---
 # <a name="task-sequence-variables"></a>Tasksequenzvariablen
 
@@ -372,6 +372,13 @@ Dies ist eine schreibgeschützte Variable, mit der überprüft werden kann, ob d
 *Gilt für den Schritt [Bereitschaft überprüfen](task-sequence-steps.md#BKMK_CheckReadiness)*
 
 Dies ist eine schreibgeschützte Variable, mit der überprüft werden kann, ob die Überprüfung **Network adapter connected** (Netzwerkadapter verbunden) TRUE (`1`) oder FALSE (`0`) zurückgegeben hat. Wenn Sie diese Überprüfung nicht aktivieren, ist der Wert dieser schreibgeschützten Variable leer.
+
+### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a> _TS_CRUEFI
+
+*Ab Version 2006* <!--6452769-->
+*Gilt für den Schritt [Bereitschaft überprüfen](task-sequence-steps.md#BKMK_CheckReadiness)*
+
+Eine schreibgeschützte Variable, die angibt, ob **Computer befindet sich im UEFI-Modus** BIOS (`0`) oder UEFI (`1`) zurückgibt. Wenn Sie diese Überprüfung nicht aktivieren, ist der Wert dieser schreibgeschützten Variable leer.
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a> _TS_CRWIRED
 

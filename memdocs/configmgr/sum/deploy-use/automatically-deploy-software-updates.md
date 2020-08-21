@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240030"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127745"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Automatisches Bereitstellen von Softwareupdates  
 
@@ -47,7 +47,7 @@ Sie können Softwareupdates mithilfe einer ADR automatisch genehmigen und bereit
 
          - Die Vorlage **Patch-Dienstag** enthält allgemeine Einstellungen für die monatliche Bereitstellung von Softwaredefinitionsupdates.  
 
-         - Die Vorlage **Office 365-Clientupdates** stellt allgemeine Einstellungen bereit, die bei der Bereitstellung von Updates für Office 365 Pro Plus-Clients verwendet werden sollen.
+         - Die Vorlage **Office 365-Clientupdates** stellt allgemeine Einstellungen bereit, die bei der Bereitstellung von Updates für Microsoft 365-Apps-Clients verwendet werden können.
              > [!Note]
              > Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Wenn Ihre ADRs auf der Eigenschaft „Title“ aufbauen, müssen Sie sie ab dem 9. Juni 2020 bearbeiten. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` ist ein Beispiel für den neuen Titel. Weitere Informationen zum Ändern von Regeln für die automatische Bereitstellung finden Sie unter [Updatekanäle für Microsoft 365-Apps](manage-office-365-proplus-updates.md#bkmk_channel). Weitere Informationen zur Namensänderung finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
@@ -199,7 +199,7 @@ Sie können Softwareupdates mithilfe einer ADR automatisch genehmigen und bereit
 
         - **Binäre differenzielle Replikation aktivieren:** Aktivieren Sie diese Einstellung, um die binäre differenzielle Replikation für das Bereitstellungspaket zu verwenden. Weitere Informationen finden Sie unter [Binäre differenzielle Replikation](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
-    - **Kein Bereitstellungspaket:** Ab Version 1806 werden Softwareupdates auf Geräten bereitgestellt, ohne dass Inhalte zuvor auf Verteilungspunkte heruntergeladen und dort bereitgestellt werden. Diese Einstellung ist beim Umgang mit extrem großen Updateinhalten nützlich. Sie verwenden sie ferner, wenn Clients stets Inhalte vom Microsoft Update-Clouddienst erhalten sollen. Clients können den Inhalt in diesem Szenario auch von Peers herunterladen, die bereits über den erforderlichen Inhalt verfügen. Der Configuration Manager-Client verwaltet weiterhin den Inhaltsdownload und kann deshalb das Feature „Peercache“ von Configuration Manager oder andere Technologien verwenden, z.B. die Übermittlungsoptimierung. Dieses Feature unterstützt alle Updatetypen, die von der Configuration Manager-Softwareupdateverwaltung unterstützt werden, einschließlich Windows- und Office-Updates.<!--1357933-->  
+    - **Kein Bereitstellungspaket:** Ab Version 1806 werden Softwareupdates auf Geräten bereitgestellt, ohne dass Inhalte zuvor auf Verteilungspunkte heruntergeladen und dort bereitgestellt werden. Diese Einstellung ist beim Umgang mit extrem großen Updateinhalten nützlich. Sie verwenden sie ferner, wenn Clients stets Inhalte vom Microsoft Update-Clouddienst erhalten sollen. Clients können den Inhalt in diesem Szenario auch von Peers herunterladen, die bereits über den erforderlichen Inhalt verfügen. Der Configuration Manager-Client verwaltet weiterhin den Inhaltsdownload und kann deshalb das Feature „Peercache“ von Configuration Manager oder andere Technologien verwenden, z.B. die Übermittlungsoptimierung. Dieses Feature unterstützt alle Updatetypen, die von der Configuration Manager-Softwareupdateverwaltung unterstützt werden, einschließlich Windows- und Microsoft 365-Apps-Updates.<!--1357933-->  
 
         > [!Note]  
         > Nachdem Sie diese Option aktiviert und die Einstellungen angewendet haben, können Sie keine Änderungen mehr vornehmen. Die anderen Optionen werden abgeblendet dargestellt.<!--SCCMDocs-pr issue 3003-->  

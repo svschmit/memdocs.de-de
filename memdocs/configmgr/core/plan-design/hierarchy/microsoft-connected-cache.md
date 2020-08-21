@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 0103ba8923698a31b86e7d34119caaeb54d54c90
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814909"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128527"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Microsoft Connected Cache in Configuration Manager
 
@@ -132,7 +132,7 @@ Wenn Clients von der Cloud verwalteten Inhalt herunterladen, verwenden sie die �
 - Wenn Sie die Option [Windows Update for Business-Richtlinien](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md) aktivieren: Windows 10-Feature und Qualitätsupdates
 - Für [Workloads für die Co-Verwaltung:](../../../comanage/workloads.md)
   - Windows Update for Business: Windows 10-Feature und Qualitätsupdates
-  - Office-Klick-und-Los-Apps: Office-Apps und Updates
+  - Office-Klick-und-Los-Apps: Microsoft 365-Apps und Updates
   - Client-Apps: Microsoft Store-Apps und Updates
   - Endpoint Protection: Definitionsupdates für Windows Defender
 

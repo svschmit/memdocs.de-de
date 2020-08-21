@@ -10,12 +10,12 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 62faf2fd736f9751e8b33e821cb814f527a1197c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c39d3380212debe97c2d2f33de6a98fecfb8402e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707088"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126051"
 ---
 # <a name="fundamentals-of-role-based-administration-for-configuration-manager"></a>Grundlagen der rollenbasierten Verwaltung für Configuration Manager
 
@@ -27,7 +27,7 @@ Bei Configuration Manager verwenden Sie die rollenbasierte Verwaltung, um den Zu
 
 - *Sicherheitsrollen* werden Administratoren zugewiesen, um diesen Benutzern (oder Benutzergruppen) Berechtigungen für verschiedene Configuration Manager-Objekte zu erteilen. Dies ist z.B. zum Erstellen oder Ändern von Clienteinstellungen der Fall.  
 
-- Mithilfe von *Sicherheitsbereichen* werden bestimmte Instanzen von Objekten gruppiert, für deren Verwaltung ein Administrator verantwortlich ist, z.B. eine Anwendung zum Installieren von Microsoft Office 2010.  
+- Mithilfe von *Sicherheitsbereichen* werden bestimmte Instanzen von Objekten gruppiert, für deren Verwaltung ein Administrator verantwortlich ist, z. B. eine Anwendung zum Installieren von Microsoft 365 Apps.  
 
 - *Sammlungen* dienen zum Angeben von Gruppen von Benutzer- und Geräteressourcen, die der Administrator verwalten kann.  
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842222"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127221"
 ---
 # <a name="co-management-workloads"></a>Workloads für die Co-Verwaltung
 
@@ -104,7 +104,7 @@ Weitere Informationen zu diesem Intune-Feature finden Sie unter [Erstellen eines
 
 <!--1357841-->
 
-Diese Workload verwaltet Office 365-Apps auf gemeinsam verwalteten Geräten.
+Diese Workload verwaltet Microsoft 365 Apps auf gemeinsam verwalteten Geräten.
 
 - Nachdem die Workload verschoben wurde, wird die App auf dem Gerät im **Unternehmensportal** angezeigt.  
 

@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878099"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126357"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Problembehandlung für Microsoft Connected Cache in Configuration Manager
 
@@ -223,7 +223,7 @@ Der Cacheserver der Übermittlungsoptimierung fügt die folgenden Neuschreibungs
 Der für jeden Cacheserver der Übermittlungsoptimierung erforderliche Speicherplatz kann je nach den Updateanforderungen Ihres Unternehmens variieren. 100 GB sollten ausreichend Speicherplatz bieten, um den folgenden Inhalt zwischenzuspeichern:
 
 - Ein Featureupdate
-- Qualitätsupdates und Office-Updates für zwei bis drei Monate
+- Zwei bis drei Monate lang Qualitätsupdates und Updates für Microsoft 365-Apps
 - Microsoft Intune-Apps und Windows-Inbox-Apps
 
 Der Cacheserver der Übermittlungsoptimierung sollte nicht viel Systemarbeitsspeicher oder Prozessorzeit beanspruchen. Wenn Sie nach der Installation des Cacheservers der Übermittlungsoptimierung einen erheblichen Prozess- oder Arbeitsspeicherressourcenverbrauch feststellen, analysieren Sie die IIS- und ARR-Protokolldateien.

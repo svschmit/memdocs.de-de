@@ -2,20 +2,20 @@
 title: Tasksequenzschritte
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über die Schritte, die Sie einer Configuration Manager-Tasksequenz hinzufügen können.
-ms.date: 07/06/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: bab2050448e1c870aac8f3237c21b19498cdb674
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546619"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124235"
 ---
 # <a name="task-sequence-steps"></a>Tasksequenzschritte
 
@@ -216,6 +216,9 @@ Wählen Sie diese Option aus, um den Zielcomputer einer angegebenen Arbeitsgrupp
 #### <a name="join-a-domain"></a>Einer Domäne beitreten
 
 Wählen Sie diese Option aus, um den Zielcomputer einer angegebenen Domäne hinzuzufügen. Geben Sie die Domäne an, oder klicken Sie auf Durchsuchen, um die Domäne auszuwählen, z. B. `fabricam.com`. Geben Sie einen LDAP-Pfad (Lightweight Directory Access Protocol) für eine Organisationseinheit an, oder suchen Sie nach einem LDAP-Pfad. Beispiel: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
+
+> [!NOTE]
+> Wenn ein in Azure Active Directory (Azure AD) eingebundener Client eine Tasksequenz für die Bereitstellung eines Betriebssystems ausführt, wird der Client im neuen Betriebssystem nicht automatisch in Azure AD eingebunden. Auch wenn der Client nicht in Azure AD eingebunden ist, wird er dennoch verwaltet.
 
 #### <a name="account"></a>Konto
 
@@ -773,7 +776,6 @@ Erfassen Sie auf dem Computer die Namen registrierter Benutzer und Organisatione
 Erfassen Sie die Zeitzoneneinstellungen auf dem Computer.  
 
 
-
 ## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a> Bereitschaft überprüfen
 
 Verwenden Sie diesen Schritt, um zu überprüfen, ob der Zielcomputer die Voraussetzungen für die Bereitstellung erfüllt.  
@@ -791,6 +793,8 @@ Ab Version 2002 beinhaltet dieser Schritt acht neue Überprüfungen. Keine dies
 - **Netzwerkadapter verbunden**
   - **Netzwerkadapter nicht drahtlos**
 
+Ab Version 2006 umfasst dieser Schritt eine Überprüfung, um zu ermitteln, ob das Gerät UEFI verwendet: **Überprüfen, ob sich der Computer im UEFI-Modus befindet**.<!--6452769-->
+
 > [!IMPORTANT]
 > Wenn Sie diese neuen Configuration Manager-Features nach der Aktualisierung des Standorts nutzen möchten, müssen Sie auch Clients auf die neueste Version aktualisieren. Beim Update des Standorts und der Konsole werden neue Features in der Configuration Manager-Konsole angezeigt. Das vollständige Szenario ist allerdings erst einsatzbereit, wenn auch die Clientversion aktualisiert wird.
 
@@ -804,14 +808,15 @@ Verwenden Sie die folgenden Tasksequenzvariablen in diesem Schritt:
 - [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
 - [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
 - [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
-- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
-- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
-- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
-- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
-- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
-- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
-- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
-- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH) (ab Version 2002)
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER) (ab Version 2002)
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER) (ab Version 2002)
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER) (ab Version 2002)
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE) (ab Version 2002)
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER) (ab Version 2002)
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK) (ab Version 2002)
+- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (ab Version 2006)
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED) (ab Version 2002)
 
 ### <a name="cmdlets-for-check-readiness"></a>Cmdlets für „Bereitschaft überprüfen“
 
@@ -869,6 +874,10 @@ Ab Version 2002 sollten Sie dafür sorgen, dass das Netzteil des Geräts angesc
 #### <a name="network-adapter-connected"></a>Netzwerkadapter verbunden
 
 Ab Version 2002 sollten Sie überprüfen, ob das Gerät über einen Netzwerkadapter verfügt, der mit dem Netzwerk verbunden ist. Sie können auch die entsprechende Überprüfung ausführen, um zu bestätigen, dass es sich um keinen **drahtlosen Netzwerkadapter** handelt.
+
+#### <a name="computer-is-in-uefi-mode"></a>Computer befindet sich im UEFI-Modus
+
+Ab Version 2006 können Sie ermitteln, ob das Gerät für UEFI oder BIOS konfiguriert ist.
 
 ### <a name="options-for-check-readiness"></a>Optionen für „Bereitschaft überprüfen“
 
@@ -1054,12 +1063,9 @@ Wenn Sie die [Tasksequenzeigenschaften](../deploy-use/manage-task-sequences-to-a
 
 ## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a> BitLocker aktivieren
 
-Verwenden Sie diesen Schritt, um die BitLocker-Verschlüsselung auf mindestens zwei Partitionen auf der Festplatte zu aktivieren. Die erste aktive Partition enthält den Windows-Bootstrap-Code. Eine andere Partition beinhaltet das Betriebssystem. Die Bootstrap-Partition muss unverschlüsselt bleiben.  
+BitLocker-Laufwerkverschlüsselung bietet eine niedrige Verschlüsselungsstufe der Inhalte eines Datenträgervolumes. Verwenden Sie diesen Schritt, um die BitLocker-Verschlüsselung auf mindestens zwei Partitionen auf der Festplatte zu aktivieren. Die erste aktive Partition enthält den Windows-Bootstrap-Code. Eine andere Partition beinhaltet das Betriebssystem. Die Bootstrap-Partition muss unverschlüsselt bleiben.  
 
-Verwenden Sie den Schritt **BitLocker vorab bereitstellen**, um BitLocker auf einem Laufwerk in Windows PE zu aktivieren. Weitere Informationen finden Sie unter [BitLocker vorab bereitstellen](#BKMK_PreProvisionBitLocker).  
-
-> [!NOTE]  
-> BitLocker-Laufwerkverschlüsselung bietet eine niedrige Verschlüsselungsstufe der Inhalte eines Datenträgervolumes.  
+Um BitLocker auf einem Laufwerk in Windows PE zu aktivieren, verwenden Sie den Schritt [BitLocker vorab bereitstellen](#BKMK_PreProvisionBitLocker).
 
 Dieser Schritt wird nur in der Vollversion des Betriebssystems ausgeführt. Er kann nicht in Windows PE ausgeführt werden.
 
@@ -1071,7 +1077,9 @@ Wenn Sie **Nur TPM**, **TPM und Schlüssel zum Systemstart auf USB** oder **TPM-
 - Aktiviert  
 - Besitz zulässig  
 
-Dieser Schritt schließt alle verbleibenden TPM-Initialisierungen ab. Die verbleibenden Schritte erfordern keine physische Anwesenheit und keine Neustarts. Der Schritt **BitLocker aktivieren** schließt die folgenden verbleibenden TPM-Initialisierungsschritte bei Bedarf transparent ab:  
+Ab Version 2006 können Sie diesen Schritt für Computer überspringen, die kein TPM besitzen oder auf denen das TPM nicht aktiviert ist. Eine neue Einstellung erleichtert die Verwaltung des Tasksequenzverhaltens auf Geräten, die BitLocker nicht vollständig unterstützen können.<!--6995601-->
+
+Dieser Schritt schließt alle verbleibenden TPM-Initialisierungen ab. Die verbleibenden Aktionen erfordern keine physische Anwesenheit und keine Neustarts. Der Schritt **BitLocker aktivieren** führt die folgenden verbleibenden TPM-Initialisierungsaktionen bei Bedarf transparent aus:
 
 - Endorsement Key-Paar erstellen  
 - Besitzerauthentifizierungswert erstellen und in Active Directory hinterlegen, welches zur Unterstützung dieses Werts erweitert worden sein muss  
@@ -1118,6 +1126,18 @@ Gibt das zu verschlüsselnde Laufwerk an. Um das aktuelle Betriebssystemlaufwerk
 
 Um ein bestimmtes Datenlaufwerk zu verschlüsseln, das kein Betriebssystem enthält, wählen Sie **Bestimmtes Laufwerk** aus. Wählen Sie dann das Laufwerk aus der Liste aus.  
 
+#### <a name="disk-encryption-mode"></a>Datenträgerverschlüsselungsmodus
+
+<!--6995601-->
+Ab Version 2006 können Sie einen der folgenden Verschlüsselungsalgorithmen auswählen:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+Standardmäßig oder bei nicht erfolgter Festlegung verwendet der Schritt weiterhin die Standardverschlüsselungsmethode für die Betriebssystemversion. Wenn der Schritt für eine Version von Windows ausgeführt wird, die den angegebenen Algorithmus nicht unterstützt, wird auf den Standardwert des Betriebssystems zurückgegriffen. Unter diesen Umständen sendet die Tasksequenz-Engine die Statusmeldung 11911.
+
 #### <a name="use-full-disk-encryption"></a>Vollständige Datenträgerverschlüsselung verwenden
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1136,6 +1156,10 @@ Wählen Sie diese Option aus, damit die BitLocker-Laufwerkverschlüsselung abges
 
 Beim Verschlüsseln einer großen Festplatte kann der Verschlüsselungsvorgang mehrere Stunden andauern. Wenn diese Option nicht ausgewählt wird, kann die Tasksequenz sofort fortgesetzt werden.  
 
+#### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>Überspringen Sie diesen Schritt für Computer, die nicht über TPM verfügen, oder wenn TPM nicht aktiviert ist.
+
+<!--6995601-->
+Ab Version 2006 können Sie diese Option auswählen, um die Laufwerkverschlüsselung auf einem Computer zu überspringen, der kein unterstütztes oder aktiviertes TPM enthält. Verwenden Sie diese Option beispielsweise, um ein Betriebssystem auf einer VM bereitzustellen. Diese Einstellung ist für den Schritt **BitLocker aktivieren** standardmäßig deaktiviert. Wenn Sie diese Einstellung aktivieren und das Gerät nicht über ein funktionierendes TPM verfügt, protokolliert die Tasksequenz-Engine einen Fehler in „smsts.log“ und sendet die Statusmeldung 11912. Die Tasksequenz wird über diesen Schritt hinaus fortgesetzt.
 
 
 ## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a> Datenträger formatieren und partitionieren
@@ -1174,6 +1198,31 @@ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Re
 #### <a name="disk-number"></a>Datenträgernummer
 
 Die Nummer des physischen Datenträgers, der formatiert werden soll Die Nummer basiert auf der Reihenfolge der Datenträgerenumeration in Windows.  
+
+#### <a name="variable-name-to-store-disk-number"></a>Variablenname zum Speichern der Datenträgernummer
+
+<!--6610288-->
+
+Ab Version 2006 können Sie eine Tasksequenzvariable verwenden, um den zu formatierenden Zieldatenträger anzugeben. Diese Variablenoption unterstützt komplexere Tasksequenzen mit dynamischem Verhalten. Beispielsweise kann ein benutzerdefiniertes Skript den Datenträger erkennen und die Variable auf Grundlage des Hardwaretyps festlegen. Anschließend können Sie mehrere Instanzen dieses Schritts verwenden, um verschiedene Hardwaretypen und Partitionen zu konfigurieren.
+
+Wenn Sie diese Eigenschaft auswählen, geben Sie einen benutzerdefinierten Variablennamen ein. Fügen Sie einen früheren Schritt in der Tasksequenz hinzu, um den Wert dieser benutzerdefinierten Variablen auf einen ganzzahligen Wert für den physischen Datenträger festzulegen.
+
+Die folgenden Schritte zeigen ein Beispiel:
+
+- **PowerShell-Skript ausführen**: benutzerdefiniertes Skript zum Sammeln von Zieldatenträgern
+  - Legt `myOSDisk` auf `1` fest.
+  - Legt `myDataDisk` auf `2` fest.
+
+- **Datenträger formatieren und partitionieren** für Betriebssystemdatenträger: gibt die `myOSDisk`-Variable an
+  - Konfiguriert Datenträger 1 als Systemdatenträger.
+
+- **Datenträger formatieren und partitionieren** für Datenträger: gibt die `myDataDisk`-Variable an
+  - Konfiguriert Datenträger 2 für unformatierten Speicher.
+
+Bei einer Variante dieses Beispiels werden Datenträgernummern und Partitionierungspläne für unterschiedliche Hardwaretypen verwendet.
+
+> [!NOTE]
+> Sie können weiterhin die vorhandene Tasksequenzvariable **OSDDiskIndex** verwenden. Allerdings wird für jede Instanz des Schritts **Datenträger formatieren und partitionieren** derselbe Indexwert verwendet. Wenn Sie die Datenträgernummer für mehrere Instanzen dieses Schritts programmgesteuert festlegen möchten, verwenden Sie diese Variableneigenschaft.
 
 #### <a name="disk-type"></a>Datenträgertyp
 
@@ -1489,6 +1538,9 @@ Wenn eines der Updates den Computer unerwartet neu startet, wiederholen Sie dies
 
 Verwenden Sie diesen Schritt, um den Zielcomputer einer Arbeitsgruppe oder einer Domäne hinzuzufügen.  
 
+> [!NOTE]
+> Wenn ein in Azure Active Directory (Azure AD) eingebundener Client eine Tasksequenz für die Bereitstellung eines Betriebssystems ausführt, wird der Client im neuen Betriebssystem nicht automatisch in Azure AD eingebunden. Auch wenn der Client nicht in Azure AD eingebunden ist, wird er dennoch verwaltet.
+
 Dieser Tasksequenzschritt wird nur in der Vollversion des Betriebssystems ausgeführt. Er kann nicht in Windows PE ausgeführt werden.
 
 Um diesen Schritt im Tasksequenz-Editor hinzuzufügen, wählen Sie **Hinzufügen**, **Allgemein** und dann **Domäne oder Arbeitsgruppe beitreten** aus.
@@ -1635,6 +1687,18 @@ Konfigurieren Sie die in diesem Abschnitt beschriebenen Einstellungen auf der Re
 
 Geben Sie das Laufwerk aus, für das Sie BitLocker aktivieren möchten. BitLocker verschlüsselt nur den belegten Speicherplatz auf dem Laufwerk.  
 
+#### <a name="disk-encryption-mode"></a>Datenträgerverschlüsselungsmodus
+
+<!--6995601-->
+Ab Version 2006 können Sie einen der folgenden Verschlüsselungsalgorithmen auswählen:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+Standardmäßig oder bei nicht erfolgter Festlegung verwendet der Schritt weiterhin die Standardverschlüsselungsmethode für die Betriebssystemversion. Wenn der Schritt für eine Version von Windows ausgeführt wird, die den angegebenen Algorithmus nicht unterstützt, wird auf den Standardwert des Betriebssystems zurückgegriffen. Unter diesen Umständen sendet die Tasksequenz-Engine die Statusmeldung 11911.
+
 #### <a name="use-full-disk-encryption"></a>Vollständige Datenträgerverschlüsselung verwenden
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1642,7 +1706,7 @@ Standardmäßig verschlüsselt dieser Schritt nur belegten Speicherplatz auf dem
 
 #### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>Überspringen Sie diesen Schritt für Computer, die nicht über TPM verfügen, oder wenn TPM nicht aktiviert ist.
 
-Wählen Sie diese Option aus, um die Laufwerkverschlüsselung auf einem Computer zu überspringen, der kein unterstütztes oder aktiviertes TPM enthält. Verwenden Sie diese Option beispielsweise, um ein Betriebssystem auf einer VM bereitzustellen.  
+Wählen Sie diese Option aus, um die Laufwerkverschlüsselung auf einem Computer zu überspringen, der kein unterstütztes oder aktiviertes TPM enthält. Verwenden Sie diese Option beispielsweise, um ein Betriebssystem auf einer VM bereitzustellen. Diese Einstellung ist für den Schritt **BitLocker vorab bereitstellen** standardmäßig aktiviert. Der Schritt kann auf einem Gerät ohne TPM oder mit einem TPM, das nicht initialisiert werden kann, nicht ausgeführt werden. Ab Version 2006 gilt Folgendes: Wenn das Gerät kein funktionierendes TPM besittz, protokolliert die Tasksequenz-Engine eine Warnung in „smsts.log“ und sendet die Statusmeldung 11912.
 
 
 
@@ -2169,10 +2233,10 @@ Berücksichtigen Sie Folgendes, wenn Sie eine untergeordnete Tasksequenz einer T
 
 Ab Version 1906 können Sie diesen Schritt mit den folgenden PowerShell-Cmdlets verwalten:<!-- 2839943, SCCMDocs#1118 -->
 
-- **Get-CMTSStepRunTaskSequence**
-- **New-CMTSStepRunTaskSequence**
-- **Remove-CMTSStepRunTaskSequence**
-- **Set-CMTSStepRunTaskSequence**
+- [Get-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruntasksequence?view=sccm-ps)
+- [New-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruntasksequence?view=sccm-ps)
+- [Remove-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruntasksequence?view=sccm-ps)
+- [Set-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruntasksequence?view=sccm-ps)
 
 Weitere Informationen finden Sie unter [Anmerkungen zu Version 1906 – Neue Cmdlets](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets).
 
@@ -2241,15 +2305,19 @@ Fügen Sie eine Regel hinzu, um eine dynamische Variable für die Verwenden in d
 
     Geben Sie eine oder mehrere Variablen an, die für eine Regel festgelegt werden sollen, die als TRUE ausgewertet wird, oder legen Sie Variablen ohne Verwendung einer Regel fest. Wählen Sie eine vorhandene Variable aus, oder erstellen Sie eine benutzerdefinierte Variable.  
 
-    - **Vorhandene Tasksequenzvariablen**: Eine oder mehrere Variablen werden aus einer Liste vorhandener Tasksequenzvariablen ausgewählt. Arrayvariablen stehen nicht zur Auswahl.  
+  - **Vorhandene Tasksequenzvariablen**: Eine oder mehrere Variablen werden aus einer Liste vorhandener Tasksequenzvariablen ausgewählt. Arrayvariablen stehen nicht zur Auswahl.  
 
-    - **Benutzerdefinierte Tasksequenzvariablen**: Eine benutzerdefinierte Tasksequenzvariable wird definiert. Sie können auch eine vorhandene Tasksequenzvariable angeben. Diese Einstellung ist nützlich, um ein vorhandenes Variablenarray wie **OSDAdapter** anzugeben, da Variablenarrays nicht in der Liste der vorhandenen Tasksequenzvariablen enthalten sind.  
+  - **Benutzerdefinierte Tasksequenzvariablen**: Eine benutzerdefinierte Tasksequenzvariable wird definiert. Sie können auch eine vorhandene Tasksequenzvariable angeben. Diese Einstellung ist nützlich, um ein vorhandenes Variablenarray wie **OSDAdapter** anzugeben, da Variablenarrays nicht in der Liste der vorhandenen Tasksequenzvariablen enthalten sind.  
 
-Nachdem Sie die Variablen für eine Regel ausgewählt haben, geben Sie einen Wert für jede Variable an. Die Variable wird auf den angegebenen Wert festgelegt, wenn die Regel als „Wahr“ ausgewertet wird. Sie können für jede Variable **Geheimer Wert** auswählen, um den Wert der Variablen auszublenden. Standardmäßig blenden einige vorhandene Variablen Werte aus, z.B. die Variable **OSDCaptureAccountPassword**.  
+Nachdem Sie die Variablen für eine Regel ausgewählt haben, geben Sie einen Wert für jede Variable an. Die Variable wird auf den angegebenen Wert festgelegt, wenn die Regel als „Wahr“ ausgewertet wird. Sie können für jede Variable die Option **Diesen Wert nicht anzeigen** auswählen, um den Wert der Variable auszublenden. Standardmäßig blenden einige vorhandene Variablen Werte aus, z.B. die Variable **OSDCaptureAccountPassword**.  
 
 > [!IMPORTANT]  
-> Configuration Manager entfernt alle Variablenwerte, die als **Geheimniswert** markiert sind, wenn Sie eine Tasksequenz mit dem Schritt **Dynamische Variablen festlegen** importieren. Geben Sie den Wert für die dynamische Variable nach dem Import der Tasksequenz erneut ein.  
+> Wenn Sie eine Tasksequenz mit dem Schritt **Dynamische Variablen festlegen** importieren, entfernt Configuration Manager alle Variablenwerte, die als **Diesen Wert nicht anzeigen** gekennzeichnet sind. Nachdem Sie die Tasksequenz importiert haben, geben Sie den Wert für die dynamische Variable erneut ein.
 
+Bei Verwendung der Option **Diesen Wert nicht anzeigen** wird der Wert der Variable im Tasksequenz-Editor nicht angezeigt. In der Tasksequenz-Protokolldatei (**smsts.log**) oder im Tasksequenz-Debugger wird der Wert der Variable ebenfalls nicht angezeigt. Die Variable kann allerdings weiterhin von der Tasksequenz während der Ausführung verwendet werden. Wenn diese Variablen nicht mehr ausgeblendet sein sollen, löschen Sie diese zuerst. Definieren Sie dann erneut die Variablen, und lassen Sie die Option zum Ausblenden dieser Variablen dieses Mal deaktiviert.  
+
+> [!WARNING]  
+> Wenn Sie Variablen in die Befehlszeile des Schritts **Befehlszeile ausführen** einfügen, zeigt die Protokolldatei der Tasksequenz die vollständige Befehlszeile einschließlich der Variablenwerte an. Um zu verhindern, dass möglicherweise vertrauliche Daten in der Protokolldatei angezeigt werden, legen Sie die Tasksequenzvariable **OSDDoNotLogCommand** auf `TRUE` fest.
 
 
 ## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a> Tasksequenzvariable festlegen
@@ -2289,8 +2357,13 @@ Geben Sie den Namen einer integrierten Tasksequenzvariablen oder einer Taskseque
 <!--1358330-->
 Aktivieren Sie diese Option, um vertrauliche Daten zu maskieren, die in Tasksequenzvariablen gespeichert sind. Dies ist beispielsweise bei der Angabe eines Kennworts der Fall.
 
-> [!Note]  
+> [!NOTE]
 > Aktivieren Sie diese Option aus, und legen Sie den Wert der Tasksequenzvariablen fest. Andernfalls wird der Wert der Variablen nicht so festgelegt, wie Sie es beabsichtigen, was bei der Ausführung der Tasksequenz zu unerwartetem Verhalten führen kann.<!--SCCMdocs issue #800-->
+
+Bei Verwendung der Option **Diesen Wert nicht anzeigen** wird der Wert der Variable im Tasksequenz-Editor nicht angezeigt. In der Tasksequenz-Protokolldatei (**smsts.log**) oder im Tasksequenz-Debugger wird der Wert der Variable ebenfalls nicht angezeigt. Die Variable kann allerdings weiterhin von der Tasksequenz während der Ausführung verwendet werden. Wenn diese Variable nicht mehr verborgen werden soll, löschen Sie sie zuerst. Definieren Sie die Variable dann neu, und wählen Sie die Option zum Ausblenden nicht aus.
+
+> [!WARNING]
+> Wenn Sie Variablen in die Befehlszeile des Schritts **Befehlszeile ausführen** einfügen, zeigt die Protokolldatei der Tasksequenz die vollständige Befehlszeile einschließlich der Variablenwerte an. Um zu verhindern, dass möglicherweise vertrauliche Daten in der Protokolldatei angezeigt werden, legen Sie die Tasksequenzvariable **OSDDoNotLogCommand** auf `TRUE` fest.<!-- 6963278 -->
 
 #### <a name="value"></a>Wert  
 
@@ -2388,6 +2461,8 @@ Wenn ein Präproduktions-Clientpaket verfügbar und der Computer Mitglied der Pi
 Der Tasksequenzschritt gibt die Standortzuweisung und die Standardkonfiguration automatisch an. Verwenden Sie dieses Feld, um zusätzliche Installationseigenschaften anzugeben, die bei der Clientinstallation verwendet werden sollen. Wenn sie mehrere Installationseigenschaften eingeben möchten, müssen Sie sie durch ein Leerzeichen trennen.  
 
 Geben Sie Befehlszeilenoptionen für die Clientinstallation an. Geben Sie beispielsweise `/skipprereq: silverlight.exe` ein, um „CCMSetup.exe“ anzuweisen, die Voraussetzungen für Microsoft Silverlight nicht zu installieren. Weitere Informationen zu diesen Befehlszeileneigenschaften für CCMSetup.exe finden Sie unter [Informationen zu Clientinstallationseigenschaften](../../core/clients/deploy/about-client-installation-properties.md).  
+
+Wenn Sie eine Tasksequenz zum Bereitstellen eines Betriebssystems auf einem internetbasierten Client ausführen, der entweder in Azure AD eingebunden ist oder die tokenbasierte Authentifizierung verwendet, müssen Sie die Eigenschaft [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) im Schritt **Windows und ConfigMgr einrichten** angeben. Beispiel: `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Optionen für „Windows und Konfigurations-Manager einrichten“
 

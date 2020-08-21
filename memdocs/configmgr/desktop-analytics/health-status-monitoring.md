@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 119f787f15b8c907d0c760a12b973ca984f4348c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b4663ca5640bcfea4338912ff471a3253b744d5f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268537"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125830"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>Überwachen des Integritätsstatus in Desktop Analytics
 
@@ -27,7 +27,7 @@ Weitere Informationen zum Verwenden dieser Funktion finden Sie unter [Überwache
 ![Screenshot der Seite „System überwachen“ in Desktop Analytics](media/monitor-health.png)
 
 > [!NOTE]  
-> Desktop Analytics sammelt nur Integritätsdaten von Geräten, die Nutzungsdaten liefern, welche als Bezugspunkt verwendet werden können. Das heißt, es sind keine Geräte unter Windows 7 und Windows 10 eingeschlossen, für die keine Übermittlung von Diagnosedaten auf der Ebene „Erweitert (begrenzt)“ festgelegt ist. Wenn für mehr als 10 % der Windows 10-Geräte die Übermittlung von Diagnosedaten auf anderen Ebenen als „Erweitert (begrenzt)“ konfiguriert ist, wird auf der Seite **System überwachen** im Bannerbereich eine Warnung angezeigt.  
+> Desktop Analytics sammelt nur Integritätsdaten von Geräten, die Nutzungsdaten liefern, welche als Bezugspunkt verwendet werden können. Das heißt, es sind keine Geräte unter Windows 7 und Windows 10 eingeschlossen, für die keine Übermittlung von Diagnosedaten auf der Ebene „Optional (begrenzt)“ festgelegt ist. Wenn für mehr als 10 % der Windows 10-Geräte die Übermittlung von Diagnosedaten auf anderen Ebenen als „Optional (begrenzt)“ konfiguriert ist, wird auf der Seite **System überwachen** im Bannerbereich eine Warnung angezeigt.  
 
 Wenn Sie weitere Informationen zu einer bestimmten App anzeigen möchten, wählen Sie diese in der Liste aus.
 

@@ -2,7 +2,7 @@
 title: Planen des Cloudverwaltungsgateways
 titleSuffix: Configuration Manager
 description: Planen und Entwerfen des Cloudverwaltungsgateways (Cloud Management Gateway, CMG) zur Vereinfachung der Verwaltung internetbasierter Clients.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502254"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126932"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planen von Cloud Management Gateway in Configuration Manager
 
@@ -54,7 +54,7 @@ Es gibt verschiedene Szenarios, in denen ein CMG von Vorteil ist. Die folgenden 
 
 - Installieren des Configuration Manager-Clients auf Windows 10-Geräten über das Internet. Mit Azure AD kann das Gerät sich beim CMG für die Clientregistrierung und -zuweisung authentifizieren. Sie können den Client manuell installieren oder eine andere Softwareverteilungsmethode verwenden, z.B. Microsoft Intune.  
 
-- Neue Gerätebereitstellung bei Co-Verwaltung. Bei der automatischen Registrierung vorhandener Clients ist CMG für die Co-Verwaltung nicht erforderlich. Erforderlich ist es bei neuen Geräten mit Windows AutoPilot, Azure AD, Microsoft Intune und Configuration Manager. Weitere Informationen finden Sie unter [Pfade zur Co-Verwaltung](../../../../comanage/quickstart-paths.md).
+- Neue Gerätebereitstellung bei Co-Verwaltung. Bei der automatischen Registrierung vorhandener Clients ist CMG für die Co-Verwaltung nicht erforderlich. Erforderlich ist es bei neuen Geräten mit Windows Autopilot, Azure AD, Microsoft Intune und Configuration Manager. Weitere Informationen finden Sie unter [Pfade zur Co-Verwaltung](../../../../comanage/quickstart-paths.md).
 
 ### <a name="specific-use-cases"></a>Spezifische Anwendungsfälle
 
@@ -124,6 +124,8 @@ Erstellen Sie das CMG am Standort der obersten Ebene in Ihrer Hierarchie. Wenn e
 Sie können mehrere CMG-Dienste in Azure und mehrere CMG-Verbindungspunkte erstellen. Mehrere CMG-Verbindungspunkte bieten einen Lastenausgleich des Clientdatenverkehrs vom CMG zu den lokalen Rollen.
 
 Ab Version 1902 können Sie einer Begrenzungsgruppe ein CMG zuordnen. Mit dieser Konfiguration können Clients für die Clientkommunikation entsprechend der [Begrenzungsgruppenbeziehungen](../../../servers/deploy/configure/boundary-groups.md) den Standardwert für das CMG verwenden oder Fallbacks zum CMG durchführen. Dieses Verhalten ist besonders in Zweigstellen- und VPN-Szenarios nützlich. Sie können für Clientdatenverkehr anstelle von kostspieligen und langsamen WAN-Verknüpfungen die schnelleren Dienste in Microsoft Azure verwenden.<!--3640932-->
+
+Ab Version 2006 können Intranetclients auf einen CMG-Softwareupdatepunkt zugreifen, wenn er einer Begrenzungsgruppe zugewiesen ist. Weitere Informationen finden Sie unter [Configure boundary groups](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup) (Konfigurieren von Begrenzungsgruppen). <!--7102873-->
 
 > [!NOTE]
 > Internetbasierte Clients gehören zu keiner Begrenzungsgruppe.
@@ -223,7 +225,7 @@ Die folgende Tabelle enthält die CMG-Unterstützung für Configuration Manager-
 |Komponente  |Unterstützung  |
 |---------|---------|
 | Softwareupdates     | ![Unterstützt](media/green_check.png) |
-| Endpoint Protection     | ![Unterstützt](media/green_check.png) <sup>[Hinweis 1](#bkmk_note1)</sup> |
+| Endpoint Protection     | ![Unterstützt](media/green_check.png) <sup>[Hinweis&nbsp;1](#bkmk_note1)</sup> |
 | Hardware- und Softwareinventur     | ![Unterstützt](media/green_check.png) |
 | Clientstatus und Benachrichtigungen     | ![Unterstützt](media/green_check.png) |
 | Skripts ausführen     | ![Unterstützt](media/green_check.png) |
@@ -233,10 +235,11 @@ Die folgende Tabelle enthält die CMG-Unterstützung für Configuration Manager-
 | Clientinstallation<br>(mit [Tokenauthentifizierung](../../deploy/deploy-clients-cmg-token.md)) | ![Unterstützt](media/green_check.png) (2002) |
 | Softwareverteilung (geräteorientiert)     | ![Unterstützt](media/green_check.png) |
 | Softwareverteilung (benutzerorientiert, erforderlich)<br>(mit Azure AD-Integration)     | ![Unterstützt](media/green_check.png) |
-| Softwareverteilung (benutzerorientiert, verfügbar)<br>([alle Anforderungen](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Unterstützt](media/green_check.png) |
+| Softwareverteilung (benutzerorientiert, verfügbar)<br>([alle Anforderungen](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)) | ![Unterstützt](media/green_check.png) |
 | [Tasksequenz für direktes Windows 10-Upgrade](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![Unterstützt](media/green_check.png) |
-| Tasksequenzen, die keine Startimages verwenden und mit einer Option bereitgestellt werden: **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen** | ![Unterstützt](media/green_check.png) |
-| Tasksequenzen, die keine Startimages verwenden und über [sämtliche Downloadoptionen](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) verfügbar sind | ![Unterstützt](media/green_check.png) (1910)|
+| Tasksequenz ohne Startimage, bereitgestellt mit der Option **Den gesamten Inhalt vor Starten der Tasksequenz lokal herunterladen** | ![Unterstützt](media/green_check.png) |
+| Tasksequenz ohne Startimage, bereitgestellt mit einer [beliebigen Downloadoption](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Unterstützt](media/green_check.png) (1910) |
+| Tasksequenz mit Startimage, gestartet im Softwarecenter | ![Unterstützt](media/green_check.png) (2006) |
 | Alle anderen Tasksequenzszenarios     | ![Nicht unterstützt](media/Red_X.png) |
 | Clientpush     | ![Nicht unterstützt](media/Red_X.png) |
 | Automatische Standortzuweisung     | ![Nicht unterstützt](media/Red_X.png) |
@@ -257,12 +260,18 @@ Die folgende Tabelle enthält die CMG-Unterstützung für Configuration Manager-
 |![Nicht unterstützt](media/Red_X.png) = Dieses Feature wird nicht mit dem CMG unterstützt |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a> Hinweis 1: Unterstützung für Endpoint Protection
+
+Ab Version 2006 können Clients, die über ein CMG kommunizieren, Endpoint Protection-Richtlinien sofort anwenden, ohne dass eine aktive Verbindung mit Active Directory bestehen muss.<!--4773948-->
+
 <!-- 4350561 -->
-Damit in die Domäne eingebundene Geräte die Endpoint Protection-Richtlinie anwenden können, benötigen sie Zugriff auf die Domäne. Bei Geräten mit seltenem Zugriff auf das interne Netzwerk kann es zu Verzögerungen bei der Anwendung der Endpoint Protection-Richtlinie kommen. Wenn Sie fordern, dass Geräte die Endpoint Protection-Richtlinie sofort nach Erhalt anwenden, ziehen Sie eine der folgenden Optionen in Betracht:
+In Version 2002 und früher benötigen in die Domäne eingebundene Geräte Zugriff auf die Domäne, um die Endpoint Protection-Richtlinie anwenden zu können. Bei Geräten mit seltenem Zugriff auf das interne Netzwerk kann es zu Verzögerungen bei der Anwendung der Endpoint Protection-Richtlinie kommen. Wenn Sie fordern, dass Geräte die Endpoint Protection-Richtlinie sofort nach Erhalt anwenden, ziehen Sie eine der folgenden Optionen in Betracht:
+
+- Aktualisieren Sie den Standort und die Clients auf Version 2006.
 
 - Verwenden Sie die Co-Verwaltung, und wechseln Sie mit der [Endpoint Protection-Workload](../../../../comanage/workloads.md#endpoint-protection) zu Intune. Dann verwalten Sie [Microsoft Defender Antivirus](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) von der Cloud aus.
 
 - Verwenden Sie [Konfigurationselemente](../../../../compliance/deploy-use/create-configuration-items.md) anstelle des nativen Features der [Antischadsoftwarerichtlinien](../../../../protect/deploy-use/endpoint-antimalware-policies.md) zum Anwenden der Endpoint Protection-Richtlinie.
+
 
 ## <a name="cost"></a>Kosten
 

@@ -2,20 +2,20 @@
 title: Anzeigen von BitLocker-Berichten
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über die BitLocker-Verwaltungsberichte in Configuration Manager
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0bae9477-0500-41cf-8aa3-5e6efadd0554
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d10717f980922e1f6d1fca9224e288b4df709da2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7c44ec9a9ed91d8543fedbdd5fba191b3989da19
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699618"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129210"
 ---
 # <a name="view-bitlocker-reports"></a>Anzeigen von BitLocker-Berichten
 
@@ -49,7 +49,7 @@ Sie können auf all diese Berichte direkt von der Website des Reporting Services
 
 Mit diesem Bericht können Sie computerspezifische Informationen sammeln. Er liefert detaillierte Verschlüsselungsinformationen zum Betriebssystemlaufwerk und zu allen Festplattenlaufwerken. Erweitern Sie den Eintrag „Computername“, um die ausführlichen Informationen zu den einzelnen Laufwerken anzuzeigen. Darüber hinaus werden die jeweils geltenden Richtlinien für alle Laufwerke eines Computers angegeben.
 
-[![Screenshot des BitLocker-Computer Konformitäts Berichts Beispiel](media/bitlocker-computer-compliance.png)](media/bitlocker-computer-compliance.png#lightbox)
+:::image type="content" source="media/bitlocker-computer-compliance.png" alt-text="Screenshot des BitLocker-Computer Konformitäts Berichts Beispiel" lightbox="media/bitlocker-computer-compliance.png":::
 
 Sie können diesen Bericht auch verwenden, um den letzten bekannten BitLocker-Verschlüsselungsstatus von verlorenen oder gestohlenen Computern zu ermitteln. Configuration Manager bestimmt die Konformität des Geräts basierend auf den BitLocker-Richtlinien, die Sie bereitstellen. Bevor Sie versuchen, den BitLocker-Verschlüsselungsstatus eines Geräts zu ermitteln, überprüfen Sie die Richtlinien, die Sie für das Gerät bereitgestellt haben.
 
@@ -100,7 +100,7 @@ Dieser Bericht enthält die folgenden Diagramme, die den BitLocker-Konformitäts
 
 - Verteilung des Konformitätsstatus nach Laufwerkstyp
 
-[![Beispielscreenshot des Dashboards für die BitLocker-Unternehmenskonformität](media/bitlocker-enterprise-compliance-dashboard.png)](media/bitlocker-enterprise-compliance-dashboard.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-dashboard.png" alt-text="Beispielscreenshot des Dashboards für die BitLocker-Unternehmenskonformität" lightbox="media/bitlocker-enterprise-compliance-dashboard.png":::
 
 ### <a name="compliance-status-distribution"></a>Verteilung des Konformitätsstatus
 
@@ -148,7 +148,7 @@ In diesem Balkendiagramm wird der aktuelle BitLocker-Konformitätsstatus nach La
 
 Dieser Bericht zeigt Informationen zur allgemeinen BitLocker-Konformität in Ihrer Organisation für die Sammlung von Computern an, auf denen Sie die BitLocker-Verwaltungsrichtlinie bereitgestellt haben.
 
-[![Screenshot der Details zu BitLocker Enterprise Compliance Beispiel](media/bitlocker-enterprise-compliance-details.png)](media/bitlocker-enterprise-compliance-details.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-details.png" alt-text="Screenshot der Details zu BitLocker Enterprise Compliance Beispiel" lightbox="media/bitlocker-enterprise-compliance-details.png":::
 
 |Spaltenname|Beschreibung|
 |--- |--- |
@@ -180,7 +180,7 @@ Dieser Bericht zeigt Informationen zur allgemeinen BitLocker-Konformität in Ihr
 
 Verwenden Sie diesen Bericht, um die allgemeine BitLocker-Konformität in Ihrer Organisation aufzuzeigen. Er zeigt auch die Konformität für einzelne Computer an, auf denen Sie die BitLocker-Verwaltungsrichtlinie bereitgestellt haben.
 
-[![Screenshot der BitLocker-Übersicht über die unternehmensweite Konformität Beispiel](media/bitlocker-enterprise-compliance-summary.png)](media/bitlocker-enterprise-compliance-summary.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-summary.png" alt-text="Screenshot der BitLocker-Übersicht über die unternehmensweite Konformität Beispiel" lightbox="media/bitlocker-enterprise-compliance-summary.png":::
 
 |Spaltenname|Beschreibung|
 |--- |--- |
@@ -199,9 +199,7 @@ Verwenden Sie diesen Bericht, um die allgemeine BitLocker-Konformität in Ihrer 
 ## <a name="recovery-audit-report"></a><a name="bkmk-audit"></a> Bericht zur Wiederherstellungsüberwachung
 
 > [!NOTE]
-> Dieser Bericht ist auch auf der [Website zur Verwaltung und Überwachung von BitLocker](helpdesk-portal.md#reports) erhältlich.
->
-> Wechseln Sie zum Anzeigen dieses Berichts in der Configuration Manager-Konsole zum Arbeitsbereich **Überwachung**. Erweitern Sie im Navigationsbereich den Knoten **Berichterstellung**, erweitern Sie **Berichte** und dann den Ordner **BitLocker-Verwaltung**. Wählen Sie den Unterordner für die lokalisierte Version des Berichts, z. B. **en-us** aus.
+> Ab Version 2002 ist dieser Bericht nur auf der [Website für die Verwaltung und Überwachung von BitLocker](helpdesk-portal.md#reports) verfügbar.<!-- 7629549 -->
 
 Verwenden Sie diesen Bericht, um Benutzer zu überwachen, die Zugriff auf BitLocker-Wiederherstellungsschlüssel angefordert haben. Sie können nach den folgenden Kriterien filtern:
 
@@ -210,13 +208,13 @@ Verwenden Sie diesen Bericht, um Benutzer zu überwachen, die Zugriff auf BitLoc
 - Der bestimmte angeforderte Schlüsseltyp: „Kennwort für den Wiederherstellungsschlüssel“, „Wiederherstellungsschlüssel-ID“ oder „TPM-Kennworthashwert“
 - Ein Datumsbereich, in dem der Abruf erfolgt ist
 
-[![Screenshot der BitLocker-Wiederherstellungs Überwachung Beispiel](media/bitlocker-recovery-audit-report.png)](media/bitlocker-recovery-audit-report.png#lightbox)
+:::image type="content" source="media/bitlocker-recovery-audit-report.png" alt-text="Screenshot der BitLocker-Wiederherstellungs Überwachung Beispiel" lightbox="media/bitlocker-recovery-audit-report.png":::
 
-|Spaltenname&nbsp;|Beschreibung|
+|Spaltenname&nbsp;|BESCHREIBUNG|
 |----------------|----|
 |Datum und Uhrzeit der Anforderung|Datum und Uhrzeit, zu der ein Endbenutzer oder Helpdeskbenutzer einen Schlüssel angefordert hat.|
 |Quelle der Überwachungsanforderung|Der Standort, von dem die Anforderung stammt. Gültige Werte sind **Self-Service-Portal** oder **Helpdesk**.|
-|Ergebnis der Anforderung|Der Status der Anforderung Gültige Werte sind **Erfolgreich** oder **Fehler**.|
+|Ergebnis der Anforderung|Status der Anforderung. Gültige Werte sind **Erfolgreich** oder **Fehler**.|
 |Helpdeskbenutzer|Der Administrator, der den Schlüssel angefordert hat. Wenn ein Helpdeskadministrator den Schlüssel ohne Angabe des Benutzernamens wiederherstellt, ist das Feld **Endbenutzer** leer. Ein Standardhelpdeskbenutzer muss den Benutzernamen angeben, der in diesem Feld angezeigt wird. Bei der Wiederherstellung über das Self-Service-Portal wird in diesem Feld und im Feld **Endbenutzer** der Name des Benutzers angezeigt, der die Anforderung gestellt hat.|
 |Endbenutzer|Der Name des Benutzers, der den Schlüsselabruf angefordert hat.|
 |Computer|Der Name des wiederhergestellten Computers|

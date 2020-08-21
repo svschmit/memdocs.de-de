@@ -10,12 +10,12 @@ ms.assetid: 58849e40-30d5-4153-84b3-ca4af3a4f09d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f92e76047a70f6d86406b1a364603163d902e62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7ad20f80f4727fe18947bed05ded6e7b107fab12
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703218"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124083"
 ---
 # <a name="user-experiences-for-os-deployment"></a>Benutzerfunktionen für die Betriebssystembereitstellung
 
@@ -146,8 +146,7 @@ Die Gesamtanzahl von Schritten enthält keine der folgenden Elemente in der Task
 
 - Schritte, die von Ihnen explizit deaktiviert werden. Ein deaktivierter Schritt wird während der Tasksequenz nicht ausgeführt.
 
-    > [!NOTE]
-    > Aktivierte Schritte in einer deaktivierten Gruppe sind in der Gesamtanzahl weiterhin enthalten.
+- Ab Version 2006 werden aktivierte Schritte in einer deaktivierten Gruppe nicht mehr gezählt.<!--6448412--> In Version 2002 sind aktivierte Schritte in einer deaktivierten Gruppe weiterhin in der Gesamtzahl enthalten.
 
 ## <a name="task-sequence-error"></a>Tasksequenzfehler
 

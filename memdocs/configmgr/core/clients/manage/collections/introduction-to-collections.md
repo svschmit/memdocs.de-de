@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0665c6378ac81d6f6f254501760647048ce66b0b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4e43f5a36f2a1bf44959b9645c2fb48a22cc71f1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695328"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126772"
 ---
 # <a name="introduction-to-collections-in-configuration-manager"></a>Einführung in Sammlungen in Configuration Manager
 
@@ -34,7 +34,7 @@ Hier einige Beispiele für die Verwendung von Sammlungen:
 |Vorgang|Beispiel|  
 |---------|-------|  
 |Gruppieren von Ressourcen|Sie können Sammlungen erstellen, die die auf der Hierarchie Ihrer Organisation basierenden Ressourcen gruppieren.<br /><br /> Sie können z.B. eine Sammlung aller Computer in der Active Directory-Organisationseinheit (OE) „Hauptsitz in London“ erstellen. Weitere Informationen zum Erstellen dieser Art von Sammlung finden Sie unter [Erstellen von Sammlungen](../../../../core/clients/manage/collections/create-collections.md).<br /><br /> Sie können diese Sammlung für bestimmte Vorgänge verwenden, z.B. zum Konfigurieren von Endpoint Protection-Einstellungen oder Geräteeinstellungen für die Energieverwaltung sowie zum Installieren des Configuration Manager-Clients.|  
-|Anwendungsbereitstellung|Sie können eine Sammlung aller Computer erstellen, auf denen Microsoft Office 2013 nicht installiert ist, und dann die Software auf allen Computern in der Sammlung bereitstellen.<br /><br /> Sie können auch Anwendungsanforderungen verwenden, um diese Aufgabe durchzuführen. Weitere Informationen finden Sie unter [Erstellen von Anwendungen mit Configuration Manager](../../../../apps/deploy-use/create-applications.md).|  
+|Anwendungsbereitstellung|Sie können eine Sammlung aller Computer erstellen, auf denen Microsoft 365 Apps nicht installiert sind, und dann die Software auf allen Computern in der Sammlung bereitstellen.<br /><br /> Sie können auch Anwendungsanforderungen verwenden, um diese Aufgabe durchzuführen. Weitere Informationen finden Sie unter [Erstellen von Anwendungen mit Configuration Manager](../../../../apps/deploy-use/create-applications.md).|  
 |[Verwalten von Clienteinstellungen](../../../../core/clients/deploy/about-client-settings.md)|Obwohl die Standardclienteinstellungen in Configuration Manager für alle Geräte und alle Benutzer gelten, können Sie benutzerdefinierte Clienteinstellungen erstellen, die für eine Sammlung von Geräten oder eine Sammlung von Benutzern gelten.<br /><br /> Wenn z.B. die Remotesteuerung mit wenigen Ausnahmen auf allen Geräten zur Verfügung stehen soll, konfigurieren Sie die Standardclienteinstellungen so, dass die Remotesteuerung zulässig ist. Anschließend konfigurieren Sie benutzerdefinierte Clienteinstellungen, die die Remotesteuerung nicht zulassen, und stellen sie für die Sammlung der ausgenommenen Clients bereit. |  
 |[Energieverwaltung](../power/introduction-to-power-management.md)|Für jede Sammlung können Sie bestimmte Energieeinstellungen konfigurieren.|  
 |[Rollenbasierte Verwaltung](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|Verwenden Sie Sammlungen, um zu steuern, welche Benutzergruppen Zugriff auf verschiedene Funktionen in der Configuration Manager-Konsole haben.|  

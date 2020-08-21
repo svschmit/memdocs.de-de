@@ -2,20 +2,20 @@
 title: Clienteinstellungen
 titleSuffix: Configuration Manager
 description: Informationen zu Standardeinstellungen und benutzerdefinierten Einstellungen zur Steuerung von Clientverhalten
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365507"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127000"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informationen zu Clienteinstellungen in Configuration Manager
 
@@ -139,7 +139,7 @@ Legen Sie diese Option auf **Ja** fest, damit Benutzer die Benutzerrichtlinie au
 
 - Der Benutzer wird vom internetbasierten Verwaltungspunkt erfolgreich mithilfe der Windows-Authentifizierung (Kerberos oder NTLM) authentifiziert. Weitere Informationen finden Sie unter [Considerations for client communications from the internet (Überlegungen zur Clientkommunikation über das Internet)](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- Das Cloudverwaltungsgateway authentifiziert den Benutzer erfolgreich mithilfe von Azure Active Directory. Weitere Informationen finden Sie unter [Deploy user-available applications on Azure AD-joined devices (Bereitstellen von für Benutzer verfügbare Anwendungen auf in Azure AD eingebundenen Geräten)](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- Das Cloudverwaltungsgateway authentifiziert den Benutzer erfolgreich mithilfe von Azure Active Directory. Weitere Informationen finden Sie unter [Bereitstellen von für Benutzer verfügbaren Anwendungen](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 Wenn Sie diese Option auf **Nein** festlegen oder eine der vorherigen Anforderungen nicht erfüllt ist, erhält ein internetbasierter Computer nur Computerrichtlinien. In diesem Fall können Benutzer weiterhin Anwendungen über einen internetbasierten Anwendungskatalog anzeigen, anfordern und installieren. Wenn diese Einstellung auf **Nein**, aber **Benutzerrichtlinie auf Clients aktivieren** auf **Ja** festgelegt ist, empfangen Benutzer keine Benutzerrichtlinien, bis der Computer mit dem Intranet verbunden ist.  
 
@@ -244,7 +244,7 @@ Weitere Informationen zu dieser Einstellung finden Sie unter [Zertifikate für M
 
 ### <a name="organization-name-displayed-in-software-center"></a>Im Softwarecenter angezeigter Organisationsname
 
-Geben Sie den Namen ein, den Benutzer im Softwarecenter sehen. Diese Branding-Informationen helfen den Benutzern, diese Anwendung als vertrauenswürdige Quelle zu identifizieren. Weitere Informationen zur Wichtigkeit dieser Einstellung finden Sie unter [Branding im Softwarecenter](../../../apps/plan-design/plan-for-software-center.md#branding-software-center).  
+Geben Sie den Namen ein, den Benutzer im Softwarecenter sehen. Diese Branding-Informationen helfen den Benutzern, diese Anwendung als vertrauenswürdige Quelle zu identifizieren. Weitere Informationen zur Wichtigkeit dieser Einstellung finden Sie unter [Branding im Softwarecenter](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).  
 
 ### <a name="use-new-software-center"></a>Verwenden des neuen Softwarecenters
 
@@ -468,41 +468,40 @@ Damit eine MIF-Datei durch die Hardwareinventur gesammelt werden kann, muss sie 
 > [!NOTE]  
 > Diese Einstellung ist nur in den Clientstandardeinstellungen verfügbar.
 
+## <a name="metered-internet-connections"></a>Getaktete Internetverbindungen
 
+Legen Sie fest, wie Computer unter Windows 8 und höher getaktete Internetverbindungen verwenden, um mit Configuration Manager zu kommunizieren. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.
 
-## <a name="metered-internet-connections"></a>Getaktete Internetverbindungen  
-
-Legen Sie fest, wie Computer unter Windows 8 und höher getaktete Internetverbindungen verwenden, um mit Configuration Manager zu kommunizieren. Bei getakteten Internetverbindungen berechnen einige Internetanbieter die anfallenden Gebühren anhand der Datenmenge, die Sie senden und empfangen.  
-
-> [!NOTE]  
-> Die konfigurierte Clienteinstellung wird in folgenden Szenarios nicht angewendet:  
+> [!NOTE]
+> Die konfigurierte Clienteinstellung wird in folgenden Szenarios nicht angewendet:
 >
 > - Wenn der Computer eine Roamingdatenverbindung verwendet, führt der Konfigurations-Manager-Client keine Tasks aus, bei denen Daten an Configuration Manager-Standorte übertragen werden müssen.  
 > - Wenn die Eigenschaften der Windows-Netzwerkverbindung als nicht getaktet konfiguriert wurden, verhält sich der Configuration Manager-Client so wie bei einer nicht getakteten Verbindung und überträgt Daten an den Standort.  
 
 ### <a name="client-communication-on-metered-internet-connections"></a>Clientkommunikation über getaktete Internetverbindungen
 
-Wählen Sie eine der folgenden Optionen für diese Einstellung aus:  
+Wählen Sie eine der folgenden Optionen für diese Einstellung aus:
 
-- **Zulassen:** Die gesamte Clientkommunikation kann über die getaktete Internetverbindung stattfinden, es sei denn, vom Clientgerät wird eine Roamingdatenverbindung verwendet.  
+- **Zulassen:** Die gesamte Clientkommunikation kann über die getaktete Internetverbindung stattfinden, es sei denn, vom Clientgerät wird eine Roamingdatenverbindung verwendet.
 
-- **Grenzwert:** Nur die folgende Clientkommunikation ist über die getaktete Internetverbindung zulässig:  
+- **Grenzwert:** Der Client kommuniziert nur zu folgenden Zwecken über die getaktete Internetverbindung:
 
-    - Clientrichtlinienabruf  
+  - Herunterladen der Clientrichtlinie
 
-    - An den Standort zu sendende Meldungen zum Clientzustand  
+  - Senden von Clientzustandsmeldungen
 
-    - Softwareinstallationsanforderungen aus dem Softwarecenter  
+  - Anfordern von Softwareinstallationen aus dem Softwarecenter
 
-    - Erforderliche Bereitstellungen (bei Erreichen des Installationsstichtags)  
+  - Herunterladen zusätzlicher Richtlinien und Inhalte für erforderliche Bereitstellungen zum Installationstermin
 
-    Wenn der Client das Datenübertragungslimit der getakteten Internetverbindung erreicht, versucht er nicht mehr, mit Configuration Manager-Standorten zu kommunizieren.  
+  Wenn der Client das Datenübertragungslimit der getakteten Internetverbindung erreicht, kommuniziert er nicht mehr mit dem Standort.
 
-- **Blockieren:** Der Konfigurations-Manager-Client versucht nicht, mit Configuration Manager-Standorten zu kommunizieren, wenn eine getaktete Internetverbindung verwendet wird. Dies ist die Standardoption.  
+- **Blockieren:** Wenn das Gerät eine getaktete Internetverbindung verwendet, versucht der Configuration Manager-Client nicht, mit dem Standort zu kommunizieren. Dies ist die Standardoption.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Der Client lässt Softwareinstallationen über das Softwarecenter unabhängig von den Einstellungen für die getaktete Internetverbindung immer zu. Wenn der Benutzer eine Softwareinstallation anfordert, während sich das Gerät in einem getakteten Netzwerk befindet, wird die Absicht des Benutzers vom Software Center berücksichtigt.<!-- MEMDocs#285 -->
 
+Ab Version 2006 funktionieren sowohl Clientinstallation als auch Clientupdate, wenn Sie diese Clienteinstellung auf **Zulassen** oder **Beschränken** festlegen. Mit diesem Verhalten kann der Client auf dem aktuellen Stand bleiben, aber die Clientkommunikation in einem getakteten Netzwerk kann weiterhin verwaltet werden. Sie können dieses Verhalten während der Clientinstallation mit dem ccmsetup-Parameter **/AllowMetered** steuern. Weitere Informationen finden Sie unter [Informationen zu Parametern und Eigenschaften für die Clientinstallation ](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## <a name="power-management"></a>Energieverwaltung  
 
@@ -894,7 +893,7 @@ Diese Einstellung konfiguriert den lokalen Port dafür, dass Deltainhalte durch 
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Verwaltung des Office 365-Client-Agents aktivieren
 
-Wenn diese Option auf **Ja** festgelegt ist, ermöglicht sie die Konfiguration von Office 365-Installationseinstellungen. Sie ermöglicht zudem das Herunterladen von Dateien aus Office Content Delivery Networks (CDNs) und das Bereitstellen der Dateien als Anwendung in Configuration Manager. Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Wenn Sie diese Option auf **Ja** festlegen ist, ermöglicht sie die Konfiguration von Installationseinstellungen für Microsoft 365-Apps. Sie ermöglicht zudem das Herunterladen von Dateien aus Office Content Delivery Networks (CDNs) und das Bereitstellen der Dateien als Anwendung in Configuration Manager. Weitere Informationen finden Sie unter [Verwalten von Microsoft 365-Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> Installation von Softwareupdates im Wartungsfenster "Alle Bereitstellungen" aktivieren, wenn das Wartungsfenster "Softwareupdate" verfügbar ist
 
@@ -980,9 +979,9 @@ Wählen Sie **Ja** aus, um eine automatische Affinität zwischen Benutzer und Ge
 <!--3485366-->
 Wenn diese Einstellung auf **Ja** festgelegt ist, können Benutzer eigene primäre Geräte im Softwarecenter identifizieren. Weitere Informationen finden Sie im [Benutzerleitfaden für Softwarecenter](../../understand/software-center.md#work-information).
 
-## <a name="windows-analytics"></a>Windows Analytics
+## <a name="windows-diagnostic-data"></a>Windows-Diagnosedaten
 
-> [!Important]  
-> Der Windows Analytics-Dienst wurde am 31. Januar 2020 eingestellt. Weitere Informationen finden Sie unter [KB 4521815: Windows Analytics-Deaktivierung am 31. Januar 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+> [!IMPORTANT]
+> Diese Gruppe wurde früher als **Windows Analytics** bezeichnet. Microsoft hat den Windows Analytics-Dienst am 31. Januar 2020 eingestellt. Weitere Informationen finden Sie unter [KB 4521815: Windows Analytics-Deaktivierung am 31. Januar 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Desktop Analytics ist die Weiterentwicklung von Windows Analytics. Weitere Informationen finden Sie unter [Was ist Desktop Analytics?](../../../desktop-analytics/overview.md)
+> Desktop Analytics ist die Weiterentwicklung von Windows Analytics. Verwenden Sie Desktop Analytics, um Einstellungen für Windows-Diagnosedaten zu verwalten. Weitere Informationen finden Sie unter [Was ist Desktop Analytics?](../../../desktop-analytics/overview.md)

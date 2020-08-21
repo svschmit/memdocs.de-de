@@ -10,12 +10,12 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 47d44c96e0ae63504278c58a5838c54648665505
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692308"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127170"
 ---
 # <a name="onedrive-for-business-profiles"></a>OneDrive for Business-Profile
 
@@ -23,7 +23,7 @@ Ab der Configuration Manager-Version 1902 können Sie OneDrive for Business-Prof
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- [Suchen Ihrer Office 365-Mandanten-ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Suchen Ihrer Microsoft 365-Mandanten-ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
 
 - Stellen Sie die Clientversion 18.111.0603.0004 oder höher für die OneDrive-Synchronisierung bereit. Weitere Informationen finden Sie unter [Bereitstellen von OneDrive-Apps mit Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
@@ -44,7 +44,7 @@ Verwenden Sie Configuration Manager, um bekannte Windows-Ordner in OneDrive for 
 
 5. Führen Sie auf der Seite **Einstellungen** die folgenden Schritte aus:
 
-    1. Geben Sie Ihre Office 365-Mandanten-ID an.  
+    1. Geben Sie Ihre Microsoft 365-Mandanten-ID an.  
 
     2. Wählen Sie eine der folgenden Optionen aus, um die bekannten Ordner in OneDrive zu verschieben:  
 

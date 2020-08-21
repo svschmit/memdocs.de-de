@@ -2,7 +2,7 @@
 title: Benachrichtigungen zum Geräteneustart
 titleSuffix: Configuration Manager
 description: Hier wird das Verhalten von Benachrichtigungen zum Neustart für diverse Clienteinstellungen in Configuration Manager beschrieben.
-ms.date: 06/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b326c4dd8112a72555239f2c3eda078ebf47bf82
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347218"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127245"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Benachrichtigungen zum Geräteneustart in Configuration Manager
 
@@ -33,25 +33,25 @@ Die [Clienteinstellungen für den Computerneustart](#client-settings) ändern di
 
 ## <a name="restart-notification-types"></a>Typen von Benachrichtigung zum Neustart
 
-Wenn ein Gerät neu gestartet werden muss, zeigt der Client dem Benutzer eine entsprechende Benachrichtigung an. Es gibt vier allgemeine Benachrichtigungen, die Benutzer erhalten können.
+Wenn ein Gerät neu gestartet werden muss, zeigt der Client dem Benutzer eine entsprechende Benachrichtigung an.
 
 ### <a name="toast-notification"></a>Popupbenachrichtigung
 
 Eine Windows-Popupbenachrichtigung informiert den Benutzer darüber, dass das Gerät neu gestartet werden muss. Die Informationen in der Popupbenachrichtigung können unterschiedlich sein, je nachdem, welche Version von Configuration Manager Sie ausführen. Dies ist eine native Benachrichtigung des Windows-Betriebssystems. Diese Art von Benachrichtigung wird auch in Software von Drittanbietern verwendet.
 
-![Popupbenachrichtigung über ausstehenden Neustart](media/3555947-restart-toast.png)
+:::image type="content" source="media/3555947-restart-toast.png" alt-text="Popupbenachrichtigung über ausstehenden Neustart":::
 
 ### <a name="software-center-notification-with-snooze"></a>Softwarecenter-Benachrichtigungen mit Erinnerungsoption
 
 Im Softwarecenter wird eine Benachrichtigung mit einer Erinnerungsoption und der verbleibenden Zeit angezeigt, bevor der Neustart des Geräts erzwungen wird. Die Benachrichtigung kann je nach Configuration Manager-Version variieren.
 
-![Softwarecenter-Benachrichtigung über ausstehenden Neustart mit Schaltfläche „Erneut erinnern“](media/3976435-snooze-restart-countdown.png)
+:::image type="content" source="media/3976435-snooze-restart-countdown.png" alt-text="Softwarecenter-Benachrichtigung über ausstehenden Neustart mit Schaltfläche „Erneut erinnern“":::
 
 ### <a name="software-center-final-countdown-notification"></a>Softwarecenter-Benachrichtigung mit finalem Countdown
 
 Diese finale Countdownbenachrichtigung wird vom Softwarecenter angezeigt. Der Benutzer kann die Benachrichtigung nicht schließen und keine Option zum erneuten Erinnern auswählen.
 
-![Softwarecenter-Benachrichtigung mit finalem Countdown](media/3976435-final-restart-countdown.png)
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Softwarecenter-Benachrichtigung mit finalem Countdown":::
 
 Ab Version 1906 wird dem Benutzer erst dann eine Statusanzeige in der Neustartbenachrichtigung angezeigt, wenn der ausstehende Neustart in weniger als 24 Stunden durchgeführt wird.
 
@@ -59,17 +59,47 @@ Ab Version 1906 wird dem Benutzer erst dann eine Statusanzeige in der Neustartb
 
 Wenn der Benutzer die erforderliche Software proaktiv vor dem Stichtag installiert und ein Neustart erforderlich ist, wird eine andere Benachrichtigung angezeigt. Die folgende Benachrichtigung wird ausgegeben, wenn die Einstellung für die Benutzeroberfläche Benachrichtigungen zulässt und Sie keine Popupbenachrichtigungen für die Bereitstellung verwenden. Weitere Informationen zum Konfigurieren dieser Einstellungen finden Sie unter [Deployment **User Experience** settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) (Bereitstellungseinstellungen für [Benutzeroberfläche])und [Benutzerbenachrichtigungen für erforderliche Bereitstellungen](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
 
-![Benachrichtigung für proaktiv installierte Software](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Benachrichtigung für proaktiv installierte Software":::
 
 #### <a name="available-apps"></a>Verfügbare Apps
 
 Wenn Sie keine Popupbenachrichtigungen verwenden, ähnelt das Dialogfeld für als **Verfügbar** markierte Software proaktiv installierter Software. Bei als **Verfügbar** markierter Software enthält die Benachrichtigung keine Frist für den Neustart, und der Benutzer kann das Intervall für eine erneute Erinnerung selbst wählen. Weitere Informationen finden Sie unter [Genehmigungseinstellungen](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
-![Bei Software, die als „Verfügbar“ markiert ist, ist in der Benachrichtigung keine Frist für einen Neustart angegeben.](media/3555947-deployment-marked-available-restart.png)
+:::image type="content" source="media/3555947-deployment-marked-available-restart.png" alt-text="Für verfügbare Software ist in der Benachrichtigung keine Frist für einen Neustart angegeben.":::
+
+### <a name="software-center-notification-of-required-restart"></a>Software Center-Benachrichtigung über den erforderlichen Neustart
+
+<!--3601213-->
+
+Ab Version 2006 können Sie Clienteinstellungen konfigurieren, um einen automatischen Neustart von Geräten zu verhindern, wenn eine Bereitstellung dies erfordert. Wenn das Gerät für eine erforderliche Bereitstellung neu gestartet werden muss, Sie jedoch die Clienteinstellung **Configuration Manager kann einen Neustart des Geräts erzwingen** deaktivieren, wird die folgende Benachrichtigung angezeigt:
+
+:::image type="content" source="media/3601213-restart-your-computer.png" alt-text="Softwarecenter-Benachrichtigung zum Neustarten des Computers":::
+
+Wenn Sie an diese Benachrichtigung **Erneut erinnern**, wird sie auf der Grundlage Ihrer Konfiguration der Häufigkeit von Neustarterinnerungs-Benachrichtigungen erneut angezeigt. Das Gerät wird erst neu gestartet, wenn Sie **Neustart** auswählen oder Windows manuell neu starten.
+
+> [!NOTE]
+> Standardmäßig kann Configuration Manager die Neustarts von Geräten noch erzwingen.
 
 ## <a name="client-settings"></a>Clienteinstellungen
 
 Konfigurieren Sie die folgenden Clienteinstellungen auf dem Gerät in der Gruppe **Computerneustart**, um das Neustartverhalten von Clients zu steuern. Weitere Informationen finden Sie unter [Konfigurieren von Clienteinstellungen](configure-client-settings.md).
+
+### <a name="configuration-manager-can-force-a-device-to-restart"></a>Configuration Manager kann einen Neustart des Geräts erzwingen
+
+<!--3601213-->
+
+Ab Version 2006 können Sie Clienteinstellungen konfigurieren, um einen automatischen Neustart von Geräten zu verhindern, wenn eine Bereitstellung dies erfordert. Diese Einstellung wird von Configuration Manager standardmäßig aktiviert.
+
+> [!IMPORTANT]
+> Diese Clienteinstellung gilt für alle Anwendungs-, Softwareupdate- und Paketbereitstellungen auf dem Gerät. Bis ein Benutzer das Gerät manuell neu startet:
+>
+> - Softwareupdates und App-Revisionen sind möglicherweise nicht vollständig installiert
+> - Weitere Softwareinstallationen sind möglicherweise nicht möglich
+
+Wenn Sie diese Einstellung deaktivieren, können Sie die Zeitspannen nach Ablauf der Frist, nach denen das Gerät neu gestartet wird oder der Benutzer eine abschließende Countdownbenachrichtigung erhält, nicht angeben.
+
+> [!NOTE]
+> Wenn Sie die neuen Configuration Manager-Features nach der Aktualisierung des Standorts vollständig nutzen möchten, müssen Sie auch Clients auf die neueste Version aktualisieren. Beim Update des Standorts und der Konsole werden neue Features in der Configuration Manager-Konsole angezeigt. Das vollständige Szenario ist allerdings erst einsatzbereit, wenn auch die Clientversion aktualisiert wird.
 
 ### <a name="specify-the-amount-of-time-after-the-deadline-before-a-device-gets-restarted-minutes"></a>Geben Sie den Zeitraum (in Minuten) nach dem Stichtag an, bevor ein Gerät neu gestartet wird
 
@@ -123,17 +153,17 @@ Wenn die Einstellung **Wenn für eine Bereitstellung ein Neustart erforderlich i
 
   - Wenn der Neustart in mehr als 24 Stunden durchgeführt wird, wird ein geschätzter Zeitpunkt für den Neustart angezeigt. Die Terminierung dieser Benachrichtigung basiert auf der Einstellung: **Geben Sie den Zeitraum (in Minuten) nach dem Stichtag an, bevor ein Gerät neu gestartet wird**.
 
-    ![Der Neustartzeitpunkt liegt mehr als 24 Stunden entfernt](media/3976435-notification-greater-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-greater-than-24-hours.png" alt-text="Der Neustartzeitpunkt liegt mehr als 24 Stunden entfernt":::
 
   - Wenn der Neustart in weniger als 24 Stunden durchgeführt wird, wird eine Statusanzeige angezeigt. Die Terminierung dieser Benachrichtigung basiert auf der Einstellung: **Geben Sie den Zeitraum (in Minuten) nach dem Stichtag an, bevor ein Gerät neu gestartet wird**.
 
-    ![Der Neustartzeitpunkt liegt weniger als 24 Stunden entfernt](media/3976435-notification-less-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-less-than-24-hours.png" alt-text="Der Neustartzeitpunkt liegt weniger als 24 Stunden entfernt":::
 
 Wenn der Benutzer die Option **Erneut erinnern** auswählt, wird nach Ablauf des Zeitraums für die erneute Erinnerung eine weitere temporäre Benachrichtigung angezeigt. Bei diesem Verhalten wird davon ausgegangen, dass der finale Countdown noch nicht erreicht wurde. Die Terminierung dieser nächsten Benachrichtigung basiert auf der Einstellung: **Legen Sie fest, wie häufig dem Benutzer nach dem Stichtag Erinnerungen angezeigt werden, bevor ein Gerät neu gestartet wird (in Minuten)** . Wenn der Benutzer die Option **Erneut erinnern** auswählt, und Ihr Intervall für die erneute Erinnerung eine Stunde beträgt, benachrichtigt das Softwarecenter den Benutzer nach 60 Minuten erneut. Bei diesem Verhalten wird davon ausgegangen, dass der finale Countdown noch nicht erreicht wurde.
 
 Beim Erreichen des finalen Countdowns zeigt das Softwarecenter dem Benutzer eine Benachrichtigung an, die er nicht schließen kann. Die Statusanzeige ist rot, und der Benutzer kann nicht **Erneut erinnern** auswählen.
 
-![Softwarecenter-Benachrichtigung mit finalem Countdown in Version 1906](media/3976435-1906-final-restart-countdown.png)
+:::image type="content" source="media/3976435-1906-final-restart-countdown.png" alt-text="Softwarecenter-Benachrichtigung mit finalem Countdown in Version 1906":::
 
 ### <a name="proactively-install-required-software-before-the-deadline"></a>Proaktive Installation der erforderlichen Software vor dem Stichtag
 
@@ -141,7 +171,7 @@ Wenn der Benutzer proaktiv erforderliche Software installiert, die vor dem Stich
 
 Die folgende Benachrichtigung wird ausgegeben, wenn die Einstellung für die Benutzeroberfläche Benachrichtigungen zulässt und Sie keine Popupbenachrichtigungen für die Bereitstellung verwenden:
 
-![Benachrichtigung für proaktiv installierte Software](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Benachrichtigung für proaktiv installierte Software":::
 
 Sobald der Stichtag erreicht ist, wird im Softwarecenter das Verhalten für die [Installation der erforderlichen Software am oder nach dem Stichtag](#install-required-software-at-or-after-the-deadline) angewendet.
 
@@ -193,25 +223,25 @@ Aktivieren Sie in der Gruppe der Clienteinstellungen [Computerneustart](#client-
 
 Durch die Konfiguration dieser Clienteinstellung ändert sich die Benutzeroberfläche für alle erforderlichen Bereitstellungen, in denen ein Neustart per Popupbenachrichtigung gefordert wird:
 
-![Popupbenachrichtigung, dass ein Neustart erforderlich ist](media/3555947-restart-toast-initial.png)  
+:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text="Popupbenachrichtigung, dass ein Neustart erforderlich ist":::
 
 Im eindringlicheren Softwarecenter-Dialogfeld:
 
-![Dialogfeld zum Neustart des Computers](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Dialogfeld zum Neustart des Computers":::
 
 Wenn der Benutzer das Gerät nach der Installation nicht neu gestartet hat, erhält er eine Benachrichtigung als Erinnerung. Diese temporäre Erinnerung wird für den Benutzer entsprechend der Clienteinstellung angezeigt: **Temporäre Benachrichtigung für Benutzer anzeigen, in der auf das Intervall (in Minuten) bis zum Abmelden des Benutzers oder Neustart des Computers hingewiesen wird**. Diese Einstellung gibt die Gesamtzeit an, innerhalb derer der Benutzer den Computer neu starten muss, bevor ein Neustart erzwungen wird.
 
 - Temporäre Benachrichtigung bei Verwendung von Popupbenachrichtigungen:
 
-  ![Popupbenachrichtigung über ausstehenden Neustart](media/3555947-restart-toast.png)
+    :::image type="content" source="media/3555947-restart-toast.png" alt-text="Popupbenachrichtigung über ausstehenden Neustart":::
 
 - Temporäre Benachrichtigung bei Verwendung des Softwarecenter-Dialogfelds, kein Popup:
 
-  ![Softwarecenter-Benachrichtigung über ausstehenden Neustart mit Schaltfläche „Erneut erinnern“](media/3555947-1902-hide-notification.png)
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Softwarecenter-Benachrichtigung über ausstehenden Neustart mit Schaltfläche „Erneut erinnern“":::
 
 Wenn der Benutzer nach der temporären Benachrichtigung keinen Neustart ausführt, wird die finale Benachrichtigung mit Countdown ausgegeben; diese kann nicht geschlossen werden. Der Zeitpunkt, zu dem die finale Benachrichtigung angezeigt wird, basiert auf der Clienteinstellung: **Nicht vom Benutzer schließbares Dialogfeld anzeigen, in der das Countdownintervall (in Minuten) bis zum Abmelden des Benutzers oder Neustart des Computers angezeigt wird**. Wenn die Einstellung z. B. auf 60 festgelegt ist, wird die finale Benachrichtigung für den Benutzer eine Stunde vor dem Erzwingen eines Neustarts angezeigt:
 
-![Softwarecenter-Benachrichtigung mit finalem Countdown](media/3555947-1902-final-countdown.png)
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Softwarecenter-Benachrichtigung mit finalem Countdown":::
 
 Die folgende Einstellung muss eine kürzere Dauer als das kürzeste [Wartungsfenster](../manage/collections/use-maintenance-windows.md) aufweisen, das auf den Computer angewendet wird:
 

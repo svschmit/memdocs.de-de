@@ -2,7 +2,7 @@
 title: Konfigurieren von Begrenzungsgruppen
 titleSuffix: Configuration Manager
 description: Unterstützen Sie Clients bei der Suche nach Standortsystemen, indem Sie Begrenzungsgruppen für die logische Organisation zusammenhängender Netzwerkadressen verwenden, die auch als Grenzen bezeichnet werden
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 7a925c29b5d186f3ca6f320741f5ca602b0bbb79
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153417"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128391"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Konfigurieren von Begrenzungsgruppen für Configuration Manager
 
@@ -312,7 +312,7 @@ In Version 1902 heißt diese Einstellung jetzt **Cloudbasierte Quellen lokalen Q
 - Cloudverteilungspunkte
 - Microsoft Update (in Version 1902 hinzugefügt)
 
-## <a name="software-update-points"></a>Softwareupdatepunkte
+## <a name="software-update-points"></a><a name="bkmk_sup"></a> Softwareupdatepunkte 
 
 Clients verwenden Begrenzungsgruppen zur Auswahl neuer Softwareupdatepunkte. Zur Steuerung, welchen Server ein Client finden kann, können Sie zu verschiedenen Begrenzungsgruppen einzelne Softwareupdatepunkte hinzufügen.
 
@@ -365,6 +365,13 @@ Beim Wechseln auf einen neuen Server wird das Fallback verwendet, um diesen zu f
 Überprüfen Sie die Konfigurationen für Ihre Begrenzungsgruppen. Bevor Sie diese Änderung umsetzen, stellen Sie sicher, dass sich Ihre Softwareupdatepunkte in den richtigen Begrenzungsgruppen befinden.
 
 Weitere Informationen finden Sie unter [Manuelles Wechseln von Clients auf einen neuen Softwareupdatepunkt](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
+
+### <a name="intranet-clients-can-use-a-cmg-software-update-point"></a><a name="bkmk_cmg-sup"></a> Intranetclients können einen CMG-Softwareupdatepunkt verwenden
+<!--7102873-->
+Ab Version 2006 können Intranetclients auf einen CMGSoftwareupdatepunkt zugreifen, wenn dieser einer Begrenzungsgruppe zugewiesen ist und auf dem Softwareupdatepunkt die Option [**Datenverkehr über Configuration Manager-Cloudverwaltungsgateway zulassen** aktiviert ist](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role). In den folgenden Szenarien können Sie Intranetgeräten erlauben, einen CMG-Softwareupdatepunkt abzufragen:
+
+- Wenn sich ein Computer im Internet mit dem VPN verbindet, fragt er den CMG-Softwareupdatepunkt weiterhin über das Internet ab.
+- Wenn der einzige Softwareupdatepunkt für die Begrenzungsgruppe der CMG-Softwareupdatepunkt ist, fragen alle Intranet- und Internetgeräte diesen ab.
 
 ## <a name="management-points"></a>Verwaltungspunkte
 

@@ -1,21 +1,21 @@
 ---
 title: Office 365-Clientverwaltungsdashboard
 titleSuffix: Configuration Manager
-description: Überprüfen von Office 365-Clientinformationen aus dem Office 365-Clientverwaltungsdashboard
+description: Überprüfen von Informationen zu Microsoft 365-Apps-Clients auf dem Office 365-Clientverwaltungsdashboard
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: 7e6ed38d0f4217bfc70d3ddb196527d421e5d7c1
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ce3947c8ca3c562869fdfed2ddba4d9b160902be
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110388"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129373"
 ---
 # <a name="office-365-client-management-dashboard"></a>Office 365-Clientverwaltungsdashboard
 
@@ -24,7 +24,7 @@ ms.locfileid: "82110388"
 > [!Note]
 > Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
 
-Ab der Configuration Manager-Version 1802 können Sie Office 365-Clientinformationen aus dem Office 365-Clientverwaltungsdashboard überprüfen. Im Office 365-Clientverwaltungsdashboard wird eine Liste von relevanten Geräten angezeigt, wenn Diagrammabschnitte ausgewählt werden. <!--1357281 -->
+Ab der Configuration Manager-Version 1802 können Sie Informationen zu Microsoft 365-Apps-Clients auf dem Office 365-Clientverwaltungsdashboard überprüfen. Im Office 365-Clientverwaltungsdashboard wird eine Liste von relevanten Geräten angezeigt, wenn Diagrammabschnitte ausgewählt werden. <!--1357281 -->
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -53,13 +53,13 @@ Der Standortserver der obersten Ebene benötigt Zugriff auf den folgenden Endpun
 > [!NOTE]
 > Die Clientgeräte benötigen für keines dieser Szenarios eine Internetverbindung.
 
-### <a name="enable-data-collection-for-office-365-proplus"></a>Aktivieren der Datensammlung für Office 365 ProPlus
+### <a name="enable-data-collection-for-microsoft-365-apps"></a>Aktivieren der Datensammlung für Microsoft 365-Apps
 
 *(In Version 1910 als Voraussetzung eingeführt)*
 
-Ab Version 1910 müssen Sie die Datensammlung für Office 365 ProPlus aktivieren, damit das **Office 365 ProPlus-Pilot- und -Integritätsdashboard** mit den Daten befüllt wird. Die Daten werden in der Configuration Manager-Standortdatenbank gespeichert und nicht an Microsoft gesendet.
+Ab Version 1910 müssen Sie die Datensammlung für Microsoft 365-Apps aktivieren, damit das **Office 365 ProPlus-Pilot- und -Integritätsdashboard** mit Daten aufgefüllt wird. Die Daten werden in der Configuration Manager-Standortdatenbank gespeichert und nicht an Microsoft gesendet.
 
-Sie unterscheiden sich von den Diagnosedaten, die unter [Diagnosedaten, die von Office 365 ProPlus an Microsoft gesendet werden](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft) beschrieben sind.
+Sie unterscheiden sich von den Diagnosedaten, die unter [Diagnosedaten, die von Microsoft 365-Apps an Microsoft gesendet werden](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft) beschrieben werden.
 
 Sie können die Datensammlung entweder mithilfe einer Gruppenrichtlinie oder durch Bearbeiten der Registrierung aktivieren.
 
@@ -80,28 +80,28 @@ reg add HKCU\Software\Policies\Microsoft\office\16.0\OSM /v EnableLogging /t REG
 
 ## <a name="viewing-the-office-365-client-management-dashboard"></a>Anzeigen des Office 365-Clientverwaltungsdashboards
 
-Wechseln Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Übersicht** > **Office 365-Clientverwaltung**, um das Office 365-Clientverwaltungsdashboard anzuzeigen. Verwenden Sie am oberen Rand des Dashboards die Dropdowneinstellung **Sammlung**, um die Dashboarddaten nach Mitgliedern einer bestimmten Sammlung zu filtern. Ab der Configuration Manager-Version 1802 kann über das Office 365-Clientverwaltungsdashboard eine Liste relevanter Geräte angezeigt werden, wenn Diagrammabschnitte ausgewählt werden.
+Wechseln Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Übersicht** > **Office 365-Clientverwaltung**, um das Office 365-Clientverwaltungsdashboard anzuzeigen. Verwenden Sie am oberen Rand des Dashboards die Dropdowneinstellung **Sammlung**, um die Dashboarddaten nach Mitgliedern einer bestimmten Sammlung zu filtern. Ab der Configuration Manager-Version 1802 zeigt das Dashboard eine Liste relevanter Geräte an, wenn Diagrammabschnitte ausgewählt werden.
 
 Das Office 365-Clientverwaltungsdashboard enthält Diagramme für die folgenden Informationen:
 
-- Anzahl der Office 365-Clients
-- Office 365-Clientversionen
-- Office 365-Clientsprachen
-- Office 365-Clientkanäle Weitere Informationen finden Sie unter [Übersicht über Updatekanäle für Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
+- Anzahl von Microsoft 365-Apps-Clients
+- Microsoft 365-Apps-Clientversionen
+- Microsoft 365-Apps-Clientsprachen
+- Microsoft 365-Apps-Clientkanäle Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Microsoft 365-Apps](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
 
-## <a name="integration-for-office-365-proplus-readiness"></a><a name="bkmk_o365_readiness"></a> Integration für Office 365 ProPlus-Bereitschaft
+## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a> Integration für die Bereitschaft für Microsoft 365-Apps
 <!--3735402-->
-Ab der Configuration Manager-Version 1902 können Sie über das Dashboard Geräte, die für ein Upgrade auf Office 365 ProPlus bereit sind, mit hoher Zuverlässigkeit identifizieren. Diese Integration bietet Erkenntnisse zu möglichen Kompatibilitätsproblemen mit Office-Add-Ins und -Makros in Ihrer Umgebung. Verwenden Sie den Configuration Manager anschließend zum Bereitstellen von Office auf Geräten, die dafür bereit sind.
+Ab der Configuration Manager-Version 1902 können Sie das Dashboard verwenden, um mit hoher Zuverlässigkeit Geräte zu identifizieren, die für ein Upgrade auf Microsoft 365-Apps bereit sind. Diese Integration bietet Erkenntnisse zu möglichen Kompatibilitätsproblemen mit Add-Ins und Makros in Ihrer Umgebung. Verwenden Sie Configuration Manager anschließend zum Bereitstellen von Microsoft 365-Apps auf Geräten, die dafür bereit sind.
 
 Das Office 365-Clientverwaltungsdashboard enthält die neue Kachel **Office365 ProPlus-Upgradebereitschaft**. Diese Kachel ist ein Balkendiagramm mit Geräten in den folgenden Zuständen:
 - Nicht bewertet
 - Bereit für Upgrade
 - Überprüfung erforderlich
 
-Wählen Sie einen Zustand aus, um eine Geräteliste zu durchlaufen. Dieser Bereitschaftsbericht zeigt weitere Details zu Geräten an. Er enthält Spalten für den Kompatibilitätsstatus von Office-Add-Ins und -Makros.
+Wählen Sie einen Zustand aus, um eine Geräteliste zu durchlaufen. Dieser Bereitschaftsbericht zeigt weitere Details zu Geräten an. Er enthält Spalten für den Kompatibilitätsstatus von Add-Ins und Makros.
 
-### <a name="prerequisites-for-office-365-proplus-readiness-integration"></a>Voraussetzungen für die Integration von Office 365 ProPlus-Bereitschaft
+### <a name="prerequisites-for-microsoft-365-apps-readiness-integration"></a>Voraussetzungen für die Integration der Microsoft 365-Apps-Bereitschaft
 
 - Aktivieren Sie die Hardwareinventur in den Clienteinstellungen. Weitere Informationen finden Sie im Abschnitt [Voraussetzungen](#prerequisites).  
 
@@ -116,7 +116,7 @@ Standardmäßig prüft der Überprüfungs-Agent auf jedem Gerät die Liste zulet
 - Office-Dateiformate mit Makros, z.B. Excel-Arbeitsmappen mit Makros (.xlsm) oder Word-Dokumente mit Makros (.docm)  
 - Ältere Office-Dateiformate, in denen nicht angegeben wird, ob Makroinhalte vorhanden sind. Beispiel: eine Arbeitsmappe in Excel 97–2003 (XLS).
 
-Wenn Sie ausführlichere Informationen zur Makrokompatibilität benötigen, stellen Sie das **Readiness Toolkit for Office add-ins and VBA** bereit, um den Code innerhalb der Makrodateien zu analysieren. Es überprüft, ob potenziellen Kompatibilitätsprobleme vorliegen. Beispielsweise verwendet die Datei eine Funktion, die in einer neueren Version von Office geändert wurde. Nachdem Sie das Readiness Toolkit for Office add-ins and VBA ausgeführt und die Option **Most recently used Office documents and installed add-ins on this computer** (Zuletzt auf diesem Computer verwendete Office-Dokumente und installierte Add-Ins) ausgewählt oder das Flag `-mru` in der Befehlszeile verwendet haben, können die Ergebnisse vom Agent der Konfigurations-Manager-Hardwareinventur abgerufen werden. Diese zusätzlichen Daten verbessern die Berechnung der Gerätebereitschaft. Weitere Informationen finden Sie unter [Verwenden des Readiness Toolkits für Office zum Bewerten der Anwendungskompatibilität von Office 365 ProPlus](https://aka.ms/readinesstoolkit).
+Wenn Sie ausführlichere Informationen zur Makrokompatibilität benötigen, stellen Sie das **Readiness Toolkit for Office add-ins and VBA** bereit, um den Code innerhalb der Makrodateien zu analysieren. Es überprüft, ob potenziellen Kompatibilitätsprobleme vorliegen. Beispielsweise verwendet die Datei eine Funktion, die in einer neueren Version von Office geändert wurde. Nachdem Sie das Readiness Toolkit for Office add-ins and VBA ausgeführt und die Option **Most recently used Office documents and installed add-ins on this computer** (Zuletzt auf diesem Computer verwendete Office-Dokumente und installierte Add-Ins) ausgewählt oder das Flag `-mru` in der Befehlszeile verwendet haben, können die Ergebnisse vom Agent der Konfigurations-Manager-Hardwareinventur abgerufen werden. Diese zusätzlichen Daten verbessern die Berechnung der Gerätebereitschaft. Weitere Informationen finden Sie unter [Verwenden des Readiness Toolkits für Office zum Bewerten der Anwendungskompatibilität von Microsoft 365-Apps](https://aka.ms/readinesstoolkit).
 
 Beachten Sie, dass das Readiness Toolkit for Office add-ins and VBA nicht auf jedem Zielgerät installiert werden muss, um die Überprüfung auszuführen. Sie können das folgende Beispiel für eine Befehlszeilenoption verwenden, um jedes gewünschte Gerät zu überprüfen.  Das Ausgabeflag ist erforderlich. Die Dateien werden jedoch nicht dazu verwendet, die Ergebnisse im Dashboard zu generieren, sodass ein beliebiger gültiger Speicherort ausgewählt werden kann.
 
@@ -126,12 +126,12 @@ ReadinessReportCreator.exe -mru -output c:\temp -silent
 
 Weitere Informationen finden Sie unter [Abrufen von Bereitschaftsinformationen für mehrere Benutzer in einem Unternehmen](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise).
 
-## <a name="office-365-proplus-upgrade-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a> Office 365 ProPlus-Dashboard für die Upgradebereitschaft
+## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a> Bereitschaftsdashboard für Microsoft 365-Apps
 
 *(Eingeführt in Version 1906)*
 
 <!--4021125-->
-Ab Version 1906 gibt es ein neues Bereitschaftsdashboard, mit dem Sie ermitteln können, welche Geräte für ein Upgrade auf Office 365 ProPlus bereit sind. Es enthält die Kachel **Office 365 ProPlus upgrade readiness** (Office 365 ProPlus-Upgradebereitschaft), die in der aktuellen Configuration Manager-Branchversion 1902 veröffentlicht wurde. Die folgenden neuen Kacheln auf diesem Dashboard helfen Ihnen bei der Bewertung der Bereitschaft von Office-Add-Ins und -Makros:
+Ab Version 1906 gibt es ein Bereitschaftsdashboard, über das Sie ermitteln können, welche Geräte für ein Upgrade auf Microsoft 365-Apps bereit sind. Es enthält die Kachel **Office 365 ProPlus upgrade readiness** (Office 365 ProPlus-Upgradebereitschaft), die in der aktuellen Configuration Manager-Branchversion 1902 veröffentlicht wurde. Die folgenden neuen Kacheln auf diesem Dashboard helfen Ihnen bei der Bewertung der Bereitschaft von Add-Ins und Makros:
 
 - Bereitstellung
 - Gerätebereitschaft
@@ -148,31 +148,31 @@ Das folgende Video wurde auf der Ignite 2019 aufgenommen und bietet weitere Info
 
 [Best Practices die Bewertung der Kompatibilität und Microsoft Office 365 ProPlus-Upgrades mit Office Readiness in Configuration Manager](https://myignite.techcommunity.microsoft.com/sessions/79338?source=sessions)
 
-### <a name="using-the-office-365-proplus-upgrade-readiness-dashboard"></a>Verwenden des Office 365 ProPlus-Dashboards für die Upgradebereitschaft
+### <a name="using-the-microsoft-365-apps-upgrade-readiness-dashboard"></a>Verwenden des Microsoft 365-Apps-Dashboards für die Upgradebereitschaft
 
 Nachdem Sie sichergestellt haben, dass Sie alle [Voraussetzungen](#prerequisites) erfüllt sind, verwenden Sie das Dashboard mithilfe der folgenden Anleitung:
  
 1. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Softwarebibliothek**, und erweitern Sie **Office 365-Clientverwaltung**.
-1. Klicken Sie auf den Knoten **Office 365 ProPlus Upgrade Readiness** (Office 365 ProPlus-Upgradebereitschaft).
+1. Wählen Sie den Knoten **Microsoft 365-Apps-Upgradebereitschaft** aus.
 1. Ändern Sie die **Sammlung** und **Target Office Architecture** (Office-Zielarchitektur), um die an das Dashboard übertragenen Informationen zu ändern.
 
-![Office 365 ProPlus-Dashboard für die Upgradebereitschaft](./media/4021125-office-365-upgrade-readiness-dashboard.png)
+[![Dashboard für die Microsoft 365-Apps-Upgradebereitschaft](./media/4021125-office-365-upgrade-readiness-dashboard.png)](./media/4021125-office-365-upgrade-readiness-dashboard.png#lightbox)
 
-![Office 365 ProPlus-Dashboard für die Upgradebereitschaft](./media/4021125-office-365-to-add-ins.png)
+[![Add-Ins des Dashboards für die Microsoft 365-Apps-Upgradebereitschaft](./media/4021125-office-365-to-add-ins.png)](./media/4021125-office-365-to-add-ins.png#lightbox)
 
-![Office 365 ProPlus-Dashboard für die Upgradebereitschaft](./media/4021125-office-365-macro-advisories.png)
+[![Makroempfehlungen auf dem Dashboard für die Microsoft 365-Apps-Upgradebereitschaft](./media/4021125-office-365-macro-advisories.png)](./media/4021125-office-365-macro-advisories.png#lightbox)
 
 ### <a name="device-readiness-information"></a>Informationen zur Gerätebereitschaft
 
 Nachdem das Add-In und die Makroinventur auf jedem Gerät ausgewertet wurden, werden die Geräte entsprechend den Informationen gruppiert. Bei Geräten mit dem Status **Zum Upgrade bereit** bestehen wahrscheinlich keinerlei Kompatibilitätsprobleme.
 
-Wenn Sie im Diagramm die Kategorie **Zum Upgrade bereit** auswählen, werden weitere Details zu den Geräten in der begrenzenden Sammlung angezeigt. Sie können die Geräteliste überprüfen, eine Auswahl gemäß Ihren Geschäftsanforderungen treffen und eine neue Gerätesammlung aus Ihrer Auswahl erstellen. Verwenden Sie die neue Sammlung, um Office 365 ProPlus mit Configuration Manager bereitzustellen.
+Wenn Sie im Diagramm die Kategorie **Zum Upgrade bereit** auswählen, werden weitere Details zu den Geräten in der begrenzenden Sammlung angezeigt. Sie können die Geräteliste überprüfen, eine Auswahl gemäß Ihren Geschäftsanforderungen treffen und eine neue Gerätesammlung aus Ihrer Auswahl erstellen. Verwenden Sie die neue Sammlung, um Microsoft 365-Apps mit Configuration Manager bereitzustellen.
 
-Geräte, für die das Risiko von Kompatibilitätsproblemen besteht, werden mit dem Status **Überprüfung erforderlich** gekennzeichnet. Für diese Geräte müssen möglicherweise Maßnahmen ergriffen werden, bevor Sie sie auf Office 365 ProPlus aktualisieren. Sie sollten beispielsweise für wichtige Add-Ins ein Update auf eine neuere Version ausführen.
+Geräte, für die das Risiko von Kompatibilitätsproblemen besteht, werden mit dem Status **Überprüfung erforderlich** gekennzeichnet. Für diese Geräte müssen möglicherweise Maßnahmen ergriffen werden, bevor ein Upgrade auf Microsoft 365-Apps durchgeführt werden kann. Sie sollten beispielsweise für wichtige Add-Ins ein Update auf eine neuere Version ausführen.
 
 ### <a name="add-in-information"></a>Informationen zu Add-Ins
 
- Auf jedem Gerät wird ein Inventar aller installierten Add-Ins erfasst. Dieses Inventar wird anschließend mit den Informationen verglichen, die Microsoft über die Leistung der Add-Ins in Office 365 ProPlus vorliegen. Wenn ein Add-in gefunden wird, das nach dem Upgrade wahrscheinlich Probleme verursacht, werden alle Geräte mit dem Add-in mit „Überprüfung erforderlich“ gekennzeichnet.
+ Auf jedem Gerät wird ein Inventar aller installierten Add-Ins erfasst. Dieses Inventar wird dann mit den Informationen verglichen, die Microsoft über die Leistung der Add-Ins in Microsoft 365-Apps vorliegen. Wenn ein Add-in gefunden wird, das nach dem Upgrade wahrscheinlich Probleme verursacht, werden alle Geräte mit dem Add-in mit „Überprüfung erforderlich“ gekennzeichnet.
 
 ### <a name="macro-information"></a>Informationen zu Makros
 
@@ -181,7 +181,7 @@ Configuration Manager prüft die zuletzt verwendeten Dateien auf jedem Gerät. D
 - Office-Dateiformate mit Makros
 - Ältere Office-Formate, die nicht angeben, ob Makroinhalte vorhanden sind
 
-Mit diesem Bericht kann ermittelt werden, auf welchen Geräten sich zuletzt verwendete Dateien befinden, die möglicherweise Makros enthalten. Das **Readiness Toolkit for Office add-ins and VBA** kann dann mithilfe von Configuration Manager bereitgestellt werden, um beliebige Geräte zu überprüfen, auf denen ausführlichere Informationen erforderlich sind, und zu prüfen, ob möglicherweise Kompatibilitätsprobleme vorliegen. Ein Beispiel wäre eine Datei, die eine Funktion enthält, die in einer neueren Version von Office geändert wurde.
+Mit diesem Bericht kann ermittelt werden, auf welchen Geräten sich zuletzt verwendete Dateien befinden, die möglicherweise Makros enthalten. Das **Readiness Toolkit for Office add-ins and VBA** kann dann mithilfe von Configuration Manager bereitgestellt werden, um beliebige Geräte zu überprüfen, auf denen ausführlichere Informationen erforderlich sind, und zu prüfen, ob möglicherweise Kompatibilitätsprobleme vorliegen. Ein Beispiel hierfür wäre eine Datei, die eine Funktion verwendet, die in einer neueren Version von Microsoft 365-Apps geändert wurde.
 
 Weitere Informationen zum Durchführen der Überprüfung finden Sie unter [Ausführliche Makrobereitschaft](#bkmk_ort).
 
@@ -189,7 +189,7 @@ Weitere Informationen zum Durchführen der Überprüfung finden Sie unter [Ausf�
 <!--4488272, 4488301-->
 *(eingeführt in Version 1910)*
 
-Ab Version 1910 können Sie mit dem **Office 365 ProPlus-Pilot- und -Integritätsdashboard** Ihre Office 365 ProPlus-Bereitstellung planen, testen und ausführen. Das Dashboard bietet Einblicke in die Integrität von Geräten mit Office 365 ProPlus, um mögliche Probleme zu identifizieren, die sich möglicherweise auf Ihre Bereitstellungspläne auswirken. Das **Office 365 ProPlus-Pilotprojekt und -Integritätsdashboard** bieten eine Empfehlung für Pilotgeräte, die auf einem Add-In-Bestand basieren. Das Dashboard verfügt über die folgenden Kacheln:
+Ab Version 1910 können Sie mit dem **Office 365 ProPlus-Pilot- und -Integritätsdashboard** Ihre Microsoft 365-Apps-Bereitstellung planen, mit Pilotversionen testen und ausführen. Das Dashboard bietet Einblicke in die Integrität von Geräten mit Microsoft 365-Apps, um mögliche Probleme zu identifizieren, die sich auf Ihre Bereitstellungspläne auswirken können. Das **Office 365 ProPlus-Pilotprojekt und -Integritätsdashboard** bieten eine Empfehlung für Pilotgeräte, die auf einem Add-In-Bestand basieren. Das Dashboard verfügt über die folgenden Kacheln:
 
 - Generieren des Pilotprojekts
 - Empfohlene Pilotgeräte
@@ -215,15 +215,15 @@ Generieren Sie mit nur einem Mausklick eine Pilotempfehlung aus einer einschrän
 
 ### <a name="recommended-pilot-devices"></a>Empfohlene Pilotgeräte
 
-**Empfohlene Pilotgeräte** sind eine minimale Gruppe von Geräten, die alle installierten Add-Ins über die einschränkende Sammlung hinweg darstellen, die Sie beim Erstellen des Pilotprojekts verwendet haben. Führen Sie einen Drilldown aus, um eine Liste dieser Geräte abzurufen. Verwenden Sie dann die Details, um bei Bedarf Geräte aus dem Pilotprojekt auszuschließen. Wenn alle Ihre Add-Ins bereits auf Office 365 ProPlus-Geräten vorhanden sind, werden Geräte mit diesen Add-Ins nicht in die Berechnung einbezogen. Dies bedeutet auch, dass Sie möglicherweise in ihrer Pilotsammlung keine Ergebnisse erhalten, da alle Ihre Add-Ins auf Geräten gefunden werden, auf denen Office 365 ProPlus installiert ist.
+**Empfohlene Pilotgeräte** sind eine minimale Gruppe von Geräten, die alle installierten Add-Ins über die einschränkende Sammlung hinweg darstellen, die Sie beim Erstellen des Pilotprojekts verwendet haben. Führen Sie einen Drilldown aus, um eine Liste dieser Geräte abzurufen. Verwenden Sie dann die Details, um bei Bedarf Geräte aus dem Pilotprojekt auszuschließen. Wenn alle Ihre Add-Ins bereits auf Microsoft 365-Apps-Geräten vorhanden sind, werden diese Geräte nicht in die Berechnung einbezogen. Dies bedeutet auch, dass Ihre Pilotsammlung möglicherweise keine Ergebnisse enthält, weil sämtliche Add-Ins auf Geräten gefunden werden, auf denen Microsoft 365-Apps installiert sind.
 
 ### <a name="deploy-pilot"></a>Bereitstellen des Pilotprojekts
 
-Nachdem Sie Ihre Pilotgeräte akzeptiert haben, stellen Sie Office 365 ProPlus mit dem Assistenten für stufenweise Bereitstellung für die Pilotsammlung bereit. Administratoren können das Pilotprojekt und die einschränkende Sammlung im Assistenten zum Verwalten von Bereitstellungen definieren.
+Nachdem Sie Ihre Pilotgeräte akzeptiert haben, stellen Sie Microsoft 365-Apps mit dem Assistenten für die Bereitstellung in Phasen für die Pilotsammlung bereit. Administratoren können das Pilotprojekt und die einschränkende Sammlung im Assistenten zum Verwalten von Bereitstellungen definieren.
 
 ### <a name="health-data"></a>Integritätsdaten
 
-Nachdem Office 365 ProPlus installiert wurde, aktivieren Sie Integritätsdaten für Ihre Pilotgeräte. Die Integritätsdaten geben Aufschluss darüber, welche Add-Ins und Makros die Integritätsziele nicht erfüllen. Das Diagramm **Geräte, die für die Bereitstellung bereit sind** identifiziert Nicht-Pilotgeräte, die für die Bereitstellung bereit sind, mithilfe von Einblicken in die Integrität. Rufen Sie die Anzahl von Geräten, die Integritätsdaten senden, aus dem Diagramm **Geräte, die Integritätsdaten senden** ab.
+Aktivieren Sie nach der Installation von Microsoft 365 Apps die Integritätsdaten auf Ihren Pilotgeräten. Die Integritätsdaten geben Aufschluss darüber, welche Add-Ins und Makros die Integritätsziele nicht erfüllen. Das Diagramm **Geräte, die für die Bereitstellung bereit sind** identifiziert Nicht-Pilotgeräte, die für die Bereitstellung bereit sind, mithilfe von Einblicken in die Integrität. Rufen Sie die Anzahl von Geräten, die Integritätsdaten senden, aus dem Diagramm **Geräte, die Integritätsdaten senden** ab.
 
 ### <a name="devices-not-meeting-health-goals"></a>Geräte, die die Integritätsziele nicht erfüllen
 
@@ -252,4 +252,4 @@ Es gibt ein bekanntes Problem mit der Kachel **Deploy Pilot** (Pilot bereitstell
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Verwalten von Office 365 ProPlus mit Configuration Manager](manage-office-365-proplus-updates.md)
+[Verwalten von Microsoft 365-Apps-Updates mit Configuration Manager](manage-office-365-proplus-updates.md)

@@ -2,20 +2,20 @@
 title: Dienstverbindungstool
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über das Dienstverbindungstool, mit dem Sie eine Verbindung mit dem Configuration Manager-Clouddienst herstellen können, um manuell Nutzungsinformationen hochzuladen.
-ms.date: 07/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 8b56b849be6abd2634e29d35e58494d4d3215857
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946843"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126085"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Verwenden des Dienstverbindungstools für Configuration Manager
 
@@ -78,7 +78,7 @@ Sie können einen der folgenden Parameter verwenden, um zu ändern, welche Datei
 - **-downloadsiteversion:** Mit diesem Parameter werden Updates und Hotfixes höherer Versionen als die Standortversion heruntergeladen.
 
     > [!IMPORTANT]
-    > Aufgrund eines bekannten Problems in Configuration Manager 2002 funktioniert das Standardverhalten nicht wie erwartet. Verwenden Sie den Parameter **-downloadsiteversion**, um die erforderlichen Updates für Version 2002 herunterzuladen.<!-- 7594517 -->
+    > Aufgrund eines bekannten Problems in Configuration Manager 2002 funktioniert das Standardverhalten nicht wie erwartet. Aktualisieren Sie auf Version 2006, oder verwenden Sie den Parameter **-downloadsiteversion**, um die erforderlichen Updates für Version 2002 herunterzuladen.<!-- 7594517 -->
 
 Weitere Informationen finden Sie unter [Befehlszeilenparameter](#bkmk_cmd).
 
