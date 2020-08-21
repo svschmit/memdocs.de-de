@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 7dc3ef2ceb22f1c15c96127c593965ea31bdd7eb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614079"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696819"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Konfigurieren der zu synchronisierenden Klassifizierungen und Produkte  
 
@@ -129,7 +129,7 @@ Weitere Informationen zur Unterstützung für Windows-Insider in Configuration M
 ### <a name="prerequisites"></a>Voraussetzungen
 
 - Configuration Manager, Version 1906 oder höher, die für die [Verwaltung von Softwareupdates](../plan-design/plan-for-software-updates.md) konfiguriert ist
-- Windows 10-Geräte, auf denen der [Windows Insider Preview-Build](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started) ausgeführt wird
+- Windows 10-Geräte, auf denen der [Windows Insider Preview-Build](/windows-insider/at-work-pro/wip-4-biz-get-started) ausgeführt wird
 - Eine Sammlung, die die Windows-Insider-Geräte enthält
 
 ### <a name="enable-windows-insider-upgrades-and-updates"></a>Aktivieren der Windows-Insider-Upgrades und -Updates
@@ -160,7 +160,7 @@ Stellen Sie für Ihre Zielsammlung Funktionsupdates für Windows-Insider so bere
 - Es gibt Lizenzbedingungen, die akzeptiert werden müssen, damit Ihre Bereitstellung installiert werden kann.
 - Möglicherweise sollten Sie die [Threadpriorität in den Clienteinstellungen](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority) verwenden.
 - Beim dynamischen Update werden wichtige Updates, einschließlich des aktuellen kumulativen Updates, direkt aus Microsoft Update installiert. Dieses Verhalten begann mit den Funktionsupdates für Windows 10, Version 1903. 
-  - Sie können das dynamische Update [in den Clienteinstellungen](../../core/clients/deploy/about-client-settings.md#bkmk_du) oder mit der [Datei „setupconfig.ini“](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) explizit deaktivieren. 
+  - Sie können das dynamische Update [in den Clienteinstellungen](../../core/clients/deploy/about-client-settings.md#bkmk_du) oder mit der [Datei „setupconfig.ini“](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) explizit deaktivieren. 
   - Weitere Informationen finden Sie im Blogbeitrag [Vorteile des dynamischen Updates für Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847).
 
 Weitere Informationen zum Bereitstellen von Upgrades finden Sie unter [Verwalten von Windows-as-a-Service mit Configuration Manager](../../osd/deploy-use/manage-windows-as-a-service.md).
@@ -168,7 +168,7 @@ Weitere Informationen zum Bereitstellen von Upgrades finden Sie unter [Verwalten
 
 ### <a name="keeping-insider-devices-up-to-date"></a>Auf-dem-neuesten-Stand-Halten von Insider-Geräten
 
-Kumulative Updates für Windows-Insider sind für WSUS und damit auch für Configuration Manager verfügbar. Diese kumulativen Updates werden in einer ähnlichen Häufigkeit wie die kumulativen Updates für Windows 10, Version 1903 freigegeben. Die kumulativen Windows-Insider-Updates befinden sich in der Produktkategorie **Windows Insider Pre-Release** (Windows-Insider-Vorabversion) und sind entweder als **Sicherheitsupdates** oder **Updates** klassifiziert. Sie können die kumulativen Updates für Windows-Insider mithilfe ihres regulären Softwareupdateprozesses bereitstellen, z. B. über [automatische Bereitstellungsregeln](../deploy-use/automatically-deploy-software-updates.md) oder [graduelle Bereitstellungen](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Kumulative Updates für Windows-Insider sind für WSUS und damit auch für Configuration Manager verfügbar. Diese kumulativen Updates werden in einer ähnlichen Häufigkeit wie die kumulativen Updates für Windows 10, Version 1903 freigegeben. Die kumulativen Windows-Insider-Updates befinden sich in der Produktkategorie **Windows Insider Pre-Release** (Windows-Insider-Vorabversion) und sind entweder als **Sicherheitsupdates** oder **Updates** klassifiziert. Sie können die kumulativen Updates für Windows-Insider mithilfe ihres regulären Softwareupdateprozesses bereitstellen, z. B. über [automatische Bereitstellungsregeln](../deploy-use/automatically-deploy-software-updates.md) oder [graduelle Bereitstellungen](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
 ## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> Erweiterte Sicherheitsupdates und Configuration Manager
 

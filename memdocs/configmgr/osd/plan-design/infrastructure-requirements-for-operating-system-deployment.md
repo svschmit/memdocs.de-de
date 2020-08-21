@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f34c803cb2b43a2c69cee4c16f5029474e318eb2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9bb07bd2b82a9411bc527d04a9a64a0bb6e12f8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709338"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697669"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Anforderungen an die Infrastruktur für die Betriebssystembereitstellung in Configuration Manager
 
@@ -33,9 +33,9 @@ Das Windows Assessment and Deployment Kit (ADK) umfasst Tools und Dokumentatione
 
 Weitere Informationen finden Sie in den folgenden Artikeln:  
 
-- [Windows ADK für Windows 10-Szenarien für IT-Experten](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
+- [Windows ADK für Windows 10-Szenarien für IT-Experten](/windows/deployment/windows-adk-scenarios-for-it-pros)  
 
-- [Windows ADK für Windows 10 herunterladen](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
+- [Windows ADK für Windows 10 herunterladen](/windows-hardware/get-started/adk-install)  
 
     > [!IMPORTANT]
     > Stellen Sie sicher, dass Sie sowohl das **Windows ADK für Windows 10** als auch das **Windows PE-Add-On für das ADK** herunterladen.
@@ -79,7 +79,7 @@ Configuration Manager verwendet ein USMT-Paket mit den USMT 10-Quelldateien, die
 
 Weitere Informationen finden Sie in den folgenden Artikeln:  
 
-- [Allgemeine Migrationsszenarien für USMT 10](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)  
+- [Allgemeine Migrationsszenarien für USMT 10](/windows/deployment/usmt/usmt-common-migration-scenarios)  
 
 - [Verwalten des Benutzerzustands](../get-started/manage-user-state.md)  
 

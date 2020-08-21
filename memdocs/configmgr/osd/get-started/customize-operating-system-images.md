@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4f1d89707fa3e1765067c264d2abec12116bde88
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906915"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697720"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Anpassen von Betriebssystemimages mit Configuration Manager
 
@@ -95,7 +95,7 @@ Betriebssystemimages in Configuration Manager sind WIM-Dateien und stellen eine 
     > [!IMPORTANT]  
     >  Im Tasksequenzschritt [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) wird versucht, das lokale Administratorkennwort auf dem Referenzcomputer vor der Ausführung von Sysprep auf einen leeren Wert zurückzusetzen. Wenn die lokale Sicherheitsrichtlinie **Kennwort muss Komplexitätsvoraussetzungen entsprechen** aktiviert ist, kann das Administratorkennwort nicht von diesem Tasksequenzschritt zurückgesetzt werden. Deaktivieren Sie in diesem Fall die Richtlinie, bevor Sie die Tasksequenz ausführen.  
 
-     Weitere Informationen zu Sysprep finden Sie unter [Sysprep (Systemvorbereitung) – Übersicht](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
+     Weitere Informationen zu Sysprep finden Sie unter [Sysprep (Systemvorbereitung) – Übersicht](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
 
 -   **Mit den entsprechenden erforderlichen Tools und Skripts für die Installationsszenarien**  
 
@@ -131,4 +131,4 @@ Betriebssystemimages in Configuration Manager sind WIM-Dateien und stellen eine 
 ##  <a name="use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a> Verwenden einer Tasksequenz zum Erstellen eines Referenzcomputers  
  Sie können den Prozess zum Erstellen eines Referenzcomputers automatisieren, indem Sie mithilfe einer Tasksequenz das Betriebssystem, Treiber, Anwendungen usw. bereitstellen.  Führen Sie die folgenden Schritte aus, um den Referenzcomputer zu erstellen, von dem Sie anschließend das Betriebssystemabbild erfassen.  
 
--   Nutzen Sie eine Tasksequenz zum Erstellen und Erfassen des Betriebssystemabbilds vom Referenzcomputer.  Eine Schritt-für-Schritt-Anleitung finden Sie unter [Verwenden einer Tasksequenz zum Erstellen und Erfassen eines Referenzcomputers](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  
+-   Nutzen Sie eine Tasksequenz zum Erstellen und Erfassen des Betriebssystemabbilds vom Referenzcomputer.  Eine Schritt-für-Schritt-Anleitung finden Sie unter [Verwenden einer Tasksequenz zum Erstellen und Erfassen eines Referenzcomputers](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).

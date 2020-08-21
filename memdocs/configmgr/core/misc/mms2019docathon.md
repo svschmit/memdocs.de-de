@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e671118578d059e2b8416e6854a701ce7c405c0f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701208"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695578"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019-Docathon
 
@@ -51,7 +51,7 @@ Erstellen Sie ein [GitHub-Konto](https://github.com/join).
 
 - Für Microsoft-Mitarbeiter umfasst die Einrichtung zusätzliche einmalige Schritte, und der Prozess für das Mitwirken unterscheidet sich geringfügig.  
 
-Weitere Informationen finden Sie im Leitfaden für Mitwirkende an docs.microsoft.com unter [Einrichten eines GitHub-Kontos](https://docs.microsoft.com/contribute/get-started-setup-github).
+Weitere Informationen finden Sie im Leitfaden für Mitwirkende an docs.microsoft.com unter [Einrichten eines GitHub-Kontos](/contribute/get-started-setup-github).
 
 ## <a name="scope"></a>Bereich
 
@@ -68,7 +68,7 @@ Sie können auch andere Inhalte auf docs.microsoft.com bearbeiten, diese Änderu
 Lesen Sie Informationen zum [Erstellen von Issues](../understand/use-docs.md#bkmk_docfeedback) und zum [Mitwirken](../understand/use-docs.md#bkmk_contribute). Die meisten grundlegenden Änderungen können über GitHub im Browser vorgenommen werden.  
 
 > [!Note]  
-> Wenn Sie den komplexeren Workflow mit git und Visual Studio Code testen möchten, finden Sie weitere Informationen unter [Installieren von Tools für die Inhaltsentwicklung](https://docs.microsoft.com/contribute/get-started-setup-tools). Sie können sich auch an Aaron oder Erik wenden, wenn Sie Hilfe benötigen. Folgendes spricht für den komplexeren Workflow:
+> Wenn Sie den komplexeren Workflow mit git und Visual Studio Code testen möchten, finden Sie weitere Informationen unter [Installieren von Tools für die Inhaltsentwicklung](/contribute/get-started-setup-tools). Sie können sich auch an Aaron oder Erik wenden, wenn Sie Hilfe benötigen. Folgendes spricht für den komplexeren Workflow:
 >
 > - Das Erstellen neuer Artikel
 > - Das Hinzufügen von Bildern
@@ -134,13 +134,13 @@ Folgende Auszeichnungen werden anhand der Anzahl der zulässigen Beiträge zu de
 
 - [Microsoft-Stil](https://aka.ms/MicrosoftStyle)
 
-    - [Schnellstart](https://docs.microsoft.com/contribute/style-quick-start)
+    - [Schnellstart](/contribute/style-quick-start)
 
-    - [Top 10 tips for Microsoft style and voice (10 Grundprinzipien der optimalen Textgestaltung für Microsoft)](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+    - [Top 10 tips for Microsoft style and voice (10 Grundprinzipien der optimalen Textgestaltung für Microsoft)](/style-guide/top-10-tips-style-voice)
 
-- [Leitfaden für Mitwirkende](https://docs.microsoft.com/contribute)
+- [Leitfaden für Mitwirkende](/contribute)
 
-- [Verwenden von Markdown für das Schreiben von Dokumentationsartikeln](https://docs.microsoft.com/contribute/markdown-reference)
+- [Verwenden von Markdown für das Schreiben von Dokumentationsartikeln](/contribute/markdown-reference)
 
 ## <a name="official-rules"></a>Offizielle Regeln
 
@@ -166,7 +166,7 @@ Offizielle Regeln für den Microsoft Cloud + AI Developer Relations Content & Le
 
 5. TEILNAHME
 
-    Sie können einen Beitrag einreichen, indem Sie Artikel in den folgenden GitHub-Repositorys bearbeiten: Intune-Dokumentation, SCCM-Dokumentation und sccm-docs-powershell-ref. Weitere Informationen zur Vorgehensweise finden Sie unter [Mitwirken](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_contribute).
+    Sie können einen Beitrag einreichen, indem Sie Artikel in den folgenden GitHub-Repositorys bearbeiten: Intune-Dokumentation, SCCM-Dokumentation und sccm-docs-powershell-ref. Weitere Informationen zur Vorgehensweise finden Sie unter [Mitwirken](/sccm/core/understand/use-docs#bkmk_contribute).
 
     Übermitteln Sie einen Pull Request auf GitHub, um einen Beitrag einzureichen.
 

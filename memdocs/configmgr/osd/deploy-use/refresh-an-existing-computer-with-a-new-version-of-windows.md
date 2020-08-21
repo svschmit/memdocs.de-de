@@ -10,12 +10,12 @@ ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b635301d9d5bd8a0fb81771255acddb21097f23b
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5972f930e0f8026f0ca1004d797bf34605af201e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124901"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697839"
 ---
 # <a name="refresh-an-existing-computer-with-a-new-version-of-windows"></a>Aktualisieren eines vorhandenen Computers mit einer neuen Version von Windows
 
@@ -90,4 +90,4 @@ Weitere Informationen finden Sie in den folgenden Artikeln:
 Weitere Informationen finden Sie unter [Überwachen von Betriebssystembereitstellungen in System Center Configuration Manager](monitor-operating-system-deployments.md).  
 
 > [!Note]
-> Wenn Sie ein neues Image für ein UEFI-Gerät erstellen, erstellt der Windows-Start-Manager einen neuen Eintrag im Startladeprogramm. Dieses Verhalten macht sich vor allem dann bemerkbar, wenn Sie wiederholt ein neues Image für ein Gerät erstellen, z. B. in einer Testumgebung oder in einer Kursteilnehmerübung. Im Allgemeinen hat dies keinen Einfluss auf die Leistung oder Nutzung des Geräts. Wenn die Liste zu groß wird, kann es bei einigen bestimmten Hardwaregeräten zu Funktionsproblemen kommen. Beispielsweise wird nicht von einem externen USB-Laufwerk gestartet, oder der aktuelle Starteintrag kann nicht aus der Liste ausgewählt werden. Verwenden Sie den Windows-Befehl **bcdedit**, um unbenutzte Starteinträge zu löschen. Weitere Informationen finden Sie unter [BCDEdit /deletevalue](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcdedit--deletevalue).<!-- 2841926 -->
+> Wenn Sie ein neues Image für ein UEFI-Gerät erstellen, erstellt der Windows-Start-Manager einen neuen Eintrag im Startladeprogramm. Dieses Verhalten macht sich vor allem dann bemerkbar, wenn Sie wiederholt ein neues Image für ein Gerät erstellen, z. B. in einer Testumgebung oder in einer Kursteilnehmerübung. Im Allgemeinen hat dies keinen Einfluss auf die Leistung oder Nutzung des Geräts. Wenn die Liste zu groß wird, kann es bei einigen bestimmten Hardwaregeräten zu Funktionsproblemen kommen. Beispielsweise wird nicht von einem externen USB-Laufwerk gestartet, oder der aktuelle Starteintrag kann nicht aus der Liste ausgewählt werden. Verwenden Sie den Windows-Befehl **bcdedit**, um unbenutzte Starteinträge zu löschen. Weitere Informationen finden Sie unter [BCDEdit /deletevalue](/windows-hardware/drivers/devtest/bcdedit--deletevalue).<!-- 2841926 -->

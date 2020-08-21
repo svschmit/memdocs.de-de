@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904898"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698570"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Neuerungen in Version 1602 von Configuration Manager
 
@@ -42,9 +42,9 @@ Das Update 1602 für System Center Configuration Manager ist nur als konsolenin
 > [!WARNING]  
 >  Vor dem Upgrade auf Windows Server 2012 R2 müssen Sie WSUS 3.2 vom Server deinstallieren.  
 >   
->  Weitere Informationen zu diesem wichtigen Schritt finden Sie im Abschnitt „Neue und geänderte Funktionalität“ in der [Übersicht über Windows Server Update Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
+>  Weitere Informationen zu diesem wichtigen Schritt finden Sie im Abschnitt „Neue und geänderte Funktionalität“ in der [Übersicht über Windows Server Update Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
- Um einen Server upzugraden, verwenden Sie die Windows Server 2012 R2-Upgradeverfahren. Sie müssen nach dem Upgrade keine Configuration Manager-Standortserverwiederherstellung ausführen. Informationen zu Upgradeverfahren finden Sie unter [Upgradeoptionen für Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) in der Windows Server-Dokumentation.  
+ Um einen Server upzugraden, verwenden Sie die Windows Server 2012 R2-Upgradeverfahren. Sie müssen nach dem Upgrade keine Configuration Manager-Standortserverwiederherstellung ausführen. Informationen zu Upgradeverfahren finden Sie unter [Upgradeoptionen für Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) in der Windows Server-Dokumentation.  
 
 ###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> SQL Server AlwaysOn-Verfügbarkeitsgruppen  
  Verwenden Sie SQL Server Always On-Verfügbarkeitsgruppen zum Hosten der Standortdatenbank an primären Standorten und am Standort der zentralen Verwaltung als Lösung für hohe Verfügbarkeit und Notfallwiederherstellung.  
@@ -209,4 +209,4 @@ Configuration Manager kann den Status der Aktivierungssperre von überwachten un
 
 -   **Nicht konform:** Benutzer haben eine Version der Geschäftsbedingungen akzeptiert, bei der es sich jedoch nicht um die neueste Version handelt.  
 
--   **Unbekannt**: Benutzer haben die Geschäftsbedingungen nie akzeptiert (einschließlich Benutzer ohne registrierte Geräte).  
+-   **Unbekannt**: Benutzer haben die Geschäftsbedingungen nie akzeptiert (einschließlich Benutzer ohne registrierte Geräte).

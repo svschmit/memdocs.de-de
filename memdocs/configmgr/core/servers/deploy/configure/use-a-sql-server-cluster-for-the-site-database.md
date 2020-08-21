@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d035e6fbd776a03ce38a4cd0fc12755100b60c91
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: 988a9c31fca8d06104ce317f4709ee990089d723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643249"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699142"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Hosten der Standortdatenbank mit einem SQL Server-Cluster
 
@@ -63,7 +63,7 @@ Beachten Sie die folgenden Voraussetzungen:
 - Aktivieren Sie zur Unterstützung der Kerberos-Authentifizierung das **TCP/IP**-Netzwerkkommunikationsprotokoll für die Netzwerkverbindung jedes SQL Server-Clusterknotens. Das **Named Pipes**-Protokoll ist nicht erforderlich, kann jedoch zur Behandlung von Problemen bei der Kerberos-Authentifizierung verwendet werden. Die Netzwerkprotokolleinstellungen werden im **SQL Server-Konfigurations-Manager** unter **SQL Server-Netzwerkkonfiguration** konfiguriert.  
 
 - Es gelten bestimmte Zertifikatanforderungen, wenn Sie einen SQL Server-Cluster für die Standortdatenbank verwenden. Weitere Informationen finden Sie in den folgenden Artikeln:
-  - [Installieren eines Zertifikats in einer SQL-Failoverclusterkonfiguration](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Installieren eines Zertifikats in einer SQL-Failoverclusterkonfiguration](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
   - [PKI-Zertifikatanforderungen für Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -101,7 +101,7 @@ Configuration Manager unterstützt nicht die Data Protection Manager-Sicherung (
 
 Hier die wichtigsten Aufgaben, um die Standortdatenbank vorzubereiten:
 
-- Erstellen Sie den virtuellen SQL Server-Cluster, der die Standortdatenbank hosten soll, in einer vorhandenen Windows Server-Clusterumgebung. Spezifische Informationen zum Installieren und Konfigurieren eines SQL Server-Clusters finden Sie in der Dokumentation zu Ihrer SQL Server-Version. Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server-Failoverclusters (Setup)](https://docs.microsoft.com/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
+- Erstellen Sie den virtuellen SQL Server-Cluster, der die Standortdatenbank hosten soll, in einer vorhandenen Windows Server-Clusterumgebung. Spezifische Informationen zum Installieren und Konfigurieren eines SQL Server-Clusters finden Sie in der Dokumentation zu Ihrer SQL Server-Version. Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server-Failoverclusters (Setup)](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
 
 - Legen Sie bei jedem Computer im SQL Server-Cluster eine Datei im Stammordner jedes Laufwerks ab, auf dem Configuration Manager keine Standortkomponenten installieren soll. Benennen Sie die Datei mit `NO_SMS_ON_DRIVE.SMS`. Standardmäßig installiert Configuration Manager an jedem physischen Knoten einige Komponenten, um Vorgänge wie Sicherungen zu unterstützen.  
 
@@ -117,4 +117,4 @@ Führen Sie zum Installieren eines Standorts, der eine gruppierte Standortdatenb
 - Geben Sie auf der Seite **Datenbankinformationen** den Namen der virtuellen SQL Server-Clusterinstanz an, von der die Standortdatenbank gehostet wird. Die virtuelle Instanz ersetzt den Namen des Computers, auf dem SQL Server ausgeführt wird.  
 
     > [!IMPORTANT]  
-    > Wenn Sie den Namen der virtuellen SQL Server-Clusterinstanz eingeben, geben Sie nicht den vom Windows Server-Cluster erstellten virtuellen Windows Server-Namen ein. Wenn Sie den virtuellen Windows Server-Namen verwenden, wird die Standortdatenbank auf der lokalen Festplatte des aktiven Windows Server-Clusterknotens installiert. Dies verhindert ein erfolgreiches Failover, sollte der Knoten ausfallen.  
+    > Wenn Sie den Namen der virtuellen SQL Server-Clusterinstanz eingeben, geben Sie nicht den vom Windows Server-Cluster erstellten virtuellen Windows Server-Namen ein. Wenn Sie den virtuellen Windows Server-Namen verwenden, wird die Standortdatenbank auf der lokalen Festplatte des aktiven Windows Server-Clusterknotens installiert. Dies verhindert ein erfolgreiches Failover, sollte der Knoten ausfallen.

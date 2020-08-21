@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 1e86f331531d166e30ec7284d3852930fb3e62af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526031"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695816"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funktionen in der Technical Preview 1601 für Configuration Manager
 
@@ -75,11 +75,11 @@ In der Technical Preview-Version 1601 haben wir Unterstützung für die folgende
 
     -   Microsoft Intune-Abonnement. Das Microsoft Intune-Abonnement muss in der Configuration Manager-Konsole konfiguriert werden.  
 
-    -   [Voraussetzungen für die automatische Azure AD-Registrierung](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)  
+    -   [Voraussetzungen für die automatische Azure AD-Registrierung](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1)  
 
     Zum Verwenden dieser Option müssen Sie in Configuration Manager eine Kompatibilitätsrichtlinie mit den nachstehend beschriebenen spezifischen Regeln erstellen und eine Richtlinie für den bedingten Zugriff in der Intune-Konsole festlegen.  Um außerdem sicherzustellen, dass nur kompatible PCs Zugriff haben, müssen Sie die Anforderung für Windows-PCs auf die Option **Geräte müssen kompatibel sein** festlegen. Es folgen die Regeln der Kompatibilitätsrichtlinie, die für von Configuration Manager verwaltete PCs gelten.  
 
-    -   **Registrierung in Azure Active Directory erforderlich:** Diese Regel überprüft, ob die Arbeitsplätze des Benutzergeräts und Azure AD miteinander verknüpft sind, und falls nicht, wird das Gerät automatisch in Azure AD registriert. Die automatische Registrierung wird nur unter Windows 8.1 unterstützt. Stellen Sie für Windows 7-PCs eine MSI-Datei bereit, um die automatische Registrierung durchzuführen. Weitere Informationen finden Sie [hier](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Registrierung in Azure Active Directory erforderlich:** Diese Regel überprüft, ob die Arbeitsplätze des Benutzergeräts und Azure AD miteinander verknüpft sind, und falls nicht, wird das Gerät automatisch in Azure AD registriert. Die automatische Registrierung wird nur unter Windows 8.1 unterstützt. Stellen Sie für Windows 7-PCs eine MSI-Datei bereit, um die automatische Registrierung durchzuführen. Weitere Informationen finden Sie [hier](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     -   **Alle mit einem Stichtag älter als eine bestimmte Anzahl von Tagen installierten benötigten Updates:** Diese Regel überprüft, ob das Gerät des Benutzers gemäß dem Stichtag und der Toleranzperiode, die Sie festgelegt haben, über alle erforderlichen Updates verfügt (entsprechend der Angabe in der Regel **Erforderliche automatische Updates**) und installiert automatisch alle ausstehenden Updates.  
 
@@ -213,4 +213,4 @@ Ein Client ist online, wenn er aktuell mit einer Standortsystemrolle des Typs �
 
  Um die neuen Einstellungen anzuzeigen, wählen Sie auf der Seite für die **Geräteeinstellungen** des Konfigurationselements im Assistenten zum **Erstellen von Konfigurationselementen** die Option **Kioskmodus – Samsung KNOX** aus.  
 
- Weitere Informationen finden Sie unter [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client (Erstellen von Konfigurationselementen für Windows 8.1- und Windows 10-Geräte, die ohne den Configuration Manager-Client verwaltet werden)](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ Weitere Informationen finden Sie unter [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client (Erstellen von Konfigurationselementen für Windows 8.1- und Windows 10-Geräte, die ohne den Configuration Manager-Client verwaltet werden)](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).

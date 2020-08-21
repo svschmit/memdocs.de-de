@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3871b51c85d0474c4bea2da24fc5a2f31d02f59f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c37fab775cdb90667ff1bc9f77dbbcaa1864b6f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702938"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696785"
 ---
 # <a name="uup-private-preview-instructions"></a>Anweisungen für die private UUP-Vorschau
 
@@ -159,7 +159,7 @@ Nachdem Sie UUP-Updates in Ihre Umgebung synchronisiert haben, finden Sie diese 
 
 ### <a name="updates-available-during-preview"></a>Während der Vorschauphase verfügbare Updates
 
-Weitere Informationen zu allen von Microsoft veröffentlichten Windows 10-Updates finden Sie unter [Versionsinformationen zu Windows 10](https://docs.microsoft.com/windows/release-information/).
+Weitere Informationen zu allen von Microsoft veröffentlichten Windows 10-Updates finden Sie unter [Versionsinformationen zu Windows 10](/windows/release-information/).
 
 #### <a name="cumulative-updates-to-test"></a>Zu testende kumulative Updates
 

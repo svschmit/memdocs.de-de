@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 656cc80c929eb7e829dd06b642a83cb174d3b0c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210110"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697244"
 ---
 # <a name="configure-certificate-infrastructure"></a>Konfigurieren der Zertifikatinfrastruktur
 
@@ -34,7 +34,7 @@ Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifika
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>So installieren und konfigurieren Sie den Registrierungsdienst für Netzwerkgeräte und die Abhängigkeiten  
 
-1. Installieren und konfigurieren Sie auf einem Server unter Windows Server 2012 R2 den Rollendienst „Registrierungsdienst für Netzwerkgeräte“ für die Serverrolle „Active Directory-Zertifikatdienste“. Weitere Informationen finden Sie im [Leitfaden zum Registrierungsdienst für Netzwerkgeräte](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
+1. Installieren und konfigurieren Sie auf einem Server unter Windows Server 2012 R2 den Rollendienst „Registrierungsdienst für Netzwerkgeräte“ für die Serverrolle „Active Directory-Zertifikatdienste“. Weitere Informationen finden Sie im [Leitfaden zum Registrierungsdienst für Netzwerkgeräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
 
 2. Überprüfen Sie die Sicherheitsberechtigungen für die Zertifikatvorlagen, die vom Registrierungsdienst für Netzwerkgeräte verwendet werden, und ändern Sie sie bei Bedarf:  
 
@@ -44,7 +44,7 @@ Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifika
 
    -   Für das SCEP-Dienstkonto (Simple Certificate Enrollment-Protokoll), das vom Anwendungspool des Registrierungsdiensts für Netzwerkgeräte verwendet wird: die Berechtigungen **Lesen** und **Anmelden**.  
 
-        Diese Anforderung gilt nicht nur für Configuration Manager, sondern ist Bestandteil der Konfiguration des Registrierungsdiensts für Netzwerkgeräte. Weitere Informationen finden Sie im [Leitfaden zum Registrierungsdienst für Netzwerkgeräte](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
+        Diese Anforderung gilt nicht nur für Configuration Manager, sondern ist Bestandteil der Konfiguration des Registrierungsdiensts für Netzwerkgeräte. Weitere Informationen finden Sie im [Leitfaden zum Registrierungsdienst für Netzwerkgeräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
 
    > [!TIP]  
    >  Die vom Registrierungsdienst für Netzwerkgeräte verwendeten Zertifikatvorlagen sind unter dem folgenden Registrierungsschlüssel auf dem Server angegeben, auf dem der Registrierungsdienst für Netzwerkgeräte ausgeführt wird: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -79,7 +79,7 @@ Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifika
 
    - **Maximale Länge einer Abfragezeichenfolge (Bytes)** : **65534**  
 
-     Weitere Informationen zu diesen Einstellungen und deren Konfiguration finden Sie unter [Anforderungslimits](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
+     Weitere Informationen zu diesen Einstellungen und deren Konfiguration finden Sie unter [Anforderungslimits](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
 
 7. Wenn Sie ein Zertifikat mit einem kürzeren Gültigkeitszeitraum als dem der verwendeten Zertifikatvorlage anfordern möchten, gilt: Diese Konfiguration ist für eine Unternehmenszertifizierungsstelle standardmäßig deaktiviert. Sie können diese Option für eine Unternehmenszertifizierungsstelle mit dem Befehlszeilentool „Certutil“ aktivieren. Verwenden Sie dann die folgenden Befehle, um den Zertifikatdienst zu beenden und neu zu starten:  
 
@@ -89,7 +89,7 @@ Folgen Sie diesen Schritten, um Ihre Infrastruktur für SCEP- oder PFX-Zertifika
 
    3. **net start certsvc**  
 
-      Weitere Informationen finden Sie unter [Tools und Einstellungen der Zertifikatdienste](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
+      Weitere Informationen finden Sie unter [Tools und Einstellungen der Zertifikatdienste](/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
 
 8. Verwenden Sie den folgenden Link als Beispiel, um zu überprüfen, ob der Registrierungsdienst für Netzwerkgeräte funktioniert: `https://server.contoso.com/certsrv/mscep/mscep.dll`. Es sollte die integrierte Webseite „Registrierungsdienst für Netzwerkgeräte“ angezeigt werden. Auf dieser Webseite wird der Dienst erläutert, und Sie erfahren, dass Netzwerkdienste die URL zum Übermitteln von Zertifikatanforderungen verwenden.  
 
@@ -201,4 +201,4 @@ Sie müssen das Configuration Manager-Richtlinienmodul auf jedem Server installi
    Wenn Sie das Configuration Manager-Richtlinienmodul deinstallieren möchten, verwenden Sie hierzu die Option **Programme und Features** in der Systemsteuerung. 
 
  
-Nachdem Sie die Konfigurationsschritte abgeschlossen haben, sind Sie für die Bereitstellung von Zertifikaten für Benutzer und Geräte mit dem Erstellen und Bereitstellen von Zertifikatprofilen bereit. Weitere Informationen zum Erstellen von Zertifikatprofilen finden Sie unter [Erstellen von Zertifikatprofilen in Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
+Nachdem Sie die Konfigurationsschritte abgeschlossen haben, sind Sie für die Bereitstellung von Zertifikaten für Benutzer und Geräte mit dem Erstellen und Bereitstellen von Zertifikatprofilen bereit. Weitere Informationen zum Erstellen von Zertifikatprofilen finden Sie unter [Erstellen von Zertifikatprofilen in Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).

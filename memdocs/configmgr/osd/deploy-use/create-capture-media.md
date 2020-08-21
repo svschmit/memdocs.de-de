@@ -10,12 +10,12 @@ ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d85ab7e9d66c1206c6741117d7b379c998078708
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f8f8d6512e0ddd9881005c5916eeb804aac59e2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125371"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698009"
 ---
 # <a name="create-capture-media"></a>Erstellen von Erfassungsmedien
 
@@ -84,7 +84,7 @@ Legen Sie für die vom Assistenten zum Erstellen von Tasksequenzmedien erstellte
 
         - Configuration Manager schreibt eine Textdatei namens `MediaLabel.txt` in das Stammverzeichnis der Medien. Die Datei enthält standardmäßig eine einzelne Textzeile: `label=Configuration Manager`. Wenn Sie die Bezeichnung für Medien anpassen, enthält diese Zeile Ihre benutzerdefinierte Bezeichnung und nicht den Standardwert.  
 
-    - **Datei "autorun.inf" auf Medium einschließen**<!-- 4090666 -->: Ab Version 1906 fügt Configuration Manager die Datei „autorun.inf“ nicht standardmäßig hinzu. Diese Datei wird in der Regel von Antischadsoftwareprodukten blockiert. Weitere Informationen zum Feature „AutoAusführen“ finden Sie unter [Creating an AutoRun-enabled CD-ROM Application (Erstellen einer CD-ROM-Anwendung, in der das Feature „AutoAusführen“ verwendet werden kann)](https://docs.microsoft.com/windows/desktop/shell/autoplay). Wählen Sie diese Option aus, um die Datei einzuschließen, sollte dies für Ihr Szenario weiterhin erforderlich sein.  
+    - **Datei "autorun.inf" auf Medium einschließen**<!-- 4090666 -->: Ab Version 1906 fügt Configuration Manager die Datei „autorun.inf“ nicht standardmäßig hinzu. Diese Datei wird in der Regel von Antischadsoftwareprodukten blockiert. Weitere Informationen zum Feature „AutoAusführen“ finden Sie unter [Creating an AutoRun-enabled CD-ROM Application (Erstellen einer CD-ROM-Anwendung, in der das Feature „AutoAusführen“ verwendet werden kann)](/windows/desktop/shell/autoplay). Wählen Sie diese Option aus, um die Datei einzuschließen, sollte dies für Ihr Szenario weiterhin erforderlich sein.  
 
 5. Geben Sie auf der Seite **Startimage** folgende Optionen an:  
 

@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 176280452039fd42dfef1d63cfdbb48169cda545
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777023"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698485"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>In Configuration Manager verwendete Konten
 
@@ -553,7 +553,7 @@ Wenn Sie über Verteilungspunkte von Configuration Manager 2007 oder über sekun
 > [!NOTE]  
 > Sowohl das Konto des Quellstandorts als auch das [Konto der Datenbank des Quellstandorts](#source-site-database-account) werden in der Configuration Manager-Konsole im Knoten **Konten** des Arbeitsbereichs **Verwaltung** als **Migrations-Manager** bezeichnet.  
 
-Weitere Informationen finden Sie unter [Migrieren von Daten zwischen Hierarchien](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+Weitere Informationen finden Sie unter [Migrieren von Daten zwischen Hierarchien](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="source-site-database-account"></a>Konto der Datenbank des Quellstandorts  
@@ -569,7 +569,7 @@ Falls Sie das Configuration Manager-Computerkonto (Current Branch) verwenden, ve
 > [!NOTE]  
 > Sowohl das Konto des Quellstandorts als auch das [Konto der Datenbank des Quellstandorts](#source-site-database-account) werden in der Configuration Manager-Konsole im Knoten **Konten** des Arbeitsbereichs **Verwaltung** als **Migrations-Manager** bezeichnet.  
 
-Weitere Informationen finden Sie unter [Migrieren von Daten zwischen Hierarchien](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+Weitere Informationen finden Sie unter [Migrieren von Daten zwischen Hierarchien](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="task-sequence-domain-join-account"></a>Domänenbeitrittskonto für Tasksequenzen 

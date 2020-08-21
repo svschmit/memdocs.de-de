@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 62c667706a9d77b3bb7d2b6bbdfde3cde8bb8365
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125184"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697975"
 ---
 # <a name="create-stand-alone-media"></a>Erstellen eigenständiger Medien
 
@@ -140,7 +140,7 @@ Legen Sie für die vom Assistenten zum Erstellen von Tasksequenzmedien erstellte
 
         - Configuration Manager schreibt eine Textdatei namens `MediaLabel.txt` in das Stammverzeichnis der Medien. Die Datei enthält standardmäßig eine einzelne Textzeile: `label=Configuration Manager`. Wenn Sie die Bezeichnung für Medien anpassen, enthält diese Zeile Ihre benutzerdefinierte Bezeichnung und nicht den Standardwert.  
 
-    - **Datei "autorun.inf" auf Medium einschließen**<!-- 4090666 -->: Ab Version 1906 fügt Configuration Manager die Datei „autorun.inf“ nicht standardmäßig hinzu. Diese Datei wird in der Regel von Antischadsoftwareprodukten blockiert. Weitere Informationen zum Feature „AutoAusführen“ finden Sie unter [Creating an AutoRun-enabled CD-ROM Application (Erstellen einer CD-ROM-Anwendung, in der das Feature „AutoAusführen“ verwendet werden kann)](https://docs.microsoft.com/windows/desktop/shell/autoplay). Wählen Sie diese Option aus, um die Datei einzuschließen, sollte dies für Ihr Szenario weiterhin erforderlich sein.  
+    - **Datei "autorun.inf" auf Medium einschließen**<!-- 4090666 -->: Ab Version 1906 fügt Configuration Manager die Datei „autorun.inf“ nicht standardmäßig hinzu. Diese Datei wird in der Regel von Antischadsoftwareprodukten blockiert. Weitere Informationen zum Feature „AutoAusführen“ finden Sie unter [Creating an AutoRun-enabled CD-ROM Application (Erstellen einer CD-ROM-Anwendung, in der das Feature „AutoAusführen“ verwendet werden kann)](/windows/desktop/shell/autoplay). Wählen Sie diese Option aus, um die Datei einzuschließen, sollte dies für Ihr Szenario weiterhin erforderlich sein.  
 
 5. Geben Sie auf der Seite **Sicherheit** folgende Optionen an:
 
@@ -151,7 +151,7 @@ Legen Sie für die vom Assistenten zum Erstellen von Tasksequenzmedien erstellte
         >
         > Auf eigenständigen Medien werden nur die Tasksequenzschritte und die dazugehörigen Variablen verschlüsselt. Die übrigen Inhalte der Medien werden nicht verschlüsselt. Nehmen Sie keine vertraulichen Informationen in Tasksequenzskripts auf. Speichern und implementieren Sie alle vertraulichen Informationen mithilfe von Tasksequenzvariablen.  
 
-    - **Datumsbereich für dieses eigenständige Medium auswählen, damit es gültig ist**: Optionale Start- und Ablaufdaten auf den Medien festlegen. Diese Einstellung ist standardmäßig deaktiviert. Vor der Ausführung des eigenständigen Mediums werden die Datums- und Zeitangaben für den Zeitraum mit der Systemzeit auf dem Computer verglichen. Wenn die Systemzeit vor der Startzeit oder nach der Ablaufzeit liegt, wird das eigenständige Medium nicht gestartet. Diese Optionen sind auch über das PowerShell-Cmdlet [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) verfügbar.  
+    - **Datumsbereich für dieses eigenständige Medium auswählen, damit es gültig ist**: Optionale Start- und Ablaufdaten auf den Medien festlegen. Diese Einstellung ist standardmäßig deaktiviert. Vor der Ausführung des eigenständigen Mediums werden die Datums- und Zeitangaben für den Zeitraum mit der Systemzeit auf dem Computer verglichen. Wenn die Systemzeit vor der Startzeit oder nach der Ablaufzeit liegt, wird das eigenständige Medium nicht gestartet. Diese Optionen sind auch über das PowerShell-Cmdlet [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) verfügbar.  
 
 6. Wählen Sie auf der Seite **Eigenständige CD/DVD** die Tasksequenz aus, die das Betriebssystem bereitstellt. Sie können nur die Tasksequenzen auswählen, die einem Startimage zugewiesen sind. Überprüfen Sie die Liste mit den Inhalten, auf die durch die Tasksequenz verwiesen wird.  
 

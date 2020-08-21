@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1836a4c7d08547405dad08d7e60eb108d0dfd00f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905751"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695714"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Funktionen in der Technical Preview 1605 für Configuration Manager
 
@@ -168,8 +168,8 @@ Häufig verwendete Aktionen, wie z.B. **Abkoppeln/Zurücksetzen**, **Kennung zur
 ##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a> Unternehmensdatenschutz (Enterprise Data Protection; EDP)  
  Sie können Konfigurationselemente erstellen, mit denen Sie Ihre EDP-Richtlinien bereitstellen, Ihre geschützten Apps und Ihre EDP-Schutzebene auswählen, und Unternehmensdaten im Netzwerk suchen können. Weitere Informationen zu EDP finden Sie in den folgenden Themen:  
 
-- [Schützen von Unternehmensdaten mit Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Erstellen und Bereitstellen einer Windows Information Protection-Richtlinie (WIP) mithilfe von Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Schützen von Unternehmensdaten mit Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Erstellen und Bereitstellen einer Windows Information Protection-Richtlinie (WIP) mithilfe von Configuration Manager](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
 
 
 ##  <a name="end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a> Endbenutzer können Apps über das Unternehmensportal installieren.  
@@ -463,4 +463,4 @@ Wenn das Unternehmensportal in dieser Technical Preview länger als 15 Minuten g
 
      Klicken Sie auf **Weiter**.  
 
-4. Überprüfen der Ergebnisse des Dateiimports. Die Details zuvor importierter IMEI- oder Seriennummern werden mit neuen Details aktualisiert.  Klicken Sie auf **Weiter**, um fortzufahren oder auf **Zurück**, um aktualisierte Details beizubehalten, und schließen Sie dann den Assistenten ab.  
+4. Überprüfen der Ergebnisse des Dateiimports. Die Details zuvor importierter IMEI- oder Seriennummern werden mit neuen Details aktualisiert.  Klicken Sie auf **Weiter**, um fortzufahren oder auf **Zurück**, um aktualisierte Details beizubehalten, und schließen Sie dann den Assistenten ab.

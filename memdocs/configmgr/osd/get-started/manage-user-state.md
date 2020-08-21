@@ -10,12 +10,12 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a720c68fc705187dedb6ff04fc3898a8b0b21c8
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b4975f67c84c2354d13457981ac90ba4481d292f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124362"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697584"
 ---
 # <a name="manage-user-state-in-configuration-manager"></a>Verwalten des Benutzerstatus in Configuration Manager
 
@@ -27,7 +27,7 @@ Mit Configuration Manager-Tasksequenzen können Sie bei der Betriebssystembereit
 
 - Updatebereitstellungen, bei denen Sie den Benutzerzustand auf dem gleichen Computer erfassen und wiederherstellen möchten  
 
-Configuration Manager verwendet das Migrationstool für den Benutzerstatus (USMT 10.0), um nach Abschluss der Installation des Betriebssystems die Migration von Benutzerstatusdaten von einem Quellcomputer zu einem Zielcomputer zu verwalten. Weitere Informationen zu häufigen Migrationsszenarien für USMT 10.0 finden Sie unter  [Häufige Migrationsszenarien](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios).
+Configuration Manager verwendet das Migrationstool für den Benutzerstatus (USMT 10.0), um nach Abschluss der Installation des Betriebssystems die Migration von Benutzerstatusdaten von einem Quellcomputer zu einem Zielcomputer zu verwalten. Weitere Informationen zu häufigen Migrationsszenarien für USMT 10.0 finden Sie unter  [Häufige Migrationsszenarien](/windows/deployment/usmt/usmt-common-migration-scenarios).
 
 Mithilfe der folgenden Abschnitte können Sie Benutzerdaten erfassen und wiederherstellen.
 
@@ -129,4 +129,4 @@ Erstellen Sie eine Computerzuordnung, um eine Beziehung zwischen einem Quellcomp
 
 ## <a name="restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> Wiederherstellen von Benutzerzustandsdaten, wenn bei einer Betriebssystembereitstellung ein Fehler auftritt
 
-Wenn bei der Bereitstellung des Betriebssystems ein Fehler auftritt, können Sie die LoadState-Funktion von USMT 10.0 verwenden, um die während des Bereitstellungsvorgangs erfassten Benutzerzustandsdaten abzurufen. Dazu gehören auch Daten, die auf einem Zustandsmigrationspunkt oder lokal auf dem Zielcomputer gespeichert sind. Weitere Informationen zu dieser USMT-Funktion finden Sie unter [LoadState-Syntax](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax).
+Wenn bei der Bereitstellung des Betriebssystems ein Fehler auftritt, können Sie die LoadState-Funktion von USMT 10.0 verwenden, um die während des Bereitstellungsvorgangs erfassten Benutzerzustandsdaten abzurufen. Dazu gehören auch Daten, die auf einem Zustandsmigrationspunkt oder lokal auf dem Zielcomputer gespeichert sind. Weitere Informationen zu dieser USMT-Funktion finden Sie unter [LoadState-Syntax](/windows/deployment/usmt/usmt-loadstate-syntax).

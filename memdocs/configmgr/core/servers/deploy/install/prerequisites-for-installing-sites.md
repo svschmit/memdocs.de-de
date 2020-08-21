@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: bf9ad15266c4e6615ba100d5ea5270e23b93ece7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268979"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699125"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Voraussetzungen für die Installation von Configuration Manager-Standorten
 
@@ -133,7 +133,7 @@ Für die erfolgreiche Replikation von Daten zwischen einem Standort der zentrale
 
 Nachdem Sie den Standort erweitert haben, müssen Sie die folgenden Azure-Dienste mit Configuration Manager neu konfigurieren:
 
-- [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 - [Microsoft Store für Unternehmen](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Cloudverwaltungsgateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 

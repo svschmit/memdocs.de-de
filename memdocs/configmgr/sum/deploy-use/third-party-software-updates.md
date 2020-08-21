@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240761"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696887"
 ---
 # <a name="enable-third-party-updates"></a>Aktivieren von Updates von Drittanbietern 
 
@@ -30,7 +30,7 @@ Ab Version 1806 können Sie über den neue Knoten **Katalog mit Updates für Dri
 ## <a name="prerequisites"></a>Voraussetzungen 
 - Auf dem SUP (im Ordner „WSUSContent“) auf oberster Ebene muss ausreichend Speicherplatz zur Verfügung stehen, um die Binärdateien des Quellinhalts für Updates der Drittanbietersoftware zu speichern.
     - Der erforderliche Speicher variiert je nach Anbieter, Updatetypen und spezifischen Updates, die Sie für die Bereitstellung veröffentlichen.
-    - Wenn Sie den Ordner „WSUSContent“ auf ein anderes Laufwerk mit genügend freiem Speicherplatz verschieben müssen, finden Sie Informationen dazu in dem Blogbeitrag [How to change the location where WSUS stores updates locally (Ändern des Speicherorts für lokale WSUS-Updates)](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).
+    - Wenn Sie den Ordner „WSUSContent“ auf ein anderes Laufwerk mit genügend freiem Speicherplatz verschieben müssen, finden Sie Informationen dazu in dem Blogbeitrag [How to change the location where WSUS stores updates locally (Ändern des Speicherorts für lokale WSUS-Updates)](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).
 - Der Synchronisierungsdienst für Updates für Drittanbietersoftware muss Zugriff auf das Internet haben.
     - Für die Katalogliste mit Partnern wird download.microsoft.com über den HTTPS-Port 443 benötigt. 
     -  Internetzugriff auf Drittanbieterkataloge und Updateinhaltsdateien. Möglicherweise benötigen Sie neben Port 443 noch weitere Ports.
@@ -41,7 +41,7 @@ Ab Version 1806 können Sie über den neue Knoten **Katalog mit Updates für Dri
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Zusätzliche Anforderungen, wenn der SUP sich nicht auf dem Standortserver auf oberster Ebene befindet 
 
 1. Wenn sich der SUP nicht auf dem Standortserver befindet, muss Secure Sockets Layer (SSL) aktiviert sein. Dies erfordert ein Serverauthentifizierungszertifikat von einer internen Zertifizierungsstelle oder über einen öffentlichen Anbieter.
-    - [Configure SSL on WSUS (Konfigurieren von WSUS für SSL)](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [Configure SSL on WSUS (Konfigurieren von WSUS für SSL)](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - Wenn Sie SSL in WSUS konfigurieren, beachten Sie, dass einige der Webdienste und virtuellen Verzeichnisse HTTP anstelle von HTTPS verwenden. 
         - Configuration Manager lädt Inhalte von Drittanbietern für Softwareupdatepakete über HTTP aus Ihrem WSUS-Inhaltsverzeichnis herunter.   
     - [Configure SSL on SUP (Konfigurieren von SSL auf dem SUP)](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -93,7 +93,7 @@ Wenn Sie das Zertifikat manuell konfigurieren müssen (genauso wie Sie z.B. auch
 
 
 ## <a name="enable-third-party-updates-on-the-clients"></a>Aktivieren von Updates von Drittanbietern für die Clients
-Aktivieren Sie Updates von Drittanbietern auf den Clients in den Clienteinstellungen. Die Einstellung legt die Richtlinie des Windows Update-Agents für das [Zulassen signierter Updates für einen Intranetspeicherort für den Microsoft-Updatedienst](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location) fest. Außerdem installiert diese Clienteinstellung das WSUS-Signaturzertifikat im Speicher des vertrauenswürdigen Herausgebers auf dem Client. Protokolle zur Zertifikatverwaltung finden Sie in der `updatesdeployment.log`-Datei auf den Clients.  Führen Sie diese Schritte für jede benutzerdefinierte Clienteinstellung durch, die Sie für Updates von Drittanbietern verwenden möchten. Weitere Informationen finden Sie in dem Artikel [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates).
+Aktivieren Sie Updates von Drittanbietern auf den Clients in den Clienteinstellungen. Die Einstellung legt die Richtlinie des Windows Update-Agents für das [Zulassen signierter Updates für einen Intranetspeicherort für den Microsoft-Updatedienst](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location) fest. Außerdem installiert diese Clienteinstellung das WSUS-Signaturzertifikat im Speicher des vertrauenswürdigen Herausgebers auf dem Client. Protokolle zur Zertifikatverwaltung finden Sie in der `updatesdeployment.log`-Datei auf den Clients.  Führen Sie diese Schritte für jede benutzerdefinierte Clienteinstellung durch, die Sie für Updates von Drittanbietern verwenden möchten. Weitere Informationen finden Sie in dem Artikel [Informationen zu Clienteinstellungen in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates).
 
 1. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Verwaltung**, und klicken Sie auf den Knoten **Clienteinstellungen**.
 2. Wählen Sie eine bereits vorhandene benutzerdefinierte Clienteinstellung aus, oder erstellen Sie eine neue. 
@@ -235,7 +235,7 @@ Die Synchronisierung von Updates für Drittanbietersoftware wird auf dem Standar
 -  Configuration Manager verfügt über eine neue Version des CAB-Formats für Katalogdateien. Diese enthält die Zertifikate zu den Binärdateien des Herstellers. Diese Zertifikate werden im Arbeitsbereich **Verwaltung** unter **Sicherheit** zum Knoten **Zertifikate** hinzugefügt, wenn Sie den Katalog genehmigen und als vertrauenswürdig einstufen.  
      - Sie können auch weiter ältere Versionen von CAB-Dateien verwenden, wenn die Download-URL HTTPS enthält und die Updates signiert sind. Dann kann der Inhalt nicht veröffentlicht werden, weil die Zertifikate zu diesen Binärdateien nicht in der CAB-Datei gespeichert sind und noch nicht genehmigt wurden. Sie können dieses Problem umgehen, wenn Sie das Zertifikat im Knoten **Zertifikate** suchen, blockieren und anschließend das Update erneut veröffentlichen. Wenn Sie mehrere Updates veröffentlichen, die mit verschiedenen Zertifikaten signiert wurden, müssen Sie die Blockierung für jedes Zertifikat aufheben, das verwendet wird.
      - Weitere Informationen finden Sie in der nachfolgenden Tabelle in den Statusmeldungen 11523 und 11524.
--  Wenn der Dienst zur Synchronisierung von Updates für Drittanbietersoftware auf dem Softwareupdatepunkt der obersten Ebene einen Proxyserver für den Internetzugriff benötigt, treten bei der Überprüfung digitaler Signaturen möglicherweise Fehler auf. Um dieses Problem zu beheben, konfigurieren Sie die WinHTTP-Proxyeinstellungen im Standortsystem. Weitere Informationen finden Sie unter [Netsh-Befehle für Windows Hypertext Transfer Protocol (WinHTTP)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
+-  Wenn der Dienst zur Synchronisierung von Updates für Drittanbietersoftware auf dem Softwareupdatepunkt der obersten Ebene einen Proxyserver für den Internetzugriff benötigt, treten bei der Überprüfung digitaler Signaturen möglicherweise Fehler auf. Um dieses Problem zu beheben, konfigurieren Sie die WinHTTP-Proxyeinstellungen im Standortsystem. Weitere Informationen finden Sie unter [Netsh-Befehle für Windows Hypertext Transfer Protocol (WinHTTP)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
 - Bei der Verwendung eines CMG zum Speichern von Inhalten werden die Inhalte für Updates für Drittanbietersoftware nicht auf Clients heruntergeladen, wenn die [Clienteinstellung](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) **Clients das Herunterladen von Deltainhalten ermöglichen (falls verfügbar)** aktiviert ist. <!--6598587-->
 
 ## <a name="status-messages"></a>Statusmeldungen

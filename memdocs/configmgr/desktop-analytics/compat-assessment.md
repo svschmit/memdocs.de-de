@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268894"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699074"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Kompatibilitätsbewertung in Desktop Analytics
 
@@ -180,13 +180,13 @@ Wenn Sie den Configuration Manager-Standort und die Clients auf Version 1906 ak
 
 #### <a name="16-bit-apps"></a>16-Bit-Apps
 
-Entfernen Sie alle 16-Bit-Komponenten aus Anwendungen, und ersetzen Sie Sie durch entsprechende 32-Bit-oder 64-Bit-Komponenten. Weitere Informationen finden Sie unter [The Windows Vista and Windows Server 2008 Developer Story: Application Compatibility Cookbook](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\)) (Die Windows Vista- und Windows Server 2008-Entwicklerstory: Cookbook zur Anwendungskompatibilität).
+Entfernen Sie alle 16-Bit-Komponenten aus Anwendungen, und ersetzen Sie Sie durch entsprechende 32-Bit-oder 64-Bit-Komponenten. Weitere Informationen finden Sie unter [The Windows Vista and Windows Server 2008 Developer Story: Application Compatibility Cookbook](/previous-versions/aa480152\(v=msdn.10\)) (Die Windows Vista- und Windows Server 2008-Entwicklerstory: Cookbook zur Anwendungskompatibilität).
 
 Die andere Möglichkeit besteht darin, NT Virtual DOS Machine (NTVDM) für die Unterstützung unter Windows 10 zu aktivieren.
 
 #### <a name="requires-admin-privileges"></a>Erfordert Administratorberechtigungen
 
-Die App erfordert, dass der Benutzer mit Administratorberechtigungen auf das Gerät zugreift. Verwenden Sie ein App-Manifest für diese Apps, die Administratorberechtigungen erfordern. Weitere Informationen finden Sie unter [Create and embed an application manifest](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)) (Erstellen und Einbetten eines Anwendungsmanifests).
+Die App erfordert, dass der Benutzer mit Administratorberechtigungen auf das Gerät zugreift. Verwenden Sie ein App-Manifest für diese Apps, die Administratorberechtigungen erfordern. Weitere Informationen finden Sie unter [Create and embed an application manifest](/previous-versions/bb756929\(v=msdn.10\)) (Erstellen und Einbetten eines Anwendungsmanifests).
 
 Desktop Analytics empfiehlt, die App Pilotversuchen zu unterziehen, um mögliche Regressionen zu erkennen.
 
@@ -196,7 +196,7 @@ Viele Java-Anwendungen hängen von einer separat installierten JRE (Java Runtime
 
 #### <a name="not-dpi-aware"></a>Nicht mit DPI-Werten kompatibel
 
-In der App treten möglicherweise Anzeigeprobleme mit höheren Bildschirmauflösungen unter Windows 10 auf. Verwenden Sie ein App-Manifest, um Probleme mit hoher DPI-Auflösung zu vermeiden. Weitere Informationen finden Sie unter [Anwendungsmanifeste](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests).
+In der App treten möglicherweise Anzeigeprobleme mit höheren Bildschirmauflösungen unter Windows 10 auf. Verwenden Sie ein App-Manifest, um Probleme mit hoher DPI-Auflösung zu vermeiden. Weitere Informationen finden Sie unter [Anwendungsmanifeste](/windows/desktop/SbsCs/application-manifests).
 
 Desktop Analytics empfiehlt, die App Pilotversuchen zu unterziehen, um mögliche Regressionen zu erkennen.
 
@@ -220,13 +220,13 @@ Die .NET Framework-Version 1.0 wird von Windows 10 nicht unterstützt. Version
 
 #### <a name="net-framework-2030"></a>.NET Framework 2.0/3.0
 
-.NET Framework 2.0 und .NET Framework 3.5 werden unter Windows 10 unterstützt. Möglicherweise müssen Sie das Windows-Feature aktivieren. Weitere Informationen finden Sie unter [Installieren von .NET Framework 3.5 unter Windows 10](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10).
+.NET Framework 2.0 und .NET Framework 3.5 werden unter Windows 10 unterstützt. Möglicherweise müssen Sie das Windows-Feature aktivieren. Weitere Informationen finden Sie unter [Installieren von .NET Framework 3.5 unter Windows 10](/dotnet/framework/install/dotnet-35-windows-10).
 
 #### <a name="ui-access"></a>UI-Zugriff
 
 Anwendungen mit UI-Zugriff können die UI-Steuerelementebenen umgehen, um Eingaben in Fenstern mit höheren Berechtigungen auf dem Desktop vorzunehmen. Verwenden Sie diese Einstellung nur für Anwendungen mit Benutzeroberflächen-Hilfstechnologien.
 
-Wenn Sie keine Barrierefreiheitsfunktionen in Ihrer App verwenden, legen Sie das Flag für den UI-Zugriff im App-Manifest auf „false“ fest. Weitere Informationen finden Sie unter [Create and embed an application manifest](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)) (Erstellen und Einbetten eines Anwendungsmanifests).
+Wenn Sie keine Barrierefreiheitsfunktionen in Ihrer App verwenden, legen Sie das Flag für den UI-Zugriff im App-Manifest auf „false“ fest. Weitere Informationen finden Sie unter [Create and embed an application manifest](/previous-versions/bb756929\(v=msdn.10\)) (Erstellen und Einbetten eines Anwendungsmanifests).
 
 Desktop Analytics empfiehlt, die App Pilotversuchen zu unterziehen, um mögliche Regressionen zu erkennen.
 
@@ -245,4 +245,4 @@ Die Bewertung für den Treiber wird in Desktop Analytics angegeben. Wählen Sie 
 
 ## <a name="see-also"></a>Weitere Informationen:
 
-Der FastTrack Center-Vorteil für Windows 10 bietet Zugriff auf **Desktop App Assure**. Dieser Vorteil ist ein neuer Dienst zum Beheben von Kompatibilitätsproblemen mit Windows 10- und Microsoft 365 Apps for Enterprise. Weitere Informationen finden Sie unter [Desktop App Assure](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).
+Der FastTrack Center-Vorteil für Windows 10 bietet Zugriff auf **Desktop App Assure**. Dieser Vorteil ist ein neuer Dienst zum Beheben von Kompatibilitätsproblemen mit Windows 10- und Microsoft 365 Apps for Enterprise. Weitere Informationen finden Sie unter [Desktop App Assure](/fasttrack/win-10-desktop-app-assure).

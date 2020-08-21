@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b72e0a14abd2b468056d4303497625633b8f64a8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906435"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698921"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Unterstützte Konfigurationen für LTSB (Long-Term Servicing Branch) von System Center Configuration Manager
 
@@ -72,7 +72,7 @@ Die folgenden Windows-Computerbetriebssysteme können vom LTSB mit der in Config
 - Die Server Core-Installation von Windows Server 2012 (x64) (Hinweis 2)
 
 **(Hinweis 1)** Datacenter-Releases werden von Configuration Manager zwar unterstützt, sind jedoch nicht dafür zertifiziert.  
-**(Hinweis 2)** Zur Unterstützung der Clientpushinstallation muss auf dem Computer, auf dem diese Betriebssystemversion ausgeführt wird, der Dateiserver-Rollendienst für die Serverrolle „Datei- und Speicherdienste“ ausgeführt werden. Informationen zum Installieren von Windows-Features auf einem Server Core-Computer finden Sie unter [Installieren von Serverrollen und -features auf einem Server Core-Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
+**(Hinweis 2)** Zur Unterstützung der Clientpushinstallation muss auf dem Computer, auf dem diese Betriebssystemversion ausgeführt wird, der Dateiserver-Rollendienst für die Serverrolle „Datei- und Speicherdienste“ ausgeführt werden. Informationen zum Installieren von Windows-Features auf einem Server Core-Computer finden Sie unter [Installieren von Serverrollen und -features auf einem Server Core-Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
 
 ### <a name="windows-embedded"></a>Windows Embedded
 Sie können den LTSB zum Verwalten der folgenden Windows Embedded-Geräte verwenden, indem Sie die Clientsoftware auf dem Gerät installieren.  Weitere Informationen finden Sie unter [Planen der Clientbereitstellung auf Windows Embedded-Geräten](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).

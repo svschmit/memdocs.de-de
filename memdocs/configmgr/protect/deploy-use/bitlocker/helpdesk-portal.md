@@ -10,12 +10,12 @@ ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf9301e4fcb279b7d79a6f6c3d0a90ab3d15e277
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129255"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697312"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>Die Website „BitLocker Administration and Monitoring“ (Verwaltung und Überwachung von BitLocker)
 
@@ -48,7 +48,7 @@ Um auf bestimmte Bereiche der Website zur Verwaltung und Überwachung zugreifen 
 
 Wenn ein Benutzer die falsche PIN zu oft eingibt, kann er die TPM sperren. Wie oft dies geschehen darf, bevor die Sperre eintritt, unterscheidet sich von Hersteller zu Hersteller. Greifen Sie vom Bereich **TPM verwalten** der Website zur Verwaltung und Überwachung auf das zentralisierte Datensystem zur Schlüsselwiederherstellung zu.
 
-Weitere Informationen zum TPM-Besitz finden Sie unter [Konfigurieren von MBAM, um die TPM zu hinterlegen und OwnerAuth-Kennwörter zu speichern](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
+Weitere Informationen zum TPM-Besitz finden Sie unter [Konfigurieren von MBAM, um die TPM zu hinterlegen und OwnerAuth-Kennwörter zu speichern](/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
 
 > [!NOTE]
 > Ab Windows 10, Version 1607, behält Windows das TPM-Besitzerkennwort bei der Bereitstellung der TPM nicht bei.
@@ -159,7 +159,7 @@ Sie können verschobene Laufwerke über den Bereich **Drive recovery** (Laufwerk
 
 Wenn das verschobene Laufwerk für die Verwendung eines TPM-Chips konfiguriert war, führen Sie die folgenden Schritte aus. Andernfalls ist das Wiederherstellungsverfahren abgeschlossen.
 
-1. Nachdem Sie das Laufwerk entsperrt haben, starten Sie den Computer im WinRE-Modus. Öffnen Sie eine Eingabeaufforderung in WinRE, und verwenden Sie den Befehl `manage-bde`, um das Laufwerk zu entschlüsseln. Dieses Tools stellt die einzige Möglichkeit dar, den Schutz mit **TPM + PIN** ohne den ursprünglichen TPM-Chip aufzuheben. Weitere Informationen zu diesem Befehl finden Sie unter [Manage-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
+1. Nachdem Sie das Laufwerk entsperrt haben, starten Sie den Computer im WinRE-Modus. Öffnen Sie eine Eingabeaufforderung in WinRE, und verwenden Sie den Befehl `manage-bde`, um das Laufwerk zu entschlüsseln. Dieses Tools stellt die einzige Möglichkeit dar, den Schutz mit **TPM + PIN** ohne den ursprünglichen TPM-Chip aufzuheben. Weitere Informationen zu diesem Befehl finden Sie unter [Manage-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
 
 1. Wenn der Vorgang abgeschlossen ist, starten Sie den Computer normal. Configuration Manager erzwingt die BitLocker-Richtlinie, um das Laufwerk mit der TPM und PIN des neuen Computers zu verschlüsseln.
 
@@ -184,7 +184,7 @@ Verwenden Sie die Wiederherstellungsschlüssel-ID, um ein Wiederherstellungsschl
 
     `repair-bde C: D: -kp F:\RecoveryKeyPackage -rp 111111-222222-333333-444444-555555-666666-777777-888888`
 
-Weitere Informationen zu diesem Befehl finden Sie unter [Repair-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde).
+Weitere Informationen zu diesem Befehl finden Sie unter [Repair-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde).
 
 ## <a name="reports"></a>Berichte
 

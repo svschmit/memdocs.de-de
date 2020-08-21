@@ -10,12 +10,12 @@ ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 220ebb558a0e01f701cab621381ad951a8fd0738
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aa7f95e18775862427254839a2aab2c229e31057
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123900"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697329"
 ---
 # <a name="customize-the-self-service-portal"></a>Anpassen des Self-Service-Portals
 
@@ -128,7 +128,7 @@ Das Self-Service-Portal zeigt den Hinweistext auf der Grundlage der folgenden Re
 
 1. Erstellen Sie einen Ordner `<language>` für jede unterstützte Sprache im `Self Service Website`-Anwendungspfad. Beispiel: `es-es` für Spanisch (Spanien). Standardmäßig ist der vollständige Pfad `C:\inetpub\Microsoft BitLocker Management Solution\Self Service Website\es-es`.
 
-    Eine Liste der gültigen Sprachcodes, die Sie verwenden können, finden Sie unter [Referenz zur NLS-API (Unterstützung von Landessprachen)](https://docs.microsoft.com/windows/win32/intl/locale-identifiers#predefined-locale-identifiers).
+    Eine Liste der gültigen Sprachcodes, die Sie verwenden können, finden Sie unter [Referenz zur NLS-API (Unterstützung von Landessprachen)](/windows/win32/intl/locale-identifiers#predefined-locale-identifiers).
 
     > [!TIP]
     > Der Name des Sprachordners kann auch der sprachneutrale Name sein. Beispiel: **es** für Spanisch, statt **es-es** für Spanisch (Spanien) und **es-ar** für Spanisch (Argentinien). Wenn der Benutzer seinen Browser auf **es-es** einstellt und dieser Sprachordner nicht existiert, überprüft der Webserver rekursiv den übergeordneten Gebietsschemaordner (**es**). (Die übergeordneten Gebietsschemas sind in .NET definiert.) Beispiel: `Self Service Website\es\Notice.txt`. Dieses rekursive Fallback imitiert die Laderegeln für .NET-Ressourcen.

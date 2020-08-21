@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: aca3322c245fa22a7c87f30e328833d8a8a128bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746512"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699040"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Verwenden der Configuration Manager-Dokumentation
 
@@ -61,7 +61,7 @@ Die folgende Suchtipps sollen Ihnen dabei helfen, die benötigten Informationen 
 
 ## <a name="feedback"></a><a name="bkmk_docfeedback"></a> Feedback
 
-Klicken Sie auf den Link **Feedback** in der oberen rechten Ecke eines Artikels, um zum Abschnitt „Feedback“ im unteren Bereich zu gelangen. In diesem Abschnitt sind GitHub-Links zu Problemen enthalten. Weitere Informationen zur Verknüpfung mit GitHub-Problemen finden Sie in diesem [Blogbeitrag zur Dokumentationsplattform](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+Klicken Sie auf den Link **Feedback** in der oberen rechten Ecke eines Artikels, um zum Abschnitt „Feedback“ im unteren Bereich zu gelangen. In diesem Abschnitt sind GitHub-Links zu Problemen enthalten. Weitere Informationen zur Verknüpfung mit GitHub-Problemen finden Sie in diesem [Blogbeitrag zur Dokumentationsplattform](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 Klicken Sie auf **Produktfeedback**, um Feedback zu Configuration Manager zu geben. Weitere Informationen finden Sie unter [Produktfeedback](find-help.md#product-feedback).
 
@@ -93,11 +93,11 @@ Weitere Informationen zum Senden von allgemeinem Feedback zur docs.microsoft.com
 
 Verwenden Sie folgende Schritte, um Benachrichtigungen zu enthalten, wenn Inhalte in der Dokumentationsbibliothek geändert werden:
 
-1. Verwenden Sie die [Suche](https://docs.microsoft.com/search/index?scope=ConfigMgr) der Dokumentationsbibliothek, um einen oder mehrere Artikel zu finden. Beispiel:
+1. Verwenden Sie die [Suche](/search/index?scope=ConfigMgr) der Dokumentationsbibliothek, um einen oder mehrere Artikel zu finden. Beispiel:
 
-    - Suchen Sie mithilfe des Titels nach einem einzelnen Artikel: [„Log files for troubleshooting – Configuration Manager“](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr) (Protokolldateien zur Behebung von Problemen (Configuration Manager)).
+    - Suchen Sie mithilfe des Titels nach einem einzelnen Artikel: [„Log files for troubleshooting – Configuration Manager“](/search/index?scope=ConfigMgr&search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22) (Protokolldateien zur Behebung von Problemen (Configuration Manager)).
 
-    - Suchen Sie nach einem Artikel zu [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr).
+    - Suchen Sie nach einem Artikel zu [SQL](/search/index?scope=ConfigMgr&search=SQL).
 
 2. Klicken Sie in der oberen rechten Ecke auf den Link **RSS**.
 
@@ -108,7 +108,7 @@ Verwenden Sie folgende Schritte, um Benachrichtigungen zu enthalten, wenn Inhalt
 
 ## <a name="contribute"></a><a name="bkmk_contribute"></a> Mitwirken
 
-Die Configuration Manager-Dokumentationsbibliothek ist wie die meisten Inhalte unter docs.microsoft.com auf GitHub als Open Source vorhanden. Für diese Bibliothek werden Beiträge aus der Community akzeptiert und gefördert. Weitere Informationen zu den ersten Schritten finden Sie unter [Contributor Guide (Leitfaden für Mitwirkende)](https://docs.microsoft.com/contribute). Als einzige Voraussetzung müssen Sie ein [GitHub-Konto erstellen](https://github.com/join).
+Die Configuration Manager-Dokumentationsbibliothek ist wie die meisten Inhalte unter docs.microsoft.com auf GitHub als Open Source vorhanden. Für diese Bibliothek werden Beiträge aus der Community akzeptiert und gefördert. Weitere Informationen zu den ersten Schritten finden Sie unter [Contributor Guide (Leitfaden für Mitwirkende)](/contribute). Als einzige Voraussetzung müssen Sie ein [GitHub-Konto erstellen](https://github.com/join).
 
 ### <a name="basic-steps-to-contribute-to-sccmdocs"></a>Grundlegende Schritte zum Mitwirken an SCCMdocs
 
@@ -116,7 +116,7 @@ Die Configuration Manager-Dokumentationsbibliothek ist wie die meisten Inhalte u
 
 2. Klicken Sie auf das Stiftsymbol, um die Quelldatei zu bearbeiten.
 
-3. Nehmen Sie Änderungen in der Markdownquelle vor. Weitere Informationen finden Sie unter [How to use Markdown for writing Docs (Verwenden von Markdown für das Schreiben von Dokumentationen)](https://docs.microsoft.com/contribute/markdown-reference).
+3. Nehmen Sie Änderungen in der Markdownquelle vor. Weitere Informationen finden Sie unter [How to use Markdown for writing Docs (Verwenden von Markdown für das Schreiben von Dokumentationen)](/contribute/markdown-reference).
 
 4. Geben Sie im Abschnitt „Propose file change“ (Änderung an der Datei vorschlagen) den öffentlichen Kommentar für den Commit ein, in dem Sie beschreiben, *was* Sie geändert haben. Klicken Sie dann auf **Propose file change** (Änderung an Datei vorschlagen).
 
@@ -148,7 +148,7 @@ Befolgen Sie diese allgemeinen Richtlinien, wenn Sie zur Configuration Manager-D
 
 - Vermeiden Sie lange Pull Requests. [Melden Sie stattdessen ein Problem](#bkmk_docfeedback), und starten Sie eine Diskussion. Dann können wir uns auf eine Vorgehensweise einigen, bevor Sie zu viel Zeit investieren.
 
-- Lesen Sie den [Microsoft-Styleguide](https://aka.ms/MicrosoftStyle). Berücksichtigen Sie die [10 Grundprinzipien der optimalen Textgestaltung für Microsoft](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).
+- Lesen Sie den [Microsoft-Styleguide](https://aka.ms/MicrosoftStyle). Berücksichtigen Sie die [10 Grundprinzipien der optimalen Textgestaltung für Microsoft](/style-guide/top-10-tips-style-voice).
 
 - Verwenden Sie die [Pull Request-Vorlage](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md) als Ausgangspunkt Ihres Beitrags.
 
@@ -160,7 +160,7 @@ Befolgen Sie diese allgemeinen Richtlinien, wenn Sie zur Configuration Manager-D
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Konsolidierung der Dokumentation für Microsoft Endpoint Manager
 
-Zur besseren Unterstützung kombinierter Szenarien für Intune und Configuration Manager sind deren Dokumentationsbibliotheken auf der [Microsoft Endpoint Manager-Website](https://docs.microsoft.com/mem) konsolidiert. Die Intune-Dokumentation befindet sich jetzt unter [docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune), während sich die Dokumentation zu Configuration Manager jetzt unter [docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr) befindet. Wenn Sie weiterhin eine veraltete URL verwenden, werden Sie automatisch umgeleitet, sodass Sie keine Änderungen zum Lesen dieses Inhalts vornehmen müssen.
+Zur besseren Unterstützung kombinierter Szenarien für Intune und Configuration Manager sind deren Dokumentationsbibliotheken auf der [Microsoft Endpoint Manager-Website](/mem) konsolidiert. Die Intune-Dokumentation befindet sich jetzt unter [docs.microsoft.com/mem/intune](../../../intune/index.yml), während sich die Dokumentation zu Configuration Manager jetzt unter [docs.microsoft.com/mem/configmgr](../../index.yml) befindet. Wenn Sie weiterhin eine veraltete URL verwenden, werden Sie automatisch umgeleitet, sodass Sie keine Änderungen zum Lesen dieses Inhalts vornehmen müssen.
 
 Wenn Sie Feedback geben oder an Artikeln mitwirken, sind einige Änderungen erforderlich:
 

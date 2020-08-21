@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: eab91146ec21bbee888d496012419f47bca4b599
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: ac3bbb7c755be82b171f35442d2dbaf446dfea84
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776972"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695119"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Überwachen der Co-Verwaltung in Configuration Manager
 
@@ -102,8 +102,8 @@ Es gibt Hunderte von möglichen Fehlern. In der folgenden Tabelle werden die hä
 
 | Fehler | Beschreibung |
 |---------|---------|
-| 2147549183 (0x8000FFFF) | Die MDM-Registrierung wurde noch nicht für Azure AD konfiguriert, oder die Registrierungs-URL wird nicht erwartet.<br><br>[Aktivieren der automatischen Registrierung von Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
-| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | Die Lizenz des Benutzers weist einen fehlerhaften Status auf und blockiert die Registrierung.<br><br>[Zuweisen von Lizenzen zu Benutzern](https://docs.microsoft.com/intune/licenses-assign) |
+| 2147549183 (0x8000FFFF) | Die MDM-Registrierung wurde noch nicht für Azure AD konfiguriert, oder die Registrierungs-URL wird nicht erwartet.<br><br>[Aktivieren der automatischen Registrierung von Windows 10](/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
+| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | Die Lizenz des Benutzers weist einen fehlerhaften Status auf und blockiert die Registrierung.<br><br>[Zuweisen von Lizenzen zu Benutzern](/intune/licenses-assign) |
 | 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | Tritt beim Versuch der automatischen Registrierung bei Intune auf, wenn die Azure AD-Konfiguration nicht vollständig angewendet wurde. Dieses Problem sollte vorübergehend sein, da das Gerät nach kurzer Zeit Wiederholungsversuche ausführt. |
 | 2149056554 (0x‭8018002A‬)<br>&nbsp; | Der Benutzer hat den Vorgang abgebrochen.<br><br>Wenn die MDM-Anmeldung mehrstufige Authentifizierung erfordert und der Benutzer sich nicht mit einer unterstützten zweiten Stufe angemeldet hat, zeigt Windows dem Benutzer eine Popupbenachrichtigung an, dass er sich anmelden soll. Wenn der Benutzer auf die Popupbenachrichtigung nicht reagiert, tritt dieser Fehler auf. Dieses Problem sollte vorübergehend sein, weil Configuration Manager einen Wiederholungsversuch ausführt und den Benutzer zur Anmeldung auffordert. Benutzer sollten mehrstufige Authentifizierung verwenden, wenn sie sich bei Windows anmelden. Informieren Sie sie auch darüber, dass ein solches Verhalten zu erwarten ist und Maßnahmen ergriffen werden müssen, wenn sie dazu aufgefordert werden. |
 | 2149056532 (0x80180014)<br>MENROLL_E_DEVICENOTSUPPORTED | Verwaltung mobiler Geräte wird nicht unterstützt. Überprüfen Sie Geräteeinschränkungen. |
@@ -114,7 +114,7 @@ Es gibt Hunderte von möglichen Fehlern. In der folgenden Tabelle werden die hä
 | 3399548929 | Benutzeranmeldung erforderlich.<br><br>Dieses Problem sollte vorübergehend sein. Es tritt auf, wenn sich der Benutzer schnell abmeldet, bevor der Registrierungstask erfolgt. |
 | 3400073236 | Fehler bei der ADAL-Sicherheitstokenanforderung.<br><br>Überprüfen Sie die Azure AD-Konfiguration, und stellen Sie sicher, dass sich Benutzer erfolgreich authentifizieren können. |
 | 2149122477 | Generisches HTTP-Problem. |
-| 3400073247 | ADAL-integrierte Windows-Authentifizierung wird nur im Verbundfluss unterstützt.<br><br>[Planen der Implementierung Ihrer Azure Active Directory-Hybrideinbindung](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) |
+| 3400073247 | ADAL-integrierte Windows-Authentifizierung wird nur im Verbundfluss unterstützt.<br><br>[Planen der Implementierung Ihrer Azure Active Directory-Hybrideinbindung](/azure/active-directory/devices/hybrid-azuread-join-plan) |
 | 3399942148 | Der Server oder Proxy wurde nicht gefunden.<br><br>Dieses Problem sollte vorübergehend sein, wenn der Client nicht mit der Cloud kommunizieren kann. Wenn es weiterhin besteht, stellen Sie sicher, dass der Client über konsistente Konnektivität mit Azure verfügt. | 
 | 2149056532 | Die jeweilige Plattform oder Version wird nicht unterstützt.<br><br>Stellen Sie sicher, dass das Gerät die [Mindestanforderungen](overview.md#windows-10) für Co-Verwaltung erfüllt. |
 | 2147943568 | Das Element wurde nicht gefunden.<br><br>Dieses Problem sollte vorübergehend sein. Wenn das Problem weiterhin auftritt, wenden Sie sich an den Microsoft-Support. |
@@ -124,7 +124,7 @@ Es gibt Hunderte von möglichen Fehlern. In der folgenden Tabelle werden die hä
 | 2149134055 | Der WinHTTP-Name wurde nicht aufgelöst.<br><br>Der Client kann den Namen des Diensts nicht auflösen. Überprüfen Sie die DNS-Konfiguration. |
 | 2149134050 | Internettimeout.<br><br>Dieses Problem sollte vorübergehend sein, wenn der Client nicht mit der Cloud kommunizieren kann. Wenn es weiterhin besteht, stellen Sie sicher, dass der Client über konsistente Konnektivität mit Azure verfügt. |
 
-Weitere Informationen finden Sie unter [Fehlerwerte für MDM-Registrierung](https://docs.microsoft.com/windows/desktop/mdmreg/mdm-registration-constants).
+Weitere Informationen finden Sie unter [Fehlerwerte für MDM-Registrierung](/windows/desktop/mdmreg/mdm-registration-constants).
 
 ## <a name="deployment-policies"></a>Bereitstellungsrichtlinien
 

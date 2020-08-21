@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a9ed8e1ece27117993761a3ce52c462e94e9f79a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eb7e2e5c564263c7172d70ec33bb33c0dd73409c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124772"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697822"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Aktualisieren von Windows auf die neueste Version unter Verwendung von Configuration Manager
 
@@ -55,7 +55,7 @@ Auf den Geräten muss eine der folgenden Betriebssystemversionen ausgeführt wer
 - Windows 8.1
 - Eine frühere Version von Windows 10 Beispielsweise können Sie Windows 10, Version 1809 auf Windows 10, Version 1903 aktualisieren.  
 
-Weitere Informationen finden Sie unter [Windows 10-Upgradepfade](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths).
+Weitere Informationen finden Sie unter [Windows 10-Upgradepfade](/windows/deployment/upgrade/windows-10-upgrade-paths).
 
 #### <a name="windows-server"></a>Windows Server
 
@@ -64,7 +64,7 @@ Weitere Informationen finden Sie unter [Windows 10-Upgradepfade](https://docs.m
 - Eine frühere Version von Windows Server 2016
 - Eine frühere Version von Windows Server 2019
 
-Weitere Informationen zu den von Windows [Server unterstützten Upgradepfaden finden Sie unter Unterstützte Upgradepfade](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) für [WindowsServer 2016 und](https://aka.ms/upgradecenter) Windows Server Upgrade Center.
+Weitere Informationen zu den von Windows [Server unterstützten Upgradepfaden finden Sie unter Unterstützte Upgradepfade](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) für [WindowsServer 2016 und](https://aka.ms/upgradecenter) Windows Server Upgrade Center.
 
 
 ## <a name="plan"></a><a name="BKMK_Plan"></a> Plan  
@@ -125,4 +125,4 @@ Verwenden Sie eine der folgenden Bereitstellungsmethoden, um das Betriebssystem 
 
 ## <a name="monitor"></a>Überwachen  
 
-Weitere Informationen zum Überwachen der Tasksequenzbereitstellung, um ein Betriebssystemupgrade durchzuführen, finden Sie unter [Überwachen von Betriebssystembereitstellungen](monitor-operating-system-deployments.md).  
+Weitere Informationen zum Überwachen der Tasksequenzbereitstellung, um ein Betriebssystemupgrade durchzuführen, finden Sie unter [Überwachen von Betriebssystembereitstellungen](monitor-operating-system-deployments.md).

@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 907c36b6f06bbf4fbbabb9ee1b2df6cadb0acb75
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca002664bd55dbac79ace5cfe4bf88cd41d65b89
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125456"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698094"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Erstellen einer Tasksequenz zum Durchführen eines Upgrades für ein Betriebssystem in Configuration Manager
 
@@ -66,7 +66,7 @@ Erstellen Sie eine Tasksequenz, und wählen Sie im Tasksequenzerstellungs-Assist
     - **Product Key:** Geben Sie den Windows-Product Key für das zu installierende Betriebssystem an. Geben Sie codierte Volumenlizenzschlüssel oder Standard-Product Keys an. Wenn Sie einen Standard-Product Key verwenden, trennen Sie jede Gruppe von fünf Zeichen durch einen Bindestrich (`-`). Beispiel: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Wenn das Upgrade für eine Volumenlizenzedition vorgesehen ist, ist der Product Key möglicherweise nicht erforderlich.  
 
         > [!Note]  
-        > Dieser Product Key kann ein Mehrfachaktivierungsschüssel oder ein generischer Volumenlizenzschlüssel sein. Ein generischer Volumenlizenzschlüssel wird auch als Clientsetupschlüssel für den Schlüsselverwaltungsdienst (KMS) bezeichnet. Weitere Informationen finden Sie unter [Planen der Volumenaktivierung](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Eine Liste der KMS-Clientsetupschlüssel finden Sie im Windows Server-Aktivierungshandbuch in [Anhang A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).
+        > Dieser Product Key kann ein Mehrfachaktivierungsschüssel oder ein generischer Volumenlizenzschlüssel sein. Ein generischer Volumenlizenzschlüssel wird auch als Clientsetupschlüssel für den Schlüsselverwaltungsdienst (KMS) bezeichnet. Weitere Informationen finden Sie unter [Planen der Volumenaktivierung](/windows/deployment/volume-activation/plan-for-volume-activation-client). Eine Liste der KMS-Clientsetupschlüssel finden Sie im Windows Server-Aktivierungshandbuch in [Anhang A](/windows-server/get-started/kmsclientkeys).
 
     - **Alle ablehnbaren Kompatibilitätsmeldungen ignorieren:** Wählen Sie diese Einstellung aus, wenn Sie ein Upgrade auf Windows Server 2016 durchführen. Wenn Sie diese Einstellung nicht auswählen, kann die Tasksequenz nicht abgeschlossen werden, weil Windows Setup darauf wartet, dass der Benutzer in einem Bestätigungsdialogfeld in einer Windows-App **Bestätigen** auswählt.  
 
@@ -217,7 +217,7 @@ Um Protokolle auf dem Client zu sammeln, fügen Sie in dieser Gruppe Schritte hi
 
 Fügen Sie zum Ausführen zusätzlicher Diagnosetools Schritte in dieser Gruppe hinzu. Automatisieren Sie diese Tools, um so bald wie möglich nach Auftreten eines Fehlers zusätzliche Informationen aus dem System zu sammeln.  
 
-Ein solches Tool ist Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). Mit diesem eigenständigen Diagnosetool können Sie Details zur Ursache des erfolglosen Versuchs eines Windows 10-Upgrades abrufen.  
+Ein solches Tool ist Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). Mit diesem eigenständigen Diagnosetool können Sie Details zur Ursache des erfolglosen Versuchs eines Windows 10-Upgrades abrufen.  
 
 - Im Configuration Manager [erstellen Sie ein Paket](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) für das Tool.  
 
@@ -225,13 +225,13 @@ Ein solches Tool ist Windows [SetupDiag](https://docs.microsoft.com/windows/depl
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
 > [!TIP]
-> Verwenden Sie stets die neueste Version von SetupDiag, um die neuesten Funktionen und Korrekturen bekannter Probleme zu erhalten. Weitere Informationen finden Sie unter [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
+> Verwenden Sie stets die neueste Version von SetupDiag, um die neuesten Funktionen und Korrekturen bekannter Probleme zu erhalten. Weitere Informationen finden Sie unter [SetupDiag](/windows/deployment/upgrade/setupdiag).
 
 ## <a name="additional-recommendations"></a>Weitere Empfehlungen
 
 ### <a name="windows-documentation"></a>Windows-Dokumentation
 
-Lesen Sie die Windows-Dokumentation zum [Beheben von Windows 10-Upgradefehlern](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Dieser Artikel enthält auch detaillierte Informationen zum Upgradeprozess.  
+Lesen Sie die Windows-Dokumentation zum [Beheben von Windows 10-Upgradefehlern](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Dieser Artikel enthält auch detaillierte Informationen zum Upgradeprozess.  
 
 ### <a name="check-minimum-disk-space"></a>Überprüfen des Mindestspeicherplatzes
 
@@ -272,12 +272,12 @@ Wenn Sie das Gerät während dieser Tasksequenz von BIOS zu UEFI konvertieren m�
 ### <a name="manage-bitlocker"></a>Verwalten von BitLocker
 
 <!--SCCMDocs issue #494-->
-Wenn Sie die Datenträgerverschlüsselung von BitLocker verwenden, wird diese während des Upgrades standardmäßig und automatisch durch Windows Setup angehalten. Ab Windows 10-Version 1803 enthält Windows Setup den Befehlszeilenparameter `/BitLocker`, mit dem dieses Verhalten gesteuert werden kann. Wenn Ihre Sicherheitsanforderungen erfordern, dass die Datenträgerverschlüsselung jederzeit aktiviert ist, verwenden Sie die [Tasksequenzvariable](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** in der Gruppe **Vorbereitung auf das Upgrade**, um `/BitLocker TryKeepActive` einzuschließen. Weitere Informationen finden Sie unter [Windows Setup-Befehlszeilenoptionen](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+Wenn Sie die Datenträgerverschlüsselung von BitLocker verwenden, wird diese während des Upgrades standardmäßig und automatisch durch Windows Setup angehalten. Ab Windows 10-Version 1803 enthält Windows Setup den Befehlszeilenparameter `/BitLocker`, mit dem dieses Verhalten gesteuert werden kann. Wenn Ihre Sicherheitsanforderungen erfordern, dass die Datenträgerverschlüsselung jederzeit aktiviert ist, verwenden Sie die [Tasksequenzvariable](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** in der Gruppe **Vorbereitung auf das Upgrade**, um `/BitLocker TryKeepActive` einzuschließen. Weitere Informationen finden Sie unter [Windows Setup-Befehlszeilenoptionen](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### <a name="remove-default-apps"></a>Entfernen von Standard-Apps
 
 <!--SCCMDocs issue #526-->
-Einige Kunden entfernen standardmäßig unter Windows 10 bereitgestellte Apps, z.B. die Bing Wetter-App oder die Microsoft Solitaire Collection. In einigen Fällen werden diese Apps durch Windows 10-Updates erneut installiert. Weitere Informationen finden Sie unter [How to keep apps removed from Windows 10 (Verhindern der erneuten Installation von Apps unter Windows 10)](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update).
+Einige Kunden entfernen standardmäßig unter Windows 10 bereitgestellte Apps, z.B. die Bing Wetter-App oder die Microsoft Solitaire Collection. In einigen Fällen werden diese Apps durch Windows 10-Updates erneut installiert. Weitere Informationen finden Sie unter [How to keep apps removed from Windows 10 (Verhindern der erneuten Installation von Apps unter Windows 10)](/windows/application-management/remove-provisioned-apps-during-update).
 
 Fügen Sie der Tasksequenz den Schritt **Befehlszeile ausführen** in der Gruppe **Vorbereitung auf das Upgrade** hinzu. Geben Sie eine Befehlszeile an, die dem folgenden Beispiel ähnelt:
 

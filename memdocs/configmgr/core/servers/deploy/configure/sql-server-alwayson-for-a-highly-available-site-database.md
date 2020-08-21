@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438592"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699227"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
@@ -76,13 +76,13 @@ Verwenden Sie eine *Enterprise* Edition von SQL Server.
 
 Jede Instanz von SQL Server kann mit einem Domänenbenutzerkonto (**Dienstkonto**) oder mit einem Nicht-Domänenkonto ausgeführt werden. Jedes Replikat in einer Gruppe kann eine andere Konfiguration aufweisen.
 
-- Verwenden Sie ein Konto mit geringstmöglichen Berechtigungen. Weitere Informationen finden Sie unter [Überlegungen zur Sicherheit bei SQL Server-Installationen](https://docs.microsoft.com/sql/sql-server/install/security-considerations-for-a-sql-server-installation).  
+- Verwenden Sie ein Konto mit geringstmöglichen Berechtigungen. Weitere Informationen finden Sie unter [Überlegungen zur Sicherheit bei SQL Server-Installationen](/sql/sql-server/install/security-considerations-for-a-sql-server-installation).  
 
-- Weitere Informationen zum Konfigurieren von Dienstkonten und Berechtigungen für SQL Server finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).  
+- Weitere Informationen zum Konfigurieren von Dienstkonten und Berechtigungen für SQL Server finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).  
 
-- Sie müssen Zertifikate verwenden, um ein Nicht-Domänenkonto zu verwenden. Weitere Informationen finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).  
+- Sie müssen Zertifikate verwenden, um ein Nicht-Domänenkonto zu verwenden. Weitere Informationen finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL)](/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).  
 
-- Weitere Informationen finden Sie unter [Erstellen eines Endpunkts für die Datenbankspiegelung für AlwaysOn-Verfügbarkeitsgruppen](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
+- Weitere Informationen finden Sie unter [Erstellen eines Endpunkts für die Datenbankspiegelung für AlwaysOn-Verfügbarkeitsgruppen](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
 
 
 ### <a name="database"></a>Datenbank
@@ -104,7 +104,7 @@ Konfigurieren Sie die Datenbank der einzelnen Replikate mit den folgenden Einste
     GO
     ```
 
-    Weitere Informationen finden Sie unter [CLR-Integration: Aktivierung](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling).  
+    Weitere Informationen finden Sie unter [CLR-Integration: Aktivierung](/sql/relational-databases/clr-integration/clr-integration-enabling).  
 
 - Legen Sie **Max. Textgröße für die Replikation** auf `2147483647` fest:  
 
@@ -120,7 +120,7 @@ Konfigurieren Sie die Datenbank der einzelnen Replikate mit den folgenden Einste
     ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
     ```
 
-    Weitere Informationen finden Sie unter [TRUSTWORTHY-Datenbankeigenschaft](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property).
+    Weitere Informationen finden Sie unter [TRUSTWORTHY-Datenbankeigenschaft](/sql/relational-databases/security/trustworthy-database-property).
 
 - Aktivieren Sie den **Service Broker**:  
 
@@ -217,9 +217,9 @@ Führen Sie das folgende SQL-Skript aus, um die Datenbankkonfigurationen für pr
 - Sie können ein Replikat mit asynchronem Commit zum Wiederherstellen Ihres synchronen Replikats verwenden. Weitere Informationen finden Sie unter [Wiederherstellungsoptionen für Standortdatenbanken](../../manage/recover-sites.md#site-database-recovery-options).  
 
     > [!Warning]  
-    > Configuration Manager unterstützt nicht, dass *Failover* Replikate mit asynchronem Commit als Standortdatenbank verwenden. Weitere Informationen finden Sie unter [Failover und Failovermodi (AlwaysOn-Verfügbarkeitsgruppen)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
+    > Configuration Manager unterstützt nicht, dass *Failover* Replikate mit asynchronem Commit als Standortdatenbank verwenden. Weitere Informationen finden Sie unter [Failover und Failovermodi (AlwaysOn-Verfügbarkeitsgruppen)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
 
-Configuration Manager prüft den Status des Replikats mit asynchronem Commit nicht auf seine Aktualität. Die Verwendung eines Replikats mit asynchronem Commit als Standortdatenbank kann die Integrität Ihres Standorts und Ihrer Daten gefährden. Dieses Replikat kann immanent asynchron sein. Weitere Informationen finden Sie unter [Übersicht über SQL Server AlwaysOn-Verfügbarkeitsgruppen](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
+Configuration Manager prüft den Status des Replikats mit asynchronem Commit nicht auf seine Aktualität. Die Verwendung eines Replikats mit asynchronem Commit als Standortdatenbank kann die Integrität Ihres Standorts und Ihrer Daten gefährden. Dieses Replikat kann immanent asynchron sein. Weitere Informationen finden Sie unter [Übersicht über SQL Server AlwaysOn-Verfügbarkeitsgruppen](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
 Jedes Replikationsmitglied muss wie folgt konfiguriert sein:
 
@@ -239,17 +239,17 @@ Jedes Replikationsmitglied muss wie folgt konfiguriert sein:
     > - Sie führen das Configuration Manager-Setup aus, um die Verwendung der Standortdatenbank in der Verfügbarkeitsgruppe anzugeben.  
     > - Sie installieren ein Update für Configuration Manager. (Nicht nur Updates, die auf die Standortdatenbank angewendet werden).  
 
-- Alle Mitglieder müssen denselben [Seedingmodus](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas) aufweisen.<!-- SCCMDocs-pr#3899 --> Das Configuration Manager-Setup schließt eine Voraussetzungsprüfung für diese Konfiguration ein, wenn eine Datenbank durch Installation oder Wiederherstellung erstellt wird.
+- Alle Mitglieder müssen denselben [Seedingmodus](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas) aufweisen.<!-- SCCMDocs-pr#3899 --> Das Configuration Manager-Setup schließt eine Voraussetzungsprüfung für diese Konfiguration ein, wenn eine Datenbank durch Installation oder Wiederherstellung erstellt wird.
 
     > [!Note]  
-    > Wenn Setup die Datenbank erstellt und Sie **automatisches** Seeding konfigurieren, muss die Verfügbarkeitsgruppe über die Berechtigungen zum Erstellen der Datenbank verfügen. Diese Anforderung gilt sowohl für eine neue Datenbank als auch für eine Wiederherstellung. Weitere Informationen finden Sie unter [Automatic seeding for secondary replica](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security) (Automatisches Seeding für ein sekundäres Replikat).<!-- SCCMDocs-pr#3900 -->
+    > Wenn Setup die Datenbank erstellt und Sie **automatisches** Seeding konfigurieren, muss die Verfügbarkeitsgruppe über die Berechtigungen zum Erstellen der Datenbank verfügen. Diese Anforderung gilt sowohl für eine neue Datenbank als auch für eine Wiederherstellung. Weitere Informationen finden Sie unter [Automatic seeding for secondary replica](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security) (Automatisches Seeding für ein sekundäres Replikat).<!-- SCCMDocs-pr#3900 -->
 
 #### <a name="replica-member-location"></a>Speicherort der Replikationsmitglieder
 
 Alle Replikate in einer Verfügbarkeitsgruppe müssen lokal oder in Microsoft Azure gehostet werden. Eine Gruppe, die ein lokales Mitglied und ein Mitglied in Azure enthält, wird nicht unterstützt.
 
 > [!NOTE]
-> Wenn Sie einen virtuellen Azure-Computer für SQL Server verwenden, aktivieren Sie **Floating IP**. Weitere Informationen finden Sie unter [Konfigurieren eines Load Balancers für eine SQL Server-Always On-Verfügbarkeitsgruppe auf virtuellen Azure-Computern](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
+> Wenn Sie einen virtuellen Azure-Computer für SQL Server verwenden, aktivieren Sie **Floating IP**. Weitere Informationen finden Sie unter [Konfigurieren eines Load Balancers für eine SQL Server-Always On-Verfügbarkeitsgruppe auf virtuellen Azure-Computern](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 Für das Setup von Configuration Manager muss eine Verbindung mit jedem Replikat hergestellt werden. Wenn Sie eine Verfügbarkeitsgruppe in Azure einrichten und die Gruppe sich hinter einem internen oder externen Lastenausgleich befindet, öffnen Sie die folgenden Standardports:
 
@@ -263,11 +263,11 @@ Nach Abschluss des Setups müssen die folgenden Ports für Configuration Manager
 
 Sie können benutzerdefinierte Ports für diese Konfigurationen verwenden. Verwenden Sie für den Endpunkt und auf allen Replikaten in der Verfügbarkeitsgruppe die gleichen Ports.
 
-Erstellen Sie eine Lastenausgleichsregel für jeden Port des Azure-Lastenausgleichs, damit SQL Daten zwischen Standorten repliziert. Weitere Informationen finden Sie unter [Konfigurieren von Hochverfügbarkeitsports für internen Lastenausgleich](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
+Erstellen Sie eine Lastenausgleichsregel für jeden Port des Azure-Lastenausgleichs, damit SQL Daten zwischen Standorten repliziert. Weitere Informationen finden Sie unter [Konfigurieren von Hochverfügbarkeitsports für internen Lastenausgleich](/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
 
 #### <a name="listener"></a>Listener
 
-Die Verfügbarkeitsgruppe muss mindestens einen *Verfügbarkeitsgruppenlistener*besitzen. Wenn Sie Configuration Manager für die Verwendung der Standortdatenbank in der Verfügbarkeitsgruppe konfigurieren, wird der virtuelle Name dieses Listeners verwendet. Eine Verfügbarkeitsgruppe kann zwar mehrere Listener enthalten, Configuration Manager kann aber nur einen nutzen. Weitere Informationen finden Sie unter [Erstellen oder Konfigurieren eines SQL Server-Verfügbarkeitsgruppenlisteners](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
+Die Verfügbarkeitsgruppe muss mindestens einen *Verfügbarkeitsgruppenlistener*besitzen. Wenn Sie Configuration Manager für die Verwendung der Standortdatenbank in der Verfügbarkeitsgruppe konfigurieren, wird der virtuelle Name dieses Listeners verwendet. Eine Verfügbarkeitsgruppe kann zwar mehrere Listener enthalten, Configuration Manager kann aber nur einen nutzen. Weitere Informationen finden Sie unter [Erstellen oder Konfigurieren eines SQL Server-Verfügbarkeitsgruppenlisteners](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
 
 #### <a name="file-paths"></a>Dateipfade
 
@@ -294,7 +294,7 @@ Betrachten Sie beispielsweise das folgende Szenario:
 #### <a name="multi-subnet-failover"></a>Multisubnetz-Failover
 
 <!-- SCCMDocs-pr#3734 -->
-Ab Version 1906 können Sie das [Schlüsselwort der MultiSubnetFailover-Verbindungszeichenfolge](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server aktivieren. Sie müssen auch folgende Werte manuell zur Windows-Registrierung auf dem Standortserver hinzufügen:
+Ab Version 1906 können Sie das [Schlüsselwort der MultiSubnetFailover-Verbindungszeichenfolge](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server aktivieren. Sie müssen auch folgende Werte manuell zur Windows-Registrierung auf dem Standortserver hinzufügen:
 
 ``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
@@ -315,11 +315,11 @@ Die folgenden Einschränkungen gelten für alle Szenarien.
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>Nicht unterstützte SQL Server-Optionen und -Konfigurationen
 
-- **Basis-Verfügbarkeitsgruppen**: Diese Verfügbarkeitsgruppen, die mit SQL Server 2016 Standard Edition eingeführt wurden, bieten keine Unterstützung für Lesezugriff auf sekundäre Replikate. Für die Konfiguration ist ein derartiger Zugriff jedoch erforderlich. Hintergrundinformationen finden Sie unter [SQL Server-Basisverfügbarkeitsgruppen](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Basis-Verfügbarkeitsgruppen**: Diese Verfügbarkeitsgruppen, die mit SQL Server 2016 Standard Edition eingeführt wurden, bieten keine Unterstützung für Lesezugriff auf sekundäre Replikate. Für die Konfiguration ist ein derartiger Zugriff jedoch erforderlich. Hintergrundinformationen finden Sie unter [SQL Server-Basisverfügbarkeitsgruppen](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
 
-- **Failoverclusterinstanz**: Failoverclusterinstanzen werden für ein Replikat, das Sie mit Configuration Manager verwenden, nicht unterstützt. Weitere Informationen finden Sie unter [SQL Server AlwaysOn-Failoverclusterinstanzen](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
+- **Failoverclusterinstanz**: Failoverclusterinstanzen werden für ein Replikat, das Sie mit Configuration Manager verwenden, nicht unterstützt. Weitere Informationen finden Sie unter [SQL Server AlwaysOn-Failoverclusterinstanzen](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 
-- **MultiSubnetFailover**: In Version 1902 und früher wird das Verwenden einer Verfügbarkeitsgruppe mit Configuration Manager in einer Konfiguration mit mehreren Subnetzen nicht unterstützt. Zudem kann nicht die Schlüsselwortverbindungszeichenfolge [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) verwendet werden.
+- **MultiSubnetFailover**: In Version 1902 und früher wird das Verwenden einer Verfügbarkeitsgruppe mit Configuration Manager in einer Konfiguration mit mehreren Subnetzen nicht unterstützt. Zudem kann nicht die Schlüsselwortverbindungszeichenfolge [MutliSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) verwendet werden.
 
     Aktualisieren Sie Configuration Manager auf Version 1906 oder höher, damit eine solche Konfiguration unterstützt wird. Weitere Informationen finden Sie unter der [MultiSubnetFailover](sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover)-Voraussetzung.
 
@@ -382,7 +382,7 @@ Wenn eine Standortdatenbank eine Verfügbarkeitsgruppe verwendet, führen Sie de
 
 ### <a name="transaction-log"></a>Transaktionsprotokoll  
 
-Legen Sie das Wiederherstellungsmodell der Standortdatenbank auf **Vollständig** fest. Diese Konfiguration ist für die Verwendung von Configuration Manager in einer Verfügbarkeitsgruppe obligatorisch. Planen Sie das Überwachen und Verwalten der Größe des Transaktionsprotokolls für die Standortdatenbank. Beim vollständigen Wiederherstellungsmodell werden Transaktionen erst festgeschrieben, wenn eine vollständige Sicherung der Datenbank oder des Transaktionsprotokolls erfolgt ist. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von SQL Server-Datenbanken](https://docs.microsoft.com/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
+Legen Sie das Wiederherstellungsmodell der Standortdatenbank auf **Vollständig** fest. Diese Konfiguration ist für die Verwendung von Configuration Manager in einer Verfügbarkeitsgruppe obligatorisch. Planen Sie das Überwachen und Verwalten der Größe des Transaktionsprotokolls für die Standortdatenbank. Beim vollständigen Wiederherstellungsmodell werden Transaktionen erst festgeschrieben, wenn eine vollständige Sicherung der Datenbank oder des Transaktionsprotokolls erfolgt ist. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von SQL Server-Datenbanken](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
 
 
 ## <a name="changes-for-site-recovery"></a>Änderungen für die Standortwiederherstellung

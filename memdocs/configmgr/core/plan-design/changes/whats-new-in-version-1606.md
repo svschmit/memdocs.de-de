@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590472"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698587"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Neuerungen in Version 1606 von Configuration Manager
 
@@ -86,7 +86,7 @@ Zum Navigieren zwischen den verschiedenen Knoten eines Arbeitsbereichs können S
 Im folgenden finden Sie Änderungen an der Verwaltung in der Configuration Manager-Konsole:
 ### <a name="oms-connector"></a>OMS-Connector
 
-Sie können jetzt Configuration Manager als Sammlungen von Configuration Manager aus mit [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/) verbinden. Dadurch werden Daten, wie z.B. Sammlungen von Configuration Manager in OMS sichtbar dargestellt. Weitere Informationen finden Sie unter [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
+Sie können jetzt Configuration Manager als Sammlungen von Configuration Manager aus mit [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview) verbinden. Dadurch werden Daten, wie z.B. Sammlungen von Configuration Manager in OMS sichtbar dargestellt. Weitere Informationen finden Sie unter [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](/azure/azure-monitor/platform/collect-sccm).
 
 Der OMS-Connector ist ein vorab veröffentlichtes Feature. Wie Sie es aktivieren, erfahren Sie unter [Features der Vorabversion in System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 

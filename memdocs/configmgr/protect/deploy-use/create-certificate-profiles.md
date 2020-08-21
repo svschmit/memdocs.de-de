@@ -10,12 +10,12 @@ ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 159afbf2c5aae9516fc5244ee06a2aa484290c20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f1ea48887f89cf06ed4b41d0de0dfc24e9d508
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705768"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697125"
 ---
 # <a name="create-certificate-profiles"></a>Erstellen von Zertifikatprofilen
 
@@ -114,7 +114,7 @@ Schließen Sie die Seite **SCEP Enrollment** (SCEP-Anmeldung) des Assistenten zu
 
   - **In Trusted Platform Module (TPM) installieren (andernfalls Fehler)** : Installiert den Schlüssel im TPM. Wenn das TPM-Modul nicht vorhanden ist, tritt bei der Installation ein Fehler auf.  
 
-  - **In Windows Hello for Business installieren, andernfalls Fehler**: Diese Option ist für Windows 10-Geräte verfügbar. Sie ermöglicht es Ihnen, das Zertifikat im Windows Hello for Business-Speicher zu speichern, der durch Multi-Factor Authentication geschützt ist. Weitere Informationen finden Sie unter [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+  - **In Windows Hello for Business installieren, andernfalls Fehler**: Diese Option ist für Windows 10-Geräte verfügbar. Sie ermöglicht es Ihnen, das Zertifikat im Windows Hello for Business-Speicher zu speichern, der durch Multi-Factor Authentication geschützt ist. Weitere Informationen finden Sie unter [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
     > [!NOTE]  
     > Diese Option unterstützt nicht die Smartcard-Anmeldung für die erweiterte Schlüsselverwendung auf der Seite „Zertifikateigenschaften“.

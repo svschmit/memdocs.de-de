@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c2861214bcdc9162b0121304b342d1d9d48be170
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125116"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697941"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Bereitstellen von Windows To Go mit Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "88125116"
 
 In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in Configuration Manager. Windows To Go ist ein Unternehmensfeature von Windows 8, das die Erstellung eines Windows To Go-Arbeitsbereichs ermöglicht, der von einem externen USB-Laufwerk auf Computern gestartet werden kann, die die Windows 7- oder Windows 8-Zertifizierungsanforderungen erfüllen. Dabei ist es unerheblich, welches Betriebssystem auf dem jeweiligen Computer ausgeführt wird. Von Windows To Go-Arbeitsbereichen kann dasselbe Abbild verwendet werden, das Unternehmen für Desktops und Laptops verwenden. Außerdem können die Arbeitsbereiche auf dieselbe Weise verwaltet werden.  
 
- Weitere Informationen zu Windows To Go finden Sie unter [Windows To Go: Featureübersicht](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
+ Weitere Informationen zu Windows To Go finden Sie unter [Windows To Go: Featureübersicht](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Bereitstellen von Windows To Go  
  Windows To Go ist ein Betriebssystem, das auf einem externen USB-Laufwerk gespeichert wird. Sie können das Windows To Go-Laufwerk auf dieselbe Weise wie andere Betriebssystembereitstellungen bereitstellen. Da jedoch Windows To Go als benutzerzentrierte Mobilitätslösung konzipiert ist, müssen Sie beim Bereitstellen dieser Laufwerke einen etwas anderen Ansatz verfolgen.  
@@ -461,4 +461,4 @@ In diesem Thema finden Sie die Schritte zum Bereitstellen von Windows To Go in C
  Nach dem Neustart des Computers vom Windows To Go-Laufwerk wird vom Laufwerk Windows PE gestartet und eine Verbindung zum Verwaltungspunkt hergestellt, um die Richtlinie zum Abschließen der Bereitstellung des Betriebssystems abzurufen. Configuration Manager konfiguriert das Laufwerk und stellt es vorab bereit. Nach der Bereitstellung des Laufwerks durch Configuration Manager kann der Benutzer den Computer neu starten, um den Bereitstellungsvorgang abzuschließen (z.B. einer Domäne beitreten oder Apps installieren). Dieser Vorgang ist bei allen vorab bereitgestellten Medien identisch.  
 
 ###  <a name="user-logs-in-to-windows-8"></a><a name="BKMK_UserLogsIn"></a> Benutzer meldet sich bei Windows 8 an  
- Nach Abschluss des Bereitstellungsvorgangs durch Configuration Manager und sobald der Windows 8-Sperrbildschirm angezeigt wird, kann sich der Benutzer beim Betriebssystem anmelden.  
+ Nach Abschluss des Bereitstellungsvorgangs durch Configuration Manager und sobald der Windows 8-Sperrbildschirm angezeigt wird, kann sich der Benutzer beim Betriebssystem anmelden.

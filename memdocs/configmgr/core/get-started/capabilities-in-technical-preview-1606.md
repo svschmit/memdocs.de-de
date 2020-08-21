@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905671"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695595"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Funktionen in der Technical Preview 1606 für Configuration Manager
 
@@ -80,9 +80,9 @@ Wenn Sie eine Toleranzperiode konfigurieren und das Kontrollkästchen aktivieren
 
 Device Guard ist ein Windows 10-Feature, das Hardware- und Software-Features verwendet, um genau zu kontrollieren, was zur Ausführung auf dem Gerät zulässig ist.
 
-Weitere Informationen finden Sie unter [Einführung zu Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+Weitere Informationen finden Sie unter [Einführung zu Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-In diesem Release kann Configuration Manager mit Device Guard und [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) zusammenarbeiten, damit ausführbare und DLL-Dateien, die mit Configuration Manager bereitgestellt werden, automatisch als vertrauenswürdig eingestuft werden, da sie aus einem verwalteten Installationsprogramm stammen, d.h., sie können auf dem Zielgerät ausgeführt werden und andere Software nicht, außer wenn es durch andere AppLocker-Regeln zulässig gemacht wird.  
+In diesem Release kann Configuration Manager mit Device Guard und [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) zusammenarbeiten, damit ausführbare und DLL-Dateien, die mit Configuration Manager bereitgestellt werden, automatisch als vertrauenswürdig eingestuft werden, da sie aus einem verwalteten Installationsprogramm stammen, d.h., sie können auf dem Zielgerät ausgeführt werden und andere Software nicht, außer wenn es durch andere AppLocker-Regeln zulässig gemacht wird.  
 
 Diese Funktion kann derzeit nicht über die Configuration Manager-Konsole konfiguriert werden. Zum Konfigurieren der Richtlinie müssen Sie einen Registrierungsschlüssel auf jedem Client und Windows-Dienste auf dem Client konfigurieren.
 Sobald dies geschehen ist, konfigurieren Sie die AppLocker-Richtliniendatei. Nachdem Sie die Richtliniendatei konfiguriert haben, können Sie sie auf allen kompatiblen Clientgeräten bereitstellen.
@@ -95,9 +95,9 @@ Wie alle AppLocker-Richtlinien können Richtlinien mit Manager Installer-Regeln 
 
 Weitere Informationen finden Sie in den folgenden Artikeln:
 
-- [Einführung zu Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [Einführung zu Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Planen und erste Schritte beim Bereitstellungsprozess für die Windows Defender-Anwendungssteuerung](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
+- [Planen und erste Schritte beim Bereitstellungsprozess für die Windows Defender-Anwendungssteuerung](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> Verschiedene Geräteverwaltungspunkte für die lokale Verwaltung mobiler Geräte  
   Mit Technical Preview 1606 unterstützt die lokale Verwaltung mobiler Geräte (MDM) jetzt eine neue Funktion im Windows 10 Anniversary Update, die ein registriertes Gerät automatisch konfiguriert, um mehr als einen Geräteverwaltungspunkt zur Verwendung zur Verfügung zu haben. Diese Funktion lässt Fallbacks des Geräts auf einen anderen Geräteverwaltungspunkt zu, wenn der normalerweise verwendete Punkt nicht verfügbar ist. Diese Funktion ist nur auf PCs verfügbar, auf denen das Windows 10 Anniversary Update installiert ist.  
@@ -170,8 +170,8 @@ Die einfachste Möglichkeit zum Export der Clientstammzertifikate im Netzwerk is
 #### <a name="upload-the-management-certificate-to-azure"></a>Laden Sie das Verwaltungszertifikat in Azure hoch
 
 Ein Azure-Verwaltungszertifikat ist für Configuration Manager erforderlich, um auf die Azure-API zugreifen und den Cloudproxydienst zu konfigurieren. Weitere Informationen und Anweisungen zum Hochladen eines Verwaltungszertifikats finden Sie unter den folgenden Artikeln in der Azure-Dokumentation:
-- [Übersicht über Zertifikate für Azure Cloud Services](https://azure.microsoft.com/documentation/articles/cloud-services-certs-create/)
-- [Hochladen eines Verwaltungszertifikats für die Azure-Verwaltung-API](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/).
+- [Übersicht über Zertifikate für Azure Cloud Services](/azure/cloud-services/cloud-services-certs-create)
+- [Hochladen eines Verwaltungszertifikats für die Azure-Verwaltung-API](/previous-versions/azure/azure-api-management-certs).
 
 Stellen Sie sicher, dass Sie die Abonnement-ID kopieren, die dem Verwaltungszertifikat zugeordnet ist. Sie werden Sie zum Konfigurieren des Cloudproxydiensts in der Configuration Manager-Konsole benötigen.
 

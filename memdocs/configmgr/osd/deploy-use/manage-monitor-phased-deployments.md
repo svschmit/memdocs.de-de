@@ -10,20 +10,20 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66f31983e34ff37cd2df8532cd9d45d372ef1f3b
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: efc43258e65752e7371c9baadf61598aac820062
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125099"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697992"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Verwalten und Überwachen von stufenweisen Bereitstellungen
 
 In diesem Artikel wird beschrieben, wie stufenweise Bereitstellungen verwaltet und überwacht werden können. Verwaltungsaufgaben umfassen das manuelle Starten der nächsten Phase sowie das Anhalten oder Fortsetzen einer Phase. 
 
 Sie müssen zunächst eine stufenweise Bereitstellung erstellen: 
-- [Anwendung](create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
-- [Softwareupdate](create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Anwendung](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
+- [Softwareupdate](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Tasksequenz](create-phased-deployment-for-task-sequence.md)  
 
 
@@ -79,7 +79,7 @@ Sie können eine stufenweise Bereitstellung manuell anhalten oder fortsetzen. Be
 4. Wählen Sie die stufenweise Bereitstellung aus, und klicken Sie im Menüband auf **Anhalten** oder **Fortsetzen**. 
 
 > [!NOTE]
-> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole den alten Namen noch im Produkt Configuration Manager und der unterstützenden Dokumentation. 
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole den alten Namen noch im Produkt Configuration Manager und der unterstützenden Dokumentation. 
 
 <!-- Removed for 1806, need to clarify behavior with engineering
 When you suspend a phased deployment, it sets the available and deadline times on the active deployments to a future time. When you resume, it generates a new schedule based on when you resume the phased deployment. The new schedule helps to avoid problems if you resume after the original deadline. For example, the initial schedule has the required deadline seven days after the deployment is available. You suspend it on the second day. If you aren't ready to resume it until day eight, you don't want the deployment to be immediately past the deadline. So it generates a new deadline starting from when you resume the phased deployment on day eight. 
@@ -128,4 +128,3 @@ Das Ziel der Phase entspricht dem **Bereitstellungserfolg in Prozent** in den Ph
 
 Die folgenden Eigenschaften beziehen sich beispielsweise auf die gleiche Phase wie die oben dargestellte Kachel „Erfolgskriterien“, bei der die Kriterien 65 % betragen:  
 ![Registerkarte „Phaseneinstellungen“ in den Phaseneigenschaften](media/phase-properties-phase-settings.png)
-

@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b16ba822cb538b62fac06ee550dd17cfa8f077be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0e4fc5b019de25234ae964137f6b374ecbbca7d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124560"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697788"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Anpassen von Startimages mit Configuration Manager
 
@@ -49,7 +49,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
 
 - **WinPE-WDS-Tools:** Hiermit werden die Windows-Bereitstellungsdienste installiert.  
 
-  Es gibt noch weitere Windows PE-Pakete, die Sie hinzufügen können. Weitere Informationen zu den optionalen Komponenten, die Sie dem Startabbild hinzufügen können, finden Sie unter [WinPE: Hinzufügen von Paketen (Referenz zu optionalen Komponenten)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+  Es gibt noch weitere Windows PE-Pakete, die Sie hinzufügen können. Weitere Informationen zu den optionalen Komponenten, die Sie dem Startabbild hinzufügen können, finden Sie unter [WinPE: Hinzufügen von Paketen (Referenz zu optionalen Komponenten)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >Wenn Sie von einem benutzerdefinierten Startimage mit von Ihnen hinzugefügten Tools aus in WinPE starten, können Sie eine Eingabeaufforderung von WinPE aus öffnen und den Dateinamen eines Tools eingeben, um es auszuführen. Der Speicherort dieser Tools wird automatisch der Pfadvariable hinzugefügt. Die Befehlszeile kann nur hinzugefügt werden, wenn die Einstellung **Befehlsunterstützung aktivieren (nur Test)** auf der Registerkarte **Anpassung** der Startimageeigenschaften aktiviert wird.
@@ -72,7 +72,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
     Hierbei ist C:\WinPEWAIK der Ordner, in dem das Startabbild enthalten ist, und C:\WinPEMount der bereitgestellte Ordner.  
 
    > [!NOTE]
-   >  Weitere Informationen finden Sie in der [Referenz zu DISM (Deployment Image Servicing and Management)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+   >  Weitere Informationen finden Sie in der [Referenz zu DISM (Deployment Image Servicing and Management)](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Nach dem Bereitstellen des Startabbilds fügen Sie diesem mit DISM optionale Komponenten hinzu. In Windows PE 5 befinden sich die optionalen 64-Bit-Komponenten im Verzeichnis „<*Installationspfad*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs“.  
 
@@ -108,7 +108,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Weitere Informationen zu den optionalen Komponenten, die Sie dem Startabbild hinzufügen können, finden Sie in der [Referenz zu optionalen Komponenten in Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+   >  Weitere Informationen zu den optionalen Komponenten, die Sie dem Startabbild hinzufügen können, finden Sie in der [Referenz zu optionalen Komponenten in Windows PE](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Fügen Sie mithilfe von DISM erforderlichenfalls bestimmte Treiber zum Startabbild hinzu. Geben Sie Folgendes ein, um Treiber zum Startabbild hinzuzufügen:  
 
@@ -194,7 +194,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
     Hierbei ist C:\WinPEWAIK der Ordner, in dem das Startabbild enthalten ist, und C:\WinPEMount der bereitgestellte Ordner.  
 
    > [!NOTE]
-   > Weitere Informationen finden Sie in der [Referenz zu DISM (Deployment Image Servicing and Management)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+   > Weitere Informationen finden Sie in der [Referenz zu DISM (Deployment Image Servicing and Management)](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Nach dem Bereitstellen des Startabbilds fügen Sie diesem mit DISM optionale Komponenten hinzu. In Windows PE 3.1 beispielsweise befinden sich die optionalen Komponenten im Verzeichnis „<*Installationspfad*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\“.  
 
@@ -224,7 +224,7 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Weitere Informationen zu den verschiedenen Paketen, die Sie dem Startabbild hinzufügen können, finden Sie unter [Hinzufügen eines Pakets zu einem Windows PE-Abbild](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
+   >  Weitere Informationen zu den verschiedenen Paketen, die Sie dem Startabbild hinzufügen können, finden Sie unter [Hinzufügen eines Pakets zu einem Windows PE-Abbild](/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Fügen Sie mithilfe von DISM erforderlichenfalls bestimmte Treiber zum Startabbild hinzu. Geben Sie Folgendes ein, um Treiber zum Startabbild hinzuzufügen:  
 
@@ -290,4 +290,4 @@ Jede Version von Configuration Manager unterstützt eine bestimmte Version von W
 
     3.  Klicken Sie auf das in Schritt 3 angegebene Startabbild.  
 
-    4.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Verteilungspunkte aktualisieren**.  
+    4.  Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** auf **Verteilungspunkte aktualisieren**.

@@ -10,12 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5f441bc277f9c91cb1a83ce97879bd29b6349481
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dc8e31245212136cd67f6f8cac062723c2cabefb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701608"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696003"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Verwalten von Zertifikaten und Sicherheit für Updates Publisher
 
@@ -76,7 +76,7 @@ Das folgende Beispiel zeigt das Konfigurieren des selbstsignierten Zertifikats a
    -   Von Zertifizierungsstellen ausgestellte Zertifikate: Fügen Sie das Zertifikat dem Zertifikatspeicher **Vertrauenswürdige Herausgeber** hinzu.
 
    > [!NOTE]
-   > WUA überprüft auch, ob auf dem lokalen Computer die Gruppenrichtlinieneinstellung **Signierten Inhalt von Intranet-Speicherort für Microsoft-Updatedienst zulassen** aktiviert ist. Diese Richtlinieneinstellung muss für WUA aktiviert sein, damit Updates überprüft werden können, die mithilfe von Update Publisher erstellt und veröffentlicht wurden. Weitere Informationen zum Aktivieren dieser Gruppenrichtlinieneinstellung finden Sie unter [Gewusst wie: Konfigurieren der Gruppenrichtlinie auf Clientcomputern](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10)).
+   > WUA überprüft auch, ob auf dem lokalen Computer die Gruppenrichtlinieneinstellung **Signierten Inhalt von Intranet-Speicherort für Microsoft-Updatedienst zulassen** aktiviert ist. Diese Richtlinieneinstellung muss für WUA aktiviert sein, damit Updates überprüft werden können, die mithilfe von Update Publisher erstellt und veröffentlicht wurden. Weitere Informationen zum Aktivieren dieser Gruppenrichtlinieneinstellung finden Sie unter [Gewusst wie: Konfigurieren der Gruppenrichtlinie auf Clientcomputern](/previous-versions/bb530967(v=technet.10)).
 
 
 

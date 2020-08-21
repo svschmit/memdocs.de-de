@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2f8b8a45ff83ce903f5737c94144e6ca5ab50826
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124286"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697652"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Verwalten von Betriebsimages mit Configuration Manager
 
@@ -89,7 +89,7 @@ Bevor Sie ein Betriebssystemimage verwenden können, fügen Sie es zunächst Ihr
 
 5. Schließen Sie den Assistenten ab.  
 
-Die PowerShell-Cmdlet-Entsprechung dieses Konsolen-Assistenten finden Sie unter [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
+Die PowerShell-Cmdlet-Entsprechung dieses Konsolen-Assistenten finden Sie unter [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
 
 Verteilen Sie als nächstes das Betriebssystemimage an Verteilungspunkte.  
 
@@ -122,4 +122,4 @@ Verwenden Sie Multicastbereitstellungen, damit mehrere Computer gleichzeitig ein
 
          Bei Auswahl der Option **Transfer this package only via multicast** (Dieses Paket nur per Multicast übertragen) müssen Sie auch Bereitstellungsoption für die Tasksequenz auf **Inhalt lokal herunterladen, wenn dies für die ausgeführte Tasksequenz erforderlich ist** festlegen. Weitere Informationen finden Sie unter [Deploy a task sequence](../deploy-use/deploy-a-task-sequence.md).  
 
-5. Klicken Sie auf **OK**, um die Einstellungen zu speichern und die Imageeigenschaften zu schließen.  
+5. Klicken Sie auf **OK**, um die Einstellungen zu speichern und die Imageeigenschaften zu schließen.

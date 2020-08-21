@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 112a1fe4a47cce330593d34da7ce8d9180457497
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268520"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698904"
 ---
 # <a name="get-support-for-desktop-analytics"></a>Anfordern von Support für Desktop Analytics
 
@@ -31,7 +31,7 @@ Microsoft bietet für Desktop Analytics Unterstützung bei allgemeinen technisch
 
 ## <a name="help-and-support"></a>Hilfe und Support
 
-Wenn Sie Hilfe für Desktop Analytics anfordern möchten, können Sie im Portal unter **Problembehandlung + Support** die Option **Hilfe und Support** verwenden. Durch diese Aktion wird ein Online-Supportticket für Desktop Analytics erstellt. Zum Erstellen und Verwalten einer Supportanfrage muss Ihr Konto über eine Azure Active Directory (Azure AD)-Rolle verfügen, welche die Aktion **microsoft.office365.supportTickets/tickets/manage** einschließt. Weitere Informationen finden Sie unter [Administratorrollen in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
+Wenn Sie Hilfe für Desktop Analytics anfordern möchten, können Sie im Portal unter **Problembehandlung + Support** die Option **Hilfe und Support** verwenden. Durch diese Aktion wird ein Online-Supportticket für Desktop Analytics erstellt. Zum Erstellen und Verwalten einer Supportanfrage muss Ihr Konto über eine Azure Active Directory (Azure AD)-Rolle verfügen, welche die Aktion **microsoft.office365.supportTickets/tickets/manage** einschließt. Weitere Informationen finden Sie unter [Administratorrollen in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
 
 Wenn sich das Problem allgemeiner auf Configuration Manager und nicht nur auf Analytics bezieht, wenden Sie sich an den [Microsoft-Support](https://aka.ms/cmcbsupport), um eine neue Supportanfrage zu öffnen. Verwenden Sie die neue Kategorie **Desktop Analytics**.
 

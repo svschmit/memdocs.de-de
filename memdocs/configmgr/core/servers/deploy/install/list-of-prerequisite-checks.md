@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943789"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698955"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Liste mit Voraussetzungsprüfungen für Configuration Manager
 
@@ -279,7 +279,7 @@ Weitere Informationen finden Sie in dem Artikel zum Microsoft-Support unter [Pro
 
 Die SQL Server-Instanz wird so konfiguriert, dass sie die Sortierung **SQL_Latin1_General_CP1_CI_AS** verwendet.
 
-Wenn die Configuration Manager-Standortdatenbank bereits installiert wurde, wird diese Prüfung auch für die Datenbank durchgeführt. Weitere Informationen zum Ändern der Sortierung Ihrer SQL Server-Instanz und -Datenbank finden Sie unter [SQL collation and unicode support (SQL-Sortierung und Unicode-Unterstützung)](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support).
+Wenn die Configuration Manager-Standortdatenbank bereits installiert wurde, wird diese Prüfung auch für die Datenbank durchgeführt. Weitere Informationen zum Ändern der Sortierung Ihrer SQL Server-Instanz und -Datenbank finden Sie unter [SQL collation and unicode support (SQL-Sortierung und Unicode-Unterstützung)](/sql/relational-databases/collations/collation-and-unicode-support).
 
 Wenn Sie ein chinesisches Betriebssystem verwenden und die Unterstützung für GB18030 erforderlich ist, gilt diese Prüfung nicht. Weitere Informationen zum Aktivieren der GB18030-Unterstützung finden Sie unter [Internationale Unterstützung](../../../plan-design/hierarchy/international-support.md).
 
@@ -379,7 +379,7 @@ Bei der Verwendung von SQL Server Always On befinden sich die Verfügbarkeitsgru
 <!-- SCCMDocs-pr#3899 -->
 *Gilt für: Standortdatenbankserver*
 
-Ab Version 1906 müssen Sie beim Verwenden von SQL Server Always On Verfügbarkeitsgruppenreplikate mit demselben [Seedingmodus](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas) konfigurieren.
+Ab Version 1906 müssen Sie beim Verwenden von SQL Server Always On Verfügbarkeitsgruppenreplikate mit demselben [Seedingmodus](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas) konfigurieren.
 
 ### <a name="sql-availability-group-replicas-must-be-healthy"></a>SQL-Verfügbarkeitsgruppenreplikate müssen fehlerfrei sein.
 
@@ -741,7 +741,7 @@ Das Konto, das Sie zum Ausführen des SQL Server-Diensts für die Standortdatenb
 
 Prüfen Sie ab Version 1810, ob die Standortdatenbank über ein Backlog mit Daten zur SQL-Änderungsnachverfolgung verfügt.<!--SCCMDocs-pr issue 3023-->  
 
-Überprüfen Sie diese Prüfung manuell, indem Sie eine gespeicherte Diagnoseprozedur in der Standortdatenbank ausführen. Stellen Sie zunächst eine [Diagnoseverbindung](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) mit der Standortdatenbank her. Dies erreichen Sie am einfachsten mithilfe des Abfrage-Editors für die Datenbank-Engine von SQL Server Management Studio und einer Verbindung mit `admin:<instance name>`.
+Überprüfen Sie diese Prüfung manuell, indem Sie eine gespeicherte Diagnoseprozedur in der Standortdatenbank ausführen. Stellen Sie zunächst eine [Diagnoseverbindung](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) mit der Standortdatenbank her. Dies erreichen Sie am einfachsten mithilfe des Abfrage-Editors für die Datenbank-Engine von SQL Server Management Studio und einer Verbindung mit `admin:<instance name>`.
 
 Führen Sie in einem Abfragefenster für dedizierte Administratorverbindungen die folgenden Befehle aus:
 
@@ -804,7 +804,7 @@ Configuration Manager verwendet den SQL Server Native Client für die folgenden 
 
 SQL Server reserviert mindestens 8 GB Speicherplatz für den zentralen Verwaltungsstandort und den primären Standort und mindestens 4 GB für den sekundären Standort.
 
-Weitere Informationen finden Sie unter [So konfigurieren Sie Arbeitsspeicheroptionen mithilfe von SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
+Weitere Informationen finden Sie unter [So konfigurieren Sie Arbeitsspeicheroptionen mithilfe von SQL Server Management Studio](/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
 
 > [!NOTE]  
 > Diese Prüfung gilt nicht für SQL Server Express an einem sekundären Sekundärer Standort. Diese Edition ist auf 1 GB reservierten Speicherplatz eingeschränkt.  
@@ -849,7 +849,7 @@ Weitere Informationen finden Sie unter [Vorbereiten von Active Directory für di
 
 WinRM Version 1.1 ist auf dem Computer des primären Standortservers oder der Configuration Manager-Konsole installiert, um die Out-of-band-Verwaltungskonsole auszuführen.
 
-WinRM wird automatisch mit allen derzeit unterstützten Versionen von Windows installiert. Weitere Informationen finden Sie unter [Installation und Konfiguration für die Windows-Remoteverwaltung](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
+WinRM wird automatisch mit allen derzeit unterstützten Versionen von Windows installiert. Weitere Informationen finden Sie unter [Installation und Konfiguration für die Windows-Remoteverwaltung](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
 ### <a name="wsus-on-site-server"></a>WSUS auf Standortserver
 
@@ -857,4 +857,4 @@ WinRM wird automatisch mit allen derzeit unterstützten Versionen von Windows in
 
 Die Windows Server Update Services (WSUS) sind auf dem Standortserver installiert.
 
-Wenn Sie einen Softwareupdatepunkt auf einem Server verwenden, der von dem des Standortservers abweicht, müssen Sie auf dem Standortserver die WSUS-Administrationskonsole installieren. Weitere Informationen über WSUS finden Sie unter [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+Wenn Sie einen Softwareupdatepunkt auf einem Server verwenden, der von dem des Standortservers abweicht, müssen Sie auf dem Standortserver die WSUS-Administrationskonsole installieren. Weitere Informationen über WSUS finden Sie unter [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).

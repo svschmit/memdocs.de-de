@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1845b381d8b37fed3a785475e961cd39c54cf42d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d9dcefe942309ad57c823ec669b7aa6630974fa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125269"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698026"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Erstellen von stufenweisen Bereitstellungen mit Configuration Manager
 
@@ -122,7 +122,7 @@ Include a timeline diagram
 6. Bestätigen Sie Ihre Auswahl auf der Registerkarte **Zusammenfassung**, und klicken Sie auf **Weiter**, um den Assistenten abzuschließen.  
 
 > [!NOTE]
-> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole den alten Namen noch im Produkt Configuration Manager und der unterstützenden Dokumentation.  
+> Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole den alten Namen noch im Produkt Configuration Manager und der unterstützenden Dokumentation.  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Erstellen einer stufenweisen Bereitstellung mit manuell konfigurierten Phasen
 <!--1358148--> 
@@ -187,7 +187,7 @@ Nachdem Sie eine stufenweise Bereitstellung erstellt haben, öffnen Sie die Eige
 ## <a name="next-steps"></a>Nächste Schritte
 
 Verwalten und Überwachen von stufenweisen Bereitstellungen:
-- [Anwendung](manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
-- [Softwareupdate](manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Anwendung](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Softwareupdate](manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Tasksequenz](manage-monitor-phased-deployments.md)  
 

@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 11649452012de33ef1e62007d71466d5a45c56ca
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384943"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698604"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Grundlegende Konzepte für die Inhaltsverwaltung in Configuration Manager
 
@@ -132,7 +132,7 @@ Vergleichen Sie anhand der folgenden Tabelle grundlegende Features dieser Techno
 
 ## <a name="branchcache"></a>BranchCache
 
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) ist eine Windows-Technologie. Clients, die BranchCache unterstützen und eine von Ihnen für BranchCache konfigurierte Bereitstellung heruntergeladen haben, fungieren anschließend als Inhaltsquelle für andere Clients mit aktivierter BranchCache-Funktion.  
+[BranchCache](/windows-server/networking/branchcache/branchcache) ist eine Windows-Technologie. Clients, die BranchCache unterstützen und eine von Ihnen für BranchCache konfigurierte Bereitstellung heruntergeladen haben, fungieren anschließend als Inhaltsquelle für andere Clients mit aktivierter BranchCache-Funktion.  
 
 Sie verfügen beispielsweise über einen Verteilungspunkt, der Windows Server 2012 oder höher ausführt und als BranchCache-Sever konfiguriert ist. Wenn der erste BranchCache-fähige Client Inhalt von diesem Server anfordert, lädt er diesen Inhalt herunter und speichert ihn zwischen.  
 
@@ -145,9 +145,9 @@ Weitere Informationen finden Sie unter [Unterstützung für Windows BranchCache]
 ## <a name="delivery-optimization"></a>Übermittlungsoptimierung
 
 <!-- 1324696 -->
-Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung über Ihr gesamtes Unternehmensnetzwerk und Remotebüros hinweg zu definieren und zu regulieren. [Windows-Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) ist eine cloudbasierte Peer-zu-Peer-Technologie zum gemeinsamen Nutzen von Inhalten auf Windows 10-Geräten. Konfigurieren Sie die Übermittlungsoptimierung so, dass bei der Freigabe von Inhalten für Peers Ihre Begrenzungsgruppen verwendet werden. Clienteinstellungen legen die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client fest. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich die Inhalte befinden. Weitere Informationen finden Sie unter den Clienteinstellungen für die [Übermittlungsoptimierung](../../clients/deploy/about-client-settings.md#delivery-optimization).
+Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung über Ihr gesamtes Unternehmensnetzwerk und Remotebüros hinweg zu definieren und zu regulieren. [Windows-Übermittlungsoptimierung](/windows/deployment/update/waas-delivery-optimization) ist eine cloudbasierte Peer-zu-Peer-Technologie zum gemeinsamen Nutzen von Inhalten auf Windows 10-Geräten. Konfigurieren Sie die Übermittlungsoptimierung so, dass bei der Freigabe von Inhalten für Peers Ihre Begrenzungsgruppen verwendet werden. Clienteinstellungen legen die Begrenzungsgruppen-ID als Gruppen-ID für die Übermittlungsoptimierung auf dem Client fest. Wenn der Client mit dem Übermittlungsoptimierungs-Clouddienst kommuniziert, wird diese ID zum Ermitteln von Peers verwendet, auf denen sich die Inhalte befinden. Weitere Informationen finden Sie unter den Clienteinstellungen für die [Übermittlungsoptimierung](../../clients/deploy/about-client-settings.md#delivery-optimization).
 
-Übermittlungsoptimierung ist die empfohlene Technologie zum Optimieren der Windows 10-Updatebereitstellung von Expressinstallationsdateien für Windows 10-Qualitätsupdates. Ab Configuration Manager 1910 ist der Internetzugriff auf den Clouddienst Übermittlungsoptimierung eine Anforderung für den Einsatz der Peer-zu-Peer-Funktionalität. Informationen zu den erforderlichen Internetendpunkten finden Sie unter [Häufig gestellte Fragen zur Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Die Optimierung kann für alle Windows-Updates verwendet werden. Weitere Informationen finden Sie unter [Optimieren der Bereitstellung von Updates für Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+Übermittlungsoptimierung ist die empfohlene Technologie zum Optimieren der Windows 10-Updatebereitstellung von Expressinstallationsdateien für Windows 10-Qualitätsupdates. Ab Configuration Manager 1910 ist der Internetzugriff auf den Clouddienst Übermittlungsoptimierung eine Anforderung für den Einsatz der Peer-zu-Peer-Funktionalität. Informationen zu den erforderlichen Internetendpunkten finden Sie unter [Häufig gestellte Fragen zur Übermittlungsoptimierung](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Die Optimierung kann für alle Windows-Updates verwendet werden. Weitere Informationen finden Sie unter [Optimieren der Bereitstellung von Updates für Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft Connected Cache

@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e5ea198f944cf44909e54e123889a3f0f29b1db5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906423"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699108"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Verwenden von Clouddiensten mit Configuration Manager
 
@@ -78,4 +78,4 @@ Diese zusätzlichen Funktionen erfordern kein Azure-Abonnement. Sie müssen kein
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a> Sicherheit für cloudbasierte Dienste  
  Configuration Manager nutzt Zertifikate zum Bereitstellen des Zugriffs auf Ihre Inhalte in Azure und zum Verwalten der von Ihnen verwendeten Dienste. Die Daten, die Sie in Azure speichern, werden von Configuration Manager verschlüsselt. Über die von Azure bereitgestellten Sicherheitsfunktionen hinaus werden jedoch von Configuration Manager keine zusätzlichen Sicherheits- oder Datenschutzfunktionen bereitgestellt.  
 
- Weitere Informationen finden Sie in den Details zu den verschiedenen cloudbasierten Ressourcenszenarios. Weitere Informationen finden Sie unter [Einführung in die Azure-Sicherheit](https://docs.microsoft.com/azure/security/fundamentals/overview).
+ Weitere Informationen finden Sie in den Details zu den verschiedenen cloudbasierten Ressourcenszenarios. Weitere Informationen finden Sie unter [Einführung in die Azure-Sicherheit](/azure/security/fundamentals/overview).

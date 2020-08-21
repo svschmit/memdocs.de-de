@@ -10,12 +10,12 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 53aa7e932e782254f63b422526b315f3ce91f397
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f07f1277a9e87ea3266473fc54dc96907a0f0e6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906172"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698972"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Sprachpakete in Configuration Manager
 
@@ -42,7 +42,7 @@ Wenn Sie das Configuration Manager-Setup ausführen, werden Sprachpaketdateien a
 
 ## <a name="server-languages"></a>Serversprachen  
 
-Verwenden Sie die folgende Tabelle, um eine Gebietsschema-ID einer Sprache zuzuordnen, die auf Servern unterstützt werden soll. Weitere Informationen zu Gebietsschema-IDs finden Sie unter [Locale IDs assigned by Microsoft (Von Microsoft zugewiesene Gebietsschema-IDs)](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
+Verwenden Sie die folgende Tabelle, um eine Gebietsschema-ID einer Sprache zuzuordnen, die auf Servern unterstützt werden soll. Weitere Informationen zu Gebietsschema-IDs finden Sie unter [Locale IDs assigned by Microsoft (Von Microsoft zugewiesene Gebietsschema-IDs)](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Serversprache|Gebietsschema-ID (LCID)|Dreistelliger Code|  
 |---------------------|------------------------|-----------------------|  
@@ -69,7 +69,7 @@ Verwenden Sie die folgende Tabelle, um eine Gebietsschema-ID einer Sprache zuzuo
 
 ## <a name="client-languages"></a>Clientsprachen  
 
-Verwenden Sie die folgende Tabelle, um eine Gebietsschema-ID einer Sprache zuzuordnen, die auf Clientcomputern unterstützt werden soll. Weitere Informationen zu Gebietsschema-IDs finden Sie unter [Locale IDs assigned by Microsoft (Von Microsoft zugewiesene Gebietsschema-IDs)](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
+Verwenden Sie die folgende Tabelle, um eine Gebietsschema-ID einer Sprache zuzuordnen, die auf Clientcomputern unterstützt werden soll. Weitere Informationen zu Gebietsschema-IDs finden Sie unter [Locale IDs assigned by Microsoft (Von Microsoft zugewiesene Gebietsschema-IDs)](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Clientsprache|Gebietsschema-ID (LCID)|Dreistelliger Code|  
 |---------------------|------------------------|-----------------------|  

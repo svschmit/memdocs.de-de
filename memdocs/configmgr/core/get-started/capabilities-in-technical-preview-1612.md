@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0c2464bfba05d640868af7d5c8be7c32c0999946
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9cd0df25c64c4ca1e0d2ce98de5d2915f7564241
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705408"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693028"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-configuration-manager"></a>Funktionen in der Technical Preview 1612 für Configuration Manager
 
@@ -185,7 +185,7 @@ So führen Sie das Tool aus:
 2. Geben Sie als nächstes eine Befehlszeile mit den erforderlichen Befehlszeilen-Switches ein sowie die optionalen Switches, die Sie verwenden möchten.
 
 **Bekanntes Problem** Wenn das Tool ausgeführt wird, kann eine Fehlermeldung wie die folgende zurückgegeben werden, wenn ein Paket oder eine Bereitstellung fehlgeschlagen oder gerade in Bearbeitung ist:
--  *System.InvalidOperationException: Diese Inhaltsbibliothek kann jetzt nicht bereinigt werden, da das Paket \<Paket-ID> nicht vollständig installiert ist*.
+-  *System.InvalidOperationException: Diese Inhaltsbibliothek kann jetzt nicht bereinigt werden, da das Paket \<packageID> nicht vollständig installiert ist.*
 
 **Problemumgehung**: Keine. Das Tool kann nicht zuverlässig verwaiste Dateien identifizieren, wenn der Inhalt in Bearbeitung ist oder nicht bereitgestellt werden konnte. Aus diesem Grund kann das Tool den Inhalt nicht bereinigen, bis das Problem gelöst wurde.
 
@@ -201,7 +201,7 @@ Die folgenden Befehlszeilen-Switches können in jeglicher Reihenfolge verwendet 
 | **/dp &lt;distribution point FQDN>**  | **Erforderlich** </br> Geben Sie den vollständig qualifizierten Domänennamen (FQDN) des Verteilungspunkts an, den Sie bereinigen möchten. </br></br> Beispiel:  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
 | **/ps &lt;primary site FQDN>**       | **Optional** wenn Inhalt von einem Verteilungspunkt an einem primären Standort bereinigt wird.</br>**Erforderlich** wenn Inhalt von einem Verteilungspunkt an einem sekundären Standort bereinigt wird. </br></br> Geben Sie den FQDN des primären Standorts an, zu dem der Verteilungspunkt gehört, oder geben Sie den übergeordneten primären Standort an, wenn sich der Verteilungspunkt an einem sekundären Standort befindet. </br></br> Beispiel: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;primary site code>**  | **Optional** wenn Inhalt von einem Verteilungspunkt an einem primären Standort bereinigt wird.</br>**Erforderlich** wenn Inhalt von einem Verteilungspunkt an einem sekundären Standort bereinigt wird. </br></br> Geben Sie den Standordcode des primären Standorts an, zu dem der Verteilungspunkt gehört, oder geben Sie den übergeordneten primären Standort an, wenn sich der Verteilungspunkt an einem sekundären Standort befindet.</br></br> Beispiel: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log \<Protokolldateiverzeichnis>**       |**Optional** </br> Bestimmen Sie ein Verzeichnis zur Ablage der Protokolldateien. Dies kann ein lokales Laufwerk oder eine Netzwerkfreigabe sein.</br></br> Wenn dieser Schalter nicht verwendet wird, werden die Protokolldateien automatisch im temporären Ordner des Benutzers abgelegt.</br></br> Beispiel für ein lokales Laufwerk: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Beispiel für eine Netzwerkfreigabe: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;Freigabe>\&lt;Ordner>***|
+| **/Protokoll \<log file directory>**       |**Optional** </br> Bestimmen Sie ein Verzeichnis zur Ablage der Protokolldateien. Dies kann ein lokales Laufwerk oder eine Netzwerkfreigabe sein.</br></br> Wenn dieser Schalter nicht verwendet wird, werden die Protokolldateien automatisch im temporären Ordner des Benutzers abgelegt.</br></br> Beispiel für ein lokales Laufwerk: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Beispiel für eine Netzwerkfreigabe: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;Freigabe>\&lt;Ordner>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>Verbesserungen für die Suche in der Konsole
@@ -317,4 +317,4 @@ Nachdem Sie diese Konfigurationsänderungen vollzogen haben, können Sie eine Be
 
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>Ändern der Konfiguration der Multi-Factor Authentication zur Registrierung des Geräts
 
-Jetzt da Sie Multi-Factor Authentication (MFA) zur Geräteregistrierung im Azure-Portal einrichten können, wurde die MFA-Option aus der Configuration Manager-Konsole entfernt. Weitere Informationen zum Einrichten von MFA bei der Anmeldung finden Sie [in diesem Microsoft Intune-Thema](/mem/intune/enrollment/multi-factor-authentication)
+Jetzt da Sie Multi-Factor Authentication (MFA) zur Geräteregistrierung im Azure-Portal einrichten können, wurde die MFA-Option aus der Configuration Manager-Konsole entfernt. Weitere Informationen zum Einrichten von MFA bei der Anmeldung finden Sie [in diesem Microsoft Intune-Thema](../../../intune/enrollment/multi-factor-authentication.md)

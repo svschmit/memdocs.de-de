@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf108cec074129f9b70e7cd2658cf2b1c8c10bc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124884"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697907"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI
 
@@ -91,7 +91,7 @@ Windows 10 enthält ein einfaches Konvertierungstool: **MBR2GPT**. Es automatis
     > [!TIP]
     > Sie können das Tool MBR2GPT.EXE auch ausführen, wenn Sie sich unter Windows PE statt in der Vollversion des Betriebssystems befinden. Fügen Sie vor dem Schritt zum Ausführen von MBR2GPT einen Schritt hinzu, mit dem der Computer in Windows PE neu gestartet wird. Entfernen Sie dann die Option **/AllowFullOS** aus der Befehlszeile.
 
-    Weitere Informationen über das Tool und die verfügbaren Optionen finden Sie unter [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
+    Weitere Informationen über das Tool und die verfügbaren Optionen finden Sie unter [MBR2GPT.EXE](/windows/deployment/mbr-to-gpt).
 
     1. Fügen Sie einen Schritt zum Ausführen des OEM-Tools hinzu, das die Firmware von BIOS in UEFI konvertiert. Dabei handelt es sich üblicherweise um den Schritt **Befehlszeile ausführen**, der eine Befehlszeile zum Ausführen des OEM-Tools enthält.
 
