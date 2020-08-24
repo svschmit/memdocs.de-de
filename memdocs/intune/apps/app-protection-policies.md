@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 1cb05cb518d4edfb443bf4f70ff1c51154e17f4c
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216398"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217641"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Erstellen und Zuweisen von App-Schutzrichtlinien
 
@@ -103,7 +103,7 @@ Befolgen Sie beim Erstellen neuer App-Schutzrichtlinien für iOS-/iPadOS- und An
     - **Bedingter Start von Android-Apps:** Weitere Informationen finden Sie unter [Einstellungen für Schutzrichtlinien für Android-Apps](app-protection-policy-settings-android.md#conditional-launch).
 
 9. Klicken Sie auf **Weiter**, um die Seite **Zuweisungen** anzuzeigen.<br>
-   Mit der Seite **Zuweisungen** können Sie die App-Schutzrichtlinie bestimmten Gruppen von Benutzern zuweisen.
+   Mit der Seite **Zuweisungen** können Sie die App-Schutzrichtlinie bestimmten Gruppen von Benutzern zuweisen. Sie müssen die Richtlinie auf eine Gruppe von Benutzern anwenden, damit sie in Kraft tritt.
 
 10. Klicken Sie auf **Next: Review and create** (Weiter: Überprüfen und erstellen), um die Werte und Einstellungen zu überprüfen, die Sie für diese App-Schutzrichtlinie eingegeben haben.
 
@@ -111,6 +111,9 @@ Befolgen Sie beim Erstellen neuer App-Schutzrichtlinien für iOS-/iPadOS- und An
 
     > [!TIP]
     > Diese Richtlinieneinstellungen werden nur durchgesetzt, wenn Apps im beruflichen Kontext verwendet werden. Wenn der Endbenutzer die App zum Erledigen einer privaten Aufgabe verwendet, ist er von diesen Richtlinien nicht betroffen. Beachten Sie, dass Dateien, die Sie neu erstellen, als persönliche Dateien angesehen werden.
+
+    > [!IMPORTANT]
+    > Es kann eine Weile dauern, bis App-Schutzrichtlinien auf vorhandene Geräte angewendet werden. Endbenutzern wird eine Benachrichtigung auf dem Gerät angezeigt, wenn die App-Schutzrichtlinie angewendet wird. Wenden Sie Ihre App-Schutzrichtlinien auf Geräte an, bevor Sie Regeln für bedingten Zugriff anwenden.
 
 Endbenutzer können die Apps aus dem App Store oder aus Google Play herunterladen. Weitere Informationen finden Sie in folgenden Quellen:
 * [Was Sie erwartet, wenn Ihre Android-App von App-Schutzrichtlinien verwaltet wird](../fundamentals/end-user-mam-apps-android.md)

@@ -1,12 +1,12 @@
 ---
-title: Querladen von Windows- und Windows Phone-Apps
+title: Querladen von Windows-Apps
 titleSuffix: Microsoft Intune
 description: Erfahren Sie, wie Sie branchenspezifische Apps signieren, um sie mit Intune bereitstellen zu können.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8194c3fcc90942b791d5300a37b3c093a5229cc9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989589"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179620"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signieren Sie branchenspezifische Apps, damit sie mit Intune auf Windows-Geräten bereitgestellt werden können
 
@@ -64,13 +64,13 @@ Intune stellt nur die neueste hochgeladene CER-Datei bereit. Wenn Sie über mehr
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>So wird das Symantec-Codesignaturzertifikat erneuert
 
-Das zum Bereitstellen von mobilen Windows Phone 8.1-Apps verwendete Zertifikat wurde am 28. Februar 2019 eingestellt und steht nicht mehr zur Verlängerung durch Symantec zur Verfügung. Wenn Sie eine App für Windows 10 Mobile bereitstellen, können Sie weiterhin Symantec Desktop Enterprise-Zertifikate verwenden, die Codesignaturen hinzufügen, indem Sie die unter [Querladen von Windows 10](app-sideload-windows.md#windows-10-sideloading) beschriebenen Anweisungen befolgen.
+Das zum Bereitstellen von mobilen Windows Phone 8.1-Apps verwendete Zertifikat wurde am 28. Februar 2019 eingestellt und steht nicht mehr zur Verlängerung durch Symantec zur Verfügung. Außerdem hat Intune den Support für Windows 10 Mobile am 10. August 2020 beendet.
 
 ## <a name="how-to-install-the-updated-certificate-for-line-of-business-lob-apps"></a>Installieren des aktualisierten Zertifikats für branchenspezifische Apps
 
 Windows Phone 8.1
 
-Der Intune-Dienst kann keine branchenspezifischen Apps mehr für diese Plattform bereitstellen, wenn das vorhandene codesignierende Symantec Mobile Enterprise-Zertifikat abgelaufen ist. Sie können weiterhin nicht signierte XAP/APPX-Dateien querladen, indem Sie eine SD-Karte nutzen oder die Datei auf das Gerät herunterladen. Weitere Informationen finden Sie unter [How to install XAP files on Windows Phone](https://answers.microsoft.com/en-us/mobiledevices/forum/mdlumia-mdapps/how-to-install-xap-file-in-windows-phone-8/da09ee72-51ae-407c-9b85-bc148df89280) (Installieren von XAP-Dateien unter Windows Phone).
+Der Intune-Dienst kann keine branchenspezifischen Apps mehr für diese Plattform bereitstellen, wenn das vorhandene codesignierende Symantec Mobile Enterprise-Zertifikat abgelaufen ist.
 
 Windows 8.1 Desktop/Windows 10 Desktop und Mobile
 
@@ -102,7 +102,7 @@ Weitere Informationen zur Behandlung von Abhängigkeiten für universelle Apps d
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Wie aktualisiere ich das Unternehmensportal auf den Geräten meiner Benutzer, wenn diese bereits die älteren Apps aus dem Store installiert haben?
 
-Falls Ihre Benutzer bereits die Unternehmensportal-App für Windows 8.1 oder Windows Phone 8.1 aus dem Store installiert haben, sollte diese automatisch auf die neue Version aktualisiert werden, ohne dass Sie oder Ihre Benutzer dazu aktiv werden müssen. Sollte die Aktualisierung nicht erfolgen, fordern Sie die Benutzer auf, sich zu vergewissern, dass sie auf ihren Geräten automatische Updates für Store-Apps aktiviert haben.
+Falls Ihre Benutzer bereits die Unternehmensportal-App für Windows 8.1 aus dem Store installiert haben, sollte diese automatisch auf die neue Version aktualisiert werden, ohne dass Sie oder Ihre Benutzer dazu aktiv werden müssen. Sollte die Aktualisierung nicht erfolgen, fordern Sie die Benutzer auf, sich zu vergewissern, dass sie auf ihren Geräten automatische Updates für Store-Apps aktiviert haben.
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Wie führe ich ein Upgrade meiner quergeladenen Windows 8.1-Unternehmensportal-App auf die Windows 10-Unternehmensportal-App durch?
 
@@ -112,9 +112,9 @@ Wenn Sie die App querladen möchten und das Windows 8.1-Unternehmensportal berei
 
 Wenn Sie die App querladen möchten und das Windows 8.1-Unternehmensportal mit dem Symantec-Codesignaturzertifikat bereitgestellt und signiert haben, führen Sie die Schritte des folgenden Abschnitts aus.  
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Wie führe ich ein Upgrade meiner signierten quergeladenen Windows Phone 8.1-Unternehmensportal-App oder Windows 8.1-Unternehmensportal-App auf die Windows 10-Unternehmensportal-App durch?
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Wie führe ich ein Upgrade meiner signierten und quergeladenen Windows 8.1-Unternehmensportal-App auf die Windows 10-Unternehmensportal-App durch?
 
-Wir empfehlen für die Migration die folgende Vorgehensweise: Legen Sie die Bereitstellungsaktion auf „Deinstallieren“ fest, um die vorhandene Bereitstellung der Windows Phone 8.1-Unternehmensportal-App oder Windows 8.1-Unternehmensportal-App zu löschen. Anschließend kann die Windows 10-Unternehmensportal-App ganz normal bereitgestellt werden.  
+Wir empfehlen für die Migration folgende Vorgehensweise: Legen Sie die Bereitstellungsaktion auf „Deinstallieren“ fest, um die vorhandene Bereitstellung der Windows 8.1-Unternehmensportal-App zu löschen. Anschließend kann die Windows 10-Unternehmensportal-App ganz normal bereitgestellt werden.  
 
 Andernfalls muss die Windows 10-Unternehmensportal-App entsprechend aktualisiert und signiert werden, um sicherzustellen, dass der Upgradepfad eingehalten wird.  
 
@@ -130,7 +130,7 @@ Im Anschluss erfahren Sie, wie Sie die App auf diese Weise signieren und bereits
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | InputWin10AppxBundle  |                                             Der Pfad, an dem sich die APPXBUNDLE-Quelldatei befindet.                                              |
 | OutputWin10AppxBundle |                                                  Der Ausgabepfad für die signierte APPXBUNDLE-Datei.                                                  |
-|       Win81Appx       |                          Der Pfad, an dem sich die APPX-Datei des Windows 8.1- oder Windows Phone 8.1-Unternehmensportals befindet.                           |
+|       Win81Appx       |                          Der Pfad, in dem sich die APPX-Datei des Windows 8.1-Unternehmensportals befindet.                           |
 |      PfxFilePath      |                                   Der Pfad der PFX-Datei für das Symantec Enterprise Mobile-Codesignaturzertifikat.                                    |
 |      PfxPassword      |                                     Das Kennwort des Symantec Enterprise Mobile-Codesignaturzertifikats.                                      |
 |      PublisherId      |      Die Herausgeber-ID des Unternehmens. Wenn sie nicht vorhanden ist, wird das Feld "Subject" von Symantec Enterprise Mobile Code Signing Certificate verwendet.       |

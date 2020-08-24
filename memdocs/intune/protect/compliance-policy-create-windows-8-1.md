@@ -1,11 +1,11 @@
 ---
 title: Windows 8.1-Konformitätseinstellungen in Microsoft Intune – Azure | Microsoft-Dokumentation
-description: Dieser Artikel enthält eine Liste aller Einstellungen, die Sie verwenden können, um Konformität für Ihre Windows 8.1- und Windows Phone 8.1-Geräte in Microsoft Intune festzulegen. Überprüfen Sie die Konformität mit der minimalen und maximalen Betriebssystemversion, legen Sie Kennwortbeschränkungen und -länge fest, aktivieren Sie die Verschlüsselung der Datenspeicherung und vieles mehr.
+description: Dieser Artikel enthält eine Liste aller Einstellungen, mit denen Sie Konformität mit Windows 8.1 in Microsoft Intune festlegen können. Überprüfen Sie die Konformität mit der minimalen und maximalen Betriebssystemversion, legen Sie Kennwortbeschränkungen und -länge fest, aktivieren Sie die Verschlüsselung der Datenspeicherung und vieles mehr.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,38 +15,31 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0189fea7f73b70286a6daf844a10806d4c1e8a5d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9b423d289e81c48479adcaa7a594974b23a9476c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353202"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252706"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Windows 8.1-Einstellungen, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen
 
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 In diesem Artikel werden die verschiedenen Konformitätseinstellungen aufgeführt und beschrieben, die Sie in Intune für Windows 8.1-Geräte festlegen können. Im Rahmen Ihrer MDM-Lösung (Mobile Device Management, Verwaltung mobiler Geräte) können Sie mit diesen Einstellungen einfache Kennwörter blockieren, eine minimale oder maximale Betriebssystemversion festlegen und vieles mehr.
 
 Diese Funktion gilt für:
 
-- Windows Phone 8.1
 - Windows 8.1 und höher
 
 Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die Ressourcen Ihrer Organisation zu schützen. Weitere Informationen zu Konformitätsrichtlinien und ihren Aufgaben finden Sie unter [Erste Schritte bei der Gerätekonformität](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-[Erstellen einer Konformitätsrichtlinie](create-compliance-policy.md#create-the-policy) Wählen Sie als **Plattform** die Option **Windows Phone 8.1** oder **Windows 8.1 und höher**aus.
+[Erstellen einer Konformitätsrichtlinie](create-compliance-policy.md#create-the-policy) Wählen Sie unter **Plattform** die Option **Windows 8.1 und höher** aus.
 
 ## <a name="device-properties"></a>Geräteeigenschaften
 
 ### <a name="operating-system-version"></a>Version des Betriebssystems
-
-**Windows Phone (8.1 oder höher)**
-- **Niedrigste zulässige Betriebssystemversion für mobile Geräte:**  
-  Geben Sie die niedrigste zulässige Version ein. Wenn ein Gerät die Anforderung an die Mindestversion des Betriebssystems nicht erfüllt, wird es als nicht konform gemeldet. Ein Link zur Vorgehensweise zum Upgrade wird angezeigt. Der Gerätebenutzer kann ein Upgrade seines Geräts durchführen, und anschließend auf die Unternehmensressourcen zugreifen.
-
-- **Höchste zulässige Betriebssystemversion für mobile Geräte:**  
-  Geben Sie die höchste zulässige Version ein. Wenn auf einem Gerät eine neuere Betriebssystemversion verwendet wird, als die in der Regel eingegebene Version, wird der Zugriff auf Organisationsressourcen gesperrt. Der Gerätebenutzer wird aufgefordert, sich an den zuständigen IT-Administrator zu wenden. Das Gerät kann solange nicht auf Organisationsressourcen zugreifen, bis die Regel geändert und die betreffende Betriebssystemversion zugelassen wird.
 
 **Windows 8.1 und höher**
 - **Mindestversion des Betriebssystems**:  

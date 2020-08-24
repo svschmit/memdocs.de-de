@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462234"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252757"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurieren des lokalen Exchange-Zugriffs für Intune
 
@@ -69,14 +69,13 @@ Bevor Sie den bedingten Zugriff konfigurieren, überprüfen Sie, ob folgende Kon
 
 ### <a name="support-for-mobile-devices"></a>Unterstützung für mobile Geräte
 
-- **Windows Phone 8.1 und höher:** Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
+- **Windows Phone**: Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
 - **Native E-Mail-App unter iOS/iPadOS:** Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
 - **EAS-E-Mail-Clients wie Gmail unter Android 4 oder höher:** Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
 
 - **EAS-E-Mail-Clients unter Android-Geräteadministrator**: Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
 
 - **EAS-E-Mail-Clients auf Android-Arbeitsprofilgeräten:** Auf Android-Arbeitsprofilgeräten werden nur *Gmail* und *Nine Work for Android Enterprise* unterstützt. Damit der bedingte Zugriff mit Android-Arbeitsprofilen funktioniert, müssen Sie ein E-Mail-Profil für die *Gmail*- oder *Nine Work for Android Enterprise*-App erstellen und diese Apps als erforderliche Installation bereitstellen. Nachdem Sie die App bereitgestellt haben, können Sie den gerätebasierten bedingten Zugriff einrichten.
-
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>So richten Sie den bedingten Zugriff für Android-Arbeitsprofilgeräten ein
 

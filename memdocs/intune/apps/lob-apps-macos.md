@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 673adad15e92fb06cf5cf7c3589b06ab8b1b337a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 407189163107da24e19b84c2011fa47f6a796475
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990654"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591692"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Hinzufügen von branchenspezifischen (Line-of-Business, LOB) macOS-Apps zu Microsoft Intune
 
@@ -42,8 +42,7 @@ Fügen Sie mithilfe der Informationen in diesem Artikel Microsoft Intune branche
 Sie müssen ein externes Tool herunterladen, das heruntergeladene Tool als ausführbare Datei markieren und Ihre *PKG*-Dateien mit dem Tool vorab verarbeiten, bevor Sie Ihre branchenspezifische Datei in Microsoft Intune hochladen können. Die Vorverarbeitung Ihrer *PKG*-Dateien muss auf einem macOS-Gerät erfolgen. Verwenden Sie das Intune App Wrapping Tool für Mac, um die Verwaltung von Mac-Apps mit Microsoft Intune zu ermöglichen.
 
 > [!IMPORTANT]
-> Die *PKG*-Datei muss mit dem Zertifikat „Developer ID Installer“ signiert werden, das von einem Apple Developer-Konto abgerufen wird. Nur *PKG*-Dateien können verwendet werden, um macOS-LOB-Apps in Microsoft Intune hochzuladen. Konvertierung anderer Formate, z.B. *.dmg* in *.pkg*, wird nicht unterstützt.
->
+> Die *PKG*-Datei muss mit dem Zertifikat „Developer ID Installer“ signiert werden, das von einem Apple Developer-Konto abgerufen wird. Nur *PKG*-Dateien können verwendet werden, um macOS-LOB-Apps in Microsoft Intune hochzuladen. Konvertierung anderer Formate, z. B. *DMG* in *PKG*, wird jedoch nicht unterstützt. Weitere Informationen zur Konvertierung von Nicht-PKG-Anwendungstypen finden Sie unter [How to deploy DMG or APP-format apps to Intune-managed Macs](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416) (Bereitstellen von DMG- oder APP-Format-Apps für Macs, die mit Intune verwaltet werden).
 
 1. Laden Sie das [Intune App Wrapping Tool für Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac) herunter.
 
@@ -93,7 +92,7 @@ Sie müssen ein externes Tool herunterladen, das heruntergeladene Tool als ausf�
     - **Name:** Geben Sie den Namen der App so ein, wie er im Unternehmensportal angezeigt wird. Stellen Sie sicher, dass alle App-Namen eindeutig sind. Wenn ein App-Name zweimal vergeben wird, wird im Unternehmensportal nur eine der Apps angezeigt.
     - **Beschreibung:** Geben Sie eine Beschreibung für die App ein. Die Beschreibung wird im Unternehmensportal angezeigt.
     - **Herausgeber**: Geben Sie den Namen des Herausgebers der App ein.
-    - **Mindestens erforderliches Betriebssystem**: Wählen Sie aus der Liste die mindestens erforderliche Betriebssystemversion aus, unter der die App installiert werden kann. Wenn Sie die App einem Gerät mit einem älteren Betriebssystem zuweisen, wird sie nicht installiert.
+    - **Mindestens erforderliches Betriebssystem**: Wählen Sie aus der Liste die mindestens erforderliche Betriebssystemversion aus, auf der die App installiert werden kann. Wenn Sie die App einem Gerät mit einem älteren Betriebssystem zuweisen, wird sie nicht installiert.
     - **Kategorie**: Wählen Sie eine oder mehrere der integrierten oder von Ihnen erstellten App-Kategorien aus. Kategorien erleichtern es dem Benutzer, die App über das Unternehmensportal zu finden.
     - **Diese App als ausgewählte App im Unternehmensportal anzeigen**: Präsentieren Sie die App herausgehoben auf der Hauptseite des Unternehmensportals, wenn die Benutzer nach Apps suchen.
     - **Informations-URL**: Geben Sie optional eine URL zu einer Website ein, die Informationen über diese App enthält. Die URL wird im Unternehmensportal angezeigt.

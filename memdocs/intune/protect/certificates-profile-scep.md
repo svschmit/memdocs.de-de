@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/10/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048088"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559537"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Erstellen und Zuweisen eines SCEP-Zertifikatprofils in Intune
 
@@ -211,13 +211,15 @@ Nachdem Sie [Ihre Infrastruktur für die Unterstützung von SCEP-Zertifikaten (S
 
    - **Hashalgorithmus**:
 
-     *(Gilt für Android, Android Enterprise, Windows Phone 8.1, Windows 8.1 und höher sowie Windows 10 und höher)*
+     *(Gilt für Android, Android Enterprise, Windows 8.1 und höher sowie Windows 10 und höher)*
 
      Wählen Sie einen der verfügbaren Hashalgorithmustypen, der für dieses Zertifikat verwendet werden soll. Wählen Sie die höchste Sicherheitsebene aus, die die verbundenen Geräten unterstützen.
 
    - **Stammzertifikat**:
 
      Wählen Sie das *vertrauenswürdige Zertifikatprofil* aus, das Sie zuvor konfiguriert und den entsprechenden Benutzern und Geräten für dieses SCEP-Zertifikatprofil zugewiesen haben. Das vertrauenswürdige Zertifikatprofil wird zum Bereitstellen von Benutzern und Geräten mit dem Zertifikat der vertrauenswürdigen Stammzertifizierungsstelle verwendet. Weitere Informationen zum vertrauenswürdigen Zertifikatprofil finden Sie unter [Exportieren des Zertifikats der vertrauenswürdigen Stammzertifizierungsstelle](certificates-configure.md#export-the-trusted-root-ca-certificate) und [Erstellen vertrauenswürdiger Zertifikatprofile](certificates-configure.md#create-trusted-certificate-profiles) in *Verwenden von Zertifikaten für die Authentifizierung in Intune*. Wenn Sie über eine Stammzertifizierungsstelle und eine ausstellende Zertifizierungsstelle verfügen, wählen Sie das vertrauenswürdige Stammzertifikatprofil aus, das die ausstellende Zertifizierungsstelle überprüft.
+     > [!NOTE]
+     > Wenn Sie auf iOS/iPadOS-Geräten über eine Stammzertifizierungsstelle und eine ausstellende Zertifizierungsstelle verfügen, wählen Sie das vertrauenswürdige Stammzertifikatprofil aus, das die Stammzertifizierungsstelle überprüft. 
 
    - **Erweiterte Schlüsselverwendung**:
 

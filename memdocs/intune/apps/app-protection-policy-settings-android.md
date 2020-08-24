@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f5b4c8400e993de4ecde0aa3d7c30f82a20e6b
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d8fd15b7bdc52d3cd8dc00f77dced42e9bb6bd66
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262709"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252151"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Einstellungen für App-Schutzrichtlinien in Microsoft Intune
 In diesem Artikel werden die Einstellungen für App-Schutzrichtlinien für Android-Geräte beschrieben. Die beschriebenen Richtlinieneinstellungen können im Azure-Portal im Bereich **Einstellungen** für eine App-Schutzrichtlinie [konfiguriert](app-protection-policies.md) werden.
@@ -127,9 +127,9 @@ Weitere Informationen finden Sie unter [Ausnahmen von der Datenübertragungsrich
 
 
 ## <a name="conditional-launch"></a>Bedingter Start
-Konfigurieren Sie die Einstellungen für einen bedingten Start, um die Sicherheitsanforderungen bei der Anmeldung für Ihre Zugriffsschutzrichtlinie festzulegen. 
+Konfigurieren Sie die Einstellungen für einen bedingten Start, um die Sicherheitsanforderungen bei der Anmeldung für Ihre App-Schutzrichtlinie festzulegen. 
 
-Standardmäßig werden mehrere Einstellungen mit vorkonfigurierten Werten und Aktionen bereitgestellt. Sie können einige der Einstellungen löschen, z.B. *Mindestversion für Betriebssystem*. Außerdem können Sie zusätzliche Einstellungen in der Dropdownliste **Eine auswählen** auswählen. 
+Standardmäßig werden mehrere Einstellungen mit vorkonfigurierten Werten und Aktionen bereitgestellt. Sie können einige der Einstellungen löschen, z. B. *Mindestversion für Betriebssystem*. Außerdem können Sie zusätzliche Einstellungen in der Dropdownliste **Eine auswählen** auswählen. 
 
 | Einstellung | Verwendung |  
 |---------|------------| 

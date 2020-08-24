@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6152b4380abacde6dd6e8e014ebe91aa258edb
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912577"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217217"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Verwalten von iOS- und macOS-Apps, die über das Apple Volume Purchase Program mit Microsoft Intune erworben wurden
 
@@ -94,24 +94,30 @@ Migrieren Sie in Apple Business Manager oder Apple School Manager vorhandene erw
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Wählen Sie **Mandantenverwaltung** > **Connectors und Token** > **Apple-VPP-Token** aus.
-3. Klicken Sie im Bereich mit der Liste der VPP-Token auf **Erstellen**.
-4. Geben Sie im Bereich **VPP-Token erstellen** die folgenden Informationen an:
-    - **VPP-Tokendatei**: Falls noch nicht geschehen, registrieren Sie sich für Apple Business Manager oder Apple School Manager. Sobald Sie registriert sind, laden Sie das Apple-VPP-Token für Ihr Konto herunter und wählen es hier aus.
-    - **Apple-ID:** Geben Sie die verwaltete Apple-ID des Kontos ein, das dem hochgeladenen Konto zugeordnet ist.
-    - **Steuerung des Tokens aus anderer MDM-Lösung übernehmen**: Wenn Sie diese Option auf **Ja** festlegen, kann das Token von einer anderen MDM-Lösung zu Intune neu zugewiesen werden.
-    - **Tokenname** – ein administratives Feld zum Festlegen des Tokennamens.
-    - **Land/Region**: Wählen Sie den VPP Store für Ihr Land bzw. Ihre Region aus.  Intune synchronisiert VPP-Apps für alle Gebietsschemas aus dem angegebenen VPP Store für das Land oder die Region.
+3. Klicken Sie im Bereich mit der Liste der VPP-Token auf **Erstellen**. Der **VPP-Token erstellen**-Prozess wird angezeigt. Beim Erstellen eines VPP-Tokens werden vier Seiten verwendet. Die erste ist **Grundlagen**.
+4. Geben Sie auf der Seite für die **Grundlagen** die folgenden Informationen an:
+   - **Tokenname** – ein administratives Feld zum Festlegen des Tokennamens.
+   - **Apple-ID:** Geben Sie die verwaltete Apple-ID des Kontos ein, das dem hochgeladenen Konto zugeordnet ist.
+   - **VPP-Tokendatei**: Falls noch nicht geschehen, registrieren Sie sich für Apple Business Manager oder Apple School Manager. Sobald Sie registriert sind, laden Sie das Apple-VPP-Token für Ihr Konto herunter und wählen es hier aus.
+5. Klicken Sie auf **Weiter**, um die Seite **Einstellungen** anzuzeigen.
+6. Geben Sie auf der Seite **Einstellungen** folgende Informationen an:
+   - **Steuerung des Tokens aus anderer MDM-Lösung übernehmen**: Wenn Sie diese Option auf **Ja** festlegen, kann das Token von einer anderen MDM-Lösung zu Intune neu zugewiesen werden.
+   - **Land/Region**: Wählen Sie den VPP Store für Ihr Land bzw. Ihre Region aus.  Intune synchronisiert VPP-Apps für alle Gebietsschemas aus dem angegebenen VPP Store für das Land oder die Region.
+
         > [!WARNING]  
         > Wenn Sie das Land oder die Region ändern, werden bei der nächsten Synchronisierung mit dem Apple-Dienst die Metadaten und die App Store-URL für Apps aktualisiert, die mit diesem Token erstellt wurden. Eine App wird nicht aktualisiert, wenn sie in dem neuen Store für das Land bzw. die Region nicht vorhanden ist.
 
-    - **Typ des VPP-Kontos:** Wählen Sie **Unternehmen** oder **Bildungswesen** aus.
-    - **Automatische App-Updates**: Mit **On** (Ein) und **Off** (Aus) können Sie automatische Updates aktivieren oder deaktivieren. Wenn diese Option aktiviert ist, erkennt Intune Updates für VPP-Apps in App Store und überträgt diese beim Geräte-Check-In automatisch mithilfe von Push auf das Gerät.
+   - **Typ des VPP-Kontos:** Wählen Sie **Unternehmen** oder **Bildungswesen** aus.
+   - **Automatische App-Updates**: Mit **On** (Ein) und **Off** (Aus) können Sie automatische Updates aktivieren oder deaktivieren. Wenn diese Option aktiviert ist, erkennt Intune Updates für VPP-Apps in App Store und überträgt diese beim Geräte-Check-In automatisch mithilfe von Push auf das Gerät.
 
         > [!NOTE]
         > Automatische App-Updates für Apple VPP-Apps werden nur für **erforderliche** und **verfügbare** Installationsabsichten aktualisiert. Bei Apps, die mit der Installationsabsicht **Verfügbar** bereitgestellt wurden, generiert das automatische Update eine Statusmeldung für den IT-Administrator, die darüber informiert, dass eine neue Version der App verfügbar ist. Diese Statusmeldung wird angezeigt, wenn Sie die App auswählen, den Geräteinstallationsstatus auswählen und die Statusdetails überprüfen.  
 
     - **Ich erteilen Microsoft die Berechtigung, sowohl Benutzer- und Geräteinformationen an Apple zu senden.** – Sie müssen **Ich stimme zu** auswählen, um fortzufahren. Informationen dazu, welche Daten Microsoft an Apple sendet, finden Sie unter [Von Intune an Apple gesendete Daten](../protect/data-intune-sends-to-apple.md).
-5. Wenn Sie fertig sind, klicken Sie auf **Erstellen**. Das Token wird im Bereich mit der Liste der Token angezeigt.
+7. Klicken Sie auf **Weiter**, um die Seite **Bereichsmarkierungen** anzuzeigen.
+8. Klicken Sie auf **Bereichstags auswählen**, um optional Bereichsmarkierungen für die App hinzuzufügen. Weitere Informationen dazu finden Sie unter [Verwenden der rollenbasierten Zugriffssteuerung und Bereichsmarkierungen für verteilte IT](../fundamentals/scope-tags.md).
+9. Klicken Sie auf **Weiter**, um die Seite **Überprüfen + erstellen** anzuzeigen. Überprüfen Sie die Werte und Einstellungen, die Sie für das VPP-Token eingegeben haben.
+10. Wenn Sie fertig sind, klicken Sie auf **Erstellen**. Das Token wird im Bereich mit der Liste der Token angezeigt.
 
 ## <a name="synchronize-a-vpp-token"></a>Synchronisieren eines VPP-Tokens
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: d1ede68097ef3afe0358154ff7b8802a0b3a7285
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501166"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Entwicklerhandbuch zum Microsoft Intune App SDK für Android
 
@@ -1184,7 +1184,7 @@ Wenn ein Konto erstmalig registriert wird, verfügt es über den Status `PENDING
 | `AUTHORIZATION_NEEDED` | Dieses Ergebnis gibt an, dass von der registrierten `MAMServiceAuthenticationCallback`-Instanz der App kein Token bereitgestellt wurde, oder das bereitgestellte Token war ungültig.  Die App sollte ein gültiges Token abrufen und `updateToken()` aufrufen, sofern möglich. |
 | `NOT_LICENSED` | Der Benutzer ist für Intune nicht lizenziert oder bei dem Versuch, den Kontakt zum Intune MAM-Dienst herzustellen, ist ein Fehler aufgetreten.  Die App sollte in einem nicht verwalteten (normalen) Zustand fortfahren, und der Benutzer sollte nicht blockiert werden.  Registrierungen werden für den Fall in regelmäßigen Abständen wiederholt, dass der Benutzer zukünftig über eine Lizenz verfügt. |
 | `ENROLLMENT_SUCCEEDED` | Der Registrierungsversuch wurde erfolgreich durchgeführt, oder der Benutzer ist bereits registriert.  Im Falle einer erfolgreichen Registrierung wird vor dieser Benachrichtigung eine Benachrichtigung zur Richtlinienaktualisierung gesendet.  Der Zugriff auf Unternehmensdaten sollte zugelassen werden. |
-| `ENROLLMENT_FAILED` | Fehler beim Registrierungsversuch.  Weitere Details finden Sie in den Geräteprotokollen.  Die App sollte in diesem Zustand nicht den Zugriff auf Unternehmensdaten gestatten, da zuvor ermittelt wurde, dass der Benutzer für Intune lizenziert ist.|
+| `ENROLLMENT_FAILED` | Fehler beim Registrierungsversuch.  Weitere Details finden Sie in den Geräteprotokollen.  Die App sollte in diesem Zustand nicht den Zugriff auf Unternehmensdaten gestatten, da zuvor ermittelt wurde, dass der Benutzer für Intune lizenziert ist. Alle Apps sollten sicherstellen, dass der Zugriff auf Unternehmensdaten nicht autorisiert ist, bis „enrollment_succeeded“ von Ihrer App abgerufen wird.|
 | `WRONG_USER` | Nur ein Benutzer pro Gerät kann eine App mit dem MAM-Dienst registrieren. Dieses Ergebnis weist darauf hin, dass für den Benutzer, für den dieses Ergebnis zurückgegeben wurde (der zweite Benutzer), die MAM-Richtlinie gilt, aber dass bereits ein anderer Benutzer registriert wurde. Da die MAM-Richtlinie nicht für den zweiten Benutzer erzwungen werden kann, darf Ihre App so lange keinen Zugriff auf die Daten dieses Benutzers gewähren (z. B. indem der Benutzer aus Ihrer App entfernt wird), bis die Registrierung für diesen Benutzer zu einem späteren Zeitpunkt erfolgreich war. Gleichzeitig mit der Rückgabe des `WRONG_USER`-Ergebnisses zeigt die mobile Anwendungsverwaltung eine Aufforderung mit der Option an, das vorhandene Konto zu entfernen. Wenn der menschliche Benutzer dies bestätigt, ist es tatsächlich möglich, dass der zweite Benutzer kurze Zeit später registriert wird. Solange der zweite Benutzer registriert ist, versucht die mobile Anwendungsverwaltung die Registrierung in regelmäßigen Abständen erneut. |
 | `UNENROLLMENT_SUCCEEDED` | Die Aufhebung der Registrierung war erfolgreich.|
 | `UNENROLLMENT_FAILED` | Fehler bei der Anforderung zur Aufhebung der Registrierung.  Weitere Details finden Sie in den Geräteprotokollen. Allgemein gesagt tritt dies nur auf, wenn die App keinen gültigen (d. h. NULL oder leer) Benutzerprinzipalname übergibt. Es gibt für diese Situation keine direkte und zuverlässige Lösung, die die App anwenden könnte. Wenn dieser Wert zurückgegeben wird, wenn die Registrierung eines gültigen Benutzerprinzipalnamens aufgehoben wird, melden Sie dies dem MAM-Team von Intune bitte als Fehler.|

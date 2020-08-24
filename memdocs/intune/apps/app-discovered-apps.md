@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d60d4eba093ce9663abf2aa57c6461bef5a34ef1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: bed118810be877bf4671571814ee6d151d6f727b
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988723"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512732"
 ---
 # <a name="intune-discovered-apps"></a>Von Intune ermittelte Apps
 
@@ -57,7 +57,6 @@ In der folgenden Liste erhalten Sie Informationen zum Plattformtyp der App, zu d
 | Windows 10 (Win32-Apps) HINWEIS: [Erfordert die Intune-Verwaltungserweiterung](intune-management-extension.md) auf dem Gerät | Nicht zutreffend | Apps mit MSI-Installation auf dem Gerät | Alle 24 Stunden ab der Geräteregistrierung |
 | Windows 10 (Moderne Apps) | Nur verwaltete moderne Apps | Alle auf dem Gerät installierten modernen Apps | Alle 7 Tage ab der Geräteregistrierung |
 | Windows 8.1 | Nur verwaltete Apps | Nur verwaltete Apps | Alle 7 Tage ab der Geräteregistrierung |
-| Windows Phone 8 | Nur verwaltete Apps | Nur verwaltete Apps | Alle 7 Tage ab der Geräteregistrierung |
 | Windows RT | Nur verwaltete Apps | Nur verwaltete Apps | Alle 7 Tage ab der Geräteregistrierung |
 | iOS/iPadOS | Nur verwaltete Apps | Alle auf dem Gerät installierten Apps | Alle 7 Tage ab der Geräteregistrierung |
 | macOS | Nur verwaltete Apps | Alle auf dem Gerät installierten Apps | Alle 7 Tage ab der Geräteregistrierung |
@@ -65,7 +64,7 @@ In der folgenden Liste erhalten Sie Informationen zum Plattformtyp der App, zu d
 | Android Enterprise | Nur verwaltete Apps | Nur im Arbeitsprofil installierte Apps | Alle 7 Tage ab der Geräteregistrierung |
 
 > [!NOTE]
-> - In Windows 10 Azure AD Hybrid eingebundene Geräte erfassen, wie in der Arbeitsauslastung der App-Verwaltung im Configuration Manager gezeigt, gemäß dem obigen Zeitplan zurzeit keinen App-Bestand über den Eingabemethoden-Editor (IME). Um dieses Problem zu beheben, muss die Arbeitsauslastung der App-Verwaltung im Configuration Manager auf Intune umgestellt werden, damit der IME auf dem Gerät installiert werden kann (der IME ist für die Win32-Inventur und PowerShell-Bereitstellung erforderlich). Beachten Sie, dass jegliche Änderungen oder Aktualisierungen zu diesem Verhalten unter [In der Entwicklung befindliche Microsoft Intune-Features](../fundamentals/in-development.md) und/oder unter [Neuerungen](../fundamentals/whats-new.md) angekündigt werden.
+> - In Windows 10 gemeinsam verwaltete Geräte erfassen, wie in der Workload [Client-Apps](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) im Configuration Manager gezeigt, gemäß dem obigen Zeitplan zurzeit keinen App-Bestand über die Intune-Verwaltungserweiterung (Intune Management Extension, IME). Um dieses Problem zu beheben, muss die Workload [Client-Apps](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) im Configuration Manager auf Intune umgestellt werden, damit die IME auf dem Gerät installiert werden kann (die IME ist für die Win32-Inventur und PowerShell-Bereitstellung erforderlich). Beachten Sie, dass jegliche Änderungen oder Aktualisierungen zu diesem Verhalten unter [In der Entwicklung befindliche Microsoft Intune-Features](../fundamentals/in-development.md) und/oder unter [Neuerungen](../fundamentals/whats-new.md) angekündigt werden.
 > - Private macOS-Geräte, die vor November 2019 registriert wurden, zeigen möglicherweise weiterhin alle auf dem Gerät installierten Apps an, bis die Geräte neu registriert werden.
 > - Vollständig verwaltete und dedizierte Android Enterprise-Geräte zeigen ermittelte Apps nicht an.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a91a84ece833bf893395e494a0e99fa675f14c2a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8d050139ae017f5800670518a41d75fba469ceac
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429657"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146472"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Windows 10-Geräteeinstellungen (und höher) zum Upgrade von Editionen oder Aktivieren des S-Modus in Intune
 
@@ -40,7 +40,7 @@ Weitere Informationen zu diesem Feature finden Sie unter [Verwenden eines Konfig
 
 - **Edition, auf die upgegradet werden soll**: Wählen Sie die Windows 10-Edition aus, auf die Sie das Upgrade durchführen. Für die Geräte, die das Ziel dieser Richtlinie sind, wird ein Upgrade auf die von Ihnen gewählte Edition durchgeführt.
 - **Product Key**: Geben Sie den Product Key ein, den Sie von Microsoft erhalten haben. Nach dem Erstellen der Richtlinie mit dem Product Key kann dieser nicht aktualisiert werden und wird aus Sicherheitsgründen ausgeblendet. Geben Sie den gesamten Schlüssel erneut ein, um den Product Key zu ändern.
-- **Lizenzdatei**: Wählen Sie für **Windows 10 Holographic for Business** oder die **Windows 10 Mobile**-Edition **Durchsuchen** aus, um die Lizenzdatei auszuwählen, die Sie von Microsoft erhalten haben. Diese Lizenzdatei enthält Lizenzinformationen für die Editionen, auf die Sie die Geräte upgraden.
+- **Lizenzdatei**: Wählen Sie für **Windows 10 Holographic for Business** die Option **Durchsuchen** aus, um die Lizenzdatei auszuwählen, die Sie von Microsoft erhalten haben. Diese Lizenzdatei enthält Lizenzinformationen für die Editionen, auf die Sie die Geräte upgraden.
 
 ## <a name="mode-switch"></a>Moduswechsel
 

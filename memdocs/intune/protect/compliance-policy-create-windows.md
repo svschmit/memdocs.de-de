@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c42ec6b7b67a1c000702e6e53747270d0eda28c
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437343"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559493"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Einstellungen für Windows 10 und höher, um Geräte mit Intune als konform oder nicht konform zu kennzeichnen
 
@@ -47,7 +47,9 @@ Als Intune-Administrator verwenden Sie diese Konformitätseinstellungen, um die 
    Die Windows BitLocker-Laufwerksverschlüsselung verschlüsselt alle auf einem Volume mit Windows-Betriebssystem gespeicherten Daten. BitLocker verwendet das Trusted Platform Module (TPM), um das Windows-Betriebssystem und Benutzerdaten zu schützen. TPM stellt auch sicher, dass ein Computer auch dann nicht manipuliert wird, wenn er unbeaufsichtigt gelassen, verloren oder gestohlen wird. Wenn der Computer mit einem kompatiblen TPM ausgestattet ist, verwendet BitLocker das TPM zum Sperren der Verschlüsselungsschlüssel, die die Daten schützen. Daher kann erst auf die Schlüssel zugegriffen werden, nachdem das TPM den Zustand des Computers überprüft hat.  
 
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
-  - **Erforderlich**: Das Gerät kann Daten, die auf dem Laufwerk gespeichert sind, vor unbefugtem Zugriff schützen, wenn das System ausgeschaltet ist oder sich im Ruhezustand befindet.  
+  - **Erforderlich**: Das Gerät kann Daten, die auf dem Laufwerk gespeichert sind, vor unbefugtem Zugriff schützen, wenn das System ausgeschaltet ist oder sich im Ruhezustand befindet.
+  
+  [Geräte-HealthAttestation-CSP – BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
 
 - **Sicherer Start muss auf dem Gerät aktiviert sein**:  
   - **Nicht konfiguriert** (*Standardeinstellung*): Diese Einstellung wird nicht für die Konformitätsprüfung ausgewertet.
@@ -107,6 +109,9 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
 
     Beispielsweise sollen alle Softwareupdates auf Geräten installiert werden. In Configuration Manager hat diese Anforderung den Zustand „Installiert“. Falls sich Programme auf dem Gerät in einem unbekannten Zustand befinden, so ist das Gerät in Intune nicht konform.
 
+  > [!NOTE]
+  > Verwenden Sie nur **Gerätekonformität in Configuration Manager erforderlich**, wenn für die Konformitätsworkload für die Co-Verwaltung *Configuration Manager* festgelegt ist. Wenn Sie diese Einstellung mit der auf *Intune* festgelegten Konformitätsworkload verwenden, kann dies Auswirkungen auf die gesamten Bewertungen der Konformität haben.
+
 ## <a name="system-security"></a>Systemsicherheit
 
 ### <a name="password"></a>Kennwort
@@ -163,6 +168,8 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
   Diese Einstellung wird für alle Laufwerke eines Geräts übernommen.
   - **Nicht konfiguriert** (*Standardeinstellung*)
   - **Erforderlich**: Verwenden Sie diese Einstellung, um die Datenspeicher auf Ihren Geräten zu verschlüsseln.
+  
+   [DeviceStatus-CSP – DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > Die Einstellung **Encryption of data storage on a device** (Verschlüsselung des Datenspeichers auf einem Gerät) überprüft allgemein, ob das Gerät über Verschlüsselung verfügt. Für eine stabilere Verschlüsselungseinstellung sollten Sie **BitLocker erforderlich** in Betracht ziehen. Dabei wird der Windows-Integritätsnachweis für Geräte genutzt, um den BitLocker-Status auf Ebene des TPM (Trusted Platform Module) zu überprüfen.
@@ -182,7 +189,7 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
   - **Nicht konfiguriert** (*Standardeinstellung*): Intune überprüft das Gerät nicht auf eine TPM-Chip-Version.
   - **Erforderlich**: Intune überprüft die Version des TPM-Chips auf Konformität. Das Gerät ist konform, wenn die Version des TPM-Chips höher als **0** (Null) ist. Das Gerät ist nicht konform, wenn auf dem Gerät keine TPM-Version vorhanden ist.
 
-  [DeviceStatus-CSP – DeviceStatus/TPM/SpecificationVersion-Knoten](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus-CSP – DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirus:**  
   - **Nicht konfiguriert** (*Standardeinstellung*): Intune überprüft das Gerät nicht auf installierte Antivirenlösungen.
@@ -214,7 +221,7 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
   - **Nicht konfiguriert** *(Standardeinstellung)* : Von Intune werden keine Anforderungen durchgesetzt.
   - **Erforderlich**: Legt fest, dass die Microsoft Defender-Sicherheitsinformationen immer auf dem neuesten Stand sein müssen
 
-  [Defender/Health/SignatureOutOfDate-CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [Defender-CSP – Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
   
   Weitere Informationen finden Sie unter [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware (Updates der Sicherheitsinformationen für Microsoft Defender Antivirus und andere Microsoft-Antischadsoftware)](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
@@ -222,7 +229,7 @@ Gilt nur für gemeinsam verwaltete Geräte mit Windows 10 und höher. Ausschlie�
   - **Nicht konfiguriert** (*Standardeinstellung*): Intune steuert weder diese Funktion noch die vorhandenen Einstellungen.
   - **Erforderlich**: Ermöglicht die Echtzeitüberprüfung auf Schadsoftware, Spyware und andere unerwünschte Software  
 
-  [Defender/AllowRealtimeMonitoring-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [Richtlinien-CSP – Defender/AllowRealtimeMonitoring-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 

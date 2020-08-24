@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7926bd972fd24f39bd4e3f520fd250526502812a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983943"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179535"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Hinzufügen der Windows 10-Unternehmensportal-App mithilfe von Microsoft Intune
 
@@ -71,7 +71,7 @@ Weitere Informationen zur Verarbeitung von Abhängigkeiten für universelle Apps
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Wie aktualisiere ich die Unternehmensportal-App auf den Geräten meiner Benutzer, wenn diese bereits die älteren Apps aus dem Store installiert haben?
-Falls Ihre Benutzer bereits die Unternehmensportal-App für Windows 8.1 oder Windows Phone 8.1 aus dem Microsoft Store installiert haben, sollte diese automatisch auf die neue Version aktualisiert werden, ohne dass Sie oder Ihre Benutzer dazu aktiv werden müssen. Sollte das Update nicht durchgeführt werden, fordern Sie die Benutzer auf, sich zu vergewissern, dass sie auf ihren Geräten automatische Updates für Store-Apps aktiviert haben.   
+Falls Ihre Benutzer bereits die Unternehmensportal-App für Windows 8.1 aus dem Microsoft Store installiert haben, sollte diese automatisch auf die neue Version aktualisiert werden, ohne dass Sie oder Ihre Benutzer dazu aktiv werden müssen. Sollte das Update nicht durchgeführt werden, fordern Sie die Benutzer auf, sich zu vergewissern, dass sie auf ihren Geräten automatische Updates für Store-Apps aktiviert haben.   
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Wie führe ich ein Upgrade meiner quergeladenen Windows 8.1-Unternehmensportal-App auf die Windows 10-Unternehmensportal-App durch?
 Für die Migration wird folgende Vorgehensweise empfohlen: Legen Sie die Zuweisungsaktion auf **Uninstall** (Deinstallieren) fest, um die Zuweisung der Windows 8.1-Unternehmensportal-App zu löschen. Nach dem Durchführen dieser Einstellung können Sie die Windows 10-Unternehmensportal-App mithilfe der oben beschriebenen Optionen zuweisen.  
@@ -80,8 +80,8 @@ Wenn Sie die App querladen müssen und das Windows 8.1-Unternehmensportal zugewi
 
 Wenn Sie die App querladen müssen und die Windows 8.1-Unternehmensportal-App mit dem Symantec-Codesignaturzertifikat zugewiesen und signiert haben, führen Sie die Schritte im folgenden Abschnitt aus.
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Wie führe ich ein Upgrade meiner signierten quergeladenen Windows Phone 8.1-Unternehmensportal-App oder Windows 8.1-Unternehmensportal-App auf die Windows 10-Unternehmensportal-App durch?
-Wir empfehlen für die Migration die folgende Vorgehensweise: Legen Sie die Zuweisungsaktion auf **Uninstall** (Deinstallieren) fest, um die vorhandene Zuweisung der Windows Phone 8.1-Unternehmensportal-App oder Windows 8.1-Unternehmensportal-App zu löschen. Nach dem Durchführen dieser Einstellung können Sie die Windows 10-Unternehmensportal-App normal zuweisen.  
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Wie führe ich ein Upgrade meiner signierten und quergeladenen Windows 8.1-Unternehmensportal-App auf die Windows 10-Unternehmensportal-App durch?
+Für die Migration sollten Sie folgendermaßen vorgehen: Legen Sie für die Zuweisungsaktion **Deinstallieren** fest, um die vorhandene Zuweisung der Windows 8.1-Unternehmensportal-App zu löschen. Nach dem Durchführen dieser Einstellung können Sie die Windows 10-Unternehmensportal-App normal zuweisen.  
 
 Ansonsten muss die Windows 10-Unternehmensportal-App entsprechend aktualisiert und signiert werden, um sicherzustellen, dass der Upgradepfad berücksichtigt wird.  
 
@@ -99,7 +99,7 @@ Im Anschluss erfahren Sie, wie Sie die App auf diese Weise signieren und zuweise
 |---|---|
 | InputWin10AppxBundle  |  Der Pfad der APPXBUNDLE-Quelldatei. |
 | OutputWin10AppxBundle | Der Ausgabepfad für die signierte APPXBUNDLE-Datei. 
-| Win81Appx  | Der Pfad der APPX-Datei des Windows 8.1- oder Windows Phone 8.1-Unternehmensportals. |
+| Win81Appx  | Der Pfad der APPX-Datei des Windows 8.1-Unternehmensportals. |
 | PfxFilePath  |  Der Pfad der PFX-Datei für das Symantec Enterprise Mobile-Codesignaturzertifikat.  |
 | PfxPassword  | Das Kennwort des Symantec Enterprise Mobile-Codesignaturzertifikats. |
 | PublisherId | Die Herausgeber-ID des Unternehmens. Wenn sie nicht vorhanden ist, wird das Feld „Subject“ (Zertifikatinhaber) vom Symantec Enterprise Mobile-Codesignaturzertifikat verwendet. |

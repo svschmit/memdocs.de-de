@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 974636ae787be0d454cc3a4fea98832aa4400c7c
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 4e1ac5180a30959618f37d909511785b4de1c407
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303486"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591236"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Festlegen der Autorität für die Verwaltung mobiler Geräte
 
@@ -36,9 +36,9 @@ Die möglichen Konfigurationen sind Folgende:
 
 - **Co-Verwaltung in Intune:** Integration der Intune-Cloudlösung in Configuration Manager für Windows 10-Geräte. Sie konfigurieren Intune mithilfe der Configuration Manager-Konsole. [Konfigurieren der automatischen Registrierung von Geräten in Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune) 
 
-- **Basic Mobility and Security for Office 365** (Einfache Mobilität und Sicherheit für Office 365): Wenn Sie diese Konfiguration aktiviert haben, wird die MDM-Autorität auf „Office 365“ festgelegt. Wenn Sie Intune verwenden möchten, müssen Sie zuvor Intune-Lizenzen kaufen.
+- **Basic Mobility and Security for Office 365** (Einfache Mobilität und Sicherheit für Office 365): Wenn Sie diese Konfiguration aktiviert haben, wird die MDM-Autorität auf „Office 365“ festgelegt. Wenn Sie Intune verwenden möchten, müssen Sie zuvor Intune-Lizenzen kaufen.
 
-- **Basic Mobility and Security for Office 365 Coexistence** (Einfache Mobilität und Sicherheit für Office 365-Koexistenz): Sie können Intune zu Ihrem Mandanten hinzufügen, wenn Sie die Konfiguration „Basic Mobility and Security for Office 365“ bereits verwenden, und Sie können die Verwaltungsautorität für alle Benutzer entweder auf Intune oder „Basic Mobility and Security for Office 365“ festlegen, um zu bestimmen, welcher Dienst zum Verwalten ihrer bei MDM registrierten Geräte verwendet wird. Die Verwaltungsautorität jedes Benutzers wird basierend auf der dem Benutzer zugeordneten Lizenz definiert. Wenn der Benutzer nur eine Lizenz für Microsoft 365 Basic oder Standard verfügt, werden dessen Geräte von „Basic Mobility and Security for Office 365“ verwaltet. Wenn der Benutzer über eine Lizenz für Intune verfügt, werden die Geräte von Intune verwaltet. Wenn Sie einem Benutzer, der zuvor von „Basic Mobility and Security for Office 365“ verwaltet wurde, eine Lizenz für Intune hinzufügen, werden seine Geräte auf die Intune-Verwaltung umgestellt. Stellen Sie sicher, dass den Benutzern Intune-Konfigurationen zugewiesen sind, um „Basic Mobility and Security for Office 365“ zu ersetzen, bevor Sie Benutzer zu Intune verschieben, andernfalls verlieren ihre Geräte die Konfiguration „Basic Mobility and Security for Office 365“, und sie erhalten keinen Ersatz von Intune.
+- **Basic Mobility and Security for Office 365 Coexistence** (Einfache Mobilität und Sicherheit für Office 365-Koexistenz): Sie können Intune Ihrem Mandanten hinzufügen, wenn Sie die Konfiguration „Basic Mobility and Security for Office 365“ bereits verwenden, und Sie können die Verwaltungsautorität für alle Benutzer entweder auf Intune oder „Basic Mobility and Security for Office 365“ festlegen, um zu bestimmen, welcher Dienst zum Verwalten Ihrer bei MDM registrierten Geräte verwendet wird. Die Verwaltungsautorität jedes Benutzers wird basierend auf der dem Benutzer zugeordneten Lizenz definiert. Wenn der Benutzer nur eine Lizenz für Microsoft 365 Basic oder Standard verfügt, werden dessen Geräte von „Basic Mobility and Security for Office 365“ verwaltet. Wenn der Benutzer über eine Lizenz für Intune verfügt, werden die Geräte von Intune verwaltet. Wenn Sie einem Benutzer, der zuvor von „Basic Mobility and Security for Office 365“ verwaltet wurde, eine Lizenz für Intune hinzufügen, werden seine Geräte auf die Intune-Verwaltung umgestellt. Stellen Sie sicher, dass den Benutzern Intune-Konfigurationen zugewiesen sind, um „Basic Mobility and Security for Office 365“ zu ersetzen, bevor Sie Benutzer zu Intune verschieben, andernfalls verlieren ihre Geräte die Konfiguration „Basic Mobility and Security for Office 365“, und sie erhalten keinen Ersatz von Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Festlegen der MDM-Autorität in Intune
 
@@ -48,12 +48,12 @@ Bei Mandanten mit Releases vor 1911 führen Sie folgende Schritte durch, wenn Si
 
 1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf das orangefarbene Banner, um die Einstellung **Autorität für die Verwaltung mobiler Geräte** zu öffnen. Der orangefarbene Banner wird nur angezeigt, wenn Sie die MDM-Autorität noch nicht festgelegt haben.
 2. Wählen Sie unter **Autorität für die Verwaltung mobiler Geräte** Ihre MDM-Autorität aus den folgenden Optionen aus:
-   - **Intune-MDM-Autorität**
-   - **Keine**
+  - **Intune-MDM-Autorität**
+  - **Keine**
 
-   ![Screenshot vom Intune-Bildschirm zum Festlegen der Autorität für die mobile Geräteverwaltung](./media/mdm-authority-set/set-mdm-auth.png)
+  ![Screenshot vom Intune-Bildschirm zum Festlegen der Autorität für die mobile Geräteverwaltung](./media/mdm-authority-set/set-mdm-auth.png)
 
-   Eine Meldung zeigt an, dass Sie die MDM-Autorität erfolgreich auf Intune festgelegt haben.
+  Eine Meldung zeigt an, dass Sie die MDM-Autorität erfolgreich auf Intune festgelegt haben.
 
 ### <a name="workflow-of-intune-administration-ui"></a>Workflow der Intune-Verwaltungsbenutzeroberfläche
 Wenn die Verwaltung von Android- oder Apple-Geräten aktiviert ist, sendet Intune Geräte- und Benutzerinformationen zur Integration mit diesen Drittanbieterdiensten, um die jeweiligen Geräte zu verwalten.
@@ -70,8 +70,38 @@ In jedem Fall muss die Zustimmung erteilt werden, wenn ein Verwaltungsdienst fü
 ## <a name="key-considerations"></a>Wichtige Überlegungen
 Nachdem Sie auf die neue MDM-Autorität umgestellt haben, gibt es wahrscheinlich eine Übergangszeit (bis zu acht Stunden), bevor das Gerät eingecheckt und mit dem Dienst synchronisiert wird. Sie müssen die Einstellungen in der neuen MDM-Autorität konfigurieren, um sicherzustellen, dass registrierte Geräte nach der Umstellung weiterhin verwaltet und geschützt werden. 
 - Geräte müssen nach der Umstellung eine Verbindung mit dem Dienst herstellen, damit die Einstellungen der neuen MDM-Autorität (eigenständiges Intune) die vorhandenen Einstellungen auf dem Gerät ersetzen.
-- Nach dem Ändern der MDM-Autorität verbleiben einige der grundlegenden Einstellungen (z.B. Profile) aus der vorherigen MDM-Autorität für bis zu sieben Tage oder bis zur ersten Verbindung des Geräts mit dem Dienst auf dem Gerät. Es wird empfohlen, dass Sie Apps und Einstellungen (Richtlinien, Profile, Apps usw.) so bald wie möglich in der neuen MDM-Autorität konfigurieren und die Einstellung den Benutzergruppen bereitstellen, die Benutzer mit gegenwärtig registrierten Geräten enthalten. Sobald ein Gerät nach der Umstellung der MDM-Autorität eine Verbindung mit dem Dienst herstellt, werden die neuen Einstellungen der neuen MDM-Autorität übertragen, und Lücken bei Verwaltung und Schutz werden verhindert.
+- Nach dem Ändern der MDM-Autorität verbleiben einige der grundlegenden Einstellungen (z.B. Profile) aus der vorherigen MDM-Autorität für bis zu sieben Tage oder bis zur ersten Verbindung des Geräts mit dem Dienst auf dem Gerät. Sie sollten Apps und Einstellungen (wie Richtlinien, Profile und Apps) so bald wie möglich in der neuen MDM-Autorität konfigurieren und die Einstellung den Benutzergruppen bereitstellen, die Benutzer mit gegenwärtig registrierten Geräten enthalten. Sobald ein Gerät nach der Umstellung der MDM-Autorität eine Verbindung mit dem Dienst herstellt, werden die neuen Einstellungen der neuen MDM-Autorität übertragen, und Lücken bei Verwaltung und Schutz werden verhindert.
 - Geräte, denen keine Benutzer zugeordnet sind (dies ist typischerweise der Fall, wenn Sie das iOS/iPadOS-Programm zur Geräteregistrierung oder die Massenregistrierung verwenden), werden nicht zur neuen MDM-Autorität migriert. Für diese Geräte müssen Sie sich mit dem Support in Verbindung setzen, um Hilfe beim Verschieben dieser Geräte zur neuen MDM-Autorität zu erhalten.
+
+## <a name="coexistence"></a>Coexistence
+
+Durch das Aktivieren der Koexistenz können Sie Intune für eine neue Gruppe von Benutzern verwenden und dabei weiterhin „Basic Mobility and Security“ für die vorhandenen Benutzer verwenden. Sie können über den Benutzer steuern, welche Geräte von Intune verwaltet werden. Wenn ein Benutzer einer Intune-Lizenz zugewiesen oder die Intune-Co-Verwaltung mit Configuration Manager verwendet wird, werden alle seine registrierten Geräte von Intune verwaltet. Andernfalls wird der Benutzer von „Basic Mobility and Security“ verwaltet.
+
+Zum Aktivieren der Koexistenz sind drei Hauptschritte erforderlich:
+1. Vorbereitung
+2. Hinzufügen der Intune-MDM-Autorität
+3. Benutzer- und Gerätemigration (optional).
+
+### <a name="preparation"></a>Vorbereitung
+
+Berücksichtigen Sie die folgenden Punkte, bevor Sie die Koexistenz mit „Basic Mobility and Security“ aktivieren:
+- Stellen Sie sicher, dass Sie über ausreichende Intune-Lizenzen für die Benutzer verfügen, die Sie über Intune verwalten möchten.
+- Überprüfen Sie, welchen Benutzern Intune-Lizenzen zugewiesen sind. Nachdem Sie die Koexistenz aktiviert haben, werden die Geräte von Benutzern, denen bereits eine Intune-Lizenz zugewiesen wurde, an Intune übertragen. Um unerwartete Geräteübertragungen zu vermeiden, sollten Sie Intune-Lizenzen erst dann zuweisen, wenn Sie die Koexistenz aktiviert haben.
+- Erstellen Sie Intune-Richtlinien zum Ersetzen von Gerätesicherheitsrichtlinien, die ursprünglich über das Office 365 Security & Compliance-Portal bereitgestellt wurden, und stellen Sie sie bereit. Diese Ersetzung sollte für alle Benutzer durchgeführt werden, von denen Sie erwarten, dass sie von „Basic Mobility and Security“ zu Intune wechseln. Wenn diesen Benutzern keine Intune-Richtlinien zugewiesen sind, können sie durch das Aktivieren der Koexistenz die „Basic Mobility and Security“-Einstellungen verlieren. Diese Einstellungen, wie z. B. verwaltete E-Mail-Profile, gehen ohne Ersetzung verloren.
+
+### <a name="add-intune-mdm-authority"></a>Hinzufügen der Intune-MDM-Autorität
+
+Um die Koexistenz zu aktivieren, müssen Sie Intune als MDM-Autorität für Ihre Umgebung hinzufügen:
+
+1. Melden Sie sich mit Rechten als globaler Azure AD-Administrator oder Intune-Dienstadministrator bei „endpoint.microsoft.com“ an.
+2. Navigieren Sie zu **Geräte**.
+3. Das Blatt **MDM-Autorität hinzufügen** wird angezeigt.
+4. Um die MDM-Autorität von *Office 365* auf *Intune* zu übertragen und die Koexistenz zu aktivieren, wählen Sie **Intune-MDM-Autorität** > **Hinzufügen** aus.
+  ![Screenshot des Bildschirms „MDM-Autorität hinzufügen“](./media/mdm-authority-set/add-mdm-authority.png)
+
+### <a name="migrate-users-and-devices-optional"></a>Migrieren von Benutzern und Geräten (optional)
+
+Nachdem die Intune-MDM-Autorität aktiviert ist, wird die Koexistenz aktiviert, und Sie können mit der Verwaltung von Benutzern über Intune beginnen. Wenn Sie zuvor von „Basic Mobility and Security“ verwaltete Geräte der Verwaltung durch Intune zuordnen möchten, weisen Sie diesen Benutzern optional eine Intune-Lizenz zu. Die Geräte der Benutzer werden beim nächsten MDM-Einchecken an Intune übertragen. Über „Basic Mobility and Security“ auf diese Geräte angewendete Einstellungen werden nicht mehr angewendet und von den Geräten entfernt.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Bereinigen mobiler Geräte nach Ablauf des MDM-Zertifikats
 
@@ -83,30 +113,30 @@ Die MDM-Autorität kann nicht in „Unbekannt“ geändert werden. Der Dienst ve
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>Was passiert nach der Umstellung der MDM-Autorität
 
-- Wenn der Intune-Dienst erkennt, dass die MDM-Autorität eines Mandanten umgestellt wurde, sendet er eine Benachrichtigung an alle registrierten Geräte, damit sie beim Dienst eingecheckt und synchronisiert werden (diese Benachrichtigung befindet sich außerhalb der regelmäßig geplanten Eincheckvorgänge). Daher werden nach der Umstellung der MDM-Autorität für den Mandanten von eigenständigem Intune alle eingeschalteten und online befindlichen Geräte mit dem Dienst verbunden. Sie empfangen die neue MDM-Autorität und werden von ihr verwaltet. Es gibt keine Unterbrechung bei der Verwaltung und bei dem Schutz dieser Geräte.
-- Selbst für Geräte, die während (oder kurz nach) der Umstellung der MDM-Autorität eingeschaltet und online sind, gibt es eine Verzögerung von bis zu acht Stunden (je nach Zeitpunkt des nächsten geplanten regulären Eincheckvorgangs), bevor Geräte unter der neuen MDM-Autorität beim Dienst registriert werden.    
+- Wenn der Intune-Dienst erkennt, dass die MDM-Autorität eines Mandanten umgestellt wurde, sendet er eine Benachrichtigung an alle registrierten Geräte, damit sie beim Dienst eingecheckt und synchronisiert werden (diese Benachrichtigung befindet sich außerhalb der regelmäßig geplanten Eincheckvorgänge). Daher werden nach der Umstellung der MDM-Autorität für den Mandanten von eigenständigem Intune alle eingeschalteten und online befindlichen Geräte mit dem Dienst verbunden. Sie empfangen die neue MDM-Autorität und werden von ihr verwaltet. Verwaltung und Schutz dieser Geräte werden nicht unterbrochen.
+- Selbst für Geräte, die während (oder kurz nach) der Umstellung der MDM-Autorität eingeschaltet und online sind, gibt es eine Verzögerung von bis zu acht Stunden (je nach Zeitpunkt des nächsten geplanten regulären Eincheckvorgangs), bevor Geräte unter der neuen MDM-Autorität beim Dienst registriert werden.  
 
-  > [!IMPORTANT]    
-  > In der Zeit zwischen der Umstellung der MDM-Autorität und dem Hochladen des erneuerten APNs-Zertifikats in die neue Autorität schlagen neue Registrierungen und Eincheckvorgänge für iOS/iPadOS-Geräte fehl. Aus diesem Grund ist es wichtig, dass Sie das APNs-Zertifikat so bald wie möglich nach der Umstellung der MDM-Autorität überprüfen und in die neue Autorität hochladen.
+ > [!IMPORTANT]  
+ > In der Zeit zwischen der Umstellung der MDM-Autorität und dem Hochladen des erneuerten APNs-Zertifikats in die neue Autorität schlagen neue Registrierungen und Eincheckvorgänge für iOS/iPadOS-Geräte fehl. Aus diesem Grund ist es wichtig, dass Sie das APNs-Zertifikat so bald wie möglich nach der Umstellung der MDM-Autorität überprüfen und in die neue Autorität hochladen.
 
-- Benutzer können schnell auf die neue MDM-Autorität umstellen, indem sie manuell einen Eincheckvorgang des Geräts beim Dienst starten. Benutzer können diese Änderung problemlos mithilfe der Unternehmensportal-App und dem Initiieren einer Überprüfung der Gerätekonformität vornehmen.
+- Benutzer können schnell auf die neue MDM-Autorität umstellen, indem sie manuell einen Eincheckvorgang des Geräts beim Dienst starten. Benutzer können diese Änderung problemlos mithilfe der Unternehmensportal-App und durch Starten einer Überprüfung der Gerätekonformität vornehmen.
 - Um zu überprüfen, ob nach der Umstellung der MDM-Autorität und dem Einchecken und Synchronisieren der Geräte beim Dienst alles ordnungsgemäß funktioniert, suchen Sie in der neuen MDM-Autorität nach den Geräten.
 - Es gibt eine Übergangszeit, bis ein Gerät beim Dienst eingecheckt wird, wenn das Gerät während der Umstellung der MDM-Autorität offline war. Um sicherzustellen, dass das Gerät während dieser Übergangszeit geschützt und funktionsfähig bleibt, verbleiben die folgenden Profile bis zu sieben Tage lang auf dem Gerät (oder bis das Gerät eine Verbindung mit der neuen MDM-Autorität herstellt und die neuen Einstellungen empfängt, die die vorhandenen überschreiben):
-  - E-Mail-Profil
-  - VPN-Profil
-  - Zertifikatprofil
-  - WLAN-Profil
-  - Konfigurationsprofile
+   - E-Mail-Profil
+   - VPN-Profil
+   - Zertifikatprofil
+   - WLAN-Profil
+   - Konfigurationsprofile
 - Nachdem Sie auf die neue MDM-Autorität umgestellt haben, kann es bis zu einer Woche dauern, bis die Kompatibilitätsinformationen in der Microsoft Intune-Verwaltungskonsole richtig gemeldet werden. Allerdings sind die Konformitätszustände in Azure Active Directory und auf dem Gerät richtig, sodass das Gerät weiterhin geschützt ist.
-- Stellen Sie sicher, dass die neuen Einstellungen, mit denen die vorhandenen Einstellungen überschrieben werden sollen, den gleichen Namen aufweisen wie die vorherigen, damit die alten Einstellungen tatsächlich überschrieben werden. Andernfalls weisen die Geräte möglicherweise redundante Profile und Richtlinien auf.    
+- Stellen Sie sicher, dass die neuen Einstellungen, mit denen die vorhandenen Einstellungen überschrieben werden sollen, den gleichen Namen aufweisen wie die vorherigen, damit die alten Einstellungen tatsächlich überschrieben werden. Andernfalls weisen die Geräte möglicherweise redundante Profile und Richtlinien auf.  
 
-  > [!TIP]    
-  > Es empfiehlt sich, alle Verwaltungseinstellungen und Konfigurationen sowie Bereitstellungen kurz nach Abschluss der Umstellung der MDM-Autorität zu erstellen. Dadurch wird sichergestellt, dass Geräte in der Übergangszeit geschützt und aktiv verwaltet werden.
+ > [!TIP]  
+ > Es empfiehlt sich, alle Verwaltungseinstellungen und Konfigurationen sowie Bereitstellungen kurz nach Abschluss der Umstellung der MDM-Autorität zu erstellen. Dadurch wird sichergestellt, dass Geräte in der Übergangszeit geschützt und aktiv verwaltet werden.
 
-- Führen Sie nach der Umstellung der MDM-Autorität die folgenden Schritte aus, um zu überprüfen, ob neue Geräte erfolgreich bei der neuen Autorität registriert werden:   
-  - Registrieren eines neuen Geräts
-  - Stellen Sie sicher, dass das neu registrierte Gerät in der neuen MDM-Autorität angezeigt wird.
-  - Führen Sie über die Verwaltungskonsole auf dem Gerät eine Aktion aus, z.B. Remotesperre. Wenn sie erfolgreich ist, wird das Gerät durch die neue MDM-Autorität verwaltet.
+- Führen Sie nach der Umstellung der MDM-Autorität die folgenden Schritte aus, um zu überprüfen, ob neue Geräte erfolgreich bei der neuen Autorität registriert werden:  
+ - Registrieren eines neuen Geräts
+ - Stellen Sie sicher, dass das neu registrierte Gerät in der neuen MDM-Autorität angezeigt wird.
+ - Führen Sie über die Verwaltungskonsole auf dem Gerät eine Aktion aus, z.B. Remotesperre. Wenn sie erfolgreich ist, wird das Gerät durch die neue MDM-Autorität verwaltet.
 - Wenn Sie Probleme mit bestimmten Geräten haben, können Sie die Registrierung der Geräte aufheben und sie erneut registrieren, damit sie so schnell wie möglich mit der neuen Autorität verbunden und von ihr verwaltet werden.
 
 ## <a name="next-steps"></a>Nächste Schritte

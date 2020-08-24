@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2a79b5c433a286321426f2b14f63768e575b5556
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881405"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179467"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Registrieren von Windows-Geräten im Intune-Unternehmensportal  
 
@@ -75,13 +75,11 @@ Die Schritte zur Registrierung unterscheiden sich je nach Version der Windows 1
     * __1607 oder höher:__ Registrieren Sie Ihr Gerät über die Navigation [**Einstellungen** > **Access work or school** (Zugriff auf Geschäft, Schule oder Uni)](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511 oder früher:__ Registrieren Sie Ihr Gerät mithilfe der [Route **Einstellungen** > **Konten**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
-## <a name="enroll-non-windows-10-devices"></a>Registrieren von nicht-Windows 10-basierten Geräten  
-In den folgenden Artikeln erfahren Sie, wie Sie über die Website des Unternehmensportals andere von Windows unterstützte Geräte registrieren:   
-* [Windows 8.1- oder Windows RT 8.1-Gerät](enroll-your-W81-or-rt81-windows.md)  
-* [Windows Phone 8.1-Gerät](enroll-your-wp81-windows.md)    
+## <a name="enroll-other-windows-devices"></a>Registrieren anderer Windows-Geräte  
+Sie können [Windows 8.1- oder Windows RT 8.1-Geräte](enroll-your-W81-or-rt81-windows.md) über die Unternehmensportal-Website registrieren. 
 
 ## <a name="it-administrator-support"></a>Unterstützung für IT-Administratoren  
-Wenn Sie IT-Administrator sind und Probleme bei der Registrierung von Geräten haben, lesen Sie [Troubleshooting Windows device enrollment problems in Microsoft Intune (Behandeln von Problemen bei der Registrierung von Windows-Geräten in Microsoft Intune)](https://support.microsoft.com/help/4469913). Dieser Artikel listet häufige Fehler, ihre Ursachen und Schritte zur Behebung auf.  
+Wenn Sie IT-Administrator sind und Probleme bei der Registrierung von Geräten haben, lesen Sie [Troubleshooting Windows device enrollment problems in Microsoft Intune (Behandeln von Problemen bei der Registrierung von Windows-Geräten in Microsoft Intune)](https://support.microsoft.com/help/4469913). In diesem Artikel werden häufige Fehler, ihre Ursachen und Schritte zur Behebung aufgelistet.  
 
 ## <a name="next-steps"></a>Nächste Schritte  
 Da Sie nun wissen, welche Geräte unterstützt werden und die Versionsnummer von Windows 10 kennen, können Sie mit den empfohlenen Artikeln zur Registrierung fortfahren.  
@@ -91,4 +89,4 @@ Weitere Informationen zur Geräteverwaltung, dem Unternehmensportal und der Verw
 * [Was geschieht, wenn Sie Ihr Gerät bei Intune registrieren?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)  
 * [Welche Informationen erhält meine Organisation, wenn ich mein Gerät registriere?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
-Benötigen Sie Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. [Besuchen Sie die Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980), um die Kontaktinformationen für die IT-Abteilung Ihrer Organisation zu erhalten.  
+Sie brauchen Hilfe? Kontaktieren Sie den Support Ihres Unternehmens. [Besuchen Sie die Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980), um die Kontaktinformationen für die IT-Abteilung Ihrer Organisation zu erhalten.  

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 195e7d42a7244976e7a631c0e8397875b8541273
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80087011"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146047"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Android-Geräteeinstellungen zum Konfigurieren von E-Mail, Authentifizierung und Synchronisierung in Intune
 
@@ -81,4 +81,4 @@ Weitere Informationen zu E-Mail-Profilen in Intune finden Sie unter [Hinzufügen
 
 [Zuweisen von Profilen](device-profile-assign.md) und [Überwachen von Profilen](device-profile-monitor.md)
 
-Sie können E-Mail-Profile auch für Geräte erstellen, die unter [Android Enterprise-Arbeitsprofile](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md), [Windows 10 und höher](email-settings-windows-10.md) sowie [Windows Phone 8.1](email-settings-windows-phone-8-1.md) ausgeführt werden.
+Sie können E-Mail-Profile auch für [Android Enterprise – Arbeitsprofil](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md) und [Windows 10 und höher](email-settings-windows-10.md) erstellen.

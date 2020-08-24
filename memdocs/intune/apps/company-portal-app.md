@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/04/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758345"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179552"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App
 
@@ -232,15 +232,13 @@ Informationen zum Anpassen der verfügbaren Self-Service-Benutzeraktionen finden
 
 Einige Plattformen und Konfigurationen lassen keine Self-Service-Geräteaktionen zu. In der folgenden Tabelle finden Sie weitere Informationen zu Self-Service-Aktionen:
 
-| Aktion | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Aktion | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Außerkraftsetzen | Verfügbar<sup>(1)</sup> | Verfügbar<sup>(9)</sup> | Verfügbar | Verfügbar<sup>(7)</sup> |
 | Zurücksetzen | Verfügbar | Verfügbar<sup>(5)</sup><sup>(9)</sup> | N/V | Verfügbar<sup>(7)</sup> |
 | Umbenennen<sup>(4)</sup> | Verfügbar | Verfügbar | Verfügbar | Verfügbar |
 | Sync | Verfügbar | Verfügbar | Verfügbar | Verfügbar |
-| Remotesperre | Nur Windows Phone | Verfügbar | Verfügbar | Verfügbar |
-| Passcode zurücksetzen | Nur Windows Phone | Verfügbar<sup>(8)</sup> | N/V | Verfügbar<sup>(6)</sup> |
-| Schlüsselwiederherstellung | Nicht verfügbar | N/V | Verfügbar<sup>(2)</sup> | N/V |
+| Schlüsselwiederherstellung | Nicht verfügbar | Nicht verfügbar | Verfügbar<sup>(2)</sup> | N/V |
 
 <sup>(1)</sup> Die **Außerbetriebnahme** ist auf Windows-Geräten, die Azure AD beigetreten sind, immer blockiert.<br>
 <sup>(2)</sup> Die **Schlüsselwiederherstellung** für macOS ist nur über das Webportal verfügbar.<br>

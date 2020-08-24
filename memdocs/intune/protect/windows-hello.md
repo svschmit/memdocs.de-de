@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 7088bfd5b27d986e12a175de1bdea0bf060c3ad3
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262862"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252519"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrieren von Windows Hello for Business in Microsoft Intune  
 
@@ -45,17 +45,15 @@ Darüber hinaus unterstützt Intune die folgenden Richtlinientypen zur Verwaltun
 In den nächsten Abschnitten dieses Artikels wird die Erstellung einer Windows Hello for Business-Standardrichtlinie für Ihre gesamte Organisation beschrieben.
 
 > [!IMPORTANT]
-> Bei Desktop- und mobilen Versionen von Windows 10 vor dem Anniversary Update konnten Sie zwei unterschiedliche PINS für die Authentifizierung bei Ressourcen festlegen:
+> Vor dem Anniversary Update konnten Sie zwei unterschiedliche PINS für die Authentifizierung bei Ressourcen festlegen:
 >
 > - Die **Geräte-PIN** konnte zum Entsperren des Geräts und zur Verbindung mit Cloudressourcen verwendet werden.
 > - Die **Arbeits-PIN** wurde für den Zugang zu Azure AD-Ressourcen auf persönlichen Geräten von Benutzern (BYOD) verwendet.
-> 
+>
 > Im Anniversary Update wurden diese beiden PINs in eine einzige Geräte-PIN zusammengeführt.
 > Dieser neue PIN-Wert wird jetzt sowohl von allen Intune-Konfigurationsrichtlinien, die Sie zum Steuern der Geräte-PIN festlegen, als auch von allen konfigurierten Windows Hello for Business-Richtlinien festgelegt.
-> Wenn Sie beide Richtlinientypen für die PIN-Steuerung eingerichtet haben, wird sowohl auf Desktop- als auch auf mobilen Geräten mit Windows 10 die Windows Hello for Business-Richtlinie angewendet.
+> Wenn Sie beide Richtlinientypen für die PIN-Steuerung eingerichtet haben, wird die Windows Hello for Business-Richtlinie angewendet.
 > Um sicherzustellen, dass Richtlinienkonflikte gelöst werden und dass die PIN-Richtlinie korrekt angewendet wird, aktualisieren Sie Ihre Windows Hello for Business-Richtlinie auf die Einstellungen in der Konfigurationsrichtlinie. Fordern Sie auch die Benutzer auf, ihre Geräte in der Unternehmensportal-App zu synchronisieren.
-
-
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Erstellen einer Windows Hello for Business-Richtlinie
 
@@ -65,13 +63,13 @@ In den nächsten Abschnitten dieses Artikels wird die Erstellung einer Windows H
 
 3. Wählen Sie aus den folgenden Optionen für **Konfigurieren von Windows Hello for Business**:
 
-     - **Aktiviert**. Wählen Sie diese Einstellung aus, wenn Sie Windows Hello for Business-Einstellungen konfigurieren möchten.  Wenn Sie *Aktivieren* auswählen, werden zusätzliche Einstellungen für Windows Hello angezeigt, die für Geräte konfiguriert werden können.
+   - **Aktiviert**. Wählen Sie diese Einstellung aus, wenn Sie Windows Hello for Business-Einstellungen konfigurieren möchten.  Wenn Sie *Aktivieren* auswählen, werden zusätzliche Einstellungen für Windows Hello angezeigt, die für Geräte konfiguriert werden können.
 
-    - **Deaktiviert**. Wählen Sie diese Option aus, wenn Sie Windows Hello for Business nicht während der Geräteregistrierung aktivieren möchten. Wenn diese Einstellung deaktiviert ist, können Benutzer Windows Hello for Business nur auf mit Azure Active Directory verknüpften Mobiltelefonen bereitstellen, für die die Bereitstellung erforderlich sein kann. Wenn *Deaktiviert* festgelegt ist, können Sie dennoch die folgenden Einstellungen für Windows Hello for Business konfigurieren, obwohl diese Richtlinie verhindert, dass Windows Hello for Business aktiviert werden kann.
+   - **Deaktiviert**. Wählen Sie diese Option aus, wenn Sie Windows Hello for Business nicht während der Geräteregistrierung aktivieren möchten. Bei Deaktivierung können Geräte Windows Hello for Business nicht bereitstellen. Wenn *Deaktiviert* festgelegt ist, können Sie dennoch die folgenden Einstellungen für Windows Hello for Business konfigurieren, obwohl diese Richtlinie verhindert, dass Windows Hello for Business aktiviert werden kann.
 
-    - **Nicht konfiguriert**. Wählen Sie diese Einstellung aus, wenn Sie Windows Hello for Business-Einstellungen nicht mit Intune steuern möchten. Vorhandene Windows Hello for Business-Einstellungen auf Windows 10-Geräten werden nicht geändert. Alle anderen Einstellungen in dem Bereich sind nicht verfügbar.
+   - **Nicht konfiguriert**. Wählen Sie diese Einstellung aus, wenn Sie Windows Hello for Business-Einstellungen nicht mit Intune steuern möchten. Vorhandene Windows Hello for Business-Einstellungen auf Windows 10-Geräten werden nicht geändert. Alle anderen Einstellungen in dem Bereich sind nicht verfügbar.
 
-4. Wenn Sie im letzten Schritt **Aktiviert** ausgewählt haben, konfigurieren Sie die erforderlichen Einstellungen, die auf alle registrierten Geräte mit Windows 10 und Windows 10 Mobile angewendet werden. Nachdem Sie diese Einstellungen konfiguriert haben, wählen Sie **Speichern** aus.
+4. Wenn Sie im letzten Schritt **Aktiviert** ausgewählt haben, konfigurieren Sie die erforderlichen Einstellungen, die auf alle registrierten Windows 10-Geräte angewendet werden. Nachdem Sie diese Einstellungen konfiguriert haben, wählen Sie **Speichern** aus.
 
    - **Trusted Platform Module (TPM) verwenden**:
 

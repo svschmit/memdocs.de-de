@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088325"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252791"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Verwenden von Konformitätsrichtlinien zum Festlegen von Regeln für Geräte, die Sie mit Intune verwalten
 
@@ -31,9 +31,7 @@ Konformitätsrichtlinien in Intune:
 
 - Konformitätsrichtlinien definieren Regeln und Einstellungen, die Benutzer und Geräte erfüllen müssen, um als „konform“ zu gelten.
 - Schließen Sie Aktionen ein, die auf nicht konforme Geräte angewendet werden. Diese Aktionen bei Nichtkonformität können Benutzer an die Gründe der Nichtkonformität warnen und Daten auf nicht konformen Geräten schützen.
-- Die Richtlinien können [mit dem bedingten Zugriff kombiniert werden](#integrate-with-conditional-access), um Benutzer und Geräte zu blockieren, die nicht den Regeln entsprechen und als nicht konform gekennzeichnet wurden.
-
-  Der bedingte Zugriff kann auch mit Konformitätszustandsdaten der Geräte verwendet werden, die Sie mithilfe der mobilen Geräteverwaltung von Drittanbieterpartnern verwalten. Zum Aktivieren dieser Funktion fügen Sie die Unterstützung des Partners sowohl zu Azure AD als auch zu Intune hinzu. Weitere Informationen finden Sie unter „Hinzufügen der Unterstützung für Gerätekonformitätspartner. 
+- Sie können [in Kombination mit dem bedingten Zugriff](#integrate-with-conditional-access) verwendet werden, wodurch Benutzer und Geräte blockiert werden, die nicht den Regeln entsprechen.
 
 Die Konformitätsrichtlinien in Intune haben zwei Teile:
 
@@ -126,7 +124,6 @@ Die folgenden Themen sind mit dedizierten Artikeln für verschiedene Aspekte der
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
   - [Windows 8.1 und höher](compliance-policy-create-windows-8-1.md)
   - [Windows 10 und höher](compliance-policy-create-windows.md)
 
@@ -163,13 +160,13 @@ In der folgenden Tabelle wird beschrieben, wie nicht konforme Einstellungen verw
 
 |**Richtlinieneinstellung**| **Plattform** |
 | --- | ----|
-| **PIN- oder Kennwortkonfiguration** | - **Android 4.0 und höher:** Isoliert<br>- **Samsung Knox Standard 4.0 und höher:** Isoliert<br>- **Android Enterprise:** Isoliert  <br>  <br>- **iOS 8.0 oder höher:** Wiederhergestellt<br>- **macOS 10.11 und höher:** Wiederhergestellt  <br>  <br>- **Windows 8.1 und höher:** Wiederhergestellt<br>- **Windows Phone 8.1 oder höher:** Wiederhergestellt|
-| **Geräteverschlüsselung** | - **Android 4.0 und höher:** Isoliert<br>- **Samsung Knox Standard 4.0 und höher:** Isoliert<br>- **Android Enterprise:** Isoliert<br><br>- **iOS 8.0 oder höher:** Wiederhergestellt (durch Festlegen der PIN)<br>- **macOS 10.11 und höher:** Wiederhergestellt (durch Festlegen der PIN)<br><br>- **Windows 8.1 und höher:** Nicht zutreffend<br>- **Windows Phone 8.1 oder höher:** Wiederhergestellt |
-| **Per Jailbreak oder Rootzugriff manipuliertes Gerät** | - **Android 4.0 und höher:** Unter Quarantäne gestellt (keine Einstellung)<br>- **Samsung Knox Standard 4.0 und höher:** Unter Quarantäne gestellt (keine Einstellung)<br>- **Android Enterprise:** Unter Quarantäne gestellt (keine Einstellung)<br><br>- **iOS 8.0 oder höher:** Unter Quarantäne gestellt (keine Einstellung)<br>- **macOS 10.11 und höher:** Nicht zutreffend<br><br>- **Windows 8.1 und höher:** Nicht zutreffend<br>- **Windows Phone 8.1 oder höher:** Nicht zutreffend |
-| **E-Mail-Profil** | - **Android 4.0 und höher:** Nicht zutreffend<br>- **Samsung Knox Standard 4.0 und höher:** Nicht zutreffend<br>- **Android Enterprise:** Nicht zutreffend<br><br>- **iOS 8.0 oder höher:** Isoliert<br>- **macOS 10.11 und höher:** Isoliert<br><br>- **Windows 8.1 und höher:** Nicht zutreffend<br>- **Windows Phone 8.1 oder höher:** Nicht zutreffend |
-| **Minimales Release des Betriebssystems** | - **Android 4.0 und höher:** Isoliert<br>- **Samsung Knox Standard 4.0 und höher:** Isoliert<br>- **Android Enterprise:** Isoliert<br><br>- **iOS 8.0 oder höher:** Isoliert<br>- **macOS 10.11 und höher:** Isoliert<br><br>- **Windows 8.1 und höher:** Isoliert<br>- **Windows Phone 8.1 oder höher:** Isoliert |
-| **Maximales Release des Betriebssystems** | - **Android 4.0 und höher:** Isoliert<br>- **Samsung Knox Standard 4.0 und höher:** Isoliert<br>- **Android Enterprise:** Isoliert<br><br>- **iOS 8.0 oder höher:** Isoliert<br>- **macOS 10.11 und höher:** Isoliert<br><br>- **Windows 8.1 und höher:** Isoliert<br>- **Windows Phone 8.1 oder höher:** Isoliert |
-| **Windows-Integritätsnachweis** | - **Android 4.0 und höher:** Nicht zutreffend<br>- **Samsung Knox Standard 4.0 und höher:** Nicht zutreffend<br>- **Android Enterprise:** Nicht zutreffend<br><br>- **iOS 8.0 oder höher:** Nicht zutreffend<br>- **macOS 10.11 und höher:** Nicht zutreffend<br><br>- **Windows 10 und Windows 10 Mobile:** Isoliert<br>- **Windows 8.1 und höher:** Isoliert<br>- **Windows Phone 8.1 oder höher:** Nicht zutreffend |
+| **PIN- oder Kennwortkonfiguration** | - **Android 4.0 und höher:** Isoliert<br>- **Samsung Knox Standard 4.0 und höher:** Isoliert<br>- **Android Enterprise:** Isoliert  <br>  <br>- **iOS 8.0 oder höher:** Wiederhergestellt<br>- **macOS 10.11 und höher:** Wiederhergestellt  <br>  <br>- **Windows 8.1 und höher:** Wiederhergestellt|
+| **Geräteverschlüsselung** | - **Android 4.0 und höher:** Isoliert<br>- **Samsung Knox Standard 4.0 und höher:** Isoliert<br>- **Android Enterprise:** Isoliert<br><br>- **iOS 8.0 oder höher:** Wiederhergestellt (durch Festlegen der PIN)<br>- **macOS 10.11 und höher:** Wiederhergestellt (durch Festlegen der PIN)<br><br>- **Windows 8.1 und höher:** Nicht zutreffend|
+| **Per Jailbreak oder Rootzugriff manipuliertes Gerät** | - **Android 4.0 und höher:** Unter Quarantäne gestellt (keine Einstellung)<br>- **Samsung Knox Standard 4.0 und höher:** Unter Quarantäne gestellt (keine Einstellung)<br>- **Android Enterprise:** Unter Quarantäne gestellt (keine Einstellung)<br><br>- **iOS 8.0 oder höher:** Unter Quarantäne gestellt (keine Einstellung)<br>- **macOS 10.11 und höher:** Nicht zutreffend<br><br>- **Windows 8.1 und höher:** Nicht zutreffend |
+| **E-Mail-Profil** | - **Android 4.0 und höher:** Nicht zutreffend<br>- **Samsung Knox Standard 4.0 und höher:** Nicht zutreffend<br>- **Android Enterprise:** Nicht zutreffend<br><br>- **iOS 8.0 oder höher:** Isoliert<br>- **macOS 10.11 und höher:** Isoliert<br><br>- **Windows 8.1 und höher:** Nicht zutreffend |
+| **Minimales Release des Betriebssystems** | - **Android 4.0 und höher:** Isoliert<br>- **Samsung Knox Standard 4.0 und höher:** Isoliert<br>- **Android Enterprise:** Isoliert<br><br>- **iOS 8.0 oder höher:** Isoliert<br>- **macOS 10.11 und höher:** Isoliert<br><br>- **Windows 8.1 und höher:** Isoliert|
+| **Maximales Release des Betriebssystems** | - **Android 4.0 und höher:** Isoliert<br>- **Samsung Knox Standard 4.0 und höher:** Isoliert<br>- **Android Enterprise:** Isoliert<br><br>- **iOS 8.0 oder höher:** Isoliert<br>- **macOS 10.11 und höher:** Isoliert<br><br>- **Windows 8.1 und höher:** Isoliert |
+| **Windows-Integritätsnachweis** | - **Android 4.0 und höher:** Nicht zutreffend<br>- **Samsung Knox Standard 4.0 und höher:** Nicht zutreffend<br>- **Android Enterprise:** Nicht zutreffend<br><br>- **iOS 8.0 oder höher:** Nicht zutreffend<br>- **macOS 10.11 und höher:** Nicht zutreffend<br><br>- **Windows 10**: Isoliert<br>- **Windows 8.1 und höher:** Isoliert |
 
 ---------------------------
 

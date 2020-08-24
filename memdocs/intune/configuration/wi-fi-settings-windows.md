@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85092874"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217620"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Hinzufügen von WLAN-Einstellungen für Geräte mit Windows 10 und höher in Intune
 
@@ -101,12 +101,14 @@ Unternehmensprofile verwenden EAP (Extensible Authentication Protocol) für die 
   - **Maximale Zeit zur Authentifizierung vor einem Timeout:** Geben Sie die maximale Zeit in Sekunden zur Authentifizierung beim Netzwerk an. Der Wert muss zwischen 1 und 120 Sekunden liegen.
   - **Windows das Anfordern zusätzlicher Anmeldeinformationen zur Authentifizierung des Benutzers erlauben:** Wenn Sie **Ja** auswählen, fordert das Windows-System den Benutzer dazu auf, zusätzliche Anmeldeinformationen einzugeben, wenn diese von der Authentifizierungsmethode benötigt werden. Wählen Sie **Nein** aus, um die Aufforderungen auszublenden.
 
-- **PMK-Zwischenspeicherung aktivieren:** Wählen Sie **Ja** aus, um den für die Authentifizierung verwendeten PMK (Pairwise Master Key, paarweise Hauptschlüssel) zwischenzuspeichern. Dadurch wird die Authentifizierung beim Netzwerk üblicherweise schneller abgeschlossen. Wählen Sie **Nein** aus, damit bei jeder Verbindung mit dem WLAN-Netzwerk der Authentifizierungshandshake erzwungen wird.
+- **PMK-Zwischenspeicherung aktivieren:** Wählen Sie **Ja** aus, um den für die Authentifizierung verwendeten PMK (Pairwise Master Key, paarweise Hauptschlüssel) zwischenzuspeichern. Dadurch wird die Authentifizierung beim Netzwerk üblicherweise schneller abgeschlossen. Wählen Sie **Nein** aus, damit bei jeder Verbindung mit dem WLAN-Netzwerk der Authentifizierungshandshake erzwungen wird. Um die Einstellung **Vorauthentifizierung aktivieren** zu verwenden, wählen Sie **Ja** aus.
 
   - **Maximal zulässige Zeit der Speicherung eines PMK im Cache:** Geben Sie die maximale Zeit in Minuten zur Zwischenspeicherung des PMK ein. Der Wert muss zwischen 5 und 1440 Minuten liegen.
   - **Maximum number of PMKs stored in cache** (Maximale Anzahl von im Cache gespeicherten PMKs): Geben Sie die Anzahl der im Cache gespeicherten Schlüssel zwischen 1 und 255 an.
 
 - **Vorauthentifizierung aktivieren:** Durch die Vorauthentifizierung kann das Profil sich bei allen Zugriffspunkten für das im Profil angegebene Netzwerk authentifizieren, bevor eine Verbindung hergestellt wird. Beim Wechseln zwischen Zugriffspunkten wird durch die Vorauthentifizierung die Neuverbindung von Benutzern oder Geräten beschleunigt. Wählen Sie **Ja** für das Profil aus, damit eine Authentifizierung bei allen Netzwerk-Zugriffspunkten durchgeführt wird, die sich innerhalb des Empfangsbereichs befinden. Wählen Sie **Nein** aus, wenn sich die Benutzer oder Geräte bei jedem Zugriffspunkt neu authentifizieren müssen.
+
+  Um diese Einstellung zu verwenden, legen Sie **PMK-Zwischenspeicherung aktivieren** auf **Ja** fest.
 
   - **Max. Vorauthentifizierungsversuche:** Geben Sie eine Anzahl der Versuche für die Vorauthentifizierung zwischen 1 und 16 an.
 

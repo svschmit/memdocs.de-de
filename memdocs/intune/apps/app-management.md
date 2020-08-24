@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912398"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252304"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Was ist die Microsoft Intune App-Verwaltung?
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Als IT-Administrator können Sie mit Microsoft Intune die Client-Apps verwalten, die Mitarbeiter Ihres Unternehmens verwenden. Diese Funktion besteht zusätzlich zur Verwaltung von Geräten und dem Schutz von Daten. Eine der Prioritäten eines Administrators ist es, sicherzustellen, dass die Endbenutzer Zugriff auf die Apps haben, die sie für ihre Arbeit benötigen. Dieses Ziel kann aus verschiedenen Gründen eine große Herausforderung darstellen:
 - Es gibt eine Vielzahl von Geräteplattformen und App-Typen.
@@ -44,29 +41,30 @@ Die [mobile Anwendungsverwaltung (Mobile Application Management, MAM) von Intune
 MAM ermöglicht es Ihnen, die Daten Ihres Unternehmens innerhalb einer Anwendung zu verwalten und zu schützen. Mit **MAM ohne Geräteregistrierung** (MAM-WE) kann eine Geschäfts-, Schul- oder Uni-App, die vertrauliche Daten enthält, auf nahezu jedem [Gerät](app-management.md#app-management-capabilities-by-platform) verwaltet werden, auch auf persönlichen Geräten in **BYOD-Szenarios (Bring Your Own Device)** . Viele Produktivitäts-Apps, wie z. B. die Microsoft Office-Apps, können über Intune MAM verwaltet werden. Weitere Informationen finden Sie in der Liste von in [Microsoft Intune verwalteten Apps](apps-supported-intune-apps.md), die für die Öffentlichkeit verfügbar ist.
 
 Intune MAM unterstützt zwei Konfigurationen:
-- **Intune MDM und MAM**: IT-Administratoren können Apps mithilfe von MAM und App-Schutzrichtlinien nur auf Geräten verwalten, die bei der Intune-Verwaltung mobiler Geräte (Mobile Device Management, MDM) registriert sind. Um Apps mithilfe von MDM und MAM zu verwalten, sollten Kunden die Intune-Konsole im Azure-Portal unter https://portal.azure.com verwenden.
-- **MAM ohne Geräteregistrierung**: Mit MAM ohne Geräteregistrierung (MAM without enrollment, MAM-WE) können IT-Administratoren Apps mithilfe von MAM und App-Schutzrichtlinien auf Geräten verwalten, die nicht bei Intune MDM registriert sind. Dies bedeutet, dass Apps über Intune auf Geräten verwaltet werden können, die bei EMM-Drittanbietern registriert sind. Um Apps mithilfe von MAM-WE zu verwalten, sollten Kunden unter https://portal.azure.com die Intune-Konsole im Azure-Portal verwenden. Darüber hinaus können Apps auf Geräten, die entweder bei EMM-Drittanbietern (Enterprise Mobility Management, EMM) oder überhaupt nicht bei einer MDM registriert sind, von Intune verwaltet werden. Weitere Informationen über BYOD und EMS von Microsoft finden Sie unter [ Technologieentscheidungen zur Ermöglichung von BYOD mit Microsoft Enterprise Mobility + Security (EMS)](../fundamentals/byod-technology-decisions.md).
+
+- **Intune MDM und MAM**: IT-Administratoren können Apps mithilfe von MAM und App-Schutzrichtlinien nur auf Geräten verwalten, die bei der Intune-Verwaltung mobiler Geräte (Mobile Device Management, MDM) registriert sind. Um Apps mit MDM und MAM zu verwalten, sollten Kunden Intune im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) verwenden.
+- **MAM ohne Geräteregistrierung**: Mit MAM ohne Geräteregistrierung (MAM without enrollment, MAM-WE) können IT-Administratoren Apps mithilfe von MAM und App-Schutzrichtlinien auf Geräten verwalten, die nicht bei Intune MDM registriert sind. Dies bedeutet, dass Apps über Intune auf Geräten verwaltet werden können, die bei EMM-Drittanbietern registriert sind. Um Apps mit MAM-WE zu verwalten, sollten Kunden Intune im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) verwenden. Darüber hinaus können Apps auf Geräten, die entweder bei EMM-Drittanbietern (Enterprise Mobility Management, EMM) oder überhaupt nicht bei einer MDM registriert sind, von Intune verwaltet werden. Weitere Informationen über BYOD und EMS von Microsoft finden Sie unter [ Technologieentscheidungen zur Ermöglichung von BYOD mit Microsoft Enterprise Mobility + Security (EMS)](../fundamentals/byod-technology-decisions.md).
 
 ## <a name="app-management-capabilities-by-platform"></a>App-Verwaltungsfunktionen nach Plattform
 
 Intune bietet eine Reihe von Funktionen, die die Installation der erforderlichen Apps auf den Geräten unterstützen, auf denen sie ausgeführt werden sollen. Die folgende Tabelle enthält eine Zusammenfassung der App-Verwaltungsfunktionen.
 
-| App-Verwaltungsfunktion | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
-| Hinzufügen und Zuweisen von Apps für Geräte und Benutzer | Ja | Ja | Ja | Ja | Ja |
-| Zuweisen von Apps für Geräte, die nicht bei Intune registriert sind | Ja | Ja | Nein | Nein | Nein |
-| Steuern des Startverhaltens von Apps mithilfe von App-Konfigurationsrichtlinien | Ja | Ja | Nein | Nein | Nein |
-| Verwenden von Richtlinien für die Bereitstellung mobiler Apps zum Verlängern abgelaufener Apps | Nein | Ja | Nein | Nein | Nein |
-| Schützen von Unternehmensdaten in Apps mit App-Schutzrichtlinien | Ja | Ja | Nein | Nein <sup>1</sup> | Nein |
-| Entfernen ausschließlich von Unternehmensdaten aus einer installierten App (Selektive App-Zurücksetzung) | Ja | Ja | Nein | Ja | Ja |
-| Überwachen von App-Zuweisungen | Ja | Ja | Ja | Ja | Ja |
-| Zuweisen und Nachverfolgen von per Volumenlizenz in einem App-Store erworbenen Apps | Nein | Nein | Nein | Ja | Nein |
-| Obligatorische Installation von Apps auf Geräten (erforderlich) <sup>2</sup> | Ja | Ja | Ja | Ja | Ja |
-| Optionale Installation auf Geräten über das Unternehmensportal (verfügbare Installation) | Ja <sup>3</sup> | Ja | Ja | Ja | Ja |
-| Installieren von Verknüpfungen zu Apps im Internet (Weblink) | Ja <sup>4</sup> | Ja | Ja | Ja | Ja |
-| Interne (branchenspezifische) Apps | Ja | Ja | Ja | Ja | Nein |
-| Apps aus einem Store | Ja | Ja | Nein | Ja | Ja |
-| Aktualisierung von Apps | Ja | Ja | Nein | Ja | Ja |
+| App-Verwaltungsfunktion | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- |
+| Hinzufügen und Zuweisen von Apps für Geräte und Benutzer | Ja | Ja | Ja | Ja |
+| Zuweisen von Apps für Geräte, die nicht bei Intune registriert sind | Ja | Ja | Nein | Nein |  |
+| Steuern des Startverhaltens von Apps mithilfe von App-Konfigurationsrichtlinien | Ja | Ja | Nein | Nein |
+| Verwenden von Richtlinien für die Bereitstellung mobiler Apps zum Verlängern abgelaufener Apps | Nein | Ja | Nein | Nein |
+| Schützen von Unternehmensdaten in Apps mit App-Schutzrichtlinien | Ja | Ja | Nein | Nein <sup>1</sup> |
+| Entfernen ausschließlich von Unternehmensdaten aus einer installierten App (Selektive App-Zurücksetzung) | Ja | Ja | Nein | Ja |
+| Überwachen von App-Zuweisungen | Ja | Ja | Ja | Ja |
+| Zuweisen und Nachverfolgen von per Volumenlizenz in einem App-Store erworbenen Apps | Nein | Nein | Nein | Ja |
+| Obligatorische Installation von Apps auf Geräten (erforderlich) <sup>2</sup> | Ja | Ja | Ja | Ja |
+| Optionale Installation auf Geräten über das Unternehmensportal (verfügbare Installation) | Ja <sup>3</sup> | Ja | Ja | Ja |
+| Installieren von Verknüpfungen zu Apps im Internet (Weblink) | Ja <sup>4</sup> | Ja | Ja | Ja |
+| Interne (branchenspezifische) Apps | Ja | Ja | Ja | Ja |
+| Apps aus einem Store | Ja | Ja | Nein | Ja |
+| Aktualisierung von Apps | Ja | Ja | Nein | Ja |
 
 <sup>1</sup> Erwägen Sie die Verwendung [Windows Information Protection](../protect/windows-information-protection-configure.md) für den Schutz von Apps auf Geräten mit Windows 10.<br>
 <sup>2</sup> Gilt nur für Geräte, die von Intune verwaltet werden.<br>
@@ -113,13 +111,15 @@ Im oberen Bereich des Navigationsmenüs für die App-Workload sind häufig verwe
 ### <a name="try-the-interactive-guide"></a>Interaktiven Leitfaden testen
 Der interaktive Leitfaden [Verwalten und Schützen von mobilen Anwendungen und Desktopanwendungen mit dem Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) führt Sie Schritt für Schritt durch das Microsoft Endpoint Manager-Admin Center, um Ihnen zu zeigen, wie Sie in Intune registrierte Geräte verwalten, die Konformität mit Richtlinien erzwingen und die Daten Ihrer Organisation schützen.</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+</div>
 
 ## <a name="additional-information"></a>Zusätzliche Informationen
 Die folgenden Konsolenelemente stellen App-bezogene Funktionen bereit:
 - **Microsoft Store für Unternehmen**: Richten Sie die Integration in den Microsoft Store für Unternehmen ein. Anschließend können Sie erworbene Anwendungen mit Intune synchronisieren, sie zuweisen und Ihre Lizenznutzung verfolgen. Weitere Informationen finden Sie unter [Per Volumenlizenz erworbene Apps aus dem Microsoft Store für Unternehmen](windows-store-for-business.md).
 - **Windows Enterprise-Zertifikat**: Hiermit können Sie den Status eines codesignierenden Zertifikats anwenden oder anzeigen, das zur Verteilung von branchenspezifischen Apps an Ihre verwalteten Windows-Geräte verwendet wird.
-- **Windows-Symantec-Zertifikat**: Hiermit können Sie den Status eines codesignierenden Symantec-Zertifikats anwenden oder anzeigen, das zur Verteilung von XAP- und WP8.x-APPX-Dateien an Windows 10 Mobile-Geräten erforderlich ist.
+- **Windows-Symantec-Zertifikat**: Anwenden oder Anzeigen des Status eines codesignierenden Symantec-Zertifikats.
 - **Windows-Schlüssel zum Querladen**: Fügen Sie einen Windows-Schlüssel zum Querladen hinzu, mit dem Sie eine App direkt auf Geräten installieren können, anstatt die App im Microsoft Store zu veröffentlichen und aus diesem herunterzuladen. Weitere Informationen finden Sie unter [Querladen einer Windows-App](app-sideload-windows.md).
 - **Apple-VPP-Tokens**: Hiermit können Sie Ihre iOS-/iPadOS-VPP-Lizenzen (Volume Purchase Program) anzeigen und anwenden. Weitere Informationen finden Sie unter [How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune (Verwalten von iOS- und macOS-Apps, die über das Apple Volume Purchase Program mit Microsoft Intune erworben wurden)](vpp-apps-ios.md).
 - **Verwaltetes Google Play**: Verwaltetes Google Play ist der Enterprise App Store von Google und die einzige Quelle von Anwendungen für Android Enterprise. Weitere Informationen finden Sie unter [Hinzufügen von verwalteten Google Play-Apps für Android Enterprise-Geräte mit Intune](apps-add-android-for-work.md).

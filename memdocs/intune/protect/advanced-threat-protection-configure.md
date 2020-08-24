@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e19315f07d803e2aab53b3724fde85f1975c0c5
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264549"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179518"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Konfigurieren von Microsoft Defender ATP in Intune
 
@@ -92,10 +92,10 @@ Nachdem Sie ein Gerät über das Konfigurationspaket integriert haben, müssen S
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** > **Profil erstellen** aus.
-3. Geben Sie einen **Namen** und eine **Beschreibung** ein.
-4. Wählen Sie unter **Plattform** die Option **Windows 10 und höher** aus.
-5. Wählen Sie für **Profiltyp** die Option **Microsoft Defender ATP (Windows 10 Desktop)** aus.
-6. Konfigurieren Sie die Einstellungen:
+3. Wählen Sie unter **Plattform** die Option **Windows 10 und höher** aus.
+4. Wählen Sie für **Profiltyp** die Option **Microsoft Defender ATP (Windows 10 Desktop)** und dann **Erstellen** aus.
+5. Geben Sie auf der Seite **Grundeinstellungen** einen *Namen* und eine *Beschreibung* (optional) für das Profil ein, und wählen Sie dann **Weiter** aus.
+6. Konfigurieren Sie auf der Seite **Einstellungen** Folgendes:
 
    - **Pakettyp für die Microsoft Defender ATP-Clientkonfiguration**: Wählen Sie **Onboarding** aus, um das Konfigurationspaket zum Profil hinzuzufügen. Klicken Sie auf **Offboard** (Integration aufheben), um das Konfigurationspaket aus dem Profil zu entfernen.
   
@@ -107,8 +107,14 @@ Nachdem Sie ein Gerät über das Konfigurationspaket integriert haben, müssen S
 
      [Onboarding von Windows 10-Computern mit Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) enthält nähere Informationen zu diesen Microsoft Defender ATP-Einstellungen.
 
-7. Klicken Sie auf **OK** und dann auf **Erstellen**, um Ihre Änderungen zu speichern. Dadurch wird das Profil erstellt.
-8. [Weisen Sie das Gerätekonfigurationsprofil Geräten zu, die Sie mit Microsoft Defender ATP bewerten möchten.](../configuration/device-profile-assign.md)
+7. Wählen Sie **Weiter** aus, um die Seite **Bereichstags** zu öffnen. Bereichstags sind optional. Wählen Sie **Weiter** aus, um den Vorgang fortzusetzen.
+
+8. Wählen Sie auf der Seite **Zuweisungen** die Gruppen aus, die dieses Profil erhalten sollen. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](../configuration/device-profile-assign.md).
+
+   Wählen Sie **Weiter** aus.
+
+9. Klicken Sie, wenn Sie fertig sind, auf der Seite **Bewerten + erstellen** auf **Erstellen**. Das neue Profil wird in der Liste angezeigt, wenn Sie den Richtlinientyp für das Profil auswählen, das Sie erstellt haben.
+ **OK**, und dann **Erstellen**, um Ihre Änderungen zu speichern. Dadurch wird das Profil erstellt.
 
 ### <a name="onboard-android-devices"></a>Durchführen des Onboardings für Android-Geräte
 

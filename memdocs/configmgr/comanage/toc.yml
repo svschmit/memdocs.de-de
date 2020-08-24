@@ -50,5 +50,7 @@
       href: how-to-prepare-Win10.md
     - name: Verschieben von Workloads zu Intune
       href: how-to-switch-workloads.md
+    - name: Apps im Unternehmensportal
+      href: company-portal.md
     - name: Überwachen der Co-Verwaltung
       href: how-to-monitor.md

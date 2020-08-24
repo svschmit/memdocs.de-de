@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db6feb746aa7177f56ff6e87565d67e207d4d9ef
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 1fb6ec17ce058247529ab1e51d50d876e4c97408
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165446"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252672"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Microsoft Intune-Data Warehouse-Datenmodell
 
@@ -60,6 +60,9 @@ Ein Sternschema-Modell bietet hohe für Flexibilität und Analysefunktionen, dam
 ## <a name="time-daily-snapshots"></a>Zeit: Tägliche Momentaufnahmen
 
 Das Warehouse ist Ihren Intune-Daten nachgelagert. Intune erstellt täglich um Mitternacht UTC eine Momentaufnahme und speichert die Momentaufnahme im Warehouse. Die Dauer der Aufbewahrung von Momentaufnahmen unterscheidet sich von Faktentabelle zu Faktentabelle. Einige werden sieben Tage, andere 30 Tage und einige auch länger gespeichert.
+
+> [!NOTE]
+> Jamf-Geräte werden vom Data Warehouse nicht synchronisiert. Weitere Informationen zu Jamf finden Sie unter [Problembehandlung bei der Integration von Jamf Pro mit Microsoft Intune](..\protect\troubleshoot-jamf.md) und [Von Jamf Pro an Intune übermittelte Daten](..\protect\data-jamf-sends-to-intune.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

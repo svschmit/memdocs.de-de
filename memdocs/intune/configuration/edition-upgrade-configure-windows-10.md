@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0e18395aae96adec3bf4bbf60bdcccdd205dc90d
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988415"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146336"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Upgraden von Windows 10-Editionen oder Verlassen des S Modus auf Geräten mit Microsoft Intune
 
@@ -50,7 +50,7 @@ Dieser Artikel listet die unterstützten Upgradepfade auf und zeigt Ihnen, wie S
 Bevor Sie Geräte upgraden, stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 - Einen gültigen Product Key für die Installation der aktualisierten Version von Windows auf allen Geräten, die das Ziel dieser Richtlinie sind (für Windows 10-Desktopeditionen). Sie können entweder Mehrfachaktivierungsschlüssel (Multiple Activation Keys, MAK) oder KMS-Schlüssel (Key Management Server, Schlüsselverwaltungsserver) verwenden.
-- Für Windows 10 Mobile- und Windows 10 Holographic-Editionen können Sie eine Lizenzdatei von Microsoft verwenden. Die Lizenzdatei enthält die Lizenzierungsinformationen zur Installation der aktualisierten Edition auf allen Geräten, die unter diese Richtlinie fallen.
+- Für Windows 10 Holographic-Editionen können Sie eine Lizenzdatei von Microsoft verwenden. Die Lizenzdatei enthält die Lizenzierungsinformationen zur Installation der aktualisierten Edition auf allen Geräten, die unter diese Richtlinie fallen.
 - Die Windows 10-Geräte, denen Sie die Richtlinie zuweisen, müssen bei Microsoft Intune registriert sein. Die Editionsupgraderichtlinie kann nicht für PCs verwendet werden, auf denen die Intune-PC-Clientsoftware ausgeführt wird.
 
 ## <a name="supported-upgrade-paths"></a>Unterstützte Upgradepfade
@@ -70,7 +70,6 @@ Die folgenden Tabelle enthält die unterstützten Upgradepfade für das Windows 
 | Windows 10 Core | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
 | Windows 10 Core N-Edition | Windows 10 Education N-Edition <br/>Windows 10 Enterprise N-Edition <br/>Windows 10 Pro Education N-Edition | 
 | Windows 10 Holographic | Windows 10 Holographic for Business |
-| Windows 10 Mobile | Windows 10 Mobile Enterprise |
 
 <!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ed7852a5aaf09a99823035d12bf2aa9139c1c02
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5be1c4fd42d27386b4fdc51cac6167625432491f
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990232"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559564"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Verwalten von VPP-Apps (Apple Volume Purchase Program) aus Microsoft Store für Unternehmen mit Microsoft Intune
 
@@ -53,7 +53,7 @@ Im [Microsoft Store für Unternehmen](https://www.microsoft.com/business-store) 
 - Registrierte Geräte müssen die Version 1511 oder höher von Windows 10 verwenden.
 
 > [!NOTE]
-> Wenn Sie den Store auf verwalteten Geräten deaktivieren (entweder manuell, über eine Richtlinie oder über eine Gruppenrichtlinie), schlägt die Installation online lizenzierter Apps fehl.
+> Wenn Sie den Zugriff auf den Store auf verwalteten Geräten deaktivieren (entweder manuell, über eine Richtlinie oder über eine Gruppenrichtlinie), tritt bei der Installation online lizenzierter Apps ein Fehler auf.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Verknüpfen Ihres Kontos für den Microsoft Store für Unternehmen mit Intune
 
@@ -78,6 +78,7 @@ Sie können nun fortfahren und die Synchronisierung in der Intune-Konsole einric
 6. Klicken Sie auf **Synchronisieren**, um die im Microsoft Store erworbenen Apps in Intune abzurufen.
 
 ## <a name="synchronize-apps"></a>Synchronisieren von Apps
+Wenn Sie Ihr Konto für den Microsoft Store für Unternehmen bereits mit Ihren Anmeldeinformationen als Intune-Administrator verknüpft haben, können Sie Ihre Apps für den Microsoft Store für Unternehmen mit den folgenden Schritten manuell mit Intune synchronisieren.
 
 1. Wählen Sie **Mandantenverwaltung** > **Connectors und Token** > **Microsoft Store für Unternehmen** aus.
 2. Klicken Sie auf **Synchronisieren**, um die im Microsoft Store erworbenen Apps in Intune abzurufen.
@@ -92,7 +93,7 @@ Sie weisen Apps aus dem Store auf die gleiche Weise wie andere Intune-Apps zu. W
 Offline-Apps können Benutzergruppen, Gerätegruppen oder Gruppen mit Benutzern und Geräten als Ziel haben.
 Offline-Apps können für einen bestimmten Benutzer auf einem Gerät oder für alle Benutzer auf einem Gerät installiert werden.
 
-Wenn Sie eine App aus dem Microsoft Store für Unternehmen zuweisen, wird von jedem Benutzer, der die App installiert, eine Lizenz verwendet. Wenn alle verfügbaren Lizenzen für eine zugewiesene App verwendet werden, können Sie keine weiteren Kopien zuweisen. Unternehmen Sie eine der folgenden Aktionen aus:
+Wenn Sie eine App aus dem Microsoft Store für Unternehmen zuweisen, wird von jedem Benutzer, der die App installiert, eine Lizenz verwendet. Wenn alle verfügbaren Lizenzen für eine zugewiesene App verwendet werden, können Sie keine weiteren Kopien zuweisen. Führen Sie eine der folgenden Aktionen aus:
 
 * Deinstallieren Sie die App auf einigen Geräten.
 * Beschränken Sie die aktuelle Zuweisung auf die Anzahl von Benutzern, für die Sie über Lizenzen verfügen.
