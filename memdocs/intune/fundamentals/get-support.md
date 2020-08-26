@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093139"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820662"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Anfordern von Support für Microsoft Intune
 
@@ -83,8 +83,6 @@ Dieses Problem tritt auf, wenn Sie Ihr neues Mandantenkonto nicht über das **M3
 
     > [!div class="mx-imgBorder"]
     > ![Bestätigen Sie Ihren Verwaltungstyp](./media/get-support/confirm-management-selection.png)
-
-  - Wenn Sie Hilfe und Support über **Problembehandlung + Support** > **Hilfe und Support** öffnen, wird Ihr ausgewählter Verwaltungstyp nicht unter *Hilfe und Support* aufgelistet.
 
   - Wenn Sie einen Drilldown in einen anderen Knoten wie *Geräte*, *Apps* oder *Benutzer* durchführen und dann *Hilfe und Support* auswählen, haben Sie keine Möglichkeit, einen Verwaltungstyp auszuwählen, und der Typ wird auch nicht unter *Hilfe- und Support* angezeigt. In diesem Fall wird *Intune* vorausgesetzt. Wenn Sie nicht möchten, dass Intune der Kontext ist, verwenden Sie die **?** - Option, sodass Sie einen anderen Verwaltungstyp auswählen können.
 

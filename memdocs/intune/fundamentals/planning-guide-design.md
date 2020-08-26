@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179569"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663241"
 ---
 # <a name="create-a-design"></a>Erstellen eines Entwurfs
 
@@ -296,8 +296,8 @@ Im folgenden Beispiel wird gezeigt, wie Zertifikate während des Entwurfs dokume
 
 | **Typ** | **Profilname** | **Geräteplattform** | **Anwendungsfälle** |   
 |:---:|:---:|:---:|:---:|
-| Stamm-CA | Stamm-CA für Unternehmensgeräte | Android, iOS/iPadOS, Windows Mobile | Unternehmen, BYOD  |                                                           
-| SCEP | Benutzerzertifikat | Android, iOS/iPadOS, Windows Mobile | Unternehmen, BYOD |                                                           
+| Stamm-CA | Stamm-CA für Unternehmensgeräte | Android, iOS/iPadOS | Unternehmen, BYOD  |                                                           
+| SCEP | Benutzerzertifikat | Android, iOS/iPadOS | Unternehmen, BYOD |                                                           
 
 
 Sie können eine [Vorlage der oben stehenden Tabelle herunterladen](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0), um die Anforderungen an Ihr Zertifikatprofil zu ermitteln.

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1616fe4104707668463843dfb890c2f8e0b0c4a8
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 84bf5d6be2761d368e514be31c6fd426b6c508f0
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880964"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820611"
 ---
 # <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Sperren eines Geräts über die Unternehmensportal-App für Windows 10
 
@@ -35,9 +35,7 @@ Das Remotesperren wird für Geräte unterstützt, auf denen folgende Betriebssys
 
 * Android
 * iOS
-* macOS
-* Windows 10 Mobile (wenn für das Gerät bereits eine Kennung festgelegt wurde)
-* Windows Phone 8.1 (wenn für das Gerät bereits eine Kennung festgelegt wurde) 
+* macOS  
   
 ## <a name="remote-lock-device"></a>Remotesperre für Gerät aktivieren
 Führen Sie die folgenden Schritte aus, um Ihr Gerät für die Unternehmens-App zu sperren.  
@@ -55,5 +53,7 @@ Führen Sie die folgenden Schritte aus, um Ihr Gerät für die Unternehmens-App 
    ![Screenshot der Seite „Gerätedetails“ der Unternehmensportal-App mit der Aufforderung, die Remotesperre zu bestätigen](./media/1804_remote_lock_Windows_CPapp_06.png)  
 
 4. Falls Sie Ihr Gerät wiederfinden, geben Sie zum Entsperren die Kennung ein.  
+
+## <a name="next-steps"></a>Nächste Schritte
 
 Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).

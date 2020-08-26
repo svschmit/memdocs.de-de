@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c1431105bdba9731bda4599e310889bfbf86a2c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: ad49651c7a9bd5b20aa7552f675f7dfe01be3b1c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252253"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820560"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Erstellen einer Konformitätsrichtlinie in Microsoft Intune
 
@@ -113,19 +113,6 @@ Stellen Sie zum Verwenden von Konformitätsrichtlinien folgendes sicher:
 10. Überprüfen Sie die Einstellungen auf der Registerkarte **Überprüfen + erstellen**, und klicken Sie auf **Erstellen**, um die Konformitätsrichtlinie zu speichern.  
 
     Die Benutzer oder Geräte, für die Ihre Richtlinie gilt, werden hinsichtlich der Konformität ausgewertet, wenn sie mit Intune eingecheckt werden.
-
-<!-- Evaluate option  - pending details as to its fate with this new Full Screen UI udpate  
-
-### Evaluate how many users are targeted
-
-When you assign the policy, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
-
-1. In Intune, select **Devices** > **Compliance policies** > **Policies**.
-
-2. Select a *policy* > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this policy.
-
-If the **Evaluate** button is grayed out, make sure the policy is assigned to one or more groups.
--->
 
 ## <a name="refresh-cycle-times"></a>Aktualisierungszykluszeit
 
