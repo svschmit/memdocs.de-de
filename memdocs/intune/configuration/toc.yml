@@ -51,7 +51,7 @@
           displayName: 'psk, oma-uri, eap'
         - name: WLAN-Problembehandlung
           href: troubleshoot-wi-fi-profiles.md
-    - name: Administrative Vorlagen auf Windows
+    - name: Administrative Vorlagen
       displayName: 'admx, gpo, group policy'
       items:
         - name: Administrative Vorlagen erstellen
