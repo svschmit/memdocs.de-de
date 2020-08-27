@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 911ff589acb5d215931dd4a2e72a05bff760a533
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: c8bf506d0b9c7285087999967dd188122494661d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253344"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907998"
 ---
 # <a name="windows-autopilot-licensing-requirements"></a>Windows Autopilot-Lizenzierungsanforderungen
 
@@ -36,17 +36,16 @@ Eines der folgenden Abonnements ist erforderlich, um die erforderlichen Azure Ac
 - [Microsoft 365 Academic a1-, a3-oder A5-Abonnement](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)
 - [Microsoft 365 Enterprise E3-oder E5-Abonnement](https://www.microsoft.com/microsoft-365/enterprise), die alle Features von Windows 10, Office 365 und EM + S (Azure AD und InTune) enthalten.
 - [Enterprise Mobility + Security E3-oder E5-Abonnement](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), das alle benötigten Azure AD-und InTune-Features umfasst.
-- [InTune for Education-Abonnement](https://docs.microsoft.com/intune-education/what-is-intune-for-education), das alle benötigten Azure AD-und InTune-Features umfasst.
+- [InTune for Education-Abonnement](/intune-education/what-is-intune-for-education), das alle benötigten Azure AD-und InTune-Features umfasst.
 - [Azure Active Directory Premium P1 oder P2](https://azure.microsoft.com/services/active-directory/) und [Microsoft InTune Abonnement](https://www.microsoft.com/cloud-platform/microsoft-intune) (oder ein alternativer MDM-Dienst).
 
 > [!NOTE]
-> Selbst bei Verwendung Microsoft 365 Abonnements müssen Sie [den Benutzern trotzdem InTune-Lizenzen zuweisen](https://docs.microsoft.com/intune/fundamentals/licenses-assign).
+> Selbst bei Verwendung Microsoft 365 Abonnements müssen Sie [den Benutzern trotzdem InTune-Lizenzen zuweisen](/intune/fundamentals/licenses-assign).
 
 Außerdem wird Folgendes empfohlen (ist jedoch nicht erforderlich):
 - [Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/p/office-365-proplus/CFQ7TTC0K8R0), die problemlos über InTune (oder andere MDM-Dienste) bereitgestellt werden können.
-- [Windows-Abonnement Aktivierung](https://docs.microsoft.com/windows/deployment/windows-10-enterprise-subscription-activation), um Geräte von Windows 10 pro zu Windows 10 Enterprise automatisch zu überspringen.
+- [Windows-Abonnement Aktivierung](/windows/deployment/windows-10-enterprise-subscription-activation), um Geräte von Windows 10 pro zu Windows 10 Enterprise automatisch zu überspringen.
 
 **Nächste Schritte**
 
 [Windows Autopilot-Konfigurations Anforderungen](configuration-requirements.md)
-

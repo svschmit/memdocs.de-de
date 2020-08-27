@@ -12,12 +12,12 @@ ms.sitesec: library
 audience: itpro
 author: greg-lindsay
 ms.topic: article
-ms.openlocfilehash: 7a8ff5a1748dc94f7e0d5001ba8aed27a225de7b
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 96c76aacf8185af671354c89cd5b89775a470710
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756698"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908365"
 ---
 #  <a name="windows-autopilot-deployment-process"></a>Windows Autopilot-Bereitstellungs Prozess
 
@@ -28,4 +28,4 @@ Windows Autopilot-Bereitstellungs Prozesse werden im folgenden Poster zusammenge
 
 [![Bereitstellen von Windows 10 mit Autopilot](media/windows10-autopilot-flowchart.png)](media/Windows10AutopilotFlowchart.pdf)
 
-**Hinweis**: der Prozess Windows Autopilot für vorhandene Geräte ist im [Poster Microsoft Endpoint Configuration Manager-Bereitstellung](https://docs.microsoft.com/windows/deployment/windows-10-deployment-posters#deploy-windows-10-with-microsoft-endpoint-configuration-manager)enthalten. 
+**Hinweis**: der Prozess Windows Autopilot für vorhandene Geräte ist im [Poster Microsoft Endpoint Configuration Manager-Bereitstellung](/windows/deployment/windows-10-deployment-posters#deploy-windows-10-with-microsoft-endpoint-configuration-manager)enthalten.

@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: c89731edddd94da99e114cf98c10547c096ebb53
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: f6a9e3008a493185a2338a5af1106806d86dd130
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252013"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907908"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Problembehandlung bei Windows Autopilot
 
@@ -94,7 +94,7 @@ Wenn OOBE unerwartetes Autopilot-Verhalten enthält, ist es hilfreich, zu überp
 
 In Windows 10, Version 1803 und höher, werden Ereignisprotokoll Einträge hinzugefügt. Sie können die og-Einträge verwenden, um Details im Zusammenhang mit den Autopilot-Profileinstellungen und dem OOBE-Flow anzuzeigen. Diese Einträge können mit Ereignisanzeige angezeigt werden. Lesen Sie die Informationen unter **Anwendungs-und Dienst Protokolle – > Microsoft – > Windows – > Provisioning-Diagnostics-Provider – > Autopilot** für Versionen vor 1903. Informationen zu den Versionen 1903 und höher finden Sie unter **Anwendungs-und Dienst Protokolle – > Microsoft – > Windows – > moderndeployment-Diagnostics-Provider – > Autopilot**. Je nach Szenario und Profil Konfiguration können die folgenden Ereignisse aufgezeichnet werden:
 
-| Ereignis-ID | type | Beschreibung |
+| Ereignis-ID | type | BESCHREIBUNG |
 |----------|------|-------------| 
 | 100 | Warnung | "Die Autopilot-Richtlinie [Name] wurde nicht gefunden." Dieser Fehler ist in der Regel ein vorübergehendes Problem, während das Gerät darauf wartet, dass ein Autopilot-Profil heruntergeladen wird. |
 | 101 | Info | "Autopilotgetpolicydwordbyname war erfolgreich: Richtlinien Name = [Einstellungs Name]; Richtlinien Wert = [Wert]. " Diese Meldung zeigt Autopilot zum Abrufen und verarbeiten numerischer OOBE-Einstellungen. |
@@ -115,7 +115,7 @@ Zusätzlich zu den Ereignisprotokoll Einträgen funktionieren die unten aufgefü
 
 Autopilot-Profileinstellungen, die vom Autopilot-Bereitstellungs Dienst empfangen werden, werden in der Registrierung des Geräts gespeichert. Diese Informationen finden Sie unter **hklm\software\microsoft\provisioning\diagnostics\autopilot**. Folgende Registrierungseinträge sind verfügbar:
 
-| Wert | Beschreibung |
+| value | BESCHREIBUNG |
 |-------|-------------|
 | AadTenantId | Der GUID des Azure AD Mandanten, bei dem sich der Benutzer angemeldet hat. Der Benutzer erhält eine Fehlermeldung, wenn dieser Eintrag nicht mit dem Mandanten identisch ist, der zum Registrieren des Geräts verwendet wurde. |
 | Cloudassignedtenantdomain | Der Azure AD Mandanten, bei dem das Gerät registriert wurde, z. b. "contosomn.onmicrosoft.com". Wenn das Gerät nicht bei Autopilot registriert ist, ist dieser Wert leer. |
@@ -126,7 +126,7 @@ Autopilot-Profileinstellungen, die vom Autopilot-Bereitstellungs Dienst empfange
 
 ### <a name="windows-10-semi-annual-channel-supported-versions"></a>Unterstützte Versionen von halbjährlichen Kanälen in Windows 10
 
-Auf Geräten, auf denen eine [unterstützte Version](https://docs.microsoft.com/windows/release-information/) des halbjährlichen Kanals von Windows 10 ausgeführt wird, können Sie die ETW-Ablauf Verfolgung verwenden, um ausführliche Informationen von Autopilot und zugehörigen Komponenten zu erhalten. Die ETW-Ablauf Verfolgungs Dateien können mithilfe von Windows Performance Analyzer oder ähnlichen Tools angezeigt werden. Weitere Informationen finden Sie [im Blog zur erweiterten Problem](https://blogs.technet.microsoft.com/mniehaus/2017/12/13/troubleshooting-windows-autopilot-level-300400/)Behandlung.
+Auf Geräten, auf denen eine [unterstützte Version](/windows/release-information/) des halbjährlichen Kanals von Windows 10 ausgeführt wird, können Sie die ETW-Ablauf Verfolgung verwenden, um ausführliche Informationen von Autopilot und zugehörigen Komponenten zu erhalten. Die ETW-Ablauf Verfolgungs Dateien können mithilfe von Windows Performance Analyzer oder ähnlichen Tools angezeigt werden. Weitere Informationen finden Sie [im Blog zur erweiterten Problem](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400)Behandlung.
 
 ## <a name="troubleshooting-azure-ad-join-issues"></a>Problembehandlung bei Azure AD Verknüpfungs Problemen
 
@@ -144,7 +144,7 @@ Informationen zu Problemen bei der InTune-Registrierung finden Sie in [diesem Kn
 
 Der Fehlercode 80180018 wird in der Regel auf einer Fehlerseite mit dem Titel "ein Fehler ist aufgetreten" angezeigt. Dieser Fehler bedeutet, dass die MDM-Registrierung fehlgeschlagen ist.
 
-Wenn die Autopilot-zurück Setzung sofort fehlschlägt, tritt ein Fehler **auf. Melden Sie sich mit einem Administrator Konto an, um zu erfahren, warum und manuell zurückgesetzt**werden. Weitere Informationen finden Sie unter Problembehandlung bei [Autopilot Reset](https://docs.microsoft.com/education/windows/autopilot-reset#troubleshoot-autopilot-reset) .
+Wenn die Autopilot-zurück Setzung sofort fehlschlägt, tritt ein Fehler **auf. Melden Sie sich mit einem Administrator Konto an, um zu erfahren, warum und manuell zurückgesetzt**werden. Weitere Informationen finden Sie unter Problembehandlung bei [Autopilot Reset](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) .
 
 ## <a name="profile-download"></a>Profil Download
 
@@ -162,9 +162,9 @@ Wenn Sie einen Computer während OOBE neu starten müssen:
 - Drücken Sie UMSCHALT + F10, um eine Eingabeaufforderung zu öffnen.
 - Geben Sie **Shutdown/r/t 0** ein, um sofort neu zu starten, oder fahren Sie **/s/t 0** herunter, um sofort herunterzufahren.
 
-Weitere Informationen finden Sie unter [Windows Setup-Befehlszeilenoptionen](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+Weitere Informationen finden Sie unter [Windows Setup-Befehlszeilenoptionen](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 [Windows Autopilot-bekannte Probleme](known-issues.md)<br>
-[Diagnostizieren von MDM-Fehlern in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[Diagnostizieren von MDM-Fehlern in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>

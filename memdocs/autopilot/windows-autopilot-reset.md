@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 8388febead5953fd6c76e7e40571d3b2e1b91e4d
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: e084663527d48c83d42d426792da0bedddd35942
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756500"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907928"
 ---
 # <a name="windows-autopilot-reset"></a>Windows Autopilot Reset
 
@@ -55,7 +55,7 @@ Bei jedem Szenario gelten zusätzliche Anforderungen und Konfigurationsdetails. 
 
 **Gilt für: Windows 10, Version 1709 und höher**
 
-Zum Ausführen dieser Aufgabe ist die Rolle "InTune-Dienst Administrator" erforderlich.  Weitere Informationen finden Sie unter [Hinzufügen von Benutzern und Gewähren von Administratorrechten für Intune](https://docs.microsoft.com/intune/users-add).
+Zum Ausführen dieser Aufgabe ist die Rolle "InTune-Dienst Administrator" erforderlich.  Weitere Informationen finden Sie unter [Hinzufügen von Benutzern und Gewähren von Administratorrechten für Intune](/intune/users-add).
 
 IT-Administratoren können eine lokale Windows Autopilot-zurück Setzung durchführen, um persönliche Dateien, Apps und Einstellungen schnell zu entfernen und Windows 10-Geräte jederzeit über den Sperrbildschirm zurückzusetzen. Außerdem können Sie die ursprünglichen Einstellungen und die Verwaltungs Registrierung (Azure Active Directory und Geräteverwaltung) anwenden, sodass die Geräteeinsatz bereit sind. Bei einer lokalen Autopilot-zurück Setzung werden Geräte in einen vollständig konfigurierten oder bekannten Zustand zurückversetzt.
 
@@ -66,7 +66,7 @@ So aktivieren Sie die lokale Autopilot-zurück Setzung in Windows 10:
 
 ### <a name="enable-local-windows-autopilot-reset"></a>Aktivieren der lokalen Windows Autopilot-zurück Setzung
 
-Um eine lokale Windows Autopilot-zurück Setzung zu aktivieren, muss die Richtlinie **disableautomatikredeploymentanmelde** Informationen konfiguriert werden. Diese Richtlinie ist in den [Richtlinien-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialproviders), " **erleistungsanbieter/disableautomatikredeploymentanmelde**Informationen" dokumentiert. Standardmäßig ist der lokale Windows Autopilot deaktiviert. Dadurch wird sichergestellt, dass eine lokale Autopilot-zurück Setzung nicht versehentlich ausgelöst wird.
+Um eine lokale Windows Autopilot-zurück Setzung zu aktivieren, muss die Richtlinie **disableautomatikredeploymentanmelde** Informationen konfiguriert werden. Diese Richtlinie ist in den [Richtlinien-CSP](/windows/client-management/mdm/policy-csp-credentialproviders), " **erleistungsanbieter/disableautomatikredeploymentanmelde**Informationen" dokumentiert. Standardmäßig ist der lokale Windows Autopilot deaktiviert. Dadurch wird sichergestellt, dass eine lokale Autopilot-zurück Setzung nicht versehentlich ausgelöst wird.
 
 Die Richtlinie kann mit einer der folgenden Methoden festgelegt werden:
 
@@ -77,7 +77,7 @@ Die Richtlinie kann mit einer der folgenden Methoden festgelegt werden:
 
 - Windows-Konfigurations-Designer
 
-    Sie können den [Windows-Konfigurations-Designer verwenden](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package) , um die **Lauf Zeit Einstellungen > Richtlinien festzulegen > >** die Einstellung für "" auf "0", und erstellen Sie ein Bereitstellungs Paket.
+    Sie können den [Windows-Konfigurations-Designer verwenden](/windows/configuration/provisioning-packages/provisioning-create-package) , um die **Lauf Zeit Einstellungen > Richtlinien festzulegen > >** die Einstellung für "" auf "0", und erstellen Sie ein Bereitstellungs Paket.
 
 - Einrichten der App "School PCs"
 
@@ -131,9 +131,9 @@ Nachdem der Vorgang abgeschlossen ist, ist das Gerät wieder einsatzbereit.
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Windows Autopilot Reset erfordert, dass die [Windows-Wiederherstellungs Umgebung (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) ordnungsgemäß konfiguriert und auf dem Gerät aktiviert ist. Wenn Sie nicht konfiguriert und aktiviert ist, wird ein Fehler wie `Error code: ERROR_NOT_SUPPORTED (0x80070032)` gemeldet.
+Windows Autopilot Reset erfordert, dass die [Windows-Wiederherstellungs Umgebung (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) ordnungsgemäß konfiguriert und auf dem Gerät aktiviert ist. Wenn Sie nicht konfiguriert und aktiviert ist, wird ein Fehler wie `Error code: ERROR_NOT_SUPPORTED (0x80070032)` gemeldet.
 
-Um sicherzustellen, dass WinRE aktiviert ist, führen Sie mit dem [REAgentC.exe Tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/reagentc-command-line-options) den folgenden Befehl aus:
+Um sicherzustellen, dass WinRE aktiviert ist, führen Sie mit dem [REAgentC.exe Tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) den folgenden Befehl aus:
 
 ```
 reagentc /enable

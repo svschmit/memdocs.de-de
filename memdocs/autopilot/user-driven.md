@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b2c9d3b8741fdae30b42aede8f5c7443e35d8bc7
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 09632eccf99774d4170fe60f51b6703cd8b90fed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251959"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907918"
 ---
 # <a name="windows-autopilot-user-driven-mode"></a>Benutzergesteuerter Modus von Windows Autopilot
 
@@ -41,7 +41,7 @@ Der restliche Prozess ist automatisiert, wie das Gerät:
 
 Alle zusätzlichen Eingabe Aufforderungen während der Out-of-Box-Darstellung (OOBE) können unterdrückt werden. Optionen, die verfügbar sind, finden Sie unter [Konfigurieren von Autopilot-Profilen](profiles.md) .
 
-Der benutzergesteuerte Modus von Windows Autopilot unterstützt Azure Active Directory und Hybrid Azure Active Directory verbundene Geräte. Weitere Informationen zu diesen beiden joinoptionen finden Sie unter [Was ist eine Geräte Identität](https://docs.microsoft.com/azure/active-directory/devices/overview).
+Der benutzergesteuerte Modus von Windows Autopilot unterstützt Azure Active Directory und Hybrid Azure Active Directory verbundene Geräte. Weitere Informationen zu diesen beiden joinoptionen finden Sie unter [Was ist eine Geräte Identität](/azure/active-directory/devices/overview).
 
 Der Prozessfluss, der während des benutzergesteuerten Prozesses abgeschlossen wurde, lautet wie folgt:
 
@@ -67,7 +67,7 @@ Weitere Informationen zu den verfügbaren joinoptionen finden Sie in den folgend
 
 Um eine benutzergesteuerte Bereitstellung mit Windows Autopilot abzuschließen, führen Sie die folgenden Vorbereitungsschritte aus:
 
-1. Stellen Sie sicher, dass die Benutzer, die bereit Stellungen im benutzergesteuerten Modus durchführen werden, Geräte zu Azure Active Directory hinzufügen können. Weitere Informationen finden Sie unter [Konfigurieren von Geräteeinstellungen](https://docs.microsoft.com/azure/active-directory/device-management-azure-portal#configure-device-settings) in der Azure Active Directory-Dokumentation.
+1. Stellen Sie sicher, dass die Benutzer, die bereit Stellungen im benutzergesteuerten Modus durchführen werden, Geräte zu Azure Active Directory hinzufügen können. Weitere Informationen finden Sie unter [Konfigurieren von Geräteeinstellungen](/azure/active-directory/device-management-azure-portal#configure-device-settings) in der Azure Active Directory-Dokumentation.
 2. Erstellen Sie ein Autopilot-Profil für den benutzergesteuerten Modus mit den gewünschten Einstellungen. In Microsoft InTune wird dieser Modus explizit ausgewählt, wenn das Profil erstellt wird. Bei der Microsoft Store für Unternehmen und Partner Center ist der benutzergesteuerte Modus die Standardeinstellung und muss nicht ausgewählt werden.
 3. Wenn Sie InTune verwenden, erstellen Sie eine Gerätegruppe in Azure Active Directory, und weisen Sie dieser Gruppe das Autopilot-Profil zu.
 
@@ -84,9 +84,9 @@ Für jedes Gerät, das über eine benutzergesteuerte Bereitstellung bereitgestel
 
 ## <a name="user-driven-mode-for-hybrid-azure-active-directory-join"></a>Benutzergesteuerte Modus für Hybrid Azure Active Directory Join
 
-Windows Autopilot erfordert, dass Geräte Azure Active Directory verknüpft sind. Wenn Sie über eine lokale Active Directory Umgebung verfügen, können Sie Geräte zu Ihrer lokalen Domäne hinzufügen. Um den Geräten beizutreten, müssen Sie Autopilot-Geräte so konfigurieren, dass Sie [mit Azure Active Directory (Azure AD) Hybrid](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)verknüpft werden. 
+Windows Autopilot erfordert, dass Geräte Azure Active Directory verknüpft sind. Wenn Sie über eine lokale Active Directory Umgebung verfügen, können Sie Geräte zu Ihrer lokalen Domäne hinzufügen. Um den Geräten beizutreten, müssen Sie Autopilot-Geräte so konfigurieren, dass Sie [mit Azure Active Directory (Azure AD) Hybrid](/azure/active-directory/devices/hybrid-azuread-join-plan)verknüpft werden. 
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Requirements (Anforderungen)
 
 So führen Sie eine benutzergesteuerte Bereitstellung mit Hybrid Azure AD mithilfe von Windows Autopilot durch:
 
@@ -97,7 +97,7 @@ So führen Sie eine benutzergesteuerte Bereitstellung mit Hybrid Azure AD mithil
 - Das Gerät muss Zugriff auf einen Active Directory Domänen Controller haben. Es muss mit dem Netzwerk der Organisation verbunden sein. Sie muss in der Lage sein, die DNS-Einträge für die AD-Domäne und den AD-Domänen Controller aufzulösen. Sie muss in der Lage sein, mit dem Domänen Controller zu kommunizieren, um den Benutzer zu authentifizieren.
 - Das Gerät muss auf das Internet zugreifen können, und zwar gemäß den [dokumentierten Netzwerk Anforderungen für Windows Autopilot](networking-requirements.md).
 - Der InTune-Connector für Active Directory muss installiert sein.
- - Hinweis: der InTune-Connector führt einen lokalen AD Join aus. Daher benötigen Benutzer keine lokale Ad-Join-Berechtigung. Dabei wird davon ausgegangen, dass der Connector so konfiguriert ist, dass er [Diese Aktion](https://docs.microsoft.com/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) im Auftrag des Benutzers ausführt. 
+ - Hinweis: der InTune-Connector führt einen lokalen AD Join aus. Daher benötigen Benutzer keine lokale Ad-Join-Berechtigung. Dabei wird davon ausgegangen, dass der Connector so konfiguriert ist, dass er [Diese Aktion](/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) im Auftrag des Benutzers ausführt. 
 - Bei Verwendung eines Proxys müssen WPAD-Proxyeinstellungen aktiviert und konfiguriert sein.
 
 **Azure AD Geräte**Verknüpfung: der Hybrid Azure AD Join-Prozess verwendet den Systemkontext, um die Geräte Azure AD beitreten auszuführen. Dies ist nicht von den Einstellungen der benutzerbasierten Azure AD Join-Berechtigung betroffen. Alle Benutzer können Geräte standardmäßig Azure AD hinzufügen.
@@ -109,7 +109,7 @@ Geräte, die mit Active Directory verknüpft sind, benötigen für viele Aktivit
 Durch das Hinzufügen von VPN-Unterstützung für dieses Szenario können Sie den Azure AD Hybrid Join Prozess so konfigurieren, dass die Konnektivitätsüberprüfung übersprungen wird. Dadurch entfällt die Notwendigkeit, mit einem Active Directory Domänen Controller zu kommunizieren. Um die Verbindung zum Unternehmensnetzwerk zuzulassen, stellt InTune stattdessen die erforderliche VPN-Konfiguration bereit, bevor der Benutzer versucht, sich bei Windows anzumelden. 
 
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Requirements (Anforderungen)
 
 Die folgenden zusätzlichen Anforderungen gelten für Azure AD Hybrid Join mit VPN-Unterstützung:
 
@@ -131,7 +131,7 @@ In Fällen, in denen die Zertifikat Authentifizierung für die VPN-Software erfo
 
 Benutzerzertifikate werden nicht unterstützt, da Sie erst bereitgestellt werden können, wenn sich der Benutzer anmeldet. Da Sie erst nach der Benutzeranmeldung installiert werden, werden nicht von Microsoft unterstützte UWP-VPN-Plug-ins, die aus dem Windows Store übermittelt werden, nicht unterstützt.
 
-### <a name="validation"></a>Überprüfen
+### <a name="validation"></a>Validierung
 
 Bevor Sie versuchen, einen Hybrid Azure AD Join per VPN zu verwenden, ist es wichtig zu bestätigen, dass ein Benutzer gesteuAzure AD Hybrid Join Prozess im Netzwerk der Organisation ausgeführt werden kann. Diese Bestätigung vereinfacht die Problembehandlung, indem sichergestellt wird, dass der Hauptprozess funktioniert, bevor die zusätzliche VPN-Konfiguration erforderlich wird.
 
@@ -145,7 +145,7 @@ Bevor Sie versuchen, einen Hybrid Azure AD Join per VPN zu verwenden, ist es wic
 Bei VPN-Konfigurationen, die automatisch eine Verbindung herstellen, können sich die Validierungs Schritte unterscheiden.
 
 > [!NOTE]
-> Always on-VPN kann für dieses Szenario verwendet werden. Weitere Informationen finden Sie in der Dokumentation zum Bereitstellen von [Always on-VPN](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) . Beachten Sie, dass InTune das erforderliche Computer spezifische VPN-Profil noch nicht bereitstellen kann. 
+> Always on-VPN kann für dieses Szenario verwendet werden. Weitere Informationen finden Sie in der Dokumentation zum Bereitstellen von [Always on-VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) . Beachten Sie, dass InTune das erforderliche Computer spezifische VPN-Profil noch nicht bereitstellen kann. 
 
 Stellen Sie sicher, dass das erforderliche kumulative Windows 10-Update unter Windows 10 1903 oder Windows 10 1909 installiert wurde, um den Prozess zu überprüfen. Sie können das Update während des OOBE-Vorgangs manuell installieren, indem Sie zuerst den aktuellen kumulativen aus herunterladen https://catalog.update.microsoft.com . Folgen Sie diesen Schritten:
 
@@ -163,7 +163,4 @@ Oder Sie können Windows Update starten, um die neuesten Updates zu installieren
 
 ### <a name="step-by-step-instructions"></a>Schrittweise Anweisungen
 
-Weitere Informationen finden Sie unter Bereitstellen von [Hybrid Azure AD verbundenen Geräten mit InTune und Windows Autopilot](https://docs.microsoft.com/intune/windows-autopilot-hybrid).
-
-
-
+Weitere Informationen finden Sie unter Bereitstellen von [Hybrid Azure AD verbundenen Geräten mit InTune und Windows Autopilot](/intune/windows-autopilot-hybrid).

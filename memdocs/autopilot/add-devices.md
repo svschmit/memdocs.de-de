@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: fc892a4372aa7d72f294ddf93f811d641ca961b5
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: b8737646946e1c575ddb8ebdd26397712c412e20
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051424"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908568"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Hinzufügen von Geräten zu Windows Autopilot
 
@@ -53,7 +53,7 @@ Für Windows Autopilot sind beim Einrichten der Beziehung zwischen dem CSP-Partn
 
 Wenn auf einem vorhandenen Gerät bereits eine unterstützte Version des halbjährlichen Kanals von Windows 10 ausgeführt und in einem MDM-Dienst wie InTune registriert ist, kann der MDM-Dienst das Gerät nach der Hardware-ID (auch als Hardwarehash bezeichnet) Abfragen.  Sobald dies der Fall ist, kann das Gerät automatisch bei Windows Autopilot registriert werden.
 
-Anweisungen dazu, wie Sie dies mit Microsoft InTune tun, finden Sie unter [Erstellen einer Autopilot-Bereitstellungs Profil](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) Dokumentation, in der die Einstellung "Konvertieren aller Zielgeräte in Autopilot" beschrieben wird. 
+Anweisungen dazu, wie Sie dies mit Microsoft InTune tun, finden Sie unter [Erstellen einer Autopilot-Bereitstellungs Profil](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) Dokumentation, in der die Einstellung "Konvertieren aller Zielgeräte in Autopilot" beschrieben wird. 
 
 Beachten Sie auch, dass bei Verwendung des Szenarios [Windows Autopilot für vorhandene Geräte](existing-devices.md) das vorab registrieren der Geräte bei Windows Autopilot nicht erforderlich ist.  Stattdessen wird eine Konfigurationsdatei (AutopilotConfigurationFile.js) mit allen Windows Autopilot-Profileinstellungen verwendet. das Gerät kann bei Windows Autopilot registriert werden, wenn die Einstellung "alle Zielgeräte in Autopilot konvertieren" verwendet wird.
 
@@ -74,10 +74,10 @@ Beachten Sie, dass der Hardware Hash auch Details zu dem Zeitpunkt enthält, zu 
 
 ### <a name="collecting-the-hardware-id-from-existing-devices-using-microsoft-endpoint-configuration-manager"></a>Erfassen der Hardware-ID von vorhandenen Geräten mithilfe von Microsoft Endpoint Configuration Manager
 
-Microsoft Endpoint Configuration Manager erfasst automatisch die hardwarehashes für vorhandene Windows 10-Geräte. Weitere Informationen finden Sie unter [Sammeln von Informationen aus Configuration Manager für Windows Autopilot](https://docs.microsoft.com/configmgr/comanage/how-to-prepare-win10#windows-autopilot). Sie können die Hash Informationen aus Configuration Manager in eine CSV-Datei extrahieren.
+Microsoft Endpoint Configuration Manager erfasst automatisch die hardwarehashes für vorhandene Windows 10-Geräte. Weitere Informationen finden Sie unter [Sammeln von Informationen aus Configuration Manager für Windows Autopilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). Sie können die Hash Informationen aus Configuration Manager in eine CSV-Datei extrahieren.
 
 > [!Note]
-> Stellen Sie vor dem Hochladen der CSV-Datei in InTune sicher, dass die erste Zeile die Seriennummer des Geräts, die Windows-Produkt-ID, den Hardware Hash, das Gruppentag und den zugewiesenen Benutzer enthält. Wenn oben in der CSV-Dateiheader Informationen vorhanden sind, löschen Sie diese Header Informationen. Weitere Informationen finden Sie unter [Registrieren von Windows-Geräten in InTune](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot).
+> Stellen Sie vor dem Hochladen der CSV-Datei in InTune sicher, dass die erste Zeile die Seriennummer des Geräts, die Windows-Produkt-ID, den Hardware Hash, das Gruppentag und den zugewiesenen Benutzer enthält. Wenn oben in der CSV-Dateiheader Informationen vorhanden sind, löschen Sie diese Header Informationen. Weitere Informationen finden Sie unter [Registrieren von Windows-Geräten in InTune](/intune/enrollment/enrollment-autopilot).
 
 ### <a name="collecting-the-hardware-id-from-existing-devices-using-powershell"></a>Erfassen der Hardware-ID von vorhandenen Geräten mithilfe von PowerShell
 
@@ -115,7 +115,7 @@ Nachdem die Hardware-IDs von vorhandenen Geräten erfasst wurden, können Sie ü
     - Das Microsoft Endpoint Manager Admin Center wird für die Intune-Geräteregistrierung verwendet.
 -   [Partner Center](https://msdn.microsoft.com/partner-center/autopilot).  Diese wird von CSP-Partnern zum Registrieren von Geräten im Auftrag von Kunden verwendet.
 -   [Microsoft 365 Business & Office 365 admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa).  Dies wird in der Regel von kleinen und mittelständischen Unternehmen (smsb) verwendet, die Ihre Geräte mit Microsoft 365 Business verwalten.
--   [Microsoft Store für Unternehmen](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  Möglicherweise verwenden Sie msfb bereits zum Verwalten Ihrer Apps und Einstellungen.
+-   [Microsoft Store für Unternehmen](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  Möglicherweise verwenden Sie msfb bereits zum Verwalten Ihrer Apps und Einstellungen.
 
 Unten finden Sie eine Übersicht über die Funktionen der einzelnen Plattformen.<br>
 <br>
@@ -173,7 +173,7 @@ Unten finden Sie eine Übersicht über die Funktionen der einzelnen Plattformen.
 Weitere Informationen zu Geräte-IDs finden Sie auch in den folgenden Themen:
 - [Geräte Identifizierung](#device-identification)
 - [Windows Autopilot-Geräte Richtlinien](autopilot-device-guidelines.md)
-- [Hinzufügen von Geräten zu einem Kundenkonto](https://docs.microsoft.com/partner-center/autopilot)
+- [Hinzufügen von Geräten zu einem Kundenkonto](/partner-center/autopilot)
 
 
 ## <a name="summary"></a>Zusammenfassung

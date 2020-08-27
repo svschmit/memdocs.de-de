@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 5fccc36ff1ecacaee3d2aa3ed7c317faaaefc113
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 5ab51eda0791d42ed49b90e97b25ee66ee72c6dc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756539"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907948"
 ---
 # <a name="windows-autopilot-self-deploying-mode"></a>Selbstbereitstellungs Modus von Windows Autopilot
 
@@ -32,7 +32,7 @@ Der Modus für die selbst Bereitstellung fügt das Gerät in Azure Active Direct
 >[!NOTE]
 >Der Modus für die selbst Bereitstellung unterstützt Active Directory Join oder Azure AD Hybrid Join nicht.  Alle Geräte werden Azure Active Directory hinzugefügt.
 
-Der Modus für die selbst Bereitstellung ist für die Bereitstellung von Windows 10 als Kiosk, digitales Signalgerät oder frei gegebenes Gerät konzipiert. Wenn Sie einen Kiosk einrichten, können Sie den neuen Kiosk Browser nutzen, eine auf Microsoft Edge basierende APP, die zum Erstellen einer angepassten, MDM-verwalteten Browserumgebung verwendet werden kann. In Kombination mit MDM-Richtlinien, um ein lokales Konto zu erstellen und für die automatische Anmeldung zu konfigurieren, kann die komplette Konfiguration des Geräts automatisiert werden. Weitere Informationen zu diesen Optionen finden Sie unter Vereinfachen der Kiosk Verwaltung mit Windows 10.  Weitere Informationen finden [Sie unter Einrichten eines Kiosk-oder digitalen Anmeldens in InTune oder einem anderen MDM-Dienst](https://docs.microsoft.com/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service) .
+Der Modus für die selbst Bereitstellung ist für die Bereitstellung von Windows 10 als Kiosk, digitales Signalgerät oder frei gegebenes Gerät konzipiert. Wenn Sie einen Kiosk einrichten, können Sie den neuen Kiosk Browser nutzen, eine auf Microsoft Edge basierende APP, die zum Erstellen einer angepassten, MDM-verwalteten Browserumgebung verwendet werden kann. In Kombination mit MDM-Richtlinien, um ein lokales Konto zu erstellen und für die automatische Anmeldung zu konfigurieren, kann die komplette Konfiguration des Geräts automatisiert werden. Weitere Informationen zu diesen Optionen finden Sie unter Vereinfachen der Kiosk Verwaltung mit Windows 10.  Weitere Informationen finden [Sie unter Einrichten eines Kiosk-oder digitalen Anmeldens in InTune oder einem anderen MDM-Dienst](/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service) .
 
 >[!NOTE]
 >Der Modus für die selbst Bereitstellung ordnet dem Gerät derzeit keinen Benutzer zu (da im Rahmen des Prozesses keine Benutzer-ID oder kein Kennwort angegeben ist).  Folglich sind einige Azure AD-und InTune-Funktionen (z. b. die BitLocker-Wiederherstellung, die Installation von Apps aus dem Unternehmensportal oder der bedingte Zugriff) möglicherweise nicht für einen Benutzer verfügbar, der sich beim Gerät anmeldet. Weitere Informationen finden Sie unter [Windows Autopilot-Szenarios und-Funktionen](windows-autopilot-scenarios.md) und [Festlegen des BitLocker-Verschlüsselungsalgorithmus für Autopilot-Geräte](bitlocker.md).
@@ -46,7 +46,7 @@ Da der Modus für die selbst Bereitstellung die TPM 2,0-Hardware eines Geräts v
 >[!IMPORTANT]
 >Wenn Sie versuchen, eine Bereitstellung im selbst Bereitstellungs Modus auf einem Gerät durchführen, das TPM 2,0 oder auf einem virtuellen Computer nicht unterstützt, schlägt der Prozess fehl, wenn das Gerät mit einem 0x800705b4-Timeout Fehler überprüft wird (virtuelle Hyper-V-TPMs werden nicht unterstützt). Beachten Sie außerdem, dass Windows 10, Version 1903 oder höher, aufgrund von Problemen mit dem TPM-Geräte Nachweis in Windows 10, Version 1809, den Modus für die selbst Bereitstellung verwenden muss. Da Windows 10 Enterprise 2019 LTSC auf Windows 10, Version 1809 basiert, wird der Modus für die selbst Bereitstellung in Windows 10 Enterprise 2019 LTSC ebenfalls nicht unterstützt. Informationen zu anderen bekannten Fehlern und Lösungen finden Sie unter [bekannte Probleme von Windows Autopilot](known-issues.md) .
 
-Um während des Autopilot-Prozesses ein Organisations spezifisches Logo und einen Organisationsnamen anzuzeigen, muss Azure Active Directory Unternehmens Branding mit den Bildern und Text konfiguriert werden, die angezeigt werden sollen.  Weitere Informationen finden Sie [unter Schnellstart: Hinzufügen eines Unternehmensbrandings zur Anmeldeseite in Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) . 
+Um während des Autopilot-Prozesses ein Organisations spezifisches Logo und einen Organisationsnamen anzuzeigen, muss Azure Active Directory Unternehmens Branding mit den Bildern und Text konfiguriert werden, die angezeigt werden sollen.  Weitere Informationen finden Sie [unter Schnellstart: Hinzufügen eines Unternehmensbrandings zur Anmeldeseite in Azure AD](/azure/active-directory/fundamentals/customize-branding) . 
 
 ## <a name="step-by-step"></a>Schritt für Schritt
 
@@ -56,7 +56,7 @@ Die folgenden Vorbereitungsschritte müssen ausgeführt werden, um eine Bereitst
 -   Wenn Sie InTune verwenden, erstellen Sie eine Gerätegruppe in Azure Active Directory, und weisen Sie dieser Gruppe das Autopilot-Profil zu.  Stellen Sie sicher, dass das Profil dem Gerät zugewiesen wurde, bevor Sie versuchen, dieses Gerät bereitzustellen.
 -   Starten Sie das Gerät, und stellen Sie ggf. eine Verbindung mit Wi-Fi her, und warten Sie, bis der Bereitstellungs Prozess beendet ist.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Validierung
 
 Beim Ausführen einer Bereitstellung im Self-Deployment-Modus mithilfe von Windows Autopilot sollten folgende Endbenutzer Erfahrungen beachtet werden:
 

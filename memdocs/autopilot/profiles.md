@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 0a18eb4020a32e752c9d3fa7988e411dc72be98e
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 648793f68aef98659d068009e278fe35dec062e4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756614"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907968"
 ---
 # <a name="configure-autopilot-profiles"></a>Autopilot-Profile konfigurieren
 
@@ -37,7 +37,7 @@ Die folgenden Profileinstellungen sind verfügbar:
 
 -   **Automatische Einrichtung für Arbeit oder Schule**. Alle Geräte, die bei Autopilot registriert sind, werden automatisch als Geschäfts-, Schul-oder unigeräte angesehen, sodass diese Frage während des OOBE-Prozesses nicht angezeigt wird
 
--   **Anmeldevorgang mit Unternehmens Branding**. Anstatt eine generische Azure Active Directory Anmeldeseite darzustellen, stellen alle Geräte, die bei Autopilot registriert sind, eine angepasste Anmeldeseite mit dem Namen, Logo und zusätzlichen Hilfe Text der Organisation dar, die in Azure Active Directory konfiguriert ist. Informationen zum Anpassen dieser Einstellungen finden Sie [unter Hinzufügen von Unternehmens Branding zu Ihrem Verzeichnis](https://docs.microsoft.com/azure/active-directory/customize-branding#add-company-branding-to-your-directory) .
+-   **Anmeldevorgang mit Unternehmens Branding**. Anstatt eine generische Azure Active Directory Anmeldeseite darzustellen, stellen alle Geräte, die bei Autopilot registriert sind, eine angepasste Anmeldeseite mit dem Namen, Logo und zusätzlichen Hilfe Text der Organisation dar, die in Azure Active Directory konfiguriert ist. Informationen zum Anpassen dieser Einstellungen finden Sie [unter Hinzufügen von Unternehmens Branding zu Ihrem Verzeichnis](/azure/active-directory/customize-branding#add-company-branding-to-your-directory) .
 
 -   Über **springen der Datenschutzeinstellungen**. Diese optionale Einstellung im Autopilot-Profil ermöglicht Organisationen, auf Fragen zu Datenschutzeinstellungen auf der Windows-Willkommensseite zu verzichten. Dies ist in der Regel wünschenswert, damit die Organisation diese Einstellungen über InTune oder ein anderes Verwaltungs Tool konfigurieren kann.
 
@@ -45,7 +45,7 @@ Die folgenden Profileinstellungen sind verfügbar:
 
 -   **Endbenutzer-Lizenzvertrag (EULA) überspringen**. In Windows 10, Version 1709 und höher, können Organisationen entscheiden, die während des OOBE-Prozesses dargestellten EULA-Seite zu überspringen. Dies bedeutet, dass Organisationen die Lizenzbedingungen im Namen Ihrer Benutzer akzeptieren.
 
--   **Deaktivieren Sie die Windows-consumerfeatures**. In Windows 10, Version 1803 und höher, können Organisationen Windows-consumerfeatures deaktivieren, sodass das Gerät nicht automatisch zusätzliche Microsoft Store-Apps installiert, wenn sich der Benutzer zum ersten Mal beim Gerät anmeldet. Weitere Informationen finden Sie in der [MDM-Dokumentation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures).
+-   **Deaktivieren Sie die Windows-consumerfeatures**. In Windows 10, Version 1803 und höher, können Organisationen Windows-consumerfeatures deaktivieren, sodass das Gerät nicht automatisch zusätzliche Microsoft Store-Apps installiert, wenn sich der Benutzer zum ersten Mal beim Gerät anmeldet. Weitere Informationen finden Sie in der [MDM-Dokumentation](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

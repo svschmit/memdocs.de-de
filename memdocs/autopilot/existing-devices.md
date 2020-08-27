@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: d37ca65d89ffc37365ae3c71ba0fe0e1f15cf42d
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: fc13a3a73e5e043d01bf5c7a3d310c496714caee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756665"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908392"
 ---
 # <a name="windows-autopilot-deployment-for-existing-devices"></a>Windows Autopilot-Bereitstellung für vorhandene Geräte
 
@@ -36,7 +36,7 @@ In diesem Thema wird beschrieben, wie Sie Windows 7 oder Windows 8.1 in die Dom�
 
 - Eine derzeit unterstützte Version von Microsoft Endpoint Configuration Manager Current Branch-oder Technical Preview-Branch. 
 - [Windows ADK](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit) 1803 oder höher
-    - Weitere Informationen zur Configuration Manager Unterstützung finden Sie [unter Unterstützung für Windows 10 ADK](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk).
+    - Weitere Informationen zur Configuration Manager Unterstützung finden Sie [unter Unterstützung für Windows 10 ADK](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk).
 - Zugewiesene Microsoft InTune Lizenzen
 - Azure Active Directory Premium
 - Windows 10, Version 1809 oder höher, in Configuration Manager als Betriebs System Abbild importiert
@@ -51,8 +51,8 @@ Falls gewünscht, können Sie eine Seite zum Registrierungs [Status](enrollment-
 So aktivieren und konfigurieren Sie die Seite "Registrierung und Status":
 
 1. Öffnen Sie [InTune in der Azure-Portal](https://aka.ms/intuneportal).
-2. Greifen Sie auf **InTune > Geräteregistrierung > Windows** -Registrierung zu [, und richten Sie eine Seite zum Registrierungsstatus ein](https://docs.microsoft.com/intune/windows-enrollment-status). 
-3. Greifen Sie auf **Azure Active Directory > Mobility (MDM und MAM) > Microsoft InTune** , und konfigurieren Sie die [Automatische MDM](https://docs.microsoft.com/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-10-automatic-enrollment) -Registrierung, und konfigurieren Sie den MDM-Benutzerbereich für einige oder alle Benutzer. 
+2. Greifen Sie auf **InTune > Geräteregistrierung > Windows** -Registrierung zu [, und richten Sie eine Seite zum Registrierungsstatus ein](/intune/windows-enrollment-status). 
+3. Greifen Sie auf **Azure Active Directory > Mobility (MDM und MAM) > Microsoft InTune** , und konfigurieren Sie die [Automatische MDM](/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-10-automatic-enrollment) -Registrierung, und konfigurieren Sie den MDM-Benutzerbereich für einige oder alle Benutzer. 
 
 Weitere Informationen finden Sie in den folgenden Beispielen.
 
@@ -203,7 +203,7 @@ Weitere Informationen finden Sie in den folgenden Beispielen.
    - <u>Startimage</u>: Klicken Sie auf **Durchsuchen** , und wählen Sie ein Windows 10-Start Abbild (1803 oder höher)
    - Klicken Sie auf **weiter**, und klicken Sie dann auf der Seite Windows installieren auf **Durchsuchen** , und wählen Sie ein Windows 10- **Abbild Paket** und **Abbild Index**, Version 1803 oder höher.
    - Aktivieren Sie das Kontrollkästchen **Zielcomputer vor Installation des Betriebssystems partitionieren und formatieren** .
-   - Aktivieren oder deaktivieren Sie das Kontrollkästchen **Tasksequenz für die Verwendung mit BitLocker konfigurieren** . Diese ist optional.
+   - Aktivieren oder deaktivieren Sie das Kontrollkästchen **Tasksequenz für die Verwendung mit BitLocker konfigurieren** . Diese Eingabe ist optional.
    - <u>Product Key</u> -und <u>Server Lizenzierungs Modus</u>: Geben Sie optional einen Product Key-und Server Lizenzierungs Modus ein.
    - <u>Lokales Administrator Kennwort zufällig generieren und das Konto auf allen unterstützten Plattformen deaktivieren (empfohlen)</u>: optional.
    - <u>Aktivieren Sie das Konto, und geben Sie das lokale Administrator Kennwort</u>an: optional.
@@ -226,7 +226,7 @@ Weitere Informationen finden Sie in den folgenden Beispielen.
      >Da die Tasksequenz Autopilot für vorhandene Geräte in Windows PE abgeschlossen ist, wird die Migration des User State Migration Toolkit (USMT) nicht unterstützt, da es keine Möglichkeit gibt, den Benutzer Zustand im neuen Betriebssystem wiederherzustellen.  Außerdem unterstützt das User State Migration Toolkit (USMT) keine Geräte, die Azure AD verknüpft sind.
 
 7. Wählen Sie auf der Seite Updates einschließen eine der drei verfügbaren Optionen aus. Diese Auswahl ist optional.
-8. Fügen Sie auf der Seite Anwendungen installieren bei Bedarf Anwendungen hinzu. Diese ist optional.
+8. Fügen Sie auf der Seite Anwendungen installieren bei Bedarf Anwendungen hinzu. Diese Eingabe ist optional.
 9. Klicken Sie auf **weiter**, bestätigen Sie die Einstellungen, klicken Sie auf **weiter**und dann auf **Schließen**.
 10. Klicken Sie mit der rechten Maustaste auf die Aufgabe Autopilot für vorhandene Geräte, und klicken Sie auf **Bearbeiten**.
 11. Klicken Sie im Task Sequenz-Editor unter der Gruppe **Betriebs System installieren** auf die Aktion **Windows-Einstellungen anwenden** .
@@ -273,7 +273,7 @@ Stellen Sie als nächstes sicher, dass alle für die Tasksequenz erforderlichen 
 
 1. Klicken Sie mit der rechten Maustaste auf die Aufgabe **Autopilot für vorhandene Geräte** , und klicken Sie **dann auf bereitstellen.**
 2. Geben Sie im Assistenten zum Bereitstellen von Software die folgenden Details für **Allgemeine** und **Bereitstellungs Einstellungen** ein:
-    - <u>Task Sequenz</u>: **Autopilot für vorhandene Geräte**.
+    - <u>Task Sequenz</u>:  **Autopilot für vorhandene Geräte**.
     - <u>Sammlung</u>: Klicken Sie auf **Durchsuchen** , und wählen Sie dann **Autopilot für vorhandene Geräte Sammlung** (oder eine andere von Ihnen bevorzugte Sammlung) aus.
     - Klicken Sie auf **weiter** , um die **Bereitstellungs Einstellungen**anzugeben.
     - <u>Aktion</u>: **Installieren**Sie.
@@ -325,4 +325,4 @@ Siehe auch [Hinzufügen von Geräten zu Windows Autopilot](add-devices.md).
 
 ## <a name="speeding-up-the-deployment-process"></a>Beschleunigen des Bereitstellungs Prozesses
 
-Wenn Sie ca. 20 Minuten aus dem Bereitstellungs Prozess entfernen möchten, finden Sie weitere Informationen im Blog von Michael Niehaus mit Anweisungen zum [beschleunigen von Windows Autopilot für vorhandene Geräte](https://blogs.technet.microsoft.com/mniehaus/2018/10/25/speeding-up-windows-autopilot-for-existing-devices/).
+Wenn Sie ca. 20 Minuten aus dem Bereitstellungs Prozess entfernen möchten, finden Sie weitere Informationen im Blog von Michael Niehaus mit Anweisungen zum [beschleunigen von Windows Autopilot für vorhandene Geräte](/archive/blogs/mniehaus/speeding-up-windows-autopilot-for-existing-devices).

@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 4c8e66e9fb0ac4527f10824332f8ac5ae1646181
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 4ae8ffdf39b7812a869d3a7ef5b5289f46f8369a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756770"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908355"
 ---
 # <a name="windows-autopilot-motherboard-replacement-scenario-guidance"></a>Leitfaden für Windows Autopilot-Austausch Szenarios
 
@@ -73,7 +73,7 @@ Zum Aufheben der Registrierung eines Autopilot-Geräts bei InTune würde ein IT-
 
 Der Registrierungsvorgang dauert ungefähr 15 Minuten.  Sie können den Prozess beschleunigen, indem Sie auf die Schaltfläche "synchronisieren" klicken und dann die Anzeige aktualisieren, bis das Gerät nicht mehr vorhanden ist.
 
-Weitere Informationen zum Aufheben der Registrierung von Geräten in InTune finden Sie [hier](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-device-group).
+Weitere Informationen zum Aufheben der Registrierung von Geräten in InTune finden Sie [hier](/intune/enrollment-autopilot#create-an-autopilot-device-group).
 
 ### <a name="deregister-from-mpc"></a>Aufheben der Registrierung von MPC
 
@@ -122,9 +122,9 @@ Reparatur-und Schlüsselaustausch Vorgänge unterscheiden sich je nach Ausstattu
 
 Reparatur Techniker müssen sich beim reparierten Gerät anmelden, um die neue Geräte-ID zu erfassen.  Wenn der Reparatur Techniker keinen Zugriff auf die Anmelde Informationen des Kunden hat, muss er ein reimaging für das Gerät durchführen, um Zugriff zu erhalten, und zwar gemäß den folgenden Schritten:
 
-1. Der Reparatur Techniker erstellt ein Start [fähiges WinPE-USB-Laufwerk](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition).
+1. Der Reparatur Techniker erstellt ein Start [fähiges WinPE-USB-Laufwerk](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition).
 2. Der Reparatur Techniker startet das Gerät in WinPE.
-3. Der Reparatur Techniker [wendet ein neues Windows-Abbild auf das Gerät an](https://docs.microsoft.com/windows-hardware/manufacture/desktop/work-with-windows-images).
+3. Der Reparatur Techniker [wendet ein neues Windows-Abbild auf das Gerät an](/windows-hardware/manufacture/desktop/work-with-windows-images).
 
     **Hinweis**: im Idealfall sollte die gleiche Version von Windows auf dem Gerät, das sich ursprünglich auf dem Gerät befand, neu erstellt werden. Daher ist eine Koordination zwischen der Reparatur Einrichtung und dem Kunden erforderlich, um diese Informationen zu dem Zeitpunkt zu erfassen, zu dem das Gerät zur Reparatur eintrifft.  Dazu zählt beispielsweise, dass der Kunde die reparaturanlage über einen USB-Stick an eine angepasste Abbild Datei (PPK-Datei) sendet.
  
@@ -194,7 +194,7 @@ Wechseln Sie auf dem Gerät zu Einstellungen > aktualisieren Sie & Sicherheit > 
 
 ![reset](images/reset.png)
 
-Es ist jedoch wahrscheinlich, dass die Reparatur Einrichtung keinen Zugriff auf Windows hat, da Sie nicht über die Anmelde Informationen des Benutzers für die Anmeldung verfügt. in diesem Fall müssen Sie andere Möglichkeiten zum reimaging des Geräts verwenden, wie z. b. das [Abbild für die Abbild Verwaltung für die Bereitstellung](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
+Es ist jedoch wahrscheinlich, dass die Reparatur Einrichtung keinen Zugriff auf Windows hat, da Sie nicht über die Anmelde Informationen des Benutzers für die Anmeldung verfügt. in diesem Fall müssen Sie andere Möglichkeiten zum reimaging des Geräts verwenden, wie z. b. das [Abbild für die Abbild Verwaltung für die Bereitstellung](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
 
 ## <a name="return-the-repaired-device-to-the-customer"></a>Das reparierte Gerät an den Kunden zurückgeben
 

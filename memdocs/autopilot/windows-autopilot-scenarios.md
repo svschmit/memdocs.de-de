@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 063d791b4b2373f195625c996c6b4a1667015ad3
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b8b91e25d01a64cfeee601c898c355111b960b7c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756494"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907871"
 ---
 # <a name="windows-autopilot-scenarios-and-capabilities"></a>Windows Autopilot-Szenarios und-Funktionen
 
@@ -27,7 +27,7 @@ ms.locfileid: "87756494"
 
 ## <a name="scenarios"></a>Szenarien
 
-Windows Autopilot bietet Unterstützung für eine wachsende Liste von Szenarien, die für die Unterstützung gängiger Organisations Anforderungen entwickelt wurden. Diese Anforderungen können je nach Art der Organisation und deren Fortschritt zu Windows 10 und der [Umstellung auf eine moderne Verwaltung](https://docs.microsoft.com/windows/client-management/manage-windows-10-in-your-organization-modern-management)variieren.
+Windows Autopilot bietet Unterstützung für eine wachsende Liste von Szenarien, die für die Unterstützung gängiger Organisations Anforderungen entwickelt wurden. Diese Anforderungen können je nach Art der Organisation und deren Fortschritt zu Windows 10 und der [Umstellung auf eine moderne Verwaltung](/windows/client-management/manage-windows-10-in-your-organization-modern-management)variieren.
 
 Die folgenden Windows Autopilot-Szenarien werden in diesem Handbuch beschrieben:
 
@@ -49,7 +49,7 @@ Diese Szenarien werden im folgenden Video zusammengefasst.
 
 ### <a name="windows-autopilot-is-self-updating-during-oobe"></a>Windows Autopilot ist während des OOBE-Updates selbst Aktualisier.
 
-Ab Windows 10, Version 1903, werden die funktionalen und kritischen Updates von Autopilot automatisch während der OOBE heruntergeladen, nachdem ein Gerät mit einem Netzwerk verbunden wurde, und die [Updates kritischer Treiber und Windows Zero-Day Patch (ZDP)](https://docs.microsoft.com/windows-hardware/customize/desktop/windows-updates-during-oobe) wurden abgeschlossen. Der Benutzer oder IT-Administrator kann diese Autopilot-Updates nicht ablehnen, da Sie für die ordnungsgemäße Ausführung der Windows Autopilot-Bereitstellung erforderlich sind.  Windows benachrichtigt den Benutzer, dass das Gerät die Updates überprüft, herunterlädt und installiert.
+Ab Windows 10, Version 1903, werden die funktionalen und kritischen Updates von Autopilot automatisch während der OOBE heruntergeladen, nachdem ein Gerät mit einem Netzwerk verbunden wurde, und die [Updates kritischer Treiber und Windows Zero-Day Patch (ZDP)](/windows-hardware/customize/desktop/windows-updates-during-oobe) wurden abgeschlossen. Der Benutzer oder IT-Administrator kann diese Autopilot-Updates nicht ablehnen, da Sie für die ordnungsgemäße Ausführung der Windows Autopilot-Bereitstellung erforderlich sind.  Windows benachrichtigt den Benutzer, dass das Gerät die Updates überprüft, herunterlädt und installiert.
 
 Weitere Informationen finden Sie unter [Windows Autopilot Update](autopilot-update.md) .
 
@@ -61,15 +61,15 @@ Sie können auch Cortana VoiceOver und die Spracherkennung während der OOBE akt
 
 Hklm\software\microsoft\windows\currentversion\oobe\enablevoiceforalleditions
 
-Der Schlüsselwert ist ein DWORD-Wert, bei dem **0** = deaktiviert und **1** = aktiviert ist.
+Der Schlüsselwert ist ein DWORD-Wert, bei dem  **0** = deaktiviert und **1** = aktiviert ist.
 
-| Wert | BESCHREIBUNG |
+| value | BESCHREIBUNG |
 | --- | --- |
 | 0 | Cortana VoiceOver ist deaktiviert. |
 | 1 | Cortana VoiceOver ist aktiviert |
 | Kein Wert | Das Gerät wird auf das Standardverhalten der Edition zurückgreifen. |
 
-Um diesen Schlüsselwert zu ändern, verwenden Sie das WCD-Tool zum Erstellen von As ppkg, wie [hier](https://docs.microsoft.com/windows/configuration/wcd/wcd-oobe#nforce)dokumentiert.
+Um diesen Schlüsselwert zu ändern, verwenden Sie das WCD-Tool zum Erstellen von As ppkg, wie [hier](/windows/configuration/wcd/wcd-oobe#nforce)dokumentiert.
 
 ### <a name="bitlocker-encryption"></a>BitLocker-Verschlüsselung
 

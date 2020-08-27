@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 18031ff51e8086d29f706110946adeacb63d908e
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 3c24610a2ac10dfae6a8ba73062edf29188938ea
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88590904"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907988"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Netzwerk Anforderungen für Windows Autopilot
 
@@ -38,11 +38,11 @@ Möglicherweise ist eine zusätzliche Konfiguration erforderlich, um den Zugriff
 - fordern Sie eine Authentifizierung an, bevor der Internet Zugriff abgerufen werden kann. 
 
 > [!NOTE]
-> Die Smartcard-und Zertifikat basierte Authentifizierung wird während der OOBE nicht unterstützt. Weitere Informationen finden Sie unter [Smartcards und Zertifikat basierte Authentifizierung](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
+> Die Smartcard-und Zertifikat basierte Authentifizierung wird während der OOBE nicht unterstützt. Weitere Informationen finden Sie unter [Smartcards und Zertifikat basierte Authentifizierung](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
 
 Weitere Informationen zu den einzelnen Diensten und ihren spezifischen Anforderungen finden Sie in den folgenden Details:
 
-<table><th>Dienst<th>Information
+<table><th>Dienst<th>Informationen
 <tr><td><b>Windows Autopilot-Bereitstellungs Dienst<b><td>Wenn eine Netzwerkverbindung vorhanden ist, wird von jedem Windows 10-Gerät eine Verbindung mit dem Windows Autopilot-Bereitstellungs Dienst hergestellt. Mit Windows 10, Version 1903 und höher, werden die folgenden URLs verwendet: https://ztd.dds.microsoft.com , https://cs.dds.microsoft.com . <br>
 
 <tr><td><b>Windows-Aktivierung<b><td>Für Windows Autopilot sind Windows-Aktivierungs Dienste erforderlich. Ausführliche Informationen zu den URLs, auf die für die Aktivierungs Dienste zugegriffen werden muss, finden Sie unter <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">Windows-Aktivierung oder-Validierung schlägt fehl mit Fehlercode 0x8004FE33</a>.<br>
@@ -53,7 +53,7 @@ Weitere Informationen zu den einzelnen Diensten und ihren spezifischen Anforderu
 
 Wenn auf Windows Update nicht zugegriffen werden kann, wird der Autopilot-Prozess trotzdem fortgesetzt, aber es sind keine kritischen Updates verfügbar.
 
-<tr><td><b>Übermittlungsoptimierung<b><td>Autopilot kontaktiert den <a href="https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization">Bereitstellungs Optimierungs</a> Dienst beim Herunterladen von apps und Updates. Dieser Kontakt richtet die Peer-zu-Peer-Freigabe von Inhalten ein, sodass nur wenige Geräte diese aus dem Internet herunterladen müssen.
+<tr><td><b>Übermittlungsoptimierung<b><td>Autopilot kontaktiert den <a href="/windows/deployment/update/waas-delivery-optimization">Bereitstellungs Optimierungs</a> Dienst beim Herunterladen von apps und Updates. Dieser Kontakt richtet die Peer-zu-Peer-Freigabe von Inhalten ein, sodass nur wenige Geräte diese aus dem Internet herunterladen müssen.
 - Windows Updates - Microsoft Store Apps und APP-Updates - Office aktualisiert - InTune Win32-apps<br>
 
 Wenn nicht auf den Bereitstellungs Optimierungs Dienst zugegriffen werden kann, wird der Autopilot-Prozess weiterhin mit Downloads zur Übermittlungs Optimierung aus der Cloud (ohne Peer-to-Peer) fortgesetzt.
@@ -69,7 +69,7 @@ Wenn keine Diagnosedaten gesendet werden können, wird der Autopilot-Prozess tro
 <tr><td><b>Windows-Notification Services (WNS)<b><td>Dieser Dienst wird verwendet, um Windows das Empfangen von Benachrichtigungen von apps und Diensten zu ermöglichen. Weitere Informationen finden Sie unter <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>.<br>
 
 Wenn die WNS-Dienste nicht verfügbar sind, wird der Autopilot-Prozess trotzdem ohne Benachrichtigungen fortgesetzt.
-<tr><td><b>Microsoft Store, Microsoft Store für Unternehmen<b><td>Apps in der Microsoft Store können per pushübertragung auf das Gerät übermittelt und über InTune (MDM) ausgelöst werden.APP-Updates und zusätzliche Apps können auch benötigt werden, wenn sich der Benutzer zum ersten Mal anmeldet. Weitere Informationen finden Sie unter <a href="https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business">Voraussetzungen für Microsoft Store für Unternehmen und Bildungseinrichtungen</a> (auch Azure AD und Windows Notification Services).<br>
+<tr><td><b>Microsoft Store, Microsoft Store für Unternehmen<b><td>Apps in der Microsoft Store können per pushübertragung auf das Gerät übermittelt und über InTune (MDM) ausgelöst werden.APP-Updates und zusätzliche Apps können auch benötigt werden, wenn sich der Benutzer zum ersten Mal anmeldet. Weitere Informationen finden Sie unter <a href="/microsoft-store/prerequisites-microsoft-store-for-business">Voraussetzungen für Microsoft Store für Unternehmen und Bildungseinrichtungen</a> (auch Azure AD und Windows Notification Services).<br>
 
 Wenn kein Zugriff auf die Microsoft Store möglich ist, wird der Autopilot-Prozess weiterhin ohne Microsoft Store-Apps ausgeführt.
 
@@ -87,4 +87,3 @@ Wenn kein Zugriff auf die Microsoft Store möglich ist, wird der Autopilot-Proze
 **Nächste Schritte**
 
 [Windows Autopilot-Lizenzierungsanforderungen](licensing-requirements.md)
-

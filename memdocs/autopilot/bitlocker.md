@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 137001d443ba9d5d8e4a8532000a976778e7f818
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 8ea2e0de96887e8f7d97633a041721462b81d6c8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756716"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908298"
 ---
 # <a name="setting-the-bitlocker-encryption-algorithm-for-autopilot-devices"></a>Festlegen des BitLocker-Verschlüsselungsalgorithmus für Autopilot-Geräte
 
@@ -29,12 +29,12 @@ ms.locfileid: "87756716"
 
 Mit Windows Autopilot können Sie die BitLocker-Verschlüsselungseinstellungen so konfigurieren, dass Sie vor dem Start der automatischen Verschlüsselung angewendet werden. Dadurch wird sichergestellt, dass der Standard Verschlüsselungsalgorithmus nicht automatisch angewendet wird, wenn dies nicht die gewünschte Einstellung ist. Andere BitLocker-Richtlinien, die vor der Verschlüsselung angewendet werden müssen, können auch vor Beginn der automatischen BitLocker-Verschlüsselung übermittelt werden. 
 
-Der BitLocker-Verschlüsselungsalgorithmus wird verwendet, wenn BitLocker zum ersten Mal aktiviert wird, und legt die Stärke fest, mit der die vollständige Volumeverschlüsselung erfolgen soll. Folgende Verschlüsselungsalgorithmen sind verfügbar: AES-CBC 128-Bit, AES-CBC 256-Bit, XTS-AES 128-Bit oder XTS-AES-256-Bit-Verschlüsselung. Der Standardwert ist XTS-AES-128-Bit-Verschlüsselung. Informationen zu den empfohlenen Verschlüsselungsalgorithmen finden Sie unter [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) .
+Der BitLocker-Verschlüsselungsalgorithmus wird verwendet, wenn BitLocker zum ersten Mal aktiviert wird, und legt die Stärke fest, mit der die vollständige Volumeverschlüsselung erfolgen soll. Folgende Verschlüsselungsalgorithmen sind verfügbar: AES-CBC 128-Bit, AES-CBC 256-Bit, XTS-AES 128-Bit oder XTS-AES-256-Bit-Verschlüsselung. Der Standardwert ist XTS-AES-128-Bit-Verschlüsselung. Informationen zu den empfohlenen Verschlüsselungsalgorithmen finden Sie unter [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) .
 
 So stellen Sie sicher, dass der gewünschte BitLocker-Verschlüsselungsalgorithmus vor der automatischen Verschlüsselung für Autopilot-Geräte festgelegt wird:
 
-1. Konfigurieren Sie die [Einstellungen der Verschlüsselungsmethode](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption) im Windows 10-Endpoint Protection Profil mit dem gewünschten Verschlüsselungsalgorithmus. 
-2. [Weisen Sie die Richtlinie](https://docs.microsoft.com/intune/device-profile-assign) ihrer Autopilot-Gerätegruppe zu. 
+1. Konfigurieren Sie die [Einstellungen der Verschlüsselungsmethode](/intune/endpoint-protection-windows-10#windows-encryption) im Windows 10-Endpoint Protection Profil mit dem gewünschten Verschlüsselungsalgorithmus. 
+2. [Weisen Sie die Richtlinie](/intune/device-profile-assign) ihrer Autopilot-Gerätegruppe zu. 
     - **Wichtig**: die Verschlüsselungs Richtlinie muss den **Geräten** in der Gruppe zugewiesen werden, nicht in den Benutzern.
 3. Aktivieren Sie die [Seite](enrollment-status.md) Autopilot-Anmeldungs Status (ESP) für diese Geräte. 
     - **Wichtig**: Wenn ESP nicht aktiviert ist, gilt die Richtlinie nicht, bevor die Verschlüsselung gestartet wird.
@@ -55,4 +55,4 @@ Windows 10, Version 1809 oder höher.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[BitLocker-Übersicht](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
+[BitLocker-Übersicht](/windows/security/information-protection/bitlocker/bitlocker-overview)
