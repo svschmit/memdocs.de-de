@@ -9,12 +9,12 @@ metadata:
   ms.author: dougeby
   manager: mtillman
   ms.date: 03/09/2020
-  ms.openlocfilehash: 6ff2467ec2ee267bfd7b9ec6d003701c7b772952
-  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+  ms.openlocfilehash: 31f6ca22f7401c47bc271904e8139b2ddc588215
+  ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "79333769"
+  ms.lasthandoff: 08/26/2020
+  ms.locfileid: "88916026"
 highlightedContent:
   items:
   - title: Was ist Intune?
@@ -49,7 +49,7 @@ conceptualContent:
       itemType: concept
       text: Kommunikationsplan für Ihre Benutzer
     footerLink:
-      text: Mehr anzeigen
+      text: Weitere Informationen
       url: ./fundamentals/index.yml
   - title: Einrichten von Intune
     links:
@@ -66,9 +66,9 @@ conceptualContent:
       itemType: concept
       text: Intune-Lizenzierung
     footerLink:
-      text: Mehr anzeigen
+      text: Weitere Informationen
       url: ./fundamentals/index.yml
-  - title: Geräte registrieren
+  - title: Registrieren von Geräten
     links:
     - url: ./enrollment/device-enrollment.md
       itemType: concept
@@ -89,7 +89,7 @@ conceptualContent:
       itemType: how-to-guide
       text: Einrichten der Registrierung für Android-Geräte
     footerLink:
-      text: Mehr anzeigen
+      text: Weitere Informationen
       url: ./enrollment/index.yml
   - title: Remoteverwaltung von Geräten
     links:
@@ -103,7 +103,7 @@ conceptualContent:
       itemType: how-to-guide
       text: Entfernen von Geräten
     footerLink:
-      text: Mehr anzeigen
+      text: Weitere Informationen
       url: ./remote-actions/index.yml
   - title: Erstellen von Konformitätsregeln für Benutzer und Geräte
     links:
@@ -117,7 +117,7 @@ conceptualContent:
       itemType: how-to-guide
       text: Aktionen für nicht konforme Geräte
     footerLink:
-      text: Mehr anzeigen
+      text: Weitere Informationen
       url: ./protect/index.yml
   - title: Steuern von Gerätefeatures und -einstellungen
     links:
@@ -134,7 +134,7 @@ conceptualContent:
       itemType: how-to-guide
       text: Konfigurieren von ADMX-Einstellungen für Gruppenrichtlinien
     footerLink:
-      text: Mehr anzeigen
+      text: Weitere Informationen
       url: ./configuration/index.yml
   - title: Schützen von Geräten und Daten
     links:
@@ -148,7 +148,7 @@ conceptualContent:
       itemType: concept
       text: Integration von Mobile Threat Defense in Intune
     footerLink:
-      text: Mehr anzeigen
+      text: Weitere Informationen
       url: ./protect/index.yml
   - title: Verwalten von Apps
     links:
@@ -165,7 +165,7 @@ conceptualContent:
       itemType: overview
       text: App-Konfigurationsrichtlinien
     footerLink:
-      text: Mehr anzeigen
+      text: Weitere Informationen
       url: ./apps/index.yml
   - title: App-Schutzrichtlinien
     links:
@@ -182,7 +182,7 @@ conceptualContent:
       itemType: how-to-guide
       text: Überwachen von App-Schutzrichtlinien
     footerLink:
-      text: Mehr anzeigen
+      text: Weitere Informationen
       url: ./apps/index.yml
   - title: Hilfe und Support
     links:
@@ -219,7 +219,7 @@ conceptualContent:
       itemType: concept
       text: Verwenden des Data Warehouse von Microsoft Intune
     footerLink:
-      text: Mehr anzeigen
+      text: Weitere Informationen
       url: ./developer/index.yml
 additionalContent:
   sections:
@@ -228,15 +228,15 @@ additionalContent:
     - title: Intune für die Bildung
       links:
       - text: Was ist Intune for Education?
-        url: https://docs.microsoft.com/intune-education/what-is-intune-for-education
+        url: /intune-education/what-is-intune-for-education
       - text: Neues in Intune for Education
-        url: https://docs.microsoft.com/intune-education/whats-new-in-edu
+        url: /intune-education/whats-new-in-edu
       - text: Wie unterscheidet sich Intune for Education von der Vollversion?
         url: ./fundamentals/introduction-intune-education.md
     - title: Intune for Government
       links:
       - text: Enterprise Mobility + Security for US Government – Beschreibung des Diensts
-        url: https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description
+        url: /enterprise-mobility-security/solutions/ems-govt-service-description
       - text: US Government-Endpunkte für Intune
         url: ./fundamentals/intune-us-government-endpoints.md
       - text: Azure Government-Website
@@ -244,21 +244,21 @@ additionalContent:
     - title: Microsoft 365
       links:
       - text: Informationen zu Microsoft 365, eine Gesamtlösung mit Intune
-        url: https://docs.microsoft.com/microsoft-365/
+        url: /microsoft-365/
       - text: Dokumentation zu Microsoft 365 Enterprise
-        url: https://docs.microsoft.com/microsoft-365/enterprise/
+        url: /microsoft-365/enterprise/
       - text: Microsoft 365 Enterprise – grundlegende Infrastruktur
-        url: https://docs.microsoft.com/microsoft-365/enterprise/deploy-foundation-infrastructure
+        url: /microsoft-365/enterprise/deploy-foundation-infrastructure
     - title: Azure Active Directory
       links:
       - text: Dokumentation zur Benutzerverwaltung
-        url: https://docs.microsoft.com/azure/active-directory/users-groups-roles/
+        url: /azure/active-directory/users-groups-roles/
       - text: Dokumentation zur Authentifizierung
-        url: https://docs.microsoft.com/azure/active-directory/authentication/
+        url: /azure/active-directory/authentication/
       - text: Dokumentation zur Geräteidentität
-        url: https://docs.microsoft.com/azure/active-directory/devices/
-      - text: Dokumentation zur Hybrididentität
-        url: https://docs.microsoft.com/azure/active-directory/hybrid/
+        url: /azure/active-directory/devices/
+      - text: Dokumentation zur Hybrid-Identität
+        url: /azure/active-directory/hybrid/
   - title: Intune-Communityressourcen
     items:
     - title: Technische Intune-Foren
