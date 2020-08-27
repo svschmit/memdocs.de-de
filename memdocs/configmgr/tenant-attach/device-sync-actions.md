@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bac86ca5a74d35b64e211936806ef1735f4e0eea
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700404"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970463"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Microsoft Endpoint Manager-Mandanten anfügen: Geräte Synchronisierung und Geräte Aktionen
 <!--3555758 live 3/4/2020-->
@@ -40,6 +40,8 @@ Ab Configuration Manager Version 2002 können Sie Ihre Configuration Manager Ger
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
+Der Dienst Verbindungspunkt stellt eine langfristige ausgehende Verbindung zu diesen Endpunkten dar. Vergewissern Sie sich, dass der für den Dienst Verbindungspunkt verwendete Proxy nicht zu schnell ein Timeout für ausgehende Verbindungen hat. Es empfiehlt sich, für ausgehende Verbindungen zu diesen Internet Endpunkten drei Minuten zu erreichen. <!--7820969-->
+
 ## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> Aktivieren des Geräte Uploads, wenn die Co-Verwaltung bereits aktiviert ist
 
 Wenn Sie derzeit die Co-Verwaltung aktiviert haben, verwenden Sie die Eigenschaften der Co-Verwaltung, um den Geräte Upload zu aktivieren. Wenn die Co-Verwaltung nicht bereits aktiviert ist, verwenden Sie stattdessen [den Assistenten zum **Konfigurieren der Co-Verwaltung** ](#bkmk_config) , um den Geräte Upload zu aktivieren.
@@ -48,7 +50,7 @@ Wenn die Co-Verwaltung bereits aktiviert ist, bearbeiten Sie die Eigenschaften d
 
 1. Navigieren Sie in der Configuration Manager-Administratorkonsole zu **Verwaltung** > **Übersicht** > **Clouddienste** > **Co-Verwaltung**.
 1. Wählen Sie im Menüband die Option **Eigenschaften** für Ihre Produktions Richtlinie für die Co-Verwaltung aus.
-1. Klicken Sie in der Registerkarte **Configure upload** (Upload konfigurieren) auf **Upload to Microsoft Endpoint Manager admin center** (Upload ins Microsoft Endpoint Manager Admin Center). Wählen Sie **Übernehmen**.
+1. Klicken Sie in der Registerkarte **Configure upload** (Upload konfigurieren) auf **Upload to Microsoft Endpoint Manager admin center** (Upload ins Microsoft Endpoint Manager Admin Center). Klicken Sie auf **Übernehmen**.
    - Die Standardeinstellung für den Upload von Geräten ist **All my devices managed by Microsoft Endpoint Configuration Manager** (Alle von Microsoft Endpoint Configuration Manager verwalteten Geräte). Bei Bedarf können Sie den Upload auf eine einzelne Geräte Sammlung beschränken.
 1. Aktivieren Sie die Option zum **Aktivieren von Endpoint Analytics für Geräte, die in den Microsoft Endpoint Manager hochgeladen** werden, wenn Sie auch Einblicke erhalten möchten, um die Endbenutzer Funktionen in [EndPoint Analytics](../../analytics/overview.md)zu optimieren.
 
