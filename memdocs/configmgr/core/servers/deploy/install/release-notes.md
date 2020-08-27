@@ -2,7 +2,7 @@
 title: Anmerkungen zu dieser Version
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie Informationen zu dringenden Problemen, die im Produkt noch nicht behoben oder bisher in keinem Knowledge Base-Artikel des Microsoft-Supports beschrieben wurden.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a29c165e13e82144d7fea767ca719a0c84c88023
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126290"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512647"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Anmerkungen zu dieser Version für Configuration Manager
 
@@ -112,6 +112,20 @@ Dieser Fehler tritt auf, weil ein `scripts`-Ordner nicht unter dem `AdminConsole
 Erstellen Sie zum Umgehen dieses Problem einen Ordner namens `scripts` im Verzeichnis `AdminConsole\bin`. Kopieren Sie die Dateien aus Ihrem lokalisierten Ordner in den neu erstellten `scripts`-Ordner. Stellen Sie Microsoft Edge (Version 77 und höher) bereit, nachdem die Dateien kopiert wurden.
 
 ## <a name="os-deployment"></a>Bereitstellung des Betriebssystems
+
+### <a name="client-policy-error-when-you-deploy-a-task-sequence"></a>Clientrichtlinienfehler beim Bereitstellen einer Tasksequenz
+
+<!-- 7970134 -->
+
+*Gilt für: Configuration Manager-Version 2006 mit Early Update Ring*
+
+Wenn Sie eine Tasksequenz auf einem Client bereitstellen, wird eine erforderliche Tasksequenz nicht zum Stichtag installiert, und eine verfügbare Tasksequenz wird nicht im Softwarecenter angezeigt. Sie sehen die Statusmeldung 10803 mit einer Beschreibung ähnlich der folgenden Fehlermeldung:
+
+*Der Client konnte die Richtlinie nicht herunterladen. Der Datenübertragungsdienst hat Folgendes zurückgegeben: "BITS-Fehler: Die Antwort des Servers war ungültig. Der Server hat nicht das definierte Protokoll befolgt. (-2145386469).*
+
+Dieses Problem tritt auf, wenn Sie den Verwaltungspunkt für HTTPS konfigurieren und das Gerät die Configuration Manager-Clientversion 1906 oder niedriger verwendet.
+
+Um dieses Problem zu umgehen, aktualisieren Sie den Configuration Manager-Client auf dem Gerät auf mindestens Version 1910.
 
 ### <a name="task-sequences-cant-run-over-cmg"></a>Tasksequenzen können nicht über CMG ausgeführt werden
 

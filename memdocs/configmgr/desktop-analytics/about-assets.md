@@ -2,7 +2,7 @@
 title: Objekte in Desktop Analytics
 titleSuffix: Configuration Manager
 description: In diesem Artikel erfahren Sie mehr über Geräte, Treiber und Apps in Desktop Analytics.
-ms.date: 05/11/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: d4328aee2bc08054fbeaa7147ceed30fe61b61a7
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107309"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614811"
 ---
 # <a name="assets-in-desktop-analytics"></a>Objekte in Desktop Analytics
 
@@ -42,6 +42,9 @@ Auf der Registerkarte **Apps** werden alle installierten Apps angezeigt, die vom
 
 **Beachtenswerte** Apps sind auf mehr als 2 % der registrierten Geräte installiert.
 
+> [!TIP]
+> Für einen bestimmten Bereitstellungsplan können Sie diesen Wert konfigurieren. Geben Sie in den Eigenschaften eines Bereitstellungsplans unter **Bereitstellungsregeln** den Wert für **Definieren Sie einen Schwellenwert für niedrige Anzahl von Installationen für Ihre Apps** an.
+
 Die Einstellung **Details zu App-Versionen** ist standardmäßig deaktiviert, sodass alle Versionen von Apps mit dem gleichen Namen und Herausgeber zusammengefasst werden.<!-- 5542186 --> Das Standardverhalten trägt dazu bei, die Gesamtzahl der angezeigten Apps zu reduzieren. Dadurch lasst sich der Aufwand beim Kommentieren der Apps verringern. Die App-Anzahl auf der Kachel **Beachtenswerte Apps** spiegelt ebenfalls diese Einstellung wider. Anstatt Hunderte von Instanzen von Microsoft Edge aufzulisten, wird jetzt eine Instanz für alle Versionen angezeigt. Sie können Entscheidungen einmal für alle Versionen treffen. Wenn Sie Entscheidungen für bestimmte Versionen einer App treffen müssen, aktivieren Sie diese Einstellung. Sie können diese Einstellung auch auf der Ebene eines Bereitstellungsplans konfigurieren. Weitere Informationen finden Sie unter [Planobjekte](about-deployment-plans.md#plan-assets).
 
 Wählen Sie die App aus der Liste aus, und wählen Sie **Bearbeiten** aus. Durch diese Aktion werden Details für die App angezeigt. Wählen Sie das Dropdownmenü **Wichtigkeit** aus, und legen Sie einen Wert fest. Sie können auch einen **Besitzer**zuweisen. Wenn Sie Änderungen vornehmen, wählen Sie **Speichern** aus.
@@ -53,6 +56,9 @@ Konfigurieren Sie die **Wichtigkeit** von Apps, indem Sie eine der folgenden Kat
 - Ignorieren
 - Nicht überprüft
 - Nicht wichtig<!-- 3587232 -->
+
+> [!NOTE]
+> Wenn Sie die App mit Configuration Manager bereitgestellt haben, konfiguriert Desktop Analytics diese nun standardmäßig automatisch als **wichtig**. Mit diesem Verhalten können Sie die Apps in Ihrer Umgebung schneller konfigurieren, um schneller zu einer Produktionsbereitstellung zu gelangen.<!-- 4859763 -->
 
 Wenn die Einstellung **Details zu App-Versionen** deaktiviert ist, wird im Bereich „App-Details“ die Anzahl der App-Versionen und Sprachen angezeigt, die zusammengefasst wurden. Wenn Sie Änderungen an den App-Details speichern, gilt dies für alle Versionen. Legen Sie z. B. die **Wichtigkeit** oder **Besitzer** fest. In einigen Werten wird „Mehrere“ angezeigt. Das bedeutet, dass kein konsistenter Wert für alle Versionen vorliegt.
 

@@ -2,7 +2,7 @@
 title: Tokenbasierte Authentifizierung für CMG
 titleSuffix: Configuration Manager
 description: Registrieren Sie einen Client im internen Netzwerk für ein eindeutiges Token, oder erstellen Sie ein Token für die Massenregistrierung internetbasierter Geräte.
-ms.date: 06/10/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 55997c9185a221d105aa8ad40bbb14021463d07b
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715661"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512698"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Tokenbasierte Authentifizierung für Cloud Management Gateway
 
@@ -25,13 +25,13 @@ ms.locfileid: "84715661"
 
 Cloud Management Gateway (CMG) unterstützt zwar viele Clienttypen, aber auch mit [Erweitertem HTTP](../../plan-design/hierarchy/enhanced-http.md) erfordern diese Clients ein [Clientauthentifizierungszertifikat](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway). Diese Zertifikatanforderung kann beim Bereitstellen auf internetbasierten Clients Probleme bereiten, die nicht häufig eine Verbindung mit dem internen Netzwerk herstellen, mit Azure Active Directory (Azure AD) verknüpft werden können und über keine Methode zum Installieren eines von der PKI ausgestellten Zertifikats verfügen.
 
-Als Lösung für diese Probleme wird die Geräteunterstützung ab Configuration Manager, Version 2002 um die folgenden Methoden erweitert:
+Zur Bewältigung dieser Anforderungen erweitert Configuration Manager ab Version 2002 seine Geräteunterstützung, indem eigene Authentifizierungstoken für Geräte ausgestellt werden. Wenn Sie dieses Feature nach der Aktualisierung des Standorts voll nutzen möchten, müssen Sie auch Clients auf die neueste Version aktualisieren. Das gesamte Szenario funktioniert erst, wenn auch die Clientversion aktuell ist. Stellen Sie ggf. sicher, dass Sie [die neue Clientversion zur Produktion heraufstufen](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production).
 
-- Registrieren im internen Netzwerk für ein eindeutiges Token
+ Clients registrieren sich für diese Token anfänglich mit einer der beiden folgenden Methoden:
 
-- Erstellen eines Tokens für die Massenregistrierung von internetbasierten Geräten
+- Internes Netzwerk
 
-Wenn Sie dieses Feature nach der Aktualisierung des Standorts voll nutzen möchten, müssen Sie auch Clients auf die neueste Version aktualisieren. Das gesamte Szenario funktioniert erst, wenn auch die Clientversion aktuell ist. Stellen Sie ggf. sicher, dass Sie [die neue Clientversion zur Produktion heraufstufen](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production).
+- Massenregistrierung
 
 Der Configuration Manager-Client verwaltet dieses Token zusammen mit dem Verwaltungspunkt, daher besteht keine Abhängigkeit von der Betriebssystemversion. Dieses Feature ist für alle [unterstützten Versionen von Clientbetriebssystemen](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md) verfügbar.
 
@@ -40,15 +40,20 @@ Der Configuration Manager-Client verwaltet dieses Token zusammen mit dem Verwalt
 >
 > Microsoft empfiehlt, Geräte zu Azure AD hinzuzufügen. Internetbasierte Geräte können Azure AD verwenden, um sich mit Configuration Manager zu authentifizieren. Außerdem werden sowohl Geräte- als auch Benutzerszenarios ermöglicht, unabhängig davon, ob das Gerät mit dem Internet oder dem internen Netzwerk verbunden ist. Weitere Informationen finden Sie unter [Installieren und Registrieren des Clients mithilfe einer Azure AD-Identität](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 
-## <a name="register-on-the-internal-network"></a>Registrieren im internen Netzwerk
+## <a name="internal-network-registration"></a>Interne Netzwerkregistrierung
 
-Diese Methode erfordert, dass der Client zuerst beim Verwaltungspunkt im internen Netzwerk registriert wird. Die Clientregistrierung erfolgt in der Regel direkt nach der Installation. Der Verwaltungspunkt gibt dem Client ein eindeutiges Token, das anzeigt, dass es ein selbst signiertes Zertifikat verwendet. Wenn der Client mit dem Internet verbunden ist, wird für die Kommunikation mit dem CMG das selbst signierte Zertifikat mit dem vom Verwaltungspunkt ausgestellten Token verknüpft. Der Client erneuert das Token einmal im Monat und ist 90 Tage gültig.
+Diese Methode erfordert, dass der Client zuerst beim Verwaltungspunkt im internen Netzwerk registriert wird. Die Clientregistrierung erfolgt in der Regel direkt nach der Installation. Der Verwaltungspunkt gibt dem Client ein eindeutiges Token, das anzeigt, dass es ein selbst signiertes Zertifikat verwendet. Wenn der Client mit dem Internet verbunden ist, wird für die Kommunikation mit dem CMG das selbst signierte Zertifikat mit dem vom Verwaltungspunkt ausgestellten Token verknüpft.
 
 Dieses Verhalten wird von der Website standardmäßig aktiviert.
 
-## <a name="create-a-bulk-registration-token"></a>Erstellen eines Massenregistrierungstokens
+## <a name="bulk-registration-token"></a>Massenregistrierungstoken
 
 Wenn Sie Clients im internen Netzwerk nicht installieren und registrieren können, erstellen Sie jetzt ein Token für die Massenregistrierung. Verwenden Sie dieses Token, wenn der Client auf einem internetbasierten Gerät installiert und über das CMG registriert wird. Das Token für die Massenregistrierung hat eine kurze Gültigkeitsdauer und ist nicht auf dem Client oder der Website gespeichert. Es ermöglicht es dem Client, ein eindeutiges Token zu generieren, das mit dem selbst signierten Zertifikat gekoppelt ist, damit es sich beim CMG authentifizieren kann.
+
+> [!NOTE]
+> Verwechseln Sie Massenregistrierungstoken nicht mit Token, die Configuration Manager einzelnen Clients ausstellt. Das Massenregistrierungstoken ermöglicht dem Client anfänglich die Installation und Kommunikation mit der Website. Diese anfängliche Kommunikation ist lang genug, damit die Website dem Client ein eigenes, eindeutiges Clientauthentifizierungstoken ausstellen kann. Der Client verwendet dann sein Authentifizierungstoken für die gesamte Kommunikation mit der Website, während er mit dem Internet verbunden ist. Über die anfängliche Registrierung hinaus verwendet oder speichert der Client das Massenregistrierungstoken nicht.
+
+Um ein Massenregistrierungstoken zur Verwendung während der Clientinstallation auf internetbasierten Geräten zu erstellen, führen Sie die folgenden Schritte aus:
 
 1. Melden Sie sich am Standortserver der obersten Ebene in der Hierarchie mit lokalen Administratorrechten an.
 
@@ -140,6 +145,12 @@ Sie können bei nach der Spalte **Typ** filtern oder sortieren. Identifizieren S
 2. Erweitern Sie **Sicherheit**, klicken Sie auf den Knoten **Zertifikate**, und wählen Sie das zu blockierende Massenregistrierungstoken aus.
 
 3. Wählen Sie auf der Registerkarte **Start** des Menübands oder im Kontextmenü die Option **Blockieren** aus. Wenn Sie die Blockierung von zuvor blockierten Massenregistrierungstoken aufheben möchten, klicken Sie auf die Aktion**Blockierung aufheben**.
+
+## <a name="token-renewal"></a>Tokenverlängerung
+
+Der Client verlängert sein eindeutiges, von Configuration Manager ausgestelltes Token einmal im Monat. Es ist 90 Tage gültig. Ein Client muss sich nicht mit dem internen Netzwerk verbinden, um sein Token zu verlängern. Solange das Token gültig ist, reicht es aus, sich über ein CMG mit der Website zu verbinden. Wenn das Token nicht binnen 90 Tagen verlängert wird, muss sich der Client direkt mit einem Verwaltungspunkt in einem internen Netzwerk verbinden, um ein neues Token zu erhalten.
+
+Ein Massenregistrierungstoken kann nicht verlängert werden. Sobald ein Token für die Massenregistrierung abläuft, generieren Sie mithilfe eines CMG ein neues Token zur Registrierung internetbasierter Geräte.
 
 ## <a name="see-also"></a>Weitere Informationen:
 

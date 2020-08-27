@@ -14,6 +14,14 @@
       href: cmpivot-overview-attached.md
     - name: CMPivot-Beispielskripts
       href: cmpivot-samples-attached.md
+- name: Endpunktsicherheit für mit dem Mandanten verbundene Geräte (Vorschauversion)
+  items:
+    - name: Aktivieren der Endpunktsicherheit
+      href: atp-onboard.md
+    - name: Erstellen und Bereitstellen der Antivirus-Richtlinie für die Endpunktsicherheit
+      href: deploy-antivirus-policy.md
+    - name: Einstellungen für die Microsoft Defender Antivirus-Richtlinie
+      href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
 - name: Problembehandlung
   items:
     - name: Anfüge- und Geräteaktionen für Mandanten

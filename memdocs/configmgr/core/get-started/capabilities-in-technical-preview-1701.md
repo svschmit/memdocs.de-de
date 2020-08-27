@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a9d0beeee1e00315a913adfc5dde6bd69f75cd6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076202"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692994"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Funktionen in der Technical Preview 1701 für Configuration Manager
 
@@ -116,7 +116,7 @@ Hierzu bearbeiten Sie eine Konfigurationsdatei, damit sie auf die Government-Clo
      &lt;/setting>
 
    - **Bearbeitet:**      
-     &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value><https://management.usgovcloudapi.net/&lt;/value>>  
+     &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value&gt;https://management.usgovcloudapi.net/&lt;/value&gt;  
      &lt;/setting>
 
    Ändern Sie den Wert für die Einstellung *FairFaxAuthorityResource* in „<https://login.microsoftonline.com/>“.
@@ -125,9 +125,9 @@ Hierzu bearbeiten Sie eine Konfigurationsdatei, damit sie auf die Government-Clo
      &lt;value>&lt;/value>
 
    - **Bearbeitet:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-     &lt;value><https://login.microsoftonline.com/&lt;/value>>
+     &lt;value&gt;[https://login.microsoftonline.com](https://login.microsoftonline.com)&lt; /value&gt;
 
-2. Nachdem Sie die Datei mit den zwei Änderungen gespeichert haben, starten Sie die Configuration Manager-Konsole auf demselben Computer neu, und installieren Sie anschließend den OMS-Connector über die Konsole. Verwenden Sie für die Installation des Connectors die Informationen in [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm), und wählen Sie den **Operations Management Suite-Arbeitsbereich** aus, der sich in der Microsoft Azure Government-Cloud befindet.
+2. Nachdem Sie die Datei mit den zwei Änderungen gespeichert haben, starten Sie die Configuration Manager-Konsole auf demselben Computer neu, und installieren Sie anschließend den OMS-Connector über die Konsole. Verwenden Sie für die Installation des Connectors die Informationen in [Synchronisieren von Daten von System Center Configuration Manager mit der Microsoft Operations Management Suite](/azure/azure-monitor/platform/collect-sccm), und wählen Sie den **Operations Management Suite-Arbeitsbereich** aus, der sich in der Microsoft Azure Government-Cloud befindet.
 
 3. Nach der erfolgreichen Installation des OMS-Connectors steht Ihnen die Verbindung zur Government-Cloud von jeder Konsole aus zur Verfügung, die sich mit dem Standort verbindet.
 

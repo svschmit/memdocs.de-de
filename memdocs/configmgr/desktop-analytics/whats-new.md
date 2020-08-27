@@ -2,7 +2,7 @@
 title: Neues in Desktop Analytics
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie eine Übersicht über die neuen Funktionen in der aktuellen monatlichen Release des Desktop Analytics-Clouddiensts.
-ms.date: 07/01/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819972"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614752"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Neues in Desktop Analytics
 
@@ -27,6 +27,18 @@ Informieren Sie sich jeden Monat über Neuigkeiten in Desktop Analytics.
 
 Um bei einer Aktualisierung dieser Seite benachrichtigt zu werden, kopieren Sie die folgende URL, und fügen Sie sie in Ihren RSS-Feedreader ein: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="august-2020"></a>August 2020
+
+### <a name="apps-deployed-from-configuration-manager-are-important-by-default"></a>Von Configuration Manager bereitgestellte Apps sind standardmäßig wichtig
+
+<!-- 4859763 -->
+
+Die Konfiguration der **Wichtigkeit** einer App ist für Desktop Analytics unerlässlich, um die Geräte zu bestimmen, die in Pilotbereitstellungen einbezogen werden sollen. Ein Administrator musste die Wichtigkeit für alle Apps in Desktop Analytics manuell konfigurieren. Erst nachdem Sie die Pilotbereitstellung überprüft haben, können Sie mit einer Produktionsbereitstellung fortfahren.
+
+Für jede App, die Sie mit Configuration Manager bereitstellen, konfiguriert Desktop Analytics diese nun standardmäßig automatisch als wichtig. Mit diesem Verhalten können Sie die Apps in Ihrer Umgebung schneller konfigurieren, um schneller zu einer Produktionsbereitstellung zu gelangen.
+
+Weitere Informationen finden Sie unter [Objekte in Desktop Analytics: Apps](about-assets.md#apps).
 
 ## <a name="july-2020"></a>Juli 2020
 

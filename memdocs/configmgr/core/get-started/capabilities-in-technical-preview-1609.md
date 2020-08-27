@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905702"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695680"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funktionen in der Technical Preview 1609 für Configuration Manager
 
@@ -91,7 +91,7 @@ Das Verfahren zum Erstellen und Bereitstellen einer Configuration Manager-Anwend
 
 Wir haben viele neue Einstellungen hinzugefügt, die Sie in Ihren Konfigurationselementen für verschiedene Geräteplattformen verwenden können.
 Dabei handelt es sich um Einstellungen, die zuvor in Microsoft Intune in einer eigenständigen Konfiguration vorhanden waren, und jetzt verfügbar sind, wenn Sie Intune mit Configuration Manager verwenden.
-Wenn Sie Hilfe zu einer dieser Einstellung benötigen, öffnen Sie [Verwalten von Einstellungen und Features auf Ihren Geräten mit Microsoft Intune-Richtlinien](/mem/intune/configuration/device-profiles), und wählen Sie dann das untergeordnete Thema zu den Einstellungen für die gewünschte Plattform aus.
+Wenn Sie Hilfe zu einer dieser Einstellung benötigen, öffnen Sie [Verwalten von Einstellungen und Features auf Ihren Geräten mit Microsoft Intune-Richtlinien](../../../intune/configuration/device-profiles.md), und wählen Sie dann das untergeordnete Thema zu den Einstellungen für die gewünschte Plattform aus.
 
 
 ### <a name="new-settings-for-android-devices"></a>Neue Einstellungen für Android-Geräte
@@ -238,7 +238,7 @@ Die folgenden Abschnitte enthalten eine Beschreibung der Änderungen, die diese 
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Änderungen an der Benutzeroberfläche und dem Verhalten für Begrenzungsgruppen und Speicherorte für Inhalt
 Beim Folgenden handelt es sich um wichtige Änderungen an Begrenzungsgruppen und daran, wie Clients Inhalt suchen. Viele dieser Änderungen und Konzepte arbeiten zusammen.
 - **Konfigurationen für „Schnell“ und „Langsam“ wurden entfernt:** Sie konfigurieren einzelne Verteilungspunkte nicht mehr so, dass diese schnell oder langsam sind.  Stattdessen wird jedes Standortsystem, das einer Begrenzungsgruppe zugeordnet ist, auf die gleiche Weise behandelt. Aufgrund dieser Änderung unterstützt die Registerkarte **Referenz** der Begrenzungsgruppeneigenschaften die Konfiguration von „schnell“ und „langsam“ nicht mehr.
-- **Neue Standardbegrenzungsgruppe an jedem Standort:**  Jeder primäre Standort verfügt über eine neue Standardbegrenzungsgruppe mit dem Namen ***Default-Site-Boundary-Group\<Standortcode>***.  Wenn sich ein Client nicht an einem Netzwerkstandort befindet, der einer Begrenzungsgruppe zugewiesen ist, verwendet dieser Client die Standortsysteme, die der Standardgruppe seines zugewiesenen Standorts zugeordnet sind. Planen Sie, diese Begrenzungsgruppe als Ersatz für das Konzept der Fallbackinhaltsquelle zu verwenden.    
+- **Neue Standardbegrenzungsgruppe an jedem Standort:**  Jeder primäre Standort verfügt über eine neue Standardbegrenzungsgruppe mit dem Namen ***Default-Site-Boundary-Group\<sitecode>***.  Wenn sich ein Client nicht an einem Netzwerkstandort befindet, der einer Begrenzungsgruppe zugewiesen ist, verwendet dieser Client die Standortsysteme, die der Standardgruppe seines zugewiesenen Standorts zugeordnet sind. Planen Sie, diese Begrenzungsgruppe als Ersatz für das Konzept der Fallbackinhaltsquelle zu verwenden.    
   -  **Fallbackquellpfade für Inhalt zulassen** wird entfernt: Sie konfigurieren für das Fallback nicht mehr explizit einen Verteilungspunkt, und die entsprechenden Optionen wurden von der Benutzeroberfläche entfernt.
 
   Darüber hinaus hat sich das Ergebnis geändert, das auftritt, wenn die Einstellung **Die Verwendung eines Fallbackquellpfads für den Inhalt durch Clients zulassen** auf einem Bereitstellungstyp für Anwendungen festgelegt wird. Diese Einstellung auf einem Bereitstellungstyp ermöglicht es einem Client nun, die Standard-Standortbegrenzungsgruppe als Quellspeicherort für Inhalt zu verwenden.
@@ -317,8 +317,8 @@ Indem Sie die verschiedenen Nachbargruppen so konfigurieren, dass diese zu versc
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>Aktualisieren vorhandener Begrenzungsgruppen auf das neue Modell
 Wenn Sie die Version 1609 installieren und Ihren Standort aktualisieren, werden die folgenden Konfigurationen automatisch vorgenommen. Diese sollen sicherstellen, dass Ihr aktuelles Fallbackverhalten verfügbar bleibt, bis Sie neue Begrenzungsgruppen und Beziehungen konfigurieren.  
-- Ungeschützte Verteilungspunkte an einem Standort werden zur Begrenzungsgruppe *Default-Site-Boundary-Group\<Standortcode>* dieses Standorts hinzugefügt.
-- Von jeder vorhandenen Begrenzungsgruppe, die einen Standortserver umfasst, der mit einer langsamen Verbindung konfiguriert wurde, wird eine Kopie erstellt. Der Name der neuen Gruppe lautet ***\<ursprünglicher Name der Begrenzungsgruppe>-Slow-Tmp***:  
+- Ungeschützte Verteilungspunkte an einem Standort werden zur Begrenzungsgruppe *Default-Site-Boundary-Group\<sitecode>* dieses Standorts hinzugefügt.
+- Von jeder vorhandenen Begrenzungsgruppe, die einen Standortserver umfasst, der mit einer langsamen Verbindung konfiguriert wurde, wird eine Kopie erstellt. Der Name der neuen Gruppe ist ***\<original boundary group name>-Slow-Tmp***:  
   -   Standortsysteme, die über eine schnelle Verbindung verfügen, bleiben in der ursprünglichen Begrenzungsgruppe.
   -   Eine Kopie der Standortsysteme, die über eine langsame Verbindung verfügen, wird der Kopie der Begrenzungsgruppe hinzugefügt. Die ursprünglichen Standortsysteme, die als langsam konfiguriert wurden, bleiben zur Abwärtskompatibilität in der ursprünglichen Begrenzungsgruppe, werden von dieser Begrenzungsgruppe jedoch nicht verwendet.
   -   Dieser Begrenzungsgruppenkopie sind keine Grenzen zugeordnet. Jedoch wird ein Fallbacklink zwischen der ursprünglichen Gruppe und der neuen Begrenzungsgruppe erstellt, deren Fallbackzeit auf 0 festgelegt ist.
@@ -347,7 +347,7 @@ Das Dashboard zeigt Diagramme für Folgendes an:
 - Office 365-Clientversionen
 - Office 365-Clientsprachen
 - Office 365-Clientkanäle     
-Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
+Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Office 365 ProPlus](/deployoffice/overview-update-channels).
 - Regeln zur automatischen Bereitstellung, die Office 365-Client in der Gruppe verfügbarer Produkte ausgewählt haben.
 
 Über das Dashboard können Sie die folgenden Aktionen ausführen:

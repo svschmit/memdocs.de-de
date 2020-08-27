@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 73b8111cbada129997cec965ca685f1ef22b1f3a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705308"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693011"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Funktionen in der Technical Preview 1702 für Configuration Manager
 
@@ -76,7 +76,7 @@ Um Azure AD mit Configuration Manager zu verwenden, benötigen Sie Folgendes:
 - Ein Standort von Configuration Manager, der auf einer Azure-VM ausgeführt wird und der mit Ihrem Azure AD verknüpft ist.
 - Configuration Manager-Clients, die in der gleichen Azure AD-Umgebung ausgeführt werden.
 
-Informationen zur Konfiguration von Azure AD DS finden Sie unter [Get started with Azure AD Domain Services (Erste Schritte mit Azure AD-Domänendiensten)](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
+Informationen zur Konfiguration von Azure AD DS finden Sie unter [Get started with Azure AD Domain Services (Erste Schritte mit Azure AD-Domänendiensten)](/azure/active-directory-domain-services/create-instance).
 
 ### <a name="discover-resources"></a>Ressourcen ermitteln
 Nachdem Sie Configuration Manager in Azure AD eingerichtet haben, können Sie Methoden der Configuration Manager-Ermittlung verwenden, um Azure AD nach Ressourcen zu durchsuchen:  
@@ -101,7 +101,7 @@ Azure AD hat keine Organisationseinheit, die Gruppen speichert. Verwenden Sie st
 
 Weitere Informationen zu Azure AD finden Sie in den folgenden Themen:  
 - [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) auf azure.microsoft.com.
-- [Active Directory Domain Services Documentation (Dokumentation von Active Directory Domain Services)](https://docs.microsoft.com/azure/active-directory-domain-services) auf docs.microsoft.com.
+- [Active Directory Domain Services Documentation (Dokumentation von Active Directory Domain Services)](/azure/active-directory-domain-services) auf docs.microsoft.com.
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>Verbesserungen bei Gerätekompatibilitätsrichtlinien für bedingten Zugriff
 
@@ -204,7 +204,7 @@ Gehen Sie wie folgt vor, um die Angaben für die Tasksequenz, die im Softwarecen
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>Prüfen Sie auf ausgeführte ausführbare Dateien, bevor Sie eine Anwendung installieren
 
-Sie können im Dialogfeld **Eigenschaften von** *\<Name des Bereitstellungstyps>* jetzt auf der Registerkarte „Installationsverhalten“ eines Bereitstellungstyps eine von mehreren ausführbaren Dateien festlegen, die bei ihrer Ausführung die Installation des Bereitstellungstyps verhindern. Der Benutzer muss die ausgeführte ausführbare Datei schließen bevor der Bereitstellungstyp installiert werden kann – die Datei kann aber auch automatisch für Bereitstellungen mit dem Zweck „Erforderlich“ geschlossen werden.
+Sie können jetzt auf der Registerkarte „Installationsverhalten“ im Dialogfeld *\<deployment type name>* -**Eigenschaften** eines Bereitstellungstyps eine von mehreren ausführbaren Dateien festlegen, die, falls ausgeführt, die Installation des Bereitstellungstyps verhindert. Der Benutzer muss die ausgeführte ausführbare Datei schließen bevor der Bereitstellungstyp installiert werden kann – die Datei kann aber auch automatisch für Bereitstellungen mit dem Zweck „Erforderlich“ geschlossen werden.
 
 ### <a name="try-it-out"></a>Probieren Sie es aus.
 
@@ -226,12 +226,12 @@ Zusätzlich können Sie jetzt mehrere Zertifizierungsstellen (certification auth
 
 Sie können ein PFX-Zertifikatprofil für iOS-Geräte mit einem E-Mail-Profil verknüpfen und die Verschlüsselung mit S/MIME aktivieren.  Dadurch wird S/MIME im nativen E-Mail-Client auf iOS aktiviert und verknüpft das korrekte S/MIME-Verschlüsselungszertifikat.
 
-Weitere Informationen zu Zertifikaten in Configuration Manager finden Sie unter [Einführung in Zertifikatprofile]( https://docs.microsoft.com/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+Weitere Informationen zu Zertifikaten in Configuration Manager finden Sie unter [Einführung in Zertifikatprofile]( /sccm/protect/deploy-use/introduction-to-certificate-profiles).
 
 
 ## <a name="new-compliance-settings-for-ios-devices"></a>Neue Kompatibilitätseinstellungen für iOS-Geräte
 
-Es wurden neue Einstellungen hinzugefügt, die Sie in Ihren Konfigurationselementen für iOS-Geräte verwenden können. Dabei handelt es sich um Einstellungen, die zuvor in Microsoft Intune in einer eigenständigen Konfiguration vorhanden waren, und jetzt verfügbar sind, wenn Sie Intune mit Configuration Manager verwenden. Hilfe zu diesen Einstellungen finden Sie unter [iOS policy settings in Microsoft Intune (Einstellungen für iOS-Richtlinien in Microsoft Intune)](/mem/intune/configuration/device-restrictions-ios).
+Es wurden neue Einstellungen hinzugefügt, die Sie in Ihren Konfigurationselementen für iOS-Geräte verwenden können. Dabei handelt es sich um Einstellungen, die zuvor in Microsoft Intune in einer eigenständigen Konfiguration vorhanden waren, und jetzt verfügbar sind, wenn Sie Intune mit Configuration Manager verwenden. Hilfe zu diesen Einstellungen finden Sie unter [iOS policy settings in Microsoft Intune (Einstellungen für iOS-Richtlinien in Microsoft Intune)](../../../intune/configuration/device-restrictions-ios.md).
 
 - **Daten aus verwalteten Apps mit iCloud synchronisieren**
 - **Aktivitäten mit HandOff auf einem anderen Gerät fortsetzen**
@@ -347,7 +347,7 @@ Sie können dies ausprobieren, indem Sie ein Konfigurationselement mithilfe des 
 #### <a name="perform-selective-wipe"></a>Selektives Zurücksetzen durchführen
 Nur Geräte, die als Android for Work registriert sind, können selektiv zurückgesetzt werden, da Sie nur das Arbeitsprofil verwalten. Das schützt das persönliche Profil vor dem Zurücksetzen. Wenn Sie ein Android for Work-Gerät selektiv zurücksetzen, wird das Arbeitsprofil entfernt, einschließlich aller Apps und Daten, und das Gerät ist nicht mehr registriert.
 
-Um ein Android for Work-Gerät selektiv zurückzusetzen, verwenden Sie den gewohnten [Ablauf zum selektiven Zurücksetzen](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) in der Configuration Manager-Konsole.
+Um ein Android for Work-Gerät selektiv zurückzusetzen, verwenden Sie den gewohnten [Ablauf zum selektiven Zurücksetzen](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) in der Configuration Manager-Konsole.
 
 #### <a name="known-issues-for-android-for-work"></a>Bekannte Probleme bei Android for Work
 **Das Konfigurieren des Synchronisierungszeitplans in E-Mail-Profilen von Android for Work schlägt bei der Bereitstellung fehl** Eine Option in der ConfigMgr-Benutzeroberfläche für E-Mail-Profile von Android for Work ist „Schedule“ (Zeitplan). Auf anderen Plattformen kann der Administrator dadurch einen Zeitplan für die Synchronisierung von E-Mails und anderen E-Mail-Kontendaten bis hin zu den mobilen Geräten konfigurieren, auf denen er bereitgestellt wird. Dies funktioniert allerdings nicht für Android for Work-E-Mail-Profile. Die Auswahl einer anderen Option als „Nicht konfiguriert“ führt dazu, dass das Profil auf keinem Gerät bereitgestellt wird.

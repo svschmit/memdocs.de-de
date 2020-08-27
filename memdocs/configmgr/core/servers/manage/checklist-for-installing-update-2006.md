@@ -2,7 +2,7 @@
 title: Checkliste für Version 2006
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie Informationen zu Vorbereitungen, die Sie treffen müssen, bevor Sie ein Update auf Version 2006 von Configuration Manager durchführen.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a3c66863e7768c5ca90151bf85d61aa1e3a0e17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129521"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696462"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Checkliste für die Installation von Update 2006 für Configuration Manager
 
@@ -81,7 +81,11 @@ Microsoft signiert das Skript digital und bündelt es in einer signierten selbst
 
 So melden Sie sich beim Early Update Ring an:
 
-1. Öffnen von Windows PowerShell und **Als Administrator ausführen**
+1. Öffnen Sie eine Sitzung mit der Windows PowerShell-Version 5 als **Administrator**.
+
+    > [!IMPORTANT]
+    > Die Current Branch-Version von Configuration Manager unterstützt nicht die PowerShell-Version 7. Wenn Sie die PowerShell-Version 7 bereits installiert haben, können Sie weiterhin die PowerShell-Version 5 nutzen. Weitere Informationen finden Sie unter [Parallele Nutzung von PowerShell 7 mit Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+
 1. Führen Sie das Skript **EnableEarlyUpdateRing2006.ps1** mit der folgenden Syntax aus:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`

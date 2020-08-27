@@ -103,6 +103,8 @@
               href: advanced-threat-protection-monitor.md
         - name: Migration von Firewallregeln
           href: endpoint-security-firewall-rule-tool.md
+        - name: Mandantenanfügung
+          href: tenant-attach-intune.md
         - name: Verschlüsseln von Datenträgern
           items:
             - name: Verwalten der BitLocker-Richtlinie
@@ -308,8 +310,10 @@
           items:
             - name: Defender Antivirus-Einstellungen für macOS
               href: antivirus-microsoft-defender-settings-macos.md
-            - name: Einstellungen für Microsoft Defender Antivirus für Windows 10
+            - name: Windows 10 Defender Antivirus-Einstellungen
               href: antivirus-microsoft-defender-settings-windows.md
+            - name: Mandantenanfügung von Defender Antivirus-Einstellungen
+              href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
             - name: Einstellungen der Windows-Sicherheitsumgebung
               href: antivirus-security-experience-windows-settings.md
         - name: Profileinstellungen für die Datenträgerverschlüsselung

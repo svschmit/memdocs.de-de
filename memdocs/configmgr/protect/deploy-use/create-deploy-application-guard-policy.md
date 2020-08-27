@@ -10,29 +10,29 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1189f8c89215bc228c533a88f38f5ae59b6855ee
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 3fb7559f624afdb16ef228c61331387c163fbd54
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454935"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697108"
 ---
 # <a name="create-and-deploy-microsoft-defender-application-guard-policy"></a>Erstellen und Bereitstellen einer Microsoft Defender Application Guard-Richtlinie
 
 *Gilt für: Configuration Manager (Current Branch)*
 <!-- 1351960 -->  
-Sie können [Microsoft Defender Application Guard (Application Guard)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)-Richtlinien erstellen und bereitstellen, indem Sie den Configuration Manager-Endpunktschutz verwenden. Diese Richtlinien dienen zum Schutz Ihrer Benutzer, indem nicht vertrauenswürdige Websites in einem sicheren isolierten Container geöffnet werden, auf den andere Teile des Betriebssystems keinen Zugriff haben.
+Sie können [Microsoft Defender Application Guard (Application Guard)](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)-Richtlinien erstellen und bereitstellen, indem Sie den Configuration Manager-Endpunktschutz verwenden. Diese Richtlinien dienen zum Schutz Ihrer Benutzer, indem nicht vertrauenswürdige Websites in einem sicheren isolierten Container geöffnet werden, auf den andere Teile des Betriebssystems keinen Zugriff haben.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Wenn Sie eine Microsoft Defender Application Guard-Richtlinie erstellen möchten, müssen Sie das Windows 10 Fall Creators Update (1709) verwenden. Die Windows 10-Geräte, auf denen Sie die Richtlinie bereitstellen, müssen mit einer [Netzwerkisolationsrichtlinie](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings) konfiguriert werden. Weitere Informationen finden Sie in der [Übersicht über Microsoft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
+Wenn Sie eine Microsoft Defender Application Guard-Richtlinie erstellen möchten, müssen Sie das Windows 10 Fall Creators Update (1709) verwenden. Die Windows 10-Geräte, auf denen Sie die Richtlinie bereitstellen, müssen mit einer [Netzwerkisolationsrichtlinie](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings) konfiguriert werden. Weitere Informationen finden Sie in der [Übersicht über Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Erstellen einer Richtlinie und Durchsuchen der verfügbaren Einstellungen
 
 1. Wählen Sie in der Configuration Manager-Konsole **Assets und Konformität** aus.
 2. Wählen Sie im Arbeitsbereich **Assets und Konformität** nacheinander **Übersicht** > **Endpoint Protection** > **Windows Defender Application Guard** aus.
 3. Klicken Sie auf der Registerkarte **Start** in der Gruppe **Erstellen** auf **Windows Defender Application Guard-Richtlinie erstellen**.
-4. Sie können die verfügbaren Einstellungen mithilfe des [Referenzartikels](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) durchsuchen und konfigurieren. Mit Configuration Manager können Sie bestimmte Richtlinieneinstellungen festlegen:
+4. Sie können die verfügbaren Einstellungen mithilfe des [Referenzartikels](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) durchsuchen und konfigurieren. Mit Configuration Manager können Sie bestimmte Richtlinieneinstellungen festlegen:
    - [Einstellungen für die Hostinginteraktion](#bkmk_HIS)
    - [Anwendungsverhalten](#bkmk_ABS)
    - [Dateiverwaltung](#bkmk_FM)
@@ -44,7 +44,7 @@ Wenn Sie eine Microsoft Defender Application Guard-Richtlinie erstellen möchten
     >  - eine aus Windows Information Protection
     >  - eine aus Microsoft Defender Application Guard
     >
-    > Wenn Sie beide Richtlinien bereitstellen, müssen diese Netzwerkisolationlisten übereinstimmen. Wenn Sie Listen bereitstellen, die nicht mit dem gleichen Client übereinstimmen, schlägt die Bereitstellung fehl. Weitere Informationen finden Sie in der [Dokumentation zu Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+    > Wenn Sie beide Richtlinien bereitstellen, müssen diese Netzwerkisolationlisten übereinstimmen. Wenn Sie Listen bereitstellen, die nicht mit dem gleichen Client übereinstimmen, schlägt die Bereitstellung fehl. Weitere Informationen finden Sie in der [Dokumentation zu Windows Information Protection](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. Schließen Sie den Assistenten ab, und stellen Sie die Richtlinie auf Windows 10-Geräten bereit, die Version 1709 verwenden.
 
@@ -78,7 +78,7 @@ Mit diesen wird das Anwendungsverhalten innerhalb der Application Guard-Sitzung 
 
 ### <a name="file-management"></a><a name="bkmk_FM"></a> Dateiverwaltung
 <!--3555858-->
-Ab Configuration Manager Version 1906 gibt es eine Richtlinieneinstellung, die es Benutzern ermöglicht, Dateien zu vertrauen, die normalerweise im Application Guard geöffnet werden. Nach erfolgreicher Durchführung werden die Dateien auf dem Hostgerät und nicht in Application Guard geöffnet. Weitere Informationen zu den Application Guard-Richtlinien finden Sie unter [Konfigurieren der Richtlinieneinstellungen für Microsoft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard).
+Ab Configuration Manager Version 1906 gibt es eine Richtlinieneinstellung, die es Benutzern ermöglicht, Dateien zu vertrauen, die normalerweise im Application Guard geöffnet werden. Nach erfolgreicher Durchführung werden die Dateien auf dem Hostgerät und nicht in Application Guard geöffnet. Weitere Informationen zu den Application Guard-Richtlinien finden Sie unter [Konfigurieren der Richtlinieneinstellungen für Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard).
 
 - **Benutzern das Vertrauen in Dateien ermöglichen, die in Windows Defender Application Guard geöffnet werden**: Ermöglichen Sie dem Benutzer, Dateien als vertrauenswürdig zu markieren. Wenn eine Datei vertrauenswürdig ist, wird Sie nicht in Application Guard, sondern auf dem Host geöffnet. Gilt für Clients mit Windows 10, Version 1809 oder höher.
   - **Prohibited** (Nicht zulässig): Erlauben Sie Benutzern nicht, Dateien als vertrauenswürdig zu markieren (Standard).
@@ -103,5 +103,5 @@ Bei Geräten unter Windows 10 Version 2004 werden Fehler bei der Konformitätsbe
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen über Microsoft Defender Application Guard finden Sie in folgenden Artikeln:
- - [Übersicht über Microsoft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)
-- [Häufig gestellte Fragen zu Microsoft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard)
+ - [Übersicht über Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)
+- [Häufig gestellte Fragen zu Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard)

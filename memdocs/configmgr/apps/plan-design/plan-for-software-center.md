@@ -2,7 +2,7 @@
 title: Planen für Software Center
 titleSuffix: Configuration Manager
 description: Legen Sie fest, wie Sie Software Center konfigurieren und mit den Markeninformationen Ihrer Organisation versehen möchten, damit Benutzer mit Configuration Manager interagieren können.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b32fc2de3c945ff2292f119a10d84d982d08677
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 802dbaa4188199e555a5cc0143ed599ad454e27e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127357"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695170"
 ---
 # <a name="plan-for-software-center"></a>Planen für Software Center
 
@@ -43,6 +43,8 @@ Aktualisieren Sie Ihren Configuration Manager-Standort und die Clients auf Versi
 - Ab Version 1906 können Sie dem Softwarecenter bis zu fünf benutzerdefinierte Registerkarten hinzufügen. Weitere Informationen finden Sie unter [Softwarecenter-Clienteinstellungen](../../core/clients/deploy/about-client-settings.md#software-center). <!--4063773-->
 
 - Benutzer können die Affinität zwischen Benutzer und Gerät im Softwarecenter konfigurieren. Weitere Informationen finden Sie unter [Verknüpfen von Benutzern und Geräten mit Affinität zwischen Benutzer und Gerät](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
+
+- Ab Version 2006 können Sie gemeinsam verwaltete Geräte so konfigurieren, dass sie das Unternehmensportal sowohl für Intune- als auch für Configuration Manager-Apps verwenden. Weitere Informationen finden Sie unter [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](../../comanage/company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 
 > [!IMPORTANT]
 > Wenn Sie neue Configuration Manager-Features nutzen möchten, müssen Sie zunächst die Clients auf die neueste Version aktualisieren. Beim Update des Standorts und der Konsole werden neue Features in der Configuration Manager-Konsole angezeigt. Das vollständige Szenario ist allerdings erst einsatzbereit, wenn auch die Clientversion aktualisiert wird.
@@ -138,7 +140,10 @@ Wenn Sie den Anwendungskatalog verwenden, gilt für das Branding Folgendes:
 
 3. Clienteinstellung **Organisationsname** in der Gruppe **Computer-Agent**. Weitere Informationen finden Sie unter [About client settings (Informationen zu Clienteinstellungen)](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Benutzerleitfaden des Softwarecenters](../../core/understand/software-center.md)
+
 - [Planen und Konfigurieren der Anwendungsverwaltung](plan-for-and-configure-application-management.md)
+
+- [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](../../comanage/company-portal.md)

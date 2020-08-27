@@ -2,7 +2,7 @@
 title: Installieren von Power BI-Beispielberichten
 titleSuffix: Configuration Manager
 description: Erfahren Sie, wie Sie die Power BI-Beispielberichte in Configuration Manager installieren
-ms.date: 08/12/2020
+ms.date: 08/18/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 450c76617cf12a3201aa990c90843cb2e0f0edee
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 025788a4ed4a26123f24ec667348eae97821295e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179433"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699686"
 ---
 # <a name="install-power-bi-sample-reports"></a>Installieren von Power BI-Beispielberichten
 <!--5679791-->
 *Gilt für: Configuration Manager (Current Branch)*
 
-Sie können den [Power BI-Berichtsserver](https://docs.microsoft.com/power-bi/report-server/get-started) ab Version 2002 mit der Configuration Manager-Berichterstellung integrieren. Zum Herunterladen stehen Beispielberichte zur Verfügung, die Sie in Configuration Manager installieren können. In diesem Artikel wird beschrieben, wie Sie die Power BI-Beispielberichte in Configuration Manager installieren.
+Sie können den [Power BI-Berichtsserver](/power-bi/report-server/get-started) ab Version 2002 mit der Configuration Manager-Berichterstellung integrieren. Zum Herunterladen stehen Beispielberichte zur Verfügung, die Sie in Configuration Manager installieren können. In diesem Artikel wird beschrieben, wie Sie die Power BI-Beispielberichte in Configuration Manager installieren.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -34,7 +34,7 @@ Sie können den [Power BI-Berichtsserver](https://docs.microsoft.com/power-bi/re
     > [!IMPORTANT]
     > Verwenden Sie nur Power BI Desktop-Versionen aus dem [Microsoft Download Center](https://www.microsoft.com/download/). Nutzen Sie keine Version aus dem Microsoft Store.
     >
-    > Verwenden Sie nur eine Version von Power BI Desktop, die [für Power BI-Berichtsserver optimiert](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop) ist.
+    > Verwenden Sie nur eine Version von Power BI Desktop, die [für Power BI-Berichtsserver optimiert](/power-bi/report-server/install-powerbi-desktop) ist.
 
 ## <a name="download-the-sample-reports"></a>Herunterladen der Beispielberichte
 
@@ -64,9 +64,14 @@ So installieren Sie die Beispielberichte:
 
 1. Geben Sie den Namen der Configuration Manager-Datenbank und den Namen des Datenbankservers an, wenn Sie dazu aufgefordert werden, und wählen Sie **Laden**.
 
-    Wenn Sie das Datenmodell laden oder anwenden, ignorieren Sie alle Fehlermeldungen, die Sie ggf. erhalten.
-
     :::image type="content" source="media/sample-report-database.png" alt-text="Angeben von Datenbank- und Datenbankserver-Name" lightbox="media/sample-report-database.png":::
+
+    > [!NOTE]
+    > Wenn Sie das Datenmodell laden oder anwenden, ignorieren Sie alle Fehlermeldungen, die Sie ggf. erhalten. Wenn z. B. die folgende Fehlermeldung angezeigt wird: „Das Herstellen von Verbindungen mit Tabellen aus mehr als einer Datenbank wird im DirectQuery-Modus nicht unterstützt“, wählen Sie **Schließen** aus. Aktualisieren Sie dann die Datenquelleneinstellungen:
+    >
+    > 1. Wählen Sie in Power BI Desktop im Menüband **Abfragen bearbeiten** und dann **Datenquelleneinstellungen** aus.
+    > 1. Wählen Sie **Quelle ändern** aus, bestätigen Sie Ihre Server- und Datenbanknamen, und wählen Sie **OK** aus.
+    > 1. Schließen Sie das Fenster mit den Datenquelleneinstellungen, und wählen Sie dann **Änderungen übernehmen** aus.
 
 1. Wenn die Berichtsdaten geladen sind, wählen Sie **Datei** > **Speichern unter** und dann **Power BI-Berichtsserver** aus.
 

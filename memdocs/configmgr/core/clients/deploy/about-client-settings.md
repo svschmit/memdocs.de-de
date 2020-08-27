@@ -2,7 +2,7 @@
 title: Clienteinstellungen
 titleSuffix: Configuration Manager
 description: Informationen zu Standardeinstellungen und benutzerdefinierten Einstellungen zur Steuerung von Clientverhalten
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127000"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693419"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informationen zu Clienteinstellungen in Configuration Manager
 
@@ -167,7 +167,7 @@ Legen Sie diese Option auf **Ja** fest, damit Clients Inhalte von einem Cloudver
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>Registrieren Sie neue, in die Domäne eingebundene Windows 10-Geräte automatisch bei Azure Active Directory.
 
-Wenn Sie Azure Active Directory so konfigurieren, dass eine hybride Einbindung unterstützt wird, konfiguriert Configuration Manager Windows 10-Geräte für diese Funktionalität. Weitere Informationen finden Sie unter [Konfigurieren von in Azure Active Directory eingebundenen Hybridgeräten](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+Wenn Sie Azure Active Directory so konfigurieren, dass eine hybride Einbindung unterstützt wird, konfiguriert Configuration Manager Windows 10-Geräte für diese Funktionalität. Weitere Informationen finden Sie unter [Konfigurieren von in Azure Active Directory eingebundenen Hybridgeräten](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 ### <a name="enable-clients-to-use-a-cloud-management-gateway"></a>Ermöglichen Sie Clients die Verwendung eines Cloudverwaltungsgateways.
 
@@ -341,11 +341,11 @@ Weitere Informationen zu diesen Einstellungen finden Sie unter [Benachrichtigung
 ## <a name="delivery-optimization"></a>Übermittlungsoptimierung
 
 <!-- 1324696 -->
-Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung über Ihr gesamtes Unternehmensnetzwerk und Remotebüros hinweg zu definieren und zu regulieren. [Windows-Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) ist eine cloudbasierte Peer-zu-Peer-Technologie zum gemeinsamen Nutzen von Inhalten auf Windows 10-Geräten. Konfigurieren Sie die Übermittlungsoptimierung so, dass bei der Freigabe von Inhalten für Peers Ihre Begrenzungsgruppen verwendet werden.
+Sie verwenden Configuration Manager-Begrenzungsgruppen, um die Inhaltsverteilung über Ihr gesamtes Unternehmensnetzwerk und Remotebüros hinweg zu definieren und zu regulieren. [Windows-Übermittlungsoptimierung](/windows/deployment/update/waas-delivery-optimization) ist eine cloudbasierte Peer-zu-Peer-Technologie zum gemeinsamen Nutzen von Inhalten auf Windows 10-Geräten. Konfigurieren Sie die Übermittlungsoptimierung so, dass bei der Freigabe von Inhalten für Peers Ihre Begrenzungsgruppen verwendet werden.
 
 > [!Note]
 > - Die Übermittlungsoptimierung ist nur auf Windows 10-Clients verfügbar.
-> - Der Internetzugriff auf den Clouddienst Übermittlungsoptimierung ist eine Anforderung für den Einsatz der Peer-zu-Peer-Funktionalität. Informationen zu den erforderlichen Internetendpunkten finden Sie unter [Häufig gestellte Fragen zur Übermittlungsoptimierung](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+> - Der Internetzugriff auf den Clouddienst Übermittlungsoptimierung ist eine Anforderung für den Einsatz der Peer-zu-Peer-Funktionalität. Informationen zu den erforderlichen Internetendpunkten finden Sie unter [Häufig gestellte Fragen zur Übermittlungsoptimierung](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 > - Bei der Verwendung eines CMG zum Speichern von Inhalten werden die Inhalte für Updates für Drittanbietersoftware nicht auf Clients heruntergeladen, wenn die [Clienteinstellung](#allow-clients-to-download-delta-content-when-available) **Clients das Herunterladen von Deltainhalten ermöglichen (falls verfügbar)** aktiviert ist. <!--6598587--> 
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Verwenden von Configuration Manager-Begrenzungsgruppen zum Festlegen der Gruppen-ID für die Übermittlungsoptimierung
@@ -641,6 +641,17 @@ Legen Sie diese Option auf **Ja** fest, um die Authentifizierung auf Netzwerkebe
 
 ## <a name="software-center"></a>Software Center
 
+### <a name="select-the-user-portal"></a>Wählen Sie das Benutzerportal aus
+
+<!--CMADO-3601237,INADO-4297660-->
+Wenn Sie ab Version 2006 das Unternehmensportal für gemeinsam verwaltete Geräte bereitstellen, legen Sie diese Einstellung auf **Unternehmensportal** fest. Mit dieser Einstellung wird sichergestellt, dass Benutzer nur Benachrichtigungen vom Unternehmensportal erhalten.
+
+Wenn Sie das Unternehmensportal auf einem gemeinsam verwalteten Gerät installieren, diese Einstellung jedoch auf **Softwarecenter** festlegen, erhalten Benutzer Benachrichtigungen von beiden Portalen. Dies ist für Benutzer u. U. verwirrend.
+
+Wenn Sie die Clienteinstellung in „Unternehmensportal“ ändern, startet ein Benutzer beim Auswählen einer Configuration Manager-Benachrichtigung das Unternehmensportal. Wenn sich die Benachrichtigung auf ein Szenario bezieht, das das Unternehmensportal nicht unterstützt, wird durch Auswählen der Benachrichtigung das Softwarecenter gestartet.
+
+Das Verhalten des Unternehmensportals hängt von der Konfiguration der Workload für die Co-Verwaltung ab. Weitere Informationen finden Sie unter [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](../../../comanage/company-portal.md).
+
 ### <a name="select-these-new-settings-to-specify-company-information"></a>Wählen Sie diese neuen Einstellungen aus, um Unternehmensinformationen anzugeben.
 
 Legen Sie diese Option auf **Ja** fest, und geben Sie dann folgende Einstellungen an, um das Softwarecenter mit den Markeninformationen Ihrer Organisation zu versehen:
@@ -927,11 +938,11 @@ Diese Clienteinstellung bietet die folgenden Optionen:
 
 - **Normal**: Das Windows Setup verbraucht mehr Systemressourcen und führt Updates schneller aus. Durch den höheren Verbrauch von Prozessorzeit ist zwar die Installationszeit insgesamt kürzer, aber die Unterbrechung für den Benutzer länger.  
 
-    - Konfiguriert die Datei „setupconfig.ini“ auf dem Gerät mit der [Windows-Befehlszeilenoption für Setup](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options), `/Priority Normal`.
+    - Konfiguriert die Datei „setupconfig.ini“ auf dem Gerät mit der [Windows-Befehlszeilenoption für Setup](/windows-hardware/manufacture/desktop/windows-setup-command-line-options), `/Priority Normal`.
 
 - **Niedrig:** Sie können weiterhin mit dem Gerät arbeiten, während der Download und die Updates im Hintergrund ausgeführt werden. Die gesamte Installationszeit ist länger, aber dafür ist die Unterbrechung für den Benutzer kürzer. Möglicherweise müssen Sie die maximale Laufzeit von Updates verlängern, um bei Verwendung dieser Option ein Timeout zu vermeiden.  
 
-    - Entfernt die [Windows-Befehlszeilenoption für Setup](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options), `/Priority`, aus der Datei „setupconfig.ini“.
+    - Entfernt die [Windows-Befehlszeilenoption für Setup](/windows-hardware/manufacture/desktop/windows-setup-command-line-options), `/Priority`, aus der Datei „setupconfig.ini“.
 
 
 ### <a name="enable-third-party-software-updates"></a>Aktivieren von Softwareupdates von Drittanbietern
@@ -940,7 +951,7 @@ Wenn Sie diese Option auf **Ja** festlegen, wird die Richtlinie für das **Zulas
 
 ### <a name="enable-dynamic-update-for-feature-updates"></a><a name="bkmk_du"></a>Dynamisches Update für Featureupdates aktivieren
 <!--4062619-->
-Ab Configuration Manager, Version 1906 können Sie [Dynamisches Update für Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) konfigurieren. „Dynamisches Update“ installiert Language Packs, Features bei Bedarf, Treiber und kumulative Updates während des Windows-Setups, indem der Client zum Download der betreffenden Updates aus dem Internet weitergeleitet wird. Wenn diese Einstellung auf **Ja** oder **Nein** festgelegt ist, ändert Configuration Manager die Datei [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options), die während der Installation von Featureupdates verwendet wird.
+Ab Configuration Manager, Version 1906 können Sie [Dynamisches Update für Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) konfigurieren. „Dynamisches Update“ installiert Language Packs, Features bei Bedarf, Treiber und kumulative Updates während des Windows-Setups, indem der Client zum Download der betreffenden Updates aus dem Internet weitergeleitet wird. Wenn diese Einstellung auf **Ja** oder **Nein** festgelegt ist, ändert Configuration Manager die Datei [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options), die während der Installation von Featureupdates verwendet wird.
 
 - **Nicht konfiguriert**: Der Standardwert. Die Datei „setupconfig“ wird nicht geändert.
   - „Dynamisches Update“ ist in allen unterstützten Versionen von Windows 10 standardmäßig aktiviert.
