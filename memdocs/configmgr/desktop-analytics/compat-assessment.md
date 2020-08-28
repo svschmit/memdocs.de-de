@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dbe827371f84bb90e2a7f2468aa139cba073fe49
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699074"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819744"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Kompatibilitätsbewertung in Desktop Analytics
 
@@ -245,4 +245,4 @@ Die Bewertung für den Treiber wird in Desktop Analytics angegeben. Wählen Sie 
 
 ## <a name="see-also"></a>Weitere Informationen:
 
-Der FastTrack Center-Vorteil für Windows 10 bietet Zugriff auf **Desktop App Assure**. Dieser Vorteil ist ein neuer Dienst zum Beheben von Kompatibilitätsproblemen mit Windows 10- und Microsoft 365 Apps for Enterprise. Weitere Informationen finden Sie unter [Desktop App Assure](/fasttrack/win-10-desktop-app-assure).
+Der FastTrack Center-Vorteil für Windows 10 bietet Zugriff auf **Desktop App Assure**. Dieser Vorteil ist ein neuer Dienst zum Beheben von Kompatibilitätsproblemen mit Windows 10- und Microsoft 365 Apps for Enterprise. Weitere Informationen finden Sie unter [Desktop App Assure](/fasttrack/win-10-app-assure).
