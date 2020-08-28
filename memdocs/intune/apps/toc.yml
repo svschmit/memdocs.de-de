@@ -53,11 +53,11 @@
               href: windows-store-for-business.md
             - name: Verwaltete Google Play-Apps
               href: apps-add-android-for-work.md
-        - name: Office 365 Suite
+        - name: "Microsoft\_365-Produktsuite"
           items:
-            - name: Office 365-Apps für Windows 10
+            - name: "Microsoft\_365-Apps für Windows\_10"
               href: apps-add-office365.md
-            - name: Office 365-Apps für macOS
+            - name: "Microsoft\_365-Apps für macOS"
               href: apps-add-office365-macos.md
         - name: Android Enterprise-System-Apps
           href: apps-ae-system.md
