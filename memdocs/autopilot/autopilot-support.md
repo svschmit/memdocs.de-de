@@ -14,12 +14,12 @@ ms.reviewer: ''
 manager: laurawi
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: f4727acde8a42a56e79dbbe22ae4ab0ce1ca9245
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: bfd8f4f88b5462fb6fdc21287ad77bb133b83f90
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756762"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993187"
 ---
 # <a name="windows-autopilot-support-information"></a>Windows Autopilot-Support Informationen
 
@@ -38,5 +38,5 @@ Bevor Sie sich mit den unten aufgeführten Ressourcen für Windows Autopilot-bez
 | Benutzer des Microsoft Partner Centers (MPC) | Verwenden Sie die in MPC verfügbaren [Hilfe Ressourcen](https://partner.microsoft.com/support) . |
 | Msfb-Benutzer (Microsoft Store for Business) | Verwenden Sie die in msfb verfügbaren Hilfe Ressourcen. |
 | InTune-Benutzer | Klicken Sie im Microsoft Azure-Portal auf [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview). |
-| Microsoft 365 Business | Die Unterstützung kann direkt über das Microsoft 365 Business-Portal aufgerufen werden, wenn Sie angemeldet sind: https://support.microsoft.com/en-us . |
+| Microsoft 365 Business Premium | Die Unterstützung kann direkt über das Microsoft 365 Business Premium-Portal aufgerufen werden, wenn Sie angemeldet sind:  https://support.microsoft.com/en-us . |
 | Abfragen im Zusammenhang mit MDA-Tests | Kontaktieren MDAHelp@microsoft.com . |

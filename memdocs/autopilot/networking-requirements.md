@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 3c24610a2ac10dfae6a8ba73062edf29188938ea
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1b217f7b299447b53c760cbba85b873d0626d741
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907988"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993750"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Netzwerk Anforderungen für Windows Autopilot
 
@@ -73,7 +73,7 @@ Wenn die WNS-Dienste nicht verfügbar sind, wird der Autopilot-Prozess trotzdem 
 
 Wenn kein Zugriff auf die Microsoft Store möglich ist, wird der Autopilot-Prozess weiterhin ohne Microsoft Store-Apps ausgeführt.
 
-<tr><td><b>Office 365<b><td>Im Rahmen der InTune-Gerätekonfiguration ist möglicherweise die Installation von Microsoft 365-Apps für Unternehmen erforderlich. Weitere Informationen finden Sie unter <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">URLs und IP-Adressbereiche von Office 365</a>. Dieser Artikel enthält alle Office-Dienste, DNS-Namen und IP-Adressen. Außerdem sind Azure AD und andere Dienste enthalten, die sich mit den oben aufgeführten Diensten überlappen können.
+<tr><td><b>Microsoft 365<b><td>Im Rahmen der InTune-Gerätekonfiguration ist möglicherweise die Installation von Microsoft 365-Apps für Unternehmen erforderlich. Weitere Informationen finden Sie unter <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">URLs und IP-Adressbereiche von Office 365</a>. Dieser Artikel enthält alle Office-Dienste, DNS-Namen und IP-Adressen. Außerdem sind Azure AD und andere Dienste enthalten, die sich mit den oben aufgeführten Diensten überlappen können.
 <tr><td><b>Zertifikat Sperr Listen (CRLs)<b><td>Einige dieser Dienste müssen auch Zertifikat Sperr Listen (CRLs) für Zertifikate überprüfen, die in den Diensten verwendet werden.Eine vollständige Liste finden Sie unter <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">URLs und IP-Adressbereiche für Office 365</a> und <a href="https://aka.ms/o365chains">Office 365-Zertifikat Ketten</a>.
 <tr><td><b>Azure AD-Hybrideinbindung<b><td>Das Gerät kann Hybrid Azure AD verknüpft sein. Der Computer sollte sich im Unternehmensnetzwerk befinden, damit Hybrid Azure AD beitreten funktioniert. Details finden Sie im <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">benutzergesteuerten Windows Autopilot-Modus</a> .
 <tr><td><b>Autopilot-selbstbereitstellungs Modus und Autopilot-White-Glove<b><td>Firmware-TPM-Geräte, die nur von Intel, AMD oder Qualcomm bereitgestellt werden, enthalten nicht alle benötigten Zertifikate zur Startzeit und müssen in der Lage sein, Sie bei der ersten Verwendung vom Hersteller abzurufen. Geräte mit diskreten TPM-Chips (einschließlich Geräten von einem beliebigen anderen Hersteller) werden mit diesen Zertifikaten vorinstalliert. Weitere Informationen finden Sie unter <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM-Empfehlungen</a>. Stellen Sie für jeden firmwaretpm-Anbieter sicher, dass auf diese URLs zugegriffen werden kann, damit Zertifikate erfolgreich angefordert werden können:
