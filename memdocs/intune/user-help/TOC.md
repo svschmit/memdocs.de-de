@@ -2,11 +2,11 @@
 
 ## [Was ist die Geräteregistrierung?](use-managed-devices-to-get-work-done.md)
 
-## [Welche Informationen sieht mein Unternehmen mit Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [Welche Informationen können von meiner Organisation angezeigt werden?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [Anforderungen für Gerätekennwörter](password-does-not-meet-it-administrator-requirements.md)
 
-## [Anmelden bei der Unternehmensportal-App](sign-in-to-the-company-portal.md)  
+## [Zugreifen auf das Unternehmensportal](sign-in-to-the-company-portal.md)  
 
 ## [Installieren einer Mobile Threat Defense-App](set-up-mobile-threat-defense.md)  
 
@@ -64,7 +64,6 @@
 
 ## [Verwenden Ihres iOS-Geräts](using-your-iOS-device-with-intune.md)
 ### [Auswirkungen der iOS-Gerätezurücksetzung](effects-of-device-reset-company-portal-ios.md)
-### [Installieren und Anmelden beim Unternehmensportal](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### Registrieren Sie Ihr Gerät
 #### [Registrieren Ihres iOS-Geräts](enroll-your-device-in-intune-ios.md)
 #### [Registrieren eines von der Organisation bereitgestellten iOS-Geräts](enroll-your-device-dep-ios.md)
@@ -143,7 +142,7 @@
 #### [Senden von Protokollen an die bzw. von der Unternehmensportal-App](send-logs-to-your-it-admin-cp-windows.md)
 #### [Senden von Protokollen über die Geräteeinstellungen-App](send-logs-to-your-it-admin-settings-windows.md)
 #### [Meine Windows-Version wird nicht unterstützt](your-windows-version-isnt-yet-supported.md)
-#### [Installieren von Office 365 auf meinem Windows 10-Gerät](install-office-windows.md)
+#### [Installieren von Office auf meinem Windows 10-Gerät](install-office-windows.md)
 #### [Mein Gerät muss verschlüsselt werden](you-need-to-enable-windows-encryption.md)
 #### [Mein Gerät benötigt Antischadsoftware](your-device-needs-antimalware-software.md)
 #### [Aktivieren des sicheren Starts](you-need-to-enable-secure-boot-windows.md)

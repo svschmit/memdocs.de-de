@@ -14,34 +14,34 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 723d81655e0d0c3101cf199057e1c4dbba8e2925
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: a677dec0d722f0ef17a8c16248a41dea1b0be947
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908416"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068120"
 ---
 # <a name="windows-autopilot-update"></a>Windows Autopilot-Update
 
 **Zielgruppe**
 
--   Windows 10, Version 1903
+- Windows 10, Version 1903
 
-Mit dem Windows Autopilot-Update können Sie die neuesten Autopilot-Features und wichtige Problem Behebungen erhalten, ohne auf die neueste Version des Windows-Betriebssystems umsteigen zu müssen. Mit Autopilot Update können Organisationen ihre aktuelle Betriebssystemversion behalten und weiterhin von neuen Autopilot-Features und Fehlerbehebungen profitieren.
- 
-Während des Autopilot-Bereitstellungs Prozesses wurde das Windows Autopilot-Update nach der kritischen Überprüfung von [Windows Zero Day Patch (ZDP)](/windows-hardware/customize/desktop/windows-updates-during-oobe) als neuer Knoten hinzugefügt. Während des Aktualisierungs Vorgangs wenden sich Windows Autopilot-Geräte an Windows Update, um nach einem neuen Autopilot-Update zu suchen.  Wenn ein Autopilot-Update verfügbar ist, wird das Update vom Gerät heruntergeladen und installiert und anschließend automatisch neu gestartet. Siehe folgendes Beispiel.
+Das Windows Autopilot-Update installiert die neuesten Autopilot-Features und-Korrekturen für Autopilot-Geräte Ihrer Organisation. Die Geräte werden nicht in die aktuelle Version des Windows-Betriebssystems verschoben. Mit Autopilot Update können Sie die aktuelle Betriebssystemversion des Geräts beibehalten und dennoch von neuen Autopilot-Features und Fehlerbehebungen profitieren.
 
-   ![Autopilot-Update 1](images/update1.png)<br>
-   ![Autopilot-Update 2](images/update2.png)<br>
-   ![Autopilot-Update 3](images/update3.png)
+Der Windows Autopilot-Aktualisierungs Vorgang tritt nach der wichtigen Update Überprüfung für [Windows Zero Day Patch (ZDP)](/windows-hardware/customize/desktop/windows-updates-during-oobe) auf. Während des Aktualisierungs Vorgangs überprüfen die Geräte Windows Update nach einem neuen Autopilot-Update. Wenn ein Autopilot-Update verfügbar ist, wird das Update vom Gerät heruntergeladen und installiert und anschließend automatisch neu gestartet. Siehe folgendes Beispiel.
+
+ ![Autopilot-Update 1](images/update1.png)<br>
+ ![Autopilot-Update 2](images/update2.png)<br>
+ ![Autopilot-Update 3](images/update3.png)
 
 Das folgende Diagramm veranschaulicht eine typische Windows Autopilot-Bereitstellungs Orchestrierung während der Out-of-Box-Darstellung (OOBE) mit dem neuen Windows Autopilot Update-Knoten.
 
-   ![Autopilot-Aktualisierungs Fluss](images/update-flow.png)
+ ![Autopilot-Aktualisierungs Fluss](images/update-flow.png)
 
 ## <a name="release-cadence"></a>Versionsrhythmus
 
-- Wenn ein Autopilot-Update verfügbar ist, wird es in der Regel am 4. Dienstag des Monats veröffentlicht. Das Update kann in einer anderen Woche veröffentlicht werden, wenn eine Ausnahme vorliegt.
+- Wenn ein Autopilot-Update verfügbar ist, wird es in der Regel am vierten Dienstag des Monats veröffentlicht. Das Update kann in einer anderen Woche veröffentlicht werden, wenn eine Ausnahme vorliegt.
 - Es wird auch ein Knowledge Base-Artikel (KB) veröffentlicht, um die Änderungen zu dokumentieren, die im Update enthalten sind.
 
 Eine Liste der veröffentlichten Updates finden Sie unter [Autopilot Update History](windows-autopilot-whats-new.md#windows-autopilot-update-history).
