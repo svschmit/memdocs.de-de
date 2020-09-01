@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565681"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819999"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Zuweisen von Benutzer- und Geräteprofilen in Microsoft Intune
 
-Wenn Sie ein Profil erstellen, enthält es alle Einstellungen, die Sie vorgenommen haben. Als Nächstes stellen Sie das Profil für einen Azure AD-Benutzer (Azure Active Directory) oder eine -Gerätegruppe bereit. Dies wird auch als Zuweisen bezeichnet. Wenn Sie ein Profil zuweisen, erhalten Benutzer und Geräte das Profil, und die von Ihnen angegebenen Einstellungen werden angewendet.
+Wenn Sie ein Profil erstellen, enthält es alle Einstellungen, die Sie vorgenommen haben. Als Nächstes stellen Sie das Profil für eine Benutzer- oder Gerätegruppe bereit. Dieser Vorgang wird auch als „Zuweisen“ bezeichnet. Wenn Sie ein Profil zuweisen, erhalten Benutzer und Geräte das Profil, und die von Ihnen angegebenen Einstellungen werden angewendet.
 
 In diesem Artikel wird erklärt, wie Sie ein Profil zuweisen können, und Sie erhalten Informationen zur Verwendung von Bereichsmarkierungen für Ihre Profile.
 
@@ -39,27 +39,22 @@ In diesem Artikel wird erklärt, wie Sie ein Profil zuweisen können, und Sie er
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-Stellen Sie sicher, dass Sie die richtige Rolle für die Zuweisung von Profilen haben. Weitere Informationen finden Sie unter [Rollenbasierte Zugriffssteuerung (RBAC) mit Microsoft Intune](../fundamentals/role-based-access-control.md).
+Stellen Sie sicher, dass Sie über die richtige Rolle zum Zuweisen von Profilen verfügen. Weitere Informationen finden Sie unter [Rollenbasierte Zugriffssteuerung (RBAC) mit Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## <a name="assign-a-device-profile"></a>Zuweisen eines Geräteprofils
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Wählen Sie **Geräte** > **Konfigurationsprofile** aus. Dort sind alle Profile aufgelistet.
-3. Wählen Sie das Profil, das Sie zuweisen möchten, und klicken Sie dann auf **Assignments** (Zuweisungen).
-4. Wählen Sie aus, ob Sie Gruppen **einschließen** oder **ausschließen** möchten, und wählen Sie Ihre Gruppen anschließend aus. Wenn Sie Ihre Gruppen auswählen, wählen Sie eine Azure AD-Gruppe aus. Halten Sie die **STRG**-Taste gedrückt, um mehrere Gruppen auszuwählen, und wählen Sie Ihre Gruppen anschließend aus.
+3. Wählen Sie das Profil aus, das Sie zuweisen möchten, und klicken Sie auf **Eigenschaften** > **Zuweisungen** > **Bearbeiten**:
 
-    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Screenshot der Optionen zum Ein- oder Ausschließen von Gruppen aus einer Profilzuweisung in Microsoft Intune":::
+    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Auswählen von Zuweisungen zum Bereitstellen des Profils für Benutzer und Gruppen in Microsoft Intune und Endpoint Manager":::
 
-5. **Speichern** Sie die Änderungen.
+4. Wählen Sie **Eingeschlossene Gruppen** oder **Ausgeschlossene Gruppen** aus, und klicken Sie dann auf **Einzuschließende Gruppen auswählen**. Wenn Sie Ihre Gruppen auswählen, wählen Sie eine Azure AD-Gruppe aus. Halten Sie die **STRG**-Taste gedrückt, um mehrere Gruppen auszuwählen, und wählen Sie Ihre Gruppen anschließend aus.
 
-### <a name="evaluate-how-many-users-are-targeted"></a>Auswerten der Anzahl der betroffenen Benutzer
+    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Ein- oder Ausschließen von Benutzern und Gruppen beim Zuweisen oder Bereitstellen eines Profils in Microsoft Intune und Endpoint Manager":::
 
-Wenn Sie das Profil zuweisen, können Sie auch **auswerten**, wie viele Benutzer betroffen sind. Durch diese Funktion wird eine Benutzeranzahl (jedoch keine Geräteanzahl) berechnet.
-
-1. Wählen Sie im Admin Center **Geräte** > **Konfigurationsprofile** aus.
-2. Wählen Sie ein Profil aus, und klicken Sie dann auf **Assignments** > **Evaluate** (Zuweisungen > Auswerten). Eine Meldung mit der Anzahl der von diesem Profil betroffenen Benutzer wird angezeigt.
-
-Wenn die Schaltfläche **Evaluate** (Auswerten) ausgegraut ist, stellen Sie sicher, dass das Profil mindestens einer Gruppe zugewiesen wurde.
+5. Klicken Sie auf **Überprüfen und speichern**. Diese Schritt weist das Profil nicht zu.
+6. Klicken Sie auf **Speichern**. Nach dem Speichern ist das Profil zugewiesen. Ihre Gruppen empfangen die Profileinstellungen, wenn die Geräte beim Intune-Dienst eingecheckt werden.
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>Verwenden von Bereichstags oder Anwendbarkeitsregeln
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 21bc1b47f64318579da439e37f8dcf66d5a0a6ce
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217217"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820509"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Verwalten von iOS- und macOS-Apps, die über das Apple Volume Purchase Program mit Microsoft Intune erworben wurden
 
@@ -175,7 +175,7 @@ Sie können alle zugeordneten iOS/iPadOS- oder macOS-App-Lizenzen des Volume Pur
 
 ## <a name="deleting-vpp-tokens"></a>Löschen von VPP-Token
 <!-- 820879 -->  
-Sie können ein VPP-Token (Apple Volume Purchase Program) über die Konsole löschen. Dies kann erforderlich sein, wenn doppelte Instanzen eines VPP-Tokens vorliegen. Wenn Sie ein Token löschen, werden auch alle zugehörigen Apps und Zuweisungen gelöscht. Beim Löschen eines Tokens werden App-Lizenzen jedoch nicht widerrufen und es werden keine Apps deinstalliert. 
+Sie können ein VPP-Token (Apple Volume Purchase Program) über die Konsole löschen. Dies kann erforderlich sein, wenn doppelte Instanzen eines VPP-Tokens vorliegen. Wenn Sie ein Token löschen, werden auch alle zugehörigen Apps und Zuweisungen gelöscht. Durch das Löschen eines Tokens werden die zugehörigen App-Lizenzen widerrufen, aber die Apps werden nicht deinstalliert.  
 
 >[!NOTE]
 >Intune kann keine App-Lizenzen widerrufen, nachdem ein Token gelöscht wurde. 

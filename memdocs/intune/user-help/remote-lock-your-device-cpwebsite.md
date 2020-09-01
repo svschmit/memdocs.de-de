@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9d932fffa7381cca26699bb37e10783bcd7803dd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 57d4cc3889c60f9b62d0bb0617731b9ab0058f4c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880917"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820645"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Sperren Ihres Geräts remote über die Unternehmensportalwebsite
 
@@ -35,9 +35,7 @@ Die Einstellung für die Remotesperre funktioniert für:
 * Android
 * iOS
 * macOS
-* Windows 10
-* Windows 10 Mobile (wenn für das Gerät bereits eine Kennung festgelegt wurde)
-* Windows Phone 8.1 (wenn für das Gerät bereits eine Kennung festgelegt wurde)  
+* Windows 10  
 
 1. Wählen Sie auf der [Unternehmensportalwebsite](https://portal.manage.microsoft.com) erst die Schaltfläche __Menü__ und anschließend __Geräte__ aus.  
 
@@ -53,6 +51,8 @@ Die Einstellung für die Remotesperre funktioniert für:
 
 4. Eine Meldung wird angezeigt, die darauf hinweist, dass Sie Ihr Gerät sperren. Tippen Sie auf **Remotesperre**, um den Vorgang zu bestätigen.
 
+## <a name="check-the-status-of-remote-lock"></a>Überprüfen des Status der Remotesperre
+
 Nach der Bestätigung versucht die Unternehmensportal-App, Ihr Gerät zu sperren. Während dieser Zeit wird eine Meldung angezeigt, dass die Remotesperre noch aussteht. Wenn Ihr Gerät gesperrt ist, wird der Status auf „Remotesperre war erfolgreich“ festgelegt.  
 
 Der Status „Remotesperre“ wird an drei Stellen angezeigt:
@@ -66,4 +66,6 @@ Der Status „Remotesperre“ wird an drei Stellen angezeigt:
 
 Wenn Sie Ihr Gerät wiederfinden und die Remotesperre aufheben möchten, geben Sie einfach Ihre Kennung ein.  
 
-Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="next-steps"></a>Nächste Schritte
+
+Haben Sie Fragen oder benötigen Hilfe? Wenden Sie sich an Ihren Ansprechpartner beim IT-Support. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  

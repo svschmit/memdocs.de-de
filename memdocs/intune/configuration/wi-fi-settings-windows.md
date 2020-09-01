@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 6bfa28a6b4df30c6303f75d4a5cf91c20ce4e827
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217620"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820628"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Hinzufügen von WLAN-Einstellungen für Geräte mit Windows 10 und höher in Intune
 
-Sie können ein Profil mit bestimmten WLAN-Einstellungen erstellen und dieses dann auf Ihren Geräten mit Windows 10 und höher bereitstellen. Microsoft Intune bietet viele Features, darunter die Authentifizierung bei Ihrem Netzwerk mit einem vorinstallierten Schlüssel.
+Sie können ein Profil mit bestimmten WLAN-Einstellungen erstellen. Dann können Sie dieses Profil auf Ihre Geräte unter Windows 10 und höher bereitstellen. Microsoft Intune bietet viele Features, darunter die Authentifizierung bei Ihrem Netzwerk mit einem vorinstallierten Schlüssel.
 
 Dieser Artikel beschreibt diese Einstellungen.
 
@@ -86,7 +86,7 @@ Unternehmensprofile verwenden EAP (Extensible Authentication Protocol) für die 
 
     Angenommen, Sie erstellen das WLAN-Netzwerk **ContosoCorp** und verwenden **ContosoCorp** im Konfigurationsprofil. Zusätzlich befindet sich das WLAN-Netzwerk **ContosoGuest** im Empfangsbereich des anderen Netzwerks. Wenn Ihre Unternehmensgeräte sich nun im Empfangsbereich befinden, sollen diese sich automatisch mit **ContosoCorp** verbinden. In diesem Szenario legen Sie die Eigenschaft **Verbindung mit bevorzugtem Netzwerk herstellen, sofern verfügbar** auf **Nein** fest.
 
-  - **Verbindung mit diesem Netzwerk herstellen, auch wenn die SSID nicht übertragen wird:** Wählen Sie für das Konfigurationsprofil **Ja** aus, damit auch dann automatisch eine Verbindung zum Netzwerk hergestellt wird, wenn das Netzwerk ausgeblendet ist (d. h., die SSID nicht öffentlich übertragen wird). Wählen Sie **Nein** aus, wenn mit diesem Konfigurationsprofil keine Verbindung mit dem ausgeblendeten Netzwerk hergestellt werden soll.
+- **Verbindung mit diesem Netzwerk herstellen, auch wenn die SSID nicht übertragen wird:** Wählen Sie für das Konfigurationsprofil **Ja** aus, damit auch dann automatisch eine Verbindung zum Netzwerk hergestellt wird, wenn das Netzwerk ausgeblendet ist (d. h., die SSID nicht öffentlich übertragen wird). Wählen Sie **Nein** aus, wenn mit diesem Konfigurationsprofil keine Verbindung mit dem ausgeblendeten Netzwerk hergestellt werden soll.
 
 - **Limit für getaktete Verbindung:** Administratoren können bestimmen, wie der Datenverkehr des Netzwerks getaktet werden soll. Anwendungen können dann ihr Verhalten für Netzwerkdatenverkehr basierend auf dieser Einstellung anpassen. Folgende Optionen sind verfügbar:
 
@@ -124,19 +124,27 @@ Unternehmensprofile verwenden EAP (Extensible Authentication Protocol) für die 
     > [!NOTE]
     > Bei Verwendung von EAP-Typen werden SCEP- und PKCS-Zertifikatprofile unterstützt.
 
-    - **Serververtrauensstellung**  
+    **Serververtrauensstellung**  
 
-      **Zertifikatservernamen:** Verwenden Sie diese Option mit den EAP-Typen **EAP-TLS**, **EAP-TTLS** oder **PEAP**. Geben Sie mindestens einen allgemeinen Namen ein, der in den von der vertrauenswürdigen Zertifizierungsstelle ausgestellten Zertifikaten verwendet wird. Wenn Sie diese Informationen eingeben, können Sie das Dialogfeld für dynamische Vertrauensstellungen umgehen, das auf Benutzergeräten bei der Verbindungsherstellung mit diesem WLAN angezeigt wird.  
+    - **Zertifikatservernamen:** Verwenden Sie diese Option mit den EAP-Typen **EAP-TLS**, **EAP-TTLS** oder **PEAP**. Geben Sie mindestens einen allgemeinen Namen ein, der in den von der vertrauenswürdigen Zertifizierungsstelle ausgestellten Zertifikaten verwendet wird. Wenn Sie diese Informationen eingeben, können Sie das Dialogfeld für dynamische Vertrauensstellungen umgehen, das auf Benutzergeräten bei der Verbindungsherstellung mit diesem WLAN angezeigt wird.  
 
-      **Stammzertifikat zur Servervalidierung:** Verwenden Sie diese Option mit den EAP-Typen **EAP-TLS**, **EAP-TTLS** oder **PEAP**. Wählen Sie das vertrauenswürdige Stammzertifikatprofil zur Authentifizierung der Verbindung aus.  
+    - **Stammzertifikat zur Servervalidierung:** Verwenden Sie diese Option mit den EAP-Typen **EAP-TLS**, **EAP-TTLS** oder **PEAP**. Wählen Sie das vertrauenswürdige Stammzertifikatprofil zur Authentifizierung der Verbindung aus.  
 
-      **Identitätsschutz (äußere Identität)** : Verwenden Sie diese Option mit dem EAP-Typ **PEAP**. Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dies kann ein beliebiger Text sein. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.  
+    - **Identitätsschutz (äußere Identität)** : Verwenden Sie diese Option mit dem EAP-Typ **PEAP**. Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dies kann ein beliebiger Text sein. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.  
 
-    - **Clientauthentifizierung**
+    - **Serverüberprüfung in PEAP-Phase 1 durchführen**: Bei Festlegung auf **Ja** überprüfen die Geräte das Zertifikat und verifizieren den Server in der PEAP-Aushandlungsphase 1. Wählen Sie **Nein** aus, um diese Überprüfung zu verhindern. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 
-      **Client certificate for client authentication (Identity certificate)** (Clientzertifikat für die Clientauthentifizierung (Identitätszertifikat)): Verwenden Sie diese Option mit dem EAP-Typ **EAP-TLS**. Wählen Sie das Zertifikatprofil zur Authentifizierung der Verbindung aus.
+      Wenn Sie **Ja** auswählen, konfigurieren Sie auch Folgendes:
 
-      **Authentifizierungsmethode**: Verwenden Sie diese Option mit dem EAP-Typ **EAP-TTLS**. Wählen Sie die Authentifizierungsmethode für die Verbindung aus:  
+      **Benutzereingabeaufforderungen für Serverüberprüfung in PEAP-Phase 1 deaktivieren**: Wenn Sie diese Option auf **Ja** festlegen, werden in Phase 1 der PEAP-Aushandlung keine Benutzereingabeaufforderungen zur Autorisierung von neuen PEAP-Servern für vertrauenswürdige Zertifizierungsstellen angezeigt. Wählen Sie **Nein** aus, um die Aufforderungen anzuzeigen. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+
+    - **Kryptografische Bindung erforderlich**: Die Einstellung **Ja** verhindert Verbindungen mit PEAP-Servern, die während der PEAP-Aushandlung keine kryptografische Bindung verwenden. Bei Auswahl von **Nein** ist keine kryptografische Bindung erforderlich. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+
+    **Clientauthentifizierung**
+
+    - **Client certificate for client authentication (Identity certificate)** (Clientzertifikat für die Clientauthentifizierung (Identitätszertifikat)): Verwenden Sie diese Option mit dem EAP-Typ **EAP-TLS**. Wählen Sie das Zertifikatprofil zur Authentifizierung der Verbindung aus.
+
+    - **Authentifizierungsmethode**: Verwenden Sie diese Option mit dem EAP-Typ **EAP-TTLS**. Wählen Sie die Authentifizierungsmethode für die Verbindung aus:  
 
       - **Zertifikate:** Wählen Sie das Clientzertifikat aus, das dem Server als Identitätszertifikat übermittelt wird.
       - **Benutzername und Kennwort**: Geben Sie als Authentifizierungsmethode eine **Nicht-EAP-Methode (innere Identität)** an. Folgende Optionen sind verfügbar:
@@ -146,12 +154,12 @@ Unternehmensprofile verwenden EAP (Extensible Authentication Protocol) für die 
         - **Microsoft CHAP (MS-CHAP)**
         - **Microsoft CHAP, Version 2 (MS-CHAP v2)**
 
-      **Identitätsschutz (äußere Identität)** : Verwenden Sie diese Option mit dem EAP-Typ **EAP-TTLS**. Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dies kann ein beliebiger Text sein. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
+    - **Identitätsschutz (äußere Identität)** : Verwenden Sie diese Option mit dem EAP-Typ **EAP-TTLS**. Geben Sie den Text ein, der als Antwort auf eine EAP-Identitätsanforderung gesendet werden soll. Dies kann ein beliebiger Text sein. Während der Authentifizierung wird zuerst diese anonyme Identität gesendet und anschließend die echte Kennung über einen sicheren Tunnel.
 
 - **Proxyeinstellungen für Unternehmen:** Wählen Sie die Proxyeinstellungen aus, die innerhalb Ihrer Organisation verwendet werden sollen. Folgende Optionen sind verfügbar:
   - **Keine**: Es sind keine Proxyeinstellungen konfiguriert.
   - **Manuell konfigurieren:** Geben Sie die **IP-Adresse des Proxyservers** und die zugehörige **Portnummer** ein.
-  - **Automatisch konfigurieren:** Geben Sie die URL ein, die auf ein PAC-Skript (Proxy auto-configuration, automatische Proxykonfiguration) verweist. Geben Sie beispielsweise `http://proxy.contoso.com/proxy.pac` ein.
+  - **Automatisch konfigurieren:** Geben Sie die URL ein, die auf ein PAC-Skript (Proxy Auto-Configuration, automatische Proxykonfiguration) zeigt. Geben Sie beispielsweise `http://proxy.contoso.com/proxy.pac` ein.
 
 - **FIPS-konformes (Federal Information Processing Standard) WLAN-Profil erzwingen:** Wählen Sie bei der Überprüfung anhand des FIPS-Standards 140-2 die Option **Ja** aus. Dieser Standard ist für alle US-Bundesbehörden erforderlich, die Sicherheitssysteme verwenden, die auf Kryptografie basieren, um vertrauliche aber nicht klassifizierte Informationen digital zu speichern. Wählen Sie **Nein** aus, um nicht FIPS-konform zu sein.
 
@@ -161,9 +169,9 @@ Falls bestimmte Einstellungen nicht in Intune verfügbar sind, können Sie WLAN-
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Das Profil ist nun erstellt. [Weisen Sie dieses Profil nun zu.](device-profile-assign.md)
+Das Profil ist nun erstellt, führt aber möglicherweise keine Aktionen durch. Denken Sie daran, das [Profil zuzuweisen](device-profile-assign.md) und [seinen Status zu überwachen](device-profile-monitor.md).
 
 ## <a name="more-resources"></a>Weitere Ressourcen
 
-- Weitere Informationen zu den verfügbaren Einstellungen finden Sie unter [Windows 8.1](wi-fi-settings-import-windows-8-1.md).
-- Verschaffen Sie sich eine [Übersicht über WLAN-Einstellungen](wi-fi-settings-configure.md) auf unterschiedlichen Plattformen.
+- [WLAN-Einstellungen für Windows 8.1](wi-fi-settings-import-windows-8-1.md)
+- Weitere Informationen, z.B. zu anderen Plattformen, finden Sie in der [Übersicht zu WLAN-Einstellungen](wi-fi-settings-configure.md).

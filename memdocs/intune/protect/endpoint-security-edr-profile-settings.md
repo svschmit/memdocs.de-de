@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: e26719bb9bf322e3e4bf11b39911e98788707629
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: e7896d2b5dff7132056ed004443e7fa3623f016e
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460415"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820016"
 ---
 # <a name="endpoint-detection-and-response-policy-settings-for-endpoint-security-in-intune"></a>Richtlinieneinstellungen für Endpunkterkennung und -antwort für Endpunktsicherheit in Intune
 
@@ -32,7 +32,7 @@ Unterstützte Plattformen und Profile:
 - **Windows 10 und höher**: Verwenden Sie diese Plattform für Richtlinien, die Sie für mit Intune verwaltete Geräte bereitstellen.
   - Profil: **Endpunkterkennung und -antwort (MDM)**
 
-- **Windows 10 und Windows Server**: Verwenden Sie diese Plattform für Richtlinien, die Sie auf Geräten bereitstellen, die von Configuration Manager verwaltet werden.
+- **Windows 10 und Windows Server (Configuration Manager)** : Verwenden Sie diese Plattform für Richtlinien, die Sie auf Geräten bereitstellen, die von Configuration Manager verwaltet werden.
   - Profil: **Endpunkterkennung und -antwort (ConfigMgr)**
 
 ## <a name="endpoint-detection-and-response-mdm"></a>Endpunkterkennung und -antwort (MDM)

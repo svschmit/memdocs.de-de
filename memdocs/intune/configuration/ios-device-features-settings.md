@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814943"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820186"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- und iPadOS-Geräteeinstellungen zur Verwendung gängiger iOS/iPadOS-Features in Intune
 
@@ -304,7 +304,7 @@ Diese Funktion gilt für:
   - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Standardmäßig verwendet das Betriebssystem keine App-Erweiterungen. Um eine App-Erweiterung zu deaktivieren, können Sie den Typ der SSO-App-Erweiterung in **Nicht konfiguriert** ändern.
   - **Microsoft Azure AD**: Verwendet das Microsoft Enterprise SSO-Plug-In, das eine SSO-App-Erweiterung vom Typ „Umleitung“ ist. Dieses Plug-In bietet einmaliges Anmelden für Active Directory-Konten in allen Anwendungen, die das Feature [Enterprise Single Sign-On von Apple](https://developer.apple.com/documentation/authenticationservices) unterstützen. Verwenden Sie diesen SSO-App-Erweiterungstyp, um einmaliges Anmelden in Microsoft-Apps, Unternehmens-Apps und auf Websites zu aktivieren, die die Authentifizierung mit Azure AD durchführen.
 
-    Das SSO-Plug-In fungiert als erweiterter Authentifizierungsbroker, der eine Verbesserung der Sicherheit und der Benutzerfreundlichkeit bietet. Alle Apps, die bisher eine brokerbasierte Authentifizierung über die Microsoft Authenticator-App verwendet haben, können das einmalige Anmelden mit dem [Microsoft Enterprise SSO-Plug-In für Apple-Geräte](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) weiterhin nutzen.
+    Das SSO-Plug-In fungiert als erweiterter Authentifizierungsbroker, der eine Verbesserung der Sicherheit und der Benutzerfreundlichkeit bietet. Alle Apps, die zur Authentifizierung die Microsoft Authenticator-App verwendet haben, können das einmalige Anmelden mit dem [Microsoft Enterprise SSO-Plug-In für Apple-Geräte](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) weiterhin nutzen.
 
     > [!IMPORTANT]
     > Um einmaliges Anmelden mit dem SSO-App-Erweiterungstyp von Microsoft Azure AD zu erreichen, installieren Sie zuerst die iOS-/iPadOS-Microsoft Authenticator-App auf dem Gerät. Die Authenticator-App bietet das Microsoft Enterprise SSO-Plug-In für Geräte, und die Einstellungen der MDM SSO-App-Erweiterung aktivieren das Plug-In. Wenn Authenticator und das SSO-App-Erweiterungsprofil auf dem Gerät installiert sind, müssen die Benutzer ihre Anmeldeinformationen eingeben, um sich anzumelden und eine Sitzung auf ihren Geräten einzurichten. Diese Sitzung wird dann für verschiedene Anwendungen verwendet, ohne dass sich die Benutzer erneut authentifizieren müssen. Weitere Informationen zu Authenticator finden Sie unter [Wozu dient die Microsoft Authenticator-App?](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
@@ -371,7 +371,12 @@ Diese Funktion gilt für:
 
 - **Active Directory site code** (Active Directory-Standortcode) (nur „Kerberos“): Geben Sie den Namen des Active Directory-Standorts ein, der von der Kerberos-Erweiterung verwendet werden soll. Möglicherweise müssen Sie diesen Wert nicht ändern, weil die Kerberos-Erweiterung den Active Directory-Standortcode ggf. automatisch ermittelt.
 - **Cachename** (nur „Kerberos“): Geben Sie den Generic Security Services-Namen (GSS) für den Kerberos-Cache ein. Dieser Wert muss höchstwahrscheinlich nicht festgelegt werden.
-- **App-Bundle-IDs** (nur „Kerberos“): Mit **Hinzufügen** werden die App-Bundle-IDs hinzugefügt, für die auf Ihren Geräten SSO verwendet werden soll. Diese Apps erhalten Zugriff auf das Kerberos-TGT (Ticket Granting Ticket) sowie das Authentifizierungsticket und authentifizieren Benutzer für Dienste, für die sie über Zugriffsberechtigungen verfügen.
+- **App-Bundle-IDs** (Microsoft Azure AD, Kerberos): Geben Sie die Bundle-IDs der zusätzlichen Apps ein, die SSO über eine Erweiterung auf den Geräten erhalten sollen.
+
+  Wenn Sie den SSO-App-Erweiterungstyp von Microsoft Azure AD verwenden, nutzen diese Apps das Microsoft Enterprise SSO-Plug-In, um Benutzer ohne Anmeldung zu authentifizieren. Die von Ihnen eingegebenen App-Bundle-IDs besitzen die Berechtigung, die SSO-App-Erweiterung von Microsoft Azure AD zu nutzen, wenn sie keine Microsoft-Bibliotheken wie z. B. die Microsoft Authentication Library (MSAL) verwenden. Der Vorgang verläuft für diese Apps möglicherweise nicht so reibungslos wie mit Microsoft-Bibliotheken. Ältere Apps, die die MSAL-Authentifizierung verwenden, oder Apps, die nicht die neuesten Microsoft-Bibliotheken verwenden, müssen zu dieser Liste hinzugefügt werden, damit sie ordnungsgemäß mit der SSO-App-Erweiterung von Microsoft Azure funktionieren.  
+
+  Wenn Sie den App-Erweiterungstyp für Kerberos-SSO verwenden, erhalten diese Apps Zugriff auf das Kerberos Ticket Granting Ticket, das als Authentifizierungsticket fungiert. Damit können diese Apps Benutzer für Dienste authentifizieren, auf die sie zugreifen dürfen.
+
 - **Domänenbereichszuordnung** (nur „Kerberos“): Mit **Hinzufügen** werden die Domänen-DNS-Suffixe hinzugefügt, die Ihrem Bereich zugeordnet werden sollen. Verwenden Sie diese Einstellung, wenn die DNS-Namen der Hosts nicht mit dem Bereichsnamen identisch sind. Wahrscheinlich ist es nicht erforderlich, diese Zuordnung zwischen benutzerdefinierter Domäne und Bereich zu erstellen.
 - **PKINIT-Zertifikat** (nur „Kerberos“): Mit **Auswählen** legen Sie das PKINIT-Zertifikat (Public Key Cryptography for Initial Authentication) fest, das für die Kerberos-Authentifizierung verwendet werden kann. Sie können aus [PKCS](../protect/certficates-pfx-configure.md)- oder [SCEP](../protect/certificates-scep-configure.md)-Zertifikaten auswählen, die Sie in Intune hinzugefügt haben. Weitere Informationen zu Zertifikaten finden Sie unter [Verwenden von Zertifikaten zur Authentifizierung in Microsoft Intune](../protect/certificates-configure.md).
 

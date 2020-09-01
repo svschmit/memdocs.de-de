@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 37e9f68951c3576393e6ed3eb3346847029736c4
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462030"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663207"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Einstellungen der Datenträgerverschlüsselungsrichtlinie für Endpunktsicherheit in Intune
 
@@ -92,6 +92,9 @@ Unterstützte Plattformen und Profile:
   Diese Einstellung gilt nur für Geräte mit den SKUs „Windows Mobile“ und „Mobile Enterprise“.
   - **Nicht konfiguriert** (*Standardeinstellung*): Die Einstellung wird auf den Standardwert des Betriebssystems zurückgesetzt, d. h. die Verschlüsselung von Speicherkarten ist nicht erforderlich.
   - **Ja**: Die Verschlüsselung von Speicherkarten ist für mobile Geräte erforderlich.
+
+  > [!NOTE]
+  > Der Support für [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) und [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) endete im August 2020.
 
 - **Aufforderung zur Drittanbieterverschlüsselung ausblenden**  
   CSP: [AllowWarningForOtherDiskEncryption](https://go.microsoft.com/fwlink/?linkid=872525)

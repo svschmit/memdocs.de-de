@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022183"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663428"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -110,6 +110,9 @@ Weitere Informationen finden Sie in der Windows-Dokumentation unter [Einstellung
   Diese Einstellung gilt nur für Geräte mit den SKUs „Windows Mobile“ und „Mobile Enterprise“.
   - **Ja** (*Standardeinstellung*): Die Verschlüsselung von Speicherkarten ist für mobile Geräte erforderlich.
   - **Nicht konfiguriert**: Die Einstellung wird auf den Standardwert des Betriebssystems zurückgesetzt, d. h. die Verschlüsselung von Speicherkarten ist nicht erforderlich.
+
+  > [!NOTE]
+  > Der Support für [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) und [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) endete im August 2020.
 
 - **Vollständige Datenträgerverschlüsselung für Betriebssystem- und Festplattenlaufwerke aktivieren**  
   CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)

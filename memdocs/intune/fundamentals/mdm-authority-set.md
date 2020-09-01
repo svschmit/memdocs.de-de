@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ac5180a30959618f37d909511785b4de1c407
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 380e39406dcc0b5bd286605804e3aa3c52750dd1
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591236"
+ms.locfileid: "88614731"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Festlegen der Autorität für die Verwaltung mobiler Geräte
 
@@ -38,7 +38,7 @@ Die möglichen Konfigurationen sind Folgende:
 
 - **Basic Mobility and Security for Office 365** (Einfache Mobilität und Sicherheit für Office 365): Wenn Sie diese Konfiguration aktiviert haben, wird die MDM-Autorität auf „Office 365“ festgelegt. Wenn Sie Intune verwenden möchten, müssen Sie zuvor Intune-Lizenzen kaufen.
 
-- **Basic Mobility and Security for Office 365 Coexistence** (Einfache Mobilität und Sicherheit für Office 365-Koexistenz): Sie können Intune Ihrem Mandanten hinzufügen, wenn Sie die Konfiguration „Basic Mobility and Security for Office 365“ bereits verwenden, und Sie können die Verwaltungsautorität für alle Benutzer entweder auf Intune oder „Basic Mobility and Security for Office 365“ festlegen, um zu bestimmen, welcher Dienst zum Verwalten Ihrer bei MDM registrierten Geräte verwendet wird. Die Verwaltungsautorität jedes Benutzers wird basierend auf der dem Benutzer zugeordneten Lizenz definiert. Wenn der Benutzer nur eine Lizenz für Microsoft 365 Basic oder Standard verfügt, werden dessen Geräte von „Basic Mobility and Security for Office 365“ verwaltet. Wenn der Benutzer über eine Lizenz für Intune verfügt, werden die Geräte von Intune verwaltet. Wenn Sie einem Benutzer, der zuvor von „Basic Mobility and Security for Office 365“ verwaltet wurde, eine Lizenz für Intune hinzufügen, werden seine Geräte auf die Intune-Verwaltung umgestellt. Stellen Sie sicher, dass den Benutzern Intune-Konfigurationen zugewiesen sind, um „Basic Mobility and Security for Office 365“ zu ersetzen, bevor Sie Benutzer zu Intune verschieben, andernfalls verlieren ihre Geräte die Konfiguration „Basic Mobility and Security for Office 365“, und sie erhalten keinen Ersatz von Intune.
+- **Grundlegende Mobilität und Sicherheit für Office 365 – [Koexistenz](#coexistence)** : Sie können Intune Ihrem Mandanten hinzufügen, wenn Sie die Konfiguration „Grundlegende Mobilität und Sicherheit für Office 365“ bereits verwenden. Außerdem können Sie die Verwaltungsautorität für alle Benutzer entweder auf „Intune“ oder auf „Grundlegende Mobilität und Sicherheit für Office 365“ festlegen, um zu bestimmen, welcher Dienst zum Verwalten Ihrer bei MDM registrierten Geräte verwendet wird. Die Verwaltungsautorität jedes Benutzers wird basierend auf der dem Benutzer zugeordneten Lizenz definiert. Wenn der Benutzer nur eine Lizenz für Microsoft 365 Basic oder Standard verfügt, werden dessen Geräte von „Basic Mobility and Security for Office 365“ verwaltet. Wenn der Benutzer über eine Lizenz für Intune verfügt, werden die Geräte von Intune verwaltet. Wenn Sie einem Benutzer, der zuvor von „Basic Mobility and Security for Office 365“ verwaltet wurde, eine Lizenz für Intune hinzufügen, werden seine Geräte auf die Intune-Verwaltung umgestellt. Stellen Sie sicher, dass den Benutzern Intune-Konfigurationen zugewiesen sind, um „Basic Mobility and Security for Office 365“ zu ersetzen, bevor Sie Benutzer zu Intune verschieben, andernfalls verlieren ihre Geräte die Konfiguration „Basic Mobility and Security for Office 365“, und sie erhalten keinen Ersatz von Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Festlegen der MDM-Autorität in Intune
 
@@ -85,9 +85,9 @@ Zum Aktivieren der Koexistenz sind drei Hauptschritte erforderlich:
 ### <a name="preparation"></a>Vorbereitung
 
 Berücksichtigen Sie die folgenden Punkte, bevor Sie die Koexistenz mit „Basic Mobility and Security“ aktivieren:
-- Stellen Sie sicher, dass Sie über ausreichende Intune-Lizenzen für die Benutzer verfügen, die Sie über Intune verwalten möchten.
+- Stellen Sie sicher, dass Sie über ausreichende [Intune-Lizenzen](licenses.md) für die Benutzer verfügen, die Sie über Intune verwalten möchten.
 - Überprüfen Sie, welchen Benutzern Intune-Lizenzen zugewiesen sind. Nachdem Sie die Koexistenz aktiviert haben, werden die Geräte von Benutzern, denen bereits eine Intune-Lizenz zugewiesen wurde, an Intune übertragen. Um unerwartete Geräteübertragungen zu vermeiden, sollten Sie Intune-Lizenzen erst dann zuweisen, wenn Sie die Koexistenz aktiviert haben.
-- Erstellen Sie Intune-Richtlinien zum Ersetzen von Gerätesicherheitsrichtlinien, die ursprünglich über das Office 365 Security & Compliance-Portal bereitgestellt wurden, und stellen Sie sie bereit. Diese Ersetzung sollte für alle Benutzer durchgeführt werden, von denen Sie erwarten, dass sie von „Basic Mobility and Security“ zu Intune wechseln. Wenn diesen Benutzern keine Intune-Richtlinien zugewiesen sind, können sie durch das Aktivieren der Koexistenz die „Basic Mobility and Security“-Einstellungen verlieren. Diese Einstellungen, wie z. B. verwaltete E-Mail-Profile, gehen ohne Ersetzung verloren.
+- Erstellen Sie Intune-Richtlinien zum Ersetzen von Gerätesicherheitsrichtlinien, die ursprünglich über das Office 365 Security & Compliance-Portal bereitgestellt wurden, und stellen Sie sie bereit. Diese Ersetzung sollte für alle Benutzer durchgeführt werden, von denen Sie erwarten, dass sie von „Basic Mobility and Security“ zu Intune wechseln. Wenn diesen Benutzern keine Intune-Richtlinien zugewiesen sind, können sie durch das Aktivieren der Koexistenz die „Basic Mobility and Security“-Einstellungen verlieren. Diese Einstellungen, wie z. B. verwaltete E-Mail-Profile, gehen ohne Ersetzung verloren. Auch beim Ersetzen von Richtlinien zur Gerätesicherheit durch Intune-Richtlinien werden Benutzer aufgefordert, ihre E-Mail-Profile erneut zu authentifizieren, nachdem das Gerät in die Intune-Verwaltung verschoben wurde.
 
 ### <a name="add-intune-mdm-authority"></a>Hinzufügen der Intune-MDM-Autorität
 
@@ -101,7 +101,7 @@ Um die Koexistenz zu aktivieren, müssen Sie Intune als MDM-Autorität für Ihre
 
 ### <a name="migrate-users-and-devices-optional"></a>Migrieren von Benutzern und Geräten (optional)
 
-Nachdem die Intune-MDM-Autorität aktiviert ist, wird die Koexistenz aktiviert, und Sie können mit der Verwaltung von Benutzern über Intune beginnen. Wenn Sie zuvor von „Basic Mobility and Security“ verwaltete Geräte der Verwaltung durch Intune zuordnen möchten, weisen Sie diesen Benutzern optional eine Intune-Lizenz zu. Die Geräte der Benutzer werden beim nächsten MDM-Einchecken an Intune übertragen. Über „Basic Mobility and Security“ auf diese Geräte angewendete Einstellungen werden nicht mehr angewendet und von den Geräten entfernt.
+Nachdem die Intune-MDM-Autorität aktiviert ist, wird die Koexistenz aktiviert, und Sie können mit der Verwaltung von Benutzern über Intune beginnen. Wenn Sie Geräte, die zuvor mit der Option „Grundlegende Mobilität und Sicherheit“ verwaltet wurden, der Verwaltung durch Intune zuordnen möchten, weisen Sie diesen Benutzern optional eine Intune-Lizenz zu. Die Geräte der Benutzer werden beim nächsten MDM-Einchecken an Intune übertragen. Über „Basic Mobility and Security“ auf diese Geräte angewendete Einstellungen werden nicht mehr angewendet und von den Geräten entfernt.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Bereinigen mobiler Geräte nach Ablauf des MDM-Zertifikats
 

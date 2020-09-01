@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 08/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5939d12003df78b459ebc12c294434826194b931
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166126"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820390"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurieren der Infrastruktur für die Unterstützung von SCEP mit Intune
 
@@ -34,7 +34,7 @@ Die in diesem Artikel enthaltenen Informationen helfen Ihnen beim Konfigurieren 
 
 ## <a name="prerequisites-for-using-scep-for-certificates"></a>Voraussetzung für die Verwendung von SCEP für Zertifikate
 
-Stellen Sie sicher, dass Sie ein [vertrauenswürdiges *Zertifikatprofil* auf den Geräten erstellt und bereitgestellt haben](certificates-configure.md#export-the-trusted-root-ca-certificate), die SCEP-Zertifikatprofile verwenden sollen, bevor Sie fortfahren. SCEP-Zertifikatprofile referenzieren direkt das vertrauenswürdige Zertifikatprofil, das Sie verwendet haben, um vertrauenswürdige Zertifikate der Stammzertifizierungsstelle für die Geräte bereitzustellen.
+Stellen Sie vor dem Fortfahren sicher, dass Sie ein [vertrauenswürdiges *Zertifikatprofil* auf den Geräten erstellt und bereitgestellt haben](certificates-configure.md#export-the-trusted-root-ca-certificate), die SCEP-Zertifikatprofile verwenden sollen. SCEP-Zertifikatprofile referenzieren direkt das vertrauenswürdige Zertifikatprofil, das Sie verwendet haben, um vertrauenswürdige Zertifikate der Stammzertifizierungsstelle für die Geräte bereitzustellen.
 
 ### <a name="servers-and-server-roles"></a>Server und Serverrollen
 
@@ -127,7 +127,7 @@ Für die folgenden Abschnitte sind Kenntnisse über Windows Server 2012 R2 ode
 1. Erstellen Sie eine v2-Zertifikatvorlage (mit Windows 2003-Kompatibilität) zur Verwendung als SCEP-Zertifikatvorlage. Sie können:
 
    - Verwenden Sie das *Zertifikatvorlagen-Snap-In*, um eine neue benutzerdefinierte Vorlage zu erstellen.
-   - Kopieren Sie eine vorhandene Vorlage (z. B. die Benutzervorlage), und aktualisieren Sie dann die Kopie, die als NDES-Vorlage verwendet werden soll.
+   - Kopieren Sie eine vorhandene Vorlage (z. B. die Webservervorlage), und aktualisieren Sie dann die Kopie, damit sie als NDES-Vorlage verwendet werden kann.
 
 2. Konfigurieren Sie die folgenden Einstellungen auf den jeweiligen Registerkarten für die Vorlage:
 
@@ -215,7 +215,7 @@ Das Anpassen der Gültigkeitsdauer der Zertifikatvorlage ist optional.
 
 Nachdem Sie [die SCEP-Zertifikatvorlage erstellt haben](#create-the-scep-certificate-template), können Sie die Vorlage bearbeiten, um die **Gültigkeitsdauer** auf der Registerkarte **Allgemein** zu überprüfen.
 
-In der Standardeinstellung verwendet Intune den in der Vorlage konfigurierten Wert. Allerdings können Sie die Zertifizierungsstelle so konfigurieren, dass der Anforderer einen anderen Wert eingeben kann und dass dieser Wert über die Intune-Konsole festgelegt werden kann.
+Standardmäßig verwendet Intune den in der Vorlage konfigurierten Wert. Allerdings können Sie die Zertifizierungsstelle so konfigurieren, dass der Anforderer einen anderen Wert eingeben kann, damit dieser Wert über die Intune-Konsole festgelegt werden kann.
 
 > [!IMPORTANT]
 > Verwenden Sie für iOS/iPadOS und macOS immer einen Wert, der in der Vorlage festgelegt wird.
@@ -327,32 +327,51 @@ Die folgenden Prozeduren können Ihnen dabei helfen, den NDES (Registrierungsdie
   
 ### <a name="install-and-bind-certificates-on-the-server-that-hosts-ndes"></a>Installieren und Einbinden von Zertifikaten auf dem NDES-Server
 
+Auf dem NDES-Server befinden sich zwei Zertifikate, die von der Konfiguration benötigt werden.
+Hier handelt es sich um das **Clientauthentifizierungszertifikat** und das **Serverauthentifizierungszertifikat**, wie im Abschnitt [Zertifikate und Vorlagen](#certificates-and-templates) erwähnt.
+
 > [!TIP]
-> Im folgenden Verfahren können Sie ein einzelnes Zertifikat für die *Serverauthentifizierung* und die *Clientauthentifizierung* verwenden, wenn das Zertifikat so konfiguriert ist, dass die Bedingungen beider Authentifizierungen erfüllt sind. Die Bedingungen werden in den Schritten 1 und 3 des folgenden Verfahrens beschrieben.
+> Im folgenden Verfahren können Sie ein einzelnes Zertifikat für die *Serverauthentifizierung* und die *Clientauthentifizierung* verwenden, wenn das Zertifikat so konfiguriert ist, dass die Bedingungen beider Authentifizierungen erfüllt sind.
+> Der Name des Antragstellers muss die Zertifikatanforderungen für die *Clientauthentifizierung* erfüllen.
 
-1. Fordern Sie ein **Serverauthentifizierungszertifikat** von ihrer internen oder öffentlichen Zertifizierungsstelle an, und installieren Sie das Zertifikat dann auf dem Server.
+- **Clientauthentifizierungszertifikat** 
 
-   Wenn der Server einen externen und einen internen Namen für einzelne Netzwerkadressen verwendet, muss das Serverauthentifizierungszertifikat Folgendes enthalten:
+   Dieses Zertifikat wird während der Installation des Intune-Zertifikatconnectors verwendet.
 
-   - Einen **Antragstellernamen** mit einem externen öffentlichen Servernamen
-   - Einen **alternativen Antragstellernamen**, der den internen Servernamen enthält
-
-2. Binden Sie das Serverauthentifizierungszertifikat in IIS ein:
-
-   1. Nachdem Sie das Serverauthentifizierungszertifikat installiert haben, öffnen Sie den **IIS-Manager**, und wählen Sie **Standardwebsite** aus. Klicken Sie im Bereich **Aktionen** auf **Bindungen**.
-
-   1. Klicken Sie auf **Hinzufügen**, legen Sie als **Typ** die Option **https** fest, und stellen Sie sicher, dass der Port **443** ist.
+   Fordern Sie von Ihrer internen oder einer öffentlichen Zertifizierungsstelle ein Zertifikat zur **Clientauthentifizierung** an, und installieren Sie es.
    
-   1. Geben Sie unter **SSL-Zertifikat**das Serverauthentifizierungszertifikat an.
-
-3. Fordern Sie auf dem NDES-Server ein **Clientauthentifizierungszertifikat** von der internen oder einer öffentlichen Zertifizierungsstelle an, und installieren Sie es.
-
-   Das Clientauthentifizierungszertifikat muss die folgenden Eigenschaften aufweisen:
+   Das Zertifikat muss die folgenden Anforderungen erfüllen:
 
    - **Erweiterte Schlüsselverwendung:** Dieser Wert muss die **Clientauthentifizierung** enthalten.
-   - **Antragstellername**: Der Wert muss mit dem DNS-Namen des Servers identisch sein, auf dem das Zertifikat installiert wird (d. h. dem Namen des NDES-Servers).
+   - **Antragstellername**: Legen Sie für den allgemeinen Namen (Common Name, CN) einen Wert fest, der mit dem vollqualifizierten Domänennamen des Servers (d. h. dem Namen des NDES-Servers) identisch ist, auf dem das Zertifikat installiert wird.
 
-4. Der Server, der den NDES-Dienst hostet, kann jetzt den Intune Certificate Connector unterstützen.
+- **Serverauthentifizierungszertifikat**
+
+   Dieses Zertifikat wird in IIS verwendet. Es handelt sich um ein einfaches Webserverzertifikat, das es dem Client ermöglicht, der NDES-URL zu vertrauen.
+   
+   1. Fordern Sie ein **Serverauthentifizierungszertifikat** von ihrer internen oder öffentlichen Zertifizierungsstelle an, und installieren Sie das Zertifikat dann auf dem Server.
+      
+      Je nachdem, wie Sie den NDES für das Internet verfügbar machen, gelten unterschiedliche Anforderungen. 
+      
+      Folgende Konfiguration ist gut geeignet:
+   
+      - **Antragstellername**: Legen Sie für den allgemeinen Namen (Common Name, CN) einen Wert fest, der mit dem vollqualifizierten Domänennamen des Servers (d. h. dem Namen des NDES-Servers) identisch ist, auf dem das Zertifikat installiert wird.
+      - **Alternativer Antragstellername**: Legen Sie DNS-Einträge für jede URL fest, auf die Ihr NDES antwortet, z. B. den internen vollqualifizierten Domänennamen und die externen URLs.
+   
+      > [!NOTE]
+      > Wenn Sie den Azure AD-App-Proxy verwenden, übersetzt der AAD-App-Proxy-Connector die Anforderungen von der externen in die interne URL.
+      > Daher antwortet der NDES nur auf Anforderungen, die an die interne URL übermittelt werden, in der Regel an den vollqualifizierten Domänennamen des NDES-Servers.
+      >
+      > In dieser Situation ist keine externe URL erforderlich.
+   
+   2. Binden Sie das Serverauthentifizierungszertifikat in IIS ein:
+
+      1. Nachdem Sie das Serverauthentifizierungszertifikat installiert haben, öffnen Sie den **IIS-Manager**, und wählen Sie **Standardwebsite** aus. Klicken Sie im Bereich **Aktionen** auf **Bindungen**.
+
+      1. Klicken Sie auf **Hinzufügen**, legen Sie als **Typ** die Option **https** fest, und stellen Sie sicher, dass der Port **443** ist.
+   
+      1. Geben Sie unter **SSL-Zertifikat**das Serverauthentifizierungszertifikat an.
+
 
 ## <a name="install-the-intune-certificate-connector"></a>Installieren des Intune Certificate Connectors
 
@@ -372,7 +391,7 @@ Der Microsoft Intune Certificate Connector wird auf dem Server installiert, der 
 
    1. Stellen Sie sicher, dass .NET Framework 4.5 installiert ist, da dies für den Intune Certificate Connector erforderlich ist. .NET Framework 4.5 ist standardmäßig in Windows Server 2012 R2 und höheren Versionen enthalten.
 
-   2. Führen Sie den Installer aus (**NDESConnectorSetup.exe**). Das Installationsprogramm installiert auch das Richtlinienmodul für NDES und den IIS-Zertifikatregistrierungspunkt-Webdienst (CRP). Der CRP-Webdienst *CertificateRegistrationSvc* wird als Anwendung in IIS ausgeführt.
+   2. Verwenden Sie ein Konto mit Administratorrechten auf dem Server, um das Installationsprogramm (**NDESConnectorSetup.exe**) auszuführen. Das Installationsprogramm installiert auch das Richtlinienmodul für NDES und den IIS-Zertifikatregistrierungspunkt-Webdienst (CRP). Der CRP-Webdienst *CertificateRegistrationSvc* wird als Anwendung in IIS ausgeführt.
 
       Bei der Installation von NDES für eigenständiges Intune wird der CRP-Dienst automatisch mit dem Zertifikatconnector installiert.
 

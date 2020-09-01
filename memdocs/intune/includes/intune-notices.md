@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051626"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820058"
 ---
 Diese Hinweise enthalten wichtige Informationen, die Ihnen bei der Vorbereitung auf künftige Änderungen und Features im Zusammenhang mit Intune helfen können.
 
@@ -37,10 +37,10 @@ Im Rahmen des im März letzten Jahres veröffentlichten Beitrags MC208118 haben 
 Die Administratorverwaltung für Android-Geräte wurde im Rahmen von Android 2.2 als Möglichkeit zum Verwalten von Android-Geräten veröffentlicht. Ab Android 5 wurde das modernere Verwaltungsframework von [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) veröffentlicht (für Geräte, die eine zuverlässige Verbindung mit Google Mobile Services herstellen können). Google fördert die Verschiebung der Geräteadministratorverwaltung, indem die Verwaltungsunterstützung in neuen Android-Releases reduziert wird.
 
 #### <a name="how-does-this-affect-me"></a>Wie wirkt sich das auf mich aus?
-Aufgrund dieser Änderungen von Google im vierten Quartal 2020 verfügen Sie nicht mehr über die umfassenden Verwaltungsfunktionen auf den betroffenen Geräten, die vom Geräteadministrator verwaltet werden. 
+Aufgrund dieser Änderungen von Google im Oktober 2020 verfügen Sie nicht mehr über die umfassenden Verwaltungsfunktionen auf den betroffenen Geräten, die vom Geräteadministrator verwaltet werden. 
 
 > [!NOTE]
-> Dies wurde zuvor für das dritte Quartal 2020 angekündigt, wurde aber basierend auf den [neuesten Informationen von Google](https://www.blog.google/products/android-enterprise/da-migration/) verschoben.
+> Diese Änderungen waren ursprünglich für das vierte Quartal 2020 angekündigt, wurden aber basierend auf den [neuesten Informationen von Google](https://www.blog.google/products/android-enterprise/da-migration/) verschoben.
 
 ##### <a name="device-types-that-will-be-impacted"></a>Betroffene Gerätetypen
 Zu den von der reduzierten Geräteadministratorunterstützung betroffenen Geräten gehören jene, bei denen die folgenden drei Bedingungen zutreffen:
@@ -96,14 +96,14 @@ Betroffene Konformitätseinstellungen:
 - Bei neu registrierten Geräten sowie neu zugewiesenen und aktualisierten Einstellungen werden die betroffenen Konformitätseinstellungen auf der Seite „Geräteeinstellungen aktualisieren“ weiterhin als Gründe für die Nichtkonformität angezeigt. Das Gerät ist nicht konform, aber strengere Kennwortanforderungen werden in der App „Einstellungen“ nicht erzwungen.
 
 #### <a name="cause-of-impact"></a>Ursache der Auswirkung 
-Ab Beginn des vierten Quartals 2020 haben die Änderungen Auswirkungen auf die Geräte. Zu diesem Zeitpunkt wird ein Update für die Unternehmensportal-App bereitgestellt, durch das die Unternehmensportal-API anstelle von Ebene 28 auf Ebene 29 abzielt ([gemäß den Anforderungen von Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
+Ab Oktober 2020 haben die Änderungen Auswirkungen auf die Geräte. Zu diesem Zeitpunkt wird ein Update für die Unternehmensportal-App bereitgestellt, durch das die Unternehmensportal-API anstelle von Ebene 28 auf Ebene 29 abzielt ([gemäß den Anforderungen von Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
 Dann sind von einem Geräteadministrator verwaltete und nicht von Samsung hergestellte Geräte betroffen, sobald der Benutzer diese beiden Aktionen abgeschlossen hat:
 - Update auf Android 10 oder höher
 - Aktualisieren der Unternehmensportal-App auf die Version, die auf die API-Ebene 29 abzielt
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Was muss ich als Vorbereitung auf diese Veränderung tun?
-Wir empfehlen Folgendes, um Einschränkungen der Funktionalität zu vermeiden, die im vierten Quartal 2020 eintreten werden:
+Um die ab Oktober 2020 geltenden Funktionseinschränkungen zu vermeiden, wird Folgendes empfohlen:
 - **Neue Registrierungen:** Integrieren Sie neue Geräte in die [Android Enterprise](../enrollment/connect-intune-android-enterprise.md)-Verwaltung (falls verfügbar) und/oder [App-Schutzrichtlinien](../apps/app-protection-policies.md). Vermeiden Sie das Integrieren neuer Geräte in die Geräteadministratorverwaltung. 
 - **Zuvor registrierte Geräte:** Wenn ein von einem Geräteadministrator verwaltetes Gerät unter Android 10 oder höher ausgeführt oder ein Update auf Android 10 oder höher ausgeführt wird (insbesondere, wenn es sich um kein Samsung-Gerät handelt), verschieben Sie es von der Geräteadministratorverwaltung in die [Android Enterprise](../enrollment/connect-intune-android-enterprise.md)-Verwaltung und/oder [App-Schutzrichtlinien](../apps/app-protection-policies.md). Sie können den optimierten Flow verwenden, um [Android-Geräte aus dem Geräteadministrator in die Arbeitsprofilverwaltung zu verschieben](../enrollment/android-move-device-admin-work-profile.md).
 

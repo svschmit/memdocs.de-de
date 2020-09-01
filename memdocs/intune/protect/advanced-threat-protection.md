@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4abfd387c803535329fa51c7cafca295ae1078c
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 9f54bf7f281fca65e01d839e926200bc68c49765
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262522"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663446"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Erzwingen der Konformität für Microsoft Defender ATP mit bedingtem Zugriff in Intune
 
@@ -65,7 +65,7 @@ Um Microsoft Defender ATP mit Intune zu verwenden, stellen Sie sicher, dass Sie 
 
 - Lizenzierter Mandant für Enterprise Mobility + Security E3 und Windows E5 (oder Microsoft 365 Enterprise E5)
 - Microsoft Intune-Umgebung mit [Intune-verwalteten](../enrollment/windows-enroll.md) Windows 10- oder Android-Geräten, die auch mit Azure AD verknüpft sind
-- [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) und Zugriff auf das Microsoft Defender Security Center (ATP-Portal)
+- [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)-Umgebung für den Zugriff auf das Microsoft Defender Security Center (ATP-Portal)
 
 > [!NOTE]
 > Microsoft Defender ATP wird für Intune-App-Schutzrichtlinien für iOS/iPadOS und Android nicht unterstützt.

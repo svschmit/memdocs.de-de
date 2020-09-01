@@ -1,11 +1,11 @@
 ---
 title: 'Gerätefunktionen und -einstellungen in Microsoft Intune: Azure | Microsoft-Dokumentation'
-description: Übersicht über die unterschiedlichen Microsoft Intune-Geräteprofile. Sie erhalten Informationen zu Funktionen, Einschränkungen, E-Mail-Adressen, WLAN, VPN, Bildungswesen, Zertifikaten, zum Upgrade von Windows 10, BitLocker und Microsoft Defender, Windows Information Protection sowie zu administrativen Vorlagen und benutzerdefinierten Einstellungen für die Gerätekonfiguration im Endpoint Manager Admin Center. Verwenden Sie diese Profile zum Verwalten und Schützen von Daten und Geräten in Ihrem Unternehmen.
+description: 'Übersicht über die unterschiedlichen Microsoft Intune-Geräteprofile. Sie erhalten Informationen zu Folgendem: Gruppenrichtlinienobjekt, Features, Einschränkungen, E-Mail, WLAN, VPN, Schulungen, Zertifikaten, Upgrade von Windows 10, BitLocker und Microsoft Defender, Windows Information Protection, administrative Vorlagen und benutzerdefinierte Einstellungen für die Gerätekonfiguration im Endpoint Manager Admin Center. Verwenden Sie diese Profile zum Verwalten und Schützen von Daten und Geräten in Ihrem Unternehmen.'
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146319"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820492"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Anwenden von Einstellungen und Funktionen auf Ihren Geräten mit Geräteprofilen in Microsoft Intune
 
@@ -41,9 +41,7 @@ In diesem Artikel erhalten Sie einen Überblick über die unterschiedlichen Arte
 
 ## <a name="administrative-templates"></a>Administrative Vorlagen
 
-[Administrative Vorlagen](administrative-templates-windows.md) enthalten Hunderte von Einstellungen, die Sie für Internet Explorer, Microsoft Edge, OneDrive, Remotedesktop, Word, Excel und andere Office-Programme konfigurieren können.
-
-Diese Vorlagen bieten Administratoren eine vereinfachte Ansicht der Einstellungen ähnlich wie die Gruppenrichtlinie, sind aber vollständig cloudbasiert.
+[Administrative Vorlagen](administrative-templates-windows.md) enthalten Hunderte von Einstellungen, die Sie für Internet Explorer, Microsoft Edge, OneDrive, Remotedesktop, Word, Excel und andere Office-Programme konfigurieren können. Diese Vorlagen bieten Administratoren eine vereinfachte Ansicht der Einstellungen ähnlich wie die Gruppenrichtlinie, sind aber vollständig cloudbasiert.
 
 Dieses Features unterstützt folgende Betriebssysteme:
 

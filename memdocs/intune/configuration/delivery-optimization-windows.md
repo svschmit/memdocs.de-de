@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 4d491a3210229d5dd6c74ccaed7f44c4ae4eb83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990061"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820441"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Übermittlungsoptimierungseinstellungen in Microsoft Intune
 
@@ -54,7 +54,7 @@ Weitere Informationen zur Übermittlungsoptimierung unter Windows 10 finden Sie
 
 7. Legen Sie auf der Seite **Konfigurationseinstellungen** fest, wie Updates und Apps heruntergeladen werden sollen. Weitere Informationen zu verfügbaren Einstellungen finden Sie unter [Übermittlungsoptimierungseinstellungen für Intune](delivery-optimization-settings.md).
 
-   Wenn Sie fertig sind mit dem Konfigurieren der Einstellungen, klicken Sie auf **Weiter**.
+   Wenn Sie mit dem Konfigurieren der Einstellungen fertig sind, klicken Sie auf **Weiter**.
 
 8. Klicken Sie auf der Seite **Bereich (Markierungen)** auf **Bereichstags auswählen**, um den Bereich *Markierungen auswählen* zu öffnen, in dem Sie dem Profil Bereichstags zuweisen.
   

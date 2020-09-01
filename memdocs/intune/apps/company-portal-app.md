@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179552"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725433"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App
 
@@ -45,7 +45,7 @@ In der folgenden Tabelle finden Sie Details zur Anpassung des Brandings für die
 | **In Kopfzeile anzeigen** | Wählen Sie aus, ob in Kopfzeilen der Benutzeroberfläche das **Organisationslogo und der Organisationsname**, **nur das Organisationslogo**  oder **nur der Organisationsname** angezeigt werden soll. Die Vorschaufelder unten zeigen nur die Logos, nicht den Namen.  |
 | **Logo für Hintergrund in Designfarbe hochladen** | Laden Sie das Logo hoch, das Sie auf der ausgewählten Designfarbe anzeigen möchten. Um eine optimale Darstellung zu erzielen, laden Sie ein Logo mit transparentem Hintergrund hoch. Im Vorschaufeld unterhalb der Einstellung können Sie die Darstellung sehen.<p>Maximale Bildgröße: 400 × 400 px<br>Maximale Dateigröße:   750 KB<br>Dateityp: PNG, JPG oder JPEG |
 | **Logo für weißen oder hellen Hintergrund hochladen** | Laden Sie das Logo hoch, das Sie vor weißen oder hellen Hintergründen anzeigen möchten. Um eine optimale Darstellung zu erzielen, laden Sie ein Logo mit transparentem Hintergrund hoch. Im Vorschaufeld unterhalb der Einstellung können Sie die Darstellung vor einem weißen Hintergrund sehen.<p>Maximale Bildgröße: 400 × 400 px<br>Maximale Dateigröße: 750 KB<br>Dateityp: PNG, JPG oder JPEG |
-| **Markenimage hochladen** | Laden Sie ein Bild hoch, das für die Marke Ihrer Organisation steht.<p><ul><li>Empfohlene Bildbreite: Größer als 1125 px (mindestens 650 px)</li><li>Maximale Bildgröße: 1,3 MB</li><li>Dateityp: PNG, JPG oder JPEG</li><li>Das Logo wird an folgenden Stellen angezeigt:</li><ul><li>iOS/iPadOS-Unternehmensportal: Hintergrundbild auf der Profilseite des Benutzers.</li><li>Unternehmensportal-Website:   Hintergrundbild auf der Profilseite des Benutzers</li><li>Android-Intune-App: Im Drawer und als Hintergrundbild auf der Profilseite des Benutzers</li></ul></ul> |
+| **Markenimage hochladen** | Laden Sie ein Bild hoch, das für die Marke Ihrer Organisation steht.<p><ul><li>Empfohlene Bildbreite: Größer als 1125 px (mindestens 650 px)</li><li>Maximale Bildgröße: 1,3 MB</li><li>Dateityp: PNG, JPG oder JPEG</li><li>Das Logo wird an folgenden Stellen angezeigt:</li><ul><li>iOS/iPadOS-Unternehmensportal: Hintergrundbild auf der Profilseite des Benutzers.</li><li>Windows-Unternehmensportal: Hintergrundbild auf der Profilseite des Benutzers</li><li>Unternehmensportal-Website:   Hintergrundbild auf der Profilseite des Benutzers</li><li>Android-Intune-App: Im Drawer und als Hintergrundbild auf der Profilseite des Benutzers</li></ul></ul> |
 
 > [!NOTE]
 > Wenn ein Benutzer eine iOS/iPadOS-Anwendung über das Unternehmensportal installiert, wird eine Eingabeaufforderung angezeigt. Dies passiert, wenn die iOS/iPadOS-App mit dem App-Store, einem Volumenlizenzprogramm (Volume-Purchase Program, VPP) oder einer branchenspezifischen App (Line-Of-Business, LOB) verknüpft ist. In der Eingabeaufforderung kann der Benutzer die Aktion akzeptieren oder die Verwaltung der App erlauben. Die Eingabeaufforderung zeigt den Namen Ihres Unternehmens oder – wenn dieser nicht verfügbar ist – den Text **Unternehmensportal** an.
@@ -90,7 +90,7 @@ Sie können die Benutzeroberfläche des Unternehmensportals speziell für die Re
 
 ### <a name="enrollment"></a>Anmeldung
 
-Die folgende Tabelle enthält registrierungsspezifische Konfigurationsinformationen:
+Die folgende Tabelle stellt registrierungsspezifische Konfigurationsinformationen bereit:
 
 | Feldname | Maximale Länge | Weitere Informationen |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -116,7 +116,7 @@ Die folgende Tabelle enthält registrierungsspezifische Konfigurationsinformatio
 
 ### <a name="privacy"></a>Datenschutz
 
-Die folgende Tabelle enthält datenschutzspezifische Konfigurationsinformationen:
+Die folgende Tabelle stellt datenschutzspezifische Konfigurationsinformationen bereit:
 
 | Feldname | Maximale Länge | Weitere Informationen |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -125,19 +125,24 @@ Die folgende Tabelle enthält datenschutzspezifische Konfigurationsinformationen
 
 ### <a name="device-ownership-notification"></a>Benachrichtigung über Gerätebesitz
 
-Die folgende Tabelle enthält benachrichtigungsspezifische Konfigurationsinformationen:
+Die folgende Tabelle stellt benachrichtigungsspezifische Konfigurationsinformationen bereit:
 
 | Feldname | Maximale Länge | Weitere Informationen |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Pushbenachrichtigung an Benutzer senden, wenn sich der Besitztyp des Geräts von „Persönlich“ in „Unternehmen“ ändert (nur Android und iOS/iPadOS) | N/V | Senden Sie eine Pushbenachrichtigung an Ihre Android- und iOS-Unternehmensportalbenutzer, wenn ihr Gerätebesitzertyp von „Persönlich“ in „Unternehmen“ geändert wird. Diese Pushbenachrichtigung ist standardmäßig deaktiviert. Wenn der Gerätebesitz auf „Unternehmen“ festgelegt wird, hat Intune einen umfassenderen Zugriff auf das Gerät, einschließlich des vollständigen App-Inventars, der FileVault-Schlüsselrotation, des Abrufs von Rufnummern und einiger ausgewählter Remoteaktionen. Weitere Informationen finden Sie unter [Ändern des Gerätebesitzes](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Pushbenachrichtigung an Benutzer senden, wenn sich der Besitztyp des Geräts von „Persönlich“ in „Unternehmen“ ändert (nur Android und iOS/iPadOS) | N/V | Senden Sie eine Pushbenachrichtigung an Ihre Android- und iOS-Unternehmensportalbenutzer, wenn ihr Gerätebesitzertyp von „Persönlich“ in „Unternehmen“ geändert wird. Diese Pushbenachrichtigung ist standardmäßig deaktiviert. Wenn der Gerätebesitz auf „Unternehmen“ festgelegt ist, hat Intune umfassenderen Zugriff auf das Gerät, einschließlich des vollständigen App-Inventars, der FileVault-Schlüsselrotation, des Abrufs von Telefonnummern und einiger ausgewählter Remoteaktionen. Weitere Informationen finden Sie unter [Ändern des Gerätebesitzes](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="app-sources"></a>App-Quellen
 
-Sie können auswählen, welche zusätzlichen App-Quellen im Unternehmensportal angezeigt werden. Die folgende Tabelle enthält spezifische Konfigurationsinformationen zur App-Quelle:
+Sie können auswählen, welche zusätzlichen App-Quellen im Unternehmensportal angezeigt werden.
+
+> [!NOTE]
+> Das Unternehmensportal unterstützt Configuration Manager-Anwendungen. Dieses Feature ermöglicht Endbenutzern, sowohl von Configuration Manager als auch von Intune bereitgestellte Anwendungen im Unternehmensportal für gemeinsam verwaltete Kunden anzuzeigen. Weitere Informationen finden Sie unter [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](/mem/configmgr/comanage/company-portal).
+
+Die folgende Tabelle enthält spezifische Konfigurationsinformationen zur App-Quelle:
 
 | Feldname | Maximale Länge | Weitere Informationen |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Azure AD-Unternehmensanwendungen | N/V | Klicken Sie auf **Ausblenden** oder **Zeigen**, damit **Azure AD-Unternehmensanwendungen** jedem Endbenutzer im Unternehmensportal angezeigt werden. Weitere Informationen finden Sie unter [Einstellungsoptionen für App-Quellen](../apps/company-portal-app.md#app-source-setting-options). |
+| Azure AD-Unternehmensanwendungen | N/V | Klicken Sie auf **Ausblenden** oder **Anzeigen**, damit **Azure AD-Unternehmensanwendungen** jedem Endbenutzer im Unternehmensportal angezeigt werden. Weitere Informationen finden Sie unter [Einstellungsoptionen für App-Quellen](../apps/company-portal-app.md#app-source-setting-options). |
 | Office Online-Anwendungen | N/V | Klicken Sie auf **Ausblenden** oder **Anzeigen**, damit **Office Online-Anwendungen** jedem Endbenutzer im Unternehmensportal angezeigt werden. Weitere Informationen finden Sie unter [Einstellungsoptionen für App-Quellen](../apps/company-portal-app.md#app-source-setting-options). |
 
 #### <a name="app-source-setting-options"></a>Einstellungsoptionen für App-Quellen
@@ -145,11 +150,11 @@ Sie können auswählen, welche zusätzlichen App-Quellen im Unternehmensportal a
 > [!NOTE]
 > Auf der Website des Unternehmensportals werden initial Apps aus anderen Microsoft-Diensten angezeigt.
 
-Sie können **Azure AD-Unternehmensanwendungen** und **Office Online-Anwendungen** für alle Endbenutzer im Unternehmensportal ausblenden oder anzeigen lassen. Wenn Sie auf **Anzeigen** klicken, wird der gesamte Anwendungskatalog aus den ausgewählten, dem Benutzer zugewiesenen Microsoft-Diensten im Unternehmensportal anzeigt. **Azure AD-Unternehmensanwendungen** werden über das [Azure-Portal](https://portal.azure.com) registriert und zugewiesen. **Office Online-Anwendungen** werden mithilfe der im [M365-Admin Center](https://admin.microsoft.com) verfügbaren Steuerfunktionen für die Lizenzierung zugewiesen. Diese Konfigurationseinstellung finden Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) unter **Mandantenverwaltung** > **Anpassung**. Standardmäßig wird jede zusätzliche App auf **Ausblenden** festgelegt. 
+Sie können **Azure AD-Unternehmensanwendungen** und **Office Online-Anwendungen** für alle Endbenutzer im Unternehmensportal ausblenden oder anzeigen lassen. Wenn Sie auf **Anzeigen** klicken, wird der gesamte Anwendungskatalog aus den ausgewählten, dem Benutzer zugewiesenen Microsoft-Diensten im Unternehmensportal anzeigt. **Azure AD-Unternehmensanwendungen** werden über das [Azure-Portal](https://portal.azure.com) registriert und zugewiesen. **Office Online-Anwendungen** werden mithilfe der im [M365-Admin Center](https://admin.microsoft.com) verfügbaren Steuerfunktionen für die Lizenzierung zugewiesen. Diese Konfigurationseinstellung finden Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) unter **Mandantenverwaltung** > **Anpassung**. Standardmäßig wird jede zusätzliche App auf **Ausblenden** festgelegt. 
 
 ### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Anpassen von Self-Service-Geräteaktionen für Benutzer im Unternehmensportal
 
-Sie können die verfügbaren Self-Service-Geräteaktionen anpassen, die Endbenutzern in der App und auf der Website des Unternehmensportals angezeigt werden. Damit nicht beabsichtigte Geräteaktionen vermieden werden, können Sie Einstellungen für die Unternehmensportal-App konfigurieren. Klicken Sie dazu auf **Mandantenverwaltung** > **Anpassung**. 
+Sie können die verfügbaren Self-Service-Geräteaktionen anpassen, die Endbenutzern in der Unternehmensportal-App und auf der Unternehmensportal-Website angezeigt werden. Damit nicht beabsichtigte Geräteaktionen vermieden werden, können Sie Einstellungen für die Unternehmensportal-App konfigurieren. Klicken Sie dazu auf **Mandantenverwaltung** > **Anpassung**.
 
 Die folgenden Aktionen sind verfügbar:
 - Schaltfläche **Entfernen** auf unternehmenseigenen Windows-Geräten ausblenden
@@ -158,7 +163,7 @@ Die folgenden Aktionen sind verfügbar:
 - Schaltfläche **Zurücksetzen** auf unternehmenseigenen iOS-/iPadOS-Geräten ausblenden
 
 > [!NOTE]
-> Mit diesen Aktionen lassen sich Geräteaktionen in der App und auf der Website des Unternehmensportals einschränken. Damit werden jedoch keine Richtlinien zur Einschränkung von Geräten implementiert. Damit Benutzer ihre Geräte nicht über die Einstellungen auf die Werkseinstellungen zurücksetzen oder die mobile Geräteverwaltung entfernen, müssen Sie Richtlinien für Geräteeinschränkungen konfigurieren. 
+> Mit diesen Aktionen lassen sich Geräteaktionen in der App und auf der Website des Unternehmensportals einschränken. Damit werden jedoch keine Richtlinien zur Einschränkung von Geräten implementiert. Damit Benutzer ihre Geräte nicht über die Einstellungen auf die Werkseinstellungen zurücksetzen oder die mobile Geräteverwaltung entfernen, müssen Sie Richtlinien für Geräteeinschränkungen konfigurieren.
 
 ## <a name="opening-web-company-portal-applications"></a>Öffnen von Anwendungen des Webunternehmensportals
 Bei Anwendungen des Webunternehmensportals wird Endbenutzern, wenn sie die Unternehmensportalanwendung installiert haben, ein Dialogfeld mit der Frage angezeigt, wie die Anwendung außerhalb des Browsers geöffnet werden soll. Wenn die App nicht im Pfad des Unternehmensportals enthalten ist, öffnet das Unternehmensportal die Homepage. Andernfalls öffnet das Unternehmensportal die entsprechende App. 

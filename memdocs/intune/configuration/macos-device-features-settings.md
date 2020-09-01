@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/15/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093554"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819659"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>macOS-Gerätefunktionseinstellungen in Intune
 
@@ -267,6 +267,15 @@ Diese Funktion gilt für:
 - **Typ der SSO-App-Erweiterung:** Wählen Sie den Typ der SSO-App-Erweiterung aus. Folgende Optionen sind verfügbar:
 
   - **Nicht konfiguriert:** Es werden keine App-Erweiterungen verwendet. Um eine App-Erweiterung zu deaktivieren, ändern Sie den Typ der SSO-App-Erweiterung in **Nicht konfiguriert**.
+  - **Microsoft Azure AD**: Verwendet das Microsoft Enterprise SSO-Plug-In, das eine SSO-App-Erweiterung vom Typ „Umleitung“ ist. Dieses Plug-In aktiviert das einmalige Anmelden für Active Directory-Konten in allen macOS-Anwendungen, die das Feature [Enterprise Single Sign-On von Apple](https://developer.apple.com/documentation/authenticationservices) unterstützen. Verwenden Sie diesen SSO-App-Erweiterungstyp, um einmaliges Anmelden in Microsoft-Apps, Unternehmens-Apps und auf Websites zu aktivieren, die die Authentifizierung mit Azure AD durchführen.
+
+    Das SSO-Plug-In fungiert als erweiterter Authentifizierungsbroker, der eine Verbesserung der Sicherheit und der Benutzerfreundlichkeit bietet.
+
+    > [!IMPORTANT]
+    > Um das einmalige Anmelden mit dem SSO-App-Erweiterungstyp von Microsoft Azure AD zu ermöglichen, installieren Sie die macOS-Unternehmensportal-App auf den Geräten. Die Unternehmensportal-App stellt das Microsoft Enterprise SSO-Plug-In auf den Geräten bereit. Die MDM-SSO-App-Erweiterungseinstellungen aktivieren das Plug-In. Wenn die Unternehmensportal-App und das SSO-App-Erweiterungsprofil auf den Geräten installiert sind, müssen die Benutzer sich mit ihren Anmeldeinformationen anmelden und eine Sitzung auf ihren Geräten erstellen. Diese Sitzung wird für verschiedene Anwendungen verwendet, ohne dass sich die Benutzer erneut authentifizieren müssen.
+    >
+    > Weitere Informationen zur Unternehmensportal-App finden Sie unter [Was geschieht, wenn Sie die Unternehmensportal-App installieren und Ihr macOS-Gerät bei Intune registrieren?](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md). Laden Sie die Unternehmensportal-App unter [diesem Link](https://go.microsoft.com/fwlink/?linkid=853070) herunter.
+
   - **Umleiten:** Verwenden Sie eine generische, anpassbare App-Erweiterung für die Umleitung, um das einmalige Anmelden (Single Sign-On, SSO) mit modernen Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterung und die Team-ID für die App-Erweiterung Ihrer Organisation kennen.
   - **Anmeldeinformationen:** Verwenden Sie eine generische, anpassbare App-Erweiterung für Anmeldeinformationen, um das einmalige Anmelden mit Challenge-Response-Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterungs-ID und die Team-ID für die SSO-App-Erweiterung Ihrer Organisation kennen.  
   - **Kerberos**: Verwenden Sie die integrierte Kerberos-Erweiterung von Apple, die in macOS Catalina 10.15 und höher enthalten ist. Bei dieser Option handelt es sich um eine Kerberos-spezifische Version der App-Erweiterung vom Typ **Anmeldeinformationen**.
@@ -274,14 +283,14 @@ Diese Funktion gilt für:
   > [!TIP]
   > Mit den Typen **Umleitung** und **Anmeldeinformationen** fügen Sie eigene Konfigurationswerte hinzu, die über die Erweiterung übergeben werden. Erwägen Sie bei Auswahl von **Anmeldeinformationen** die Verwendung integrierter Konfigurationseinstellungen, die von Apple für den Typ **Kerberos** bereitgestellt werden.
 
-- **Erweiterungs-ID** („Umleiten“ und „Anmeldeinformationen“): Geben Sie den Bundlebezeichner ein, der Ihre SSO-App-Erweiterung identifiziert, z. B. `com.apple.ssoexample`.
-- **Team-ID** („Umleiten“ und „Anmeldeinformationen“): Geben Sie den Teambezeichner Ihrer SSO-App-Erweiterung ein. Eine Team-ID ist eine aus 10 Zeichen bestehende alphanumerische (Ziffern und Buchstaben) Zeichenfolge, die von Apple generiert wird, z. B. `ABCDE12345`. 
+- **Erweiterungs-ID** (Umleiten, Anmeldeinformationen): Geben Sie den Bundlebezeichner ein, der Ihre SSO-App-Erweiterung identifiziert, z. B. `com.apple.ssoexample`.
+- **Team-ID** (Umleiten, Anmeldeinformationen): Geben Sie den Teambezeichner Ihrer SSO-App-Erweiterung ein. Eine Team-ID ist eine aus 10 Zeichen bestehende alphanumerische (Ziffern und Buchstaben) Zeichenfolge, die von Apple generiert wird, z. B. `ABCDE12345`. 
 
   Auf der [Seite zur Team-ID-Ermittlung](https://help.apple.com/developer-account/#/dev55c3c710c) (öffnet die Website von Apple) finden Sie weitere Informationen.
 
-- **Bereich** („Anmeldeinformationen“ und „Kerberos“): Geben Sie den Namen Ihres Authentifizierungsbereichs ein. Der Bereichsname sollte groß geschrieben werden, z. B. `CONTOSO.COM`. In der Regel ist Ihr Bereichsname mit dem DNS-Domänennamen identisch, besteht aber nur aus Großbuchstaben.
+- **Bereich** (Anmeldeinformationen, Kerberos): Geben Sie den Namen Ihres Authentifizierungsbereichs ein. Der Bereichsname sollte groß geschrieben werden, z. B. `CONTOSO.COM`. In der Regel ist Ihr Bereichsname mit dem DNS-Domänennamen identisch, besteht aber nur aus Großbuchstaben.
 
-- **Domänen** („Anmeldeinformationen“ und „Kerberos“): Geben Sie die Domänen- oder Hostnamen der Websites ein, auf denen eine Authentifizierung über SSO möglich ist. Wenn Ihre Website beispielsweise `mysite.contoso.com` lautet, ist `mysite` der Hostname und `contoso.com` der Domänenname. Wenn Benutzer eine Verbindung mit einer dieser Websites herstellen, verarbeitet die App-Erweiterung die Authentifizierung. Diese Authentifizierung ermöglicht es Benutzern Face ID, Touch ID oder eine PIN/einen Passcode von Apple für die Anmeldung zu verwenden.
+- **Domänen** (Anmeldeinformationen, Kerberos): Geben Sie die Domänen- oder Hostnamen der Websites ein, auf denen eine Authentifizierung über SSO möglich ist. Wenn Ihre Website beispielsweise `mysite.contoso.com` lautet, ist `mysite` der Hostname und `contoso.com` der Domänenname. Wenn Benutzer eine Verbindung mit einer dieser Websites herstellen, verarbeitet die App-Erweiterung die Authentifizierung. Diese Authentifizierung ermöglicht es Benutzern Face ID, Touch ID oder eine PIN/einen Passcode von Apple für die Anmeldung zu verwenden.
 
   - Alle Domänen in den Intune-Profilen für Ihre SSO-App-Erweiterung müssen eindeutig sein. Sie können eine Domäne nicht mehrfach in einem SSO-App-Erweiterungsprofil verwenden – selbst dann nicht, wenn Sie verschiedene Arten von SSO-App-Erweiterungen verwenden.
   - Für diese Domänen erfolgt keine Beachtung der Groß-/Kleinschreibung.
@@ -291,7 +300,7 @@ Diese Funktion gilt für:
   - Alle URLs in Ihren Intune-SSO-Erweiterungsprofilen müssen eindeutig sein. Sie können eine Domäne nicht mehrfach in einem SSO-App-Erweiterungsprofil verwenden – selbst dann nicht, wenn Sie verschiedene Arten von SSO-App-Erweiterungen verwenden.
   - Die URLs müssen mit `http://` oder `https://` beginnen.
 
-- **Zusätzliche Konfiguration** („Umleiten“ und „Anmeldeinformationen“): Geben Sie zusätzliche erweiterungsspezifische Daten ein, die an die SSO-App-Erweiterung übergeben werden sollen:
+- **Zusätzliche Konfiguration** (Microsoft Azure AD, Umleiten, Anmeldeinformationen): Geben Sie zusätzliche erweiterungsspezifische Daten ein, die an die SSO-App-Erweiterung übergeben werden sollen:
   - **Schlüssel:** Geben Sie den Namen des Elements ein, das Sie hinzufügen möchten, z. B. `user name`.
   - **Typ:** Geben Sie den Datentyp ein. Folgende Optionen sind verfügbar:
 
@@ -331,7 +340,13 @@ Diese Funktion gilt für:
 - **Active Directory site code** (Active Directory-Standortcode) (nur „Kerberos“): Geben Sie den Namen des Active Directory-Standorts ein, der von der Kerberos-Erweiterung verwendet werden soll. Möglicherweise müssen Sie diesen Wert nicht ändern, weil die Kerberos-Erweiterung den Active Directory-Standortcode ggf. automatisch ermittelt.
 - **Cachename** (nur „Kerberos“): Geben Sie den Generic Security Services-Namen (GSS) für den Kerberos-Cache ein. Dieser Wert muss höchstwahrscheinlich nicht festgelegt werden.  
 - **Password requirements message** (Meldung zu Kennwortanforderungen) (nur „Kerberos“): Geben Sie eine Textversion der Kennwortanforderungen Ihrer Organisation ein, die den Benutzern angezeigt wird. Die Meldung wird angezeigt, wenn Sie keine Active Directory-Kennwortkomplexitätsanforderungen erzwingen oder keine Mindestkennwortlänge eingeben.  
-- **App-Bundle-IDs** (nur „Kerberos“): Mit **Hinzufügen** werden die App-Bundle-IDs hinzugefügt, für die auf Ihren Geräten SSO verwendet werden soll. Diese Apps erhalten Zugriff auf das Kerberos-TGT (Ticket Granting Ticket) sowie das Authentifizierungsticket. Außerdem authentifizieren diese Apps Benutzer für Dienste, für die sie über Zugriffsberechtigungen verfügen.
+- **Modus für gemeinsam genutzte Geräte aktivieren** (nur Microsoft Azure AD): Klicken Sie auf **Ja**, wenn Sie das Microsoft Enterprise SSO-Plug-In auf macOS-Geräten bereitstellen, die für den Azure AD-Modus für gemeinsam genutzte Geräte konfiguriert sind. Geräte im Freigabemodus ermöglichen es vielen Benutzern, sich global bei Anwendungen, die den Freigabemodus für Geräte unterstützen, an- und abzumelden. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert. 
+
+  Bei Auswahl von **Ja** werden alle vorhandenen Benutzerkonten von den Geräten gelöscht. Sie müssen genau wissen, wie diese Einstellungen die Geräte ändern, damit es nicht zu Datenverlusten kommt oder die Geräte unabsichtlich auf die Werkseinstellungen zurückgesetzt werden.
+
+  Weitere Informationen zum Modus für gemeinsam genutzte Geräte finden Sie unter [Übersicht über den Modus für gemeinsam genutzte Geräte](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
+
+- **App-Bundle-IDs** (Microsoft Azure AD, Kerberos): Mit **Hinzufügen** werden die App-Bundle-IDs hinzugefügt, für die auf Ihren Geräten SSO verwendet werden soll. Diese Apps erhalten Zugriff auf das Kerberos-TGT (Ticket Granting Ticket) sowie das Authentifizierungsticket. Außerdem authentifizieren diese Apps Benutzer für Dienste, für die sie über Zugriffsberechtigungen verfügen.
 - **Domänenbereichszuordnung** (nur „Kerberos“): Mit **Hinzufügen** werden die Domänen-DNS-Suffixe hinzugefügt, die Ihrem Bereich zugeordnet werden sollen. Verwenden Sie diese Einstellung, wenn die DNS-Namen der Hosts nicht mit dem Bereichsnamen identisch sind. Wahrscheinlich ist es nicht erforderlich, diese Zuordnung zwischen benutzerdefinierter Domäne und Bereich zu erstellen.
 - **PKINIT-Zertifikat** (nur „Kerberos“): Mit **Auswählen** legen Sie das PKINIT-Zertifikat (Public Key Cryptography for Initial Authentication) fest, das für die Kerberos-Authentifizierung verwendet werden kann. Sie können aus [PKCS](../protect/certficates-pfx-configure.md)- oder [SCEP](../protect/certificates-scep-configure.md)-Zertifikaten auswählen, die Sie in Intune hinzugefügt haben. Weitere Informationen zu Zertifikaten finden Sie unter [Verwenden von Zertifikaten zur Authentifizierung in Microsoft Intune](../protect/certificates-configure.md).
 

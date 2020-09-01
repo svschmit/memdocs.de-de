@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/16/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c23044b912b7f0edf2852477aad80dd9be66cf54
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526065"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819608"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -435,29 +435,33 @@ Diese Einstellung gelten für Android Enterprise-Registrierungstypen, bei denen 
 
   - Android 7.0 und höher mit aktiviertem Arbeitsprofil
 
-- **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).
-- **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Sperrung des Arbeitsprofils:** Geben Sie den Zeitraum an, für den sich ein Gerät im Leerlauf befinden muss, bevor der Bildschirm automatisch gesperrt wird. Benutzer müssen ihre Anmeldeinformationen eingeben, um wieder Zugriff zu erhalten. Geben Sie zum Beispiel `5` ein, um Geräte nach 5 Minuten im Leerlauf zu sperren. Wenn kein Wert angegeben oder **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+  Konfigurieren Sie auch Folgendes:
 
-  Benutzer können keinen Zeitwert auf Geräten festlegen, der über dem im Profil konfigurierten Zeitwert liegt. Benutzer können einen niedrigeren Zeitwert festlegen. Wenn das Profil beispielsweise auf `15` Minuten festgelegt wird, können Benutzer einen Wert von 5 Minuten festlegen. Benutzer können den Wert jedoch nicht auf 30 Minuten festlegen.
+  - **Minimale Kennwortlänge:** Geben Sie die Mindestlänge des Kennworts ein (4 bis 16 Zeichen).
+  - **Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Sperrung des Arbeitsprofils:** Geben Sie den Zeitraum an, für den sich ein Gerät im Leerlauf befinden muss, bevor der Bildschirm automatisch gesperrt wird. Benutzer müssen ihre Anmeldeinformationen eingeben, um wieder Zugriff zu erhalten. Geben Sie zum Beispiel `5` ein, um Geräte nach 5 Minuten im Leerlauf zu sperren. Wenn kein Wert angegeben oder **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 
-- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie mit einem Wert zwischen 4 und 11 an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Arbeitsprofil auf dem Gerät zurückgesetzt wird. Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+    Benutzer können keinen Zeitwert auf Geräten festlegen, der über dem im Profil konfigurierten Zeitwert liegt. Benutzer können einen niedrigeren Zeitwert festlegen. Wenn das Profil beispielsweise auf `15` Minuten festgelegt wird, können Benutzer einen Wert von 5 Minuten festlegen. Benutzer können den Wert jedoch nicht auf 30 Minuten festlegen.
 
-- **Kennwortablauf (Tage):** Geben Sie die Anzahl der Tage (von **1**-**365**) ein, nach der Benutzerkennwörter geändert werden müssen.
-- **Erforderlicher Kennworttyp:** Geben Sie den erforderlichen Grad der Kennwortkomplexität ein, und bestimmen Sie, ob biometrische Geräte zulässig sind. Folgende Optionen sind verfügbar:
-  - **Gerätestandard**
-  - **Biometrie auf niedriger Sicherheitsstufe:** [Vergleich von stark und schwach biometrisch](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (öffnet Android-Website)
-  - **Erforderlich**
-  - **Mindestens numerisch:** Bei dieser Einstellung sind numerische Zeichen wie `123456789` enthalten.
-  - **Numerisch, komplex:** Bei dieser Einstellung sind wiederholte oder fortlaufende Zahlen wie `1111` oder `1234` nicht zulässig.
-  - **Mindestens alphabetisch**: Bei dieser Einstellung sind Buchstaben des Alphabets enthalten. Zahlen und Symbole sind nicht erforderlich.
-  - **Mindestens alphanumerisch**: Schließt Großbuchstaben, Kleinbuchstaben und Ziffern ein.
-  - **Mindestens alphanumerisch mit Symbolen**: Schließt Großbuchstaben, Kleinbuchstaben, Ziffern, Interpunktionszeichen und Symbole ein.
+  - **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie mit einem Wert zwischen 4 und 11 an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Arbeitsprofil auf dem Gerät zurückgesetzt wird. Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 
-- **Wiederverwendung vorheriger Kennwörter verhindern:** Verwenden Sie diese Einstellung, um zu verhindern, dass Benutzer zuvor verwendete Kennwörter erstellen. Geben Sie die Anzahl der zuvor verwendeten Kennwörter ein, die nicht erneut verwendet werden können, von 1–24. Geben Sie z.B. `5` an, damit ein Benutzer sein neues Kennwort nicht auf sein aktuelles Kennwort oder eines seiner vorherigen vier Kennwörter festlegen kann. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
-- **Entsperrung durch Fingerabdruck:** Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, den Fingerabdruckscanner des Geräts zum Entsperren zu verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer das Gerät per Fingerabdruck entsperren.
-- **Smart Lock und andere Vertrauens-Agents:** Wenn **Blockieren** festgelegt wird, werden Smart Lock und andere Vertrauens-Agents daran gehindert, die Sperrbildschirmeinstellungen auf kompatiblen Geräten anzupassen. Dieses Feature wird auch als Vertrauens-Agent bezeichnet und ermöglicht es Ihnen, das Kennwort für den Gerätesperrbildschirm zu deaktivieren oder zu umgehen, wenn sich das Gerät an einem vertrauenswürdigen Standort befindet. Beispielsweise können Sie das Arbeitsprofilkennwort umgehen, wenn Geräte mit einem bestimmten Bluetooth-Gerät verbunden sind oder sich in der Nähe eines NFC-Tags befinden. Mit dieser Einstellung können Sie verhindern, dass Benutzer Smart Lock konfigurieren.
+  - **Kennwortablauf (Tage):** Geben Sie die Anzahl der Tage (von **1**-**365**) ein, nach der Benutzerkennwörter geändert werden müssen.
+  - **Erforderlicher Kennworttyp:** Geben Sie den erforderlichen Grad der Kennwortkomplexität ein, und bestimmen Sie, ob biometrische Geräte zulässig sind. Folgende Optionen sind verfügbar:
+    - **Gerätestandard**
+    - **Biometrie auf niedriger Sicherheitsstufe:** [Vergleich von stark und schwach biometrisch](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (öffnet Android-Website)
+    - **Erforderlich**
+    - **Mindestens numerisch:** Bei dieser Einstellung sind numerische Zeichen wie `123456789` enthalten.
+    - **Numerisch, komplex:** Bei dieser Einstellung sind wiederholte oder fortlaufende Zahlen wie `1111` oder `1234` nicht zulässig.
+    - **Mindestens alphabetisch**: Bei dieser Einstellung sind Buchstaben des Alphabets enthalten. Zahlen und Symbole sind nicht erforderlich.
+    - **Mindestens alphanumerisch**: Schließt Großbuchstaben, Kleinbuchstaben und Ziffern ein.
+    - **Mindestens alphanumerisch mit Symbolen**: Schließt Großbuchstaben, Kleinbuchstaben, Ziffern, Interpunktionszeichen und Symbole ein.
 
-  Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
+  - **Wiederverwendung vorheriger Kennwörter verhindern:** Verwenden Sie diese Einstellung, um zu verhindern, dass Benutzer zuvor verwendete Kennwörter erstellen. Geben Sie die Anzahl der zuvor verwendeten Kennwörter ein, die nicht erneut verwendet werden können, von 1–24. Geben Sie z.B. `5` an, damit ein Benutzer sein neues Kennwort nicht auf sein aktuelles Kennwort oder eines seiner vorherigen vier Kennwörter festlegen kann. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
+  - **Entsperrung per Gesichtserkennung**: **Blockieren** verhindert, dass Benutzer die Gesichtserkennung des Geräts zum Entsperren des Arbeitsprofils verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer das Gerät per Gesichtserkennung entsperren.
+  - **Entsperrung durch Fingerabdruck:** **Blockieren** verhindert, dass Benutzer den Fingerabdruckscanner des Geräts zum Entsperren des Arbeitsprofils verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer das Gerät per Fingerabdruck entsperren.
+  - **Entsperrung per Iriserkennung**: **Blockieren** verhindert, dass Benutzer den Irisscanner des Geräts zum Entsperren des Arbeitsprofils verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer das Gerät mit dem Irisscanner entsperren.
+  - **Smart Lock und andere Vertrauens-Agents:** Wenn **Blockieren** festgelegt wird, werden Smart Lock und andere Vertrauens-Agents daran gehindert, die Sperrbildschirmeinstellungen auf kompatiblen Geräten anzupassen. Dieses Feature wird auch als Vertrauens-Agent bezeichnet und ermöglicht es Ihnen, das Kennwort für den Gerätesperrbildschirm zu deaktivieren oder zu umgehen, wenn sich das Gerät an einem vertrauenswürdigen Standort befindet. Beispielsweise können Sie das Arbeitsprofilkennwort umgehen, wenn Geräte mit einem bestimmten Bluetooth-Gerät verbunden sind oder sich in der Nähe eines NFC-Tags befinden. Mit dieser Einstellung können Sie verhindern, dass Benutzer Smart Lock konfigurieren.
+
+    Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
 ### <a name="password"></a>Kennwort
 
@@ -481,7 +485,9 @@ Diese Kennworteinstellungen gelten für persönliche Profile auf Geräten, die e
   - **Mindestens alphanumerisch mit Symbolen**: Schließt Großbuchstaben, Kleinbuchstaben, Ziffern, Interpunktionszeichen und Symbole ein.
 
 - **Wiederverwendung vorheriger Kennwörter verhindern:** Verwenden Sie diese Einstellung, um zu verhindern, dass Benutzer zuvor verwendete Kennwörter erstellen. Geben Sie die Anzahl der zuvor verwendeten Kennwörter ein, die nicht erneut verwendet werden können, von 1–24. Geben Sie z.B. `5` an, damit ein Benutzer sein neues Kennwort nicht auf sein aktuelles Kennwort oder eines seiner vorherigen vier Kennwörter festlegen kann. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
-- **Entsperrung durch Fingerabdruck:** Wenn **Blockieren** festgelegt wird, werden Benutzer daran gehindert, den Fingerabdruckscanner des Geräts zum Entsperren zu verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer das Gerät per Fingerabdruck entsperren.
+- **Entsperrung durch Fingerabdruck:** **Blockieren** verhindert, dass Benutzer den Fingerabdruckscanner des Geräts zum Entsperren des Geräts verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer das Gerät per Fingerabdruck entsperren.
+- **Entsperrung per Gesichtserkennung**: **Blockieren** verhindert, dass Benutzer die Gesichtserkennung des Geräts zum Entsperren des Geräts verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer das Gerät per Gesichtserkennung entsperren.
+- **Entsperrung per Iriserkennung**: **Blockieren** verhindert, dass Benutzer den Irisscanner des Geräts zum Entsperren des Geräts verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass Benutzer das Gerät mit dem Irisscanner entsperren.
 - **Smart Lock und andere Vertrauens-Agents:** Wenn **Blockieren** festgelegt wird, werden Smart Lock und andere Vertrauens-Agents daran gehindert, die Sperrbildschirmeinstellungen auf kompatiblen Geräten anzupassen. Dieses Feature wird auch als Vertrauens-Agent bezeichnet und ermöglicht es Ihnen, das Kennwort für den Gerätesperrbildschirm zu deaktivieren oder zu umgehen, wenn sich das Gerät an einem vertrauenswürdigen Standort befindet. Beispielsweise können Sie das Arbeitsprofilkennwort umgehen, wenn Geräte mit einem bestimmten Bluetooth-Gerät verbunden sind oder sich in der Nähe eines NFC-Tags befinden. Mit dieser Einstellung können Sie verhindern, dass Benutzer Smart Lock konfigurieren.
 
   Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.

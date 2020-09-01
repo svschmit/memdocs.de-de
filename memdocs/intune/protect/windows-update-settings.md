@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551909"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819710"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows-Updateeinstellungen für Intune  
 
@@ -179,12 +179,12 @@ Einstellungen für die Benutzererfahrung steuern die Endbenutzererfahrung für d
   - **Zulassen**: Zulassen, dass Gerätebenutzer die Windows Update-Überprüfung verwenden, um Updates und Features zu suchen und zu installieren.
   - **Blockieren**: Verhindern, dass Gerätebenutzer auf die Windows Update-Überprüfung zugreifen, Updates herunterladen und Features installieren  
 
-- **Genehmigung des Benutzers für Neustart außerhalb der Nutzungszeiten erfordern**  
+- **Benutzergenehmigung zum Schließen der Neustartbenachrichtigung erforderlich**  
   **Standardeinstellung:** Nicht konfiguriert  
   Windows Update-CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - **Nicht konfiguriert**  
-  - **Erforderlich**: Der Benutzer muss einen Geräteneustart außerhalb der Nutzungszeiten genehmigen.  
+  - **Nein**: automatisches Schließen nach 25 Sekunden.
+  - **Ja**: Schließen durch Benutzer erforderlich.
    
 - **Benutzer vor erforderlichem automatischen Neustart mit ablehnbarer Erinnerung erinnern (Stunden)**  
   **Standardeinstellung:** 4  
@@ -239,7 +239,7 @@ Einstellungen für die Benutzererfahrung steuern die Endbenutzererfahrung für d
   - **Karenzzeit**  
     **Standardeinstellung:** *Not configured* Windows Update-CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Gibt eine Mindestanzahl von Tagen nach dem Stichtag an, bis der Neustart automatisch erfolgt (2–7)
+    Gibt eine Mindestanzahl von Tagen nach dem Stichtag an, bis der Neustart automatisch erfolgt (0–7).
 
   - **Automatischer Neustart vor Stichtag**  
     **Standardeinstellung:**  Ja, Windows Update-CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)

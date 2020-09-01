@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 233bc5bbdf983069ed60c8a9afbe165fb2e6b9b1
-ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
+ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405816"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663377"
 ---
 # <a name="troubleshoot-conditional-access"></a>Problembehandlung beim bedingten Zugriff
 In diesem Artikel wird beschrieben, wie Sie vorgehen müssen, wenn Ihre Benutzer keinen Zugriff auf Ressourcen erhalten, die mit bedingtem Zugriff geschützt sind, oder wenn Benutzer auf geschützte Ressourcen zugreifen können, aber blockiert werden sollten.
@@ -45,7 +45,7 @@ Damit der bedingte Zugriff funktioniert, müssen die folgenden Anforderungen erf
 
 - Dem Benutzer muss standardmäßig eine Konformitätsrichtlinie für Geräte zugewiesen werden. Dies kann von der Konfiguration der Einstellung **Geräte ohne zugewiesene Kompatibilitätsrichtlinie kennzeichnen als** abhängen, die sich im Intune-Verwaltungsportal unter **Gerätekonformität** > **Einstellungen für Kompatibilitätsrichtlinie** befindet.
 
-- Exchange ActiveSync muss auf dem Gerät aktiviert werden, wenn der Benutzer den nativen E-Mail-Client des Geräts anstelle von Outlook verwendet. Dies geschieht für iOS/iPadOS-, Windows Phone- und Android-/Knox-Geräte automatisch.
+- Exchange ActiveSync muss auf dem Gerät aktiviert werden, wenn der Benutzer den nativen E-Mail-Client des Geräts anstelle von Outlook verwendet. Dies erfolgt für iOS/iPadOS- und Android Knox-Geräte automatisch.
 
 - Für Exchange lokal muss Ihr Intune Exchange Connector ordnungsgemäß konfiguriert sein. Weitere Informationen finden Sie unter [Problembehandlung für den Exchange Connector in Microsoft Intune](troubleshoot-exchange-connector.md).
 
@@ -94,7 +94,7 @@ Sie können diese Bedingungen für alle Geräte im Azure-Portal und im Gerätein
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Die Geräte sind nicht konform, aber Benutzer werden nicht blockiert
 
-- Bei Windows-PCs blockiert der bedingte Zugriff nur die native E-Mail-App, Office 2013 mit moderner Authentifizierung oder Office 2016. Zum Blockieren früherer Versionen von Outlook oder aller E-Mail-Apps auf Windows-PCs ist die Konfiguration der AAD-Geräteregistrierung und der Active Directory-Verbunddienste (AD FS) gemäß [Einrichten von SharePoint Online und Exchange Online für bedingten Zugriff mit Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication) erforderlich.
+- Bei Windows-PCs blockiert der bedingte Zugriff nur die native E-Mail-App, Office 2013 mit moderner Authentifizierung oder Office 2016. Zum Blockieren früherer Versionen von Outlook oder aller E-Mail-Apps auf Windows-PCs ist die Konfiguration der Azure AD Device Registration und der Active Directory-Verbunddienste (AD FS) erforderlich, wie unter [Einrichten von SharePoint Online und Exchange Online für bedingten Zugriff mit Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication) beschrieben.
 
 - Wenn das Gerät gezielt zurückgesetzt oder von Intune außer Betrieb gesetzt wird, hat es nach der Deaktivierung möglicherweise noch mehrere Stunden lang Zugriff. Dies liegt daran, dass Exchange die Zugriffsrechte sechs Stunden lang zwischenspeichert. Ziehen Sie in diesem Szenario andere Möglichkeiten zum Datenschutz auf abgekoppelten Geräten in Betracht.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2718c73cb34e01c84ef07d5085c698028ca285c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461996"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820322"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune Data Warehouse-Sammlungen
 
@@ -254,7 +254,8 @@ In der Entität **device** werden alle für die Verwaltung registrierten Geräte
 | PhoneNumber                | Telefonnummer des Geräts                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Mobilfunktechnologie des Geräts                                                                                                                                                    |
-| WiFiMacAddress             | WiFi-MAC                                                                                                                                                                              |
+| WiFiMacAddress             | WiFi-MAC-Adresse                                                                                                                                                                              |
+| windowsOsEdition             | Windows-Betriebssystemedition                                                                                                                                                                              |
 
 
 ## <a name="devicetypes"></a>deviceTypes
@@ -487,7 +488,7 @@ Die Entität **MamCheckin** stellt Daten dar, die gesammelt wurden, als eine MAM
 | mamApplicationKey |Anwendungsschlüssel der Anwendung, die dem Einchecken der MAM-Anwendung zugeordnet ist. | 432 |
 | DeviceHealthKey |Schlüssel von DeviceHealth, der diesem Eincheckvorgang der MAM-App zugeordnet wird | 321 |
 | PlatformKey |Stellt die Plattform des Geräts dar, die diesem Eincheckvorgang der MAM-App zugeordnet wird |123 |
-| LastCheckInDate |Datum und Uhrzeit, wann diese MAM-App zuletzt eingecheckt wurde. Der Wert kann NULL sein. |23.11.2016 12:00:00 |
+| LastCheckInDate |Datum und Uhrzeit, wann diese MAM-App zuletzt eingecheckt wurde. Der Wert kann NULL sein. |23.11.2016 12:00:00 Uhr |
 
 ## <a name="mamdevicehealths"></a>MamDeviceHealths
 

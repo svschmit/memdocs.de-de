@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252757"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663343"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurieren des lokalen Exchange-Zugriffs für Intune
 
@@ -59,7 +59,7 @@ Bevor Sie den bedingten Zugriff konfigurieren, überprüfen Sie, ob folgende Kon
   - Es muss bei Intune **registriert** sein oder sich um einen in die Domäne eingebundenen PC handeln.
   - **Es muss in Azure Active Directory registriert sein**. Darüber hinaus muss die Exchange ActiveSync-ID des Clients in Azure Active Directory registriert sein.
 
-- Der Azure AD Device Registration-Dienst wird automatisch für Intune und Office 365-Kunden aktiviert. Kunden, die den AD FS Device Registration Service bereitgestellt haben, sehen keine registrierten Geräte in ihrem lokalen Active Directory. **Dies gilt nicht für Windows-PCs und Windows Phone-Geräte.**
+- Der Azure AD Device Registration-Dienst wird automatisch für Intune und Office 365-Kunden aktiviert. Kunden, die den AD FS Device Registration Service bereitgestellt haben, sehen keine registrierten Geräte in ihrem lokalen Active Directory. **Dies gilt nicht für Windows-PCs und -Geräte.**
 
 - Es besteht **Konformität** mit allen für das Gerät festgelegten Konformitätsrichtlinien.
 
@@ -69,7 +69,6 @@ Bevor Sie den bedingten Zugriff konfigurieren, überprüfen Sie, ob folgende Kon
 
 ### <a name="support-for-mobile-devices"></a>Unterstützung für mobile Geräte
 
-- **Windows Phone**: Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
 - **Native E-Mail-App unter iOS/iPadOS:** Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
 - **EAS-E-Mail-Clients wie Gmail unter Android 4 oder höher:** Informationen zum Erstellen einer Richtlinie für bedingten Zugriff finden Sie unter [Erstellen von Richtlinien für bedingten Zugriff](../protect/create-conditional-access-intune.md).
 
