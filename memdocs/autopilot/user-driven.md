@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 09632eccf99774d4170fe60f51b6703cd8b90fed
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: f5299db1c151d3338fb2060246a7d07beb462779
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907918"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193652"
 ---
 # <a name="windows-autopilot-user-driven-mode"></a>Benutzergesteuerter Modus von Windows Autopilot
 
@@ -86,14 +86,15 @@ Für jedes Gerät, das über eine benutzergesteuerte Bereitstellung bereitgestel
 
 Windows Autopilot erfordert, dass Geräte Azure Active Directory verknüpft sind. Wenn Sie über eine lokale Active Directory Umgebung verfügen, können Sie Geräte zu Ihrer lokalen Domäne hinzufügen. Um den Geräten beizutreten, müssen Sie Autopilot-Geräte so konfigurieren, dass Sie [mit Azure Active Directory (Azure AD) Hybrid](/azure/active-directory/devices/hybrid-azuread-join-plan)verknüpft werden. 
 
-### <a name="requirements"></a>Requirements (Anforderungen)
+### <a name="requirements"></a>Anforderungen
 
 So führen Sie eine benutzergesteuerte Bereitstellung mit Hybrid Azure AD mithilfe von Windows Autopilot durch:
 
+- Auf dem Gerät muss Windows 10, Version 1809 oder höher, ausgeführt werden. 
 - Ein Windows Autopilot-Profil für den benutzergesteuerten Modus muss erstellt werden. 
  - **Azure AD Hybrid** verknüpft muss als die ausgewählte Option unter **Join to Azure AD as** in the Autopilot Profile angegeben werden.
 - Wenn Sie InTune verwenden, muss eine Gerätegruppe in Azure Active Directory mit dem Windows Autopilot-Profil vorhanden sein, das dieser Gruppe zugewiesen ist.
-- Auf dem Gerät muss Windows 10, Version 1809 oder höher, ausgeführt werden.
+- Wenn Sie InTune verwenden, erstellen Sie ein Domänen Beitritts Profil, und weisen Sie es zu Ein Konfigurations Profil für den Domänen Beitritt enthält Informationen zu lokalen Active Directory Domänen.
 - Das Gerät muss Zugriff auf einen Active Directory Domänen Controller haben. Es muss mit dem Netzwerk der Organisation verbunden sein. Sie muss in der Lage sein, die DNS-Einträge für die AD-Domäne und den AD-Domänen Controller aufzulösen. Sie muss in der Lage sein, mit dem Domänen Controller zu kommunizieren, um den Benutzer zu authentifizieren.
 - Das Gerät muss auf das Internet zugreifen können, und zwar gemäß den [dokumentierten Netzwerk Anforderungen für Windows Autopilot](networking-requirements.md).
 - Der InTune-Connector für Active Directory muss installiert sein.
@@ -109,7 +110,7 @@ Geräte, die mit Active Directory verknüpft sind, benötigen für viele Aktivit
 Durch das Hinzufügen von VPN-Unterstützung für dieses Szenario können Sie den Azure AD Hybrid Join Prozess so konfigurieren, dass die Konnektivitätsüberprüfung übersprungen wird. Dadurch entfällt die Notwendigkeit, mit einem Active Directory Domänen Controller zu kommunizieren. Um die Verbindung zum Unternehmensnetzwerk zuzulassen, stellt InTune stattdessen die erforderliche VPN-Konfiguration bereit, bevor der Benutzer versucht, sich bei Windows anzumelden. 
 
 
-### <a name="requirements"></a>Requirements (Anforderungen)
+### <a name="requirements"></a>Anforderungen
 
 Die folgenden zusätzlichen Anforderungen gelten für Azure AD Hybrid Join mit VPN-Unterstützung:
 
@@ -147,7 +148,7 @@ Bei VPN-Konfigurationen, die automatisch eine Verbindung herstellen, können sic
 > [!NOTE]
 > Always on-VPN kann für dieses Szenario verwendet werden. Weitere Informationen finden Sie in der Dokumentation zum Bereitstellen von [Always on-VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) . Beachten Sie, dass InTune das erforderliche Computer spezifische VPN-Profil noch nicht bereitstellen kann. 
 
-Stellen Sie sicher, dass das erforderliche kumulative Windows 10-Update unter Windows 10 1903 oder Windows 10 1909 installiert wurde, um den Prozess zu überprüfen. Sie können das Update während des OOBE-Vorgangs manuell installieren, indem Sie zuerst den aktuellen kumulativen aus herunterladen https://catalog.update.microsoft.com . Folgen Sie diesen Schritten:
+Stellen Sie sicher, dass das erforderliche kumulative Windows 10-Update unter Windows 10 1903 oder Windows 10 1909 installiert wurde, um den Prozess zu überprüfen. Sie können das Update während des OOBE-Vorgangs manuell installieren, indem Sie zuerst den aktuellen kumulativen aus herunterladen https://catalog.update.microsoft.com . Führen Sie die folgenden Schritte aus:
 
 1. Drücken Sie UMSCHALT + F10, um eine Eingabeaufforderung zu öffnen.
 2. Fügen Sie einen USB-Schlüssel mit dem heruntergeladenen Update ein.

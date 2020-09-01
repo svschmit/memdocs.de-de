@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b3f25f424857d99919450ec1426ee1023bae3aca
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0070492304fc75bf51b6eda929c274076c7b2452
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057372"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193814"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Hinzufügen von Geräten zu Windows Autopilot
 
@@ -130,10 +130,10 @@ Weitere Informationen zum Ausführen des Skripts finden Sie in der Hilfe zum [Ge
 
 Nachdem die hardwarehashes von vorhandenen Geräten erfasst wurden, können Sie mit einer der folgenden Methoden hochgeladen werden:
 
-- [Microsoft InTune](enrollment-autopilot.md) ist der bevorzugte Mechanismus für alle Kunden.
- - Das Microsoft Endpoint Manager Admin Center wird für die Intune-Geräteregistrierung verwendet.
-- [Partner Center](https://msdn.microsoft.com/partner-center/autopilot) wird von CSP-Partnern zum Registrieren von Geräten für Kunden verwendet.
-- [Microsoft 365 Business & Office 365 admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa) wird in der Regel von kleinen und mittelständischen Unternehmen (smsb) verwendet, die Ihre Geräte mit Microsoft 365 Business verwalten.
+- [Microsoft InTune](enrollment-autopilot.md). Dies ist der bevorzugte Mechanismus für alle Kunden.
+  - Das Microsoft Endpoint Manager Admin Center wird für die Intune-Geräteregistrierung verwendet.
+- [Partner Center](https://msdn.microsoft.com/partner-center/autopilot). Diese wird von CSP-Partnern zum Registrieren von Geräten im Auftrag von Kunden verwendet.
+- [Microsoft 365 Business & Office 365 admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). Dies wird in der Regel von kleinen und mittelständischen Unternehmen (smsb) verwendet, die Ihre Geräte mit Microsoft 365 Business verwalten.
 - [Microsoft Store für Unternehmen](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). Möglicherweise verwenden Sie msfb bereits zum Verwalten Ihrer Apps und Einstellungen.
 
 Unten finden Sie eine Übersicht über die Funktionen der einzelnen Plattformen.<br>
