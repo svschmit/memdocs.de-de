@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 0070492304fc75bf51b6eda929c274076c7b2452
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: da7ab26cc748b64426ec256a0814beae4ced1a5f
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193814"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89280932"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Hinzufügen von Geräten zu Windows Autopilot
 
@@ -92,7 +92,7 @@ Microsoft Endpoint Configuration Manager erfasst automatisch die hardwarehashes 
 
 ### <a name="collecting-the-hardware-hash-from-existing-devices-using-powershell"></a>Erfassen des Hardware Hashs von vorhandenen Geräten mithilfe von PowerShell
 
-Der Hardwarehash für ein vorhandenes Gerät steht über Windows-Verwaltungsinstrumentation (WMI) zur Verfügung, solange auf diesem Gerät eine unterstützte Version des halbjährlichen Kanals von Windows 10 ausgeführt wird. Sie können ein PowerShell-Skript verwenden ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) , um den Hardware Hash und die Seriennummer eines Geräts zu erhalten. Die Seriennummer ist hilfreich, um schnell festzustellen, zu welchem Gerät der Hardware Hash gehört.
+Der Hardwarehash für ein vorhandenes Gerät steht über Windows-Verwaltungsinstrumentation (WMI) zur Verfügung, solange auf diesem Gerät eine unterstützte Version des halbjährlichen Kanals von Windows 10 ausgeführt wird. Sie können ein PowerShell-Skript ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) verwenden, um den Hardware Hash und die Seriennummer eines Geräts zu erhalten. Die Seriennummer ist hilfreich, um schnell festzustellen, zu welchem Gerät der Hardware Hash gehört.
 
 Um dieses Skript zu verwenden, können Sie eine der folgenden Methoden verwenden:
 - Laden Sie Sie vom PowerShell-Katalog herunter, und führen Sie Sie auf jedem Computer aus.
