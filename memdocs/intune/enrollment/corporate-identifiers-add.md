@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e999cb66c42bd0e04c76cb13689122df187f2f6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 061ee72dfb473eef8e1373497ad6494fa0c3541c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252723"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912609"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifizieren von Geräten als unternehmenseigen
 
@@ -36,7 +36,7 @@ Bei der Registrierung weist Intune automatisch den Geräten, die eine der folgen
 - Mit einem [Geräteregistrierungs-Manager](device-enrollment-manager-enroll.md)-Konto registriert (alle Plattformen)
 - Mit dem [Apple-Programm zur Geräteregistrierung](device-enrollment-program-enroll-ios.md), dem [Apple School Manager](apple-school-manager-set-up-ios.md) oder dem [Apple Configurator](apple-configurator-enroll-ios.md) registriert (iOS-Geräte).
 - Mit einer IMEI-Nummer (alle Plattformen mit IMEI-Nummern) oder Seriennummer (iOS und Android) [vor der Registrierung als unternehmenseigen identifiziert](#identify-corporate-owned-devices-with-imei-or-serial-number)
-- Verknüpft mit Azure Active Directory mit Anmeldeinformationen für ein Geschäfts- oder Schulkonto. [Bei Azure Active Directory registrierte Geräte](https://docs.microsoft.com/azure/active-directory/devices/overview) werden als persönlich gekennzeichnet.
+- Verknüpft mit Azure Active Directory mit Anmeldeinformationen für ein Geschäfts- oder Schulkonto. [Bei Azure Active Directory registrierte Geräte](/azure/active-directory/devices/overview) werden als persönlich gekennzeichnet.
 - In den [Geräteeigenschaften](#change-device-ownership) als „Unternehmen“ festgelegt
 
 Nach der Registrierung können Sie in den [Besitzeinstellungen](#change-device-ownership) zwischen **Persönlich** und **Unternehmen** wechseln.

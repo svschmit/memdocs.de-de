@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d07b87bca934dac924f2d2c281ecb7b2a2e8a2c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a61e92265447f8ceced83d493b9397713b67dca6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989792"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909430"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Einrichten App-basierter Richtlinien für bedingten Zugriff mit Intune
 
@@ -32,7 +32,7 @@ Richten Sie die App-basierten Richtlinien für bedingten Zugriff für Apps ein, 
 Bevor Sie App-basierte Richtlinien für den bedingten Zugriff verwenden, müssen Sie Ihren Apps [Intune-App-Schutzrichtlinien](../apps/app-protection-policies.md) zugewiesen haben.
 
 > [!IMPORTANT]
-> In diesem Artikel werden die einzelnen Schritte erläutert, die notwendig sind, um eine einfache app-basierte Richtlinie für bedingten Zugriff hinzuzufügen. Sie können dieselben Schritte auch für andere Cloud-Apps verwenden. Weitere Informationen finden Sie unter [Anleitung: Planen Ihrer Bereitstellung für bedingten Zugriff in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access).
+> In diesem Artikel werden die einzelnen Schritte erläutert, die notwendig sind, um eine einfache app-basierte Richtlinie für bedingten Zugriff hinzuzufügen. Sie können dieselben Schritte auch für andere Cloud-Apps verwenden. Weitere Informationen finden Sie unter [Anleitung: Planen Ihrer Bereitstellung für bedingten Zugriff in Azure Active Directory](/azure/active-directory/conditional-access/plan-conditional-access).
 
 ## <a name="create-app-based-conditional-access-policies"></a>Erstellen App-basierter Richtlinien für bedingten Zugriff
 
@@ -72,4 +72,4 @@ Bevor Sie Richtlinien für den bedingten Zugriff über das Microsoft Endpoint Ma
 ## <a name="see-also"></a>Weitere Informationen:
 
 [Erstellen und Zuweisen von App-Schutzrichtlinien](../apps/app-protection-policies.md)
-[Bedingter Zugriff im klassischen Azure-Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
+[Bedingter Zugriff im klassischen Azure-Portal](/azure/active-directory/active-directory-conditional-access)

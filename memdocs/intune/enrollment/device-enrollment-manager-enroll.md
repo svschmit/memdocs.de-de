@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb5dec2fd96c5b5dfe0b82bb30bf653250786c95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f674cc7b0c7d7314c7152d530cff210319c568df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986761"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913136"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrieren von Geräten in Intune mithilfe eines Geräteregistrierungs-Manager-Kontos
 
@@ -49,7 +49,7 @@ DEM-Benutzerkonten und Geräte, die mit einem DEM-Benutzerkonto registriert werd
 
 Sie können die folgenden Methoden verwenden, um Geräte über DEM-Konten anzumelden:
 
-- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Massenregistrierung für Windows-Geräte](windows-bulk-enroll.md)
 - DEM-initiiert über Unternehmensportal
 
@@ -77,4 +77,3 @@ Wenn Sie einen Geräteregistrierungs-Manager entfernen, wirkt sich dies nicht au
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, und navigieren Sie zu **Geräte** > **Geräte registrieren** > **Geräteregistrierungs-Manager**.
 2. Wählen Sie auf dem Blatt **Geräteregistrierungs-Manager** den DEM-Benutzer aus, und klicken Sie auf **Löschen**.
-

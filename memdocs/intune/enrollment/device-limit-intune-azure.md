@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8610b619a4ac05f37b893060b3b3a2bcb1dae528
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 63c9d9e4752e4b0d317667162255e368fc5a099c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864853"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908553"
 ---
 # <a name="understand-intune-and-azure-ads-device-limit-restrictions"></a>Verstehen der Einschränkungen zum Gerätelimit in Intune und Azure AD
 
@@ -39,7 +39,7 @@ Die Einschränkungen zum Gerätelimit von Intune legen die maximale Anzahl von G
 
 ## <a name="azure-device-limit-restriction"></a>Einschränkung zum Gerätelimit in Azure
 
-Einschränkungen zum Gerätelimit in Azure legen die maximale Anzahl von Geräten fest, die in Azure AD eingebunden oder registriert werden können. Um die **maximale Anzahl von Geräten pro Benutzer** festzulegen, navigieren Sie zum Azure-Portal und dann zu **Azure Active Directory** > **Geräte**. Weitere Informationen finden Sie unter [Konfigurieren von Geräteeinstellungen](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal).
+Einschränkungen zum Gerätelimit in Azure legen die maximale Anzahl von Geräten fest, die in Azure AD eingebunden oder registriert werden können. Um die **maximale Anzahl von Geräten pro Benutzer** festzulegen, navigieren Sie zum Azure-Portal und dann zu **Azure Active Directory** > **Geräte**. Weitere Informationen finden Sie unter [Konfigurieren von Geräteeinstellungen](/azure/active-directory/devices/device-management-azure-portal).
 
 ## <a name="settings-applied-based-on-user-affinity"></a>Auf Grundlage von Benutzeraffinität angewendete Einstellungen
 
@@ -114,6 +114,6 @@ Für die Einschränkungen des Gerätelimits in Azure gilt die Einstellung **Maxi
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Erstellen einer Gerätelimiteinschränkung in Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
+- [Erstellen einer Gerätelimiteinschränkung in Azure.](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Konfigurieren von Geräteeinstellungen in Azure.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [Weitere Informationen zur Registrierung und zum Domänenbeitritt.](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)
+- [Weitere Informationen zur Registrierung und zum Domänenbeitritt.](/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

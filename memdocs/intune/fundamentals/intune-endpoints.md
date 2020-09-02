@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9586b27ce5040eb683fa22510c7c9a51aeee1d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 0206af58be08130e67907bad18d7afa10e236d44
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262539"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912405"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Netzwerkendpunkte für Microsoft Intune  
 
@@ -91,7 +91,7 @@ Wenn Sie Intune zum Bereitstellen von PowerShell-Skripts oder Win32-Apps verwend
 
 ## <a name="windows-push-notification-services-wns"></a>Windows-Pushbenachrichtigungsdienste (WNS)  
 
-Bei von Intune verwalteten Windows-Geräten, die mithilfe von mobiler Geräteverwaltung (Mobile Device Management, MDM) verwaltet werden, müssen für Geräteaktionen und andere sofortige Aktivitäten die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS) verwendet werden. Weitere Informationen finden Sie unter [Zulassen von Windows Notification-Datenverkehr durch Unternehmensfirewalls](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
+Bei von Intune verwalteten Windows-Geräten, die mithilfe von mobiler Geräteverwaltung (Mobile Device Management, MDM) verwaltet werden, müssen für Geräteaktionen und andere sofortige Aktivitäten die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS) verwendet werden. Weitere Informationen finden Sie unter [Zulassen von Windows Notification-Datenverkehr durch Unternehmensfirewalls](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
 
 ## <a name="delivery-optimization-port-requirements"></a>Übermittlungsoptimierung bei Portanforderungen  
 
@@ -101,7 +101,7 @@ Bei Peer-zu-Peer-Datenverkehr verwendet die Übermittlungsoptimierung 7680 für 
 
 ### <a name="proxy-requirements"></a>Proxyanforderungen  
 
-Um die Übermittlungsoptimierung nutzen zu können, müssen Sie Bytebereichsanforderungen zulassen. Weitere Informationen finden Sie unter [Proxyanforderungen für Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
+Um die Übermittlungsoptimierung nutzen zu können, müssen Sie Bytebereichsanforderungen zulassen. Weitere Informationen finden Sie unter [Proxyanforderungen für Windows Update](/windows/deployment/update/windows-update-troubleshooting).
 
 ### <a name="firewall-requirements"></a>Firewallanforderungen  
 
@@ -125,10 +125,10 @@ Weitere Informationen finden Sie in den Apple-Artikeln [Von Apple-Softwareproduk
 
 ## <a name="android-port-information"></a>Android-Portinformationen
 
-Je nachdem, wie Sie Android-Geräte verwalten möchten, müssen Sie möglicherweise Google Android Enterprise-Ports öffnen und/oder Android-Pushbenachrichtigungen aktivieren. Weitere Informationen zu den unterstützten Verwaltungsmethoden für Android finden Sie in der [Dokumentation zur Android-Registrierung](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
+Je nachdem, wie Sie Android-Geräte verwalten möchten, müssen Sie möglicherweise Google Android Enterprise-Ports öffnen und/oder Android-Pushbenachrichtigungen aktivieren. Weitere Informationen zu den unterstützten Verwaltungsmethoden für Android finden Sie in der [Dokumentation zur Android-Registrierung](../enrollment/android-enroll.md). 
 
 > [!NOTE]
-> Da Google Mobile Services in China nicht verfügbar ist, können von Intune verwaltete Geräte in China keine Features nutzen, die Google Mobile Services erfordern. Zu diesen Funktionen gehören: Google Play Protect-Funktionen wie der SafetyNet-Gerätenachweis, die Verwaltung von Apps über den Google Play Store und Android Enterprise-Funktionen (siehe diese [Google-Dokumentation](https://support.google.com/work/android/answer/6270910)). Darüber hinaus erfolgt die Kommunikation mit dem Microsoft Intune-Dienst in der Intune Unternehmensportal-App für Android über Google Mobile Services. Da Google Play-Dienste in China nicht verfügbar sind, kann es bis zu 8 Stunden dauern, bis einige Aufgaben abgeschlossen sind. Weitere Informationen finden Sie in [diesem Artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+> Da Google Mobile Services in China nicht verfügbar ist, können von Intune verwaltete Geräte in China keine Features nutzen, die Google Mobile Services erfordern. Zu diesen Funktionen gehören: Google Play Protect-Funktionen wie der SafetyNet-Gerätenachweis, die Verwaltung von Apps über den Google Play Store und Android Enterprise-Funktionen (siehe diese [Google-Dokumentation](https://support.google.com/work/android/answer/6270910)). Darüber hinaus erfolgt die Kommunikation mit dem Microsoft Intune-Dienst in der Intune Unternehmensportal-App für Android über Google Mobile Services. Da Google Play-Dienste in China nicht verfügbar sind, kann es bis zu 8 Stunden dauern, bis einige Aufgaben abgeschlossen sind. Weitere Informationen finden Sie in [diesem Artikel](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -140,4 +140,4 @@ Intune nutzt Google Firebase Cloud Messaging (FCM) für Pushbenachrichtigungen, 
 
 ## <a name="endpoint-analytics"></a>Endpunktanalyse
 
-Weitere Informationen zu den erforderlichen Endpunkten für die Endpunktanalyse finden Sie unter [Proxykonfiguration](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).
+Weitere Informationen zu den erforderlichen Endpunkten für die Endpunktanalyse finden Sie unter [Proxykonfiguration](../../analytics/troubleshoot.md#bkmk_endpoints).

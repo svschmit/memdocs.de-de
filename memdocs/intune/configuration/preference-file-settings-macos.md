@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 478cce186d5f2943aeb5730acf90c3e875c8b687
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988671"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915312"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Hinzufügen einer Eigenschaftenlistendatei zu macOS-Geräten mit Microsoft Intune
 
@@ -66,7 +66,7 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 
     - **Name der bevorzugten Domäne:** Geben Sie die Bundle-ID ein, z. B. `com.company.application`. Geben Sie beispielsweise `com.Contoso.applicationName`, `com.Microsoft.Edge` oder `com.microsoft.wdav` ein.
 
-      Eigenschaftenlistendateien werden üblicherweise für Webbrowser (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) und benutzerdefinierte Apps verwendet. Wenn Sie eine bevorzugte Domäne erstellen, wird auch eine Bundle-ID erstellt.
+      Eigenschaftenlistendateien werden üblicherweise für Webbrowser (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) und benutzerdefinierte Apps verwendet. Wenn Sie eine bevorzugte Domäne erstellen, wird auch eine Bundle-ID erstellt.
 
     - **Datei mit Eigenschaftenliste:** Wählen Sie die mit Ihrer App verknüpfte Eigenschaftenlistendatei aus. Stellen Sie sicher, dass es sich dabei um eine `.plist`- oder `.xml`-Datei handelt. Laden Sie z. B. eine Datei mit dem Namen `YourApp-Manifest.plist` oder `YourApp-Manifest.xml` hoch.
 
@@ -97,4 +97,4 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
 
 [Zuweisen von Profilen](device-profile-assign.md) und [Überwachen von Profilen](device-profile-monitor.md)
 
-Weitere Informationen zu Einstellungsdateien für Microsoft Edge finden Sie unter [Konfigurieren der Microsoft Edge-Richtlinieneinstellungen für macOS mithilfe einer Eigenschaftsliste (.plist)](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
+Weitere Informationen zu Einstellungsdateien für Microsoft Edge finden Sie unter [Konfigurieren der Microsoft Edge-Richtlinieneinstellungen für macOS mithilfe einer Eigenschaftsliste (.plist)](/deployedge/configure-microsoft-edge-on-mac).

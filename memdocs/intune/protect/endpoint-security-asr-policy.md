@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 20c8cc73e8037c0f394547b64d562cf75271240c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 6d94748356b342fe6dc9498d815edbdb92038af3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431448"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913493"
 ---
 # <a name="attack-surface-reduction-policy-for-endpoint-security-in-intune"></a>Richtlinie zur Verringerung der Angriffsfläche für Endpunktsicherheit in Intune
 
 Wenn Defender Antivirus auf Ihren Windows 10-Geräten verwendet wird, können Sie Endpunktsicherheitsrichtlinien von Intune für die Verringerung der Angriffsfläche verwenden, um diese Einstellungen für Ihre Geräte zu verwalten.
 
-Mithilfe von Richtlinien zur Verringerung der Angriffsfläche können Sie die Angriffsflächen verringern, indem Sie die Stellen minimieren, an denen Ihre Organisation anfällig für Cyberbedrohungen und Angriffe ist. Weitere Informationen finden Sie unter [Übersicht über die Verringerung der Angriffsfläche]( https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in der Dokumentation zu Windows Threat Protection.
+Mithilfe von Richtlinien zur Verringerung der Angriffsfläche können Sie die Angriffsflächen verringern, indem Sie die Stellen minimieren, an denen Ihre Organisation anfällig für Cyberbedrohungen und Angriffe ist. Weitere Informationen finden Sie unter [Übersicht über die Verringerung der Angriffsfläche]( /windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in der Dokumentation zu Windows Threat Protection.
 
 Die Endpunktsicherheitsrichtlinien für die Verringerung der Angriffsfläche finden Sie unter *Verwalten* im Knoten **Endpunktsicherheit** des [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). Jedes *Profil* für die Verringerung der Angriffsfläche verwaltet Einstellungen für einen bestimmten Bereich eines Windows 10-Geräts.
 
@@ -44,7 +44,7 @@ Zeigen Sie [Profileinstellungen für die Verringerung der Angriffsfläche](../pr
 
 - **App- und Browserisolation**: Verwalten von Einstellungen für Windows Defender Application Guard (Application Guard) als Teil von Defender ATP. Mithilfe von Application Guard können Sie alte und neu aufkommende Angriffe verhindern und vom Unternehmen definierte Websites als nicht vertrauenswürdig isolieren, während Sie definieren, welche Websites, Cloudressourcen und interne Netzwerke vertrauenswürdig sind.
 
-  Weitere Informationen finden Sie unter [Application Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) in der Dokumentation zu Microsoft Defender ATP.
+  Weitere Informationen finden Sie unter [Application Guard](/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) in der Dokumentation zu Microsoft Defender ATP.
 
 - **Webschutz**: Einstellungen, die Sie für den Webschutz in Microsoft Defender ATP verwalten können, konfigurieren Netzwerkschutz, um Ihre Computer vor Bedrohungen aus dem Web zu schützen. Durch Integration in Microsoft Edge und beliebte Browser von Drittanbietern wie Chrome und Firefox geht der Webschutz gegen Bedrohungen aus dem Web ohne einen Webproxy vor und kann Computer schützen, wenn Sie remote oder lokal verwendet werden. Der Webschutz beendet den Zugriff auf:
   - Phishingwebsites
@@ -53,26 +53,26 @@ Zeigen Sie [Profileinstellungen für die Verringerung der Angriffsfläche](../pr
   - Nicht vertrauenswürdige Websites oder Websites, die nur wenig vertrauenswürdig sind
   - Websites, die Sie in Ihrer benutzerdefinierten Indikatorliste blockiert haben.
 
-  Weitere Informationen finden Sie unter [Webschutz](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) in der Dokumentation zu Microsoft Defender ATP.
+  Weitere Informationen finden Sie unter [Webschutz](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) in der Dokumentation zu Microsoft Defender ATP.
 
 - **Anwendungssteuerung**: Anwendungssteuerungseinstellungen können dabei helfen, Sicherheitsbedrohungen zu mindern, indem sie die Anwendungen einschränken, die Benutzer ausführen können, sowie den Code, der im Systemkern (Kernel) ausgeführt wird. Verwalten Sie Einstellungen, mit denen nicht signierte Skripts und MSIs blockiert werden können, und schränken Sie die Ausführung von Windows PowerShell auf den Modus mit eingeschränkter Sprache ein.
 
-  Weitere Informationen finden Sie unter [Anwendungssteuerung](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in der Dokumentation zu Microsoft Defender ATP.
+  Weitere Informationen finden Sie unter [Anwendungssteuerung](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in der Dokumentation zu Microsoft Defender ATP.
 
 - **Regeln zur Verringerung der Angriffsfläche**: Konfigurieren Sie Einstellungen für Regeln zur Verringerung der Angriffsfläche, die auf Verhalten abzielen, das Schadsoftware und böswillige Apps üblicherweise zum Infizieren von Computern verwenden, beispielsweise:
   - Ausführbare Dateien und Skripts, die in Office-Apps oder Web-E-Mail zum Herunterladen oder Ausführen von Dateien verwendet werden.
   - Verborgene oder anderweitig verdächtige Skripts.
   - Verhalten, das Apps in der Regel nicht bei der täglichen Arbeit zeigen. Das Verringern der Angriffsfläche bedeutet, dass Angreifern weniger Möglichkeiten zum Durchführen von Angriffen geboten werden.
 
-  Weitere Informationen finden Sie unter [Regeln zum Verringern der Angriffsfläche](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in der Dokumentation zu Microsoft Defender ATP.
+  Weitere Informationen finden Sie unter [Regeln zum Verringern der Angriffsfläche](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in der Dokumentation zu Microsoft Defender ATP.
 
 - **Gerätesteuerung**: Mit Einstellungen für die Gerätesteuerung können Sie Geräte für einen mehrstufigen Ansatz zum Sichern von Wechselmedien konfigurieren. Microsoft Defender ATP bietet mehrere Überwachungs- und Steuerungsfeatures, mit denen Sie eine Gefährdung Ihrer Geräte durch Bedrohungen in nicht autorisierten Peripheriegeräten verhindern können.
 
-  Weitere Informationen finden Sie unter [Steuern von USB-Geräten und anderen Wechselmedien mithilfe von Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in der Dokumentation zu Microsoft Defender ATP.
+  Weitere Informationen finden Sie unter [Steuern von USB-Geräten und anderen Wechselmedien mithilfe von Microsoft Defender ATP](/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in der Dokumentation zu Microsoft Defender ATP.
 
 - **Schutz vor Exploits**: Exploit-Schutzeinstellungen können Schutz vor Schadsoftware bieten, die Exploits verwendet, um Geräte zu infizieren und Schadsoftware zu verteilen. Der Exploit-Schutz besteht aus einer Reihe von Entschärfungen, die entweder auf das Betriebssystem oder auf einzelne Apps angewendet werden können.
 
-  Weitere Informationen finden Sie unter [Aktivieren von Schutz vor Exploits](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) in der Dokumentation zu Microsoft Defender ATP.
+  Weitere Informationen finden Sie unter [Aktivieren von Schutz vor Exploits](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) in der Dokumentation zu Microsoft Defender ATP.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

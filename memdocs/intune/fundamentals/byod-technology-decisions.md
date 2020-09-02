@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: b4523db7f2c7bb27542e7cb3e909ece7c93a996f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455241"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915414"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Technologieentscheidungen zur Ermöglichung von BYOD mit Microsoft Enterprise Mobility + Security (EMS)
 
@@ -33,7 +33,7 @@ In diesem Thema untersuchen wir den einfachen Anwendungsfall, BYOD-Zugriff auf U
 * Ihre E-Mail-Konten werden in Exchange Online gehostet.
 
 ## <a name="common-reasons-to-manage-the-device-mdm"></a>Häufige Gründe für die Verwaltung von Geräten (MDM)
-Sie können Benutzer ganz einfach dazu bringen, ihre Geräte bei der Geräteverwaltung zu registrieren, indem Sie eine [Richtlinie für bedingten Zugriff](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) in Exchange Online bereitstellen. Im Folgenden werden die Gründe aufgeführt, warum sich die Verwaltung persönlicher Geräte empfiehlt:
+Sie können Benutzer ganz einfach dazu bringen, ihre Geräte bei der Geräteverwaltung zu registrieren, indem Sie eine [Richtlinie für bedingten Zugriff](/azure/active-directory/active-directory-conditional-access-azure-portal) in Exchange Online bereitstellen. Im Folgenden werden die Gründe aufgeführt, warum sich die Verwaltung persönlicher Geräte empfiehlt:
 
 **WLAN/VPN** – Wenn Ihre Benutzer zur Produktivitätssteigerung ein Unternehmenskonnektivitätsprofil benötigen, so kann dieses nahtlos konfiguriert werden.
 

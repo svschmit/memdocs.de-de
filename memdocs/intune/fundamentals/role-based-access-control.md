@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0a0b1913b200c8316be98cc7df5de4b8d63d0d18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80220165"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911436"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Rollenbasierte Zugriffssteuerung für Microsoft Intune
 
@@ -48,8 +48,8 @@ Sie können Gruppen ohne weitere Konfiguration integrierte Rollen zuweisen. Sie 
 
 - **Helpdesk-Operator**: Führt Remoteaufgaben für Benutzer und Geräte durch und kann Anwendungen oder Richtlinien Benutzern oder Geräten zuweisen.
 - **Richtlinien- und Profil-Manager**: Verwaltet Konformitätsrichtlinien, Konfigurationsprofile, die Apple-Registrierung, unternehmensbezogene Geräte-IDs und Sicherheitsbaselines.
-- **Schreibgeschützter Operator**: Kann Benutzer-, Geräte-, Registrierungs-, Konfigurations- und Anwendungsinformationen anzeigen. Kann keine Änderungen in Intune vornehmen.
-- **Anwendungs-Manager**: Verwaltet mobile und verwaltete Anwendungen und kann Geräteinformationen lesen sowie Gerätekonfigurationsprofile anzeigen.
+- **Operator mit beschränkter Leseberechtigung**: Kann Benutzer-, Geräte-, Registrierungs-, Konfigurations- und Anwendungsinformationen anzeigen. Kann keine Änderungen in Intune vornehmen.
+- **Anwendungs-Manager:** Verwaltet mobile und verwaltete Anwendungen und kann Geräteinformationen lesen sowie Gerätekonfigurationsprofile anzeigen.
 - **Intune-Rollenadministrator**: Verwaltet benutzerdefinierte Intune-Rollen und fügt integrierten Intune-Rollen Aufgaben hinzu. Dies ist die einzige Intune-Rolle, die Administratoren Berechtigungen zuweisen kann.
 - **Schuladministrator**: Verwaltet Windows 10-Geräte in [Intune for Education](introduction-intune-education.md).
 - **Endpunktsicherheits-Manager**: Verwaltet Sicherheits- und Konformitätsfeatures, wie z. B. Sicherheitsbaselines, Gerätekonformität, bedingter Zugriff und Microsoft Defender ATP.
@@ -60,18 +60,18 @@ Sie können mithilfe von benutzerdefinierten Berechtigungen Ihre eigenen Rollen 
 ### <a name="azure-active-directory-roles-with-intune-access"></a>Azure Active Directory-Rollen mit Zugriff auf Intune
 | Azure Active Directory-Rolle | Alle Intune-Daten | Intune-Überwachungsdaten |
 | --- | :---: | :---: |
-| Globaler Administrator | Lesen + Schreiben | Lesen + Schreiben |
-| Intune-Dienstadministrator | Lesen + Schreiben | Lesen + Schreiben |
-| Administrator für bedingten Zugriff | Keine | Keine |
+| Globaler Administrator | Lesen/Schreiben | Lesen/Schreiben |
+| Intune-Dienstadministrator | Lesen/Schreiben | Lesen/Schreiben |
+| Administrator für den bedingten Zugriff | Keine | Keine |
 | Sicherheitsadministrator | Schreibgeschützt (vollständige Administratorberechtigungen für den Endpunkt-Sicherheitsknoten) | Schreibgeschützt |
 | Sicherheitsoperator | Schreibgeschützt | Schreibgeschützt |
 | Sicherheitsleseberechtigter | Schreibgeschützt | Schreibgeschützt |
 | Complianceadministrator | Keine | Schreibgeschützt |
-| Administrator für Konformitätsdaten | Keine | Schreibgeschützt |
-| Globaler Leser | Schreibgeschützt | Schreibgeschützt |
+| Compliancedatenadministrator | Keine | Schreibgeschützt |
+| Globaler Leser | Nur Leseberechtigung | Nur Leseberechtigung |
 
 > [!TIP]
-> Intune zeigt außerdem drei Azure AD-Erweiterungen an: **Benutzer**, **Gruppen** und **Bedingter Zugriff**, die mithilfe der rollenbasierten Zugriffssteuerung von Azure AD gesteuert werden. Darüber hinaus führt der **Benutzerkontoadministrator** lediglich auf AAD-Benutzer- und Gruppen bezogene Aktivitäten aus und verfügt nicht über Vollzugriffsberechtigungen zum Ausführen aller Aktivitäten in Intune. Weitere Informationen finden Sie unter [Berechtigungen der Administratorrolle in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
+> Intune zeigt außerdem drei Azure AD-Erweiterungen an: **Benutzer**, **Gruppen** und **Bedingter Zugriff**, die mithilfe der rollenbasierten Zugriffssteuerung von Azure AD gesteuert werden. Darüber hinaus führt der **Benutzerkontoadministrator** lediglich auf AAD-Benutzer- und Gruppen bezogene Aktivitäten aus und verfügt nicht über Vollzugriffsberechtigungen zum Ausführen aller Aktivitäten in Intune. Weitere Informationen finden Sie unter [Berechtigungen der Administratorrolle in Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles).
 
 ## <a name="role-assignments"></a>Rollenzuweisungen
 Eine Rollenzuweisung definiert Folgendes:
@@ -96,5 +96,5 @@ Hat ein Benutzer mehrere Rollenzuweisungen, Berechtigungen und Bereichsmarkierun
 - Berechtigungen und Bereichsmarkierungen für Objekte anderer Typen (etwa Richtlinien oder Apps) gelten nicht gegenseitig. Eine Leseberechtigung für eine Richtlinie umfasst beispielsweise keine Leseberechtigung für Apps in den Zuweisungen des Benutzers.
 
 ## <a name="next-steps"></a>Nächste Schritte
-- [Assign a role to a user (Zuweisen einer Rolle an einen Benutzer)](assign-role.md)
-- [Create a custom role (Erstellen einer benutzerdefinierten Rolle)](create-custom-role.md)
+- [Zuweisen einer Rolle zu einem Benutzer](assign-role.md)
+- [Erstellen einer benutzerdefinierten Rolle](create-custom-role.md)

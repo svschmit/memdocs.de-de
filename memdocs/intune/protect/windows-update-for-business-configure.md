@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b8d6bb9e69831d2804d93d3694671f8dd27da305
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252570"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915975"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Verwalten von Windows 10-Softwareupdates in Intune
 
@@ -38,7 +38,7 @@ Intune stellt die folgenden Richtlinientypen zum Verwalten von Updates bereit:
 
 Weisen Sie Gerätegruppen Richtlinien für Windows 10-Updateringe und Windows 10-Featureupdates zu. Sie können beide Richtlinientypen in der gleichen Intune-Umgebung verwenden, um Softwareupdates für Ihre Windows 10-Geräte zu verwalten und eine auf Ihre Geschäftsanforderungen ausgerichtete Updatestrategie zu erstellen.
 
-Weitere Informationen finden Sie unter [Verwalten von Updates mit Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
+Weitere Informationen finden Sie unter [Verwalten von Updates mit Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -182,7 +182,7 @@ Beachten Sie bei der Deinstallation Folgendes:
 
   Stellen Sie sich beispielsweise einen Updatering mit einer Deinstallationsfrist von 20 Tagen vor. Nach 25 Tagen beschließen Sie, ein Rollback des letzten Featureupdates durchzuführen und die Option „Deinstallieren“ zu verwenden.  Geräte, die das Featureupdate vor mehr als 20 Tagen installiert haben, können es nicht deinstallieren, da sie die erforderlichen Bits im Rahmen ihrer Wartung entfernt haben. Auf Geräten, auf denen das Featureupdate erst vor 19 Tagen installiert wurde, kann das Update jedoch deinstalliert werden, wenn sie erfolgreich eingecheckt werden, um den Deinstallationsbefehl zu erhalten, bevor die 20-tägige Deinstallationsfrist abläuft.
 
-Weitere Informationen zu den Windows Update-Richtlinien finden Sie unter [Update CSP (Update-Konfigurationsdienstanbieter)](https://docs.microsoft.com/windows/client-management/mdm/update-csp) in der Dokumentation zur Verwaltung von Windows-Clients.
+Weitere Informationen zu den Windows Update-Richtlinien finden Sie unter [Update CSP (Update-Konfigurationsdienstanbieter)](/windows/client-management/mdm/update-csp) in der Dokumentation zur Verwaltung von Windows-Clients.
 
 ##### <a name="to-uninstall-the-latest-windows-10-update"></a>So deinstallieren Sie das aktuelle Windows 10-Update
 
@@ -247,7 +247,7 @@ In diesem Bereich können Sie folgende Aktionen ausführen:
 
 ## <a name="validation-and-reporting-for-windows-10-updates"></a>Validierung und Berichterstellung für Windows 10-Updates
 
-Verwenden Sie für Windows 10-Update Ringe und Windows 10-Featureupdates [Berichte zur Updatekonformität für Intune](windows-update-compliance-reports.md), um den Updatestatus von Geräten zu überwachen. Diese Lösung verwendet [Updatekonformität](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) mit Ihrem Azure-Abonnement.
+Verwenden Sie für Windows 10-Update Ringe und Windows 10-Featureupdates [Berichte zur Updatekonformität für Intune](windows-update-compliance-reports.md), um den Updatestatus von Geräten zu überwachen. Diese Lösung verwendet [Updatekonformität](/windows/deployment/update/update-compliance-monitor) mit Ihrem Azure-Abonnement.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdfa6a47bb96f40ea51802a06028afab2548c8b3
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: d9fefbdac81f04cbbe3e3580d9bff6cf72ae60da
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165667"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911708"
 ---
 # <a name="microsoft-intune-data-warehouse-api"></a>Microsoft Intune-Data Warehouse-API
 
@@ -66,8 +66,8 @@ OData definiert ein abstraktes Datenmodell und ein Protokoll, mit denen alle Cli
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erfahren Sie mehr über die Arbeit mit Azure AD unter [Authentifizierungsszenarios für Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+Erfahren Sie mehr über die Arbeit mit Azure AD unter [Authentifizierungsszenarios für Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 OData-Ressourcen finden Sie unter [odata.org](https://www.odata.org).
   
-Überprüfen Sie die Standardversion 4.0 von OData unter [OData Version 4.0] https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  
+Überprüfen Sie die Standardversion 4.0 von OData unter [OData Version 4.0] https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)

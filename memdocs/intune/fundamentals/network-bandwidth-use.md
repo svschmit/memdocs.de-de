@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: c99300e1c29aa7d3ec7519727dd6d12527626bfa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943840"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911487"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Anforderungen und Bandbreite an die Intune-Netzwerkkonfiguration
 
@@ -79,7 +79,7 @@ Informationen zur Verwendung eines Proxyservers zum Zwischenspeichern von Inhalt
 
 Dank der Übermittlungsoptimierung können Sie Intune verwenden, um die Bandbreitennutzung zu reduzieren, wenn Ihre Windows 10-Geräte Anwendungen und Updates herunterladen. Durch einen sich selbst organisierenden, verteilten Cache können Downloads per Pull von herkömmlichen Servern und alternativen Quellen (wie z. B. Netzwerkpeers) abgerufen werden.
 
-Die vollständige Liste aller Windows 10-Versionen und Inhaltstypen, die von der Übermittlungsoptimierung unterstützt werden, finden Sie im Artikel [Übermittlungsoptimierung für Windows 10-Updates](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
+Die vollständige Liste aller Windows 10-Versionen und Inhaltstypen, die von der Übermittlungsoptimierung unterstützt werden, finden Sie im Artikel [Übermittlungsoptimierung für Windows 10-Updates](/windows/deployment/update/waas-delivery-optimization#requirements).
 
 Sie können die [Übermittlungsoptimierung](../configuration/delivery-optimization-settings.md) im Rahmen Ihrer Gerätekonfigurationsprofile einrichten.
 
@@ -95,7 +95,7 @@ Sie können in einem in Ihnen festgelegten Zeitraum den BITS auf einem Windows-C
 > [!NOTE]
 > Für die mobile Geräteverwaltung unter Windows verwendet nur die Verwaltungsschnittstelle des Betriebssystems für den App-Typ MobileMSI den BITS zum Download. AppX/MsiX verwenden ihren eigenen Nicht-BITS-Downloadstapel, und Win32-Apps verwenden die Übermittlungsoptimierung statt des BITS über den Intune-Agent.
 
-Weitere Informationen zu BITS und Windows-Computern finden Sie unter [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) in der TechNet-Bibliothek.
+Weitere Informationen zu BITS und Windows-Computern finden Sie unter [Background Intelligent Transfer Service](/windows/win32/bits/background-intelligent-transfer-service-portal) in der TechNet-Bibliothek.
 
 
 #### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>Verwenden von BranchCache auf Computern (erfordert den Intune-Softwareclient)
@@ -111,7 +111,7 @@ Zum Verwenden von BranchCache muss BranchCache auf dem Clientcomputer aktiviert 
 
 Standardmäßig werden BranchCache und der Modus „Verteilter Cache“ auf Computern aktiviert, wenn der Intune-Client installiert wird. Wenn jedoch die Gruppenrichtlinie BranchCache deaktiviert, setzt Intune diese Richtlinie nicht außer Kraft, und BranchCache bleibt deaktiviert.
 
-Wenn Sie BranchCache verwenden, arbeiten Sie mit den Administratoren in Ihrer Organisation, um die Gruppenrichtlinien und die Intune-Firewallrichtlinie zu verwalten. Stellen Sie sicher, dass sie keine Richtlinien bereitstellen, von denen BranchCache oder Firewall-Ausnahmen deaktiviert werden. Weitere Informationen zu BranchCache finden Sie unter [BranchCache: Übersicht](https://technet.microsoft.com/library/hh831696.aspx).
+Wenn Sie BranchCache verwenden, arbeiten Sie mit den Administratoren in Ihrer Organisation, um die Gruppenrichtlinien und die Intune-Firewallrichtlinie zu verwalten. Stellen Sie sicher, dass sie keine Richtlinien bereitstellen, von denen BranchCache oder Firewall-Ausnahmen deaktiviert werden. Weitere Informationen zu BranchCache finden Sie unter [BranchCache: Übersicht](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11)).
 
 
 ## <a name="next-steps"></a>Nächste Schritte

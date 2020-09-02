@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 42bcbcdbc6cc6f3256ece2f24114f2d2a52083ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048156"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915006"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Updates der Benutzeroberfläche für Endbenutzer-Apps in Intune
 
@@ -32,7 +32,7 @@ Lernen Sie die neuesten Updates für die Microsoft Intune-Apps kennen. Wir verbe
 * Benachrichtigen von Kursteilnehmern und Mitarbeitern über Änderungen bei App und Registrierung.
 * Aktualisieren der Dokumentation oder Helpdesk-Abläufe Ihrer Organisation.  
 
-Wenn Sie ein Mitarbeiter oder Kursteilnehmer sind, sollten Sie sich die Screenshots und Links zur Hilfedokumentation für das Unternehmensportal ansehen. Weitere Informationen zur Benutzung der Unternehmensportal-App finden Sie in der [Benutzerhilfe-Dokumentation für das Unternehmensportal](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
+Wenn Sie ein Mitarbeiter oder Kursteilnehmer sind, sollten Sie sich die Screenshots und Links zur Hilfedokumentation für das Unternehmensportal ansehen. Weitere Informationen zur Benutzung der Unternehmensportal-App finden Sie in der [Benutzerhilfe-Dokumentation für das Unternehmensportal](../user-help/use-managed-devices-to-get-work-done.md).  
 
 ## <a name="week-of-august-10-2020"></a>Woche vom 10. August 2020
 
@@ -193,7 +193,7 @@ Die Anzeigen und Schritte bei der Registrierung im Unternehmensportal für iOS w
 * Öffnen der App „Settings“ (Einstellungen), um das Verwaltungsprofil auf dem Gerät zu installieren.  
 * Rückkehr zur Unternehmensportal-App, um die Registrierung abzuschließen.  
 
-Die aktualisierten Registrierungsschritte und -anzeigen finden Sie unter [Enroll iOS device in Intune (Registrieren eines iOS-Geräts in Intune)](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
+Die aktualisierten Registrierungsschritte und -anzeigen finden Sie unter [Enroll iOS device in Intune (Registrieren eines iOS-Geräts in Intune)](../user-help/enroll-your-device-in-intune-ios.md).  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Update für die Benutzeroberfläche für die Unternehmensportal-App für iOS <!-- 2536024 -->
 Die Startseite der Unternehmensportal-App für iOS-Geräte wurde neu gestaltet. Sie entspricht nun mehr dem Muster der iOS-Benutzeroberfläche, und zudem können Apps und E-Books besser gefunden werden.  
@@ -217,7 +217,7 @@ Als Microsoft Intune-Administrator können Sie ein benutzerdefiniertes Markenbil
 ## <a name="week-of-august-27-2018"></a>Woche vom 27. August 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Neues Update für die Benutzeroberfläche für die Unternehmensportal-Website <!--2000968 -->  
-Die Unternehmensportalwebsite wurde auf der Grundlage von Kundenfeedback um neue Features ergänzt. Sie werden eine erhebliche Verbesserung der vorhandenen Funktionen und Benutzerfreundlichkeit Ihrer Geräte feststellen können. Bestimmte Bereiche der Website wie Gerätedetails, Feedback und Support sowie die Geräteübersicht wurden mit einem neuen, modernen und dynamischen Design ausgestattet. Die [Dokumentation zur Intune-Unternehmensportalwebsite](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) wurde entsprechend dieser Änderungen aktualisiert.   
+Die Unternehmensportalwebsite wurde auf der Grundlage von Kundenfeedback um neue Features ergänzt. Sie werden eine erhebliche Verbesserung der vorhandenen Funktionen und Benutzerfreundlichkeit Ihrer Geräte feststellen können. Bestimmte Bereiche der Website wie Gerätedetails, Feedback und Support sowie die Geräteübersicht wurden mit einem neuen, modernen und dynamischen Design ausgestattet. Die [Dokumentation zur Intune-Unternehmensportalwebsite](../user-help/using-the-intune-company-portal-website.md) wurde entsprechend dieser Änderungen aktualisiert.   
 
 Folgende Updates werden Sie bemerken:  
 
@@ -257,7 +257,7 @@ Beispielscreenshot der Ansicht „Details“:
 
 ## <a name="week-of-april-23-2018"></a>Woche vom 23. April 2018
 ### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Aktualisierte Navigationsansicht in der Unternehmensportal-App für Windows 10 <!-- 1195010 -->
-Die Intune-Unternehmensportal-App für Windows 10 wurde mit der [Navigationsansicht von Fluent Design System](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics) aktualisiert. An der Seite der App befindet sich eine statische, vertikale Liste aller Seiten der obersten Ebene. Klicken Sie auf einen beliebigen Link, um Seiten schnell anzuzeigen und zwischen ihnen zu wechseln. Dies ist das erste von mehreren Updates, die wir Ihnen im Rahmen unserer fortlaufenden Bestrebungen präsentieren werden, die Intune-Benutzeroberfläche zu optimieren. 
+Die Intune-Unternehmensportal-App für Windows 10 wurde mit der [Navigationsansicht von Fluent Design System](/windows/uwp/design/basics/navigation-basics) aktualisiert. An der Seite der App befindet sich eine statische, vertikale Liste aller Seiten der obersten Ebene. Klicken Sie auf einen beliebigen Link, um Seiten schnell anzuzeigen und zwischen ihnen zu wechseln. Dies ist das erste von mehreren Updates, die wir Ihnen im Rahmen unserer fortlaufenden Bestrebungen präsentieren werden, die Intune-Benutzeroberfläche zu optimieren. 
 
 ![Screenshot des Unternehmensportal-App-Dashboards mit der Fluent Design-Navigationsansicht](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
 

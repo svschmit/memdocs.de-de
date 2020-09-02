@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d14ee52decf1b6ef9b2566b3233a385c1331bcc5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460466"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910977"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Überwachen der Geräteverschlüsselung mit Intune
 
@@ -59,7 +59,7 @@ Im Bereich „Verschlüsselungsbericht“ werden alle von Ihnen verwalteten Ger�
     - Version 1709 oder höher von *Business*, *Enterprise* oder *Education* oder Version 1809 oder höher von *Pro*
     - Das Gerät muss über einen TPM-Chip verfügen.
 
-    Weitere Informationen finden Sie in der Windows-Dokumentation unter [BitLocker configuration service provider (CSP) (BitLocker-Konfigurationsdienstanbieter (Configuration Service Provider, CSP))](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
+    Weitere Informationen finden Sie in der Windows-Dokumentation unter [BitLocker configuration service provider (CSP) (BitLocker-Konfigurationsdienstanbieter (Configuration Service Provider, CSP))](/windows/client-management/mdm/bitlocker-csp).
 
   - **Nicht bereit:** Das Gerät kann nicht vollständig verschlüsselt werden, unterstützt jedoch die Verschlüsselung. Das Windows-Gerät könnte beispielsweise von einem Benutzer manuell verschlüsselt werden oder über eine Gruppenrichtlinie, die so festgelegt werden kann, dass die Verschlüsselung ohne ein TPM zulässig ist.
   - **Nicht zutreffend**: Es stehen nicht genügend Informationen zur Verfügung, um dieses Gerät zu klassifizieren.

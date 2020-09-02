@@ -19,12 +19,12 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb1f6ae1ca666a96eca583d2e3be9c565013e7c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1c43d2c4ae7ccda2cd0cf9283586a980eb166d22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881315"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912082"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Registrieren Ihres iOS-Geräts im Telecom Expense Management
 
@@ -39,7 +39,7 @@ Wählen Sie die entsprechende Option aus, und Sie erhalten eine Benachrichtigung
 ## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>Registrieren bei Datalert mit Ihrem Microsoft-Geschäfts- oder -Schulkonto
 
 > [!NOTE]
-> Für diese Art der Registrierung muss die [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to)-App auf Ihrem Mobiltelefon installiert und aktiv sein.
+> Für diese Art der Registrierung muss die [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to)-App auf Ihrem Mobiltelefon installiert und aktiv sein.
 
 1. Wählen Sie __Mit Microsoft-Konto anmelden__.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 0ae39f91c4daa67c40c42022f63137f0b23daf80
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252791"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911062"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Verwenden von Konformitätsrichtlinien zum Festlegen von Regeln für Geräte, die Sie mit Intune verwalten
 
@@ -143,8 +143,8 @@ Weitere Informationen zur Verwendung des bedingten Zugriffs mit ihren Gerätekon
 
 Weitere Informationen zum bedingten Zugriff finden Sie in der Azure AD-Dokumentation:
 
-- [Was ist bedingter Zugriff?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-- [Was ist eine Geräteidentität?](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+- [Was ist bedingter Zugriff?](/azure/active-directory/conditional-access/overview)
+- [Was ist eine Geräteidentität?](/azure/active-directory/device-management-introduction)
 
 ### <a name="reference-for-non-compliance-and-conditional-access-on-the-different-platforms"></a>Verweis auf Nichtkonformität und bedingten Zugriff auf den unterschiedlichen Plattformen
 

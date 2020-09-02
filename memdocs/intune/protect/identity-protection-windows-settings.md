@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: b4581ba6bdc8b5be41d5cf567c631ffaad40d418
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ce4795dd060d29b62887fbf5496b2f2706ba954f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351967"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909107"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Einstellungen für Windows 10-Geräte zum Aktivieren von Windows Hello for Business in Intune
 
 In diesem Artikel werden die Windows Hello for Business-Einstellungen aufgeführt und beschrieben, die Sie für Windows 10-Geräte in Intune steuern können. Als Intune-Administrator können Sie diese Einstellungen konfigurieren und Windows 10-Geräten als Teil Ihrer Lösung für die mobile Geräteverwaltung (MDM) zuweisen. 
 
-Weitere Informationen zu diesen Einstellungen finden Sie in der Windows Hello-Dokumentation unter [Configure Windows Hello for Business Policy settings](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings) (Konfigurieren der Richtlinieneinstellungen für Windows Hello for Business).
+Weitere Informationen zu diesen Einstellungen finden Sie in der Windows Hello-Dokumentation unter [Configure Windows Hello for Business Policy settings](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings) (Konfigurieren der Richtlinieneinstellungen für Windows Hello for Business).
 
 
 Weitere Informationen zu Windows Hello for Business-Profilen in Intune finden Sie unter [Konfigurieren von Identity Protection-Einstellungen in Microsoft Intune](identity-protection-configure.md).
@@ -125,7 +125,7 @@ Weitere Informationen zu Windows Hello for Business-Profilen in Intune finden Si
   - **Zertifikat für lokale Ressourcen**  
 
     - **Aktivieren**: Ermöglicht es Windows Hello for Business, Zertifikate zur Authentifizierung bei lokalen Ressourcen zu verwenden.
-    - **Nicht konfiguriert**: Verhindert, dass Windows Hello for Business Zertifikate zur Authentifizierung bei lokalen Ressourcen verwendet. Stattdessen verwenden Geräte das Standardverhalten der *lokalen schlüsselbasierten Authentifizierung*. Weitere Informationen finden Sie unter [User certificate for on-premises authentication (Benutzerzertifikat für lokale Authentifizierung)](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) in der Windows Hello-Dokumentation.  
+    - **Nicht konfiguriert**: Verhindert, dass Windows Hello for Business Zertifikate zur Authentifizierung bei lokalen Ressourcen verwendet. Stattdessen verwenden Geräte das Standardverhalten der *lokalen schlüsselbasierten Authentifizierung*. Weitere Informationen finden Sie unter [User certificate for on-premises authentication (Benutzerzertifikat für lokale Authentifizierung)](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) in der Windows Hello-Dokumentation.  
 
   **Standardeinstellung:** Nicht konfiguriert
 

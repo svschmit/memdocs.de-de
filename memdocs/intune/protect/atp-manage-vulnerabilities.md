@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d5c57dcbe91d18b633831bafde3a0feae997ba76
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262590"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909379"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Verwenden von Intune zum Korrigieren von mit Microsoft Defender ATP identifizierten Sicherheitsrisiken
 
 Wenn Sie Intune mit Microsoft Defender Advanced Threat Protection (ATP) integrieren, können Sie die Bedrohungs- und Sicherheitsrisikenverwaltung von ATP (Thread & Vulnerability Management, TVM) nutzen und Intune verwenden, um mittels TVM identifizierte Schwachstellen von Endpunkten zu beheben. Diese Integration bietet einen risikobasierten Ansatz für die Ermittlung und Priorisierung von Sicherheitsrisiken, der die Korrekturreaktionszeiten in Ihrer gesamten Umgebung verbessern kann.
 
-[Bedrohungs- und Sicherheitsrisikenverwaltung](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) ist Teil von [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
+[Bedrohungs- und Sicherheitsrisikenverwaltung](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) ist Teil von [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
 
 ## <a name="how-integration-works"></a>Funktionsweise der Integration
 
@@ -108,4 +108,4 @@ Weitere Informationen zu Intune und [Microsoft Defender ATP](advanced-threat-pro
 
 Lesen Sie Intune [Mobile Threat Defense](mobile-threat-defense.md).
 
-Schauen Sie sich das [Dashboard für die Bedrohungs- und Sicherheitsrisikenverwaltung](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender ATP an.
+Schauen Sie sich das [Dashboard für die Bedrohungs- und Sicherheitsrisikenverwaltung](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender ATP an.

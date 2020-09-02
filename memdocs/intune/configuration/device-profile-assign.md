@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 55835d5ee8527f54e530da5113f841ed108fa6f5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819999"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915805"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Zuweisen von Benutzer- und Geräteprofilen in Microsoft Intune
 
@@ -31,7 +31,7 @@ Wenn Sie ein Profil erstellen, enthält es alle Einstellungen, die Sie vorgenomm
 In diesem Artikel wird erklärt, wie Sie ein Profil zuweisen können, und Sie erhalten Informationen zur Verwendung von Bereichsmarkierungen für Ihre Profile.
 
 > [!NOTE]  
-> Wenn ein Profil entfernt wird oder nicht mehr einem Gerät zugewiesen ist, kann dies je nach den Einstellungen im Profil verschiedene Folgen haben. Die Einstellungen basieren auf CSPs, und jeder CSP kann mit der Entfernung des Profils anders umgehen. Eine Einstellung könnte z. B. den vorhandenen Wert beibehalten und nicht auf einen Standardwert zurücksetzen. Das Verhalten wird von jedem CSP im Betriebssystem gesteuert. Eine Liste der Windows-CSPs finden Sie in der [Referenz des Konfigurationsdienstanbieters (Configuration Service Provider, CSP)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+> Wenn ein Profil entfernt wird oder nicht mehr einem Gerät zugewiesen ist, kann dies je nach den Einstellungen im Profil verschiedene Folgen haben. Die Einstellungen basieren auf CSPs, und jeder CSP kann mit der Entfernung des Profils anders umgehen. Eine Einstellung könnte z. B. den vorhandenen Wert beibehalten und nicht auf einen Standardwert zurücksetzen. Das Verhalten wird von jedem CSP im Betriebssystem gesteuert. Eine Liste der Windows-CSPs finden Sie in der [Referenz des Konfigurationsdienstanbieters (Configuration Service Provider, CSP)](/windows/client-management/mdm/configuration-service-provider-reference).
 >
 > Wenn Sie den Wert einer Einstellung ändern möchten, erstellen Sie ein neues Profil, konfigurieren Sie die Einstellung **Nicht konfiguriert**, und weisen Sie das Profil zu. Nach Anwendung auf das Gerät sollten Benutzer die Einstellung auf ihren bevorzugten Wert ändern können.
 >

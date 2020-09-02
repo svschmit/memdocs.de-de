@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 03c43adb14c854b89ef914f0b9b30ea2be690a92
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565664"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906785"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Verwenden von APIs zum Hinzufügen von Drittanbieter-Zertifizierungsstellen für SCEP in Intune
 
@@ -96,7 +96,7 @@ Für die Authentifizierung bei Intune benötigt der SCEP-Server einen Azure-Anwe
 
 Zum Abrufen dieser Daten meldet sich der Administrator des SCEP-Servers beim Azure-Portal an, registriert die Anwendung, erteilt der Anwendung die Berechtigung für die **Microsoft Intune-API\Überprüfung der SCEP-Herausforderung**, erstellt einen Schlüssel für die Anwendung und lädt anschließend den Anwendungsbezeichner, den zugehörigen Schlüssel und die Mandanten-ID herunter.
 
-Eine Anleitung zur Registrierung einer Anwendung sowie zum Abrufen der Bezeichner und Schlüssel finden Sie unter [Verwenden des Portals zum Erstellen einer AAD-Anwendung und eines Dienstprinzipals für den Zugriff auf Ressourcen](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+Eine Anleitung zur Registrierung einer Anwendung sowie zum Abrufen der Bezeichner und Schlüssel finden Sie unter [Verwenden des Portals zum Erstellen einer AAD-Anwendung und eines Dienstprinzipals für den Zugriff auf Ressourcen](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
 ### <a name="java-library-api"></a>API der Java-Bibliothek
 
@@ -241,7 +241,7 @@ Benachrichtigt Intune darüber, dass bei der Verarbeitung einer SCEP-Anforderung
 
 - **transactionId:** Dieser Parameter bezeichnet die Transaktions-ID des SCEP.
 - **certificateRequest:** Dieser Parameter bezeichnet die DER-codierte PKCS #10-Zertifikatanforderung mit Base64-Codierung als Zeichenfolge.
-- **hResult:** Dieser Parameter bezeichnet einen Win32-Fehlercode, der den aufgetretenen Fehler am besten beschreibt. Siehe [Win32-Fehlercodes](https://msdn.microsoft.com/library/cc231199.aspx)
+- **hResult:** Dieser Parameter bezeichnet einen Win32-Fehlercode, der den aufgetretenen Fehler am besten beschreibt. Siehe [Win32-Fehlercodes](/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d)
 - **errorDescription:** Dieser Parameter bezeichnet eine Beschreibung des aufgetretenen Fehlers.
 
 **Löst aus:**

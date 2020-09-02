@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4934115915c41d696258aa54ee8f4b7c84d1809c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9a19a78002d0655cf63a8b757ea252fb8992603f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464992"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915261"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-corporate-owned-devices-with-work-profile"></a>Einrichten der Intune-Registrierung für unternehmenseigene Android Enterprise-Geräte mit Arbeitsprofil
 
@@ -83,7 +83,7 @@ Sie können Apps und Richtlinien auf zugewiesene oder dynamische Gerätegruppen 
     - **Geräte hinzufügen, wobei:** enrollmentProfileName
     - Klicken Sie im mittleren Feld auf **Ist gleich**.
     - Geben Sie im letzten Feld den Namen des Registrierungsprofils ein, das Sie zuvor erstellt haben.
-    Weitere Informationen über Regeln für die dynamische Mitgliedschaft finden Sie unter [Regeln für eine dynamische Mitgliedschaft für Gruppen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
+    Weitere Informationen über Regeln für die dynamische Mitgliedschaft finden Sie unter [Regeln für eine dynamische Mitgliedschaft für Gruppen in Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Klicken Sie auf **Abfrage hinzufügen** > **Erstellen**.
 
 ### <a name="revoke-tokens"></a>Widerrufen von Tokens

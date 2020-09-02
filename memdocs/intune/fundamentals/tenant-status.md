@@ -16,19 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: cd4c64e08177387561323b1e59bef3b976bf0bf3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690679"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911181"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Verwenden der Seite des Intune-Mandantenstatus
 
 Bei der Mandantenstatusseite von Microsoft Intune handelt es sich um einen zentralen Hub, auf dem Sie aktuelle und wichtige Details zu Ihrem Mandanten abrufen können. Diese Details umfassen u. a. die Lizenzverfügbarkeit und -verwendung, den Connectorstatus und wichtige Mitteilungen zum Intune-Dienst.
 
 > [!TIP]
-> Ein Mandant ist eine Instanz von Azure Active Directory (Azure AD). Ihr Intune-Abonnement wird von einem Azure AD-Mandanten gehostet. Weitere Informationen finden Sie in der Azure AD-Dokumentation unter [Schnellstart: Einrichten eines Mandanten](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant).
+> Ein Mandant ist eine Instanz von Azure Active Directory (Azure AD). Ihr Intune-Abonnement wird von einem Azure AD-Mandanten gehostet. Weitere Informationen finden Sie in der Azure AD-Dokumentation unter [Schnellstart: Einrichten eines Mandanten](/azure/active-directory/develop/quickstart-create-new-tenant).
 
 Melden Sie sich zum Anzeigen des Dashboards beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an, wechseln Sie zu **Mandantenverwaltung**, und wählen Sie dann **Mandantenstatus** aus.
 

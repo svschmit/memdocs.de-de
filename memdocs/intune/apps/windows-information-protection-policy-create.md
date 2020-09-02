@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66ea84d8defa1d1d5b79f686537b391452cf3c30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 88eabe07cadf45644f3e10be338a23454c5d1711
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990283"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911980"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Erstellen und Bereitstellen von WIP-Richtlinien (Windows Information Protection) in Intune
 
@@ -52,11 +52,11 @@ Sie müssen mit einigen Konzepten vertraut sein, wenn Sie eine WIP-Richtlinie hi
 Sie müssen den MAM-Anbieter konfigurieren, bevor Sie eine WIP-Richtlinie erstellen können. Weitere Informationen finden Sie unter [Konfigurieren Ihres MAM-Anbieters in Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP unterstützt nicht mehrere Identitäten; nur jeweils eine verwaltete Identität darf vorhanden sein. Weitere Informationen zu den Möglichkeiten und Grenzen von WIP finden Sie unter [Schützen Ihrer Unternehmensdaten mit Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+> WIP unterstützt nicht mehrere Identitäten; nur jeweils eine verwaltete Identität darf vorhanden sein. Weitere Informationen zu den Möglichkeiten und Grenzen von WIP finden Sie unter [Schützen Ihrer Unternehmensdaten mit Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Darüber hinaus benötigen Sie folgende Lizenz und folgendes Update:
 
-- [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)-Lizenz
+- [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium)-Lizenz
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 
@@ -68,7 +68,7 @@ Darüber hinaus benötigen Sie folgende Lizenz und folgendes Update:
 Nachdem Sie Intune in Ihrer Organisation eingerichtet haben, können Sie eine WIP-spezifische Richtlinie erstellen.
 
 > [!TIP]  
-> Weitere Informationen zum Erstellen von WIP-Richtlinien für Intune, einschließlich der verfügbaren Einstellungen und deren Konfiguration, finden Sie in der Bibliothek mit der Dokumentation zur Windows-Sicherheit unter [Erstellen einer Windows Information Protection-Richtlinie (WIP) mit MAM mithilfe des Azure-Portals für Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure). 
+> Weitere Informationen zum Erstellen von WIP-Richtlinien für Intune, einschließlich der verfügbaren Einstellungen und deren Konfiguration, finden Sie in der Bibliothek mit der Dokumentation zur Windows-Sicherheit unter [Erstellen einer Windows Information Protection-Richtlinie (WIP) mit MAM mithilfe des Azure-Portals für Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure). 
 
 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
@@ -194,4 +194,4 @@ Nachdem Sie Ihre WIP-App-Schutzrichtlinie erstellt haben, müssen Sie sie Ihrer 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Windows Information Protection finden Sie unter [Protect your enterprise data using Windows Information Protection (WIP) (Schützen Ihrer Unternehmensdaten mit Windows Information Protection (WIP))](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Weitere Informationen zu Windows Information Protection finden Sie unter [Protect your enterprise data using Windows Information Protection (WIP) (Schützen Ihrer Unternehmensdaten mit Windows Information Protection (WIP))](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).

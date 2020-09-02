@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27d31e64e99e8dc796b0436052f7220260ab1029
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795668"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906819"
 ---
 # <a name="see-device-details-in-intune"></a>Anzeigen von Gerätedetails in Intune
 
@@ -48,10 +48,10 @@ Dieser Artikel erläutert, wie Sie all Ihre Geräte und deren Eigenschaften im A
       - [Autopilot-Zurücksetzung](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (nur Windows)
       - [Schnellüberprüfung](../configuration/device-restrictions-windows-10.md) (nur Windows 10)
       - [Vollständige Überprüfung](../configuration/device-restrictions-windows-10.md) (nur Windows 10)
-      - [Windows Defender-Sicherheitsinformationen aktualisieren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
-      - [BitLocker-Schlüsselrotation](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Windows Defender-Sicherheitsinformationen aktualisieren](/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
+      - [BitLocker-Schlüsselrotation](../protect/encrypt-devices.md#to-rotate-the-bitlocker-recovery-key)
       - [Gerät umbenennen](device-rename.md)
-      - [Neue Remoteunterstützungssitzung](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
+      - [Neue Remoteunterstützungssitzung](./teamviewer-support.md)
    - Verwenden Sie die **Eigenschaften**, um eine [von Ihnen erstellte Gerätekategorie](../enrollment/device-group-mapping.md) zuzuweisen, und ändern Sie den Besitz des Geräts in ein privates oder ein unternehmenseigenes Gerät.
    - Unter **Hardware** werden viele Details über das Gerät aufgeführt, z. B. die Geräte-ID, das Betriebssystem und die Version, der Speicherplatz und weitere Details.
    - Unter **Ermittelte Apps** werden alle auf dem Gerät installierten Apps aufgeführt, die von Intune gefunden wurden. Weitere Informationen finden Sie unter [Von Intune ermittelte Apps](../apps/app-discovered-apps.md).

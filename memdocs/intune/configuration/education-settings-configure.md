@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52eae65e6735ad655c2e8db53e34383ccc5e3b30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7b1a605e456edb525afec306ff594ba7cc3895aa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988388"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912728"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Verwenden der „Take a Test“-App für Windows 10-Geräte in Microsoft Intune
 
@@ -30,7 +30,7 @@ Education-Profile in Intune sind dafür konzipiert, dass Kursteilnehmer einen Te
 
 - Windows 10 und höher
 
-Wenn der Benutzer sich anmeldet, wird die „Take a Test“-App automatisch mit dem Test geöffnet, den Sie eingegeben haben. Keine anderen Apps können auf dem Gerät ausgeführt werden, während der Test ausgeführt wird. [Durchführen von Prüfungen in Windows 10](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) enthält weitere Details zur „Take a Test“-App.
+Wenn der Benutzer sich anmeldet, wird die „Take a Test“-App automatisch mit dem Test geöffnet, den Sie eingegeben haben. Keine anderen Apps können auf dem Gerät ausgeführt werden, während der Test ausgeführt wird. [Durchführen von Prüfungen in Windows 10](/education/windows/take-tests-in-windows-10) enthält weitere Details zur „Take a Test“-App.
 
 In diesem Artikel sind die Schritte zum Erstellen eines Gerätekonfigurationsprofil in Microsoft Intune aufgelistet. Darüber hinaus enthält er Informationen zum Lesen und Lernen der verfügbaren Education-Einstellungen für Ihre Windows 10-Geräte.
 

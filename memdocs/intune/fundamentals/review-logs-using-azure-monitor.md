@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: c93f50f7c4b2537ab4dbd1d9462f13434e9c158e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912526"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911521"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Senden von Daten an den Speicher, an Event Hubs oder Log Analytics in Intune (Vorschauversion)
 
@@ -53,9 +53,9 @@ Für die Nutzung dieser Funktion benötigen Sie:
 
 Je nachdem, wohin Sie die Überwachungsprotokolldaten weiterleiten möchten, benötigen Sie einen der folgenden Dienste:
 
-* Ein [Azure-Speicherkonto](https://docs.microsoft.com/azure/storage/common/storage-account-overview) mit *ListKeys*-Berechtigungen. Es wird empfohlen, dass Sie ein allgemeines Speicherkonto und kein Blob-Speicherkonto verwenden. Informationen zu den Speicherpreisen finden Sie im [Azure Storage-Preisrechner](https://azure.microsoft.com/pricing/calculator/?service=storage). 
-* Ein [Azure Event Hubs-Namespace](https://docs.microsoft.com/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) für die Integration von Drittanbieterlösungen.
-* Ein [Azure Log Analytics-Arbeitsbereich](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) zum Senden von Protokolle an Log Analytics.
+* Ein [Azure-Speicherkonto](/azure/storage/common/storage-account-overview) mit *ListKeys*-Berechtigungen. Es wird empfohlen, dass Sie ein allgemeines Speicherkonto und kein Blob-Speicherkonto verwenden. Informationen zu den Speicherpreisen finden Sie im [Azure Storage-Preisrechner](https://azure.microsoft.com/pricing/calculator/?service=storage). 
+* Ein [Azure Event Hubs-Namespace](/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) für die Integration von Drittanbieterlösungen.
+* Ein [Azure Log Analytics-Arbeitsbereich](/azure/azure-monitor/learn/quick-create-workspace) zum Senden von Protokolle an Log Analytics.
 
 ## <a name="send-logs-to-azure-monitor"></a>Senden von Protokollen an Azure Monitor
 
@@ -83,7 +83,7 @@ Je nachdem, wohin Sie die Überwachungsprotokolldaten weiterleiten möchten, ben
         1. Wählen Sie diese Option > **Konfigurieren** aus. 
         2. Erstellen Sie einen neuen Arbeitsbereich, und geben Sie die Details des Arbeitsbereichs ein. Oder wählen Sie einen vorhandenen Arbeitsbereich aus der Liste aus > **OK**.
 
-            IN [Azure Log Analytics-Arbeitsbereich](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) finden Sie weitere Details zu diesen Einstellungen.
+            IN [Azure Log Analytics-Arbeitsbereich](/azure/azure-monitor/learn/quick-create-workspace) finden Sie weitere Details zu diesen Einstellungen.
 
     - **LOG** > **AuditLogs**: Wählen Sie diese Option, um die [Intune-Überwachungsprotokolle](monitor-audit-logs.md) an Ihr Speicherkonto, Ihren Event Hub oder Log Analytics zu senden. Die Überwachungsprotokolle zeigen den Verlauf aller Aufgaben, die eine Änderung in Intune bewirkt haben, z.B. wer die Änderung durchgeführt hat und wann diese erfolgt ist.
 
@@ -178,7 +178,7 @@ Die folgende Tabelle enthält die ungefähren monatlichen Kosten für einen einf
 
 | Category | Wert |
 | -------- | ----- |
-|Ereignisse pro Sekunde|0,1 |
+|Ereignisse pro Sekunde|0.1 |
 |Ereignisse pro Fünf-Minuten-Intervall| 52|
 |Menge pro Intervall|104 KB |
 |Nachrichten pro Intervall|1 |
@@ -187,7 +187,7 @@ Die folgende Tabelle enthält die ungefähren monatlichen Kosten für einen einf
 
 ### <a name="log-analytics-cost-considerations"></a>Log Analytics-Kostenbetrachtung
 
-Informationen zum Prüfen von Kosten im Zusammenhang mit dem Log Analytics-Arbeitsbereich finden Sie unter [Verwalten der Kosten durch Steuerung der Datenmenge und -aufbewahrung in Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage).
+Informationen zum Prüfen von Kosten im Zusammenhang mit dem Log Analytics-Arbeitsbereich finden Sie unter [Verwalten der Kosten durch Steuerung der Datenmenge und -aufbewahrung in Log Analytics](/azure/log-analytics/log-analytics-manage-cost-storage).
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
@@ -199,7 +199,7 @@ Zum Weiterleiten mit dieser Funktion sind sowohl Überwachungsprotokolle als auc
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>Wann werden die entsprechenden Protokolle nach einer Aktion im Event Hub angezeigt?
 
-Die Protokolle werden in der Regel innerhalb weniger Minuten nach Ausführung der Aktion in Ihrem Event Hub angezeigt. Weitere Informationen finden Sie in [Was sind Azure Event Hubs?](https://docs.microsoft.com/azure/event-hubs/).
+Die Protokolle werden in der Regel innerhalb weniger Minuten nach Ausführung der Aktion in Ihrem Event Hub angezeigt. Weitere Informationen finden Sie in [Was sind Azure Event Hubs?](/azure/event-hubs/).
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>Wann werden die entsprechenden Protokolle nach einer Aktion im Speicherkonto angezeigt?
 
@@ -219,22 +219,22 @@ Die Streamingkosten richten sich nach der Anzahl von Nachrichten, die Sie pro Mi
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Wie integriere ich Intune-Überwachungsprotokolle in mein SIEM-System?
 
-Verwenden Sie Azure Monitor mit Event Hubs zum Streamen von Protokollen an Ihr SIEM-System. Zuerst [streamen Sie die Protokolle an einen Event Hub](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). Dann [richten Sie Ihr SIEM-Tool](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) mit dem konfigurierten Event Hub ein. 
+Verwenden Sie Azure Monitor mit Event Hubs zum Streamen von Protokollen an Ihr SIEM-System. Zuerst [streamen Sie die Protokolle an einen Event Hub](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). Dann [richten Sie Ihr SIEM-Tool](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) mit dem konfigurierten Event Hub ein. 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>Welche SIEM-Tools werden derzeit unterstützt?
 
-Derzeit wird Azure Monitor von [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar und [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (öffnet eine neue Website) unterstützt. Weitere Informationen zur Funktionsweise von Connectors finden Sie unter [Streamen von Azure-Überwachungsdaten an einen Event Hub für die Verwendung durch ein externes Tool](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
+Derzeit wird Azure Monitor von [Splunk](/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar und [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (öffnet eine neue Website) unterstützt. Weitere Informationen zur Funktionsweise von Connectors finden Sie unter [Streamen von Azure-Überwachungsdaten an einen Event Hub für die Verwendung durch ein externes Tool](/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Kann ich auf die Daten von einem Event Hub auch ohne ein externes SIEM-Tool zugreifen?
 
-Ja. Sie können die [Event Hubs-API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) nutzen, um über Ihre benutzerdefinierte Anwendung auf die Protokolle zuzugreifen.
+Ja. Sie können die [Event Hubs-API](/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) nutzen, um über Ihre benutzerdefinierte Anwendung auf die Protokolle zuzugreifen.
 
 ### <a name="what-data-is-stored"></a>Welche Daten werden gespeichert?
 
-Intune speichert keine Daten, die über die Pipeline gesendet wurden. Intune leitet Daten im Auftrag des Mandanten an die Azure Monitor-Pipeline. Weitere Informationen finden Sie unter [Übersicht über Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview).
+Intune speichert keine Daten, die über die Pipeline gesendet wurden. Intune leitet Daten im Auftrag des Mandanten an die Azure Monitor-Pipeline. Weitere Informationen finden Sie unter [Übersicht über Azure Monitor](/azure/azure-monitor/overview).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-* [Archivieren von Aktivitätsprotokollen in einem Speicherkonto](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
-* [Weiterleiten von Aktivitätsprotokollen an Event Hub](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [Integrieren von Aktivitätsprotokollen mit Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [Archivieren von Aktivitätsprotokollen in einem Speicherkonto](/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
+* [Weiterleiten von Aktivitätsprotokollen an Event Hub](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
+* [Integrieren von Aktivitätsprotokollen mit Log Analytics](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

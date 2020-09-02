@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9fafc6a48e933fbcce692c560532736808cbf7c4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461724"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915244"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Registrieren eines dedizierten oder vollständig verwalteten Android Enterprise-Geräts oder eines unternehmenseigenen Android Enterprise-Geräts mit einem Arbeitsprofil
 
@@ -35,11 +35,11 @@ Nachdem Sie Ihre [dedizierten](android-kiosk-enroll.md), [vollständig verwaltet
 | Token-Eingabe | 6.0 |
 | QR-Code | 7.0 |
 | Zero-Touch  | 8.0<br><br> Bei beteiligten Herstellern |
-| [Registrierung mobiler Geräte für Knox](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> Nur auf Geräten mit Samsung Knox 2.8 oder höher. |
+| [Registrierung mobiler Geräte für Knox](./android-samsung-knox-mobile-enroll.md)  | 6.0<br><br> Nur auf Geräten mit Samsung Knox 2.8 oder höher. |
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>Registrieren mit NFC (Near Field Communication)
 
-Bei Geräten der Version 6 oder höher, die NFC unterstützen, können Sie Ihre Geräte bereitstellen, indem Sie ein speziell formatiertes NFC-Tag erstellen. Sie können Ihre eigene App oder ein beliebiges NFC-Tagerstellungstool verwenden. Weitere Informationen finden Sie im Blogbeitrag [NFC-based Android Enterprise device enrollment with Microsoft Intune (NFC-basierte Android Enterprise-Geräteregistrierung mit Microsoft Intune)](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) und in der Google-Dokumentation zur [Android Management API](https://developers.google.com/android/management/provision-device#nfc_method).
+Bei Geräten der Version 6 oder höher, die NFC unterstützen, können Sie Ihre Geräte bereitstellen, indem Sie ein speziell formatiertes NFC-Tag erstellen. Sie können Ihre eigene App oder ein beliebiges NFC-Tagerstellungstool verwenden. Weitere Informationen finden Sie im Blogbeitrag [NFC-based Android Enterprise device enrollment with Microsoft Intune (NFC-basierte Android Enterprise-Geräteregistrierung mit Microsoft Intune)](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) und in der Google-Dokumentation zur [Android Management API](https://developers.google.com/android/management/provision-device#nfc_method).
 
 ## <a name="enroll-by-using-a-token"></a>Registrieren mithilfe eines Tokens
 
@@ -91,9 +91,8 @@ Das Gerät muss das Zero-Touch-System von Google unterstützen und einem Liefera
 4. Wählen Sie **Anwenden** aus.
 
 ## <a name="enroll-by-using-knox-mobile-enrollment"></a>Registrierung mithilfe der Registrierung mobiler Geräte für Knox
-Wenn Sie die Registrierung mobiler Geräte für Samsung Knox (Knox Mobile Enrollment, KME) verwenden möchten, muss das Gerät die Betriebssystemversion Android 6 oder höher und Knox 2.8 oder höher besitzen. Weitere Informationen finden Sie unter [Automatisches Registrieren von Android-Geräten mit Samsung Knox Mobile Enrollment](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll).
+Wenn Sie die Registrierung mobiler Geräte für Samsung Knox (Knox Mobile Enrollment, KME) verwenden möchten, muss das Gerät die Betriebssystemversion Android 6 oder höher und Knox 2.8 oder höher besitzen. Weitere Informationen finden Sie unter [Automatisches Registrieren von Android-Geräten mit Samsung Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 - [Bereitstellen von Android-Apps](../apps/apps-deploy.md)
 - [Hinzufügen von Android-Konfigurationsrichtlinien](../configuration/device-profiles.md)
-

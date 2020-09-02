@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: fb62a7b592b492d4092b7af7ee29b2bfd50c66e8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126514"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915176"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Verschieben von Android-Geräten aus dem Geräteadministrator in die Arbeitsprofilverwaltung
 
@@ -40,7 +40,7 @@ Wenn Benutzer bemerken, dass ihr Gerät aus diesem Grund nicht mehr konform ist,
 - Richten Sie die Android-Arbeitsprofilverwaltung ein, indem Sie [eine Verbindung von Ihrem Intune-Mandantenkonto mit Ihrem Android Enterprise-Konto herstellen](connect-intune-android-enterprise.md).
 - Legen Sie die [Android Enterprise-Arbeitsprofilregistrierung](android-work-profile-enroll.md) für die Gruppe von Benutzern fest, die zum Android-Arbeitsprofil wechseln.
 - Erhöhen Sie ggf. die Limits für Benutzergeräte. Wenn Sie die Registrierung von Geräten bei der Geräteadministratorverwaltung aufheben, werden Datensätze für Geräte u. U. nicht sofort entfernt. Um für diesen Zeitraum über genügend Puffer zu verfügen, müssen Sie möglicherweise das Gerätelimit erhöhen, sodass die Benutzer sich bei der Arbeitsprofilverwaltung registrieren können.
-  - [Konfigurieren Sie die Azure Active Directory-Geräteeinstellungen](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) für die maximale Anzahl von Geräten pro Benutzer.
+  - [Konfigurieren Sie die Azure Active Directory-Geräteeinstellungen](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) für die maximale Anzahl von Geräten pro Benutzer.
   - Passen Sie die [Intune-Gerätelimiteinschränkungen](enrollment-restrictions-set.md#create-a-device-limit-restriction) an, indem Sie das Gerätelimit festlegen. 
 
 ## <a name="create-device-compliance-policy"></a>Erstellen einer Gerätekonformitätsrichtlinie

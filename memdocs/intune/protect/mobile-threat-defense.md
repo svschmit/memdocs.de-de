@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bc7f526db4cb9fd269d2d48845cc5dc4096b5df
-ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
+ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87412340"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906887"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integration von Mobile Threat Defense in Intune
 
@@ -35,7 +35,7 @@ Intune kann Daten von einem MTD-Anbieter (Mobile Threat Defense) als Information
 Intune kann dieselben Daten als Quelle für nicht registrierte Geräte mit Intune-App-Schutzrichtlinien verwenden. Daher können Administratoren diese Informationen verwenden, um Unternehmensdaten in einer [geschützten Microsoft Intune-App](../apps/apps-supported-intune-apps.md) zu schützen und einen Block auszugeben oder selektives Zurücksetzen durchzuführen.
 
 > [!NOTE]
-> Die Integration von Mobile Threat Defense in das Intune-Angebot von GCC High und DoD wird derzeit *nicht* unterstützt. Erfahren Sie mehr über die [ Unterstützung von Microsoft Intune für US-Regierungsbehörden: GCC High](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+> Die Integration von Mobile Threat Defense in das Intune-Angebot von GCC High und DoD wird derzeit *nicht* unterstützt. Erfahren Sie mehr über die [ Unterstützung von Microsoft Intune für US-Regierungsbehörden: GCC High](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 
 ## <a name="protect-corporate-resources"></a>Schützen von Unternehmensressourcen
 

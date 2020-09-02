@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5daf488d878881c35db689fae0279c0312eb4c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074774"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915788"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Tutorial: Konfigurieren von Slack zur Verwendung von Intune für EMM und die App-Konfiguration
 
@@ -45,7 +45,7 @@ Sie benötigen für dieses Tutorial einen Testmandanten mit den folgenden Abonne
 Sie benötigen auch einen Plan für [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-).
 
 ## <a name="configure-your-slack-enterprise-grid-plan"></a>Konfigurieren Ihres Slack Enterprise Grid-Plans
-Aktivieren Sie EMM für Ihren Slack Enterprise Grid-Plan, indem Sie die [Anweisungen von Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) befolgen und eine [Verbindung mit Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) als Identitätsanbieter Ihres Grid-Plans herstellen.
+Aktivieren Sie EMM für Ihren Slack Enterprise Grid-Plan, indem Sie die [Anweisungen von Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) befolgen und eine [Verbindung mit Azure Active Directory](/azure/active-directory/saas-apps/slack-tutorial) als Identitätsanbieter Ihres Grid-Plans herstellen.
 
 ## <a name="sign-in-to-intune"></a>Anmelden bei Intune
 Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) als globaler Administrator oder Intune-Dienstadministrator an. Wenn Sie ein Testabonnement für Intune erstellt haben, besitzt das Konto, mit dem Sie das Abonnement erstellt haben, die Rolle des globalen Administrators.

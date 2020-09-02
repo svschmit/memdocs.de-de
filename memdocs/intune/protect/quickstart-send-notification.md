@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d02329f65d7b7ecec1dbfeaf84ecbe5c8fb53013
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e986021bb4d575ec3269e97b228cc381e1f2cf72
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079483"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910892"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Schnellstart: Senden von Benachrichtigungen an nicht konforme Geräte
 
 In diesem Schnellstart verwenden Sie Microsoft Intune zum Senden von E-Mail-Benachrichtigungen an Mitarbeiter mit nicht konformen Geräten.
 
-Wenn Intune ein Gerät erkennt, das nicht konform ist, kennzeichnet Intune dieses standardmäßig als „nicht konform“. Das Gerät wird dann durch den [bedingten Zugriff](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) von Azure Active Directory (Azure AD) blockiert. Mit Intune können Sie Aktionen bei Nichtkonformität hinzufügen, was Ihnen Flexibilität beim Ermitteln der Vorgehensweise verschafft, wenn ein Gerät nicht konform ist. Beispielsweise können Sie Benutzern eine Toleranzperiode gewähren, in der sie die Konformität wiederherstellen können, bevor nicht konforme Geräte blockiert werden.
+Wenn Intune ein Gerät erkennt, das nicht konform ist, kennzeichnet Intune dieses standardmäßig als „nicht konform“. Das Gerät wird dann durch den [bedingten Zugriff](/azure/active-directory/active-directory-conditional-access-azure-portal) von Azure Active Directory (Azure AD) blockiert. Mit Intune können Sie Aktionen bei Nichtkonformität hinzufügen, was Ihnen Flexibilität beim Ermitteln der Vorgehensweise verschafft, wenn ein Gerät nicht konform ist. Beispielsweise können Sie Benutzern eine Toleranzperiode gewähren, in der sie die Konformität wiederherstellen können, bevor nicht konforme Geräte blockiert werden.
 
 Eine Aktion, die ausgeführt wird, wenn ein Gerät die Konformitätsanforderungen nicht erfüllt, besteht darin, eine E-Mail an den Gerätebenutzer zu senden. Sie können E-Mail-Benachrichtigungen vor dem Senden auch anpassen. Sie können Empfänger, Betreff und Nachrichtentext, Unternehmenslogos und Kontaktinformationen anpassen. Außerdem bezieht Intune Einzelheiten zu dem nicht konformen Gerät in die E-Mail-Benachrichtigung mit ein.
 
@@ -37,7 +37,7 @@ Wenn Sie über kein Intune-Abonnement verfügen, [registrieren Sie sich für ein
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Wenn Sie Gerätekonformitätsrichtlinien verwenden, um den Zugriff auf Unternehmensressourcen durch Geräte zu blockieren, muss der bedingte Zugriff von Azure AD eingerichtet sein. Wenn Sie den Schnellstart [Erstellen einer Gerätekonformitätsrichtlinie](quickstart-set-password-length-android.md) abgeschlossen haben, verwenden Sie Azure Active Directory. Weitere Informationen zu Azure AD finden Sie unter [Bedingter Zugriff in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) und [Gängige Möglichkeiten für die Verwendung des bedingten Zugriffs mit Intune](../protect/conditional-access-intune-common-ways-use.md).
+Wenn Sie Gerätekonformitätsrichtlinien verwenden, um den Zugriff auf Unternehmensressourcen durch Geräte zu blockieren, muss der bedingte Zugriff von Azure AD eingerichtet sein. Wenn Sie den Schnellstart [Erstellen einer Gerätekonformitätsrichtlinie](quickstart-set-password-length-android.md) abgeschlossen haben, verwenden Sie Azure Active Directory. Weitere Informationen zu Azure AD finden Sie unter [Bedingter Zugriff in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) und [Gängige Möglichkeiten für die Verwendung des bedingten Zugriffs mit Intune](../protect/conditional-access-intune-common-ways-use.md).
 
 ## <a name="sign-in-to-intune"></a>Anmelden bei Intune
 

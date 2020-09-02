@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e7f9c984b81bbe98269b0123371d8097d960ffb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 57a7b232b7391d6b8716d4c2a56d69b44f6c07ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462132"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914751"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Problembehandlung für den Intune Exchange Connector
 
@@ -31,7 +31,7 @@ In diesem Artikel wird beschrieben, wie Sie Probleme im Intune Exchange Connecto
 
 > [!IMPORTANT]
 >
-> Ab Juli 2020 wird die Unterstützung für den Exchange Connector eingestellt. Der Connector wird durch die [hybride moderne Authentifizierung](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) für Exchange abgelöst. Dementsprechend wird es nicht mehr möglich sein, Intune einen Exchange Connector hinzuzufügen.
+> Ab Juli 2020 wird die Unterstützung für den Exchange Connector eingestellt. Der Connector wird durch die [hybride moderne Authentifizierung](/office365/enterprise/hybrid-modern-auth-overview) (HMA) für Exchange abgelöst. Dementsprechend wird es nicht mehr möglich sein, Intune einen Exchange Connector hinzuzufügen.
 >
 > Falls Kunden den Exchange Connector bereits konfiguriert haben und diesen verwenden, erhalten diese weiterhin Unterstützung für den Connector.
 
@@ -66,7 +66,7 @@ Bevor Sie ein Problem mit einem Exchange-Connector in Intune beheben, erfassen S
 
 - Der Computer, der den Intune Exchange Connector und den Exchange-Clientzugriffsserver (Client Access Server, CAS) hostet, sollte in die Domäne eingebunden sein und sich im selben LAN befinden. Vergewissern Sie sich, dass dem Konto, das vom Intune Exchange Connector verwendet wird, die erforderlichen Berechtigungen hinzugefügt wurden.
 
-- Das Benachrichtigungskonto wird zum Abrufen der Einstellungen *AutoErmittlung* verwendet. Weitere Informationen zur AutoErmittlung in Exchange finden Sie unter [AutoErmittlungsdienst in Exchange Server](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
+- Das Benachrichtigungskonto wird zum Abrufen der Einstellungen *AutoErmittlung* verwendet. Weitere Informationen zur AutoErmittlung in Exchange finden Sie unter [AutoErmittlungsdienst in Exchange Server](/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
 
 - Der Intune Exchange Connector sendet eine Anforderung an die EWS-URL und verwendet dabei die Anmeldeinformationen des Benachrichtigungskontos, um E-Mail-Benachrichtigungen zusammen mit dem Link *Erste Schritte* (für die Intune-Registrierung) zu versenden. Die Registrierung über den Link *Erste Schritte* ist eine Voraussetzung für Android-Geräte, die nicht mit der KNOX-Plattform verwendet werden. Andernfalls werden diese Geräte durch das Feature „Bedingter Zugriff“ gesperrt.
 
@@ -86,4 +86,4 @@ Die folgenden Artikel können helfen, häufig auftretende Probleme und bestimmte
 Bei Fragen können Sie sich an den Support oder an die Intune-Community wenden:
 
 - Navigieren Sie zu [Support anfordern](../fundamentals/get-support.md), um das Problem mithilfe der Intune-Konsole zu beheben oder eine Supportanfrage bei Microsoft zu stellen. 
-- Posten Sie Ihr Problem in den [Microsoft Intune-Foren](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  
+- Posten Sie Ihr Problem in den [Microsoft Intune-Foren](/answers/products/mem).  

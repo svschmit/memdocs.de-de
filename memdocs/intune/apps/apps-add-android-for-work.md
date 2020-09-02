@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: 0f6c70bcfa1bf9d23ff3555498cb199ff032bb34
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821630"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910535"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Hinzufügen verwalteter Google Play-Apps zu Android Enterprise-Geräten mit Intune
 
@@ -183,7 +183,7 @@ Wenn Sie eine App aus dem Store genehmigt haben und diese nicht in der Workload 
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>Zuweisen einer verwalteten Google Play-App zu Android Enterprise-Arbeitsprofilen und unternehmenseigenen Arbeitsprofilgeräten
 
-Wenn die App im Knoten **App-Lizenzen** des Workloadbereichs **Apps** angezeigt wird, können Sie sie [wie jede andere App zuweisen](/mem/intune/apps/apps-deploy), indem Sie die App Benutzergruppen zuweisen.
+Wenn die App im Knoten **App-Lizenzen** des Workloadbereichs **Apps** angezeigt wird, können Sie sie [wie jede andere App zuweisen](./apps-deploy.md), indem Sie die App Benutzergruppen zuweisen.
 
 Nachdem Sie die App zugewiesen haben, wird sie auf den Geräten der von Ihnen ausgewählten Benutzern installiert (oder zur Installation verfügbar). Der Benutzer des Geräts wird nicht zur Genehmigung der Installation aufgefordert. Weitere Informationen zu dedizierten Android Enterprise-Arbeitsprofilgeräten finden Sie unter [Einrichten der Registrierung von Android Enterprise-Arbeitsprofilgeräten](../enrollment/android-work-profile-enroll.md). 
 

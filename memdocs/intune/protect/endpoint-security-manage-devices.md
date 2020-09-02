@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 98b1380254a784dfe8939c607ab574f7bdaa8752
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088529"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914989"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Verwalten von Geräten mithilfe der Endpunktsicherheit in Microsoft Intune
 
-Als Sicherheitsadministrator verwenden Sie die Ansicht *Alle Geräte* im Microsoft Endpoint Manager Admin Center, um Ihre Geräte zu überprüfen und zu verwalten. Die Ansicht zeigt eine Liste all Ihrer Geräte in Azure Active Directory (Azure AD). Dies schließt Geräte ein, die über Intune, Configuration Manager und per [Co-Verwaltung](https://docs.microsoft.com/configmgr/comanage/overview) sowohl über Intune als auch über Configuration Manager verwaltet werden. Geräte können sich in der Cloud und in Ihrer lokalen Infrastruktur befinden, wenn sie in Azure AD integriert sind.
+Als Sicherheitsadministrator verwenden Sie die Ansicht *Alle Geräte* im Microsoft Endpoint Manager Admin Center, um Ihre Geräte zu überprüfen und zu verwalten. Die Ansicht zeigt eine Liste all Ihrer Geräte in Azure Active Directory (Azure AD). Dies schließt Geräte ein, die über Intune, Configuration Manager und per [Co-Verwaltung](/configmgr/comanage/overview) sowohl über Intune als auch über Configuration Manager verwaltet werden. Geräte können sich in der Cloud und in Ihrer lokalen Infrastruktur befinden, wenn sie in Azure AD integriert sind.
 
  Um zur Ansicht zu gelangen, öffnen Sie das [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) und klicken auf **Endpunktsicherheit** > **Alle Geräte**.
 
@@ -59,15 +59,13 @@ Bei der Anzeige von Geräten im Microsoft Endpoint Manager Admin Center sollten 
 
     Der Konformitätsstatus für Geräte, die über Configuration Manager verwaltet werden, ist im Microsoft Endpoint Manager Admin Center nicht sichtbar.
 
-    Weitere Informationen finden Sie unter [Aktivieren der Mandantenanfügung](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions) in der Configuration Manager-Dokumentation.
+    Weitere Informationen finden Sie unter [Aktivieren der Mandantenanfügung](/configmgr/tenant-attach/device-sync-actions) in der Configuration Manager-Dokumentation.
 
   - **MDM/ConfigMgr-Agent**: Diese Geräte unterliegen einer Co-Verwaltung über Intune und Configuration Manager.
 
-    Bei der Co-Verwaltung [wählen Sie verschiedene Workloads für die Co-Verwaltung](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) aus, um zu bestimmen, welche Aspekte von Configuration Manager oder Intune verwaltet werden. Diese Auswahl beeinflusst, welche Richtlinien auf das Gerät angewendet und wie Konformitätsdaten an das Admin Center gemeldet werden.
+    Bei der Co-Verwaltung [wählen Sie verschiedene Workloads für die Co-Verwaltung](/configmgr/comanage/how-to-switch-workloads) aus, um zu bestimmen, welche Aspekte von Configuration Manager oder Intune verwaltet werden. Diese Auswahl beeinflusst, welche Richtlinien auf das Gerät angewendet und wie Konformitätsdaten an das Admin Center gemeldet werden.
 
     Beispielsweise können Sie Intune zum Konfigurieren der Richtlinie für Antivirus, Firewall und Verschlüsselung verwenden. Diese Richtlinientypen sind Richtlinien für *Endpoint Protection*. Damit für ein Gerät mit Co-Verwaltung nicht die Configuration Manager-Richtlinien, sondern die Intune-Richtlinien verwendet werden, legen Sie den Schieberegler der Co-Verwaltung für Endpoint Protection entweder auf *Intune* oder *Intune-Pilot* fest. Wenn der Schieberegler auf Configuration Manager festgelegt ist, verwendet das Gerät stattdessen die Richtlinien und Einstellungen aus Configuration Manager.
-
-  - **Workspace ONE:** Diese Geräte werden vom Drittanbieterpartner für Gerätekonformität Workspace ONE verwaltet. Weitere Informationen finden Sie unter [Gerätekonformitätspartner](../protect/device-compliance-partners.md).
 
 - **Konformität**: Die Konformität wird anhand der Konformitätsrichtlinien bewertet, die dem Gerät zugewiesen sind. Die Quelle dieser Richtlinien sowie die in der Konsole angezeigten Informationen richten sich danach, wie das Gerät verwaltet wird: über Intune, Configuration Manager oder per Co-Verwaltung. Damit Geräte mit Co-Verwaltung Konformitätsdaten melden, legen Sie den Schieberegler der Co-Verwaltung für die Gerätekonformität entweder auf „Intune“ oder auf „Intune-Pilot“ fest.  
 

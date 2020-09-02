@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3ffef32f4f33e79b25145dd4c0257b8a5bcfd32a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820441"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913765"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Übermittlungsoptimierungseinstellungen in Microsoft Intune
 
@@ -30,7 +30,7 @@ In diesem Artikel wird beschrieben, wie Sie Übermittlungsoptimierungseinstellun
 
 Eine Liste der von Intune unterstützten Übermittlungsoptimierungseinstellungen finden Sie unter [Übermittlungsoptimierungseinstellungen für Intune](delivery-optimization-settings.md).  
 
-Weitere Informationen zur Übermittlungsoptimierung unter Windows 10 finden Sie in der Windows-Dokumentation unter [Delivery Optimization updates (Updates für die Übermittlungsoptimierung)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization).  
+Weitere Informationen zur Übermittlungsoptimierung unter Windows 10 finden Sie in der Windows-Dokumentation unter [Delivery Optimization updates (Updates für die Übermittlungsoptimierung)](/windows/deployment/update/waas-delivery-optimization).  
 
 ## <a name="create-the-profile"></a>Erstellen des Profils
 

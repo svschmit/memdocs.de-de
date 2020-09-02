@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: 5c7a83f07ce9c3da2fa953a3ea0d97e05b928a6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110731"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915465"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massenregistrierung für Windows-Geräte
 
@@ -78,7 +78,7 @@ Azure AD-Benutzer sind auf diesen Geräten Standardbenutzer und erhalten zugewie
    - Speichern Sie das Paket auf einem USB-Laufwerk, verbinden Sie dieses Laufwerk mit dem Gerät, das Sie per Massenvorgang registrieren möchten, und wenden Sie das Paket während des anfänglichen Setups an.
    - Speichern Sie das Paket in einem Netzwerkordner, und wenden Sie es nach der ersten Einrichtung an.
 
-   Eine Schrittanleitung zum Anwenden eines Bereitstellungspakets finden Sie unter [Anwenden eines Bereitstellungspakets](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
+   Eine Schrittanleitung zum Anwenden eines Bereitstellungspakets finden Sie unter [Anwenden eines Bereitstellungspakets](/windows/configuration/provisioning-packages/provisioning-apply-package).
 
 3. Nachdem das Paket angewendet wurde, wird das Gerät nach ca. 1 Minute automatisch neu gestartet.
    ![Screenshot: Angeben von Name, Projektordner und Beschreibung in der Windows Configuration Designer-App](./media/windows-bulk-enroll/bulk-enroll-add.png)

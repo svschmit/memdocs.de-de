@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d54a03290b7d2020b6ec13b64f985613c0a292d
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 82ee499689a7c7ae85fb72cc4fc9b5f6d5ffc939
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912304"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908869"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK-Xamarin-Bindungen
 
@@ -56,7 +56,7 @@ Xamarin-Apps, die mit den Intune App SDK Xamarin-Bindungen erstellt wurden, kön
 
 Lesen Sie die [Lizenzbedingungen](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Drucken Sie die Lizenzbedingungen aus, und heben Sie eine Kopie für Ihre Unterlagen auf. Indem Sie die Intune App SDK-Xamarin-Bindungen herunterladen und verwenden, stimmen Sie diesen Lizenzbestimmungen zu. Wenn Sie sie nicht akzeptieren, dürfen Sie die Software nicht verwenden.
 
-Das Intune SDK ist für seine Szenarios, die die [Authentifizierung](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) und den bedingten Start betreffen, auf die [Microsoft-Authentifizierungsbibliothek (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) angewiesen. Dazu müssen Apps mit [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) konfiguriert sein. 
+Das Intune SDK ist für seine Szenarios, die die [Authentifizierung](/azure/active-directory/develop/authentication-vs-authorization) und den bedingten Start betreffen, auf die [Microsoft-Authentifizierungsbibliothek (MSAL)](/azure/active-directory/develop/v2-overview) angewiesen. Dazu müssen Apps mit [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) konfiguriert sein. 
 
 Wenn Ihre Anwendung bereits für die Verwendung von MSAL konfiguriert ist und über eine eigene benutzerdefinierte Client-ID verfügt, die zur Authentifizierung bei Azure Active Directory verwendet wird, stellen Sie sicher, dass der Xamarin-Anwendung die erforderlichen Berechtigungen für den Intune MAM-Dienst (Mobile Application Management) gewährt werden. Verwenden Sie die Anweisungen unter [Erste Schritte mit dem Microsoft Intune App SDK](app-sdk-get-started.md) im Abschnitt [ Erteilen von Berechtigungen für den Zugriff auf den Intune-App-Schutzdienst durch Ihre App (optional)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional).
 
@@ -69,7 +69,7 @@ So verhindern Sie ein mögliches Spoofing, das Offenlegen von Informationen und 
   * [Intune App SDK-NuGet-Profil von Microsoft](https://www.nuget.org/profiles/msintuneappsdk)
   * [GitHub-Repository für Intune App SDK für Xamarin](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 * Konfigurieren Sie Ihre NuGet-Konfiguration für Ihr Projekt, um signierten, nicht geänderten NuGet-Paketen zu vertrauen.
-Weitere Informationen finden Sie unter [Verwalten von Paketvertrauensgrenzen](https://docs.microsoft.com/nuget/consume-packages/installing-signed-packages).
+Weitere Informationen finden Sie unter [Verwalten von Paketvertrauensgrenzen](/nuget/consume-packages/installing-signed-packages).
 * Sichern Sie das Ausgabeverzeichnis, das die Xamarin-Anwendung enthält. Erwägen Sie für die Ausgabe ein Verzeichnis auf Benutzerebene zu verwenden.
 
 
@@ -212,9 +212,9 @@ Sobald der Remapper zu Ihrem Projekt hinzugefügt wurde, müssen Sie die MAM ent
 ```
 
 Wenn die Ersetzungen nicht erfolgen, kann es zu folgenden Kompilierungsfehlern kommen, bis Sie die Ersetzungen vornehmen:
-* [Compilerfehler CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239): Dieser Fehler wird häufig in dieser Form angezeigt``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
+* [Compilerfehler CS0239](/dotnet/csharp/misc/cs0239): Dieser Fehler wird häufig in dieser Form angezeigt``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
 Dies entspricht dem erwarteten Verhalten, da bestimmte Funktionen in `sealed` geändert werden und stattdessen eine neue MAM-Variante zum Überschreiben hinzugefügt wird, wenn der Remapper die Vererbung von Xamarin-Klassen ändert.
-* [Compilerfehler CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Dieser Fehler wird häufig in dieser Form angezeigt: ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Wenn der Remapper die Vererbung einiger der Xamarin-Klassen ändert, werden bestimmte Memberfunktionen in `public` geändert. Wenn Sie eine dieser Funktionen überschreiben, müssen Sie möglicherweise die Zugriffsmodifizierer für diese Überschreibungen so ändern, dass sie ebenfalls `public` sind.
+* [Compilerfehler CS0507](/dotnet/csharp/language-reference/compiler-messages/cs0507): Dieser Fehler wird häufig in dieser Form angezeigt: ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Wenn der Remapper die Vererbung einiger der Xamarin-Klassen ändert, werden bestimmte Memberfunktionen in `public` geändert. Wenn Sie eine dieser Funktionen überschreiben, müssen Sie möglicherweise die Zugriffsmodifizierer für diese Überschreibungen so ändern, dass sie ebenfalls `public` sind.
 
 > [!NOTE]
 > Der Remapper schreibt eine Abhängigkeit neu, die Visual Studio für die Autovervollständigung von IntelliSense verwendet. Daher müssen Sie das Projekt möglicherweise neu laden und neu erstellen, wenn der Remapper hinzugefügt wird, damit IntelliSense die Änderungen ordnungsgemäß erkennt.
@@ -235,4 +235,4 @@ Für einen App-Schutz ohne Registrierung des Geräts muss der Benutzer das Gerä
 Beispielanwendungen, die MAM-Funktionen in xamarin. Android-und xamarin. Forms-apps hervorheben, sind auf [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps) verfügbar.
 
 ## <a name="support"></a>Unterstützung
-Wenn Ihre Organisation ein bestehender Intune-Kunde ist, arbeiten Sie mit Ihrem Microsoft-Supportmitarbeiter zusammen, um ein Supportticket zu erstellen und ein Issue auf der [GitHub-Seite für Issues](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) anzulegen. Wir helfen Ihnen so schnell wie möglich. 
+Wenn Ihre Organisation ein bestehender Intune-Kunde ist, arbeiten Sie mit Ihrem Microsoft-Supportmitarbeiter zusammen, um ein Supportticket zu erstellen und ein Issue auf der [GitHub-Seite für Issues](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) anzulegen. Wir helfen Ihnen so schnell wie möglich.

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d18ea0a12f0525b71fbcb8660187af36f1148bee
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8127281069ce4209adfc2aec82a93f5a60669307
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093164"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911861"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Geräteeinstellungen bei Windows Holographic for Business zur Ausführung als Kiosk in Intune
 
@@ -74,7 +74,7 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
   - **Automatische Anmeldung (Windows 10, Version 1803 und neuer):** Wird unter Windows Holographic for Business nicht unterstützt.
   - **Lokale Benutzerkonten:** **Fügen Sie das lokale Benutzerkonto (auf dem Gerät) hinzu**. Das von Ihnen eingegebene Konto wird zum Anmelden im Kiosk verwendet.
   - **Azure AD-Benutzer oder Gruppe (Windows 10, Version 1803 und höher):** Bei dieser Option sind Benutzeranmeldeinformationen für die Anmeldung auf dem Gerät erforderlich. Wählen Sie **Hinzufügen** aus, um Azure AD-Benutzer oder Gruppen aus der Liste auszuwählen. Sie können mehrere Benutzer und Gruppen auswählen. Wählen Sie **OK** aus, um die Änderungen zu speichern.
-  - **HoloLens-Besucher:** Beim Besucherkonto handelt es sich um ein Gastkonto, für das keine Anmeldeinformationen oder Authentifizierung erforderlich ist. Weitere Informationen dazu finden Sie unter [shared PC mode concepts (Konzepte für den Modus „Freigegebener Computer“)](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **HoloLens-Besucher:** Beim Besucherkonto handelt es sich um ein Gastkonto, für das keine Anmeldeinformationen oder Authentifizierung erforderlich ist. Weitere Informationen dazu finden Sie unter [shared PC mode concepts (Konzepte für den Modus „Freigegebener Computer“)](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Browser und Anwendungen**: Wählen Sie die Apps aus, die auf dem Kioskgerät ausgeführt werden sollen. Denken Sie daran, dass Sie mehrere Apps hinzufügen können.
 
@@ -84,7 +84,7 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
       - **Normalmodus (Vollversion von Microsoft Edge)** : Führt eine Vollversion von Microsoft Edge mit sämtlichen Funktionen für das Browsen aus. Benutzerdaten und -zustand werden zwischen Sitzungen beibehalten.
       - **Öffentliches Browsen (InPrivate)** : Hiermit wird eine Version von Microsoft Edge InPrivate mit mehreren Registerkarten mit einer für Kioske ausgelegten Benutzeroberfläche im Vollbildmodus ausgeführt.
 
-      Weitere Informationen zu diesen Optionen finden Sie unter [Bereitstellen des Microsoft Edge-Kioskmodus](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+      Weitere Informationen zu diesen Optionen finden Sie unter [Bereitstellen des Microsoft Edge-Kioskmodus](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
       > Mit dieser Einstellung wird der Microsoft Edge-Browser auf dem Gerät aktiviert. Erstellen Sie zum Konfigurieren spezifischer Microsoft Edge-Einstellungen ein Geräteeinschränkungsprofil (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **Windows 10** (Plattform) > **Geräteeinschränkungen** > **Microsoft Edge-Browser**). Der [Microsoft Edge-Browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) beschreibt und führt alle Holographic for Business-Einstellungen auf.
@@ -97,12 +97,12 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
     - **Nach AUMID hinzufügen:** Mit dieser Option können Sie Windows-Posteingangs-Apps wie Editor oder Rechner hinzufügen. Geben Sie die folgenden Eigenschaften ein:
 
       - **Anwendungsname:** Erforderlich. Geben Sie einen Namen für die Anwendung ein.
-      - **Anwendungsbenutzermodell-ID (AUMID):** Erforderlich. Geben Sie die AUMID der Windows-App ein. Weitere Informationen zum Abrufen dieser ID finden Sie unter [Ermitteln der Anwendungsbenutzermodell-ID einer installierten App](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+      - **Anwendungsbenutzermodell-ID (AUMID):** Erforderlich. Geben Sie die AUMID der Windows-App ein. Weitere Informationen zum Abrufen dieser ID finden Sie unter [Ermitteln der Anwendungsbenutzermodell-ID einer installierten App](/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
     - **AutoLaunch**: (Optional) Nachdem Sie Ihre Apps und Ihren Browser hinzugefügt haben, wählen Sie eine App oder einen Browser aus, die bzw. der jeweils automatisch geöffnet werden soll, wenn sich der Benutzer anmeldet. Nur eine App oder ein Browser kann mit automatisch gestartet werden.
     - **Kachelgröße:** Erforderlich. Nachdem Sie Ihre Apps hinzugefügt haben, wählen Sie eine kleine, mittlere, breite oder große App-Kachelgröße aus.
 
-- **Alternatives Startlayout verwenden:** Wählen Sie **Ja** aus, um eine XML-Datei einzufügen, die beschreibt, wie die Apps im Startmenü dargestellt werden (u. a. die Reihenfolge der Apps). Verwenden Sie diese Option, wenn Sie in Ihrem Startmenü weitere Anpassungen vornehmen möchten. [Startlayout anpassen und exportieren](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens): Diese Option umfasst eine Anleitung und eine XML-Datei für Windows Holographic for Business-Geräte.
+- **Alternatives Startlayout verwenden:** Wählen Sie **Ja** aus, um eine XML-Datei einzufügen, die beschreibt, wie die Apps im Startmenü dargestellt werden (u. a. die Reihenfolge der Apps). Verwenden Sie diese Option, wenn Sie in Ihrem Startmenü weitere Anpassungen vornehmen möchten. [Startlayout anpassen und exportieren](/hololens/hololens-kiosk#start-layout-for-hololens): Diese Option umfasst eine Anleitung und eine XML-Datei für Windows Holographic for Business-Geräte.
 
 - **Windows-Taskleiste:** Wird unter Windows Holographic for Business nicht unterstützt.
 - **Zugriff auf Downloadordner zulassen**: Wird unter Windows Holographic for Business nicht unterstützt.

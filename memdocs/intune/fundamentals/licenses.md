@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf4fb6499299cd09fcac5673e252dd064120620
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: a447112bc721a87283210ca560b5d6bdbd38d26e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764253"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912354"
 ---
 # <a name="microsoft-intune-licensing"></a>Microsoft Intune-Lizenzierung
 Microsoft Intune ist für verschiedene Kundenanforderungen und Unternehmensgrößen erhältlich – angefangen bei einer einfach zu bedienenden Verwaltung für Schulen und kleine Unternehmen bis hin zu erweiterten Funktionen, die von Unternehmenskunden benötigt werden. Die meisten Lizenzen, die Microsoft Intune enthalten, gewähren auch die Berechtigung zur Verwendung von Configuration Manager, solange das Abonnement aktiv bleibt. Einem Administrator muss eine Lizenz zum Verwalten von Intune zugewiesen sein.
@@ -48,7 +48,7 @@ Intune für Education ist in den folgenden Lizenzen enthalten:
 ## <a name="additional-information"></a>Zusätzliche Informationen
 - Zusätzlich zu den oben aufgeführten Paketen ist ein Microsoft Intune-Benutzer- und Geräteabonnement als eigenständiges Abonnement erhältlich.
 - Ein Abonnement für Microsoft Intune-Geräte ist zur Verwaltung von Kiosks, dedizierten Geräten, Phone-Raum-Geräten, IoT und anderen Einmalgeräten verfügbar, die keine benutzerbasierten Sicherheits- und Verwaltungsfunktionen erfordern.
-- Die entsprechende Microsoft Intune-Lizenz ist erforderlich, wenn ein Benutzer oder Gerät direkt oder indirekt vom Microsoft Intune-Dienst profitiert, einschließlich des Zugriffs auf den Microsoft Intune-Dienst über eine [Microsoft-API](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use).
+- Die entsprechende Microsoft Intune-Lizenz ist erforderlich, wenn ein Benutzer oder Gerät direkt oder indirekt vom Microsoft Intune-Dienst profitiert, einschließlich des Zugriffs auf den Microsoft Intune-Dienst über eine [Microsoft-API](/legal/microsoft-apis/terms-of-use).
 - Intune ist in Lizenzen, die sich nicht in den vorherigen Tabellen befinden, nicht enthalten.
 
 Besuchen Sie die Seite [Microsoft-Lizenzierung](https://www.microsoft.com/licensing/default), um die neuesten Informationen über Produktversionen, Produktlizenzupdates, Volumenlizenzpläne und andere Informationen bezüglich Ihrer spezifischen Anwendungsfälle zu erhalten.  

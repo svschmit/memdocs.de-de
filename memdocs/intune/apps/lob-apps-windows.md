@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5b70f36873200d0adbbc356d9a482cf13cc2ea49
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990625"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913323"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Hinzufügen branchenspezifischer Windows-Apps zu Microsoft Intune
 
@@ -50,7 +50,7 @@ Branchenspezifische Apps werden über eine App-Installationsdatei hinzugefügt. 
    Die App-Details werden angezeigt.
 
     > [!NOTE]
-    > Zu den Dateierweiterungen für Windows-Apps gehören **.msi**, **.appx**, **.appxbundle**, **.msix** und **.msixbundle**. Weitere Informationen zu **.msix** finden Sie in der [MSIX-Dokumentation](https://docs.microsoft.com/windows/msix/) und unter [MSIX-App-Verteilung](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise).
+    > Zu den Dateierweiterungen für Windows-Apps gehören **.msi**, **.appx**, **.appxbundle**, **.msix** und **.msixbundle**. Weitere Informationen zu **.msix** finden Sie in der [MSIX-Dokumentation](/windows/msix/) und unter [MSIX-App-Verteilung](/windows/msix/desktop/managing-your-msix-deployment-enterprise).
 
 3. Wenn Sie fertig sind, wählen Sie im Bereich **App-Paketdatei** die Option **OK** aus, um die App hinzuzufügen.
 
@@ -62,7 +62,7 @@ Branchenspezifische Apps werden über eine App-Installationsdatei hinzugefügt. 
     - **Herausgeber**: Geben Sie den Namen des Herausgebers der App ein.
     - **App-Installationskontext**: Wählen Sie den Installationskontext aus, der dieser App zugeordnet werden soll. Wählen Sie für Apps mit dualem Modus den gewünschten Kontext aus. Für alle weiteren Apps wird diese Einstellung basierend auf dem Paket vorausgewählt und kann nicht geändert werden.
     - **App-Version ignorieren**: Legen Sie diese Option auf **Ja** fest, wenn der App-Entwickler die App automatisch aktualisiert. Diese Option gilt nur für mobile MSI-Apps.
-    - **Befehlszeilenargumente**: Geben Sie optional Befehlszeilenargumente ein, die bei Ausführung auf die MSI-Datei angewendet werden sollen.  Ein Beispiel ist **/q**. Schließen Sie den Befehl „msiexec“ und Argumente wie **/i** oder **/x** nicht ein, da diese automatisch verwendet werden. Weitere Informationen finden Sie unter [Befehlszeilenoptionen](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). Wenn die MSI-Datei zusätzliche Befehlszeilenoptionen benötigt, verwenden Sie [Win32-App-Verwaltung](app-management.md).
+    - **Befehlszeilenargumente**: Geben Sie optional Befehlszeilenargumente ein, die bei Ausführung auf die MSI-Datei angewendet werden sollen.  Ein Beispiel ist **/q**. Schließen Sie den Befehl „msiexec“ und Argumente wie **/i** oder **/x** nicht ein, da diese automatisch verwendet werden. Weitere Informationen finden Sie unter [Befehlszeilenoptionen](/windows/desktop/Msi/command-line-options). Wenn die MSI-Datei zusätzliche Befehlszeilenoptionen benötigt, verwenden Sie [Win32-App-Verwaltung](app-management.md).
     - **Kategorie**: Wählen Sie eine oder mehrere der integrierten oder von Ihnen erstellten App-Kategorien aus. Kategorien erleichtern es dem Benutzer, die App über das Unternehmensportal zu finden.
     - **Diese App als ausgewählte App im Unternehmensportal anzeigen**: Präsentieren Sie die App herausgehoben auf der Hauptseite des Unternehmensportals, wenn die Benutzer nach Apps suchen.
     - **Informations-URL**: Geben Sie optional eine URL zu einer Website ein, die Informationen über diese App enthält. Die URL wird im Unternehmensportal angezeigt.

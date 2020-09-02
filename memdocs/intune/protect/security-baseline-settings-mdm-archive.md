@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92eafef5bac7f1008284f896b85981d170331382
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 790382e3c7ad92133ffbb69fafa6b92e3d2076fa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079211"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912065"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -44,7 +44,7 @@ Wenn eine Baselineversion nicht mehr für die Verwendung unterstützt wird, wird
 
 ### <a name="above-lock"></a>Sperrbildschirm  
 
-Weitere Informationen finden Sie unter [Policy CSP - AboveLock (Richtlinien-Konfigurationsdienstanbieter: AboveLock)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - AboveLock (Richtlinien-Konfigurationsdienstanbieter: AboveLock)](/windows/client-management/mdm/policy-csp-abovelock) in Ihrer Windows-Dokumentation.  
 
 - **Anzeige von Popupbenachrichtigungen blockieren**  
   Diese Richtlinieneinstellung ermöglicht Ihnen, zu verhindern, dass App-Benachrichtigungen auf dem Sperrbildschirm angezeigt werden. Wenn Sie diese Richtlinieneinstellung aktivieren, werden keine App-Benachrichtigungen auf dem Sperrbildschirm angezeigt. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer wählen, welche Apps Benachrichtigungen auf dem Sperrbildschirm anzeigen.
@@ -53,7 +53,7 @@ Weitere Informationen finden Sie unter [Policy CSP - AboveLock (Richtlinien-Konf
 
 ### <a name="app-runtime"></a>App-Laufzeit  
 
-Weitere Informationen finden Sie unter [Policy CSP - AppRuntime (Richtlinien-Konfigurationsdienstanbieter: AppRuntime)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime
+Weitere Informationen finden Sie unter [Policy CSP - AppRuntime (Richtlinien-Konfigurationsdienstanbieter: AppRuntime)](/windows/client-management/mdm/policy-csp-appruntime
 ) in Ihrer Windows-Dokumentation.  
 
 - **Microsoft-Konten optional für Windows Store-Apps**  
@@ -63,7 +63,7 @@ Weitere Informationen finden Sie unter [Policy CSP - AppRuntime (Richtlinien-Kon
 
 ### <a name="application-management"></a>Anwendungsverwaltung  
 
-Weitere Informationen finden Sie unter [Policy CSP - ApplicationManagement (Richtlinien-Konfigurationsdienstanbieter: ApplicationManagement)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - ApplicationManagement (Richtlinien-Konfigurationsdienstanbieter: ApplicationManagement)](/windows/client-management/mdm/policy-csp-applicationmanagement) in Ihrer Windows-Dokumentation.  
 
 - **Game DVR (nur Desktop) blockieren**  
   konfiguriert, ob Aufzeichnen und Übertragen von Spielen zulässig ist.
@@ -72,7 +72,7 @@ Weitere Informationen finden Sie unter [Policy CSP - ApplicationManagement (Rich
 
 ### <a name="auto-play"></a>Automatische Wiedergabe  
 
-Weitere Informationen finden Sie unter [Policy CSP - Autoplay (Richtlinien-Konfigurationsdienstanbieter: Autoplay)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - Autoplay (Richtlinien-Konfigurationsdienstanbieter: Autoplay)](/windows/client-management/mdm/policy-csp-autoplay) in Ihrer Windows-Dokumentation.  
 
 - **Standardverhalten für automatische Ausführung der automatischen Wiedergabe**  
   Diese Einstellung betrifft das Standardverhalten für AutoRun-Befehle. AutoRun-Befehle werden in autorun.inf-Dateien gespeichert und können Installationsprogramme oder andere Routinen auslösen. Wenn das Standardverhalten für AutoRun-Befehle *Aktiviert* ist, können es Administratoren auf einem Gerät ändern, das Windows Vista oder eine höhere Version ausführt. Für das Verhalten bestehen die folgenden Einstellungsmöglichkeiten: a) AutoRun-Befehle komplett deaktivieren, oder b) Wiederherstellen des Verhaltens vor der Ausführung von Windows Vista, damit AutoRun-Befehle wieder automatisch ausgeführt werden. Wenn *Deaktiviert* oder *Nicht konfiguriert* eingestellt ist, wird der Benutzer von Geräten, auf denen Windows Vista ausgeführt wird, dazu aufgefordert, zu entscheiden, ob ein AutoRun-Befehl ausgeführt werden soll.
@@ -91,7 +91,7 @@ Weitere Informationen finden Sie unter [Policy CSP - Autoplay (Richtlinien-Konfi
 
 ### <a name="bitlocker"></a>BitLocker  
 
-Weitere Informationen finden Sie unter [Policy CSP - BitLocker (Richtlinien-Konfigurationsdienstanbieter: BitLocker)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
+Weitere Informationen finden Sie unter [Policy CSP - BitLocker (Richtlinien-Konfigurationsdienstanbieter: BitLocker)](/windows/client-management/mdm/policy-csp-bitlocker
 ) in Ihrer Windows-Dokumentation.  
 
 - **Richtlinie für BitLocker-Verschlüsselung von Wechseldatenträgern**  
@@ -121,7 +121,7 @@ Weitere Informationen finden Sie unter [Policy CSP - BitLocker (Richtlinien-Konf
 
 ### <a name="browser"></a>Browser  
 
-Weitere Informationen finden Sie unter [Policy CSP - Browser (Richtlinien-Konfigurationsdienstanbieter - Browser)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - Browser (Richtlinien-Konfigurationsdienstanbieter - Browser)](/windows/client-management/mdm/policy-csp-browser) in Ihrer Windows-Dokumentation.  
 
 - **SmartScreen für Microsoft Edge anfordern**  
 
@@ -151,7 +151,7 @@ Weitere Informationen finden Sie unter [Policy CSP - Browser (Richtlinien-Konfig
 
 ### <a name="connectivity"></a>Verbindung  
 
-Weitere Informationen finden Sie unter [Policy CSP – Connectivity (Richtlinien-Konfigurationsdienstanbieter: Konnektivität)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP – Connectivity (Richtlinien-Konfigurationsdienstanbieter: Konnektivität)](/windows/client-management/mdm/policy-csp-connectivity) in der Windows-Dokumentation.  
 
 - **Block Internet download for web publishing and online ordering wizards** (Internet-Download für die Assistenten „Webpublishing“ und „Onlinebestellung von Abzügen“ deaktivieren)  
   Diese Richtlinieneinstellung legt fest, ob Windows eine Liste von Anbietern für den Webpublishing-Assistenten und den Assistenten für Onlinebestellung herunterladen soll. Diese Assistenten ermöglichen Benutzern, aus einer Liste Firmen auszuwählen, die Dienste wie Onlinespeicherung und Fotodruck anbieten. Standardmäßig werden zusätzlich zu den in der Registrierung angegebenen Anbietern auch solche angezeigt, die von einer Windows-Website heruntergeladen wurden. Wenn Sie diese Richtlinieneinstellung aktivieren, werden keine Anbieter heruntergeladen, sondern nur die Dienstanbieter angezeigt, die in der lokalen Registrierung zwischengespeichert sind. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird eine Liste von Anbietern heruntergeladen, wenn der Benutzer den Webpublishing-Assistenten und den Assistenten für Onlinebestellung verwendet. Weitere Informationen über den Webpublishing-Assistenten und den Assistenten für Onlinebestellung finden Sie in der Dokumentation, einschließlich Details über das Angeben von Dienstanbietern in der Registrierung.  
@@ -165,7 +165,7 @@ Weitere Informationen finden Sie unter [Policy CSP – Connectivity (Richtlinien
 
 ### <a name="credentials-delegation"></a>Delegierung von Anmeldeinformationen  
 
-Weitere Informationen finden Sie unter [Policy CSP – CredentialsDelegation (Richtlinien-Konfigurationsdienstanbieter: CredentialsDelegation)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation
+Weitere Informationen finden Sie unter [Policy CSP – CredentialsDelegation (Richtlinien-Konfigurationsdienstanbieter: CredentialsDelegation)](/windows/client-management/mdm/policy-csp-credentialsdelegation
 ) in der Windows-Dokumentation.  
 
 - **Remote host delegation of non-exportable credentials** (Remotehostdelegierung nicht exportierbarer Anmeldeinformationen)  
@@ -176,7 +176,7 @@ Weitere Informationen finden Sie unter [Policy CSP – CredentialsDelegation (Ri
 
 ### <a name="credentials-ui"></a>Benutzeroberfläche für Anmeldeinformationen  
 
-Weitere Informationen finden Sie unter [Policy CSP – Connectivity (Richtlinien-Konfigurationsdienstanbieter: CredentialsUI)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP – Connectivity (Richtlinien-Konfigurationsdienstanbieter: CredentialsUI)](/windows/client-management/mdm/policy-csp-credentialsui) in der Windows-Dokumentation.  
 
 - **Enumerate administrators** (Administratoren auflisten) Diese Richtlinieneinstellung steuert, ob Administratorkonten angezeigt werden, wenn ein Benutzer versucht, eine Anwendung mit erhöhten Rechten auszuführen. Standardmäßig werden Administratorkonten beim Versuch eines Benutzers, eine Anwendung mit erhöhten Rechten auszuführen, nicht angezeigt. Wenn Sie diese Richtlinieneinstellung aktivieren, werden alle lokalen Administratorkonten auf dem Computers angezeigt, damit der Benutzer eines auswählen und das richtige Kennwort eingeben kann. Wenn Sie diese Richtlinieneinstellung deaktivieren, müssen Benutzer jedes Mal einen Benutzernamen und ein Kennwort eingeben, um eine Anwendung mit erhöhten Rechten auszuführen.  
 
@@ -185,7 +185,7 @@ Weitere Informationen finden Sie unter [Policy CSP – Connectivity (Richtlinien
 
 ### <a name="data-protection"></a>Schutz von Daten  
 
-Weitere Informationen finden Sie unter [Policy CSP – Defender (Richtlinien-Konfigurationsdienstanbieter: DataProtection)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection
+Weitere Informationen finden Sie unter [Policy CSP – Defender (Richtlinien-Konfigurationsdienstanbieter: DataProtection)](/windows/client-management/mdm/policy-csp-dataprotection
 ) in der Windows-Dokumentation.  
 
 - **Block direct memory access** (Direkten Speicherzugriff blockieren)  
@@ -196,7 +196,7 @@ Weitere Informationen finden Sie unter [Policy CSP – Defender (Richtlinien-Kon
 
 ### <a name="device-guard"></a>Device Guard  
 
-Weitere Informationen finden Sie unter [Policy CSP – DeviceGuard (Richtlinien-Konfigurationsdienstanbieter: DeviceGuard)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
+Weitere Informationen finden Sie unter [Policy CSP – DeviceGuard (Richtlinien-Konfigurationsdienstanbieter: DeviceGuard)](/windows/client-management/mdm/policy-csp-deviceguard
 ) in der Windows-Dokumentation.  
 
 - **Credential Guard**  
@@ -214,7 +214,7 @@ Weitere Informationen finden Sie unter [Policy CSP – DeviceGuard (Richtlinien-
 
 ### <a name="device-installation"></a>Geräteinstallation  
 
-Weitere Informationen finden Sie unter [Policy CSP – DeviceInstallation (Richtlinien-Konfigurationsdienstanbieter: DeviceInstallation)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP – DeviceInstallation (Richtlinien-Konfigurationsdienstanbieter: DeviceInstallation)](/windows/client-management/mdm/policy-csp-deviceinstallation) in der Windows-Dokumentation.  
 
 - **Hardware device installation by device identifiers** (Installation von Hardwaregeräten anhand der Geräte-ID)  
   Mit dieser Richtlinieneinstellung können Sie eine Liste von Plug & Play-Hardware-IDs und kompatiblen IDs für Geräte angeben, deren Installation unter Windows verhindert wird. Diese Richtlinieneinstellung hat Vorrang gegenüber jeder anderen Richtlinieneinstellung, die die Installation eines Geräts ermöglicht. Wenn Sie diese Richtlinieneinstellung aktivieren, kann ein Gerät nicht installiert oder aktualisiert werden, wenn die zugehörige Hardware-ID oder kompatible ID in der von Ihnen erstellten Liste enthalten ist. Wenn Sie diese Richtlinieneinstellung auf einem Remotedesktopserver aktivieren, wirkt sich dies auf die Umleitung der angegebenen Geräte von einem Remotedesktopclient an den Remotedesktopserver aus. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Geräte installiert und aktualisiert werden, sofern andere Richtlinieneinstellungen dies zulassen.
@@ -251,7 +251,7 @@ Weitere Informationen finden Sie unter [Policy CSP – DeviceInstallation (Richt
 
 ### <a name="device-lock"></a>Gerätesperre  
 
-Weitere Informationen finden Sie unter [Policy CSP - DeviceLock (Richtlinien-CSP: DeviceLock)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - DeviceLock (Richtlinien-CSP: DeviceLock)](/windows/client-management/mdm/policy-csp-devicelock) in Ihrer Windows-Dokumentation.  
 
 - **Verwendung der Kamera verhindern**  
   Deaktiviert das Ein-/Ausschalten der Kamera auf dem Sperrbildschirm in den PC-Einstellungen und verhindert, dass eine Kamera auf dem Sperrbildschirm aufgerufen wird. Standardmäßig können Benutzer das Aufrufen einer verfügbaren Kamera auf dem Sperrbildschirm aktivieren. Wenn Sie diese Einstellung aktivieren, können Benutzer den Kamerazugriff auf den Sperrbildschirm in den PC-Einstellungen nicht mehr aktivieren, und die Kamera kann nicht mehr auf dem Sperrbildschirm aufgerufen werden. 
@@ -314,7 +314,7 @@ Weitere Informationen finden Sie unter [Policy CSP - DeviceLock (Richtlinien-CSP
 
 ### <a name="event-log-service"></a>Ereignisprotokolldienst  
 
-Weitere Informationen finden Sie unter [Policy CSP - EventLogService (Richtlinien-Konfigurationsdienstanbieter: EventLogService)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - EventLogService (Richtlinien-Konfigurationsdienstanbieter: EventLogService)](/windows/client-management/mdm/policy-csp-eventlogservice) in Ihrer Windows-Dokumentation.  
 
 - **Sicherheitsprotokoll: maximale Dateigröße in kB**  
   Diese Richtlinieneinstellung gibt die maximale Größe der Protokolldatei in Kilobyte an. Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie die maximale Protokolldateigröße so konfigurieren, dass sie zwischen 1 Megabyte (1.024 Kilobyte) und 2 Terabyte (2.147.483.647 Kilobyte) in Kilobyte-Schritten liegt. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die maximale Größe der Protokolldatei auf den lokal konfigurierten Wert eingestellt. Dieser Wert kann durch den lokalen Administrator über das Dialogfeld „Protokolleigenschaften“ geändert werden und wird standardmäßig auf 20 Megabyte eingestellt.
@@ -333,7 +333,7 @@ Weitere Informationen finden Sie unter [Policy CSP - EventLogService (Richtlinie
 
 ### <a name="experience"></a>Erfahrung  
 
-Weitere Informationen finden Sie unter [Policy CSP - Experience (Richtlinien-Konfigurationsdienstanbieter: Experience)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - Experience (Richtlinien-Konfigurationsdienstanbieter: Experience)](/windows/client-management/mdm/policy-csp-experience) in Ihrer Windows-Dokumentation.  
 
 - **Windows-Blickpunkt blockieren**  
   Ermöglicht IT-Administratoren, alle Features von Windows-Blickpunkt zu deaktivieren – Windows-Blickpunkt auf dem Sperrbildschirm, Windows-Tipps, Microsoft-Features für Endbenutzer und weitere ähnliche Features.
@@ -354,7 +354,7 @@ Weitere Informationen finden Sie unter [Policy CSP - Experience (Richtlinien-Kon
 
 ### <a name="exploit-guard"></a>Exploit Guard  
 
-Weitere Informationen finden Sie unter [Policy CSP - ExploitGuard (Richtlinien-Konfigurationsdienstanbieter: ExploitGuard)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - ExploitGuard (Richtlinien-Konfigurationsdienstanbieter: ExploitGuard)](/windows/client-management/mdm/policy-csp-exploitguard) in Ihrer Windows-Dokumentation.  
 
 - **Exploit-Schutz-XML**  
   Ermöglicht dem IT-Administrator, eine Konfiguration vorzunehmen, die für alle Geräte in der Organisation die gewünschten Optionen zur Risikominderung für System und Anwendungen abbildet. Die Konfiguration wird in einer XML-Datei vorgenommen. Durch den Exploit-Schutz können Geräte vor Schadsoftware geschützt werden, die Exploits für die Verbreitung und den Befall von Systemen verwendet. Sie können die App „Windows-Sicherheit“ oder PowerShell verwenden, um Lösungen zur Entschärfung (Konfigurationen) zu erstellen. Diese Konfiguration können Sie anschließend als XML-Datei exportieren und für die Computer in Ihrem Netzwerk freigeben, sodass diese über dieselben Einstellungen zur Entschärfung verfügen. Sie können außerdem eine vorhandene XML-Konfigurationsdatei aus EMET in eine XML-Konfigurationsdatei für den Exploit-Schutz konvertieren und importieren.
@@ -363,7 +363,7 @@ Weitere Informationen finden Sie unter [Policy CSP - ExploitGuard (Richtlinien-K
  
 ### <a name="file-explorer"></a>Datei-Explorer  
 
-Weitere Informationen finden Sie unter [Policy CSP - FileExplorer (Richtlinien-CSP: FileExplorer)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - FileExplorer (Richtlinien-CSP: FileExplorer)](/windows/client-management/mdm/policy-csp-fileexplorer) in der Windows-Dokumentation.  
 
 - **Block data execution prevention** (Schutz vor Ausführung von Daten blockieren)  
   Wenn Sie den Schutz vor der Ausführung von Daten deaktivieren, können bestimmte veraltete Plug-In-Anwendungen erfolgreich ausgeführt werden, ohne dass der Explorer geschlossen wird.
@@ -378,7 +378,7 @@ Weitere Informationen finden Sie unter [Policy CSP - FileExplorer (Richtlinien-C
 
 ### <a name="internet-explorer"></a>Internet Explorer  
 
-Weitere Informationen finden Sie unter [Policy CSP - Internet Explorer (Richtlinien-CSP: Internet Explorer)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - Internet Explorer (Richtlinien-CSP: Internet Explorer)](/windows/client-management/mdm/policy-csp-internetexplorer) in der Windows-Dokumentation.  
 
 - **Internet Explorer internet zone access to data sources** (Zugriff auf Datenquellen in Internetzonen in Internet Explorer)  
   Durch diese Richtlinieneinstellung können Sie festlegen, ob Internet Explorer mithilfe von Microsoft XML Parser (MSXML) oder ActiveX Data Objects (ADO) auf Daten aus anderen Sicherheitszonen zugreifen kann. Wenn Sie diese Richtlinieneinstellung aktivieren, können Benutzer eine Seite in die Zone laden, die MSXML oder ADO verwendet, um auf Daten in einer anderen Site in der Zone zuzugreifen. Wenn Sie im Dropdownfeld „Prompt“ (Bestätigen) auswählen, werden Benutzer dazu aufgefordert, zu entscheiden, ob eine Seite in der Zone geladen werden soll, die MSXML oder ADO verwendet, um auf Daten in einer anderen Site in der Zone zuzugreifen. Wenn Sie diese Richtlinieneinstellung deaktivieren, können Benutzer keine Seite in die Zone laden, die MSXML oder ADO verwendet, um auf Daten in einer anderen Site in der Zone zuzugreifen. Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, können Benutzer keine Seite in die Zone laden, die MSXML oder ADO verwendet, um auf Daten in einer anderen Site in der Zone zuzugreifen.
@@ -950,7 +950,7 @@ Weitere Informationen finden Sie unter [Policy CSP - Internet Explorer (Richtlin
   **Standardeinstellung:** Deaktiviert  
   
 ### <a name="local-policies-security-options"></a>Sicherheitsoptionen für lokale Richtlinien
-Weitere Informationen finden Sie unter [Policy CSP – LocalPoliciesSecurityOptions (Richtlinien-Konfigurationsdienstanbieter: LocalPoliciesSecurityOptions)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) in der Windows-Dokumentation. 
+Weitere Informationen finden Sie unter [Policy CSP – LocalPoliciesSecurityOptions (Richtlinien-Konfigurationsdienstanbieter: LocalPoliciesSecurityOptions)](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) in der Windows-Dokumentation. 
 
 - **Restrict anonymous access to named pipes and shares** (Anonymen Zugriff auf Named Pipes und Freigaben einschränken)  
   Wenn diese Sicherheitseinstellung aktiviert ist, wird der anonyme Zugriff auf Freigaben und Pipes für folgende Einstellungen eingeschränkt: (1) Named Pipes, auf die anonym zugegriffen werden kann (2) Freigaben, auf die anonym zugegriffen werden kann
@@ -1094,7 +1094,7 @@ Weitere Informationen finden Sie unter [Policy CSP – LocalPoliciesSecurityOpti
 
 ### <a name="ms-security-guide"></a>MSSecurityGuide  
 
-Weitere Informationen finden Sie unter [Policy CSP - MSSecurityGuide (Richtlinien-CSP: MSSecurityGuide)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - MSSecurityGuide (Richtlinien-CSP: MSSecurityGuide)](/windows/client-management/mdm/policy-csp-mssecurityguide) in der Windows-Dokumentation.  
 
 - **Apply UAC restrictions to local accounts on network logon** (UAC-Einschränkungen auf lokale Konten bei der Netzwerkanmeldung anwenden)  
   **Standardeinstellung:** Aktiviert
@@ -1113,7 +1113,7 @@ Weitere Informationen finden Sie unter [Policy CSP - MSSecurityGuide (Richtlinie
   
 ### <a name="mss-legacy"></a>MSS Legacy  
 
-Weitere Informationen finden Sie unter [Policy CSP - MSSLegacy (Richtlinen-CSP: MSSLegacy)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - MSSLegacy (Richtlinen-CSP: MSSLegacy)](/windows/client-management/mdm/policy-csp-msslegacy) in der Windows-Dokumentation.  
 
 - **Network IP source routing protection level** (Schutzebene für das Quellrouting von Netzwerk-IP-Adressen)  
   **Standardeinstellung:** Höchster Schutz  
@@ -1129,7 +1129,7 @@ Weitere Informationen finden Sie unter [Policy CSP - MSSLegacy (Richtlinen-CSP: 
   
 ### <a name="power"></a>Power  
 
-Weitere Informationen finden Sie unter [Policy CSP - Power (Richtlinien-CSP: Power)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - Power (Richtlinien-CSP: Power)](/windows/client-management/mdm/policy-csp-power) in der Windows-Dokumentation.  
 
 - **Require password on wake while plugged in** (Kennwort bei Reaktivierung im Netzbetrieb anfordern)  
   Mit dieser Richtlinieneinstellung können Sie bestimmen, ob der Benutzer zur Eingabe eines Kennworts aufgefordert wird, wenn das System aus dem Energiesparmodus reaktiviert wird. Wenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, wird der Benutzer beim Verlassen des Energiesparmodus zur Eingabe eines Kennworts aufgefordert. Wenn Sie diese Richtlinieneinstellung deaktivieren, wird der Benutzer beim Verlassen des Energiesparmodus nicht zur Eingabe eines Kennworts aufgefordert.
@@ -1153,7 +1153,7 @@ Weitere Informationen finden Sie unter [Policy CSP - Power (Richtlinien-CSP: Pow
   
 ### <a name="remote-desktop-services"></a>Remotedesktopdienste  
 
-Weitere Informationen finden Sie unter [Policy CSP – RemoteDesktopServices (Richtlinien-Konfigurationsdienstanbieter: RemoteDesktopServices)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP – RemoteDesktopServices (Richtlinien-Konfigurationsdienstanbieter: RemoteDesktopServices)](/windows/client-management/mdm/policy-csp-remotedesktopservices) in der Windows-Dokumentation.  
 
 - **Block password saving** (Speichern von Kennwörtern blockieren)  
   Diese Richtlinieneinstellung steuert, ob Kennwörter auf diesem Computer über die Remotedesktopverbindung gespeichert werden können. Wenn Sie diese Einstellung aktivieren, wird das Kontrollkästchen für die Kennwortspeicherung in der Remotedesktopverbindung deaktiviert, und Benutzer können Kennwörter nicht mehr speichern. Wenn ein Benutzer eine RDP-Datei über die Remotedesktopverbindung öffnet und seine Einstellungen speichert, werden alle zuvor in der RDP-Datei vorhandenen Kennwörter gelöscht. Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, kann der Benutzer Kennwörter über die Remotedesktopverbindung speichern.
@@ -1166,7 +1166,7 @@ Weitere Informationen finden Sie unter [Policy CSP – RemoteDesktopServices (Ri
   **Standardeinstellung:** Aktiviert
   
 - **Block drive redirection** (Laufwerkumleitung blockieren)  
-  Mit dieser Richtlinieneinstellung wird festgelegt, ob die Zuordnung von Clientlaufwerken während einer Remotedesktopdienst-Sitzung (Laufwerkumleitung) verhindert werden soll. Remotedesktopdienst-Hostserver ordnen Clientlaufwerke standardmäßig beim Herstellen der Verbindung automatisch zu. Zugeordnete Laufwerke werden in der Sitzungsordnerstruktur im Datei-Explorer oder unter Computer mit dem Format *\<Laufwerkbuchstabe>* auf *\<Computername>* angezeigt. Mit dieser Richtlinieneinstellung können Sie dieses Verhalten überschreiben. Wenn Sie diese Richtlinieneinstellung aktivieren, ist die Umleitung von Clientlaufwerken in Remotedesktopdienst-Sitzungen nicht zulässig, und die Zwischenablageumleitung beim Kopieren von Dateien ist auf Computern unter Windows Server 2003, Windows 8 und Windows XP nicht zulässig. Wenn Sie diese Richtlinieneinstellung deaktivieren, ist die Umleitung von Clientlaufwerken immer zulässig. Außerdem ist die Zwischenablageumleitung beim Kopieren von Dateien immer zulässig, wenn die Zwischenablageumleitung zulässig ist. Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, werden die Umleitung von Clientlaufwerken und die Zwischenablageumleitung beim Kopieren von Dateien nicht auf Gruppenrichtlinienebene festgelegt.
+  Mit dieser Richtlinieneinstellung wird festgelegt, ob die Zuordnung von Clientlaufwerken während einer Remotedesktopdienst-Sitzung (Laufwerkumleitung) verhindert werden soll. Remotedesktopdienst-Hostserver ordnen Clientlaufwerke standardmäßig beim Herstellen der Verbindung automatisch zu. Zugeordnete Laufwerke werden in der Sitzungsordnerstruktur im Datei-Explorer oder auf dem Computer im Format *\<driveletter>* auf *\<computername>* angezeigt. Mit dieser Richtlinieneinstellung können Sie dieses Verhalten überschreiben. Wenn Sie diese Richtlinieneinstellung aktivieren, ist die Umleitung von Clientlaufwerken in Remotedesktopdienst-Sitzungen nicht zulässig, und die Zwischenablageumleitung beim Kopieren von Dateien ist auf Computern unter Windows Server 2003, Windows 8 und Windows XP nicht zulässig. Wenn Sie diese Richtlinieneinstellung deaktivieren, ist die Umleitung von Clientlaufwerken immer zulässig. Außerdem ist die Zwischenablageumleitung beim Kopieren von Dateien immer zulässig, wenn die Zwischenablageumleitung zulässig ist. Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, werden die Umleitung von Clientlaufwerken und die Zwischenablageumleitung beim Kopieren von Dateien nicht auf Gruppenrichtlinienebene festgelegt.
   
   **Standardeinstellung:** Aktiviert
   
@@ -1187,7 +1187,7 @@ Weitere Informationen finden Sie unter [Policy CSP – RemoteDesktopServices (Ri
   
 ### <a name="remote-management"></a>Remoteverwaltung  
 
-Weitere Informationen finden Sie unter [Policy CSP – RemoteManagement (Richtlinien-Konfigurationsdienstanbieter: RemoteManagement)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP – RemoteManagement (Richtlinien-Konfigurationsdienstanbieter: RemoteManagement)](/windows/client-management/mdm/policy-csp-remotemanagement) in der Windows-Dokumentation.  
 
 - **Block storing run as credentials** (Speichern von Anmeldeinformationen für „Ausführen als“ blockieren)  
   Standardclientauthentifizierung
@@ -1222,7 +1222,7 @@ Weitere Informationen finden Sie unter [Policy CSP – RemoteManagement (Richtli
 
 ### <a name="remote-procedure-call"></a>Remoteprozeduraufruf  
 
-Weitere Informationen finden Sie unter [Policy CSP – RemoteProcedureCall (Richtlinien-Konfigurationsdienstanbieter: RemoteProcedureCall)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) in der Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP – RemoteProcedureCall (Richtlinien-Konfigurationsdienstanbieter: RemoteProcedureCall)](/windows/client-management/mdm/policy-csp-remoteprocedurecall) in der Windows-Dokumentation.  
 
 - **RPC unauthenticated client options** (Nicht authentifizierte RPC-Clientoptionen)  
   Diese Richtlinieneinstellung steuert, wie die RPC-Server-Runtime nicht authentifizierte RPC-Clients behandelt, die sich mit RPC-Servern verbinden. Diese Richtlinieneinstellung betrifft alle RPC-Anwendungen. Verwenden Sie diese Richtlinieneinstellung in einer Domänenumgebung mit Vorsicht, da sie eine Vielzahl von Funktionen, darunter auch die Gruppenrichtlinienverarbeitung selbst, beeinträchtigen kann. Um nach einer Änderung die Richtlinieneinstellung wiederherzustellen, kann ein manueller Eingriff auf jedem betroffenen Computer erforderlich sein. Diese Richtlinieneinstellung sollte niemals auf einen Domänencontroller angewendet werden. Wenn Sie diese Richtlinieneinstellung deaktivieren, verwendet die RPC-Server-Runtime den Wert für „Authenticated“ (Authentifiziert) auf dem Windows-Client und den Wert für „None“ (Keine Authentifizierung) auf Windows-Server-Versionen, die diese Richtlinieneinstellung unterstützen. Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, bleibt sie deaktiviert. Die RPC-Server-Runtime verhält sich so, als wäre sie aktiviert mit dem für Windows-Clients verwendeten Wert für „Authenticated“ (Authentifiziert) und dem für Server-SKUs verwendeten Wert für „None“ (Keine Authentifizierung), die diese Richtlinieneinstellung unterstützen. Wenn Sie diese Richtlinieneinstellung aktivieren, wird die RPC-Server-Runtime angewiesen, nicht authentifizierte RPC-Clients, die sich mit RPC-Servern verbinden, welche auf einem Computer ausgeführt werden, einzuschränken. Ein Client gilt als authentifizierter Client, wenn er für die Kommunikation mit dem Server eine benannte Pipe verwendet, oder wenn er RPC-Sicherheit verwendet. RPC-Schnittstellen, die speziell den Zugriff durch nicht authentifizierte Clients angefordert haben, können von dieser Einschränkung ausgenommen werden, abhängig von dem für diese Richtlinieneinstellung gewählten Wert.  
@@ -1234,7 +1234,7 @@ Weitere Informationen finden Sie unter [Policy CSP – RemoteProcedureCall (Rich
 
 ### <a name="search"></a>Suchen  
 
-Weitere Informationen finden Sie unter [Policy CSP - Search (Richtlinien-Konfigurationsdienstanbieter: Search)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - Search (Richtlinien-Konfigurationsdienstanbieter: Search)](/windows/client-management/mdm/policy-csp-search) in Ihrer Windows-Dokumentation.  
 
 - **Indizierung verschlüsselter Elemente deaktivieren**  
   Hiermit wird die Indizierung von Elementen zugelassen oder verweigert. Diese Option ist für die Windows Search-Indexerstellung bestimmt und steuert, ob verschlüsselte Elemente wie beispielsweise WIP-geschützte Dateien (Windows Information Protection) indiziert werden. Wenn die Richtlinie aktiviert ist, werden WIP-geschützte Elemente indiziert und die zugehörigen Metadaten werden an einem nicht verschlüsselten Speicherort gespeichert. Die Metadaten umfassen beispielsweise den Dateipfad und das Änderungsdatum. Wenn die Richtlinie deaktiviert ist, werden WIP-geschützte Elemente nicht indiziert und sie werden nicht in den Ergebnissen in Cortana oder im Datei-Explorer angezeigt. Ferner sind bei Fotos und Groove-Apps Leistungseinbußen möglich, wenn sich auf dem Gerät große Mengen an WIP-geschützten Mediendateien befinden.
@@ -1243,7 +1243,7 @@ Weitere Informationen finden Sie unter [Policy CSP - Search (Richtlinien-Konfigu
   
 ### <a name="smart-screen"></a>SmartScreen  
 
-Weitere Informationen finden Sie unter [Policy CSP - SmartScreen (Richtlinien-Konfigurationsdienstanbieter: SmartScreen)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - SmartScreen (Richtlinien-Konfigurationsdienstanbieter: SmartScreen)](/windows/client-management/mdm/policy-csp-smartscreen) in Ihrer Windows-Dokumentation.  
 
 - **Ausführen nicht überprüfter Dateien blockieren**  
   Hindern Sie Benutzer am Ausführen von nicht überprüften Dateien. 
@@ -1264,7 +1264,7 @@ Weitere Informationen finden Sie unter [Policy CSP - SmartScreen (Richtlinien-Ko
   
 ### <a name="system"></a>System  
 
-Weitere Informationen finden Sie unter [Policy CSP - System (Richtlinien-Konfigurationsdienstanbieter: System)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - System (Richtlinien-Konfigurationsdienstanbieter: System)](/windows/client-management/mdm/policy-csp-system) in Ihrer Windows-Dokumentation.  
 
 - **Starttreiberinitialisierung für Systemstart**  
   Mit dieser Richtlinieneinstellung können Sie angeben, welche Bootstarttreiber initialisiert werden. Dies geschieht basierend auf einer durch den Bootstarttreiber für den Antischadsoftware-Frühstart festgelegten Klassifizierung. Der Bootstarttreiber für den Antischadsoftware-Frühstart kann die folgenden Klassifizierungen für die einzelnen Bootstarttreiber zurückgeben: 
@@ -1280,7 +1280,7 @@ Weitere Informationen finden Sie unter [Policy CSP - System (Richtlinien-Konfigu
 
 ### <a name="wi-fi"></a>WLAN  
 
-Weitere Informationen finden Sie unter [Policy CSP - Wifi (Richtlinien-Konfigurationsdienstanbieter: Wifi)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - Wifi (Richtlinien-Konfigurationsdienstanbieter: Wifi)](/windows/client-management/mdm/policy-csp-wifi) in Ihrer Windows-Dokumentation.  
 
 - **Internetfreigabe blockieren**  
   Gibt an, ob die Internetfreigabe auf dem Gerät möglich ist.  
@@ -1294,7 +1294,7 @@ Weitere Informationen finden Sie unter [Policy CSP - Wifi (Richtlinien-Konfigura
   
 ### <a name="windows-connection-manager"></a>Windows-Verbindungs-Manager  
 
-Weitere Informationen finden Sie unter [Policy CSP - WindowsConnectionManager (Richtlinien-Konfigurationsdienstanbieter: WindowsConnectionManager)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - WindowsConnectionManager (Richtlinien-Konfigurationsdienstanbieter: WindowsConnectionManager)](/windows/client-management/mdm/policy-csp-windowsconnectionmanager) in Ihrer Windows-Dokumentation.  
 
 - **Verbindung zu Nicht-Domänennetzwerken blockieren**  
   Diese Richtlinieneinstellung verhindert, dass Computer gleichzeitig eine Verbindung zu einem domänenbasierten Netzwerk und zu einem nicht-domänenbasierten Netzwerk herstellen. Wenn diese Richtlinieneinstellung aktiviert ist, reagiert der Computer, abhängig von den folgenden Situationen, wie folgt auf automatische und manuelle Versuche, eine Netzwerkverbindung herzustellen: 
@@ -1307,7 +1307,7 @@ Weitere Informationen finden Sie unter [Policy CSP - WindowsConnectionManager (R
   
 ### <a name="windows-defender"></a>Windows Defender  
 
-Weitere Informationen finden Sie unter [Policy CSP - Defender (Richtlinien-Konfigurationsdienstanbieter: Defender)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - Defender (Richtlinien-Konfigurationsdienstanbieter: Defender)](/windows/client-management/mdm/policy-csp-defender) in Ihrer Windows-Dokumentation.  
 
 - **Eingehende E-Mail überprüfen**  
   Gestattet oder verweigert das Überprüfen von E-Mails.
@@ -1421,7 +1421,7 @@ Weitere Informationen finden Sie unter [Policy CSP - Defender (Richtlinien-Konfi
 
 ### <a name="windows-ink-workspace"></a>Windows Ink-Arbeitsbereich  
 
-Weitere Informationen finden Sie unter [Policy CSP - WindowsInkWorkspace (Richtlinien-Konfigurationsdienstanbieter - WindowsInkWorkspace)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - WindowsInkWorkspace (Richtlinien-Konfigurationsdienstanbieter - WindowsInkWorkspace)](/windows/client-management/mdm/policy-csp-windowsinkworkspace) in Ihrer Windows-Dokumentation.  
 
 - **Ink-Arbeitsbereich**  
   Gibt an, ob der Benutzer auf den Ink-Arbeitsbereich zugreifen darf. 
@@ -1433,7 +1433,7 @@ Weitere Informationen finden Sie unter [Policy CSP - WindowsInkWorkspace (Richtl
  
 ### <a name="windows-powershell"></a>Windows PowerShell  
 
-Weitere Informationen finden Sie unter [Policy CSP - WindowsPowerShell (Richtlinien-Konfigurationsdienstanbieter - WindowsPowerShell)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) in Ihrer Windows-Dokumentation.  
+Weitere Informationen finden Sie unter [Policy CSP - WindowsPowerShell (Richtlinien-Konfigurationsdienstanbieter - WindowsPowerShell)](/windows/client-management/mdm/policy-csp-windowspowershell) in Ihrer Windows-Dokumentation.  
 
 - **PowerShell-Shellskriptblock-Protokollierung**  
   Mit dieser Richtlinieneinstellung können alle PowerShell-Skript-Eingaben im Microsoft-Windows-PowerShell/Operational-Ereignisprotokoll protokolliert werden. Wenn Sie diese Richtlinieneinstellung aktivieren, protokolliert Windows PowerShell die Verarbeitung von Befehlen, Skriptblöcken, Funktionen und Skripts, unabhängig davon, ob diese interaktiv oder automatisch aufgerufen wurden. Wenn Sie diese Richtlinieneinstellung deaktivieren, ist das Protokollieren von PowerShell-Skript-Eingaben deaktiviert. Wenn Sie die Protokollierung von Skriptblockaufrufen aktivieren, protokolliert PowerShell zusätzlich Protokollereignisse, wenn ein Befehl, ein Skriptblock, eine Funktion oder Skriptstarts oder -stops aufgerufen werden. Das Aktivieren der Protokollierung von Aufrufen führt zu einer großen Anzahl von Ereignisprotokollen. Anmerkung: Diese Richtlinieneinstellung ist sowohl unter„Computerkonfiguration“ als auch unter „Benutzerkonfiguration“ im Editor für Gruppenrichtlinien vorhanden. Die Richtlinieneinstellung in der Computerkonfiguration hat Vorrang vor der Richtlinieneinstellung in der Benutzerkonfiguration.

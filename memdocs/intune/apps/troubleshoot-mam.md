@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7858253772b554858209f3524f20bccf08839bd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: bd15cc44ac3e6d17c36e3b623135b94ddcfcdbc3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217454"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912966"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Problembehandlung der Verwaltung von mobilen Geräten
 
@@ -59,7 +59,7 @@ Häufige Probleme von Endbenutzern lassen sich in folgende Kategorien unterteile
 Plattform | Szenario | Erläuterung |
 ---| --- | --- |
 iOS | Der Endbenutzer kann die iOS/iPadOS-Freigabeerweiterung verwenden, um Geschäfts-, Schul- oder Unidaten in nicht verwalteten Apps zu öffnen, auch wenn die Datenübertragungsrichtlinie auf **Nur verwaltete Apps** oder **Keine Apps** festgelegt ist. Führt das nicht zu Datenlecks? | Die Intune-App-Schutzrichtlinie kann die iOS/iPadOS-Freigabeerweiterung nicht steuern, ohne das Gerät zu verwalten. Daher **verschlüsselt Intune „unternehmenseigene“ Daten, bevor diese außerhalb der App freigegeben werden**. Sie können dies überprüfen, indem Sie versuchen, die „unternehmenseigene“ Datei außerhalb der verwalteten App zu öffnen. Die Datei sollte verschlüsselt sein und außerhalb der verwalteten App nicht geöffnet werden können.
-iOS | Warum wird der Endbenutzer **aufgefordert, die Microsoft Authenticator-App zu installieren**? | Dies ist erforderlich, wenn der App-basierte bedingte Zugriff angewendet wird. Informationen hierzu finden Sie unter [Vorschreiben der Verwendung von genehmigten Client-Apps](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
+iOS | Warum wird der Endbenutzer **aufgefordert, die Microsoft Authenticator-App zu installieren**? | Dies ist erforderlich, wenn der App-basierte bedingte Zugriff angewendet wird. Informationen hierzu finden Sie unter [Vorschreiben der Verwendung von genehmigten Client-Apps](/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | Warum müssen Endbenutzer die **Unternehmensportal-App installieren**, auch wenn ich den MAM-App-Schutz ohne Geräteregistrierung verwende?  | Unter Android ist ein Großteil der App-Schutzfunktionen in die Unternehmensportal-App integriert. **Eine Registrierung der Geräte ist nicht erforderlich, allerdings wird immer die Unternehmensportal-App benötigt**. Beim App-Schutz ohne Registrierung muss lediglich die Unternehmensportal-App auf dem Gerät des Endbenutzers installiert sein.
 iOS/Android | App-Schutzrichtlinie wird nicht auf E-Mail-Entwürfe in der Outlook-App angewendet | Da Outlook sowohl den Unternehmens- als auch den persönlichen Kontext unterstützt, wird MAM nicht für E-Mail-Entwürfe erzwungen.
 iOS/Android | App-Schutzrichtlinie wird nicht auf neue Dokumente in WXP angewendet (Word, Excel, PowerPoint) | Da WXP sowohl den Unternehmens- als auch den persönlichen Kontext unterstützt, wird MAM in neuen Dokumenten erst erzwungen, wenn Sie an einem identifizierten Unternehmensspeicherort wie z. B. OneDrive gespeichert werden.

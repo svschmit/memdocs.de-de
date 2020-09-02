@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55e38ac8b5503e98df4878529ac892b55a52be47
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 2c6648f66c585dac5b8913fdb13adfcb98cbf927
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429626"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912694"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Konfigurieren der „Take a Test“-App für Windows 10-Geräte mit Intune
 
@@ -49,7 +49,7 @@ Nachdem Sie das Profil konfiguriert haben, weisen Sie es zu, und stellen Sie es 
   - `user@contoso.com`
   - `computerName\username`
 - **Kontoname**: Wenn Sie ein lokales Gastkonto einrichten möchten, geben Sie den Namen des Kontos ein, das mit der Prüfungs-App verwendet wird. Der Kontoname wird als Kachel auf dem Anmeldebildschirm angezeigt. Die Kursteilnehmer können auf die Kachel klicken, um den Test zu starten.  
-- **Bewertungs-URL**: Geben Sie die URL des Tests an, den Benutzer ausführen sollen. Weitere Informationen zum Abrufen der URL finden Sie in der [„Take a Test“-Dokumentation](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
+- **Bewertungs-URL**: Geben Sie die URL des Tests an, den Benutzer ausführen sollen. Weitere Informationen zum Abrufen der URL finden Sie in der [„Take a Test“-Dokumentation](/education/windows/take-tests-in-windows-10).
 - **Druckerverbindung:** **Anfordern** lässt nur von mit einem Drucker verbundenen Geräten aus Zugriff auf die Prüfungs-App zu. Diese Einstellung macht auch die Schaltfläche „Drucken“ der App für die Testkandidaten verfügbar. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem kann standardmäßig zulassen, dass Kursteilnehmer von Geräten aus auf die App zugreifen können, die nicht mit einem Drucker verbunden sind.  
 - **Bildschirmüberwachung**: **Zulassen** überwacht die Bildschirmaktivität, während Benutzer einen Test ausführen. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem kann standardmäßig verhindern, dass Sie den Bildschirm während des Tests überwachen.
 - **Textvorschläge:** Wählen Sie **Zulassen** aus, damit Testteilnehmer Textvorschläge sehen können. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Das Betriebssystem kann Textvorschläge standardmäßig blockieren, während Benutzer einen Test ausführen.

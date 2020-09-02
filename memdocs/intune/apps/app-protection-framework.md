@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 0803563dc525b0835602d54d4bde3de1345aeb33
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410928"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913374"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Datenschutzframework mithilfe von App-Schutzrichtlinien 
 
@@ -64,7 +64,7 @@ Die folgenden App-Schutzrichtlinieneinstellungen sollten für geeignete Apps akt
 Microsoft empfiehlt, Nutzungsszenarios zu überprüfen und zu kategorisieren, und dann mithilfe von Anleitungen Benutzer für eine entsprechende Stufe zu konfigurieren. Wie bei jedem Framework müssen die Einstellungen in einer entsprechenden Stufe möglicherweise je nach Anforderungen eines Unternehmens angepasst werden, da für den Datenschutz die Bedrohungsumgebung, Risikobereitschaft und der Einfluss auf die Verwendbarkeit ausgewertet werden müssen.  
 
 ### <a name="conditional-access-policies"></a>Richtlinien für bedingten Zugriff
-Um sicherzustellen, dass nur Apps, die App-Schutzrichtlinien unterstützen, auf Geschäfts-, Schul- oder Unikontodaten zugreifen, sind Azure Active Directory-Bedingungsrichtlinien erforderlich. Weitere Informationen zu Schritten zum Implementieren spezifischer Richtlinien finden Sie unter **Szenario 1: Office 365-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien** in [Gewusst wie: Erzwingen einer App-Schutzrichtlinie und einer genehmigten Client-App für den Zugriff auf Cloud-Apps mithilfe des bedingten Zugriffs](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Um sicherzustellen, dass nur Apps, die App-Schutzrichtlinien unterstützen, auf Geschäfts-, Schul- oder Unikontodaten zugreifen, sind Azure Active Directory-Bedingungsrichtlinien erforderlich. Weitere Informationen zu Schritten zum Implementieren spezifischer Richtlinien finden Sie unter **Szenario 1: Office 365-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien** in [Gewusst wie: Erzwingen einer App-Schutzrichtlinie und einer genehmigten Client-App für den Zugriff auf Cloud-Apps mithilfe des bedingten Zugriffs](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>Für die App-Schutzrichtlinien empfohlene Apps  
 

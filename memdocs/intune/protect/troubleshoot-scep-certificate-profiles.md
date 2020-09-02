@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ce8f787c8ba2b08cc47d8f1431ea7d4bdce5e58
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991006"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914734"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Übersicht zur Problembehandlung bei SCEP-Zertifikatprofilen in Microsoft Intune
 
@@ -80,7 +80,7 @@ Die folgende Liste enthält Protokolle oder Konsolen, auf die in den nachfolgend
 
 - **NDESConnector_date_time.svclog**:
 
-  Dieses Protokoll zeigt die Kommunikation des Microsoft Intune Certificate Connector mit dem Intune-Clouddienst. Um diese Protokolldatei anzuzeigen, können Sie das [Service Trace Viewer-Tool](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) verwenden.
+  Dieses Protokoll zeigt die Kommunikation des Microsoft Intune Certificate Connector mit dem Intune-Clouddienst. Um diese Protokolldatei anzuzeigen, können Sie das [Service Trace Viewer-Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) verwenden.
 
   Zugehöriger Registrierungsschlüssel: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -88,7 +88,7 @@ Die folgende Liste enthält Protokolle oder Konsolen, auf die in den nachfolgend
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  Dieses Protokoll zeigt das NDES-Richtlinienmodul, das Zertifikatanforderungen empfängt und überprüft. Um diese Protokolldatei anzuzeigen, können Sie das [Service Trace Viewer-Tool](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) verwenden.
+  Dieses Protokoll zeigt das NDES-Richtlinienmodul, das Zertifikatanforderungen empfängt und überprüft. Um diese Protokolldatei anzuzeigen, können Sie das [Service Trace Viewer-Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) verwenden.
 
   Speicherort: Auf dem Server, der NDES auf *%program_files%\Microsoft intune\ndesconnectorisvc\logs\logs* hostet
 
@@ -148,4 +148,4 @@ Verwenden Sie für Geräte unter Windows die Windows-Ereignisprotokolle, um Prob
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Überprüfen der [Bereitstellung von SCEP-Zertifikatprofilen](troubleshoot-scep-certificate-profile-deployment.md) 
+Überprüfen der [Bereitstellung von SCEP-Zertifikatprofilen](troubleshoot-scep-certificate-profile-deployment.md)

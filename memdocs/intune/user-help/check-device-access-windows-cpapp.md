@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 24d83e5ada6109caec2f6238df44559909580931
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: af883fc950a878a70bac2f9121967254583a90d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878450"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914445"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>Überprüfen des Zugriffs über die Unternehmensportal-App für Windows
 
@@ -68,7 +68,7 @@ Führen Sie die Schritte in diesem Artikel aus, um den Zugriff von der Unternehm
 
     ![Beispielscreenshot der Unternehmensportal-App für Windows, Startseite mit hervorgehobenem Abschnitt „Meine Geräte“](./media/1809_CheckAccess_Context_Select_Device.png)  
 
-2. Klicken Sie mit der rechten Maustaste, oder tippen Sie auf ein Gerät, und halten Sie es gedrückt, um das [Kontextmenü](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) zu öffnen.  
+2. Klicken Sie mit der rechten Maustaste, oder tippen Sie auf ein Gerät, und halten Sie es gedrückt, um das [Kontextmenü](//windows/uwp/design/controls-and-patterns/menus) zu öffnen.  
 
     ![Ein Beispielscreenshot der Unternehmensportal-App für Windows, Startseite Das Kontextmenü für das Gerät wird im Abschnitt **Meine Geräte** auf der Seite angezeigt und enthält die Aktionen „Umbenennen“, „Entfernen“ und „Zugriff prüfen“.](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. Wählen Sie **Zugriff prüfen** aus. Die App synchronisiert Ihr Gerät mit den aktuellen Anforderungen Ihres Unternehmens und überprüft, ob Ihr Gerät mit diesen übereinstimmt. Diese Überprüfung kann einige Minuten dauern.  

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 720328ebe260c967bef4a879bd0ee33ae2f332a0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866127"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915686"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Verwenden von Azure AD für den Zugriff auf die Intune-APIs in Microsoft Graph
 
@@ -53,9 +53,9 @@ Inhalt dieses Artikels
 
 Weitere Informationen finden Sie unter:
 
-- [Autorisieren des Zugriffs auf Webanwendungen mit OAuth 2.0 und Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [Autorisieren des Zugriffs auf Webanwendungen mit OAuth 2.0 und Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Erste Schritte mit der Azure AD-Authentifizierung](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
-- [Integrieren von Anwendungen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [Integrieren von Anwendungen in Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)
 - [Grundlegendes zu OAuth 2.0](https://oauth.net/2/)
 
 ## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Registrieren von Apps, um die Microsoft Graph-API zu verwenden
@@ -80,7 +80,7 @@ So registrieren Sie eine App, um die Microsoft Graph-API zu verwenden:
 
     2. Werte für **Anwendungstyp** und **Umleitungs-URI**.
 
-        Diese unterscheiden sich entsprechend Ihren Anforderungen. Wenn Sie beispielsweise eine Azure AD-[Authentifizierungsbibliothek](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) verwenden, legen Sie **Anwendungstyp** auf `Native` und **Umleitungs-URI** auf `urn:ietf:wg:oauth:2.0:oob` fest.
+        Diese unterscheiden sich entsprechend Ihren Anforderungen. Wenn Sie beispielsweise eine Azure AD-[Authentifizierungsbibliothek](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) verwenden, legen Sie **Anwendungstyp** auf `Native` und **Umleitungs-URI** auf `urn:ietf:wg:oauth:2.0:oob` fest.
 
         > [!NOTE]
         > Azure Active Directory (Azure AD), Active Directory-Authentifizierungsbibliothek (ADAL) und die Azure AD Graph-API werden als veraltet gekennzeichnet. Weitere Informationen finden Sie unter [Updaten Ihrer Anwendung zur Verwendung von Microsoft-Authentifizierungsbibliothek (MSAL) und Microsoft Graph-API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -88,7 +88,7 @@ So registrieren Sie eine App, um die Microsoft Graph-API zu verwenden:
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
-        Weitere Informationen finden Sie unter [Authentifizierungsszenarien für Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+        Weitere Informationen finden Sie unter [Authentifizierungsszenarien für Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 5. Auf dem Blatt „Anwendung“:
 
@@ -106,7 +106,7 @@ So registrieren Sie eine App, um die Microsoft Graph-API zu verwenden:
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    Wählen Sie die für Ihre App erforderlichen Rollen, indem Sie ein Häkchen links neben den gewünschten Namen setzen.  Weitere Informationen zu bestimmten Berechtigungsbereichen in Intune finden Sie unter [Intune-Berechtigungsbereiche](#intune-permission-scopes).  Weitere Informationen zu anderen Berechtigungsbereichen für die Graph-API finden Sie in der [Microsoft Graph-Berechtigungsreferenz](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
+    Wählen Sie die für Ihre App erforderlichen Rollen, indem Sie ein Häkchen links neben den gewünschten Namen setzen.  Weitere Informationen zu bestimmten Berechtigungsbereichen in Intune finden Sie unter [Intune-Berechtigungsbereiche](#intune-permission-scopes).  Weitere Informationen zu anderen Berechtigungsbereichen für die Graph-API finden Sie in der [Microsoft Graph-Berechtigungsreferenz](/graph/permissions-reference).
 
     Wählen Sie für optimale Ergebnisse nur so viele Rollen, wie für die Implementierung Ihrer Anwendung erforderlich sind.
 
@@ -141,8 +141,8 @@ Azure AD und Microsoft Graph verwenden Berechtigungsbereiche zum Steuern des Zug
 Berechtigungsbereiche (auch _OAuth-Bereiche_ genannt) steuern den Zugriff auf bestimmte Intune-Entitäten und deren Eigenschaften. In diesem Abschnitt werden die Berechtigungsbereiche für die Features der Intune-API zusammengefasst.
 
 Weitere Informationen:
-- [Azure AD-Authentifizierung](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
-- [Anwendungsberechtigungsbereiche](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
+- [Azure AD-Authentifizierung](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [Anwendungsberechtigungsbereiche](/azure/active-directory/develop/active-directory-v2-scopes)
 
 Wenn Sie Microsoft Graph Berechtigungen erteilen, können Sie angeben, dass folgende Bereiche den Zugriff auf die Intune-Features steuern sollen. In der folgenden Tabelle werden die Berechtigungsbereiche der Intune-API zusammengefasst.  Die erste Spalte enthält den Namen der Funktion entsprechend der Anzeige im Azure-Portal, die zweite den Namen des Berechtigungsbereichs.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820186"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909002"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- und iPadOS-Geräteeinstellungen zur Verwendung gängiger iOS/iPadOS-Features in Intune
 
@@ -304,10 +304,10 @@ Diese Funktion gilt für:
   - **Nicht konfiguriert:** Diese Einstellung wird von Intune nicht geändert oder aktualisiert. Standardmäßig verwendet das Betriebssystem keine App-Erweiterungen. Um eine App-Erweiterung zu deaktivieren, können Sie den Typ der SSO-App-Erweiterung in **Nicht konfiguriert** ändern.
   - **Microsoft Azure AD**: Verwendet das Microsoft Enterprise SSO-Plug-In, das eine SSO-App-Erweiterung vom Typ „Umleitung“ ist. Dieses Plug-In bietet einmaliges Anmelden für Active Directory-Konten in allen Anwendungen, die das Feature [Enterprise Single Sign-On von Apple](https://developer.apple.com/documentation/authenticationservices) unterstützen. Verwenden Sie diesen SSO-App-Erweiterungstyp, um einmaliges Anmelden in Microsoft-Apps, Unternehmens-Apps und auf Websites zu aktivieren, die die Authentifizierung mit Azure AD durchführen.
 
-    Das SSO-Plug-In fungiert als erweiterter Authentifizierungsbroker, der eine Verbesserung der Sicherheit und der Benutzerfreundlichkeit bietet. Alle Apps, die zur Authentifizierung die Microsoft Authenticator-App verwendet haben, können das einmalige Anmelden mit dem [Microsoft Enterprise SSO-Plug-In für Apple-Geräte](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) weiterhin nutzen.
+    Das SSO-Plug-In fungiert als erweiterter Authentifizierungsbroker, der eine Verbesserung der Sicherheit und der Benutzerfreundlichkeit bietet. Alle Apps, die zur Authentifizierung die Microsoft Authenticator-App verwendet haben, können das einmalige Anmelden mit dem [Microsoft Enterprise SSO-Plug-In für Apple-Geräte](/azure/active-directory/develop/apple-sso-plugin) weiterhin nutzen.
 
     > [!IMPORTANT]
-    > Um einmaliges Anmelden mit dem SSO-App-Erweiterungstyp von Microsoft Azure AD zu erreichen, installieren Sie zuerst die iOS-/iPadOS-Microsoft Authenticator-App auf dem Gerät. Die Authenticator-App bietet das Microsoft Enterprise SSO-Plug-In für Geräte, und die Einstellungen der MDM SSO-App-Erweiterung aktivieren das Plug-In. Wenn Authenticator und das SSO-App-Erweiterungsprofil auf dem Gerät installiert sind, müssen die Benutzer ihre Anmeldeinformationen eingeben, um sich anzumelden und eine Sitzung auf ihren Geräten einzurichten. Diese Sitzung wird dann für verschiedene Anwendungen verwendet, ohne dass sich die Benutzer erneut authentifizieren müssen. Weitere Informationen zu Authenticator finden Sie unter [Wozu dient die Microsoft Authenticator-App?](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
+    > Um einmaliges Anmelden mit dem SSO-App-Erweiterungstyp von Microsoft Azure AD zu erreichen, installieren Sie zuerst die iOS-/iPadOS-Microsoft Authenticator-App auf dem Gerät. Die Authenticator-App bietet das Microsoft Enterprise SSO-Plug-In für Geräte, und die Einstellungen der MDM SSO-App-Erweiterung aktivieren das Plug-In. Wenn Authenticator und das SSO-App-Erweiterungsprofil auf dem Gerät installiert sind, müssen die Benutzer ihre Anmeldeinformationen eingeben, um sich anzumelden und eine Sitzung auf ihren Geräten einzurichten. Diese Sitzung wird dann für verschiedene Anwendungen verwendet, ohne dass sich die Benutzer erneut authentifizieren müssen. Weitere Informationen zu Authenticator finden Sie unter [Wozu dient die Microsoft Authenticator-App?](/azure/active-directory/user-help/user-help-auth-app-overview).
 
   - **Umleiten:** Verwenden Sie eine generische, anpassbare App-Erweiterung für die Umleitung, um das einmalige Anmelden (Single Sign-On, SSO) mit modernen Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterungs-ID für die App-Erweiterung Ihrer Organisation kennen.
   - **Anmeldeinformationen:** Verwenden Sie eine generische, anpassbare App-Erweiterung für Anmeldeinformationen, um das einmalige Anmelden mit Challenge-Response-Authentifizierungsflows zu nutzen. Stellen Sie sicher, dass Sie die Erweiterungs-ID für die App-Erweiterung Ihrer Organisation kennen.
@@ -318,7 +318,7 @@ Diese Funktion gilt für:
 
 - **Freigabemodus für Geräte** (nur Microsoft Azure AD): Wählen Sie **Aktivieren** aus, wenn Sie das Microsoft Enterprise SSO-Plug-In auf iOS/iPadOS-Geräten bereitstellen, die für das Feature „Freigabemodus für Geräte“ von Azure AD konfiguriert sind. Geräte im Freigabemodus ermöglichen es vielen Benutzern, sich global bei Anwendungen, die den Freigabemodus für Geräte unterstützen, an- und abzumelden. Wenn die Einstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert. Standardmäßig sind iOS/iPadOS-Geräte nicht für die gemeinsame Nutzung durch mehrere Benutzer vorgesehen.
 
-  Weitere Informationen über den Freigabemodus für Geräte und wie er aktiviert wird, finden Sie unter [Übersicht über den Freigabemodus für Geräte](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) und [Freigabemodus für iOS-Geräte](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
+  Weitere Informationen über den Freigabemodus für Geräte und wie er aktiviert wird, finden Sie unter [Übersicht über den Freigabemodus für Geräte](/azure/active-directory/develop/msal-shared-devices) und [Freigabemodus für iOS-Geräte](/azure/active-directory/develop/msal-ios-shared-devices).  
 
   Diese Funktion gilt für:
   

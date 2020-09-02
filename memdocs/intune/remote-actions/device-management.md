@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3c1b074e2fa35fa36bfb4f759ef348020c0dbed
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0814fd11b2597c2a78dda70ba560e17fe2b742a1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983226"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914362"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Was ist die Microsoft Intune Geräteverwaltung?
 
@@ -43,7 +43,7 @@ Die Workload **Geräte** liefert Informationen zu den verwalteten Geräten und e
 
      Wählen Sie ein beliebiges Gerät aus, [um zusätzliche Details zu diesem anzuzeigen](device-inventory.md), z. B. Hardwaredetails, installierte Apps und Richtlinien.
 
-   - Unter **Azure AD-Geräte** wird eine Liste der Geräte angezeigt, die in Azure Active Directory (Azure AD) registriert oder damit verknüpft sind. Weitere Informationen zur [Azure AD-Geräteverwaltung](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+   - Unter **Azure AD-Geräte** wird eine Liste der Geräte angezeigt, die in Azure Active Directory (Azure AD) registriert oder damit verknüpft sind. Weitere Informationen zur [Azure AD-Geräteverwaltung](/azure/active-directory/device-management-introduction).
    - Die **Geräteaktionen** umfassen einen Verlauf der Remoteaktionen, die auf Geräten ausgeführt wurden, einschließlich der Aktion, dem Status, der Person, die die Aktion gestartet hat, und dem Zeitpunkt.
 
      ![Screenshot der Überwachung von Geräteaktionen](./media/device-management/monitor-device-actions.png)
@@ -57,7 +57,7 @@ Die verfügbaren Aktionen hängen von der Geräteplattform und der Konfiguration
 
 - [Anzeigen des Gerätebestands](device-inventory.md)
 - Ausführen von Remotegeräteaktionen:
-  - [Autopilot-Zurücksetzung](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+  - [Autopilot-Zurücksetzung](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
   - [BitLocker-Schlüsselrotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (nur Windows)
   - [Löschen](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Deaktivieren der Aktivierungssperre](device-activation-lock-disable.md) (nur iOS)
@@ -72,7 +72,7 @@ Die verfügbaren Aktionen hängen von der Geräteplattform und der Konfiguration
   - [Kennung zurücksetzen](device-passcode-reset.md)
   - [Neu starten](device-restart.md) (nur Windows)
   - [Außerkraftsetzen](devices-wipe.md#retire)
-  - [Windows Defender-Sicherheitsinformationen aktualisieren](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
+  - [Windows Defender-Sicherheitsinformationen aktualisieren](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Zurücksetzen der PIN unter Windows 10](device-windows-pin-reset.md)
   - [Zurücksetzen](devices-wipe.md#wipe)
   - [Senden von benutzerdefinierten Benachrichtigungen](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)

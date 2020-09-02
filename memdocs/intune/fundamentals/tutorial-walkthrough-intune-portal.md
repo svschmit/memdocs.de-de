@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 544257bfb0fc844560cdbb1522345f4f8be63555
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355256"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907006"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Tutorial: Überblick über Microsoft Intune im Azure-Portal
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) enthält über 100 Dienste, die Sie bei vielen Cloud Computing-Szenarios unterstützen. Microsoft Intune ist nur einer von vielen Diensten, die in Azure verfügbar sind. Mithilfe von Intune können Sie sicherstellen, dass die Geräte, Apps und Daten Ihres Unternehmens die entsprechenden Sicherheitsanforderungen erfüllen. Sie können festlegen, welche Anforderungen erfüllt werden müssen, und welche Maßnahmen vorgenommen werden, wenn diese nicht erfüllt sind. Sie finden den Microsoft Intune-Dienst im [Azure-Portal](https://portal.azure.com). Mithilfe der Features in Intune können Sie verschiedene MDM- (Mobile Geräteverwaltung) und MAM-Aufgaben (Mobile Anwendungsverwaltung) erledigen.
+[Azure](/learn/modules/welcome-to-azure) enthält über 100 Dienste, die Sie bei vielen Cloud Computing-Szenarios unterstützen. Microsoft Intune ist nur einer von vielen Diensten, die in Azure verfügbar sind. Mithilfe von Intune können Sie sicherstellen, dass die Geräte, Apps und Daten Ihres Unternehmens die entsprechenden Sicherheitsanforderungen erfüllen. Sie können festlegen, welche Anforderungen erfüllt werden müssen, und welche Maßnahmen vorgenommen werden, wenn diese nicht erfüllt sind. Sie finden den Microsoft Intune-Dienst im [Azure-Portal](https://portal.azure.com). Mithilfe der Features in Intune können Sie verschiedene MDM- (Mobile Geräteverwaltung) und MAM-Aufgaben (Mobile Anwendungsverwaltung) erledigen.
 
 Inhalt des Tutorials:
 > [!div class="checklist"]

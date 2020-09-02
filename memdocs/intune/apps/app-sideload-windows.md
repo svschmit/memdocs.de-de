@@ -16,19 +16,19 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: fb981563c2d98389f6d1dda4d050e391e9ad5637
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179620"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910467"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signieren Sie branchenspezifische Apps, damit sie mit Intune auf Windows-Geräten bereitgestellt werden können
 
 Als Intune-Administrator können Sie universelle branchenspezifische Apps – einschließlich der Unternehmensportal-App – auf Windows 8.1 Desktop- oder Windows 10 Desktop- und Mobile-Geräten bereitstellen. Zum Bereitstellen von *APPX*-Apps auf Windows 8.1 Desktop- oder Windows 10 Desktop- und Mobile-Geräten können Sie ein codesignierendes Zertifikat einer öffentlichen Zertifizierungsstelle verwenden, der Ihre Windows-Geräte bereits vertrauen. Sie können auch Ihre eigene Zertifizierungsstelle verwenden.
 
  > [!NOTE]
- > Windows 8.1 Desktop erfordert entweder eine Unternehmensrichtlinie zum Aktivieren des Querladens oder die Nutzung von Schlüsseln zum Querladen (für in die Domäne eingebundene Geräte automatisch aktiviert). Weitere Informationen finden Sie unter [Windows 8 Sideloading Requirements](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/) (Anforderungen für das Querladen von Windows 8).
+ > Windows 8.1 Desktop erfordert entweder eine Unternehmensrichtlinie zum Aktivieren des Querladens oder die Nutzung von Schlüsseln zum Querladen (für in die Domäne eingebundene Geräte automatisch aktiviert). Weitere Informationen finden Sie unter [Windows 8 Sideloading Requirements](/archive/blogs/scd-odtsp/windows-8-sideloading-requirements-from-technet) (Anforderungen für das Querladen von Windows 8).
 
 ## <a name="windows-10-sideloading"></a>Querladen von Windows 10
 
@@ -36,11 +36,11 @@ Unter Windows 10 funktioniert das Querladen anders als in früheren Windows-Ver
 
 - Sie können ein Gerät mithilfe einer Unternehmensrichtlinie für das Querladen entsperren. Intune bietet eine Gerätekonfigurationsrichtlinie namens „Installation vertrauenswürdiger Apps“. Bei Geräten, die dem zum Signieren der APPX-App verwendeten Zertifikat bereits vertrauen, muss diese Richtlinie einfach nur auf <allow> festgelegt werden. Das ist alles.
 
-- Symantec Phone-Zertifikate und Lizenzschlüssel für das Querladen sind nicht erforderlich. Wenn jedoch keine lokale Zertifizierungsstelle verfügbar ist, müssen Sie möglicherweise ein codesignierendes Zertifikat von einer öffentlichen Zertifizierungsstelle abrufen. Weitere Informationen finden Sie unter [Einführung in das Codesignieren](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
+- Symantec Phone-Zertifikate und Lizenzschlüssel für das Querladen sind nicht erforderlich. Wenn jedoch keine lokale Zertifizierungsstelle verfügbar ist, müssen Sie möglicherweise ein codesignierendes Zertifikat von einer öffentlichen Zertifizierungsstelle abrufen. Weitere Informationen finden Sie unter [Einführung in das Codesignieren](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
 ### <a name="code-sign-your-app"></a>Codesignieren Ihrer App
 
-Fügen Sie zunächst eine Codesignatur zu Ihrem APPX-Paket hinzu. Weitere Informationen dazu finden Sie unter [Signieren von App-Paketen mit SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool).
+Fügen Sie zunächst eine Codesignatur zu Ihrem APPX-Paket hinzu. Weitere Informationen dazu finden Sie unter [Signieren von App-Paketen mit SignTool](/windows/uwp/packaging/sign-app-package-using-signtool).
 
 ### <a name="upload-your-app"></a>Hochladen Ihrer App
 
@@ -98,7 +98,7 @@ Wenn Sie keinen Zugriff auf den Microsoft Store ermöglichen möchten, können S
       <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. Kehren Sie zu Intune zurück, und laden Sie die Unternehmensportal-App als neue App hoch. Stellen Sie sie als erforderliche App für die gewünschte Gruppe von Zielbenutzern bereit.  
 
-Weitere Informationen zur Behandlung von Abhängigkeiten für universelle Apps durch Intune finden Sie unter [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Bereitstellen einer APPXBUNDLE-Datei mit Abhängigkeiten über Microsoft Intune MDM).  
+Weitere Informationen zur Behandlung von Abhängigkeiten für universelle Apps durch Intune finden Sie unter [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm) (Bereitstellen einer APPXBUNDLE-Datei mit Abhängigkeiten über Microsoft Intune MDM).  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Wie aktualisiere ich das Unternehmensportal auf den Geräten meiner Benutzer, wenn diese bereits die älteren Apps aus dem Store installiert haben?
 
@@ -136,4 +136,4 @@ Im Anschluss erfahren Sie, wie Sie die App auf diese Weise signieren und bereits
 |      PublisherId      |      Die Herausgeber-ID des Unternehmens. Wenn sie nicht vorhanden ist, wird das Feld "Subject" von Symantec Enterprise Mobile Code Signing Certificate verwendet.       |
 |        SdkPath        | Der Pfad des Stammordners für das Windows SDK für Windows 10. Dieses Argument ist optional und wird standardmäßig auf „${env:ProgramFiles(x86)}\Windows Kits\10“ festgelegt. |
 
-Das Skript gibt nach der Ausführung die signierte Version der Windows 10-Unternehmensportal-App aus. Anschließend können Sie die signierte Version der Anwendung über Intune als branchenspezifische App bereitstellen. Dadurch wird für die derzeit bereitstellten Versionen ein Upgrade auf die neue App durchgeführt.  
+Das Skript gibt nach der Ausführung die signierte Version der Windows 10-Unternehmensportal-App aus. Anschließend können Sie die signierte Version der Anwendung über Intune als branchenspezifische App bereitstellen. Dadurch wird für die derzeit bereitstellten Versionen ein Upgrade auf die neue App durchgeführt.

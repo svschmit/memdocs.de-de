@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: e2a00ef50676ee24de30f93ad5b5ddd88192b6db
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252621"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915074"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Einstellungen für Windows 10 (und höher), um Geräte zu schützen, die Intune verwenden.
 
@@ -34,7 +34,7 @@ Informationen zum Konfigurieren von Microsoft Defender Antivirus finden Sie unte
 
 [Hinzufügen der Endpoint Protection-Einstellungen in Intune](endpoint-protection-configure.md)  
 
-Weitere Informationen übers CSPs (Konfigurationsdienstanbieter) finden Sie unter [Referenz zu Konfigurationsdienstanbietern](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).  
+Weitere Informationen übers CSPs (Konfigurationsdienstanbieter) finden Sie unter [Referenz zu Konfigurationsdienstanbietern](/windows/client-management/mdm/configuration-service-provider-reference).  
 
 ## <a name="microsoft-defender-application-guard"></a>Microsoft Defender Application Guard  
 
@@ -44,7 +44,7 @@ Application Guard ist nur für Windows 10-Geräte (64-Bit) verfügbar. Mithilfe 
 
 - **Application Guard**  
   **Standardeinstellung:** Nicht konfiguriert  
-   Application Guard-CSP: [Settings/AllowWindowsDefenderApplicationGuard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
+   Application Guard-CSP: [Settings/AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
 
   - **Aktiviert für Edge**: Aktiviert dieses Feature, das nicht vertrauenswürdige Websites in einem virtualisierten Hyper-V-Browsercontainer öffnet.  
   - **Nicht konfiguriert:** Alle Websites (vertrauenswürdige und nicht vertrauenswürdige) können auf dem Gerät geöffnet werden.  
@@ -63,7 +63,7 @@ Application Guard ist nur für Windows 10-Geräte (64-Bit) verfügbar. Mithilfe 
 - **Inhalt der Zwischenablage**  
   Diese Einstellung ist nur verfügbar, wenn das *Verhalten der Zwischenablage* auf eine der Einstellungen zum *Zulassen* festgelegt ist.  
   **Standardeinstellung:** Nicht konfiguriert  
-  Application Guard-CSP: [Settings/ClipboardFileType](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
+  Application Guard-CSP: [Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
 
   Hiermit wählen Sie den zulässigen Inhalt der Zwischenablage aus.  
   - **Nicht konfiguriert**  
@@ -315,19 +315,19 @@ Benutzerdefinierte Firewallregeln unterstützen die folgenden Optionen:
 
 - **Richtung**   
   **Standardeinstellung:** Nicht konfiguriert  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Direction](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#direction)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Direction](/windows/client-management/mdm/firewall-csp#direction)  
   
   Legen Sie fest, ob diese Regel für **eingehenden** oder **ausgehenden** Datenverkehr gilt. Wenn **Nicht konfiguriert** festgelegt wird, wird die Regel automatisch auf ausgehenden Datenverkehr angewendet.  
 
 - **Aktion**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Action](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#action) und [FirewallRules/*FirewallRuleName*/Action/Type](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#type)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Action](/windows/client-management/mdm/firewall-csp#action) und [FirewallRules/*FirewallRuleName*/Action/Type](/windows/client-management/mdm/firewall-csp#type)  
 
   Wählen Sie **Zulassen** oder **Blockieren** aus. Wenn **Nicht konfiguriert** festgelegt wird, lässt die Regen den Datenverkehr standardmäßig zu.  
 
 - **Netzwerktyp**  
   **Standardeinstellung:** 0 ausgewählt  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Profiles](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#profiles)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Profiles](/windows/client-management/mdm/firewall-csp#profiles)  
 
   Wählen Sie bis zu drei Netzwerktypen aus, für die die Regel gilt. Zu den Optionen gehören **Domäne**, **Privat** und **Öffentlich**.  Wenn keine Netzwerktypen ausgewählt sind, gilt die Regel für alle drei Netzwerktypen.  
 
@@ -338,13 +338,13 @@ Benutzerdefinierte Firewallregeln unterstützen die folgenden Optionen:
 
   Hiermit können Sie Verbindungen für eine App oder ein Programm steuern. Wählen Sie eine der folgenden Optionen aus, und führen Sie dann die zusätzliche Konfiguration durch:  
   - **Paketfamilienname:** Legen Sie einen Paketfamiliennamen fest. Verwenden Sie den PowerShell-Befehl **Get-AppxPackage**, um den Paketfamiliennamen zu ermitteln.   
-    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#packagefamilyname)  
+    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](/windows/client-management/mdm/firewall-csp#packagefamilyname)  
  
   - **Dateipfad:** Sie müssen einen Dateipfad zu einer App auf dem Clientgerät festlegen. Dabei kann es sich um einen absoluten oder einen relativen Pfad handeln. Beispiel:  C:\Windows\System\Notepad.exe oder %WINDIR%\Notepad.exe.  
-    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
+    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)  
 
   - **Windows-Dienst:** Legen Sie den Kurznamen des Windows-Diensts fest, wenn es sich um einen Dienst und nicht um eine Anwendung handelt, die Datenverkehr sendet oder empfängt. Verwenden Sie den PowerShell-Befehl **Get-Service**, um den Kurznamen des Diensts zu ermitteln.  
-    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)  
+    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)  
 
   - **Alle:** *Es ist keine weitere Konfiguration erforderlich*.  
 
@@ -354,7 +354,7 @@ Legen Sie die lokalen und die Remoteadressen fest, für die diese Regel gilt.
 
 - **Lokale Adressen**    
   **Standardeinstellung:** Beliebige Adresse  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
 
   Wählen Sie **Beliebige Adresse** oder **Angegebene Adresse** aus.  
 
@@ -367,7 +367,7 @@ Legen Sie die lokalen und die Remoteadressen fest, für die diese Regel gilt.
 
 - **Remoteadressen**  
   **Standardeinstellung:** Beliebige Adresse  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
  
   Wählen Sie **Beliebige Adresse** oder **Angegebene Adresse** aus.  
 
@@ -392,21 +392,21 @@ Geben Sie die lokalen und die Remoteports an, für die diese Regel gilt.
 
 - **Protokoll**  
   **Standardeinstellung:** Beliebig  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Protocol](/windows/client-management/mdm/firewall-csp#protocol)  
   Wählen Sie aus den folgenden Optionen aus, und führen Sie die jeweiligen erforderlichen Konfigurationen durch:  
   - **Alle:** Es ist keine weitere Konfiguration erforderlich.  
   - **TCP:** Konfigurieren Sie die lokalen und Remoteports. Beide Optionen unterstützen die Optionen „Alle Ports“ und „Angegebene Ports“. Geben Sie „Angegebene Ports“ mithilfe einer durch Trennzeichen getrennte Liste ein.  
-    - **Lokale Ports:** Firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **Remoteports:** Firewall-CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **Lokale Ports:** Firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **Remoteports:** Firewall-CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **UDP:** Konfigurieren Sie die lokalen und Remoteports. Beide Optionen unterstützen die Optionen „Alle Ports“ und „Angegebene Ports“. Geben Sie „Angegebene Ports“ mithilfe einer durch Trennzeichen getrennte Liste ein.  
-    - **Lokale Ports:** Firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **Remoteports:** Firewall-CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **Lokale Ports:** Firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **Remoteports:** Firewall-CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **Benutzerdefiniert:** Legen Sie eine benutzerdefinierte **Protokollnummer** zwischen 0 bis 255 fest.  
 
 #### <a name="advanced-configuration"></a>Erweiterte Konfiguration  
 - **Schnittstellentypen**  
   **Standardeinstellung:** 0 ausgewählt  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#interfacetypes)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](/windows/client-management/mdm/firewall-csp#interfacetypes)  
 
   Wählen Sie eine der folgenden Optionen aus:  
   - **Remotezugriff**  
@@ -483,7 +483,7 @@ Bei den Grundeinstellungen handelt es sich um universelle BitLocker-Einstellunge
   - **Standardbenutzern erlauben, die Verschlüsselung während Azure AD Join zu aktivieren**  
     *Diese Einstellung gilt nur für in Azure Active Directory eingebunden Geräte und hängt von der vorherigen Einstellung `Warning for other disk encryption` ab.*  
     **Standardeinstellung:** Nicht konfiguriert  
-    BitLocker-CSP: [AllowStandardUserEncryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
+    BitLocker-CSP: [AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
      - **Zulassen:** Standardbenutzer (Nichtadministratoren) können die BitLocker-Verschlüsselung aktivieren, wenn sie angemeldet sind.  
      - **Nicht konfiguriert**: Nur Administratoren können die BitLocker-Verschlüsselung auf dem Gerät aktivieren.  
@@ -656,7 +656,7 @@ Diese Einstellungen gelten speziell für Betriebssystemlaufwerke.
 
   - **Rotation von clientgesteuerten Wiederherstellungskennwörtern**  
     **Standardeinstellung:** Schlüsselrotation für Azure AD-eingebundene Geräte aktiviert  
-    BitLocker-CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
+    BitLocker-CSP: [ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)  
     
     Mit dieser Einstellung wird nach der Wiederherstellung eines Betriebssystemlaufwerks eine vom Client gesteuerte Rotation des Wiederherstellungskennworts gestartet (über bootmgr oder WinRE).  
 
@@ -780,7 +780,7 @@ Diese Einstellungen gelten speziell für Wechseldatenträger.
  
 ## <a name="microsoft-defender-exploit-guard"></a>Microsoft Defender Exploit Guard  
 
-Verwenden Sie den [Exploit-Schutz](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection), um die Angriffsfläche von Apps zu verwalten und zu reduzieren, die von Ihren Angestellten verwendet werden.  
+Verwenden Sie den [Exploit-Schutz](/windows/security/threat-protection/microsoft-defender-atp/exploit-protection), um die Angriffsfläche von Apps zu verwalten und zu reduzieren, die von Ihren Angestellten verwendet werden.  
 
 ### <a name="attack-surface-reduction"></a>Verringerung der Angriffsfläche  
 
@@ -790,7 +790,7 @@ Die Regeln zur Verringerung der Angriffsfläche schützen vor Verhalten, das oft
 
 - **Abgreifen von Anmeldeinformationen über das Subsystem der lokalen Sicherheitsautorität von Windows kennzeichnen**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Diebstahl von Anmeldeinformationen aus dem Subsystem für die lokale Sicherheitsautorität (lsass.exe) von Windows blockieren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  Regel: [Diebstahl von Anmeldeinformationen aus dem Subsystem für die lokale Sicherheitsautorität (lsass.exe) von Windows blockieren](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Wehren Sie Aktionen und Apps ab, die üblicherweise von Schadsoftware verwendet wird, die nach Sicherheitsproblemen sucht, um Computer zu infizieren.  
 
@@ -800,7 +800,7 @@ Die Regeln zur Verringerung der Angriffsfläche schützen vor Verhalten, das oft
 
 - **Prozesserstellung über Adobe Reader (Beta)**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Adobe Reader am Erstellen von untergeordneten Prozessen hindern](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
+  Regel: [Adobe Reader am Erstellen von untergeordneten Prozessen hindern](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
 
   - **Nicht konfiguriert**  
   - **Aktivieren:** Mit dieser Einstellung werden untergeordnete Prozesse blockiert, die von Adobe Reader erstellt werden.  
@@ -812,7 +812,7 @@ Blockieren Sie folgende Aktionen, die Office-Apps durchführen können:
 
 - **Einschleusung von Code durch Office-Apps in andere Prozesse (keine Ausnahmen)**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Einschleusung von Code durch Office-Anwendungen in andere Prozesse blockieren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
+  Regel: [Einschleusung von Code durch Office-Anwendungen in andere Prozesse blockieren](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - **Nicht konfiguriert**  
   - **Blockieren:** Mit dieser Einstellung wird die Einschleusung von Code durch Office-Apps in andere Prozesse blockiert.  
@@ -820,7 +820,7 @@ Blockieren Sie folgende Aktionen, die Office-Apps durchführen können:
 
 - **Erstellung ausführbarer Inhalte in Office-Apps und -Makros**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Erstellung ausführbarer Inhalte durch Office-Anwendungen blockieren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
+  Regel: [Erstellung ausführbarer Inhalte durch Office-Anwendungen blockieren](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - **Nicht konfiguriert**  
   - **Blockieren:** Mit dieser Einstellung wird die Erstellung ausführbarer Inhalte in Office-Apps und -Makros blockiert.  
@@ -828,7 +828,7 @@ Blockieren Sie folgende Aktionen, die Office-Apps durchführen können:
 
 - **Starten untergeordneter Prozesse in Office-Apps**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Alle Office-Anwendungen am Erstellen von untergeordneten Prozessen hindern](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
+  Regel: [Alle Office-Anwendungen am Erstellen von untergeordneten Prozessen hindern](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - **Nicht konfiguriert**  
   - **Blockieren:** Mit dieser Einstellung werden Office-Apps am Starten von untergeordneten Prozessen gehindert.  
@@ -836,7 +836,7 @@ Blockieren Sie folgende Aktionen, die Office-Apps durchführen können:
   
 - **Win32-Importe aus Office-Makrocode**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Win32-API-Aufrufe über Office-Makros blockieren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
+  Regel: [Win32-API-Aufrufe über Office-Makros blockieren](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - **Nicht konfiguriert**  
   - **Blockieren:** Mit dieser Einstellung blockieren Sie Win32-Importe aus Makrocode in Office.  
@@ -844,7 +844,7 @@ Blockieren Sie folgende Aktionen, die Office-Apps durchführen können:
   
 - **Prozesserstellung über Office-Kommunikationsprodukte**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Office-Kommunikationsanwendung am Erstellen von untergeordneten Prozessen hindern](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
+  Regel: [Office-Kommunikationsanwendung am Erstellen von untergeordneten Prozessen hindern](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
   - **Nicht konfiguriert**  
   - **Aktivieren:** Hiermit wird die Erstellung untergeordneter Prozesse über Office-Kommunikations-Apps blockiert.  
@@ -856,7 +856,7 @@ Blockieren Sie diese Optionen, um Bedrohungen durch Skripts zu verhindern:
 
 - **Verborgener JS-/VBS-/PS-/Makrocode**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Ausführung möglicherweise verschleierter Skripts blockieren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
+  Regel: [Ausführung möglicherweise verschleierter Skripts blockieren](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
   - **Nicht konfiguriert**  
   - **Blockieren:** Hiermit blockieren Sie verborgenen JS-/VBS-/PS-/Makrocode.  
@@ -864,7 +864,7 @@ Blockieren Sie diese Optionen, um Bedrohungen durch Skripts zu verhindern:
 
 - **Ausführung von aus dem Internet heruntergeladener Nutzlast über JS/VBS (keine Ausnahmen)**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Starten heruntergeladener ausführbarer Inhalte durch JavaScript oder VBScript blockieren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
+  Regel: [Starten heruntergeladener ausführbarer Inhalte durch JavaScript oder VBScript blockieren](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - **Nicht konfiguriert**  
   - **Blockieren:** Mit dieser Einstellung blockieren Sie die Ausführung von aus dem Internet heruntergeladener Payload über JS/VBS.  
@@ -872,7 +872,7 @@ Blockieren Sie diese Optionen, um Bedrohungen durch Skripts zu verhindern:
 
 - **Prozesserstellung über die Befehle „PSExec“ und „WMI“**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Erstellung von Prozessen durch PSExec- und WMI-Befehle blockieren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
+  Regel: [Erstellung von Prozessen durch PSExec- und WMI-Befehle blockieren](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
   - **Nicht konfiguriert**  
   - **Blockieren**: Blockiert Prozesserstellungen über die Befehle „PSExec“ und „WMI“.  
@@ -881,7 +881,7 @@ Blockieren Sie diese Optionen, um Bedrohungen durch Skripts zu verhindern:
 
 - **Nicht vertrauenswürdige und nicht signierte Prozesse, die über USB ausgeführt werden**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Nicht vertrauenswürdige und nicht signierte Prozesse, die über USB ausgeführt werden, blockieren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
+  Regel: [Nicht vertrauenswürdige und nicht signierte Prozesse, die über USB ausgeführt werden, blockieren](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
   - **Nicht konfiguriert**  
   - **Blockieren**: Blockiert nicht vertrauenswürdige und nicht signierte Prozesse, die über USB ausgeführt werden.  
@@ -889,7 +889,7 @@ Blockieren Sie diese Optionen, um Bedrohungen durch Skripts zu verhindern:
   
 - **Ausführbare Dateien, die keinem Listenkriterium zur Verbreitung, zum Alter oder zur Vertrauenswürdigkeit entsprechen**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Ausführbare Dateien an der Ausführung hindern, außer sie erfüllen Kriterium zur Verbreitung, zum Alter oder zu vertrauenswürdigen Listen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
+  Regel: [Ausführbare Dateien an der Ausführung hindern, außer sie erfüllen Kriterium zur Verbreitung, zum Alter oder zu vertrauenswürdigen Listen](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
   - **Nicht konfiguriert**  
   - **Blockieren**: Blockiert das Ausführen ausführbarer Dateien, wenn sie keinem Listenkriterium zur Verbreitung, zum Alter oder zur Vertrauenswürdigkeit entsprechen.  
@@ -901,7 +901,7 @@ Blockieren Sie diese Optionen, um Bedrohungen durch E-Mails zu verhindern:
 
 - **Ausführung ausführbarer Inhalte (EXE, DLL, PS, JS, VBS usw.), die per E-Mail (Webmail-/E-Mail-Client) zugestellt werden (keine Ausnahmen)**  
   **Standardeinstellung:** Nicht konfiguriert  
-  Regel: [Ausführbare Inhalte von E-Mail-Clients und Webmail blockieren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
+  Regel: [Ausführbare Inhalte von E-Mail-Clients und Webmail blockieren](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - **Nicht konfiguriert**  
   - **Blockieren**: Blockiert die Ausführung ausführbarer Inhalte (EXE, DLL, PS, JS, VBS usw.), die per E-Mail (Webmail-/E-Mail-Client) zugestellt werden.  
@@ -911,7 +911,7 @@ Blockieren Sie diese Optionen, um Bedrohungen durch E-Mails zu verhindern:
 
 - **Erweiterter Schutz vor Ransomware**  
   Standard:  Nicht konfiguriert  
-  Regel: [Erweiterten Schutz vor Ransomware verwenden](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
+  Regel: [Erweiterten Schutz vor Ransomware verwenden](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
   - **Nicht konfiguriert**  
   - **Aktivieren**: Verwenden Sie einen offensiven Schutz vor Ransomware.  
@@ -940,7 +940,7 @@ Blockieren Sie diese Optionen, um Bedrohungen durch E-Mails zu verhindern:
 
 ### <a name="controlled-folder-access"></a>Überwachter Ordnerzugriff  
 
-[Schützen Sie wichtige Daten](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) vor schädlichen Apps und Bedrohungen, z. B. vor Ransomware.  
+[Schützen Sie wichtige Daten](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) vor schädlichen Apps und Bedrohungen, z. B. vor Ransomware.  
 
 - **Ordnerschutz**  
   **Standardeinstellung:** Nicht konfiguriert  
@@ -986,7 +986,7 @@ Sie können von beliebigen Apps ausgehende Verbindungen an nicht vertrauenswürd
 - **XML hochladen**  
   **Standardeinstellung:** *Nicht konfiguriert*  
 
-  Erstellen Sie eine XML-Datei, die die gewünschten System- und Anwendungsschutzeinstellungen enthält, um den Exploit-Schutz [zum Schützen Ihrer Geräte vor Exploits](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) zu verwenden. Es gibt zwei Methoden zum Erstellen dieser XML-Datei:  
+  Erstellen Sie eine XML-Datei, die die gewünschten System- und Anwendungsschutzeinstellungen enthält, um den Exploit-Schutz [zum Schützen Ihrer Geräte vor Exploits](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) zu verwenden. Es gibt zwei Methoden zum Erstellen dieser XML-Datei:  
 
   - *PowerShell*: Verwenden Sie mindestens eines der PowerShell-Cmdlets *Get-ProcessMitigation*, *Set-ProcessMitigation* und *ConvertTo-ProcessMitigationPolicy*. Die Cmdlets konfigurieren Einstellungen zur Risikominderung und exportieren eine XML-Darstellung von ihnen.  
 
@@ -1043,7 +1043,7 @@ Microsoft Defender Credential Guard schützt vor Angriffen zum Diebstahl von Anm
 
 ## <a name="microsoft-defender-security-center"></a>Microsoft Defender Security Center  
 
-Microsoft Defender Security Center fungiert als separate App bzw. separater Prozess der einzelnen Features. Sie zeigt Benachrichtigungen über das Info-Center an. Sie dienst als Collector oder zentraler Ort, um den Status anzuzeigen und Konfigurationen für die verschiedenen Features auszuführen. Weitere Informationen finden Sie in der Dokumentation zu [Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center).  
+Microsoft Defender Security Center fungiert als separate App bzw. separater Prozess der einzelnen Features. Sie zeigt Benachrichtigungen über das Info-Center an. Sie dienst als Collector oder zentraler Ort, um den Status anzuzeigen und Konfigurationen für die verschiedenen Features auszuführen. Weitere Informationen finden Sie in der Dokumentation zu [Windows Defender](/windows/threat-protection/windows-defender-security-center/windows-defender-security-center).  
 
 ### <a name="microsoft-defender-security-center-app-and-notifications"></a>Microsoft Defender Security Center-App und -Benachrichtigungen  
 
@@ -1257,7 +1257,7 @@ Konfigurieren Sie mit diesen Optionen die lokalen Sicherheitseinstellungen auf W
 
 - **Gerät ohne Anmeldung abdocken**  
   **Standardeinstellung:** Nicht konfiguriert  
-  LocalPoliciesSecurityOptions-CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
+  LocalPoliciesSecurityOptions-CSP: [Devices_AllowUndockWithoutHavingToLogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
   - **Blockieren:** Bei dieser Einstellung muss sich der Benutzer beim Gerät anmelden und die Berechtigung dafür erhalten, das Gerät abzudocken.
   - **Nicht konfiguriert:** Benutzer können auf die physische Schaltfläche zum Auswerfen eines angedockten portablen Geräts drücken, um dieses sicher abzudocken.
@@ -1321,7 +1321,7 @@ Konfigurieren Sie mit diesen Optionen die lokalen Sicherheitseinstellungen auf W
 
 - **Benutzerinformationen auf Sperrbildschirm**  
   **Standardeinstellung:** Nicht konfiguriert  
-  LocalPoliciesSecurityOptions-CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
+  LocalPoliciesSecurityOptions-CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
 
   Konfigurieren Sie die Benutzerinformationen, die angezeigt werden, wenn die Sitzung gesperrt ist. Wenn nicht konfiguriert, werden Anzeigename des Benutzers, Domäne und Benutzername angezeigt.  
 
@@ -1648,4 +1648,4 @@ Konfigurieren Sie mit diesen Optionen die lokalen Sicherheitseinstellungen auf W
 
 Das Profil ist nun erstellt, führt aber noch keine Aktionen durch. Die nächsten Schritte sind das [Zuweisen von Benutzer- und Geräteprofilen in Microsoft Intune](../configuration/device-profile-assign.md) und das [Überwachen von Geräteprofilen in Microsoft Intune](../configuration/device-profile-monitor.md).  
 
-Konfigurieren von Endpoint Protection-Einstellungen auf [macOS](endpoint-protection-macos.md)-Geräten.  
+Konfigurieren von Endpoint Protection-Einstellungen auf [macOS](endpoint-protection-macos.md)-Geräten.

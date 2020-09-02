@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cecd39bcba7e16cc933086c99bbc0b403381d75d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 1ccf9801c7a5977485c6c1864a69be2e46a4af55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461792"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914870"
 ---
 # <a name="monitor-security-baselines-and-profiles-in-microsoft-intune"></a>Überwachen von Sicherheitsbaselines und Sicherheitsbaselineprofilen in Microsoft Intune
 
@@ -168,7 +168,7 @@ Auf Windows 10-Geräten ist ein integrierter MDM-Diagnoseinformationsbericht ver
 
   Schauen Sie z.B. in den Abschnitt **Registrierte Konfigurationsquellen und Zielressourcen** oder **Nicht verwaltete Richtlinien**. So können Sie erfahren, warum der Fehler oder Konflikt verursacht wird.
 
-[Diagnostizieren von MDM-Fehlern in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) enthält weitere Informationen zu diesen integrierten Bericht.
+[Diagnostizieren von MDM-Fehlern in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) enthält weitere Informationen zu diesen integrierten Bericht.
 
 > [!TIP]
 >

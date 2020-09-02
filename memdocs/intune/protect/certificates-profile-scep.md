@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 5126f2e5cc145e864fb4f56e472dba7a5179540f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559537"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915584"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Erstellen und Zuweisen eines SCEP-Zertifikatprofils in Intune
 
@@ -104,16 +104,16 @@ Nachdem Sie [Ihre Infrastruktur für die Unterstützung von SCEP-Zertifikaten (S
          - **CN={{IMEINumber}}** : Die eindeutige IMEI-Nummer (International Mobile Equipment Identity), die verwendet wird, um ein Mobiltelefon zu identifizieren.
          - **CN={{OnPrem_Distinguished_Name}}** : Eine Sequenz von durch Kommas getrennte relative definierte Namen wie *CN=Jane Doe, OU=UserAccounts, DC=corp, DC=contoso, DC=com*.
 
-           Stellen Sie sicher, dass Sie das Benutzerattribut *onpremisesdistinguishedname* mithilfe von [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) mit Azure AD synchronisieren, um die Variable *{{OnPrem_Distinguished_Name}}* zu verwenden.
+           Stellen Sie sicher, dass Sie das Benutzerattribut *onpremisesdistinguishedname* mithilfe von [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) mit Azure AD synchronisieren, um die Variable *{{OnPrem_Distinguished_Name}}* zu verwenden.
 
          - **CN={{onPremisesSamAccountName}}** : Administratoren können das Attribut „samAccountName“ aus Active Directory mithilfe von Azure AD Connect in einem Attribut mit dem Namen *onPremisesSamAccountName* mit Azure AD synchronisieren. Intune kann diese Variable als Teil einer Zertifikatsausstellungsanforderung im Antragsteller eines Zertifikats ersetzen. Das Attribut „samAccountName“ ist der zur Unterstützung von Clients und Servern aus einer früheren Version von Windows (vor Windows 2000) verwendete Benutzeranmeldename. Das Format des Benutzeranmeldenamens lautet wie folgt: *DomainName\testUser*oder nur *testUser*.
 
-            Stellen Sie sicher, dass Sie das Benutzerattribut *onPremisesSamAccountName* mithilfe von [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) mit Azure AD synchronisieren, um die Variable *{{onPremisesSamAccountName}}* zu verwenden.
+            Stellen Sie sicher, dass Sie das Benutzerattribut *onPremisesSamAccountName* mithilfe von [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) mit Azure AD synchronisieren, um die Variable *{{onPremisesSamAccountName}}* zu verwenden.
 
          Durch eine Kombination einer oder vieler dieser Variablen mit statischen Zeichenfolgen können Sie ein benutzerdefiniertes Format wie dieses für den Antragstellernamen erstellen:  
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
-         Dieses Beispiel enthält das Format des Antragstellernamens, das die Variablen „CN“ und „E“ und Zeichenfolgen für die Werte „Organisationseinheit“, „Organisation“, „Standort“, „Bundesland/Kanton“ und „Land/Region“ verwendet. Die Funktion [CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beschreibt diese Funktion und die unterstützten Zeichenfolgen.
+         Dieses Beispiel enthält das Format des Antragstellernamens, das die Variablen „CN“ und „E“ und Zeichenfolgen für die Werte „Organisationseinheit“, „Organisation“, „Standort“, „Bundesland/Kanton“ und „Land/Region“ verwendet. Die Funktion [CertStrToName](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) beschreibt diese Funktion und die unterstützten Zeichenfolgen.
          
          \* Für Profile vom Typ „Fully Managed, Dedicated, and Corporate-Owned Work Profile“ (Vollständig verwaltet, dediziert und unternehmenseigen mit einem Arbeitsprofil) für Android funktioniert die Einstellung **CN={{UserPrincipalName}}** nicht. Solche Profile können für Geräte ohne Benutzer verwendet werden. Daher können sie den Benutzerprinzipalnamen des Benutzers nicht abrufen. Wenn Sie diese Option für Geräte mit Benutzern wirklich benötigen, können Sie eine Problemumgehung wie die folgende verwenden: **CN={{UserName}}\@contoso.com** Es werden der Benutzername und die Domäne angegeben, die Sie manuell hinzugefügt haben, z. B. janedoe@contoso.com
 
@@ -313,7 +313,7 @@ Beachten Sie jedoch Folgendes, bevor Sie fortfahren:
 
 - Damit Zertifikate möglichst schnell nach der Geräteregistrierung auf Geräten veröffentlicht werden können, weisen Sie das Zertifikatprofil besser einer Benutzergruppe zu (nicht einer Gerätegruppe). Wenn Sie es einer Gerätegruppe zuweisen, muss eine vollständige Geräteregistrierung stattfinden, bevor das Gerät Richtlinien empfängt.
 
-- Wenn Sie die Co-Verwaltung für Intune und Configuration Manager verwenden, bewegen Sie in Configuration Manager den [Schieberegler für Workloads](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) für die Ressourcenzugriffsrichtlinie auf **Intune** oder **Intune-Pilot**. Diese Einstellung ermöglicht es Windows 10-Clients, den Prozess zur Anforderung des Zertifikats zu starten.
+- Wenn Sie die Co-Verwaltung für Intune und Configuration Manager verwenden, bewegen Sie in Configuration Manager den [Schieberegler für Workloads](/configmgr/comanage/how-to-switch-workloads) für die Ressourcenzugriffsrichtlinie auf **Intune** oder **Intune-Pilot**. Diese Einstellung ermöglicht es Windows 10-Clients, den Prozess zur Anforderung des Zertifikats zu starten.
 
 > [!NOTE]
 > - Wenn auf iOS/iPadOS-Geräten ein SCEP-Zertifikatprofil oder ein PKCS-Zertifikatsprofil einem zusätzlichen Profil (z.B. einem WLAN- oder VPN-Profil) zugeordnet ist, erhält das Gerät ein Zertifikat für jedes der zusätzlichen Profile. Dadurch werden für das iOS/iPadOS-Gerät mehrere Zertifikate über die SCEP- oder PKCS-Zertifikatanforderung bereitgestellt. 

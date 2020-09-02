@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66bc3db54ebefe814a14f564abbad42dc226aefe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b3d0ae7f0ec42cef3ba792b5c0bf3c913bb9e63e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988989"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906853"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Geschäftsbedingungen für den Benutzerzugriff
 
@@ -39,7 +39,7 @@ Sie können mehrere Sätze von Bedingungen erstellen und diese verschiedenen Gru
 
 Es gibt zwei Möglichkeiten zum Erstellen der Nutzungsbedingungen Ihres Unternehmens:
 - Die in diesem Artikel beschriebene Verwendung von Intune
-- Die Verwendung der Funktion [Nutzungsbedingungen für Azure Active Directory](https://docs.microsoft.com/azure/active-directory/governance/active-directory-tou)
+- Die Verwendung der Funktion [Nutzungsbedingungen für Azure Active Directory](/azure/active-directory/governance/active-directory-tou)
 
 Informationen zu den verschiedenen Methoden finden Sie im Blogbeitrag [Auswählen der passenden Lösung für die Nutzungsbedingungen Ihrer Organisation](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409). 
 

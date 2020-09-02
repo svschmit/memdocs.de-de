@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0a81e0e59eca03c9c15d7553376ea0c524251a18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988288"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914853"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Hinzufügen von iOS/iPadOS-Softwareupdaterichtlinien in Intune
 
@@ -35,7 +35,7 @@ Diese Funktion gilt für:
 Das Gerät wird standardmäßig etwa alle acht Stunden bei Intune eingecheckt. Wenn ein Update über eine Updaterichtlinie verfügbar ist, wird das Update vom Gerät heruntergeladen. Das Gerät installiert dann das Update beim nächsten Einchecken innerhalb Ihrer Zeitplankonfiguration. Obwohl während des Updateprozesses in der Regel keine Benutzerinteraktion erforderlich ist, muss der Benutzer, wenn das Gerät über einen Passcode verfügt, diesen eingeben, um ein Softwareupdate zu starten. Profile verhindern nicht, dass Benutzer das Betriebssystem manuell aktualisieren. Benutzer können daran gehindert werden, das Betriebssystem manuell mit einer Gerätekonfigurationsrichtlinie zu aktualisieren, um die Sichtbarkeit von Softwareupdates einzuschränken.
 
 > [!NOTE]
-> Wenn Sie den [autonomen Einzelanwendungsmodus](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam) (Autonomous Single App Mode, ASAM) verwenden, sollten die Auswirkungen von Betriebssystemupdates berücksichtigt werden, da das resultierende Verhalten möglicherweise unerwünscht ist.
+> Wenn Sie den [autonomen Einzelanwendungsmodus](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam) (Autonomous Single App Mode, ASAM) verwenden, sollten die Auswirkungen von Betriebssystemupdates berücksichtigt werden, da das resultierende Verhalten möglicherweise unerwünscht ist.
 Führen Sie Tests durch, um die Auswirkungen von Betriebssystemupdates auf die App zu bewerten, die Sie im autonomen Einzelanwendungsmodus ausführen.
 
 ## <a name="configure-the-policy"></a>Konfigurieren der Richtlinie

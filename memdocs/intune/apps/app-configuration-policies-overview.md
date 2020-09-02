@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 7981f661dd345ea80f9ab92debc9657072de1f4e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461656"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907271"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>App-Konfigurationsrichtlinien für Microsoft Intune
 
@@ -71,7 +71,7 @@ Die Auswahl von **Verwaltete Apps** als **Geräteregistrierungstyp** bezieht sic
 ![Geräteregistrierungstyp](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> Für Apps mit mehreren Identitäten, z. B. Microsoft Outlook, können Benutzereinstellungen berücksichtigt werden. Bei einem Posteingang mit Relevanz wird die Benutzereinstellung beispielsweise berücksichtigt und die Konfiguration nicht geändert. Mit anderen Parametern können Sie steuern, ob ein Benutzer die Einstellung ändern kann oder nicht. Weitere Informationen finden Sie unter [Bereitstellen von Outlook für iOS-/iPadOS- und Android-App-Konfigurationseinstellungen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+> Für Apps mit mehreren Identitäten, z. B. Microsoft Outlook, können Benutzereinstellungen berücksichtigt werden. Bei einem Posteingang mit Relevanz wird die Benutzereinstellung beispielsweise berücksichtigt und die Konfiguration nicht geändert. Mit anderen Parametern können Sie steuern, ob ein Benutzer die Einstellung ändern kann oder nicht. Weitere Informationen finden Sie unter [Bereitstellen von Outlook für iOS-/iPadOS- und Android-App-Konfigurationseinstellungen](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="android-app-configuration-policies"></a>Richtlinien zur Konfiguration von Android-Apps
 
@@ -176,7 +176,7 @@ Um auf einem Android-Gerät Protokolle zu erfassen, müssen Sie oder der Endbenu
     
 ## <a name="graph-api-support-for-app-configuration"></a>Graph-API-Unterstützung für die App-Konfiguration
 
-Sie können die Graph-API verwenden, um App-Konfigurationsaufgaben abzuschließen. Weitere Informationen finden Sie in der [Graph-API-Referenz für die MAM-Zielkonfiguration](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Weitere Informationen zu Intune und Graph finden Sie unter [Arbeiten mit Intune in Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
+Sie können die Graph-API verwenden, um App-Konfigurationsaufgaben abzuschließen. Weitere Informationen finden Sie in der [Graph-API-Referenz für die MAM-Zielkonfiguration](/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Weitere Informationen zu Intune und Graph finden Sie unter [Arbeiten mit Intune in Microsoft Graph](/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
 ## <a name="troubleshooting"></a>Problembehandlung
 

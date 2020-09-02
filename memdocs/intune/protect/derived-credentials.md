@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a83d6301ffe5663abd6025c8f52b2e7a7e0b7982
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461181"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911113"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Verwenden abgeleiteter Anmeldeinformationen in Microsoft Intune
 
@@ -119,8 +119,8 @@ Im Folgenden finden Sie wichtige Überlegungen zu jedem unterstützten Partner. 
 
 Überprüfen Sie den plattformspezifischen Benutzerworkflow für die Geräte, die Sie mit abgeleiteten Anmeldeinformationen verwenden werden.
 
-- [iOS und iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
-- [Vollständig verwaltete Android Enterprise-Geräte](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
+- [iOS und iPadOS](/intune-user-help/enroll-ios-device-disa-purebred)
+- [Vollständig verwaltete Android Enterprise-Geräte](../user-help/enroll-android-device-disa-purebred.md)
 
 **Zu den wichtigsten Anforderungen gehören**:
 
@@ -138,7 +138,7 @@ Informationen zum Abrufen und Konfigurieren der DISA Purebred-App finden Sie sp�
 
 Überprüfen Sie den plattformspezifischen Benutzerworkflow für die Geräte, die Sie mit abgeleiteten Anmeldeinformationen verwenden werden.
 
-- [iOS und iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [iOS und iPadOS](/intune-user-help/enroll-ios-device-entrust-datacard)
 - [Vollständig verwaltete Android Enterprise-Geräte](../user-help/enroll-android-device-entrust-datacard.md)
 
 **Zu den wichtigsten Anforderungen gehören**:
@@ -156,7 +156,7 @@ Informationen zum Abrufen und Konfigurieren der DISA Purebred-App finden Sie sp�
 
 Überprüfen Sie den plattformspezifischen Benutzerworkflow für die Geräte, die Sie mit abgeleiteten Anmeldeinformationen verwenden werden.
 
-- [iOS und iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [iOS und iPadOS](/intune-user-help/enroll-ios-device-intercede)
 - [Vollständig verwaltete Android Enterprise-Geräte](../user-help/enroll-android-device-intercede.md)
 
 **Zu den wichtigsten Anforderungen gehören**:

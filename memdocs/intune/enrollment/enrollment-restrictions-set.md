@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b056eb0bab2416a87f443c025a76c22b580ed3c9
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: f13be3c277605f11a1b16e9bcd3484cf4cdc7027
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252440"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907052"
 ---
 # <a name="set-enrollment-restrictions"></a>Festlegen von Registrierungseinschränkungen
 
@@ -122,7 +122,7 @@ Während der BYOD-Registrierung erhalten Benutzer eine Benachrichtigung darüber
 > - Registrierungen über den Geräteregistrierungs-Manager
 >
 > Gerätelimiteinschränkungen werden für diese Registrierungstypen nicht erzwungen, da diese als Szenarien mit gemeinsam genutzten Geräten gelten.
-> Sie können für diese Registrierungstypen [in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) harte Grenzwerte festlegen.
+> Sie können für diese Registrierungstypen [in Azure Active Directory](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) harte Grenzwerte festlegen.
 
 
 ## <a name="change-enrollment-restrictions"></a>Ändern von Registrierungseinschränkungen
@@ -144,19 +144,19 @@ Wenn Sie die Registrierung privater Windows-Geräte blockieren, überprüft Intu
 
 Die folgenden Methoden sind als Windows-Unternehmensregistrierung autorisiert:
 - Der Benutzer, der sich registriert, verwendet ein [Konto für den Geräteregistrierungs-Manager]( device-enrollment-manager-enroll.md).
-- Das Gerät wird über [Windows Autopilot](enrollment-autopilot.md) registriert.
+- Das Gerät wird über [Windows Autopilot](../../autopilot/enrollment-autopilot.md) registriert.
 - Das Gerät ist bei Windows Autopilot registriert, jedoch ohne die Option „MDM enrollment only“ (Nur MDM-Registrierung) in den Windows-Einstellungen.
 - Die IME-Nummer des Geräts ist unter **Geräteregistrierung** >  **[Bezeichner von Unternehmensgeräten](corporate-identifiers-add.md)** aufgeführt.
 - Das Gerät wird über ein [Massenbereitstellungspaket](windows-bulk-enroll.md) registriert.
-- Die Geräteregistrierung erfolgt über ein GPO oder eine [automatische Registrierung aus Configuration Manager für die Co-Verwaltung](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
+- Die Geräteregistrierung erfolgt über ein GPO oder eine [automatische Registrierung aus Configuration Manager für die Co-Verwaltung](/configmgr/comanage/quickstart-paths#bkmk_path1).
  
 Die folgenden Registrierungen werden von Intune als unternehmenseigen gekennzeichnet. Da sie die Steuerung pro Gerät durch den Intune-Administrator jedoch nicht unterstützen, werden sie blockiert:
-- [Automatische MDM-Registrierung](windows-enroll.md#enable-windows-10-automatic-enrollment) mit der [Azure Active Directory-Einbindung während der Windows-Einrichtung](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
-- [Automatische MDM-Registrierung](windows-enroll.md#enable-windows-10-automatic-enrollment) mit der [Azure Active Directory-Einbindung aus den Windows-Einstellungen](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)*.
+- [Automatische MDM-Registrierung](windows-enroll.md#enable-windows-10-automatic-enrollment) mit der [Azure Active Directory-Einbindung während der Windows-Einrichtung](/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
+- [Automatische MDM-Registrierung](windows-enroll.md#enable-windows-10-automatic-enrollment) mit der [Azure Active Directory-Einbindung aus den Windows-Einstellungen](/azure/active-directory/user-help/user-help-register-device-on-network)*.
  
 Die folgenden persönlichen Registrierungsmethoden werden ebenso blockiert:
-- [Automatische MDM-Registrierung](windows-enroll.md#enable-windows-10-automatic-enrollment) durch [Hinzufügen eines Geschäftskontos über die Windows-Einstellungen](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)\*.
-- Die Option [MDM enrollment only]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) (Nur MDM-Registrierung) in den Windows-Einstellungen.
+- [Automatische MDM-Registrierung](windows-enroll.md#enable-windows-10-automatic-enrollment) durch [Hinzufügen eines Geschäftskontos über die Windows-Einstellungen](/azure/active-directory/user-help/user-help-join-device-on-network)\*.
+- Die Option [MDM enrollment only]( /windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) (Nur MDM-Registrierung) in den Windows-Einstellungen.
 
 \* Diese werden nicht blockiert, wenn sie bei Autopilot registriert sind.
 

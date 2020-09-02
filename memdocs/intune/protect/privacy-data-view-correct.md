@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6cddd94400874c508a31b11b22fa4417798e2da
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 865a6f33053d9e1fe011d6c2cddf94d0e3995148
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084775"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914962"
 ---
 # <a name="view-and-correct-personal-data"></a>Anzeigen und Korrigieren personenbezogener Daten
 
@@ -37,7 +37,7 @@ Intune-Administratoren können einige personenbezogene Daten basierend auf ihren
 Administratoren können die personenbezogenen Daten von Benutzern in verschiedenen Blättern der Intune-Benutzeroberfläche anzeigen. In den folgenden Artikeln wird erläutert, auf welche Informationen Administratoren zugreifen können:
 - [Anzeigen von Gerätedetails in Intune](../remote-actions/device-inventory.md) – hier erfahren Sie, wie Sie Informationen zu Endbenutzergeräten überprüfen können.
 - [Überwachen von App-Informationen und -Zuweisungen](../apps/apps-monitor.md) – dieser Artikel erläutert, wie Sie Informationen zu den Apps abrufen können, die auf einem Endbenutzergerät installiert sind.
-- Im Artikel [Welche Informationen erhält meine Organisation, wenn ich mein Gerät registriere?](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) erhalten Endbenutzer eine Liste der Daten, die ihr Unternehmen sehen bzw. nicht sehen kann. Setzen Sie Ihre Benutzer darüber in Kenntnis, welche Daten Sie erfassen und warum Sie diese erfassen. Dieser Artikel kann den ersten Schritt für diese Transparenz darstellen.
+- Im Artikel [Welche Informationen erhält meine Organisation, wenn ich mein Gerät registriere?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) erhalten Endbenutzer eine Liste der Daten, die ihr Unternehmen sehen bzw. nicht sehen kann. Setzen Sie Ihre Benutzer darüber in Kenntnis, welche Daten Sie erfassen und warum Sie diese erfassen. Dieser Artikel kann den ersten Schritt für diese Transparenz darstellen.
 
 ### <a name="who-can-view-the-data"></a>Wer kann die Daten anzeigen?
 

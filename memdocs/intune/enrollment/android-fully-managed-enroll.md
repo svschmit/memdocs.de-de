@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78ed3fe234fb4ab236fe35b5e1778582f3eb731d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b0324755ef4706e1642357ae7a4e7dc90e719a7e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461707"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915193"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Einrichten der Intune-Registrierung von vollständig verwalteten Android Enterprise-Geräten 
 
@@ -60,7 +60,7 @@ Führen Sie die folgenden Schritte aus, um die Verwaltung für vollständig verw
 2. Wählen Sie **Ja** unter **Benutzern die Registrierung unternehmenseigener Benutzergeräte ermöglichen** aus.
 
 > [!NOTE]
-> Wenn Sie eine Richtlinie für den bedingten Zugriff mit Azure AD definiert haben, die das Gewährungssteuerelement *Markieren des Geräts als kompatibel erforderlich* oder eine Blockierungsrichtlinie verwendet sowie für **Alle Cloud-Apps**, **Android** und **Browser** gilt, müssen Sie die **Microsoft Intune**-Cloud-App aus dieser Richtlinie ausschließen. Der Grund: Beim Android-Setupvorgang wird eine Chrome-Registerkarte zum Authentifizieren Ihrer Benutzer während der Registrierung verwendet. Weitere Informationen finden Sie in der [Dokumentation zum bedingten Zugriff mit Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> Wenn Sie eine Richtlinie für den bedingten Zugriff mit Azure AD definiert haben, die das Gewährungssteuerelement *Markieren des Geräts als kompatibel erforderlich* oder eine Blockierungsrichtlinie verwendet sowie für **Alle Cloud-Apps**, **Android** und **Browser** gilt, müssen Sie die **Microsoft Intune**-Cloud-App aus dieser Richtlinie ausschließen. Der Grund: Beim Android-Setupvorgang wird eine Chrome-Registerkarte zum Authentifizieren Ihrer Benutzer während der Registrierung verwendet. Weitere Informationen finden Sie in der [Dokumentation zum bedingten Zugriff mit Azure AD](/azure/active-directory/conditional-access/).
 
 Wenn für diese Einstellung **Ja** ausgewählt ist, erhalten Sie ein Registrierungstoken (eine zufällige Zeichenfolge) und einen QR-Code für Ihren Intune-Mandanten. Dieses einzelne Registrierungstoken ist für all Ihre Benutzer gültig und läuft nicht ab. Abhängig vom Android-Betriebssystem und der Version des Geräts können Sie entweder das Token oder den QR-Code verwenden, um das Gerät zu registrieren.
 
@@ -70,4 +70,3 @@ Sie können jetzt [Ihre vollständig verwalteten Geräte registrieren](android-d
 ## <a name="next-steps"></a>Nächste Schritte
 - [Add Android Enterprise fully managed device configuration policies (Hinzufügen von Konfigurationsrichtlinien für vollständig verwaltete Android Enterprise-Geräte)](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Android-Geräte](../apps/app-configuration-policies-use-android.md)
-

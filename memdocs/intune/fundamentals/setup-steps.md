@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 631b2f0fdf0d5cdd79eee9a3645b5769b756d71b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c0a71ba59a1704e0f6369f611a2922212a2aa8c6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990703"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911339"
 ---
 # <a name="set-up-intune"></a>Einrichten von Intune
 
@@ -30,10 +30,10 @@ Diese Einrichtungsschritte helfen Ihnen, die mobile Geräteverwaltung (Mobile De
 
 Einige Schritte wie die Einrichtung eines Intune-Abonnements und der MDM-Autorität sind in den meisten Szenarios erforderlich. Andere Schritte wie das Konfigurieren einer benutzerdefinierten Domäne oder das Hinzufügen von Apps sind optional, je nach den Anforderungen Ihres Unternehmens.
 
-Wenn Sie Microsoft Configuration Manager derzeit zum Verwalten von Computern und Servern verwenden, können Sie [Configuration Manager über die Co-Verwaltung mit der Cloud verknüpfen](https://docs.microsoft.com/configmgr/comanage/overview).
+Wenn Sie Microsoft Configuration Manager derzeit zum Verwalten von Computern und Servern verwenden, können Sie [Configuration Manager über die Co-Verwaltung mit der Cloud verknüpfen](/configmgr/comanage/overview).
 
 >[!TIP]
->Sie können das *FastTrack Center-Leistungsangebot* nutzen, wenn Sie mindestens 150 Lizenzen für Intune in einem berechtigten Plan erwerben. Bei diesem Dienst unterstützen Sie Microsoft-Spezialisten bei der Vorbereitung Ihrer Umgebung für Intune. Informationen hierzu finden Sie unter [FastTrack Center-Leistungsangebot für Enterprise Mobility Suite (EMS)](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
+>Sie können das *FastTrack Center-Leistungsangebot* nutzen, wenn Sie mindestens 150 Lizenzen für Intune in einem berechtigten Plan erwerben. Bei diesem Dienst unterstützen Sie Microsoft-Spezialisten bei der Vorbereitung Ihrer Umgebung für Intune. Informationen hierzu finden Sie unter [FastTrack Center-Leistungsangebot für Enterprise Mobility Suite (EMS)](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 | Schritte | Status  |
 |---|---|

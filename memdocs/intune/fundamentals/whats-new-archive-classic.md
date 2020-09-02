@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c939b2b21bc8bfbf82a997c05f24d91c487a9e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 398f1cd789d0ea2e2c15349e943c8e29545733e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81681970"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912320"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Neuerungen im klassischen Intune-Portal – vorherige Monate
 
@@ -345,7 +345,7 @@ __Silverlight wird von Firefox nicht mehr unterstützt__ <!--VSO TBA-->
 Mozilla entfernt die Unterstützung für Silverlight in Version 52 des [Firefox-Browsers](https://www.mozilla.org/firefox) ab März 2017. Bei der vorhandenen Intune-Konsole Daher werden Sie sich mit Firefox-Versionen nach Version 51 nicht mehr anmelden können. Wir empfehlen, für den Zugriff auf die Verwaltungskonsole Internet Explorer 10 oder 11 oder eine [Firefox-Version vor Version 52](https://ftp.mozilla.org/pub/firefox/releases/) zu verwenden. Durch den Übergang von Intune zum Azure-Portal wird die Unterstützung einer Reihe von [modernen Browsern](/azure/azure-preview-portal-supported-browsers-devices) ohne Abhängigkeit von Silverlight möglich.
 
 __Entfernen von Richtlinien für das mobile Exchange Online-Postfach__ <!--770687-->
-Seit Dezember können Administratoren Richtlinien für das mobile Exchange Online-Postfach (EAS) nicht mehr in der Intune-Konsole anzeigen oder konfigurieren. Das Rollout dieser Änderung erfolgt für alle Intune-Mandanten im Laufe des Dezembers und Januars. Die Konfiguration aller vorhandenen Richtlinien bleibt unverändert. Verwenden Sie zum Konfigurieren neuer Richtlinien die Exchange-Verwaltungsshell. Weitere Informationen finden Sie [hier](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
+Seit Dezember können Administratoren Richtlinien für das mobile Exchange Online-Postfach (EAS) nicht mehr in der Intune-Konsole anzeigen oder konfigurieren. Das Rollout dieser Änderung erfolgt für alle Intune-Mandanten im Laufe des Dezembers und Januars. Die Konfiguration aller vorhandenen Richtlinien bleibt unverändert. Verwenden Sie zum Konfigurieren neuer Richtlinien die Exchange-Verwaltungsshell. Weitere Informationen finden Sie [hier](/exchange/mobile-device-mailbox-policies-exchange-2013-help).
 
 __Intune AV Player-, Image Viewer- und PDF Viewer-Apps werden unter Android nicht mehr unterstützt__ <!--747553-->
 Ab Mitte Dezember 2016 können Benutzer die Intune AV-Player-, Image Viewer- und PDF Viewer-Apps nicht mehr verwenden. Diese Apps wurden durch die Azure Information Protection-App ersetzt. [Hier](/information-protection/rms-client/mobile-app-faq) erfahren Sie mehr über die Azure Information Protection-App.

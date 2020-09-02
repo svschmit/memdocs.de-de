@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58e22af70a3cf119cb044a15b40ba581fe6452c
-ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
+ms.openlocfilehash: 1eb64f8ed2bc67b4800a4583010dea150ade421d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86452847"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914156"
 ---
 # <a name="add-the-macos-company-portal-app"></a>Hinzufügen der Unternehmensportal-App für macOS
 
@@ -40,7 +40,7 @@ Die Unternehmensportal-App ist auch im Lieferumfang von Microsoft AutoUpdate (MA
 > Die Unternehmensportal-App kann nur automatisch mit Intune auf Geräten installiert werden, die bereits über die direkte Registrierung oder die automatische Geräteregistrierung registriert sind. Bei persönlichen Geräten oder der manuellen Registrierung muss die Unternehmensportal-App heruntergeladen und installiert werden, um die Registrierung zu initiieren. Weitere Informationen finden Sie unter [Benutzeranweisungen zum Herunterladen und Installieren der Unternehmensportal-App](#instruct-users-to-download-and-install-company-portal).
 ## <a name="instruct-users-to-download-and-install-company-portal"></a>Benutzeranweisungen zum Herunterladen und Installieren der Unternehmensportal-App
 
-Sie können Benutzer anweisen, die Unternehmensportal-App für macOS herunterzuladen, zu installieren und sich bei dieser anzumelden. Anwendungen zum Herunterladen, Installieren und Anmelden bei der Unternehmensportal-App finden Sie unter [Registrieren eines macOS-Geräts mithilfe der Unternehmensportal-App](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+Sie können Benutzer anweisen, die Unternehmensportal-App für macOS herunterzuladen, zu installieren und sich bei dieser anzumelden. Anwendungen zum Herunterladen, Installieren und Anmelden bei der Unternehmensportal-App finden Sie unter [Registrieren eines macOS-Geräts mithilfe der Unternehmensportal-App](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 ##  <a name="install-company-portal-for-macos-as-a-macos-lob-app"></a>Installieren der Unternehmensportal-App für macOS als branchenspezifische macOS-App
 
@@ -66,5 +66,5 @@ Die Unternehmensportal-App für macOS kann mithilfe des Features für [Shellskri
 > Das Skript erfordert Internetzugriff, wenn es ausgeführt wird, um die aktuelle Version der Unternehmensportal-App für macOS herunterzuladen. 
 ## <a name="next-steps"></a>Nächste Schritte
 - Weitere Informationen zum Zuweisen von Apps finden Sie unter [Zuweisen von Apps zu Gruppen mit Microsoft Intune](apps-deploy.md).
-- Weitere Informationen zum Konfigurieren der automatischen Geräteregistrierung finden Sie unter [Automatisches Registrieren von macOS-Geräten mit Apple Business Manager oder Apple School Manager](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-macos).
-- Unter [Mac-Updates](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-updates) erfahren Sie mehr über das Konfigurieren der Microsoft AutoUpdate-Einstellungen auf macOS-Geräten.
+- Weitere Informationen zum Konfigurieren der automatischen Geräteregistrierung finden Sie unter [Automatisches Registrieren von macOS-Geräten mit Apple Business Manager oder Apple School Manager](../enrollment/device-enrollment-program-enroll-macos.md).
+- Unter [Mac-Updates](/windows/security/threat-protection/microsoft-defender-atp/mac-updates) erfahren Sie mehr über das Konfigurieren der Microsoft AutoUpdate-Einstellungen auf macOS-Geräten.

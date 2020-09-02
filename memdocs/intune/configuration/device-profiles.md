@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c7e2964281e26e695dcd58629601a34043ab0e55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820492"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913782"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Anwenden von Einstellungen und Funktionen auf Ihren Geräten mit Geräteprofilen in Microsoft Intune
 
@@ -138,7 +138,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 ## <a name="education"></a>Education
 
-Mit den [Education settings - Windows 10](education-settings-configure.md) (Education-Einstellungen: Windows 10) können Sie Optionen für die [Take a Test-Windows-App](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) konfigurieren. Wenn Sie diese Optionen konfigurieren, können keine anderen Apps auf dem Gerät ausgeführt werden, bis der Test abgeschlossen ist.
+Mit den [Education settings - Windows 10](education-settings-configure.md) (Education-Einstellungen: Windows 10) können Sie Optionen für die [Take a Test-Windows-App](/education/windows/take-tests-in-windows-10) konfigurieren. Wenn Sie diese Optionen konfigurieren, können keine anderen Apps auf dem Gerät ausgeführt werden, bis der Test abgeschlossen ist.
 
 In den [Einstellungen für Bildungseinrichtungen (iOS/iPadOS)](../fundamentals/education-settings-configure-ios-shared.md) wird die iOS/iPadOS-Classroom-App so konfiguriert, dass der Unterricht strukturiert und Geräte von Schülern/Kursteilnehmern im Kursraum gesteuert werden können. Sie können iPad-Geräte so konfigurieren, dass mehrere Schüler/Kursteilnehmer gemeinsam ein Gerät verwenden können.
 
@@ -157,7 +157,7 @@ Dieses Features unterstützt folgende Betriebssysteme:
 
 [Endpoint Protection](../protect/endpoint-protection-configure.md) konfiguriert BitLocker- und Microsoft Defender-Einstellungen für Windows 10-Geräte. Außerdem werden auf macOS-Geräten die Firewall, das Gateway und andere Ressourcen konfiguriert.
 
-Informationen zur Integration von Microsoft Defender Advanced Threat Protection in Microsoft Intune finden Sie unter [Konfigurieren von Endpunkten mithilfe von Tools für die mobile Geräteverwaltung (MDM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
+Informationen zur Integration von Microsoft Defender Advanced Threat Protection in Microsoft Intune finden Sie unter [Konfigurieren von Endpunkten mithilfe von Tools für die mobile Geräteverwaltung (MDM)](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 Dieses Features unterstützt folgende Betriebssysteme:
 

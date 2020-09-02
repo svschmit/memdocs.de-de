@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6fb5702b7c809c7810004a53d084f19fa94dea9e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: f08282fe6bd8675474415290d50c0b07b4e1fc25
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431851"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915057"
 ---
 # <a name="account-protection-policy-for-endpoint-security-in-intune"></a>Kontoschutzrichtlinie für Endpunktsicherheit in Intune
 
@@ -30,7 +30,7 @@ Verwenden Sie Intune-Endpunktsicherheitsrichtlinien für den Kontoschutz, um die
 - *Windows Hello for Business-* ersetzt Kennwörter auf PCs und mobilen Geräten durch starke zweistufige Authentifizierung.
 - *Credential Guard* hilft beim Schutz von Anmeldeinformationen und Geheimnissen, die Sie mit Ihren Geräten verwenden.
 
-Weitere Informationen finden Sie unter [Identitäts- und Zugriffsverwaltung](https://docs.microsoft.com/windows/security/identity-protection/) in der Dokumentation zur Windows-Identitäts- und Zugriffsverwaltung.
+Weitere Informationen finden Sie unter [Identitäts- und Zugriffsverwaltung](/windows/security/identity-protection/) in der Dokumentation zur Windows-Identitäts- und Zugriffsverwaltung.
 
 Die Endpunktsicherheitsrichtlinien für Kontenschutz finden Sie unter *Verwalten* im Knoten **Endpunktsicherheit** des [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

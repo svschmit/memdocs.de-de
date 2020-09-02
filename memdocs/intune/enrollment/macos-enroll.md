@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c0973805a0646ec7df87f36eea183a9456f7e39
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 7f2b2826e8eaf1cf1c1c8680743b582203199aed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865505"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906836"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Registrieren von macOS-Geräten in Intune
 
@@ -51,7 +51,7 @@ Benutzer können ihre eigenen persönlichen Geräte in der Intune-Verwaltung reg
 - zur [Unternehmensportal-Website](https://portal.manage.microsoft.com) wechseln oder
 - unter [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) die macOS-Unternehmensportal-App herunterladen.
 
-Sie können Ihren Benutzern auch einen Link zu den Schritten für die Onlineregistrierung senden: [Registrieren Ihres macOS-Geräts in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)
+Sie können Ihren Benutzern auch einen Link zu den Schritten für die Onlineregistrierung senden: [Registrieren Ihres macOS-Geräts in Intune](../user-help/enroll-your-device-in-intune-macos-cp.md)
 
 Informationen zu anderen Endbenutzeraufgaben finden Sie in den folgenden Artikeln:
 
@@ -82,7 +82,7 @@ Für VMware Fusion müssen Sie die [VMX-Datei bearbeiten](https://kb.vmware.com/
 
 Die durch den Benutzer genehmigte MDM-Registrierung ist ein Typ der macOS-Registrierung, mit dem Sie bestimmte sicherheitsrelevante Einstellungen verwalten können. Weitere Informationen finden Sie in der [Supportdokumentation von Apple](https://support.apple.com/HT208019).  
  
-Ab Juni 2020 werden alle neuen macOS-MDM-Registrierungen in Intune einschließlich derjenigen als durch den Benutzer genehmigt angesehen, die nicht über die automatische Geräteregistrierung (ADE) registriert wurden. Der Endbenutzer muss das Verwaltungsprofil unter **Systemeinstellungen** > **Profile** manuell installieren und somit die Genehmigung des Verwaltungsprofils bereitstellen. Die Systemeinstellungen werden automatisch von der Unternehmensportal-App für BYOD-macOS-Benutzer gestartet. Die [Anweisungen zum Installieren des Verwaltungsprofils](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) werden in der Unternehmensportal-App bereitgestellt.     
+Ab Juni 2020 werden alle neuen macOS-MDM-Registrierungen in Intune einschließlich derjenigen als durch den Benutzer genehmigt angesehen, die nicht über die automatische Geräteregistrierung (ADE) registriert wurden. Der Endbenutzer muss das Verwaltungsprofil unter **Systemeinstellungen** > **Profile** manuell installieren und somit die Genehmigung des Verwaltungsprofils bereitstellen. Die Systemeinstellungen werden automatisch von der Unternehmensportal-App für BYOD-macOS-Benutzer gestartet. Die [Anweisungen zum Installieren des Verwaltungsprofils](../user-help/enroll-your-device-in-intune-macos-cp.md) werden in der Unternehmensportal-App bereitgestellt.     
 
 BYOD-macOS-MDM-Registrierungen vor Juni 2020 sind möglicherweise nicht vom Benutzer genehmigt, wenn der Endbenutzer die Genehmigung des Verwaltungsprofils unter **Systemeinstellungen** > **Profile** nicht manuell bereitgestellt hat. Bei BYOD-Registrierungen nach Juni 2020 startet die Unternehmensportal-App die **Systemeinstellungen** für den Benutzer, der daraufhin auf „Installieren“ klicken muss. Wenn der Benutzer das Verwaltungsprofil während der Registrierung nicht genehmigt hat, kann er zu **Systemeinstellungen** > **Profile** wechseln, das Verwaltungsprofil auswählen und auf **Genehmigen** klicken, um das Profil zu einem späteren Zeitpunkt zu genehmigen.
 

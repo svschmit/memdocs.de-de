@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
-ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
+ms.openlocfilehash: 287306a8a583dcb6a9617a2933cecb0223a25df4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86285282"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913102"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Problembehandlung bei der App-Installation
 
@@ -125,7 +125,7 @@ Zu den auf ARM64-Geräten unterstützten App-Typen zählen die folgenden:
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Problembehandlung bei Apps aus dem Microsoft Store
 
-Mithilfe der Informationen im Artikel [Problembehandlung beim Packen, Bereitstellen und Abfragen von Microsoft Store-Apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) können Sie allgemeine Probleme beheben, die bei der Installation von Apps aus dem Microsoft Store (mit Intune oder mittels anderer Tools) auftreten können.
+Mithilfe der Informationen im Artikel [Problembehandlung beim Packen, Bereitstellen und Abfragen von Microsoft Store-Apps](/windows/win32/appxpkg/troubleshooting) können Sie allgemeine Probleme beheben, die bei der Installation von Apps aus dem Microsoft Store (mit Intune oder mittels anderer Tools) auftreten können.
 
 ## <a name="app-troubleshooting-resources"></a>Ressourcen zur Problembehandlung für Apps
 - [Bereitstellen von Visio und Project als Teil Ihrer Bereitstellung von Microsoft 365-Apps](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)

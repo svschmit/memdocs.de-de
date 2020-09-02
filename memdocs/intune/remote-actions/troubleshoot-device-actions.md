@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ad644d8438b23f36eccad24bee31ee92de5c040
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d5b80cd7c90b7899e25b14c4cb2de1590530f43a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078844"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910807"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Troubleshooting für Geräteaktionen in Intune
 
@@ -99,7 +99,7 @@ Dies liegt daran, dass für eine Ihrer Kompatibilitätsrichtlinien ein Passcode 
 ### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>Nach Verwendung der Aktion „Zurücksetzen“ kann ich ein Windows 10-Gerät nicht neu starten.
 Dieses Problem kann verursacht werden, wenn Sie die Option **Hiermit wird das Gerät zurückgesetzt. Dieser Vorgang wird auch dann fortgesetzt, wenn die Stromversorgung unterbrochen wird. Durch Auswahl dieser Option wird möglicherweise das erneute Starten einiger Windows 10-Geräte verhindert.** auf einem Windows 10-Gerät auswählen.
 
-Dies kann der Fall sein, wenn bei der Installation von Windows eine größere Beschädigung vorliegt, die eine Neuinstallation des Betriebssystems verhindert. In diesem Fall schlägt der Prozess fehl, und das System befindet sich in der [Windows-Wiederherstellungsumgebung]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+Dies kann der Fall sein, wenn bei der Installation von Windows eine größere Beschädigung vorliegt, die eine Neuinstallation des Betriebssystems verhindert. In diesem Fall schlägt der Prozess fehl, und das System befindet sich in der [Windows-Wiederherstellungsumgebung]( /windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 ### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>Nach Verwendung der Aktion „Zurücksetzen“ kann ich ein mit BitLocker verschlüsseltes Gerät nicht neu starten.
 Dieses Problem kann verursacht werden, wenn Sie die Option **Hiermit wird das Gerät zurückgesetzt. Dieser Vorgang wird auch dann fortgesetzt, wenn die Stromversorgung unterbrochen wird. Durch Auswahl dieser Option wird möglicherweise das erneute Starten einiger Windows 10-Geräte verhindert.** auf einem mit BitLocker verschlüsselten Gerät auswählen.

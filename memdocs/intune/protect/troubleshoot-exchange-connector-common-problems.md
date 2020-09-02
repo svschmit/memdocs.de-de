@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b1ed3cd24c05586bd5dc9d9a2443a33ffcdc2a48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972129"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914802"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Lösen häufig auftretender Probleme mit dem Intune Exchange Connector
  
@@ -56,7 +56,7 @@ Lesen Sie die folgenden Abschnitte, um Probleme in Bezug auf die E-Mail-Benachri
 
 ### <a name="check-the-notification-account-that-retrieves-autodiscover-settings"></a>Überprüfen Sie das Benachrichtigungskonto, das die Einstellungen für den AutoErmittlungsdienst abruft.
 
-1. Stellen Sie sicher, dass der AutoErmittlungsdienst und die Exchange-Webdienste in den Exchange-Clientzugriffsdiensten konfiguriert sind. Weitere Informationen finden Sie unter [Clientzugriffsdienste](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) und [AutoErmittlungsdienst in Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
+1. Stellen Sie sicher, dass der AutoErmittlungsdienst und die Exchange-Webdienste in den Exchange-Clientzugriffsdiensten konfiguriert sind. Weitere Informationen finden Sie unter [Clientzugriffsdienste](/Exchange/architecture/client-access/client-access) und [AutoErmittlungsdienst in Exchange Server](/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
 
 2. Vergewissern Sie sich, dass Ihr Benachrichtigungskonto die folgenden Anforderungen erfüllt:
 
@@ -71,14 +71,14 @@ Lesen Sie die folgenden Abschnitte, um Probleme in Bezug auf die E-Mail-Benachri
    2. Geben Sie *Autodiscover.SMTP-Domäne.com* ein. Die Ausgabe sollte ähnlich wie im folgenden Bild aussehen: ![NSLOOKUP-Ergebnisse](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
       )
 
-   Sie können den AutoErmittlungsdienst auch im Internet unter https://testconnectivity.microsoft.com testen. Alternativ können Sie ihn mit dem Microsoft-Verbindungsuntersuchungstool von einer lokalen Domäne aus testen. Weitere Informationen finden Sie unter [Microsoft-Verbindungsuntersuchung](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
+   Sie können den AutoErmittlungsdienst auch im Internet unter https://testconnectivity.microsoft.com testen. Alternativ können Sie ihn mit dem Microsoft-Verbindungsuntersuchungstool von einer lokalen Domäne aus testen. Weitere Informationen finden Sie unter [Microsoft-Verbindungsuntersuchung](/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
 ### <a name="check-autodiscover"></a>Überprüfen der AutoErmittlung
 
 Führen Sie die folgenden Schritte aus, wenn bei der AutoErmittlung ein Fehler auftritt:
 
-1. [Konfigurieren Sie einen gültigen DNS-Eintrag für die AutoErmittlung](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
+1. [Konfigurieren Sie einen gültigen DNS-Eintrag für die AutoErmittlung](/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
 
 2. Geben Sie die EWS-URL als vordefinierten Code in die Konfigurationsdatei für den Intune Exchange Connector ein:
 

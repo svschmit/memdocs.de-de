@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb45550f8c38237bebcc54db5531ab244ab10d84
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 6f30b2a3ecac3767da71c999b8920930532b8279
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531518"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915771"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Verwenden von DFCI-Profilen (Device Firmware Configuration Interface) auf Windows-Geräten in Microsoft Intune (Public Preview)
 
 Wenn Sie Intune zum Verwalten von Autopilot-Geräten verwenden, können Sie nach deren Registrierung mithilfe von DFCI (Firmware Configuration Interface) UEFI-Einstellungen (BIOS) verwalten. Eine Übersicht über die Vorteile, Szenarios und Voraussetzungen finden Sie in der [Übersicht zu DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
-DFCI [ermöglicht Windows das Weitergeben von Verwaltungsbefehlen](https://docs.microsoft.com/windows/client-management/mdm/uefi-csp) von Intune an UEFI (Unified Extensible Firmware Interface).
+DFCI [ermöglicht Windows das Weitergeben von Verwaltungsbefehlen](/windows/client-management/mdm/uefi-csp) von Intune an UEFI (Unified Extensible Firmware Interface).
 
 Verwenden Sie dieses Feature in Intune zum Steuern von BIOS-Einstellungen. In der Regel ist Firmware resilienter gegen böswillige Angriffe. Dadurch wird die Kontrolle des Endbenutzers über das BIOS beschränkt, was in kompromittierten Situationen gut ist.
 
@@ -45,11 +45,11 @@ Diese Funktion gilt für:
 
 - Das Gerät muss von einem [CSP-Partner (Microsoft Cloud Solution Provider)](https://partner.microsoft.com/cloud-solution-provider) oder direkt vom OEM für Windows Autopilot registriert werden. 
 
-  Manuell für Autopilot registrierte Geräte, die beispielsweise [aus einer CSV-Datei importiert werden](../enrollment/enrollment-autopilot.md#add-devices), dürfen DFCI nicht verwenden. Die DFCI-Verwaltung erfordert standardmäßig den externen Nachweis der kommerziellen Beschaffung des Geräts über eine OEM- oder CSP-Partnerregistrierung bei Windows Autopilot.
+  Manuell für Autopilot registrierte Geräte, die beispielsweise [aus einer CSV-Datei importiert werden](../../autopilot/enrollment-autopilot.md#add-devices), dürfen DFCI nicht verwenden. Die DFCI-Verwaltung erfordert standardmäßig den externen Nachweis der kommerziellen Beschaffung des Geräts über eine OEM- oder CSP-Partnerregistrierung bei Windows Autopilot.
 
   Nach der Registrierung des Geräts wird dessen Seriennummer in der Liste der Windows Autopilot-Geräte angezeigt.
 
-  Weitere Informationen zu Autopilot einschließlich sämtlicher Anforderungen finden Sie unter [Registrieren von Windows-Geräten in Intune mithilfe von Windows Autopilot](../enrollment/enrollment-autopilot.md).
+  Weitere Informationen zu Autopilot einschließlich sämtlicher Anforderungen finden Sie unter [Registrieren von Windows-Geräten in Intune mithilfe von Windows Autopilot](../../autopilot/enrollment-autopilot.md).
 
 ## <a name="create-your-azure-ad-security-groups"></a>Erstellen von Azure AD-Sicherheitsgruppen
 
@@ -66,7 +66,7 @@ Erstellen Sie die folgenden Profile, und weisen Sie diese Ihrer Gruppe zu, um DF
 
 ### <a name="create-an-autopilot-deployment-profile"></a>Erstellen eines Autopilot-Bereitstellungsprofils
 
-Mit diesem Profil werden neue Geräte eingerichtet und vorab konfiguriert. Das [Autopilot-Bereitstellungsprofil](../enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile) listet die Schritte zum Erstellen des Profils auf.
+Mit diesem Profil werden neue Geräte eingerichtet und vorab konfiguriert. Das [Autopilot-Bereitstellungsprofil](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile) listet die Schritte zum Erstellen des Profils auf.
 
 ### <a name="create-an-enrollment-state-page-profile"></a>Erstellen eines Seite zum Registrierungsstatus-Profils
 

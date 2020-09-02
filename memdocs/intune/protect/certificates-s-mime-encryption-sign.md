@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d935e79dfe2fd0d786dae596cafe173b66018c9
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663293"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915567"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>S/MIME-Übersicht zum Signieren und Verschlüsseln von E-Mails in Intune
 
@@ -33,7 +33,7 @@ E-Mail-Zertifikate, auch bekannt als S/MIME-Zertifikate, bieten zusätzliche Sic
 
 Auf iOS/iPadOS-Geräten können Sie ein von Intune verwaltetes E-Mail-Profil erstellen, das S/MIME und Zertifikate zum Signieren und Verschlüsseln eingehender und ausgehender E-Mails verwendet. Für andere Plattformen wird S/MIME möglicherweise nicht unterstützt. Wenn S/MIME unterstützt wird, installieren Sie Zertifikate, welche die S/MIME-Signatur und -Verschlüsselung verwenden. Anschließend aktiviert ein Endbenutzer S/MIME in seiner E-Mail-Anwendung.
 
-Weitere Informationen zur S/MIME-E-Mail-Signatur und -Verschlüsselung finden Sie unter [S/MIME for message signing and encryption (S/MIME für die Nachrichtensignatur und -verschlüsselung)](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
+Weitere Informationen zur S/MIME-E-Mail-Signatur und -Verschlüsselung finden Sie unter [S/MIME for message signing and encryption (S/MIME für die Nachrichtensignatur und -verschlüsselung)](/Exchange/policy-and-compliance/smime).
 
 In diesem Artikel erhalten Sie eine Übersicht über die Verwendung von S/MIME-Zertifikaten zum Signieren und Verschlüsseln von E-Mails auf Ihren Geräten.
 
@@ -41,7 +41,7 @@ In diesem Artikel erhalten Sie eine Übersicht über die Verwendung von S/MIME-Z
 
 Mithilfe von Signaturzertifikaten kann die E-Mail-App des Clients sicher mit dem E-Mail-Server kommunizieren.
 
-Für die Verwendung von Signaturzertifikaten müssen Sie eine Vorlage in Ihrer Zertifizierungsstelle erstellen, deren Schwerpunkt auf dem Signieren liegt. In der Zertifizierungsstelle von Microsoft Active Directory werden unter [Konfigurieren der Zertifikatvorlage des Servers](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) die Schritte für die Erstellung der Zertifikatvorlagen aufgeführt.
+Für die Verwendung von Signaturzertifikaten müssen Sie eine Vorlage in Ihrer Zertifizierungsstelle erstellen, deren Schwerpunkt auf dem Signieren liegt. In der Zertifizierungsstelle von Microsoft Active Directory werden unter [Konfigurieren der Zertifikatvorlage des Servers](/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) die Schritte für die Erstellung der Zertifikatvorlagen aufgeführt.
 
 Signaturzertifikate in Intune verwenden PKCS-Zertifikate. Unter [Konfigurieren und Verwenden von PKCS-Zertifikate](certficates-pfx-configure.md) wird beschrieben, wie PKCS-Zertifikate in Ihrer Intune-Umgebung bereitgestellt und verwendet werden. Diese Schritte umfassen:
 

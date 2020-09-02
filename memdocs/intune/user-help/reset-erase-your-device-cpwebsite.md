@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: b61265a1c278b83a91ac1e353794a358dcc5fdb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881466"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915516"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Zurücksetzen des Geräts über die Website des Unternehmensportals
 
@@ -32,7 +32,7 @@ Zurücksetzen eines verwendeten, verlorenen oder gestohlenen Geräts auf die Wer
 
 Nach dem Zurücksetzen wird das Gerät nicht mehr im Unternehmensportal angezeigt. Vorhandene Apps und Dateien werden gelöscht, und das Gerät wird auf die Werkseinstellungen zurückgesetzt. 
 
-Das Zurücksetzen von Geräten im Unternehmensportal ist nicht für alle iOS-Geräte möglich. Wenn Sie ein Mitarbeiter des IT-Supports sind und weitere Informationen zum Zurücksetzen von Geräten und Einschränkungen erhalten möchten, finden Sie unter [Entfernen von Geräten durch Zurücksetzen, Zurückziehen oder manuelle Aufhebung der Registrierung des Geräts](https://docs.microsoft.com/intune/devices-wipe) weitere Informationen.  
+Das Zurücksetzen von Geräten im Unternehmensportal ist nicht für alle iOS-Geräte möglich. Wenn Sie ein Mitarbeiter des IT-Supports sind und weitere Informationen zum Zurücksetzen von Geräten und Einschränkungen erhalten möchten, finden Sie unter [Entfernen von Geräten durch Zurücksetzen, Zurückziehen oder manuelle Aufhebung der Registrierung des Geräts](/intune/devices-wipe) weitere Informationen.  
 
 > [!Note]
 > Sie können diese Schritte auch auf einem anderen registrieren Gerät ausführen. Öffnen Sie die Unternehmensportal-App, und führen Sie die Schritte aus, um eine ähnliche Zurücksetzungsmethode verwenden zu können. 

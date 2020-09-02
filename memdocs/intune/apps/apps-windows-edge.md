@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baaec1e48579313085c039872cc931891c367132
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: abf2ad4a1b0857f1a839de49bb709fc4ff27f369
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531535"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913952"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Hinzufügen von Microsoft Edge für Windows 10 zu Microsoft Intune
 
@@ -121,7 +121,7 @@ Wenn Sie Microsoft Edge auf dem Gerät eines Benutzer deinstallieren müssen, f�
 
 ## <a name="troubleshooting"></a>Problembehandlung
 **Microsoft Edge Version 77 und höher für Windows 10:**<br>
-Intune verwendet die Intune-Verwaltungserweiterung zum Herunterladen und Bereitstellen des Microsoft Edge-Installers auf zugewiesenen Windows 10-Geräten. Anschließend werden die Bereitstellungseinstellungen an den Microsoft Edge-Installer übermittelt, der den Microsoft Edge-Browser direkt aus dem CDN herunterlädt und installiert. Verweisen Sie auf die [Voraussetzungen für die Intune-Verwaltungserweiterung](intune-management-extension.md#prerequisites) und die bewährten Methoden für den Zugriff auf den Azure-Aktualisierungsdienst und das CDN, um sicherzustellen, dass Ihre Netzwerkkonfiguration Windows 10-Geräten den Zugriff auf diese Speicherorte gestattet. Um zur Installation des Browsers den Zugriff auf Installationsdateien von einem CDN zu ermöglichen, müssen Sie außerdem den Zugriff auf Windows Update-Endpunkte zulassen. Weitere Informationen finden Sie unter [Verbindungsendpunkte für Windows 10, Version 1809 verwalten – Windows Update](https://docs.microsoft.com/windows/privacy/manage-windows-1809-endpoints#windows-update) und [Netzwerkendpunkte für Microsoft Intune](../fundamentals/intune-endpoints.md).
+Intune verwendet die Intune-Verwaltungserweiterung zum Herunterladen und Bereitstellen des Microsoft Edge-Installers auf zugewiesenen Windows 10-Geräten. Anschließend werden die Bereitstellungseinstellungen an den Microsoft Edge-Installer übermittelt, der den Microsoft Edge-Browser direkt aus dem CDN herunterlädt und installiert. Verweisen Sie auf die [Voraussetzungen für die Intune-Verwaltungserweiterung](intune-management-extension.md#prerequisites) und die bewährten Methoden für den Zugriff auf den Azure-Aktualisierungsdienst und das CDN, um sicherzustellen, dass Ihre Netzwerkkonfiguration Windows 10-Geräten den Zugriff auf diese Speicherorte gestattet. Um zur Installation des Browsers den Zugriff auf Installationsdateien von einem CDN zu ermöglichen, müssen Sie außerdem den Zugriff auf Windows Update-Endpunkte zulassen. Weitere Informationen finden Sie unter [Verbindungsendpunkte für Windows 10, Version 1809 verwalten – Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update) und [Netzwerkendpunkte für Microsoft Intune](../fundamentals/intune-endpoints.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 - [Das Zuweisen von Apps zu Gruppen](apps-deploy.md)

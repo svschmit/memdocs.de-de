@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: d3a1a66988f922a293187f3ed30e3659dee567b1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429504"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915703"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Einstellungen für Windows 10 (und höher) für die Verwaltung von gemeinsam genutzten Geräten mithilfe von Intune
 
@@ -32,7 +32,7 @@ Mithilfe von Microsoft Intune können Endbenutzer sich bei gemeinsam genutzten G
 
 In diesem Artikel werden die Einstellungen aufgeführt und beschrieben, die in einem Gerätekonfigurationsprofil für Windows 10 (und höher) verwendet werden können. Wenn das Profil in Intune erstellt wird, stellen Sie das Profil für die Gerätegruppen in Ihrer Organisation bereit oder weisen es diesen zu. Sie können dieses Profil ebenfalls zu Gerätegruppen mit gemischten Gerätetypen und Betriebssystemversionen zuweisen.
 
-Weitere Informationen zu diesem Intune-Feature finden Sie unter [Control access, accounts, and power features on shared PC or multi-user devices (Features für das Steuern von Zugriff, Konten und Energieeinstellungen auf gemeinsam genutzten Computern oder Geräten mit mehreren Benutzern)](shared-user-device-settings.md). Weitere Informationen zum Windows-Konfigurationsdienstanbieter (Configuration Service Provider, CSP) finden Sie unter [SharedPC CSP (Konfigurationsdienstanbieter „SharedPC“)](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
+Weitere Informationen zu diesem Intune-Feature finden Sie unter [Control access, accounts, and power features on shared PC or multi-user devices (Features für das Steuern von Zugriff, Konten und Energieeinstellungen auf gemeinsam genutzten Computern oder Geräten mit mehreren Benutzern)](shared-user-device-settings.md). Weitere Informationen zum Windows-Konfigurationsdienstanbieter (Configuration Service Provider, CSP) finden Sie unter [SharedPC CSP (Konfigurationsdienstanbieter „SharedPC“)](/windows/client-management/mdm/sharedpc-csp).
 
 ## <a name="before-your-begin"></a>Vorbereitungen
 
@@ -40,7 +40,7 @@ Weitere Informationen zu diesem Intune-Feature finden Sie unter [Control access,
 
 ## <a name="shared-multi-user-device-settings"></a>Einstellungen für von mehreren Benutzern gemeinsam genutzte Geräte
 
-Diese Einstellungen verwenden den [SharedPC-CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
+Diese Einstellungen verwenden den [SharedPC-CSP](/windows/client-management/mdm/sharedpc-csp).
 
 - **Modus für gemeinsame PC-Nutzung:** **Aktivieren** aktiviert den Modus für gemeinsame PC-Nutzung. In diesem Modus kann sich nur jeweils ein Benutzer auf dem Gerät anmelden. Ein anderer Benutzer kann sich erst anmelden, nachdem der aktuelle Benutzer sich abgemeldet hat. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 - **Gastkonto:** Aktivieren Sie diese Einstellung, damit die Option „Gast“ auf dem Anmeldebildschirm verfügbar ist. Für Gastkonten sind keine Anmeldeinformationen und keine Authentifizierung erforderlich. Für diese Einstellung wird bei jeder Verwendung ein neues lokales Konto erstellt. Folgende Optionen sind verfügbar:
@@ -92,10 +92,10 @@ Diese Einstellungen verwenden den [SharedPC-CSP](https://docs.microsoft.com/wind
   - **Aktiviert**: Verwendet die empfohlenen (eingeschränkteren) Einstellungen für Geräte in Bildungseinrichtungen.
   - **Deaktiviert:** Die empfohlenen Standardrichtlinien für Geräte in Bildungseinrichtungen werden nicht verwendet.
 
-  Weitere Informationen zu den Bildungsrichtlinien finden Sie unter [Windows 10 configuration recommendations for education customers (Empfehlungen für die Konfiguration von Windows 10 für Kunden im Bildungsbereich)](https://docs.microsoft.com/education/windows/configure-windows-for-education).
+  Weitere Informationen zu den Bildungsrichtlinien finden Sie unter [Windows 10 configuration recommendations for education customers (Empfehlungen für die Konfiguration von Windows 10 für Kunden im Bildungsbereich)](/education/windows/configure-windows-for-education).
 
 > [!TIP]
-> [Einrichten eines gemeinsam genutzten oder Gast-PC](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (öffnet eine andere Dokumentationswebsite) ist eine großartige Ressource für dieses Windows 10-Feature. Hier finden Sie Konzepte und Gruppenrichtlinien, die im Modus für gemeinsame PC-Nutzung festgelegt werden können.
+> [Einrichten eines gemeinsam genutzten oder Gast-PC](/windows/configuration/set-up-shared-or-guest-pc) (öffnet eine andere Dokumentationswebsite) ist eine großartige Ressource für dieses Windows 10-Feature. Hier finden Sie Konzepte und Gruppenrichtlinien, die im Modus für gemeinsame PC-Nutzung festgelegt werden können.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

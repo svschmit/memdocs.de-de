@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc3ef945351529ce0db3e40108fef135414c4fab
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 6a37b94ee0e474e9e3da6aae359ba1b315212910
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093617"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911929"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Geräteeinstellungen bei Windows 10 (und höher) zur Ausführung als Kiosk in Intune
 
@@ -41,7 +41,7 @@ Weitere Informationen zur Windows-Kioskfunktion in Intune finden Sie unter [Konf
   1. Erstellen Sie das Kioskprofil, um das Gerät im Kioskmodus auszuführen.
   2. Erstellen Sie das [Geräteeinschränkungsprofil](device-restrictions-windows-10.md#microsoft-edge-browser), und konfigurieren Sie spezifische Features und Einstellungen, die in Microsoft Edge zulässig sind.
 
-- Stellen Sie sicher, dass sich alle Dateien, Skripts und Verknüpfungen auf dem lokalen System befinden. Weitere Informationen einschließlich anderer Windows-Anforderungen finden Sie unter [Anpassen und Exportieren des Startlayouts](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
+- Stellen Sie sicher, dass sich alle Dateien, Skripts und Verknüpfungen auf dem lokalen System befinden. Weitere Informationen einschließlich anderer Windows-Anforderungen finden Sie unter [Anpassen und Exportieren des Startlayouts](/windows/configuration/customize-and-export-start-layout).
 
 > [!IMPORTANT]
 > Achten Sie darauf, dass Sie dieses Kioskprofil den gleichen Geräten wie Ihr [Microsoft Edge-Profil](device-restrictions-windows-10.md#microsoft-edge-browser) zuweisen.
@@ -54,17 +54,17 @@ Hiermit wird nur eine App auf dem Gerät ausgeführt.
 
 - **Typ der Benutzeranmeldung:** Wählen Sie den Kontotyp aus, der die App ausführt. Folgende Optionen sind verfügbar:
 
-  - **Automatische Anmeldung (Windows 10, Version 1803 und neuer):** Verwenden Sie diese Option für Kiosks in öffentlichen Umgebungen, die ähnlich einem Gastkonto keine Benutzeranmeldung erfordern. Diese Einstellung verwendet [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Automatische Anmeldung (Windows 10, Version 1803 und neuer):** Verwenden Sie diese Option für Kiosks in öffentlichen Umgebungen, die ähnlich einem Gastkonto keine Benutzeranmeldung erfordern. Diese Einstellung verwendet [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
   - **Lokales Benutzerkonto:** Geben Sie das lokale Benutzerkonto (auf dem Gerät) an. Das von Ihnen eingegebene Konto wird zum Anmelden im Kiosk verwendet.
 
 - **Anwendungstyp:** Wählen Sie den Anwendungstyp aus. Folgende Optionen sind verfügbar:
 
   - **Microsoft Edge-Browser hinzufügen**: Klicken Sie auf **Microsoft Edge-Browser**, und wählen Sie den **Microsoft Edge-Kioskmodustyp** aus:
 
-    - **Digitale/interaktive Beschilderung**: Durch diese Option wird eine URL im Vollbildmodus geöffnet, und es wird nur der Inhalt dieser Website angezeigt. Weitere Informationen zu diesem Feature finden Sie unter [Einrichten digitaler Beschilderungen](https://docs.microsoft.com/windows/configuration/setup-digital-signage).
+    - **Digitale/interaktive Beschilderung**: Durch diese Option wird eine URL im Vollbildmodus geöffnet, und es wird nur der Inhalt dieser Website angezeigt. Weitere Informationen zu diesem Feature finden Sie unter [Einrichten digitaler Beschilderungen](/windows/configuration/setup-digital-signage).
     - **Öffentliches Browsen (InPrivate)** : Durch diese Option wird eine Version von Microsoft Edge mit mehreren Registerkarten ausgeführt. Benutzer können öffentlich browsen oder ihre Sitzung beenden.
 
-    Weitere Informationen zu diesen Optionen finden Sie unter [Bereitstellen des Microsoft Edge-Kioskmodus](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+    Weitere Informationen zu diesen Optionen finden Sie unter [Bereitstellen des Microsoft Edge-Kioskmodus](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
     > [!NOTE]
     > Mit dieser Einstellung wird der Microsoft Edge-Browser auf dem Gerät aktiviert. Erstellen Sie zum Konfigurieren spezifischer Microsoft Edge-Einstellungen ein Geräteeinschränkungsprofil (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > **Windows 10** (Plattform) > **Geräteeinschränkungen** > **Microsoft Edge-Browser**). Der [Microsoft Edge-Browser](device-restrictions-windows-10.md#microsoft-edge-browser) führt alle Einstellungen und Beschreibungen dieser auf.
@@ -96,7 +96,7 @@ Hiermit wird nur eine App auf dem Gerät ausgeführt.
       `office.com`
 
     > [!NOTE]
-    > Bei Windows 10-Kiosken mit automatischer Anmeldung, die mit dem Microsoft-Kioskbrowser aktiviert wird, muss eine Offlinelizenz aus dem Microsoft Store für Unternehmen verwendet werden. Diese Anforderung besteht, da bei der automatischen Anmeldung ein lokales Benutzerkonto ohne AD-Anmeldeinformationen (Azure Active Directory) verwendet wird. Onlinelizenzen können daher nicht ausgewertet werden. Weitere Informationen finden Sie unter [Verteilen von Offline-Apps](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
+    > Bei Windows 10-Kiosken mit automatischer Anmeldung, die mit dem Microsoft-Kioskbrowser aktiviert wird, muss eine Offlinelizenz aus dem Microsoft Store für Unternehmen verwendet werden. Diese Anforderung besteht, da bei der automatischen Anmeldung ein lokales Benutzerkonto ohne AD-Anmeldeinformationen (Azure Active Directory) verwendet wird. Onlinelizenzen können daher nicht ausgewertet werden. Weitere Informationen finden Sie unter [Verteilen von Offline-Apps](/microsoft-store/distribute-offline-apps).
 
   - **Store-App hinzufügen**: Klicken Sie auf **Store-App hinzufügen**, und wählen Sie eine App aus der Liste aus.
 
@@ -112,7 +112,7 @@ Hiermit wird nur eine App auf dem Gerät ausgeführt.
 
   Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
-  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="multi-app-kiosk"></a>Kiosk mit mehreren Apps
 
@@ -126,10 +126,10 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
 
 - **Typ der Benutzeranmeldung:** Wählen Sie den Kontotyp aus, der Ihre Apps ausführt. Folgende Optionen sind verfügbar:
 
-  - **Automatische Anmeldung (Windows 10, Version 1803 und höher):** Verwenden Sie diese Option für Kiosks in öffentlichen Umgebungen, die ähnlich einem Gastkonto keine Benutzeranmeldung erfordern. Diese Einstellung verwendet [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Automatische Anmeldung (Windows 10, Version 1803 und höher):** Verwenden Sie diese Option für Kiosks in öffentlichen Umgebungen, die ähnlich einem Gastkonto keine Benutzeranmeldung erfordern. Diese Einstellung verwendet [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
   - **Lokales Benutzerkonto:** **Fügen Sie das lokale Benutzerkonto (auf dem Gerät) hinzu**. Das von Ihnen eingegebene Konto wird zum Anmelden im Kiosk verwendet.
   - **Azure AD-Benutzer oder Gruppe (Windows 10, Version 1803 und höher):** Klicken Sie auf **Hinzufüge**, und wählen Sie Azure AD-Benutzer oder Gruppen aus der Liste aus. Sie können mehrere Benutzer und Gruppen auswählen. Wählen Sie **OK** aus, um die Änderungen zu speichern.
-  - **HoloLens-Besucher:** Beim Besucherkonto handelt es sich um ein Gastkonto, für das keine Anmeldeinformationen oder Authentifizierung erforderlich ist. Weitere Informationen dazu finden Sie unter [shared PC mode concepts (Konzepte für den Modus „Freigegebener Computer“)](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **HoloLens-Besucher:** Beim Besucherkonto handelt es sich um ein Gastkonto, für das keine Anmeldeinformationen oder Authentifizierung erforderlich ist. Weitere Informationen dazu finden Sie unter [shared PC mode concepts (Konzepte für den Modus „Freigegebener Computer“)](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Browser und Anwendungen**: Wählen Sie die Apps aus, die auf dem Kioskgerät ausgeführt werden sollen. Denken Sie daran, dass Sie mehrere Apps hinzufügen können.
 
@@ -142,7 +142,7 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
       - **Normalmodus (Vollversion von Microsoft Edge)** : Führt eine Vollversion von Microsoft Edge mit sämtlichen Funktionen für das Browsen aus. Benutzerdaten und -zustand werden zwischen Sitzungen beibehalten.
       - **Öffentliches Browsen (InPrivate)** : Hiermit wird eine Version von Microsoft Edge InPrivate mit mehreren Registerkarten mit einer für Kioske ausgelegten Benutzeroberfläche im Vollbildmodus ausgeführt.
 
-      Weitere Informationen zu diesen Optionen finden Sie unter [Bereitstellen des Microsoft Edge-Kioskmodus](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+      Weitere Informationen zu diesen Optionen finden Sie unter [Bereitstellen des Microsoft Edge-Kioskmodus](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
       > Mit dieser Einstellung wird der Microsoft Edge-Browser auf dem Gerät aktiviert. Erstellen Sie zum Konfigurieren spezifischer Microsoft Edge-Einstellungen ein Geräteeinschränkungsprofil (**Geräte** > **Konfigurationsprofile** > **Profil erstellen** > >**Windows 10** (Plattform) > **Geräteeinschränkungen** >  **Microsoft Edge-Browser**). Der [Microsoft Edge-Browser](device-restrictions-windows-10.md#microsoft-edge-browser) führt alle Einstellungen und Beschreibungen dieser auf.
@@ -166,7 +166,7 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
         Um den Zugriff auf bestimmte Websites zu erlauben, laden Sie eine CSV-Datei mit einer Liste der zulässigen Websites hoch. Wenn Sie keine CSV-Datei hinzufügen, können alle Websites aufgerufen werden.
 
       > [!NOTE]
-      > Bei Windows 10-Kiosken mit automatischer Anmeldung, die mit dem Microsoft-Kioskbrowser aktiviert wird, muss eine Offlinelizenz aus dem Microsoft Store für Unternehmen verwendet werden. Diese Anforderung besteht, da bei der automatischen Anmeldung ein lokales Benutzerkonto ohne AD-Anmeldeinformationen (Azure Active Directory) verwendet wird. Onlinelizenzen können daher nicht ausgewertet werden. Weitere Informationen finden Sie unter [Verteilen von Offline-Apps](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
+      > Bei Windows 10-Kiosken mit automatischer Anmeldung, die mit dem Microsoft-Kioskbrowser aktiviert wird, muss eine Offlinelizenz aus dem Microsoft Store für Unternehmen verwendet werden. Diese Anforderung besteht, da bei der automatischen Anmeldung ein lokales Benutzerkonto ohne AD-Anmeldeinformationen (Azure Active Directory) verwendet wird. Onlinelizenzen können daher nicht ausgewertet werden. Weitere Informationen finden Sie unter [Verteilen von Offline-Apps](/microsoft-store/distribute-offline-apps).
 
   - **Anwendungen**
 
@@ -176,12 +176,12 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
 
       - **Anwendungsname:** Erforderlich. Geben Sie einen Namen für die Anwendung ein.
       - **Lokaler Pfad zur ausführbaren App-Datei**: Erforderlich. Geben Sie den Pfad zur ausführbaren Datei ein, z.B. `C:\Program Files (x86)\Microsoft VS Code\Code.exe` oder `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-      - **Geben Sie die AUMID (Application User Model ID) der Win32-App ein**: Geben Sie die AUMID der Win32-App ein. Diese Einstellung bestimmt das Startlayout der Kachel auf dem Desktop. Informationen zum Abrufen dieser ID finden Sie unter [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
+      - **Geben Sie die AUMID (Application User Model ID) der Win32-App ein**: Geben Sie die AUMID der Win32-App ein. Diese Einstellung bestimmt das Startlayout der Kachel auf dem Desktop. Informationen zum Abrufen dieser ID finden Sie unter [Get-StartApps](/powershell/module/startlayout/get-startapps?view=win10-ps).
 
     - **Nach AUMID hinzufügen:** Mit dieser Option können Sie Windows-Posteingangs-Apps wie Editor oder Rechner hinzufügen. Geben Sie die folgenden Eigenschaften ein:
 
       - **Anwendungsname:** Erforderlich. Geben Sie einen Namen für die Anwendung ein.
-      - **Anwendungsbenutzermodell-ID (AUMID):** Erforderlich. Geben Sie die AUMID der Windows-App ein. Weitere Informationen zum Abrufen dieser ID finden Sie unter [Ermitteln der Anwendungsbenutzermodell-ID einer installierten App](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+      - **Anwendungsbenutzermodell-ID (AUMID):** Erforderlich. Geben Sie die AUMID der Windows-App ein. Weitere Informationen zum Abrufen dieser ID finden Sie unter [Ermitteln der Anwendungsbenutzermodell-ID einer installierten App](/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
     - **AutoLaunch**: (Optional) Nachdem Sie Ihre Apps und Ihren Browser hinzugefügt haben, wählen Sie eine App oder einen Browser aus, die bzw. der jeweils automatisch geöffnet werden soll, wenn sich der Benutzer anmeldet. Nur eine App oder ein Browser kann automatisch gestartet werden.
     - **Kachelgröße:** Erforderlich. Nachdem Sie Ihre Apps hinzugefügt haben, wählen Sie eine kleine, mittlere, breite oder große App-Kachelgröße aus.
@@ -191,7 +191,7 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
   > [!TIP]
   > Nachdem Sie alle Apps hinzugefügt haben, können Sie die Anzeigereihenfolge ändern, indem Sie auf die Apps in der Liste klicken und sie dann verschieben.  
 
-- **Alternatives Startlayout verwenden:** Wählen Sie **Ja** aus, um eine XML-Datei einzufügen, die beschreibt, wie die Apps im Startmenü dargestellt werden (z. B. die Reihenfolge der Apps). Verwenden Sie diese Option, wenn Sie in Ihrem Startmenü weitere Anpassungen vornehmen möchten. [Anpassen und Exportieren des Startlayouts](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout): Bietet Anweisungen und XML-Beispiele.
+- **Alternatives Startlayout verwenden:** Wählen Sie **Ja** aus, um eine XML-Datei einzufügen, die beschreibt, wie die Apps im Startmenü dargestellt werden (z. B. die Reihenfolge der Apps). Verwenden Sie diese Option, wenn Sie in Ihrem Startmenü weitere Anpassungen vornehmen möchten. [Anpassen und Exportieren des Startlayouts](/windows/configuration/customize-and-export-start-layout): Bietet Anweisungen und XML-Beispiele.
 
 - **Windows-Taskleiste:** Sie können die Taskleiste **einblenden** oder **ausblenden**. Standardmäßig wird sie ausgeblendet. Symbole, z.B. das WLAN-Symbol werden dargestellt, die Einstellungen können jedoch nicht vom Endbenutzer geändert werden.
 
@@ -207,7 +207,7 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
 
   Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert.
 
-  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -215,4 +215,4 @@ Apps, die sich in diesem Modus befinden, sind über das Startmenü verfügbar. D
 
 Außerdem können Sie Kioskprofile für Geräte mit [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [Windows Holographic for Business](kiosk-settings-holographic.md) erstellen.
 
-Weitere Informationen finden Sie unter [Einrichten eines Kiosks mit einer einzelnen App](https://docs.microsoft.com/windows/configuration/kiosk-single-app) oder [Einrichten eines Kiosks mit mehreren Apps](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) im Windows-Leitfaden.
+Weitere Informationen finden Sie unter [Einrichten eines Kiosks mit einer einzelnen App](/windows/configuration/kiosk-single-app) oder [Einrichten eines Kiosks mit mehreren Apps](/windows/configuration/lock-down-windows-10-to-specific-apps) im Windows-Leitfaden.

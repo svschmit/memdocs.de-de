@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dae87983f442661046fa48c63b5691f1bef48240
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342906"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915890"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Verwalten von Windows-PCs als Computer mit dem Intune-Softwareclient
 
@@ -90,7 +90,7 @@ Die Intune-Clientsoftware verwaltet Softwareupdates, Windows-Firewall und Endpoi
 
 Wenn Sie die Intune-Clientsoftware zum Verwalten von Windows-PCs verwenden, können Sie nur die Richtlinien im Abschnitt **Computerverwaltung** verwenden.
 
-Intune verwaltet Windows-PCs mithilfe von Richtlinien, ähnlich wie Gruppenrichtlinienobjekte in Windows Server Active Directory Domain Services. Wenn Sie Computer in einer Active Directory-Domäne mit Intune verwalten, [stellen Sie sicher, dass Intune-Richtlinien nicht zu Konflikten mit Gruppenrichtlinienobjekten führen](resolve-gpo-and-microsoft-intune-policy-conflicts.md), die für Ihre Organisation eingerichtet sind. Weitere Informationen finden Sie unter [Gruppenrichtlinien für Anfänger](https://technet.microsoft.com/library/hh147307.aspx).
+Intune verwaltet Windows-PCs mithilfe von Richtlinien, ähnlich wie Gruppenrichtlinienobjekte in Windows Server Active Directory Domain Services. Wenn Sie Computer in einer Active Directory-Domäne mit Intune verwalten, [stellen Sie sicher, dass Intune-Richtlinien nicht zu Konflikten mit Gruppenrichtlinienobjekten führen](resolve-gpo-and-microsoft-intune-policy-conflicts.md), die für Ihre Organisation eingerichtet sind. Weitere Informationen finden Sie unter [Gruppenrichtlinien für Anfänger](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10)).
 
   ![Auswählen der Vorlage für neue Windows-PC-Richtlinien](./media/manage-windows-pcs-with-microsoft-intune/select-template-for-pc-policy.png)
 

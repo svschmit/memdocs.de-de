@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1acbb00e5da0766685233cf7136caf8320564200
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 199bd8f267cc84492b21af83bf0761474080f11b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878084"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913408"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Auswirkungen der Zurücksetzung eines iOS-Geräts im Unternehmensportal 
 
@@ -42,6 +42,6 @@ Das passiert, wenn Ihr Gerät nur für den Zugriff auf Geschäfts-, Schul- oder 
 
 - Ihr Geschäfts-, Schul- oder Uni-E-Mail-Konto wird gelöscht. Nicht gespeicherte E-Mails werden gelöscht.   
 
-Die Option zum Zurücksetzen von Geräten ist nicht für alle iOS-Geräte verfügbar. Wenn Sie ein Mitarbeiter des IT-Supports sind und mehr über diese Einschränkungen erfahren möchten, finden Sie unter [Entfernen von Geräten durch Zurücksetzen, Zurückziehen oder manuelle Aufhebung der Registrierung des Geräts](https://docs.microsoft.com/intune/devices-wipe) weitere Informationen.  
+Die Option zum Zurücksetzen von Geräten ist nicht für alle iOS-Geräte verfügbar. Wenn Sie ein Mitarbeiter des IT-Supports sind und mehr über diese Einschränkungen erfahren möchten, finden Sie unter [Entfernen von Geräten durch Zurücksetzen, Zurückziehen oder manuelle Aufhebung der Registrierung des Geräts](/intune/devices-wipe) weitere Informationen.  
 
 Wenn Sie Fragen haben, wenden Sie sich an Ihren IT-Support. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).

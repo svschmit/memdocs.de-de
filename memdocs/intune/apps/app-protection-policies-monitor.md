@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 3a64d3f58541194ed4c1a63ac57cddec70ff6873
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455071"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913476"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Überwachen von App-Schutzrichtlinien
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -92,7 +92,7 @@ Sie können nach einem einzelnen Benutzer suchen und den Kompatibilitätsstatus 
 - **Letzte Synchronisierung:** Zeitpunkt der letzten Synchronisierung der App mit Intune.
 
 >[!NOTE]
-> Die Spalte **Letzte Synchronisierung** stellt sowohl im Benutzerstatusbericht in der Konsole als auch im [exportierbaren CSV-Bericht](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities) der App-Schutzrichtlinie den gleichen Wert dar. Der Unterschied besteht in einer kurzen Verzögerung bei der Synchronisierung der Werte in den beiden Berichten.
+> Die Spalte **Letzte Synchronisierung** stellt sowohl im Benutzerstatusbericht in der Konsole als auch im [exportierbaren CSV-Bericht](/intune/app-protection-policies-monitor#export-app-protection-activities) der App-Schutzrichtlinie den gleichen Wert dar. Der Unterschied besteht in einer kurzen Verzögerung bei der Synchronisierung der Werte in den beiden Berichten.
 >
 > Die in „Letzte Synchronisierung“ angegebene Uhrzeit ist der Zeitpunkt, zu dem Intune die App-Instanz zuletzt gesehen hat. Wenn ein Benutzer eine App startet, könnte diese abhängig vom letzten Eincheckzeitpunkt zu diesem Startzeitpunkt mit dem Intune-App-Schutz-Dienst kommunizieren. Informieren Sie sich über [die Wiederholungsintervallzeiten für den Eincheckvorgang der App-Schutzrichtlinie](app-protection-policy-delivery.md). Wenn ein Benutzer diese spezielle App also im letzten Eincheckintervall (in der Regel 30 Minuten für die aktive Verwendung) nicht verwendet hat und die App gestartet wird, dann gilt Folgendes:
 >
