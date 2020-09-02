@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: aafd83f1aa09881c9e7c4196b91798ab0d278a87
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 37d249c75f18d52f7fa17a0e271f45b17465da1a
+ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993655"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385332"
 ---
 # <a name="windows-autopilot-requirements"></a>Anforderungen für Windows Autopilot
 
@@ -53,14 +53,14 @@ Windows Autopilot ist von einer Vielzahl von internetbasierten Diensten abhängi
 - DNS-Namensauflösung für Internet-DNS-Namen sicherstellen
 - Erlauben Sie den Zugriff auf alle Hosts über Port 80 (http), 443 (HTTPS) und 123 (UDP/NTP).
 
-In Umgebungen mit restriktiveren Internet Zugriff oder für diejenigen, die eine Authentifizierung erfordern, bevor der Internet Zugriff abgerufen werden kann, ist möglicherweise eine zusätzliche Konfiguration erforderlich, um den Zugriff auf die erforderlichen Dienste in die Whitelist aufzunehmen. 
+In Umgebungen mit restriktiveren Internet Zugriff oder für diejenigen, die eine Authentifizierung erfordern, bevor der Internet Zugriff abgerufen werden kann, ist möglicherweise eine zusätzliche Konfiguration erforderlich, um den Zugriff auf die erforderlichen Dienste zuzulassen. 
 
 > [!NOTE]
 > Die Smartcard-und Zertifikat basierte Authentifizierung wird während der OOBE-Authentifizierung nicht unterstützt. Weitere Informationen finden Sie unter [Smartcards und Zertifikat basierte Authentifizierung](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
 
 Weitere Informationen zu den einzelnen Diensten und ihren spezifischen Anforderungen finden Sie in den folgenden Details:
 
-<table><th>Dienst<th>Informationen
+<table><th>Dienst<th>Information
 <tr><td><b>Windows Autopilot-Bereitstellungs Dienst<b><td>Wenn eine Netzwerkverbindung vorhanden ist, wird von jedem Windows 10-Gerät eine Verbindung mit dem Windows Autopilot-Bereitstellungs Dienst hergestellt.  Mit Windows 10, Version 1903 und höher, werden die folgenden URLs verwendet: https://ztd.dds.microsoft.com , https://cs.dds.microsoft.com . <br>
 
 <tr><td><b>Windows-Aktivierung<b><td>Windows Autopilot erfordert auch Windows-Aktivierungs Dienste. Weitere Informationen zu den URLs, auf die für die Aktivierungs Dienste zugegriffen werden muss, finden Sie <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">unter Windows-Aktivierung oder-Überprüfung mit Fehlercode 0x8004FE33</a> .<br>
@@ -143,6 +143,6 @@ Eine exemplarische Vorgehensweise für einige dieser und verwandte Schritte find
 
 Es gibt keine zusätzlichen Hardwareanforderungen für die Verwendung von Windows 10 Autopilot, außer den [Anforderungen zum Ausführen von Windows 10](https://www.microsoft.com/windows/windows-10-specifications).
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 [Übersicht über Windows Autopilot](windows-Autopilot.md)
