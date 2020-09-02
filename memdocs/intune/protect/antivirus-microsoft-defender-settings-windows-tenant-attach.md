@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 966c3f21505cbbe1573abd47fb7081c5e97cc3c1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3bb1d4806271ab40c60f0ad419e4e708d36bbc97
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823517"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194122"
 ---
 # <a name="settings-for-microsoft-defender-antivirus-policy-for-tenant-attached-devices-in-microsoft-intune"></a>Einstellungen für Microsoft Defender Antivirus-Richtlinien für mandantenbasiert angefügte Geräte in Microsoft Intune
 
@@ -30,7 +30,7 @@ Sehen Sie sich die Microsoft Defender Antivirus-Einstellungen an, die Sie über 
 ## <a name="cloud-protection"></a>Cloudschutz
 
 - **Von der Cloud bereitgestellten Schutz aktivieren**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   Standardmäßig sendet Defender auf Windows 10-Desktop-Geräten Informationen zu allen gefundenen Problemen an Microsoft. Microsoft analysiert diese Informationen, um mehr über die Probleme zu erfahren, die Sie und andere Kunden betreffen, und dann verbesserte Lösungen anzubieten.
 
@@ -39,7 +39,7 @@ Sehen Sie sich die Microsoft Defender Antivirus-Einstellungen an, die Sie über 
   - **Zugelassen**:  Aktiviert Microsoft Active Protection Service.
 
 - **Von der Cloud bereitgestellte Schutzebene**  
-  CSP: [CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Konfigurieren Sie, wie aggressiv Defender Antivirus beim Blockieren und Überprüfen verdächtiger Dateien vorgehen soll.
   - **Nicht konfiguriert** (*Standardeinstellung*): Standardmäßige Blockierungsebene von Defender.
@@ -48,7 +48,7 @@ Sehen Sie sich die Microsoft Defender Antivirus-Einstellungen an, die Sie über 
   - **Keine Toleranz**: Alle unbekannten ausführbaren Dateien werden blockiert.
 
 - **Defender: Erweitertes Timeout für Cloud in Sekunden**  
-  CSP: [CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP: [CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Defender Antivirus blockiert verdächtige Dateien automatisch 10 Sekunden lang, um die Dateien in der Cloud zu überprüfen und sicherzustellen, dass sie sicher sind. Bei dieser Einstellung können Sie dieses Timeout um 50 Sekunden verlängern.
 
@@ -57,24 +57,24 @@ Sehen Sie sich die Microsoft Defender Antivirus-Einstellungen an, die Sie über 
 Sie können jede Einstellung in dieser Gruppe erweitern, **Hinzufügen** auswählen und einen Wert für den Ausschluss angeben.
 
 - **Defender: auszuschließende Prozesse**  
-  CSP: [ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP: [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   Geben Sie eine Liste mit von Prozessen geöffneten Dateien an, die während einer Überprüfung ignoriert werden sollen. Der Prozess selbst wird nicht von der Überprüfung ausgeschlossen.
 
 - **Dateierweiterungen, die bei Überprüfungen und Echtzeitschutz ausgeschlossen werden sollen**  
-  CSP: [ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP: [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   Geben Sie eine Liste mit Dateityperweiterungen an, die während einer Überprüfung ignoriert werden sollen.
 
 - **Defender: auszuschließende Dateien und Ordner**  
-  CSP: [ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP: [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   Geben Sie eine Liste mit Dateien und Verzeichnispfaden an, die während einer Überprüfung ignoriert werden sollen.
 
 ## <a name="real-time-protection"></a>Echtzeitschutz
 
 - **Echtzeitschutz aktivieren**  
-  CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   Hiermit fordern Sie an, dass Defender auf Windows 10-Desktop-Geräten die Funktion der Echtzeitüberwachung verwenden muss.
   - **Nicht konfiguriert** (*Standardeinstellung*): Die Einstellung wird auf den Systemstandardwert wiederhergestellt.

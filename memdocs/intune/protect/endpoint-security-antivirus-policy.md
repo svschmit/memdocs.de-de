@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 63400c81ee678a98a83ed17cf192335acf9c047b
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 2460a132711fb19d12f33bbada23756fc2344cca
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820294"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194245"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Antivirenrichtlinie für Endpunktsicherheit in Intune
 
@@ -39,7 +39,7 @@ Antivirenrichtlinien enthalten dieselben Einstellungen wie die Profile *Endpunkt
 
 - **macOS**
   - Eine unterstützte Version von macOS
-  - Damit Intune Antivireneinstellungen auf einem Gerät verwalten kann, muss Microsoft Defender ATP auf diesem Gerät installiert sein. Siehe: [Microsoft Defender ATP für macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (in der Dokumentation zu Microsoft Defender ATP)
+  - Damit Intune Antivireneinstellungen auf einem Gerät verwalten kann, muss Microsoft Defender ATP auf diesem Gerät installiert sein. Siehe: [Microsoft Defender ATP für macOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (in der Dokumentation zu Microsoft Defender ATP)
 
 - **Windows 10 und höher**
   - Es gelten keine zusätzlichen Voraussetzungen.
@@ -65,7 +65,7 @@ Die folgenden Profile werden für Geräte unterstützt, die Sie mit Intune verwa
 
   - Profil: **Antivirus**: Verwalten Sie [Einstellungen für Antivirenrichtlinien](../protect/antivirus-microsoft-defender-settings-macos.md) für macOS.
 
-    Wenn Sie [Microsoft Defender ATP für Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) verwenden, können Sie die Antivireneinstellungen für Ihre verwalteten macOS-Geräte über Intune konfigurieren und bereitstellen, anstatt diese Einstellungen mithilfe von `.plist`-Dateien zu konfigurieren.
+    Wenn Sie [Microsoft Defender ATP für Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) verwenden, können Sie die Antivireneinstellungen für Ihre verwalteten macOS-Geräte über Intune konfigurieren und bereitstellen, anstatt diese Einstellungen mithilfe von `.plist`-Dateien zu konfigurieren.
 
 **Windows 10**:
 
@@ -77,7 +77,7 @@ Die folgenden Profile werden für Geräte unterstützt, die Sie mit Intune verwa
 
     Das Profil *Microsoft Defender Antivirus* ist eine separate Instanz der Antivireneinstellungen im Profil *Geräteeinschränkungen* für die Gerätekonfigurationsrichtlinie.
   
-    Im Unterschied zu den Antivireneinstellungen in einem Profil *Geräteeinschränkungen* , können Sie diese Einstellungen für Geräte verwenden, die gemeinsam verwaltet werden. Um diese Einstellungen verwenden zu können, muss der Schieberegler [Workload für Co-Verwaltung](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) für Endpoint Protection auf Intune eingestellt sein.
+    Im Unterschied zu den Antivireneinstellungen in einem Profil *Geräteeinschränkungen* , können Sie diese Einstellungen für Geräte verwenden, die gemeinsam verwaltet werden. Um diese Einstellungen verwenden zu können, muss der Schieberegler [Workload für Co-Verwaltung](/configmgr/comanage/how-to-switch-workloads) für Endpoint Protection auf Intune eingestellt sein.
 
   - Profil: **Microsoft Defender Antivirus-Ausschlüsse**: Verwalten Sie Richtlinieneinstellungen nur für [Antivirus-Ausschlüsse](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions).
   
@@ -117,9 +117,9 @@ Die folgenden Einstellungen unterstützen die Richtlinienzusammenführung:
 
 [Microsoft Defender Antivirus-Richtlinien](../protect/antivirus-microsoft-defender-settings-windows.md)
 
-- **Defender: auszuschließende Prozesse** – Konfigurationsdienstanbieter: [Defender/ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
-- **Dateierweiterungen, die von Überprüfungen und Echtzeitschutz ausgeschlossen werden sollen** – Konfigurationsdienstanbieter: [Defender/ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
-- **Defender: auszuschließende Dateien und Ordner** – Konfigurationsdienstanbieter: [Defender/ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+- **Defender: auszuschließende Prozesse** – Konfigurationsdienstanbieter: [Defender/ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+- **Dateierweiterungen, die von Überprüfungen und Echtzeitschutz ausgeschlossen werden sollen** – Konfigurationsdienstanbieter: [Defender/ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+- **Defender: auszuschließende Dateien und Ordner** – Konfigurationsdienstanbieter: [Defender/ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
 ## <a name="antivirus-policy-reports"></a>Berichte zu Antivirenrichtlinien
 

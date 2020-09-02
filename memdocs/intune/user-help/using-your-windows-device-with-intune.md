@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 481113dc64418b1579dbf9b478cd3ebd85b6cb72
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: cbf23dc82f5524bcd8c778c41e964c7a9e46c21e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179323"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057269"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Verwenden Ihres Windows-Geräts mit dem Intune-Unternehmensportal
 
@@ -33,7 +33,7 @@ Dieser Abschnitt erläutert Tasks und Informationen zum Unternehmensportal für 
 ## <a name="how-to-get-company-portal"></a>Abrufen des Unternehmensportals
 Das Unternehmensportal ist als Websiteversion und auch als App-Download verfügbar. Melden Sie sich mit Ihren Geschäfts- ,Schul- oder Unianmeldeinformationen an, um [auf die Unternehmensportal-Website zuzugreifen](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-Ausführliche Schritte und Screenshots finden Sie unter [Anmelden beim Unternehmensportal](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal).
+Ausführliche Schritte und Screenshots finden Sie unter [Anmelden beim Unternehmensportal](./sign-in-to-the-company-portal.md).
 
 ## <a name="supported-versions"></a>Unterstützte Versionen
 
@@ -67,7 +67,7 @@ Auch einige andere Versionen von Windows, z.B. [Windows 10 Holographic](https://
 * [Aktualisieren Ihres Windows-Geräts](you-need-to-update-your-windows-device.md)
 * [Senden von Protokollen an die bzw. von der Unternehmensportal-App](send-logs-to-your-it-admin-cp-windows.md)
 * [Senden von Protokollen über die Geräteeinstellungen-App](send-logs-to-your-it-admin-settings-windows.md)
-* [Installieren von Office 365 auf meinem Windows 10-Gerät](install-office-windows.md)
+* [Installieren von Office auf meinem Windows 10-Gerät](install-office-windows.md)
 * [Mein Gerät muss verschlüsselt werden](you-need-to-enable-windows-encryption.md)
 * [Mein Gerät benötigt Antischadsoftware](your-device-needs-antimalware-software.md)
 * [Aktivieren des sicheren Starts](you-need-to-enable-secure-boot-windows.md)
