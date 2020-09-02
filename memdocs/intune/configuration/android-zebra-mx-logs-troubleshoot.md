@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c8cc44cb614154df1a128ee1f1708a3259f88169
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80083844"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910042"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Problembehandlung und Ermitteln potenzieller Fehler auf Android Zebra-Geräten in Microsoft Intune
 
@@ -57,7 +57,7 @@ Stellen Sie mit [Android Debug Bridge (adb)](https://developer.android.com/studi
 Die Protokolle werden auf dem Gerät unter `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files` gespeichert.
 
 ### <a name="get-logs-from-email"></a>Abrufen von Protokollen per E-Mail
-Endbenutzer können Ihnen die Protokolle mithilfe einer E-Mail-App auf dem Gerät senden, damit Sie nach der Bereitstellung mit Intune auf die Protokolle zugreifen können. Öffnen Sie die Unternehmensportal-App auf dem Zebra-Gerät, und [senden Sie die Protokolle](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). Beim Verwenden des Features zum Senden von Protokollen wird auch eine PowerLift-Incident-ID erstellt, die Sie referenzieren können, wenn Sie sich an den Microsoft-Support wenden.
+Endbenutzer können Ihnen die Protokolle mithilfe einer E-Mail-App auf dem Gerät senden, damit Sie nach der Bereitstellung mit Intune auf die Protokolle zugreifen können. Öffnen Sie die Unternehmensportal-App auf dem Zebra-Gerät, und [senden Sie die Protokolle](../user-help/send-logs-to-your-it-admin-by-email-android.md). Beim Verwenden des Features zum Senden von Protokollen wird auch eine PowerLift-Incident-ID erstellt, die Sie referenzieren können, wenn Sie sich an den Microsoft-Support wenden.
 
 ## <a name="read-the-logs"></a>Lesen der Protokolle
 

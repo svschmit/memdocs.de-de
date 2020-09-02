@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 72bbc3d720f7abb22296d21bfe4869240200c912
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093766"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907734"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Einrichten der iOS-/iPadOS- und iPadOS-Benutzerregistrierung (Vorschau)
 
@@ -46,7 +46,7 @@ Ein Registrierungsprofil definiert die Einstellungen, die bei der Registrierung 
 
     ![Erstellen eines Apple-Registrierungsprofils](./media/ios-user-enrollment/create-profile.png)
 
-2. Geben Sie zu administrativen Zwecken auf der Seite **Grundlegende Einstellungen** einen **Namen** und eine **Beschreibung** für das Profil ein. Benutzer können diese Informationen nicht sehen. Sie können das Feld **Name** zum Erstellen einer dynamischen Gruppe in Azure Active Directory verwenden. Verwenden Sie den Profilnamen, um den Parameter „enrollmentProfileName“ zu definieren, um Geräte mit diesem Registrierungsprofil zuzuweisen. Erfahren Sie mehr über [dynamische Gruppen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+2. Geben Sie zu administrativen Zwecken auf der Seite **Grundlegende Einstellungen** einen **Namen** und eine **Beschreibung** für das Profil ein. Benutzer können diese Informationen nicht sehen. Sie können das Feld **Name** zum Erstellen einer dynamischen Gruppe in Azure Active Directory verwenden. Verwenden Sie den Profilnamen, um den Parameter „enrollmentProfileName“ zu definieren, um Geräte mit diesem Registrierungsprofil zuzuweisen. Erfahren Sie mehr über [dynamische Gruppen in Azure Active Directory](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
     ![Seite „Grundlagen“](./media/ios-user-enrollment/basics-page.png)
 
@@ -58,7 +58,7 @@ Ein Registrierungsprofil definiert die Einstellungen, die bei der Registrierung 
 
     - **Geräteregistrierung**: Alle Benutzer in diesem Profil verwenden die Geräteregistrierung.
     - **Benutzerregistrierung**: Alle Benutzer in diesem Profil verwenden die Benutzerregistrierung.
-    - **Basierend auf Benutzerauswahl festlegen**: Alle Benutzer in dieser Gruppe können wählen, welchen Registrierungstyp sie verwenden möchten. Wenn Benutzer ihre Geräte registrieren, haben sie die Möglichkeit, zwischen **Ich besitze dieses Gerät** und **(Unternehmen) besitzt dieses Gerät** zu wählen. Bei Wahl der zweiten Option wird das Gerät über die Geräteregistrierung registriert. Wenn der Benutzer **Ich besitze dieses Gerät** wählt, erhält er eine weitere Option, um das gesamte Gerät oder nur sichere arbeitsbezogene Apps und Daten abzusichern. Die Wahl des Endbenutzers, ob er das Gerät besitzt, bestimmt, welcher Registrierungstyp auf seinem Gerät implementiert wird. Diese Benutzerauswahl wird in Intune auch im Attribut „Gerätebesitz“ berücksichtigt. Weitere Informationen zur Benutzererfahrung finden Sie unter [Einrichten des iOS-/iPadOS-Gerätezugriffs auf Unternehmensressourcen](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+    - **Basierend auf Benutzerauswahl festlegen**: Alle Benutzer in dieser Gruppe können wählen, welchen Registrierungstyp sie verwenden möchten. Wenn Benutzer ihre Geräte registrieren, haben sie die Möglichkeit, zwischen **Ich besitze dieses Gerät** und **(Unternehmen) besitzt dieses Gerät** zu wählen. Bei Wahl der zweiten Option wird das Gerät über die Geräteregistrierung registriert. Wenn der Benutzer **Ich besitze dieses Gerät** wählt, erhält er eine weitere Option, um das gesamte Gerät oder nur sichere arbeitsbezogene Apps und Daten abzusichern. Die Wahl des Endbenutzers, ob er das Gerät besitzt, bestimmt, welcher Registrierungstyp auf seinem Gerät implementiert wird. Diese Benutzerauswahl wird in Intune auch im Attribut „Gerätebesitz“ berücksichtigt. Weitere Informationen zur Benutzererfahrung finden Sie unter [Einrichten des iOS-/iPadOS-Gerätezugriffs auf Unternehmensressourcen](../user-help/enroll-your-device-in-intune-macos-cp.md).
     
 5. Wählen Sie **Weiter** aus.
 
@@ -81,5 +81,3 @@ Wenn Sie mehr als ein Registrierungstypprofil erstellt haben, können Sie die Pr
 2. Ziehen Sie die Profile in die Liste, und legen Sie sie in der Reihenfolge ab, in der Sie sie anwenden möchten.
 
 Bei Konflikten zwischen Profilen für einen beliebigen Benutzer wird das Profil mit höherer Priorität auf den Benutzer angewendet.
-
-

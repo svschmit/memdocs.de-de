@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: da725c63c340a3ff64e1f69f96f59bd5dea30eb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406559"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907893"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Verwenden der Cloud zum Konfigurieren einer Gruppenrichtlinie für Windows 10-Geräte mit ADMX-Vorlagen und Microsoft Intune
 
@@ -37,7 +37,7 @@ ADMX-Vorlagen sind für die folgenden Dienste verfügbar:
 - **Office:** Herunterladen unter [Microsoft 365-Apps, Office 2019 und Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: In das Betriebssystem Windows 10 integriert
 
-Weitere Informationen zu ADMX-Richtlinien finden Sie unter [Grundlegendes zu durch ADMX unterstützten Richtlinien](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
+Weitere Informationen zu ADMX-Richtlinien finden Sie unter [Grundlegendes zu durch ADMX unterstützten Richtlinien](/windows/client-management/mdm/understanding-admx-backed-policies).
 
 Diese Vorlagen sind in Microsoft Intune integriert und als Profile unter **Administrative Vorlagen** verfügbar. In diesem Profil konfigurieren Sie die Einstellungen, die dieses Profil umfassen soll, und weisen es dann Ihren Geräten zu.
 
@@ -57,7 +57,7 @@ Diese Funktion gilt für:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Ein Abonnement für Microsoft 365 E3 oder E5, in dem Intune und Azure Active Directory (AD) Premium enthalten sind, ist erforderlich. Sollten Sie kein E3- oder E5-Abonnement haben, [können Sie ein kostenloses Testabonnement abschließen](https://docs.microsoft.com/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
+- Ein Abonnement für Microsoft 365 E3 oder E5, in dem Intune und Azure Active Directory (AD) Premium enthalten sind, ist erforderlich. Sollten Sie kein E3- oder E5-Abonnement haben, [können Sie ein kostenloses Testabonnement abschließen](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
 
   Weitere Informationen dazu, was in den verschiedenen Microsoft 365-Lizenzen enthalten ist, finden Sie unter [Mit Microsoft 365 zum digitalen Unternehmen](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
@@ -190,10 +190,10 @@ In den folgenden Schritten erstellen Sie Sicherheitsgruppen und fügen diesen Gr
 
 - Dynamische Gruppen sind ein Feature in Azure AD Premium. Wenn Sie kein Azure AD Premium haben, können Sie mit Ihrer Lizenz nur zugewiesene Gruppen erstellen. Weitere Informationen zu dynamischen Gruppen finden Sie unter:
 
-  - [Dynamische Gruppenmitgliedschaft in Azure Active Directory (Teil 1)](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
-  - [Dynamische Gruppenmitgliedschaft in Azure Active Directory (Teil 2)](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
+  - [Dynamische Gruppenmitgliedschaft in Azure Active Directory (Teil 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
+  - [Dynamische Gruppenmitgliedschaft in Azure Active Directory (Teil 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Azure AD Premium umfasst weitere Dienste, die beim Verwalten von Apps und Geräten häufig verwendet werden, darunter [Multi-Factor Authentication (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) und [bedingter Zugriff](https://docs.microsoft.com/azure/active-directory/conditional-access/overview).
+- Azure AD Premium umfasst weitere Dienste, die beim Verwalten von Apps und Geräten häufig verwendet werden, darunter [Multi-Factor Authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) und [bedingter Zugriff](/azure/active-directory/conditional-access/overview).
 
 - Viele Administratoren fragen, wann sie Benutzergruppen und wann Gerätegruppen verwenden sollen. Der Abschnitt [Benutzer- und Gerätegruppen im Vergleich](device-profile-assign.md#user-groups-vs-device-groups) kann Ihnen hierfür als Orientierung dienen.
 
@@ -420,7 +420,7 @@ Ihre Einstellungen sehen ähnlich aus wie die folgenden:
 > [!div class="mx-imgBorder"]
 > ![Erstellen einer Administratorvorlage für OneDrive in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
-Weitere Informationen zu Einstellungen für den OneDrive-Client finden Sie unter [Verwenden von Gruppenrichtlinien zum Steuern der Einstellungen für die OneDrive-Synchronisierung](https://docs.microsoft.com/onedrive/use-group-policy).
+Weitere Informationen zu Einstellungen für den OneDrive-Client finden Sie unter [Verwenden von Gruppenrichtlinien zum Steuern der Einstellungen für die OneDrive-Synchronisierung](/onedrive/use-group-policy).
 
 ### <a name="assign-your-template"></a>Vorlage zuweisen
 
@@ -438,7 +438,7 @@ Mittlerweile haben Sie einige administrative Vorlagen erstellt und von Ihnen ers
 In diesem Abschnitt werden die folgenden Ressourcen verwendet. Diese Ressourcen werden in diesem Abschnitt installiert.
 
 - [Intune PowerShell-SDK](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [Microsoft Graph-API für Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [Microsoft Graph-API für Intune](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
 
 1. Öffnen Sie auf dem **Administratorcomputer** **Windows PowerShell** als Administrator:
 
@@ -458,7 +458,7 @@ In diesem Abschnitt werden die folgenden Ressourcen verwendet. Diese Ressourcen 
 
     3. Geben Sie `Y` ein, um Änderungen vorzunehmen.
 
-    Die Ausführungsrichtlinie von PowerShell hilft dabei, das Ausführen bösartiger Skripts zu verhindern. Weitere Informationen finden Sie unter [Informationen zu Ausführungsrichtlinien](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+    Die Ausführungsrichtlinie von PowerShell hilft dabei, das Ausführen bösartiger Skripts zu verhindern. Weitere Informationen finden Sie unter [Informationen zu Ausführungsrichtlinien](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 3. Geben Sie `Install-Module -Name Microsoft.Graph.Intune` ein.
 
@@ -581,7 +581,7 @@ Wenn Sie diese nicht mehr benötigen, können Sie:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie sich weiter mit dem [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) vertraut gemacht, mithilfe des Abfragegenerators dynamische Gruppen erstellt und in Intune administrative Vorlagen zum Konfigurieren von [ADMX-Einstellungen](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) erstellt. Außerdem haben Sie die lokale Verwendung von ADMX-Vorlagen mit der Verwendung in der Cloud mit Intune verglichen. Darüber hinaus haben Sie mithilfe von PowerShell-Cmdlets eine administrative Vorlage erstellt.
+In diesem Tutorial haben Sie sich weiter mit dem [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) vertraut gemacht, mithilfe des Abfragegenerators dynamische Gruppen erstellt und in Intune administrative Vorlagen zum Konfigurieren von [ADMX-Einstellungen](/windows/client-management/mdm/understanding-admx-backed-policies) erstellt. Außerdem haben Sie die lokale Verwendung von ADMX-Vorlagen mit der Verwendung in der Cloud mit Intune verglichen. Darüber hinaus haben Sie mithilfe von PowerShell-Cmdlets eine administrative Vorlage erstellt.
 
 Weitere Informationen zu administrativen Vorlagen in Intune finden Sie unter:
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 170a5b22362ee3bd9e347af2addc03ef3b542de2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985922"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907803"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Windows 10-App-Bereitstellung mit Microsoft Intune 
 
@@ -69,7 +69,7 @@ Sie können branchenspezifische Windows 10-Apps signieren und in die Intune-Ver
 
 ## <a name="microsoft-store-for-business-apps"></a>Apps aus Microsoft Store für Unternehmen
 
-Bei Apps aus dem Microsoft Store für Unternehmen handelt es sich um moderne Apps, die über das Verwaltungsportal des Microsoft Store für Unternehmen erworben wurden. Sie werden dann mit Microsoft Intune für die Verwaltung synchronisiert. Die Apps können entweder online oder offline lizenziert werden. Der Microsoft Store verwaltet Updates direkt, ohne dass weitere Aktionen des Administrators erforderlich sind. Sie können Updates für bestimmte Apps jedoch mithilfe eines benutzerdefinierten Uniform Resource Identifiers (URI) verhindern. Weitere Informationen finden Sie im Artikel „Enterprise app management“ (Verwalten von Unternehmens-Apps) unter [Prevent app from automatic updates (Verhindern von automatischen App-Updates)](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Die Benutzer können auch Updates für alle Apps aus dem Microsoft Store für Unternehmen deaktivieren. 
+Bei Apps aus dem Microsoft Store für Unternehmen handelt es sich um moderne Apps, die über das Verwaltungsportal des Microsoft Store für Unternehmen erworben wurden. Sie werden dann mit Microsoft Intune für die Verwaltung synchronisiert. Die Apps können entweder online oder offline lizenziert werden. Der Microsoft Store verwaltet Updates direkt, ohne dass weitere Aktionen des Administrators erforderlich sind. Sie können Updates für bestimmte Apps jedoch mithilfe eines benutzerdefinierten Uniform Resource Identifiers (URI) verhindern. Weitere Informationen finden Sie im Artikel „Enterprise app management“ (Verwalten von Unternehmens-Apps) unter [Prevent app from automatic updates (Verhindern von automatischen App-Updates)](/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Die Benutzer können auch Updates für alle Apps aus dem Microsoft Store für Unternehmen deaktivieren. 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Kategorisieren von Apps aus dem Microsoft Store für Unternehmen 
 So kategorisieren Sie Apps aus dem Microsoft Store für Unternehmen: 
@@ -106,7 +106,7 @@ Windows LOB-Apps (insbesondere APPX und MSIX) und Microsoft Store für Unternehm
   - Fehler: Ein Benutzer kann nicht als Ziel für eine Gerätekontextinstallation festgelegt werden.
 
 > [!IMPORTANT]
-> Bei Verwendung in Kombination mit einem Autopilot-Bereitstellungsszenario mit intensiver Benutzerunterstützung ist nicht erforderlich, dass LOB-Apps und Microsoft Store für Unternehmen-Apps, die im Gerätekontext bereitgestellt werden, auf eine Gerätegruppe zielen. Weitere Informationen finden Sie unter [Windows Autopilot für Bereitstellung mit intensiver Benutzerunterstützung](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
+> Bei Verwendung in Kombination mit einem Autopilot-Bereitstellungsszenario mit intensiver Benutzerunterstützung ist nicht erforderlich, dass LOB-Apps und Microsoft Store für Unternehmen-Apps, die im Gerätekontext bereitgestellt werden, auf eine Gerätegruppe zielen. Weitere Informationen finden Sie unter [Windows Autopilot für Bereitstellung mit intensiver Benutzerunterstützung](/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > Nachdem Sie eine App-Zuweisung mit einer bestimmten Bereitstellung gespeichert haben, können Sie den Kontext für die Zuweisung nur für moderne Apps ändern. Für moderne Apps können Sie den Kontext vom Benutzerkontext in den Gerätekontext ändern. 

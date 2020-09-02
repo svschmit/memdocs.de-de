@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 752e2b1948c1c56c77866b69365d0da2859dd279
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 09da822557e27eca29da2afc342c93a76d698d6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531639"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909923"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Verwenden von Richtliniensätzen zur Gruppierung von Verwaltungsobjektsammlungen in Microsoft Intune
 
@@ -71,7 +71,7 @@ Wenn Sie einen Richtliniensatz erstellen, erstellen Sie eine einzelne Zuweisungs
 5. Klicken Sie auf **Next: Geräteverwaltung**.<br>
    Auf der Seite **Geräteverwaltung** können Sie Ihrem Richtliniensatz Geräteverwaltungsobjekte hinzufügen, z. B. [Gerätekonfigurierungsprofile](../configuration/device-profiles.md) und [Gerätekonformitätsrichtlinien](../protect/device-compliance-get-started.md). Stellen Sie sicher, dass Sie alle zugeordneten Objekte einschließen, beispielsweise andere Richtlinien, Zertifikate und Sicherheitsbaselineprofile.
 6. Klicken Sie auf **Next: Geräteregistrierung**.<br>
-   Auf der Seite **Geräteregistrierung** können Sie Ihrem Richtliniensatz Geräteregistrierungsobjekte hinzufügen, z. B. [Gerätetypbeschränkungen](../enrollment/enrollment-restrictions-set.md), [Windows Autopilot Deployment-Profile](../enrollment/enrollment-autopilot.md) und [Profile für Seite zum Registrierungsstatus](../enrollment/windows-enrollment-status.md).
+   Auf der Seite **Geräteregistrierung** können Sie Ihrem Richtliniensatz Geräteregistrierungsobjekte hinzufügen, z. B. [Gerätetypbeschränkungen](../enrollment/enrollment-restrictions-set.md), [Windows Autopilot Deployment-Profile](../../autopilot/enrollment-autopilot.md) und [Profile für Seite zum Registrierungsstatus](../enrollment/windows-enrollment-status.md).
 7. Klicken Sie auf **Next: Zuweisungen**.<br>
    Auf der Seite **Zuweisungen** können Sie den Richtliniensatz Benutzern und Geräten zuweisen. Beachten Sie: Sie können ein Richtliniensatz einem Gerät unabhängig davon zuweisen, ob das Gerät von Intune verwaltet wird.
 8. Klicken Sie auf **Next: Überprüfen + erstellen**, um die für das Profil eingegebenen Werte zu überprüfen.

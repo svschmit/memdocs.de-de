@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b60d37c4da0b706dc109b5800b362d448224f116
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: a8480ec3f7d83ad5819e21ad34b9dfbc67f38999
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410963"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907339"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Hinzufügen von App-Konfigurationsrichtlinien für verwaltete iOS-/iPadOS-Geräte
 
@@ -227,7 +227,7 @@ Sobald eine Konfigurationsrichtlinie zugewiesen wurde, können Sie den Konfigura
 
 ## <a name="additional-information"></a>Zusätzliche Informationen
 
-- [Bereitstellen von Outlook für iOS-/iPadOS- und Android-App-Konfigurationseinstellungen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Bereitstellen von Outlook für iOS-/iPadOS- und Android-App-Konfigurationseinstellungen](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

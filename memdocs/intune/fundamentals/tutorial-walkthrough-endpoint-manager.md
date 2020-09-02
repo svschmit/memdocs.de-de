@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81ea88bc72e6bcd52dbfe51cb4fa12803605de18
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 650188df0c5e19b3eeb9bfa06197b77414cecb20
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355542"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910178"
 ---
 # <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Tutorial: Exemplarische Vorgehensweise für Intune in Microsoft Endpoint Manager
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) enthält über 100 Dienste, die Sie bei vielen Cloud Computing-Szenarios unterstützen. Microsoft Intune ist nur einer von vielen Diensten, die in Azure verfügbar sind. Mithilfe von Intune können Sie sicherstellen, dass die Geräte, Apps und Daten Ihres Unternehmens die entsprechenden Sicherheitsanforderungen erfüllen. Sie können festlegen, welche Anforderungen erfüllt werden müssen, und welche Maßnahmen vorgenommen werden, wenn diese nicht erfüllt sind. Im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) finden Sie den Microsoft Intune-Dienst sowie andere Einstellungen für die Geräteverwaltung. Mithilfe der Features in Intune können Sie verschiedene MDM- (Mobile Geräteverwaltung) und MAM-Aufgaben (Mobile Anwendungsverwaltung) erledigen.
+[Azure](/learn/modules/welcome-to-azure) enthält über 100 Dienste, die Sie bei vielen Cloud Computing-Szenarios unterstützen. Microsoft Intune ist nur einer von vielen Diensten, die in Azure verfügbar sind. Mithilfe von Intune können Sie sicherstellen, dass die Geräte, Apps und Daten Ihres Unternehmens die entsprechenden Sicherheitsanforderungen erfüllen. Sie können festlegen, welche Anforderungen erfüllt werden müssen, und welche Maßnahmen vorgenommen werden, wenn diese nicht erfüllt sind. Im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) finden Sie den Microsoft Intune-Dienst sowie andere Einstellungen für die Geräteverwaltung. Mithilfe der Features in Intune können Sie verschiedene MDM- (Mobile Geräteverwaltung) und MAM-Aufgaben (Mobile Anwendungsverwaltung) erledigen.
 
 > [!NOTE]
 > Bei Microsoft Endpoint Manager handelt es sich um eine einzelne, integrierte Endpunktverwaltungsplattform zum Verwalten aller Endpunkte. Im Microsoft Endpoint Manager Admin Center sind ConfigMgr und Microsoft Intune integriert.

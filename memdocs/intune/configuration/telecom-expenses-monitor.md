@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3267bf4e59d6745e480a81f8bdc39cfa2827ea4
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 3cabf3bad447ef3db8250d14fcb376cb86aefad3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506331"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907548"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Einrichten eines TEM-Diensts (Telecom Expense Management) in Intune
 
@@ -184,8 +184,8 @@ Der Datalert-Dienst ist jetzt aktiv. Der Dienst beginnt damit, die Datennutzung 
 
 Bei der Einrichtung der Endbenutzerfunktionen sind folgende Artikel hilfreich:
 
-- [Registrieren Ihres iOS-/iPadOS-Geräts in Telecom Expense Management](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-ios)
-- [Registrieren Ihres Android-Gerät im Telecom Expense Management](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-android)
+- [Registrieren Ihres iOS-/iPadOS-Geräts in Telecom Expense Management](../user-help/enroll-your-device-with-telecom-expense-management-ios.md)
+- [Registrieren Ihres Android-Gerät im Telecom Expense Management](../user-help/enroll-your-device-with-telecom-expense-management-android.md)
 
 ## <a name="turn-off-the-datalert-service"></a>Deaktivieren des Datalert-Diensts
 

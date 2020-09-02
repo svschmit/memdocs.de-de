@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8c71ef5e1abfcccfdeec6c01551a23bf1d1750bd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881144"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907649"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Umbenennen von Geräten in der Unternehmensportal-App für Windows
 Benennen Sie ein Gerät um, um es leichter von anderen Geräten zu unterscheiden. Mit der Unternehmensportal-App für Windows können Sie die folgenden Typen verbundener Geräte umbenennen:  
@@ -47,7 +47,7 @@ Schließen Sie den folgenden Schritt ab, um ein Gerät von der Seite **Gerätede
      ![Beispielscreenshot der Unternehmensportal-App für Windows, Seite „Gerätedetails“, Popupfeld „Umbenennen“](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Umbenennen eines Gerätes über das Gerätekontextmenü  
-Schließen Sie den folgenden Schritt ab, um ein Gerät über die [Kontextmenü](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus)aktionen zu entfernen.  
+Schließen Sie den folgenden Schritt ab, um ein Gerät über die [Kontextmenü](//windows/uwp/design/controls-and-patterns/menus)aktionen zu entfernen.  
 
 1. Öffnen Sie die **Startseite** der Unternehmensportal-App, und wechseln Sie zu **Meine Geräte**.
 
@@ -61,4 +61,3 @@ Schließen Sie den folgenden Schritt ab, um ein Gerät über die [Kontextmenü](
      ![Ein Beispielscreenshot der Unternehmensportal-App für Windows, Startseite Das Popupfeld „Umbenennen“ erscheint über dem Gerät, in das der Benutzer einen neuen Namen eingeben und auf „Umbenennen“ oder „Abbrechen“ klicken kann.](./media/1808_RenameApp_Popup.png)  
 
 Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).
-

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 2e61e7e8bae436e567bceec5f098170cfb7b7c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443850"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907751"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Verbinden mit dem Data Warehouse mit Power BI
 
@@ -42,7 +42,7 @@ Mit der Power BI-App „Konformität“ können Sie interaktive, dynamisch gener
 Es werden auch Trends für die Registrierung, die Konformität, das Gerätekonfigurierungsprofil und Softwareupdates hervorgehoben. Beispieldiagramme und Berichte wenden benutzerfreundliche Filter auf den Zeichenbereich an. Um erweiterte Filter zu verwenden, sehen Sie sich den Bereich **Filter** in Power BI Desktop an.
 
 > [!NOTE]
-> Mit Power BI-Vorlagen-Apps können Power BI-Partner mit wenig oder ohne Programmieraufwand Power BI-Apps entwickeln und diese für Power BI-Kunden bereitstellen. Sie können beispielsweise die in Version 2.0 verfügbare Power BI-Vorlage für Complianceberichte verwenden. Version 2.0 bietet ein verbessertes Design sowie Änderungen an Berechnungen und Daten, die in der Vorlage vorhanden sind. Weitere Informationen finden Sie unter [Aktualisieren einer Vorlagen-App](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [Intune Compliance (Data Warehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) und [Was sind Power BI-Vorlagen-Apps?](https://docs.microsoft.com/power-bi/service-template-apps-overview).
+> Mit Power BI-Vorlagen-Apps können Power BI-Partner mit wenig oder ohne Programmieraufwand Power BI-Apps entwickeln und diese für Power BI-Kunden bereitstellen. Sie können beispielsweise die in Version 2.0 verfügbare Power BI-Vorlage für Complianceberichte verwenden. Version 2.0 bietet ein verbessertes Design sowie Änderungen an Berechnungen und Daten, die in der Vorlage vorhanden sind. Weitere Informationen finden Sie unter [Aktualisieren einer Vorlagen-App](/power-bi/service-template-apps-install-distribute#update-a-template-app), [Intune Compliance (Data Warehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) und [Was sind Power BI-Vorlagen-Apps?](/power-bi/service-template-apps-overview).
 
 Die folgenden Schritte zeigen, wie Sie die Power BI-Datei herunterladen und wie Sie den OData-Link mit Power BI verwenden.
 

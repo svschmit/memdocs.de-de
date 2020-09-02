@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051671"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907295"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatisches Registrieren von iOS-/iPadOS-Geräten mit der automatischen Geräteregistrierung von Apple
 
@@ -154,7 +154,7 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 4. Wählen Sie **Weiter: Geräteverwaltungseinstellungen** aus.
 
 5. Wählen Sie unter **Benutzeraffinität** aus, ob sich Geräte mit diesem Profil mit oder ohne einen zugewiesenen Benutzer registrieren müssen.
-    - **Mit Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die Benutzern gehören und für Dienste wie z.B. die Installation von Apps das Unternehmensportal verwenden sollen. Wenn Sie ADFS verwenden und zur Authentifizierung den Setup-Assistenten verwenden, ist der [Endpunkt WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints) [Weitere Informationen](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) erforderlich.
+    - **Mit Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die Benutzern gehören und für Dienste wie z.B. die Installation von Apps das Unternehmensportal verwenden sollen. Wenn Sie ADFS verwenden und zur Authentifizierung den Setup-Assistenten verwenden, ist der [Endpunkt WS-Trust 1.3 Username/Mixed](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) [Weitere Informationen](/powershell/module/adfs/get-adfsendpoint?view=win10-ps) erforderlich.
 
     - **Ohne Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die keinem einzelnen Benutzer zugeordnet sind. Verwenden Sie diese Option für Geräte, die nicht auf lokale Benutzerdaten zugreifen. Um es einem Endbenutzer zu ermöglichen, sich beim iOS-Unternehmensportal anzumelden und sich selbst als primären Benutzer des Geräts festzulegen, senden Sie den `IntuneUDAUserlessDevice`-Schlüssel in einer App-Konfigurationsrichtlinie für verwaltete Geräte an das iOS-Unternehmensportal. Hinweis: Nur der erste Benutzer, der sich anmeldet, wird als primärer Benutzer festgelegt. Wenn sich der erste Benutzer abmeldet und ein anderer Benutzer anmeldet, bleibt der erste Benutzer der primäre Benutzer des Geräts. Weitere Informationen finden Sie unter [Konfigurieren der Unternehmensportal-App zur Unterstützung von iOS-und iPadOS-DEP-Geräten](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices). 
 

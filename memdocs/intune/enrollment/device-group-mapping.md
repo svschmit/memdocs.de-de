@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761e668ae2c774bb52dbe6971d343d60b3e95516
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e6dae19e466d3d0e88ae07d1c82a63b098439632
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986108"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908614"
 ---
 # <a name="categorize-devices-into-groups"></a>Kategorisieren von Geräten in Gruppen
 
@@ -55,7 +55,7 @@ Verwenden Sie den Kategorienamen des Geräts zum Erstellen von Azure Active Dire
 ### <a name="step-2-create-azure-active-directory-security-groups"></a>Schritt 2: Erstellen von Azure Active Directory-Sicherheitsgruppen
 In diesem Schritt erstellen Sie dynamische Gruppen im Azure-Portal auf Basis der Gerätekategorie und des Gerätekategorienamens.
 
-Wenn Sie fortfahren möchten, erhalten Sie weitere Informationen zum [Verwenden von Attributen zum Erstellen erweiterter Regeln](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) in der Dokumentation zu Azure Active Directory.
+Wenn Sie fortfahren möchten, erhalten Sie weitere Informationen zum [Verwenden von Attributen zum Erstellen erweiterter Regeln](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in der Dokumentation zu Azure Active Directory.
 
 Verwenden Sie die Informationen in diesem Abschnitt zum Erstellen einer Gerätegruppe mit einer erweiterten Regel mithilfe des Attributs **deviceCategory**. Beispiel: **device.deviceCategory -eq***Gerätekategoriename, den Sie über die Intune-Verwaltungskonsole erhalten haben*.
 

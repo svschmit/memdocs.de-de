@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: fa533ea8a34fae0c3460d207bb88e6b64b0957eb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252774"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909651"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurieren von Aktionen für nicht konforme Geräte in Intune
 
@@ -29,7 +29,7 @@ Für Geräte, die nicht Ihren Konformitätsrichtlinien oder -regeln entsprechen,
 
 ## <a name="overview"></a>Übersicht
 
-Standardmäßig enthält jede Konformitätsrichtlinie die Aktion bei Nichtkonformität von **Gerät als nicht konform markieren** mit einem Zeitplan von null Tagen (**0**). Wenn Intune feststellt, dass ein Gerät nicht konform ist, markiert Intune das Gerät sofort als „nicht konform“. Nachdem ein Gerät als nicht konform gekennzeichnet wurde, kann das Gerät durch den [bedingten Zugriff](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) von Azure Active Directory (AD) blockiert werden.
+Standardmäßig enthält jede Konformitätsrichtlinie die Aktion bei Nichtkonformität von **Gerät als nicht konform markieren** mit einem Zeitplan von null Tagen (**0**). Wenn Intune feststellt, dass ein Gerät nicht konform ist, markiert Intune das Gerät sofort als „nicht konform“. Nachdem ein Gerät als nicht konform gekennzeichnet wurde, kann das Gerät durch den [bedingten Zugriff](/azure/active-directory/active-directory-conditional-access-azure-portal) von Azure Active Directory (AD) blockiert werden.
 
 Durch die Konfiguration von **Aktionen bei Nichtkonformität** gewinnen Sie die Flexibilität, zu entscheiden, wie und wann mit nicht konformen Geräten zu verfahren ist. Sie können beispielsweise auswählen, dass das Gerät nicht sofort blockiert werden soll, und dem Benutzer eine Toleranzperiode einräumen, in der er dafür sorgen kann, dass das Gerät konform wird.
 
@@ -107,7 +107,7 @@ Wenn die E-Mail gesendet wurde, bezieht Intune Einzelheiten zu dem nicht konform
 
 Sie können [Aktionen für die Nichtkonformität](#add-actions-for-noncompliance) hinzufügen, wenn Sie die Richtlinie für die Gerätekonformität konfigurieren, oder Sie fügen sie später durch Bearbeiten der Richtlinie hinzu. Sie können zu jeder Richtlinie zusätzliche Aktionen hinzufügen, um Ihren Anforderungen zu entsprechen. Denken Sie daran, dass jede Konformitätsrichtlinie automatisch die Standardaktion für die Nichtkonformität enthält, die Geräte als nicht konform markiert, wobei der Zeitplan auf null Tage festgelegt ist.
 
-Wenn Sie Gerätekonformitätsrichtlinien verwenden, um den Zugriff auf Unternehmensressourcen durch Geräte zu blockieren, muss der bedingte Zugriff von Azure AD eingerichtet sein. Anleitungen dazu finden Sie unter [Bedingter Zugriff in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) oder [Gängige Möglichkeiten für die Verwendung des bedingten Zugriffs mit Intune](conditional-access-intune-common-ways-use.md).
+Wenn Sie Gerätekonformitätsrichtlinien verwenden, um den Zugriff auf Unternehmensressourcen durch Geräte zu blockieren, muss der bedingte Zugriff von Azure AD eingerichtet sein. Anleitungen dazu finden Sie unter [Bedingter Zugriff in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) oder [Gängige Möglichkeiten für die Verwendung des bedingten Zugriffs mit Intune](conditional-access-intune-common-ways-use.md).
 
 Plattformspezifische Informationen zum Erstellen einer Gerätekonformitätsrichtlinie finden Sie hier:
 

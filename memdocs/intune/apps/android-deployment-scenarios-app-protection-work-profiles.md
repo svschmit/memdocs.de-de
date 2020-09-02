@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 80a26e10a3c05436699d3cafb3c4564e73099c07
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: c77a7355d63eb7f670949846c15670148b61c971
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165837"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907176"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Anwendungsschutzrichtlinien und Arbeitsprofile für Android Enterprise-Geräte in Intune
 
@@ -106,7 +106,7 @@ Office-Anwendungen wie Outlook und OneDrive weisen Verhaltensweisen für mehrere
 
 Wenn Sie Arbeitsprofile verwenden, möchten Sie dieses Verhalten mit mehreren Identitäten ggf. deaktivieren. Wenn Sie es deaktivieren, können Badgeinstanzen der App im Arbeitsprofil nur mit einer Organisationsidentität konfiguriert werden. Verwenden Sie die App-Konfigurationseinstellung „Zulässige Konten“ für die Unterstützung von Office Android-Apps.
 
-Weitere Informationen finden Sie unter [Bereitstellen von Outlook für iOS-/iPadOS- und Android-App-Konfigurationseinstellungen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+Weitere Informationen finden Sie unter [Bereitstellen von Outlook für iOS-/iPadOS- und Android-App-Konfigurationseinstellungen](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="when-to-use-intune-app"></a>Verwenden von Intune APP
 

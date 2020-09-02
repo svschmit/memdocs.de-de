@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424b835669986d1ede6e2300e9dfaba619034c30
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6c605598897edca4e9aecfa090811ee9fe282e09
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079738"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907632"
 ---
 # <a name="data-intune-sends-to-apple"></a>Von Intune an Apple gesendete Daten
 
@@ -33,7 +33,7 @@ Wenn einer der folgenden Apple-Dienste auf einem Gerät aktiviert ist, richtet M
 
 - [Apple Device Enrollment Program (DEP)](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Apple-MDM-Push-Zertifikat (APNS)](../enrollment/apple-mdm-push-certificate-get.md)
-- [Apple School Manager (ASM)](https://docs.microsoft.com/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
+- [Apple School Manager (ASM)](/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
 - [Apple Volume Purchase Program (VPP)](../apps/vpp-apps-ios.md)
 
 Damit Microsoft Intune eine Verbindung einrichten kann, müssen Sie zunächst für jeden Apple-Dienst ein Apple-Konto erstellen.
@@ -71,5 +71,3 @@ In der folgenden Tabelle sind die Daten aufgeführt, die Microsoft Intune von ei
 | VPP | Seriennummer | Seriennummer des verwalteten Geräts. |
 
 Wenn Sie die Apple-Dienste mit Microsoft Intune nicht mehr verwenden und die Daten löschen möchten, müssen Sie das Microsoft Intune Apple-Token und das Apple-Konto löschen. Informationen zur Kontenverwaltung in der Dokumentation zum Apple-Konto.
-
-
