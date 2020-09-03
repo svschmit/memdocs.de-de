@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698713"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995108"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Neuerungen in Version 1906 von Configuration Manager (Current Branch)
 
@@ -94,7 +94,7 @@ Weitere Informationen finden Sie unter [Einblicke für die Verwaltung](../../ser
     > [!Note]  
     > Diese Änderung gilt nicht für SQL Server-Cluster.
 
-- Site Recovery kann die Datenbank in einer SQL AlwaysOn-Gruppe neu erstellen. Dieser Prozess funktioniert sowohl mit manuellem als auch mit automatischem Seeding.<!-- SCCMDocs-pr#3846 -->
+- Site Recovery kann die Datenbank in einer SQL Always On-Gruppe neu erstellen. Dieser Prozess funktioniert sowohl mit manuellem als auch mit automatischem Seeding.<!-- SCCMDocs-pr#3846 -->
 
 - Neue Setup-Voraussetzungsprüfungen:<!-- SCCMDocs-pr#3899 -->  
 
@@ -505,7 +505,7 @@ Der Link **Erforderliche anzeigen** ist an folgenden Stellen verfügbar:
    - **Softwarebibliothek** > **Windows 10-Wartung** > **Alle Windows 10-Updates**
    - **Softwarebibliothek** > **Office 365-Clientverwaltung** > **Office 365-Updates**
 
-Weitere Informationen finden Sie unter [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates) (Verwalten von Softwareupdates), [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates) (Verwalten von Windows-as-a-Service) und [Verwalten von Office 365 ProPlus-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Weitere Informationen finden Sie unter [Ausführen eines Drillthrough durch erforderliche Updates](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Ausführen eines Drillthrough durch erforderliche Updates](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates) und [Verwalten von Microsoft 365 Apps mit Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a> Office-Verwaltung
@@ -514,7 +514,7 @@ Weitere Informationen finden Sie unter [Monitor software updates](../../../sum/d
 
 <!--4021125-->
 
-Es gibt ein neues Bereitschaftsdashboard, mit dem Sie ermitteln können, welche Geräte für ein Upgrade auf Office 365 ProPlus bereit sind. Es enthält die Kachel **Office 365 ProPlus upgrade readiness** (Office 365 ProPlus-Upgradebereitschaft), die in der aktuellen Configuration Manager-Branchversion 1902 veröffentlicht wurde. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Softwarebibliothek**, erweitern Sie **Office 365-Clientverwaltung**, und wählen Sie den Knoten **Office 365 ProPlus Upgrade Readiness** (Office 365 ProPlus-Upgradebereitschaft) aus.
+Es gibt ein Bereitschaftsdashboard, über das Sie ermitteln können, welche Geräte für ein Upgrade auf Microsoft 365 Apps for Enterprise bereit sind. Es enthält die Kachel **Office 365 ProPlus upgrade readiness** (Office 365 ProPlus-Upgradebereitschaft), die in der aktuellen Configuration Manager-Branchversion 1902 veröffentlicht wurde. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Softwarebibliothek**, erweitern Sie **Office 365-Clientverwaltung**, und wählen Sie den Knoten **Office 365 ProPlus Upgrade Readiness** (Office 365 ProPlus-Upgradebereitschaft) aus.
 
 Weitere Informationen zum Dashboard sowie zu Voraussetzungen und zur Verwendung dieser Daten finden Sie unter [Integration für Office 365 ProPlus-Bereitschaft](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 

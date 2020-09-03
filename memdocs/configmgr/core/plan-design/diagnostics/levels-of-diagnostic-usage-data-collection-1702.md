@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4443d2319bceca2e92f1655660ec384674dac1e7
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c3859d77726b49973257da47233fedde28f705a1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128779"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994819"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für Configuration Manager Version 1702
 
@@ -340,7 +340,7 @@ Bei Version 1702 von Configuration Manager umfasst diese Ebene folgende Daten:
 
     - Konfigurationen, die für aktive Windows 10-Wartungspläne verwendet werden  
 
-    - Anzahl der bereitgestellten Office 365-Updates  
+    - Anzahl bereitgestellter Microsoft 365-Updates  
 
     - Anzahl der Updategruppen und -zuweisungen  
 

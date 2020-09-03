@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 01c482700b56a1835e46cf5d48da75710f380496
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694422"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995397"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funktionen in der Technical Preview 1806 für Configuration Manager
 
@@ -176,14 +176,15 @@ Ab diesem Release synchronisieren die gemeinsam verwalteten Geräte automatisch 
 
 
 
-## <a name="transition-office-365-workload-to-intune-using-co-management"></a>Übertragen der Office 365-Workload auf Intune mithilfe der Co-Verwaltung
+## <a name="transition-microsoft-365-workload-to-intune-using-co-management"></a>Übertragen der Office 365-Arbeitsauslastung auf Intune mithilfe der Co-Verwaltung
 <!--1357841-->
-Sie können jetzt die Office 365-Workload von Configuration Manager in Microsoft Intune übertragen, nachdem Sie die Co-Verwaltung aktiviert haben. Wechseln Sie für den Übergang dieser Workload zur Eigenschaftenseite für die Co-Verwaltung, und bewegen Sie den Schieberegler von Configuration Manager zu Pilot oder Alle. Weitere Informationen finden Sie unter [Co-Verwaltung für Windows 10-Geräte](../../comanage/overview.md).
+Sie können jetzt die Microsoft 365-Arbeitsauslastung von Configuration Manager zu Microsoft Intune übertragen, nachdem Sie die Co-Verwaltung aktiviert haben. Wechseln Sie für den Übergang dieser Workload zur Eigenschaftenseite für die Co-Verwaltung, und bewegen Sie den Schieberegler von Configuration Manager zu Pilot oder Alle. Weitere Informationen finden Sie unter [Co-Verwaltung für Windows 10-Geräte](../../comanage/overview.md).
 
-Außerdem gibt es die neue globale Bedingung **Are Office 365 applications managed by Intune on the device** (Office 365-Anwendungen auf dem Gerät mit Intune verwalten). Diese Bedingung wird neuen Office 365-Anwendungen standardmäßig als Anforderung hinzugefügt. Wenn Sie diese Workload übertragen, entsprechen gemeinsam verwaltete Clients nicht den Anforderungen der Anwendung, weshalb Sie Office 365 nicht über Configuration Manager installieren sollten.
+Außerdem gibt es die neue globale Bedingung **Are Office 365 applications managed by Intune on the device** (Office 365-Anwendungen auf dem Gerät mit Intune verwalten). Diese Bedingung wird neuen Microsoft 365-Anwendungen standardmäßig als Anforderung hinzugefügt. Wenn Sie diese Arbeitsauslastung übertragen, entsprechen gemeinsam verwaltete Clients nicht den Anforderungen der Anwendung, weshalb Sie Microsoft 365 nicht über Configuration Manager installieren sollten.
 
 ### <a name="known-issue"></a>Bekanntes Problem
-- Dieser Workloadübergang gilt derzeit nur für Office 365-Bereitstellungen. Office 365-Updates werden weiterhin von Configuration Manager verwaltet.<!--510876--> Weitere Informationen, einschließlich einer möglichen Problemumgehung, finden Sie in den Anmerkungen zu Configuration Manager Version 1802 unter [Changing Office 365 client setting doesn’t apply (Das Ändern einer Office 365-Clienteinstellung wird nicht übernommen)](../servers/deploy/install/release-notes.md).
+
+- Diese Arbeitsauslastungsübertragung gilt aktuell nur für Microsoft 365-Bereitstellungen. Microsoft 365-Updates werden weiterhin von Configuration Manager verwaltet.<!--510876--> Weitere Informationen, einschließlich einer möglichen Problemumgehung, finden Sie in den Versionshinweisen zur Configuration Manager-Version 1802 unter [Das Ändern einer Microsoft 365-Clienteinstellung wird nicht übernommen](../servers/deploy/install/release-notes.md).
 
 
 
@@ -240,7 +241,7 @@ Das Office-Anpassungstool ist jetzt in das Office 365-Installer in der Configura
  Versuchen Sie, die Aufgaben fertig zu stellen. Senden Sie uns anschließend Ihr [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback), und lassen Sie uns wissen, wie es gelaufen ist.
 
 1. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Softwarebibliothek**, und klicken Sie auf den Knoten **Office 365-Clientverwaltung**.
-2. Klicken Sie im Dashboard auf die Kachel **Office 365-Installationsprogramm**, um den Office 365-Installations-Assistenten zu starten. Weitere Informationen finden Sie unter [Bereitstellen von Office 365-Apps](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+2. Klicken Sie im Dashboard auf die Kachel **Office 365-Installationsprogramm**, um den Office 365-Installations-Assistenten zu starten. Weitere Informationen finden Sie unter [Bereitstellen von Microsoft 365-Apps](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. Klicken Sie auf der Seite **Office-Einstellung** auf **Go To Office Web Page** (Zur Office-Webseite wechseln). Verwenden Sie das Office-Onlineanpassungstool, um Einstellungen für diese Bereitstellung anzugeben. 
 4. Klicken Sie in der oberen rechten Ecke auf **Senden**, wenn Sie fertig sind. Beenden Sie den Office 365-Installations-Assistenten.
 

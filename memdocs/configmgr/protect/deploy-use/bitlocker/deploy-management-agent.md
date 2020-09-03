@@ -2,7 +2,7 @@
 title: Bereitstellen der BitLocker-Verwaltung
 titleSuffix: Configuration Manager
 description: In diesem Artikel erfahren Sie, wie Sie den BitLocker-Verwaltungs-Agent für Konfigurations-Manager-Clients und den Wiederherstellungsdienst für Verwaltungspunkte bereitstellen.
-ms.date: 07/27/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a7eca5c2f5c00ae559a8567d5fce1e4e36df19c0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129272"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819931"
 ---
 # <a name="deploy-bitlocker-management"></a>Bereitstellen der BitLocker-Verwaltung
 
@@ -118,6 +118,8 @@ Wenn Sie die Einstellungen einer vorhandenen Richtlinie ändern möchten, wähle
 
 Wenn Sie mehr als eine Richtlinie erstellen, können Sie ihre relative Priorität konfigurieren. Wenn Sie mehrere Richtlinien auf einem Client bereitstellen, werden anhand des Prioritätswerts die Einstellungen bestimmt.
 
+Ab Version 2006 können Sie die folgenden PowerShell-Cmdlets von Windows für diese Aufgabe verwenden. Weitere Informationen erhalten Sie unter [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps).
+
 ## <a name="deploy-a-policy"></a>Bereitstellen einer Richtlinie
 
 1. Wählen Sie im Knoten **BitLocker-Verwaltung** eine vorhandene Richtlinie aus. Klicken Sie im Menüband auf **Bereitstellen**.
@@ -135,6 +137,7 @@ Sie können mehrere Bereitstellungen mit derselben Richtlinie erstellen. Wenn Si
 > [!IMPORTANT]
 > Vom MBAM-Client werden keine BitLocker-Laufwerkverschlüsselungsaktionen gestartet, solange eine Verbindung über das Remotedesktopprotokoll aktiv ist. Alle Remotekonsolenverbindungen müssen geschlossen und ein Benutzer muss bei einer physischen Konsolensitzung angemeldet sein, bevor die BitLocker-Laufwerkverschlüsselung beginnt.
 
+Ab Version 2006 können Sie die folgenden PowerShell-Cmdlets von Windows für diese Aufgabe verwenden. Weitere Informationen finden Sie unter [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
 
 ## <a name="monitor"></a>Überwachen
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d23880def99fd12bffe83efffe9768f94481d07e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904813"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993555"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Neuerungen in Version 1610 von Configuration Manager
 
@@ -183,9 +183,9 @@ Das Dashboard zeigt Diagramme für Folgendes an:
 - Anzahl der Office 365-Clients
 - Office 365-Clientversionen
 - Office 365-Clientsprachen
-- Office 365-Clientkanäle     
+- Office 365-Clientkanäle
 
-Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Weitere Informationen finden Sie unter [Verwalten von Updates für Microsoft 365-Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI
 Sie können eine Tasksequenz einer Betriebssystembereitstellung nun mit einer neuen Variable (TSUEFIDrive) so anpassen, dass durch den Schritt **Computer neu starten** auf der Festplatte eine FAT32-Partition für den Übergang zu UEFI vorbereitet wird. Das folgende Verfahren stellt ein Beispiel dar, wie Sie Tasksequenzschritte erstellen können, um die Festplatte auf die Konvertierung von BIOS zu UEFI vorzubereiten. Weitere Informationen finden Sie unter [Tasksequenzschritte für das Verwalten einer Konvertierung von BIOS zu UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).

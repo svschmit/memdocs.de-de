@@ -2,7 +2,7 @@
 title: Konfigurieren von Wake-On-LAN
 titleSuffix: Configuration Manager
 description: Wählen Sie Wake-On-LAN-Einstellungen in Configuration Manager aus.
-ms.date: 08/11/2020
+ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 33283b13bc28c7d102f014ac3cb4048681343ac2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127034"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907846"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>Konfigurieren von Wake-On-LAN in Configuration Manager
 
@@ -27,7 +27,7 @@ Legen Sie Wake-On-LAN-Einstellungen für Configuration Manager fest, wenn Sie Co
 <!--3607710-->
 Ab Configuration Manager 1810 gibt es eine neue Möglichkeit, Computer aus dem Energiesparmodus zu reaktivieren. Mithilfe der Configuration Manager-Konsole können Sie Clients reaktivieren, auch wenn sich der Client nicht im selben Subnetz wie der Standortserver befindet. Wenn Sie Wartungen durchführen oder Geräte abfragen müssen, sind Sie nicht durch Remoteclients eingeschränkt, die sich im Ruhezustand befinden. Der Standortserver verwendet den Clientbenachrichtigungskanal, um andere Clients zu identifizieren, die im gleichen Remotesubnetz aktiv sind. Diese Clients werden dann verwendet, um eine Wake-On-LAN-Anforderung (Magic Packet) zu senden. Durch die Verwendung des Clientbenachrichtigungskanals wird MAC-Flapping vermieden, das dazu führen könnte, dass der Port vom Router heruntergefahren wird. Die neue Version von Wake-On-LAN kann gleichzeitig mit der [älteren Version](#bkmk_wol-previous) aktiviert werden.
 
-### <a name="limitations"></a>Einschränkungen
+### <a name="prerequisites-and-limitations"></a>Voraussetzungen und Einschränkungen
 <!--7323898, 7363492-->
 - Es muss mindestens ein Client im Zielsubnetz aktiv sein.
 - Die folgenden Netzwerktechnologien werden von diesem Feature nicht unterstützt:
@@ -38,6 +38,8 @@ Ab Configuration Manager 1810 gibt es eine neue Möglichkeit, Computer aus dem 
 - Computer werden nur reaktiviert, wenn Sie sie durch die Clientbenachrichtigung **Reaktivieren** benachrichtigen.
     - Für die Reaktivierung an einem Stichtag wird die ältere Version von Wake-On-LAN verwendet.
     -  Wenn die ältere Version nicht aktiviert ist, erfolgt keine Reaktivierung von Clients für Bereitstellungen, die mit den Einstellungen **Wake-On-LAN verwenden, um Clients für erforderliche Bereitstellungen zu aktivieren** oder **Aktivierungspakete senden** erstellt wurden.  
+- Die DHCP-Leasedauer kann nicht auf unendlich festgelegt werden. <!--8018584-->
+   - Möglicherweise stellen Sie fest, dass SleepAgent_&lt;*Domäne*\>@SYSTEM_0.log sehr groß wird sowie möglicherweise einen Ansturm von Übertragungen in Umgebungen, in denen DHCP-Leases auf unendlich festgelegt sind.  
 
 ### <a name="security-role-permissions"></a>Berechtigungen für Sicherheitsrollen
 

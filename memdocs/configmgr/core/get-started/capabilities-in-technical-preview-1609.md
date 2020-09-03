@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695680"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995533"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funktionen in der Technical Preview 1609 für Configuration Manager
 
@@ -347,36 +347,36 @@ Das Dashboard zeigt Diagramme für Folgendes an:
 - Office 365-Clientversionen
 - Office 365-Clientsprachen
 - Office 365-Clientkanäle     
-Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Office 365 ProPlus](/deployoffice/overview-update-channels).
+Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Microsoft 365-Apps](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Regeln zur automatischen Bereitstellung, die Office 365-Client in der Gruppe verfügbarer Produkte ausgewählt haben.
 
 Über das Dashboard können Sie die folgenden Aktionen ausführen:
 - Verwenden Sie am oberen Rand des Dashboards die Dropdowneinstellung **Sammlung**, um die Dashboarddaten nach Mitgliedern einer bestimmten Sammlung zu filtern.
-- Klicken Sie oben rechts im Dashboard auf **Office 365-Installer**, um den Office 365-Installationsassistenten zu starten, um Office 365-Apps für Clients bereitzustellen. Weitere Informationen finden Sie unter [Bereitstellen von Office 365-Apps für Clients](#deploy-office-365-apps-to-clients).
-- Klicken Sie rechts von der Mitte im Dashboard auf **Create an ADR** (Erstellen einer ADR), um den Assistent zum Erstellen automatischer Bereitstellungsregeln zu öffnen, um eine neue automatische Bereitstellungsregel (automatic deployment rule, ADR) zu erstellen. Wählen Sie zum Erstellen einer ADR für Office 365-Apps bei der Auswahl des Produkts **Office 365-Client** aus. Weitere Informationen finden Sie unter [Automatically deploy software updates (Automatisches Bereitstellen von Softwareupdates)](../../sum/deploy-use/automatically-deploy-software-updates.md).
+- Klicken Sie oben rechts im Dashboard auf **Office 365-Installer**, um den Office 365-Installationsassistenten zu starten, um Microsoft 365-Apps für Clients bereitzustellen. Weitere Informationen finden Sie unter [Bereitstellen von Microsoft 365-Apps für Clients](#deploy-microsoft-365-apps-to-clients).
+- Klicken Sie rechts von der Mitte im Dashboard auf **Create an ADR** (Erstellen einer ADR), um den Assistent zum Erstellen automatischer Bereitstellungsregeln zu öffnen, um eine neue automatische Bereitstellungsregel (automatic deployment rule, ADR) zu erstellen. Wählen Sie zum Erstellen einer ADR für Microsoft 365-Apps bei der Auswahl des Produkts **Office 365-Client** aus. Weitere Informationen finden Sie unter [Automatically deploy software updates (Automatisches Bereitstellen von Softwareupdates)](../../sum/deploy-use/automatically-deploy-software-updates.md).
 - Klicken Sie auf der unteren rechten Seite des Dashboards auf **Create Client Agent Settings** (Client-Agent-Einstellungen erstellen), um die Client-Agent-Einstellungen zu öffnen. Weitere Informationen finden Sie unter [About client settings (Informationen zu Clienteinstellungen)](../clients/deploy/about-client-settings.md).
 
 
 
-Weitere Informationen zu Office 365 ProPlus-Updates finden Sie unter [Manage Office 365 ProPlus updates with Configuration Manager (Verwalten von Office 365 ProPlus-Updates mit System Center Configuration Manager)](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Weitere Informationen zu Microsoft 365 Apps for Enterprise-Updates finden Sie unter [Verwalten von Microsoft 365-Apps-Updates mit Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
-## <a name="deploy-office-365-apps-to-clients"></a>Bereitstellen von Office 365-Apps für Clients
-In diesem Release können Sie vom Office 365-Clientverwaltungsdashboard aus den Office 365-Installer starten, mit dem Sie Office 365-Installationseinstellungen konfigurieren, Dateien aus Office Content Delivery Networks (CDNs) herunterladen und die Dateien als Anwendung in Configuration Manager bereitstellen können.
+## <a name="deploy-microsoft-365-apps-to-clients"></a>Bereitstellen von Microsoft 365-Apps für Clients
+In diesem Release können Sie vom Office 365-Clientverwaltungsdashboard aus den Office 365-Installer starten, mit dem Sie Microsoft 365-Installationseinstellungen konfigurieren, Dateien aus Office Content Delivery Networks (CDNs) herunterladen und die Dateien als Anwendung in Configuration Manager bereitstellen können.
 
-### <a name="limitations-of-office-365-deployment"></a>Einschränkungen der Office 365-Bereitstellung
+### <a name="limitations-of-microsoft-365-deployment"></a>Einschränkungen bei Microsoft 365-Bereitstellungen
 - Möglicherweise haben Sie Probleme beim Versuch, vorhandene Clienteinstellungen (XML) in den Office 365-App-Installationsassistenten zu importieren. Sie können die Clienteinstellungen ohne Probleme manuell konfigurieren.
 
-#### <a name="to-deploy-office-365-apps-to-clients"></a>So stellen Sie Office 365-Apps für Clients bereit
+#### <a name="to-deploy-microsoft-365-apps-to-clients"></a>Bereitstellen von Microsoft 365-Apps für Clients
 1. Navigieren Sie in der Configuration Manager-Konsole zu **Softwarebibliothek** > **Übersicht** > **Office 365-Clientverwaltung**.
 2. Klicken Sie im oberen rechten Bereich auf **Office 365-Installer**. Der Office 365-Installations-Assistent wird geöffnet.
 3. Geben Sie auf der Seite **Anwendungseinstellungen** einen Namen und eine Beschreibung für die App an, geben Sie den Downloadpfad für die Dateien ein, und klicken Sie anschließend auf **Weiter**. Beachten Sie, dass der Pfad im folgenden Format angegeben sein muss: &#92;&#92;*Server*&#92;*Freigabe*.
-4. Wählen Sie auf der Seite **Import Client Settings** (Clienteinstellungen importieren) aus, ob Sie die Office 365-Clienteinstellungen von einer vorhandenen XML-Konfigurationsdatei importieren oder die Einstellungen manuell angeben möchten, und klicken Sie anschließend auf **Weiter**.
+4. Wählen Sie auf der Seite **Clienteinstellungen importieren** aus, ob Sie die Microsoft 365-Clienteinstellungen aus einer vorhandenen XML-Konfigurationsdatei importieren oder die Einstellungen manuell angeben möchten, und klicken Sie anschließend auf **Weiter**.
 Wenn Sie über eine vorhandene Konfigurationsdatei verfügen, geben Sie den Speicherort für die Datei an, und fahren Sie mit Schritt 7 fort. Beachten Sie, dass der Speicherort im folgenden Format angegeben werden muss: &#92;&#92;*Server*&#92;*Freigabe*&#92;*Dateiname*.XML.
 
     > [!IMPORTANT]
     >Möglicherweise haben Sie Probleme beim Versuch, vorhandene Clienteinstellungen (XML) in diese Technical Preview zu importieren.
 
-5. Wählen Sie auf der Seite **Client Products** (Clientprodukte) die Office 365-Suite aus, die Sie verwenden, wählen Sie die Anwendungen aus, die Sie einschließen möchten, wählen Sie etwaige zusätzliche Office-Produkte aus, die enthalten sein sollen, und klicken Sie anschließend auf **Weiter**.
+5. Wählen Sie auf der Seite **Clientprodukte** die Microsoft 365-Suite aus, die Sie verwenden, wählen Sie die Anwendungen aus, die Sie einschließen möchten, wählen Sie etwaige zusätzliche Office-Produkte aus, die enthalten sein sollen, und klicken Sie anschließend auf **Weiter**.
 6. Wählen Sie auf der Seite **Clienteinstellungen** die einzuschließenden Einstellungen aus, und klicken Sie anschließend auf **Weiter**.
 7. Wählen Sie auf der Seite **Bereitstellung** aus, ob die Anwendung bereitgestellt werden soll, und klicken Sie anschließend auf **Weiter**.
 Wenn Sie auswählen, das Paket nicht im Assistenten bereitzustellen, fahren Sie mit Schritt 9 fort.
@@ -385,7 +385,7 @@ Wenn Sie auswählen, das Paket nicht im Assistenten bereitzustellen, fahren Sie 
 10. Sie können die Anwendung über **Softwarebibliothek** > **Übersicht** > **Anwendungsverwaltung** > **Anwendungen** genauso bereitstellen und ändern, wie Sie dies bei jeder anderen Anwendung in Configuration Manager tun würden.
 
 >[!NOTE]
->Nach der Bereitstellung von Office 365-Apps können Sie Regeln zur automatischen Bereitstellung erstellen, um die Apps zu verwalten. Wählen Sie zum Erstellen einer ADR für Office 365-Apps bei der Auswahl des Produkts **Create an ADR** (Erstellen einer ADR) und anschließend **Office 365-Client** aus. Weitere Informationen finden Sie unter [Automatically deploy software updates (Automatisches Bereitstellen von Softwareupdates)](../../sum/deploy-use/automatically-deploy-software-updates.md).
+>Nach der Bereitstellung von Microsoft 365-Apps können Sie Regeln zur automatischen Bereitstellung erstellen, um die Apps zu verwalten. Klicken Sie zum Erstellen einer ADR für Microsoft 365-Apps bei der Auswahl des Produkts auf **ADR erstellen** und anschließend auf **Office 365-Client**. Weitere Informationen finden Sie unter [Automatically deploy software updates (Automatisches Bereitstellen von Softwareupdates)](../../sum/deploy-use/automatically-deploy-software-updates.md).
 
 ## <a name="improvements-for-bios-to-uefi-conversion"></a><a name="BKMK_UEFIConversion"></a>Verbesserungen für die Konvertierung von BIOS zu UEFI
 Sie können eine Tasksequenz einer Betriebssystembereitstellung nun mit einer neuen Variable (TSUEFIDrive) so anpassen, dass durch den Schritt „Computer neu starten“ auf der Festplatte eine FAT32-Partition für den Übergang zu UEFI vorbereitet wird. Das folgende Verfahren stellt ein Beispiel dar, wie Sie Tasksequenzschritte erstellen können, um die Festplatte auf die Konvertierung von BIOS zu UEFI vorzubereiten.

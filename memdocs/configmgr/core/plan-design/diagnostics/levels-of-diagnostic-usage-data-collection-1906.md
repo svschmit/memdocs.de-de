@@ -10,12 +10,12 @@ ms.assetid: 370fc61f-2d8a-45b4-adc7-7b5d5ede2bf4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c4b82bba24eccf9be5f410b5d2854d782230a72
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 41465fe916ef985ec0e33596be23f16910149a7a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126646"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994598"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1906"></a>Diagnose- und Nutzungsdaten für Version 1906
 
@@ -156,7 +156,7 @@ Bei Version 1906 von Configuration Manager umfasst diese Ebene folgende Daten:
 
 - Anzahl eindeutiger Brandings für den Anwendungskatalog  
 
-- Anzahl der über das Office 365-Dashboard erstellten Anwendungen  
+- Anzahl der über das Dashboard erstellten Microsoft 365-Anwendungen  
 
 - Anzahl der Pakete nach Typ  
 
@@ -206,7 +206,7 @@ Bei Version 1906 von Configuration Manager umfasst diese Ebene folgende Daten:
 
 - ***[Neu]*** Aggregierte Statistiken zur Nutzung von Anwendungsgruppen
 
-- ***[Neu]*** Aggregierte Statistiken zu Office-Add-Ins, Nutzung des Office Readiness Toolkit und Anzahl der Clients mit Office 365 ProPlus
+- ***[Neu]*** Aggregierte Statistiken zu Office-Add-Ins, Nutzung des Readiness Toolkits for Office und Anzahl der Clients mit Microsoft 365 Apps for Enterprise
 
 ### <a name="client"></a>Client  
 
@@ -440,7 +440,7 @@ Bei Version 1906 von Configuration Manager umfasst diese Ebene folgende Daten:
 
 - Konfigurationen, die für aktive Windows 10-Wartungspläne verwendet werden  
 
-- Anzahl der bereitgestellten Office 365-Updates  
+- Anzahl bereitgestellter Microsoft 365-Updates  
 
 - Anzahl der synchronisierten Microsoft Surface-Treiber  
 

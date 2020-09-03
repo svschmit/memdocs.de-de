@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eb6f1b9c97d017d7aaabb41075aaf68b6c1d7b45
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: afca31c224e40efa79638f05192259d0986e1e72
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128643"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994632"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1810"></a>Diagnose- und Nutzungsdaten für Version 1810
 
@@ -151,7 +151,7 @@ Bei Version 1810 von Configuration Manager umfasst diese Ebene folgende Daten:
 
 - Anzahl eindeutiger Brandings für den Anwendungskatalog  
 
-- Anzahl der über das Office 365-Dashboard erstellten Anwendungen  
+- Anzahl der über das Dashboard erstellten Microsoft 365-Anwendungen  
 
 - Anzahl der Pakete nach Typ  
 
@@ -432,7 +432,7 @@ Bei Version 1810 von Configuration Manager umfasst diese Ebene folgende Daten:
 
 - Konfigurationen, die für aktive Windows 10-Wartungspläne verwendet werden  
 
-- Anzahl der bereitgestellten Office 365-Updates  
+- Anzahl bereitgestellter Microsoft 365-Updates  
 
 - Anzahl der synchronisierten Microsoft Surface-Treiber  
 

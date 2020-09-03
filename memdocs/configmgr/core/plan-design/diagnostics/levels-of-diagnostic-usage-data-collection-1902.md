@@ -10,12 +10,12 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c66200041bcc643dc7306b76c540daf2b0b1058
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bfd7818622ca536fd3a7a00de95bd5400b060fd5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128621"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994615"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1902"></a>Diagnose- und Nutzungsdaten für Version 1902
 
@@ -154,7 +154,7 @@ Bei Version 1902 von Configuration Manager umfasst diese Ebene folgende Daten:
 
 - Anzahl eindeutiger Brandings für den Anwendungskatalog  
 
-- Anzahl der über das Office 365-Dashboard erstellten Anwendungen  
+- Anzahl der über das Dashboard erstellten Microsoft 365-Anwendungen  
 
 - Anzahl der Pakete nach Typ  
 
@@ -441,7 +441,7 @@ Bei Version 1902 von Configuration Manager umfasst diese Ebene folgende Daten:
 
 - Konfigurationen, die für aktive Windows 10-Wartungspläne verwendet werden  
 
-- Anzahl der bereitgestellten Office 365-Updates  
+- Anzahl bereitgestellter Microsoft 365-Updates  
 
 - Anzahl der synchronisierten Microsoft Surface-Treiber  
 

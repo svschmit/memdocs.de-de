@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 157adee0ce6bbf677bb88c4ae404f92ed0506c42
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a8cc58a11c1cce86bb5964ef4ad55958619a4529
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128813"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994870"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für Configuration Manager Version 1606
 
@@ -324,7 +324,7 @@ Ab Version 1606 von Configuration Manager umfasst diese Ebene folgende Daten:
 
     -   Statistiken zu Clusterpatches  
 
-    -   Anzahl der bereitgestellten Office 365-Updates  
+    -   Anzahl bereitgestellter Microsoft 365-Updates  
 
     -   Vom Softwareupdatepunkt synchronisierte Klassifikationen
 

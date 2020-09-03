@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9278e6cb148768e993706fe112bbfd70121cc6b9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695595"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995465"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Funktionen in der Technical Preview 1606 für Configuration Manager
 
@@ -215,11 +215,11 @@ Nachdem der Dienst und die Rollen vollständig konfiguriert sind, erhalten inter
 
 Nachdem Clients die neue Speicherortinformationen für Cloudproxydienst haben, überprüfen Sie den Status der Clients, die nicht mehr auf dem internen privaten Netzwerk sind, aber Zugriff auf das Internet haben. Sie können Datenverkehr auf dem Cloudproxydienst auch überwachen, indem Sie auf **Verwaltung > Clouddienste > Cloudproxydienst** den Dienst im Listenbereich auswählen und die Informationen zum Datenverkehr im Detailbereich anzeigen.   
 
-## <a name="manage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Verwaltung des Office 365-Client-Agents in Configuration Manager  
+## <a name="manage-the-microsoft-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Verwaltung des Microsoft 365-Client-Agents in Configuration Manager  
 
-Ab Technical Preview 1606 können Sie eine Configuration Manager-Client-Agenteinstellung anstatt der Gruppenrichtlinie verwenden, um Office 365-Clients zum Empfangen von Updates von Configuration Manager zu aktivieren. Nachdem Sie diese Einstellung konfiguriert und Updates für Office 365 bereitgestellt haben, kommuniziert der Configuration Manager-Client-Agent mit dem Office 365-Client-Agent, um Office 365-Updates von einem Verteilungspunkt herunterzuladen und zu installieren. Configuration Manager macht auch eine Bestandsaufnahme der Client-Agenteinstellungen.
+Ab Technical Preview 1606 können Sie eine Configuration Manager-Client-Agent-Einstellung anstatt der Gruppenrichtlinie verwenden, um Microsoft 365-Clients zum Empfangen von Updates von Configuration Manager zu aktivieren. Nachdem Sie diese Einstellung konfiguriert und Updates für Microsoft 365 bereitgestellt haben, kommuniziert der Configuration Manager-Client-Agent mit dem Microsoft 365-Client-Agent, um die Updates von einem Verteilungspunkt herunterzuladen und zu installieren. Configuration Manager macht auch eine Bestandsaufnahme der Client-Agenteinstellungen.
 
-Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Weitere Informationen finden Sie unter [Verwalten von Microsoft 365 Apps for Enterprise-Updates](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Einrichten der Configuration Manager-Clienteinstellung, zum Verwalten des Office 365-Client-Agents
 1.  Klicken Sie in der Configuration Manager-Konsole auf **Verwaltung** > **Übersicht** > **Clienteinstellungen**.

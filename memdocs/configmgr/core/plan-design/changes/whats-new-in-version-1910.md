@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3c99716070bf32ae27a7bd8b7a114d8b920814e2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700298"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993470"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Neuerungen in Version 1910 von Configuration Manager (Current Branch)
 
@@ -134,7 +134,7 @@ Weitere Informationen finden Sie unter [Microsoft Connected Cache in Configurati
 
 Sie können ab sofort die Auswertung benutzerdefinierter Konfigurationsbaselines als Regel für die Konformitätsrichtlinienbewertung hinzufügen. Wenn Sie eine Konfigurationsbaseline erstellen oder bearbeiten, können Sie nun die Option **Diese Baseline als Teil der Konformitätsrichtlinienbewertung auswerten** verwenden. Beim Hinzufügen oder Bearbeiten einer Konformitätsrichtlinienregel steht Ihnen eine Bedingung mit dem Namen **Konfigurierte Baselines in Konformitätsrichtlinienauswertung einbeziehen** zur Verfügung.
 
-Bei gemeinsam verwalteten Geräten und wenn Sie Intune so konfigurieren, dass die Ergebnisse der Konformitätsbewertung von Configuration Manager als Teil des Gesamtkonformitätsstatus übernommen werden, werden diese Informationen an Azure Active Directory gesendet. Sie können diese dann für den bedingten Zugriff auf Ihre Office 365-Ressourcen verwenden.
+Bei gemeinsam verwalteten Geräten und wenn Sie Intune so konfigurieren, dass die Ergebnisse der Konformitätsbewertung von Configuration Manager als Teil des Gesamtkonformitätsstatus übernommen werden, werden diese Informationen an Azure Active Directory gesendet. Sie können diese dann für den bedingten Zugriff auf Ihre Microsoft 365-Ressourcen verwenden.
 
 Weitere Informationen finden Sie unter [Einbeziehen benutzerdefinierter Konfigurationsbaselines im Rahmen der Konformitätsrichtlinienbewertung](../../../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 

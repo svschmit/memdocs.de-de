@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0425b937062acd96b8df66df38ec53a04e91b4de
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694864"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995227"
 ---
 # <a name="co-management-workloads"></a>Workloads für die Co-Verwaltung
 
@@ -110,9 +110,9 @@ Diese Workload verwaltet Microsoft 365 Apps auf gemeinsam verwalteten Geräten
 
 - Es kann etwa 24 Stunden dauern, bis Office-Updates im Client angezeigt werden, es sei denn, die Geräte werden neu gestartet.  
 
-- Es gibt die neue globale Bedingung **Are Office 365 applications managed by Intune on the device** (Werden Office 365-Anwendungen auf dem Gerät mit Intune verwaltet?). Diese Bedingung wird neuen Office 365-Anwendungen standardmäßig als Anforderung hinzugefügt. Wenn Sie diese Workload übertragen, entsprechen gemeinsam verwaltete Clients nicht den Anforderungen der Anwendung. Daher sollten sie Office 365 nicht über Configuration Manager installieren.  
+- Es gibt die neue globale Bedingung **Are Office 365 applications managed by Intune on the device** (Werden Office 365-Anwendungen auf dem Gerät mit Intune verwaltet?). Diese Bedingung wird neuen Microsoft 365-Anwendungen standardmäßig als Anforderung hinzugefügt. Wenn Sie diese Workload übertragen, entsprechen gemeinsam verwaltete Clients nicht den Anforderungen der Anwendung. Daher sollten sie Microsoft 365 nicht über Configuration Manager installieren.  
 
-Weitere Informationen zu diesem Intune-Feature finden Sie unter [Zuweisen von Office 365-Apps zu Windows 10-Geräten mit Microsoft Intune](/intune/apps-add-office365).
+Weitere Informationen zu diesem Intune-Feature finden Sie unter [Zuweisen von Microsoft 365-Apps zu Windows 10-Geräten mit Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365).
 
 ## <a name="client-apps"></a>Client-Apps
 

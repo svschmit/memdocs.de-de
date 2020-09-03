@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5c125bc92c8949384486c7efc03cea122258092e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692790"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993504"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Neuerungen in Version 1702 von Configuration Manager
 
@@ -220,11 +220,11 @@ Wenn Sie die Windows ADK-Version upgraden und dann Updates und Wartung zum Insta
 
 ## <a name="software-updates"></a>Softwareupdates
 
-### <a name="deploy-office-365-apps-to-clients"></a>Bereitstellen von Office 365-Apps für Clients
-In diesem Release können Sie ab Version 1702 vom Office 365-Clientverwaltungsdashboard aus den Office 365-Installer starten, mit dem Sie Office 365-Installationseinstellungen konfigurieren, Dateien aus Office Content Delivery Networks (CDNs) herunterladen und die Dateien als Anwendung in Configuration Manager bereitstellen können. Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
+### <a name="deploy-microsoft-365-apps-to-clients"></a>Bereitstellen von Microsoft 365-Apps für Clients
+In diesem Release können Sie ab Version 1702 vom Office 365-Clientverwaltungsdashboard aus den Office 365-Installer starten, mit dem Sie Installationseinstellungen konfigurieren, Dateien aus Office Content Delivery Networks (CDNs) herunterladen und die Dateien als Anwendung in Configuration Manager bereitstellen können. Weitere Informationen finden Sie unter [Verwalten von Updates für Microsoft 365-Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
 
 > [!IMPORTANT]
-> Die Office 365-App, die Sie mithilfe des Assistenten für Office 365-Anwendungen in Configuration Manager erstellen und bereitstellen, wird nicht automatisch von Configuration Manager verwaltet. Dies geschieht erst nach Aktivierung der Client-Agent-Einstellungen der Softwareupdates **Verwaltung des Office 365-Client-Agents aktivieren**. Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen](../../clients/deploy/about-client-settings.md).
+> Die Microsoft 365-App, die Sie mithilfe des Assistenten für Office 365-Anwendungen in Configuration Manager erstellen und bereitstellen, wird nicht automatisch von Configuration Manager verwaltet. Dies geschieht erst nach Aktivierung der Client-Agent-Einstellungen der Softwareupdates **Enable management of the Office 365 Client Again** (Verwaltung des Office 365-Client-Agents wieder aktivieren). Weitere Informationen finden Sie unter [Informationen zu Clienteinstellungen](../../clients/deploy/about-client-settings.md).
 
 ### <a name="manage-express-installation-files-for-windows-10-updates"></a>Unterstützung von Express-Installationsdateien für Windows 10-Updates
 Configuration Manager unterstützt ab Version 1702 Express-Installationsdateien für Windows 10-Updates. Wenn Sie eine unterstützte Version von Windows 10 verwenden, können Sie jetzt die Configuration Manager-Einstellungen nutzen, um nur das Delta zwischen dem kumulativen Update von Windows 10 des laufenden Monats und dem Updates des Vormonats herunterzuladen. Ohne Express-Installationsdateien lädt Configuration Manager die kompletten kumulativen Updates für Windows 10 (einschließlich aller Updates aus den letzten Monaten) jeden Monat herunter. Mit Expressinstallationsdateien erhalten Sie kleinere Downloads und kürzere Installationszeiten. Informationen finden Sie unter [Verwalten von Express-Installationsdateien für Windows 10-Updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md)

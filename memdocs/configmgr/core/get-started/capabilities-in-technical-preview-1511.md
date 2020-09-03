@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694507"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995482"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funktionen in der Technical Preview 1511 für Configuration Manager
 
@@ -50,24 +50,24 @@ Für Computer, die über WUfB verbunden sind, kann Configuration Manager keine M
 
 5.  Die Computer, die über WUfB verwaltet werden, zeigen als Kompatibilitätsstatus **Unbekannt** an und werden im Gesamtprozentsatz der Kompatibilität nicht berücksichtigt.  
 
-##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Verwalten von Office 365 ProPlus-Clientupdates über Configuration Manager  
- Configuration Manager verfügt jetzt über die Möglichkeit zum Verwalten von Office 365-Desktopclientupdates mithilfe des Softwareupdateverwaltungs-Workflows von Configuration Manager.    
-Wenn Microsoft ein neues Office 365-Desktopclientupdate in Windows Server Updates Services (WSUS) veröffentlicht, kann Configuration Manager das Update mit seinem Katalog synchronisieren, wenn das Office 365-Update als Teil der Katalogsynchronisierung konfiguriert ist.  Der Configuration Manager-Standortserver lädt dann die Office 365-Clientupdates herunter, und verteilt das Paket an die Configuration Manager-Verteilungspunkte.  Der Configuration Manager-Client informiert dann die Office 365-Desktopclients, wo sie die Updates abrufen können und wann der Installationsvorgang gestartet werden soll.  
+##  <a name="managing-microsoft-365-apps-for-enterprise-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Verwalten des Updates für den Microsoft 365 Apps for Enterprise-Client über Configuration Manager  
+Configuration Manager verfügt jetzt über die Möglichkeit zum Verwalten von Microsoft 365-Desktopclientupdates mithilfe des Workflows für die Softwareupdateverwaltung von Configuration Manager.
+Wenn Microsoft ein neues Microsoft 365-Desktopclientupdate in Windows Server Updates Services (WSUS) veröffentlicht, kann Configuration Manager das Update mit dem dazugehörigen Katalog synchronisieren, wenn das Microsoft 365-Update als Teil der Katalogsynchronisierung konfiguriert ist.  Der Configuration Manager-Standortserver lädt dann die Microsoft 365-Clientupdates herunter und verteilt das Paket an die Configuration Manager-Verteilungspunkte.  Der Configuration Manager-Client informiert dann die Microsoft 365-Desktopclients, wo sie die Updates abrufen können und wann der Installationsvorgang gestartet werden soll.  
 
 **Voraussetzungen für dieses Szenario:**  
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!  
  Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Feedbackinformationen oben in diesem Thema, um uns Ihre Erfahrungen mitzuteilen:  
 
-1. Sie können Office 365-Updates mit dem Configuration Manager-Standortserver synchronisieren und sie über die Configuration Manager-Konsole anzeigen.  
+1. Sie können Microsoft 365-Updates mit dem Configuration Manager-Standortserver synchronisieren und sie über die Configuration Manager-Konsole anzeigen.  
 
-2. Sie können Office 365-Updates genehmigen und erfolgreich bereitstellen.  
+2. Sie können Microsoft 365-Updates genehmigen und erfolgreich bereitstellen.  
 
-3. Sie können Office 365-Updates herunterladen und erfolgreich für Clients bereitstellen.  
+3. Sie können Microsoft 365-Updates herunterladen und erfolgreich für Clients bereitstellen.  
 
-4. Sie können die Kompatibilität für Office 365-Updates mithilfe der Überwachung und Berichte in der Konsole überprüfen.  
+4. Sie können die Kompatibilität für Microsoft 365-Updates mithilfe der Überwachung und mit Berichten in der Konsole überprüfen.  
 
-   Detaillierte Anweisungen finden Sie unter [Verwalten von Updates für Office 365 ProPlus mit dem Microsoft Endpoint Configuration Manager](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Detaillierte Anweisungen finden Sie unter [Verwalten von Microsoft 365-Clientupdates mit Configuration Manager (Technical Preview)](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Unterstützung für SQL Server AlwaysOn für hoch verfügbare Datenbanken  
  Configuration Manager unterstützt jetzt die Verwendung einer SQL Server Always On-Verfügbarkeitsgruppe zum Hosten der Standortdatenbank.  Wenn Sie einen neuen Standort installieren, können Sie das Setup anweisen, anstatt einer normalen Instanz von SQL Server die Verfügbarkeitsgruppe zu verwenden.  

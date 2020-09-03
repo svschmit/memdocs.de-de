@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700281"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819676"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Neuerungen in Version 2006 von Configuration Manager (Current Branch)
 
@@ -31,6 +31,13 @@ Wenn Sie die neuen Configuration Manager-Features nach der Aktualisierung des St
 > Um bei einer Aktualisierung dieser Seite benachrichtigt zu werden, kopieren Sie die folgende URL, und fügen Sie sie in Ihren RSS-Feedreader ein: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Anfügen von Mandanten in Microsoft Endpoint Manager
+
+### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Mandantenanfügung: Microsoft Defender Antivirus-Richtlinien im Microsoft Endpoint Manager Admin Center
+<!--4812909-->
+Sie können ab sofort Microsoft Defender Antivirus-Richtlinien in der Microsoft Endpoint Manager-Konsole erstellen und diese in Configuration Manager-Sammlungen bereitstellen. Weitere Informationen einschließlich detaillierter Anleitungen und verfügbarer Einstellungen finden Sie in den folgenden Artikeln:
+- [Mandantenanfügung: Onboarding für Configuration Manager-Clients für Microsoft Defender ATP im Admin Center (Vorschau)](../../../tenant-attach/atp-onboard.md)
+- [Mandantenanfügung: Bereitstellen von Antivirusrichtlinien für die Endpunktsicherheit im Admin Center (Vorschau)](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Einstellungen für Microsoft Defender Antivirus-Richtlinien für mandantenbasiert angefügte Geräte in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json) 
 
 ### <a name="install-applications-from-the-admin-center"></a>Installieren von Anwendungen über das Admin Center
 <!--7518897, 6024389-->
@@ -126,10 +133,10 @@ Zur besseren Abstimmung mit den Desktop Analytics-Anforderungen für Windows-Dia
 |---------|---------|
 | Erforderlich | Basic |
 | Optional (begrenzt) | Erweitert (begrenzt) |
-| Nicht zutreffend | Verbessert |
+| Nicht zutreffend | Erweitert |
 | Optional | Vollständig |
 
-Wenn Sie zuvor Geräte auf der Ebene **Erweitert** konfiguriert haben, werden diese bei einem Upgrade auf Version 2006 auf **Optional (begrenzt)** zurückgesetzt. Dadurch werden weniger Daten an Microsoft gesendet. Diese Änderung sollte keine Auswirkungen auf die in Desktop Analytics angezeigten Informationen haben.
+Wenn Sie zuvor Geräte auf der Ebene **Erweitert** konfiguriert haben, werden diese bei einem Upgrade auf Version 2006 auf **Optional (begrenzt)** zurückgesetzt. Dadurch senden diese Geräte weniger Daten an Microsoft. Diese Änderung sollte keine Auswirkungen auf die in Desktop Analytics angezeigten Informationen haben.
 
 Weitere Informationen finden Sie unter [Aktivieren der Datenfreigabe für Desktop Analytics](../../../desktop-analytics/enable-data-sharing.md).
 

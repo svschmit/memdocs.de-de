@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692926"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995448"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funktionen in der Technical Preview 1705 für Configuration Manager
 
@@ -136,20 +136,20 @@ Zum Beenden des Standorts können Sie das [Hierarchieverwaltungstool](../servers
 Das Beenden des Standorts ist gleichbedeutend mit dem Beenden des Standortkomponenten-Manager-Diensts (sitecomp) gefolgt vom SMS_Executive-Dienst auf dem Standortserver.
 
 
-## <a name="improved-user-notifications-for-office-365-updates"></a>Verbesserte Benutzerbenachrichtigungen zu Office 365-Updates
-Verbesserungen sind erfolgt, um die Office-Klick-und-Los-Benutzerumgebung zu nutzen, wenn ein Client ein Office 365-Update installiert. Dazu gehören Popup- und In-App-Benachrichtigungen sowie ein Countdown. Wenn vor dieser Version ein Office 365-Update an einen Client gesendet wurde, wurden geöffnete Office-Anwendungen ohne Warnung automatisch geschlossen. Nach diesem Update werden Office-Anwendungen nicht mehr unerwartet geschlossen.
+## <a name="improved-user-notifications-for-microsoft-365-updates"></a>Verbesserte Benutzerbenachrichtigungen zu Microsoft 365-Updates
+Verbesserungen sind erfolgt, um die Office-Klick-und-Los-Benutzeroberfläche zu nutzen, wenn ein Client ein Microsoft 365-Update installiert. Dazu gehören Popup- und In-App-Benachrichtigungen sowie ein Countdown. Wenn vor dieser Version ein Microsoft 365-Update an einen Client gesendet wurde, wurden geöffnete Office-Anwendungen ohne Warnung automatisch geschlossen. Nach diesem Update werden Office-Anwendungen nicht mehr unerwartet geschlossen.
 
 ### <a name="prerequisites"></a>Voraussetzungen
-Dieses Update gilt für Office 365 ProPlus-Clients.
+Dieses Update gilt für Microsoft 365 Apps for Enterprise-Clients.
 
 ### <a name="known-issues"></a>Bekannte Probleme
-Wenn ein Client eine Office 365-Updatezuweisung erstmals prüft und für das Update eine in der Vergangenheit liegende Frist geplant war, es sofort geplant oder binnen 30 Minuten geplant ist, kann die Office 365-Benutzerumgebung uneinheitlich sein. Der Client kann beispielsweise ein 30-minütiges Countdown-Dialogfeld für das Update angezeigt bekommen, doch die tatsächliche Erzwingung kann vor dem Ende des Countdowns starten. Um dieses Verhalten zu vermeiden, beachten Sie Folgendes:
-- Stellen Sie das Office 365-Update mit einer Frist bereit, die mehr als 60 Minuten vor der aktuellen Uhrzeit geplant ist.
+Wenn ein Client eine Microsoft 365-Updatezuweisung erstmals prüft und für das Update eine in der Vergangenheit liegende Frist geplant war, es sofort geplant oder binnen 30 Minuten geplant ist, kann die Servicequalität für Microsoft 365-Benutzer uneinheitlich sein. Der Client kann beispielsweise ein 30-minütiges Countdown-Dialogfeld für das Update angezeigt bekommen, doch die tatsächliche Erzwingung kann vor dem Ende des Countdowns starten. Um dieses Verhalten zu vermeiden, beachten Sie Folgendes:
+- Stellen Sie das Microsoft 365-Update mit einer Frist bereit, die mehr als 60 Minuten nach dem jeweils aktuellen Zeitpunkt in der Zukunft liegt.
 - Konfigurieren Sie ein Wartungsfenster außerhalb der Geschäftszeiten für die Sammlung oder eine Karenzzeit für die Erzwingung der Bereitstellung.
 
 ### <a name="try-it-out"></a>Probieren Sie es aus!
 Versuchen Sie, die folgenden Aufgaben auszuführen, und senden Sie uns dann **Feedback** über die Registerkarte **Start** des Menübands, um uns zu wissen zu lassen, wie es funktioniert hat:
-- Stellen Sie auf einem Client ein Office 365-Update mit einer Frist bereit, die auf eine Uhrzeit festgelegt ist, die mindestens 60 Minuten vor der aktuellen Uhrzeit liegt. Beobachten Sie das neue Verhalten auf dem Client.
+- Stellen Sie auf einem Client ein Microsoft 365-Update mit einer Frist bereit, die mehr als 60 Minuten nach dem aktuellen Zeitpunkt in der Zukunft liegt. Beobachten Sie das neue Verhalten auf dem Client.
 
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Konfigurieren und Bereitstellen von Windows Defender Application Guard-Richtlinien

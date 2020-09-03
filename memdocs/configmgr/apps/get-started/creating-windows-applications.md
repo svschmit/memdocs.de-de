@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 77fee5931046bc706f965a9a5d738f5a7e2223f4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695187"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819625"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Erstellen von Windows-Anwendungen in Configuration Manager
 
@@ -127,6 +127,11 @@ Ab Version 2002 können Sie komplexe Anwendungen mithilfe von Tasksequenzen üb
 Als Bereitstellungstyp für eine App können Sie nur eine Tasksequenz hinzufügen, die nicht der Bereitstellung des Betriebssystems dient. Tasksequenzen mit hoher Auswirkung, Betriebssystembereitstellung oder -upgrade werden nicht unterstützt. <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 Wenn Sie diesen Bereitstellungstyp zu einer App hinzufügen, konfigurieren Sie die zugehörigen Eigenschaften auf der Seite **Tasksequenz**. Weitere Informationen finden Sie unter [Optionen der **Bereitstellungstyp-** Tasksequenz](../deploy-use/create-applications.md#bkmk_dt-ts).
+
+Ab Version 2006 können Sie die folgenden PowerShell-Cmdlets von Windows verwenden, um einen Bereitstellungstyp für eine Tasksequenz hinzuzufügen und zu konfigurieren:
+
+- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype?view=sccm-ps)
 
 ### <a name="prerequisites-for-a-task-sequence-deployment-type"></a>Voraussetzungen für einen Tasksequenz-Bereitstellungstyp
 

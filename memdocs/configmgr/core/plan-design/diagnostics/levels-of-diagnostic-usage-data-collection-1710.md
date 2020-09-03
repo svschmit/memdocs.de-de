@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 925595b0e810f89bed6d79de1e0cd89450e45e9a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 007897778f49bd3bbc62c9ba31f0b58c90dfd1f3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128745"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994734"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-configuration-manager"></a>Ebenen der Sammlung von Nutzungsdaten zu Diagnosezwecken für Configuration Manager Version 1710
 
@@ -137,7 +137,7 @@ Bei Version 1710 von Configuration Manager umfasst diese Ebene folgende Daten:
 
    - Anzahl eindeutiger Brandings für den Anwendungskatalog
 
-   - Anzahl der über das Office 365-Dashboard erstellten Anwendungen
+   - Anzahl der über das Dashboard erstellten Microsoft 365-Anwendungen
 
    - Anzahl der Pakete nach Typ  
 
@@ -383,7 +383,7 @@ Bei Version 1710 von Configuration Manager umfasst diese Ebene folgende Daten:
 
     - Konfigurationen, die für aktive Windows 10-Wartungspläne verwendet werden  
 
-    - Anzahl der bereitgestellten Office 365-Updates  
+    - Anzahl bereitgestellter Microsoft 365-Updates  
 
     - Anzahl der synchronisierten Microsoft Surface-Treiber
 

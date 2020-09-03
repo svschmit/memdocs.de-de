@@ -10,12 +10,12 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2c125212a13790e196d001f53411633d1e42d4f8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c87ae35fa3e5a76c57342a0d1cad4167b0f14685
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689288"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895963"
 ---
 # <a name="packages-and-programs-in-configuration-manager"></a>Pakete und Programme in Configuration Manager
 
@@ -67,7 +67,9 @@ In Paketen können einige neue Features von Configuration Manager verwendet werd
     - **Quellordner:** Wenn das Paket Quelldateien enthält, klicken Sie auf **Durchsuchen**, um das Dialogfeld **Quellordner festlegen** zu öffnen und anschließend den Quelldateipfad für das Paket anzugeben.  
 
         > [!NOTE]  
-        > Das Computerkonto des Standortservers muss über Lesezugriffsberechtigungen für den angegebenen Quellordner verfügen.  
+        > Das Computerkonto des Standortservers muss über Lesezugriffsberechtigungen für den angegebenen Quellordner verfügen.
+        >
+        > Windows begrenzt den Quellpfad auf maximal 256 Zeichen. Diese Begrenzung gilt für Paketquellen sowie für Anwendungen. Weitere Informationen finden Sie unter [Benennen von Dateien, Pfaden und Namespaces](/windows/win32/fileio/naming-a-file).
 
     - Ab Version 1906: Wenn Sie Inhalte eines Clients vorab zwischenspeichern möchten, geben Sie die **Architektur** und **Sprache** des Pakets an. Weitere Informationen finden Sie unter [Konfigurieren des zwischengespeicherten Inhalts](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
 
@@ -87,7 +89,7 @@ In Paketen können einige neue Features von Configuration Manager verwendet werd
         > [!NOTE]  
         > Programmnamen müssen innerhalb eines Pakets eindeutig sein. Nachdem Sie ein Programm erstellt haben, können Sie seinen Namen nicht mehr ändern.  
 
-    - **Befehlszeile:** Geben Sie die Befehlszeile zum Starten dieses Programms ein, oder wählen Sie **Durchsuchen** aus, um nach dem Speicherort der Datei zu suchen.  
+    - **Befehlszeile**: Geben Sie die Befehlszeile zum Starten dieses Programms ein, oder wählen Sie **Durchsuchen** aus, um nach dem Speicherort der Datei zu suchen.  
 
         Wenn Sie für den Dateinamen keine Erweiterung angeben, versucht Configuration Manager „.com“, „.exe“ und „.bat“ als mögliche Erweiterungen zu verwenden.  
 
@@ -99,36 +101,36 @@ In Paketen können einige neue Features von Configuration Manager verwendet werd
 
         Wird die Datei nicht gefunden, schlägt das Programm fehl.  
 
-    - **Startordner** (optional): Geben Sie hier den Ordner an, aus dem das Programm ausgeführt wird (bis zu 127 Zeichen). Dieser Ordner kann ein absoluter Pfad auf dem Client sein. Es kann sich auch um einen Pfad handeln, der relativ zu dem Verteilungspunktordner angegeben ist, in dem das Paket enthalten ist.
+    - **Startordner** (optional): Geben Sie den Ordner an, von dem aus das Programm ausgeführt wird (maximal 127 Zeichen). Dieser Ordner kann ein absoluter Pfad auf dem Client sein. Es kann sich auch um einen Pfad handeln, der relativ zu dem Verteilungspunktordner angegeben ist, in dem das Paket enthalten ist.
 
-    - **Run**: Geben Sie den Modus an, in dem das Programm auf Clientcomputern ausgeführt wird. Wählen Sie eine der folgenden Optionen aus:  
+    - **Ausführen**: Geben Sie den Modus an, in dem das Programm auf Clientcomputern ausgeführt wird. Wählen Sie eine der folgenden Optionen aus:  
 
-        - **Normal**: Das Programm wird basierend auf den Standardeinstellungen des Systems und Programms im normalen Modus ausgeführt. Dies ist der Standardmodus.  
+        - **Normal**: Das Programm wird basierend auf den Standardeinstellungen des Systems und des Programms im normalen Modus ausgeführt. Dies ist der Standardmodus.  
 
         - **Minimiert**: Das Programm wird auf Clientgeräten minimiert ausgeführt. Benutzer können Installationsaktivitäten möglicherweise im Infobereich oder in der Taskleiste sehen.  
 
         - **Maximiert**: Das Programm wird auf Clientgeräten maximiert ausgeführt. Benutzer sehen alle Installationsaktivitäten.  
 
-        - **Ausgeblendet:** Die Anwendung wird auf Clientgeräten im Hintergrund ausgeführt. Benutzer sehen keine Installationsaktivitäten.  
+        - **Ausgeblendet**: Die Anwendung wird auf Clientgeräten im Hintergrund ausgeführt. Benutzer sehen keine Installationsaktivitäten.  
 
     - **Programm kann ausgeführt werden:** Geben Sie an, ob das Programm nur ausgeführt werden kann, wenn ein Benutzer beim Clientcomputer angemeldet ist, wenn kein Benutzer angemeldet ist, oder ob die Ausführung in beiden Fällen möglich sein soll.  
 
-    - **Ausführmodus:** Geben Sie an, ob das Programm mit den Administratorberechtigungen oder den Berechtigungen des angemeldeten Benutzers ausgeführt werden soll.  
+    - **Ausführmodus**: Geben Sie an, ob das Programm mit den Administratorberechtigungen oder den Berechtigungen des angemeldeten Benutzers ausgeführt werden soll.  
 
-    - **Benutzern gestatten, die Programminstallation anzuzeigen und mit ihr zu interagieren:** Verwenden Sie diese Einstellung, falls verfügbar, um anzugeben, ob der Benutzer mit der Programminstallation interagieren darf. Diese Option ist nur verfügbar, wenn die folgenden Bedingungen zutreffen:
+    - **Benutzern gestatten, die Programminstallation anzuzeigen und mit ihr zu interagieren**: Verwenden Sie diese Einstellung, falls verfügbar, um anzugeben, ob der Benutzer mit der Programminstallation interagieren darf. Diese Option ist nur verfügbar, wenn die folgenden Bedingungen zutreffen:
 
         - Die Einstellung **Programm kann ausgeführt werden** wird für **Nur wenn kein Benutzer angemeldet ist** und **Unabhängig von Benutzeranmeldung** verwendet.
         - Die Einstellung **Ausführmodus** wird für **Mit Administratorrechten ausführen** verwendet.  
 
-    - **Laufwerkmodus:** Geben Sie hier Informationen zur Ausführung des Programms im Netzwerk an. Wählen Sie eine der folgenden Optionen aus:  
+    - **Laufwerkmodus**: Geben Sie hier Informationen zur Ausführung des Programms im Netzwerk an. Wählen Sie eine der folgenden Optionen aus:  
 
-        - **Unterstützt UNC-Namen:** Hiermit wird angegeben, dass das Programm mit einem UNC-Namen (Universal Naming Convention) ausgeführt wird. Dies ist die Standardeinstellung.  
+        - **Unterstützt UNC-Namen**: Geben Sie hier an, dass das Programm mit einem UNC-Namen (Universal Naming Convention) ausgeführt wird. Dies ist die Standardeinstellung.  
 
-        - **Erfordert Laufwerkbuchstaben:** Hiermit wird angegeben, dass das Programm zur vollständigen Kennzeichnung seines Speicherortes einen Laufwerkbuchstaben erfordert. Für diese Einstellung kann von Configuration Manager jeder verfügbare Laufwerkbuchstabe auf dem Client verwendet werden.  
+        - **Erfordert Laufwerkbuchstaben**: Geben Sie hier an, dass das Programm zur vollständigen Kennzeichnung seines Speicherortes einen Laufwerkbuchstaben erfordert. Für diese Einstellung kann von Configuration Manager jeder verfügbare Laufwerkbuchstabe auf dem Client verwendet werden.  
 
-        - **Erfordert einen bestimmten Laufwerkbuchstaben:** : Legen Sie fest, dass das Programm einen bestimmten Laufwerkbuchstaben erfordert, den Sie angeben, um den Speicherort vollständig zu qualifizieren. Beispiel: **Z:** . Wenn der Client bereits den angegebenen Laufwerkbuchstaben verwendet, kann das Programm nicht ausgeführt werden.  
+        - **Erfordert einen bestimmten Laufwerkbuchstaben**: Geben Sie hier an, dass das Programm einen bestimmten von Ihnen angegebenen Laufwerkbuchstaben erfordert, um seinen Speicherort vollständig zu kennzeichnen. Beispiel: **Z:**. Wenn der Client bereits den angegebenen Laufwerkbuchstaben verwendet, kann das Programm nicht ausgeführt werden.  
 
-    - **Verbindung mit dem Verteilungspunkt beim Anmelden wiederherstellen:** Geben Sie an, ob der Client die Verbindung mit dem Verteilungspunkt bei der Anmeldung des Benutzers erneut herstellen soll. Standardmäßig aktiviert der Assistent diese Option nicht.
+    - **Verteilungspunkt beim Anmelden wiederherstellen**: Geben Sie an, ob der Clientcomputer erneut eine Verbindung mit dem Verteilungspunkt herstellt, wenn sich der Benutzer anmeldet. Standardmäßig aktiviert der Assistent diese Option nicht.
 
 3. Geben Sie im **Assistent zum Erstellen von Paketen und Programmen** auf der Seite **Anforderungen** die folgenden Informationen an:  
 
@@ -136,9 +138,9 @@ In Paketen können einige neue Features von Configuration Manager verwendet werd
 
     - **Plattformanforderungen:** Wählen Sie die Option **Dieses Programm kann auf jeder Plattform ausgeführt werden** oder **Dieses Programm kann nur auf angegebenen Clientplattformen ausgeführt werden** aus. Wählen Sie dann die Betriebssystemversionen aus, die Clients zur Installation dieses Pakets und Programms benötigen.  
 
-    - **Geschätzter Speicherplatz:** Geben Sie hier den Speicherplatz auf dem Datenträger an, der zur Ausführung des Programms auf dem Computer erforderlich ist. Die Standardeinstellung lautet **Unbekannt**. Geben Sie bei Bedarf eine ganze Zahl an, die größer oder gleich 0 (Null) ist. Wenn Sie einen Wert festlegen, wählen Sie auch Einheiten für den Wert aus.  
+    - **Geschätzter Speicherplatz**: Geben Sie hier den Speicherplatz an, der zur Ausführung des Programms auf dem Computer erforderlich ist. Die Standardeinstellung lautet **Unbekannt**. Geben Sie bei Bedarf eine ganze Zahl an, die größer oder gleich 0 (Null) ist. Wenn Sie einen Wert festlegen, wählen Sie auch Einheiten für den Wert aus.  
 
-    - **Maximal zulässige Laufzeit (Minuten):** Geben Sie die maximal zulässige Zeit für die Ausführung des Programms auf dem Clientcomputer an. Der Standardwert beträgt **120** Minuten. Verwenden Sie nur ganze Zahlen, die größer als 0 (Null) sind.  
+    - **Maximal zulässige Laufzeit (Minuten)**: Geben Sie an, wie lange die Ausführung des Programms auf dem Clientcomputer voraussichtlich maximal dauert. Der Standardwert beträgt **120** Minuten. Verwenden Sie nur ganze Zahlen, die größer als 0 (Null) sind.  
 
         > [!IMPORTANT]  
         > Wenn Sie in derselben Sammlung Wartungsfenster verwenden, in der Sie dieses Programm bereitstellen, kann ein Konflikt auftreten, wenn die **Maximal zulässige Laufzeit** länger als das geplante Wartungsfenster ist. Wenn Sie die maximal zulässige Laufzeit auf **Unbekannt** festlegen, wird das Programm innerhalb des Wartungsfensters ausgeführt. Nach dem Schließen des Wartungsfensters wird die Ausführung dann je nach Bedarf fortgesetzt. Wenn Sie die maximal zulässige Laufzeit auf einen bestimmten Zeitraum festlegen, der die Länge aller verfügbaren Wartungsfenster überschreitet, wird das Programm nicht vom Client ausgeführt.  
@@ -157,28 +159,28 @@ In Paketen können einige neue Features von Configuration Manager verwendet werd
 
 2. Geben Sie auf der Seite **Programm für Gerät** die folgenden Einstellungen an:  
 
-    - **Name:** Geben Sie einen Namen für das Programm mit maximal 50 Zeichen an.  
+    - **Name**: Geben Sie einen Namen für das Programm an (maximal 50 Zeichen).  
 
         > [!NOTE]  
         > Programmnamen müssen innerhalb eines Pakets eindeutig sein. Nachdem Sie ein Programm erstellt haben, können Sie seinen Namen nicht mehr ändern.  
 
-    - **Kommentar** (optional): Geben Sie einen Kommentar für dieses Geräteprogramm mit maximal 127 Zeichen an.  
+    - **Kommentar** (optional): Geben Sie einen Kommentar für dieses Geräteprogramm an (maximal 127 Zeichen).  
 
-    - **Downloadordner**: Geben Sie den Namen des Ordners auf dem Gerät an, in dem die Paketquelldateien gespeichert werden sollen. Der Standardwert lautet `\Temp\`.  
+    - **Downloadordner**: Geben Sie den Namen des Ordners auf dem Gerät an, in dem die Paketquelldateien gespeichert werden sollen. Standardwert: `\Temp\`.  
 
     - **Befehlszeile:** Geben Sie die Befehlszeile zum Starten dieses Programms ein. Klicken Sie auf **Durchsuchen**, um zum Speicherort der Datei zu navigieren.  
 
-    - **Befehlszeile im Downloadordner ausführen:** Wählen Sie diese Option aus, um das Programm aus dem Downloadordner auszuführen.  
+    - **Befehlszeile im Downloadordner ausführen**: Bei Auswahl dieser Option wird das Programm aus dem Downloadordner ausgeführt.  
 
-    - **Befehlszeile in diesem Ordner ausführen:** Bei Auswahl dieser Option können Sie einen anderen Ordner angeben, von dem aus das Programm ausgeführt wird.  
+    - **Befehlszeile von diesem Ordner ausführen**: Bei Auswahl dieser Option können Sie einen anderen Ordner angeben, von dem aus das Programm ausgeführt wird.  
 
 3. Geben Sie auf der Seite **Anforderungen** die folgenden Einstellungen an:  
 
-    - **Geschätzter Speicherplatz:** Geben Sie die Menge des Speicherplatzes an, der für die Software erforderlich ist. Der Client zeigt diesen Wert Benutzern von mobilen Geräten vor der Installation des Programms an.  
+    - **Geschätzter Speicherplatz**: Geben Sie die Menge des Speicherplatzes an, der für die Software erforderlich ist. Der Client zeigt diesen Wert Benutzern von mobilen Geräten vor der Installation des Programms an.  
 
     - **Programm herunterladen:** Geben Sie Informationen dazu an, wann das Programm vom mobilen Gerät heruntergeladen werden kann. Zur Auswahl stehen die Optionen **So bald wie möglich**, **Nur über ein schnelles Netzwerk**oder **Nur, wenn das Gerät in der Dockingstation ist**.  
 
-    - **Zusätzliche Anforderungen:** Geben Sie ggf. zusätzliche Anforderungen für dieses Programm an. Benutzern werden diese Anforderungen vor dem Installieren der Software angezeigt. Sie können z. B. die Benutzer benachrichtigen, die sie benötigen, um alle anderen Programme schließen, bevor Sie das Programm ausführen.  
+    - **Zusätzliche Anforderungen**: Geben Sie ggf. zusätzliche Anforderungen für dieses Programm an. Benutzern werden diese Anforderungen vor dem Installieren der Software angezeigt. Sie können z. B. die Benutzer benachrichtigen, die sie benötigen, um alle anderen Programme schließen, bevor Sie das Programm ausführen.  
 
 ## <a name="deploy-packages-and-programs"></a>Bereitstellen von Paketen und Programmen  
 
@@ -214,9 +216,9 @@ In Paketen können einige neue Features von Configuration Manager verwendet werd
 
     Welche Optionen auf dieser Seite verfügbar sind, ist davon abhängig, ob die Bereitstellungsaktion auf **Verfügbar** oder **Erforderlich** festgelegt ist.  
 
-    Für Bereitstellungen mit der Einstellung **Erforderlich** konfigurieren Sie dann im Dropdownmenü **Verhalten beim erneuten Ausführen** das Verhalten für das erneute Ausführen des Programms. Wählen Sie aus den folgenden Optionen:  
+    Für Bereitstellungen mit der Einstellung **Erforderlich** konfigurieren Sie dann im Dropdownmenü **Verhalten beim erneuten Ausführen** das Verhalten für das erneute Ausführen des Programms. Sie können zwischen folgenden Optionen wählen:  
 
-    | Verhalten beim erneuten Ausführen | Beschreibung |
+    | Verhalten beim erneuten Ausführen | BESCHREIBUNG |
     |----------------|-------------|
     | **Bereitgestelltes Programm nie erneut ausführen** | Der Client führt das Programm nicht noch mal aus. Dieses Verhalten tritt auch dann auf, wenn das Programm ursprünglich fehlgeschlagen ist oder Programmdateien geändert wurden. |
     | **Programm immer erneut ausführen** | Der Client führt das Programm immer noch mal aus, wenn die Bereitstellung geplant ist. Dieses Verhalten tritt auch dann auf, wenn das Programm bereits erfolgreich ausgeführt wurde. Dies ist bei wiederkehrenden Bereitstellungen beim Aktualisieren des Programms nützlich. |
@@ -225,16 +227,16 @@ In Paketen können einige neue Features von Configuration Manager verwendet werd
 
 7. Geben Sie auf der Seite **Benutzerfreundlichkeit** die folgenden Informationen an:  
 
-    - **Benutzern zuweisungsunabhängige Programmausführung erlauben:** Benutzer können diese Software unabhängig von der geplanten Installationszeit aus dem Softwarecenter installieren.  
+    - **Benutzern zuweisungsunabhängige Programmausführung erlauben**: Benutzer können diese Software unabhängig von der geplanten Installationszeit aus dem Softwarecenter installieren.  
 
-    - **Softwareinstallation**: Ermöglicht die Installation der Software außerhalb konfigurierter Wartungsfenster.  
+    - **Softwareinstallation**: Die Software kann außerhalb konfigurierter Wartungsfenster installiert werden.  
 
-    - **Systemneustart (falls dieser zum Abschluss der Installation erforderlich ist)** : Wenn für den Abschluss der Softwareinstallation ein Geräteneustart erforderlich ist, kann diese Aktion auch außerhalb konfigurierter Wartungsfenster ausgeführt werden.  
+    - **Systemneustart (falls dieser zum Abschluss der Installation erforderlich ist)**: Wenn für den Abschluss der Softwareinstallation ein Geräteneustart erforderlich ist, kann dieser auch außerhalb konfigurierter Wartungsfenster ausgeführt werden.  
 
-    - **Eingebettete Geräte:** Beim Bereitstellen von Paketen und Programmen für Windows Embedded-Geräte mit Schreibfilteraktivierung können Sie angeben, dass die Installationspakete und Programme auf dem temporären Overlay gespeichert und die Änderungen später ausgeführt werden. Alternativ können Sie die Änderungen auch am Installationsstichtag oder während eines Wartungsfensters bereitstellen. Falls die Änderungen am Installationsstichtag oder während eines Wartungsfensters bereitgestellt werden, ist ein Neustart erforderlich, und die Änderungen werden auf dem Gerät beibehalten.  
+    - **Eingebettete Geräte**: Beim Bereitstellen von Paketen und Programmen für Windows Embedded-Geräte mit Schreibfilteraktivierung können Sie angeben, dass die Installationspakete und Programme auf dem temporären Overlay gespeichert und die Änderungen später ausgeführt werden. Alternativ können Sie die Änderungen auch am Installationsstichtag oder während eines Wartungsfensters bereitstellen. Falls die Änderungen am Installationsstichtag oder während eines Wartungsfensters bereitgestellt werden, ist ein Neustart erforderlich, und die Änderungen werden auf dem Gerät beibehalten.  
 
         > [!NOTE]  
-        > Wenn Sie ein Paket oder ein Programm auf einem Windows Embedded-Gerät bereitstellen, stellen Sie sicher, dass das Gerät Mitglied einer Sammlung mit einem konfigurierten Wartungsfenster. Weitere Informationen zur Verwendung von Wartungsfenstern beim Bereitstellen von Paketen und Programmen auf Windows Embedded-Geräten finden Sie unter [Creating Windows Embedded applications (Erstellen von Windows Embedded-Anwendungen)](../get-started/creating-windows-embedded-applications.md).  
+        > Stellen Sie beim Bereitstellen eines Pakets oder Programms auf einem Windows Embedded-Gerät sicher, dass das Gerät Mitglied einer Sammlung ist, für die ein Wartungsfenster konfiguriert wurde. Weitere Informationen zur Verwendung von Wartungsfenstern beim Bereitstellen von Paketen und Programmen auf Windows Embedded-Geräten finden Sie unter [Creating Windows Embedded applications (Erstellen von Windows Embedded-Anwendungen)](../get-started/creating-windows-embedded-applications.md).  
 
 8. Geben Sie auf der Seite **Verteilungspunkte** die folgenden Informationen an:  
 
@@ -254,7 +256,7 @@ Zeigen Sie die Bereitstellung im Arbeitsbereich **Überwachung** im Knoten **Ber
 
 Zum Überwachen von Paket- und Programmbereitstellungen verwenden Sie dieselben Verfahren wie zur Überwachung von Anwendungen. Diese Verfahren werden unter [Überwachen von Anwendungen](monitor-applications-from-the-console.md) beschrieben.  
 
-Pakete und Programme umfassen darüber hinaus mehrere integrierte Berichte, mit denen eine Überwachung der Informationen zum Bereitstellungsstatus von Paketen und Programmen möglich ist. Diesen Berichten sind die Berichtskategorien **Softwareverteilung – Paket- und Programmbereitstellung** und **Softwareverteilung – Status der Paket- und Programmbereitstellung**zugeordnet.  
+Pakete und Programme umfassen darüber hinaus mehrere integrierte Berichte, mit denen eine Überwachung der Informationen zum Bereitstellungsstatus von Paketen und Programmen möglich ist. Diesen Berichten sind die Berichtskategorien **Softwareverteilung – Paket- und Programmbereitstellung** und **Softwareverteilung – Status der Paket- und Programmbereitstellung** zugeordnet.  
 
 Weitere Informationen zum Konfigurieren der Berichterstellung in Configuration Manager finden Sie unter [Einführung in die Berichterstellung in Configuration Manager](../../core/servers/manage/introduction-to-reporting.md).  
 
@@ -290,7 +292,7 @@ Hiermit wird der **Assistent für die Verteilung von Inhalt** geöffnet, mit dem
 Aktualisiert Verteilungspunkte mit dem neuesten Inhalt für das ausgewählte Paket und Programm.
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Skripts](create-deploy-scripts.md)
 

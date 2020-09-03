@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9ea860568d7f094588e628955f128e5b8a3aa154
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692977"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995414"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Funktionen in der Technical Preview 1707 für Configuration Manager
 
@@ -54,9 +54,9 @@ In diesem Artikel werden die Features vorgestellt, die in der Technical Preview-
  -  Task 2              
 -->
 
-## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Client-Peer-Cache-Unterstützung für Express-Installationsdateien für Windows 10 und Office 365
+## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Clientpeercache-Unterstützung für Dateien zur Expressinstallation von Windows 10 und Microsoft 365
 <!-- 1352486 -->
-Ab dieser Version unterstützt Peercache die Verteilung von Express-Installationsdateien mit Inhalt für Windows 10 und von Updatedateien für Office 365. Es sind keine weiteren Konfigurationen erforderlich.
+Ab diesem Release unterstützt Peercache die Verteilung von Inhaltsdateien für die Expressinstallation von Windows 10 sowie die Verteilung von Updatedateien für Microsoft 365. Es sind keine weiteren Konfigurationen erforderlich.
 
 ## <a name="surface-device-dashboard"></a>Gerätedashboard Surface
 <!--1355788-->
@@ -70,7 +70,7 @@ Klicken Sie auf einen Teil des Diagramms der **Surface-Modelle** für eine volls
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Konfigurieren und Bereitstellen von Windows Defender Application Guard-Richtlinien
 <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) ist eine neue Windows-Funktion zum Schutz Ihrer Benutzer, indem nicht vertrauenswürdige Websites in einem sicheren isolierten Container geöffnet werden, auf den andere Teile des Betriebssystems keinen Zugriff haben. In dieser Technical Preview haben wir Unterstützung für diese Funktion mithilfe von Configuration Manager-Konformitätseinstellungen hinzugefügt, die Sie konfigurieren und in einer Sammlung bereitstellen. Diese Funktion wird als Vorschau für die 64-Bit-Version von Windows 10 Fall Creators Update (Codename: RS3) veröffentlicht. Um diese Funktion jetzt zu testen, müssen Sie eine Preview-Version dieses Updates verwenden.
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) ist eine neue Windows-Funktion zum Schutz Ihrer Benutzer, indem nicht vertrauenswürdige Websites in einem sicheren isolierten Container geöffnet werden, auf den andere Teile des Betriebssystems keinen Zugriff haben. In dieser Technical Preview haben wir Unterstützung für diese Funktion mithilfe von Configuration Manager-Konformitätseinstellungen hinzugefügt, die Sie konfigurieren und in einer Sammlung bereitstellen. Dieses Feature wird als Vorschau für die 64-Bit-Version von Windows 10 Fall Creators Update veröffentlicht (Codename: RS3) veröffentlicht. Um diese Funktion jetzt zu testen, müssen Sie eine Preview-Version dieses Updates verwenden.
 
 ### <a name="before-you-start"></a>Vorbereitung
 

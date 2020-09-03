@@ -2,7 +2,7 @@
 title: Neues in Desktop Analytics
 titleSuffix: Configuration Manager
 description: In diesem Artikel erhalten Sie eine Übersicht über die neuen Funktionen in der aktuellen monatlichen Release des Desktop Analytics-Clouddiensts.
-ms.date: 08/19/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: dd188b80375861cd08784d0574e737bfce7f2d92
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614752"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993145"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Neues in Desktop Analytics
 
@@ -39,6 +39,12 @@ Die Konfiguration der **Wichtigkeit** einer App ist für Desktop Analytics unerl
 Für jede App, die Sie mit Configuration Manager bereitstellen, konfiguriert Desktop Analytics diese nun standardmäßig automatisch als wichtig. Mit diesem Verhalten können Sie die Apps in Ihrer Umgebung schneller konfigurieren, um schneller zu einer Produktionsbereitstellung zu gelangen.
 
 Weitere Informationen finden Sie unter [Objekte in Desktop Analytics: Apps](about-assets.md#apps).
+
+<!-- 6049643 -->
+
+### <a name="improved-processing-of-diagnostic-data-during-snapshot-generation"></a>Verbesserte Verarbeitung von Diagnosedaten während der Generierung von Momentaufnahmen
+
+Microsoft hat das Erfassen und Verarbeiten von Windows-Diagnosedaten von Geräten, die für Desktop Analytics registriert sind, verbessert. Diese Verbesserungen erhöhen die Zuverlässigkeit der täglichen Momentaufnahmenerstellung und ebnen den Weg für neue Features, die sich gerade in der Entwicklung befinden. Als Folge dieser Arbeiten hat Microsoft den Zähler für **Geräte haben diese App in den letzten 30 Tagen gestartet** in Bereitstellungsplänen vorübergehend deaktiviert. Weitere Informationen finden Sie unter [Objekte in Desktop Analytics: Apps](about-assets.md#usage).
 
 ## <a name="july-2020"></a>Juli 2020
 
@@ -66,7 +72,7 @@ Im Desktop Analytics-Portal können jetzt Benachrichtigungsbanner angezeigt werd
 
 ### <a name="improvement-to-prerequisites"></a>Verbesserung der Voraussetzungen
 
-Desktop Analytics erfordert nicht länger, dass Sie einen Office 365-Dienst in Ihrem Azure Active Directory-Mandanten (Azure AD) bereitstellen. Die **Office365-Clientadministrator**-App in Azure AD ist jetzt die **Desktop Analytics**-App und ermöglicht Configuration Manager den Abruf von Dienstinformationen und -status.
+Desktop Analytics erfordert nicht länger, dass Sie einen Microsoft 365-Dienst in Ihrem Azure Active Directory-Mandanten (Azure AD) bereitstellen. Die **Office365-Clientadministrator**-App in Azure AD ist jetzt die **Desktop Analytics**-App und ermöglicht Configuration Manager den Abruf von Dienstinformationen und -status.
 
 ## <a name="may-2020"></a>Mai 2020
 

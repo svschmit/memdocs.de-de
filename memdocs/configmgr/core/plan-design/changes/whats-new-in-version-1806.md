@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692637"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995006"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Neuigkeiten in Version 1806 des Current Branch von Configuration Manager
 
@@ -235,7 +235,7 @@ Die folgenden Workloads können jetzt nach der Aktivierung der Co-Verwaltung von
 
 - **Gerätekonfiguration**<!--1357903-->: Mit dieser Workload können Sie Intune zum Bereitstellen von MDM-Richtlinien verwenden, während Sie weiterhin Configuration Manager zum Bereitstellen von Anwendungen verwenden.  
 
-- **Office 365**<!--1357841-->: Geräte installieren keine Office 365-Bereitstellungen über Configuration Manager.  
+- **Office 365**<!--1357841-->: Geräte installieren keine Microsoft 365-Bereitstellungen über Configuration Manager.  
 
 - **Mobile Apps**<!--1357892-->: Alle über Intune verfügbaren Apps sind im Unternehmensportal verfügbar. Apps, die Sie im Configuration Manager bereitstellen, sind im Softwarecenter verfügbar. Bei diesem Feature handelt es sich um ein [vorab veröffentlichtes Feature](../../servers/manage/pre-release-features.md).  
 
@@ -294,9 +294,9 @@ Weitere Informationen finden Sie unter [Erstellen von Windows-Anwendungen](../..
 
 ### <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Integration des Office-Anpassungstools in den Office 365-Installer
 <!--1358149-->
-Das Office-Anpassungstool ist jetzt in das Office 365-Installer in der Configuration Manager-Konsole integriert. Beim Erstellen einer Bereitstellung für Office 365 können Sie die neuesten Verwaltungseinstellungen von Office dynamisch konfigurieren. Microsoft aktualisiert das Office-Anpassungstool, wenn neue Builds von Office 365 veröffentlicht werden. Mit dieser Integration können Sie neue Verwaltungseinstellungen in Office 365 verwenden, sobald diese verfügbar sind. 
+Das Office-Anpassungstool ist jetzt in das Office 365-Installer in der Configuration Manager-Konsole integriert. Beim Erstellen einer Bereitstellung für Microsoft 365 können Sie die neuesten Verwaltungseinstellungen von Office dynamisch konfigurieren. Microsoft aktualisiert das Office-Anpassungstool, wenn neue Builds von Microsoft 365 veröffentlicht werden. Mit dieser Integration können Sie neue Verwaltungseinstellungen in Microsoft 365 verwenden, sobald diese verfügbar sind. 
 
-Weitere Informationen finden Sie unter [Bereitstellen von Office 365-Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Weitere Informationen finden Sie unter [Bereitstellen von Microsoft 365-Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Unterstützung für neue Windows-App-Paketformate

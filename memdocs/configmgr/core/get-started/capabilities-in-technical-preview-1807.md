@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bc848cd1f6365b5a94c915a00517ca0a4abb8e4a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694371"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995312"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funktionen in der Technical Preview-Version 1807 für Configuration Manager 
 
@@ -42,14 +42,14 @@ Steps to workaround, if any.
 
 ## <a name="known-issues"></a>Bekannte Probleme 
 
-### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a> Probleme mit Office 365-Softwareupdates
+### <a name="issues-with-microsoft-365-software-updates"></a><a name="ki_o365"></a> Probleme bei Microsoft 365-Softwareupdates
 <!--521365-->
-Wenn Sie Office 365-Updates mit Technical Preview-Branches in den Versionen 1806 und 1806.2 verwalten, können sie möglicherweise nicht auf Clients installiert werden. 
+Wenn Sie Microsoft 365-Updates mit Technical Preview-Branches in den Versionen 1806 und 1806.2 verwalten, können sie möglicherweise nicht auf Clients installiert werden. 
 
 #### <a name="workaround"></a>Problemumgehung
-- Löschen Sie vorhandene Bereitstellungspakete und Softwareupdategruppen für Office 365.  
+- Löschen Sie vorhandene Bereitstellungspakete und Softwareupdategruppen für Microsoft 365.  
 
-- Ab dem 31. Juli 2018 werden Office 365-Softwareupdates synchronisiert und nur die neuesten Updates bereitgestellt.  
+- Ab dem 31. Juli 2018 werden Microsoft 365-Softwareupdates synchronisiert und nur die neuesten Updates bereitgestellt.  
 
 
 

@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700564"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993334"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Neuerungen in Version 2002 von Configuration Manager (Current Branch)
 
@@ -312,13 +312,13 @@ Configuration Manager erkennt jetzt, ob ein Wartungsstapelupdate (Servicing Stac
 
 Weitere Informationen finden Sie unter [Planen von Softwareupdates](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu).
 
-### <a name="office-365-updates-for-disconnected-software-update-points"></a>Office 365-Updates für nicht verbundene Softwareupdatepunkte
+### <a name="microsoft-365-updates-for-disconnected-software-update-points"></a>Microsoft 365-Updates für nicht verbundene Softwareupdatepunkte
 
 <!-- 4065163 -->
 
-Sie können ein neues Tool verwenden, um Office 365-Updates von einem mit dem Internet verbundenen WSUS-Server in eine nicht verbundene Configuration Manager-Umgebung zu importieren. Bisher konnten Sie beim Exportieren und Importieren von Metadaten für Softwareupdates in nicht verbundenen Umgebungen keine Office 365-Updates bereitstellen. Für Office 365-Updates sind zusätzliche Metadaten erforderlich, die über eine Office-API vom Office-CDN heruntergeladen werden, was in nicht verbundenen Umgebungen nicht möglich ist.
+Sie können ein neues Tool verwenden, um Microsoft 365-Updates von einem mit dem Internet verbundenen WSUS-Server in eine nicht verbundene Configuration Manager-Umgebung zu importieren. Bisher konnten Sie beim Exportieren und Importieren von Metadaten für Softwareupdates in nicht verbundenen Umgebungen keine Microsoft 365-Updates bereitstellen. Für Microsoft 365-Updates sind zusätzliche Metadaten erforderlich, die über eine Office-API vom Office-CDN heruntergeladen werden, was in nicht verbundenen Umgebungen nicht möglich ist.
 
-Weitere Informationen finden Sie unter [Synchronisieren von Office 365-Updates bei einem getrennten Softwareupdatepunkt](../../../sum/get-started/synchronize-office-updates-disconnected.md).
+Weitere Informationen finden Sie unter [Synchronisieren von Microsoft 365-Updates bei einem getrennten Softwareupdatepunkt](../../../sum/get-started/synchronize-office-updates-disconnected.md).
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 

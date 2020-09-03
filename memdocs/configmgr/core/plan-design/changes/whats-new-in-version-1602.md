@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 334397cfa52c90694823107c2144bfbbcbd509ac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698570"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993623"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Neuerungen in Version 1602 von Configuration Manager
 
@@ -98,8 +98,8 @@ Diese Apps werden im Knoten **Anwendungen** der Configuration Manager-Konsole an
 
 ## <a name="software-updates"></a>Softwareupdates  
 
-### <a name="manage-office-365-client-updates"></a>Verwalten von Updates von Office 365-Clients  
- Configuration Manager bietet die Möglichkeit zum Verwalten von Updates von Office 365-Clients mithilfe des Workflows zum Verwalten von Softwareupdates. Weitere Informationen finden Sie unter [Verwalten von Office 365 ProPlus-Updates mit Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
+### <a name="manage-microsoft-365-client-updates"></a>Verwalten von Microsoft 365-Clientupdates  
+ Configuration Manager bietet die Möglichkeit zum Verwalten von Updates von Microsoft 365-Clients mithilfe des Workflows zum Verwalten von Softwareupdates. Weitere Informationen finden Sie unter [Verwalten von Updates für Office 365-Apps mit Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
 
 ## <a name="compliance-settings"></a>Kompatibilitätseinstellungen  
 
@@ -119,7 +119,7 @@ Diese Apps werden im Knoten **Anwendungen** der Configuration Manager-Konsole an
 
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>Einschränken des auf der Integrität von Geräten basierenden Zugriffs  
- Sie können jetzt den Zugriff auf E-Mail- und Office 365-Dienste basierend auf der Integrität von Geräten gemäß der Meldung des Health Attestation-Diensts einschränken. Darüber hinaus werden Geräte, die von Intune verwaltet werden, in die Geräte-Integritätsberichte einbezogen.  
+ Sie können jetzt den Zugriff auf E-Mail- und Microsoft 365-Dienste basierend auf der Integrität von Geräten gemäß der Meldung des Health Attestation-Diensts einschränken. Darüber hinaus werden Geräte, die von Intune verwaltet werden, in die Geräte-Integritätsberichte einbezogen.  
 
  Die Configuration Manager-Konsole verfügt über eine neue Konformitätsregel, mit der Sie angeben können, ob den Geräten basierend auf ihrem Integritätsstatus der Zugriff erlaubt oder nicht erlaubt werden soll. Details zum Health Attestation-Dienst und zur Meldung der Integrität von Geräten in Intune finden Sie unter [Integritätsnachweis für Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 

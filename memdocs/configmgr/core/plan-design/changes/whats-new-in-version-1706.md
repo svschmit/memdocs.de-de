@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2e823aad8fcf69861d21a99f0e65dcf8aaa40dcd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692824"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993385"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Neuerungen in Version 1706 von Configuration Manager
 
@@ -44,9 +44,9 @@ Version 1706 drops support for the following products:
 
 ## <a name="site-infrastructure"></a>Infrastruktur von Standorten
 
-### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Unterstützung für Client-Peer-Cache für Express-Installationsdateien für Windows 10 und Office 365  
+### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Clientpeercache-Unterstützung für Dateien zur Expressinstallation von Windows 10 und Microsoft 365  
 <!-- 1352486 -->
-Ab dieser Version unterstützt Peercache die Verteilung von Express-Installationsdateien mit Inhalt für Windows 10 und von Updatedateien für Office 365. Weiteren Konfigurationen zur Unterstützung der Änderungen sind nicht erforderlich.
+Ab diesem Release unterstützt Peercache die Verteilung von Inhaltsdateien für die Expressinstallation von Windows 10 sowie die Verteilung von Updatedateien für Microsoft 365. Weiteren Konfigurationen zur Unterstützung der Änderungen sind nicht erforderlich.
 
 ### <a name="updates-for-the-data-warehouse"></a>Updates für Data Warehouse
 <!-- 1277922 -->
@@ -227,8 +227,8 @@ Sie können jetzt Zurückstellungsrichtlinien für Funktions- oder Qualitätsupd
 
 Weitere Informationen finden Sie unter [Integration mit Windows Update für Unternehmen in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
-### <a name="improved-user-notifications-for-office-365-updates"></a>Verbesserte Benutzerbenachrichtigungen zu Office 365-Updates
-Verbesserungen sind erfolgt, um die Office-Klick-und-Los-Benutzerumgebung zu nutzen, wenn ein Client ein Office 365-Update installiert. Dazu gehören Popup- und In-App-Benachrichtigungen sowie ein Countdown. Weitere Informationen finden Sie unter [Verhalten bei Neustart und Client-Benachrichtigungen für Office 365-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+### <a name="improved-user-notifications-for-microsoft-365-updates"></a>Verbesserte Benutzerbenachrichtigungen zu Microsoft 365-Updates
+Verbesserungen sind erfolgt, um die Office-Klick-und-Los-Benutzeroberfläche zu nutzen, wenn ein Client ein Microsoft 365-Update installiert. Dazu gehören Popup- und In-App-Benachrichtigungen sowie ein Countdown. Weitere Informationen finden Sie unter [Verhalten bei Neustart und Client-Benachrichtigungen für Microsoft 365-Updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## <a name="reporting"></a>Berichterstellung
 
