@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2ab05abee2889259cc6c92e9081e4d10e2123923
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995533"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193748"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funktionen in der Technical Preview 1609 für Configuration Manager
 
@@ -347,7 +347,7 @@ Das Dashboard zeigt Diagramme für Folgendes an:
 - Office 365-Clientversionen
 - Office 365-Clientsprachen
 - Office 365-Clientkanäle     
-Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Microsoft 365-Apps](https://docs.microsoft.com/deployoffice/overview-update-channels).
+Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Microsoft 365-Apps](/deployoffice/overview-update-channels).
 - Regeln zur automatischen Bereitstellung, die Office 365-Client in der Gruppe verfügbarer Produkte ausgewählt haben.
 
 Über das Dashboard können Sie die folgenden Aktionen ausführen:

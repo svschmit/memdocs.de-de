@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2d431f744ab09aeb938a7961ebf713f71c0f8015
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995193"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193681"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Häufig gestellte Fragen zur Einstellung von „Ready for Modern Desktop“
 
@@ -49,7 +49,7 @@ Für viele Kunden ist es eine Herausforderung, bei Windows 10 und Microsoft 36
 
 Im Verzeichnis *Ready for modern desktop* werden Softwarelösungen aufgeführt, die auf kommerziellen Geräten mit Windows 10 und Microsoft 365 Apps for Enterprise unterstützt und in der Praxis verwendet werden. Das Verzeichnis unterstützt IT-Manager, die die neuesten Versionen von Windows 10 und Microsoft 365 für ihre Bereitstellungen in Erwägung ziehen.
 
-IT-Managern haben den Wunsch geäußert, dass diese Informationen in die von ihnen bereits verwendeten Tools zur Planung der Bereitstellungspläne integriert werden. Mit [Desktop Analytics](https://aka.ms/dadocs) und [Features für die Microsoft 365-Apps-Bereitschaft](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager können Sie Ihre Upgradeprojekte für Windows 10 und Microsoft 365 Apps for Enterprise planen. 
+IT-Managern haben den Wunsch geäußert, dass diese Informationen in die von ihnen bereits verwendeten Tools zur Planung der Bereitstellungspläne integriert werden. Mit [Desktop Analytics](https://aka.ms/dadocs) und [Features für die Microsoft 365-Apps-Bereitschaft](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager können Sie Ihre Upgradeprojekte für Windows 10 und Microsoft 365 Apps for Enterprise planen. 
 
 > [!Note]
 > Ab dem 21. April 2020 wird Office 365 ProPlus in **Microsoft 365 Apps for Enterprise** umbenannt. Weitere Informationen finden Sie unter [Namensänderung für Office 365 ProPlus](/deployoffice/name-change). Möglicherweise finden Sie während des Updates der Konsole noch Verweise auf den alten Namen in der Configuration Manager-Konsole und der unterstützenden Dokumentation.
@@ -122,4 +122,4 @@ Evaluieren Sie die Leistung Ihrer Lösungen mit Integritäts- und Metrikberichte
 
 Stellen Sie sicher, dass Ihre Desktopanwendungen jetzt und in Zukunft mit Windows 10 kompatibel sind. Weitere Informationen finden Sie unter [Anwendungskompatibilität für Entwickler](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Wenn Sie Lösungen für Microsoft 365 Apps for Enterprise entwickeln, lesen Sie die [Best Practices für die Entwicklung von COM-, VSTO-und VBA-Add-Ins in Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Wenn Sie Lösungen für Microsoft 365 Apps for Enterprise entwickeln, lesen Sie die [Best Practices für die Entwicklung von COM-, VSTO-und VBA-Add-Ins in Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

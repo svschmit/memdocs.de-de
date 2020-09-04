@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995482"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193637"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funktionen in der Technical Preview 1511 für Configuration Manager
 
@@ -67,7 +67,7 @@ Wenn Microsoft ein neues Microsoft 365-Desktopclientupdate in Windows Server Up
 
 4. Sie können die Kompatibilität für Microsoft 365-Updates mithilfe der Überwachung und mit Berichten in der Konsole überprüfen.  
 
-   Detaillierte Anweisungen finden Sie unter [Verwalten von Microsoft 365-Clientupdates mit Configuration Manager (Technical Preview)](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Detaillierte Anweisungen finden Sie unter [Verwalten von Microsoft 365-Clientupdates mit Configuration Manager (Technical Preview)](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Unterstützung für SQL Server AlwaysOn für hoch verfügbare Datenbanken  
  Configuration Manager unterstützt jetzt die Verwendung einer SQL Server Always On-Verfügbarkeitsgruppe zum Hosten der Standortdatenbank.  Wenn Sie einen neuen Standort installieren, können Sie das Setup anweisen, anstatt einer normalen Instanz von SQL Server die Verfügbarkeitsgruppe zu verwenden.  

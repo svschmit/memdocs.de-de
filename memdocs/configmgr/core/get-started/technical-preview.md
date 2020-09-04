@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129119"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432573"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview für Configuration Manager
 
@@ -166,11 +166,8 @@ Nachfolgend sind die folgenden Features der Vorgängerversionen des Technical Pr
 
 | Komponente        | Technical Preview-Version |
 |----------------|---------------------------|
-| Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten <!--3601237--> | [Technical Preview 2006](2020/technical-preview-2006.md#bkmk_portal) |
 | Verbesserungen an verfügbaren Apps über CMG <!--7033501--> | [Technical Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Mandantenanfügung: Verbesserungen an Configuration Manager-Aktionen im Microsoft Endpoint Manager Admin Center <!--7518897--> | [Technical Preview 2006](2020/technical-preview-2006.md#bkmk_apps) |
 | Mandantenanfügung: Gerätezeitachse im Admin Center <!--7141381--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Mandantenanfügung: Installieren einer Anwendung über das Admin Center <!--6024389--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_apps) |
 | Mandantenanfügung: CMPivot aus dem Admin Center <!--6024392--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Mandantenanfügung: „Skripts ausführen“ über das Admin Center <!--6234688--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Verbesserungen an Cloudverwaltungsgateway-Cmdlets <!--6978300--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
