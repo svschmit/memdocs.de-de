@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 0b479f770053051e580a68aa810a60c35d745ac5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663258"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996349"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementieren Ihres Microsoft Intune-Plans
 
@@ -37,7 +37,7 @@ Die wichtigsten Anforderungen der eigenständigen Intune-Version lauten wie folg
 
 - Enterprise Mobility + Security (EMS)/Intune-Abonnement
 
-- Office 365-Abonnement (für Office-Apps und über die durch die App-Schutzrichtlinie verwalteten Apps)
+- Microsoft 365-Abonnement (für Office-Apps und über die durch die App-Schutzrichtlinie verwalteten Apps)
 
 - APNs-Zertifikat (zum Aktivieren der Verwaltung der iOS-/iPadOS-Geräteplattform)
 
@@ -60,11 +60,11 @@ Wie oben im Abschnitt „Intune-Anforderungen“ angegeben, benötigen Sie ein E
 
 - Informationen zum [Kauf von Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
-### <a name="task-2-add-office-365-subscription"></a>Aufgabe 2: Hinzufügen eines Office 365-Abonnements
+### <a name="task-2-add-microsoft-365-subscription"></a>Aufgabe 2: Hinzufügen eines Microsoft 365-Abonnements
 
-Dieser Schritt ist optional. Sie benötigen ein Office 365-Abonnement, wenn Sie planen, Exchange Online zu verwenden und mobile Office-Apps mit App-Schutzrichtlinien zu verwalten. Wenn Ihre Organisation nicht über ein Office 365-Abonnement verfügt, wenden Sie sich an Microsoft oder das Microsoft-Konto-Team, und teilen Sie Ihr Interesse am Kauf von Office 365 mit.
+Dieser Schritt ist optional. Sie benötigen ein Microsoft 365-Abonnement, wenn Sie planen, Exchange Online zu verwenden und mobile Office-Apps mit App-Schutzrichtlinien zu verwalten. Wenn Ihre Organisation nicht über ein Microsoft 365-Abonnement verfügt, wenden Sie sich an Microsoft oder das Microsoft-Konto-Team, und teilen Sie Ihr Interesse am Kauf von Microsoft 365 mit.
 
-- Weitere Informationen zu [Office 365-Bezugsquellen](https://products.office.com/business/compare-office-365-for-business-plans).
+- Informationen zum [Kauf von Microsoft 365](https://products.office.com/business/compare-office-365-for-business-plans).
 
 ### <a name="task-3-add-users-groups-in-azure-ad"></a>Aufgabe 3: Hinzufügen von Benutzergruppen in Azure AD
 
@@ -74,9 +74,9 @@ Möglicherweise müssen Sie je nach den Anwendungsszenarios und Anforderungen Ih
 <!---why not send them to the AAD connect topic? Question out to Andre: https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect--->
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Aufgabe 4: Zuweisen von Benutzerlizenzen für Intune und Office 365
+### <a name="task-4-assign-intune-and-microsoft-365-user-licenses"></a>Aufgabe 4: Zuweisen von Benutzerlizenzen für Intune und Microsoft 365
 
-Allen Zielbenutzern für das EMS/Intune- und Office 365-Rollout muss eine Lizenz zugewiesen sein. Sie können im Office 365 Admin Center EMS-/Intune- und Office 365-Lizenzen zuweisen.
+Allen Zielbenutzern für das EMS/Intune- und Microsoft 365-Rollout muss eine Lizenz zugewiesen sein. Sie können im Microsoft 365 Admin Center EMS-/Intune- und Microsoft 365-Lizenzen zuweisen.
 
 - Weitere Informationen zum [Zuweisen von Intune-Lizenzen](licenses-assign.md).
 

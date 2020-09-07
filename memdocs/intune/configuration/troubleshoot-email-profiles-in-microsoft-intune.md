@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 3d011d6111ede4bb5879e53e771d20b792bf00d3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565715"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995125"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Häufig auftretende Probleme und Lösungen für E-Mail-Profile in Microsoft Intune
 
@@ -51,7 +51,7 @@ In diesen Szenarios entscheiden Sie, ob es wichtiger ist, Gerätegruppen zu verw
 
 ## <a name="device-already-has-an-email-profile-installed"></a>Auf dem Gerät ist bereits ein E-Mail-Profil installiert
 
-Wenn Benutzer vor der Registrierung bei Intune oder Office 365 MDM ein E-Mail-Profil erstellen, funktioniert das von Intune bereitgestellte E-Mail-Profil möglicherweise nicht wie erwartet:
+Wenn Benutzer vor der Registrierung bei Intune oder Microsoft 365 MDM ein E-Mail-Profil erstellen, funktioniert das von Intune bereitgestellte E-Mail-Profil möglicherweise nicht wie erwartet:
 
 - **iOS/iPadOS**: Intune erkennt basierend auf dem Hostnamen und der E-Mail-Adresse ein vorhandenes doppeltes E-Mail-Profil. Das vom Benutzer erstellte E-Mail-Profil blockiert die Bereitstellung des von Intune erstellten Profils. Dieses Problem tritt häufig auf, da iOS-/iPadOS-Benutzer in der Regel zuerst ein E-Mail-Profil erstellen und dann die Registrierung vornehmen. In der Unternehmensportal-App wird der Benutzer als nicht konform aufgeführt, und der Benutzer wird möglicherweise aufgefordert, das E-Mail-Profil zu entfernen.
 

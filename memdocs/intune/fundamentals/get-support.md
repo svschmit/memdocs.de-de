@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 2a476be4fb8c9d40150648e72d3203df564893dd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820662"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994343"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Anfordern von Support für Microsoft Intune
 
 Microsoft bietet für Microsoft Intune Unterstützung bei allgemeinen technischen Fragen, der Vertriebsvorbereitung sowie bei Fragen zu Rechnungen und Abonnements. Der Support ist für kostenpflichtige Abonnements und für Testabonnements online und telefonisch verfügbar. Der technische Onlinesupport ist nur auf Englisch und Japanisch verfügbar. Der telefonische Support und der Onlinesupport zu Abrechnungen sind in zusätzlichen Sprachen verfügbar.
 
-Als Intune-Administrator können Sie die Option **Hilfe und Support** verwenden, um ein Onlinesupportticket für Intune über das Azure-Portal einzureichen. Damit Sie einen Supportfall erstellen und verwalten können, muss Ihr Konto eine Azure Active Directory-Rolle (Azure AD) besitzen, die die *Aktion* **microsoft.office365.supportTickets** enthält. Weitere Informationen zu Azure AD-Rollen und -Berechtigungen, die zum Erstellen eines Supporttickets erforderlich sind, finden Sie unter [Berechtigungen der Administratorrolle in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
+Als Intune-Administrator können Sie die Option **Hilfe und Support** verwenden, um ein Onlinesupportticket für Intune über das Azure-Portal einzureichen. Damit Sie einen Supportfall erstellen und verwalten können, muss Ihr Konto eine Azure Active Directory-Rolle (Azure AD) besitzen, die die *Aktion* **microsoft.office365.supportTickets** enthält. Weitere Informationen zu Azure AD-Rollen und -Berechtigungen, die zum Erstellen eines Supporttickets erforderlich sind, finden Sie unter [Berechtigungen der Administratorrolle in Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
 
 >[!IMPORTANT]
 > Wenden Sie sich für den technischen Support für Drittanbieterprodukte, die mit Intune eingesetzt werden können (z.B. Saaswedo, Cisco oder Lookout), zuerst an den Lieferanten des Produkts. Bevor Sie beim Intune-Support eine Anforderung stellen, sollten Sie sicherstellen, dass Sie das andere Produkt richtig konfiguriert haben.
@@ -50,7 +50,7 @@ Wenn Sie einen neu erstellten Mandanten für Intune verwenden, kann *Hilfe und S
 
 Die Fehlerdetails enthalten eine *Sitzungs-ID*, *Erweiterungsdetails* usw.
 
-Dieses Problem tritt auf, wenn Sie Ihr neues Mandantenkonto nicht über das **M365 Admin Center** auf https://admin.microsoft.com oder das **Office 365-Portal** unter https://portal.office.com authentifiziert haben. Wählen Sie zur Lösung des Problems den Link für das *M365 Admin Center* in der Meldung aus, oder rufen Sie https://portal.office.com auf, und melden Sie sich an. Nach der Authentifizierung bei einer der beiden Websites ist *Hilfe und Support* für Intune verfügbar.
+Dieses Problem tritt auf, wenn Sie Ihr neues Mandantenkonto nicht über das **Microsoft 365 Admin Center** auf https://admin.microsoft.com oder das **Office 365-Portal** unter https://portal.office.com authentifiziert haben. Wählen Sie zur Lösung des Problems den Link für das *Microsoft 365 Admin Center* in der Meldung aus, oder rufen Sie https://portal.office.com auf, und melden Sie sich an. Nach der Authentifizierung bei einer der beiden Websites ist *Hilfe und Support* für Intune verfügbar.
 
 **Zugriff auf Hilfe und Support:**
 

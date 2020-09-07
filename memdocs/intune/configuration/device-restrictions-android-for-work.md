@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819608"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194105"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -296,7 +296,7 @@ End of comment -->
 - **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie an, wie häufig ein falsches Kennwort eingegeben werden kann, bevor das Gerät zurückgesetzt wird (zwischen 4 und 11). Wenn `0` (null) festgelegt wird, wird möglicherweise die Funktion zum Zurücksetzen des Geräts deaktiviert. Wenn kein Wert angegeben ist, wird diese Einstellung von Intune nicht geändert oder aktualisiert.
 
   > [!NOTE]
-  > Auf vollständig verwalteten Geräten, dedizierten Geräten und unternehmenseigenen Arbeitsprofilgeräten wird keine Aufforderung zum Festlegen eines Kennworts angezeigt. Die Einstellungen werden erzwungen und das Kennwort muss manuell festgelegt werden. Durch die Durchsetzung dieser Richtlinie wird ein Fehler gemeldet, bis Sie das Kennwort festlegen, das Ihren Anforderungen entspricht.
+  > Auf vollständig verwalteten Geräten, dedizierten Geräten und unternehmenseigenen Arbeitsprofilgeräten wird keine Aufforderung zum Festlegen eines Kennworts angezeigt. Die Einstellungen sind erforderlich, Benutzer werden jedoch möglicherweise nicht benachrichtigt. Benutzer müssen das Kennwort manuell festlegen. Die Richtlinie wird so lange als fehlgeschlagen gemeldet, bis der Benutzer ein Kennwort festlegt, das Ihren Anforderungen entspricht.
 
 ### <a name="power-settings"></a>Energieeinstellungen
 

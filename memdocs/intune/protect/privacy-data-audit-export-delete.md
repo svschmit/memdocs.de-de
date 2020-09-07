@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084814"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995992"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Überwachen, Exportieren und Löschen von personenbezogenen Daten in Intune
 
@@ -60,20 +60,20 @@ Es gibt drei Möglichkeiten, um personenbezogene Daten aus der Intune-Verwaltung
 
 ### <a name="delete-a-user-from-intune"></a>Löschen eines Benutzers aus Intune
 
-Um die personenbezogenen Daten eines Endbenutzers aus Intune zu löschen, muss ein Administrator [den Benutzer aus Azure Active Directory (AAD) löschen](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Wenn der Benutzer dauerhaft aus AAD gelöscht wird, empfängt Intune den Löschbefehl von AAD und beginnt automatisch damit, alle personenbezogenen Daten des Benutzers aus dem Intune-Dienst zu entfernen. Die Benutzerinformationen werden innerhalb von 30 Tagen nach dem Löschvorgang aus dem Intune-Dienst gelöscht.
+Um die personenbezogenen Daten eines Endbenutzers aus Intune zu löschen, muss ein Administrator [den Benutzer aus Azure Active Directory (AAD) löschen](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Wenn der Benutzer dauerhaft aus AAD gelöscht wird, empfängt Intune den Löschbefehl von AAD und beginnt automatisch damit, alle personenbezogenen Daten des Benutzers aus dem Intune-Dienst zu entfernen. Die Benutzerinformationen werden innerhalb von 30 Tagen nach dem Löschvorgang aus dem Intune-Dienst gelöscht.
 
 ### <a name="reset-device-to-factory-settings"></a>Zurücksetzen des Geräts auf die Werkseinstellung
 Beim Zurücksetzen auf Werkseinstellungen werden alle geschäftlichen und personenbezogenen Daten und Einstellungen auf die Werkseinstellungen zurückgesetzt. Dies ist nützlich, um ein Gerät für den nächsten Mitarbeiter bereitzustellen. Benutzerdateien, von Benutzern installierte Anwendungen und vom Standard abweichende Einstellungen werden entfernt, und diese Daten werden innerhalb von 30 Tagen nach dem Löschvorgang aus dem Intune-Dienst gelöscht.
 
 ### <a name="user-self-removal-from-intune-management"></a>Selbstständige Entfernung des Benutzers aus der Intune-Verwaltung
-Benutzer können ihre persönlichen [Android-, Apple- oder Windows-Geräte](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) aus der Intune-Verwaltung ohne Unterstützung durch den Administrator entfernen.   
+Benutzer können ihre persönlichen [Android-, Apple- oder Windows-Geräte](../user-help/unenroll-your-device-from-intune-android.md) aus der Intune-Verwaltung ohne Unterstützung durch den Administrator entfernen.   
 
 ### <a name="retire"></a>Außerkraftsetzen
 Mit der Aktion **Abkoppeln** werden in Intune bereitgestellte Daten wie Unternehmensanwendungen, Daten zu von Intune verwalteten Apps, Richtlinieneinstellungen und E-Mail-Profile entfernt. Dabei bleiben die personenbezogenen Daten des Benutzers auf dem Gerät erhalten.
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Löschen eines Mandanten aus Microsoft Intune
 
-Wenn ein Intune-Mandantenkunde sein Intune-Konto löscht, werden alle Mandantendaten innerhalb von 180 Tagen, nachdem der Benutzer sein Intune-Konto geschlossen hat, gelöscht. Wenn der AAD-Mandant anderen Microsoft-Unternehmensabonnements (Azure, Office 365) zugeordnet ist, werden nur die Intune-Kundendaten gelöscht. Die AAD-Mandantenressource wird für die Verwendung durch die anderen Abonnements beibehalten. Wenn es sich beim Intune-Konto um das einzige Abonnement handelt, das dem AAD-Mandanten zugeordnet ist, wird der Mandant gelöscht, und alle Ressourcen und Kundendaten werden ebenfalls gelöscht.
+Wenn ein Intune-Mandantenkunde sein Intune-Konto löscht, werden alle Mandantendaten innerhalb von 180 Tagen, nachdem der Benutzer sein Intune-Konto geschlossen hat, gelöscht. Wenn der Azure AD-Mandant anderen Microsoft-Unternehmensabonnements (Azure, Microsoft 365) zugeordnet ist, werden nur die Intune-Kundendaten gelöscht. Die Azure AD-Mandantenressource wird für die Verwendung durch die anderen Abonnements beibehalten. Wenn es sich beim Intune-Konto um das einzige Abonnement handelt, das dem Azure AD-Mandanten zugeordnet ist, wird der Mandant gelöscht, und alle Ressourcen und Kundendaten werden ebenfalls gelöscht.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

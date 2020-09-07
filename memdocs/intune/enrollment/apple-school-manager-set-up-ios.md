@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e919ac336532e8b641908b02c0e282ae9e1711e7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 431dc3fec49609c4f163c9d7f471b60565611bc3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093970"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992836"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Einrichten der iOS-/iPadOS-Geräteregistrierung mit Apple School Manager
 
@@ -38,7 +38,7 @@ Die Registrierung von Apple School Manager kann nicht mit der [automatischen Ger
 **Voraussetzungen**
 - [Pushzertifikat für Apple-MDM (Mobile Device Management, Verwaltung mobiler Geräte)](apple-mdm-push-certificate-get.md)
 - [MDM-Autorität](../fundamentals/mdm-authority-set.md)
-- Bei ADFS ist für Benutzeraffinität [Endpunkt WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints) erforderlich. [Weitere Informationen](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)
+- Bei ADFS ist für Benutzeraffinität [Endpunkt WS-Trust 1.3 Username/Mixed](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) erforderlich. [Weitere Informationen](/powershell/module/adfs/get-adfsendpoint?view=win10-ps)
 - Geräte, die über das Programm [Apple School Management](http://school.apple.com) erworben wurden
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>Abrufen eines Apple-Tokens und Zuweisen von Geräten
@@ -83,12 +83,12 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Registrierungsprogrammtoken).
 2. Wählen Sie ein Token aus, und wählen Sie dann **Profile** und **Profil erstellen** aus.
 
-3. Geben Sie zu administrativen Zwecken unter **Profil erstellen** einen **Namen** und eine **Beschreibung** für das Profil ein. Benutzer können diese Informationen nicht sehen. Sie können das Feld **Name** zum Erstellen einer dynamischen Gruppe in Azure Active Directory verwenden. Verwenden Sie den Profilnamen, um den Parameter „enrollmentProfileName“ zu definieren, um Geräte mit diesem Registrierungsprofil zuzuweisen. Erfahren Sie mehr über [dynamische Gruppen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+3. Geben Sie zu administrativen Zwecken unter **Profil erstellen** einen **Namen** und eine **Beschreibung** für das Profil ein. Benutzer können diese Informationen nicht sehen. Sie können das Feld **Name** zum Erstellen einer dynamischen Gruppe in Azure Active Directory verwenden. Verwenden Sie den Profilnamen, um den Parameter „enrollmentProfileName“ zu definieren, um Geräte mit diesem Registrierungsprofil zuzuweisen. Erfahren Sie mehr über [dynamische Gruppen in Azure Active Directory](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
     ![Profilname und Beschreibung](./media/apple-school-manager-set-up-ios/image05.png)
 
 4. Wählen Sie unter **Benutzeraffinität** aus, ob sich Geräte mit diesem Profil mit oder ohne einen zugewiesenen Benutzer registrieren müssen.
-    - **Mit Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die Benutzern gehören und das Unternehmensportal verwenden sollen, um Dienste wie z. B. die Installation von Apps nutzen zu können. Mit dieser Option können Benutzer ihre Geräte auch über das Unternehmensportal authentifizieren. Bei ADFS ist für Benutzeraffinität [Endpunkt WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints) erforderlich. [Weitere Informationen](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)   Der Apple School Manager-Modus „Gemeinsam genutztes iPad“ erfordert, dass Benutzer sich ohne Affinität zwischen Benutzer und Gerät registrieren.
+    - **Mit Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die Benutzern gehören und das Unternehmensportal verwenden sollen, um Dienste wie z. B. die Installation von Apps nutzen zu können. Mit dieser Option können Benutzer ihre Geräte auch über das Unternehmensportal authentifizieren. Bei ADFS ist für Benutzeraffinität [Endpunkt WS-Trust 1.3 Username/Mixed](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) erforderlich. [Weitere Informationen](/powershell/module/adfs/get-adfsendpoint?view=win10-ps)   Der Apple School Manager-Modus „Gemeinsam genutztes iPad“ erfordert, dass Benutzer sich ohne Affinität zwischen Benutzer und Gerät registrieren.
 
     - **Ohne Benutzeraffinität registrieren**: Wählen Sie diese Option für Geräte aus, die keinem einzelnen Benutzer zugeordnet sind, z. B. ein gemeinsam genutztes Gerät. Verwenden Sie diese Option für Geräte, die Aufgaben ohne Zugriff auf lokale Benutzerdaten ausführen. Apps wie die Unternehmensportal-App funktionieren nicht.
 
@@ -156,7 +156,7 @@ Da Sie nun Ihr Token installiert haben, können Sie ein Registrierungsprofil fü
 
 1. Klicken Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) auf **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens** (Geräte > iOS/iPadOS > iOS/iPadOS-Registrierung > Registrierungsprogrammtoken).
 2. Wählen Sie ein Apple School Manager-Token und dann **School Data Sync** aus.
-3. Wählen Sie unter **School Data Sync** die Option **Zulassen** aus. Mit dieser Einstellung kann Intune in Office 365 eine Verbindung mit SDS herstellen.
+3. Wählen Sie unter **School Data Sync** die Option **Zulassen** aus. Mit dieser Einstellung kann Intune in Microsoft 365 eine Verbindung mit SDS herstellen.
 4. Um eine Verbindung zwischen Apple School Manager und Azure AD zu ermöglichen, klicken Sie auf **Microsoft-Synchronisierung von Schul-/Unidaten einrichten**. Erfahren Sie mehr über [das Einrichten von School Data Sync](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1).
 5. Klicken Sie auf **Speichern** > **OK**.
 

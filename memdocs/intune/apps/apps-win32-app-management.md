@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2c8d007ba2fccb92fd90de4da64945155678041d
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84271006"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281199"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Eigenständiges Intune – Win32-App-Verwaltung
 
@@ -240,7 +240,7 @@ Die folgenden Schritte enthaltenen Informationen zum Hinzufügen einer Windows-A
                 ![Screenshot des Erkennungsregelbereichs – Ordnervorkommen](./media/apps-win32-app-management/apps-win32-app-04.png)
         
         3. **Registrierung** – Überprüfen Sie anhand von Wert, Zeichenfolge, Ganzzahl oder Version.
-            - **Schlüsselpfad** – Der vollständige Pfad des Registrierungseintrags, der den zu erkennenden Wert enthält.
+            - **Schlüsselpfad** – Der vollständige Pfad des Registrierungseintrags, der den zu erkennenden Wert enthält. Eine gültige Syntax ist HKEY_LOCAL_MACHINE\Software\WinRAR oder HKLM\Software\WinRAR.
             - **Wertname** – Gibt den Namen des Registrierungswerts an. Wenn dieser Wert leer ist, erfolgt die Erkennung über den Schlüssel. Der (Standard-) Wert eines Schlüssels wird als Erkennungswert verwendet, wenn die Erkennungsmethode eine andere ist als das Vorhandensein von Dateien oder Ordnern.
             - **Erkennungsmethode** – Wählen Sie die Art der Erkennungsmethode aus, mit der das Vorhandensein der App überprüft wird.
             - **Einer 32-Bit-App auf 64-Bit-Clients zugeordnet** – Wählen Sie **Ja** aus, um die 32-Bit-Registrierung auf 64-Bit-Clients zu durchsuchen. Wählen Sie **Nein** (Standard) aus, um die 64-Bit-Registrierung auf 64-Bit-Clients zu durchsuchen. 32-Bit-Clients durchsuchen immer die 32-Bit-Registrierung.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 572519d8ddf3558f1573f26b84fd6217108a24b3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 267bf556447308ee0c81c5ad9c9bb8153df9532d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987999"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994105"
 ---
 # <a name="configure-a-custom-domain-name"></a>Konfigurieren eines benutzerdefinierten Domänennamens
 
@@ -32,10 +32,10 @@ Wenn sich Ihre Organisation für einen cloudbasierten Microsoft-Dienst wie Intun
 
 Bevor Sie Benutzerkonten erstellen oder Ihr lokales Active Directory-Verzeichnis synchronisieren, wird dringend empfohlen, dass Sie entscheiden, ob nur die .onmicrosoft.com-Domäne verwendet oder benutzerdefinierte Domänennamen hinzugefügt werden sollen. Richten Sie eine benutzerdefinierte Domäne ein, bevor Sie zur Vereinfachung der Benutzerverwaltung Benutzer hinzufügen. Durch Einrichten einer benutzerdefinierten Domäne können sich Benutzer mit den Anmeldeinformationen anmelden, die sie für den Zugriff auf andere Domänenressourcen verwenden.
 
-Wenn Sie einen cloudbasierten Dienst von Microsoft abonnieren, wird Ihre Instanz dieses Diensts zu einem Microsoft [Azure AD-Mandanten](https://technet.microsoft.com/library/jj573650.aspx#BKMK_WhatIsAnAzureADTenant). Azure AD stellt Identitäts- und Verzeichnisdienste für Ihren cloudbasierten Dienst bereit. Die Aufgaben beim Konfigurieren von Intune zum Verwenden des benutzerdefinierten Domänennamens Ihres Unternehmens sind identisch mit denen bei anderen Azure AD-Mandanten. Daher können Sie sich an den Informationen und Verfahren unter [Hinzufügen Ihrer Domäne](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/) orientieren.
+Wenn Sie einen cloudbasierten Dienst von Microsoft abonnieren, wird Ihre Instanz dieses Diensts zu einem Microsoft [Azure AD-Mandanten](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant). Azure AD stellt Identitäts- und Verzeichnisdienste für Ihren cloudbasierten Dienst bereit. Die Aufgaben beim Konfigurieren von Intune zum Verwenden des benutzerdefinierten Domänennamens Ihres Unternehmens sind identisch mit denen bei anderen Azure AD-Mandanten. Daher können Sie sich an den Informationen und Verfahren unter [Hinzufügen Ihrer Domäne](/azure/active-directory/fundamentals/add-custom-domain) orientieren.
 
 > [!TIP]
-> Weitere Informationen zu benutzerdefinierten Domänen finden Sie unter [Konzeptionelle Übersicht über benutzerdefinierte Domänennamen in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain-concepts/).
+> Weitere Informationen zu benutzerdefinierten Domänen finden Sie unter [Konzeptionelle Übersicht über benutzerdefinierte Domänennamen in Azure Active Directory](/azure/active-directory/users-groups-roles/domains-manage).
 
 Sie können den Namen der Anfangsdomäne „onmicrosoft.com“ nicht umbenennen oder entfernen. Sie können in Intune verwendete benutzerdefinierte Domänennamen hinzufügen, überprüfen oder entfernen, damit Ihre Geschäftsidentität eindeutig bleibt.
 
@@ -52,8 +52,8 @@ Sie können den Namen der Anfangsdomäne „onmicrosoft.com“ nicht umbenennen 
     - **Register.com-Benutzer**: Befolgen Sie die [ausführliche Anleitung](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify), um den TXT-Eintrag zu erstellen.
 5. [Möglicherweise müssen Sie zusätzliche DNS-Einträge für Intune-Registrierungen erstellen](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).
 
-Die Schritte zum Hinzufügen und Überprüfen einer benutzerdefinierten Domäne können auch [in Azure Active Directory ausgeführt werden](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
+Die Schritte zum Hinzufügen und Überprüfen einer benutzerdefinierten Domäne können auch [in Azure Active Directory ausgeführt werden](/azure/active-directory/fundamentals/add-custom-domain).
 
-[Weitere Informationen über Ihre erste onmicrosoft.com-Domäne in Office 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A)
+[Weitere Informationen über Ihre erste onmicrosoft.com-Domäne in Microsoft 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A)
 
 Weitere Informationen über das [Vereinfachen der Windows-Registrierung ohne Azure AD Premium](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium) erhalten Sie, indem Sie einen DNS CNAME-Eintrag erstellen, der Registrierungen an Intune-Server weiterleitet.

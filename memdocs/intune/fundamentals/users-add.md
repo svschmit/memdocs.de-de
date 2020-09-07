@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10b3e8d25f32277b3aa96e5e008d1f6611b7e46c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 56d632da8480e0beedac7f086928638633dbe49c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988155"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996315"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Hinzufügen von Benutzern und Gewähren von Administratorrechten für Intune
 
@@ -36,7 +36,7 @@ Sie können Benutzer manuell über das [Microsoft 365 Admin Center](https://admi
 ### <a name="add-intune-users-in-the-microsoft-365-admin-center"></a>Hinzufügen von Intune-Benutzern im Microsoft 365 Admin Center
 
 1. Melden Sie sich mit einem globalen Administratorkonto oder einem Konto für Benutzerverwaltungsadministratoren beim [Microsoft 365 Admin Center](https://admin.microsoft.com) an.
-2. Wählen Sie im Office 365-Menü **Administrator** aus.
+2. Wählen Sie im Microsoft 365-Menü **Administrator** aus.
 3. Wählen Sie im Admin Center **Benutzer hinzufügen** aus.
 
    ![Screenshot des Bereichs „Richtlinie hinzufügen“](./media/users-add/office-add-user.png)
@@ -76,10 +76,10 @@ Sie können Benutzer manuell über das [Microsoft 365 Admin Center](https://admi
 
 Nachdem Sie Ihrem Intune-Abonnement Benutzer hinzugefügt haben, sollten Sie einigen Benutzern Administratorrechte gewähren.  Befolgen Sie diese Schritte, um Administratorberechtigungen zu gewähren:
 
-### <a name="give-admin-permissions-in-office-365"></a>Gewähren von Administratorberechtigungen in Office 365
+### <a name="give-admin-permissions-in-microsoft-365"></a>Gewähren von Administratorberechtigungen in Microsoft 365
 
 1. Melden Sie sich mit einem globalen Administratorkonto beim [Microsoft 365 Admin Center](https://admin.microsoft.com) an.
-2. Wählen Sie im Office 365-Menü **Administrator** aus.
+2. Wählen Sie im Microsoft 365-Menü **Administrator** aus.
 3. Wählen Sie im Admin Center **Aktive Benutzer** und anschließend den Benutzer aus, dem Sie Administratorberechtigungen zuweisen möchten.
 
 4. Wählen Sie in der Spalte **Rollen** die Option **Bearbeiten** aus.
@@ -102,11 +102,11 @@ Nachdem Sie Ihrem Intune-Abonnement Benutzer hinzugefügt haben, sollten Sie ein
 
 Weisen Sie Benutzern mindestens eine Administratorberechtigung zu. Diese Berechtigungen definieren den administrativen Bereich für Benutzer sowie die Aufgaben, die sie verwalten können. Administratorberechtigungen sind den verschiedenen Microsoft-Clouddiensten gemeinsam, und einige Berechtigungen werden möglicherweise nicht von allen Diensten unterstützt. Das Azure-Portal und das Microsoft 365 Admin Center führen jeweils eingeschränkte Administratorrollen auf, die von Intune nicht verwendet werden. Intune-Administratorberechtigungen enthalten folgende Optionen:
 
-- **Globaler Administrator**: (Office 365 und Intune) Besitzt Zugriff auf alle Verwaltungsfunktionen in Intune. Standardmäßig wird die Person, die sich für Intune angemeldet hat, zum globalen Administrator. Globale Administratoren sind die einzigen Administratoren, die andere Administratorrollen zuweisen können. Sie können in Ihrer Organisation über mehrere globale Administratoren verfügen. Als bewährte Methode wird empfohlen, nur wenigen Personen in Ihrem Unternehmen diese Funktion zuzuweisen, um Risiken für Ihr Unternehmen so gering wie möglich zu halten.
-- **Kennwortadministrator**: (Office 365 und Intune) Setzt Kennwörter zurück, verwaltet Serviceanfragen und überwacht den Dienststatus. Die Rechte von Kennwortadministratoren beschränken sich auf das Zurücksetzen von Kennwörtern für Benutzer.
-- **Dienstadministrator**: (Office 365 und Intune) Öffnet Supportanfragen an Microsoft und überwacht das Servicedashboard und das Nachrichtencenter. Sie verfügen über „Nur-Anzeige“-Berechtigungen, können allerdings Supporttickets öffnen und lesen.
-- **Rechnungsadministrator**: (Office 365 und Intune) Tätigt Erwerbe, verwaltet Abonnements, verwaltet Supporttickets und überwacht den Dienststatus.
-- **Benutzerdministrator**: (Office 365 und Intune) Setzt Kennwörter zurück, überwacht den Dienststatus, kann Benutzerkonten hinzufügen oder löschen und verwaltet Serviceanfragen. Der Benutzerverwaltungsadministrator kann keine globalen Administratoren löschen, keine andere Administratorrollen erstellen und keine Kennwörter für andere Administratoren zurücksetzen.
+- **Globaler Administrator**: (Microsoft 365 und Intune) Besitzt Zugriff auf alle Verwaltungsfunktionen in Intune. Standardmäßig wird die Person, die sich für Intune angemeldet hat, zum globalen Administrator. Globale Administratoren sind die einzigen Administratoren, die andere Administratorrollen zuweisen können. Sie können in Ihrer Organisation über mehrere globale Administratoren verfügen. Als bewährte Methode wird empfohlen, nur wenigen Personen in Ihrem Unternehmen diese Funktion zuzuweisen, um Risiken für Ihr Unternehmen so gering wie möglich zu halten.
+- **Kennwortadministrator**: (Microsoft 365 und Intune) Setzt Kennwörter zurück, verwaltet Serviceanfragen und überwacht den Dienststatus. Die Rechte von Kennwortadministratoren beschränken sich auf das Zurücksetzen von Kennwörtern für Benutzer.
+- **Dienstadministrator**: (Microsoft 365 und Intune) Öffnet Supportanfragen an Microsoft und überwacht das Servicedashboard und das Nachrichtencenter. Sie verfügen über „Nur-Anzeige“-Berechtigungen, können allerdings Supporttickets öffnen und lesen.
+- **Rechnungsadministrator**: (Microsoft 365 und Intune) Tätigt Erwerbe, verwaltet Abonnements, verwaltet Supporttickets und überwacht den Dienststatus.
+- **Benutzeradministrator**: (Microsoft 365 und Intune) Setzt Kennwörter zurück, überwacht den Dienststatus, kann Benutzerkonten hinzufügen oder löschen und verwaltet Serviceanfragen. Der Benutzerverwaltungsadministrator kann keine globalen Administratoren löschen, keine andere Administratorrollen erstellen und keine Kennwörter für andere Administratoren zurücksetzen.
 - **Intune-Dienstadministrator**: Alle globalen Intune-Administratorberechtigungen außer die Berechtigung zum Erstellen von Administratoren mit den Optionen von **Verzeichnisrolle**.
 
 Das Konto, mit dem Sie Ihr Microsoft Intune-Abonnement erstellen, ist ein globaler Administrator. Als Best Practice empfiehlt es sich, für die täglichen Verwaltungsaufgaben keinen globalen Administrator zu verwenden. Ein Administrator benötigt zwar keine Intune-Lizenz für den Zugriff auf Intune im Azure-Portal, doch zum Ausführen bestimmter Verwaltungsaufgaben, z.B. zum Einrichten des Exchange-Diensts Connector, ist eine Intune-Lizenz erforderlich.
@@ -115,11 +115,11 @@ Für den Zugriff auf das Microsoft 365 Admin Center muss für Ihr Konto **Sign-i
 
 ## <a name="sync-active-directory-and-add-users-to-intune"></a>Synchronisieren von Active Directory und Hinzufügen von Benutzern zu Intune
 
-Sie können die Verzeichnissynchronisierung so konfigurieren, dass Benutzerkonten aus Ihrem lokalen Active Directory in Microsoft Azure Active Directory (Azure AD) importiert werden. Dies schließt Intune Benutzer ein. Wenn Ihr lokaler Active Directory-Dienst mit all Ihren Azure Active Directory-basierten Diensten verbunden ist, gestaltet sich die Verwaltung der Benutzeridentität viel einfacher. Sie können auch Features für die einmalige Anmeldung konfigurieren, damit die Benutzer mit der Art der Authentifizierung vertraut sind und diese problemlos verläuft. Durch das Verknüpfen eines [Azure AD-Mandanten](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) mit mehreren Diensten sind die zuvor synchronisierten Benutzerkonten für alle cloudbasierten Dienste verfügbar.
+Sie können die Verzeichnissynchronisierung so konfigurieren, dass Benutzerkonten aus Ihrem lokalen Active Directory in Microsoft Azure Active Directory (Azure AD) importiert werden. Dies schließt Intune Benutzer ein. Wenn Ihr lokaler Active Directory-Dienst mit all Ihren Azure Active Directory-basierten Diensten verbunden ist, gestaltet sich die Verwaltung der Benutzeridentität viel einfacher. Sie können auch Features für die einmalige Anmeldung konfigurieren, damit die Benutzer mit der Art der Authentifizierung vertraut sind und diese problemlos verläuft. Durch das Verknüpfen eines [Azure AD-Mandanten](/azure/active-directory/hybrid/whatis-hybrid-identity) mit mehreren Diensten sind die zuvor synchronisierten Benutzerkonten für alle cloudbasierten Dienste verfügbar.
 
 ### <a name="how-to-sync-on-premises-users-with-azure-ad"></a>Synchronisieren lokaler Benutzer mit Azure AD
 
 Das einzige Tool, das Sie zur Synchronisierung der Benutzerkonten mit Azure AD benötigen, ist der [Azure AD Connect-Assistent](https://www.microsoft.com/download/details.aspx?id=47594). Der Azure AD Connect-Assistent stellt eine Anleitung zum Herstellen der Verbindung zwischen Ihrer lokalen Identitätsinfrastruktur und der Cloud bereit. Wählen Sie Ihre Topologie und Bedürfnisse aus (einzelne oder mehrere Verzeichnisse, Kennworthashsynchronisierung, Pass-Through-Authentifizierung oder Verbund). Der Assistent konfiguriert alle Komponenten, die für die erfolgreiche Verbindung nötig sind, und stellt sie bereit. Hierzu gehören: Synchronisierungsdienste, Active Directory-Verbunddienste (AD FS) und das Azure AD PowerShell-Modul.
 
 > [!TIP]
-> Azure AD Connect umfasst Funktionen, die zuvor als Dirsync und Azure AD Sync veröffentlicht wurden. Erfahren Sie mehr über die [Verzeichnisintegration](https://technet.microsoft.com/library/jj573653.aspx). Informationen zur Synchronisierung von Benutzerkonten aus einem lokalen Verzeichnis mit Azure AD finden Sie unter [Ähnlichkeiten zwischen Active Directory und Azure AD](https://technet.microsoft.com/library/dn518177.aspx).
+> Azure AD Connect umfasst Funktionen, die zuvor als Dirsync und Azure AD Sync veröffentlicht wurden. Erfahren Sie mehr über die [Verzeichnisintegration](/previous-versions/azure/azure-services/jj573653(v=azure.100)). Informationen zur Synchronisierung von Benutzerkonten aus einem lokalen Verzeichnis mit Azure AD finden Sie unter [Ähnlichkeiten zwischen Active Directory und Azure AD](/previous-versions/azure/azure-services/dn518177(v=azure.100)).

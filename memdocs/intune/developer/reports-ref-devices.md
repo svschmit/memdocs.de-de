@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 852d119d7b80df28436f5a8e25fe39782e1e5cc0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165429"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996383"
 ---
 # <a name="reference-for-devices-entities"></a>Referenz für Geräteentitäten
 
@@ -65,7 +65,7 @@ Die Entität **deviceTypes** stellt den Gerätetyp dar, auf den von anderen Data
 | 10 |IPod |iPod-Gerät |
 | 11 |Android |Mit dem Geräteadministrator verwaltetes Android-Gerät |
 | 12 |ISocConsumer |iSoc Consumer-Gerät |
-| 14 |MacMDM |Mac OS X-Gerät, das mit dem integrierten MDM-Agent verwaltet wird |
+| 14 |MacMDM |OS X-Gerät, das mit dem integrierten MDM-Agent verwaltet wird |
 | 15 |HoloLens |HoloLens-Gerät |
 | 16 |SurfaceHub |Surface Hub-Gerät |
 | 17 |AndroidForWork |Android-Gerät, das mit dem Android-Profilbesitzer verwaltet wird |
@@ -170,7 +170,7 @@ Die Entität **enrollmentType** gibt an, ob ein Gerät einem Unternehmen oder ei
 | ownerTypeName |Stellt den Besitzertypen der Geräte dar:  <br>Corporate (Unternehmen): Das Gerät gehört einem Unternehmen. <br>Personal (Privat): Das Gerät befindet sich im Privatbesitz (BYOD).  <br>Unknown (Unbekannt): Es liegen keine Informationen zu diesem Gerät vor. |Corporate Personal Unknown |
 
 > [!Note]  
-> Für `ownerTypeName` in AzureAD müssen Sie beim Erstellen dynamischer Gruppen für Geräte den Filterwert `deviceOwnership` als `Company` festlegen. Weitere Informationen finden Sie unter [Regeln für Geräte](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Für `ownerTypeName` in AzureAD müssen Sie beim Erstellen dynamischer Gruppen für Geräte den Filterwert `deviceOwnership` als `Company` festlegen. Weitere Informationen finden Sie unter [Regeln für Geräte](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -266,7 +266,7 @@ In der Entität **devices** werden alle für die Verwaltung registrierten Gerät
 | windowsOsEdition           | Windows-Betriebssystemedition                                                                                                                             |
 | ethernetMacAddress           | Der eindeutige Netzwerkbezeichner dieses Geräts.                                                                                                                                        |
 | model                      | Das Gerätemodell.                                                                                                                                                                      |
-| office365Version           | Die auf dem Gerät installierte Version von Office 365.                                                                                                                             |
+| office365Version           | Die auf dem Gerät installierte Version von Microsoft 365.                                                                                                                             |
 
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
@@ -288,4 +288,3 @@ Die Entität **devicePropertyHistory** hat die gleichen Eigenschaften wie die Ge
 | deviceCategoryKey          | Schlüssel des Gerätekategorieattributs für dieses Gerät. 
 | physicalMemoryInBytes      | Der physische Speicher in Bytes.                                                                                                                                                          |
 | totalStorageSpaceInBytes   | Gesamte Speicherkapazität in Bytes.                                                                                                                                                                |
-

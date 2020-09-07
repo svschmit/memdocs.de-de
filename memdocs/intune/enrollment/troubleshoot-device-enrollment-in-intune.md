@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 5c0aadb15587822ca2500ec477b6264ce4e96ed2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865821"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993521"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Behandlung von Problemen bei der Geräteregistrierung in Microsoft Intune
 
@@ -47,8 +47,8 @@ Sie können auch sicherstellen, dass Uhrzeit und Datum auf dem Gerät des Benutz
 
 Ihre Benutzer verwalteter Geräte können Registrierungs- und Diagnoseprotokolle erfassen, die Sie überprüfen können. Benutzeranleitungen zur Erfassung der Protokolle finden Sie unter:
 
-- [Senden von Android-Registrierungsfehlern an Ihren IT-Administrator](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
-- [Senden von iOS-/iPadOS-Fehlern an Ihren IT-Administrator](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+- [Senden von Android-Registrierungsfehlern an Ihren IT-Administrator](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [Senden von iOS-/iPadOS-Fehlern an Ihren IT-Administrator](../user-help/send-errors-to-your-it-admin-ios.md)
 
 
 ## <a name="general-enrollment-issues"></a>Allgemeine Probleme bei der Registrierung
@@ -121,12 +121,12 @@ Entfernen Sie alte Geräteeinträge, um zu verhindern, dass das Limit erreicht w
 **Problem:** Dieses Problem kann auftreten, wenn Sie eine zweite verifizierte Domäne zu Ihrer ADFS-Instanz hinzufügen. Benutzer mit dem Benutzerprinzipalnamen-Suffix (UPN) der zweiten Domäne können sich möglicherweise nicht bei Portalen anmelden oder Geräte registrieren.
 
 
-<strong>Lösung:</strong> Kunden von Microsoft Office 365 müssen für jedes Suffix eine separate Instanz des AD FS 2.0-Verbunddienst bereitstellen, wenn Folgendes zutrifft:
+<strong>Lösung:</strong> Kunden von Microsoft 365 müssen für jedes Suffix eine separate Instanz des AD FS 2.0-Verbunddiensts bereitstellen, wenn Folgendes zutrifft:
 - Sie verwenden das einmalige Anmelden (SSO) über AD FS 2.0 und
 - verfügen über mehrere Domänen der obersten Ebene für UPN-Suffixe des Benutzers in ihrer Organisation (z. B. @contoso.com oder @fabrikam.com).
 
 
-Ein [Rollup für AD FS 2.0](https://support.microsoft.com/kb/2607496) funktioniert in Verbindung mit der Option <strong>SupportMultipleDomain</strong>, um den AD FS-Server zur Unterstützung dieses Szenarios zu aktivieren, ohne dass zusätzliche AD FS 2.0-Server erforderlich sind. Weitere Informationen finden Sie in diesem [Blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+Ein [Rollup für AD FS 2.0](https://support.microsoft.com/kb/2607496) funktioniert in Verbindung mit der Option <strong>SupportMultipleDomain</strong>, um den AD FS-Server zur Unterstützung dieses Szenarios zu aktivieren, ohne dass zusätzliche AD FS 2.0-Server erforderlich sind. Weitere Informationen finden Sie in diesem [Blog](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
 
 
 ## <a name="android-issues"></a>Android-Probleme
@@ -215,7 +215,7 @@ Der Benutzer kann das fehlende Zertifikat abrufen, indem er die Anweisungen unte
 
 Nach der Eingabe ihrer Unternehmensanmeldeinformationen und der Weiterleitung zur Verbundanmeldung wird den Benutzern möglicherweise noch der Fehler für das fehlende Zertifikat angezeigt. In diesem Fall kann der Fehler bedeuten, dass auf Ihrem AD FS-Server (Active Directory-Verbunddienste) ein Zwischenzertifikat fehlt.
 
-Der Zertifikatsfehler tritt auf, weil Android-Geräte Zwischenzertifikate benötigen, die in eine [SSL-Server-Hello-Nachricht](https://technet.microsoft.com/library/cc783349.aspx) eingebunden werden müssen. Derzeit sendet eine standardmäßige AD FS-Serverinstallation oder eine AD FS-Proxyserverinstallation mit WAP nur das SSL-Zertifikat des AD FS-Diensts in der SSL-Server-Hello-Antwort auf eine SSL-Client-Hello-Nachricht.
+Der Zertifikatsfehler tritt auf, weil Android-Geräte Zwischenzertifikate benötigen, die in eine [SSL-Server-Hello-Nachricht](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)) eingebunden werden müssen. Derzeit sendet eine standardmäßige AD FS-Serverinstallation oder eine AD FS-Proxyserverinstallation mit WAP nur das SSL-Zertifikat des AD FS-Diensts in der SSL-Server-Hello-Antwort auf eine SSL-Client-Hello-Nachricht.
 
 Um das Problem zu beheben, importieren Sie die Zertifikate wie folgt in die persönlichen Zertifikate des Computers auf dem AD FS-Server oder den Proxys:
 
@@ -294,9 +294,9 @@ Für die Registrierung von ADE-Geräten mit Benutzeraffinität muss das Anforder
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 ```
 
-Weitere Informationen finden Sie in der [Get-AdfsEndpoint-Dokumentation](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+Weitere Informationen finden Sie in der [Get-AdfsEndpoint-Dokumentation](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
-Weitere Informationen finden Sie unter [Best practices for securing Active Directory Federation Services (Bewährte Methoden zum Schützen von Active Directory-Verbunddiensten)](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Hilfe bei der Entscheidung, ob WS-Trust 1.3 Username/Mixed bei Ihrem Identitätsverbundanbieter aktiviert ist, erhalten Sie wie folgt:
+Weitere Informationen finden Sie unter [Best practices for securing Active Directory Federation Services (Bewährte Methoden zum Schützen von Active Directory-Verbunddiensten)](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). Hilfe bei der Entscheidung, ob WS-Trust 1.3 Username/Mixed bei Ihrem Identitätsverbundanbieter aktiviert ist, erhalten Sie wie folgt:
 - Wenden Sie sich an den Microsoft-Support, wenn Sie ADFS verwenden.
 - Wenden Sie sich an den Anbieter Ihrer Drittanbieteridentität.
 

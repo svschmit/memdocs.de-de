@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24bdaf71f90e3da84fb26c4b69d9b81f43413c69
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: feabc9f889d0bce83c96df92f8154784e31b84e4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079058"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996706"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Tutorial: Schützen des Exchange Online-E-Mail-Diensts auf verwalteten Geräten
 
@@ -104,11 +104,11 @@ Jetzt erstellen wir eine Richtlinie für bedingten Zugriff, die erzwingt, dass a
 
 1. Klicken Sie in Intune auf **Endpunktsicherheit** > **Bedingter Zugriff** > **Neue Richtlinie**.
 
-2. Geben Sie unter **Name** Folgendes ein: **Testrichtlinie für Office 365-E-Mail**.
+2. Geben Sie unter **Name** **Testrichtlinie für Microsoft 365-E-Mail** ein.
 
 3. Klicken Sie unter **Zuweisungen** auf **Benutzer und Gruppen**. Klicken Sie auf der Registerkarte **Einschließen** auf **Alle Benutzer** und dann auf **Fertig**.
 
-4. Wählen Sie unter **Zuweisungen** die Option **Cloud-Apps oder -aktionen** aus. Da wir den Office 365 Exchange Online-E-Mail-Dienst schützen möchten, wählen wir diese in den folgenden Schritten aus:
+4. Wählen Sie unter **Zuweisungen** die Option **Cloud-Apps oder -aktionen** aus. Da wir den Microsoft 365 Exchange Online-E-Mail-Dienst schützen möchten, wählen wir diesen in den folgenden Schritten aus:
 
    1. Klicken Sie auf der Registerkarte **Einschließen** auf **Apps auswählen**.
 
@@ -162,7 +162,7 @@ Jetzt erstellen wir eine Richtlinie für bedingten Zugriff, die erzwingt, dass a
 
 ## <a name="try-it-out"></a>Probieren Sie es aus
 
-Mit den von Ihnen erstellten Richtlinien müssen iOS-Geräte, die sich beim Office 365-E-Mail-Dienst anmelden, bei Intune registrieren und die mobile Outlook-App für iOS/iPadOS verwenden. Um dieses Szenario auf iOS-Geräten zu testen, melden Sie sich bei Exchange Online mit den Anmeldeinformationen für einen Benutzer auf Ihrem Testmandanten an. Sie werden aufgefordert, das Gerät zu registrieren und die mobile Outlook-App zu installieren.
+Mit den von Ihnen erstellten Richtlinien müssen iOS-Geräte, die sich beim Microsoft 365-E-Mail-Dienst anmelden, bei Intune registrieren und die mobile Outlook-App für iOS/iPadOS verwenden. Um dieses Szenario auf iOS-Geräten zu testen, melden Sie sich bei Exchange Online mit den Anmeldeinformationen für einen Benutzer auf Ihrem Testmandanten an. Sie werden aufgefordert, das Gerät zu registrieren und die mobile Outlook-App zu installieren.
 
 1. Um dies auf einem iPhone zu testen, navigieren Sie zu **Einstellungen** > **Kennwörter & Konten** > **Konto hinzufügen** > **Exchange**.
 
@@ -189,4 +189,4 @@ Wenn die Testrichtlinien nicht mehr benötigt werden, können Sie diese entferne
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie Richtlinien erstellt, die für den Zugriff auf den Exchange Online-E-Mail-Dienst von iOS-Geräten verlangen, sich bei Intune zu registrieren und die Outlook-App zu verwenden. Weitere Informationen zur Verwendung von Intune mit bedingtem Zugriff zum Schutz anderer Apps und Dienste (z.B. Exchange ActiveSync-Clients für Office 365 Exchange Online) finden Sie unter [Was ist bedingter Zugriff?](conditional-access.md).
+In diesem Tutorial haben Sie Richtlinien erstellt, die für den Zugriff auf den Exchange Online-E-Mail-Dienst von iOS-Geräten verlangen, sich bei Intune zu registrieren und die Outlook-App zu verwenden. Weitere Informationen zur Verwendung von Intune mit bedingtem Zugriff zum Schutz anderer Apps und Dienste (z. B. Exchange ActiveSync-Clients für Microsoft 365 Exchange Online) finden Sie im Artikel [Erfahren Sie mehr zum bedingten Zugriff und Intune](conditional-access.md).

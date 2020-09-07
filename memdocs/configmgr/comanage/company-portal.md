@@ -2,7 +2,7 @@
 title: Apps im Unternehmensportal
 titleSuffix: Configuration Manager
 description: Stellen Sie für gemeinsam verwaltete Geräte eine einheitliche Benutzererfahrung zur Nutzung der Unternehmensportal-App bereit.
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 535b91b82e024431e4221824b4623b6ffc17b286
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700878"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432556"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten
 
@@ -50,7 +50,9 @@ Weitere Informationen finden Sie in den folgenden Artikeln:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Configuration Manager Current Branch, ab Version 2006
+- Configuration Manager Current Branch, ab Version 2006 <sup>([Siehe FAQ](#bkmk_ver-prereq))</sup>
+
+- Unternehmensportal-App, Version 11.0.8980.0 oder höher
 
 - Windows 10 ab Version 1803:
 
@@ -116,6 +118,10 @@ Wenn Sie die Clienteinstellung für das Unternehmensportal ändern, startet ein 
 Um Hilfe bei Installationsproblemen mit Configuration Manager-Apps zu erhalten, besuchen Sie im Unternehmensportal den Abschnitt **Hilfe und Support**. Wenn Sie die Option **Hilfe anfordern** wählen, können Sie als Teil der Anforderung Configuration Manager-Protokolldateien senden.
 
 ## <a name="frequently-asked-questions-faq"></a>Häufig gestellte Fragen (FAQ)
+
+### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> Ich verwende Configuration Manager, Version 2002. Warum zeigt das neue Unternehmensportal Configuration Manager-Apps an?
+
+Unternehmensportal, Version 11.0.8980.0 oder höher, zeigt von Configuration Manager bereitgestellte Anwendungen für alle gemeinsam verwalteten Clients an, die es verwenden. Configuration Manager, Version 2006, ist die Voraussetzung, da es die Clienteinstellung zur Steuerung von Benachrichtigungen hinzufügt. Wenn Sie das Unternehmensportal auf einem gemeinsam verwalteten Gerät einer früheren Version installieren oder die Clienteinstellung nicht konfigurieren, werden den Benutzern Benachrichtigungen von beiden Portalen angezeigt. Dies ist für Benutzer u. U. verwirrend.
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>Unterstützt das Unternehmensportal Anwendungen, die als Softwareupdates über Configuration Manager bereitgestellt werden?
 

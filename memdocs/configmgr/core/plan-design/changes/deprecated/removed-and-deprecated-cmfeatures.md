@@ -2,7 +2,7 @@
 title: Veraltete Features
 titleSuffix: Configuration Manager
 description: Hier finden Sie Informationen zu den Features, die von Configuration Manager nicht mehr unterstützt werden.
-ms.date: 08/11/2020
+ms.date: 08/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: aca9dc5c2ff2d88155ab19656f391cf87a4e977f
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694253"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068088"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Entfernte und veraltete Features für Configuration Manager
 
@@ -31,6 +31,7 @@ Die folgenden Features sind veraltet. Sie können sie derzeit noch verwenden, ab
 
 |Komponente|Erste Ankündigung als veraltetes Feature|Nicht mehr &nbsp;unterstützt ab|
 |-----------|---|--------------|
+|Die geografische Ansicht im Knoten **Standorthierarchie** des Arbeitsbereichs **Überwachung** in der Configuration Manager-Konsole.<!--8116777-->|August 2020|TBD|
 |Die Implementierung für die Freigabe von Inhalten aus Azure hat sich geändert. Verwenden Sie ein inhaltsfähiges Cloud-Management-Gateway. Zukünftig können Sie keinen herkömmlichen Cloudverteilungspunkt mehr erstellen.|Februar 2019|Noch festzulegen<sup>[Hinweis 1](#bkmk_note1)</sup>|
 |Klassische Dienstbereitstellung in Azure für Cloud Management Gateway und den Cloudverteilungspunkt. Weitere Informationen finden Sie unter [Planen des Cloudverwaltungsgateways](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|November 2018|Noch festzulegen<sup>[Hinweis 1](#bkmk_note1)</sup>|
 

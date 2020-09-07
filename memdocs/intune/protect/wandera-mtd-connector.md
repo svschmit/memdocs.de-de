@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1655c7b18262d0515308a00c617f06d917d976de
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: 92c0911ff9250fb1b2832df4b7e269f192ee8cda
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972177"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057520"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Wandera Mobile Threat Defense-Connector mit Intune  
 
@@ -38,7 +38,7 @@ Die mobile App von Wandera lässt sich mithilfe von Microsoft Intune nahtlos ins
 
 Die Konformitätsrichtlinie in Intune enthält eine Regel für MTD, die auf der Risikobewertung von Wandera basiert. Wenn diese Regel aktiviert ist, bewertet Intune die Gerätekompatibilität mit der von Ihnen aktivierten Richtlinie.
 
-Für Geräte, die nicht konform sind, kann der Zugriff auf Ressourcen wie Office 365 blockiert werden. Benutzer auf blockierten Geräten erhalten Anleitungen von der Wandera-App, wie sie das Problem beheben und den Zugriff zurückzuerlangen können.
+Für nicht konforme Geräte kann der Zugriff auf Ressourcen wie Microsoft 365 blockiert werden. Benutzer auf blockierten Geräten erhalten Anleitungen von der Wandera-App, wie sie das Problem beheben und den Zugriff zurückzuerlangen können.
 
 Wandera aktualisiert Intune mit der neuesten Bedrohungsstufe der einzelnen Geräte (Sicher, Niedrig, Mittel oder Hoch), wenn sich diese ändert. Diese Bedrohungsstufe wird kontinuierlich von der Wandera-Sicherheitscloud neu berechnet und basiert auf dem Gerätestatus, der Netzwerkaktivität und zahlreichen Mobile Threat Intelligence-Feeds für verschiedene Bedrohungskategorien.
 

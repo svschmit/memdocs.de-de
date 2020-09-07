@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28bf8edb1b7c80e2362e9b145f38bd383dffa625
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: a5460e9c01da8a9a227caf5a03186a37f2c427bb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820577"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194087"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Hinzufügen von Einstellungen für iOS-, iPadOS- oder macOS-Gerätefeatures in Intune
 
@@ -153,7 +153,11 @@ Diese Einstellungen konfigurieren eine App-Erweiterung, die das einmalige Anmeld
 
 In Intune verwenden Sie diese Einstellungen, um eine von Microsoft, Apple, Ihrer Organisation oder Ihrem Identitätsanbieter erstellte App-Erweiterung für das einmalige Anmelden zu konfigurieren. Die App-Erweiterung für einmaliges Anmelden verarbeitet die Authentifizierung für Ihre Benutzer. Diese Einstellungen konfigurieren SSO-App-Erweiterungen für Umleitungen und Anmeldeinformationen.
 
-- Die Erweiterung für Umleitungen ist für moderne Authentifizierungsprotokolle wie OpenID Connect, OAuth und SAML2 konzipiert. Sie können zwischen der Microsoft Azure AD-SSO-Erweiterung ([Microsoft Enterprise SSO-Plug-In](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) und einer allgemeinen Erweiterung für Umleitungen wählen.
+- Die Erweiterung für Umleitungen ist für moderne Authentifizierungsprotokolle wie OpenID Connect, OAuth und SAML2 konzipiert. Sie können zwischen der Microsoft Azure AD-SSO-Erweiterung ([Microsoft Enterprise SSO-Plug-In](/azure/active-directory/develop/apple-sso-plugin)) und einer allgemeinen Erweiterung für Umleitungen wählen.
+
+  > [!IMPORTANT]
+  > Die Microsoft Azure AD SSO-Erweiterung unter macOS befindet sich derzeit noch in der Entwicklung. Sie wird zwar auf der Benutzeroberfläche von Intune angezeigt, funktioniert aber nicht erwartungsgemäß. Verwenden Sie daher unter macOS nicht **Microsoft Azure AD** für den SSO-App-Erweiterungstyp.
+
 - Die Erweiterung für Anmeldeinformationen ist für Abfrage- und Antwort-Authentifizierungsabläufe konzipiert. Sie können zwischen einer von Apple bereitgestellten Kerberos-spezifischen und einer generischen Erweiterung für Anmeldeinformationen auswählen.
 
 Eine Liste der Einstellungen, die Sie in Intune konfigurieren können, finden Sie unter [App-Erweiterung für einmaliges Anmelden](ios-device-features-settings.md#single-sign-on-app-extension) (iOS/iPadOS) und [App-Erweiterung für einmaliges Anmelden](macos-device-features-settings.md#single-sign-on-app-extension) (macOS).

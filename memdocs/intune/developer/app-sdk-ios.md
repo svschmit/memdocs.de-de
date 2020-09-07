@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db975d15ec0c93bde8991872f6847364786aa429
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912407"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281182"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK für iOS –Entwicklerhandbuch
 
@@ -657,7 +657,7 @@ Intune-Administratoren können Konfigurationsdaten über das Intune Azure-Portal
 
 * Rufen Sie den entsprechenden Selektor auf dem Objekt `IntuneMAMAppConfig` auf. Wenn es sich zum Beispiel beim Schlüssel Ihrer Anwendung um eine Zeichenfolge handeln, könnten Sie `stringValueForKey` oder `allStringsForKey` verwenden. Eine ausführliche Beschreibung der Rückgabewerte und Fehlerbedingungen finden Sie in `IntuneMAMAppConfig.h`.
 
-Weitere Informationen zu den Funktionen der Graph-API finden Sie in der zugehörigen [Referenz](https://developer.microsoft.com/graph/docs/concepts/overview).
+Weitere Informationen zu den Funktionen der Graph-API finden Sie in der zugehörigen [Referenz](/graph/overview).
 
 Weitere Informationen zum Erstellen einer MAM-Zielkonfigurationsrichtlinie für Apps in iOS finden Sie im Abschnitt zur MAM-Zielkonfiguration für Apps unter [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete iOS-/iPadOS-Geräte](../apps/app-configuration-policies-use-ios.md).
 
@@ -753,14 +753,30 @@ Standardmäßig werden Apps als Einzelidentitäts-Apps betrachtet. Das SDK legt 
     Beachten Sie, dass diese Methode aus einem Hintergrundthread aufgerufen wird. Die App sollte keinen Wert zurückgeben, bevor alle Daten für den Benutzer entfernt wurden (mit Ausnahme der Dateien, wenn die App „FALSE“ zurückgibt).
 
 ## <a name="siri-intents"></a>Siri Intents
+
 Wenn Ihre App mit Siri Intents integrierbar ist, sollten Sie in `IntuneMAMPolicy.h` die Hinweise zu `areSiriIntentsAllowed` lesen. Dort finden Sie eine Anleitung für die Unterstützung dieses Szenarios. 
     
 ## <a name="notifications"></a>Benachrichtigungen
+
 Wenn Ihre App Benachrichtigungen erhält, sollten Sie in `IntuneMAMPolicy.h` die Hinweise zu `notificationPolicy` lesen. Dort finden Sie eine Anleitung für die Unterstützung dieses Szenarios.  Es wird empfohlen, dass Apps sich für `IntuneMAMPolicyDidChangeNotification` registrieren (in `IntuneMAMPolicyManager.h` beschrieben) und diesen Wert über den Schlüsselbund an `UNNotificationServiceExtension` kommunizieren.
-## <a name="displaying-web-content-within-application"></a>Anzeigen von Webinhalten innerhalb der Anwendung
-Wenn Ihre Anwendung Websites innerhalb einer Webansicht anzeigen kann und die angezeigten Webseiten zu beliebigen Websites weiterleiten können, ist die Anwendung zuständig dafür, die aktuelle Identität festzulegen, sodass es in der Webansicht nicht zu einem Leck der verwalteten Daten kommen kann. Beispiele sind Webseiten des Typs „Feature vorschlagen“ oder „Feedback“, die über direkte oder indirekte Links zu einer Suchmaschine verfügen.
-Anwendungen mit mehreren Identitäten sollten IntuneMAMPolicyManager setUIPolicyIdentity aufrufen und dabei vor dem Anzeigen der Webansicht die leere Zeichenfolge übergeben. Nachdem die Webansicht geschlossen wurde, muss die Anwendung setUIPolicyIdentity aufrufen und die aktuelle Identität übergeben.
-Anwendungen mit einer Identität sollten IntuneMAMPolicyManager setCurrentThreadIdentity aufrufen und dabei vor dem Anzeigen der Webansicht die leere Zeichenfolge übergeben. Nachdem die Webansicht geschlossen wurde, muss die Anwendung setCurrentThreadIdentity aufrufen und „nil“ übergeben.
+
+## <a name="displaying-web-content-within-an-application"></a>Anzeigen von Webinhalten innerhalb einer Anwendung
+
+Wenn Ihre Anwendung Websites in einer Webansicht anzeigen kann, müssen Sie ggf. Logik hinzufügen, um abhängig vom jeweiligen Szenario Datenverluste zu vermeiden.
+
+### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>Webansichten, in denen nur nicht unternehmensbezogene Inhalte/Websites angezeigt werden
+
+Wenn Ihre Anwendung keine Unternehmensdaten in der Webansicht anzeigt und die Benutzer zu beliebigen Websites navigieren und dort möglicherweise verwaltete Daten aus anderen Teilen der Anwendung durch Kopieren in ein öffentliches Forum einfügen können, ist die Anwendung für das Festlegen der aktuellen Identität verantwortlich, sodass verwaltete Daten nicht über die Webansicht nach draußen gelangen können. Beispiele hierfür sind Webseiten des Typs „Feature vorschlagen“ oder „Feedback“, die über direkte oder indirekte Links zu einer Suchmaschine verfügen. Anwendungen mit mehreren Identitäten sollten IntuneMAMPolicyManager setUIPolicyIdentity aufrufen und dabei vor dem Anzeigen der Webansicht die leere Zeichenfolge übergeben. Nach dem Schließen der Webansicht muss die Anwendung setUIPolicyIdentity aufrufen und die aktuelle Identität übergeben. Anwendungen mit nur einer Identität sollten IntuneMAMPolicyManager setCurrentThreadIdentity aufrufen und dabei vor dem Anzeigen der Webansicht die leere Zeichenfolge übergeben. Nach dem Schließen der Webansicht muss die Anwendung setCurrentThreadIdentity aufrufen und „nil“ übergeben. Dadurch wird sichergestellt, dass das Intune SDK die Webansicht als nicht verwaltet behandelt und dass verwaltete Daten aus anderen Teilen der Anwendung nicht in die Webansicht eingefügt werden können, wenn die Richtlinie entsprechend konfiguriert ist. 
+
+### <a name="webviews-that-display-only-corporate-contentwebsites"></a>Webansichten, in denen nur unternehmensbezogene Inhalte/Websites angezeigt werden
+
+Wenn in Ihrer Anwendung nur Unternehmensdaten in der Webansicht angezeigt werden und Benutzer nicht zu beliebigen Websites navigieren können, sind keine Änderungen erforderlich.
+
+### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>Webansichten, die unternehmens- und nicht-unternehmensbezogene Inhalte/Websites anzeigen können
+
+In diesem Szenario wird nur WKWebView unterstützt. Anwendungen, die die Legacy-UIWebView verwenden, sollten zu WKWebView wechseln. Wenn Ihre Anwendung unternehmensbezogene Inhalte innerhalb von WKWebView anzeigt und Benutzer auch auf nicht unternehmensbezogene Inhalte/Websites zugreifen können, was zu Datenverlusten führen kann, sollte die Anwendung die Delegatmethode „isExternalURL:“ implementieren, die in „IntuneMAMPolicyDelegate.h“ definiert ist. Anwendungen müssen ermitteln, ob die an die Delegatmethode übergegebene URL eine Unternehmenswebsite darstellt, auf der verwaltete Daten eingefügt werden können, oder eine Nicht-Unternehmenswebsite, über die Unternehmensdaten nach außen gelangen könnten. 
+
+Wenn für „isExternalURL“ das Ergebnis „NO“ zurückgegeben wird, weiß das Intune SDK, dass es sich bei der geladenen Website um einen Unternehmensstandort handelt, auf dem verwaltete Daten freigegeben werden können. Wird „YES“ zurückgegeben, öffnet das Intune SDK die URL in Edge anstatt in WKWebView, wenn dies durch die aktuellen Richtlinieneinstellungen vorgeschrieben ist. Dadurch wird sichergestellt, dass keine verwalteten Daten von innerhalb der App auf die externe Website gelangen können.
 
 ## <a name="ios-best-practices"></a>Empfohlene Methoden für iOS
 

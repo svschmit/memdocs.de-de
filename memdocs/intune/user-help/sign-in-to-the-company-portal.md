@@ -1,11 +1,11 @@
 ---
 title: Anmelden bei der Unternehmensportal-App | Microsoft-Dokumentation
-description: Vorgehensweise beim Anmelden bei der Unternehmensportal-App auf verschiedenen Plattformen.
+description: Hier erfahren Sie, wo Sie die Unternehmensportal-App erhalten, und lernen Sie drei verschiedene Anmeldemöglichkeiten kennen.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/31/2019
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,81 +19,78 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 59555c8bb9a35d5b70b46836f2298bf3ed342b2d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 28400d1aff176f83fd98b8ef1a825f468cd8847f
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881832"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057435"
 ---
-# <a name="sign-in-to-company-portal"></a>Anmelden beim Unternehmensportal  
+# <a name="how-to-sign-in-to-company-portal"></a>Anmelden beim Unternehmensportal  
+
+Das Unternehmensportal ist für Windows 10-, Android-, iOS- und macOS-Geräte an folgenden Orten verfügbar: 
+
+* [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417)  
+* [Google Play](https://go.microsoft.com/fwlink/?linkid=2141416)  
+* [Apple App Store](https://go.microsoft.com/fwlink/?linkid=2141414)  
+* [Registrieren eines Mac-Geräts](https://go.microsoft.com/fwlink/?linkid=853070): Wenn Sie diesen Link auswählen, wird das Installer-Paket für das Unternehmensportal direkt auf Ihr Gerät heruntergeladen.  
 
 Es gibt drei Möglichkeiten, sich bei der Unternehmensportal-App anzumelden:
 
-* Anmeldung mit Ihrer geschäftlichen E-Mail-Adresse und Ihrem Kennwort  
+* Anmeldung mit der E-Mail-Adresse Ihres Schul- oder Geschäftskontos und Ihrem Kennwort  
 * Anmeldung über die zertifikatbasierte Authentifizierung  
-* Anmeldung über ein anderes Gerät    
+* Anmeldung über ein anderes Gerät   
+
+In diesem Artikel wird beschrieben, wie Sie sich jeweils mit diesen Methoden anmelden. Idealerweise verwenden Sie die von Ihrer Organisation empfohlene oder vorgeschriebene Methode. 
 
 
-## <a name="sign-in-with-your-email-address-and-password"></a>Anmeldung mit Ihrer E-Mail-Adresse und Ihrem Kennwort
-Die folgenden Schritte enthalten Screenshots aus der Unternehmensportal für iOS.  
+## <a name="sign-in-with-school-or-work-account"></a>Mit Schul-oder Geschäftskonto anmelden    
+Führen Sie die folgenden Schritte aus, um sich mit Ihrem Schul- oder Geschäftskonto am Unternehmensportal anzumelden. 
 
-1. Öffnen Sie die App auf Ihrem Gerät, und tippen Sie auf **Anmelden**.  
+1. Öffnen Sie die App, und tippen Sie auf **Anmelden**.  
 
-   ![Screenshot: Anmeldeseite des Unternehmensportals](./media/intune-ios-cp-signin-1908.png)
-
-
-2. Geben Sie Ihr **Geschäfts-, Schul- oder Unikonto** ein, und klicken Sie auf **Weiter**.
-
-   ![Der Benutzer wird nur zur Eingabe der E-Mail-Adresse aufgefordert, nicht zur Eingabe von E-Mail-Adresse und Kennwort im gleichen Bildschirm.](./media/cp_ios_aad_signin_after_1804_002.png)
+2. Geben Sie die Ihrem Schul- oder Geschäftskonto zugeordnete E-Mail-Adresse ein, und tippen Sie dann auf **Weiter**.
 
 3. Geben Sie Ihr Kennwort ein, und tippen Sie dann auf **Anmelden**.
 
-   ![Der Benutzer wird erst zur Eingabe des Kennworts aufgefordert, wenn die E-Mail-Adresse akzeptiert wurde.](./media/cp_ios_aad_signin_after_1804_003.png)
 
-4. Ihre Anmeldeinformationen werden von der App überprüft. Wenn dieser Vorgang abgeschlossen wurde, können Sie auf die Ressourcen Ihrer Organisation zugreifen und verfügbare Apps installieren.  
+4. Warten Sie, während Ihre Anmeldeinformationen von der App überprüft werden. Nach dem Abschluss dieses Vorgangs können Sie auf die Features in der App und auf die Ressourcen Ihrer Organisation zugreifen.  
 
-   ![Nach dem Durchlaufen des Authentifizierungsprozesses erfolgt die Anmeldung bei der Unternehmensportal-App, und es wird ein Balken zum Ladefortschritt angezeigt.](./media/cp_ios_aad_signin_after_1804_004.png)
-
-## <a name="sign-in-with-certificate-based-authentication"></a>Anmeldung über die zertifikatbasierte Authentifizierung
+## <a name="sign-in-with-certificate"></a>Mit Zertifikat anmelden  
 Diese Anmeldeoption wird nur angezeigt, wenn Ihre Organisation eine zertifikatbasierte Authentifizierung zulässt und ein Zertifikat verfügbar ist, das Sie verwenden können.  
 
 1. Öffnen Sie die Unternehmensportal-App auf Ihrem Gerät.  
 
-2. Geben Sie den Namen Ihres **Geschäfts- oder Schulkontos** ein.  
+2. Geben Sie die Ihrem Schul- oder Geschäftskonto zugeordnete E-Mail-Adresse ein, und tippen Sie dann auf **Weiter**.   
 
-3. Tippen Sie auf den Link **Sign in with a certificate (Anmelden über ein Zertifikat)** .  
+3. Tippen Sie auf **Mit einem Zertifikat anmelden**.  
 
 4. Tippen Sie auf **Fortfahren**, um das Zertifikat zu verwenden.  
+5. Warten Sie, während die App Ihr Zertifikat überprüft. Nach dem Abschluss dieses Vorgangs können Sie auf die Features in der App und auf die Ressourcen Ihrer Organisation zugreifen.  
 
-## <a name="sign-in-from-another-device"></a>Anmeldung über ein anderes Gerät
+## <a name="sign-in-via-another-device"></a>Über ein anderes Gerät anmelden    
 
-Wenn in Ihrem Unternehmen der Computerzugriff per Smartcards geregelt wird, müssen Sie sich wahrscheinlich authentifizieren, indem Sie sich über ein anderes Gerät anmelden.  
+Wenn Sie für den Zugriff auf Arbeitsressourcen normalerweise eine Smartcard verwenden, befolgen Sie die Schritte in diesem Abschnitt, um sich beim Unternehmensportal anzumelden.  
 
-1. Öffnen Sie die Unternehmensportal-App auf Ihrem Gerät. Stellen Sie sicher, dass es sich um das Gerät handelt, das Sie für den Zugriff auf Ihre Arbeitsressourcen verwenden.       
+1. Öffnen Sie das Unternehmensportal auf dem Gerät, das Sie für den Zugriff auf Ihre Arbeitsressourcen verwenden werden.  
 
-1. Wählen Sie **Anmeldung über ein anderes Gerät** aus.  
+2. Wählen Sie **Anmeldung über ein anderes Gerät** aus.  
 
-   ![Auf der Anmeldeseite für das Unternehmensportal werden die Benutzer zur Eingabe ihrer E-Mail-Adresse aufgefordert.  Ferner werden die Schaltfläche „Weiter“ und der Link „Von anderem Gerät aus anmelden“ angezeigt. Außerdem wird der Link „Kein Zugriff auf Ihr Konto?“ angezeigt. Ein Link am unteren Seitenrand führt zu Informationen von Microsoft zu Datenschutz und Cookies.](./media/cp_ios_aad_signin_after_1804_005.png)
-
-2. Sie erhalten einen eindeutigen, einmal gültigen Code für die Anmeldung im Unternehmensportal. Kopieren Sie den Code.
+3. Notieren Sie sich den einmaligen Anmeldecode, der auf dem Bildschirm angezeigt wird (oder halten Sie diesen Bildschirm für die nächsten Schritte bereit). 
 
    ![Der Benutzer erhält die Anweisung, mit einer über den Arbeitscomputer bezogenen eindeutigen Kennung zur Seite https://microsoft.com/devicelogin zu wechseln und sich dort mit dieser Kennung anzumelden.](./media/cp_ios_aad_signin_after_1804_006.png)
 
-3. Öffnen Sie auf dem anderen Gerät (das Sie für die Authentifizierung verwenden) den Browser, und navigieren Sie zu [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). Geben oder fügen Sie den Code ein.  
+3. Öffnen Sie auf dem anderen Gerät (das Sie für die Authentifizierung verwenden) den Browser, und navigieren Sie zu [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).  
+
+4. Geben Sie den Code ein, wenn Sie dazu aufgefordert werden.  
 
    ![Ein Bild des Browsers des Benutzers auf dem Arbeitscomputer statt in der Unternehmensportal-App. Die angezeigte Seite „Geräteanmeldung“ fordert den Benutzer auf, den über die Unternehmensportal-App empfangenen Code einzugeben.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
 4. Klicken Sie auf __Fortsetzen__, damit die Anmeldung beim Unternehmensportal auf Ihrem Arbeitsgerät erfolgen kann.   
 
-   ![Der Benutzer hat den eindeutigen Code in das Feld eingegeben und wurde auf der Seite „Geräteanmeldung“ aufgefordert, zu bestätigen, dass das Intune-Unternehmensportal die App ist, die zur Anmeldung autorisiert werden soll.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_005.png) 
+5. Sobald der Bildschirm besagt, dass Sie beim Unternehmensportal angemeldet sind, können Sie den Browser schließen und zu Ihrem Arbeitsgerät wechseln.  
 
-5. Sobald der Code überprüft wurde, können Sie das Fenster schließen.  
 
-   ![Eine Bestätigungsseite informiert darüber, dass der Benutzer sich jetzt auf dem Gerät bei der Unternehmensportal-App angemeldet hat und dass diese Seite geschlossen werden kann.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_006.png)
+## <a name="next-steps"></a>Nächste Schritte  
 
-6. Die Unternehmensportal-App meldet Sie auf Ihrem Arbeitsgerät an.  
-
-   ![Nach Abschluss des Authentifizierungsprozesses meldet sich die Unternehmensportal-App Sie an und zeigt einen entsprechenden Ladebalken an.](./media/cp_ios_aad_signin_after_1804_007.png)
-
-Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Sie kommen nicht weiter oder benötigen Hilfe? Wenden Sie sich an Ihren Ansprechpartner beim IT-Support. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  

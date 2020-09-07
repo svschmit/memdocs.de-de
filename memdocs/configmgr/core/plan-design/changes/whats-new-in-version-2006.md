@@ -2,7 +2,7 @@
 title: Neuerungen in Version 2006
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 2006 des Current Branchs von Configuration Manager eingeführt wurden.
-ms.date: 08/20/2020
+ms.date: 09/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
+ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819676"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385361"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Neuerungen in Version 2006 von Configuration Manager (Current Branch)
 
@@ -340,8 +340,7 @@ Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configu
 
 Weitere Informationen zu Änderungen an der Verwaltungsdienst-Rest-API finden Sie in den[Versionshinweisen zum Verwaltungsdienst](../../../develop/adminservice/release-notes.md#bkmk_2006).
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4556203).
+Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Zusammenfassung der Änderungen im Current Branch von Configuration Manager, Version 2006](https://support.microsoft.com/help/4578830).
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
@@ -363,9 +362,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Derzeit wird Version 2006 für den Early Update Ring freigegeben. Zum Installieren dieses Updates müssen Sie sich anmelden. Weitere Informationen finden Sie unter [Early Update Ring](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring).
+<!-- At this time, version 2006 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring). -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. -->
+Ab dem 31. August 2020 ist Version 2006 global für alle Kunden zur Installation verfügbar.
 
 Wenn Sie zum Installieren dieser Version bereit sind, finden Sie dazu unter [Updates und Wartung für Configuration Manager](../../servers/manage/updates.md) und [Checkliste für die Installation von Update 2006](../../servers/manage/checklist-for-installing-update-2006.md) weitere Informationen.
 

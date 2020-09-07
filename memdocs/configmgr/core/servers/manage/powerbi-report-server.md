@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc8aa57bda5f5a29d72af854be9a18e4f32760f8
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699584"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432539"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integrieren mit dem Power BI-Berichtsserver
 
@@ -103,9 +103,15 @@ Führen Sie diesen Prozess nur dann aus, wenn Sie am Standort noch über keinen 
 
 1. Wenn der Bericht gespeichert werden kann, klicken Sie im Menü **Datei** auf **Speichern als**, und wählen Sie dann **Power BI-Berichtsserver** aus.
 
-1. Geben Sie im Fenster **Power BI Report Server Selection** (Ausgewählter Power BI-Berichtsserver) die URL für den Reporting Services-Punkt als **Neue Berichtsserveradresse** ein. Beispiel: `https://rsp.contoso.com/Reports`.
+1. Geben Sie im Fenster **Power BI Report Server Selection** (Ausgewählter Power BI-Berichtsserver) die URL für den Reporting Services-Punkt als **Neue Berichtsserveradresse** ein. Beispiel: `https://rsp.contoso.com/Reports`. Klicken Sie auf **OK**.
 
-In der Configuration Manager-Konsole wird der neue Bericht in der Liste der Power BI-Berichte angezeigt.
+1. Doppelklicken Sie im Fenster **Bericht speichern** auf den Ordner `ConfigMgr_<SiteCode>`. Beispiel: `ConfigMgr_PS1`, wobei `PS1` der Code des ConfigMgr-Standorts ist. Sie können optional einen Unterordner für die Speicherung auswählen oder erstellen (vom Berichtsserver aus).
+    > [!TIP]
+    > Berichte und Berichtsordner mit Power BI-Berichten müssen sich im Ordner `ConfigMgr_<SiteCode>` auf dem Berichtsserver befinden, sonst werden sie nicht in der Configuration Manager-Konsole angezeigt.
+
+1. Geben Sie in **Dateiname** einen Namen für den Bericht ein.
+
+In der Configuration Manager-Konsole wird der neue Bericht in der Liste der Power BI-Berichte angezeigt. Wenn Ihre Berichte nicht angezeigt werden, überprüfen Sie, ob Sie die Berichte im Ordner `ConfigMgr_<SiteCode>` gespeichert haben.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

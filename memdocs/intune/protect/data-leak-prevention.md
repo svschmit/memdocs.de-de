@@ -2,7 +2,7 @@
 title: Verhindern von Datenverlusten auf nicht verwalteten Geräten
 titleSuffix: Microsoft Intune
 description: Ermöglichen Sie den Zugriff auf Unternehmensdaten auf Geräten, und schützen Sie Daten vor Datenverlusten mithilfe von Microsoft Intune.
-keywords: Datenschutz, Verluste verhindern, Gerät, O365, Office 365
+keywords: Datenschutz, Verluste verhindern, Gerät, M365, Microsoft 365
 ms.author: dougeby
 author: dougeby
 manager: dougeby
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d694a2221dff705d6ec2c1dc1db426740d95cdbe
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c979d6cf35611a419c4e27605b696c6ad3d85cd9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352422"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996179"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Verhindern von Datenverlusten auf nicht verwalteten Geräten mit Microsoft Intune
 
-Wenn Sie Zugriff auf Unternehmensdaten gewähren, die von Office 365 gehostet werden, können Sie steuern, wie Benutzer Daten freigeben und speichern, ohne beabsichtigte oder versehentliche Datenverluste zu riskieren. Microsoft Intune stellt App-Schutzrichtlinien bereit, die Sie festlegen, um Ihre Unternehmensdaten auf benutzereigenen Geräten zu sichern. Die Geräte müssen nicht beim Intune-Dienst registriert werden. 
+Wenn Sie Zugriff auf Unternehmensdaten gewähren, die von Microsoft 365 gehostet werden, können Sie steuern, wie Benutzer Daten freigeben und speichern, ohne beabsichtigte oder versehentliche Datenverluste zu riskieren. Microsoft Intune stellt App-Schutzrichtlinien bereit, die Sie festlegen, um Ihre Unternehmensdaten auf benutzereigenen Geräten zu sichern. Die Geräte müssen nicht beim Intune-Dienst registriert werden. 
 
 Mit Intune eingerichtete App-Schutzrichtlinien funktionieren auch auf Geräten, die mit einer Geräteverwaltungslösung verwaltet werden, die nicht von Microsoft stammt. Die personenbezogenen Daten auf den Geräten werden nicht angerührt. Nur die Unternehmensdaten werden von der IT-Abteilung verwaltet. 
 
@@ -40,7 +40,7 @@ Die App-Schutzrichtlinien von Intune sind unabhängig von der Geräteverwaltung.
 Der folgende Maßnahmenplan kann verwendet werden, wenn Sie die folgenden Anforderungen erfüllen:
 
 * Ihr Unternehmen ist für den sicheren Übergang in die Cloud bereit.
-* Ihr Unternehmen verwendet die Office 365 Exchange Online, SharePoint Online, OneDrive for Business oder Yammer.
+* Ihr Unternehmen verwendet Microsoft 365 Exchange Online, SharePoint Online, OneDrive for Business oder Yammer.
 * Ihr Unternehmen verfügt über Lizenzen für Microsoft-365, Enterprise Mobility + Security (EMS) oder Azure Information Protection.
 * Ihr Unternehmen ermöglicht Benutzern den Zugriff auf Unternehmensdaten über unternehmens- oder benutzereigene Windows-, iOS-/iPadOS- oder Android-Geräte.
 * Ihr Unternehmen möchte nicht, dass die Registrierung von benutzereigenen Geräten in einem Geräteverwaltungsdienst erforderlich ist.
@@ -55,7 +55,7 @@ Für iOS-/iPadOS- und Android-Geräte:
 
 Für Windows 10-Geräte:
 
-1. Erfahren Sie, [wie Windows Information Protection (WIP) funktioniert](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
+1. Erfahren Sie, [wie Windows Information Protection (WIP) funktioniert](/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
 2. Machen Sie sich bereit für die Konfiguration von [App-Schutzrichtlinien für Windows 10](../apps/app-protection-policies-configure-windows-10.md).
 3. [Erstellen Sie WIP-App-Schutzrichtlinien in Intune, und stellen Sie diese bereit](../apps/windows-information-protection-policy-create.md).
 
@@ -68,4 +68,4 @@ Geben Sie nach Bedarf die folgenden Links frei, um zusätzliche Informationen be
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Benötigen Sie Hilfe bei der Aktivierung dieses oder anderer EMS- oder Office 365-Szenarios? Wenn Sie über mindestens 150 Lizenzen für Microsoft 365, Enterprise Mobility + Security oder Azure Active Directory Premium verfügen, nutzen Sie Ihre [FastTrack-Vorteile](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Benötigen Sie Hilfe bei der Aktivierung dieses oder anderer EMS- oder Microsoft 365-Szenarios? Wenn Sie über mindestens 150 Lizenzen für Microsoft 365, Enterprise Mobility + Security oder Azure Active Directory Premium verfügen, nutzen Sie Ihre [FastTrack-Vorteile](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

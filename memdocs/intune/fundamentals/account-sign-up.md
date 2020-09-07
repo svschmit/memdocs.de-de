@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31cc746edce40300b5678439550ce3108270750d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ae034699d3a07311ca6a51557cbbc673916569bf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988870"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994275"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Registrieren oder Anmelden bei Microsoft Intune
 
 In diesem Thema werden Systemadministratoren darauf hingewiesen, wie Sie sich für ein Intune-Konto anmelden können.
 
-Bevor Sie sich für ein Intune-Konto anmelden, bestimmen Sie, ob Sie bereits ein Microsoft Online Services-Konto, ein Enterprise Agreement oder einen gleichwertigen Volumenlizenzvertrag besitzen. Ein Microsoft-Volumenlizenzvertrag oder andere Microsoft-Clouddienstabonnements wie Office 365 enthalten normalerweise ein Arbeits- oder Schulkonto.
+Bevor Sie sich für ein Intune-Konto anmelden, bestimmen Sie, ob Sie bereits ein Microsoft Online Services-Konto, ein Enterprise Agreement oder einen gleichwertigen Volumenlizenzvertrag besitzen. Ein Microsoft-Volumenlizenzvertrag oder andere Microsoft-Clouddienstabonnements wie Microsoft 365 enthalten normalerweise ein Arbeits- oder Schulkonto.
 
 Wenn Sie bereits über ein Arbeits- oder Schulkonto verfügen, **melden Sie sich mit diesem Konto an**, und fügen Sie Intune Ihrem Abonnement hinzu. Sie können sich auch für ein neues Konto **registrieren**, um Intune für Ihre Organisation zu verwenden.
 
@@ -70,12 +70,12 @@ Intune for Education: https://intuneeducation.portal.azure.com
 
 Klassisches Intune-Portal: https://manage.microsoft.com. Das klassische Intune-Portal wird nur zum Verwalten von Geräten verwendet, die mit dem Intune-PC-Softwareclient registriert wurden.
 
-### <a name="urls-for-intune-services-provided-by-office-365"></a>URLs für von Office 365 bereitgestellte Intune-Dienste
+### <a name="urls-for-intune-services-provided-by-microsoft-365"></a>URLs für von Microsoft 365 bereitgestellte Intune-Dienste
 
 Microsoft 365 Business: https://portal.microsoft.com/adminportal
 
-Mobile Geräteverwaltung von Office 365: https://admin.microsoft.com/adminportal/home#/MifoDevices
+Microsoft 365 Mobile Device Management: https://admin.microsoft.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>Weitere Informationen:
 
-[Sie können sich nicht bei Office 365, Azure oder Intune anmelden](https://support.microsoft.com/help/2412085)
+[Sie können sich nicht bei Microsoft 365, Azure oder Intune anmelden](https://support.microsoft.com/help/2412085).

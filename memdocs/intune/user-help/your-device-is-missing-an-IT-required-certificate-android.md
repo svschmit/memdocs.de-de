@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/29/2019
+ms.date: 08/25/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 162a5c2ff02a762578fb6f52b60b6ff404862329
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 754d6b5b3c968cf329ca57a312b89d5bae18dca3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546707"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992775"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Installieren des fehlenden Zertifikats, das Ihre Organisation vorschreibt  
 
@@ -32,12 +32,8 @@ Wenn Ihr Gerät nicht bei Intune registriert ist und ein erforderliches Zertifik
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
-Es gibt zwei Möglichkeiten, das erforderliche Zertifikat herunterzuladen und Ihr Gerät zu registrieren. 
+In diesem Artikel wird beschrieben, wie Sie den Browserzugriff in der Unternehmensportal-App aktivieren, sodass Sie das erforderliche Zertifikat herunterladen und Ihr Gerät registrieren können. 
 
-- Aktivieren Sie den Browserzugriff in der Unternehmensportal-App.
-- Identifizieren Sie das fehlende Zertifikat auf einem Unternehmens- oder Schul-PC. Suchen Sie dann im Internet danach, und laden Sie es auf Ihr Gerät herunter. 
-
-Schließen Sie zunächst die Schritte für das Aktivieren des Browserzugriffs ab. Wenn Sie Ihr Gerät anschließend immer noch nicht registrieren können, führen Sie die Schritte für die Internetsuche nach dem Zertifikat aus. 
 
 ## <a name="enable-browser-access"></a>Aktivieren des Browserzugriffs
 Führen Sie die folgenden Schritte durch, um den Browserzugriff zu aktivieren. Nachdem Sie den Zugriff aktiviert haben, wird das richtige Zertifikat über das Unternehmensportal installiert und die Registrierung fortgesetzt.    
@@ -45,45 +41,9 @@ Führen Sie die folgenden Schritte durch, um den Browserzugriff zu aktivieren. N
 1. Tippen Sie in der Unternehmensportal-App in der rechten Ecke auf das Menü.  
 2. Wählen Sie **Einstellungen** aus.  
 3. Klicken Sie neben **Browserzugriff aktivieren** auf **Aktivieren**.  
-4. Tippen Sie auf dem Bildschirm „Geräteadministrator“ auf **AKTIVIEREN**. 
-
-## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Ermitteln und Herunterladen des fehlenden Zertifikats über eine Websuche
-Schließen Sie diese Schritte ab, um das Zertifikat manuell zu ermitteln und es auf Ihrem Gerät zu installieren.  
-
-1. Öffnen Sie auf einem PC den Internet Explorer. Wenn Ihnen dafür kein PC zur Verfügung steht, wenden Sie sich an die Supportabteilung Ihres Unternehmens. Die Kontaktinformationen für die Supportabteilung Ihres Unternehmens finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).
-
-2. Öffnen Sie die [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980), und melden Sie sich mit Ihren Geschäfts- oder Schulanmeldeinformationen an.
-
-3. Wählen Sie ganz rechts in der Adressleiste des Browsers das Symbol aus, das wie ein Vorhängeschloss aussieht, wie im nachstehenden Screenshot dargestellt.
-
-    ![screenshot-internet-explorer-address-bar-padlock-symbol](./media/andr-missing-cert-ie-padlock-symbol.png)
-
-    Wenn das Vorhängeschlosssymbol nicht angezeigt wird, beenden Sie den Vorgang, und wenden Sie sich an die Supportabteilung Ihres Unternehmens. Das Vorhängeschlosssymbol bedeutet, dass Sie sicher angemeldet sind, Sie sollten also nicht fortfahren, solange dieses Symbol nicht angezeigt wird.
-
-4. Wählen Sie **Zertifikate anzeigen** aus.
-
-    ![screenshot-internet-explorer-view-certificates-button-on-website-identification-dialog](./media/andr-missg-cert-ie-view-cert-button.png)
-
-5. Wählen Sie die Registerkarte **Zertifizierungspfad** aus, und identifizieren Sie das Zertifikat, das Sie aus dem Internet abrufen müssen. Der Name des Zertifikats, das Sie benötigen, befindet sich an der gleichen Position wie der, der im vorherigen Beispielscreenshot hervorgehoben ist.
-
-6. Suchen Sie mithilfe einer Suchmaschine wie Bing oder Google nach dem Namen des fehlenden Zertifikats, das Sie im vorherigen Abschnitt angegeben haben. Das Zertifikat kann mit verschiedenen Erweiterungen wie CRT oder PEM usw. enden.
-
-7. Laden Sie das Stammzertifikat von der Website herunter.
-
-8. Ziehen Sie nach dem Herunterladen des Zertifikats vom oberen Rand Ihres Geräts nach unten, um Ihre Benachrichtigungen zu öffnen, und tippen Sie dann in der Liste der Benachrichtigungen auf den Namen des Zertifikats.
-
-4. Übernehmen Sie im Dialogfeld **Name the Certificate** (Zertifikat benennen), das im folgenden Screenshot angezeigt wird, den Standardzertifikatnamen.
-
-5. Stellen Sie sicher, dass **Verwendung von Anmeldeinformationen** auf **Für VPN und Apps** festgelegt ist, und tippen Sie dann auf **OK**.
-
-    ![screenshot-certificate-name-dialog-showing-certificate-name](./media/andr-missing-cert-cert-name.png)
-
-6. Schließen Sie die Unternehmensportal-App.
-
-7. Öffnen Sie die Unternehmensportal-App erneut. Sie sollten sich jetzt bei der Unternehmensportal-App anmelden können. Wenn Sie Hilfe benötigen, wenden Sie sich an die Supportabteilung Ihres Unternehmens.
-
-Wenn Ihnen die gleiche „Zertifikat fehlt“-Meldung wie in der Abbildung oben angezeigt wird, und Sie den oben beschriebenen Vorgang bereits ausgeführt haben, benötigt die Supportabteilung Ihres Unternehmens wahrscheinlich noch ein anderes Zertifikat, um Ihnen bei der Installation helfen zu können. Verwenden Sie die Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980), wenn Sie sich an die Supportabteilung Ihres Unternehmens wenden möchten.
+4. Tippen Sie auf dem Bildschirm „Geräteadministrator“ auf **AKTIVIEREN**.  
 
 ## <a name="next-steps"></a>Nächste Schritte  
+Wenn die Meldung, dass ein Zertifikat fehlt, noch mal angezeigt wird, obwohl Sie diese Schritte bereits durchgeführt haben, wenden Sie sich an den IT-Support, um weitere Hilfe zu erhalten. Dort erhalten Sie Unterstützung beim Ausfindigmachen und Installieren des erforderlichen Zertifikats. Die Kontaktinformationen für Ihre Organisation finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+

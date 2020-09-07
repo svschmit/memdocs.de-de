@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccbd923ba1110f99c57b499115a41a03ec3317c1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 394ffa75b6f272024d440fad56d68727c27531da
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252808"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996451"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Hinzufügen von Apps zu Microsoft Intune 
 
@@ -56,8 +56,8 @@ Die folgende Tabelle führt die verschiedenen App-Typen auf und erläutert, wie 
 | iOS/iPadOS Store-Apps  | Store-App  | Wählen Sie **iOS** als **App-Typ** aus, suchen Sie nach der App, und wählen Sie die App in Intune aus. |
 | Microsoft Store-Apps  | Store-App  | Wählen Sie **Windows** als **App-Typ** aus, und geben Sie die Microsoft Store-URL für die App ein. |
 | Verwaltete Google Play-Apps | Store-App  | Wählen Sie **Verwaltetes Google Play** als **App-Typ** aus, suchen Sie nach der App, und wählen Sie die App in Intune aus. |
-| Office 365-Apps für Windows 10  | Store-App (Office 365) | Wählen Sie **Windows 10** unter **Microsoft 365-Apps** als **App-Typ** aus, und wählen Sie dann die Office 365-App aus, die Sie installieren möchten.  |
-| Office 365-Apps für macOS | Store-App (Office 365) | Wählen Sie **macOS** unter **Microsoft 365-Apps** als **App-Typ** aus, und wählen Sie dann die Office 365-App-Suite aus. |
+| Microsoft 365-Apps für Windows 10  | Store-App (Microsoft 365) | Wählen Sie **Windows 10** unter **Microsoft 365-Apps** als **App-Typ** aus, und wählen Sie dann die Microsoft 365-App aus, die Sie installieren möchten.  |
+| Microsoft 365-Apps für macOS | Store-App (Microsoft 365) | Wählen Sie **macOS** unter **Microsoft 365-Apps** als **App-Typ** aus, und wählen Sie dann die Microsoft 365-App-Suite aus. |
 | Microsoft Edge, Version 77 und höher, für Windows 10 | Store-App | Wählen Sie **Windows 10** unter **Microsoft Edge, Version 77 und höher** als **App-Typ** aus. |
 | Microsoft Edge, Version 77 und höher, für macOS | Store-App | Wählen Sie **macOS** unter **Microsoft Edge, Version 77 und höher** als **App-Typ** aus. |
 | Branchenspezifische Android-Apps | LOB-App | Wählen Sie **Branchenspezifische App** als **App-Typ** aus, wählen Sie **App-Paketdatei** aus, und geben Sie dann eine Android-Installationsdatei mit der Erweiterung **APK** an.  |
@@ -221,8 +221,8 @@ Wie Sie Apps für jede Plattform in Intune hinzufügen, erfahren Sie unter:
 - [Web-Apps (für alle Plattformen)](web-app.md)
 - [Microsoft Store-Apps](store-apps-windows.md)
 - [Branchenspezifische Windows-Apps](lob-apps-windows.md)
-- [Office 365 apps for Windows 10 (Office 365-Apps für Windows 10)](apps-add-office365.md)
-- [Office 365-Apps für macOS](apps-add-office365-macos.md)
+- [Microsoft 365-Apps für Windows 10](apps-add-office365.md)
+- [Microsoft 365-Apps für macOS](apps-add-office365-macos.md)
 - [Verwaltete Google Play-Apps](apps-add-android-for-work.md)
 - [Microsoft Edge für Windows 10](apps-windows-edge.md)
 - [Microsoft Edge für macOS](apps-edge-macos.md)

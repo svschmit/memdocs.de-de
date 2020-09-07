@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: ba4bef364f734f9078b7c404e06978b018f4c387
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383256"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281080"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Verwalten von Funktionen für die Zusammenarbeit mithilfe von Office für iOS und Android mit Microsoft Intune
 
@@ -32,12 +32,12 @@ Zu den Hauptvorteilen von Office für iOS und Android gehören u. a. die folgen
 - Die Integration der Office Lens-Technologie ermöglicht die Verwendung der Kamera mit Funktionen wie dem Konvertieren von Bildern in bearbeitungsfähige Word- und Excel-Dokumente, dem Scannen von PDFs und dem Erfassen von Whiteboards mit automatischen digitalen Verbesserungen, um das Lesen der Inhalte zu vereinfachen.
 - Außerdem werden neue Funktionen für häufige Aufgaben hinzugefügt, die Benutzer beim Arbeiten auf einem Smartphone oftmals erledigen müssen, z. B. schnelle Notizen, Unterzeichnen von PDFs, Scannen von QR-Codes und Übertragen von Dateien zwischen Geräten.
 
-Die vielfältigsten und umfangreichsten Schutzfunktionen für Office 365-Daten sind verfügbar, wenn Sie die Enterprise Mobility + Security-Suite abonnieren, die Microsoft Intune und Azure Active Directory Premium-Features wie bedingten Zugriff bietet. Sie sollten mindestens eine Richtlinie für bedingten Zugriff bereitstellen, die nur die Konnektivität mit Office für iOS und Android auf mobilen Geräten zulässt, sowie eine Intune-App-Schutzrichtlinie, die gewährleistet, dass die Funktionen für die Zusammenarbeit geschützt sind.
+Die vielfältigsten und umfangreichsten Schutzfunktionen für Microsoft 365-Daten sind verfügbar, wenn Sie die Enterprise Mobility + Security-Suite abonnieren, die Microsoft Intune und Azure Active Directory Premium-Features wie bedingten Zugriff bietet. Sie sollten mindestens eine Richtlinie für bedingten Zugriff bereitstellen, die nur die Konnektivität mit Office für iOS und Android auf mobilen Geräten zulässt, sowie eine Intune-App-Schutzrichtlinie, die gewährleistet, dass die Funktionen für die Zusammenarbeit geschützt sind.
 
 ## <a name="apply-conditional-access"></a>Aktivieren des bedingten Zugriff
-Organisationen können Richtlinien für bedingten Zugriff von Azure AD nutzen, um sicherzustellen, dass Benutzer nur mit Office für iOS und Android auf Geschäfts-, Schul- oder Uni-Inhalte zugreifen können. Dazu benötigen Sie eine Richtlinie für bedingten Zugriff, die für alle potenziellen Benutzer gilt. Einzelheiten zur Erstellung dieser Richtlinie finden Sie unter [Erzwingen einer App-Schutzrichtlinie für den Cloud-App-Zugriff mit bedingtem Zugriff](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Organisationen können Richtlinien für bedingten Zugriff von Azure AD nutzen, um sicherzustellen, dass Benutzer nur mit Office für iOS und Android auf Geschäfts-, Schul- oder Uni-Inhalte zugreifen können. Dazu benötigen Sie eine Richtlinie für bedingten Zugriff, die für alle potenziellen Benutzer gilt. Einzelheiten zur Erstellung dieser Richtlinie finden Sie unter [Erzwingen einer App-Schutzrichtlinie für den Cloud-App-Zugriff mit bedingtem Zugriff](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Befolgen Sie „Schritt 1: Konfigurieren einer Azure AD-Richtlinie für bedingten Zugriff für Office 365“ unter [Szenario 1: Office 365-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien.](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies) So wird Office für iOS und Android zugelassen, OAuth-fähige Clients von Drittanbietern für mobile Geräte werden jedoch daran gehindert, eine Verbindung zu Office 365-Endpunkten herzustellen.
+1. Befolgen Sie „Schritt 1: Konfigurieren einer Azure AD-Richtlinie für bedingten Zugriff für Office 365“ unter [Szenario 1: Office 365-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien.](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies) So wird Office für iOS und Android zugelassen, OAuth-fähige Clients von Drittanbietern für mobile Geräte werden jedoch daran gehindert, eine Verbindung zu Office 365-Endpunkten herzustellen.
 
    >[!NOTE]
    > Diese Richtlinie sorgt dafür, dass Benutzer mobiler Geräte über die entsprechenden Apps auf alle Office-Endpunkte zugreifen können.
@@ -74,6 +74,7 @@ Office für iOS und Android unterstützt App-Einstellungen, die eine einheitlich
 Die App-Konfiguration kann entweder über den Kanal „MDM (Mobile Device Management, Verwaltung mobiler Geräte)“ des Betriebssystems auf registrierten Geräten (Kanal [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) für iOS oder [Android in the Enterprise ](https://developer.android.com/work/managed-configurations) für Android) oder über den Kanal „Intune-App-Schutzrichtlinie“ bereitgestellt werden. Office für iOS und Android unterstützt die folgenden Konfigurationsszenarios:
 
 - Nur Geschäfts-, Schul- oder Unikonten zulassen
+- Allgemeine App-Konfiguration
 - Datenschutzeinstellungen
 
 > [!IMPORTANT]
@@ -96,6 +97,26 @@ Dieses Konfigurationsszenario funktioniert nur mit registrierten Geräten. Aller
 
 > [!NOTE]
 > Aktuell unterstützt nur Office für Android den Modus für von Organisationen zugelassenen Konten.
+
+## <a name="general-app-configuration-scenarios"></a>Allgemeine App-Konfigurationsszenarien
+
+Office für iOS und Android bietet Administratoren die Möglichkeit, die Standardkonfiguration für verschiedene In-App-Einstellungen festzulegen.  Diese Funktion wird sowohl für bei einem beliebigen UEM-Anbieter registrierte Geräte als auch für nicht registrierte Geräte angeboten, wenn für Office für iOS und Android eine Intune-App-Schutzrichtlinie angewendet wird.
+
+> [!NOTE]
+> Wenn eine App-Schutzrichtlinie für die Benutzer bestimmt ist, empfiehlt es sich, die allgemeinen App-Konfigurationseinstellungen in einem Registrierungsmodell für **verwaltete Apps** bereitzustellen. Dadurch wird sichergestellt, dass die App-Konfigurationsrichtlinie für registrierte und für nicht registrierte Geräte bereitgestellt wird. 
+
+Office unterstützt die folgenden Konfigurationseinstellungen:
+
+- Verwalten der Erstellung von Kurznotizen
+
+### <a name="manage-the-creation-of-sticky-notes"></a>Verwalten der Erstellung von Kurznotizen
+
+Standardmäßig ermöglicht Office für iOS und Android Benutzern das Erstellen von Kurznotizen. Für Benutzer mit Exchange Online-Postfächern werden die Notizen mit dem Postfach des Benutzers synchronisiert. Für Benutzer mit lokalen Postfächern werden diese Notizen nur auf dem lokalen Gerät gespeichert.
+
+|    Schlüssel    |    Wert    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.NotesCreationEnabled    |    **true** (Standard) ermöglicht die Kurznotizenerstellung für das Geschäfts-, Schul- oder Unikonto.<br>**false** deaktiviert die Kurznotizenerstellung für das Geschäfts-, Schul- oder Unikonto.    |
+
 
 ## <a name="data-protection-app-configuration-scenarios"></a>App-Konfigurationsszenarien für Datenschutz
 

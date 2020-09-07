@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: de3d4eb47a6a08c0ba2bdddb20312f7e95eb8c84
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882199"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057313"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installieren und freigeben von Apps auf Ihrem Gerät
 
@@ -53,12 +53,12 @@ Installieren Sie über die Unternehmensportal-App für Windows Apps auf Ihrem Ge
 > [!IMPORTANT]
 > Wenn eine erforderliche App nicht installiert werden kann und Ihre Organisation sie Ihnen zur manuellen Installation zur Verfügung stellt, wählen Sie **Wiederholen** aus. Es kann bis zu zehn Minuten dauern, bis der aktualisierte Status angezeigt wird. Wenn Sie während dieser Zeit noch mal **Wiederholen** auswählen und einen Fehler erhalten, ist das in Ordnung. Warten Sie weiterhin die zehn Minuten auf einen aktualisierten Status.   
 
-Je nach Größe Ihres Unternehmens kann es sein, dass mehrere Office-Versionen im Unternehmensportal zum Download verfügbar sind. Spezifische Informationen zur Office-Suite für Windows-Geräte finden Sie unter [Installieren von Office 365 auf Ihrem Windows 10-Gerät](./install-office-windows.md).
+Je nach Größe Ihres Unternehmens kann es sein, dass mehrere Office-Versionen im Unternehmensportal zum Download verfügbar sind. Spezifische Informationen zur Office-Suite für Windows-Geräte finden Sie unter [Installieren von Microsoft 365 auf Ihrem Windows-Gerät](./install-office-windows.md).
 
 ## <a name="share-apps"></a>Freigeben von Apps  
 Empfehlen Sie Ihren Arbeits- oder Schul- bzw. Unikontakten Apps, und geben Sie sie für sie frei. In den folgenden Schritten wird beschrieben, wie ein Link direkt über das Unternehmensportal geteilt werden kann.
 
-1. Führen Sie im Unternehmensportal einen Rechtsklick aus, oder tippen Sie auf eine App, und halten Sie sie gedrückt, um das [Kontextmenü](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) zu öffnen.  
+1. Führen Sie im Unternehmensportal einen Rechtsklick aus, oder tippen Sie auf eine App, und halten Sie sie gedrückt, um das [Kontextmenü](//windows/uwp/design/controls-and-patterns/menus) zu öffnen.  
 
     ![In der Unternehmensportal-App für Windows 10 wird auf der Titelseite eine Liste der Apps und Geräte angezeigt. Das klickbare Kontextmenü „Freigeben“ ist oben auf dem Symbol der Beispiel-App sichtbar. ](./media/1808_ShareContext_CP_Windows.png)  
 
@@ -97,4 +97,4 @@ Um zu dieser Seite zu gelangen, wechseln Sie zum Navigationsmenü und wählen do
 
 Verwenden Sie **Sortieren nach**, um den Zuweisungstyp der Apps, den Herausgeber, alphabetisch nach Namen oder chronologisch nach dem Veröffentlichungsdatum neu anzuordnen. Verwenden Sie **Filter nach**, um die angezeigten Apps nach dem Installationsstatus zu filtern.  Wenn keine Apps verfügbar sind, sehen Sie eine Meldung, dass keine Unternehmens-Apps installiert wurden.  
 
-Benötigen Sie weitere Hilfe? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Benötigen Sie weitere Hilfe? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).

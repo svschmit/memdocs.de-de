@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aec16e4c3c1eae5614fdf000740dcf8363bec1ca
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 72c4405d68d2a1c9a5294a7d05acffb106837f60
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88145979"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996400"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Hinzufügen von E-Mail-Einstellungen für iOS- und iPadOS-Geräte in Microsoft Intune
 
@@ -64,15 +64,15 @@ In diesem Artikel werden alle E-Mail-Einstellungen aufgeführt und beschrieben, 
 - **SSL**: Mit der Option **Aktivieren** wird die SSL-Kommunikation (Secure Sockets Layer) beim Senden und Empfangen von E-Mails sowie bei der Kommunikation mit dem Exchange-Server verwendet.
 - **OAuth**: Mit der Option **Aktivieren** wird Open Authorization (OAuth) beim Senden und Empfangen von E-Mails sowie bei der Kommunikation mit Exchange verwendet. Wenn Ihr OAuth-Server die zertifikatbasierte Authentifizierung verwendet, wählen Sie **Zertifikat** als **Authentifizierungsmethode** aus, und fügen Sie das Zertifikat dem Profil hinzu. Wählen Sie andernfalls **Benutzername und Kennwort** als **Authentifizierungsmethode** aus. Stellen Sie bei der Verwendung von OAuth Folgendes sicher:
 
-  - Vergewissern Sie sich, dass Ihr E-Mail-Programm OAuth unterstützt, bevor Sie Ihren Benutzern dieses Profil zuordnen. Office 365 Exchange Online unterstützt OAuth. Lokale Exchange-Lösungen oder Lösungen von Partnern oder Drittanbietern unterstützen OAuth möglicherweise nicht. Lokale Exchange-Instanzen können allerdings für die moderne Authentifizierung konfiguriert werden. Weitere Informationen finden Sie unter [Übersicht über hybride moderne Authentifizierung und Voraussetzungen für lokale Skype for Business- und Exchange-Server](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+  - Vergewissern Sie sich, dass Ihr E-Mail-Programm OAuth unterstützt, bevor Sie Ihren Benutzern dieses Profil zuordnen. Microsoft 365 Exchange Online unterstützt OAuth. Lokale Exchange-Lösungen oder Lösungen von Partnern oder Drittanbietern unterstützen OAuth möglicherweise nicht. Lokale Exchange-Instanzen können allerdings für die moderne Authentifizierung konfiguriert werden. Weitere Informationen finden Sie unter [Übersicht über hybride moderne Authentifizierung und Voraussetzungen für lokale Skype for Business- und Exchange-Server](/office365/enterprise/hybrid-modern-auth-overview).
 
     Wenn das E-Mail-Profil OAuth verwendet und der E-Mail-Dienst dies nicht unterstützt, funktioniert die Option **Kennwort erneut eingeben** nicht. Dadurch geschieht beispielsweise nichts, wenn der Benutzer in den Apple-Geräteeinstellungen **Kennwort erneut eingeben** auswählt.
 
   - Wenn OAuth aktiviert ist, steht den Benutzern eine moderne Authentifizierung bei der Anmeldung mit einem E-Mail-Konto zur Verfügung, die auch die mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) unterstützt. 
 
-  - Einige Organisationen deaktivieren den [Self-Service-Anwendungszugriff](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access) für Endbenutzer. In diesem Szenario schlägt die Anmeldung mit moderner Authentifizierung möglicherweise fehl, bis ein Administrator die Unternehmens-App „iOS Accounts“ (iOS-Konten) erstellt und den Benutzern in Azure AD Zugriff auf diese App gewährt.
+  - Einige Organisationen deaktivieren den [Self-Service-Anwendungszugriff](/azure/active-directory/manage-apps/manage-self-service-access) für Endbenutzer. In diesem Szenario schlägt die Anmeldung mit moderner Authentifizierung möglicherweise fehl, bis ein Administrator die Unternehmens-App „iOS Accounts“ (iOS-Konten) erstellt und den Benutzern in Azure AD Zugriff auf diese App gewährt.
 
-    Hierfür wird normalerweise im Panel [Anwendungszugriff](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) über das Feature **App hinzufügen** eine Anwendung hinzugefügt, für die **keine Genehmigung des Unternehmens** erforderlich ist. Weitere Informationen finden Sie unter [Zuweisen von Benutzern zu Anwendungen](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
+    Hierfür wird normalerweise im Panel [Anwendungszugriff](/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) über das Feature **App hinzufügen** eine Anwendung hinzugefügt, für die **keine Genehmigung des Unternehmens** erforderlich ist. Weitere Informationen finden Sie unter [Zuweisen von Benutzern zu Anwendungen](/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
   > [!NOTE]
   > Wenn Sie OAuth aktivieren, geschieht Folgendes:  

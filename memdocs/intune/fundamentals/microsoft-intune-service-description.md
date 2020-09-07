@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune-Dienstbeschreibung
-description: Microsoft Intune ist ein cloudbasierter Dienst, der Sie bei der Verwaltung von Windows-, iOS/iPadOS-, Mac OS X- und Android-Geräten unterstützt.
+description: Microsoft Intune ist ein cloudbasierter Dienst, der Sie bei der Verwaltung von Windows-, iOS/iPadOS-, macOS- und Android-Geräten unterstützt.
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -15,12 +15,12 @@ ms.reviewer: cacamp
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f89fc7ffb3059204507a541e19afa2e97424dea5
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7352ebaf9b4aba07316c8fd9b1b5fc98d20588b0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663224"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992690"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune-Dienstbeschreibung
 
@@ -55,17 +55,17 @@ Da sich das Ökosystem für die mobile Geräteverwaltung durch Updates von Betri
 
 - [Neuerungen in Microsoft Intune](whats-new.md). Dieses Thema wird mit dem monatlichen Dienstupdate und zudem wöchentlich aktualisiert, wenn z.B. Apps wie die Unternehmensportal-App veröffentlicht werden.
 
-- Wichtige Dienstupdates werden auch im [Microsoft 365 Admin Center](https://admin.microsoft.com/) im Nachrichtencenter angekündigt. Wenn Sie die begleitende [mobilen Office 365-Admin-App](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) installieren, können Sie Benachrichtigungen auf Ihrem mobilen Gerät erhalten. Erfahren Sie mehr über das [Office 365-Nachrichtencenter](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Wichtige Dienstupdates werden auch im [Microsoft 365 Admin Center](https://admin.microsoft.com/) im Nachrichtencenter angekündigt. Wenn Sie die begleitende [mobile Microsoft 365 Admin-App](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) installieren, können Sie Benachrichtigungen auf Ihrem mobilen Gerät erhalten. Hier erfahren Sie mehr über das Arbeiten mit dem [Microsoft 365-Nachrichtencenter](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
   Einige hilfreiche Tipps:
 
-  - Die Nachrichten im Office 365-Nachrichtencenter sind zielgerichtet. Wenn Ihr Unternehmen z. B. nicht mit Intune for Education arbeitet, werden Sie zu Intune for Education nicht benachrichtigt.
+  - Die Nachrichten im Microsoft 365-Nachrichtencenter sind zielgerichtet. Wenn Ihr Unternehmen z. B. nicht mit Intune for Education arbeitet, werden Sie zu Intune for Education nicht benachrichtigt.
 
   - Nachrichten laufen ab. Beispielsweise läuft die Benachrichtigung mit einem Link zur Seite „Neuerungen“, dass Ihr Dienst aktualisiert wurde, beispielsweise wahrscheinlich vor der Benachrichtigung zum nächsten Dienstupdate ab. Andernfalls hätten Sie einen großen Rückstand von Beiträgen, die möglicherweise nicht mehr relevant sind.
 
-  - Die mobile App für die Office 365-Verwaltung ermöglicht Ihnen das Durchsuchen aller Nachrichten und Weiterleiten der Benachrichtigung, wenn Sie diese mit Kollegen in Ihrer Organisation teilen möchten.
+  - Die mobile Microsoft 365 Admin-App ermöglicht Ihnen das Durchsuchen aller Nachrichten und das Weiterleiten der Benachrichtigung, wenn Sie diese mit Kollegen in Ihrer Organisation teilen möchten.
 
-  - Unter „Einstellungen für das Nachrichtencenter bearbeiten“ finden Sie nun eine Umschaltfläche für **Intune**, sodass Sie sich diese an ein Intune-Abonnement übermittelten Nachrichten ansehen können. Wenn „Verwaltung mobiler Geräte für Office 365“ angezeigt wird, handelt es sich um einen anderen Dienst und nicht um Intune.
+  - Unter „Einstellungen für das Nachrichtencenter bearbeiten“ finden Sie nun eine Umschaltfläche für **Intune**, sodass Sie sich diese an ein Intune-Abonnement übermittelten Nachrichten ansehen können. Wenn „Verwaltung mobiler Geräte für Microsoft 365“ angezeigt wird, handelt es sich um einen anderen Dienst und nicht um Intune.
 
 - Außerdem bieten wir zwei Blogs zum Veröffentlichen der bewährten Methoden für den Support für Enterprise Mobility + Security (EMS) und Intune:
 
@@ -74,21 +74,21 @@ Da sich das Ökosystem für die mobile Geräteverwaltung durch Updates von Betri
   - [Blog zum Intune-Support](https://blogs.technet.microsoft.com/intunesupport/)
 
 > [!Note]
-> Sie können die Dienstintegrität von Intune im [Microsoft 365 Admin Center](https://admin.microsoft.com) überwachen. Wählen Sie im linken Bereich **Dienststatus** aus. Sie können auch die [mobile App für die Office 365-Verwaltung](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) zum Anzeigen des Dienststatus nutzen.
+> Sie können die Dienstintegrität von Intune im [Microsoft 365 Admin Center](https://admin.microsoft.com) überwachen. Wählen Sie im linken Bereich **Dienststatus** aus. Sie können auch die [mobile Microsoft 365 Admin-App](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) zum Anzeigen der Dienstintegrität nutzen.
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Typen von Benachrichtigungen von Microsoft zum Intune-Dienst
 
 Abhängig von den Auswirkungen der Änderung werden Sie mindestens 7 bis 90 Tage vor der Dienständerung benachrichtigt, damit Sie Dienständerungen planen können. Bei diesen Änderungen kann es sich um die folgenden Arten handeln:
 
-- Änderungen an der Endbenutzeroberfläche, die Sie mit Ihren Helpdeskmitarbeitern oder Endbenutzern teilen möchten. Bei diesen Änderungen erfolgt in der Regel eine Benachrichtigung 7 bis 30 Tage zuvor, die im Artikel zu den [Neuerungen auf der Benutzeroberfläche der Intune-App](whats-new-app-ui.md) dokumentiert werden. Eine Korrektur eines Rechtschreibfehlers wird allerdings meist nicht dokumentiert. Doch bei einer wichtigen Änderung an der Oberfläche zur Benutzerregistrierung übermitteln wir über das Office 365-Nachrichtencenter eine Nachricht an unsere Kunden mit einem Link zum Artikel mit den Änderungen an der Intune App-Benutzeroberfläche. Sie werden also über die Änderungen benachrichtigt und haben Zeit, Ihre Anleitungen für Endbenutzer zu prüfen und zu aktualisieren, ehe die Änderungen in der Produktionsumgebung übernommen werden.
+- Änderungen an der Endbenutzeroberfläche, die Sie mit Ihren Helpdeskmitarbeitern oder Endbenutzern teilen möchten. Bei diesen Änderungen erfolgt in der Regel eine Benachrichtigung 7 bis 30 Tage zuvor, die im Artikel zu den [Neuerungen auf der Benutzeroberfläche der Intune-App](whats-new-app-ui.md) dokumentiert werden. Eine Korrektur eines Rechtschreibfehlers wird allerdings meist nicht dokumentiert. Bei einer wichtigen Änderung der Oberfläche für die Benutzerregistrierung übermitteln wir jedoch über das Microsoft 365-Nachrichtencenter eine Nachricht an unsere Kunden mit einem Link zum Artikel mit den Änderungen an der Benutzeroberfläche der Intune-App. Sie werden also über die Änderungen benachrichtigt und haben Zeit, Ihre Anleitungen für Endbenutzer zu prüfen und zu aktualisieren, bevor die Änderungen in der Produktionsumgebung übernommen werden.
 
-- Änderungen, die Maßnahmen Ihrerseits erfordern, heißen **Plan for Change** (Änderungen einplanen) und erfolgen in der Regel mit einer Vorlaufzeit von 30 Tagen. Im Office 365-Nachrichtencenter heißt die Kategorie explizit „Plan for Change“ (Änderungen einplanen). Sobald das exakte Datum vorliegt, an dem die Änderung in der Produktionsumgebung erfolgt, wird auch eine **Handlungsfrist** mit einer visuellen Warteschlange und einem Ausrufezeichen angegeben.
+- Änderungen, die Maßnahmen Ihrerseits erfordern, heißen **Plan for Change** (Änderungen einplanen) und erfolgen in der Regel mit einer Vorlaufzeit von 30 Tagen. Im Microsoft 365-Nachrichtencenter heißt die Kategorie explizit „Plan for Change“ (Änderungen einplanen). Sobald das exakte Datum vorliegt, an dem die Änderung in der Produktionsumgebung erfolgt, wird auch eine **Handlungsfrist** mit einer visuellen Warteschlange und einem Ausrufezeichen angezeigt.
 
 - Bei den meisten veralteten Funktionen erfolgt eine entsprechende Benachrichtigung 90 Tage zuvor. Wenn wir beispielsweise für eine bestimmte Version von Internet Explorer keinen Support mehr bieten, ist es unser Ziel, Sie 90 Tage vorher zu benachrichtigen. Bei veraltete Funktionen kann es kompliziert werden, wenn die Veraltung von einem anderen Unternehmen angekündigt wird. Angenommen, ein Browserhersteller hat angekündigt, dass Silverlight von seinem neuesten Build nicht mehr unterstützt wird. Daraufhin informieren wir Kunden, dass wir den Support für diesen Browser einstellen, wobei unsere Benachrichtigung der Kunden der 90-Tage-Frist unterliegt.
 
 - Im Falle einer Deaktivierung des Intune-Diensts würden Sie 12 Monate im Voraus informiert.
 
-Wenn schließlich im seltenen Fall, dass im Anschluss an einen Vorfall Maßnahmen zum Wiederherstellen Ihres Diensts oder eine umfassende Änderung mit nach Rückmeldungen von Kunden potenziellem Störpotenzial erforderlich sein sollten, werden basierend auf Ihren [Kommunikationseinstellungen für Office 365](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) E-Mails an die Dienstadministratoren gesendet. Voraussetzung ist eine gültige (vorzugsweise geschäftliche) E-Mail-Adresse.  
+In den seltenen Fällen, in denen nach einem Vorfall Maßnahmen erforderlich sind, um Ihren Dienst wieder in den Normalzustand zu versetzen, oder bei einer umfassenden Änderung, bei der es – Kundenfeedback zufolge – zu möglichen Dienstunterbrechungen kommen könnte, senden wir den Dienstadministratoren basierend auf ihren [Microsoft 365-Kommunikationseinstellungen](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) eine E-Mail. Voraussetzung hierfür ist eine gültige (vorzugsweise geschäftliche) E-Mail-Adresse.  
 
 
 <!--- ## Choose the management solution that's right for you

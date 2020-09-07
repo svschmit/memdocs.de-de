@@ -2,7 +2,7 @@
 title: Datensicherheit und -freigabe in Intune
 titleSuffix: Microsoft Intune
 description: Erfahren Sie mehr darüber, wie personenbezogene Daten in Intune gesichert und freigegeben werden.
-keywords: ''
+keywords: Datenschutz, Daten
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fba72c89676d8974f5e7f9aac25d3365b69f61c7
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079551"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286253"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Datensicherheit und -freigabe in Intune
 
@@ -36,17 +36,9 @@ Für Microsoft Intune werden die gleichen technischen und organisatorischen Maß
 
 Weitere Informationen finden Sie im [Service Trust Portal](https://www.microsoft.com/en-us/TrustCenter/stp).
 
-Intune verwendet beispielsweise folgende Techniken zur Datenminimierung:
-
-- aggregation
-- Optionale Datensammlung für einige Features
-- Weniger präzise oder vertrauliche Daten
-
-Intune verwendet ebenfalls Techniken wie RBAC und JIT-Sicherheit für Supportincidents, um den Datenschutz standardmäßig sicherzustellen. 
-
 ### <a name="data-breach-reporting"></a>Melden von Datenschutzverletzungen
 
-Wenn ein Sicherheitsincident identifiziert wird, der den Kunden gemeldet werden sollte, werden diese darüber benachrichtigt. Dieser Prozess umfasst die Zusammenarbeit mit dem Microsoft Office 365-Team, um Benachrichtigungen über Datenschutzverletzungen mithilfe von Intune an alle Microsoft Office 365-Kunden zu übermitteln.
+Wenn ein Sicherheitsincident identifiziert wird, der den Kunden gemeldet werden sollte, werden diese darüber benachrichtigt. Dieser Prozess umfasst die Zusammenarbeit mit dem Microsoft 365-Team, um Benachrichtigungen über Datenschutzverletzungen mithilfe von Intune an alle Microsoft 365-Kunden zu übermitteln.
 
 ## <a name="data-sharing"></a>Datenfreigabe
 
@@ -72,7 +64,7 @@ Weitere Informationen zu für Drittanbieter freigegebenen Daten finden Sie in fo
 
 Microsoft Intune gibt keine Daten für Configuration Manager frei. Configuration Manager ist ein lokales Produkt, das direkt vom Kunden bereitgestellt, verwaltet und betrieben wird. Die Diagnose- und Nutzungsdaten, die von Configuration Manager gesammelt werden, dienen ausschließlich zur Verbesserung der Installation, der Qualität und der Sicherheit von zukünftigen Releases.
 
-Weitere Informationen erhalten Sie unter [Diagnose- und Nutzungsdaten für Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
+Weitere Informationen erhalten Sie unter [Diagnose- und Nutzungsdaten für Configuration Manager](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 
 
 ## <a name="next-steps"></a>Nächste Schritte

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed7b8c0e8a4953dd2b125fbaf3e63ce74873a7
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 46e2f716808f5f3c91e44932572146d04c259484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217483"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993901"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Geführtes Szenario: Sichere mobile Microsoft Office-Apps
 
@@ -52,7 +52,7 @@ Sie können die App-Schutzrichtlinien verwenden, um zu verhindern, dass Benutzer
 - Richtlinien zur Datenverschiebung wie **Kopien von Organisationsdaten speichern** und **Ausschneiden, Kopieren und Einfügen einschränken**.
 - Zugriffsrichtlinieneinstellungen, die eine einfache PIN für den Zugriff erfordern und verhindern, dass verwaltete Apps auf Geräten mit Jailbreak oder Rootzugriff ausgeführt werden
 
-Mit App-basiertem bedingten Zugriff und der Verwaltung von Client-Apps wird eine Sicherheitsschicht hinzugefügt, indem sichergestellt wird, dass nur Client-Apps, die Intune-App-Schutzrichtlinien unterstützen, auf Exchange Online und andere Office 365-Dienste zugreifen können.
+Mit App-basiertem bedingten Zugriff und der Verwaltung von Client-Apps wird eine Sicherheitsstufe hinzugefügt, indem sichergestellt wird, dass nur Client-Apps, die Intune-App-Schutzrichtlinien unterstützen, auf Exchange Online und andere Microsoft 365-Dienste zugreifen können.
 
 Wenn Sie nur für die Microsoft Outlook-App den Zugriff auf Exchange Online zulassen, können Sie die integrierten E-Mail-Apps von iOS/iPadOS und Android blockieren. Darüber hinaus können Sie für Apps, auf die keine Intune-App-Schutzrichtlinien angewendet wurden, den Zugriff auf SharePoint Online blockieren.
 

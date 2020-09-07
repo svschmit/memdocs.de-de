@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c77d69e076956ab66deeb5fb8256afc6038225b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: d3c42683e1c9a9d67f6fadd51878ebf2da3e0cac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820033"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996604"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Änderungsprotokoll für die Intune Data Warehouse-API
 
@@ -41,7 +41,7 @@ In der folgenden Tabelle werden die Eigenschaften aufgeführt, die zur Entität 
 |    Sammlung                          |    Änderung     |    Beschreibung                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    hinzugefügt    |    Der eindeutige Netzwerkbezeichner dieses Geräts.                                                                                                                                                                                                                                                                     |
-|    office365Version    |    hinzugefügt    |    Die auf dem Gerät installierte Version von Office 365.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    hinzugefügt    |    Die auf dem Gerät installierte Version von Microsoft 365.                                                                                                                                                                                                                                                                     |
 
 In der folgenden Tabelle sind die Eigenschaften aufgeführt, die zur Entität [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) in Intune Data Warehouse hinzugefügt wurden.
 
@@ -80,7 +80,7 @@ In der folgenden Tabelle werden die Eigenschaften aufgeführt, die zur Entität 
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    hinzugefügt    |    Der eindeutige Netzwerkbezeichner dieses Geräts.                                                                                                                                                                                                                                                                     |
 |    model    |    hinzugefügt    |    Das Gerätemodell.                                                                                                                                                                                                                                                                     |
-|    office365Version    |    hinzugefügt    |    Die auf dem Gerät installierte Version von Office 365.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    hinzugefügt    |    Die auf dem Gerät installierte Version von Microsoft 365.                                                                                                                                                                                                                                                                     |
 
 In der folgenden Tabelle werden die Eigenschaften aufgeführt, die zur Entität **devicePropertyHistory** in Intune Data Warehouse hinzugefügt wurden.
 

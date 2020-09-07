@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f6b117855430af281db7087d77f53bb0e11c61
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 3d7ba1f42ebffa8580e368d89ea9720e544e0063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137425"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994003"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Einrichten der Symantec Endpoint Protection Mobile-Integration in Intune
 
@@ -138,7 +138,7 @@ SEP Mobile synchronisiert die Geräte und führt den Mobile Threat Defense-Diens
 
     ![Darstellung des Hinzufügens der iOS/iPadOS-App zu Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
-7. Melden Sie sich mit den Azure Active Directory-Anmeldeinformationen für das Office 365-Konto an, das das Verzeichnis verwaltet.
+7. Melden Sie sich mit den Azure Active Directory-Anmeldeinformationen für das Microsoft 365-Konto an, unter dem das Verzeichnis verwaltet wird.
 
 8. Klicken Sie auf die Schaltfläche **Annehmen**, um Azure Active Directory die SEP Mobile iOS/iPadOS-App hinzuzufügen.
 

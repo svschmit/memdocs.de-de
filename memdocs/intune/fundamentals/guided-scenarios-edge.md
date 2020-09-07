@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fc1e75f38767de77f89dce2a85c747a7390e76d
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: ee6961de9a33f54db4f3fa8bb4c5a2bfa9406fbb
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217408"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993833"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Geführtes Szenario: Bereitstellen von Microsoft Edge für Mobilgeräte
 
@@ -34,7 +34,7 @@ Dank der integrierten Features von Microsoft Edge ist es für die Benutzer ein L
 > Wenn Sie die Registrierung von iOS/iPadOS- oder Android-Geräten für Benutzer blockiert haben, wird die Registrierung durch dieses Szenario nicht aktiviert, und die Benutzer müssen Microsoft Edge selbst installieren.
 Die folgenden durch Intune-Richtlinien aktivierten Microsoft Edge-Unternehmensfeatures sind verfügbar:
 
-- **Doppelte Identitäten:** Benutzer können sowohl Geschäftskonten als auch persönliche Konten zum Browsen hinzufügen. Die beiden Identitäten sind vollständig voneinander getrennt, ähnlich wie bei Office 365 und Outlook. Intune-Administratoren können die gewünschten Richtlinien für geschütztes Browsen im Geschäftskonto festlegen.
+- **Doppelte Identitäten:** Benutzer können sowohl Geschäftskonten als auch persönliche Konten zum Browsen hinzufügen. Die beiden Identitäten sind vollständig voneinander getrennt, ähnlich wie bei Microsoft 365 und Outlook. Intune-Administratoren können die gewünschten Richtlinien für geschütztes Browsen im Geschäftskonto festlegen.
 - **Integration von Intune-App-Schutzrichtlinien:** Administratoren können jetzt App-Schutzrichtlinien für Microsoft Edge erstellen. U. a. können sie in diesem Rahmen festlegen, wie und ob Benutzer Inhalte ausschneiden, kopieren und einfügen können, ob Bildschirmaufnahmen zulässig sind, und sie können sicherstellen, dass von Benutzern ausgewählte Links nur in anderen verwalteten Apps geöffnet werden.
 - **Azure-Anwendungspoxyintegration:** Administratoren können den Zugriff auf SaaS-Apps und Web-App festlegen, um sicherzustellen, dass browserbasierte Apps nur im sicheren Microsoft Edge-Browser ausgeführt werden, egal ob Endbenutzer eine Verbindung über ein Unternehmensnetzwerk oder über das Internet herstellen.
 - **Verknüpfungen zu Favoriten und der Startseite:** Für einen einfacheren Zugriff können Administratoren URLs festlegen, die unter Favoriten angezeigt werden, wenn sich Benutzer im Unternehmenskontext befinden. Administratoren können auch eine Verknüpfung zur Startseite hinzufügen, die als primäre Verknüpfung angezeigt wird, wenn der Unternehmensbenutzer eine neue Seite oder eine neue Registerkarte in Microsoft Edge öffnet.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 7d9fe4c3a48cbf333fffd83d013b6a2d5fcf4ed9
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795702"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281131"
 ---
 # <a name="configure-microsoft-launcher"></a>Konfigurieren von Microsoft Launcher
 
@@ -69,9 +69,9 @@ In der folgenden Tabelle sind die für Microsoft Launcher verfügbaren Konfigura
 |    Ändern des Hintergrundbilds für das Gerät durch Benutzer zulässig    |    Bool    |    True    |    Hiermit können Sie festlegen, ob die Einstellung für das Hintergrundbild durch Endbenutzer geändert werden darf.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird das Hintergrundbild in der Richtlinie nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird das Hintergrundbild bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    Feed aktivieren    |    Boolesch    |    True    |    Ermöglicht es Ihnen, den Launcher-Feed auf dem Gerät zu aktivieren, wenn der Benutzer auf dem Startbildschirm nach rechts wischt.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird der Feed aktiviert.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird der Feed deaktiviert.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Ändern der Feedaktivierung durch Benutzer zulässig    |    Boolesch    |    True    |     Hiermit können Sie festlegen, ob die Einstellung **Feed aktivieren** durch Endbenutzer geändert werden darf.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird der Feed nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird der Feed bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
-|    Platzierung der Suchleiste   |    Zeichenfolge    |    Unten    |  Hiermit können Sie die **Platzierung der Suchleiste** auf dem Startbildschirm angeben. <ul><li>Wenn **Unten** festgelegt ist, befindet sich die Suchleiste am unteren Rand des Startbildschirms.</li><li>Wenn **Oben** festgelegt ist, befindet sich die Suchleiste am oberen Rand des Startbildschirms.</li><li>Wenn **Ausblenden** festgelegt ist, wird die Suchleiste vom Startbildschirm entfernt.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
+|    Platzierung der Suchleiste   |    Zeichenfolge    |    Unten    |  Hiermit können Sie die **Platzierung der Suchleiste** auf dem Startbildschirm angeben. <ul><li>Wenn **Unten** festgelegt ist, befindet sich die Suchleiste am unteren Rand des Startbildschirms.</li><li>Wenn **Oben** festgelegt ist, befindet sich die Suchleiste am oberen Rand des Startbildschirms.</li><li>Wenn **Ausgeblendet** festgelegt ist, wird die Suchleiste vom Startbildschirm entfernt.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
 |    Ändern der Platzierung der Suchleiste durch Benutzer zulässig   |    Bool    |    True    |  Hiermit können Sie festlegen, ob die Einstellung zur **Platzierung der Suchleiste** durch Endbenutzer geändert werden darf. <ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird die Platzierung der Suchleiste nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird die Platzierung der Suchleiste bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`<p>**HINWEIS:** Diese Einstellung wird für Microsoft Launcher 6.2 und höher nicht mehr erzwungen. Daher gibt es keine Auswirkungen, wenn dieser Wert auf `True` festgelegt wird. Ihre Endbenutzer können die Platzierung der Suchleiste auf ihren Geräten nicht anpassen.    |
-|    Dockmodus  |    Zeichenfolge    |    Anzeigen    | Hiermit können Sie das Dock auf dem Gerät aktivieren, wenn der Benutzer auf dem Startbildschirm nach rechts wischt.<ul><li>Wenn **Anzeigen** festgelegt ist, wird das Dock aktiviert.</li><li>Wenn **Ausblenden** festgelegt ist, wird das Dock auf dem Startbildschirm ausgeblendet, der Benutzer kann es jedoch bei Bedarf anzeigen lassen.</li><li>Wenn **Deaktiviert** festgelegt ist, wird das Dock deaktiviert.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Dock.Mode`    |
+|    Dockmodus  |    Zeichenfolge    |    Anzeigen    | Hiermit können Sie das Dock auf dem Gerät aktivieren, wenn der Benutzer auf dem Startbildschirm nach rechts wischt.<ul><li>Wenn **Anzeigen** festgelegt ist, wird das Dock aktiviert.</li><li>Wenn **Ausgeblendet** festgelegt ist, wird das Dock auf dem Startbildschirm ausgeblendet, der Benutzer kann es jedoch bei Bedarf anzeigen.</li><li>Wenn **Deaktiviert** festgelegt ist, wird das Dock deaktiviert.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Dock.Mode`    |
 |   Ändern des Dockmodus durch Benutzer zulässig   |    Zeichenfolge    |    True    |  Hiermit können Sie festlegen, ob die Einstellung zum Dockmodus durch Endbenutzer geändert werden darf.<ul><li>Wenn diese Einstellung auf **TRUE** festgelegt ist, wird die Einstellung zum Dockmodus nur bei der ersten Bereitstellung erzwungen. Danach wird die Richtlinie nicht mehr erzwungen, sodass Änderungen, die durch den Benutzer vorgenommen wurden, erhalten bleiben.</li><li>Wenn diese Einstellung auf **FALSE** festgelegt ist, wird die Einstellung zum Dockmodus bei jeder Synchronisierung erzwungen.</li></ul><br>JSON-Schlüsselname:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
 ## <a name="enter-json-data"></a>Eingeben von JSON-Daten
@@ -219,7 +219,7 @@ Dies ist ein Beispiel für ein JSON-Skript, in dem alle verfügbaren Konfigurati
         }, 
         {
             "key": "com.microsoft.launcher.Wallpaper.Url", 
-            "valueBool": "http://www.contoso.com/wallpaper.png"
+            "valueString": "http://www.contoso.com/wallpaper.png"
         }, 
         {
             "key": "com.microsoft.launcher.HomeScreen.GridSize", 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34f88d4e7aefe9a32238bb6d14203de0defd65ef
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b501ab979d87461067018f789d6d096020d3819e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988259"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057418"
 ---
 # <a name="remotely-assist-mobile-devices-managed-by-microsoft-endpoint-manager"></a>Remoteunterstützung für von Microsoft Endpoint Manager verwaltete mobile Geräte
 
@@ -30,7 +30,7 @@ Für die Remoteunterstützung für von Microsoft Endpoint Manager verwaltete Ger
 - [Microsoft Teams](https://products.office.com/microsoft-teams/) ist der Hub für die Teamarbeit, in dem Sie von jedem Ort der Welt aus mit Mitgliedern Ihres Teams chatten, diskutieren und zusammenarbeiten können.
 - [Quick Assist](https://support.microsoft.com/help/4027243/windows-10-solve-pc-problems-with-quick-assist) ist eine Windows 10-Anwendung, mit der zwei Personen ein Gerät über eine Remoteverbindung gemeinsam nutzen können.
 - [TeamViewer](https://www.teamviewer.com/) ist ein Drittanbieterprogramm, das Sie separat erwerben können. Es bietet umfassende Funktionen für Remotezugriff und -support. Die Integration von Intune und [TeamViewer](teamviewer-support.md) ermöglicht die Bereitstellung von Remotesupport über TeamViewer. Der Connector wird dabei direkt in Intune verwaltet.
-- Microsoft Endpoint Configuration Manager umfasst eine [Remotesteuerung](https://docs.microsoft.com/configmgr/core/clients/manage/remote-control/introduction-to-remote-control). Mit dieser Funktion können Sie alle Arbeitsgruppencomputer und in die Domäne eingebundenen Computer remote verwalten, unterstützen oder anzeigen.
+- Microsoft Endpoint Configuration Manager umfasst eine [Remotesteuerung](/configmgr/core/clients/manage/remote-control/introduction-to-remote-control). Mit dieser Funktion können Sie alle Arbeitsgruppencomputer und in die Domäne eingebundenen Computer remote verwalten, unterstützen oder anzeigen.
 
 | Features, Plattformen, Lizenzierung | **Teams** | Quick Assist | TeamViewer (Intune) | Remotesteuerung (Configuration Manager) |
 |:---:|:---:|:---:|:---:|:---:|
@@ -49,4 +49,4 @@ Für die Remoteunterstützung für von Microsoft Endpoint Manager verwaltete Ger
 | Erfordert Co-Verwaltung des Geräts durch Configuration Manager und Intune ||||![Häkchen](../enrollment/media/enrollment-method-capab/checkmark.png)|
 | Erfordert zusätzliche Lizenzierung\* |![Häkchen](../enrollment/media/enrollment-method-capab/checkmark.png)||![Häkchen](../enrollment/media/enrollment-method-capab/checkmark.png)|![Häkchen](../enrollment/media/enrollment-method-capab/checkmark.png)|
 
-\* Teams erfordert O365- oder M365-Lizenzen. Für die Verwendung von TeamViewer und Intune müssen beide Programme lizenziert sein. Die Remotesteuerung ist ein Feature von Configuration Manager und erfordert die Lizenzierung von Configuration Manager.
+\* Teams benötigen eine Microsoft 365-Lizenzierung. Für die Verwendung von TeamViewer und Intune müssen beide Programme lizenziert sein. Die Remotesteuerung ist ein Feature von Configuration Manager und erfordert die Lizenzierung von Configuration Manager.

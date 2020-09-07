@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f44bd52d12753ae25b8828d6c41d3055721a1fd6
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: fc6201ca73a7599ab05b8a4874a431eed6b81c46
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165990"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912473"
 ---
 # <a name="intune-reports"></a>Intune-Berichte
 Mithilfe von Microsoft Intune-Berichten können Sie die Integrität und Aktivität von Endpunkten in Ihrem Unternehmen effektiver und proaktiver überwachen. Zudem erhalten Sie weitere Berichtsdaten zu Intune. Sie können beispielsweise Berichte zur Gerätekonformität, -integrität und zu -trends abrufen. Darüber hinaus können Sie benutzerdefinierte Berichte erstellen, um spezifischere Daten zu erhalten. 
@@ -32,7 +32,7 @@ Die Berichtstypen sind in die folgenden Schwerpunktbereiche unterteilt:
 - **Operational** (operativ): bietet gezielt erfasste und aktuelle Daten, anhand derer Sie Maßnahmen ergreifen können. Diese Berichte sind besonders für Administratoren, Fachexperten und Helpdeskmitarbeiter nützlich.
 - **Organizational** (organisatorisch): bietet eine umfassendere Zusammenfassung zum allgemeinen Zustand, z. B. den Status der Geräteverwaltung. Diese Berichte sind besonders für Manager und Administratoren nützlich.
 - **Historical** (verlaufsbezogen): bietet Informationen zu Mustern und Trends für einen bestimmten Zeitraum. Diese Berichte sind besonders für Manager und Administratoren nützlich.
-- **Specialist** (spezialisiert): ermöglicht die Verwendung von Rohdaten zur Erstellung Ihrer eigenen benutzerdefinierten Berichte. Diese Berichte sind besonders für Administratoren nützlich.
+- **Specialist** (spezialisiert): ermöglicht die Verwendung von Rohdaten zur Erstellung Ihrer eigenen benutzerdefinierten Berichte Diese Berichte sind besonders für Administratoren nützlich.
 
 Das Berichterstellungsframework bietet konsistente und umfassendere Funktionen zur Berichterstellung. Die verfügbaren Berichte umfassen die folgenden Funktionen:
 - **Search and sort** (Suchen und Sortieren): Sie können einzelne Spalten suchen und sortieren. Dabei spielt es keine Rolle, wie groß das Dataset jeweils ist.
@@ -103,7 +103,7 @@ Führen Sie die folgenden Schritte aus, um den Bericht zu den **Trends** abzuruf
     ![Intune-Trendbericht](./media/intune-reports/intune-reports-03.png)
 
 ## <a name="azure-monitor-integration-reports-specialist"></a>Integrationsberichte für Azure Monitor (spezialisiert)
-Sie können Ihre eigenen Berichte im Hinblick auf die Daten anpassen, die Sie benötigen. Alternativ können Sie auch die Daten in Ihren Berichten mithilfe von [Log Analytics](reports.md#log-analytics) und [Azure Monitor-Arbeitsmappen](reports.md#workbooks) über [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) abrufen. Mit diesen Lösungen können Sie Warnungen konfigurieren sowie benutzerdefinierte Abfragen und Dashboards erstellen, auf denen die Daten zur Gerätekonformität Ihren Anforderungen entsprechend angezeigt werden. Zudem können Sie Aktivitätsprotokolle in Ihrem Azure Storage-Konto speichern, über [SIEM-Tools (Security Information & Event Management)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration) in die Berichte integrieren und eine Korrelation zwischen den Berichten und Azure Active Directory-Aktivitätsprotokollen herstellen. Azure Monitor-Arbeitsmappen können zusätzlich zu importierten Dashboards zur benutzerdefinierten Berichterstellung verwendet werden.
+Sie können Ihre eigenen Berichte im Hinblick auf die Daten anpassen, die Sie benötigen. Alternativ können Sie auch die Daten in Ihren Berichten mithilfe von [Log Analytics](reports.md#log-analytics) und [Azure Monitor-Arbeitsmappen](reports.md#workbooks) über [Azure Monitor](/azure/azure-monitor/overview) abrufen. Mit diesen Lösungen können Sie Warnungen konfigurieren sowie benutzerdefinierte Abfragen und Dashboards erstellen, auf denen die Daten zur Gerätekonformität Ihren Anforderungen entsprechend angezeigt werden. Zudem können Sie Aktivitätsprotokolle in Ihrem Azure Storage-Konto speichern, über [SIEM-Tools (Security Information & Event Management)](/microsoft-365/security/office-365-security/siem-server-integration) in die Berichte integrieren und eine Korrelation zwischen den Berichten und Azure Active Directory-Aktivitätsprotokollen herstellen. Azure Monitor-Arbeitsmappen können zusätzlich zu importierten Dashboards zur benutzerdefinierten Berichterstellung verwendet werden.
 
 > [!NOTE]
 > Für komplexe Berichterstellungsfunktionen ist ein Azure-Abonnement erforderlich.
@@ -135,27 +135,27 @@ Gehen Sie wie folgt vor, um benutzerdefinierte Berichte zu erstellen und abzuruf
 ### <a name="diagnostic-settings"></a>Diagnoseeinstellungen
 Jede Azure-Ressource erfordert eine eigene Diagnoseeinstellung. Damit wird für jede Ressource Folgendes definiert:
 
-- Kategorien von Protokollen und Metrikdaten, die an die in der Einstellung definierten Ziele gesendet werden. Die verfügbaren Kategorien variieren je nach Ressourcentyp.
-- Mindestens ein Ziel, an das die Protokolle gesendet werden sollen. Zu den aktuellen Zielen gehören der Log Analytics-Arbeitsbereich, Event Hubs und Azure Storage.
-- Eine Aufbewahrungsrichtlinie für Daten, die in Azure Storage gespeichert werden
+- Kategorien der Protokolle und Metrikdaten, die an die in der Einstellung definierten Ziele gesendet werden. Die verfügbaren Kategorien sind je nach Ressourcentyp verschieden.
+- Ein oder mehrere Ziele zum Senden der Protokolle. Zu den aktuellen Zielen gehören der Log Analytics-Arbeitsbereich, Event Hubs und Azure Storage.
+- Aufbewahrungsrichtlinie für Daten, die in Azure Storage gespeichert werden.
 
-Eine einzelne Diagnoseeinstellung kann jeweils eins der Ziele definieren. Wenn Sie Daten an mehr als einen bestimmten Zieltyp senden möchten (z. B. an zwei unterschiedliche Log Analytics-Arbeitsbereiche), sollten Sie mehrere Einstellungen festlegen. Jede Ressource kann bis zu fünf Diagnoseeinstellungen aufweisen.
+Mit einer einzelnen Diagnoseeinstellung kann eines der Ziele definiert werden. Wenn Sie Daten an mehrere Ziele eines bestimmten Typs senden möchten (z.B. zwei verschiedene Log Analytics-Arbeitsbereiche), dann erstellen Sie mehrere Einstellungen. Jede Ressource kann bis zu fünf Diagnoseeinstellungen aufweisen.
 
-Weitere Informationen zu Diagnoseeinstellungen finden Sie unter [Erstellen einer Diagnoseeinstellung zum Erfassen von Plattformprotokollen und Metriken in Azure](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-settings).
+Weitere Informationen zu Diagnoseeinstellungen finden Sie unter [Erstellen einer Diagnoseeinstellung zum Erfassen von Plattformprotokollen und Metriken in Azure](/azure/azure-monitor/platform/diagnostic-settings).
 
-### <a name="log-analytics"></a>Protokollanalysen
-Log Analytics ist das wichtigste Tool im Azure-Portal zum Schreiben von Protokollabfragen und zum interaktiven Analysieren der Ergebnisse dieser Abfragen. Auch wenn eine Protokollabfrage an einer anderen Stelle in Azure Monitor verwendet wird, schreiben und testen Sie sie in der Regel zuerst mithilfe von Log Analytics. Ausführliche Informationen zur Verwendung von Log Analytics und zum Erstellen von Protokollabfragen finden Sie unter [Übersicht über Protokollabfragen in Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
+### <a name="log-analytics"></a>Log Analytics
+Log Analytics ist das wichtigste Tool im Azure-Portal zum Schreiben von Protokollabfragen und zum interaktiven Analysieren der Ergebnisse dieser Abfragen. Auch wenn eine Protokollabfrage an einer anderen Stelle in Azure Monitor verwendet wird, sollten Sie die Abfrage in der Regel zunächst mithilfe von Log Analytics schreiben und testen. Ausführliche Informationen zur Verwendung von Log Analytics und zum Erstellen von Protokollabfragen finden Sie unter [Übersicht über Protokollabfragen in Azure Monitor](/azure/azure-monitor/log-query/log-query-overview). 
 
 ### <a name="workbooks"></a>Arbeitsmappen
-Arbeitsmappen kombinieren Text, Analytics-Abfragen, Azure-Metriken und Parameter in umfangreichen interaktiven Berichten. Sie können von allen anderen Teammitgliedern bearbeitet werden, die Zugriff auf dieselben Azure-Ressourcen haben. Weitere Informationen zu Arbeitsmappen finden Sie unter [Azure Monitor-Arbeitsmappen](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Außerdem können Sie mit Arbeitsmappenvorlagen arbeiten und eigene Beiträge hinzufügen. Weitere Informationen finden Sie unter [Azure Monitor-Arbeitsmappenvorlagen](https://go.microsoft.com/fwlink/?linkid=867045).
+Arbeitsmappen kombinieren Text, Analytics-Abfragen, Azure-Metriken und Parameter in umfangreichen interaktiven Berichten. Arbeitsmappen können von anderen Teammitgliedern bearbeitet werden, die Zugriff auf dieselben Azure-Ressourcen haben. Weitere Informationen zu Arbeitsmappen finden Sie unter [Azure Monitor-Arbeitsmappen](/azure/azure-monitor/app/usage-workbooks). Außerdem können Sie mit Arbeitsmappenvorlagen arbeiten und eigene Beiträge hinzufügen. Weitere Informationen finden Sie unter [Azure Monitor-Arbeitsmappenvorlagen](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## <a name="next-steps"></a>Nächste Schritte 
 
 Weitere Informationen finden Sie unter den folgenden Links:
 - [Blog: Berichterstellungsframework für Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
-- [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-- [Was ist Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
-- [Protokollabfragen](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
-- [Erste Schritte mit Log Analytics in Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
-- [Azure Monitor-Arbeitsmappen](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)
-- [SIEM-Tools (Security Information & Event Management)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)
+- [Azure Monitor](/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+- [Was ist Log Analytics?](/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
+- [Protokollabfragen](/azure/azure-monitor/log-query/log-query-overview)
+- [Erste Schritte mit Log Analytics in Azure Monitor](/azure/azure-monitor/log-query/get-started-portal)
+- [Azure Monitor-Arbeitsmappen](/azure/azure-monitor/app/usage-workbooks)
+- [SIEM-Tools (Security Information & Event Management)](/microsoft-365/security/office-365-security/siem-server-integration)

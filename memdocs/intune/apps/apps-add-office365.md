@@ -1,7 +1,7 @@
 ---
-title: Hinzufügen von Office 365-Apps zu Windows 10-Geräten mit Microsoft Intune
+title: Hinzufügen von Microsoft 365-Apps zu Windows 10-Geräten mit Microsoft Intune
 titleSuffix: ''
-description: Erfahren Sie, wie Sie Microsoft Intune verwenden können, um Office 365-Apps auf Windows 10-Geräten zu installieren.
+description: Hie rlernen Sie, wie Sie Microsoft Intune verwenden können, um Microsoft 365-Apps auf Windows 10-Geräten zu installieren.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8a0fba0f342995070b3408f4edc6b06d2012e7c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2242f8570a5f0ff625855bb3d31029fb4e13e3a8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989528"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996519"
 ---
-# <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Hinzufügen von Office 365-Apps zu Windows 10-Geräten mit Microsoft Intune
+# <a name="add-microsoft-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Hinzufügen von Microsoft 365-Apps zu Windows 10-Geräten mit Microsoft Intune
 
-Bevor Sie Apps zuweisen, überwachen, konfigurieren oder schützen können, müssen Sie sie zu Intune hinzufügen. Zu den verfügbaren [App-Typen](apps-add.md#app-types-in-microsoft-intune) gehören Office 365-Apps für Windows 10-Geräte. Wenn Sie den App-Typ in Intune auswählen, können Sie Office 365-Apps zuweisen und auf Geräten mit Windows 10 installieren. Sie können auch Apps für den Microsoft Project Online-Desktopclient und Microsoft Visio Online Plan 2 zuweisen und installieren, wenn Sie über die entsprechenden Lizenzen verfügen. Die verfügbaren Office 365-Apps werden in Azure in der Intune-Konsole als einzelne Einträge in der App-Liste angezeigt.
+Bevor Sie Apps zuweisen, überwachen, konfigurieren oder schützen können, müssen Sie sie zu Intune hinzufügen. Zu den verfügbaren [App-Typen](apps-add.md#app-types-in-microsoft-intune) gehören Microsoft 365-Apps für Windows 10-Geräte. Wenn Sie diesen App-Typ in Intune auswählen, können Sie Microsoft 365-Apps den von Ihnen verwalteten Windows 10-Geräten zuweisen und auf diesen installieren. Sie können auch Apps für den Microsoft Project Online-Desktopclient und Microsoft Visio Online Plan 2 zuweisen und installieren, wenn Sie über die entsprechenden Lizenzen verfügen. Die verfügbaren Microsoft 365-Apps werden in Azure in der Intune-Konsole als separate Einträge in der App-Liste angezeigt.
 
 > [!NOTE]
 > Microsoft Office 365 ProPlus wurde in **Microsoft 365 Apps for Enterprise** umbenannt. In unserer Dokumentation wird üblicherweise **Microsoft 365-Apps** verwendet.
@@ -37,17 +37,17 @@ Bevor Sie Apps zuweisen, überwachen, konfigurieren oder schützen können, müs
 ## <a name="before-you-start"></a>Vorbereitung
 
 > [!IMPORTANT]
-> Wenn es auf dem Endbenutzergerät MSI-Office-Apps gibt, müssen Sie diese Apps mit dem Feature **MSI entfernen** sicher deinstallieren. Andernfalls schlägt die Installation der von Intune bereitgestellten Office 365-Apps fehl.
+> Wenn es auf dem Endbenutzergerät MSI-Office-Apps gibt, müssen Sie diese Apps mit dem Feature **MSI entfernen** sicher deinstallieren. Andernfalls schlägt die Installation der von Intune bereitgestellten Microsoft 365-Apps fehl.
 
 - Auf den Geräten, auf denen Sie diese Apps bereitstellen, muss das Windows 10 Creators Update oder höher ausgeführt werden.
 - Intune unterstützt nur das Hinzufügen von Office-Apps aus der Microsoft 365-Apps-Suite.
 - Falls Office-Apps geöffnet sind, wenn Intune die App-Suite installiert, kann bei der Installation ein Fehler auftreten, und Benutzer verlieren möglicherweise Daten aus nicht gespeicherten Dateien.
 - Diese Installationsmethode wird auf Windows Home-, Windows Team-, Windows Holographic- oder Windows Holographic for Business-Geräten nicht unterstützt.
-- Intune unterstützt nicht das Installieren von Office 365-Desktop-Apps aus dem Microsoft Store (sogenannte Office Centennial-Apps) auf einem Gerät, für das bereits Office 365-Apps mit Intune bereitgestellt wurden. Wenn Sie diese Konfiguration installieren, kann sie zu Datenverlusten oder -beschädigungen führen.
+- Intune unterstützt nicht das Installieren von Microsoft 365-Desktop-Apps aus dem Microsoft Store (sogenannte Office Centennial-Apps) auf einem Gerät, für das bereits Microsoft 365-Apps mit Intune bereitgestellt wurden. Wenn Sie diese Konfiguration installieren, kann sie zu Datenverlusten oder -beschädigungen führen.
 - Mehrere erforderliche oder verfügbare App-Zuweisungen sind nicht additiv. Eine spätere App-Zuweisung überschreibt bereits vorhandene installierte App-Zuweisungen. Wenn z.B. der erste Satz von Office-Apps Word enthält und der spätere nicht, wird Word deinstalliert. Diese Bedingung gilt nicht für Visio- oder Project-Anwendungen.
-- Mehrere Office 365-Bereitstellungen werden derzeit nicht unterstützt. Es wird nur eine Bereitstellung an das Gerät übermittelt.
+- Mehrere Microsoft 365-Bereitstellungen werden derzeit nicht unterstützt. Es wird nur eine Bereitstellung an das Gerät übermittelt.
 - **Office-Version:** Wählen Sie aus, ob Sie die 32-Bit- oder die 64-Bit-Version von Office zuweisen möchten. Sie können die 32-Bit-Version sowohl auf 32-Bit- als auch auf 64-Bit-Geräten installieren. Die 64-Bit-Version lässt sich jedoch nur auf 64-Bit-Geräten installieren.
-- **Remove MSI from end-user devices** (MSI von Endbenutzergeräten entfernen): Wählen Sie aus, ob Sie vorhandene Office-MSI-Apps von Endbenutzergeräten entfernen möchten. Die Installation kann nicht erfolgreich durchgeführt werden, wenn bereits MSI-Apps auf den Endbenutzergeräten vorhanden sind. Die zu deinstallierenden Apps sind nicht auf die Apps beschränkt, die in **App-Suite konfigurieren** zur Installation ausgewählt wurden, sondern es werden sämtliche Office-(MSI)-Apps vom Endbenutzergerät entfernt. Weitere Informationen finden Sie unter [Remove existing MSI versions of Office when upgrading to Office 365 ProPlus (Entfernen vorhandener MSI-Versionen von Office beim Upgrade auf Microsoft 365-Apps)](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Wenn Intune Office auf den Computern Ihrer Endbenutzer neu installiert, erhalten sie automatisch dieselben Sprachpakete wie bei früheren MSI-Office-Installationen.
+- **Remove MSI from end-user devices** (MSI von Endbenutzergeräten entfernen): Wählen Sie aus, ob Sie vorhandene Office-MSI-Apps von Endbenutzergeräten entfernen möchten. Die Installation kann nicht erfolgreich durchgeführt werden, wenn bereits MSI-Apps auf den Endbenutzergeräten vorhanden sind. Die zu deinstallierenden Apps sind nicht auf die Apps beschränkt, die in **App-Suite konfigurieren** zur Installation ausgewählt wurden, sondern es werden sämtliche Office-(MSI)-Apps vom Endbenutzergerät entfernt. Weitere Informationen finden Sie unter [Remove existing MSI versions of Office when upgrading to Office 365 ProPlus (Entfernen vorhandener MSI-Versionen von Office beim Upgrade auf Microsoft 365-Apps)](/deployoffice/upgrade-from-msi-version). Wenn Intune Office auf den Computern Ihrer Endbenutzer neu installiert, erhalten sie automatisch dieselben Sprachpakete wie bei früheren MSI-Office-Installationen.
 
 ## <a name="select-microsoft-365-apps"></a>Auswählen von Microsoft 365-Apps
 
@@ -92,14 +92,14 @@ Wenn Sie **Konfigurations-Designer** auswählen, ändert sich der Bereich **App 
    - **Office-Apps auswählen**: Wählen Sie in der Dropdownliste die Standard-Office-Apps aus, die Sie Geräten zuweisen möchten.
    - **Weitere Office-Apps auswählen (Lizenz erforderlich)** : Wählen Sie in der Dropdownliste zusätzliche Office-Apps aus, die Sie Geräten zuweisen möchten und für die Sie über Lizenzen verfügen. Hierzu gehören lizenzierte Apps wie der Microsoft Project Online-Desktopclient und Microsoft Visio Online (Plan 2).
    - **Architektur**: Wählen Sie aus, ob Sie die **32-Bit**- oder **64-Bit**-Version von Microsoft 365-Apps zuweisen möchten. Sie können die 32-Bit-Version sowohl auf 32-Bit- als auch auf 64-Bit-Geräten installieren. Die 64-Bit-Version lässt sich jedoch nur auf 64-Bit-Geräten installieren.
-    - **Updatekanal**: Wählen Sie aus, wie Office auf Geräten aktualisiert wird. Informationen zu den unterschiedlichen Updatekanälen finden Sie in der [Übersicht der Updatekanäle für Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Es stehen die folgenden Optionen zur Auswahl:
+    - **Updatekanal**: Wählen Sie aus, wie Office auf Geräten aktualisiert wird. Informationen zu den verschiedenen Updatekanälen finden Sie in der [Übersicht über die Updatekanäle von Microsoft 365-Apps](/DeployOffice/overview-of-update-channels-for-office-365-proplus). Es stehen die folgenden Optionen zur Auswahl:
         - **Monatlich**
         - **Monatlich (Ziel)**
         - **Halbjährlich**
         - **Halbjährlich (Ziel)**
 
         Nach der Auswahl eines Kanals stehen folgende Optionen zur Verfügung:
-        - **Andere Versionen entfernen**: Klicken Sie auf **Ja**, um andere Office-Versionen (MSI) von Benutzergeräten zu entfernen. Wählen Sie diese Option aus, wenn Sie vorhandene Office-MSI-Apps von Endbenutzergeräten entfernen möchten. Die Installation kann nicht erfolgreich durchgeführt werden, wenn bereits MSI-Apps auf den Endbenutzergeräten vorhanden sind. Die zu deinstallierenden Apps sind nicht auf die Apps beschränkt, die in **App-Suite konfigurieren** zur Installation ausgewählt wurden, sondern es werden sämtliche Office-(MSI)-Apps vom Endbenutzergerät entfernt. Weitere Informationen finden Sie unter [Remove existing MSI versions of Office when upgrading to Office 365 ProPlus (Entfernen vorhandener MSI-Versionen von Office beim Upgrade auf Microsoft 365-Apps)](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Wenn Intune Office auf den Computern Ihrer Endbenutzer neu installiert, erhalten sie automatisch dieselben Sprachpakete wie bei früheren MSI-Office-Installationen. 
+        - **Andere Versionen entfernen**: Klicken Sie auf **Ja**, um andere Office-Versionen (MSI) von Benutzergeräten zu entfernen. Wählen Sie diese Option aus, wenn Sie vorhandene Office-MSI-Apps von Endbenutzergeräten entfernen möchten. Die Installation kann nicht erfolgreich durchgeführt werden, wenn bereits MSI-Apps auf den Endbenutzergeräten vorhanden sind. Die zu deinstallierenden Apps sind nicht auf die Apps beschränkt, die in **App-Suite konfigurieren** zur Installation ausgewählt wurden, sondern es werden sämtliche Office-(MSI)-Apps vom Endbenutzergerät entfernt. Weitere Informationen finden Sie unter [Remove existing MSI versions of Office when upgrading to Office 365 ProPlus (Entfernen vorhandener MSI-Versionen von Office beim Upgrade auf Microsoft 365-Apps)](/deployoffice/upgrade-from-msi-version). Wenn Intune Office auf den Computern Ihrer Endbenutzer neu installiert, erhalten sie automatisch dieselben Sprachpakete wie bei früheren MSI-Office-Installationen. 
         - **Zu installierende Version**: Wählen Sie die Office-Version aus, die installiert werden soll.
         - **Bestimmte Version**: Wenn Sie in der Einstellung oben **Bestimmte Version** als Option für **Zu installierende Version** ausgewählt haben, können Sie eine bestimmte Version von Office für den ausgewählten Kanal auf Endbenutzergeräten installieren. 
             
@@ -107,11 +107,11 @@ Wenn Sie **Konfigurations-Designer** auswählen, ändert sich der Bereich **App 
             
             Der Berichtsstatus für Geräte, deren angeheftete Version (oder andere Eigenschaften) aktualisiert wurde und die als verfügbar bereitgestellt wurden, lautet „Installiert“, wenn die vorherige Version vor dem Check-In des Geräts installiert wurde. Wenn das Gerät eingecheckt wird, ändert sich der Status vorübergehend in „Unbekannt“. Dies wird dem Benutzer nicht angezeigt. Wenn der Benutzer die Installation der neuesten verfügbaren Version startet, wird der Status als „Installiert“ angezeigt.
             
-            Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Microsoft 365-Apps](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus).
-    - **Aktivierung gemeinsam genutzter Computer verwenden**: Wählen Sie diese Option aus, wenn sich mehrere Benutzer einen Computer teilen. Weitere Informationen finden Sie in der [Übersicht über die Aktivierung gemeinsam genutzter Computer für Microsoft 365-Apps](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
+            Weitere Informationen finden Sie unter [Übersicht über die Updatekanäle für Microsoft 365-Apps](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
+    - **Aktivierung gemeinsam genutzter Computer verwenden**: Wählen Sie diese Option aus, wenn sich mehrere Benutzer einen Computer teilen. Weitere Informationen finden Sie in der [Übersicht über die Aktivierung gemeinsam genutzter Computer für Microsoft 365-Apps](/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Microsoft-Software-Lizenzbedingungen automatisch akzeptieren**: Wählen Sie diese Option aus, wenn es nicht erforderlich ist, dass Endbenutzer die Lizenzvereinbarung akzeptieren. Intune akzeptiert daraufhin die automatisch die Vereinbarung.
     - **Sprachen**: Office wird automatisch in allen unterstützen Sprachen installiert, die mit Windows auf Endbenutzergeräten installiert wurden. Wählen Sie diese Option, wen Sie zusätzliche Sprachen mit der App-Sammlung installieren möchten. <p></p>
-        Sie können zusätzliche Sprachen für Office 365 Pro Plus-Apps bereitstellen, die über Intune verwaltet werden. In der Liste der verfügbaren Sprachpakete ist auch der **Typ** der Sprachpakete angegeben (grundlegende Sprachunterstützung, Sprache teilweise unterstützt und Sprachkorrekturhilfen). Wählen Sie im Azure-Portal Bereich **Microsoft Intune** > **Apps** > **Alle Apps** > **Hinzufügen** aus. Wählen Sie im Bereich **App hinzufügen** in der Liste **App-Typ** unter **Microsoft 365-Apps** den Eintrag **Windows 10** aus. Wählen Sie im Bereich **Einstellungen der App-Suite** die Option **Sprachen** aus. Weitere Informationen finden Sie unter [Übersicht über die Bereitstellung von Sprachen in Microsoft 365-Apps](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+        Sie können zusätzliche Sprachen für Microsoft 365-Apps bereitstellen, die über Intune verwaltet werden. In der Liste der verfügbaren Sprachpakete ist auch der **Typ** der Sprachpakete angegeben (grundlegende Sprachunterstützung, Sprache teilweise unterstützt und Sprachkorrekturhilfen). Wählen Sie im Azure-Portal Bereich **Microsoft Intune** > **Apps** > **Alle Apps** > **Hinzufügen** aus. Wählen Sie im Bereich **App hinzufügen** in der Liste **App-Typ** unter **Microsoft 365-Apps** den Eintrag **Windows 10** aus. Wählen Sie im Bereich **Einstellungen der App-Suite** die Option **Sprachen** aus. Weitere Informationen finden Sie unter [Übersicht über die Bereitstellung von Sprachen in Microsoft 365-Apps](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. Klicken Sie auf **Weiter**, um die Seite **Bereichsmarkierungen** anzuzeigen.
 
 ## <a name="step-2---option-2-configure-app-suite-using-xml-data"></a>Schritt 2 (**Option 2**): Konfigurieren der App-Suite mithilfe von XML-Daten 
@@ -127,7 +127,7 @@ Wenn Sie auf der Seite **App-Suite konfigurieren** unter dem Dropdownfeld **Eins
 
 2. Klicken Sie auf **Weiter**, um die Seite **Bereichsmarkierungen** anzuzeigen.
 
-Weitere Informationen zum Eingeben von XML-Daten finden Sie unter [Konfigurationsoptionen für das Office-Bereitstellungstool](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
+Weitere Informationen zum Eingeben von XML-Daten finden Sie unter [Konfigurationsoptionen für das Office-Bereitstellungstool](/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 ## <a name="step-3---select-scope-tags-optional"></a>Schritt 3: Auswählen von Bereichsmarkierungen (optional)
 Sie können Bereichsmarkierungen verwenden, um zu bestimmen, wer Client-App-Informationen in Intune anzeigen kann. Ausführliche Informationen zu Bereichsmarkierungen finden Sie unter [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Verwenden der rollenbasierten Zugriffssteuerung und von Bereichsmarkierungen für verteilte IT).
@@ -149,7 +149,7 @@ Sie können Bereichsmarkierungen verwenden, um zu bestimmen, wer Client-App-Info
 
 ## <a name="deployment-details"></a>Bereitstellungsdetails
 
-Nachdem die Bereitstellungsrichtlinie von Intune über [Office-Konfigurationsdienstanbieter (CSP)](https://docs.microsoft.com/windows/client-management/mdm/office-csp) den Zielcomputern zugewiesen wurde, lädt das Endgerät automatisch das Installationspaket aus dem Speicherort *officecdn.microsoft.com* herunter. Im Verzeichnis *Programme* werden zwei Verzeichnisse angezeigt:
+Nachdem die Bereitstellungsrichtlinie von Intune über [Office-Konfigurationsdienstanbieter (CSP)](/windows/client-management/mdm/office-csp) den Zielcomputern zugewiesen wurde, lädt das Endgerät automatisch das Installationspaket aus dem Speicherort *officecdn.microsoft.com* herunter. Im Verzeichnis *Programme* werden zwei Verzeichnisse angezeigt:
 
 ![Office-Installationspakete im Verzeichnis „Programme“](./media/apps-add-office365/office-folder.png)
 
@@ -161,25 +161,25 @@ Im Verzeichnis *Microsoft Office 15* werden die Office-Klick-und-Los-Installati
 
 ![Klicken, um Installationsstartdateien auszuführen](./media/apps-add-office365/clicktorun-files.png)
 
-Die Installation wird im unbeaufsichtigten Modus ausgeführt, wenn die Zuweisung der O365 Suite entsprechend konfiguriert ist. Die heruntergeladenen Installationsdateien werden gelöscht, nachdem die Installation erfolgreich abgeschlossen wurde. Wenn die Zuweisung als **Verfügbar** konfiguriert ist, werden die Office-Anwendungen in der Unternehmensportal-App angezeigt, damit Endbenutzer die Installation manuell initiieren können.
+Die Installation wird im unbeaufsichtigten Modus ausgeführt, wenn die Zuweisung von Microsoft 365 entsprechend konfiguriert ist. Die heruntergeladenen Installationsdateien werden gelöscht, nachdem die Installation erfolgreich abgeschlossen wurde. Wenn die Zuweisung als **Verfügbar** konfiguriert ist, werden die Office-Anwendungen in der Unternehmensportal-App angezeigt, damit Endbenutzer die Installation manuell initiieren können.
 
 ## <a name="troubleshooting"></a>Problembehandlung
-Intune verwendet das [Office-Bereitstellungstool](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) zum Herunterladen und Bereitstellen von Office 365 ProPlus auf Ihren Clientcomputern über das [Office 365-CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Sehen Sie sich die Best Practices in [Verwalten von Office 365-Endpunkten](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) an, um sicherzustellen, dass Ihre Netzwerkkonfiguration Clients den Zugriff auf das CDN erlaubt, anstatt den CDN-Datenverkehr über zentrale Proxys weiterzuleiten, um unnötige Latenzen zu vermeiden.
+Intune verwendet das [Office-Bereitstellungstool](/DeployOffice/overview-of-the-office-2016-deployment-tool) zum Herunterladen und Bereitstellen von Office 365 ProPlus auf Ihren Clientcomputern über das [Office 365-CDN](/office365/enterprise/content-delivery-networks). Sehen Sie sich die Best Practices in [Verwalten von Office 365-Endpunkten](/office365/enterprise/managing-office-365-endpoints) an, um sicherzustellen, dass Ihre Netzwerkkonfiguration Clients den Zugriff auf das CDN erlaubt, anstatt den CDN-Datenverkehr über zentrale Proxys weiterzuleiten, um unnötige Latenzen zu vermeiden.
 
-Führen Sie den [Microsoft Support- und Wiederherstellungs-Assistenten für Office 365](https://diagnostics.office.com) auf einem Zielgerät aus, falls Installations- oder Laufzeitprobleme auftreten.
+Führen Sie den [Microsoft Support- und Wiederherstellungs-Assistenten für Microsoft 365](https://diagnostics.office.com) auf einem Zielgerät aus, falls Installations- oder Runtimeprobleme auftreten.
 
 ### <a name="additional-troubleshooting-details"></a>Zusätzliche Informationen zur Fehlerbehebung
 
-Wenn Sie O365-Apps nicht auf einem Gerät installieren können, müssen Sie herausfinden, ob das Problem im Zusammenhang mit Intune oder dem Betriebssystem/Office steht. Wenn die beiden Ordner *Microsoft Office* und *Microsoft Office 15* im Verzeichnis *Programme* des Geräts angezeigt werden, können Sie überprüfen, ob die Bereitstellung erfolgreich von Intune initiiert wurde. Wenn diese beiden Ordner nicht im Verzeichnis *Programme* angezeigt werden, sollten Sie Folgendes überprüfen:
+Wenn Sie Microsoft 365-Apps nicht auf einem Gerät installieren können, müssen Sie herausfinden, ob das Problem im Zusammenhang mit Intune oder mit dem Betriebssystem/mit Office steht. Wenn die beiden Ordner *Microsoft Office* und *Microsoft Office 15* im Verzeichnis *Programme* des Geräts angezeigt werden, können Sie überprüfen, ob die Bereitstellung erfolgreich von Intune initiiert wurde. Wenn diese beiden Ordner nicht im Verzeichnis *Programme* angezeigt werden, sollten Sie Folgendes überprüfen:
 
 - Das Gerät ist ordnungsgemäß bei Microsoft Intune registriert. 
 - Auf dem Gerät ist eine aktive Netzwerkverbindung vorhanden. Wenn sich das Gerät im Flugmodus befindet, ausgeschaltet ist oder sich an einem Ort ohne Empfang befindet, wird die Richtlinie erst angewendet, wenn die Netzwerkverbindung hergestellt wurde.
-- Sowohl Intune- als auch Office 365-Netzwerkanforderungen sind erfüllt und die zugehörigen IP-Adressbereiche sind wie in den folgenden Artikeln beschrieben zugänglich:
+- Sowohl Intune- als auch Microsoft 365-Netzwerkanforderungen sind erfüllt, und die zugehörigen IP-Adressbereiche sind wie in den folgenden Artikeln beschrieben zugänglich:
 
-  - [Bandbreiten- und andere Anforderungen an die Netzwerkkonfiguration für Intune](https://docs.microsoft.com/intune/network-bandwidth-use)
-  - [URLs und IP-Adressbereiche für Office 365](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)
+  - [Bandbreiten- und andere Anforderungen an die Netzwerkkonfiguration für Intune](/intune/network-bandwidth-use)
+  - [URLs und IP-Adressbereiche für Office 365](/office365/enterprise/urls-and-ip-address-ranges)
 
-- Der O365-App Suite wurden die richtigen Gruppen zugewiesen. 
+- Der Microsoft 365-App-Suite wurden die richtigen Gruppen zugewiesen. 
 
 Überprüfen Sie zusätzlich die Größe des Verzeichnisses *C:\Programme\Microsoft Office\Updates\Download*. Das aus der Intune-Cloud heruntergeladene Installationspaket wird an diesem Speicherort gespeichert. Wenn die Größe gar nicht oder nur langsam zunimmt, wird empfohlen, die Netzwerkkonnektivität und Bandbreite zu überprüfen.
 
@@ -236,4 +236,4 @@ In den nachstehenden Tabellen sind die häufigsten Fehlercodes aufgeführt, die 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Informationen zum Zuweisen der App-Suite zu weiteren Gruppen finden Sie unter [Zuweisen von Apps zu Gruppen](/mem/intune/apps/apps-deploy).
+- Informationen zum Zuweisen der App-Suite zu weiteren Gruppen finden Sie unter [Zuweisen von Apps zu Gruppen](./apps-deploy.md).

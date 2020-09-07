@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
-ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
+ms.openlocfilehash: b0f360509f456489a321e072c2acfbf26c14bf98
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86946642"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970497"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden Ihrer PKCS-Zertifikate mit Intune
 
@@ -40,12 +40,12 @@ Wenn Sie PKCS-Zertifikate mit Intune verwenden möchten, müssen Sie über folge
 - **Active Directory-Domäne**:  
   Alle in diesem Abschnitt aufgeführten Server müssen der Active Directory-Domäne angehören.
 
-  Informationen zum Installieren und Konfigurieren von Active Directory Domain Services (AD DS) finden Sie unter [AD DS Design and Planning (AD DS-Entwurf und -Planung)](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
+  Informationen zum Installieren und Konfigurieren von Active Directory Domain Services (AD DS) finden Sie unter [AD DS Design and Planning (AD DS-Entwurf und -Planung)](/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
 
 - **Zertifizierungsstelle:**  
    Eine Unternehmenszertifizierungsstelle
 
-  Informationen zum Installieren und Konfigurieren von Active Directory-Zertifikatdiensten finden Sie unter [Active Directory Certificate Services Step-by-Step Guide (Ausführliche Anleitung zu den Active Directory-Zertifikatdiensten)](https://technet.microsoft.com/library/cc772393).
+  Informationen zum Installieren und Konfigurieren von Active Directory-Zertifikatdiensten finden Sie unter [Active Directory Certificate Services Step-by-Step Guide (Ausführliche Anleitung zu den Active Directory-Zertifikatdiensten)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772393(v=ws.10)).
 
   > [!WARNING]  
   > Für Intune müssen AD CS mit einer Unternehmenszertifizierungsstelle, nicht mit einer eigenständigen Zertifizierungsstelle ausgeführt werden.
@@ -82,7 +82,7 @@ Wenn Sie PKCS-Zertifikate mit Intune verwenden möchten, müssen Sie über folge
   - den Microsoft Intune Certificate Connector zur Authentifizierung und Signierung von E-Mails mit S/MIME
   - den PFX-Certificate Connector für Microsoft Intune zur Verschlüsselung von E-Mails mit S/MIME
 
-  Der Connector erfordert Zugriff auf die gleichen Ports wie für verwaltete Geräte. Informationen hierzu finden Sie unter [Zugriff für verwaltete Geräte](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  Der Connector erfordert Zugriff auf die gleichen Ports wie für verwaltete Geräte. Informationen hierzu finden Sie unter [Zugriff für verwaltete Geräte](/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune unterstützt die Installation des *PFX-Zertifikatconnectors* auf demselben Server, auf dem auch der *Microsoft Intune-Zertifikatconnector* installiert ist.
   
@@ -119,6 +119,12 @@ Jedes Gerät benötigt ein Zertifikat einer Stamm- oder Zwischenzertifizierungss
     > **Vorlagenname** entspricht standardmäßig dem **Vorlagenanzeigenamen** *ohne Leerzeichen*. Notieren Sie sich den Namen der Vorlage, da Sie diesen später brauchen werden.
 
 6. Klicken Sie unter **Anforderungsverarbeitung** auf **Exportieren von privatem Schlüssel zulassen**.
+    
+    > [!NOTE]
+    > Anders als beim SCEP wird bei den PKCS der private Schlüssel des Zertifikats auf dem Server generiert, auf dem der Connector installiert ist, und nicht auf dem Gerät. Die Zertifikatvorlage muss das Exportieren des privaten Schlüssels erlauben, sodass der Zertifikatconnector das PFX-Zertifikat exportieren und an das Gerät senden kann. 
+    >
+    > Beachten Sie jedoch, dass die Zertifikate auf dem Gerät selbst installiert sind und der private Schlüssel als nicht exportierbar markiert ist.
+    
 7. Bestätigen Sie unter **Kryptografie**, dass die **Minimale Schlüsselgröße** auf 2048 festgelegt ist.
 8. Klicken Sie unter **Antragstellername** auf **Supply in the request** (Informationen werden in der Anforderung angegeben).
 9. Überprüfen Sie unter **Erweiterungen**, ob „Verschlüsselndes Dateisystem“, „Sichere E-Mail“ und „Clientauthentifizierung“ unter **Anwendungsrichtlinien** angezeigt werden.
@@ -160,7 +166,7 @@ Jedes Gerät benötigt ein Zertifikat einer Stamm- oder Zwischenzertifizierungss
 6. Es wird empfohlen, auf der Registerkarte **Erweitert** die Option **Konto SYSTEM dieses Computers verwenden (Standard)** aktiviert zu lassen.
 7. **Anwenden** > **Schließen**.
 8. Wechseln Sie zurück zum Intune-Portal (**Intune** > **Gerätekonfiguration** > **Certificate Connectors**). Nach einigen Momenten wird ein grünes Häkchen angezeigt, und der **Verbindungsstatus** ist **Aktiv**. Ihr Connectorserver kann jetzt mit Intune kommunizieren.
-9. Wenn Sie in Ihrer Netzwerkumgebung über einen Webproxy verfügen, müssen Sie möglicherweise zusätzliche Konfigurationen vornehmen, damit der Connector funktioniert. Weitere Informationen finden Sie in der Azure Active Directory-Dokumentation unter [Verwenden von vorhandenen lokalen Proxyservern](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers).
+9. Wenn Sie in Ihrer Netzwerkumgebung über einen Webproxy verfügen, müssen Sie möglicherweise zusätzliche Konfigurationen vornehmen, damit der Connector funktioniert. Weitere Informationen finden Sie in der Azure Active Directory-Dokumentation unter [Verwenden von vorhandenen lokalen Proxyservern](/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers).
     - Android Enterprise (*Arbeitsprofil*)
     - iOS
     - macOS
@@ -292,16 +298,16 @@ Plattformen:
   - **CN={{IMEINumber}}** : Die eindeutige IMEI-Nummer (International Mobile Equipment Identity), die verwendet wird, um ein Mobiltelefon zu identifizieren.
   - **CN={{OnPrem_Distinguished_Name}}** : Eine Sequenz von durch Kommas getrennte relative definierte Namen wie *CN=Jane Doe, OU=UserAccounts, DC=corp, DC=contoso, DC=com*.
 
-    Stellen Sie sicher, dass Sie das Benutzerattribut *onpremisesdistinguishedname* mithilfe von [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) mit Azure AD synchronisieren, um die Variable *{{OnPrem_Distinguished_Name}}* zu verwenden.
+    Stellen Sie sicher, dass Sie das Benutzerattribut *onpremisesdistinguishedname* mithilfe von [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) mit Azure AD synchronisieren, um die Variable *{{OnPrem_Distinguished_Name}}* zu verwenden.
 
   - **CN={{onPremisesSamAccountName}}** : Administratoren können das Attribut „samAccountName“ aus Active Directory mithilfe von Azure AD Connect in einem Attribut mit dem Namen *onPremisesSamAccountName* mit Azure AD synchronisieren. Intune kann diese Variable als Teil einer Zertifikatsausstellungsanforderung im Antragsteller eines Zertifikats ersetzen. Das Attribut „samAccountName“ ist der zur Unterstützung von Clients und Servern aus einer früheren Version von Windows (vor Windows 2000) verwendete Benutzeranmeldename. Das Format des Benutzeranmeldenamens lautet wie folgt: *DomainName\testUser*oder nur *testUser*.
 
-    Stellen Sie sicher, dass Sie das Benutzerattribut *onPremisesSamAccountName* mithilfe von [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) mit Azure AD synchronisieren, um die Variable *{{onPremisesSamAccountName}}* zu verwenden.
+    Stellen Sie sicher, dass Sie das Benutzerattribut *onPremisesSamAccountName* mithilfe von [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) mit Azure AD synchronisieren, um die Variable *{{onPremisesSamAccountName}}* zu verwenden.
 
   Durch eine Kombination einer oder vieler dieser Variablen mit statischen Zeichenfolgen können Sie ein benutzerdefiniertes Format wie dieses für den Antragstellernamen erstellen:  
   - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
   
-  Dieses Beispiel enthält das Format des Antragstellernamens, das die Variablen „CN“ und „E“ und Zeichenfolgen für die Werte „Organisationseinheit“, „Organisation“, „Standort“, „Bundesland/Kanton“ und „Land/Region“ verwendet. Die Funktion [CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beschreibt diese Funktion und die unterstützten Zeichenfolgen.
+  Dieses Beispiel enthält das Format des Antragstellernamens, das die Variablen „CN“ und „E“ und Zeichenfolgen für die Werte „Organisationseinheit“, „Organisation“, „Standort“, „Bundesland/Kanton“ und „Land/Region“ verwendet. Die Funktion [CertStrToName](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) beschreibt diese Funktion und die unterstützten Zeichenfolgen.
 
 - **Gerätzertifikattyp**  
   Formatoptionen für das Format des Antragstellernamens umfassen die folgenden Variablen: 

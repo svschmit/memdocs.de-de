@@ -18,18 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7e51f7dc4bf76b9dc35b3eb560bc2dcbe9c48916
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663377"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993816"
 ---
 # <a name="troubleshoot-conditional-access"></a>Problembehandlung beim bedingten Zugriff
 In diesem Artikel wird beschrieben, wie Sie vorgehen müssen, wenn Ihre Benutzer keinen Zugriff auf Ressourcen erhalten, die mit bedingtem Zugriff geschützt sind, oder wenn Benutzer auf geschützte Ressourcen zugreifen können, aber blockiert werden sollten.
 
 Mit Intune und bedingtem Zugriff können Sie den Zugriff auf folgende Dienste schützen:
-- Office 365-Dienste wie Exchange Online, SharePoint Online und Skype for Business Online
+
+- Microsoft 365-Dienste wie Exchange Online, SharePoint Online und Skype for Business Online
 - Exchange lokal
 - verschiedene weitere Dienste
 
@@ -49,7 +50,7 @@ Damit der bedingte Zugriff funktioniert, müssen die folgenden Anforderungen erf
 
 - Für Exchange lokal muss Ihr Intune Exchange Connector ordnungsgemäß konfiguriert sein. Weitere Informationen finden Sie unter [Problembehandlung für den Exchange Connector in Microsoft Intune](troubleshoot-exchange-connector.md).
 
-- Für lokales Skype müssen Sie die hybride moderne Authentifizierung konfigurieren. Weitere Informationen finden Sie unter [Übersicht über die hybride moderne Authentifizierung](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- Für lokales Skype müssen Sie die hybride moderne Authentifizierung konfigurieren. Weitere Informationen finden Sie unter [Übersicht über die hybride moderne Authentifizierung](/office365/enterprise/hybrid-modern-auth-overview).
 
 Sie können diese Bedingungen für alle Geräte im Azure-Portal und im Geräteinventurbericht anzeigen.
 
@@ -77,11 +78,11 @@ Sie können diese Bedingungen für alle Geräte im Azure-Portal und im Gerätein
 
 - Ein Android-Gerät, das angemeldet und konform ist, kann weiterhin blockiert werden und einen Quarantänehinweis erhalten, wenn es zum ersten Mal versucht, auf Unternehmensressourcen zuzugreifen. Wenn dies der Fall ist, stellen Sie sicher, dass die Unternehmensportal-App nicht ausgeführt wird, und wählen Sie dann in der Quarantäne-E-Mail den Link **Jetzt starten** aus, um die Auswertung auszulösen. Dies sollte nur dann erforderlich sein, wenn der bedingte Zugriff zum ersten Mal aktiviert wird.
 
-- Ein registriertes Android-Gerät fordert den Benutzer möglicherweise mit der Meldung „Keine Zertifikate gefunden“ und dem verweigerten Zugriff auf O365-Ressourcen auf. Der Benutzer muss die Option *Browserzugriff aktivieren* auf dem registrierten Gerät wie folgt aktivieren:
+- Ein registriertes Android-Gerät fordert den Benutzer möglicherweise mit der Meldung „Keine Zertifikate gefunden“ und dem verweigerten Zugriff auf Microsoft 365-Ressourcen auf. Der Benutzer muss die Option *Browserzugriff aktivieren* auf dem registrierten Gerät wie folgt aktivieren:
   1. Öffnen Sie die Unternehmensportal-App.
   2. Wechseln Sie über die Schaltfläche mit den drei Punkten (...) oder die Hardwaremenü-Schaltfläche zur Seite „Einstellungen“.
   3. Wählen Sie die Schaltfläche *Browserzugriff aktivieren* aus.
-  4. Melden Sie sich im Chrome-Browser von Office 365 ab, und starten Sie Chrome erneut.  
+  4. Melden Sie sich im Chrome-Browser von Microsoft 365 ab, und starten Sie Chrome erneut.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Geräte werden blockiert und es wird keine Quarantäne-E-Mail empfangen
@@ -94,7 +95,7 @@ Sie können diese Bedingungen für alle Geräte im Azure-Portal und im Gerätein
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Die Geräte sind nicht konform, aber Benutzer werden nicht blockiert
 
-- Bei Windows-PCs blockiert der bedingte Zugriff nur die native E-Mail-App, Office 2013 mit moderner Authentifizierung oder Office 2016. Zum Blockieren früherer Versionen von Outlook oder aller E-Mail-Apps auf Windows-PCs ist die Konfiguration der Azure AD Device Registration und der Active Directory-Verbunddienste (AD FS) erforderlich, wie unter [Einrichten von SharePoint Online und Exchange Online für bedingten Zugriff mit Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication) beschrieben.
+- Bei Windows-PCs blockiert der bedingte Zugriff nur die native E-Mail-App, Office 2013 mit moderner Authentifizierung oder Office 2016. Zum Blockieren früherer Versionen von Outlook oder aller E-Mail-Apps auf Windows-PCs ist die Konfiguration der Azure AD Device Registration und der Active Directory-Verbunddienste (AD FS) erforderlich, wie unter [Einrichten von SharePoint Online und Exchange Online für bedingten Zugriff mit Azure Active Directory](/azure/active-directory/active-directory-conditional-access-no-modern-authentication) beschrieben.
 
 - Wenn das Gerät gezielt zurückgesetzt oder von Intune außer Betrieb gesetzt wird, hat es nach der Deaktivierung möglicherweise noch mehrere Stunden lang Zugriff. Dies liegt daran, dass Exchange die Zugriffsrechte sechs Stunden lang zwischenspeichert. Ziehen Sie in diesem Szenario andere Möglichkeiten zum Datenschutz auf abgekoppelten Geräten in Betracht.
 

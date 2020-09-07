@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2e05e86bf765071d9d22edebfec2ec03115123
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: ecb0e1864fd47cf7aad65fa88de765cb47fce583
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217585"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996723"
 ---
 # <a name="protecting-application-extensions"></a>Schützen von Anwendungserweiterungen
 
@@ -39,10 +39,10 @@ Wenn Sie verhindern möchten, dass Endbenutzer auf Outlook-Add-Ins zugreifen und
 - Um zu verhindern, dass Benutzer ein Sideloading von Add-Ins durchführen können, entfernen Sie die Rolle My Custom Apps.
 - Um zu verhindern, dass Benutzer alle Add-Ins installieren, entfernen Sie beide Rollen – My Custom Apps und My Marketplace.
 
-Diese Anweisungen gelten für Office 365, Exchange 2016, Exchange 2013 für Outlook im Web, unter Windows, auf Mac-PCs und mobil.
+Diese Anweisungen gelten für Microsoft 365, Exchange 2016, Exchange 2013 für Outlook im Web, unter Windows, auf Mac-PCs und mobil.
 
-- Weitere Informationen finden Sie unter [Add-Ins für Outlook](https://technet.microsoft.com/library/jj943753(v=exchg.150).aspx).
-- Weitere Informationen finden Sie unter [Angeben der Administratoren und Benutzer, die Add-Ins für die Outlook-App installieren und verwalten können](https://technet.microsoft.com/library/jj943754(v=exchg.150).aspx).
+- Weitere Informationen finden Sie unter [Add-Ins für Outlook](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook).
+- Weitere Informationen finden Sie unter [Angeben der Administratoren und Benutzer, die Add-Ins für die Outlook-App installieren und verwalten können](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/specify-who-can-install-and-manage-add-ins).
 
 ## <a name="linkedin-account-connections-for-microsoft-apps"></a>LinkedIn-Kontoverbindungen für Microsoft-Apps
 
@@ -51,7 +51,7 @@ LinkedIn-Kontoverbindungen ermöglichen Benutzern öffentliche LinkedIn-Profilin
 > [!NOTE]
 > Die Integration von LinkedIn ist derzeit für Kunden der US-Regierung und Organisationen mit Exchange Online-Postfächern nicht verfügbar, die in Australien, Kanada, China, Frankreich, Deutschland, Indien, Südkorea, Japan, Südafrika und dem Vereinigten Königreich gehostet werden.
 
-Die Richtlinien für Intune SDK und Intune-App-Schutz umfassen keine Unterstützung für die Verwaltung von LinkedIn-Kontoverbindungen, es gibt jedoch andere Möglichkeiten, diese zu verwalten. Sie können LinkedIn-Kontoverbindungen für Ihre gesamte Organisation deaktivieren. Sie können LinkedIn-Kontoverbindungen auch für ausgewählte Benutzergruppen in Ihrer Organisation aktivieren. Diese Einstellungen betreffen LinkedIn-Verbindungen über Office 365-Apps auf allen Plattformen (Web, Mobil und Desktop). Sie können:
+Die Richtlinien für Intune SDK und Intune-App-Schutz umfassen keine Unterstützung für die Verwaltung von LinkedIn-Kontoverbindungen, es gibt jedoch andere Möglichkeiten, diese zu verwalten. Sie können LinkedIn-Kontoverbindungen für Ihre gesamte Organisation deaktivieren. Sie können LinkedIn-Kontoverbindungen auch für ausgewählte Benutzergruppen in Ihrer Organisation aktivieren. Diese Einstellungen betreffen LinkedIn-Verbindungen über Microsoft 365-Apps auf allen Plattformen (Web, mobil und Desktop). Sie können:
 
 - LinkedIn-Kontoverbindungen für Ihren Mandanten im Azure-Portal aktivieren oder deaktivieren. 
 - LinkedIn-Kontoverbindungen für die Office 2016-Apps Ihrer Organisation aktivieren oder deaktivieren, die Gruppenrichtlinien verwenden.
@@ -66,16 +66,16 @@ Wenn ein Benutzer seine Zustimmung gibt, seine Daten zwischen den Konten zu teil
 
 |Microsoft Graph-Berechtigungen  |Beschreibung  |
 |---------|---------|
-|Liest Berechtigungen für [Personen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#people-permissions)     |Ermöglicht der App, eine bewertete Liste von Personen zu lesen, die für den angemeldeten Benutzer relevant sind. Diese Liste kann lokale Kontakte, Kontakte aus sozialen Netzwerken oder dem Verzeichnis Ihrer Organisation und Personen aus aktuellen Kommunikationen (z.B. E-Mail und Skype) enthalten.         |
-|Liest Berechtigungen für [Kalender](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Ermöglicht der App, Ereignisse in Benutzerkalendern zu lesen. Enthält die Besprechungen in angemeldeten Benutzerkalendern, ihre Uhrzeiten, Orte und Teilnehmer.         |
-|Liest Berechtigungen für [Benutzerprofile](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#user-permissions)     |Ermöglicht Benutzern, sich bei der App anzumelden, und ermöglicht der App, das Profil von angemeldeten Benutzern zu lesen. Darüber hinaus wird der App ermöglicht, grundlegende Unternehmensinformationen von angemeldeten Benutzern zu lesen.         |
-|Subscriptions     |Dieser Bereich ist nicht verfügbar und wird noch nicht verwendet. Darin sind Abonnements enthalten, die von der Organisation des Benutzers für Microsoft-Apps und -Dienste bereitgestellt werden, z.B. Office 365.         |
+|Liest Berechtigungen für [Personen](/graph/permissions-reference#people-permissions)     |Ermöglicht der App, eine bewertete Liste von Personen zu lesen, die für den angemeldeten Benutzer relevant sind. Diese Liste kann lokale Kontakte, Kontakte aus sozialen Netzwerken oder dem Verzeichnis Ihrer Organisation und Personen aus aktuellen Kommunikationen (z.B. E-Mail und Skype) enthalten.         |
+|Liest Berechtigungen für [Kalender](/graph/permissions-reference#calendars-permissions)     |Ermöglicht der App, Ereignisse in Benutzerkalendern zu lesen. Enthält die Besprechungen in angemeldeten Benutzerkalendern, ihre Uhrzeiten, Orte und Teilnehmer.         |
+|Liest Berechtigungen für [Benutzerprofile](/graph/permissions-reference#user-permissions)     |Ermöglicht Benutzern, sich bei der App anzumelden, und ermöglicht der App, das Profil von angemeldeten Benutzern zu lesen. Darüber hinaus wird der App ermöglicht, grundlegende Unternehmensinformationen von angemeldeten Benutzern zu lesen.         |
+|Subscriptions     |Dieser Bereich ist nicht verfügbar und wird noch nicht verwendet. Darin sind Abonnements enthalten, die von der Organisation des Benutzers für Microsoft-Apps und -Dienste bereitgestellt werden, z. B. Microsoft 365.         |
 |Einblicke     |Dieser Bereich ist nicht verfügbar und wird noch nicht verwendet. Darin sind Interessen enthalten, die dem angemeldeten Benutzerkonto basierend auf der Verwendung von Microsoft-Diensten zugeordnet werden können.         |
 
 ### <a name="learn-more"></a>Erfahren Sie mehr
 
 - Erfahren Sie mehr über [LinkedIn-Informationen und -Features in Ihren Microsoft-Apps](https://go.microsoft.com/fwlink/?linkid=850740).
-- Erfahren Sie mehr über die Veröffentlichung von LinkedIn-Kontoverbindungen über die [Office 365-Roadmap](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
-- Erfahren Sie mehr über das [Konfigurieren von LinkedIn-Kontoverbindungen](https://docs.microsoft.com/azure/active-directory/linkedin-integration).
+- Hier erfahren Sie über die [Microsoft 365-Roadmap](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc) mehr über die Veröffentlichung von LinkedIn-Kontoverbindungen. 
+- Erfahren Sie mehr über das [Konfigurieren von LinkedIn-Kontoverbindungen](/azure/active-directory/linkedin-integration).
 - Weitere Informationen über Daten, die zwischen den LinkedIn- und Microsoft-Arbeits- oder -Schulkonten freigegeben werden, finden Sie unter [LinkedIn in Microsoft-Anwendungen mit Ihrem Arbeits- oder Schulkonto](https://www.linkedin.com/help/linkedin/answer/84077).
 

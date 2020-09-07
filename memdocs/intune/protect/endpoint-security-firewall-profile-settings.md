@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d90870a60ea292939926816bb74b5d285dc6a09f
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 10d9320932e7835b8c2ecac46e35ea5a57375904
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431604"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068132"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Einstellungen der Firewallrichtlinie für Endpunktsicherheit in Intune
 
@@ -198,22 +198,22 @@ Die folgenden Einstellungen werden als [Richtlinie für die Endpunktsicherheit f
   - **Nicht konfiguriert**
 
 - **Paketfamilienname**  
-  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   Paketfamiliennamen können durch Ausführen des Befehls „Get-AppxPackage“ in PowerShell abgerufen werden.
 
 - **Dateipfad**  
-  CSP: [FirewallRules/Firewallregelname/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+  CSP: [FirewallRules/Firewallregelname/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
   Geben Sie den App-Speicherort auf dem Clientgerät ein, um den Dateipfad einer App anzugeben. Beispiel: `C:\Windows\System\Notepad.exe` oder `%WINDIR%\Notepad.exe`.
 
 - **Dienstname**  
-  [FirewallRules/Firewallregelname/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/Firewallregelname/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Verwenden Sie den Kurznamen eines Windows-Diensts, wenn Datenverkehr durch einen Dienst gesendet oder empfangen wird, nicht durch eine Anwendung. Um den Kurznamen eines Diensts abzurufen, führen Sie den Befehl `Get-Service` in PowerShell aus.
 
 - **Protokoll**  
-  CSP: [FirewallRules/Firewallregelname/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+  CSP: [FirewallRules/Firewallregelname/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   Geben Sie das Protokoll für diese Portregel an.
   - Transportschichtprotokolle wie *TCP(6)* und *UDP(17)* ermöglichen die Angabe von Ports oder Portbereichen.
@@ -228,7 +228,7 @@ Die folgenden Einstellungen werden als [Richtlinie für die Endpunktsicherheit f
   - **Nicht konfiguriert**
 
 - **Autorisierte Benutzer**  
-  [FirewallRules/Firewallregelname/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/Firewallregelname/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Legen Sie eine Liste autorisierter, lokaler Benutzer für diese Regel fest. Es kann keine Liste autorisierter Benutzer festgelegt werden, wenn der *Dienstname* in dieser Regel auf einen Windows-Dienst festgelegt ist. Wenn kein autorisierter Benutzer angegeben wird, lautet der Standardwert *Alle Benutzer*.
 
@@ -237,9 +237,14 @@ Die folgenden Einstellungen werden als [Richtlinie für die Endpunktsicherheit f
   - **Ja**: Hiermit unterstützen Sie beliebige lokale Adressen und konfigurieren keinen Adressbereich.
 
 - **Lokale Adressbereiche**  
-  CSP: [FirewallRules/Firewallregelname/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP: [FirewallRules/Firewallregelname/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  Fügen Sie mindestens eine Adresse in einer durch Trennzeichen getrennte Liste lokaler Adressen hinzu, die der Regel unterliegen. Gültige Einträge (Token) umfassen folgende Optionen:
+  Verwalten Sie lokale Adressbereiche für diese Regel. Sie können:
+  - **Hinzufügen** verwenden, um mindestens eine Adresse als eine durch Trennzeichen getrennte Liste von lokalen Adressen hinzuzufügen, die der Regel unterliegen.
+  - **Importieren** verwenden, um eine CSV-Datei zu importieren, die eine Liste von Adressen enthält, die als lokale Adressbereiche verwendet werden sollen.
+  - **Exportieren** verwenden, um die aktuelle Liste der lokalen Adressbereiche als CSV-Datei zu exportieren.
+
+  Gültige Einträge (Token) umfassen folgende Optionen:
   - **Ein Sternchen**: Ein Sternchen (\*) gibt eine beliebige lokale Adresse an. Falls dieses Zeichen vorhanden ist, darf kein anderes Token enthalten sein.
   - **Ein Subnetz**: Geben Sie Subnetze über die Subnetzmaske oder die Netzwerkpräfixnotation an. Wenn weder eine Subnetzmaske noch ein Netzwerkpräfix angegeben wird, lautet die Subnetzmaske standardmäßig 255.255.255.255.
   - **Eine gültige IPv6-Adresse**
@@ -253,9 +258,14 @@ Die folgenden Einstellungen werden als [Richtlinie für die Endpunktsicherheit f
   - **Ja**: Hiermit unterstützen Sie beliebige Remoteadressen und konfigurieren keinen Adressbereich.
 
 - **Remoteadressbereiche**  
-  CSP: [FirewallRules/Firewallregelname/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP: [FirewallRules/Firewallregelname/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  Fügen Sie mindestens eine Adresse in einer durch Trennzeichen getrennte Liste mit Remoteadressen hinzu, die der Regel unterliegen. Gültige Einträge (Token) umfassen folgende Optionen, Groß-/Kleinschreibung wird nicht beachtet:
+  Verwalten Sie Remoteadressbereiche für diese Regel. Sie können:
+  - **Hinzufügen** verwenden, um mindestens eine Adresse als eine durch Trennzeichen getrennte Liste von Remoteadressen hinzuzufügen, die der Regel unterliegen.
+  - **Importieren** verwenden, um eine CSV-Datei zu importieren, die eine Liste von Adressen enthält, die als Remoteadressbereiche verwendet werden sollen.
+  - **Exportieren** verwenden, um die aktuelle Liste der Remoteadressbereiche als CSV-Datei zu exportieren.
+
+  Gültige Einträge (Token) umfassen folgende Optionen, Groß-/Kleinschreibung wird nicht beachtet:
   - **Ein Sternchen**: Ein Sternchen (\*) gibt eine beliebige Remoteadresse an. Falls dieses Zeichen vorhanden ist, darf kein anderes Token enthalten sein.
   - **Defaultgateway**
   - **DHCP**

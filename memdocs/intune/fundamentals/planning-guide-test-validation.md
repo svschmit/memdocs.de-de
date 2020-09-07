@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aeca72af3eadf55174f1ad97c1e294f48f131801
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ae07904d9fb21773fbc4caad18cb183d9565c401
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357232"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996298"
 ---
 # <a name="intune-testing-and-validation"></a>Testen und Überprüfen von Intune
 
@@ -40,7 +40,7 @@ Wir empfehlen, die folgenden Schritte zu dokumentieren:
 
 Wenn eine Entwurfskomponente nicht in mindestens einem auf eine Anforderung oder ein Szenario ausgerichteten Testkriterium vorhanden ist, überlegen Sie, ob die Entwurfskomponente erforderlich ist oder nicht. Stellen Sie darüber hinaus sicher, dass die folgenden Elemente vorhanden sind:
 
-- **Konten**: Testkonten, die für EMS und Office 365 lizenziert sind, um alle Anwendungsszenarios testen zu können.
+- **Konten**: Testkonten, die für EMS und Microsoft 365 lizenziert sind, um alle Anwendungsszenarios testen zu können.
 
 - **Geräte:** Testgeräte, die zurückgesetzt oder auf Werkseinstellungen zurückgesetzt werden können.
 

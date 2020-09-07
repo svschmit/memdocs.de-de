@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
-ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
+ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334622"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193962"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Verwalten der BitLocker-Richtlinie für Windows 10 in Intune
 
@@ -97,7 +97,7 @@ Verwenden Sie eines der folgenden Verfahren, um den von Ihnen bevorzugten Richtl
    1. **Plattform**: Windows 10 und höher
    2. **Profiltyp**: Endpoint Protection
 
-   ![Auswählen des BitLocker-Profils](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Auswählen des Profils](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Klicken Sie auf **Einstellungen** > **Windows-Verschlüsselung**.
 
@@ -123,7 +123,8 @@ Sie können eine BitLocker-Richtlinie konfigurieren, die automatisch und ohne Me
 
 Ein Gerät muss die folgenden Bedingungen erfüllen, damit BitLocker ohne Meldung aktiviert werden kann:
 
-- Auf dem Gerät muss Windows 10 Version 1809 oder höher ausgeführt werden.
+- Wenn sich Endbenutzer beim Gerät als Administrator anmelden, muss auf dem Gerät Windows 10, Version 1803 oder höher ausgeführt werden.
+- Wenn sich Endbenutzer beim Gerät als Standardbenutzer anmelden, muss auf dem Gerät Windows 10, Version 1809 oder höher ausgeführt werden.
 - Das Gerät muss in Azure AD eingebunden sein.  
 
 **BitLocker-Richtlinienkonfiguration:**
@@ -156,7 +157,7 @@ Intune gewährt Zugriff auf das Azure AD-Blatt für BitLocker, sodass Sie sich �
 
    Wenn keine Schlüssel in Azure AD verfügbar sind, zeigt Intune die Meldung *Für dieses Gerät wurde kein BitLocker-Schlüssel gefunden* an.
 
-Informationen zu BitLocker stehen über den [BitLocker-Konfigurationsdienstanbieter](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (Configuration Service Provider, CSP) zur Verfügung. Der BitLocker-CSP wird ab der Windows 10-Version 1703 unterstützt, und ab der Windows 10 Pro-Version 1809.
+Informationen zu BitLocker stehen über den [BitLocker-Konfigurationsdienstanbieter](/windows/client-management/mdm/bitlocker-csp) (Configuration Service Provider, CSP) zur Verfügung. Der BitLocker-CSP wird ab der Windows 10-Version 1703 unterstützt, und ab der Windows 10 Pro-Version 1809.
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>Drehen von BitLocker-Wiederherstellungsschlüsseln
 

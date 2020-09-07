@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 76d1141a1c4dd442f6fb94a06b5d20adc8c7fa77
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080129"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996332"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Bestimmen von Anforderungen von Anwendungsfallszenarien
 
@@ -64,7 +64,7 @@ Hier sind einige weitere Beispiele, die in der Spalte „Anforderungen“ verwen
   - E-Mail (Windows 10 Mobile)
 
 - **Apps**
-  - Office 365 mit App-Schutzrichtlinien
+  - Microsoft 365 mit App-Schutzrichtlinien
   - Branchenspezifisch (LOB) mit App-Schutzrichtlinien
 
 ## <a name="next-steps"></a>Nächste Schritte

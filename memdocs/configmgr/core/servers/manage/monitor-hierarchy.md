@@ -10,12 +10,12 @@ ms.assetid: 007dbb73-18a7-48a3-a489-97cf9fc4f140
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fc6744ef7d1aaf90a5e7339cc9a5174c0d33f6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 504943df58c0471a0ef821a269cc22b2d12d76d8
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694398"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068037"
 ---
 # <a name="monitor-the-hierarchy"></a>Überwachen der Hierarchie
 
@@ -101,11 +101,7 @@ Weitere Informationen finden Sie unter [Monitor software updates (Überwachen vo
 
 ## <a name="monitor-the-site-hierarchy"></a><a name="BKMK_SH_Node"></a> Überwachen der Standorthierarchie
 
-Im Knoten **Standorthierarchie** des Arbeitsbereichs **Überwachung** finden Sie eine Übersicht Ihrer Configuration Manager-Hierarchie sowie Links zwischen Standorten. Sie können zwei Ansichten verwenden:  
-
-- **Hierarchiediagramm:** In dieser Ansicht wird Ihre Hierarchie als vereinfachte Topologiezuordnung angezeigt, in der nur wichtige Informationen dargestellt werden. Weitere Informationen finden Sie unter [Hierarchiediagramm](#hierarchy-diagram).  
-
-- **Geografische Ansicht:** In dieser Ansicht werden Ihre Standorte in einer geografischen Zuordnung angezeigt. Dabei werden die geografischen Orte der von Ihnen konfigurierten Standorte dargestellt. Weitere Informationen finden Sie unter [Geografische Ansicht](#geographical-view).  
+Im Knoten **Standorthierarchie** des Arbeitsbereichs **Überwachung** finden Sie eine Übersicht Ihrer Configuration Manager-Hierarchie sowie Links zwischen Standorten. 
 
 Mit dem Knoten **Standorthierarchie** können Sie die Integrität der einzelnen Standorte überwachen. Außerdem können Sie die Replikationslinks zwischen Standorten sowie deren Beziehungen zu externen Faktoren wie einem geografischen Standort überwachen.  
 
@@ -123,13 +119,16 @@ Mit den folgenden Optionen können Sie das Hierarchiediagramm ändern:
 
 #### <a name="groups"></a>Gruppen
 
-Sie können die Anzahl von primären und sekundären Standorten konfigurieren, von denen Änderungen in der Anzeige des Hierarchiediagramms ausgelöst werden. Durch diese Änderung der Anzeige werden die Standorte zu einem einzigen Objekt kombiniert. So sehen Sie die Gesamtzahl der Standorte und einen allgemeinen Rollup von Statusnachrichten sowie des Standortstatus. Von Gruppenkonfigurationen wird die geografische Ansicht nicht beeinflusst.  
+Sie können die Anzahl von primären und sekundären Standorten konfigurieren, von denen Änderungen in der Anzeige des Hierarchiediagramms ausgelöst werden. Durch diese Änderung der Anzeige werden die Standorte zu einem einzigen Objekt kombiniert. So sehen Sie die Gesamtzahl der Standorte und einen allgemeinen Rollup von Statusnachrichten sowie des Standortstatus.
 
 #### <a name="favorite-sites"></a>Favoriten
 
 Sie können einzelne Standorte als Favoriten angeben. Favoriten sind im Hierarchiediagramm mit einem Sternsymbol gekennzeichnet. Favoritenstandorte werden nicht mit anderen Standorten kombiniert, wenn Sie Gruppen verwenden. Sie werden immer einzeln angezeigt.  
 
 ### <a name="geographical-view"></a>Geografische Ansicht
+
+> [!IMPORTANT]
+> Ab August 2020 ist dieses Feature veraltet. Verwenden Sie die Option **Hierarchiediagramm**.<!--8116777-->
 
 Von der geografischen Ansicht werden Ihre Standorte in einer geografischen Zuordnung angezeigt. Dabei werden nur Standorte angezeigt, die mit einem geografischen Ort konfiguriert sind. Wenn Sie in dieser Ansicht einen Standort auswählen, werden Replikationslinks zu über- und untergeordneten Standorten angezeigt. Im Unterschied zur Hierarchiediagrammansicht können Sie in dieser Ansicht keine Details zu Statusmeldungen und Replikationslinks der Standorte anzeigen.  
 

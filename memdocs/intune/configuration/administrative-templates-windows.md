@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: faa217bd5e56a304b80298f2039ad3c541612e54
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990189"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992802"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Verwenden von Windows 10-Vorlagen zum Konfigurieren von Gruppenrichtlinieneinstellungen in Microsoft Intune
 
@@ -33,7 +33,7 @@ Diese Funktion gilt für:
 
 - Windows 10 und höher
 
-Die Windows-Einstellungen ähneln den Einstellungen für Gruppenrichtlinienobjekte in Active Directory (AD). Diese Einstellungen sind in Windows integriert und sind [durch ADMX unterstützte Einstellungen](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies), die XML verwenden. Die Office- und Microsoft Edge-Einstellungen sind in ADMX erfasst und verwenden die ADMX-Einstellungen in [administrativen Office-Vorlagendateien](https://www.microsoft.com/download/details.aspx?id=49030) und [administrativen Microsoft Edge-Vorlagendateien](https://www.microsoftedgeinsider.com/enterprise). Die Intune-Vorlagen sind außerdem vollständig cloudbasiert. Sie bieten eine einfache und unkomplizierte Möglichkeit, die Einstellungen zu konfigurieren und die Einstellungen zu suchen, die Sie nutzen möchten.
+Die Windows-Einstellungen ähneln den Einstellungen für Gruppenrichtlinienobjekte in Active Directory (AD). Diese Einstellungen sind in Windows integriert und sind [durch ADMX unterstützte Einstellungen](/windows/client-management/mdm/understanding-admx-backed-policies), die XML verwenden. Die Office- und Microsoft Edge-Einstellungen sind in ADMX erfasst und verwenden die ADMX-Einstellungen in [administrativen Office-Vorlagendateien](https://www.microsoft.com/download/details.aspx?id=49030) und [administrativen Microsoft Edge-Vorlagendateien](https://www.microsoftedgeinsider.com/enterprise). Die Intune-Vorlagen sind außerdem vollständig cloudbasiert. Sie bieten eine einfache und unkomplizierte Möglichkeit, die Einstellungen zu konfigurieren und die Einstellungen zu suchen, die Sie nutzen möchten.
 
 **Administrative Vorlagen** sind in Intune integriert, einschließlich der Verwendung des OMA-URI, und erfordern keine weiteren Anpassungen. Als Bestandteil Ihrer Lösung für die mobile Geräteverwaltung (Mobile Device Management, MDM) verwenden Sie diese Vorlageneinstellungen als Anlaufstelle, um Ihre Windows 10-Geräte zu verwalten.
 
@@ -43,7 +43,7 @@ In diesem Artikel sind die Schritte zum Erstellen einer Vorlage für Windows 10-
 
 - Einige dieser Einstellungen sind ab Windows 10, Version 1709 (RS2/Build 15063), verfügbar. Einige Einstellungen sind nicht in allen Windows-Editionen enthalten. Um optimale Ergebnisse zu erzielen, wird empfohlen, Windows 10 Enterprise, Version 1903 (19H1/Build 18362) oder höher, zu verwenden.
 
-- In den Windows-Einstellungen werden [Windows-Richtlinien-CSPs](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) verwendet. Die CSPs funktionieren unter verschiedenen Windows-Editionen, z. B. Home, Professional, Enterprise. Wenn Sie herausfinden möchten, ob ein CSP unter einer bestimmten Edition funktioniert, klicken Sie auf [Windows-Richtlinien-CSPs](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
+- In den Windows-Einstellungen werden [Windows-Richtlinien-CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) verwendet. Die CSPs funktionieren unter verschiedenen Windows-Editionen, z. B. Home, Professional, Enterprise. Wenn Sie herausfinden möchten, ob ein CSP unter einer bestimmten Edition funktioniert, klicken Sie auf [Windows-Richtlinien-CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
 ## <a name="create-the-template"></a>Vorlage erstellen
 
@@ -136,6 +136,6 @@ In diesem Vorlagen sind Tausende von Einstellungen verfügbar. Nutzen Sie die in
 
 Die Vorlage ist nun erstellt, führt aber vielleicht noch keine Aktionen durch. [Weisen Sie anschließend die Vorlage (auch Profil genannt) zu](device-profile-assign.md), und [überwachen Sie deren Status](device-profile-monitor.md).
 
-Aktualisieren Sie [Office 365 mithilfe administrativer Vorlagen](administrative-templates-update-office.md).
+Aktualisieren Sie [Microsoft 365 mithilfe administrativer Vorlagen](administrative-templates-update-office.md).
 
 [Tutorial: Verwenden der Cloud zum Konfigurieren einer Gruppenrichtlinie für Windows 10-Geräte mit ADMX-Vorlagen und Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

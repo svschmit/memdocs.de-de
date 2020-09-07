@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81ba50c9822ff5672fd52bab1d89f444aafdb402
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 20d217246be59a612c1a022251f89559ad940894
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022329"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996434"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Häufig gestellte Fragen zu MAM und App-Schutz
 
@@ -66,13 +66,13 @@ Jede App, die in das [Intune App SDK](../developer/app-sdk.md) integriert oder v
 
 **Welche grundlegenden Anforderungen bestehen für die Verwendung von App-Schutzrichtlinien in einer mit Intune verwalteten App?**
 
-- Der Endbenutzer muss über ein Azure Active Directory-Konto (AAD) verfügen. Informationen dazu, wie Sie Intune-Benutzer in Azure Active Directory erstellen, finden Sie unter [Hinzufügen von Benutzern und Gewähren von Administratorrechten für Intune](../fundamentals/users-add.md).
+- Der Endbenutzer muss über ein Azure Active Directory-Konto (Azure AD) verfügen. Informationen dazu, wie Sie Intune-Benutzer in Azure Active Directory erstellen, finden Sie unter [Hinzufügen von Benutzern und Gewähren von Administratorrechten für Intune](../fundamentals/users-add.md).
 
 - Dem AAD-Konto des Endbenutzers muss eine Lizenz für Microsoft Intune zugewiesen sein. Informationen zum Zuweisen von Intune-Lizenzen zu Endbenutzern finden Sie unter [Verwalten von Intune-Lizenzen](../fundamentals/licenses-assign.md).
 
 - Der Endbenutzer muss zu einer Sicherheitsgruppe gehören, für die eine App-Schutzrichtlinie gilt. Die gleiche App-Schutzrichtlinie muss für die verwendete App gelten. App-Schutzrichtlinien können im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) erstellt und bereitgestellt werden. Sicherheitsgruppen können zurzeit im [Microsoft 365 Admin Center](https://admin.microsoft.com) erstellt werden.
 
-- Der Endbenutzer muss sich mit seinem AAD-Konto bei der App anmelden.
+- Der Endbenutzer muss sich mit seinem Azure AD-Konto bei der App anmelden.
 
 **Was geschieht, wenn ich eine App mit Intune-App-Schutz aktivieren möchte, diese aber keine unterstützte App-Entwicklungsplattform verwendet?**
 
@@ -85,14 +85,14 @@ Das Intune App SDK kann die Microsoft-Authentifizierungsbibliothek für die Auth
 
 - Die mobile Outlook-App muss auf dem Gerät des Endbenutzers installiert sein.
 
-- Das [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online)-Postfach und die zugehörige Lizenz des Endbenutzers müssen mit dem AAD-Konto des Endbenutzers verknüpft sein.
+- Das [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online)-Postfach und die zugehörige Lizenz des Endbenutzers müssen mit dem Azure Active Directory-Konto des Endbenutzers verknüpft sein.
 
   >[!NOTE]
-  > Die mobile Outlook-App unterstützt derzeit nur den Intune-App-Schutz für Microsoft Exchange Online und [Exchange Server mit moderner hybrider Authentifizierung](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx), nicht jedoch lokales Exchange oder Exchange in Office 365.
+  > Die mobile Outlook-App unterstützt derzeit nur den Intune-App-Schutz für Microsoft Exchange Online und [Exchange Server mit moderner hybrider Authentifizierung](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019), nicht jedoch lokales Exchange oder Exchange in Office 365.
 
 **Welche zusätzlichen Anforderungen gelten für die Verwendung der [Word-, Excel- und PowerPoint](https://products.office.com/business/office)-Apps?**
 
-- Mit dem AAD-Konto des Endbenutzers muss eine Lizenz für [Microsoft 365-Apps für Business oder Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) verknüpft sein. Das Abonnement muss die Office-Apps auf mobilen Geräten enthalten und kann ein Cloudspeicherkonto mit [OneDrive for Business](https://onedrive.live.com/about/business/) umfassen. Office 365-Lizenzen können im [Microsoft 365 Admin Center](https://admin.microsoft.com) zugewiesen werden. Befolgen Sie dazu diese [Anweisungen](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Mit dem AAD-Konto des Endbenutzers muss eine Lizenz für [Microsoft 365-Apps für Business oder Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) verknüpft sein. Das Abonnement muss die Office-Apps auf mobilen Geräten enthalten und kann ein Cloudspeicherkonto mit [OneDrive for Business](https://onedrive.live.com/about/business/) umfassen. Microsoft 365-Lizenzen können im [Microsoft 365 Admin Center](https://admin.microsoft.com) zugewiesen werden. Befolgen Sie dazu diese [Anweisungen](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - Der Benutzer muss über einen verwalteten Speicherort verfügen, der mithilfe der Funktion „Speichern unter“ im Rahmen der Einstellung für die Anwendungsschutzrichtlinie „Kopien von Organisationsdaten speichern“ konfiguriert wird. Wenn beispielsweise der verwaltete Speicherort OneDrive ist, muss die [OneDrive](https://onedrive.live.com/about/)-App in der Word-, Excel- oder PowerPoint-App des Endbenutzer konfiguriert werden.
 
@@ -105,7 +105,7 @@ Das Intune App SDK kann die Microsoft-Authentifizierungsbibliothek für die Auth
 Intune kennzeichnet alle Daten in der App entweder als „unternehmenseigen“ oder „persönlich“. Daten werden als „unternehmenseigen“ betrachtet, wenn sie von einem Speicherort des Unternehmens stammen. Bei den Office-Apps betrachtet Intune Folgendes als Unternehmensspeicher: E-Mail-Speicher (Exchange) oder Cloudspeicher (OneDrive-App mit einem OneDrive for Business-Konto).
 
 **Welche zusätzlichen Anforderungen gelten für die Verwendung von Skype for Business?**<br></br>
-Informationen hierzu finden Sie in den Lizenzanforderungen für [Skype for Business](https://products.office.com/skype-for-business/it-pros). Informationen zu Skype for Business (SfB)-Hybrid- und lokalen Konfigurationen finden Sie Informationen unter [Moderne Hybridauthentifizierung für SfB und Exchange wird allgemein verfügbar](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) bzw. [Moderne Authentifizierung für SfB OnPrem mit AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910).
+Informationen hierzu finden Sie in den Lizenzanforderungen für [Skype for Business](https://products.office.com/skype-for-business/it-pros). Informationen zu Skype for Business (SfB)-Hybrid- und lokalen Konfigurationen finden Sie unter [Moderne Hybridauthentifizierung für SfB und Exchange wird allgemein verfügbar](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) bzw. [Moderne Authentifizierung für SfB OnPrem mit Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910).
 
 ## <a name="app-protection-features"></a>App-Schutzfunktionen
 

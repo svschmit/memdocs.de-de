@@ -16,32 +16,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3db207e4c1c75706c1f54762bf74c1757d342ac1
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: ac2133455d4440e8048e7b9aba8f9f9b13d98a53
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973042"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996536"
 ---
 # <a name="manage-messaging-collaboration-access-by-using-outlook-for-ios-and-android-with-microsoft-intune"></a>Verwalten des Zugriffs für Nachrichten und Zusammenarbeit mithilfe von Outlook für iOS und Android mit Microsoft Intune
 
 Die App „Outlook für iOS und Android“ ist so entworfen, dass Benutzer Ihrer Organisation mehr Möglichkeiten auf ihrem mobilen Geräten haben, indem E-Mails, Kalender, Kontakte und andere Dateien zusammengeführt werden.
 
-Die vielfältigsten und umfangreichsten Schutzfunktionen für Office 365-Daten sind verfügbar, wenn Sie die Enterprise Mobility + Security-Suite abonnieren, die Microsoft Intune und Azure Active Directory Premium-Features wie bedingten Zugriff bietet. Sie sollten mindestens eine Richtlinie für bedingten Zugriff bereitstellen, die nur die Konnektivität mit Outlook für iOS und Android auf mobilen Geräten zulässt, sowie eine Intune-App-Schutzrichtlinie, die gewährleistet, dass die Funktionen für die Zusammenarbeit geschützt sind.
+Die vielfältigsten und umfangreichsten Schutzfunktionen für Microsoft 365-Daten sind verfügbar, wenn Sie die Enterprise Mobility + Security-Suite abonnieren, die Microsoft Intune und Azure Active Directory Premium-Features wie bedingten Zugriff bietet. Sie sollten mindestens eine Richtlinie für bedingten Zugriff bereitstellen, die nur die Konnektivität mit Outlook für iOS und Android auf mobilen Geräten zulässt, sowie eine Intune-App-Schutzrichtlinie, die gewährleistet, dass die Funktionen für die Zusammenarbeit geschützt sind.
 
 ## <a name="apply-conditional-access"></a>Aktivieren des bedingten Zugriff
-Organisationen können Richtlinien für bedingten Zugriff von Azure AD nutzen, um sicherzustellen, dass Benutzer nur mit Outlook für iOS und Android auf Geschäfts-, Schul- oder Uni-Inhalte zugreifen können. Dazu benötigen Sie eine Richtlinie für bedingten Zugriff, die für alle potenziellen Benutzer gilt. Einzelheiten zur Erstellung dieser Richtlinie finden Sie unter [Erzwingen einer App-Schutzrichtlinie für den Cloud-App-Zugriff mit bedingtem Zugriff](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Organisationen können Richtlinien für bedingten Zugriff von Azure AD nutzen, um sicherzustellen, dass Benutzer nur mit Outlook für iOS und Android auf Geschäfts-, Schul- oder Uni-Inhalte zugreifen können. Dazu benötigen Sie eine Richtlinie für bedingten Zugriff, die für alle potenziellen Benutzer gilt. Einzelheiten zur Erstellung dieser Richtlinie finden Sie unter [Erzwingen einer App-Schutzrichtlinie für den Cloud-App-Zugriff mit bedingtem Zugriff](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Befolgen Sie „Schritt 1: Konfigurieren einer Azure AD-Richtlinie für bedingten Zugriff für Office 365“ unter [Szenario 1: Office 365-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies). Dadurch wird Outlook für iOS und Android zugelassen, die OAuth-fähigen Exchange ActiveSync-Clients werden jedoch daran gehindert, eine Verbindung zu Exchange Online herzustellen.
+1. Befolgen Sie „Schritt 1: Konfigurieren einer Azure AD-Richtlinie für bedingten Zugriff für Office 365“ unter [Szenario 1: Office 365-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies). Dadurch wird Outlook für iOS und Android zugelassen, die OAuth-fähigen Exchange ActiveSync-Clients werden jedoch daran gehindert, eine Verbindung zu Exchange Online herzustellen.
 
    > [!NOTE]
    > Diese Richtlinie sorgt dafür, dass Benutzer mobiler Geräte über die entsprechenden Apps auf alle Office-Endpunkte zugreifen können.
 
-2. Befolgen Sie „Schritt 2: Konfigurieren einer Azure AD-Richtlinie für bedingten Zugriff für Exchange Online mit ActiveSync (EAS)“ unter [Szenario 1: Office 365-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies). Dadurch werden Exchange ActiveSync-Clients, die eine einfache Authentifizierung nutzen, daran gehindert, eine Verbindung zu Exchange Online herzustellen.
+2. Befolgen Sie „Schritt 2: Konfigurieren einer Azure AD-Richtlinie für bedingten Zugriff für Exchange Online mit ActiveSync (EAS)“ unter [Szenario 1: Office 365-Apps erfordern genehmigte Apps mit App-Schutzrichtlinien](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies). Dadurch werden Exchange ActiveSync-Clients, die eine einfache Authentifizierung nutzen, daran gehindert, eine Verbindung zu Exchange Online herzustellen.
 
-   Die oben genannten Richtlinien nutzen die Zuweisungssteuerung [App-Schutzrichtlinie erforderlich](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference). So kann dafür gesorgt werden, dass eine Intune-App-Schutz-Richtlinie auf das zugehörige Konto in Outlook für iOS und Android angewendet wird, bevor der Zugriff gewährt wird. Wenn der Benutzer keiner Intune-App-Schutz-Richtlinie zugewiesen ist, keine Lizenz für Intune hat oder die App nicht in der Intune-App-Schutz-Richtlinie eingeschlossen ist, hindert die Richtlinie den Benutzer daran, ein Zugriffstoken abzurufen und Zugriff auf die Nachrichtendaten zu erhalten.
+   Die oben genannten Richtlinien nutzen die Zuweisungssteuerung [App-Schutzrichtlinie erforderlich](/azure/active-directory/active-directory-conditional-access-technical-reference). So kann dafür gesorgt werden, dass eine Intune-App-Schutz-Richtlinie auf das zugehörige Konto in Outlook für iOS und Android angewendet wird, bevor der Zugriff gewährt wird. Wenn der Benutzer keiner Intune-App-Schutz-Richtlinie zugewiesen ist, keine Lizenz für Intune hat oder die App nicht in der Intune-App-Schutz-Richtlinie eingeschlossen ist, hindert die Richtlinie den Benutzer daran, ein Zugriffstoken abzurufen und Zugriff auf die Nachrichtendaten zu erhalten.
 
-3. Befolgen Sie schließlich noch die Anweisungen unter [Vorgehensweise: Blockieren der Legacyauthentifizierung bei Azure AD mit bedingtem Zugriff](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication), um Legacyauthentifizierung für andere Exchange-Protokolle auf iOS- und Android-Geräten zu verhindern. Diese Richtlinie sollte nur auf die Office 365 Exchange Online-Cloud-App und auf iOS- und Android-Geräteplattformen angewendet werden. Dies sorgt dafür dass, das mobile Apps, für die Exchange Web Services oder IMAP4- oder POP3-Protokolle mit einer einfachen Authentifizierung verwendet werden, keine Verbindung zu Exchange Online herstellen können.
+3. Befolgen Sie schließlich noch die Anweisungen unter [Vorgehensweise: Blockieren der Legacyauthentifizierung bei Azure AD mit bedingtem Zugriff](/azure/active-directory/conditional-access/block-legacy-authentication), um Legacyauthentifizierung für andere Exchange-Protokolle auf iOS- und Android-Geräten zu verhindern. Diese Richtlinie sollte nur auf die Microsoft Exchange Online-Cloud-App und auf iOS- und Android-Geräteplattformen angewendet werden. Dies sorgt dafür dass, das mobile Apps, für die Exchange Web Services oder IMAP4- oder POP3-Protokolle mit einer einfachen Authentifizierung verwendet werden, keine Verbindung zu Exchange Online herstellen können.
 
 ## <a name="create-intune-app-protection-policies"></a>Erstellen von Intune-App-Schutzrichtlinien
 
@@ -79,7 +79,7 @@ Die App-Konfiguration kann entweder über den Kanal „MDM (Mobile Device Manage
 - S/MIME-Einstellungen
 - Datenschutzeinstellungen
 
-Spezifische Verfahrensschritte und eine ausführliche Dokumentation zu den App-Konfigurationseinstellungen von Outlook für iOS und Android finden Sie unter [Bereitstellen von Outlook für IOS-und Android-App-Konfigurationseinstellungen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+Spezifische Verfahrensschritte und eine ausführliche Dokumentation zu den App-Konfigurationseinstellungen von Outlook für iOS und Android finden Sie unter [Bereitstellen von Outlook für IOS-und Android-App-Konfigurationseinstellungen](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 1bfb903cbff6f4e2a47117f504981759c00b1d27
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262760"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993850"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Geführtes Szenario: Über die Cloud verwalteter moderner Desktop
 
@@ -55,14 +55,14 @@ In diesem geführten Szenario müssen Sie Ihr Testgerät und Ihren Testbenutzer 
 
 - Erstellen eines Testbenutzerkontos in Azure Active Directory.
 - Erstellen eines Testgeräts mit Windows 10, Version 1903 oder höher.
-- (Optional) [Registrieren des Testgeräts mit Windows Autopilot](../enrollment/enrollment-autopilot.md#add-devices)
+- (Optional) [Registrieren des Testgeräts mit Windows Autopilot](../../autopilot/enrollment-autopilot.md#add-devices)
 - (Optional) Aktivieren von [Hinzufügen von Branding zur Azure Active Directory-Anmeldeliste Ihrer Organisation](https://go.microsoft.com/fwlink/?linkid=2102455).
 
 ## <a name="step-2---user"></a>Schritt 2: Benutzer
 
 Wählen Sie einen Benutzer aus, der auf dem Gerät eingerichtet werden soll. Diese Person ist der primäre Benutzer des Geräts.
 
-Wenn Sie weitere Benutzer oder Geräte zu dieser Konfiguration hinzufügen möchten, fügen Sie die Benutzer und Geräte einfach zu den vom Assistenten erstellten AAD-Sicherheitsgruppen hinzu. Im Gegensatz zu anderen geführten Szenarios müssen Sie den Assistenten nicht mehr als einmal ausführen, da die Konfiguration nicht anpassbar ist. Fügen Sie einfach weitere Benutzer und Geräte zu den erstellten AAD-Gruppen hinzu. Nach Abschluss des Assistenten können Sie die Gruppe anzeigen, die mit den bereitgestellten Richtlinien erstellt wurde.
+Wenn Sie weitere Benutzer oder Geräte zu dieser Konfiguration hinzufügen möchten, fügen Sie die Benutzer und Geräte einfach zu den vom Assistenten erstellten Azure AD-Sicherheitsgruppen hinzu. Im Gegensatz zu anderen geführten Szenarios müssen Sie den Assistenten nicht mehr als einmal ausführen, da die Konfiguration nicht anpassbar ist. Fügen Sie einfach weitere Benutzer und Geräte zu den erstellten Azure AD-Gruppen hinzu. Nach Abschluss des Assistenten können Sie die Gruppe anzeigen, die mit den bereitgestellten Richtlinien erstellt wurde.
 
 ## <a name="step-3---device"></a>Schritt 3: Gerät
 
@@ -74,7 +74,7 @@ Windows Autopilot automatisiert die Konfiguration neuer Geräte, sodass Benutzer
 
 ### <a name="option-b--manual-device-enrollment"></a>Option B: Manuelle Geräteregistrierung
 
-Die Benutzer werden ihre neuen Geräte manuell einrichten und in der Verwaltung mobiler Geräte registrieren. Nachdem Sie dieses Szenario abgeschlossen haben, setzen Sie das Gerät zurück, und geben Sie dem primären Benutzer die Registrierungsanweisungen für Windows-Geräte. Weitere Informationen finden Sie unter [Einbinden eines neuen Windows 10-Geräts in Azure AD auf der Windows-Willkommensseite](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+Die Benutzer werden ihre neuen Geräte manuell einrichten und in der Verwaltung mobiler Geräte registrieren. Nachdem Sie dieses Szenario abgeschlossen haben, setzen Sie das Gerät zurück, und geben Sie dem primären Benutzer die Registrierungsanweisungen für Windows-Geräte. Weitere Informationen finden Sie unter [Einbinden eines neuen Windows 10-Geräts in Azure AD auf der Windows-Willkommensseite](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ## <a name="step-4---review--create"></a>Schritt 4: Überprüfen und Erstellen
 
@@ -90,12 +90,12 @@ Im letzten Schritt können Sie eine Zusammenfassung der von Ihnen konfigurierten
         - **Alle** für die **Microsoft Intune-App** oder
         - auf **Einige** festgelegt ist. Fügen Sie außerdem die Benutzergruppe hinzu, die durch dieses geführte Szenario erstellt wurde.
 2. Stellen Sie sicher, dass der ausgewählte Benutzer in der Lage ist, Geräte mit Azure Active Directory zu verknüpfen.
-    - Stellen Sie sicher, dass die AAD-Verknüpfung auf:
+    - Stellen Sie sicher, dass die Azure AD-Verknüpfung auf:
         - **Alle** oder
         - auf **Einige** festgelegt ist. Fügen Sie auch die Benutzergruppe hinzu, die durch dieses geführte Szenario erstellt wurde.
 3. Befolgen Sie die entsprechenden Schritte auf dem Gerät, um es wie in den folgenden Schritten mit Azure AD zu verknüpfen:
-    - Mit Windows Autopilot: Weitere Informationen finden Sie unter [Windows Autopilot-Benutzergesteuerter Modus](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven).
-    - Ohne Windows Autopilot: Weitere Informationen finden Sie unter [Einbinden eines neuen Windows 10-Geräts in Azure AD auf der Windows-Willkommensseite](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+    - Mit Windows Autopilot: Weitere Informationen finden Sie unter [Windows Autopilot-Benutzergesteuerter Modus](/windows/deployment/windows-autopilot/user-driven).
+    - Ohne Windows Autopilot: Weitere Informationen finden Sie unter [Einbinden eines neuen Windows 10-Geräts in Azure AD auf der Windows-Willkommensseite](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ### <a name="what-happens-when-i-click-deploy"></a>Was passiert, wenn Sie auf „Bereitstellen“ klicken?
 Der Benutzer und das Gerät werden zu neuen Sicherheitsgruppen hinzugefügt. Diese werden auch mit von Intune empfohlenen Einstellungen für Sicherheit und Produktivität am Arbeitsplatz oder in der Schule/Universität konfiguriert. Nachdem der Benutzer das Gerät mit Azure AD verknüpft hat, werden dem Gerät weitere Apps und Einstellungen hinzugefügt. Erfahren Sie mehr zu diesen weiteren Konfigurationen unter [Schnellstart: Registrierung Ihres Windows 10-Geräts](../enrollment/quickstart-enroll-windows-device.md).
@@ -122,7 +122,7 @@ Das geführte Szenario weist den Benutzer auch dem ausgewählten Gerät mit Auto
 
 Sobald der Benutzer das Gerät mit Azure Active Directory verknüpft, werden die folgenden Konfigurationen auf das Gerät angewendet:
 
-1. Microsoft 365-Apps werden automatisch auf dem in der Cloud verwalteten PC installiert. Es enthält die Anwendungen, mit denen Sie vertraut sind, einschließlich Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business und Word. Mit diesen Anwendungen können Sie sich mit Office 365-Diensten wie SharePoint Online, Exchange Online und Skype for Business Online verbinden. Microsoft 365-Apps werden im Gegensatz zu Versionen von Office, die kein Abonnement erfordern, regelmäßig mit neuen Features aktualisiert. Eine Liste mit neuen Features finden Sie unter „Neuerungen in Office 365“.
+1. Microsoft 365-Apps werden automatisch auf dem in der Cloud verwalteten PC installiert. Es enthält die Anwendungen, mit denen Sie vertraut sind, einschließlich Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business und Word. Mit diesen Anwendungen können Sie sich mit Microsoft 365-Diensten wie SharePoint Online, Exchange Online und Skype for Business Online verbinden. Microsoft 365-Apps werden im Gegensatz zu Versionen von Office, die kein Abonnement erfordern, regelmäßig mit neuen Features aktualisiert. Eine Liste mit neuen Features finden Sie unter „Neuerungen in Microsoft 365“.
 2. Die Windows-Sicherheitsbaselines werden auf dem über eine Cloud verwalteten PC installiert. Wenn Sie Microsoft Defender Advanced Threat Protection eingerichtet haben, konfiguriert das geführte Szenario auch die Baselineeinstellungen für Defender. Defender Advanced Threat Protection bietet eine neue Schutzebene für Windows 10-Sicherheitsfeatures. Mit einer Kombination aus Clienttechnologie, die in Windows 10 integriert ist, und einem robusten Clouddienst werden Bedrohungen besser erkannt, die es über andere Abwehrsysteme hinaus geschafft haben. 
 
 ## <a name="next-steps"></a>Nächste Schritte

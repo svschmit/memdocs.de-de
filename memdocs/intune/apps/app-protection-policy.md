@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: ce01d71ecc928af48eb72da9235a7074623ff34c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997981"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996757"
 ---
 # <a name="app-protection-policies-overview"></a>Übersicht über App-Schutzrichtlinien
 
@@ -52,7 +52,7 @@ App-Schutzrichtlinien können für Apps konfiguriert werden, die auf Geräten au
 - **Nicht bei einer Lösung für die mobile Geräteverwaltung registriert:** Diese Geräte sind in der Regel eigene Geräte von Mitarbeitern, die nicht in Intune oder anderen MDM-Lösungen verwaltet oder registriert werden.
 
 > [!IMPORTANT]
-> Sie können Verwaltungsrichtlinien für mobile Apps für mobile Office-Apps erstellen, die eine Verbindung mit Office 365-Diensten herstellen. Außerdem können Sie den Zugriff auf lokale Exchange-Postfächer schützen, indem Sie Intune-App-Schutzrichtlinien für Outlook für iOS/iPadOS und Android erstellen, die mit hybrider moderner Authentifizierung aktiviert wurden. Bevor Sie dieses Feature verwenden, sollten Sie sicherstellen, dass Sie die [Anforderungen für Outlook für iOS/iPadOS und Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx) erfüllen. App-Schutzrichtlinien werden nicht für andere Apps unterstützt, die eine Verbindung mit lokalen Exchange- oder SharePoint-Diensten herstellen.
+> Sie können Verwaltungsrichtlinien für mobile Apps für mobile Office-Apps erstellen, die eine Verbindung mit Microsoft 365-Diensten herstellen. Außerdem können Sie den Zugriff auf lokale Exchange-Postfächer schützen, indem Sie Intune-App-Schutzrichtlinien für Outlook für iOS/iPadOS und Android erstellen, die mit hybrider moderner Authentifizierung aktiviert wurden. Bevor Sie dieses Feature verwenden, sollten Sie sicherstellen, dass Sie die [Anforderungen für Outlook für iOS/iPadOS und Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019) erfüllen. App-Schutzrichtlinien werden nicht für andere Apps unterstützt, die eine Verbindung mit lokalen Exchange- oder SharePoint-Diensten herstellen.
 
 ## <a name="benefits-of-using-app-protection-policies"></a>Vorteile der Verwendung von App-Schutzrichtlinien
 
@@ -149,7 +149,7 @@ Jede App, die in das [Intune SDK](../developer/app-sdk.md) integriert oder vom [
 
 Das Intune SDK-Entwicklungsteam testet und unterstützt aktiv Apps, die mit den nativen Android-, iOS/iPadOS-Plattformen (Obj-C, Swift), Xamarin- und Xamarin.Forms-Plattformen erstellt wurden. Während einige Kunden das Intune SDK erfolgreich in andere Plattformen wie React Native und NativeScript integrieren konnten, bieten wir keine expliziten Anleitungen oder Plug-Ins für App-Entwickler, die andere als unsere unterstützten Plattformen verwenden.
 
-Das [Intune SDK](../developer/app-sdk.md) nutzt einige erweiterte moderne Authentifizierungsfunktionen aus den [Azure Active Directory-Authentifizierungsbibliotheken](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (Azure Active Directory Authentication Libraries, ADAL) sowohl für die Erst- als auch Drittanbieterversionen des SDK. Die [Microsoft-Authentifizierungsbibliothek](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (Microsoft Authentication Library, MSAL) ist für viele wichtige Szenarien wie die Authentifizierung beim Intune-Dienst für den App-Schutz und den bedingten Start nicht gut geeignet. Da der allgemeine Leitfaden des Identity-Teams von Microsoft darin besteht, für alle Microsoft Office-Apps auf MSAL umzusteigen, wird das [Intune SDK](../developer/app-sdk.md) es letztlich unterstützen müssen, aber derzeit ist keine Unterstützung geplant.
+Das [Intune SDK](../developer/app-sdk.md) nutzt einige erweiterte moderne Authentifizierungsfunktionen aus den [Azure Active Directory-Authentifizierungsbibliotheken](/azure/active-directory/develop/active-directory-authentication-libraries) (Azure Active Directory Authentication Libraries, ADAL) sowohl für die Erst- als auch Drittanbieterversionen des SDK. Die [Microsoft-Authentifizierungsbibliothek](/azure/active-directory/develop/reference-v2-libraries) (Microsoft Authentication Library, MSAL) ist für viele wichtige Szenarien wie die Authentifizierung beim Intune-Dienst für den App-Schutz und den bedingten Start nicht gut geeignet. Da der allgemeine Leitfaden des Identity-Teams von Microsoft darin besteht, für alle Microsoft Office-Apps auf MSAL umzusteigen, wird das [Intune SDK](../developer/app-sdk.md) es letztlich unterstützen müssen, aber derzeit ist keine Unterstützung geplant.
 
 ## <a name="end-user-requirements-to-use-app-protection-policies"></a>Anforderungen an die Endbenutzer bei der Verwendung von App-Schutzrichtlinien
 
@@ -171,15 +171,15 @@ Es gibt einige zusätzliche Anforderungen, die Sie kennen müssen, wenn Sie App-
 Für die Verwendung der [mobilen Outlook-App](https://products.office.com/outlook) gelten u. a. folgende zusätzliche Anforderungen:
 
 - Die mobile Outlook-App muss auf dem Gerät des Endbenutzers installiert sein.
-- Das [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online)-Postfach und die zugehörige Lizenz des Endbenutzers müssen mit dem AAD-Konto des Endbenutzers verknüpft sein.
+- Das [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online)-Postfach und die zugehörige Lizenz des Endbenutzers müssen mit dem Azure Active Directory-Konto des Endbenutzers verknüpft sein.
 
   >[!NOTE]
-  > Die mobile Outlook-App unterstützt derzeit nur den Intune-App-Schutz für Microsoft Exchange Online und [Exchange Server mit moderner hybrider Authentifizierung](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx), nicht jedoch lokales Exchange oder Exchange in Office 365.
+  > Die mobile Outlook-App unterstützt derzeit nur den Intune-App-Schutz für Microsoft Exchange Online und [Exchange Server mit moderner hybrider Authentifizierung](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019), nicht jedoch lokales Exchange oder Exchange in Office 365.
 
 ### <a name="word-excel-and-powerpoint"></a>Word, Excel und PowerPoint
 Für die Verwendung der Apps für [Word, Excel und PowerPoint](https://products.office.com/business/office) gelten u. a. folgende zusätzliche Anforderungen:
 
-- Mit dem AAD-Konto des Endbenutzers muss eine Lizenz für [Microsoft 365-Apps für Business oder Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) verknüpft sein. Das Abonnement muss die Office-Apps auf mobilen Geräten enthalten und kann ein Cloudspeicherkonto mit [OneDrive for Business](https://onedrive.live.com/about/business/) umfassen. Office 365-Lizenzen können im [Microsoft 365 Admin Center](https://admin.microsoft.com) zugewiesen werden. Befolgen Sie dazu diese [Anweisungen](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Mit dem AAD-Konto des Endbenutzers muss eine Lizenz für [Microsoft 365-Apps für Business oder Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) verknüpft sein. Das Abonnement muss die Office-Apps auf mobilen Geräten enthalten und kann ein Cloudspeicherkonto mit [OneDrive for Business](https://onedrive.live.com/about/business/) umfassen. Microsoft 365-Lizenzen können im [Microsoft 365 Admin Center](https://admin.microsoft.com) zugewiesen werden. Befolgen Sie dazu diese [Anweisungen](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - Der Benutzer muss über einen verwalteten Speicherort verfügen, der mithilfe der Funktion „Speichern unter“ im Rahmen der Einstellung für die Anwendungsschutzrichtlinie „Kopien von Organisationsdaten speichern“ konfiguriert wird. Wenn beispielsweise der verwaltete Speicherort OneDrive ist, muss die [OneDrive](https://onedrive.live.com/about/)-App in der Word-, Excel- oder PowerPoint-App des Endbenutzer konfiguriert werden.
 
@@ -192,7 +192,7 @@ Für die Verwendung der Apps für [Word, Excel und PowerPoint](https://products.
 Für Office wird ein verwalteter Speicherort (z. B. OneDrive) benötigt. Intune kennzeichnet alle Daten in der App entweder als „unternehmenseigen“ oder „persönlich“. Daten werden als „unternehmenseigen“ betrachtet, wenn sie von einem Speicherort des Unternehmens stammen. Bei den Office-Apps betrachtet Intune Folgendes als Unternehmensspeicher: E-Mail-Speicher (Exchange) oder Cloudspeicher (OneDrive-App mit einem OneDrive for Business-Konto).
 
 ### <a name="skype-for-business"></a>Skype for Business
-Für die Verwendung von Skype for Business gelten zusätzliche Anforderungen. Informationen hierzu finden Sie in den Lizenzanforderungen für [Skype for Business](https://products.office.com/skype-for-business/it-pros). Informationen zu Skype for Business (SfB)-Hybrid- und lokalen Konfigurationen finden Sie Informationen unter [Moderne Hybridauthentifizierung für SfB und Exchange wird allgemein verfügbar](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) bzw. [Moderne Authentifizierung für SfB OnPrem mit AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910).
+Für die Verwendung von Skype for Business gelten zusätzliche Anforderungen. Informationen hierzu finden Sie in den Lizenzanforderungen für [Skype for Business](https://products.office.com/skype-for-business/it-pros). Informationen zu Skype for Business (SfB)-Hybrid- und lokalen Konfigurationen finden Sie unter [Moderne Hybridauthentifizierung für SfB und Exchange wird allgemein verfügbar](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) bzw. [Moderne Authentifizierung für SfB OnPrem mit Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910).
 
 ## <a name="app-protection-global-policy"></a>Globale App-Schutzrichtlinie
 

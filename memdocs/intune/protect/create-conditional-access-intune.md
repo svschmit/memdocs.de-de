@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e40f9bc84e4969e963629479f22a6f988e025c4e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ed80cd89728a1ce58d37be8c16b8e61dcfbb5566
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985053"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992673"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Erstellen einer gerätebasierten Richtlinie für bedingten Zugriff
 
@@ -89,7 +89,7 @@ Eine Richtlinie für bedingten Zugriff gibt die Apps oder Dienste an, die Sie sc
    - **Gerätezustand**: Die Richtlinie für bedingten Zugriff gilt für alle Gerätezustände, es sei denn, Sie wählen hier „Ja“ aus und schließen die Zustände „Gerät in Hybrid-Azure AD eingebunden“ oder „Gerät als konform markiert“ (oder beide) explizit aus.
 
      > [!TIP]
-     > Wenn Sie sowohl Clients mit **moderner Authentifizierung** als auch **Exchange ActiveSync-Clients** schützen möchten, erstellen Sie zwei separate Richtlinien für bedingten Zugriff – eine für jeden Clienttyp. Exchange Active Sync unterstützt zwar die moderne Authentifizierung, ist die einzige von Exchange Active Sync unterstützte Bedingung die Plattform. Andere Bedingungen wie z.B. die mehrstufige Authentifizierung werden nicht unterstützt. Um den Zugriff von Exchange ActiveSync auf Exchange Online effektiv zu schützen, erstellen Sie eine Richtlinie für bedingten Zugriff, die die Cloud-App „Office 365 Exchange Online“ und die Client-App „Exchange ActiveSync“ mit aktivierter Einstellung „Richtlinie nur auf unterstützte Plattformen anwenden“ festlegt.
+     > Wenn Sie sowohl Clients mit **moderner Authentifizierung** als auch **Exchange ActiveSync-Clients** schützen möchten, erstellen Sie zwei separate Richtlinien für bedingten Zugriff – eine für jeden Clienttyp. Exchange Active Sync unterstützt zwar die moderne Authentifizierung, ist die einzige von Exchange Active Sync unterstützte Bedingung die Plattform. Andere Bedingungen wie z.B. die mehrstufige Authentifizierung werden nicht unterstützt. Um den Zugriff von Exchange ActiveSync auf Exchange Online effektiv zu schützen, erstellen Sie eine Richtlinie für bedingten Zugriff, die die Cloud-App „Microsoft 365 Exchange Online“ und die Client-App „Exchange ActiveSync“ mit aktivierter Einstellung „Richtlinie nur auf unterstützte Plattformen anwenden“ festlegt.
 
 9. Wählen Sie **Fertig** aus.
 

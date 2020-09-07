@@ -15,12 +15,12 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 7f4d3f8193eeaf9597d56c8cf1cd999147915e61
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 9aceb4d2b8b0b67af297fa5d15cdf66ae04a83f4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531569"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996621"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Problembehandlung bei der Richtlinienbereitstellung für den App-Schutz in Intune
 
@@ -57,14 +57,14 @@ Obwohl Sie Intune-App-Schutzrichtlinien unabhängig von jeder MDM-Lösung verwen
 - Der Benutzer muss zu einer Sicherheitsgruppe gehören, für die eine App-Schutzrichtlinie gilt. Die gleiche App-Schutzrichtlinie muss auf die verwendete App ausgerichtet sein.
 - Bei Android-Geräten ist die Unternehmensportal-App erforderlich, um App-Schutzrichtlinien zu erhalten.
 - Wenn Sie [Word-, Excel- oder PowerPoint](https://products.office.com/business/office)-Apps verwenden, müssen die folgenden zusätzlichen Anforderungen erfüllt sein:
-    - Mit dem Azure Active Directory-Konto (Azure AD) des Benutzers muss eine Lizenz für [Microsoft 365 Business oder Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) verknüpft sein. Das Abonnement muss die Office-Apps auf mobilen Geräten enthalten und kann ein Cloudspeicherkonto mit [OneDrive for Business](https://onedrive.live.com/about/business/) umfassen. Office 365-Lizenzen können im [Microsoft 365 Admin Center](https://admin.microsoft.com) zugewiesen werden. Befolgen Sie dazu diese [Anweisungen](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+    - Mit dem Azure Active Directory-Konto (Azure AD) des Benutzers muss eine Lizenz für [Microsoft 365 Business oder Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) verknüpft sein. Das Abonnement muss die Office-Apps auf mobilen Geräten enthalten und kann ein Cloudspeicherkonto mit [OneDrive for Business](https://onedrive.live.com/about/business/) umfassen. Microsoft 365-Lizenzen können im [Microsoft 365 Admin Center](https://admin.microsoft.com) zugewiesen werden. Befolgen Sie dazu diese [Anweisungen](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
     - Der Benutzer muss über einen verwalteten Speicherort verfügen, der mit der differenzierten Funktion **Speichern unter** konfiguriert ist. Dieser Befehl befindet sich unter der Einstellung **Kopien von Organisationsdaten speichern** für die Anwendungsschutzrichtlinie. Wenn z. B. der verwaltete Speicherort OneDrive ist, muss die [OneDrive](https://onedrive.live.com/about/)-App in der Word-, Excel- oder PowerPoint-App des Benutzer konfiguriert werden.
     - Wenn der verwaltete Speicherort OneDrive ist, muss die App unter die App-Schutzrichtlinie fallen, die für den Benutzer angegeben ist.
 
   > [!NOTE]
   > Die mobilen Office-Apps unterstützen zurzeit nur SharePoint Online, nicht jedoch SharePoint lokal.
 
-- Wenn Sie Intune-App-Schutzrichtlinien zusammen mit lokalen Ressourcen (Microsoft Skype for Business und Microsoft Exchange Server) verwenden, müssen Sie [HMA (hybride moderne Authentifizierung) für Skype for Business und Exchange aktivieren](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- Wenn Sie Intune-App-Schutzrichtlinien zusammen mit lokalen Ressourcen (Microsoft Skype for Business und Microsoft Exchange Server) verwenden, müssen Sie [HMA (hybride moderne Authentifizierung) für Skype for Business und Exchange aktivieren](/office365/enterprise/hybrid-modern-auth-overview).
 
 Intune-App-Schutzrichtlinien erfordern, dass die Identität des Benutzers zwischen der App und dem [Intune App SDK](../developer/app-sdk-get-started.md) konsistent ist. Die einzige Möglichkeit, diese Konsistenz zu garantieren, ist eine moderne Authentifizierung. Es gibt Szenarien, in denen Apps in einer lokalen Konfiguration ohne moderne Authentifizierung funktionieren können. Die Ergebnisse sind jedoch weder konsistent noch gewährleistet.
 
@@ -74,7 +74,7 @@ Weitere Informationen darüber, wie Sie HMA für hybride und lokale Konfiguratio
 [Hybride moderne Authentifizierung für SfB und Exchange wird allgemein verfügbar](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
 - **Lokal**<br>
-[Moderne Authentifizierung für lokales SfB mit AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
+[Moderne Authentifizierung für lokales SfB mit Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### <a name="check-app-protection-policy-status"></a>Prüfen des App-Schutzrichtlinienstatus
 
@@ -83,7 +83,7 @@ Gehen Sie wie folgt vor, um den Schutzstatus Ihrer App zu überprüfen:
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Klicken Sie auf **Apps** > **Überwachen** > **Status des App-Schutzes** und dann auf die Kachel **Zugewiesene Benutzer**.
 3. Klicken Sie auf der Seite **App-Berichterstellung** auf **Benutzer auswählen**, um eine Liste von Benutzern und Gruppen anzuzeigen.
-4. Suchen und wählen Sie einen der betroffenen Benutzer aus der Liste aus, und wählen Sie dann **Benutzer auswählen** aus. Im oberen Bereich von „App-Berichterstellung“ können Sie sehen, ob der Benutzer für den App-Schutz und O365 lizenziert ist. Sie können auch den App-Status für alle Geräte des Benutzers anzeigen.
+4. Suchen und wählen Sie einen der betroffenen Benutzer aus der Liste aus, und wählen Sie dann **Benutzer auswählen** aus. Im oberen Bereich von „App-Berichterstellung“ können Sie sehen, ob der Benutzer für den App-Schutz und Microsoft 365 lizenziert ist. Sie können auch den App-Status für alle Geräte des Benutzers anzeigen.
 5. Notieren Sie sich wichtige Informationen wie die Zielanwendungen, Gerätetypen, Richtlinien, den Check-In-Status des Geräts und den Zeitpunkt der letzten Synchronisierung.
 
 > [!NOTE]
@@ -95,9 +95,9 @@ Weitere Informationen finden Sie unter [Überprüfen der Einrichtung von App-Sch
 
 In den meisten Szenarien melden sich die Benutzer mit ihrem Benutzerprinzipalnamen (UPN) bei ihren Konten an. In einigen Umgebungen (z. B. in lokalen Szenarien) können Benutzer jedoch eine andere Form von Anmeldeinformationen verwenden. In diesen Fällen könnten Sie feststellen, dass der in der App verwendete UPN nicht mit dem UPN-Objekt in Azure AD übereinstimmt. Wenn dieses Problem auftritt, werden die App-Schutzrichtlinien nicht wie erwartet angewendet.
 
-Die von Microsoft empfohlenen bewährten Methoden bestehen darin, den UPN der primären SMTP-Adresse zuzuordnen. Diese Vorgehensweise ermöglicht es Benutzern, sich mit einer einheitlichen Identität bei verwalteten Apps, dem Intune-App-Schutz und anderen Azure AD-Ressourcen anzumelden. Weitere Informationen finden Sie unter [Azure AD UserPrincipalName-Auffüllung](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
+Die von Microsoft empfohlenen bewährten Methoden bestehen darin, den UPN der primären SMTP-Adresse zuzuordnen. Diese Vorgehensweise ermöglicht es Benutzern, sich mit einer einheitlichen Identität bei verwalteten Apps, dem Intune-App-Schutz und anderen Azure AD-Ressourcen anzumelden. Weitere Informationen finden Sie unter [Azure AD UserPrincipalName-Auffüllung](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
 
-Wenn Ihre Umgebung alternative Anmeldemethoden erfordert, finden Sie weitere Informationen unter [Konfigurieren einer alternativen Anmelde-ID](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), insbesondere unter [Hybride moderne Authentifizierung mit alternativer ID](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
+Wenn Ihre Umgebung alternative Anmeldemethoden erfordert, finden Sie weitere Informationen unter [Konfigurieren einer alternativen Anmelde-ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), insbesondere unter [Hybride moderne Authentifizierung mit alternativer ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
 
 ### <a name="verify-that-the-user-is-targeted"></a>Überprüfen Sie, ob der Benutzer das Ziel ist
 
@@ -115,7 +115,7 @@ Wenn Sie die Richtlinie einer Benutzergruppe zuweisen, stellen Sie sicher, dass 
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 2. Wählen Sie **Gruppen > Alle Gruppen** aus, und suchen Sie dann die Gruppe, die für Ihre App-Schutzrichtlinienzuweisung verwendet wird. Anschließend wählen Sie sie aus.
 3. Wählen Sie unter dem Abschnitt **Verwalten** die Option **Mitglieder** aus.
-4. Wenn der betroffene Benutzer nicht aufgeführt ist, überprüfen Sie [App- und Ressourcenzugriff mithilfe von Azure Active Directory-Gruppen verwalten](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups) und Ihre Gruppenmitgliedschaftsregeln. Stellen Sie sicher, dass der betroffene Benutzer in der Gruppe enthalten ist.
+4. Wenn der betroffene Benutzer nicht aufgeführt ist, überprüfen Sie [App- und Ressourcenzugriff mithilfe von Azure Active Directory-Gruppen verwalten](/azure/active-directory/fundamentals/active-directory-manage-groups) und Ihre Gruppenmitgliedschaftsregeln. Stellen Sie sicher, dass der betroffene Benutzer in der Gruppe enthalten ist.
 5. Stellen Sie sicher, dass der betroffene Benutzer nicht zu einer Gruppe gehört, die von der Richtlinie ausgeschlossen ist.
 
 > [!IMPORTANT]

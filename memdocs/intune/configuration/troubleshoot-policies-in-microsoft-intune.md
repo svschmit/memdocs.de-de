@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 26545af603e71c0adff5a0c5dcdcbbc337ce4eb3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146506"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995176"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Richtlinien und Profile zur Problembehandlung in Intune
 
@@ -122,15 +122,15 @@ In diesem Artikel werden häufig verwendete Methoden zur Problembehandlung aufge
 ## <a name="policy-troubleshooting-resources"></a>Richtlinie zur Problembehandlung
 
 - [Problembehandlung für iOS-/iPadOS- oder Android-Richtlinien, die nicht auf Geräte angewendet werden](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (öffnet eine andere Microsoft-Website)
-- [Problembehandlung für Intune-Richtlinienfehler unter Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (öffnet einen Blog)
+- [Problembehandlung für Intune-Richtlinienfehler unter Windows 10](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (öffnet einen Blog)
 - [Problembehandlung bei benutzerdefinierten CSP-Einstellungen für Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (öffnet eine andere Microsoft-Website)
-- [Vergleich zwischen der Windows 10-Gruppenrichtlinie und der MDM-Richtlinie von Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (öffnet eine andere Microsoft-Website)
+- [Vergleich zwischen der Windows 10-Gruppenrichtlinie und der MDM-Richtlinie von Intune](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins) (öffnet eine andere Microsoft-Website)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Warnung: Fehler beim Speichern von Zugriffsregeln in Exchange
 
 **Problem:** Sie erhalten die Warnung **Fehler beim Speichern von Zugriffsregeln in Exchange.** in der Verwaltungskonsole.
 
-Wenn Sie Richtlinien im Exchange-Arbeitsbereich „Lokale Richtlinie“ (Verwaltungskonsole) erstellt haben, aber Office 365 verwenden, werden die konfigurierten Richtlinieneinstellungen von Intune nicht erzwungen. Beachten Sie die Richtlinienquelle in der Warnung. Löschen Sie im Arbeitsbereich „Richtlinie für lokales Exchange“ die Legacyregeln. Die Legacyregeln sind globale Exchange-Regeln in Intune für lokales Exchange und für Office 365 nicht relevant. Erstellen Sie dann eine neue Richtlinie für Office 365.
+Wenn Sie Richtlinien im Exchange-Arbeitsbereich „Lokale Richtlinie“ (Verwaltungskonsole) erstellt haben, aber Microsoft 365 verwenden, werden die konfigurierten Richtlinieneinstellungen von Intune nicht erzwungen. Beachten Sie die Richtlinienquelle in der Warnung. Löschen Sie im Arbeitsbereich „Richtlinie für lokales Exchange“ die Legacyregeln. Die Legacyregeln sind globale Exchange-Regeln in Intune für lokales Exchange und für Microsoft 365 nicht relevant. Erstellen Sie dann eine neue Richtlinie für Microsoft 365.
 
 Unter [Behandeln von Problemen mit dem lokalen Intune Exchange Connector](../protect/troubleshoot-exchange-connector.md) finden Sie weitere Informationen.
 

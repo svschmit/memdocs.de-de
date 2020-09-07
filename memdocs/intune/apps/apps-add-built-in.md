@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37bf4cf8d6381ab076f7c0cd0eb879ddf43d571c
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 9c4cc5fc662e27badcb0c1c1ae478ab700fce70e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217101"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996468"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Hinzufügen von integrierten Apps zu Microsoft Intune
 
-Der *integrierte* App-Typ erleichtert Ihnen das Zuweisen geordneter verwalteter Apps, z. B. Office 365-Apps, zu iOS-/iPadOS- und Android-Geräten. Sie können bestimmte Apps für diesen App-Typ zuweisen, z.B. Excel, OneDrive, Outlook oder Skype. Nach dem Hinzufügen einer App wird als App-Typ entweder *Integrierte iOS-App* oder *Integrierte Android-App* angezeigt. Mithilfe des integrierten App-Typs können Sie wählen, welche dieser Apps Sie für Gerätebenutzer veröffentlichen möchten.
+Der *integrierte* App-Typ erleichtert Ihnen das Zuweisen geordneter verwalteter Apps, z. B. Microsoft 365-Apps, zu iOS-/iPadOS- und Android-Geräten. Sie können bestimmte Apps für diesen App-Typ zuweisen, z.B. Excel, OneDrive, Outlook oder Skype. Nach dem Hinzufügen einer App wird als App-Typ entweder *Integrierte iOS-App* oder *Integrierte Android-App* angezeigt. Mithilfe des integrierten App-Typs können Sie wählen, welche dieser Apps Sie für Gerätebenutzer veröffentlichen möchten.
 
-In früheren Versionen der Intune-Konsole stellte Intune mehrere standardmäßig verwaltete Office 365-Apps wie Outlook und OneDrive bereit. Diese verwalteten Apps wurden mit den App-Typen *Verwaltete iOS Store-App* oder *Verwaltete Android-App* bezeichnet. Es wird empfohlen, anstelle dieser App-Typen den integrierten App-Typen zu verwenden. Mit dem integrierten App-Typen können Sie außerdem Office 365-Apps flexibler bearbeiten und löschen.
+In früheren Versionen der Intune-Konsole stellte Intune mehrere standardmäßig verwaltete Microsoft 365-Apps wie Outlook und OneDrive bereit. Diese verwalteten Apps wurden mit den App-Typen *Verwaltete iOS Store-App* oder *Verwaltete Android-App* bezeichnet. Es wird empfohlen, anstelle dieser App-Typen den integrierten App-Typen zu verwenden. Mit dem integrierten App-Typen können Sie außerdem Microsoft 365-Apps flexibler bearbeiten und löschen.
 
 >[!NOTE]
->Als *Verwaltete iOS Store-App* oder *Verwaltete Android-App* bezeichnete standardmäßige Office 365-Apps werden aus der Liste der Apps entfernt, wenn alle Zuweisungen gelöscht sind.
+>Als *Verwaltete iOS Store-App* oder *Verwaltete Android-App* bezeichnete standardmäßige Microsoft 365-Apps werden aus der Liste der Apps entfernt, wenn alle Zuweisungen gelöscht sind.
 
 ## <a name="add-a-built-in-app"></a>Hinzufügen einer integrierten App
 

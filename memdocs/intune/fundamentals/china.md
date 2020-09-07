@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 34f1aeb9ec265b7a6e09135bc931574732f5816d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137391"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994207"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune wird in China von 21Vianet betrieben  
 
@@ -48,20 +48,20 @@ Da die China-Dienste von einem Partner aus China betrieben werden, gibt es einig
   - Google Play Protect-Funktionen wie z. B. dem SafetyNet-Gerätenachweis
   - Verwalten von Apps aus dem Google Play Store
   - Android-Unternehmensfunktionen Weitere Informationen finden Sie in dieser [Google-Dokumentation](https://support.google.com/work/android/answer/6270910?hl=en).
-- In der Intune Unternehmensportal-App für Android erfolgt die Kommunikation mit dem Microsoft Intune-Dienst über Google Mobile Services. Da Google Play-Dienste in China nicht verfügbar sind, kann es bis zu 8 Stunden dauern, bis einige Aufgaben abgeschlossen sind. Weitere Informationen finden Sie in [diesem Artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
+- In der Intune Unternehmensportal-App für Android erfolgt die Kommunikation mit dem Microsoft Intune-Dienst über Google Mobile Services. Da Google Play-Dienste in China nicht verfügbar sind, kann es bis zu 8 Stunden dauern, bis einige Aufgaben abgeschlossen sind. Weitere Informationen finden Sie in [diesem Artikel](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
 - Zur Einhaltung der lokalen Bestimmungen und zur Bereitstellung verbesserter Funktionalität kann sich die Intune-Clientumgebung (Unternehmensportal-APP) in China unterscheiden.
 - Das Fencing ist nicht verfügbar.
 - Die Verfügbarkeit der mobilen Anwendungsverwaltung (Mobile Application Management, MAM) ist abhängig von den Apps, die in der Volksrepublik China verfügbar sind.
 
 ## <a name="you-control-customer-data"></a>Sie haben die Kontrolle über die Kundendaten
 
-In Microsoft Azure, Intune, Office 365 und Power BI, das von 21ViaNet betrieben wird, haben Sie vollständige Kontrolle über Ihre Daten:
+In Microsoft Azure, Intune, Microsoft 365 und Power BI, das von 21ViaNet betrieben wird, haben Sie vollständige Kontrolle über Ihre Daten:
 - Sie wissen, wo sich die Kundendaten befinden.
 - Sie haben die Kontrolle über den Zugriff auf Ihre Kundendaten.
 - Sie haben die Kontrolle über Ihre Kundendaten, wenn Sie den Dienst verlassen.
 - Sie haben Optionen, um die Sicherheit Ihrer Kundendaten zu kontrollieren.
 
-Mit Microsoft Azure, Intune, Office 365 und Power BI, das von 21ViaNet betrieben wird, sind Sie der Besitzer Ihrer Daten:
+Mit Microsoft Azure, Intune, Microsoft 365 und Power BI, das von 21ViaNet betrieben wird, sind Sie der Besitzer Ihrer Daten:
 - 21ViaNet verwendet keine Kundendaten zu Werbezwecken.
 - Sie haben die Kontrolle, wer Zugriff auf Ihre Kundendaten hat.
 - Wir verwenden logische Isolation, um die Daten jedes Kunden voneinander zu trennen.
@@ -72,8 +72,8 @@ Mit Microsoft Azure, Intune, Office 365 und Power BI, das von 21ViaNet betrieben
 
 Mit der Mandantenadministrator-Rolle für Intune, das von 21ViaNet betrieben wird, können Daten für Datensubjekte auf folgende Weise angefordert werden:
 
-- Mithilfe des Azure Active Directory Admin Centers kann ein Mandantenadministrator ein Datensubjekt dauerhaft aus Azure Active Directory und verwandten Diensten löschen. Weitere Informationen finden Sie unter [Azure-Datensubjektanforderungen – Löschen](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
-- Vom System generierte Protokolle für Microsoft-Dienste, die von 21ViaNet betrieben werden, können von Mandantenadministratoren mithilfe des Datenprotokollexports exportiert werden. Weitere Informationen finden Sie unter [Azure-Datensubjektanforderungen – Exportieren](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
+- Mithilfe des Azure Active Directory Admin Centers kann ein Mandantenadministrator ein Datensubjekt dauerhaft aus Azure Active Directory und verwandten Diensten löschen. Weitere Informationen finden Sie unter [Azure-Datensubjektanforderungen – Löschen](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
+- Vom System generierte Protokolle für Microsoft-Dienste, die von 21ViaNet betrieben werden, können von Mandantenadministratoren mithilfe des Datenprotokollexports exportiert werden. Weitere Informationen finden Sie unter [Azure-Datensubjektanforderungen – Exportieren](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

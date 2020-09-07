@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7dc7fb7b01add52b75fcc4a4a42f57951decf484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663343"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993128"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurieren des lokalen Exchange-Zugriffs für Intune
 
@@ -34,7 +34,7 @@ Wenn Sie über eine Exchange Online Dedicated-Umgebung verfügen und herausfinde
 > [!IMPORTANT]
 > Die Informationen in diesem Artikel gelten für Kunden, für die die Verwendung des Exchange Connector unterstützt wird.
 >
-> Ab Juli 2020 wird der Exchange Connector nicht mehr unterstützt und durch die [hybride moderne Authentifizierung](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) für Exchange ersetzt.  Wenn Sie den Exchange Connector in Ihrer Umgebung eingerichtet haben, wird Ihr Intune-Mandant weiterhin für dessen Verwendung unterstützt, und Sie haben weiterhin Zugriff auf die Benutzeroberfläche, die dessen Konfiguration unterstützt. Sie können den Connector weiterhin verwenden oder die HMA konfigurieren und den Connector deinstallieren.
+> Ab Juli 2020 wird der Exchange Connector nicht mehr unterstützt und durch die [hybride moderne Authentifizierung](/office365/enterprise/hybrid-modern-auth-overview) (HMA) für Exchange ersetzt.  Wenn Sie den Exchange Connector in Ihrer Umgebung eingerichtet haben, wird Ihr Intune-Mandant weiterhin für dessen Verwendung unterstützt, und Sie haben weiterhin Zugriff auf die Benutzeroberfläche, die dessen Konfiguration unterstützt. Sie können den Connector weiterhin verwenden oder die HMA konfigurieren und den Connector deinstallieren.
 >
 > Für die Verwendung der HMA muss Intune nicht den Exchange Connector einrichten und verwenden. Durch diese Änderung wurde die Benutzeroberfläche zum Konfigurieren und Verwalten des Exchange Connector für Intune aus dem Admin Center des Microsoft Endpoint Manager entfernt, sofern Sie mit Ihrem Abonnement nicht bereits den Exchange Connector verwenden.
 
@@ -59,7 +59,7 @@ Bevor Sie den bedingten Zugriff konfigurieren, überprüfen Sie, ob folgende Kon
   - Es muss bei Intune **registriert** sein oder sich um einen in die Domäne eingebundenen PC handeln.
   - **Es muss in Azure Active Directory registriert sein**. Darüber hinaus muss die Exchange ActiveSync-ID des Clients in Azure Active Directory registriert sein.
 
-- Der Azure AD Device Registration-Dienst wird automatisch für Intune und Office 365-Kunden aktiviert. Kunden, die den AD FS Device Registration Service bereitgestellt haben, sehen keine registrierten Geräte in ihrem lokalen Active Directory. **Dies gilt nicht für Windows-PCs und -Geräte.**
+- Der Azure AD Device Registration-Dienst wird automatisch für Intune und Microsoft 365-Kunden aktiviert. Kunden, die den AD FS Device Registration Service bereitgestellt haben, sehen keine registrierten Geräte in ihrem lokalen Active Directory. **Dies gilt nicht für Windows-PCs und -Geräte.**
 
 - Es besteht **Konformität** mit allen für das Gerät festgelegten Konformitätsrichtlinien.
 
@@ -86,16 +86,16 @@ Bevor Sie den bedingten Zugriff konfigurieren, überprüfen Sie, ob folgende Kon
 
   4. Wählen Sie **Android Enterprise** unter **Plattform** und **E-Mail** unter **Profiltyp** aus.
 
-  5. Konfigurieren Sie die [E-Mail-Profileinstellungen](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
+  5. Konfigurieren Sie die [E-Mail-Profileinstellungen](/intune/configuration/email-settings-android-enterprise#android-enterprise).
 
   6. Wenn Sie fertig sind, wählen Sie **OK** > **Erstellen** aus, um Ihre Änderungen zu speichern.
 
-  7. Nachdem Sie das E-Mail-Profil erstellt haben, können Sie [es zu Gruppen zuweisen](https://docs.microsoft.com/intune/device-profile-assign).
+  7. Nachdem Sie das E-Mail-Profil erstellt haben, können Sie [es zu Gruppen zuweisen](/intune/device-profile-assign).
 
-  8. Richten Sie den [gerätebasierten bedingten Zugriff](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access) ein.
+  8. Richten Sie den [gerätebasierten bedingten Zugriff](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access) ein.
 
 > [!NOTE]
-> Microsoft Outlook für Android und iOS/iPadOS wird nicht über den lokalen Exchange-Connector unterstützt. Wenn Sie Richtlinien für den bedingten Azure Active Directory-Zugriff und Intune-App-Schutzrichtlinien mit Outlook für iOS/iPadOS und Android für Ihre lokale Postfächer nutzen möchten, lesen Sie [Verwendung der modernen Hybridauthentifizierung mit Outlook für iOS und Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
+> Microsoft Outlook für Android und iOS/iPadOS wird nicht über den lokalen Exchange-Connector unterstützt. Wenn Sie Richtlinien für den bedingten Azure Active Directory-Zugriff und Intune-App-Schutzrichtlinien mit Outlook für iOS/iPadOS und Android für Ihre lokale Postfächer nutzen möchten, lesen Sie [Verwendung der modernen Hybridauthentifizierung mit Outlook für iOS und Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### <a name="support-for-pcs"></a>Unterstützung für PCs
 

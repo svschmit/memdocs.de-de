@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e1619f3dde57b002ce8884e4af7d4a02e3d71b9f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080146"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992758"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>App-basierter bedingter Zugriff mit Intune
 
 [Intune-App-Schutzrichtlinien](../apps/app-protection-policy.md) unterstützen Sie beim Schutz Ihrer Unternehmensdaten auf Geräten, die bei Intune registriert sind. App-Schutzrichtlinien können Sie auch auf mitarbeitereigenen Geräten verwenden, die nicht für die Verwaltung in Intune registriert sind. Auch wenn Ihr Unternehmen das Gerät nicht verwaltet, müssen Sie in diesem Fall dennoch sicherstellen, dass Unternehmensdaten und -ressourcen geschützt sind.
 
-Mit App-basiertem bedingten Zugriff und der Verwaltung von Client-Apps wird eine Sicherheitsstufe hinzugefügt, indem sichergestellt wird, dass nur Client-Apps, die Intune-App-Schutzrichtlinien unterstützen, auf Exchange Online und andere Office 365-Dienste zugreifen können.
+Mit App-basiertem bedingten Zugriff und der Verwaltung von Client-Apps wird eine Sicherheitsstufe hinzugefügt, indem sichergestellt wird, dass nur Client-Apps, die Intune-App-Schutzrichtlinien unterstützen, auf Exchange Online und andere Microsoft 365-Dienste zugreifen können.
 
 > [!NOTE]
 > Eine verwaltete App ist eine App, auf die App-Schutzrichtlinien angewendet wurden und die von Intune verwaltet werden kann.
@@ -47,9 +47,9 @@ Weitere Informationen finden Sie unter [Enterprise Mobility: Preise](https://www
 
 ## <a name="supported-apps"></a>Unterstützte Apps
 
-Eine Liste von Apps, die den App-basierten bedingten Zugriff unterstützen, finden Sie in der [Referenz zu den Einstellungen für den bedingten Azure Active Directory-Zugriff](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
+Eine Liste von Apps, die den App-basierten bedingten Zugriff unterstützen, finden Sie in der [Referenz zu den Einstellungen für den bedingten Azure Active Directory-Zugriff](/azure/active-directory/active-directory-conditional-access-technical-reference).
 
-Der App-basierte bedingte Zugriff [unterstützt auch branchenspezifische Apps](app-modern-authentication-block.md), aber diese Apps müssen die [moderne Authentifizierung von Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) nutzen. 
+Der App-basierte bedingte Zugriff [unterstützt auch branchenspezifische Apps](app-modern-authentication-block.md), aber diese Apps müssen die [moderne Authentifizierung von Microsoft 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) nutzen. 
 
 ## <a name="how-app-based-conditional-access-works"></a>Funktionsweise des App-basierten bedingten Zugriffs
 

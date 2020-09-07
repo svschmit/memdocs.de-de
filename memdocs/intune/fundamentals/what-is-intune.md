@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 939a9b46c3972bc4d575b3b58d08f5f6fb169239
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332804"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996258"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune ist ein MDM- und MAM-Anbieter für Ihre Geräte
 
@@ -34,7 +34,7 @@ Intune ist Teil der [Enterprise Mobility + Security-Suite (EMS)](https://www.mic
 
 Mit Intune können Sie folgende Aktionen ausführen:
 
-- Sie können zu 100 % mit Intune in der Cloud arbeiten oder die [Co-Verwaltung](https://docs.microsoft.com/configmgr/comanage/overview) mit Configuration Manager und Intune wählen.
+- Sie können zu 100 % mit Intune in der Cloud arbeiten oder die [Co-Verwaltung](/configmgr/comanage/overview) mit Configuration Manager und Intune wählen.
 - Legen Sie Regeln fest, und konfigurieren Sie Einstellungen für private und organisationseigene Geräte für den Zugriff auf Daten und Netzwerke.
 - Stellen Sie Apps auf lokalen und mobilen Geräten bereit, und authentifizieren Sie sie.
 - Schützen Sie Ihre Unternehmensinformationen, indem Sie steuern, wie Benutzer auf Informationen zugreifen und diese freigeben können.
@@ -106,9 +106,9 @@ Intune ist verfügbar:
 
 - Als eigenständiger [Azure-Dienst](https://go.microsoft.com/fwlink/?linkid=2090973)
 - Enthalten in [Microsoft 365 ](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) und [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government)
-- Als [Mobile Geräteverwaltung in Office 365](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd), die aus einigen eingeschränkten Intune-Features besteht
+- Als [Mobile Geräteverwaltung in Microsoft 365](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd), die aus einigen eingeschränkten Intune-Features besteht
 
-Intune wird in vielen Sektoren verwendet, einschließlich [Behörden](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description), [Ausbildung](https://www.microsoft.com/en-us/education/intune), [Kiosk- oder dedizierten Geräten](../configuration/kiosk-settings.md) für Produktion, Einzelhandel und Sonstiges.
+Intune wird in vielen Sektoren verwendet, einschließlich [Behörden](/enterprise-mobility-security/solutions/ems-govt-service-description), [Ausbildung](https://www.microsoft.com/en-us/education/intune), [Kiosk- oder dedizierten Geräten](../configuration/kiosk-settings.md) für Produktion, Einzelhandel und Sonstiges.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Schützen des Exchange Online-E-Mail-Diensts auf nicht verwalteten Geräten'
 titleSuffix: Microsoft Intune
-description: Erfahren Sie, wie Sie Office 365 Exchange Online mit Intune-App-Schutzrichtlinien und dem bedingten Zugriff von Azure AD sichern.
+description: Hier erfahren Sie, wie Sie Microsoft 365 Exchange Online mit Intune-App-Schutzrichtlinien und dem bedingten Zugriff von Azure AD sichern.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f32ced29b6bb53f8c091ba1a0f42261a2baa493
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: 12b776af250a9d4a9bf0fb6c8ba7eec98540f883
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605217"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993952"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutorial: Schützen des Exchange Online-E-Mail-Diensts auf nicht verwalteten Geräten
 
@@ -120,7 +120,7 @@ Nun erstellen wir zwei Richtlinien für bedingten Zugriff, um alle Geräteplattf
 
 4. Klicken Sie unter **Zuweisungen** auf **Benutzer und Gruppen**. Klicken Sie auf der Registerkarte **Einschließen** auf **Alle Benutzer** und dann auf **Fertig**.
 
-5. Wählen Sie unter **Zuweisungen** die Option **Cloud-Apps oder -aktionen** aus. Da wir den Office 365 Exchange Online-E-Mail-Dienst schützen möchten, wählen wir diese in den folgenden Schritten aus:
+5. Wählen Sie unter **Zuweisungen** die Option **Cloud-Apps oder -aktionen** aus. Da wir den Microsoft 365 Exchange Online-E-Mail-Dienst schützen möchten, wählen wir diesen in den folgenden Schritten aus:
 
    1. Klicken Sie auf der Registerkarte **Einschließen** auf **Apps auswählen**.
    2. Klicken Sie auf **Auswählen**.
@@ -170,7 +170,7 @@ Die Richtlinie für bedingten Zugriff für Clients mit moderner Authentifizierun
 
 4. Klicken Sie unter **Zuweisungen** auf **Benutzer und Gruppen**. Klicken Sie auf der Registerkarte *Einschließen* auf **Alle Benutzer** und dann auf **Fertig**.
 
-5. Wählen Sie unter **Zuweisungen** die Option **Cloud-Apps oder -aktionen** aus. Wählen Sie die Option für Office 365 Exchange Online-E-Mail folgendermaßen aus:
+5. Wählen Sie unter **Zuweisungen** die Option **Cloud-Apps oder -aktionen** aus. Wählen Sie die Option für Microsoft 365 Exchange Online-E-Mail folgendermaßen aus:
 
    1. Klicken Sie auf der Registerkarte *Einschließen* auf **Apps auswählen**.
    2. Klicken Sie auf **Auswählen**.
@@ -205,7 +205,7 @@ Die App-Schutzrichtlinien und der bedingte Zugriff sind jetzt eingerichtet und k
 
 ## <a name="try-it-out"></a>Probieren Sie es aus
 
-Mit den von Ihnen erstellten Richtlinien müssen Geräte sich bei Intune registrieren und die mobile Outlook-App verwenden, um auf Office 365-E-Mails zuzugreifen. Um dieses Szenario auf iOS-Geräten zu testen, melden Sie sich bei Exchange Online mit den Anmeldeinformationen für einen Benutzer auf Ihrem Testmandanten an.
+Mit den von Ihnen erstellten Richtlinien müssen Geräte sich bei Intune registrieren und die mobile Outlook-App verwenden, um auf Microsoft 365-E-Mails zuzugreifen. Um dieses Szenario auf iOS-Geräten zu testen, melden Sie sich bei Exchange Online mit den Anmeldeinformationen für einen Benutzer auf Ihrem Testmandanten an.
 
 1. Um dies auf einem iPhone zu testen, navigieren Sie zu **Einstellungen** > **Kennwörter & Konten** > **Konto hinzufügen** > **Exchange**.
 

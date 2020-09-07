@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88f8a2ff04f536370f613341170e7fae0a808ff6
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 265b92229d687c7dafb2c6de196990c29ffc0cb8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365524"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996094"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Erstellen einer Mobile Threat Defense-Gerätekompatibilitätsrichtlinie (MTD) mit Intune
 
@@ -68,7 +68,7 @@ Voraussetzungen für die Gerätekompatibilitätsrichtlinie mit MTD:
 7. Klicken Sie, wenn Sie fertig sind, auf der Seite **Bewerten + erstellen** auf **Erstellen**. Das neue Profil wird in der Liste angezeigt, wenn Sie den Richtlinientyp für das Profil auswählen, das Sie erstellt haben.
 
 > [!IMPORTANT]
-> Wenn Sie Richtlinien für bedingten Zugriff für Office 365 oder andere Dienste erstellen, wird die Konformitätsbewertung ausgewertet, und auf nicht konformen Geräten wird der Zugriff auf Unternehmensressourcen blockiert, bis die Bedrohung auf dem Gerät beseitigt ist.
+> Wenn Sie Richtlinien für bedingten Zugriff für Microsoft 365 oder andere Dienste erstellen, wird die Konformitätsbewertung ausgewertet, und auf nicht konformen Geräten wird der Zugriff auf Unternehmensressourcen blockiert, bis die Bedrohung auf dem Gerät beseitigt ist.
 
 ## <a name="to-assign-an-mtd-device-compliance-policy"></a>So weisen Sie eine MTD-Gerätekonformitätsrichtlinie zu
 

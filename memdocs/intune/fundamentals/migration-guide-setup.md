@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b7784d4ad86e3418259f85ca1c4577d2289dc86
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c39174dded9fae0055786b6132b3f964f187b1b1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358155"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992707"
 ---
 # <a name="basic-setup"></a>Grundlegende Einrichtung
 
@@ -31,19 +31,19 @@ Nachdem Sie Ihre Umgebung analysiert haben, können Sie mit dem Einrichten von M
 
 ### <a name="identity"></a>Identität
 
-Intune erfordert Azure Active Directory (AAD) als Identitäts- und Benutzergruppierungsanbieter. Weitere Informationen:
+Intune erfordert Azure Active Directory (Azure AD) als Identitäts- und Benutzergruppierungsanbieter. Weitere Informationen:
 
-- [Identitätsanforderungen](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [Identitätsanforderungen](/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
-- [Anforderungen für die Verzeichnissynchronisierung](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [Anforderungen für die Verzeichnissynchronisierung](/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
-- [So funktioniert's: Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [So funktioniert's: Azure Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
 
 - [Planen von Benutzer- und Gerätegruppen](users-add.md)
 
 - [Erstellen von Benutzer- und Gerätegruppen](groups-get-started.md)
 
-Wenn in Ihrer Organisation bereits Office 365 verwendet wird, muss Intune dieselbe Azure Active Directory-Umgebung verwenden.
+Wenn in Ihrer Organisation bereits Microsoft 365 verwendet wird, muss Intune dieselbe Azure Active Directory-Umgebung verwenden.
 
 ### <a name="pki-optional"></a>PKI (optional)
 
@@ -63,7 +63,7 @@ Bevor Sie zu Intune migrieren können, brauchen Sie ein [Intune-Abonnement](acco
 
 - Erfahren Sie, wie Sie [Intune-Benutzerlizenzen zuweisen](licenses-assign.md) können.
 
-- Wenn Sie bereits einen neuen AAD-Mandanten erstellt haben, erfahren Sie, wie Sie [neue Benutzer erstellen oder Benutzer aus Ihrem lokalen Active Directory (AD) synchronisieren](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) können.
+- Wenn Sie bereits einen neuen AAD-Mandanten erstellt haben, erfahren Sie, wie Sie [neue Benutzer erstellen oder Benutzer aus Ihrem lokalen Active Directory (AD) synchronisieren](/azure/active-directory/connect/active-directory-aadconnect) können.
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>Aufgabe 3: Stellen Sie die MDM-Autorität auf Intune um
 

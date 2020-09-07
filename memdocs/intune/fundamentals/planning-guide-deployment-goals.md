@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 63ef6acb54f079f2a47800ae84cbe49cd4fabed3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079228"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992640"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Bestimmen der Bereitstellungsziele, sonstigen Ziele und Herausforderungen
 
@@ -33,9 +33,9 @@ Ein guter Bereitstellungsplan beginnt mit dem Ermitteln der langfristigen und ku
 
 Bereitstellungsziele sind langfristig angelegt und sollen durch das Bereitstellen von Intune in Ihrer Organisation realisiert werden. Nachstehend finden Sie einige Beispiele solcher Ziele, jeweils mit Beschreibung und geschäftlichem Nutzen.
 
-- **Integration in Office 365 und Unterstützung der Verwendung von Office Mobile-Apps**
+- **Integration in Microsoft 365 und Unterstützung der Verwendung von Office Mobile-Apps**
 
-  - **Beschreibung:** Bereitstellen einer engen Integration in Office 365 und Verwendung von Office Mobile-Apps mit App-Schutz.
+  - **Beschreibung:** Bereitstellen einer engen Integration in Microsoft 365 und Verwendung von Office Mobile-Apps mit App-Schutz.
 
   - **Geschäftswert:** Sichere und verbesserte Benutzeroberfläche, da Benutzer Apps verwenden können, die sie kennen und bevorzugen.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f7f4bf735ee5145bdad269a0ea6a6016d0ad97e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2284af22d25329fad74a7559030520a187a7c38a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985959"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992924"
 ---
 # <a name="learn-about-conditional-access-and-intune"></a>Erfahren Sie mehr zum bedingten Zugriff und Intune
 
@@ -33,7 +33,7 @@ Enterprise Mobility + Security (EMS) ist kein eigenständiges Produkt. Dabei han
 Sie können Bedingungen definieren, die den Zugriff auf Ihre Unternehmensdaten basierend auf dem Ort, dem Gerät, dem Benutzerstatus und der Vertraulichkeit der Anwendung einschränken.
 
 > [!NOTE]
-> Der bedingte Zugriff kann auch auf [Office 365-Dienste](https://docs.microsoft.com/office365/enterprise/office-365-client-support-conditional-access) angewendet werden.
+> Der bedingte Zugriff kann auch auf [Microsoft 365-Dienste](/office365/enterprise/office-365-client-support-conditional-access) angewendet werden.
 
 ![Diagramm des bedingten Zugriffs](./media/conditional-access/ca-diagram-1.png)
 

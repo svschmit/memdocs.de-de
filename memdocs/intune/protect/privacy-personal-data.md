@@ -2,7 +2,7 @@
 title: Datenschutz und personenbezogene Daten in Intune
 titleSuffix: Microsoft Intune
 description: Erfahren Sie mehr darüber, welche personenbezogene Daten in Intune erfasst und verarbeitet werden.
-keywords: ''
+keywords: Datenschutz, DSGVO, personenbezogene Daten
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -18,16 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 275bb43552b0dda3409dcd11ef14311334f13fa9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6cf808f814a4bb26531c15110946cac50492ad0e
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079507"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068071"
 ---
 # <a name="privacy-and-personal-data-in-intune"></a>Datenschutz und personenbezogene Daten in Intune
 
-Endbenutzer können Daten auf von Intune verwalteten Geräten empfangen, übertragen und speichern. Sie vertrauen darauf, dass die Daten geschützt werden und nur gemäß ihren Erwartungen verwendet werden. Die Artikel in diesem Abschnitt enthalten Informationen darüber, wie Intune personenbezogene Daten erfasst, speichert, beibehält, verarbeitet, sichert, freigibt, überwacht und exportiert, um Intune-Administratoren dabei zu helfen, diese Erwartungen zu definieren. Sie erfahren außerdem, wie Sie personenbezogene Daten anzeigen, korrigieren und löschen können.
+Microsoft Intune wird im Auftrag des Kunden als Datenprozessor betrieben, um Kunden den angeforderten Dienst bereitzustellen, wie dies in den [Microsoft-Bestimmungen für Onlinedienste (OST, Online Services Terms)](https://go.microsoft.com/fwlink/p/?LinkId=2098215) festgelegt ist. Personenbezogene Daten werden unmittelbar durch die Intune-Nutzung seitens des Kundenadministrators über das Azure-Portal oder das Microsoft Endpoint Manager-Verwaltungszentrum oder von Kundengeräten bereitgestellt, wenn diese für die Verwaltung registriert sind. Personenbezogene Daten werden auch in Diensten von Drittanbietern gemäß den Anweisungen des Kunden gesammelt, z. B. [Einrichten des Apple-Programms zur Geräteregistrierung](privacy-data-secure-share.md#data-sharing). Kunden können Daten auf von Intune verwalteten Geräten empfangen, übertragen und speichern. Personenbezogene Daten werden innerhalb der überwachten Konformitätsgrenzen des Intune-Diensts im Rahmen der technischen Sicherheitsmaßnahmen verarbeitet und gespeichert, die in den [Microsoft-Bestimmungen für Onlinedienste (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215) zugesichert werden. 
+
+Um Intune-Administratoren bei der Festlegung des Schutzes Ihrer Daten zu unterstützen, finden Sie in diesem Artikel Informationen dazu, wie Intune personenbezogene Daten sammelt, speichert, beibehält, verarbeitet, sichert, freigibt, überwacht und exportiert. Sie erfahren außerdem, wie Sie Ihre personenbezogenen Daten anzeigen, korrigieren und löschen können.
 
 Microsoft Intune verwendet keine personenbezogenen Daten, die durch den Dienst erfasst wurden, für Profilerstellungs-, Werbe- oder Marketingzwecke.
 
@@ -35,7 +37,7 @@ Microsoft Intune verwendet keine personenbezogenen Daten, die durch den Dienst e
 
 ## <a name="your-company-terms-and-conditions"></a>Nutzungsbedingungen für Ihr Unternehmen
 
-Sie können die [Datenschutzbestimmungen in die Nutzungsbedingungen Ihres Unternehmens für Endbenutzer einfügen](../apps/company-portal-app.md). Solche Datenschutzbestimmungen können Informationen über die Verwendung und den Datenschutz der personenbezogenen Daten von Endbenutzern enthalten.
+Zusätzlich zu den [Microsoft-Datenschutzbestimmungen](https://privacy.microsoft.com/en-us/privacystatement) können Sie [Datenschutzbestimmungen in die Geschäftsbedingungen Ihres Unternehmens für Endbenutzer einschließen](../apps/company-portal-app.md). Solche Datenschutzbestimmungen können Informationen über die Verwendung und den Datenschutz der personenbezogenen Daten von Endbenutzern enthalten.
 
 Sie können die Nutzungsbedingungen Ihres Unternehmens in der Intune-Unternehmensportal-App anzeigen. Auf diese Weise können Benutzer die Nutzungsbedingungen und Datenschutzbestimmungen überprüfen, bevor sie die Registrierung in Intune durchführen und auf Unternehmensressourcen und -daten zugreifen.
 

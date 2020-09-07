@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: e70952b0d90222bd31a4e9df997d70e9d528ef24
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819659"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194197"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>macOS-Gerätefunktionseinstellungen in Intune
 
@@ -267,7 +267,12 @@ Diese Funktion gilt für:
 - **Typ der SSO-App-Erweiterung:** Wählen Sie den Typ der SSO-App-Erweiterung aus. Folgende Optionen sind verfügbar:
 
   - **Nicht konfiguriert:** Es werden keine App-Erweiterungen verwendet. Um eine App-Erweiterung zu deaktivieren, ändern Sie den Typ der SSO-App-Erweiterung in **Nicht konfiguriert**.
-  - **Microsoft Azure AD**: Verwendet das Microsoft Enterprise SSO-Plug-In, das eine SSO-App-Erweiterung vom Typ „Umleitung“ ist. Dieses Plug-In aktiviert das einmalige Anmelden für Active Directory-Konten in allen macOS-Anwendungen, die das Feature [Enterprise Single Sign-On von Apple](https://developer.apple.com/documentation/authenticationservices) unterstützen. Verwenden Sie diesen SSO-App-Erweiterungstyp, um einmaliges Anmelden in Microsoft-Apps, Unternehmens-Apps und auf Websites zu aktivieren, die die Authentifizierung mit Azure AD durchführen.
+  - **Microsoft Azure AD**: 
+
+    > [!IMPORTANT]
+    > Die Microsoft Azure AD SSO-Erweiterung befindet sich derzeit noch in der Entwicklung. Sie wird zwar auf der Benutzeroberfläche von Intune angezeigt, funktioniert aber nicht erwartungsgemäß. Verwenden Sie daher **Microsoft Azure AD** nicht für den SSO-App-Erweiterungstyp.
+
+    Verwendet das Microsoft Enterprise SSO-Plug-In, das eine SSO-App-Erweiterung vom Typ „Umleitung“ ist. Dieses Plug-In aktiviert das einmalige Anmelden für Active Directory-Konten in allen macOS-Anwendungen, die das Feature [Enterprise Single Sign-On von Apple](https://developer.apple.com/documentation/authenticationservices) unterstützen. Verwenden Sie diesen SSO-App-Erweiterungstyp, um einmaliges Anmelden in Microsoft-Apps, Unternehmens-Apps und auf Websites zu aktivieren, die die Authentifizierung mit Azure AD durchführen.
 
     Das SSO-Plug-In fungiert als erweiterter Authentifizierungsbroker, der eine Verbesserung der Sicherheit und der Benutzerfreundlichkeit bietet.
 
@@ -324,7 +329,7 @@ Diese Funktion gilt für:
 - **AutoErmittlung** (nur „Kerberos“): Wenn diese Option auf **Blockieren** festgelegt ist, verwendet die Kerberos-Erweiterung nicht automatisch LDAP und DNS, um ihren Active Directory-Standortnamen zu ermitteln. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise zu, dass die Erweiterung den Namen des Active Directory-Standorts automatisch ermittelt.
 - **Password changes** (Kennwortänderungen) (nur „Kerberos“): Die Option **Blockieren** hindert Benutzer daran, die Kennwörter zu ändern, mit denen sie sich bei den von Ihnen eingegebenen Domänen anmelden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig lässt das Betriebssystem möglicherweise das Ändern von Kennwörtern zu.  
 - **Password sync** (Kennwortsynchronisierung) (nur „Kerberos“): Klicken Sie auf **Aktivieren**, um die lokalen Kennwörter Ihrer Benutzer mit Azure AD zu synchronisieren. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig deaktiviert das Betriebssystem möglicherweise die Kennwortsynchronisierung mit Azure AD. Verwenden Sie diese Einstellung als Alternative oder Backuplösung für das einmalige Anmelden (SSO). Diese Einstellung funktioniert nicht, wenn Benutzer mit einem mobilen Apple-Konto angemeldet sind.
-- **Windows Server Active Directory password complexity** (Windows Server Active Directory-Kennwortkomplexität) (nur „Kerberos“): Klicken Sie auf **Anfordern**, um durchzusetzen, dass Benutzer die Anforderungen an die Kennwortkomplexität erfüllen müssen, die Active Directory stellt. Weitere Informationen finden Sie unter [Kennwort muss Komplexitätsvoraussetzungen entsprechen](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig fordert das Betriebssystem möglicherweise nicht, dass Benutzer die Active Directory-Kennwortanforderungen erfüllen.
+- **Windows Server Active Directory password complexity** (Windows Server Active Directory-Kennwortkomplexität) (nur „Kerberos“): Klicken Sie auf **Anfordern**, um durchzusetzen, dass Benutzer die Anforderungen an die Kennwortkomplexität erfüllen müssen, die Active Directory stellt. Weitere Informationen finden Sie unter [Kennwort muss Komplexitätsvoraussetzungen entsprechen](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig fordert das Betriebssystem möglicherweise nicht, dass Benutzer die Active Directory-Kennwortanforderungen erfüllen.
 - **Mindestkennwortlänge** (nur „Kerberos“): Geben Sie die Mindestanzahl von Zeichen ein, aus denen das Kennwort eines Benutzers bestehen muss. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise keine Mindestlänge für Benutzerkennwörter.
 - **Limit für die Wiederverwendung von Kennwörtern** (nur „Kerberos“): Geben Sie die Anzahl neuer Kennwörter ein (1 bis 24), die verwendet werden, bis ein vorheriges Kennwort für die Domäne wiederverwendet werden kann. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise kein Limit für die Wiederverwendung von Kennwörtern.
 - **Minimum password age** (Mindestkennwortalter) (nur „Kerberos“): Geben Sie die Anzahl von Tagen ein, die ein Kennwort für die Domäne verwendet wird, bevor ein Benutzer es ändern kann. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig erzwingt das Betriebssystem möglicherweise kein Mindestkennwortalter, bevor ein Kennwort geändert werden kann.
@@ -344,7 +349,7 @@ Diese Funktion gilt für:
 
   Bei Auswahl von **Ja** werden alle vorhandenen Benutzerkonten von den Geräten gelöscht. Sie müssen genau wissen, wie diese Einstellungen die Geräte ändern, damit es nicht zu Datenverlusten kommt oder die Geräte unabsichtlich auf die Werkseinstellungen zurückgesetzt werden.
 
-  Weitere Informationen zum Modus für gemeinsam genutzte Geräte finden Sie unter [Übersicht über den Modus für gemeinsam genutzte Geräte](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
+  Weitere Informationen zum Modus für gemeinsam genutzte Geräte finden Sie unter [Übersicht über den Modus für gemeinsam genutzte Geräte](/azure/active-directory/develop/msal-shared-devices).
 
 - **App-Bundle-IDs** (Microsoft Azure AD, Kerberos): Mit **Hinzufügen** werden die App-Bundle-IDs hinzugefügt, für die auf Ihren Geräten SSO verwendet werden soll. Diese Apps erhalten Zugriff auf das Kerberos-TGT (Ticket Granting Ticket) sowie das Authentifizierungsticket. Außerdem authentifizieren diese Apps Benutzer für Dienste, für die sie über Zugriffsberechtigungen verfügen.
 - **Domänenbereichszuordnung** (nur „Kerberos“): Mit **Hinzufügen** werden die Domänen-DNS-Suffixe hinzugefügt, die Ihrem Bereich zugeordnet werden sollen. Verwenden Sie diese Einstellung, wenn die DNS-Namen der Hosts nicht mit dem Bereichsnamen identisch sind. Wahrscheinlich ist es nicht erforderlich, diese Zuordnung zwischen benutzerdefinierter Domäne und Bereich zu erstellen.

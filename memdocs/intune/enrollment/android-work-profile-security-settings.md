@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b661068515069b1bc4c20acdc1c9ad00a12fe7dd
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546825"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286202"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Sicherheitskonfigurationen für Android Enterprise-Arbeitsprofile
 
@@ -90,7 +90,9 @@ Stufe 1 ist die empfohlene Mindestsicherheitskonfiguration für persönliche Ge
 | Arbeitsprofileinstellungen | Kennwortablauf (Tage) | Nicht konfiguriert | Organisationen müssen diese Festlegung möglicherweise entsprechend ihrer Kennwortrichtlinien aktualisieren. |
 | Arbeitsprofileinstellungen | Erforderlicher Kennworttyp | Numerisch, komplex ||
 | Arbeitsprofileinstellungen | Wiederverwendung vorheriger Kennwörter verhindern | Nicht konfiguriert | Organisationen müssen diese Festlegung möglicherweise entsprechend ihrer Kennwortrichtlinien aktualisieren.|
+| Arbeitsprofileinstellungen | Entsperrung per Gesichtserkennung | Nicht konfiguriert ||
 | Arbeitsprofileinstellungen | Entsperrung durch Fingerabdruck | Nicht konfiguriert ||
+| Arbeitsprofileinstellungen | Entsperrung per Iriserkennung | Nicht konfiguriert ||
 | Arbeitsprofileinstellungen | Smart Lock und andere Vertrauens-Agents | Nicht konfiguriert |||
 | Gerätekennwort | Minimale Kennwortlänge | 6 | Organisationen müssen diese Festlegung möglicherweise entsprechend ihrer Kennwortrichtlinien aktualisieren. |
 | Gerätekennwort | Maximaler Zeitraum der Inaktivität (in Minuten) bis zur Bildschirmsperrung | 5 | Organisationen müssen diese Festlegung möglicherweise entsprechend ihrer Kennwortrichtlinien aktualisieren. |

@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 0d4ae3b78e9bbb2e6135bec4a0e1ab69e80092ba
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048037"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057401"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Einrichten des iOS-Gerätezugriffs auf Unternehmensressourcen  
 
@@ -54,11 +54,11 @@ Nachdem Ihr Gerät registriert ist, wird es mithilfe der Unternehmensportal-App 
 ### <a name="setting-notifications"></a>Benachrichtigungseinstellungen  
 Wenn Ihre Organisation nach der Registrierung eine neue Sicherheitsanforderung, wie beispielsweise eine mehrstufige Authentifizierung, durchsetzt, erhalten Sie eine Benachrichtigung von der Unternehmensportal-App. Sie haben dann die Möglichkeit, Ihre Einstellungen so zu ändern, dass Sie von Ihrem Gerät aus weiterarbeiten können.  
 
-Weitere Informationen zur Registrierung finden Sie unter [Was geschieht, wenn ich die Unternehmensportal-App installiere und mein Gerät registriere?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
+Weitere Informationen zur Registrierung finden Sie unter [Was geschieht, wenn ich die Unternehmensportal-App installiere und mein Gerät registriere?](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## <a name="prerequisties"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Voraussetzungen    
 
-* Navigieren Sie zum App Store, um die [Intune-Unternehmensportal-App](install-and-sign-in-to-the-intune-company-portal-app-ios.md) auf Ihr Gerät herunterzuladen und zu installieren. 
+* Installation der Unternehmensportal-App [über App Store](https://go.microsoft.com/fwlink/?linkid=2141414)
 * Eine stabile WLAN-Verbindung, bis alle Schritte abgeschlossen sind
 * Zugriff auf den Safari-Webbrowser auf Ihrem Gerät
 
@@ -188,4 +188,4 @@ Wenn Sie IT-Administrator sind und Probleme bei der Registrierung von Geräten h
 ## <a name="next-steps"></a>Nächste Schritte  
 Finden Sie Apps, die Ihnen bei der Arbeit oder in der Schule oder Hochschule helfen. Erfahren Sie, wie über das Unternehmensportal [Apps zur Verfügung gestellt werden](use-managed-apps-on-your-device-ios.md).  
 
-Benötigen Sie weitere Unterstützung? Kontaktieren Sie die Supportabteilung Ihres Unternehmens. Sie finden entsprechende Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Benötigen Sie weitere Unterstützung? Kontaktieren Sie die Supportabteilung Ihres Unternehmens. Sie finden entsprechende Kontaktinformationen auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).

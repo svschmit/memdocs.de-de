@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 211722a02183d3b86525468f907d4093331d9de6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8285b15a3fd7d473641ce9480fe1e6522b54e814
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988432"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281097"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Konfigurieren von Domänenbeitrittseinstellungen für in Hybrid-Azure AD eingebundene Geräte in Microsoft Intune
 
-Viele Umgebungen verwenden lokale Active Directory-Domänen (AD). Wenn in AD-Domänen eingebundene Geräte auch in Azure AD eingebunden werden, werden diese als in Hybrid-Azure AD eingebundene Geräte bezeichnet. Mithilfe von Windows Autopilot können Sie [in Hybrid-Azure AD eingebundene Geräte in Intune registrieren](../enrollment/windows-autopilot-hybrid.md). Für die Registrierung benötigen Sie außerdem ein Konfigurationsprofil für den **Domänenbeitritt**.
+Viele Umgebungen verwenden lokale Active Directory-Domänen (AD). Wenn in AD-Domänen eingebundene Geräte auch in Azure AD eingebunden werden, werden diese als in Hybrid-Azure AD eingebundene Geräte bezeichnet. Mithilfe von Windows Autopilot können Sie [in Hybrid-Azure AD eingebundene Geräte in Intune registrieren](../../autopilot/windows-autopilot-hybrid.md). Für die Registrierung benötigen Sie außerdem ein Konfigurationsprofil für den **Domänenbeitritt**.
 
 Ein Konfigurationsprofil für den **Domänenbeitritt** enthält Informationen zur lokalen Active Directory-Domäne. Wenn Geräte bereitgestellt werden (und in der Regel offline sind), dieses Profil stellt die AD-Domänendetails bereit, damit Geräten mitgeteilt wird, welche lokale Domäne eingebunden werden soll. Wenn Sie kein Domänenbeitrittsprofil erstellen, schlägt die Bereitstellung dieser Geräte möglicherweise fehl.
 
@@ -56,9 +56,9 @@ In diesem Artikel wird veranschaulicht, wie Sie ein Domänenbeitrittsprofil für
 
     - **Computernamenspräfix:** Geben Sie ein Präfix für den Gerätenamen ein. Computernamen sind 15 Zeichen lang. Nach dem Präfix werden die verbleibenden 15 Zeichen zufällig generiert.
     - **Domänenname:** Geben Sie die FQDNs (vollqualifizierten Domänennamen) der einzubindenden Geräte ein. Geben Sie beispielsweise `americas.corp.contoso.com.` ein.
-    - **Organisationseinheit** (Optional): Geben Sie den vollständigen Pfad ([Distinguished Name](https://docs.microsoft.com/windows/win32/ad/object-names-and-identities#distinguished-name)) in die Organisationseinheit (OE) der zu erstellenden Computerkonten ein. Geben Sie beispielsweise `"CN=Users,DC=Contoso,DC=com"` ein. Wenn Sie keinen Wert eingeben, wird ein bekannter Container für Computerobjekte verwendet.
+    - **Organisationseinheit** (Optional): Geben Sie den vollständigen Pfad ([Distinguished Name](/windows/win32/ad/object-names-and-identities#distinguished-name)) in die Organisationseinheit (OE) der zu erstellenden Computerkonten ein. Geben Sie beispielsweise `"CN=Users,DC=Contoso,DC=com"` ein. Wenn Sie keinen Wert eingeben, wird ein bekannter Container für Computerobjekte verwendet.
 
-      Weitere Informationen und Tipps zu dieser Einstellung finden Sie unter [Bereitstellen von in Hybrid-Azure AD eingebundene Geräte](../enrollment/windows-autopilot-hybrid.md).
+      Weitere Informationen und Tipps zu dieser Einstellung finden Sie unter [Bereitstellen von in Hybrid-Azure AD eingebundene Geräte](../../autopilot/windows-autopilot-hybrid.md).
 
 8. Wählen Sie **Weiter** aus.
 
@@ -66,16 +66,18 @@ In diesem Artikel wird veranschaulicht, wie Sie ein Domänenbeitrittsprofil für
 
     Wählen Sie **Weiter** aus.
 
-10. Wählen Sie unter **Zuweisungen** die Benutzer oder Benutzergruppen aus, denen Ihr Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+10. Wählen Sie unter **Zuweisungen** die Gerätegruppen aus, denen das Profil zugewiesen werden soll. Weitere Informationen zum Zuweisen von Profilen finden Sie unter [Zuweisen von Benutzer- und Geräteprofilen](device-profile-assign.md).
+
+    Wenn Geräte mit verschiedenen Domänen oder Organisationseinheiten verknüpft werden müssen, erstellen Sie verschiedene Gerätegruppen.
 
     Wählen Sie **Weiter** aus.
 
 11. Überprüfen Sie die Einstellungen unter **Überprüfen + erstellen**. Wenn Sie auf **Erstellen** klicken, werden die Änderungen gespeichert, und das Profil wird zugewiesen. Die Richtlinie wird auch in der Profilliste angezeigt.
 
-Sie können nun [in Hybrid-Azure AD eingebundene Geräte mithilfe von Intune und Windows Autopilot bereitstellen](../enrollment/windows-autopilot-hybrid.md).
+Sie können nun [in Hybrid-Azure AD eingebundene Geräte mithilfe von Intune und Windows Autopilot bereitstellen](../../autopilot/windows-autopilot-hybrid.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Überwachen Sie den Profilstatus](device-profile-monitor.md), [nachdem das Profil zugewiesen wurde](device-profile-assign.md).
 
-[Bereitstellen von in Hybrid-Azure AD eingebundenen Geräten mit Intune und Windows Autopilot](../enrollment/windows-autopilot-hybrid.md)
+[Bereitstellen von in Hybrid-Azure AD eingebundenen Geräten mit Intune und Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md)
