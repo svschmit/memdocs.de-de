@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0639f5a92d4377212834f5c7089f534628e787d1
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057313"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390856"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installieren und freigeben von Apps auf Ihrem Gerät
 
@@ -58,7 +58,7 @@ Je nach Größe Ihres Unternehmens kann es sein, dass mehrere Office-Versionen i
 ## <a name="share-apps"></a>Freigeben von Apps  
 Empfehlen Sie Ihren Arbeits- oder Schul- bzw. Unikontakten Apps, und geben Sie sie für sie frei. In den folgenden Schritten wird beschrieben, wie ein Link direkt über das Unternehmensportal geteilt werden kann.
 
-1. Führen Sie im Unternehmensportal einen Rechtsklick aus, oder tippen Sie auf eine App, und halten Sie sie gedrückt, um das [Kontextmenü](//windows/uwp/design/controls-and-patterns/menus) zu öffnen.  
+1. Führen Sie im Unternehmensportal einen Rechtsklick aus, oder tippen Sie auf eine App, und halten Sie sie gedrückt, um das [Kontextmenü](/windows/uwp/design/controls-and-patterns/menus) zu öffnen.  
 
     ![In der Unternehmensportal-App für Windows 10 wird auf der Titelseite eine Liste der Apps und Geräte angezeigt. Das klickbare Kontextmenü „Freigeben“ ist oben auf dem Symbol der Beispiel-App sichtbar. ](./media/1808_ShareContext_CP_Windows.png)  
 

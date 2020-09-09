@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51fbb59fa0557df1757258b9463514c6355ff92d
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: faabd2656e8b72502c682eaab37a0cc5b484ea03
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996247"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423933"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Neuerungen in Microsoft Intune (vorherige Monate)
 
@@ -447,7 +447,7 @@ In Intune werden nun geführte Szenarios bereitgestellt, die Ihnen beim Durchfü
 Weitere Informationen finden Sie unter [Übersicht über geführte Szenarios in Intune](guided-scenarios-overview.md).
 
 #### <a name="additional-app-configuration-variable-available---4969237-----"></a>Zusätzliche verfügbare App-Konfigurationsvariablen<!-- 4969237   -->
-Beim Erstellen einer App-Konfigurationsrichtlinie können Sie die Konfigurationsvariable `AAD Device ID` als Teil Ihrer Konfigurationseinstellungen einfügen. Klicken Sie in Intune auf **Client-Apps** > **App-Konfigurationsrichtlinien** > **Hinzufügen**. Geben Sie die Details Ihrer Konfigurationsrichtlinie ein, und klicken Sie auf **Konfigurationseinstellungen**, um das Blatt **Konfigurationseinstellungen** anzuzeigen. Weitere Informationen finden Sie unter [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Android Enterprise-Geräte: Verwenden des Konfigurations-Designers](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+Beim Erstellen einer App-Konfigurationsrichtlinie können Sie die Konfigurationsvariable `AAD_Device_ID` als Teil Ihrer Konfigurationseinstellungen einfügen. Klicken Sie in Intune auf **Client-Apps** > **App-Konfigurationsrichtlinien** > **Hinzufügen**. Geben Sie die Details Ihrer Konfigurationsrichtlinie ein, und klicken Sie auf **Konfigurationseinstellungen**, um das Blatt **Konfigurationseinstellungen** anzuzeigen. Weitere Informationen finden Sie unter [Hinzufügen von App-Konfigurationsrichtlinien für verwaltete Android Enterprise-Geräte: Verwenden des Konfigurations-Designers](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
 #### <a name="create-groups-of-management-objects-called-policy-sets---3762880----"></a>Erstellen von Gruppen von Verwaltungsobjekten namens Richtliniensätze<!-- 3762880  -->
 Mit Richtliniensätzen können Sie ein Bündel von Verweisen auf bereits vorhandene Verwaltungsentitäten erstellen, die als einzelne konzeptionelle Einheit identifiziert, ausgerichtet und überwacht werden müssen. Richtliniensätze stellen keinen Ersatz für vorhandene Konzepte oder Objekte dar. Sie können weiterhin individuelle Objekte in Intune zuweisen und als Teil eines Richtliniensatzes referenzieren. Daher werden alle Änderungen an diesen individuellen Objekten im Richtliniensatz berücksichtigt.  Klicken Sie in Intune auf **Richtliniensätze** > **Erstellen**, um einen neuen Richtliniensatz zu erstellen.
@@ -479,7 +479,7 @@ Die Benutzeroberfläche zum [Erstellen](../protect/software-updates-ios.md#confi
 #### <a name="engaged-restart-settings-are-removed-from-windows-update-rings----4464404--------"></a>Die Einstellungen für erzwungene Neustarts wurden aus Windows-Updateringen entfernt<!--  4464404      -->
 Wie bereits angekündigt unterstützen Windows 10-Updateringe von Intune nun [Einstellungen für Zeitlimits](../protect/windows-update-settings.md) und unterstützen *erzwungene Neustarts* nicht mehr. Wenn Sie Updateringe in Intune konfigurieren oder verwalten, sind Einstellungen für *erzwungene Neustarts* nicht mehr verfügbar.  
 
-Diese Änderung erfolgt gemäß der jüngsten [Änderungen der Windows-Wartung](//windows/whats-new/whats-new-windows-10-version-1903#servicing), und auf Geräten mit Windows 10 Version 1903 oder höher ersetzen *Zeitlimits* die Konfigurationen für *erzwungene Neustarts*.
+Diese Änderung erfolgt gemäß der jüngsten [Änderungen der Windows-Wartung](/windows/whats-new/whats-new-windows-10-version-1903#servicing), und auf Geräten mit Windows 10 Version 1903 oder höher ersetzen *Zeitlimits* die Konfigurationen für *erzwungene Neustarts*.
 
 #### <a name="prevent-installation-of-apps-from-unknown-sources-on-android-enterprise-work-profile-devices---4760025-----"></a>Verhinderung der Installation von Apps aus unbekannten Quellen auf Android Enterprise-Arbeitsprofilgeräten<!-- 4760025   -->
 Benutzer können in keinem Fall Apps aus unbekannten Quellen auf Android Enterprise-Arbeitsprofilgeräten installieren. In diesem Update gibt es eine neue Einstellung: **App-Installationen aus unbekannten Quellen im persönlichen Profil verhindern**. Diese Einstellung hindert Benutzer standardmäßig daran, Apps aus unbekannten Quellen in das persönliche Profil auf dem Gerät querzuladen.
@@ -1346,7 +1346,7 @@ Administratoren werden feststellen, dass diese vier Apps automatisch zur Liste i
 ### <a name="device-configuration"></a>Gerätekonfiguration
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---1533038---"></a>PFX-Zertifikatconnector für Microsoft Intune aktualisiert<!-- 1533038 -->
-Es wurde ein Update zum [PFX-Zertifikatconnector für Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) veröffentlicht, das ein Problem behebt, bei dem vorhandene PFX-Zertifikate immer wieder verarbeitet wurden. Dies führte dazu, dass der Connector die Verarbeitung neuer Anforderungen beendete.
+Es wurde ein Update zum [PFX-Zertifikatconnector für Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) veröffentlicht, das ein Problem behebt, bei dem vorhandene PFX-Zertifikate immer wieder verarbeitet wurden. Dies führte dazu, dass der Connector die Verarbeitung neuer Anforderungen beendete.
 
 #### <a name="intune-security-tasks-for-defender-atp-in-public-preview---3208597---"></a>Intune-Sicherheitsaufgaben für Defender ATP (in öffentlicher Vorschau)<!-- 3208597 -->
 In der öffentlichen Vorschau können Sie Intune verwenden, um [Sicherheitsaufgaben für Microsoft Defender Advanced Threat Protection (ATP)](../protect/atp-manage-vulnerabilities.md) zu verwalten. Diese Integration in ATP bietet einen risikobasierten Ansatz zur Erkennung, Priorisierung und Behebung von Schwachstellen und Fehlkonfigurationen an Endpunkten, wobei gleichzeitig die Zeitspanne zwischen Ermittlung und Risikominderung verkürzt wird.
@@ -1400,7 +1400,7 @@ Die verfügbaren Einstellungen finden Sie unter [Configure VPN settings on iOS d
 Gilt für: iOS
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---doc-vso-1521237----"></a>PFX-Zertifikatconnector für Microsoft Intune aktualisiert<!-- doc-vso 1521237  -->  
-Es wurde ein Update für den [PFX-Zertifikatconnector für Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) veröffentlicht, durch das das Abrufintervall von 5 Minuten auf 30 Sekunden verkürzt wird.
+Es wurde ein Update für den [PFX-Zertifikatconnector für Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) veröffentlicht, durch das das Abrufintervall von 5 Minuten auf 30 Sekunden verkürzt wird.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1487,7 +1487,7 @@ Die Intune APP-Unterstützung (App Protection Policy, App-Schutzrichtlinie) für
 ### <a name="device-configuration"></a>Gerätekonfiguration
 
 #### <a name="updated-certificate-connectors---icm-113304612---"></a>Update für Zertifikatconnectors<!-- ICM 113304612 -->
-Es wurden Updates für den [Intune-Zertifikatconnector und den PFX-Zertifikatconnector für Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) veröffentlicht. Mit diesen neuen Releases wurden einige bekannte Probleme behoben.
+Es wurden Updates für den [Intune-Zertifikatconnector und den PFX-Zertifikatconnector für Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) veröffentlicht. Mit diesen neuen Releases wurden einige bekannte Probleme behoben.
 
 #### <a name="set-login-settings-and-control-restart-options-on-macos-devices---1210083----"></a>Festlegen der Anmeldeeinstellungen und Steuern der Neustartoptionen für macOS-Geräte<!-- 1210083  -->
 Sie können auf macOS-Geräten ein Gerätekonfigurationsprofil erstellen (**Gerätekonfiguration** > **Profile** > **Profil erstellen** > Plattform **macOS** auswählen > **Gerätefunktionen**). Dieses Update umfasst neue Einstellungen im Fenster „Anmelden“, z. B. die Anzeige eines benutzerdefinierten Banners, die Auswahl der Anmeldemethode für Benutzer, das Anzeigen oder Ausblenden von Energieeinstellungen und mehr.

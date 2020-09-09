@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ea17b57fc0881e189d0d57b823caece3610b4528
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907649"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390839"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Umbenennen von Geräten in der Unternehmensportal-App für Windows
 Benennen Sie ein Gerät um, um es leichter von anderen Geräten zu unterscheiden. Mit der Unternehmensportal-App für Windows können Sie die folgenden Typen verbundener Geräte umbenennen:  
@@ -47,7 +47,7 @@ Schließen Sie den folgenden Schritt ab, um ein Gerät von der Seite **Gerätede
      ![Beispielscreenshot der Unternehmensportal-App für Windows, Seite „Gerätedetails“, Popupfeld „Umbenennen“](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Umbenennen eines Gerätes über das Gerätekontextmenü  
-Schließen Sie den folgenden Schritt ab, um ein Gerät über die [Kontextmenü](//windows/uwp/design/controls-and-patterns/menus)aktionen zu entfernen.  
+Schließen Sie den folgenden Schritt ab, um ein Gerät über die [Kontextmenü](/windows/uwp/design/controls-and-patterns/menus)aktionen zu entfernen.  
 
 1. Öffnen Sie die **Startseite** der Unternehmensportal-App, und wechseln Sie zu **Meine Geräte**.
 
