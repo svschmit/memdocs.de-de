@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c36b46cedb69ae0ce9d5559797fba78f5f7ab7f6
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906751"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564277"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Entfernen von Geräten durch Zurücksetzen, Abkoppeln oder manuelles Aufheben der Registrierung des Geräts
 
@@ -174,7 +174,7 @@ Sie können Intune so konfigurieren, dass Geräte automatisch gelöscht werden, 
 
 Aufgrund von Kommunikationsproblemen oder fehlenden Geräten müssen Sie möglicherweise Geräte aus Azure AD löschen. Sie können die Aktion **Löschen** aber dazu verwenden, Gerätedatensätze aus dem Azure-Portal von den Geräten zu entfernen, von denen Sie wissen, dass sie schwer zugänglich sind, und für die eine erneute Kommunikation mit Azure unwahrscheinlich ist. Die Aktion **Löschen** entfernt keine Geräte aus der Verwaltung.
 
-1. Melden Sie sich mit Ihren Administratoranmeldeinformationen [im Azure-Portal bei Azure Active Directory](https://aka.ms/accessaad) an. Sie können sich auch beim [Microsoft 365 Admin Center](https://admin.microsoft.com) anmelden. Klicken Sie im Menü auf **Admin Center** > **Azure AD**.
+1. Melden Sie sich mit Ihren Administratoranmeldeinformationen [im Azure-Portal bei Azure Active Directory](https://azure.microsoft.com/services/active-directory/) an. Sie können sich auch beim [Microsoft 365 Admin Center](https://admin.microsoft.com) anmelden. Klicken Sie im Menü auf **Admin Center** > **Azure AD**.
 2. Erstellen Sie ein Azure-Abonnement, wenn Sie noch keines besitzen. Hierzu sollte keine Kreditkarte oder Zahlung erforderlich sein, wenn Sie ein gebührenpflichtiges Konto besitzen (klicken Sie auf den Abonnementlink **Ihr kostenloses Azure Active Directory registrieren**).
 3. Wählen Sie zuerst **Azure Active Directory** und dann Ihre Organisation aus.
 4. Wählen Sie die Registerkarte **Benutzer** aus.
