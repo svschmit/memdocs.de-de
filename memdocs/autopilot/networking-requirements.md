@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: Informieren Sie sich über die Netzwerk Anforderungen für die Windows Autopilot-Bereitstellung.
 keywords: MDM, Setup, Windows, Windows 10, OOBE, Manage, Bereitstellung, Autopilot, ZTD, Zero-Touchscreen, Partner, msfb, InTune
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -17,16 +18,16 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 1b217f7b299447b53c760cbba85b873d0626d741
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: c17f56bfb75cb2e3fb96f2b470d0c91df7ea2ef0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993750"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606548"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Netzwerk Anforderungen für Windows Autopilot
 
-**Gilt für: Windows 10**
+**Gilt für: Windows 10**
 
 Windows Autopilot ist von einer Vielzahl von internetbasierten Diensten abhängig. Der Zugriff auf diese Dienste muss bereitgestellt werden, damit Autopilot ordnungsgemäß funktioniert. Im einfachsten Fall kann die Aktivierung der richtigen Funktionalität erreicht werden, indem die folgenden Bedingungen sichergestellt werden:
 
@@ -42,7 +43,7 @@ Möglicherweise ist eine zusätzliche Konfiguration erforderlich, um den Zugriff
 
 Weitere Informationen zu den einzelnen Diensten und ihren spezifischen Anforderungen finden Sie in den folgenden Details:
 
-<table><th>Dienst<th>Informationen
+<table><th>Dienst<th>Information
 <tr><td><b>Windows Autopilot-Bereitstellungs Dienst<b><td>Wenn eine Netzwerkverbindung vorhanden ist, wird von jedem Windows 10-Gerät eine Verbindung mit dem Windows Autopilot-Bereitstellungs Dienst hergestellt. Mit Windows 10, Version 1903 und höher, werden die folgenden URLs verwendet: https://ztd.dds.microsoft.com , https://cs.dds.microsoft.com . <br>
 
 <tr><td><b>Windows-Aktivierung<b><td>Für Windows Autopilot sind Windows-Aktivierungs Dienste erforderlich. Ausführliche Informationen zu den URLs, auf die für die Aktivierungs Dienste zugegriffen werden muss, finden Sie unter <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">Windows-Aktivierung oder-Validierung schlägt fehl mit Fehlercode 0x8004FE33</a>.<br>
@@ -76,7 +77,10 @@ Wenn kein Zugriff auf die Microsoft Store möglich ist, wird der Autopilot-Proze
 <tr><td><b>Microsoft 365<b><td>Im Rahmen der InTune-Gerätekonfiguration ist möglicherweise die Installation von Microsoft 365-Apps für Unternehmen erforderlich. Weitere Informationen finden Sie unter <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">URLs und IP-Adressbereiche von Office 365</a>. Dieser Artikel enthält alle Office-Dienste, DNS-Namen und IP-Adressen. Außerdem sind Azure AD und andere Dienste enthalten, die sich mit den oben aufgeführten Diensten überlappen können.
 <tr><td><b>Zertifikat Sperr Listen (CRLs)<b><td>Einige dieser Dienste müssen auch Zertifikat Sperr Listen (CRLs) für Zertifikate überprüfen, die in den Diensten verwendet werden.Eine vollständige Liste finden Sie unter <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">URLs und IP-Adressbereiche für Office 365</a> und <a href="https://aka.ms/o365chains">Office 365-Zertifikat Ketten</a>.
 <tr><td><b>Azure AD-Hybrideinbindung<b><td>Das Gerät kann Hybrid Azure AD verknüpft sein. Der Computer sollte sich im Unternehmensnetzwerk befinden, damit Hybrid Azure AD beitreten funktioniert. Details finden Sie im <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">benutzergesteuerten Windows Autopilot-Modus</a> .
-<tr><td><b>Autopilot-selbstbereitstellungs Modus und Autopilot-White-Glove<b><td>Firmware-TPM-Geräte, die nur von Intel, AMD oder Qualcomm bereitgestellt werden, enthalten nicht alle benötigten Zertifikate zur Startzeit und müssen in der Lage sein, Sie bei der ersten Verwendung vom Hersteller abzurufen. Geräte mit diskreten TPM-Chips (einschließlich Geräten von einem beliebigen anderen Hersteller) werden mit diesen Zertifikaten vorinstalliert. Weitere Informationen finden Sie unter <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM-Empfehlungen</a>. Stellen Sie für jeden firmwaretpm-Anbieter sicher, dass auf diese URLs zugegriffen werden kann, damit Zertifikate erfolgreich angefordert werden können:
+<tr><td><b>Autopilot-selbstbereitstellungs Modus und Autopilot-White-Glove<b><td>
+Der TPM-Nachweis Prozess erfordert Zugriff auf eine Gruppe von HTTPS-URLs (für jeden TPM-Anbieter eindeutig).  Gewährleisten Sie den Zugriff auf dieses URL-Muster: *. microsoftaik.Azure.net
+ 
+Firmware-TPM-Geräte, die nur von Intel, AMD oder Qualcomm bereitgestellt werden, enthalten nicht alle benötigten Zertifikate zur Startzeit und müssen in der Lage sein, Sie bei der ersten Verwendung vom Hersteller abzurufen. Geräte mit diskreten TPM-Chips (einschließlich Geräten von einem beliebigen anderen Hersteller) werden mit diesen Zertifikaten vorinstalliert. Weitere Informationen finden Sie unter <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM-Empfehlungen</a>. Stellen Sie für jeden firmwaretpm-Anbieter sicher, dass auf diese URLs zugegriffen werden kann, damit Zertifikate erfolgreich angefordert werden können: 
 
  <br>Intel <code>https://ekop.intel.com/ekcertservice</code>
  <br>SOCS <code>https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1</code>

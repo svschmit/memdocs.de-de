@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: Lesen Sie Neuigkeiten und Ressourcen zu den neuesten Updates und früheren Versionen von Windows Autopilot.
 keywords: MDM, Setup, Windows, Windows 10, OOBE, Manage, Bereitstellung, Autopilot, ZTD, Zero-Touchscreen, Partner, msfb, InTune
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -14,18 +15,18 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 840a46aa05f088f8c2ccb27d3b3a3ec368728ae9
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 736e01696cf503b63762c32a9acee3cb68c1e241
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907861"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606564"
 ---
 # <a name="windows-autopilot-whats-new"></a>Windows Autopilot: Neuerungen
 
 **Zielgruppe**
 
--   Windows 10
+- Windows 10
 
 ## <a name="windows-autopilot-update-history"></a>Windows Autopilot Update-Verlauf
 
@@ -51,18 +52,18 @@ Auch in dieser Windows-Version neu:
 - Auf der InTune-Seite zum Registrierungsstatus (ESP) werden nun InTune-Verwaltungs Erweiterungen nachverfolgt.
 - [Cortana VoiceOver und die Spracherkennung während OOBE](windows-autopilot-scenarios.md#cortana-voiceover-and-speech-recognition-during-oobe) sind für alle Windows 10 pro Education-und Enterprise-SKUs standardmäßig deaktiviert.
 - [Windows Autopilot ist während des OOBE-Updates selbst Aktualisier](windows-autopilot-scenarios.md#windows-autopilot-is-self-updating-during-oobe). Ab Windows 10 werden die funktionalen und kritischen Updates der Version 1903 automatisch während des OOBE-Vorgangs heruntergeladen.
-- Windows Autopilot legt die Diagnosedaten Ebene in Windows 10, Version 1903 und höher, während der OOBE auf Full fest. 
+- Windows Autopilot legt die Diagnosedaten Ebene während des OOBE-Betriebs auf Geräten mit Windows 10, Version 1903 oder höher, auf Full fest. 
 
 ## <a name="new-in-windows-10-version-1809"></a>Neu in Windows 10, Version 1809
 
-Der [Self-Bereitstellung-Modus](self-deploying.md) von Windows Autopilot ermöglicht die Bereitstellung von Geräten mit Zero-Finger Eingaben. Schalten Sie einfach das Gerät ein, binden Sie es in das Ethernet ein, und das Gerät wird vollständig von Windows Autopilot konfiguriert. Diese selbst Bereitstellungs Funktion entfernt den aktuellen Bedarf, dass ein Endbenutzer durch Drücken der Schaltfläche "weiter" während des Bereitstellungs Prozesses interagieren muss. 
+Der [Self-Bereitstellung-Modus](self-deploying.md) von Windows Autopilot ist ein Geräte Bereitstellungs Prozess mit Zero-Note. Schalten Sie einfach das Gerät ein, stellen Sie eine Verbindung mit Ethernet her, und Autopilot konfiguriert das Gerät automatisch. Endbenutzer müssen während des Bereitstellungs Vorgangs nicht auf die Schaltfläche "weiter" klicken. 
 
-Sie können den Windows Autopilot-Modus für die selbst Bereitstellung verwenden, um das Gerät bei einem Aad-Mandanten zu registrieren, den MDM-Anbieter Ihrer Organisation zu registrieren und Richtlinien und Anwendungen bereitzustellen, ohne dass Benutzerauthentifizierung oder Benutzerinteraktion erforderlich ist. 
+Sie können den Windows Autopilot-Modus für die selbst Bereitstellung verwenden, um das Gerät bei einem Aad-Mandanten zu registrieren, den MDM-Anbieter Ihrer Organisation zu registrieren und Richtlinien und Anwendungen bereitzustellen. Es ist keine Benutzerauthentifizierung oder Benutzerinteraktion erforderlich.
 
 >[!NOTE]
 >Windows 10, Version 1903 oder höher, ist erforderlich, um den Modus für die selbst Bereitstellung aufgrund von Problemen mit dem TPM-Geräte Nachweis in Windows 10, Version 1809, zu verwenden.
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-[Neuerungen in Microsoft Intune](/intune/whats-new)<br>
+[Neues in Microsoft InTune](/intune/whats-new)<br>
 [Neuerungen in Windows 10](/windows/whats-new/)

@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: Mit der Windows Autopilot-Bereitstellung und InTune können Sie UEFI-Einstellungen (BIOS) verwalten, nachdem Sie mithilfe der Device Firmware Configuration Interface (dfci) registriert wurden.
 keywords: Autopilot, dfci, UEFI, Windows 10
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,20 +15,20 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: df49fb939b709c15f2b01b3577f7fc7ced60140d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 95979a3c53752bb77c31710e20de54dbc2781262
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908345"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606612"
 ---
-# <a name="dfci-management"></a>Dfci-Verwaltung
+# <a name="device-firmware-configuration-interface-dfci-management"></a>Dfci-Verwaltung (Device Firmware Configuration Interface)
 
 **Zielgruppe**
 
--   Windows 10
+- Windows 10
 
-Mit der Windows Autopilot-Bereitstellung und InTune können Sie die Einstellungen für Unified Extensible Firmware Interface (UEFI) verwalten, nachdem Sie mithilfe der Device Firmware Configuration Interface (dfci) registriert wurden.  Dfci [ermöglicht Windows das Übergeben von Verwaltungs Befehlen](/windows/client-management/mdm/uefi-csp) von InTune an UEFI an von Autopilot bereitgestellte Geräte. Dies ermöglicht es Ihnen, die Kontrolle über die BIOS-Einstellungen des Endbenutzers einzuschränken. Beispielsweise können Sie die Startoptionen sperren, um zu verhindern, dass Benutzer ein anderes Betriebssystem starten, z. b. eine, die nicht über die gleichen Sicherheitsfeatures verfügt.
+Mit der Windows Autopilot-Bereitstellung und InTune können Sie die Einstellungen für Unified Extensible Firmware Interface (UEFI) verwalten, nachdem Sie mithilfe der Device Firmware Configuration Interface (dfci) registriert wurden. Dfci [ermöglicht Windows das Übergeben von Verwaltungs Befehlen](/windows/client-management/mdm/uefi-csp) von InTune an UEFI für Autopilot-bereitgestellte Geräte. Diese Funktion ermöglicht es Ihnen, die Kontrolle über die BIOS-Einstellungen des Endbenutzers einzuschränken. Beispielsweise können Sie die Startoptionen sperren, um zu verhindern, dass Benutzer ein anderes Betriebssystem starten, z. b. eine, die nicht über die gleichen Sicherheitsfeatures verfügt.
 
 Wenn ein Benutzer eine frühere Windows-Version neu installiert, ein separates Betriebssystem installiert oder die Festplatte formatiert, kann die dfci-Verwaltung nicht außer Kraft gesetzt werden. Diese Funktion kann auch verhindern, dass Schadsoftware mit Betriebssystem Prozessen kommuniziert, einschließlich erhöhter Betriebssystem Prozesse. Die Vertrauenskette von dfci verwendet die Kryptografie mit öffentlichem Schlüssel und ist nicht von der lokalen UEFI-Kenn Wort Sicherheit abhängig. Diese Sicherheitsebene blockiert lokale Benutzer am Zugriff auf verwaltete Einstellungen aus den UEFI-Menüs des Geräts.
 
@@ -35,9 +36,18 @@ Eine Übersicht über die Vorteile von dfci, Szenarien und Voraussetzungen finde
 
 ## <a name="dfci-management-lifecycle"></a>Dfci-Verwaltungs Lebenszyklus
 
-Der dfci-Verwaltungs Lebenszyklus kann als UEFI-Integration, Geräteregistrierung, Profilerstellung, Registrierung, Verwaltung, Deaktivierung und Wiederherstellung angezeigt werden. Dies wird in der folgenden Abbildung veranschaulicht.
+Der dfci-Verwaltungs Lebenszyklus umfasst die folgenden Prozesse:
+- UEFI-Integration
+- Geräteregistrierung
+- Profilerstellung
+- Anmeldung
+- Verwaltung
+- Außerkraftsetzung
+- Wiederherstellung
 
-   ![Lebenszyklus](images/dfci.png)
+Dies wird in der folgenden Abbildung veranschaulicht.
+
+ ![Lebenszyklus](images/dfci.png)
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
 

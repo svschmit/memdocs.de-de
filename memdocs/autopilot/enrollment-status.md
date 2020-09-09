@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: Bietet einen Überblick über die Funktionen der Registrierungs Status Seite, Konfiguration
 keywords: Autopilot-Plug-and-Forget, Windows 10
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,24 +15,29 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: dd60c47e0e22aa24cf1d4d4df3324f3b1bfed21c
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: a7d368aef0b10fbe78e2c4ca141a39aa4ed6d803
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908254"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606605"
 ---
 # <a name="windows-autopilot-enrollment-status-page"></a>Windows Autopilot-Registrierungs Status (Seite)
 
 **Zielgruppe**
 
--   Windows 10, Version 1803 und höher 
+-  Windows 10, Version 1803 und höher 
 
-Auf der Seite Anmeldungs Status (ESP) wird der Status des Vorgangs zur gesamten Gerätekonfiguration angezeigt, wenn ein MDM-verwalteter Benutzer sich zum ersten Mal bei einem Gerät anmeldet.  Mit dem ESP können Benutzer den Fortschritt der Geräte Bereitstellung verstehen und sicherstellen, dass das Gerät den gewünschten Zustand der Organisation erreicht hat, bevor der Benutzer zum ersten Mal auf den Desktop zugreifen kann.
+Wenn ein Benutzer sich zum ersten Mal bei einem Gerät anmeldet, wird auf der Seite Anmeldungs Status (ESP) der Konfigurations Status des Geräts angezeigt. Das ESP stellt außerdem sicher, dass sich das Gerät im erwarteten Zustand befindet, bevor der Benutzer zum ersten Mal auf den Desktop zugreifen kann.
 
-Mit dem ESP werden die Installation von Anwendungen, Sicherheitsrichtlinien, Zertifikaten und Netzwerkverbindungen nachverfolgt.  Mit InTune kann ein Administrator ESP-Profile für einen lizenzierten InTune-Benutzer bereitstellen und bestimmte Einstellungen im ESP-Profil konfigurieren. Dies sind einige dieser Einstellungen: Erzwingen der Installation von angegebenen Anwendungen, zulassen der Erfassung von Problem Behandlungsprotokollen durch Benutzer, angeben der Aktionen, die ein Benutzer ausführen kann, wenn die Geräte Einrichtung fehlschlägt.  Weitere Informationen finden Sie unter Einrichten der Seite "Registrierungs [Status" in InTune](/intune/windows-enrollment-status).   
+ESP verfolgt die Installation von Anwendungen, Sicherheitsrichtlinien, Zertifikaten und Netzwerkverbindungen. Ein Administrator kann ESP-Profile für einen lizenzierten InTune-Benutzer bereitstellen und bestimmte Einstellungen im ESP-Profil konfigurieren. Einige dieser Einstellungen lauten:
+- Erzwingen der Installation von angegebenen Anwendungen.
+- Ermöglicht Benutzern das Erfassen von Problem Behandlungsprotokollen.
+- Angeben, wie ein Benutzer vorgehen kann, wenn die Geräteeinrichtung fehlschlägt.
+
+Weitere Informationen finden Sie unter Einrichten der Seite "Registrierungs [Status" in InTune](/intune/windows-enrollment-status).  
  
- ![Seite zum Registrierungsstatus](images/enrollment-status-page.png)
+![Seite zum Registrierungsstatus](images/enrollment-status-page.png)
  
 
 ## <a name="more-information"></a>Weitere Informationen
