@@ -3,6 +3,7 @@ title: Windows Autopilot für White-Glove-Bereitstellung
 description: Windows Autopilot für White-Glove-Bereitstellung
 keywords: MDM, Setup, Windows, Windows 10, OOBE, Manage, Bereitstellung, Autopilot, ZTD, Zero-Touchscreen, Partner, msfb, InTune, vorab Bereitstellung
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: low
 ms.sitesec: library
@@ -11,14 +12,15 @@ audience: itproF
 manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
+ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: df7b4bc3cbac23024dc8d108a91defebbf6dde38
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 21b55882d4af8d4d20b6ff2690d23680141e2e47
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614691"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643438"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Windows Autopilot für White-Glove-Bereitstellung
 
@@ -26,13 +28,13 @@ ms.locfileid: "88614691"
 
 Windows Autopilot unterstützt Organisationen bei der einfachen Bereitstellung neuer Geräte mithilfe des vorinstallierten OEM-Abbilds und der Treiber. Dadurch können Endbenutzer Ihre Geräte mit einem einfachen Prozess im geschäftlichen Bereich bereit bringen.
 
- ![OEM](images/wg01.png)
+ ![OEM-Prozess](images/wg01.png)
 
 Windows Autopilot kann auch einen <I>weißen Hand Schuh</I> Dienst bereitstellen, der Partnern oder IT-Mitarbeitern die vorab Bereitstellung eines vollständig konfigurierten und Geschäfts bereiten Windows 10-PCs unterstützt. Aus Sicht des Endbenutzers ist die benutzergesteuerte Windows Autopilot-Darstellung unverändert, aber es ist schneller, das Gerät in einen vollständig bereitgestellten Zustand zu bringen.
 
 Bei **Windows Autopilot für die Bereitstellung eines weißen**handlerprozesses wird der Bereitstellungs Prozess aufgeteilt. Die zeitaufwändigen Teile werden von IT, Partnern oder OEMs erledigt. Der Endbenutzer schließt einfach einige erforderliche Einstellungen und Richtlinien ein und kann dann mit der Verwendung des Geräts beginnen.
 
- ![OEM](images/wg02.png)
+ ![OEM-Prozess mit Partner](images/wg02.png)
 
 Bei White-Glove-bereit Stellungen wird Microsoft InTune in Windows 10, Version 1903 und höher, verwendet. Solche bereit Stellungen bauen auf vorhandenen Windows Autopilot [-benutzergesteuerten Szenarios](user-driven.md) auf und unterstützen Szenarios im benutzergesteuerten Modus sowohl für Azure Active Directory verbundene als auch für hybride Azure Active Directory verbundene Geräte.
 
@@ -86,7 +88,7 @@ Nachdem der Kunde oder IT-Administrator alle apps und Einstellungen, die Sie fü
 - Starten Sie das Gerät (Ausführen von Windows 10 pro, Enterprise oder Education-SKUs, Version 1903 oder höher).
 - Klicken Sie im ersten OOBE-Bildschirm (bei dem es sich um eine Sprachauswahl oder einen Gebiets Schema Auswahl-Bildschirm handeln kann) nicht auf **weiter** Drücken Sie stattdessen die Windows-Taste fünfmal, um ein weiteres Dialogfeld mit den Optionen anzuzeigen. Wählen Sie auf diesem Bildschirm die Option **Windows Autopilot Bereitstellung** aus, und klicken Sie dann auf **weiter**.
 
- ![choice](images/choice.png)
+ ![Windows Autopilot-Bereitstellungs Option](images/choice.png)
 
 - Auf dem **Windows Autopilot-Konfigurations** Bildschirm werden Informationen zum Gerät angezeigt:
  - Das Autopilot-Profil, das dem Gerät zugewiesen ist.
@@ -96,13 +98,13 @@ Nachdem der Kunde oder IT-Administrator alle apps und Einstellungen, die Sie fü
  - **Hinweis**: die QR-Codes können mithilfe einer begleitenden App gescannt werden. Die APP konfiguriert außerdem das Gerät, um anzugeben, wem es angehört. Ein [Open Source-Beispiel der begleitenden App](https://github.com/Microsoft/WindowsAutopilotCompanion) , die mithilfe des Graph-API in InTune integriert wurde, wurde vom Autopilot-Team auf GitHub veröffentlicht.
 - Überprüfen Sie die angezeigten Informationen. Wenn Änderungen erforderlich sind, nehmen Sie die Änderungen vor, und klicken Sie dann auf **Aktualisieren** , um die aktualisierten Autopilot-Profildetails erneut herunterzuladen.
 
- ![Anle](images/landing.png)
+ ![Windows Autopilot-Konfigurationsbildschirm](images/landing.png)
 
 - Klicken Sie auf bereitstellen, um den **Bereitstellungs** Prozess zu starten.
 
 Wenn der vorab Bereitstellungs Vorgang erfolgreich abgeschlossen wurde:
 - Der Bildschirm grüner Status wird mit Informationen zum Gerät angezeigt, einschließlich der zuvor dargestellten Details. Beispielsweise Autopilot Profile, Organisationsname, zugewiesener Benutzer und QR-Code. Die verstrichene Zeit für die Schritte vor der Bereitstellung wird ebenfalls bereitgestellt.
- ![White-Glove-result](images/white-glove-result.png)
+ ![Grüner Konfigurationsbildschirm](images/white-glove-result.png)
 - Klicken Sie auf **reseal** , um das Gerät zu schließen. An diesem Punkt kann das Gerät an den Endbenutzer ausgeliefert werden.
 
 >[!NOTE]
@@ -123,6 +125,6 @@ Wenn der vorab Bereitstellungs Vorgang erfolgreich abgeschlossen wurde und das G
 - Wenn Sie Azure AD Hybrid Join verwenden, wird das Gerät neu gestartet. Geben Sie nach dem Neustart die Active Directory Anmelde Informationen des Benutzers ein.
 - Weitere Richtlinien und apps werden an das Gerät übermittelt, wie von der Seite zum Registrierungs Status (ESP) nachverfolgt. Sobald der Benutzer fertig ist, kann er auf den Desktop zugreifen.
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 [Whiteglove-Video](https://youtu.be/nE5XSOBV0rI)
