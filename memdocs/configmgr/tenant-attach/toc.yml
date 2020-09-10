@@ -8,9 +8,15 @@
       href: client-details.md
     - name: Installieren von Anwendungen (Vorschau)
       href: applications.md
+    - name: Gerätezeitskala (Vorschau)
+      href: timeline.md
+    - name: Ressourcen-Explorer (Vorschau)
+      href: resource-explorer.md
 - name: CMPivot für mit dem Mandanten verknüpfte Geräte (Vorschau)
   items:
-    - name: CMPivot-Übersicht
+    - name: Starten von CMPivot (Vorschau)
+      href: cmpivot-start.md
+    - name: Überblick über die CMPivot-Nutzung
       href: cmpivot-overview-attached.md
     - name: CMPivot-Beispielskripts
       href: cmpivot-samples-attached.md
@@ -30,3 +36,9 @@
       href: troubleshoot-client-details.md
     - name: Anwendungsinstallation (Vorschau)
       href: troubleshoot-applications.md
+    - name: Zeitskala (Vorschau)
+      href: troubleshoot-timeline.md
+    - name: Ressourcen-Explorer (Vorschau)
+      href: troubleshoot-resource-explorer.md
+    - name: CMPivot (Vorschau)
+      href: troubleshoot-cmpivot.md
