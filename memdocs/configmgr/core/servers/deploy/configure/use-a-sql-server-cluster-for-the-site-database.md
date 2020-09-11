@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 988a9c31fca8d06104ce317f4709ee990089d723
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 90e4c0dfd2b55ec5acf943cd591ba45c719a68ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699142"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607516"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Hosten der Standortdatenbank mit einem SQL Server-Cluster
 
@@ -63,7 +63,7 @@ Beachten Sie die folgenden Voraussetzungen:
 - Aktivieren Sie zur Unterstützung der Kerberos-Authentifizierung das **TCP/IP**-Netzwerkkommunikationsprotokoll für die Netzwerkverbindung jedes SQL Server-Clusterknotens. Das **Named Pipes**-Protokoll ist nicht erforderlich, kann jedoch zur Behandlung von Problemen bei der Kerberos-Authentifizierung verwendet werden. Die Netzwerkprotokolleinstellungen werden im **SQL Server-Konfigurations-Manager** unter **SQL Server-Netzwerkkonfiguration** konfiguriert.  
 
 - Es gelten bestimmte Zertifikatanforderungen, wenn Sie einen SQL Server-Cluster für die Standortdatenbank verwenden. Weitere Informationen finden Sie in den folgenden Artikeln:
-  - [Installieren eines Zertifikats in einer SQL-Failoverclusterkonfiguration](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Installieren eines Zertifikats in einer SQL-Failoverclusterkonfiguration](/sql/database-engine/configure-windows/manage-certificates#provision-failover-cluster-cert)
   - [PKI-Zertifikatanforderungen für Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -101,7 +101,7 @@ Configuration Manager unterstützt nicht die Data Protection Manager-Sicherung (
 
 Hier die wichtigsten Aufgaben, um die Standortdatenbank vorzubereiten:
 
-- Erstellen Sie den virtuellen SQL Server-Cluster, der die Standortdatenbank hosten soll, in einer vorhandenen Windows Server-Clusterumgebung. Spezifische Informationen zum Installieren und Konfigurieren eines SQL Server-Clusters finden Sie in der Dokumentation zu Ihrer SQL Server-Version. Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server-Failoverclusters (Setup)](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
+- Erstellen Sie den virtuellen SQL Server-Cluster, der die Standortdatenbank hosten soll, in einer vorhandenen Windows Server-Clusterumgebung. Spezifische Informationen zum Installieren und Konfigurieren eines SQL Server-Clusters finden Sie in der Dokumentation zu Ihrer SQL Server-Version. Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server-Failoverclusters (Setup)](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup).  
 
 - Legen Sie bei jedem Computer im SQL Server-Cluster eine Datei im Stammordner jedes Laufwerks ab, auf dem Configuration Manager keine Standortkomponenten installieren soll. Benennen Sie die Datei mit `NO_SMS_ON_DRIVE.SMS`. Standardmäßig installiert Configuration Manager an jedem physischen Knoten einige Komponenten, um Vorgänge wie Sicherungen zu unterstützen.  
 

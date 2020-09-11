@@ -10,12 +10,12 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b79e0ec67fa7c1d7ede0af1549c8cda4dd3ee3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3dedef9ffe785ce7127fc371030cfd990d70e38
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700038"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608387"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Verwalten von Veröffentlichungen in Updates Publisher
 
@@ -82,9 +82,6 @@ Um eine Veröffentlichung zu exportieren, wechseln Sie zum **Arbeitsbereich „V
 Wählen Sie nach der Veröffentlichungenauswahl auf der Registerkarte **Start** des Menübands die Option **Exportieren**, und geben Sie dann einen Pfad und Dateinamen für den Katalogexport an.
 
 Sie können auch abhängige Softwareupdates als Teil des Exports exportieren (einzuschließen).
-
-## <a name="rename-a-publication"></a>Umbenennen einer Veröffentlichung
-Um eine Veröffentlichung umzubenennen, wählen Sie die Veröffentlichung im **Arbeitsbereich „Veröffentlichungen“** aus, und wählen Sie dann auf der Registerkarte **Veröffentlichung** des Menübands **Bearbeiten** aus.
 
 ## <a name="delete-a-publication"></a>Löschen einer Veröffentlichung
 Um eine Veröffentlichung zu löschen, wählen Sie die Veröffentlichung im **Arbeitsbereich „Veröffentlichungen“** aus, und wählen Sie dann auf der Registerkarte **Veröffentlichung** des Menübands **Löschen** aus.

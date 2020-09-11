@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819931"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606942"
 ---
 # <a name="deploy-bitlocker-management"></a>Bereitstellen der BitLocker-Verwaltung
 
@@ -118,7 +118,7 @@ Wenn Sie die Einstellungen einer vorhandenen Richtlinie ändern möchten, wähle
 
 Wenn Sie mehr als eine Richtlinie erstellen, können Sie ihre relative Priorität konfigurieren. Wenn Sie mehrere Richtlinien auf einem Client bereitstellen, werden anhand des Prioritätswerts die Einstellungen bestimmt.
 
-Ab Version 2006 können Sie die folgenden PowerShell-Cmdlets von Windows für diese Aufgabe verwenden. Weitere Informationen erhalten Sie unter [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps).
+Ab Version 2006 können Sie die folgenden PowerShell-Cmdlets von Windows für diese Aufgabe verwenden. Weitere Informationen erhalten Sie unter [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting).
 
 ## <a name="deploy-a-policy"></a>Bereitstellen einer Richtlinie
 
@@ -137,7 +137,7 @@ Sie können mehrere Bereitstellungen mit derselben Richtlinie erstellen. Wenn Si
 > [!IMPORTANT]
 > Vom MBAM-Client werden keine BitLocker-Laufwerkverschlüsselungsaktionen gestartet, solange eine Verbindung über das Remotedesktopprotokoll aktiv ist. Alle Remotekonsolenverbindungen müssen geschlossen und ein Benutzer muss bei einer physischen Konsolensitzung angemeldet sein, bevor die BitLocker-Laufwerkverschlüsselung beginnt.
 
-Ab Version 2006 können Sie die folgenden PowerShell-Cmdlets von Windows für diese Aufgabe verwenden. Weitere Informationen finden Sie unter [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
+Ab Version 2006 können Sie die folgenden PowerShell-Cmdlets von Windows für diese Aufgabe verwenden. Weitere Informationen finden Sie unter [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 ## <a name="monitor"></a>Überwachen
 

@@ -2,7 +2,7 @@
 title: Technical Preview-Releases
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über den Technical Preview-Branch, mit dem Sie neue Funktionen und Fähigkeiten in Configuration Manager testen können.
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432573"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564209"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview für Configuration Manager
 
@@ -167,8 +167,6 @@ Nachfolgend sind die folgenden Features der Vorgängerversionen des Technical Pr
 | Komponente        | Technical Preview-Version |
 |----------------|---------------------------|
 | Verbesserungen an verfügbaren Apps über CMG <!--7033501--> | [Technical Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Mandantenanfügung: Gerätezeitachse im Admin Center <!--7141381--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Mandantenanfügung: CMPivot aus dem Admin Center <!--6024392--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Mandantenanfügung: „Skripts ausführen“ über das Admin Center <!--6234688--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Verbesserungen an Cloudverwaltungsgateway-Cmdlets <!--6978300--> | [Technical Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
 | Melden von Setup- und Upgradefehlern bei Microsoft <!--5622909--> | [Technical Preview 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |

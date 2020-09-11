@@ -10,12 +10,12 @@ ms.assetid: a49a9564-0863-44c3-991e-a8e271fed586
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 20b23cec74ae3d201bc81fe1834e87e7eb8fcc13
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 32800284c415de6a36e856abf473bc6d8d729e6f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129526"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608242"
 ---
 # <a name="changes-to-cmpivot"></a>Änderungen an CMPivot
 
@@ -359,7 +359,7 @@ Damit CMPivot in einem solchen Szenario für den CAS funktioniert, können Sie e
       1. Klicken Sie anschließend auf **Nur Kerberos verwenden**.
       1. Fügen Sie den Dienst der SQL Server-Instanz für die einzelnen primären Standorte zusammen mit einem Port und einer Instanz hinzu.
       1. Vergewissern Sie sich, dass diese Änderungen gemäß den Sicherheitsrichtlinien Ihres Unternehmens vorgenommen werden.
-1. Vergewissern Sie sich, dass der [Dienstprinzipalname (Service Principal Name, SPN)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs) für den CAS-SQL-Listener und der jeweilige Name des primären SQL-Listeners öffentlich sind.
+1. Vergewissern Sie sich, dass der [Dienstprinzipalname (Service Principal Name, SPN)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs) für den CAS-SQL-Listener und der jeweilige Name des primären SQL-Listeners öffentlich sind.
 1. Starten Sie die primären SQL Server-Instanzen neu.
 1. Starten Sie den CAS-Standortserver und die SQL-Serverinstanzen für den CAS neu.
 

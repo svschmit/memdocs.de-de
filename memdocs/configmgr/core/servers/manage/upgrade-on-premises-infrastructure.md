@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0c2894bcdf80901171cceba96e7829793f899383
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699482"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606788"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Upgraden der lokalen Infrastruktur, die Configuration Manager unterstützt
 
@@ -242,15 +242,15 @@ Führen Sie die folgende SQL-Abfrage auf dem Standortdatenbankserver aus, um den
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-Weitere Informationen zu SQL-CE-Kompatibilitätsgraden und deren Festlegung finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+Weitere Informationen zu SQL-CE-Kompatibilitätsgraden und deren Festlegung finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 Weitere Informationen zum Upgrade von SQL Server finden Sie in den folgenden SQL Server-Artikeln:  
 
 - [Upgrade auf SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [Upgrade auf SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [Upgrade auf SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
-- [Upgrade auf SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [Upgrade auf SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>So führen Sie ein SQL Server-Upgrade auf dem Standortdatenbankserver aus  
 

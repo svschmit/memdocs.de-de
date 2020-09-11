@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: eae605c067094665f2f6866e75fa8f9a94a5df52
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995006"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607737"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Neuigkeiten in Version 1806 des Current Branch von Configuration Manager
 
@@ -584,7 +584,7 @@ Weitere Informationen finden Sie unter [Verbesserungen der Konsole in Version 18
 
 Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Summary of changes in Configuration Manager current branch, version 1806 (Zusammenfassung der Änderungen in der Current Branch-Version 1806 von Configuration Manager)](https://support.microsoft.com/help/4459701).
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie unter [PowerShell 1806 Release Notes (Versionshinweise zu PowerShell 1806)](/powershell/sccm/1806_release_notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie unter [PowerShell 1806 Release Notes (Versionshinweise zu PowerShell 1806)](/powershell/sccm/1806_release_notes).
 
 Folgender Updaterollup (4462978) ist ab dem 24. Oktober 2018 in der Konsole verfügbar: [Update rollup for Configuration Manager current branch, version 1806 (Updaterollup für die Current Branch-Version 1806 von Configuration Manager)](https://support.microsoft.com/help/4462978).
 

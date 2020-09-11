@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: fb2fb87a483328d06b3e0757fb6eb5a25e734b1d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193637"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607911"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funktionen in der Technical Preview 1511 für Configuration Manager
 
@@ -110,7 +110,7 @@ Versuchen Sie, die folgende Aufgabe auszuführen, und verwenden Sie dann die Fee
  Verwenden Sie die folgenden Verfahren, um zuerst die Verfügbarkeitsgruppe zu erstellen und zu konfigurieren, und installieren Sie dann einen neuen Configuration Manager-Standort, der die Verfügbarkeitsgruppe verwendet.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>So erstellen Sie eine SQL Server AlwaysOn-Verfügbarkeitsgruppe  
-Das Verfahren zum [Erstellen einer SQL Server-Verfügbarkeitsgruppe](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) wird in der SQL Server-Dokumentationsbibliothek beschrieben.  Wenn Sie eine Verfügbarkeitsgruppe erstellen, vergewissern Sie sich, dass die folgenden Anforderungen für die Verwendung mit Configuration Manager erfüllt sind:  
+Das Verfahren zum [Erstellen einer SQL Server-Verfügbarkeitsgruppe](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server) wird in der SQL Server-Dokumentationsbibliothek beschrieben.  Wenn Sie eine Verfügbarkeitsgruppe erstellen, vergewissern Sie sich, dass die folgenden Anforderungen für die Verwendung mit Configuration Manager erfüllt sind:  
 
 -   Maximal drei Mitglieder:  
 

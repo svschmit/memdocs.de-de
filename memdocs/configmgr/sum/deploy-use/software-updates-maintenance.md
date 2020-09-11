@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: a327d50a2743f81407530355b6fd5101ce6a8b02
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 1b11d0e54305b148a2f73a3a3af9f0497fe8e557
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696904"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608046"
 ---
 # <a name="software-updates-maintenance"></a>Wartung für Softwareupdates
 
@@ -130,11 +130,11 @@ Durch das Hinzufügen von nicht gruppierten Indizes wird die WSUS-Bereinigungsle
 
 Wenn sich die WSUS-Datenbank auf einem Remotecomputer mit SQL Server befindet, müssen Sie möglicherweise in SQL Berechtigungen zum Erstellen von Indizes hinzufügen. Das Konto, mit dem die Verbindung mit der WSUS-Datenbank hergestellt und die Indizes erstellt werden können, kann variieren. Wenn Sie in den [Eigenschaften des Softwareupdatepunkts ein WSUS-Server-Verbindungskonto](../get-started/install-a-software-update-point.md#wsus-server-connection-account) angeben, stellen Sie sicher, dass das Verbindungskonto über die SQL-Berechtigungen verfügt. Wenn Sie kein Verbindungskonto für WSUS-Server angeben, benötigt das Computerkonto des Standortservers die SQL-Berechtigungen.
 
-- Das Erstellen eines Indexes erfordert die Berechtigung `ALTER` für die Tabelle oder Sicht. Das Konto muss ein Mitglied der festen Serverrolle `sysadmin` oder der festen Datenbankrollen `db_ddladmin` und `db_owner` sein. Weitere Informationen zum Erstellen eines Indexes und den erforderlichen Berechtigungen finden Sie unter [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
-- Dem Konto muss die Serverberechtigung `CONNECT SQL` erteilt werden. Weitere Informationen finden Sie unter [GRANT (Serverberechtigungen) (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Das Erstellen eines Indexes erfordert die Berechtigung `ALTER` für die Tabelle oder Sicht. Das Konto muss ein Mitglied der festen Serverrolle `sysadmin` oder der festen Datenbankrollen `db_ddladmin` und `db_owner` sein. Weitere Informationen zum Erstellen eines Indexes und den erforderlichen Berechtigungen finden Sie unter [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql#permissions).
+- Dem Konto muss die Serverberechtigung `CONNECT SQL` erteilt werden. Weitere Informationen finden Sie unter [GRANT (Serverberechtigungen) (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 > [!NOTE]  
->  Wenn sich die WSUS-Datenbank auf einem Remotecomputer mit SQL Server und nicht standardmäßigem Port befindet, werden möglicherweise keine Indizes hinzugefügt. Für dieses Szenario können Sie einen [Serveralias mit dem SQL Server-Konfigurations-Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) erstellen. Indizes werden hinzugefügt, sobald der Alias hinzugefügt wurde und Configuration Manager eine Verbindung mit der WSUS-Datenbank herstellen kann.
+>  Wenn sich die WSUS-Datenbank auf einem Remotecomputer mit SQL Server und nicht standardmäßigem Port befindet, werden möglicherweise keine Indizes hinzugefügt. Für dieses Szenario können Sie einen [Serveralias mit dem SQL Server-Konfigurations-Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) erstellen. Indizes werden hinzugefügt, sobald der Alias hinzugefügt wurde und Configuration Manager eine Verbindung mit der WSUS-Datenbank herstellen kann.
 
 ### <a name="remove-obsolete-updates-from-the-wsus-database"></a>Entfernen veralteter Updates aus der WSUS-Datenbank
 
@@ -150,8 +150,8 @@ Veraltete Updates sind nicht verwendete Updates und Updaterevisionen in der WSUS
 
 Wenn sich die WSUS-Datenbank in einer SQL Server-Remoteinstanz befindet, benötigt das Computerkonto des Standortservers die folgenden SQL Server-Berechtigungen:
 
-- Die festen Datenbankrollen `db_datareader` und `db_datawriter`. Weitere Informationen finden Sie unter [Rollen auf Datenbankebene](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
-- Die Serverberechtigung `CONNECT SQL` muss dem Computerkonto des Standortservers gewährt werden. Weitere Informationen finden Sie unter [GRANT (Serverberechtigungen) (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Die festen Datenbankrollen `db_datareader` und `db_datawriter`. Weitere Informationen finden Sie unter [Rollen auf Datenbankebene](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).
+- Die Serverberechtigung `CONNECT SQL` muss dem Computerkonto des Standortservers gewährt werden. Weitere Informationen finden Sie unter [GRANT (Serverberechtigungen) (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 #### <a name="wsus-cleanup-wizard"></a>Assistent für die WSUS-Bereinigung
 

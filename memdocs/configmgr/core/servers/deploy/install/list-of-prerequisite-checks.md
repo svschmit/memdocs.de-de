@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5bdf2adbf4ba5f02869ba5058da84ee7738e0ce2
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698955"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608070"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Liste mit Voraussetzungsprüfungen für Configuration Manager
 
@@ -741,7 +741,7 @@ Das Konto, das Sie zum Ausführen des SQL Server-Diensts für die Standortdatenb
 
 Prüfen Sie ab Version 1810, ob die Standortdatenbank über ein Backlog mit Daten zur SQL-Änderungsnachverfolgung verfügt.<!--SCCMDocs-pr issue 3023-->  
 
-Überprüfen Sie diese Prüfung manuell, indem Sie eine gespeicherte Diagnoseprozedur in der Standortdatenbank ausführen. Stellen Sie zunächst eine [Diagnoseverbindung](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) mit der Standortdatenbank her. Dies erreichen Sie am einfachsten mithilfe des Abfrage-Editors für die Datenbank-Engine von SQL Server Management Studio und einer Verbindung mit `admin:<instance name>`.
+Überprüfen Sie diese Prüfung manuell, indem Sie eine gespeicherte Diagnoseprozedur in der Standortdatenbank ausführen. Stellen Sie zunächst eine [Diagnoseverbindung](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators) mit der Standortdatenbank her. Dies erreichen Sie am einfachsten mithilfe des Abfrage-Editors für die Datenbank-Engine von SQL Server Management Studio und einer Verbindung mit `admin:<instance name>`.
 
 Führen Sie in einem Abfragefenster für dedizierte Administratorverbindungen die folgenden Befehle aus:
 

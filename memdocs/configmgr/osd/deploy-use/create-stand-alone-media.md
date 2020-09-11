@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 8ff3e0ee8f002a21e283b8a56f55d0daa2490253
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068020"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606355"
 ---
 # <a name="create-stand-alone-media"></a>Erstellen eigenständiger Medien
 
@@ -151,7 +151,7 @@ Legen Sie für die vom Assistenten zum Erstellen von Tasksequenzmedien erstellte
         >
         > Auf eigenständigen Medien werden nur die Tasksequenzschritte und die dazugehörigen Variablen verschlüsselt. Die übrigen Inhalte der Medien werden nicht verschlüsselt. Nehmen Sie keine vertraulichen Informationen in Tasksequenzskripts auf. Speichern und implementieren Sie alle vertraulichen Informationen mithilfe von Tasksequenzvariablen.  
 
-    - **Datumsbereich für dieses eigenständige Medium auswählen, damit es gültig ist**: Optionale Start- und Ablaufdaten auf den Medien festlegen. Diese Einstellung ist standardmäßig deaktiviert. Vor der Ausführung des eigenständigen Mediums werden die Datums- und Zeitangaben für den Zeitraum mit der Systemzeit auf dem Computer verglichen. Wenn die Systemzeit vor der Startzeit oder nach der Ablaufzeit liegt, wird das eigenständige Medium nicht gestartet. Diese Optionen sind auch über das PowerShell-Cmdlet [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) verfügbar.  
+    - **Datumsbereich für dieses eigenständige Medium auswählen, damit es gültig ist**: Optionale Start- und Ablaufdaten auf den Medien festlegen. Diese Einstellung ist standardmäßig deaktiviert. Vor der Ausführung des eigenständigen Mediums werden die Datums- und Zeitangaben für den Zeitraum mit der Systemzeit auf dem Computer verglichen. Wenn die Systemzeit vor der Startzeit oder nach der Ablaufzeit liegt, wird das eigenständige Medium nicht gestartet. Diese Optionen sind auch über das PowerShell-Cmdlet [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia) verfügbar.  
 
 6. Wählen Sie auf der Seite **Eigenständige CD/DVD** die Tasksequenz aus, die das Betriebssystem bereitstellt. Sie können nur die Tasksequenzen auswählen, die einem Startimage zugewiesen sind. Überprüfen Sie die Liste mit den Inhalten, auf die durch die Tasksequenz verwiesen wird.  
 

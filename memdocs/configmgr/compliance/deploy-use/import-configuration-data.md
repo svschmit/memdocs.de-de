@@ -10,12 +10,12 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7d9760a49815b9eb33c7886f4d9a8f9637dedd21
+ms.sourcegitcommit: 9f072da27aa64f46a9409470b5dac5bfac3a0fe5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240353"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468310"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>Importieren von Konfigurationsdaten mit Configuration Manager
 
@@ -28,8 +28,6 @@ Zusätzlich zur Erstellung von Konfigurationsbaselines und Konfigurationselement
 - Konfigurationsdaten, die aus System Center 2012 Configuration Manager und höher exportiert wurden.  
 
 - Konfigurationsdaten, die extern erstellt wurden und dem SML-Schema entsprechen.  
-
-  Ein Beispiel für ein Konfigurationspaket, das Sie bei der Verwaltung der Kompatibilität von Standortserverrollen für System Center 2012 Configuration Manager unterstützt, finden Sie unter [Konfigurationspaket für System Center 2012 Configuration Manager](https://www.microsoft.com/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
 
 Wenn Sie eine Konfigurationsbasislinie importieren, können einige oder alle der Konfigurationselemente, auf die in der Konfigurationsbasislinie verwiesen wird, auch in der CAB-Datei enthalten sein. Während des Imports überprüft Configuration Manager, ob alle Konfigurationselemente, auf die in der Konfigurationsbaseline verwiesen wird, in der CAB-Datei enthalten oder bereits am Configuration Manager-Standort vorhanden sind. Der Import kann nicht ausgeführt werden, wenn Sie versuchen, eine Konfigurationsbaseline zu importieren, die auf durch Configuration Manager nicht auffindbare Konfigurationsdaten verweist.  
 

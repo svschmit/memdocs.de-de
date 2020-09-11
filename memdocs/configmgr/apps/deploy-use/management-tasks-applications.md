@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 15c1be9ed388356e17f8591123114dccf7bcd612
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: cf96add17fa9ff5d4bf0aeb7970f4db046f7b463
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695204"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606537"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Verwaltungstasks für Configuration Manager-Anwendungen
 
@@ -40,7 +40,7 @@ Hilfe zum Erstellen von Anwendungen und Bereitstellungstypen finden Sie unter [E
 |**Statistik aktualisieren**|Aktualisiert die Informationen zu Bereitstellungen dieser Anwendung, die im Arbeitsbereich **Überwachung** im Knoten **Bereitstellungen** angezeigt werden.<br /><br /> Siehe [Überwachen von Anwendungen aus der Configuration Manager-Konsole](../../apps/deploy-use/monitor-applications-from-the-console.md).|  
 |**Reaktivieren**|Reaktiviert eine Anwendung, die mithilfe des Verwaltungstasks **Außerkraftsetzen** außer Kraft gesetzt wurde.|  
 |**Außerkraftsetzen**|Außer Kraft gesetzte Anwendungen können nicht mehr bereitgestellt werden, jedoch werden weder die Anwendung noch Bereitstellungen der Anwendung gelöscht. Bereits auf Clientcomputern installierte Exemplare dieser Anwendung werden nicht entfernt. Alle Anwendungsrevisionen werden von Configuration Manager nach 60 Tagen gelöscht. Installierte Kopien der Anwendung werden jedoch nicht entfernt.<br /><br /> Zum Löschen einer Anwendung müssen Sie diese zunächst außer Kraft setzen, sämtliche Bereitstellungen löschen, Verweise anderer Bereitstellungen auf diese Anwendung entfernen, und dann sämtliche Revisionen der Anwendung löschen.<br /><br /> Siehe [Überarbeiten und Ablösen von Anwendungen](../../apps/deploy-use/revise-and-supersede-applications.md).|  
-|**Exportierenieren**|Öffnet den **Assistenten zum Exportieren von Anwendungen**, mit dessen Hilfe Sie die ausgewählten Anwendungen in eine ZIP-Datei exportieren können. Diese Datei können Sie dann archivieren oder an einem anderen Standort installieren. Wenn Sie den Inhalt der Anwendung exportieren, wird ein Ordner erstellt, in dem sich der Inhalt befindet.<br /><br /> Sie können darüber hinaus Anwendungsabhängigkeiten, Ablösungsbeziehungen und -bedingungen und Inhalt für die Anwendung und ihre Abhängigkeiten exportieren.<br /><br /> Das Windows PowerShell-Cmdlet **Export-CMApplication** hat die gleiche Funktion. Weitere Informationen finden Sie unter [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps).|  
+|**Exportierenieren**|Öffnet den **Assistenten zum Exportieren von Anwendungen**, mit dessen Hilfe Sie die ausgewählten Anwendungen in eine ZIP-Datei exportieren können. Diese Datei können Sie dann archivieren oder an einem anderen Standort installieren. Wenn Sie den Inhalt der Anwendung exportieren, wird ein Ordner erstellt, in dem sich der Inhalt befindet.<br /><br /> Sie können darüber hinaus Anwendungsabhängigkeiten, Ablösungsbeziehungen und -bedingungen und Inhalt für die Anwendung und ihre Abhängigkeiten exportieren.<br /><br /> Das Windows PowerShell-Cmdlet **Export-CMApplication** hat die gleiche Funktion. Weitere Informationen finden Sie unter [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication).|  
 |**Löschen**|Löscht die derzeit ausgewählte Anwendung.<br /><br /> Eine Anwendung kann nicht gelöscht werden, wenn andere Anwendungen von ihr abhängig sind oder sie über eine aktive Bereitstellung oder abhängige Tasksequenzen verfügt.|  
 |**Bereitstellung simulieren**|Öffnet den **Assistenten zum Simulieren der Anwendungsbereitstellung**, mit dessen Hilfe Sie die Ergebnisse einer Anwendungsbereitstellung auf Computern ohne Installieren oder Deinstallieren der Anwendung überprüfen können.<br /><br /> Siehe [Simulieren von Anwendungsbereitstellungen](../../apps/deploy-use/simulate-application-deployments.md).|  
 |**Bereitstellen**|Öffnet den **Assistenten zum Bereitstellen von Software**, mit dessen Hilfe Sie die ausgewählte Anwendung auf Sammlungen oder Computern in Ihrer Hierarchie bereitstellen können.<br /><br /> Siehe [Bereitstellen von Anwendungen](../../apps/deploy-use/deploy-applications.md).|  

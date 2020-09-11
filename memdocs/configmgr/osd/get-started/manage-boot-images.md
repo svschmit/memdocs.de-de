@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3ddcf0c9ff4a9af1e74a745d8bda326804365206
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697635"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606306"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Verwalten von Startimages mit Configuration Manager
 
@@ -206,7 +206,7 @@ Wählen Sie auf der Registerkarte **Anpassung** die folgenden Einstellungen aus:
 - **Standardtastaturlayout in WinPE festlegen:** <!--4910348-->Ab Version 1910 können Sie das Standardtastaturlayout für ein Startimage konfigurieren. Wenn Sie eine andere Sprache als „en-us“ auswählen, schließt Configuration Manager „en-us“ weiterhin in die verfügbaren Eingabegebietsschemas ein. Auf dem Gerät entspricht das anfängliche Tastaturlayout dem ausgewählten Gebietsschema, aber der Benutzer kann das Gerät bei Bedarf auf „en-us“ umstellen.
 
 > [!Tip]
-> Verwenden Sie das PowerShell-Cmdlet [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps), um diese Einstellungen über ein Skript zu konfigurieren.
+> Verwenden Sie das PowerShell-Cmdlet [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage), um diese Einstellungen über ein Skript zu konfigurieren.
 
 #### <a name="optional-components"></a>Optionale Komponenten
 

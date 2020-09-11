@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: d28d3ed697097b177ef9e2849fbcd6003505594c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995108"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607801"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Neuerungen in Version 1906 von Configuration Manager (Current Branch)
 
@@ -622,7 +622,7 @@ Ab dieser Version sind die folgenden Features keine Vorabfeatures mehr:
 
 Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Zusammenfassung der Änderungen im Current Branch von Configuration Manager, Version 1906](https://support.microsoft.com/help/4514258).
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1906](/powershell/sccm/1906-release-notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1906](/powershell/sccm/1906-release-notes).
 
 Folgender Updaterollup (4517869) ist ab 1. Oktober 2019 in der Konsole verfügbar: [Updaterollup für den aktuellen Branch von Configuration Manager, Version 1906](https://support.microsoft.com/help/4517869).
 

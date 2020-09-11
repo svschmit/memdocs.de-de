@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699227"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607556"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
@@ -315,7 +315,7 @@ Die folgenden Einschränkungen gelten für alle Szenarien.
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>Nicht unterstützte SQL Server-Optionen und -Konfigurationen
 
-- **Basis-Verfügbarkeitsgruppen**: Diese Verfügbarkeitsgruppen, die mit SQL Server 2016 Standard Edition eingeführt wurden, bieten keine Unterstützung für Lesezugriff auf sekundäre Replikate. Für die Konfiguration ist ein derartiger Zugriff jedoch erforderlich. Hintergrundinformationen finden Sie unter [SQL Server-Basisverfügbarkeitsgruppen](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Basis-Verfügbarkeitsgruppen**: Diese Verfügbarkeitsgruppen, die mit SQL Server 2016 Standard Edition eingeführt wurden, bieten keine Unterstützung für Lesezugriff auf sekundäre Replikate. Für die Konfiguration ist ein derartiger Zugriff jedoch erforderlich. Hintergrundinformationen finden Sie unter [SQL Server-Basisverfügbarkeitsgruppen](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups).  
 
 - **Failoverclusterinstanz**: Failoverclusterinstanzen werden für ein Replikat, das Sie mit Configuration Manager verwenden, nicht unterstützt. Weitere Informationen finden Sie unter [SQL Server AlwaysOn-Failoverclusterinstanzen](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 

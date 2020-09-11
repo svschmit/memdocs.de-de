@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 99a053800971642b1c771329c2ff9b3a29ce7912
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995448"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607895"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funktionen in der Technical Preview 1705 für Configuration Manager
 
@@ -121,12 +121,12 @@ Ab dieser Version können Sie jetzt Replikate mit asynchronem Commit in den SQL 
 
 - Diese Version unterstützt kein Failover, um das Replikat mit asynchronem Commit als Standortdatenbank zu verwenden.
   > [!CAUTION]  
-  > Da Configuration Manager nicht den Status des Replikats mit asynchronem Commit dahingehend überprüft, ob es aktuell ist, und [ein solches Replikat asynchron sein kann](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), kann das Verwenden eines Replikats mit asynchronem Commit als Standortdatenbank die Integrität Ihres Standorts und Ihrer Daten gefährden.  
+  > Da Configuration Manager nicht den Status des Replikats mit asynchronem Commit dahingehend überprüft, ob es aktuell ist, und [ein solches Replikat asynchron sein kann](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes), kann das Verwenden eines Replikats mit asynchronem Commit als Standortdatenbank die Integrität Ihres Standorts und Ihrer Daten gefährden.  
 
 - Sie können die gleiche Anzahl und Art von Replikaten in einer Verfügbarkeitsgruppe nutzen, die von der von Ihnen verwendeten Version von SQL Server unterstützt wird.   (Zuvor war die Unterstützung auf zwei Replikate mit synchronem Commit beschränkt.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Konfigurieren eines Replikats mit asynchronem Commit
-Zum Hinzufügen eines asynchronen Replikats zu einer [mit Configuration Manager verwendeten Verfügbarkeitsgruppe](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md) müssen Sie nicht die Konfigurationsskripts ausführen, die zum Konfigurieren eines synchronen Replikats erforderlich sind. (Der Grund ist, dass das Verwenden eines asynchronen Replikats als Standortdatenbank nicht unterstützt wird.) Weitere Informationen finden Sie unter [Add a secondary replica to an availability group](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014) (Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe).
+Zum Hinzufügen eines asynchronen Replikats zu einer [mit Configuration Manager verwendeten Verfügbarkeitsgruppe](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md) müssen Sie nicht die Konfigurationsskripts ausführen, die zum Konfigurieren eines synchronen Replikats erforderlich sind. (Der Grund ist, dass das Verwenden eines asynchronen Replikats als Standortdatenbank nicht unterstützt wird.) Weitere Informationen finden Sie unter [Add a secondary replica to an availability group](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server) (Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Wiederherstellen Ihres Standorts mithilfe des asynchronen Replikats
 Bevor Sie ein asynchrones Replikat zum Wiederherstellen der Standortdatenbank verwenden, müssen Sie den aktiven primären Standort beenden, um weitere Schreibvorgänge in die Standortdatenbank zu verhindern. Nachdem Sie den Standort beendet haben, können Sie ein asynchrones Replikat anstelle einer [manuell wiederhergestellten Datenbank](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered) verwenden.

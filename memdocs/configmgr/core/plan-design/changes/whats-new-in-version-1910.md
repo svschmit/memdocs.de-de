@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c99716070bf32ae27a7bd8b7a114d8b920814e2
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 86ee63564654d41b965cfc411eede273eeca4ef4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993470"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607711"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Neuerungen in Version 1910 von Configuration Manager (Current Branch)
 
@@ -346,7 +346,7 @@ Dieses Release umfasst folgende Verbesserungen bei der Suche in der Configuratio
 
 ## <a name="other-updates"></a>Weitere Updates
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1910](/powershell/sccm/1910-release-notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1910](/powershell/sccm/1910-release-notes).
 
 Weitere Informationen zu Änderungen an der Verwaltungsdienst-Rest-API finden Sie in den[Versionshinweisen zum Verwaltungsdienst](../../../develop/adminservice/release-notes.md#bkmk_1910).
 

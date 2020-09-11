@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 59f3d1a8a7b217a794440e2f75e0bb09e28634a9
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc214422f273a854db913538c082897aa63c4388
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700792"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606648"
 ---
 # <a name="what-is-desktop-analytics"></a>Was ist Desktop Analytics?
 
@@ -72,7 +72,7 @@ Zum Verwenden von Desktop Analytics müssen Sie sicherstellen, dass Ihre Umgebun
 - Sie benötigen ein aktives Azure-Abonnement mit den Berechtigungen eines [globalen Administrators](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions). [Microsoft-Konten](/windows/security/identity-protection/access-control/microsoft-accounts) werden nicht unterstützt.  
 
     > [!IMPORTANT]
-    > Desktop Analytics ist ein Windows-Dienst, der global in Azure gehostet wird und Windows-Diagnosedaten nutzt. Desktop Analytics ist ein globaler Azure-Dienst, der zwar für US Government-Kunden verfügbar ist, jedoch nicht die Anforderungen der [US Government Community Compliance (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) erfüllt. Eine Liste der Complianceangebote für Microsoft-Produkte und -Dienste finden Sie im [Microsoft Trust Center](/microsoft-365/compliance/offering-home?view=o365-worldwide). Desktop Analytics ist nicht für GCC High-Kunden oder US Department of Defense-Kunden verfügbar. Die Nutzung von Azure Government-Abonnements zum Hosten von Desktop Analytics-Arbeitsbereichen wird nicht unterstützt.
+    > Desktop Analytics ist ein Windows-Dienst, der global in Azure gehostet wird und Windows-Diagnosedaten nutzt. Desktop Analytics ist ein globaler Azure-Dienst, der zwar für US Government-Kunden verfügbar ist, jedoch nicht die Anforderungen der [US Government Community Compliance (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) erfüllt. Eine Liste der Complianceangebote für Microsoft-Produkte und -Dienste finden Sie im [Microsoft Trust Center](/microsoft-365/compliance/offering-home). Desktop Analytics ist nicht für GCC High-Kunden oder US Department of Defense-Kunden verfügbar. Die Nutzung von Azure Government-Abonnements zum Hosten von Desktop Analytics-Arbeitsbereichen wird nicht unterstützt.
 
     - Berechtigungen als **Arbeitsbereichsbesitzer** zum **Einrichten Ihres Arbeitsbereichs** sowie die folgenden Rollen:  
 

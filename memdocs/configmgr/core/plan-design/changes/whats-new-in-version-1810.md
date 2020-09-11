@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a92d5a627d6cbe4e64ffa221ae00458f4227c844
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699839"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607755"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Neuerungen in Version 1810 von Configuration Manager (Current Branch)
 
@@ -427,7 +427,7 @@ Für die lokale MDM ist es nicht mehr erforderlich, bei neuen Bereitstellungen e
 
 Neben neuen Features umfasst dieses Release auch weitere Änderungen, beispielsweise Fehlerbehebungen. Weitere Informationen finden Sie unter [Zusammenfassung der Änderungen im aktuellen Current Branch von System Center Configuration Manager-Version 1810](https://support.microsoft.com/help/4482169).
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1810](/powershell/sccm/1810-release-notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell 1810](/powershell/sccm/1810-release-notes).
 
 Folgender Updaterollup (4488598) ist ab dem 25. März 2019 in der Konsole verfügbar: [Update rollup 2 for Configuration Manager current branch, version 1810 (Updaterollup 2 für die Current Branch-Version 1810 von Configuration Manager)](https://support.microsoft.com/help/4488598). Dadurch wird das vorherige Updaterollup, KB 4486457, ersetzt.
 

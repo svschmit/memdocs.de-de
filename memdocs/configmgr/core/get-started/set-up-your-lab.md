@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c8159928e5fe3e8524c3282cfd1eb543dc9537da
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7623663e340d964593854883fa588484e239b4d0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696496"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607867"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Einrichten eines Configuration Manager-Labs
 
@@ -45,7 +45,7 @@ Gemäß der Anleitung in diesem Thema können Sie eine Laborumgebung einrichten,
 
     -   **SQL_Latin1_General_CP1_CI_AS** als **SQL Collation** -Klasse.  
 
-    -   **Windows-Authentifizierung**[statt SQL-Authentifizierung](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15) is required.  
+    -   **Windows-Authentifizierung**[statt SQL-Authentifizierung](/sql/relational-databases/security/choose-an-authentication-mode) is required.  
 
     -   Eine dedizierte **SQL Server-Instanz** ist erforderlich.  
 

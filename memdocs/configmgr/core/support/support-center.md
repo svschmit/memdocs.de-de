@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 788c48599ac8a94b8690f3a88f9761b9ae8ac742
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 70ef4ba22be8668053929639f951769f1aa2fe7d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699431"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608322"
 ---
 # <a name="support-center-for-configuration-manager"></a>Supportcenter für Configuration Manager
 
@@ -52,7 +52,7 @@ Ab Version 1906 ist **OneTrace** als neue Protokollanzeige im Supportcenter verf
 
 ### <a name="powershell-cmdlets"></a>PowerShell-Cmdlets
 
-Im Supportcenter können zudem [PowerShell-Cmdlets](/powershell/sccm/overview?view=sccm-ps) verwendet werden. Verwenden Sie diese Cmdlets, um eine Remoteverbindung zu einem anderen Konfigurations-Manager-Client herzustellen, um die Optionen für die Datensammlung zu konfigurieren und um die Datensammlung zu starten.
+Im Supportcenter können zudem [PowerShell-Cmdlets](/powershell/sccm/overview) verwendet werden. Verwenden Sie diese Cmdlets, um eine Remoteverbindung zu einem anderen Konfigurations-Manager-Client herzustellen, um die Optionen für die Datensammlung zu konfigurieren und um die Datensammlung zu starten.
 
 
 ## <a name="prerequisites"></a>Voraussetzungen

@@ -10,12 +10,12 @@ ms.assetid: 42e80570-d637-41a4-97b7-ebf1f8975af3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a01b6a3dde9921af2f5486475b0defb0c869cccd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2513941ede51ec8af3dfd1776c31ac428d7260c6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691268"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606801"
 ---
 # <a name="get-help-from-fasttrack-for-co-management"></a>Hilfe von FastTrack für die Co-Verwaltung erhalten
 
@@ -25,7 +25,7 @@ Im folgenden Video erläutern und zeigen Senior Program Manager Patrick McSweene
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/How-to-Request-Assistance-from-FastTrack/player]
 
-Um eine Supportanfrage an FastTrack zu stellen, navigieren Sie zunächst zu [FastTrack für Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security). Klicken Sie auf **Anmelden**, und geben Sie Ihre Organisations-ID ein. Navigieren Sie nach der Authentifizierung zum Dashboard, und befolgen Sie die Anweisungen zum Zugreifen auf das Formular **Unterstützung anfordern**.
+Um eine Supportanfrage an FastTrack zu stellen, navigieren Sie zunächst zu [FastTrack für Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365/security). Klicken Sie auf **Anmelden**, und geben Sie Ihre Organisations-ID ein. Navigieren Sie nach der Authentifizierung zum Dashboard, und befolgen Sie die Anweisungen zum Zugreifen auf das Formular **Unterstützung anfordern**.
 
 Ihre Anfrage wird überprüft und an das entsprechende FastTrack-Team weitergeleitet. Das Team befasst sich dann mit Ihrer Anspruchsberechtigung und Ihren spezifischen Anforderungen. 
 
@@ -34,7 +34,7 @@ Die FastTrack für Microsoft 365-Website enthält auch von Experten erstellte Do
 
 ### <a name="make-a-fasttrack-request"></a>FastTrack-Support anfordern:
 
-1. Melden Sie sich bei [FastTrack für Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security) mit Ihrer Organisations-ID und Ihrem Kennwort an.  
+1. Melden Sie sich bei [FastTrack für Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365/security) mit Ihrer Organisations-ID und Ihrem Kennwort an.  
 
 2. Wählen Sie unter dem Abschnitt „Willkommen bei FastTrack“ die Option **FastTrack-Unterstützung anfordern** aus.  
 

@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 659dd91c4b6bbeba6e2e93d3318683a4006aa5ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695340"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606599"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Genehmigen von Anwendungen in Configuration Manager
 
@@ -49,7 +49,7 @@ Nachdem Sie eine Anwendung für die Installation genehmigt haben, können Sie di
 
 Ab Version 1906: Wenn Sie eine App-Anforderung in der Konsole genehmigen und dann ablehnen, können Sie sie erneut genehmigen. Die App wird auf dem Client erneut installiert, nachdem Sie sie genehmigt haben.  <!-- 4224910 -->
 
-Diesen Genehmigungsprozess können Sie mit dem PowerShell-Cmdlet [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) automatisieren. Ab Version 1902 enthält dieses Cmdlet den Parameter **InstallActionBehavior**. Verwenden Sie diesen Parameter, um festzulegen, ob die Anwendung sofort oder außerhalb der Geschäftszeiten installiert werden soll.<!-- SCCMDocs-pr issue #3418 -->
+Diesen Genehmigungsprozess können Sie mit dem PowerShell-Cmdlet [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest) automatisieren. Ab Version 1902 enthält dieses Cmdlet den Parameter **InstallActionBehavior**. Verwenden Sie diesen Parameter, um festzulegen, ob die Anwendung sofort oder außerhalb der Geschäftszeiten installiert werden soll.<!-- SCCMDocs-pr issue #3418 -->
 
 Ab Version 1906 können Sie erkennen, welche Bereitstellungen eine Genehmigung erfordern. Wählen Sie eine App im Knoten **Anwendungen** aus. Wechseln Sie im Detailbereich zur Registerkarte **Bereitstellungen**. Es wird standardmäßig eine neue Spalte angezeigt: **Genehmigung erforderlich**.
 
