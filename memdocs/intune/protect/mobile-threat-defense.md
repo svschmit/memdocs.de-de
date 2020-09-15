@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2020
+ms.date: 09/1/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0c6655f9d7aaa708e5dd0b2818c9cfc1ba4c9cdc
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906887"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390788"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integration von Mobile Threat Defense in Intune
 
@@ -80,13 +80,15 @@ Der Zugriff wird ermöglicht, wenn das Gerät wiederhergestellt ist:
 ## <a name="sample-scenarios-for-unenrolled-devices-using-intune-app-protection-policies"></a>Beispielszenarios für nicht registrierte Geräte mit Intune-App-Schutzrichtlinien
 
 Wenn ein Gerät von der Mobile Threat Defense-Lösung als infiziert eingestuft wird:<br>
-![Abbildung: mit Mobile Threat Defense geschütztes, gefährdetes Gerät](./media/mobile-threat-defense/MTD-image-3.png)
+![Abbildung eines infizierten Mobile Threat Defense-Geräts](./media/mobile-threat-defense/MTD-image-3.png)
 
 Der Zugriff wird ermöglicht, wenn das Gerät wiederhergestellt ist:<br>
 ![Abbildung: Mobile Threat Defense-Zugriff gewährt](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
-> Sie können mehrere Mobile Threat Defense-Anbieter mit einem einzelnen Intune-Mandanten verwenden. Wenn jedoch zwei oder mehr Anbieter für die Verwendung auf derselben Plattform konfiguriert sind, müssen alle Geräte, auf denen diese Plattform ausgeführt wird, jede MTD-App installieren und nach Bedrohungen suchen. Wenn Sie eine Überprüfung von einer konfigurierten App nicht übermitteln, wird das Gerät als nicht kompatibel gekennzeichnet. 
+> Es wird empfohlen, für jeden Mandanten pro Plattform einen Mobile Threat Defense-Anbieter zu verwenden. 
+> 
+> Für die Gerätekonformität können Sie mehrere Mobile Threat Defense-Anbieter mit einem einzelnen Intune-Mandanten verwenden. Wenn jedoch zwei oder mehr Anbieter für die Verwendung auf derselben Plattform konfiguriert sind, müssen alle Geräte, auf denen diese Plattform ausgeführt wird, jede MTD-App installieren und nach Bedrohungen suchen. Wenn Sie eine Überprüfung von einer konfigurierten App nicht übermitteln, wird das Gerät als nicht kompatibel gekennzeichnet. 
 
 ## <a name="mobile-threat-defense-partners"></a>Partner von Mobile Threat Defense
 

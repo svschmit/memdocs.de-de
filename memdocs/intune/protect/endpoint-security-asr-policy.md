@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6d94748356b342fe6dc9498d815edbdb92038af3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 303acae2eba275907b70fcc52660217568913c62
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913493"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432522"
 ---
 # <a name="attack-surface-reduction-policy-for-endpoint-security-in-intune"></a>Richtlinie zur Verringerung der Angriffsfläche für Endpunktsicherheit in Intune
 
@@ -58,6 +58,9 @@ Zeigen Sie [Profileinstellungen für die Verringerung der Angriffsfläche](../pr
 - **Anwendungssteuerung**: Anwendungssteuerungseinstellungen können dabei helfen, Sicherheitsbedrohungen zu mindern, indem sie die Anwendungen einschränken, die Benutzer ausführen können, sowie den Code, der im Systemkern (Kernel) ausgeführt wird. Verwalten Sie Einstellungen, mit denen nicht signierte Skripts und MSIs blockiert werden können, und schränken Sie die Ausführung von Windows PowerShell auf den Modus mit eingeschränkter Sprache ein.
 
   Weitere Informationen finden Sie unter [Anwendungssteuerung](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in der Dokumentation zu Microsoft Defender ATP.
+  
+    > [!NOTE]
+    > Wenn Sie diese Einstellung verwenden, ruft das aktuelle AppLocker-CSP-Verhalten den Endbenutzer dazu auf, seinen Computer neu zu starten, wenn eine Richtlinie bereitgestellt wird.
 
 - **Regeln zur Verringerung der Angriffsfläche**: Konfigurieren Sie Einstellungen für Regeln zur Verringerung der Angriffsfläche, die auf Verhalten abzielen, das Schadsoftware und böswillige Apps üblicherweise zum Infizieren von Computern verwenden, beispielsweise:
   - Ausführbare Dateien und Skripts, die in Office-Apps oder Web-E-Mail zum Herunterladen oder Ausführen von Dateien verwendet werden.

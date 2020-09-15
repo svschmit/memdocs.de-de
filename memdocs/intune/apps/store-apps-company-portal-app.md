@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 4dca7e5b790cd932841211b04cf463602df55a57
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910263"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390771"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Hinzufügen der Windows 10-Unternehmensportal-App mithilfe von Microsoft Intune
 
@@ -33,6 +33,9 @@ Benutzer können die Unternehmensportal-App selbst über den Microsoft Store ins
 
  > [!IMPORTANT]
  > Wenn Sie beim Herunterladen der Unternehmensportal-App wie in diesem Artikel beschrieben vorgehen möchten, müssen Sie bei jeder Veröffentlichung eines App-Updates manuelle Updates zuweisen. Informationen zur Bereitstellung der Unternehmensportal-App für Autopilot-Geräte unter Windows 10 finden Sie unter [Hinzufügen der Unternehmensportal-App für Autopilot-Geräte unter Windows 10](store-apps-company-portal-autopilot.md).
+
+> [!NOTE]
+> Das Unternehmensportal unterstützt Configuration Manager-Anwendungen. Dieses Feature ermöglicht Endbenutzern, sowohl von Configuration Manager als auch von Intune bereitgestellte Anwendungen im Unternehmensportal für gemeinsam verwaltete Kunden anzuzeigen. Diese neue Version des Unternehmensportals zeigt mit Configuration Manager bereitgestellte Apps für alle gemeinsam verwalteten Kunden an. Diese Unterstützung hilft Administratoren beim Konsolidieren ihrer verschiedenen Portalumgebungen für Endbenutzer. Weitere Informationen finden Sie unter [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](/mem/configmgr/comanage/company-portal).
 
 ## <a name="configure-settings-to-show-offline-apps"></a>Konfigurieren der Einstellungen zum Anzeigen von Offline-Apps
 1. Melden Sie sich beim [Microsoft Store für Unternehmen](https://www.microsoft.com/business-store) mit Ihrem Administratorkonto an.
@@ -95,7 +98,7 @@ Im Anschluss erfahren Sie, wie Sie die App auf diese Weise signieren und zuweise
 3. Führen Sie das Skript mit den im Skriptheader angegebenen Eingabeparametern (s. Tabelle unten) aus, um die Windows 10-Unternehmensportal-App zu signieren.  
     An das Skript müssen keine Abhängigkeiten übergeben werden. Diese sind nur erforderlich, wenn die App in die Intune-Verwaltungskonsole hochgeladen wird.
 
-| Parameter |  Description  |
+| Parameter |  Beschreibung  |
 |---|---|
 | InputWin10AppxBundle  |  Der Pfad der APPXBUNDLE-Quelldatei. |
 | OutputWin10AppxBundle | Der Ausgabepfad für die signierte APPXBUNDLE-Datei. 

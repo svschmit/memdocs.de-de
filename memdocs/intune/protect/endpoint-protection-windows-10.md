@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2a00ef50676ee24de30f93ad5b5ddd88192b6db
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 12ac9998f60236a9aa661fc2088449db982180bf
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915074"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432607"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Einstellungen für Windows 10 (und höher), um Geräte zu schützen, die Intune verwenden.
 
@@ -1016,6 +1016,9 @@ Wählen Sie zusätzliche Apps aus, die von der Microsoft Defender-Anwendungssteu
   - **Nicht konfiguriert:** Bei dieser Einstellung wird die Anwendungssteuerung nicht zu den Geräten hinzugefügt. Zuvor hinzugefügte Einstellungen werden jedoch weiterhin für die zugewiesenen Geräte erzwungen. 
  
   - **Nur überwachen:** Anwendungen werden nicht blockiert. Alle Ereignisse werden in den Protokollen des lokalen Clients protokolliert.  
+
+    > [!NOTE]
+    > Wenn Sie diese Einstellung verwenden, ruft das aktuelle AppLocker-CSP-Verhalten den Endbenutzer dazu auf, seinen Computer neu zu starten, wenn eine Richtlinie bereitgestellt wird.
 
 ## <a name="microsoft-defender-credential-guard"></a>Microsoft Defender Credential Guard  
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1db36b0ea3d2ba691811958a01043a606b4681a
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251971"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423814"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Verwenden von Zertifikaten zur Authentifizierung in Microsoft Intune
 
@@ -44,11 +44,13 @@ Jedes einzelne Zertifikatprofil, das Sie erstellen, unterstützt eine einzelne P
 
 Bei der Verwendung einer Microsoft-Zertifizierungsstelle (Certification Authority) gilt Folgendes:
 
-- Sie müssen einen [NDES-Server (Network Device Enrollment Service, Registrierungsdienst für Netzwerkgeräte) für die Verwendung mit Intune einrichten](certificates-scep-configure.md#set-up-ndes), wenn Sie SCEP-Zertifikatprofile verwenden möchten.
-- Sie müssen den [Microsoft Intune-Zertifikatconnector installieren](certificates-scep-configure.md#install-the-intune-certificate-connector), um die folgenden Zertifikatprofiltypen verwenden zu können:
-  - SCEP-Zertifizierungsprofil
-  - PKCS-Zertifikatprofil
+- Führen Sie folgende Schritte aus, um SCEP-Zertifikatprofile zu verwenden:
+  - [Richten Sie einen NDES-Server (Network Device Enrollment Service, Registrierungsdienst für Netzwerkgeräte) zur Verwendung mit Intune ein](certificates-scep-configure.md#set-up-ndes).
+  - [Installieren Sie den Zertifikatconnector von Microsoft](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
+- So verwenden Sie PKCS-Zertifikatprofile:
+  - [Installieren Sie den PFX-Zertifikatconnector für Microsoft Intune.](certificates-imported-pfx-configure.
+  
 - Verwenden von importierten PKCS-Zertifikaten:
   - [Installieren Sie den PFX-Zertifikatconnector für Microsoft Intune.](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune)
   - Exportieren Sie Zertifikate von der Zertifizierungsstelle, und importieren Sie diese dann in Microsoft Intune. Weitere Informationen finden Sie unter dem [PowerShell-Projekt für PFXImport](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
@@ -80,9 +82,9 @@ Bei der Verwendung einer Drittanbieter-Zertifizierungsstelle (Certification Auth
 | Plattform              | Vertrauenswürdiges Zertifikatprofil | PKCS-Zertifikatprofil | SCEP-Zertifikatprofil | Importiertes PKCS-Zertifikatprofil  |
 |--|--|--|--|---|
 | Android-Geräteadministrator | ![Unterstützt](./media/certificates-configure/green-check.png) | ![Unterstützt](./media/certificates-configure/green-check.png) | ![Unterstützt](./media/certificates-configure/green-check.png)|  ![Unterstützt](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> – Vollständig verwaltet (Gerätebesitzer)   | ![Unterstützt](./media/certificates-configure/green-check.png) |   | ![Unterstützt](./media/certificates-configure/green-check.png) |  ![Unterstützt](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> – Vollständig verwaltet (Gerätebesitzer)   | ![Unterstützt](./media/certificates-configure/green-check.png) | ![Unterstützt](./media/certificates-configure/green-check.png)  | ![Unterstützt](./media/certificates-configure/green-check.png) |  ![Unterstützt](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> – Dediziert (Gerätebesitzer)   | ![Unterstützt](./media/certificates-configure/green-check.png)  | ![Unterstützt](./media/certificates-configure/green-check.png) | ![Unterstützt](./media/certificates-configure/green-check.png)  | ![Unterstützt](./media/certificates-configure/green-check.png)|
-| Android Enterprise <br> – Unternehmenseigenes Arbeitsprofil   | ![Unterstützt](./media/certificates-configure/green-check.png)  |  | ![Unterstützt](./media/certificates-configure/green-check.png)  | ![Unterstützt](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> – Unternehmenseigenes Arbeitsprofil   | ![Unterstützt](./media/certificates-configure/green-check.png)  | ![Unterstützt](./media/certificates-configure/green-check.png)  | ![Unterstützt](./media/certificates-configure/green-check.png)  | ![Unterstützt](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> – Arbeitsprofil    | ![Unterstützt](./media/certificates-configure/green-check.png) | ![Unterstützt](./media/certificates-configure/green-check.png) | ![Unterstützt](./media/certificates-configure/green-check.png) | ![Unterstützt](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![Unterstützt](./media/certificates-configure/green-check.png) | ![Unterstützt](./media/certificates-configure/green-check.png) | ![Unterstützt](./media/certificates-configure/green-check.png) | ![Unterstützt](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Unterstützt](./media/certificates-configure/green-check.png) |  ![Unterstützt](./media/certificates-configure/green-check.png) |![Unterstützt](./media/certificates-configure/green-check.png)|![Unterstützt](./media/certificates-configure/green-check.png)|
@@ -172,3 +174,5 @@ Erstellen Sie SCEP-, PKCS- oder über PKCS importierte Zertifikatprofile für je
 - [Konfigurieren Ihrer Infrastruktur für die Unterstützung von SCEP-Zertifikaten mit Intune](certificates-scep-configure.md)  
 - [Konfigurieren Ihrer Microsoft Intune-Zertifikatsinfrastruktur für PKCS](certficates-pfx-configure.md)  
 - [Erstellen eines importierten PKCS-Zertifikatprofils](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+
+Erfahren Sie mehr über [Zertifikatconnectors](certificate-connectors.md).

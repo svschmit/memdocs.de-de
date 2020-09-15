@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec355eb1b388e384b5250e9c17f739cd05941ee7
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 94ef57ddd9186678f4f09c74764f9fc110534db3
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194228"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390808"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Anpassen von Intune-Unternehmensportal-Apps, der Unternehmensportal-Website und der Intune-App
 
 In den Unternehmensportal-Apps, auf der Unternehmensportal-Website und in der Intune-App unter Android greifen Benutzer auf Unternehmensdaten zu und können häufig anfallende Aufgaben ausführen. Zu den häufigen Aufgaben gehören das Registrieren von Geräten, das Installieren von Apps und die Suche nach Informationen (beispielsweise zur Unterstützung durch Ihre IT-Abteilung). Darüber hinaus können Benutzer an diesen Stellen sicher auf Unternehmensressourcen zugreifen. Die Oberfläche für Endbenutzer bietet verschiedene Seiten, z. B. „Startseite“, „Apps“, „App-Details“, „Geräte“ und „Gerätedetails“. Um Apps im Unternehmensportal schnell zu finden, können Sie die Apps auf der Seite „Apps“ filtern.
+
+> [!NOTE]
+> Das Unternehmensportal unterstützt Configuration Manager-Anwendungen. Dieses Feature ermöglicht Endbenutzern, sowohl von Configuration Manager als auch von Intune bereitgestellte Anwendungen im Unternehmensportal für gemeinsam verwaltete Kunden anzuzeigen. Diese neue Version des Unternehmensportals zeigt mit Configuration Manager bereitgestellte Apps für alle gemeinsam verwalteten Kunden an. Diese Unterstützung hilft Administratoren beim Konsolidieren ihrer verschiedenen Portalumgebungen für Endbenutzer. Weitere Informationen finden Sie unter [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](/mem/configmgr/comanage/company-portal).
 
 ## <a name="customizing-the-user-experience"></a>Anpassen der Benutzeroberfläche
 

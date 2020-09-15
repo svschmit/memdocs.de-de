@@ -7,14 +7,20 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820058"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564096"
 ---
 Diese Hinweise enthalten wichtige Informationen, die Ihnen bei der Vorbereitung auf künftige Änderungen und Features im Zusammenhang mit Intune helfen können.
+
+### <a name="updated-end-user-experience-for-android-device-administrator-wi-fi-profiles---7662680----"></a>Update der Endbenutzererfahrung von WLAN-Profilen für Android-Geräteadministratoren<!-- 7662680  -->
+Aufgrund einer von Google vorgenommenen Änderung ändert sich die Endbenutzererfahrung neuer WLAN-Profile ab dem Release der Unternehmensportal-App im Oktober erheblich. Benutzer werden zusätzliche Berechtigungen und WLAN-Konfigurationen explizit akzeptieren, wenn diese bereitgestellt werden. WLAN-Konfigurationen werden nicht in der Liste bekannter WLAN-Netzwerke angezeigt, aber es wird automatisch eine Verbindung hergestellt, wenn das Gerät sich in Reichweite befindet. Es gibt keine Verhaltensänderungen für vorhandene WLAN-Profile. Es gibt außerdem keine Änderungen an der Benutzererfahrung für Administratoren im Endpoint Manager Admin Center.
+
+Gilt für:
+- Android-Geräteadministrator (Android 10 und höher)
 
 ### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Die Microsoft Intune-Unterstützung für Geräte mit Windows Phone 8.1 und Windows 10 Mobile wird eingestellt<!-- 3544938, 3544909 -->
 Der Microsoft-Mainstream-Support für Windows Phone 8.1 wurde im Juli 2017 eingestellt, der erweiterte Support im Juni 2019. Die Unternehmensportal-App für Windows Phone 8.1 befindet sich seit Oktober 2017 im Unterstützungsmodus. Außerdem wird am 20. Februar 2020 die Microsoft Intune-Unterstützung für Windows Phone 8.1 eingestellt. 
@@ -46,7 +52,7 @@ Aufgrund dieser Änderungen von Google im Oktober 2020 verfügen Sie nicht mehr
 Zu den von der reduzierten Geräteadministratorunterstützung betroffenen Geräten gehören jene, bei denen die folgenden drei Bedingungen zutreffen:
 - registriert über die Geräteadministratorverwaltung
 - Android 10 oder höher
-- kein Samsung-Gerät
+- Alle Android-Hersteller, mit Ausnahme von Samsung
 
 Geräte sind nicht betroffen, wenn Folgendes zutrifft:
 - nicht über die Geräteadministratorverwaltung registriert
@@ -76,15 +82,6 @@ Die [reduzierte Geräteadministratorunterstützung](https://developers.google.co
 
 ![Screenshot: Seite für Android-Compliancerichtlinie](../fundamentals/media/notices/android-compliance-settings.png)
 
-###### <a name="additional-impacts-based-on-android-os-version"></a>Weitere Auswirkungen auf Grundlage der Android-Betriebssystemversion
-
-**Android 10:** Für alle vom Geräteadministrator verwalteten Geräte (einschließlich Samsung) unter Android 10 und höher hat Google für Geräteadministratorverwaltung-Agents wie z. B. das Unternehmensportal die Möglichkeit beschränkt, auf Gerätebezeichnerinformationen zuzugreifen. Diese Einschränkung wirkt sich nach Geräteupdates auf Android 10 oder höher auf die folgenden Intune-Features wie folgt aus:
-- Die Netzwerkzugriffssteuerung für VPN funktioniert nicht mehr.
-- Die Identifizierung von Geräten mit IMEI oder Seriennummer als unternehmenseigen kennzeichnet Geräte nicht automatisch als unternehmenseigen.
-- Die IMEI und Seriennummer sind für IT-Administratoren in Intune nicht mehr sichtbar.
-
-**Android 11:** Wir testen derzeit die Unterstützung von Android 11 der neuesten Entwicklerbetaversion, um zu ermitteln, ob dies Auswirkungen auf vom Geräteadministrator verwaltete Geräte hat.
-
 #### <a name="user-experience-of-impacted-settings-on-impacted-devices"></a>Verwendung betroffener Einstellungen auf betroffenen Geräten
 
 Betroffene Konfigurationseinstellungen:
@@ -95,6 +92,9 @@ Betroffene Konformitätseinstellungen:
 - Bei bereits registrierten Geräten, auf die die Einstellungen schon angewendet wurden, werden die betroffenen Konformitätseinstellungen auf der Seite „Geräteeinstellungen aktualisieren“ weiterhin als Gründe für die Nichtkonformität angezeigt. Das Gerät ist nicht konform, und die Kennwortanforderungen werden in der App „Einstellungen“ weiterhin erzwungen.
 - Bei neu registrierten Geräten sowie neu zugewiesenen und aktualisierten Einstellungen werden die betroffenen Konformitätseinstellungen auf der Seite „Geräteeinstellungen aktualisieren“ weiterhin als Gründe für die Nichtkonformität angezeigt. Das Gerät ist nicht konform, aber strengere Kennwortanforderungen werden in der App „Einstellungen“ nicht erzwungen.
 
+Zusätzliche Änderung an der Benutzererfahrung bei WLAN-Profilen
+- Benutzer werden zusätzliche Berechtigungen und WLAN-Konfigurationen explizit akzeptieren, wenn diese bereitgestellt werden. WLAN-Konfigurationen werden nicht in der Liste bekannter WLAN-Netzwerke angezeigt, aber es wird automatisch eine Verbindung hergestellt, wenn das Gerät sich in Reichweite befindet. Es gibt keine Verhaltensänderungen für vorhandene WLAN-Profile. Es gibt außerdem keine Änderungen an der Benutzererfahrung für Administratoren im Endpoint Manager Admin Center.  
+
 #### <a name="cause-of-impact"></a>Ursache der Auswirkung 
 Ab Oktober 2020 haben die Änderungen Auswirkungen auf die Geräte. Zu diesem Zeitpunkt wird ein Update für die Unternehmensportal-App bereitgestellt, durch das die Unternehmensportal-API anstelle von Ebene 28 auf Ebene 29 abzielt ([gemäß den Anforderungen von Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
@@ -102,10 +102,28 @@ Dann sind von einem Geräteadministrator verwaltete und nicht von Samsung herges
 - Update auf Android 10 oder höher
 - Aktualisieren der Unternehmensportal-App auf die Version, die auf die API-Ebene 29 abzielt
 
+#### <a name="additional-impacts-based-on-android-os-version"></a>Weitere Auswirkungen auf Grundlage der Android-Betriebssystemversion 
+**Android 10:**  Für alle vom Geräteadministrator verwalteten Geräte (einschließlich Samsung) unter Android 10 und höher hat Google für Geräteadministratorverwaltungs-Agents wie z. B. das Unternehmensportal die Möglichkeit beschränkt, auf Gerätebezeichnerinformationen zuzugreifen. Diese Einschränkung wirkt sich nach Geräteupdates auf Android 10 oder höher auf die folgenden Intune-Features wie folgt aus: 
+- Die Netzwerkzugriffssteuerung für VPN funktioniert nicht mehr. 
+- Die Identifizierung von Geräten mit IMEI oder Seriennummer als unternehmenseigen kennzeichnet Geräte nicht automatisch als unternehmenseigen. 
+- Die IMEI und Seriennummer sind für IT-Administratoren in Intune nicht mehr sichtbar. 
+
+**Android 11:** Das neueste Release der Android 11-Betaversion wird weiterhin getestet, um die Auswirkungen auf vom Geräteadministrator verwaltete Geräte auszuwerten. Folgendes wurde festgestellt: 
+- Für Geräte von Geräteadministratoren (Samsung ausgenommen) mit Android 11 und höher hat Google für Verwaltungs-Agents wie das Unternehmensportal die Möglichkeit entfernt, das Blockieren der Kamera zu erzwingen. Diese Änderung wurde sogar vor dem Update im Oktober für die Unternehmensportal-App eingeführt. Richtlinien zum Blockieren der Kamera, die auf Geräten angewendet werden, bevor ein Update auf Android 11 durchgeführt wird, werden weiterhin angewendet.  
+- Ab Android 11 können vertrauenswürdige Stammzertifikate nicht mehr auf Geräten bereitgestellt werden, die mit dem Geräteadministrator registriert wurden (mit Ausnahme von Samsung-Geräten). Benutzer müssen das vertrauenswürdige Stammzertifikat manuell auf dem Gerät installieren. Wenn auf einem Gerät das vertrauenswürdige Stammzertifikat manuell installiert wurde, können auf dem Gerät Zertifikate mit SCEP bereitgestellt werden. In diesem Szenario müssen Sie dennoch eine Richtlinie für vertrauenswürdige Zertifikate erstellen und auf dem Gerät bereitstellen. Außerdem müssen Sie diese Richtlinie mit dem SCEP-Zertifikatprofil verknüpfen. 
+    - Wenn sich das vertrauenswürdige Stammzertifikat auf dem Gerät befindet, kann das SCEP-Zertifikatprofil erfolgreich installiert werden.  
+    - Wird das vertrauenswürdige Zertifikat jedoch nicht gefunden, kann das SCEP-Zertifikatprofil nicht installiert werden. 
+
+
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Was muss ich als Vorbereitung auf diese Veränderung tun?
 Um die ab Oktober 2020 geltenden Funktionseinschränkungen zu vermeiden, wird Folgendes empfohlen:
 - **Neue Registrierungen:** Integrieren Sie neue Geräte in die [Android Enterprise](../enrollment/connect-intune-android-enterprise.md)-Verwaltung (falls verfügbar) und/oder [App-Schutzrichtlinien](../apps/app-protection-policies.md). Vermeiden Sie das Integrieren neuer Geräte in die Geräteadministratorverwaltung. 
 - **Zuvor registrierte Geräte:** Wenn ein von einem Geräteadministrator verwaltetes Gerät unter Android 10 oder höher ausgeführt oder ein Update auf Android 10 oder höher ausgeführt wird (insbesondere, wenn es sich um kein Samsung-Gerät handelt), verschieben Sie es von der Geräteadministratorverwaltung in die [Android Enterprise](../enrollment/connect-intune-android-enterprise.md)-Verwaltung und/oder [App-Schutzrichtlinien](../apps/app-protection-policies.md). Sie können den optimierten Flow verwenden, um [Android-Geräte aus dem Geräteadministrator in die Arbeitsprofilverwaltung zu verschieben](../enrollment/android-move-device-admin-work-profile.md).
+- **Konfigurieren der Kennwortkomplexität:** Auf betroffenen Geräten mit Android 10 und höher können Sie mithilfe einer zukünftigen Einstellung namens „Password Complexity“ (Kennwortkomplexität) weiterhin Kennworteinschränkungen und Konformität erzwingen. Die Kennwortkomplexität ist ein Maß für die Kennwortstärke, die die Art, Länge und Qualität des Kennworts berücksichtigt.
+
+#### <a name="what-if-i-have-non-samsung-devices-that-cannot-move-to-android-enterprise"></a>Was geschieht, wenn meine Geräte (keine Samsung-Geräte) nicht zu Android Enterprise wechseln können? 
+Einige Geräte können nicht vom Geräteadministrator zur Verwaltung durch Android Enterprise wechseln. Beispielsweise [hat Google Android Enterprise in einigen Märkten nicht zur Verfügung gestellt](https://support.google.com/work/android/answer/6270910?hl=en). Sie können weiterhin Intune verwenden, um nicht von Samsung stammende Geräte von einem Geräteadministrator verwalten zu lassen, jedoch gelten die in diesem Beitrag erwähnten Änderungen an der Funktionalität. Weitere Informationen zur Verwaltung von Geräten, wenn Android Enterprise nicht verfügbar ist, finden Sie unter [Verwenden von Intune in Umgebungen ohne Google Mobile Services](../apps/manage-without-gms.md). 
+
 
 #### <a name="additional-information"></a>Zusätzliche Informationen
 - [Verschieben von Android-Geräten aus dem Geräteadministrator in die Arbeitsprofilverwaltung](../enrollment/android-move-device-admin-work-profile.md)

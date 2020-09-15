@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/29/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 89da26da402648d95a3a1e91482c1cbe7ad415e4
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992571"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423786"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden importierter PKCS-Zertifikate mit Intune
 
@@ -89,13 +89,15 @@ Wenn Sie Intune verwenden, um ein **importiertes PFX-Zertifikat** für einen Ben
 
 ## <a name="download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune"></a>Herunterladen, Installieren und Konfigurieren des PFX-Zertifikatconnectors für Microsoft Intune
 
+[Überprüfen Sie die Anforderungen an den Connector](certificate-connectors.md), und stellen Sie sicher, dass Ihre Umgebung und Ihr Windows-Server bereit sind, den Connector zu unterstützen, bevor Sie beginnen.
+
 1. Melden Sie sich beim [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) an.
 
-2. Wählen Sie **Mandantenverwaltung** > **Connectors und Token** > **Zertifikatconnectors** > **Hinzufügen** aus.
+2. Wählen Sie **Mandantenverwaltung** > **Connectors und Token** > **Zertifikatconnectors** >  **+ Hinzufügen** aus.
 
-   ![Download des PFX-Zertifikatconnectors für Microsoft Intune](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
+3. Klicken Sie für den Connector für PKCS #12 auf *Zertifikatconnector-Software herunterladen*, und speichern Sie die Datei an einem Speicherort, auf den Sie über den Server zugreifen, auf dem Sie den Connector installieren werden.
 
-3. Befolgen Sie die Anweisungen zum Herunterladen des *PFX-Zertifikatconnectors für Microsoft Intune* an einen Speicherort, der für den Server zugänglich ist, auf dem Sie den Connector installieren möchten.
+   ![Herunterladen des Microsoft Intune-Connectors](./media/certificates-imported-pfx-configure/download-connector.png)
 
 4. Melden Sie sich nach Abschluss des Downloads beim Server an, und führen Sie das Installationsprogramm aus (PfxCertificateConnectorBootstrapper.exe).  
    - Wenn Sie den Standardspeicherort für die Installation übernehmen, wird der Connector in `Program Files\Microsoft Intune\PFXCertificateConnector` installiert.

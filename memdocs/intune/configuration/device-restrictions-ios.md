@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303435"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423882"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>iOS- und iPadOS-Geräteeinstellungen zum Zulassen oder Einschränken von Funktionen mit Intune
 
@@ -70,8 +70,9 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
   Legen Sie **Blockieren** für die Einstellung **Bildschirmaufnahme** fest, um diese Einstellung zu verwenden.
 
   Diese Funktion gilt für:  
-  - iOS 9.3 und höher
-  - iOS 13.0 und höher
+  - iOS 9.3 bis iOS 12.x: Erfordert überwachte Geräte
+  - iOS 13.0 und höher: Erfordert keine überwachten Geräte
+  - iPadOS 13.0 und höher: Geräte müssen mit der Geräteregistrierung oder der automatisierten Geräteregistrierung registriert werden.
 
 - **Unangekündigte Bildschirmüberwachung über Classroom-App**: Mit der Option **Zulassen** können Lehrkräfte die Bildschirme der iOS/iPadOS-Geräte von Kursteilnehmern ansehen, ohne dass diese es erfahren. In einer Klasse registrierte Kursteilnehmergeräte, die die Classroom-App verwenden, gewähren dem Kursleiter automatisch die Berechtigung. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig könnte das Betriebssystem diese Funktion verhindern.
 

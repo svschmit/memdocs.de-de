@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb277f30401f31ddb400f5e3f6cd7709fa31c0b
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: f9ec657e7d2ee83f3f4f54f9a33a5a350faa4229
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286236"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564243"
 ---
 # <a name="in-development-for-microsoft-intune"></a>In der Entwicklung befindliche Features für Microsoft Intune
 
@@ -218,15 +218,6 @@ PowerShell-Skripts unterstützen bei Azure AD registrierte Geräte in Intune. We
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics enthält das Gerätedetailprotokoll<!--6014987  -->
 Intune-Gerätedetailprotokolle werden unter **Berichte** > **Log Analytics** bereitgestellt. Sie können Gerätedetails korrelieren, um benutzerdefinierte Abfragen und Azure-Workbooks zu erstellen.
 
-### <a name="tenant-attach-device-timeline-in-the-admin-center--7220536-cm7141381---"></a>Mandantenanfügung: Gerätezeitachse im Admin Center<!--7220536, CM7141381 -->
-Wenn Configuration Manager ein Gerät über das Anfügen von Mandanten mit dem Microsoft Endpoint Manager synchronisiert, sehen Sie eine Zeitachse der Ereignisse. Diese Zeitachse zeigt die frühere Aktivität auf dem Gerät an, anhand der Sie Probleme beheben können. Weitere Informationen erhalten Sie unter [Technical Preview für Configuration Manager 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline).  
-
-### <a name="tenant-attach-install-an-application-from-the-admin-center---7220536-cm6024389---"></a>Mandantenanfügung: Installieren einer Anwendung über das Admin Center<!-- 7220536, CM6024389 -->
-Sie können ab sofort über das Microsoft Endpoint Management Admin Center eine Anwendungsinstallation in Echtzeit für ein Gerät mit Mandantenanfügung einleiten. Weitere Informationen erhalten Sie unter [Technical Preview für Configuration Manager 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps).
-
-### <a name="tenant-attach-cmpivot-from-the-admin-center--7220536-cm6024392---"></a>Mandantenanfügung: CMPivot aus dem Admin Center<!--7220536, CM6024392 -->
-Holen Sie das Leistungspotenzial von [CMPivot](../../configmgr/tenant-attach/cmpivot-overview-attached.md) in das Microsoft Endpoint Manager Admin Center. Ermöglichen Sie zusätzlichen Rollen, z. B. dem Helpdesk, das Einleiten von Echtzeitabfragen aus der Cloud für ein einzelnes ConfigMgr-verwaltetes Gerät, und geben Sie die Ergebnisse an das Admin Center zurück. Dies bietet alle herkömmlichen Vorteile von CMPivot, mit denen IT-Administratoren und andere festgelegte Rollen schnell den Zustand von Geräten in Ihrer Umgebung bewerten und Maßnahmen ergreifen können. Weitere Informationen erhalten Sie unter [Technical Preview für Configuration Manager 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot). 
-
 ### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688---"></a>Mandantenanfügung: „Skripts ausführen“ über das Admin Center<!--7220536, CM6234688 -->
 Bringen Sie das Leistungspotenzial des lokalen Configuration Manager-Features [Skripts ausführen](../../configmgr/apps/deploy-use/create-deploy-scripts.md) in das Microsoft Endpoint Manager Admin Center. Erlauben Sie zusätzlichen Rollen, z. B. dem Helpdesk, das Ausführen von PowerShell-Skripts aus der Cloud für ein einzelnes verwaltetes Configuration Manager-Gerät. Dies bietet alle herkömmlichen Vorteile von PowerShell-Skripts, die bereits vom Configuration Manager-Administrator definiert und für diese neue Umgebung genehmigt wurden. Weitere Informationen erhalten Sie unter [Technical Preview für Configuration Manager 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts). 
 
@@ -275,11 +266,11 @@ In **Geräte** > **Gruppenrichtlinienanalyse (Vorschau)** können Sie Gruppenric
 Gilt für:
 - Windows 10 und höher
 
-#### <a name="new-windows-10-feature-update-report---6473121-----"></a>Neuer Bericht über Windows 10-Featureupdates<!-- 6473121   -->
-Der Bericht **Fehler bei Featureupdate** enthält Fehlerdetails für Geräte, die Ziel einer **Windows 10-Featureupdates**-Richtlinie sind und bei denen versucht wurde, ein Update durchzuführen. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) **Geräte** > **Überwachen** > **Fehler bei Featureupdates** aus, um diesen Bericht anzuzeigen.
-
 #### <a name="new-windows-10-feature-update-report---6473128----"></a>Neuer Bericht über Windows 10-Featureupdates<!-- 6473128  -->
 Der Bericht **Windows-Featureupdates** enthält eine allgemeine Übersicht über die Konformität für Geräte, die Ziel einer **Windows 10-Featureupdates**-Richtlinie sind. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) **Berichte** > **Windows-Updates (Vorschau)**  > **Fehler bei Featureupdate**, um die Zusammenfassung für diesen Bericht anzuzeigen. Wenn Sie Berichte für bestimmte Richtlinien anzeigen möchten, wählen Sie die Registerkarte **Berichte** aus, und öffnen Sie den **Bericht zu Windows-Featureupdates**. 
+
+#### <a name="new-windows-10-feature-failures-update-report---6473121-----"></a>Neuer Bericht für Fehler bei Featureupdates unter Windows 10<!-- 6473121   -->
+Der Bericht **Fehler bei Featureupdate** enthält Fehlerdetails für Geräte, die Ziel einer **Windows 10-Featureupdates**-Richtlinie sind und bei denen versucht wurde, ein Update durchzuführen. Wählen Sie im [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) **Geräte** > **Überwachen** > **Fehler bei Featureupdates** aus, um diesen Bericht anzuzeigen.
 
 <!-- ***********************************************-->
 <!--

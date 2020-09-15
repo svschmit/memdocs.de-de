@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7becc53b9464cad6f864f219f2d59046c2e61707
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: dc8fa6f2d4fe5171bd8a4ffe977eec7f6eed2093
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193782"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564097"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Neuerungen in Microsoft Intune
 
@@ -53,6 +53,44 @@ In diesem Artikel werden die Neuheiten im [Microsoft Endpoint Manager Admin Cent
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-september-7-2020"></a>Woche vom 7. September 2020
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Geräteverwaltung
+
+#### <a name="tenant-attach-device-timeline-in-the-admin-center"></a>Mandantenanfügung: Gerätezeitachse im Admin Center
+<!--7220536, CM7141381-->
+Wenn Configuration Manager ein Gerät über das Anfügen von Mandanten mit dem Microsoft Endpoint Manager synchronisiert, sehen Sie eine Zeitachse der Ereignisse. Diese Zeitachse zeigt die frühere Aktivität auf dem Gerät an, anhand der Sie Probleme beheben können. Weitere Informationen finden Sie unter [Anfügen von Mandanten: Gerätezeitachse im Admin Center](../../configmgr/tenant-attach/timeline.md).
+
+#### <a name="tenant-attach-resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Mandantenanfügung: Ressourcen-Explorer im Admin Center
+<!--IN7220536, CM6479284 -->
+Über das Microsoft Endpoint Management Admin Center können Sie den Hardwarebestand Ihrer hochgeladenen Configuration Manager-Geräte mithilfe des Ressourcen-Explorers anzeigen. Weitere Informationen finden Sie unter [Anfügen von Mandanten: Ressourcen-Explorer im Admin Center](../../configmgr/tenant-attach/resource-explorer.md).
+
+#### <a name="tenant-attach-cmpivot-from-the-admin-center"></a>Mandantenanfügung: CMPivot aus dem Admin Center
+<!--IN7220536, CM6024392-->
+Holen Sie das Leistungspotenzial von CMPivot in das Microsoft Endpoint Manager Admin Center. Ermöglichen Sie zusätzlichen Rollen, z. B. dem Helpdesk, das Einleiten von Echtzeitabfragen aus der Cloud für ein einzelnes ConfigMgr-verwaltetes Gerät, und geben Sie die Ergebnisse an das Admin Center zurück. Dies bietet alle herkömmlichen Vorteile von CMPivot, mit denen IT-Administratoren und andere festgelegte Rollen schnell den Zustand von Geräten in Ihrer Umgebung bewerten und Maßnahmen ergreifen können.
+
+Weitere Informationen über CMPivot im Admin Center finden Sie unter [Voraussetzungen für CMPivot](../../configmgr/tenant-attach/cmpivot-start.md), [Übersicht über CMPivot](../../configmgr/tenant-attach/cmpivot-overview-attached.md) und [Beispielskripts für CMPivot](../../configmgr/tenant-attach/cmpivot-samples-attached.md).
+
+## <a name="week-of-august-31-2020"></a>Woche vom 31. August 2020
+
+### <a name="device-configuration"></a>Gerätekonfiguration
+
+#### <a name="new-version-of-the-pfx-certificate-connector-and-changes-for-pkcs-certificate-profile-support-----4839686----"></a>Neue Version des PFX-Zertifikatconnectors und Änderungen an der Unterstützung von PKCS-Zertifikatprofilen <!--  4839686  -->
+
+Es wurde eine neue Version des PFX-Zertifikatconnectors veröffentlicht: Version **6.2008.60.607**. Diese neue Connectorversion:
+
+- unterstützt PKCS-Zertifikatprofile auf allen unterstützten Plattformen außer Windows 8.1.
+ 
+  Die gesamte PCKS-Unterstützung wurde im PFX-Zertifikatconnector konsolidiert.  Das bedeutet, dass Sie den Microsoft-Zertifikatconnector entfernen und NDES aus Ihrer Umgebung deinstallieren können, wenn Sie SCEP nicht in Ihrer Umgebung und NDES für andere Zwecke verwenden. 
+ 
+- Da die Funktionalität nicht aus dem Microsoft-Zertifikatconnector entfernt wurde, können Sie sie weiterhin zur Unterstützung von PKCS-Zertifikatprofilen verwenden.
+- unterstützt die Zertifikatsperrung für S/MIME in Outlook.
+- erfordert .NET Framework 4.7.2.
+
+Weitere Informationen über Zertifikatconnectors, einschließlich einer Liste von Connectorreleases für beide Zertifikatconnectors, finden Sie unter [Zertifikatconnectors](../protect/certificate-connectors.md).
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-24-2020-2008-service-release"></a>Woche vom 24. August 2020 (Dienstrelease 2008)
@@ -179,7 +217,7 @@ Als Microsoft Intune-Administrator können Sie ein benutzerdefiniertes Markenbil
 ### <a name="app-management"></a>App-Verwaltung
 
 #### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>Das Unternehmensportal unterstützt nun Configuration Manager-Anwendungen<!-- 4297660 -->
-Das Unternehmensportal unterstützt jetzt Configuration Manager-Anwendungen. Dieses Feature ermöglicht Endbenutzern, sowohl von Configuration Manager als auch von Intune bereitgestellte Anwendungen im Unternehmensportal für gemeinsam verwaltete Kunden anzuzeigen. Diese Unterstützung hilft Administratoren beim Konsolidieren ihrer verschiedenen Portalumgebungen für Endbenutzer. Weitere Informationen finden Sie unter [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](../../configmgr/comanage/company-portal.md). 
+Das Unternehmensportal unterstützt jetzt Configuration Manager-Anwendungen. Dieses Feature ermöglicht Endbenutzern, sowohl von Configuration Manager als auch von Intune bereitgestellte Anwendungen im Unternehmensportal für gemeinsam verwaltete Kunden anzuzeigen. Diese neue Version des Unternehmensportals zeigt mit Configuration Manager bereitgestellte Apps für alle gemeinsam verwalteten Kunden an. Diese Unterstützung hilft Administratoren beim Konsolidieren ihrer verschiedenen Portalumgebungen für Endbenutzer. Weitere Informationen finden Sie unter [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](../../configmgr/comanage/company-portal.md). 
 
 ### <a name="device-security"></a>Gerätesicherheit
 
@@ -639,6 +677,9 @@ Wenn Sie eine [Vorlage für Benachrichtigungen](../protect/actions-for-noncompli
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Administratoren: Keine Intune-Lizenz für den Zugriff auf die Microsoft Endpoint Manager-Administratorkonsole mehr erforderlich<!--1335430 -->
 Sie können jetzt eine mandantenweite Umschaltfläche benutzen, die es Administratoren ermöglicht, auch ohne Intune-Lizenz auf die Microsoft Endpoint Manager-Administratorkonsole und die APIs für Abfragediagramme zuzugreifen. Sobald Sie jedoch festgelegt haben, dass keine Lizenz erforderlich ist, können Sie den Vorgang nicht mehr rückgängig machen. 
 
+
+> [!Note]
+> Für die Ausführung einiger Aktionen, einschließlich des Ablaufs für den TeamViewer-Connector, ist weiterhin eine Intune-Lizenz erforderlich.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

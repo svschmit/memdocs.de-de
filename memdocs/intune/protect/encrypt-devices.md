@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 4c652907d105b4b0363b2113916e892360feab39
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193962"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564260"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Verwalten der BitLocker-Richtlinie für Windows 10 in Intune
 
@@ -97,7 +97,7 @@ Verwenden Sie eines der folgenden Verfahren, um den von Ihnen bevorzugten Richtl
    1. **Plattform**: Windows 10 und höher
    2. **Profiltyp**: Endpoint Protection
 
-   ![Auswählen des Profils](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Auswählen Ihres BitLocker-Profils](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Klicken Sie auf **Einstellungen** > **Windows-Verschlüsselung**.
 
@@ -149,6 +149,8 @@ Intune gewährt Zugriff auf das Azure AD-Blatt für BitLocker, sodass Sie sich �
 2. Klicken Sie auf **Geräte** > **Alle Geräte**.
 
 3. Wählen Sie ein Gerät aus der Liste aus, und wählen Sie dann unter *Überwachung* die Option **Recovery keys** (Wiederherstellungsschlüssel) aus.
+
+4. Klicken Sie auf **Wiederherstellungsschlüssel anzeigen**. Dadurch wird ein Überwachungsprotokolleintrag unter der Aktivität „KeyManagement“ erstellt.
   
    Wenn Schlüssel in Azure AD verfügbar sind, sind die folgenden Informationen verfügbar:
    - BitLocker-Schlüssel-ID
@@ -158,6 +160,8 @@ Intune gewährt Zugriff auf das Azure AD-Blatt für BitLocker, sodass Sie sich �
    Wenn keine Schlüssel in Azure AD verfügbar sind, zeigt Intune die Meldung *Für dieses Gerät wurde kein BitLocker-Schlüssel gefunden* an.
 
 Informationen zu BitLocker stehen über den [BitLocker-Konfigurationsdienstanbieter](/windows/client-management/mdm/bitlocker-csp) (Configuration Service Provider, CSP) zur Verfügung. Der BitLocker-CSP wird ab der Windows 10-Version 1703 unterstützt, und ab der Windows 10 Pro-Version 1809.
+
+Weitere Informationen zu Überwachungsprotokolleinträgen finden Sie unter [Überwachungsprotokolle im Azure-Portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>Drehen von BitLocker-Wiederherstellungsschlüsseln
 
