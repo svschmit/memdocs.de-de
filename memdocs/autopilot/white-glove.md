@@ -15,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 21b55882d4af8d4d20b6ff2690d23680141e2e47
-ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
+ms.openlocfilehash: 61bddf4ffcb844a997e19ad4d954b2e2a8ec6b45
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643438"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081709"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Windows Autopilot für White-Glove-Bereitstellung
 
@@ -45,7 +45,7 @@ Zusätzlich zu den [Windows Autopilot-Anforderungen](software-requirements.md)er
 - Windows 10, Version 1903 oder höher.
 - Ein InTune-Abonnement.
 - Physische Geräte, die TPM 2,0 und den Geräte Nachweis unterstützen. Virtuelle Computer werden nicht unterstützt. Der Hand Schuh Bereitstellungs Prozess verwendet Windows Autopilot-Funktionen zur selbst Bereitstellung, d. h., TPM 2,0 ist erforderlich.
-- Physische Geräte mit Ethernet-Konnektivität. Wi-Fi-Konnektivität wird nicht unterstützt, da eine Sprache, ein Gebiets Schema und eine Tastatur zum Herstellen der WLAN-Verbindung ausgewählt werden müssen. Wenn Sie diese Anforderung in einem vorab Bereitstellungs Prozess erzwingen, können Sie verhindern, dass der Benutzer beim Empfang des Geräts seine eigene Sprache, Ihr eigenes Gebiets Schema und seine eigene Tastatur auswählt.
+- Physische Geräte mit Ethernet-Konnektivität sind erforderlich, um eine vorab Bereitstellung durchzuführen. Wi-Fi-Konnektivität wird nicht unterstützt, da eine Sprache, ein Gebiets Schema und eine Tastatur zum Herstellen der WLAN-Verbindung ausgewählt werden müssen. Wenn Sie diese Anforderung in einem vorab Bereitstellungs Prozess erzwingen, können Sie verhindern, dass der Benutzer beim Empfang des Geräts seine eigene Sprache, Ihr eigenes Gebiets Schema und seine eigene Tastatur auswählt. Weitere Informationen finden Sie unter [Verwenden einer drahtlos Netzwerkverbindung mit einem Windows Autopilot-White-Glove](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/).
 
 >[!IMPORTANT]
 >Da der OEM oder der Hersteller den weißen Hand Schuh Prozess ausführt, <u>erfordert dies keinen Zugriff auf die lokale Domänen Infrastruktur eines Endbenutzers</u>. Dies ist anders als bei einem typischen Hybrid Azure AD verknüpft, da das Neustarten des Geräts verschoben wird. Das Gerät wird vor dem Zeitpunkt, zu dem eine Verbindung mit einem Domänen Controller erwartet wird, neu versiegelt, und das Domänen Netzwerk wird kontaktiert, wenn das Gerät vom Endbenutzer lokal gekapselt wird.

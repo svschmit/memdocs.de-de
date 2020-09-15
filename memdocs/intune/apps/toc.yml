@@ -81,9 +81,17 @@
             - name: Branchenspezifische macOS-Apps
               href: lob-apps-macos.md
             - name: Win32-App-Verwaltung
-              href: apps-win32-app-management.md
-            - name: Win32-App-Geräte im S-Modus
-              href: apps-win32-s-mode.md
+              items:
+                - name: Übersicht über die Win32-App-Verwaltung
+                  href: apps-win32-app-management.md
+                - name: Vorbereiten einer Win32-App
+                  href: apps-win32-prepare.md
+                - name: Hinzufügen einer Win32-App
+                  href: apps-win32-add.md
+                - name: Problembehandlung bei einer Win32-App
+                  href: apps-win32-troubleshoot.md
+                - name: Win32-App-Geräte im S-Modus
+                  href: apps-win32-s-mode.md
         - name: Hinzufügen bestimmter Apps
           items:
             - name: 'Unternehmensportal-App: Autopilot'

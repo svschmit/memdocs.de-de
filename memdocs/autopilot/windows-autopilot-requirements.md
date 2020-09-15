@@ -17,16 +17,16 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 37d249c75f18d52f7fa17a0e271f45b17465da1a
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: bf0b6d1f074de85793f025f9578892a126bbce3d
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385332"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076077"
 ---
 # <a name="windows-autopilot-requirements"></a>Anforderungen für Windows Autopilot
 
-**Gilt für: Windows 10**
+**Gilt für: Windows 10**
 
 Windows Autopilot ist von bestimmten Funktionen abhängig, die in Windows 10, Azure Active Directory und MDM-Diensten wie Microsoft InTune verfügbar sind.  Um Windows Autopilot verwenden und diese Funktionen nutzen zu können, müssen einige Anforderungen erfüllt sein.
 
@@ -41,7 +41,7 @@ Windows Autopilot ist von bestimmten Funktionen abhängig, die in Windows 10, Az
   - Windows 10 Pro for Workstations
   - Windows 10 Enterprise
   - Windows 10 Education
-  - Windows 10 Enterprise 2019 LTSC
+  - Windows 10 Enterprise 2019 LTSC (der selbst Bereitstellungs Modus wird nicht unterstützt)
 
 >[!NOTE]
 >Die Verfahren für die Bereitstellung von Windows Autopilot können auf bestimmte Produkte und Versionen verweisen. Die Aufnahme dieser Produkte in diesen Inhalt impliziert keine Erweiterung der Unterstützung für eine Version, die über den Support Lebenszyklus hinausgeht. Von Windows Autopilot werden keine Produkte unterstützt, die über den Support Lebenszyklus hinausgehen. Weitere Informationen finden Sie unter [Microsoft-Lebenszyklusrichtlinie](https://go.microsoft.com/fwlink/p/?LinkId=208270).

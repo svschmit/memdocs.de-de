@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c98025ecf731e856de150d1cb5ffa854ef623c0e
-ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
+ms.openlocfilehash: 421c9ebcf15e9c45bd235c10062dd63179a9f59c
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516304"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076189"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>Registrieren von Windows-Geräten in InTune mithilfe von Windows Autopilot
 
@@ -119,6 +119,9 @@ Autopilot-Bereitstellungsprofile werden verwendet, um die Autopilot-Geräte zu k
     - **Optionen zur Kontoänderung ausblenden (Windows 10, Version 1809 oder höher, erforderlich)** : Wählen Sie **Ausblenden** aus, um zu verhindern, dass Optionen zum Ändern des Kontos auf der Anmeldeseite des Unternehmens und den Domänenfehlerseiten angezeigt werden. Für diese Option muss das [Unternehmensbranding in Azure Active Directory konfiguriert](/azure/active-directory/fundamentals/customize-branding) sein.
     - **Art des Benutzerkontos**: Wählen Sie den Kontotyp des Benutzers aus (**Administrator** oder **Standardbenutzer**). Der Benutzer, der dem Gerät beitritt, kann ein lokaler Administrator werden, indem er zur lokalen Administratorgruppe hinzugefügt wird. Wir aktivieren den Benutzer nicht als Standardadministrator auf dem Gerät.
     - **Willkommensseite ohne Benutzerauthentifizierung zulassen** (erfordert Windows 10, Version 1903 oder höher; [zusätzliche physische Anforderungen](white-glove.md#prerequisites)): Wählen Sie **Ja** aus, um die intensive Benutzerunterstützung zuzulassen.
+    > [!NOTE]
+    > Wenn Sie diese Einstellung auf Nein (blockierende White-Glove) festlegen, sollten Sie beachten, dass es weiterhin möglich ist, die Windows-Taste fünfmal während des OOBE-Vorgangs zu drücken, um einen weißen Handschuh aufzurufen und den Fortschritt im Pfad Diese Einstellung wird von InTune jedoch erzwungen, und es wird ein Roter Bildschirm mit dem Fehlercode 0x80180005 angezeigt, der auf einen Fehler bei der vorab Bereitstellung hinweist.
+
     - **Vorlage für Gerätenamen anwenden** (erfordert Windows 10, Version 1809 oder höher und Azure AD-Verknüpfungstyp): Klicken Sie auf **Ja**, um eine Vorlage für die Benennung eines Geräts während der Registrierung zu erstellen. Namen dürfen höchstens 15 Zeichen lang sein und können Buchstaben, Zahlen und Bindestriche enthalten. Ein Name darf nicht nur aus Zahlen bestehen. Verwenden Sie das [%SERIAL%-Makro](/windows/client-management/mdm/accounts-csp), um eine hardwarespezifische Seriennummer hinzuzufügen. Verwenden Sie alternativ das [%RAND:x%-Makro](/windows/client-management/mdm/accounts-csp), um eine zufällige Zeichenfolge von Zahlen hinzuzufügen, bei der x der Anzahl der hinzuzufügenden Ziffern entspricht. Sie können nur in einem [Domänenbeitrittsprofil](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile) ein Präfix für Hybridgeräte bereitstellen. 
     - **Sprache (Region)** \*: Wählen Sie die Sprache aus, die für das Gerät verwendet werden soll. Diese Option ist nur verfügbar, wenn Sie **Selbstbereitstellend** als **Bereitstellungsmodus** ausgewählt haben.
     - **Tastatur automatisch konfigurieren**\*: Wenn **Sprache (Region)** ausgewählt ist, können Sie mit **Ja** die Tastaturauswahlseite überspringen. Diese Option ist nur verfügbar, wenn Sie **Selbstbereitstellend** als **Bereitstellungsmodus** ausgewählt haben.
