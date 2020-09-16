@@ -4,6 +4,7 @@ description: Erfahren Sie, wie Sie Probleme behandeln, die während des Windows 
 keywords: MDM, Setup, Windows, Windows 10, OOBE, Manage, Bereitstellung, Autopilot, ZTD, Zero-Touchscreen, Partner, msfb, InTune
 ms.reviewer: mniehaus
 manager: laurawi
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -14,16 +15,16 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: f6a9e3008a493185a2338a5af1106806d86dd130
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 38f140717d256d6edd4e9bd6cd0a66b6bc853740
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907908"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574579"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Problembehandlung bei Windows Autopilot
 
-**Gilt für: Windows 10**
+**Gilt für: Windows 10**
 
 Windows Autopilot ist so konzipiert, dass alle Teile des Windows-Geräte Lebenszyklus vereinfacht werden, aber es gibt immer Situationen, in denen Probleme auftreten können. Überprüfen Sie die folgenden Informationen, um die Problembehandlung zu unterstützen.
 
@@ -42,9 +43,9 @@ Für die Problembehandlung sind folgende wichtige Aktivitäten auszuführen:
 
 - Konfiguration: verfügt über Azure Active Directory und Microsoft InTune (oder einen entsprechenden MDM-Dienst) gemäß den [Windows Autopilot-Konfigurations Anforderungen](configuration-requirements.md)konfiguriert?
 - Netzwerk Konnektivität: kann das Gerät auf die in den [Windows Autopilot-Netzwerk Anforderungen](networking-requirements.md)beschriebenen Dienste zugreifen?
-- Standardverhalten von Autopilot (OOBE): Es wurden nur die erwarteten Standard-Erfahrungs Bildschirme angezeigt? Wurde die Seite mit den Azure AD Anmelde Informationen erwartungsgemäß mit organisationsspezifischen Details angepasst?
-- Azure AD joinprobleme: war das Gerät in der Lage, Azure Active Directory beizutreten?
-- MDM-Registrierungsprobleme: war das Gerät in der Lage, sich bei Microsoft InTune (oder einem entsprechenden MDM-Dienst) anzumelden?
+- Nicht verwendende Autopilot-Verhalten (OOBE): werden die [erwarteten OOBE](#troubleshooting-autopilot-oobe-issues) -Bildschirme angezeigt? Wird die Seite mit den Azure AD Anmelde Informationen erwartungsgemäß mit organisationsspezifischen Details angepasst?
+- Azure AD joinprobleme: kann das Gerät [Azure Active Directory beitreten](#troubleshooting-azure-ad-join-issues)?
+- MDM-Registrierungsprobleme: ist das Gerät in der Lage, sich [bei Microsoft InTune](#troubleshooting-intune-enrollment-issues) (oder einem entsprechenden MDM-Dienst) anzumelden?
 
 ## <a name="troubleshooting-autopilot-device-import"></a>Problembehandlung bei Autopilot-Geräte Import
 
@@ -115,7 +116,7 @@ Zusätzlich zu den Ereignisprotokoll Einträgen funktionieren die unten aufgefü
 
 Autopilot-Profileinstellungen, die vom Autopilot-Bereitstellungs Dienst empfangen werden, werden in der Registrierung des Geräts gespeichert. Diese Informationen finden Sie unter **hklm\software\microsoft\provisioning\diagnostics\autopilot**. Folgende Registrierungseinträge sind verfügbar:
 
-| value | BESCHREIBUNG |
+| Wert | BESCHREIBUNG |
 |-------|-------------|
 | AadTenantId | Der GUID des Azure AD Mandanten, bei dem sich der Benutzer angemeldet hat. Der Benutzer erhält eine Fehlermeldung, wenn dieser Eintrag nicht mit dem Mandanten identisch ist, der zum Registrieren des Geräts verwendet wurde. |
 | Cloudassignedtenantdomain | Der Azure AD Mandanten, bei dem das Gerät registriert wurde, z. b. "contosomn.onmicrosoft.com". Wenn das Gerät nicht bei Autopilot registriert ist, ist dieser Wert leer. |
@@ -164,7 +165,7 @@ Wenn Sie einen Computer während OOBE neu starten müssen:
 
 Weitere Informationen finden Sie unter [Windows Setup-Befehlszeilenoptionen](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 [Windows Autopilot-bekannte Probleme](known-issues.md)<br>
 [Diagnostizieren von MDM-Fehlern in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
