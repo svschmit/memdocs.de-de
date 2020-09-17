@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: da7ab26cc748b64426ec256a0814beae4ced1a5f
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: 776cc47865853ae9b52218c0b2257840aea09219
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89280932"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689331"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Hinzufügen von Geräten zu Windows Autopilot
 
@@ -44,6 +44,8 @@ Kunden können Geräte von Wiederverkäufern, Verteilern oder anderen Partnern e
 
 Wie bei OEMs müssen CSP-Partner die Berechtigung zum Registrieren von Geräten für eine Organisation erhalten. Sie können den auf der [Seite Kunden Zustimmung](registration-auth.md#csp-authorization)beschriebenen Prozess verwenden. Der CSP-Partner fordert eine Beziehung mit der Organisation an. Der globale Administrator dieser Organisation genehmigt die Anforderung. Nach der Genehmigung fügen CSP-Partner Geräte mithilfe von [Partner Center](https://partner.microsoft.com/pcv/dashboard/overview)hinzu, entweder direkt über die Website oder über verfügbare APIs, mit denen die gleichen Aufgaben automatisiert werden können.
 
+Für Surface-Geräte können Microsoft-Support bei der Geräteregistrierung helfen.  Weitere Informationen finden Sie [unter Unterstützung der Oberflächen Registrierung für Windows Autopilot](https://docs.microsoft.com/surface/surface-autopilot-registration-support).
+
 Für Windows Autopilot sind beim Einrichten der Beziehung zwischen dem CSP-Partner und der Organisation keine delegierten Administrator Berechtigungen erforderlich. Im Rahmen des Genehmigungsprozesses des globalen Administrators können die Benutzer das Kontrollkästchen "delegierte Administrator Berechtigungen einschließen" deaktivieren.
 
 > [!Note]
@@ -52,10 +54,11 @@ Für Windows Autopilot sind beim Einrichten der Beziehung zwischen dem CSP-Partn
 ## <a name="automatic-registration-of-existing-devices"></a>Automatische Registrierung vorhandener Geräte
 
 Wenn dies der Fall ist, können Sie automatisch ein vorhandenes Gerät registrieren:
-- Ausführen einer unterstützten Version von Windows 10 (halbjährlicher Kanal)
+- Ausführen einer unterstützten Version des halbjährlichen Kanals von Windows 10.
 - wird bei einem MDM-Dienst wie InTune registriert.
 
 Bei Geräten, die diese Anforderungen erfüllen, kann der MDM-Dienst das Gerät zum Hardware Hash auffordern. Danach kann das Gerät automatisch bei Windows Autopilot registriert werden.
+
 Anweisungen dazu, wie Sie dies mit Microsoft InTune tun, finden Sie unter [Erstellen einer Autopilot-Bereitstellungs Profil](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) Dokumentation, in der die Einstellung "Konvertieren aller Zielgeräte in Autopilot" beschrieben wird. 
 
 Diese Geräte können mithilfe der InTune-Einstellung **alle Zielgeräte in Autopilot konvertieren** automatisch in Windows konvertiert werden. Weitere Informationen finden Sie unter [Erstellen eines Autopilot-Bereitstellungsprofils](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile). 
