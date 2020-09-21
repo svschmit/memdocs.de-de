@@ -7,15 +7,15 @@ ms.technology: configmgr-comanage
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/06/2019
+ms.date: 09/15/2020
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 52a08549087338d0609aafc26f2cc1b3b697d6ba
+ms.sourcegitcommit: e533cdf8722156a66b1cc46f710def96587345d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606822"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90568571"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Verschieben von Configuration Manager-Workloads zu Intune
 
@@ -47,7 +47,7 @@ Ab Version 1906 können Sie verschiedene Pilotsammlungen für die einzelnen Work
 
 > [!Important]  
 > - Bevor Sie Workloads verschieben, stellen Sie sicher, dass Sie die entsprechende Workload in Intune ordnungsgemäß konfigurieren und bereitstellen. Achten Sie darauf, dass Workloads immer von einem der Verwaltungstools für Ihre Geräte verwaltet werden.
-> - Ab Version 1806 von Configuration Manager synchronisieren die gemeinsam verwalteten Geräte automatisch die MDM-Richtlinie von Microsoft Intune, wenn Sie eine gemeinsam verwaltete Workload anpassen. Diese Synchronisierung findet auch statt, wenn Sie die Aktion **Computerrichtlinie herunterladen** aus den Clientbenachrichtigungen in der Configuration Manager-Konsole auslösen. Weitere Informationen finden Sie unter [So lösen Sie den Clientrichtlinienabruf mithilfe der Clientbenachrichtigung aus](../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval). <!--1357377-->
+> - Ab Version 1806 von Configuration Manager synchronisieren die gemeinsam verwalteten Geräte automatisch die MDM-Richtlinie von Microsoft Intune, wenn Sie eine gemeinsam verwaltete Workload anpassen. <!--7087526-->
 
 ## <a name="switch-workloads-in-version-1902-and-earlier"></a>Verschieben von Workloads in Version 1902 und früher
 
@@ -74,7 +74,7 @@ Sie können Workloads verschieben, wenn Sie die Co-Verwaltung aktivieren, oder a
 
 > [!Important]  
 > - Bevor Sie Workloads verschieben, stellen Sie sicher, dass Sie die entsprechende Workload in Intune ordnungsgemäß konfigurieren und bereitstellen. Achten Sie darauf, dass Workloads immer von einem der Verwaltungstools für Ihre Geräte verwaltet werden. 
-> - Ab Version 1806 von Configuration Manager synchronisieren die gemeinsam verwalteten Geräte automatisch die MDM-Richtlinie von Microsoft Intune, wenn Sie eine gemeinsam verwaltete Workload anpassen. Diese Synchronisierung findet auch statt, wenn Sie die Aktion **Computerrichtlinie herunterladen** aus den Clientbenachrichtigungen in der Configuration Manager-Konsole auslösen. Weitere Informationen finden Sie unter [So lösen Sie den Clientrichtlinienabruf mithilfe der Clientbenachrichtigung aus](../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval). <!--1357377-->
+> - Ab Version 1806 von Configuration Manager synchronisieren die gemeinsam verwalteten Geräte automatisch die MDM-Richtlinie von Microsoft Intune, wenn Sie eine gemeinsam verwaltete Workload anpassen. <!--7087526-->
 
 ## <a name="next-steps"></a>Nächste Schritte
 
