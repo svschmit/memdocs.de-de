@@ -2,7 +2,7 @@
 title: Neuerungen in Version 2006
 titleSuffix: Configuration Manager
 description: Hier erfahren Sie mehr über Änderungen und neue Funktionen, die in Version 2006 des Current Branchs von Configuration Manager eingeführt wurden.
-ms.date: 09/01/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: 7e67773c359291db3c537ac0ed8fe6ce6fbcfc1f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385361"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607655"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Neuerungen in Version 2006 von Configuration Manager (Current Branch)
 
@@ -32,12 +32,26 @@ Wenn Sie die neuen Configuration Manager-Features nach der Aktualisierung des St
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Anfügen von Mandanten in Microsoft Endpoint Manager
 
+### <a name="device-timeline-in-the-admin-center"></a><a name="bkmk_timeline"></a> Gerätezeitachse im Admin Center
+<!--7220536, CM7141381-->
+Wenn Configuration Manager ein Gerät über das Anfügen von Mandanten mit dem Microsoft Endpoint Manager synchronisiert, sehen Sie eine Zeitachse der Ereignisse. Diese Zeitachse zeigt die frühere Aktivität auf dem Gerät an, anhand der Sie Probleme beheben können. Weitere Informationen finden Sie unter [Gerätezeitachse im Admin Center](../../../tenant-attach/timeline.md).
+
+### <a name="resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Ressourcen-Explorer im Admin Center
+<!--6479284-->
+Über das Microsoft Endpoint Management Admin Center können Sie den Hardwarebestand Ihrer hochgeladenen Configuration Manager-Geräte mithilfe des Ressourcen-Explorers anzeigen. Weitere Informationen finden Sie unter [Anfügen von Mandanten: Ressourcen-Explorer im Admin Center](../../../tenant-attach/resource-explorer.md).
+
+### <a name="cmpivot-from-the-admin-center"></a><a name="bkmk_cmpivot"></a> CMPivot aus dem Admin Center
+<!--6024392-->
+Holen Sie das Leistungspotenzial von CMPivot in das Microsoft Endpoint Manager Admin Center. Ermöglichen Sie zusätzlichen Rollen, z. B. dem Helpdesk, das Einleiten von Echtzeitabfragen aus der Cloud für ein einzelnes ConfigMgr-verwaltetes Gerät, und geben Sie die Ergebnisse an das Admin Center zurück. Dies bietet alle herkömmlichen Vorteile von CMPivot, mit denen IT-Administratoren und andere festgelegte Rollen schnell den Zustand von Geräten in Ihrer Umgebung bewerten und Maßnahmen ergreifen können.
+
+Weitere Informationen über CMPivot im Admin Center finden Sie unter [Voraussetzungen für CMPivot](../../../tenant-attach/cmpivot-start.md), [Übersicht über CMPivot](../../../tenant-attach/cmpivot-overview-attached.md) und [Beispielskripts für CMPivot](../../../tenant-attach/cmpivot-samples-attached.md).
+
 ### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Mandantenanfügung: Microsoft Defender Antivirus-Richtlinien im Microsoft Endpoint Manager Admin Center
 <!--4812909-->
 Sie können ab sofort Microsoft Defender Antivirus-Richtlinien in der Microsoft Endpoint Manager-Konsole erstellen und diese in Configuration Manager-Sammlungen bereitstellen. Weitere Informationen einschließlich detaillierter Anleitungen und verfügbarer Einstellungen finden Sie in den folgenden Artikeln:
 - [Mandantenanfügung: Onboarding für Configuration Manager-Clients für Microsoft Defender ATP im Admin Center (Vorschau)](../../../tenant-attach/atp-onboard.md)
 - [Mandantenanfügung: Bereitstellen von Antivirusrichtlinien für die Endpunktsicherheit im Admin Center (Vorschau)](../../../tenant-attach/deploy-antivirus-policy.md)
-- [Einstellungen für Microsoft Defender Antivirus-Richtlinien für mandantenbasiert angefügte Geräte in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json) 
+- [Einstellungen für Microsoft Defender Antivirus-Richtlinien für mandantenbasiert angefügte Geräte in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
 
 ### <a name="install-applications-from-the-admin-center"></a>Installieren von Anwendungen über das Admin Center
 <!--7518897, 6024389-->
@@ -133,7 +147,7 @@ Zur besseren Abstimmung mit den Desktop Analytics-Anforderungen für Windows-Dia
 |---------|---------|
 | Erforderlich | Basic |
 | Optional (begrenzt) | Erweitert (begrenzt) |
-| Nicht zutreffend | Erweitert |
+| – | Erweitert |
 | Optional | Vollständig |
 
 Wenn Sie zuvor Geräte auf der Ebene **Erweitert** konfiguriert haben, werden diese bei einem Upgrade auf Version 2006 auf **Optional (begrenzt)** zurückgesetzt. Dadurch senden diese Geräte weniger Daten an Microsoft. Diese Änderung sollte keine Auswirkungen auf die in Desktop Analytics angezeigten Informationen haben.
@@ -336,7 +350,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell Version 2006](/powershell/sccm/2006-release-notes?view=sccm-ps).
+Weitere Informationen zu Änderungen der Windows PowerShell-Cmdlets für Configuration Manager finden Sie in den [Versionshinweisen zu PowerShell Version 2006](/powershell/sccm/2006-release-notes).
 
 Weitere Informationen zu Änderungen an der Verwaltungsdienst-Rest-API finden Sie in den[Versionshinweisen zum Verwaltungsdienst](../../../develop/adminservice/release-notes.md#bkmk_2006).
 

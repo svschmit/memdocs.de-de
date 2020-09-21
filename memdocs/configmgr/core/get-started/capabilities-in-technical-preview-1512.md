@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3e618a8a0db81ad870c5aeedc89b01ba6089a0f8
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074502"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607927"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Funktionen in der Technical Preview 1512 für Configuration Manager
 
@@ -81,7 +81,7 @@ In der Technical Preview 1512 haben wir die folgenden neuen Einstellungen zur En
 
          Folgendes zeigt z. B. die vom Administrator festgelegte Windows Defender-Einstellung in Windows 10 als aktiviert an, und dem Benutzer ist es nicht gestattet, diese zu ändern:  
 
-         ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
+         ![Windows Defender – Automatische Beispielübermittlung](../../core/get-started/media/TechRef_WinDefender.png)  
 
     Darüber hinaus wird die vorhandene Einstellung **Dateien und Ordner ausschließen** im Abschnitt „Ausschlusseinstellungen“ der Endpoint Protection-Richtlinie für Antischadsoftware verbessert, um den Ausschluss von Geräten zuzulassen. Sie können jetzt z.B. Folgendes als Ausschluss angeben: **\device\mvfs** (für Dateisysteme mit mehreren Versionen). Die Richtlinie überprüft nicht den Gerätepfad. Die Endpoint Protection-Richtlinie wird der Antischadsoftware-Engine auf dem Client bereitgestellt, die in der Lage sein muss, die Gerätezeichenfolge zu interpretieren.  
 

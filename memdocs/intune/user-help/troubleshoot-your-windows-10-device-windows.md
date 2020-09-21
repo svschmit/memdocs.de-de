@@ -1,11 +1,11 @@
 ---
-title: Behandlung von Problemen bei der Registrierung von Windows 10-Geräten | Microsoft-Dokumentation
-description: ''
+title: Problembehandlung für den Windows 10-Gerätezugriff auf Geschäfts-, Schul- oder Unikonten | Microsoft Intune
+description: Beheben Sie Probleme mit dem Zugriff oder der Kontoverbindung bei einem registrierten Windows 10-Gerät.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,52 +15,61 @@ ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: priyar
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 75f163d3f6f5761f1804edd23839bc2e20cca0f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 7c96bef7c1be004714f0b06dd47c9c28850118da
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881754"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643420"
 ---
-# <a name="troubleshoot-your-windows-10-device-enrollment"></a>Behandlung von Problemen bei der Registrierung von Windows 10-Geräten
-Wenn Sie Ihr Gerät registriert haben, aber immer noch nicht auf Ihre geschäftlichen oder schulischen E-Mails und Dateien zugreifen können, führen Sie zur Problembehandlung folgende Schritte aus.  
+# <a name="troubleshoot-windows-10-device-access"></a>Problembehandlung für den Windows 10-Gerätezugriff
+Dieser Artikel beschreibt, wie Sie Zugriffsprobleme bei einem registrierten Windows 10-Gerät lösen. 
 
-1. Sehen Sie sich die beiden folgenden Bildschirme an, und suchen Sie denjenigen heraus, der der Anzeige auf Ihrem Gerät entspricht. Befolgen Sie die Schritte, die zu diesem Bildschirm gehören.
+## <a name="check-wi-fi-connection"></a>Überprüfen der WLAN-Verbindung  
 
-    Wenn dieser Bildschirm angezeigt wird, befolgen Sie die Schritte unter [Schritte zur Problembehandlung bei Anzeige von „Zugriff auf Geschäfts-, Schul- oder Unikonto“](#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+Für den Zugriff auf Geschäfts-, Schul- oder Uniressourcen ist eine WLAN-Verbindung erforderlich. Überprüfen Sie, ob eine Verbindung mit einem WLAN besteht, und versuchen Sie erneut, auf die Ressourcen zuzugreifen.  
 
-    ![settings-accounts-access-work-or-school](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+## <a name="add-work-or-school-account-in-settings-app"></a>Hinzufügen eines Geschäfts-, Schul- oder Unikontos in der App „Einstellungen“  
+Diese Schritte entsprechen denen, die Sie zum Registrieren Ihres Geräts ausgeführt haben. Wenn Ihr Konto jedoch in der App **Einstellungen** nicht angezeigt wird, müssen Sie diese Schritte möglicherweise erneut ausführen.  
 
-    Wenn dieser Bildschirm angezeigt wird, befolgen Sie die Schritte unter [Schritte zur Problembehandlung bei Anzeige von „Ihr Konto“](#troubleshooting-steps-to-follow-if-you-see-your-account).
+1. Öffnen Sie die App **Einstellungen**. 
+2. Wählen Sie **Konten** aus.
+3. Der nächste Schritt variiert je nach verwendeter Windows 10-Version. 
+    * Version 1607 und höher: Wählen Sie **Zugriff auf Geschäfts-, Schul- oder Unikonto** aus.
+    * Version 1511 und früher: Wählen Sie **Arbeitsplatzzugriff** aus.  
+4. Suchen Sie nach Ihrem Konto. Wenn es nicht aufgeführt wird, wählen Sie die Schaltfläche mit dem Pluszeichen (**Verbinden**), um es hinzuzufügen. 
+5. Melden Sie sich mit den Anmeldeinformationen Ihres Geschäfts- oder Schulkontos an. 
+6. Befolgen Sie die Anweisungen auf dem Bildschirm, um die Verbindungsherstellung abzuschließen.  
+7. Wenn der Vorgang beendet ist, wird Ihr Konto als Verbindung hinzugefügt. Dann haben Sie Zugriff auf alle Ressourcen, die Ihre Organisation zur Verfügung stellt.   
 
-    ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
+## <a name="contact-it-support-for-access-requirements"></a>Kontaktieren des IT-Supports bezüglich der Zugriffsanforderungen  
+Wenn Ihr Geschäfts-, Schul- oder Unikonto in der App „Einstellungen“ aufgeführt wird, sind Ihr Gerät und Ihr Konto bereits verbunden. Wenden Sie sich Ihren IT-Supportkontakt, wenn Sie weitere Hilfe bei Zugriffsproblemen benötigen. Möglicherweise liegen Einschränkungen oder Anforderungen vor, die verhindert, dass Sie auf bestimmte Ressourcen zugreifen können.  
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Schritte zur Problembehandlung bei Anzeige von „Zugriff auf Geschäfts-, Schul- oder Unikonto“
+## <a name="error-messages"></a>Fehlermeldungen  
 
-1. Wenn Sie die obigen Schritte ausgeführt haben und trotzdem nicht auf E-Mails und Dateien Ihres Geschäfts-, Schul- oder Unikontos zugreifen können, wechseln Sie zurück zu **Zugriff auf Geschäfts-, Schul- oder Unikonto**.
+### <a name="we-couldnt-auto-discover-a-management-endpoint-matching-the-username-entered-please-check-your-username-and-try-again-if-you-know-the-url-to-your-management-endpoint-please-enter-it"></a>Ein Verwaltungsendpunkt, der mit dem eingegebenen Benutzernamen übereinstimmt, konnte nicht gefunden werden. Please check your username and try again. Wenn Sie die URL Ihres Verwaltungsendpunkts kennen, geben Sie sie ein.
 
-2. Führen Sie einen der folgenden Schritte aus:
+**Ursache:** Ihr Konto konnte mit der angegebenen URL (auch als Verwaltungsendpunkt bezeichnet) nicht verifiziert werden.  
 
-   - Wenn eine Verbindung ähnlich der unten gezeigten Abbildung angezeigt wird, tippen sie darauf, und überprüfen Sie, ob die Optionen „Verwalten“, „Info“ und „Trennen“ angezeigt werden. Wenn das der Fall ist, sind Sie jetzt registriert und verbunden.
+#### <a name="resolution"></a>Lösung
+1. Geben Sie Ihren Benutzernamen und Ihr Kennwort erneut ein. 
+2. Wenn der Zugriff weiterhin nicht funktioniert, wenden Sie sich an Ihren IT-Supportkontakt, um die richtige URL zu erhalten (Beispiel: www.IhrUnternehmen.onmicrosoft.com). 
+3. Geben Sie die angegebene URL bei entsprechender Aufforderung ein. 
 
-     ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
+### <a name="it-looks-like-youre-not-connected-make-sure-youre-connected-to-the-network"></a>Anscheinend sind Sie nicht verbunden. Stellen Sie sicher, dass eine Verbindung mit dem Netzwerk besteht.
 
-   - Wenn die oben gezeigten Verbindungsinformationen nicht angezeigt werden oder einige Optionen fehlen, tippen Sie auf **Verbinden**. Melden Sie sich anschließend mit Ihren Geschäfts-, Schul- oder Unianmeldeinformationen an, um eine Verbindung herzustellen.  
+**Ursache:** Ihr Gerät ist mit keinem WLAN verbunden, aber zum Hinzufügen eines Geschäfts-, Schul- oder Unikontos ist eine Verbindung erforderlich.     
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Schritte zur Problembehandlung bei Anzeige von „Mein Konto“
+#### <a name="resolution"></a>Lösung
+1. Wählen Sie in der Symbolleiste oder den Einstellungen Ihres Geräts das Globussymbol **Netzwerkstatus** aus.
+2. Wählen Sie ein WLAN aus, und klicken Sie auf **Verbinden**.  
+3. Versuchen Sie erneut, Ihr Konto zu verbinden.  
 
-Wenn Sie die obigen Schritte ausgeführt haben und trotzdem nicht auf E-Mails, Dateien und andere Daten Ihres Geschäfts-, Schul- oder Unikontos zugreifen können, wechseln Sie zurück zu **Konten**, und tippen Sie auf **Geschäftszugriff**.
 
-- Wenn Ihr Geschäfts-, Schul- oder Unikonto angezeigt wird, steht die Verbindung.  
+## <a name="next-steps"></a>Nächste Schritte  
 
-- Wenn Ihr Geschäfts- oder Schulkonto nicht angezeigt wird, tippen Sie auf **Verbinden**, und melden Sie sich mit den Anmeldeinformationen Ihres Geschäfts- oder Schulkontos an.
-
-## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>Schritte zur Problembehandlung bei Anzeige von „Geschäfts-, Schul- oder Unikonto einrichten“
-
-Wenn eine Meldung angezeigt wird, die <strong>We couldn't auto-discover a management endpoint matching the username entered. Please check your username and try again. If you know the URL to your management endpoint, please enter it.</strong> (Es konnte automatisch kein Verwaltungsendpunkt erkannt werden, der mit dem eingegebenen Benutzernamen übereinstimmt. Bitte überprüfen Sie Ihren Benutzernamen, und versuchen Sie es noch einmal. Wenn Sie die URL zu Ihrem Verwaltungsendpunkt kennen, geben Sie sie ein.) angibt, versuchen Sie, Ihren Benutzernamen und das Kennwort erneut anzugeben. Wenn es immer noch nicht funktioniert, wenden Sie sich für die Website, die Sie im Textfeld <strong>Verwaltungsendpunkt</strong> bereitstellen müssen, an den Support Ihres Unternehmens. Dies ist eine Website, die in etwas so aussieht: <strong>www.ihrefirma.aufmicrosoft.com</strong>.
-
-Benötigen Sie weitere Unterstützung? Kontaktieren Sie den Support Ihres Unternehmens. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Benötigen Sie weitere Unterstützung? Wenden Sie sich an Ihren Ansprechpartner beim IT-Support. Die entsprechenden Kontaktinformationen finden Sie auf der [Unternehmensportal-Website](https://go.microsoft.com/fwlink/?linkid=2010980).

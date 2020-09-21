@@ -9,12 +9,13 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+description: Planen für Richtlinien für Antischadsoftware und Windows-Firewall-Sicherheit
+ms.openlocfilehash: 2e3904b7b7232e92fd4a246d2e0519ef32fb67f6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590506"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606827"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Planen von Endpoint Protection in Configuration Manager
 
@@ -44,12 +45,12 @@ Windows 10-Computer benötigen keinen zusätzlichen Client für die Verwaltung v
 
 -   Erkennung von Sicherheitslücken im Netzwerk über das Netzwerkinspektionssystem  
 
--   Integration mit Cloud Protection Service, um Schadsoftware an Microsoft zu berichten. Wenn Sie diesem Dienst beitreten, können von Windows Defender oder vom Endpoint Protection-Client die neuesten Definitionen aus dem Microsoft Center zum Schutz vor Schadsoftware heruntergeladen werden, sobald nicht identifizierte Schadsoftware auf einem Computer erkannt wird.  
+-   Integration mit Cloud Protection Service, um Microsoft Schadsoftware zu melden. Wenn Sie diesem Dienst beitreten, können von Windows Defender oder vom Endpoint Protection-Client die neuesten Definitionen aus dem Microsoft Center zum Schutz vor Schadsoftware heruntergeladen werden, sobald nicht identifizierte Schadsoftware auf einem Computer erkannt wird.  
 
 > [!NOTE]  
 >  Der Endpoint Protection-Client kann auf einem Server, auf dem Hyper-V ausgeführt wird, sowie auf virtuellen Gastcomputern mit unterstützten Betriebssystemen installiert werden. Um eine übermäßige CPU-Auslastung zu verhindern, weisen Endpoint Protection-Aktionen eine integrierte zufällige Verzögerung auf, damit Dienste nicht gleichzeitig ausgeführt werden.  
 
-  Darüber hinaus können Sie Endpoint Protection in Configuration Manager zum Verwalten von Windows-Firewalleinstellungen in der Configuration Manager-Konsole nutzen.  
+  Darüber hinaus können Sie Endpoint Protection in Configuration Manager zum Verwalten von Windows-Firewall-Einstellungen in der Configuration Manager-Konsole nutzen.  
 
  [Beispielszenario: Verwenden von Endpoint Protection zum Schutz von Computern vor Schadsoftware](../deploy-use/scenarios-endpoint-protection.md). Diesem Szenario können Sie entnehmen, wie Sie Endpoint Protection und die Windows-Firewall konfigurieren und verwalten können.  
 
@@ -57,7 +58,7 @@ Windows 10-Computer benötigen keinen zusätzlichen Client für die Verwaltung v
 
 Mit Endpoint Protection in Configuration Manager können Sie Antischadsoftware-Richtlinien erstellen, in denen Einstellungen für Endpoint Protection-Clientkonfigurationen enthalten sind. Sie können diese Antischadsoftware-Richtlinien auf Clientcomputern bereitstellen und sie im Knoten **Endpoint Protection-Status**im Arbeitsbereich **Überwachung** oder mithilfe von Configuration Manager-Berichten überwachen.  
 
- Weitere Informationen:  
+ Zusätzliche Informationen:  
 
 -   [Erstellen und Bereitstellen von Richtlinien für Antischadsoftware für Endpoint Protection](../deploy-use/endpoint-antimalware-policies.md) ‒ Erstellen, Bereitstellen und Überwachen von Richtlinien für Antischadsoftware mit einer Liste der Einstellungen, die Sie konfigurieren können  
 

@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bf50039a7c2fe8490c89f3e3b0adca275bb69e20
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696887"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607991"
 ---
 # <a name="enable-third-party-updates"></a>Aktivieren von Updates von Drittanbietern 
 
@@ -125,7 +125,7 @@ Wenn Sie in der Configuration Manager-Konsole Drittanbieterkataloge abonnieren, 
 
 1. Navigieren Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Softwarebibliothek**. Erweitern Sie **Softwareupdates**, und klicken Sie auf den Knoten **Katalog mit Updates für Drittanbietersoftware**.  
 2. Wählen Sie den zu abonnierenden Katalog aus, und klicken Sie im Menüband auf **Subscribe to Catalog** (Katalog abonnieren). 
-    ![Benutzerdefinierter Katalog, zu dem Updates von Drittanbietern hinzugefügt wurden](media/third-party-updates-subscribe.png)
+    ![Drittanbieterupdates – Katalog abonnieren](media/third-party-updates-subscribe.png)
 3. Überprüfen und genehmigen Sie das Katalogzertifikat.  
    > [!NOTE]
    > 

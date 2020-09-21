@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67de7db6587c1f80d849808c139bf1ae94f4bbd5
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327056"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643639"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Schnellstart: Registrieren Ihres Windows 10-Geräts
 
@@ -87,7 +87,7 @@ Bevor Sie Ihr Windows 10-Desktopgerät registrieren, müssen Sie die installiert
 
    ![Screenshot des neu hinzugefügten Kontos](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    Wenn Sie die obigen Schritte ausgeführt haben und trotzdem nicht auf E-Mails und Dateien Ihres Geschäfts-, Schul- oder Unikontos zugreifen können, befolgen Sie die Schritte unter [Schritte zur Problembehandlung bei Anzeige von „Zugriff auf Geschäfts-, Schul- oder Unikonto“](../user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+    Wenn Sie die obigen Schritte ausgeführt haben und trotzdem nicht auf E-Mails und Dateien Ihres Geschäfts-, Schul- oder Unikontos zugreifen können, befolgen Sie die Schritte unter [Problembehandlung für den Windows 10-Gerätezugriff](../user-help/troubleshoot-your-windows-10-device-windows.md).  
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Bestätigen der Geräteregistrierung bei Intune
 

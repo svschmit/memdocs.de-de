@@ -2,11 +2,11 @@
 title: Überwachen, Exportieren und Löschen von personenbezogenen Daten
 titleSuffix: Microsoft Intune
 description: Erfahren Sie mehr über das Überwachen, Exportieren und Löschen von personenbezogenen Daten.
-keywords: ''
+keywords: Datenschutz-Grundverordnung, personenbezogene Daten, Datenschutz
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 9/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 5d792df5a4a8690751d7d140aa7fa89191aedb1b
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995992"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012628"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Überwachen, Exportieren und Löschen von personenbezogenen Daten in Intune
 
@@ -60,10 +60,10 @@ Es gibt drei Möglichkeiten, um personenbezogene Daten aus der Intune-Verwaltung
 
 ### <a name="delete-a-user-from-intune"></a>Löschen eines Benutzers aus Intune
 
-Um die personenbezogenen Daten eines Endbenutzers aus Intune zu löschen, muss ein Administrator [den Benutzer aus Azure Active Directory (AAD) löschen](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Wenn der Benutzer dauerhaft aus AAD gelöscht wird, empfängt Intune den Löschbefehl von AAD und beginnt automatisch damit, alle personenbezogenen Daten des Benutzers aus dem Intune-Dienst zu entfernen. Die Benutzerinformationen werden innerhalb von 30 Tagen nach dem Löschvorgang aus dem Intune-Dienst gelöscht.
+Um die personenbezogenen Daten eines Endbenutzers aus Intune zu löschen, muss ein Administrator [den Benutzer aus Azure Active Directory (Azure AD) löschen](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Wenn der Benutzer dauerhaft aus Azure AD gelöscht wird, empfängt Intune den Löschbefehl von Azure AD und beginnt automatisch damit, alle personenbezogenen Daten des Benutzers aus dem Intune-Dienst zu entfernen. Die Benutzerinformationen werden innerhalb von 30 Tagen nach dem Löschvorgang aus dem Intune-Dienst gelöscht.
 
 ### <a name="reset-device-to-factory-settings"></a>Zurücksetzen des Geräts auf die Werkseinstellung
-Beim Zurücksetzen auf Werkseinstellungen werden alle geschäftlichen und personenbezogenen Daten und Einstellungen auf die Werkseinstellungen zurückgesetzt. Dies ist nützlich, um ein Gerät für den nächsten Mitarbeiter bereitzustellen. Benutzerdateien, von Benutzern installierte Anwendungen und vom Standard abweichende Einstellungen werden entfernt, und diese Daten werden innerhalb von 30 Tagen nach dem Löschvorgang aus dem Intune-Dienst gelöscht.
+Beim Zurücksetzen auf Werkseinstellungen werden alle geschäftlichen und personenbezogenen Daten und Einstellungen auf die Werkseinstellungen zurückgesetzt. Dies ist nützlich, um ein Gerät für den nächsten Mitarbeiter bereitzustellen. Benutzerdateien, von Benutzern installierte Anwendungen und vom Standard abweichende Einstellungen werden entfernt, und diese Daten werden innerhalb von 30 Tagen nach dem Entfernungsvorgang aus dem Intune-Dienst gelöscht.
 
 ### <a name="user-self-removal-from-intune-management"></a>Selbstständige Entfernung des Benutzers aus der Intune-Verwaltung
 Benutzer können ihre persönlichen [Android-, Apple- oder Windows-Geräte](../user-help/unenroll-your-device-from-intune-android.md) aus der Intune-Verwaltung ohne Unterstützung durch den Administrator entfernen.   
@@ -77,4 +77,4 @@ Wenn ein Intune-Mandantenkunde sein Intune-Konto löscht, werden alle Mandantend
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erfahren Sie, wie Sie personenbezogene Daten in Intune [überwachen, exportieren oder löschen](privacy-data-audit-export-delete.md) können.
+Erfahren Sie mehr darüber, wie [personenbezogene Daten in Intune angezeigt und korrigiert](privacy-data-view-correct.md) werden.

@@ -9,12 +9,13 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b598cfad1d3a73f77e91bf3b41baab60c6c3616
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+description: Weitere Links zur Configuration Manager-Hilfedokumentation
+ms.openlocfilehash: 00ac9ad91739a4144e3b8a4e44d6e5d31e8abada
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819693"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607812"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Onlinedokumentation für Configuration Manager
 
@@ -40,7 +41,7 @@ Sie können die Onlinedokumentation zu Configuration Manager, Current Branch unt
 
 - [Bereitstellen und Verwalten von Softwareupdates in Configuration Manager](../../sum/understand/software-updates-introduction.md)  
 
-- [Sicherstellen der Gerätekonformität mit Configuration Manager](../../compliance/understand/ensure-device-compliance.md)  
+- [Sicherstellen der Gerätekompatibilität mit Configuration Manager](../../compliance/understand/ensure-device-compliance.md)  
 
 - [Schützen der Daten und Standortinfrastruktur mit Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)  
 
@@ -48,7 +49,7 @@ Sie können die Onlinedokumentation zu Configuration Manager, Current Branch unt
 
 - [Sicherheit und Datenschutz für Configuration Manager](../plan-design/security/security-and-privacy.md)  
 
-### <a name="release-notes"></a>Anmerkungen zu dieser Version
+### <a name="release-notes"></a>Versionshinweise
 
 Die Versionshinweise enthalten Informationen, die nicht in der Produktdokumentation erwähnt werden und u. U. für die erfolgreiche Installation und Verwendung von Configuration Manager erforderlich sind. Weitere Informationen erhalten Sie unter [Anmerkungen zu dieser Version für Configuration Manager](../servers/deploy/install/release-notes.md)  
 
@@ -56,7 +57,7 @@ Die Versionshinweise enthalten Informationen, die nicht in der Produktdokumentat
 
 Weitere Informationen erhalten Sie unter [Suchen nach Hilfe für die Verwendung von Configuration Manager](../understand/find-help.md).
 
-### <a name="accessibility"></a>Zugänglichkeit
+### <a name="accessibility"></a>Zugriff
 
 Weitere Informationen hierzu erhalten Sie unter [Barrierefreiheitsfunktionen für die Configuration Manager-Konsole](../understand/accessibility-features.md).
 
@@ -64,7 +65,7 @@ Weitere Informationen hierzu erhalten Sie unter [Barrierefreiheitsfunktionen fü
 
 Weitere Informationen erhalten Sie unter [Technical Preview für Configuration Manager](../get-started/technical-preview.md).  
 
-## <a name="system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager
+## <a name="system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager
 
 ### <a name="online-documentation"></a>Onlinedokumentation
 
@@ -100,10 +101,10 @@ Die Versionshinweise und technischen Publikationen ergänzen die Configuration M
 
 - [Technische Dokumentation zu System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
 
-### <a name="accessibility"></a>Zugänglichkeit
+### <a name="accessibility"></a>Zugriff
 
 Informationen über die Features, Produkte und Dienste, die die Barrierefreiheit in Configuration Manager gewährleisten, finden Sie unter [Barrierefreiheitsfunktionen von Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\)).
 
-### <a name="downloadable-documentation"></a>Dokumentation zum Herunterladen
+### <a name="downloadable-documentation"></a>Herunterladbare Dokumentation
 
 Sie können eine Kopie der technischen Dokumentation für System Center 2012 R2 Configuration Manager aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29256) herunterladen.

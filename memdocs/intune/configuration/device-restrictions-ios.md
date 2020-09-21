@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: ca9fb5b350cd9c89b8d4eb37144340b93e9ebbab
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423882"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574812"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>iOS- und iPadOS-Geräteeinstellungen zum Zulassen oder Einschränken von Funktionen mit Intune
 
@@ -173,9 +173,9 @@ Diese Einstellungen werden einem Gerätekonfigurationsprofil in Intune hinzugef�
   > [!NOTE]
   > Bei Geräten, die vom Benutzer registriert werden, können Benutzer eine PIN angeben, die länger als 6 Zeichen ist. Es werden jedoch nicht mehr als 6 Zeichen auf Geräten erzwungen. Wenn ein Administrator die Mindestlänge beispielsweise auf `8` festlegt, müssen Benutzer von Geräten mit Benutzerregistrierung eine PIN mit nur 6 Ziffern festlegen. Intune erzwingt auf von Benutzern registrierten Geräten keine PINs, die länger als 6 Zeichen sind.
 
-- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie die Anzahl der fehlgeschlagenen Anmeldungen ein, bevor das Gerät zurückgesetzt wird (zwischen 4 und 11).
+- **Anzahl von fehlgeschlagenen Anmeldungen, bevor das Gerät zurückgesetzt wird:** Geben Sie die Anzahl der fehlerhaften Anmeldungen ein, bevor das Gerät zurückgesetzt wird (zwischen 2 und 11). Es wird nicht empfohlen, diesen Wert auf `2` oder `3` festzulegen. Es passiert häufig, dass Benutzer ein falsches Kennwort eingeben. Wenn Sie den Wert so festlegen, dass das Gerät bereits nach zwei oder drei fehlerhaften Kennworteingaben zurückgesetzt wird, würde dieser Fall sehr häufig eintreten. Es wird empfohlen, diesen Wert auf mindestens `4` festzulegen. 
   
-  Die integrierte iOS/iPadOS-Sicherheit kann sich auf diese Einstellung auswirken. iOS/iPadOS kann die Auslösung der Richtlinie beispielsweise je nach Anzahl der Anmeldefehler verzögern. Die wiederholte Eingabe desselben Kennworts kann beispielsweise auch als ein Versuch anerkannt werden. Der [iOS/iPadOS-Sicherheitsleitfaden von Apple](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (Apple-Website) ist eine gute Ressource mit ausführlichen Informationen zu Passcodes.
+  Die integrierte iOS/iPadOS-Sicherheit kann sich auf diese Einstellung auswirken. iOS/iPadOS kann die Auslösung der Richtlinie beispielsweise je nach Anzahl der Anmeldefehler verzögern. Die wiederholte Eingabe desselben Kennworts kann beispielsweise auch als ein Versuch anerkannt werden. Der [iOS/iPadOS-Sicherheitsleitfaden von Apple](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (Apple-Website) ist eine gute Ressource mit ausführlichen Informationen zu Passcodes. 
   
 - **Maximaler Zeitraum der Bildschirmsperre (in Minuten) bis zur Anforderung eines Kennworts<sup>1</sup>:** Geben Sie an, wie lange Geräte im Leerlauf bleiben können, bevor Benutzer sein Kennwort erneut eingeben müssen. Wenn Sie einen längeren Zeitraum eingeben, als derzeit auf dem Gerät eingestellt ist, ignoriert das Gerät Ihre Eingabe.
 

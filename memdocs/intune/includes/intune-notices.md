@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: e63bb965b8fed4c0266e359493bbfa67100862cb
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564096"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90045188"
 ---
 Diese Hinweise enthalten wichtige Informationen, die Ihnen bei der Vorbereitung auf künftige Änderungen und Features im Zusammenhang mit Intune helfen können.
 
@@ -108,7 +108,7 @@ Dann sind von einem Geräteadministrator verwaltete und nicht von Samsung herges
 - Die Identifizierung von Geräten mit IMEI oder Seriennummer als unternehmenseigen kennzeichnet Geräte nicht automatisch als unternehmenseigen. 
 - Die IMEI und Seriennummer sind für IT-Administratoren in Intune nicht mehr sichtbar. 
 
-**Android 11:** Das neueste Release der Android 11-Betaversion wird weiterhin getestet, um die Auswirkungen auf vom Geräteadministrator verwaltete Geräte auszuwerten. Folgendes wurde festgestellt: 
+**Android 11:** Die folgenden Änderungen wirken sich nach einem Update auf Android 11 auf vom Geräteadministrator verwaltete Geräte aus: 
 - Für Geräte von Geräteadministratoren (Samsung ausgenommen) mit Android 11 und höher hat Google für Verwaltungs-Agents wie das Unternehmensportal die Möglichkeit entfernt, das Blockieren der Kamera zu erzwingen. Diese Änderung wurde sogar vor dem Update im Oktober für die Unternehmensportal-App eingeführt. Richtlinien zum Blockieren der Kamera, die auf Geräten angewendet werden, bevor ein Update auf Android 11 durchgeführt wird, werden weiterhin angewendet.  
 - Ab Android 11 können vertrauenswürdige Stammzertifikate nicht mehr auf Geräten bereitgestellt werden, die mit dem Geräteadministrator registriert wurden (mit Ausnahme von Samsung-Geräten). Benutzer müssen das vertrauenswürdige Stammzertifikat manuell auf dem Gerät installieren. Wenn auf einem Gerät das vertrauenswürdige Stammzertifikat manuell installiert wurde, können auf dem Gerät Zertifikate mit SCEP bereitgestellt werden. In diesem Szenario müssen Sie dennoch eine Richtlinie für vertrauenswürdige Zertifikate erstellen und auf dem Gerät bereitstellen. Außerdem müssen Sie diese Richtlinie mit dem SCEP-Zertifikatprofil verknüpfen. 
     - Wenn sich das vertrauenswürdige Stammzertifikat auf dem Gerät befindet, kann das SCEP-Zertifikatprofil erfolgreich installiert werden.  

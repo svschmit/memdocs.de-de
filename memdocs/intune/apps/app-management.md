@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 68336d252cb3d3d3d49cc0c7a32e49e94ba5cdd7
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252304"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012662"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Was ist die Microsoft Intune App-Verwaltung?
 
@@ -101,6 +101,7 @@ Im oberen Bereich des Navigationsmenüs für die App-Workload sind häufig verwe
     - **App-Konfigurationsrichtlinien**: Wählen Sie diese Option aus, um Einstellungen anzugeben, die beim Ausführen einer App durch einen Benutzer möglicherweise erforderlich sind. Weitere Informationen finden Sie unter [App-Konfigurationsrichtlinien](app-configuration-policies-use-ios.md), [Richtlinien zur Konfiguration von iOS-Apps](app-configuration-policies-use-ios.md) und [Richtlinien zur Konfiguration von Android-Apps](app-configuration-policies-overview.md).
     - **iOS-App-Bereitstellungsprofile**: iOS-Apps enthalten ein Bereitstellungsprofil und Code, der von einem Zertifikat signiert ist. Wenn das Zertifikat abläuft, kann die App nicht mehr ausgeführt werden. Intune stellt Ihnen die Tools zum proaktiven Zuweisen einer neuen Richtlinie für Bereitstellungsprofile auf Geräten zur Verfügung, auf denen Apps installiert sind, die bald ablaufen. Weitere Informationen finden Sie unter [iOS-App-Bereitstellungsprofile](app-provisioning-profile-ios.md).
     - **Zusätzliche Richtlinien für S-Modus**: Wählen Sie diese Option aus, um zusätzliche Anwendungen für die Ausführung auf Ihren verwalteten S-Modus-Geräten zu autorisieren. Weitere Informationen finden Sie unter [Zusätzliche Richtlinien für S-Modus](apps-win32-s-mode.md).
+    - **Richtlinien für Office-Apps**: Wählen Sie diese Option aus, um Verwaltungsrichtlinien für mobile Office-Apps zu erstellen, die eine Verbindung mit Microsoft 365-Diensten herstellen. Außerdem können Sie den Zugriff auf lokale Exchange-Postfächer schützen, indem Sie Intune-App-Schutzrichtlinien für Outlook für iOS/iPadOS und Android erstellen, die mit hybrider moderner Authentifizierung aktiviert wurden. Sie müssen die Voraussetzungen für die Verwendung von Richtlinien für Office-Apps erfüllen. Weitere Informationen zu den Voraussetzungen finden Sie unter [Voraussetzungen für die Verwendung des Office-Cloudrichtliniendiensts](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service). App-Schutzrichtlinien werden nicht für andere Apps unterstützt, die eine Verbindung mit lokalen Exchange- oder SharePoint-Diensten herstellen. Verwandte Informationen finden Sie unter [Übersicht über den Office-Cloudrichtliniendienst für Microsoft 365-Apps für Unternehmen](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service).
     - **Richtliniensätze**: Wählen Sie diese Option aus, um eine zuweisbare Sammlung von Apps, Richtlinien und anderen von Ihnen definierten Verwaltungsobjekten zu erstellen. Weitere Informationen finden Sie unter [Richtliniensätze](../fundamentals/policy-sets.md).
 - **Sonstige**:   
     - **Selektive App-Zurücksetzung**: Wählen Sie diese Option aus, um nur Unternehmensdaten vom Gerät eines ausgewählten Benutzers zu entfernen. Weitere Informationen finden Sie unter [Selektive App-Zurücksetzung](apps-selective-wipe.md).
@@ -109,10 +110,10 @@ Im oberen Bereich des Navigationsmenüs für die App-Workload sind häufig verwe
 - **Hilfe und Support**: Hiermit können Sie Probleme behandeln, Unterstützung anfordern oder den Intune-Status anzeigen. Weitere Informationen finden Sie unter [Problembehandlung](../fundamentals/help-desk-operators.md).
 
 ### <a name="try-the-interactive-guide"></a>Interaktiven Leitfaden testen
-Der interaktive Leitfaden [Verwalten und Schützen von mobilen Anwendungen und Desktopanwendungen mit dem Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) führt Sie Schritt für Schritt durch das Microsoft Endpoint Manager-Admin Center, um Ihnen zu zeigen, wie Sie in Intune registrierte Geräte verwalten, die Konformität mit Richtlinien erzwingen und die Daten Ihrer Organisation schützen.</br></br>
+Der interaktive Leitfaden [Verwalten und Schützen von mobilen Anwendungen und Desktopanwendungen mit dem Microsoft Endpoint Manager](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) führt Sie Schritt für Schritt durch das Microsoft Endpoint Manager-Admin Center, um Ihnen zu zeigen, wie Sie in Intune registrierte Geräte verwalten, die Konformität mit Richtlinien erzwingen und die Daten Ihrer Organisation schützen.</br></br>
 
 <div align=”center”>
-<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
 </div>
 
 ## <a name="additional-information"></a>Zusätzliche Informationen

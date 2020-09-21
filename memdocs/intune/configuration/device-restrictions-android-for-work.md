@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 2e79017726e8b8924ac5502c7522b124f11e6c60
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194105"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606961"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise-Geräteeinstellungen zum Zulassen oder Einschränken von Features mit Intune
 
@@ -35,13 +35,13 @@ In diesem Artikel werden die verschiedenen Einstellungen aufgeführt und beschri
 
 Diese Einstellungen gelten für Android Enterprise-Registrierungstypen, bei denen das gesamte Gerät von Intune verwaltet wird, z. B. vollständig verwaltete Geräte, dedizierte Geräte und unternehmenseigene Android Enterprise-Arbeitsprofilgeräte.
 
-Einige Einstellungen werden nicht von allen Registrierungstypen unterstützt. Informationen dazu, welche Einstellungen von welchen Registrierungstypen unterstützt werden, finden Sie in der Benutzeroberfläche. Jede Einstellung befindet sich unter einer Überschrift, die angibt, von welchen Registrierungstypen diese Einstellung verwendet werden kann.
+Einige Einstellungen werden nicht von allen Registrierungstypen unterstützt. Informationen dazu, welche Einstellungen von welchen Registrierungstypen unterstützt werden, finden Sie in der Benutzeroberfläche. Jede Einstellung befindet sich unter einer Überschrift, die angibt, welche Registrierungstypen die Einstellung verwenden können.
 
-![Überschriften von Einstellungen](./media/device-restrictions-android-for-work/setting-headers.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Hier sehen Sie die Überschriften der Einstellungen für Android Enterprise-Benutzer und -Konten sowie die Registrierungstypen, für die sie in Microsoft Intune und Endpoint Manager gelten.":::
 
 Einige Einstellungen gelten nur auf Arbeitsprofilebene für unternehmenseigene Geräte mit einem Arbeitsprofil. Diese Einstellungen gelten für vollständig verwaltete und dedizierte Geräte weiterhin auf Geräteebene. Diese Einstellungen sind in der Benutzeroberfläche mit dem Deskriptor *(Arbeitsprofilebene)* gekennzeichnet.
 
-![Überschriften von Einstellungen](./media/device-restrictions-android-for-work/work-profile-level.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Hier sehen Sie die Android Enterprise-Anwendungseinstellungen, die auf Arbeitsprofilebene in Microsoft Intune und Endpoint Manager gelten.":::
 
 
 ### <a name="general"></a>Allgemein
@@ -239,7 +239,7 @@ Verwenden Sie diese Einstellungen, um eine Kioskoberfläche auf Ihren dedizierte
 - **Vollständig verwaltet:** Mit dieser Einstellung wird die Microsoft Launcher-App auf vollständig verwalteten Geräten konfiguriert.
 
   - Über **Microsoft Launcher als Standardstartprogramm festlegen:** **Aktivieren** wird Microsoft Launcher als Standardstartprogramm auf dem Startbildschirm festgelegt. Wenn Sie Launcher als Standard festlegen, können Benutzer kein anderes Startprogramm verwenden. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. Standardmäßig wird Microsoft Launcher nicht als Standardstartprogramm erzwungen.
-  - **Konfigurieren des benutzerdefinierten Hintergrundbilds:** Bei Auswahl von **Aktivieren** können Sie Ihr eigenes Bild als Hintergrundbild des Bildschirms verwenden und festlegen, ob Benutzer das Bild ändern können. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. In der Standardeinstellung werden die aktuellen Hintergrundbilder der Geräte beibehalten.
+  - **Konfigurieren des benutzerdefinierten Hintergrundbilds:** In der Microsoft Launcher-App können Sie über **Aktivieren** Ihr eigenes Bild als Bildschirmhintergrund verwenden und festlegen, ob Benutzer das Bild ändern können. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. In der Standardeinstellung werden die aktuellen Hintergrundbilder der Geräte beibehalten.
     - **Eingeben der URL des Hintergrundbilds:** Geben Sie die URL des Hintergrundbilds ein. Dieses Bild wird auf dem Startbildschirm des Geräts angezeigt. Geben Sie beispielsweise `http://www.contoso.com/image.jpg` ein. 
     - **Benutzern das Ändern des Hintergrundbilds erlauben:** Bei Auswahl von **Aktivieren** können Benutzer das Hintergrundbild ändern. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. In der Standardeinstellung werden Benutzer daran gehindert, den Hintergrund zu ändern.
   - **Aktivieren des Startfeeds:** Bei Auswahl von **Aktivieren** wird der Startfeed mit Anzeige von Kalendern, Dokumenten und aktuellen Aktivitäten aktiviert. Wenn die Standardeinstellung **Nicht konfiguriert** festgelegt ist, wird diese Einstellung nicht von Intune geändert oder aktualisiert. In der Standardeinstellung wird dieser Feed nicht angezeigt.

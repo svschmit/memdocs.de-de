@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: cbea7d7e126b120145533b7cf19822b54b3cb701
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613941"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607965"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Dashboard für Surface-Geräte in Configuration Manager
 
@@ -52,7 +52,7 @@ Im Dashboard für Surface-Geräte werden drei Diagramme für Ihre Umgebung angez
 
 - **Top 5-Firmwareversionen**: Diagramm mit den fünf am häufigsten verwendeten Firmwaremodellen in Ihrer Umgebung 
   - Wenn Sie mit dem Mauszeiger auf einen Diagrammabschnitt zeigen, wird die Anzahl der Surface-Geräte angezeigt, die zur ausgewählten Firmwareversion gehören. Ab Configuration Manager Version 1806 wird durch Klicken auf einen Diagrammabschnitt eine Liste relevanter Geräte angezeigt. <!--1358654-->
-     ![Geräteliste für Surface-Modell](media/Surface-Firmware-Hover.PNG)
+     ![Surface-Firmware-QuickInfo](media/Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>Weitere Informationen

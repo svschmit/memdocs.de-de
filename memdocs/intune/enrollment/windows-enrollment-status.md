@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 2fc05ced647e8784333c2a20bc13c27aa2bf3447
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051579"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076123"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Einrichten der Seite zum Registrierungsstatus
  
@@ -122,8 +122,8 @@ Zur Vorbereitung des Geräts wird auf der Seite zum Registrierungsstatus Folgend
 Auf der Seite zum Registrierungsstatus wird der Status der folgenden Geräteeinrichtungselemente angezeigt:
 
 - Sicherheitsrichtlinien
-  - Ein Konfigurationsanbieter für alle Registrierungen
-  - Tatsächliche CSPs, die von Intune konfiguriert wurden, werden an dieser Stelle nicht nachverfolgt.
+  - Richtlinien für Microsoft Edge, Assigned Access und Kiosk Browser werden derzeit nachverfolgt.
+  - Andere Richtlinien werden nicht nachverfolgt.
 - Applications
   - Branchenspezifische MSI-Apps („pro Computer“)
   - Branchenspezifische Store-Apps mit dem Installationskontext „Gerät“
@@ -138,8 +138,8 @@ Auf der Seite zum Registrierungsstatus wird der Status der folgenden Geräteeinr
 Für die Kontoeinrichtung werden die folgenden Elemente auf der Seite zum Registrierungsstatus nachverfolgt, wenn diese dem derzeit angemeldeten Benutzer zugewiesen sind:
 
 - Sicherheitsrichtlinien
-  - Ein CSP für alle Registrierungen
-  - Tatsächliche CSPs, die von Intune konfiguriert wurden, werden an dieser Stelle nicht nachverfolgt.
+  - Richtlinien für Microsoft Edge, Assigned Access und Kiosk Browser werden derzeit nachverfolgt.
+  - Andere Richtlinien werden nicht nachverfolgt.
 - Applications
   - Branchenspezifische MSI-Apps („pro Benutzer“), die „Allen Geräten“, „Allen Benutzern“ oder einer „Benutzergruppe“ zugewiesen sind, der der sich registrierende Benutzer angehört
   - Branchenspezifische MSI-Apps („pro Computer“), die „Allen Benutzern“ oder einer „Benutzergruppe“ zugewiesen sind, der der sich registrierende Benutzer angehört
@@ -152,53 +152,6 @@ Für die Kontoeinrichtung werden die folgenden Elemente auf der Seite zum Regist
   - VPN- oder WLAN-Profile, die „Allen Benutzern“ oder einer „Benutzergruppe“ zugewiesen sind, der der sich registrierende Benutzer angehört
 - Zertifikate
   - Zertifikatprofile, die „Allen Benutzern“ oder einer „Benutzergruppe“ zugewiesen sind, der der sich registrierende Benutzer angehört
-
-### <a name="troubleshooting"></a>Problembehandlung
-
-Im Folgenden sind häufig gestellte Fragen zur Behandlung von Problemen im Zusammenhang mit der Seite zum Registrierungsstatus aufgeführt.
-
-- Warum wurden meine Anwendungen nicht über die Seite „Registrierungsstatus“ installiert und nachverfolgt?
-  - Stellen Sie Folgendes sicher, um zu gewährleisten, dass Anwendungen über die Seite „Registrierungsstatus“ installiert und nachverfolgt werden:
-      - Die Apps werden über eine „erforderliche“ Zuweisung einer Azure AD-Gruppe zugewiesen, die das Gerät (für geräteorientierte Apps) oder den Benutzer (für benutzerorientierte Apps) enthält.  (Geräteorientierte Apps werden Während der Gerätephase von ESP nachverfolgt, während benutzerorientierte Apps während der Benutzerphase von ESP nachverfolgt werden.)
-      - Entweder Sie geben **Geräteverwendung blockieren, bis alle Apps und Profile installiert sind** an oder schließen die App in die Liste **Block device use until these required apps are installed** (Geräteverwendung blockieren, bis diese erforderlichen Apps installiert wurden) ein.
-      - Diese Apps werden im Gerätekontext installiert und verfügen nicht über Anwendbarkeitsregeln im Benutzerkontext.
-
-- Warum wird die Seite zum Registrierungsstatus für Bereitstellungen ohne Autopilot angezeigt, z. B. wenn sich ein Benutzer zum ersten Mal auf einem registrierten Gerät anmeldet, das gemeinsam mit Configuration Manager verwaltet wird?  
-  - Auf der Seite zum Registrierungsstatus wird der Installationsstatus für alle Registrierungsmethoden angezeigt, einschließlich
-      - Autopilot
-      - Co-Verwaltung mit Configuration Manager
-      - wenn sich ein neuer Benutzer bei dem Gerät anmeldet, auf dem die Richtlinie „Seite zum Registrierungsstatus“ zum ersten Mal angewendet wird
-      - wenn die Einstellung **Seite nur für Geräte anzeigen, die über die Willkommensseite bereitgestellt wurden** aktiviert ist und für die Richtlinie festgelegt ist, dass nur dem ersten Benutzer, der sich auf dem Gerät anmeldet, die Seite zum Registrierungsstatus angezeigt wird.
-
-- Wie kann ich die Seite zum Registrierungsstatus deaktivieren, wenn sie auf dem Gerät konfiguriert wurde?
-  - Die Richtlinie „Seite zum Registrierungsstatus“ wird zum Zeitpunkt der Registrierung auf einem Gerät festgelegt. Um die Seite zum Registrierungsstatus zu deaktivieren, müssen Sie deren Abschnitte „Benutzer“ und „Gerät“ deaktivieren. Sie deaktivieren die Abschnitte, indem Sie benutzerdefinierte OMA-URI-Einstellungen mit den folgenden Konfigurationen erstellen.
-
-      Deaktivieren der Seite zum Registrierungsstatus für Benutzer:
-
-      ```
-      Name:  Disable User ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-      Deaktivieren der Seite zum Registrierungsstatus für Geräte:
-
-      ```
-      Name:  Disable Device ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipDeviceStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-- Wie kann ich Protokolldateien sammeln?
-  - Es gibt zwei Möglichkeiten zur Erfassung von Protokolldateien zur Seite zum Registrierungsstatus (Enrollment Status Page, ESP):
-      - Aktivieren Sie in der ESP-Richtlinie, dass Benutzer Protokolle sammeln dürfen. Wenn auf der Seite zum Registrierungsstatus ein Timeout auftritt, kann der Endbenutzer die Option **Protokolle sammeln** wählen. Nach Herstellen einer Verbindung mit einem USB-Laufwerk können die Protokolldateien darauf kopiert werden.
-      - Öffnen Sie eine Eingabeaufforderung, indem Sie UMSCHALTTASTE+F10 drücken und dann die folgende Befehlszeile eingeben, um die Protokolldateien zu generieren: 
-
-      ```
-      mdmdiagnosticstool.exe -area Autopilot -cab <pathToOutputCabFile>.cab 
-      ```
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
@@ -219,4 +172,6 @@ Im Folgenden sind bekannte Probleme im Zusammenhang mit der Seite zum Registrier
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie die Windows-Registrierungsseiten eingerichtet haben, sollten Sie sich informieren, wie Sie Windows-Geräte verwalten. Weitere Informationen finden Sie unter [Was ist die Microsoft Intune-Geräteverwaltung?](../remote-actions/device-management.md).
+Nachdem Sie die Windows-Registrierungsseiten eingerichtet haben, informieren Sie sich, wie Sie [Windows-Geräte verwalten](../remote-actions/device-management.md).
+
+[Problembehandlung für die Seite zum Windows-Registrierungsstatus](https://docs.microsoft.com/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)

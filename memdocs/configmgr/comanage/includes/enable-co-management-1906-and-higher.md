@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
 ms.date: 08/11/2020
-ms.openlocfilehash: a61bf84a872458f37826c3de07ede05b1b658f0c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b0c25174873e00cf23dacd2c77208775f1fb1ced
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127301"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89644352"
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 
@@ -61,6 +61,6 @@ Wenn Sie die Co-Verwaltung aktivieren, können Sie die öffentliche Azure-Cloud,
 
 1. Geben Sie auf der Seite **Staging** die Pilotsammlung für jede der Workloads an, die auf **Intune-Pilot** festgelegt sind.
 
-   ![Angeben der Sammlung „Automatische Intune-Registrierung“ ](../media/3555750-co-management-onboarding-staging.png)
+   ![Konfigurations-Assistent für die Co-Verwaltung, Seite "Staging", Pilotsammlungen angeben](../media/3555750-co-management-onboarding-staging.png)
 
 1. Schließen Sie den Assistenten, um die Co-Verwaltung zu aktivieren.

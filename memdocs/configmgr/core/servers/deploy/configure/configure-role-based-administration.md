@@ -9,12 +9,13 @@ ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14258c3e7e2cfe5423b97064a26fdf5616d6b0a4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+description: Kombinieren von Sicherheitsrollen, Sicherheitsbereichen und zugewiesenen Sammlungen, um den Verwaltungsbereich für jeden Administrator zu definieren
+ms.openlocfilehash: a475660d2a171829e1592c1c411a3251e74eb79f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078616"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607621"
 ---
 # <a name="configure-role-based-administration-for-configuration-manager"></a>Konfigurieren der rollenbasierten Verwaltung für Configuration Manager
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 812e82df-76df-402b-bfe9-29302838f40e
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: jieyang
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 46f8d7d46e376d2fb8f1cab1b3d0b3bc583bdeed
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179586"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643464"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrieren von Windows 10-Geräten mit dem Intune-Unternehmensportal
 
@@ -65,10 +65,6 @@ In diesen Schritten wird beschrieben, wie Sie ein Windows 10-Gerät (Version 160
 8. Wechseln Sie zu **Einstellungen** > **Konten** > **Access work or school** (Zugriff auf Geschäft, Schule oder Uni), um Ihre Verbindung zu überprüfen.  Ihr Konto sollte jetzt in der Liste aufgeführt werden.  
 
 
-    ![Validate that the connection was set up correctly](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
-
-Können Sie immer noch nicht auf Ihre Geschäfts-, Schul- oder Uni-E-Mails, -Dateien oder entsprechende andere Daten zugreifen? Erfahren Sie, wie Sie [Probleme mit Ihrem Konto beheben](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).  
-
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Registrieren von Windows 10-Geräten (Version 1511 und früher)  
 In diesen Schritten wird beschrieben, wie Sie ein Windows 10-Gerät (Version 1511 und früher) registrieren.  
 
@@ -91,7 +87,10 @@ In diesen Schritten wird beschrieben, wie Sie ein Windows 10-Gerät (Version 151
 
     ![Anmelden](./media/W10-enroll-4-sign-in.png)  
 
-Können Sie immer noch nicht auf Ihre Geschäfts-, Schul- oder Uni-E-Mails, -Dateien oder entsprechende andere Daten zugreifen? Erfahren Sie, wie Sie [Probleme im Zusammenhang mit Ihrem Konto](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) während der Registrierung beheben.  
+
+## <a name="troubleshooting"></a>Problembehandlung 
+Eine nicht abschließende Liste der Fehlermeldungen und weiterer Lösungsmöglichkeiten für Verbindungsfehler finden Sie unter [Problembehandlung für den Windows 10-Gerätezugriff](troubleshoot-your-windows-10-device-windows.md).  
+
 
 ## <a name="it-administrator-support"></a>Unterstützung für IT-Administratoren   
 

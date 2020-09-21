@@ -4,17 +4,18 @@ ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
+description: Informationen und Regeln für MMS 2019-Docathon
 ms.assetid: 8fe2ecfc-f5c1-4fa6-8703-245339400723
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 91430688fd2af93e5d5b5ce7eb0cbc6358388ea4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695578"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607836"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019-Docathon
 
@@ -28,7 +29,7 @@ Sie fragen sich, warum Sie teilnehmen sollten? Bei docs.microsoft.com handelt es
 - Praxisanweisungen und Tipps
 - Überprüfung des Inhalts, Aktualität
 
-## <a name="set-up"></a>Einrichtung
+## <a name="set-up"></a>Einrichten
 
 Wenn Sie mitwirken möchten, müssen Sie vorher diese Schritte durchführen.
 
@@ -53,7 +54,7 @@ Erstellen Sie ein [GitHub-Konto](https://github.com/join).
 
 Weitere Informationen finden Sie im Leitfaden für Mitwirkende an docs.microsoft.com unter [Einrichten eines GitHub-Kontos](/contribute/get-started-setup-github).
 
-## <a name="scope"></a>Bereich
+## <a name="scope"></a>`Scope`
 
 Für dieses Event werden nur die folgenden GitHub-Repositorys berücksichtigt:
 
@@ -71,7 +72,7 @@ Lesen Sie Informationen zum [Erstellen von Issues](../understand/use-docs.md#bkm
 > Wenn Sie den komplexeren Workflow mit git und Visual Studio Code testen möchten, finden Sie weitere Informationen unter [Installieren von Tools für die Inhaltsentwicklung](/contribute/get-started-setup-tools). Sie können sich auch an Aaron oder Erik wenden, wenn Sie Hilfe benötigen. Folgendes spricht für den komplexeren Workflow:
 >
 > - Das Erstellen neuer Artikel
-> - Das Hinzufügen von Bildern
+> - Hinzufügen von Bildern
 > - Das Suchen und Ersetzen von Zeichenfolgen (einschließlich reguläre Ausdrücke)
 > - Die Möglichkeit, umfassendere und komplexere Änderungen vorzunehmen  
 
@@ -138,7 +139,7 @@ Folgende Auszeichnungen werden anhand der Anzahl der zulässigen Beiträge zu de
 
     - [Top 10 tips for Microsoft style and voice (10 Grundprinzipien der optimalen Textgestaltung für Microsoft)](/style-guide/top-10-tips-style-voice)
 
-- [Leitfaden für Mitwirkende](/contribute)
+- [Handbuch für Mitwirkende](/contribute)
 
 - [Verwenden von Markdown für das Schreiben von Dokumentationsartikeln](/contribute/markdown-reference)
 
@@ -252,6 +253,6 @@ Offizielle Regeln für den Microsoft Cloud + AI Developer Relations Content & Le
 
 13. DATENSCHUTZ
 
-    Microsoft verpflichtet sich, Ihre Privatsphäre zu schützen. Microsoft verwendet die auf diesem Formular angegebenen Daten, um Ihnen wichtige Informationen zu unseren Produkten, Upgrades und Verbesserungen sowie Informationen zu anderen Microsoft-Produkten und -Diensten zukommen zu lassen. Microsoft gibt diese Daten nicht ohne Ihre Zustimmung an Drittanbieter weiter, sofern dies nicht notwendig ist, um die von Ihnen angeforderten Dienste oder Transaktionen abzuschließen, oder es vom Gesetz erforderlich ist. Microsoft sorgt für die Sicherheit Ihrer personenbezogenen Informationen. Wir setzen eine Vielzahl von Sicherheitstechnologien ein, die dazu beizutragen, Ihre personenbezogenen Informationen vor dem Zugriff, der Verwendung und Offenlegung durch nicht autorisierte Personen zu schützen. Ihre personenbezogenen Informationen werden ohne Ihre Zustimmung nur außerhalb des Unternehmens weitergegeben, wenn die oben genannten Bedingungen zutreffen.
+    Microsoft verpflichtet sich, Ihre Privatsphäre zu schützen. Microsoft verwendet die auf diesem Formular angegebenen Daten, um Ihnen wichtige Informationen zu unseren Produkten, Upgrades und Verbesserungen sowie Informationen zu anderen Microsoft-Produkten und -Diensten zukommen zu lassen. Microsoft gibt diese Daten nicht ohne Ihre Zustimmung an Drittanbieter weiter, sofern dies nicht notwendig ist, um die von Ihnen angeforderten Dienste oder Transaktionen abzuschließen, oder es vom Gesetz erforderlich ist. Microsoft sorgt für die Sicherheit Ihrer persönlichen Daten. Wir verwenden eine Vielzahl von Sicherheitstechnologien und -verfahren, um Ihre persönlichen Daten vor nicht autorisiertem Zugriff, Gebrauch oder Veröffentlichung zu schützen. Ihre personenbezogenen Informationen werden ohne Ihre Zustimmung nur außerhalb des Unternehmens weitergegeben, wenn die oben genannten Bedingungen zutreffen.
 
     Wenn Sie der Meinung sind, dass Microsoft die Datenschutzrichtlinie verletzt hat, kontaktieren Sie uns, indem Sie eine E-Mail an privrc@microsoft.com oder einen Brief an die Adresse „Microsoft Privacy Response Center, Microsoft Corporation, One Microsoft Way, Redmond, WA 98052“ senden.

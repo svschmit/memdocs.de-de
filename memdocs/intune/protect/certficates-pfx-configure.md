@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1024681ed42c192983ffde23777de72c40622c65
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: 28ca32bc65ee0c4647c22b10b6b5d47a25efa202
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423718"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643622"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurieren und Verwenden Ihrer PKCS-Zertifikate mit Intune
 
@@ -140,9 +140,13 @@ Jedes Gerät benötigt ein Zertifikat einer Stamm- oder Zwischenzertifizierungss
    > [!WARNING]
    > Standardmäßig ist **Verstärkte Sicherheitskonfiguration für IE** in Windows Server auf **Ein** festgelegt. Dies kann zu Problemen bei der Office 365-Anmeldung führen.
 
-6. Schließen Sie das Fenster.
+6. Wählen Sie die Registerkarte **Zertifizierungsstellenkonto** aus, und geben Sie die Anmeldeinformationen für ein Konto ein, das über die Berechtigung „Zertifikate ausstellen und verwalten“ für die ausstellende Zertifizierungsstelle verfügt. Diese Anmeldeinformationen werden für die Zertifikatsperrung in der Zertifizierungsstelle verwendet. 
 
-7. Wechseln Sie im Microsoft Endpoint Manager Admin Center zurück zu **Mandantenverwaltung** > **Connectors und Token** > **Zertifikatconnectors**. Nach wenigen Augenblicken wird ein grünes Häkchen angezeigt, und der Verbindungsstatus wird aktualisiert. Der Connectorserver kann jetzt mit Intune kommunizieren.
+    **Übernehmen** Sie Ihre Änderungen.
+
+7. Schließen Sie das Fenster.
+
+8. Wechseln Sie im Microsoft Endpoint Manager Admin Center zurück zu **Mandantenverwaltung** > **Connectors und Token** > **Zertifikatconnectors**. Nach wenigen Augenblicken wird ein grünes Häkchen angezeigt, und der Verbindungsstatus wird aktualisiert. Der Connectorserver kann jetzt mit Intune kommunizieren.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Erstellen eines vertrauenswürdigen Zertifikatprofils
 

@@ -2,11 +2,11 @@
 title: Datenspeicherung und -verarbeitung in Intune
 titleSuffix: Microsoft Intune
 description: Erfahren Sie mehr darüber, wie personenbezogene Daten in Intune gespeichert und verarbeitet werden.
-keywords: ''
+keywords: Daten, Datenschutz
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,40 +18,36 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bb40b21d9a257586bbd38d24b2e9b6b0a9f8ce3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92c7c597a6d196ab5f8c3170cd5880682a280e73
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079534"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076062"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Datenspeicherung und -verarbeitung in Intune
 
-Nachdem Intune die [Daten sammelt](privacy-data-collect.md), werden sie wie im Folgenden beschrieben gespeichert und verarbeitet.
+### <a name="storing-customer-data"></a>Speichern von Kundendaten
 
-## <a name="storing-personal-data"></a>Speichern von personenbezogenen Daten
-
-Alle Daten, bei denen es sich nicht um Telemetriedaten handelt, werden vom Intune-Dienst verarbeitet und an einem oder mehreren der folgenden Speicherorte gespeichert: 
-
-- SQLAzure 
-- Zuverlässige Sammlungen (Service Fabric)  
-- Azure Storage 
-
-Telemetriedaten (Dienstprotokolle, Leistungsprotokolle, Fehler usw.), die wichtig für die Überwachung und die Stabilität von Diensten sind, werden an die Microsoft-Telemetriedatenspeicher gesendet.
+Nach dem [Sammeln von Daten](privacy-data-collect.md) befolgt Intune die Microsoft 365-Standardrichtlinie für die Datenverarbeitung, die regelt, wie Kundendaten gespeichert und verarbeitet werden. Informationen dazu finden Sie unter [Informationen dazu, wo Ihre Microsoft 365-Kundendaten gespeichert werden](https://docs.microsoft.com/microsoft-365/enterprise/o365-data-locations). Personenbezogene Daten werden innerhalb der überwachten Konformitätsgrenzen des Intune-Diensts im Rahmen der technischen Sicherheitsmaßnahmen verarbeitet, die in den [Microsoft-Bestimmungen für Onlinedienste (OST)](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46) zugesichert werden.
 
 ### <a name="storage-locations"></a>Speicherorte
 
 Microsoft betreibt Intune-Dienste in vielen Regionen weltweit. Intune berücksichtigt die Auswahl des Speicherorts, die vom Administrator für Kundendaten festgelegt wurde.
 
-Weitere Informationen finden Sie unter [Wo wir Ihre Daten speichern](https://www.microsoft.com/trust-center/privacy/data-location).
+Weitere Informationen finden Sie unter [Standorte von Rechenzentren](https://docs.microsoft.com/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#data-center-locations).
 
 ### <a name="personal-data-retention"></a>Aufbewahrung personenbezogener Daten
 
-Im Allgemeinen werden personenbezogene Daten von Intune noch bis zu 30 Tage aufbewahrt, nachdem der Benutzer aus der Intune-Verwaltung entfernt wurde.
+Die Microsoft 365-Standardrichtlinie für die Datenverarbeitung regelt, wie lange Kundendaten nach dem Löschen aufbewahrt werden. Kundendaten werden in den beiden folgenden Szenarien gelöscht:
 
-Telemetriedaten, die durch die Verwendung von Intune gesammelt wurden, werden bis zu 30 Tage aufbewahrt.
+-**Aktives Löschen**: Der Mandant besitzt ein aktives Abonnement, und ein Benutzer oder Administrator löscht Daten, oder ein Administrator löscht einen Benutzer.
+-**Passives Löschen**: Das Mandantenabonnement endet.
 
-Überwachungsprotokolle werden bis zu einem Jahr aufbewahrt.
+Informationen zu beiden Szenarien finden Sie unter [Aufbewahren, Löschen und Zerstören von Daten in Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide).  
+
+Im Allgemeinen werden von Intune gesammelte Daten innerhalb von 30 Tagen nach dem Löschen entfernt. Überwachungsprotokolle werden aus Sicherheitsgründen bis zu ein Jahr lang aufbewahrt. 
+
 
 ## <a name="processing-personal-data"></a>Verarbeiten von personenbezogenen Daten
 
@@ -60,15 +56,6 @@ Intune verarbeitet personenbezogene Daten mit ISO-zertifizierten Systemen. Weite
 ### <a name="profiling-and-marketing"></a>Profilerstellung und Marketing
 
 Microsoft Intune verwendet keine personenbezogenen Daten, die durch den Dienst gesammelt wurden, für Profilerstellungs- oder Marketingzwecke. 
-
-### <a name="restrict-processing-of-personal-data"></a>Einschränken der Verarbeitung von personenbezogenen Daten
-
-Wenn Sie die Verarbeitung der personenbezogenen Daten eines Benutzers einschränken möchten, können Sie dessen Konto löschen, indem Sie Folgendes durchführen:
-1. Exportieren Sie eine elektronische Kopie der personenbezogenen Daten des Benutzers. Dazu zählen:
-    - Konten
-    - Dienstdaten
-    - Zugeordnete Protokolle
-2. Löschen Sie das Konto des Benutzers und die zugehörigen Daten aus Intune.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

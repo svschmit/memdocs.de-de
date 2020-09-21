@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: 08f0f02075baf7447815beb56c0f9c0a726c4d43
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281182"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039396"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK für iOS –Entwicklerhandbuch
 
@@ -70,6 +70,7 @@ Die folgenden Headerdateien enthalten die APIs, die Datentypen und die Protokoll
 
 -  IntuneMAMAppConfig.h
 -  IntuneMAMAppConfigManager.h
+-  IntuneMAMComplianceManager.h
 -  IntuneMAMDataProtectionInfo.h
 -  IntuneMAMDataProtectionManager.h
 -  IntuneMAMDefs.h
@@ -77,12 +78,15 @@ Die folgenden Headerdateien enthalten die APIs, die Datentypen und die Protokoll
 -  IntuneMAMEnrollmentDelegate.h
 -  IntuneMAMEnrollmentManager.h
 -  IntuneMAMEnrollmentStatus.h
+-  IntuneMAMFile.h
 -  IntuneMAMFileProtectionInfo.h
 -  IntuneMAMFileProtectionManager.h
 -  IntuneMAMLogger.h
 -  IntuneMAMPolicy.h
 -  IntuneMAMPolicyDelegate.h
 -  IntuneMAMPolicyManager.h
+-  IntuneMAMSettings.h
+-  IntuneMAMUIHelper.h
 -  IntuneMAMVersionInfo.h
 
 Entwickler können die Inhalte aller vorherigen Header verfügbar machen, indem sie nur IntuneMAM.h importieren.
@@ -214,19 +218,19 @@ Wenn Ihre App bereits MSAL verwendet, sind die folgenden Konfigurationen erforde
 
 3. Geben Sie außerdem im Wörterbuch **IntuneMAMSettings** mit dem Schlüsselnamen `ADALRedirectUri` den Umleitungs-URI an, mit dem MSAL-Aufrufe durchgeführt werden sollen. Alternativ können Sie stattdessen `ADALRedirectScheme` angeben, wenn der Umleitungs-URI der Anwendung das Format `scheme://bundle_id` aufweist.
 
-Darüber hinaus können Apps diese Azure AD-Einstellungen zur Runtime überschreiben. Legen Sie zu diesem Zweck einfach die Eigenschaften `aadAuthorityUriOverride`, `aadClientIdOverride` und `aadRedirectUriOverride` auf der `IntuneMAMPolicyManager`-Instanz fest.
+Darüber hinaus können Apps diese Azure AD-Einstellungen zur Runtime überschreiben. Legen Sie zu diesem Zweck einfach die Eigenschaften `aadAuthorityUriOverride`, `aadClientIdOverride` und `aadRedirectUriOverride` in der Klasse `IntuneMAMSettings` fest.
 
 4. Stellen Sie sicher, dass die Schritte befolgt werden, um Ihrer iOS-App Berechtigungen für den Dienst der App-Schutzrichtlinie (App Protection Policy, APP) zu erteilen. Verwenden Sie die Anweisungen im [Leitfaden zu den ersten Schritten mit dem Intune SDK](app-sdk-get-started.md#next-steps-after-integration), Abschnitt [Erteilen von Berechtigungen für den Zugriff auf den Intune-App-Schutzdienst durch Ihre App (optional)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional).  
 
 > [!NOTE]
-> Der Ansatz mit „Info.plist“ empfiehlt sich für alle Einstellungen, die statisch sind und nicht zur Runtime ermittelt werden müssen. Die den `IntuneMAMPolicyManager`-Eigenschaften zugewiesenen Werte haben Vorrang vor den entsprechenden in „Info.plist“ angegebenen Werten und werden auch nach dem Neustart der App beibehalten. Das SDK verwendet diese weiterhin für das Einchecken von Richtlinien, bis die Registrierung des Benutzers aufgehoben wird oder die Werte gelöscht oder geändert werden.
+> Der Ansatz mit „Info.plist“ empfiehlt sich für alle Einstellungen, die statisch sind und nicht zur Runtime ermittelt werden müssen. Zur Laufzeit den `IntuneMAMSettings`-Klasseneigenschaften zugewiesene Werte haben Vorrang vor den entsprechenden in „Info.plist“ angegebenen Werten und werden auch nach dem Neustart der App beibehalten. Das SDK verwendet diese weiterhin für das Einchecken von Richtlinien, bis die Registrierung des Benutzers aufgehoben wird oder die Werte gelöscht oder geändert werden.
 
 ### <a name="if-your-app-does-not-use-msal"></a>Wenn Ihre Anwendung MSAL nicht verwendet
 
 Wie zuvor erwähnt kann das Intune App SDK die [Microsoft-Authentifizierungsbibliothek](https://github.com/AzureAD/microsoft-authentication-library-for-objc) für die Authentifizierung und für Szenarios mit bedingtem Start verwenden. Außerdem nutzt es MSAL zum Registrieren des Benutzeridentität mit dem Dienst für die mobile Anwendungsverwaltung für Verwaltungsszenarios ohne Geräteregistrierung. Wenn **der Authentifizierungsmechanismus Ihrer App nicht auf MSAL basiert**, müssen Sie möglicherweise benutzerdefinierte AAD-Einstellungen konfigurieren:
 
 * Entwickler müssen eine App-Registrierung in AAD mit einem benutzerdefinierten Weiterleitungs-URI im [hier angegebenen Format](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration) erstellen. 
-* Entwickler sollten die zuvor erwähnten Einstellungen `ADALClientID` und `ADALRedirectUri` oder alternativ die äquivalenten Eigenschaften `aadClientIdOverride` und `aadRedirectUriOverride` der `IntuneMAMPolicyManager`-Instanz festlegen. 
+* Entwickler sollten die zuvor erwähnten Einstellungen `ADALClientID` und `ADALRedirectUri` oder alternativ die äquivalenten Eigenschaften `aadClientIdOverride` und `aadRedirectUriOverride` in der Klasse `IntuneMAMSettings` festlegen. 
 * Entwickler sollten außerdem unbedingt Schritt 4 des vorherigen Abschnitts befolgen, damit ihre App-Registrierung Zugriff auf den Dienst für App-Schutz in Intune hat.
 
 ### <a name="special-considerations-when-using-msal"></a>Besondere Überlegungen bei der Verwendung von MSAL 
@@ -766,7 +770,7 @@ Wenn Ihre Anwendung Websites in einer Webansicht anzeigen kann, müssen Sie ggf.
 
 ### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>Webansichten, in denen nur nicht unternehmensbezogene Inhalte/Websites angezeigt werden
 
-Wenn Ihre Anwendung keine Unternehmensdaten in der Webansicht anzeigt und die Benutzer zu beliebigen Websites navigieren und dort möglicherweise verwaltete Daten aus anderen Teilen der Anwendung durch Kopieren in ein öffentliches Forum einfügen können, ist die Anwendung für das Festlegen der aktuellen Identität verantwortlich, sodass verwaltete Daten nicht über die Webansicht nach draußen gelangen können. Beispiele hierfür sind Webseiten des Typs „Feature vorschlagen“ oder „Feedback“, die über direkte oder indirekte Links zu einer Suchmaschine verfügen. Anwendungen mit mehreren Identitäten sollten IntuneMAMPolicyManager setUIPolicyIdentity aufrufen und dabei vor dem Anzeigen der Webansicht die leere Zeichenfolge übergeben. Nach dem Schließen der Webansicht muss die Anwendung setUIPolicyIdentity aufrufen und die aktuelle Identität übergeben. Anwendungen mit nur einer Identität sollten IntuneMAMPolicyManager setCurrentThreadIdentity aufrufen und dabei vor dem Anzeigen der Webansicht die leere Zeichenfolge übergeben. Nach dem Schließen der Webansicht muss die Anwendung setCurrentThreadIdentity aufrufen und „nil“ übergeben. Dadurch wird sichergestellt, dass das Intune SDK die Webansicht als nicht verwaltet behandelt und dass verwaltete Daten aus anderen Teilen der Anwendung nicht in die Webansicht eingefügt werden können, wenn die Richtlinie entsprechend konfiguriert ist. 
+Wenn Ihre Anwendung keine Unternehmensdaten in der Webansicht anzeigt und die Benutzer zu beliebigen Websites navigieren und dort möglicherweise verwaltete Daten aus anderen Teilen der Anwendung durch Kopieren in ein öffentliches Forum einfügen können, ist die Anwendung für das Festlegen der aktuellen Identität verantwortlich, sodass verwaltete Daten nicht über die Webansicht nach draußen gelangen können. Beispiele hierfür sind Webseiten des Typs „Feature vorschlagen“ oder „Feedback“, die über direkte oder indirekte Links zu einer Suchmaschine verfügen. Anwendungen mit mehreren Identitäten müssen `setUIPolicyIdentity` in der Instanz `IntuneMAMPolicyManager` aufrufen und dabei vor dem Anzeigen der Webansicht die leere Zeichenfolge übergeben. Nach dem Verwerfen der Webansicht muss die Anwendung `setUIPolicyIdentity` aufrufen und die aktuelle Identität übergeben. Anwendungen mit nur einer Identität müssen `setCurrentThreadIdentity` in der Instanz `IntuneMAMPolicyManager` aufrufen und dabei vor dem Anzeigen der Webansicht die leere Zeichenfolge übergeben. Nach dem Verwerfen der Webansicht muss die Anwendung `setCurrentThreadIdentity` aufrufen und nichts übergeben. Dadurch wird sichergestellt, dass das Intune SDK die Webansicht als nicht verwaltet behandelt und dass verwaltete Daten aus anderen Teilen der Anwendung nicht in die Webansicht eingefügt werden können, wenn die Richtlinie entsprechend konfiguriert ist. 
 
 ### <a name="webviews-that-display-only-corporate-contentwebsites"></a>Webansichten, in denen nur unternehmensbezogene Inhalte/Websites angezeigt werden
 
@@ -774,9 +778,9 @@ Wenn in Ihrer Anwendung nur Unternehmensdaten in der Webansicht angezeigt werden
 
 ### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>Webansichten, die unternehmens- und nicht-unternehmensbezogene Inhalte/Websites anzeigen können
 
-In diesem Szenario wird nur WKWebView unterstützt. Anwendungen, die die Legacy-UIWebView verwenden, sollten zu WKWebView wechseln. Wenn Ihre Anwendung unternehmensbezogene Inhalte innerhalb von WKWebView anzeigt und Benutzer auch auf nicht unternehmensbezogene Inhalte/Websites zugreifen können, was zu Datenverlusten führen kann, sollte die Anwendung die Delegatmethode „isExternalURL:“ implementieren, die in „IntuneMAMPolicyDelegate.h“ definiert ist. Anwendungen müssen ermitteln, ob die an die Delegatmethode übergegebene URL eine Unternehmenswebsite darstellt, auf der verwaltete Daten eingefügt werden können, oder eine Nicht-Unternehmenswebsite, über die Unternehmensdaten nach außen gelangen könnten. 
+In diesem Szenario wird nur WKWebView unterstützt. Anwendungen, die die Legacy-UIWebView verwenden, sollten zu WKWebView wechseln. Wenn Ihre Anwendung in der WKWebView unternehmenseigene Inhalte anzeigt und Benutzer auch auf nicht unternehmenseigene Inhalte/Websites zugreifen können (dies kann zu Datenverlusten führen), muss die Anwendung die Delegatmethode `isExternalURL:` implementieren, die in `IntuneMAMPolicyDelegate.h` definiert ist. Anwendungen müssen ermitteln, ob die an die Delegatmethode übergegebene URL eine Unternehmenswebsite darstellt, auf der verwaltete Daten eingefügt werden können, oder eine Nicht-Unternehmenswebsite, über die Unternehmensdaten nach außen gelangen könnten. 
 
-Wenn für „isExternalURL“ das Ergebnis „NO“ zurückgegeben wird, weiß das Intune SDK, dass es sich bei der geladenen Website um einen Unternehmensstandort handelt, auf dem verwaltete Daten freigegeben werden können. Wird „YES“ zurückgegeben, öffnet das Intune SDK die URL in Edge anstatt in WKWebView, wenn dies durch die aktuellen Richtlinieneinstellungen vorgeschrieben ist. Dadurch wird sichergestellt, dass keine verwalteten Daten von innerhalb der App auf die externe Website gelangen können.
+Die Rückgabe von „NO“ in `isExternalURL` informiert das Intune SDK darüber, dass es sich bei der geladenen Website um eine Unternehmenswebsite handelt, in der verwaltete Daten freigegeben werden können. Wird „YES“ zurückgegeben, öffnet das Intune SDK die URL in Edge anstatt in WKWebView, wenn dies durch die aktuellen Richtlinieneinstellungen vorgeschrieben ist. Dadurch wird sichergestellt, dass keine verwalteten Daten von innerhalb der App auf die externe Website gelangen können.
 
 ## <a name="ios-best-practices"></a>Empfohlene Methoden für iOS
 
@@ -827,7 +831,7 @@ Ja, der IT-Administrator kann einen Befehl zum selektiven Zurücksetzen an die A
 
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>Gibt es eine Beispiel-App, in der die Integration des SDK gezeigt wird?
 
-Ja! Wir haben vor Kurzem die Open-Source-Beispiel-App [Wagr für iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App) überarbeitet. Wagr ist jetzt auch für App-Schutzrichtlinien aktiviert, die mit dem Intune App SDK bereitgestellt werden.
+Ja! Weitere Informationen finden Sie in der Beispiel-App [Chatr](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App).
 
 ### <a name="how-can-i-troubleshoot-my-app"></a>Troubleshooting für Apps
 

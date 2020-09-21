@@ -28,6 +28,8 @@
       href: get-started/configure-classifications-and-products.md
     - name: Verwalten von Einstellungen für Softwareupdates
       href: get-started/manage-settings-for-software-updates.md
+    - name: Konfigurieren eines Softwareupdatepunkts für die Verwendung von SSL
+      href: get-started/software-update-point-ssl.md
     - name: Synchronisieren von Softwareupdates in getrennten Umgebungen
       items:
         - name: Synchronisieren von Softwareupdates bei einem getrennten Softwareupdatepunkt

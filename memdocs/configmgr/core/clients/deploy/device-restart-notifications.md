@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11a7330220ed1aa8f4c3f813418ea86e59e0e1fc
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127245"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608011"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Benachrichtigungen zum Geräteneustart in Configuration Manager
 
@@ -51,7 +51,7 @@ Im Softwarecenter wird eine Benachrichtigung mit einer Erinnerungsoption und der
 
 Diese finale Countdownbenachrichtigung wird vom Softwarecenter angezeigt. Der Benutzer kann die Benachrichtigung nicht schließen und keine Option zum erneuten Erinnern auswählen.
 
-:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Softwarecenter-Benachrichtigung mit finalem Countdown":::
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Softwarecenter – Countdown zu finalem Neustart":::
 
 Ab Version 1906 wird dem Benutzer erst dann eine Statusanzeige in der Neustartbenachrichtigung angezeigt, wenn der ausstehende Neustart in weniger als 24 Stunden durchgeführt wird.
 
@@ -237,11 +237,11 @@ Wenn der Benutzer das Gerät nach der Installation nicht neu gestartet hat, erh�
 
 - Temporäre Benachrichtigung bei Verwendung des Softwarecenter-Dialogfelds, kein Popup:
 
-    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Softwarecenter-Benachrichtigung über ausstehenden Neustart mit Schaltfläche „Erneut erinnern“":::
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Softwarecenter-Benachrichtigung über ausstehenden Neustart mit Schaltfläche „Erneut erinnern“ in Version 1902":::
 
 Wenn der Benutzer nach der temporären Benachrichtigung keinen Neustart ausführt, wird die finale Benachrichtigung mit Countdown ausgegeben; diese kann nicht geschlossen werden. Der Zeitpunkt, zu dem die finale Benachrichtigung angezeigt wird, basiert auf der Clienteinstellung: **Nicht vom Benutzer schließbares Dialogfeld anzeigen, in der das Countdownintervall (in Minuten) bis zum Abmelden des Benutzers oder Neustart des Computers angezeigt wird**. Wenn die Einstellung z. B. auf 60 festgelegt ist, wird die finale Benachrichtigung für den Benutzer eine Stunde vor dem Erzwingen eines Neustarts angezeigt:
 
-:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Softwarecenter-Benachrichtigung mit finalem Countdown":::
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Softwarecenter-Benachrichtigung über finalen Countdown in Version 1902":::
 
 Die folgende Einstellung muss eine kürzere Dauer als das kürzeste [Wartungsfenster](../manage/collections/use-maintenance-windows.md) aufweisen, das auf den Computer angewendet wird:
 

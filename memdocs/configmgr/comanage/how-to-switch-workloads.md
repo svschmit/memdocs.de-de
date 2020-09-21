@@ -10,12 +10,12 @@ manager: dougeby
 ms.date: 09/06/2019
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 88c8b34437ba52e700ef97885aafed40734a0f32
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776955"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606822"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Verschieben von Configuration Manager-Workloads zu Intune
 
@@ -43,7 +43,7 @@ Ab Version 1906 können Sie verschiedene Pilotsammlungen für die einzelnen Work
 
 4. Wechseln Sie zur Registerkarte **Staging**, und ändern Sie die **Pilotsammlung** für Workloads, falls erforderlich.
   
-   ![Screenshot der Registerkarte „Workloads“ auf der Eigenschaftenseite für die Co-Verwaltung](media/3555750-co-management-staging-tab.png)
+   ![Screenshot der Registerkarte „Staging“ auf der Eigenschaftenseite für die Co-Verwaltung](media/3555750-co-management-staging-tab.png)
 
 > [!Important]  
 > - Bevor Sie Workloads verschieben, stellen Sie sicher, dass Sie die entsprechende Workload in Intune ordnungsgemäß konfigurieren und bereitstellen. Achten Sie darauf, dass Workloads immer von einem der Verwaltungstools für Ihre Geräte verwaltet werden.
@@ -60,7 +60,7 @@ Sie können Workloads verschieben, wenn Sie die Co-Verwaltung aktivieren, oder a
 
 3. Wechseln Sie zur Registerkarte **Workloads**. Standardmäßig werden alle Workloads auf die Einstellung **Configuration Manager** festgelegt. Um eine Workload zu verschieben, bewegen Sie den Schieberegler für diese Workload auf die gewünschte Einstellung.  
 
-    ![Screenshot der Registerkarte „Workloads“ auf der Eigenschaftenseite für die Co-Verwaltung](media/properties-workloads.png)
+    ![Screenshot der Registerkarte „Workloads“ auf der Eigenschaftenseite für die Co-Verwaltung, Version 1902](media/properties-workloads.png)
 
     - **Configuration Manager:** Configuration Manager verwaltet diese Workload weiterhin.  
 

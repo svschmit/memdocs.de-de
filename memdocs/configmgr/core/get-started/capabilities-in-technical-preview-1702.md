@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e9fa71060b8125b7d0872a40d197f1c423217bad
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693011"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607932"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Funktionen in der Technical Preview 1702 für Configuration Manager
 
@@ -186,11 +186,11 @@ Gehen Sie wie folgt vor, um eine Tasksequenz als Tasksequenz mit schwerwiegenden
 
    Angenommen, Sie konfigurieren folgende benutzerdefinierte Benachrichtigung in den Eigenschaften.
 
-   ![Benutzerdefinierte Benachrichtigung für eine Tasksequenz](./media/user-notification.png)
+   ![Benutzerdefinierte Benachrichtigung für eine Tasksequenz – Eigenschaften](./media/user-notification.png)
 
    Folgende Benachrichtigung wird angezeigt, wenn der Endbenutzer die Installation aus dem Softwarecenter öffnet.
 
-   ![Benutzerdefinierte Benachrichtigung für eine Tasksequenz](./media/user-notification-enduser.png)
+   ![Benutzerdefinierte Benachrichtigung für eine Tasksequenz – Softwarecenter](./media/user-notification-enduser.png)
 
 ### <a name="configure-software-center-properties"></a>Konfigurieren der Eigenschaften des Softwarecenters
 Gehen Sie wie folgt vor, um die Angaben für die Tasksequenz, die im Softwarecenter angezeigt werden, zu konfigurieren. Diese Angaben dienen nur zu Informationszwecken.  

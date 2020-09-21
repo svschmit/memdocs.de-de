@@ -10,12 +10,12 @@ ms.assetid: 36385bea-f05e-4300-947f-cb3927b3bac5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6bddf46df63eac70a536faaee04a2ac7243e534a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7302262c0da5f48bae83f5194ce41206055ae94d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128272"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608352"
 ---
 # <a name="troubleshoot-cmpivot"></a>Problembehandlung für CMPivot
 
@@ -49,7 +49,7 @@ Suchen Sie in `smsprov.log` nach folgenden Zeilen:
 
 Suchen Sie als Nächstes die ID im CMPivot-Fenster. Diese ID ist die `ClientOperationID`.
 
-![CMPivot-Fenster, „ClientOperationID“ hervorgehoben](media/cmpivot-client-operationid-1902.png)
+![CMPivot-Fenster, „ClientOperationID“ hervorgehoben, Version 1902](media/cmpivot-client-operationid-1902.png)
 
 Suchen Sie die `TaskID` in der Tabelle „ClientAction“. Die `TaskID` entspricht der `UniqueID` in der Tabelle „ClientAction“.
 

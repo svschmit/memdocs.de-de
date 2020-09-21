@@ -15,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 38f140717d256d6edd4e9bd6cd0a66b6bc853740
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: ac359871b9f565b66d6d179048ae8c64ebf5392d
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574579"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779516"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Problembehandlung bei Windows Autopilot
 
@@ -93,7 +93,7 @@ Wenn OOBE unerwartetes Autopilot-Verhalten enthält, ist es hilfreich, zu überp
 
 ### <a name="windows-10-version-1803-and-above"></a>Windows 10, Version 1803 und höher
 
-In Windows 10, Version 1803 und höher, werden Ereignisprotokoll Einträge hinzugefügt. Sie können die og-Einträge verwenden, um Details im Zusammenhang mit den Autopilot-Profileinstellungen und dem OOBE-Flow anzuzeigen. Diese Einträge können mit Ereignisanzeige angezeigt werden. Lesen Sie die Informationen unter **Anwendungs-und Dienst Protokolle – > Microsoft – > Windows – > Provisioning-Diagnostics-Provider – > Autopilot** für Versionen vor 1903. Informationen zu den Versionen 1903 und höher finden Sie unter **Anwendungs-und Dienst Protokolle – > Microsoft – > Windows – > moderndeployment-Diagnostics-Provider – > Autopilot**. Je nach Szenario und Profil Konfiguration können die folgenden Ereignisse aufgezeichnet werden:
+In Windows 10, Version 1803 und höher, werden Ereignisprotokoll Einträge hinzugefügt. Sie können die Protokolleinträge verwenden, um Details im Zusammenhang mit den Autopilot-Profileinstellungen und dem OOBE-Flow anzuzeigen. Diese Einträge können mit Ereignisanzeige angezeigt werden. Lesen Sie die Informationen unter **Anwendungs-und Dienst Protokolle – > Microsoft – > Windows – > Provisioning-Diagnostics-Provider – > Autopilot** für Versionen vor 1903. Informationen zu den Versionen 1903 und höher finden Sie unter **Anwendungs-und Dienst Protokolle – > Microsoft – > Windows – > moderndeployment-Diagnostics-Provider – > Autopilot**. Je nach Szenario und Profil Konfiguration können die folgenden Ereignisse aufgezeichnet werden:
 
 | Ereignis-ID | type | BESCHREIBUNG |
 |----------|------|-------------| 
@@ -165,7 +165,7 @@ Wenn Sie einen Computer während OOBE neu starten müssen:
 
 Weitere Informationen finden Sie unter [Windows Setup-Befehlszeilenoptionen](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 [Windows Autopilot-bekannte Probleme](known-issues.md)<br>
 [Diagnostizieren von MDM-Fehlern in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>

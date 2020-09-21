@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: f91de698a518a8f8530ae42d5a8842d7876074a1
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423814"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076218"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Verwenden von Zertifikaten zur Authentifizierung in Microsoft Intune
 
@@ -49,7 +49,7 @@ Bei der Verwendung einer Microsoft-Zertifizierungsstelle (Certification Authorit
   - [Installieren Sie den Zertifikatconnector von Microsoft](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
 - So verwenden Sie PKCS-Zertifikatprofile:
-  - [Installieren Sie den PFX-Zertifikatconnector für Microsoft Intune.](certificates-imported-pfx-configure.
+  - [Installieren Sie den PFX-Zertifikatconnector für Microsoft Intune.](certficates-pfx-configure.md)
   
 - Verwenden von importierten PKCS-Zertifikaten:
   - [Installieren Sie den PFX-Zertifikatconnector für Microsoft Intune.](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune)
