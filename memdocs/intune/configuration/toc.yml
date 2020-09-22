@@ -51,9 +51,11 @@
           displayName: 'psk, oma-uri, eap'
         - name: WLAN-Problembehandlung
           href: troubleshoot-wi-fi-profiles.md
-    - name: Administrative Vorlagen
-      displayName: 'admx, gpo, group policy'
+    - name: Administrative Vorlagen für Vorlagen für Gruppenrichtlinien
+      displayName: 'admx, gpo'
       items:
+        - name: Analyse von Gruppenrichtlinien
+          href: group-policy-analytics.md
         - name: Administrative Vorlagen erstellen
           href: administrative-templates-windows.md
         - name: Aktualisieren von Office mithilfe administrativer Vorlagen

@@ -11,24 +11,48 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 80a602c8aa6be7599bbb579f41f34fb560d903c3
-  ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+  ms.openlocfilehash: b3d6c2510cb26fb520c3b765a0931991aaed6e14
+  ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/28/2020
-  ms.locfileid: "89067986"
+  ms.lasthandoff: 09/18/2020
+  ms.locfileid: "90802821"
 landingContent:
 - title: Informationen zur Mandantenanfügung
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: Aktivieren der Mandantenanfügung
       url: device-sync-actions.md
-    - text: Anzeigen von ConfigMgr-Clientdetails (Vorschau)
-      url: client-details.md
   - linkListType: reference
     links:
     - text: Problembehandlung für Anfüge- und Geräteaktionen für Mandanten
       url: troubleshoot.md
     - text: Problembehandlung für ConfigMgr-Clientdetails (Vorschau)
       url: troubleshoot-client-details.md
+- title: Abrufen von Informationen zu den hochgeladenen Geräten
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Anzeigen von ConfigMgr-Clientdetails (Vorschau)
+      url: client-details.md
+    - text: Gerätezeitskala (Vorschau)
+      url: timeline.md
+    - text: Ressourcen-Explorer (Vorschau)
+      url: resource-explorer.md
+- title: Hauptaufgaben
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Skripts ausführen
+      url: scripts.md
+    - text: Installieren von Anwendungen
+      url: applications.md
+    - text: Starten von CMPivot
+      url: cmpivot-start.md
+  - linkListType: concept
+    links:
+    - text: Überblick über die CMPivot-Nutzung
+      url: cmpivot-overview-attached.md
+    - text: CMPivot-Beispielskripts
+      url: cmpivot-samples-attached.md
