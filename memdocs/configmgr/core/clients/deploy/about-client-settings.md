@@ -2,7 +2,7 @@
 title: Clienteinstellungen
 titleSuffix: Configuration Manager
 description: Informationen zu Standardeinstellungen und benutzerdefinierten Einstellungen zur Steuerung von Clientverhalten
-ms.date: 08/20/2020
+ms.date: 09/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9e44c67e2dd7c78787d849e84784a39c40125dc0
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693419"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076089"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informationen zu Clienteinstellungen in Configuration Manager
 
@@ -644,11 +644,9 @@ Legen Sie diese Option auf **Ja** fest, um die Authentifizierung auf Netzwerkebe
 ### <a name="select-the-user-portal"></a>Wählen Sie das Benutzerportal aus
 
 <!--CMADO-3601237,INADO-4297660-->
-Wenn Sie ab Version 2006 das Unternehmensportal für gemeinsam verwaltete Geräte bereitstellen, legen Sie diese Einstellung auf **Unternehmensportal** fest. Mit dieser Einstellung wird sichergestellt, dass Benutzer nur Benachrichtigungen vom Unternehmensportal erhalten.
+Wenn Sie ab Version 2006 das Unternehmensportal für gemeinsam verwaltete Geräte bereitstellen, legen Sie diese Einstellung auf **Unternehmensportal** fest. Diese Einstellung stellt sicher, dass die Benachrichtigungen von Configuration Manager und Intune beide das Unternehmensportal starten. Wenn sich eine Configuration Manager-Benachrichtigung auf ein Szenario bezieht, das das Unternehmensportal nicht unterstützt, wird durch Auswählen der Benachrichtigung das Software Center gestartet.
 
-Wenn Sie das Unternehmensportal auf einem gemeinsam verwalteten Gerät installieren, diese Einstellung jedoch auf **Softwarecenter** festlegen, erhalten Benutzer Benachrichtigungen von beiden Portalen. Dies ist für Benutzer u. U. verwirrend.
-
-Wenn Sie die Clienteinstellung in „Unternehmensportal“ ändern, startet ein Benutzer beim Auswählen einer Configuration Manager-Benachrichtigung das Unternehmensportal. Wenn sich die Benachrichtigung auf ein Szenario bezieht, das das Unternehmensportal nicht unterstützt, wird durch Auswählen der Benachrichtigung das Softwarecenter gestartet.
+Wenn Sie das Unternehmensportal auf einem gemeinsam verwalteten Gerät installieren, diese Einstellung jedoch auf **Software Center** festlegen, starten Benachrichtigungen von Configuration Manager das Software Center. Benachrichtigungen von Intune starten das Unternehmensportal. Dieses Verhalten kann durch die Interaktion mit unterschiedlichen Portalen für Benutzer verwirrend sein.
 
 Das Verhalten des Unternehmensportals hängt von der Konfiguration der Workload für die Co-Verwaltung ab. Weitere Informationen finden Sie unter [Verwenden der Unternehmensportal-App auf gemeinsam verwalteten Geräten](../../../comanage/company-portal.md).
 

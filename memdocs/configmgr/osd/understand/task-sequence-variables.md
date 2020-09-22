@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 852ab8b709dcec90d7819a63a6cb6dbb2c781534
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697346"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689462"
 ---
 # <a name="task-sequence-variables"></a>Tasksequenzvariablen
 
@@ -579,6 +579,12 @@ Wenn der Treiberkatalog mehrere mit einem Hardwaregerät kompatible Gerätetreib
 (Eingabe)
 
 Eine durch Kommas getrennte Liste der eindeutigen IDs der Treiberkatalogkategorie. Im Schritt **Treiber automatisch anwenden** werden nur die Treiber in mindestens einer der angegebenen Kategorien berücksichtigt. Dieser Wert ist optional und wird standardmäßig nicht festgelegt. Rufen Sie die verfügbaren Kategorie-IDs ab, indem Sie die Objekte **SMS_CategoryInstance** am Standort auflisten.
+
+### <a name="osdbitlockerpin"></a><a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*Gilt für den Schritt [BitLocker aktivieren](task-sequence-steps.md#BKMK_EnableBitLocker).*
+
+Geben Sie die PIN für die BitLocker-Verschlüsselung an. Diese Variable ist nur gültig, wenn der BitLocker-Modus **TPM und PIN** lautet.
 
 ### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
@@ -1645,7 +1651,9 @@ Verwenden Sie diese Variable, um Inhalt im Tasksequenzcache vorübergehend beizu
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Gibt einen Befehl an, der nach Abschluss der Tasksequenz ausgeführt wird. Geben Sie beispielsweise `shutdown.exe /r /t 30 /f` an, um den Computer 30 Sekunden nach Abschluss der Tasksequenz neu zu starten.
+Gibt einen Befehl an, der nach Abschluss der Tasksequenz ausgeführt wird. Kurz vor dem Beenden der Tasksequenz erzeugt der TSManager-Prozess die angegebene Post-Aktion. Er wartet nicht und zeichnet keinen Status auf, sondern endet einfach nach dem Aufruf dieses Befehls.<!-- MEMDocs #719 -->
+
+Geben Sie beispielsweise `shutdown.exe /r /t 30 /f` an, um den Computer 30 Sekunden nach Abschluss der Tasksequenz neu zu starten.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

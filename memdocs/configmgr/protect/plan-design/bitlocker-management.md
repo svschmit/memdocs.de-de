@@ -2,7 +2,7 @@
 title: Plan für die BitLocker-Verwaltung
 titleSuffix: Configuration Manager
 description: Planung der Verwaltung der BitLocker-Laufwerkverschlüsselung mit Configuration Manager
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 193189e0e949aefdff15630476a306c1dc4ef2c7
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699958"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574530"
 ---
 # <a name="plan-for-bitlocker-management"></a>Plan für die BitLocker-Verwaltung
 
@@ -23,12 +23,12 @@ ms.locfileid: "88699958"
 
 <!-- 3601034 -->
 
-Ab Version 1910 können Sie die BitLocker-Laufwerkverschlüsselung (BitLocker Drive Encryption, BDE) von Configuration Manager für lokale Windows-Clients verwalten, die Active Directory beigetreten sind. Azure Active Directory beigetretene oder Arbeitsgruppenclients werden nicht unterstützt. Configuration Manager bietet eine vollständige Lebenszyklusverwaltung für BitLocker, die die Microsoft BitLocker-Verwaltung und -Überwachung (Microsoft BitLocker Administration and Monitoring, MBAM) ersetzen kann.
+Ab Version 1910 können Sie die BitLocker-Laufwerkverschlüsselung (BitLocker Drive Encryption, BDE) von Configuration Manager für lokale Windows-Clients verwalten, die Active Directory beigetreten sind. Configuration Manager bietet eine vollständige Lebenszyklusverwaltung für BitLocker, die die Microsoft BitLocker-Verwaltung und -Überwachung (Microsoft BitLocker Administration and Monitoring, MBAM) ersetzen kann.
 
 > [!NOTE]
 > Configuration Manager aktiviert dieses optionale Feature nicht automatisch. Sie müssen dieses Feature aktivieren, bevor Sie es verwenden. Weitere Informationen finden Sie unter [Enable optional features from updates (Aktivieren optionaler Features von Updates)](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-Weitere Informationen finden Sie unter [BitLocker (Übersicht)](/windows/security/information-protection/bitlocker/bitlocker-overview).
+Weitere allgemeine Informationen zu BitLocker finden Sie unter [BitLocker (Übersicht)](/windows/security/information-protection/bitlocker/bitlocker-overview).
 
 > [!TIP]
 > Stellen Sie die [**Endpoint Protection**-Workload](../../comanage/workloads.md#endpoint-protection) auf Intune um, damit Sie die Verschlüsselung auf gemeinsam verwalteten Windows 10-Geräten mit dem Clouddienst „Microsoft Endpoint Manager“ verwalten können. Weitere Informationen zur Verwendung von Intune finden Sie unter [Windows-Verschlüsselung](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -71,6 +71,8 @@ Lassen Sie zu, dass andere Personen in Ihrer Organisation außerhalb der Configu
 Ermöglichen Sie es Benutzern, ein mit BitLocker verschlüsseltes Gerät mit einem Single Use Key selbst zu entsperren. Sobald dieser Schlüssel verwendet wird, wird ein neuer Schlüssel für das Gerät generiert.
 
 ## <a name="prerequisites"></a>Voraussetzungen
+
+- Mit Azure Active Directory verknüpfte Arbeitsgruppenclients oder Clients in nicht vertrauenswürdigen Domänen werden nicht unterstützt. Der Client muss derzeit mit dem lokalen Active Directory verknüpft sein. Diese Konfiguration dient zum Authentifizieren beim Wiederherstellungsdienst, um Schlüssel zu hinterlegen.
 
 - Wenn Sie eine BitLocker-Verwaltungsrichtlinie erstellen möchten, benötigen Sie in Configuration Manager die Rolle **Hauptadministrator**.
 

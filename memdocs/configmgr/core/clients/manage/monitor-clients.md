@@ -2,7 +2,7 @@
 title: Überwachen von Clients
 titleSuffix: Configuration Manager
 description: Ausführliche Anleitungen zur Überwachung von Clients in Configuration Manager
-ms.date: 07/12/2019
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8094db944a1430311f0c3bb8c94bc7043b12c5ae
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525912"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574614"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Überwachen von Clients in Configuration Manager
 
@@ -76,11 +76,11 @@ Configuration Manager stellt die folgenden Informationstypen als Clientstatus be
 <!--3599209-->
 Softwareupdates und andere Apps werden zum Schutz der Umgebung bereitgestellt. Diese Bereitstellungen erreichen jedoch nur fehlerfreie Clients. Fehlerhafte Configuration Manager-Clients beeinträchtigen die Konformität insgesamt. Je nach Nenner – Anzahl der Geräte, die insgesamt verwaltet werden sollen – kann die Ermittlung der Clientintegrität eine gewisse Herausforderung darstellen. Der Nenner ist umso größer, wenn Sie alle Systeme aus Active Directory ermitteln, auch wenn einige dieser Datensätze zu ausgemusterten Computern gehören.
 
-Ab Version 1902 können Sie ein Dashboard mit Informationen zur Integrität von Configuration Manager-Clients in Ihrer Umgebung anzeigen. Zeigen Sie die Clientintegrität, Szenariointegrität und allgemeine Fehler an. Filtern Sie die Ansicht nach verschiedenen Attributen, um alle potenziellen Probleme nach Betriebssystem- und Clientversion anzuzeigen.
+Configuration Manager stellt ein Dashboard mit Informationen zur Integrität von Clients in Ihrer Umgebung bereit. Zeigen Sie die Clientintegrität, Szenariointegrität und allgemeine Fehler an. Filtern Sie die Ansicht nach verschiedenen Attributen, um alle potenziellen Probleme nach Betriebssystem- und Clientversion anzuzeigen.
 
 Wechseln Sie in der Configuration Manager-Konsole zum Arbeitsbereich **Überwachung**. Erweitern Sie **Clientstatus**, und wählen Sie den Knoten **Dashboard „Clientintegrität“** aus.
 
-![Screenshot des Dashboards „Clientintegrität“](media/3599209-client-health-dashboard.png)
+:::image type="content" source="media/3599209-client-health-dashboard.png" alt-text="Screenshot des Dashboards „Clientintegrität“" lightbox="media/3599209-client-health-dashboard.png":::
 
 > [!Tip]  
 > Es gibt keine Änderungen an ccmeval.  
@@ -91,18 +91,18 @@ Standardmäßig werden im Dashboard „Clientintegrität“ nur Onlineclients un
 
 Oben im Dashboard werden Filter zum Anpassen der im Dashboard angezeigten Daten angezeigt.
 
-- **Sammlung:** Standardmäßig werden im Dashboard Geräte in der Sammlung **Alle Systeme** angezeigt. Wählen Sie in der Liste eine Gerätesammlung aus, um die Ansicht auf eine Teilmenge von Geräten in einer bestimmten Sammlung zu begrenzen.  
+- **Clientintegrität für Clients in den folgenden Sammlungen**: Standardmäßig werden im Dashboard Geräte in der Sammlung **Alle Systeme** angezeigt. Wählen Sie eine Gerätesammlung aus, um die Ansicht auf eine Teilmenge von Geräten in einer bestimmten Sammlung zu begrenzen.  
 
-- **Online/offline**: Standardmäßig werden im Dashboard nur Onlineclients angezeigt. Dieser Status stammt vom Clientbenachrichtigungskanal, über den der Status eines Clients alle fünf Minuten aktualisiert wird. Weitere Informationen finden Sie unter [Informationen zum Clientstatus](monitor-clients.md#bkmk_about).  
+- **In der Anzahl der letzten Tage aktive Clients**: Standardmäßig werden im Dashboard Clients angezeigt, die während der letzten drei Tage aktiv waren.  
 
-- **Aktive \# Tage**: Standardmäßig werden im Dashboard Clients angezeigt, die während der letzten drei Tage aktiv waren.  
+- **Clientintegrität für Offlineclients einschließen**: Standardmäßig werden im Dashboard nur Onlineclients angezeigt. Dieser Status stammt vom Clientbenachrichtigungskanal, über den der Status eines Clients alle fünf Minuten aktualisiert wird. Weitere Informationen finden Sie unter [Informationen zum Clientstatus](monitor-clients.md#bkmk_about).  
 
-- **Failure only** (Nur Fehler): Die Ansicht wird auf die Geräte beschränkt, die einen Clientintegritätsfehler melden.  
+- **Nur Details zu fehlerhaften Clients anzeigen**: Die Ansicht wird auf die Geräte beschränkt, die einen Clientintegritätsfehler melden.  
 
     > [!Tip]  
     > Verwenden Sie diesen Filter zusammen mit den Kacheln für Client- und Betriebssystemversion. Weitere Informationen finden Sie unter [Versionskacheln](#version-tiles).
 
-### <a name="client-health-percentage"></a>Prozentsatz für Clientintegrität
+### <a name="overall-client-health"></a>Clientintegrität insgesamt
 
 Auf dieser Kachel wird die Clientintegrität insgesamt in der Hierarchie angezeigt.
 

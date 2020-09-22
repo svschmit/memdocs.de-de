@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37abb7cba84c8e2479e59070e47c3f09b3b2b8d9
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 49792ea588f01cc57a1dbce9cc137b94a0e4d291
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606969"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574795"
 ---
 # <a name="task-sequence-steps"></a>Tasksequenzschritte
 
@@ -1096,8 +1096,9 @@ Wenn die Festplatte bereits verschlüsselt, aber BitLocker deaktiviert ist, akti
 
 Verwenden Sie die folgenden Tasksequenzvariablen in diesem Schritt:  
 
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)  
+- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
 
 ### <a name="cmdlets-for-enable-bitlocker"></a>Cmdlets für „BitLocker aktivieren“
 
@@ -1592,12 +1593,20 @@ Verwenden Sie diesen Schritt, um den Configuration Manager-Client auf dem Refere
 
 Dieser Schritt entfernt den Configuration Manager-Client vollständig – und nicht nur wichtige Informationen. Wenn die Tasksequenz das erfasste Betriebssystemimage bereitstellt, wird jedes Mal ein neuer Configuration Manager-Client installiert.  
 
-> [!Note]  
-> Die Tasksequenz-Engine entfernt während der Tasksequenz **Referenz-Betriebssystemabbild erstellen und erfassen** nur den Client. Die Tasksequenz-Engine entfernt den Client nicht bei anderen Erfassungsmethoden (z.B. Erfassungsmedien oder benutzerdefinierte Tasksequenz).  
+> [!TIP]
+> Die Tasksequenz-Engine entfernt während der Tasksequenz **Referenz-Betriebssystemabbild erstellen und erfassen** standardmäßig nur den Client. Die Tasksequenz-Engine entfernt den Client nicht bei anderen Erfassungsmethoden (z.B. Erfassungsmedien oder benutzerdefinierte Tasksequenz). Sie können dieses Verhalten für Tasksequenzen für die Betriebssystembereitstellung überschreiben. Legen Sie die Tasksequenzvariable **SMSTSUninstallCCMClient** vor dem Schritt **ConfigMgr-Client für Erfassung vorbereiten** auf **TRUE** fest. Diese Variable und dieses Verhalten gelten nur für Tasksequenzen für die Betriebssystembereitstellung. Der Client wird nach dem nächsten Neustart des Geräts entfernt.
 
 Dieser Tasksequenzschritt wird nur in der Vollversion des Betriebssystems ausgeführt. Er kann nicht in Windows PE ausgeführt werden.  
 
 Um diesen Schritt im Tasksequenz-Editor hinzuzufügen, wählen Sie **Hinzufügen**, **Images** und dann **ConfigMgr-Client für Erfassung vorbereiten** aus.
+
+
+### <a name="variables-for-prepare-configmgr-client-for-capture"></a>Variablen für „ConfigMgr-Client für Erfassung vorbereiten“
+
+Verwenden Sie die folgenden Tasksequenzvariablen in diesem Schritt:  
+
+- SMSTSUninstallCCMClient
+
 
 ### <a name="cmdlets-for-prepare-configmgr-client-for-capture"></a>Cmdlets für „Konfigurations-Manager für Erfassung vorbereiten“
 
@@ -2317,7 +2326,7 @@ Nachdem Sie die Variablen für eine Regel ausgewählt haben, geben Sie einen Wer
 Bei Verwendung der Option **Diesen Wert nicht anzeigen** wird der Wert der Variable im Tasksequenz-Editor nicht angezeigt. In der Tasksequenz-Protokolldatei (**smsts.log**) oder im Tasksequenz-Debugger wird der Wert der Variable ebenfalls nicht angezeigt. Die Variable kann allerdings weiterhin von der Tasksequenz während der Ausführung verwendet werden. Wenn diese Variablen nicht mehr ausgeblendet sein sollen, löschen Sie diese zuerst. Definieren Sie dann erneut die Variablen, und lassen Sie die Option zum Ausblenden dieser Variablen dieses Mal deaktiviert.  
 
 > [!WARNING]  
-> Wenn Sie Variablen in die Befehlszeile des Schritts **Befehlszeile ausführen** einfügen, enthält die Protokolldatei der Tasksequenz die vollständige Befehlszeile einschließlich der Variablenwerte. Um zu verhindern, dass möglicherweise vertrauliche Daten in der Protokolldatei angezeigt werden, legen Sie die Tasksequenzvariable **OSDDoNotLogCommand** auf `TRUE` fest.
+> Wenn Sie Variablen in die Befehlszeile des Schritts **Befehlszeile ausführen** einfügen, zeigt die Protokolldatei der Tasksequenz die vollständige Befehlszeile einschließlich der Variablenwerte an. Um zu verhindern, dass möglicherweise vertrauliche Daten in der Protokolldatei angezeigt werden, legen Sie die Tasksequenzvariable **OSDDoNotLogCommand** auf `TRUE` fest.
 
 
 ## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a> Tasksequenzvariable festlegen
@@ -2462,7 +2471,7 @@ Der Tasksequenzschritt gibt die Standortzuweisung und die Standardkonfiguration 
 
 Geben Sie Befehlszeilenoptionen für die Clientinstallation an. Geben Sie beispielsweise `/skipprereq: silverlight.exe` ein, um „CCMSetup.exe“ anzuweisen, die Voraussetzungen für Microsoft Silverlight nicht zu installieren. Weitere Informationen zu diesen Befehlszeileneigenschaften für CCMSetup.exe finden Sie unter [Informationen zu Clientinstallationseigenschaften](../../core/clients/deploy/about-client-installation-properties.md).  
 
-Wenn Sie eine Tasksequenz zum Bereitstellen eines Betriebssystems auf einem internetbasierten Client ausführen, der entweder in Azure AD eingebunden ist oder die tokenbasierte Authentifizierung verwendet, müssen Sie die Eigenschaft [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) im Schritt **Windows und ConfigMgr einrichten** angeben. Beispielsweise `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
+Wenn Sie eine Tasksequenz zum Bereitstellen eines Betriebssystems auf einem internetbasierten Client ausführen, der entweder in Azure AD eingebunden ist oder die tokenbasierte Authentifizierung verwendet, müssen Sie die Eigenschaft [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) im Schritt **Windows und ConfigMgr einrichten** angeben. Beispiel: `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Optionen für „Windows und Konfigurations-Manager einrichten“
 

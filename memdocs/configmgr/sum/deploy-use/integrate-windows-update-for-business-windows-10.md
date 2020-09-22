@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 62f5059ef02d7b2594a506135abf332a8b6c0def
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699805"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083895"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integrieren mit Windows Update for Business
 
@@ -90,9 +90,9 @@ Weitere Informationen zum Windows-Insider-Programm finden Sie unter [Erste Schri
     - **Branchbereitschaftsniveau:** Legen Sie den Branch fest, für den das Gerät Windows-Updates erhält. Wählen Sie „Halbjährlicher Kanal (gezielt)“, „Halbjährlicher Kanal“ oder einen Windows Insider-Build aus.
 
         > [!NOTE]
-        > Stellen Sie Richtlinien für **Halbjährlicher Kanal (gezielt)** für Windows 10, *Version 1903 oder höher* bereit. Stellen Sie Richtlinien für **Halbjährlicher Kanal** für Windows 10, *Version 1809 oder früher* bereit.
+        > Stellen Sie Richtlinien für **Halbjährlicher Kanal** für Windows 10, *Version 1903 oder höher* bereit. Stellen Sie Richtlinien für **Halbjährlicher Kanal (gezielt)** für Windows 10, *Version 1809 oder früher* bereit.
         >
-        > Wenn Sie eine Richtlinie für **Halbjährlichen Kanal** für Windows 10, Version 1903 oder höher, bereitstellen, tritt bei der Bereitstellung ein Fehler auf: **0x8004100c**.<!-- 5593139 -->
+        > Wenn Sie eine Richtlinie für **Halbjährlichen Kanal (gezielt)** für Windows 10, Version 1903 oder höher, bereitstellen, tritt bei der Bereitstellung ein Fehler auf: **0x8004100c**.<!-- 5593139 -->
 
     - **Zurückstellungszeitraum (Tage):**  Geben Sie die Anzahl der Tage an, die Funktionsupdates verzögert werden. Sie können den Empfang dieser Funktionsupdates für einen Zeitraum von bis zu 365 Tagen nach ihrer Veröffentlichung verzögern.
     - **Anhalten von Funktionsupdates ab:** Wählen Sie aus, ob Sie das Empfangen von Funktionsupdates für bis zu 35 Tage ab dem von Ihnen angegebenen Zeitpunkt anhalten möchten. Nach Ablauf der maximalen Anzahl von Tagen läuft die Anhaltefunktion automatisch ab, sodass das Gerät in Windows Update nach in Frage kommenden Updates sucht. Nach diesem Suchvorgang können Sie die Updates erneut anhalten. Sie können das Anhalten von Funktionsupdates beenden, indem Sie das Kontrollkästchen deaktivieren.

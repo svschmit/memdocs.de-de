@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 018b8f09b0f5595c854eee761f495974665a45ce
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606942"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574677"
 ---
 # <a name="deploy-bitlocker-management"></a>Bereitstellen der BitLocker-Verwaltung
 
@@ -214,7 +214,8 @@ Als Problemumgehung müssen Sie zuerst BitLocker auf dem Gerät deaktivieren. An
 
 Der Configuration Manager-Clienthandler für BitLocker erkennt Co-Verwaltung. Wenn das Gerät der Co-Verwaltung unterliegt und Sie die [Endpoint Protection-Workload](../../../comanage/workloads.md#endpoint-protection) auf Intune umstellen, ignoriert der Configuration Manager-Client die BitLocker-Richtlinie des Geräts. Das Gerät bezieht seine Windows-Verschlüsselungsrichtlinie von Intune.
 
-Wenn Sie Autoritäten für die Verschlüsselungsverwaltung wechseln und sich auch der gewünschte Verschlüsselungsalgorithmus ändert, müssen Sie eine [Neuverschlüsselung](#re-encryption) einplanen.
+> [!NOTE]
+> Das Wechseln der Verschlüsselungsverwaltungsstelle unter Beibehaltung des gewünschten Verschlüsselungsalgorithmus erfordert keine zusätzlichen Aktionen auf dem Client. Wenn Sie jedoch Autoritäten für die Verschlüsselungsverwaltung wechseln und sich auch der gewünschte Verschlüsselungsalgorithmus ändert, müssen Sie eine [Neuverschlüsselung](#re-encryption) einplanen.
 
 Weitere Informationen zur Verwaltung von BitLocker mit Intune finden Sie in den folgenden Artikeln:
 

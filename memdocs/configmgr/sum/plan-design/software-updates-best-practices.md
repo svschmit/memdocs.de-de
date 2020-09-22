@@ -5,17 +5,17 @@ description: Verwenden Sie diese bewährten Methoden für Softwareupdates in Con
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: 3a48ce044f3d1aecbebf2ba93e936dd34b904140
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2809a6852cc3739cfe48418580ba464c3abe956a
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696637"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718687"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Bewährte Methoden für Softwareupdates in Configuration Manager
 
@@ -53,7 +53,8 @@ Wenn die Configuration Manager- und WSUS-Datenbanken dieselbe Instanz von SQL Se
 
 Wählen Sie beim Installieren von WSUS die Einstellung **Updates lokal speichern** aus. Durch diese Einstellung lädt WSUS die Lizenzbedingungen herunter, die Softwareupdates zugeordnet sind. Die Bedingungen werden während des Synchronisierungsprozesses heruntergeladen und auf der lokalen Festplatte für den WSUS-Server gespeichert. Wenn Sie diese Einstellung nicht auswählen, tritt bei Konformitätsüberprüfungen für Softwareupdates mit Lizenzbedingungen auf Clientcomputern möglicherweise ein Fehler auf. Die Komponente **WSUS-Synchronisierungs-Manager** des Softwareupdatepunkts überprüft standardmäßig alle 60 Minuten, ob diese Einstellung aktiviert ist.  
 
-
+### <a name="configure-your-software-update-points-to-use-tlsssl"></a><a name="bkmk_ssl"></a> Konfigurieren Ihrer Softwareupdatepunkte für die Verwendung von TLS/SSL
+Indem Sie die Windows Server Update Services (WSUS)-Server und die entsprechenden Softwareupdatepunkte für die Verwendung von TLS/SSL konfigurieren, schränken Sie die Möglichkeiten für einen potenziellen Angreifer ein, Clients von einem Remotestandort aus zu kompromittieren und Berechtigungen zu erhöhen. Um die Verwendung der besten Sicherheitsprotokolle zu gewährleisten, empfehlen wir Ihnen dringend, das TLS/SSL-Protokoll zu implementieren, um Ihre Softwareupdateinfrastruktur zu schützen. Weitere Informationen finden Sie im Tutorial [Konfigurieren eines Softwareupdatepunkts für die Verwendung von TLS/SSL mit einem PKI-Zertifikat](../get-started/software-update-point-ssl.md).
 
 ## <a name="operational-best-practices"></a><a name="bkmk_operation"></a> Bewährte Betriebsmethoden  
 

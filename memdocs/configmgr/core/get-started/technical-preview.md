@@ -2,7 +2,7 @@
 title: Technical Preview-Releases
 titleSuffix: Configuration Manager
 description: Erfahren Sie mehr über den Technical Preview-Branch, mit dem Sie neue Funktionen und Fähigkeiten in Configuration Manager testen können.
-ms.date: 09/08/2020
+ms.date: 09/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: a27cd1e7a28b52ccc224f965b678d7d578be75eb
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564209"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081738"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview für Configuration Manager
 
@@ -116,19 +116,21 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2009.md) <!--ID-->
 
 Nachfolgend sind die Features der neusten Technical Preview-Versionen für Configuration Manager dargestellt:
 
-### <a name="technical-preview-version-2008"></a>Technical Preview, Version 2008
+### <a name="technical-preview-version-2009"></a>Technical Preview, Version 2009
 
-- [Sammlungsabfrage – Vorschau](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
-- [Analysieren von SetupDiag-Fehlern für Featureupdates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
-- [Überwachen der Szenariointegrität](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
-- [Ansicht der Sammlungsauswertung](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
-- [Anzeigen der Größe einer Tasksequenz in der Konsole](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
-- [Task „Veraltete gesammelte Dateien löschen“](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
-- [Importieren von Objekten in den aktuellen Ordner](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
+- [Cloud Management Gateway mit VM Scale Set](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
+- [ Verbesserungen an der Remotesteuerung](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
+- [Bereitstellen eines Betriebssystems über CMG mithilfe von Startmedien](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
+- [Anzeigen von Sammlungsbeziehungen](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
+- [Aktivieren des Computers am Bereitstellungsstichtag mithilfe der Peeraktivierung](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
+- [Verbesserungen bei Benachrichtigungen in der Konsole](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
+- [Benachrichtigungen für Geräte, die keine Updates mehr erhalten](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
+- [Verbesserte Funktionalität des Windows Server-Neustarts für Nicht-Administratorkonten](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
+- [Verbesserungen bei der Bereitstellung von Betriebssystemen](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
 
 > [!NOTE]
 > Features, die in einer Vorgängerversion der Technical Preview verfügbar waren, bleiben auch in späteren Versionen enthalten. Ebenso bleiben Features, die Current Branch von Configuration Manager hinzugefügt wurden, in weiteren Branches der Technical Preview enthalten.
@@ -145,6 +147,16 @@ Die folgenden Features wurden in früheren Versionen des Technical Preview-Branc
 
 > [!TIP]
 > Sobald ein neues Current Branch-Release verfügbar ist, werden die in dieser Version verfügbaren Features im aktuellen Artikel mit *Neuerungen* aufgeführt. Weitere Informationen finden Sie unter den [Neuigkeiten zu inkrementellen Versionen](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### <a name="technical-preview-version-2008"></a>Technical Preview, Version 2008
+
+- [Sammlungsabfrage – Vorschau](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [Analysieren von SetupDiag-Fehlern für Featureupdates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Überwachen der Szenariointegrität](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Ansicht der Sammlungsauswertung](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [Anzeigen der Größe einer Tasksequenz in der Konsole](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Task „Veraltete gesammelte Dateien löschen“](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Importieren von Objekten in den aktuellen Ordner](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 ### <a name="technical-preview-version-2007"></a>Technical Preview, Version 2007
 

@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fff07351725e6606a49804bba79f226a9042c349
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698485"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039345"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>In Configuration Manager verwendete Konten
 
@@ -336,7 +336,7 @@ Sie können mehr als ein Clientpushinstallations-Konto angeben. Configuration Ma
 > 4. Entfernen Sie anschließend das alte Konto aus Configuration Manager und Active Directory Domain Services  
 
 > [!IMPORTANT]  
-> Erteilen Sie diesem Konto nicht das Recht, sich lokal anzumelden.  
+> Verwenden Sie die Richtlinie der Domäne oder lokalen Gruppe, um dem Windows-Benutzer das Recht **Lokal anmelden verweigern** zuzuweisen. Als Mitglied der Gruppe „Administratoren“ hat dieses Konto das Recht, sich lokal anzumelden, was nicht erforderlich ist. Um die Sicherheit zu erhöhen, verweigern Sie diesem Konto das Recht ausdrücklich. Das Recht „Verweigern“ hat Vorrang vor dem Recht „Zulassen“.<!--MEMDocs#744-->
 
 Weitere Informationen finden Sie unter [Clientpushinstallation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation).
 

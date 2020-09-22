@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Verwenden eines Configuration Manager-Verteilungspunkts als lokalen Cacheserver für die Übermittlungsoptimierung
-ms.date: 05/05/2020
+ms.date: 09/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a42e0937748ecd31b16698904f724260b9b60512
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699329"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039294"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Microsoft Connected Cache in Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "88699329"
 
 <!--3555764-->
 
-Ab Version 1906 können Sie einen Microsoft Connected Cache-Server auf Ihren Verteilungspunkten installieren. Wenn Sie diese Art von Inhalt lokal zwischenspeichern, können Ihre Clients von dem Feature zur Übermittlungsoptimierung profitieren, und Sie können dabei helfen, WAN-Links zu schützen.
+Ab Version 1906 können Sie einen Microsoft Connected Cache-Server auf Ihren Verteilungspunkten installieren. Wenn Sie diese Art von Inhalt lokal zwischenspeichern, können Ihre Clients von dem Feature zur Übermittlungsoptimierung profitieren, das beim Schutz von WAN-Links hilft.
 
 > [!NOTE]
 > Ab Version 1910 wird dieses Feature als **Microsoft Connected Cache** bezeichnet. Zuvor wurde es als Übermittlungsoptimierung durch netzwerkinternen Cache (Delivery Optimization In-Network Cache) bezeichnet.

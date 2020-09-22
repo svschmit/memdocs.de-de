@@ -2,7 +2,7 @@
 title: Konsoleninterne Dokumentation
 titleSuffix: Configuration Manager
 description: Dieser Artikel wird nur in der Configuration Manager-Konsole angezeigt.
-ms.date: 08/12/2020
+ms.date: 09/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b9501590f05a0e765a706af036bc2d1b994e7470
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7aa94abdcf73ac882e8358a61f80ed498b61740e
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696479"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075916"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "88696479"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Dokumentation zu Microsoft Endpoint Configuration Manager
 
-*Letzte Aktualisierung: 12. August 2020*
+*Letzte Aktualisierung: 11. September 2020*
 
 Die Inhalte können Sie dabei unterstützen, Configuration Manager kennenzulernen und zu unterstützen.
 
@@ -35,43 +35,43 @@ Die Inhalte können Sie dabei unterstützen, Configuration Manager kennenzulerne
 
 Weitere Informationen finden Sie in den folgenden Artikeln:
 
-- [Configuration Manager-Dokumentationsbibliothek](../../index.yml)  
-- [Verwenden der Configuration Manager-Dokumentation](../understand/use-docs.md)
+- [Configuration Manager-Dokumentationsbibliothek](https://docs.microsoft.com/mem/configmgr)  
+- [Verwenden der Configuration Manager-Dokumentation](https://docs.microsoft.com/mem/configmgr/core/understand/use-docs)
 
 ## <a name="recommended"></a>Empfohlen
 
 Eine zusammengestellte Liste mit wichtigen Artikeln.
 
-- [Anfügen von Mandanten in Microsoft Endpoint Manager](../../tenant-attach/index.yml)
-- [Endpunktanalyse](../../../analytics/index.yml)
-- [Desktop Analytics](../../desktop-analytics/index.yml)
-- [Co-Verwaltung für Windows 10-Geräte](../../comanage/index.yml)  
-- [CMPivot](../servers/manage/cmpivot.md)  
-- [Plan für die BitLocker-Verwaltung](../../protect/plan-design/bitlocker-management.md)  
-- [Microsoft Edge-Verwaltung](../../apps/deploy-use/deploy-edge.md)  
-- [Verwalten von Microsoft 365-Apps-Updates](../../sum/deploy-use/manage-office-365-proplus-updates.md)  
-- [Grundlagen zu Configuration Manager Current Branch und Windows as a Service](../understand/configuration-manager-and-windows-as-service.md)
-- [Optimieren der Bereitstellung von Updates für Windows 10 mit Configuration Manager](../../sum/deploy-use/optimize-windows-10-update-delivery.md)
-- [Technical Preview-Releases](../get-started/technical-preview.md)
+- [Anfügen von Mandanten in Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/)
+- [Endpunktanalyse](https://docs.microsoft.com/mem/analytics/)
+- [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/)
+- [Co-Verwaltung für Windows 10-Geräte](https://docs.microsoft.com/mem/configmgr/comanage/)  
+- [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
+- [Plan für die BitLocker-Verwaltung](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
+- [Microsoft Edge-Verwaltung](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
+- [Verwalten von Microsoft 365-Apps-Updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Grundlagen zu Configuration Manager Current Branch und Windows as a Service](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service)
+- [Optimieren der Bereitstellung von Updates für Windows 10 mit Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
+- [Technical Preview-Releases](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview)
 
 ## <a name="trending"></a>Populär
 
-Die beliebtesten Artikel zwischen dem 1. Juli und 31. Juli 2020.
+Die beliebtesten Artikel zwischen dem 1. August und dem 31. August 2020.
 
 | Seitenaufrufe | Titel |
 |------------|-------|
-| 25526 | [Aktivieren von Transport Layer Security 1.2 (TLS) auf Clients](../plan-design/security/enable-tls-1-2-client.md) |
-| 22168 | [Aktivieren von Transport Layer Security 1.2 (TLS): Übersicht](../plan-design/security/enable-tls-1-2.md) |
-| 18114 | [Protokolldateireferenz](../plan-design/hierarchy/log-files.md) |
-| 17355 | [Planen des Cloudverwaltungsgateways](../clients/manage/cmg/plan-cloud-management-gateway.md) |
-| 15548 | [Was ist Configuration Manager?](../understand/introduction.md) |
-| 14783 | [Für Verbindungen verwendete Ports](../plan-design/hierarchy/ports.md) |
-| 13029 | [Benutzerleitfaden des Softwarecenters](../understand/software-center.md) |
-| 12939 | [Co-Verwaltung für Windows 10-Geräte](../../comanage/overview.md) |
-| 12256 | [Desktop Analytics](../../desktop-analytics/overview.md) |
-| 11343 | [Neuerungen in Version 2002](../plan-design/changes/whats-new-in-version-2002.md) |
+| 21996 | [Aktivieren von Transport Layer Security 1.2 (TLS) auf Clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 19388 | [Aktivieren von Transport Layer Security 1.2 (TLS): Übersicht](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 16940 | [Protokolldateireferenz](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 16687 | [Was ist Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction) |
+| 15658 | [Planen des Cloudverwaltungsgateways](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 14430 | [Benutzerleitfaden des Softwarecenters](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 13922 | [Für Verbindungen verwendete Ports](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 12258 | [Co-Verwaltung für Windows 10-Geräte](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 10444 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 10353 | [Aktivieren von Transport Layer Security 1.2 (TLS) auf Standortservern und Remotestandortsystemen](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-server) |
 
-Die [Configuration Manager-Hubseite](../../index.yml) wurde in diesem Zeitraum 35.558 Mal aufgerufen.
+Die [Configuration Manager-Hubseite](https://docs.microsoft.com/mem/configmgr) wurde in diesem Zeitraum 32.142 Mal aufgerufen.
 
 ## <a name="recently-updated"></a>Kürzlich aktualisiert
 
@@ -79,42 +79,42 @@ Artikel mit einem zeitnahen und wichtigem Update.
 
 | Zuletzt überprüft | Titel |
 |---------------|-------|
-| 31.07.2020 | [Mandantenanfügung: Übersicht über CMPivot](../../tenant-attach/cmpivot-overview-attached.md) |
-| 27.07.2020 | [Community Hub und GitHub](../servers/manage/community-hub.md) |
-| 14.07.2020 | [Technical Preview 2007](../get-started/2020/technical-preview-2007.md) |
-| 10.07.2020 | [Anfügen von Mandanten in Microsoft Endpoint Manager](../../tenant-attach/device-sync-actions.md) |
-| 08.07.2020 | [Mandantenanfügung – Configuration Manager-Clientdetails im Admin Center (Vorschau)](../../tenant-attach/client-details.md) |
-| 08.07.2020 | [Problembehandlung bei Clientdetails](../../tenant-attach/troubleshoot-client-details.md) |
-| 07.07.2020 | [Problembehandlung für Anfüge- und Geräteaktionen für Mandanten](../../tenant-attach/troubleshoot.md) |
-| 07.07.2020 | [Häufig gestellte Fragen zum Produkt und zur Lizenzierung](../understand/product-and-licensing-faq.md) |
-| 07.07.2020 | [Erforderliche Berechtigungen für den Internetzugriff](../plan-design/network/internet-endpoints.md) |
-| 01.07.2020 | [Neues in Desktop Analytics](../../desktop-analytics/whats-new.md) |
+| 31.08.2020 | [Neuerungen in Version 2006](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2006) |
+| 24.08.2020 | [Mandantenanfügung – Durchführen des Onboardings für Configuration Manager-Clients in Microsoft Defender ATP über das Microsoft Endpoint Manager Admin Center (Vorschau)](https://docs.microsoft.com/mem/configmgr/tenant-attach/atp-onboard) |
+| 21.08.2020 | [Referenz zu BitLocker-Einstellungen](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings) |
+| 21.08.2020 | [Neues in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
+| 20.8.2020 | [Apps im Unternehmensportal](https://docs.microsoft.com/mem/configmgr/comanage/company-portal) |
+| 18.8.2020 | [Installieren von Power BI-Beispielberichten](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-sample-reports) |
+| 17.08.2020 | [Anmerkungen zu dieser Version](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 11.08.2020 | [Erforderliche Berechtigungen für den Internetzugriff](https://docs.microsoft.com/mem/configmgr/core/plan-design/network/internet-endpoints) |
+| 11.08.2020 | [IProgressUI::ShowMessageEx-Methode](https://docs.microsoft.com/mem/configmgr/develop/reference/core/clients/client-classes/iprogressui--showmessageex-method) |
+| 7\.8.2020 | [Technical Preview 2008](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2008) |
 
 ## <a name="troubleshooting-articles"></a>Artikel zur Problembehandlung
 
 Exemplarische Vorgehensweisen mit Anleitungen, die Ihnen bei der Problembehandlung von Configuration Manager-Komponenten und -Features helfen.
 
-- [Troubleshoot application deployments (Problembehandlung bei Anwendungsbereitstellungen)](../../apps/understand/app-deployment-technical-reference.md)
+- [Troubleshoot application deployments (Problembehandlung bei Anwendungsbereitstellungen)](https://docs.microsoft.com/mem/configmgr/apps/understand/app-deployment-technical-reference)
 - [Problembehandlung beim PXE-Start](https://support.microsoft.com/help/4468612)
 - [Understand and troubleshoot Updates and Servicing in Configuration Manager](https://support.microsoft.com/help/4490424) (Grundlegende Informationen und Problembehandlung für Updates und Wartung in Configuration Manager)
 - [Problembehandlung bei der Softwareupdatesynchronisierung](https://support.microsoft.com/help/10059)
 - [Grundlegendes und Problembehandlung bei der Inhaltsverteilung](https://support.microsoft.com/help/4482728)
-- [Grundlegendes und Problembehandlung bei der Integration von Microsoft Store für Unternehmen](../../apps/deploy-use/troubleshoot-microsoft-store-for-business-integration.md)
+- [Grundlegendes und Problembehandlung bei der Integration von Microsoft Store für Unternehmen](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration)
 - [Problembehandlung bei der Softwareupdateverwaltung](https://support.microsoft.com/help/10680)
 - [Problembehandlung beim Tasksequenzschritt „Anwendung installieren“](https://support.microsoft.com/help/18408/)
-- [Problembehandlung bei Desktop Analytics](../../desktop-analytics/troubleshooting.md)
-- [Problembehandlung für Microsoft Connected Cache](../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md)
-- [Problembehandlung für BitLocker](../../protect/tech-ref/bitlocker/troubleshoot.md)
+- [Problembehandlung bei Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/troubleshooting)
+- [Problembehandlung für Microsoft Connected Cache](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache)
+- [Problembehandlung für BitLocker](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/troubleshoot)
 
 ## <a name="new-and-updated-support-articles"></a>Neue und aktualisierte Supportartikel
 
-Supportartikel, die neu sind oder zwischen dem 16. Mai und dem 17. Juni 2020 aktualisiert wurden.
+Supportartikel, die neu sind oder zwischen dem 18. Juli und dem 11. September 2020 aktualisiert wurden.
 
-- [KB 4560496: Updaterollup für Microsoft Endpoint Configuration Manager, Version 2002](https://support.microsoft.com/help/4560496)
-- [KB 4569513: Fehler "Nicht gefunden" beim Bearbeiten von Tabellen für Anwendungskatalog-Updates](https://support.microsoft.com/help/4569513)
-- [KB 4574419: Timeoutfehler im Microsoft Endpoint Configuration Manager Admin Center](https://support.microsoft.com/help/4574416)
-- [KB 4564442: Windows 10-Bereitstellungen schlagen mit dem Microsoft Deployment Toolkit auf Computern mit BIOS-artiger Firmware fehl](https://support.microsoft.com/help/4564442)
-- [KB 4563473: Updaterollup für Configuration Manager Version 2002: Probleme bei der Mandantenanfügung](https://support.microsoft.com/help/4563473)
-- [KB 4567007: PXE-Startfehler oder Tasksequenzverzögerungen nach Update auf Current Branch von Configuration Manager, Version 2002](https://support.microsoft.com/help/4567007)
+- [KB 4578830: Übersicht über die Änderungen in Microsoft Endpoint Configuration Manager Current Branch, Version 2006](https://support.microsoft.com/help/4578830)
+- [KB 4576791: Update für Microsoft Endpoint Configuration Manager, Version 2006, früher Updatering](https://support.microsoft.com/help/4576791)
+- [KB 4578123: CMPivot-Abfragen geben unerwartete Ergebnisse in Configuration Manager Current Branch, Version 2002, zurück](https://support.microsoft.com/help/4578123)
+- [KB 4576785: Timeout für Anwendungsblatt im Microsoft Endpoint Manager Admin Center](https://support.microsoft.com/help/4576782)
+- [KB 4575774: Das Cmdlet „New-CMTSStepPrestartCheck“ gibt in Configuration Manager, Version 2002, einen Fehler aus](https://support.microsoft.com/help/4575774)
+- [KB 4575339: Gerät werden zweimal im Admin Center von Microsoft Endpoint Configuration Manager angezeigt](https://support.microsoft.com/help/4575339)
 
 Informationen zum Abonnieren von Atom- oder RSS-Benachrichtigungen für neue Configuration Manager-Supportartikel finden Sie unter [Updates für Supportinhalte](https://support.microsoft.com/help/4089498/). Wählen Sie **Microsoft Endpoint Configuration Manager** aus.

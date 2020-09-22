@@ -2,7 +2,7 @@
 title: Einrichten von BitLocker-Portalen
 titleSuffix: Configuration Manager
 description: Installieren der BitLocker-Verwaltungskomponenten für das Self-Service-Portal und die Verwaltungs- und Überwachungswebsite
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: f6834090cd2a58113fb26e298c0c451f846f5ce9
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697261"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574591"
 ---
 # <a name="set-up-bitlocker-portals"></a>Einrichten von BitLocker-Portalen
 
@@ -106,6 +106,8 @@ Dieser Prozess verwendet das PowerShell-Skript „MBAMWebSiteInstaller.ps1“, u
 - `-IISWebSite`: Die Website, auf der das Skript die MBAM-Webanwendungen installiert. Standardmäßig ist dies die IIS-Standardwebsite. Erstellen Sie die benutzerdefinierte Website, bevor Sie diesen Parameter verwenden.
 
 - `-InstallDirectory`: Der Pfad, in dem das Skript die Webanwendungsdateien installiert. Dieser Pfad ist standardmäßig `C:\inetpub`. Erstellen Sie das benutzerdefinierte Verzeichnis, bevor Sie diesen Parameter verwenden.
+
+- `-DomainName`  *gilt für Version 2002 und höher*: Legen Sie den NetBIOS-Domänennamen des Servers mit der Helpdesk- oder Self-Service-Webportal-Rolle fest. Nur erforderlich, wenn der NetBIOS-Domänenname nicht mit dem DNS-Domänennamen übereinstimmt. Diese Konfiguration wird auch als separater Domänennamespace bezeichnet. Zum Beispiel `-DomainName fabrikham`, wobei der DNS-Domänenname `contoso.com` lautet.<!-- MEMDocs #759 -->
 
 - `-Uninstall`: Deinstalliert die Helpdesk- und Self-Service-Webportalsites für die BitLocker-Verwaltung auf einem Webserver, auf dem sie zuvor installiert waren.
 

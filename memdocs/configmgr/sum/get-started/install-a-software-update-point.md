@@ -5,17 +5,17 @@ description: Primäre Standorte setzen einen Softwareupdatepunkt am Standort der
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 0cddb8df51624a562597da17ea310db0a26081f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1f3ab3c108a7f8481aee84b6df5cd41b4b186246
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696928"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718840"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Installieren und Konfigurieren eines Softwareupdatepunkts  
 
@@ -69,7 +69,7 @@ ms.locfileid: "81696928"
 ### <a name="configure-ssl-communications-to-wsus"></a>Konfigurieren der SSL-Kommunikation mit WSUS  
  Sie können die SSL-Kommunikation im Assistenten auf der Seite **Allgemein** oder in den Eigenschaften des Softwareupdatepunkts auf der Registerkarte **Allgemein** konfigurieren.  
 
- Weitere Informationen zur Verwendung von SSL finden Sie unter [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL).  
+ Weitere Informationen zur Verwendung von SSL finden Sie unter [Entscheiden, ob WSUS zur Verwendung von SSL konfiguriert werden soll](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL) und [Konfigurieren eines Softwareupdatepunkts für die Verwendung von TLS/SSL mit einem PKI-Zertifikat](../get-started/software-update-point-ssl.md).  
 
 ### <a name="wsus-server-connection-account"></a>Verbindungskonto für WSUS-Server  
  Sie können ein Konto konfigurieren, das beim Herstellen einer Verbindung mit WSUS auf dem Softwareupdatepunkt vom Standortserver verwendet wird. Wenn Sie dieses Konto nicht konfigurieren, wird die Verbindung mit WSUS von Configuration Manager über das Computerkonto für den Standortserver hergestellt. Konfigurieren Sie das Verbindungskonto für WSUS-Server auf der Seite **Proxy- und Kontoeinstellungen** des Assistenten oder auf der Registerkarte **Proxy- und Kontoeinstellungen** in den Eigenschaften für den Softwareupdatepunkt.  Je nachdem, welche Version von Configuration Manager Sie verwenden, können Sie das Konto an unterschiedlichen Stellen im Assistenten konfigurieren.  

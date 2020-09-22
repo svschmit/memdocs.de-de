@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: eef375cad028a6903a0fa28d1cc3f7562bcebf6f
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607556"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689411"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Vorbereiten der Verwendung von SQL Server AlwaysOn-Verfügbarkeitsgruppen mit Configuration Manager
 
@@ -390,6 +390,9 @@ Legen Sie das Wiederherstellungsmodell der Standortdatenbank auf **Vollständig*
 Wenn zumindest ein Knoten der Verfügbarkeitsgruppe funktionsfähig bleibt, verwenden Sie die Sitewiederherstellungsoption **Datenbankwiederherstellung überspringen (diese Option verwenden, wenn die Standortdatenbank nicht betroffen war)** .
 
 Ab Version 1906 kann Site Recovery die Datenbank in einer SQL AlwaysOn-Gruppe neu erstellen. Dieser Prozess funktioniert sowohl mit manuellem als auch mit automatischem Seeding.<!-- SCCMDocs-pr#3846 -->
+
+> [!TIP]
+> Wenn Sie den Setup-/Wiederherstellungs-Assistenten ausführen, gilt die Seite **Neue Verfügbarkeitsgruppendatenbank** nur für Konfigurationen mit manuellem Seeding. Beim automatischen Seeding gibt es keine freigegebene Datenbanksicherung, sodass diese Seite des Assistenten nicht angezeigt wird.<!-- SCCMDocs #2242 -->
 
 Wenn in Version 1902 oder früher alle Knoten einer Verfügbarkeitsgruppe verloren gegangen sind, müssen Sie zuerst die Verfügbarkeitsgruppe neu erstellen, bevor Sie den Standort wiederherstellen können. Configuration Manager kann den Verfügbarkeitsknoten nicht neu erstellen oder wiederherstellen. Erstellen Sie die Gruppe neu, stellen Sie die Sicherung wieder her, und konfigurieren Sie SQL neu. Verwenden Sie dann die Sitewiederherstellungsoption **Datenbankwiederherstellung überspringen (diese Option verwenden, wenn die Standortdatenbank nicht betroffen war)** .
 
