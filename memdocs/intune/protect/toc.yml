@@ -23,6 +23,8 @@
     - name: Datenschutz und personenbezogene Daten
       href: privacy-personal-data.md
       items:
+        - name: Optionale Diagnosedaten in Client-Apps
+          href: client-apps-optional-data.md
         - name: Datensammlung
           href: privacy-data-collect.md
         - name: Datenspeicherung und -verarbeitung
