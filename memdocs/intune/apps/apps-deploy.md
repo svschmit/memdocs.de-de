@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 57e9195a71c268a9d7465be767b51f0f335dfb8d
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443816"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008174"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Zuweisen von Apps zu Gruppen mit Microsoft Intune
 
@@ -64,7 +64,7 @@ In der folgenden Tabelle werden die verschiedenen Optionen für die Zuweisung vo
    - **Für registrierte Geräte verfügbar**: Weisen Sie die App Gruppen von Benutzern zu, die die App über die Unternehmensportal-App oder -Website installieren können.
    - **Verfügbar mit oder ohne Registrierung**: Weisen Sie diese App Gruppen von Benutzern zu, deren Geräte nicht bei Intune registriert sind. Benutzern muss eine Intune-Lizenz zugewiesen sein. Weitere Informationen finden Sie unter [Intune-Lizenzen](../fundamentals/licenses.md).
    - **Erforderlich**: Die App wird auf Geräten in den ausgewählten Gruppen installiert. Auf einigen Plattformen muss der Endbenutzer möglicherweise weitere Eingabeaufforderungen bestätigen, bevor die App-Installation startet.
-   - **Deinstallieren**: Die App wird auf Geräten in den ausgewählten Gruppen deinstalliert, wenn Intune die App zuvor über eine Zuweisung vom Typ „Für registrierte Geräte verfügbar“ oder „Erforderlich“ in der gleichen Bereitstellung auf dem Gerät installiert hat. Weblinks können nach der Bereitstellung nicht entfernt werden.
+   - **Deinstallieren**: Die App wird auf Geräten in den ausgewählten Gruppen deinstalliert, wenn Intune die App zuvor über eine Zuweisung vom Typ „Für registrierte Geräte verfügbar“ oder „Erforderlich“ in der gleichen Bereitstellung auf dem Gerät installiert hat. 
 
      > [!NOTE]
      > **Nur für iOS/iPadOS-Apps:**

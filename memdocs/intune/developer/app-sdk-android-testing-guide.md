@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/01/2020
+ms.date: 09/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 975ab2faa91a5e904beb5aa17b776061f122916d
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: 1486b75526af470444c6a5880ccd27920f2ceb00
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286270"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814840"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Testleitfaden für Entwickler zum Microsoft Intune App SDK für Android
 
@@ -33,7 +33,7 @@ Wenn Sie in Ihrem Unternehmen nicht bereits über einen Mandanten verfügen, kö
 1. Navigieren Sie zur [Website für die Erstellung eines Microsoft CDX-Mandanten](https://cdx.transform.microsoft.com/my-tenants/create-tenant), und erstellen Sie einen Microsoft 365 Enterprise-Mandanten.
 2. [Richten Sie Intune ein](../fundamentals/setup-steps.md), um die mobile Geräteverwaltung (MDM) zu aktivieren.
 3. [Erstellen Sie Benutzer](../fundamentals/users-add.md).
-4. [Erstellen Sie Gruppen]../fundamentals/(groups-add.md).
+4. [Erstellen Sie Gruppen](../fundamentals/groups-add.md).
 5. [Weisen Sie Lizenzen je nach Bedarf für Ihre Tests zu](../fundamentals/licenses-assign.md).
 
 
@@ -72,7 +72,6 @@ Diese Richtlinien wirken sich auf die Verwendung von Absichten und Inhaltsanbiet
     - Das Freigeben von Inhalten zwischen Ihrer App und verwalteten Apps ist zulässig.
     - Die Freigabe über Ihre App an nicht verwaltete Apps (z. B. Chrome) wird blockiert.
 
-
 #### <a name="restrict-receiving-data-from-other-apps"></a>Einschränken des Datenempfangs von anderen Apps
 
 1. Wählen Sie für **Organisationsdaten an andere Apps senden** die Option **Alle Apps** aus.
@@ -97,7 +96,7 @@ Sie können die Zwischenablage wie folgt auf verwaltete Apps einschränken:
     - Das Kopieren von Text aus Ihrer App in eine nicht verwaltete App (z. B. eine Nachrichten-App) wird blockiert.
 
 ### <a name="prevent-save"></a>Verhindern der Speicherung
-Wenn Ihre App integrierte Steuerelemente für „Speichern als“ benötigt, können Sie die Funktion **Speichern als** folgendermaßen steuern:
+Wenn Ihre App [integrierte Steuerelemente für „Speichern als“](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations) benötigt, können Sie die Funktion **Speichern als** folgendermaßen steuern:
 
 1. Legen Sie die Option **„Speichern unter“ verhindern** auf **Ja** fest.
 2. Überprüfen Sie die folgenden Bedingungen:

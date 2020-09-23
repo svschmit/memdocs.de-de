@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8bfddd247f2f86d8fc5a9162a5c68efd5e7ffb5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 463e2b7c72c91131de88eb3de956556d65d50788
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996281"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002765"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>In Intune unterstützte Betriebssysteme und Browser
 
@@ -95,7 +95,7 @@ Ein [Intune-Softwareclient](manage-windows-pcs-with-microsoft-intune.md) auf Win
 > [!Note]
 > Microsoft hat angekündigt, dass der Support für Windows 7 am 14. Januar 2020 endet. Ab diesem Datum wird auch der Support von Intune für Windows 7-Geräte eingestellt.
 >
-> Weitere Informationen finden Sie unter [Intune – Planen für Änderungen: Support für Windows 7 endet](whats-new.md#windows-7-ends-extended-support).
+> Weitere Informationen finden Sie unter [Intune – Planen für Änderungen: Support für Windows 7 endet](whats-new-archive.md#windows-7-ends-extended-support).
 >
 > Microsoft Intune stellt die Unterstützung für die Silverlight-basierte Intune-Konsole am 15. Oktober 2020 ein. Damit einhergehend endet auch die Unterstützung für den über die Silverlight-Konsole konfigurierten PC-Softwareclient (auch als PC-Agent bezeichnet).
 >

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b5f08f4ce77bf068ac67e6a83e4e15e9a11f6e2d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262777"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814857"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Verwenden benutzerdefinierter Einstellungen für Android-Geräte in Microsoft Intune
 
@@ -50,7 +50,7 @@ In diesem Artikel erfahren Sie, wie Sie ein benutzerdefiniertes Profil für Andr
 
     - **Name:** Geben Sie einen aussagekräftigen Namen für das Profil ein. Benennen Sie Ihre Profile, damit Sie diese später leicht wiedererkennen. Ein guter Profilname ist beispielsweise **Benutzerdefiniertes Android-Profil**.
     - **Beschreibung:** Geben Sie eine Beschreibung für das Profil ein. Diese Einstellung ist optional, wird jedoch empfohlen.
-    - **Plattform**: Wählen Sie **Android** aus.
+    - **Plattform**: Wählen Sie **Android-Geräteadministrator** aus.
     - **Profiltyp**: Klicken Sie auf **Benutzerdefiniert**.
 
 4. Klicken Sie unter **Benutzerdefinierte OMA-URI-Einstellungen** auf **Hinzufügen**. Legen Sie folgende Einstellungen fest:
