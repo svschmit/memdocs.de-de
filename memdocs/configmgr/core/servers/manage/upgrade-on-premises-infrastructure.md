@@ -208,6 +208,8 @@ Wenn Sie über mehr als einen Configuration Manager-Standort in einer Hierarchie
 
 Configuration Manager unterstützt das direkte Upgrade von SQL Server auf die folgenden Versionen:
 
+- SQL Server 2019  
+
 - SQL Server 2017  
 
 - SQL Server 2016  
